@@ -6,6 +6,16 @@ Everything is generated from one written timeline, placed on real geography, and
 
 > **This repository contains the answers.** The ground-truth event list, canon timeline, internal registry notes and answer keys are all here. Keep it private from participants and give them only the package built by `scripts/build_delivery.py` (see [Running an event](#running-an-event)).
 
+## Overview video
+
+[![Animated preview of the overview video: the storm approaching, the Corpus Christi region, ships leaving the anchorage](docs/media/rafael_overview_preview.gif)](docs/media/rafael_the_storm_is_cover.mp4)
+
+**[Rafael: The Storm Is Cover (2 minutes, 73 MB, no sound)](docs/media/rafael_the_storm_is_cover.mp4)**. Select the preview or the link, then choose **View raw** to play it in the browser.
+
+> **Spoilers.** The video walks through the whole scenario, including the hidden threads and a threat-actor name that the scenario never makes public. It is for organisers and game masters. Do not show it to participants or post it publicly.
+
+## A look at the data
+
 ![Inner Harbor and downtown Corpus Christi one day after landfall: vessels held at berth, response vehicles on the street grid, open incidents](docs/images/map_inner_harbor_day1.png)
 
 *One day after landfall, drawn from the delivered logs over the real shoreline, ship channel and streets: every vessel is at a berth because the channel is closed, response vehicles follow streets, and incidents sit on real blocks.*
@@ -191,7 +201,9 @@ cd ../hurricane-rafael-scenario
 python scripts/snapshot.py --lock && python scripts/check_acceptance.py
 ```
 
-The copy is about 1.2 GB in 2,600 files, with no file over 45 MB, so it fits an ordinary git repository without large-file storage. `.gitattributes` turns off line-ending conversion because the lock records exact file hashes.
+The target can be a git working folder: its `.git` folder is left alone, so the same command refreshes an existing clone before a commit.
+
+The copy is about 1.3 GB in 2,600 files. No data file is over 45 MB and the largest file is the 73 MB overview video, so it fits an ordinary git repository without large-file storage (GitHub prints a size warning for the video but accepts it). `.gitattributes` turns off line-ending conversion because the lock records exact file hashes.
 
 ## Known limits
 
@@ -205,7 +217,7 @@ The copy is about 1.2 GB in 2,600 files, with no file over 45 MB, so it fits an 
 
 All people, companies, vessels, aircraft, outlets, hospitals and events are fictional; any resemblance to real ones is unintended. Real place names and public infrastructure are used for realism. `99_reference/geo/landmarks.geojson` carries real facility names from the public sources listed above and is reference data only.
 
-No licence has been chosen for this repository yet. Add one before sharing it outside your organisation. The geographic reference files derive from US Government sources; check each source's terms in `99_reference/geo/SOURCES_*.md`.
+The repository is released under the MIT License (see `LICENSE`). The geographic reference files derive from US Government sources; check each source's terms in `99_reference/geo/SOURCES_*.md`.
 
 ## More documentation
 

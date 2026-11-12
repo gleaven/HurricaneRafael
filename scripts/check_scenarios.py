@@ -6,7 +6,7 @@
 Usage: python scripts/check_scenarios.py -> 07_validation/reports/scenarios_report.json; exit 1 on failure"""
 import sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import load, save, load_registry, sroot, sload
+from common import load, save, load_registry, sroot, sload, ROOT
 
 REQUIRED = ["00_scenario/config.json", "00_scenario/threads.json", "00_scenario/msel.json", "02_public_record/public_record.json"]
 res = []
@@ -18,7 +18,7 @@ check("layer prefixes non-empty and unique", all(pfx) and len(pfx) == len(set(pf
 seen_threads, seen_events, seen_facts = {}, {}, {}
 for s in reg:
     sid, root = s["id"], sroot(s["id"])
-    check(f"{sid}: root exists", os.path.isdir(root), root)
+    check(f"{sid}: root exists", os.path.isdir(root), os.path.relpath(root, ROOT).replace(os.sep, "/"))
     for rel in REQUIRED:
         check(f"{sid}: has {rel}", os.path.exists(os.path.join(root, rel)))
     if s.get("kind") == "layer":
