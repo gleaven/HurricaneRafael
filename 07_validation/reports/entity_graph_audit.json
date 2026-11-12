@@ -1,0 +1,5730 @@
+{
+ "inventory": {
+  "vessel": {
+   "vessels.json": 28,
+   "AIS positions (MMSI)": 30,
+   "supply/vessel_arrivals (MMSI)": 74,
+   "supply/cargo_manifest (names)": 45,
+   "map VMETA": 30,
+   "entities.json VSL-/BRG-": 8
+  },
+  "aircraft": {
+   "aircraft_registry.json": 22,
+   "ADS-B files (icao24)": 10,
+   "map AMETA": 10,
+   "entities.json ACF-": 2
+  },
+  "facility": {
+   "facility_registry.json": 10,
+   "ed_visits facility ids": 7,
+   "hospital_capacity ids": 4,
+   "syndrome_summary ids": 7,
+   "places.json facility-type ids": 15
+  },
+  "host": {
+   "gw_host_registry.json": 25,
+   "siem_alerts HostName": 21,
+   "siem_alerts IPs": 49,
+   "zeek conn/notice IPs": 41,
+   "gridwater assets systems": 8,
+   "entities.json HOST-": 4
+  },
+  "ot_asset": {
+   "gridwater assets facilities": 18,
+   "scada_tags asset ids": 27,
+   "historian AssetID": 27,
+   "work_orders ASSETNUM": 12,
+   "work_orders LOCATION": 5
+  },
+  "scada_tag": {
+   "scada_tags.json": 182,
+   "historian Tagname": 182
+  },
+  "social_account": {
+   "personas.json": 32,
+   "tweet authors": 32,
+   "characters kind=persona": 2,
+   "entities.json SOC-ACC range": "5001-5040 (40 accounts, none enumerated)"
+  },
+  "drone": {
+   "drone_operators.json": 11,
+   "telemetry operator ids": 5,
+   "flights": 13,
+   "entities.json": "UAS-SYN-01 to 06 (range)"
+  },
+  "sensor": {
+   "sensor_registry.json": 11,
+   "env_sensors files": 11,
+   "weather stations (no registry)": 3,
+   "places.json sensor ids": [
+    "WW-xx",
+    "GAUGE-12",
+    "GAUGE-14",
+    "WQ-01 to WQ-06"
+   ]
+  },
+  "cad_unit": {
+   "cad_units.json units": 142,
+   "911 records unit_id": 94,
+   "agencies in records": {
+    "CCEMS": 1169,
+    "CCPD": 2094,
+    "CCFD": 774,
+    "MA_FIRE": 496,
+    "NCSO": 381,
+    "MA_EMS": 203
+   },
+   "agencies in registry": [
+    "CCPD",
+    "CCFD",
+    "CCEMS",
+    "NCSO"
+   ]
+  },
+  "finance": {
+   "entity_registry.json entities": 13,
+   "claims adjuster ids": 5,
+   "claims insurers": 3,
+   "claimant ids": 94,
+   "txn receivers": 128,
+   "txn senders": 10
+  },
+  "infrastructure": {
+   "infrastructure_assets.json": 10,
+   "damage_assessment structure ids": 522
+  },
+  "terminal": {
+   "terminal_registry.json": 10,
+   "vessel_arrivals terminal ids": 8
+  },
+  "satellite_scene": {
+   "scene files": 13,
+   "ids": [
+    "RAFAEL-D00-02-SAR",
+    "RAFAEL-D00-04-SAR",
+    "RAFAEL-D00-SAR",
+    "RAFAEL-D01-OPT",
+    "RAFAEL-D02-SAR",
+    "RAFAEL-D03-OPT",
+    "RAFAEL-D05-OPT",
+    "RAFAEL-D07-OPT",
+    "RAFAEL-D14-OPT",
+    "RAFAEL-D30-OPT",
+    "RAFAEL-PRE-01",
+    "RAFAEL-PRE-02",
+    "RAFAEL-PRE-03"
+   ]
+  }
+ },
+ "missing_registry_entries": [
+  {
+   "class": "vessel",
+   "used_in": "ais/ais_positions.csv",
+   "count": 7,
+   "ids": [
+    "229183047 Adriatic Carrier",
+    "319041827 Bayou Spirit",
+    "338109472 Gulf Meridian",
+    "371204893 Santos Provider",
+    "416002317 MV Halcyon Drift",
+    "477291038 Pacific Trader",
+    "503082914 Coastal Endeavor"
+   ],
+   "note": "AIS MMSI absent from vessels.json"
+  },
+  {
+   "class": "vessel",
+   "used_in": "supply/vessel_arrivals.csv",
+   "count": 50,
+   "ids": [
+    "248174029 MT La Quinta Crude",
+    "248309471 MT Nueces Bay Tanker",
+    "248481029 MT Storm Rider",
+    "248482019 MT Gulf Knight",
+    "248591038 MT South Padre Crude",
+    "248691048 MT La Quinta Express",
+    "308192041 MV Corpus Grain",
+    "308192847 MV San Antonio Bay",
+    "308284710 MV Gulf Rebuilder",
+    "308471039 MV Aransas Pass Cargo",
+    "308571038 MV Coastal Express",
+    "308591038 MV Lone Star Container",
+    "308591048 MV Roosevelt Island",
+    "308782019 MV Galveston Relief",
+    "308882019 MV Corpus Containers I",
+    "338290481 USCGC Elm Buoy Tender",
+    "338481029 MV Army Corps Pioneer",
+    "338491027 MT Lone Star Carrier",
+    "338491047 MV Nueces Bay Supply",
+    "338592018 MT Lone Star Crude 2",
+    "338782019 MV Houston Supply",
+    "338782049 Marine Spill Response I",
+    "338782059 Marine Spill Response II",
+    "352047281 MT Nueces Sunrise",
+    "352183047 MT Maverick Bay",
+    "352190847 MT Galveston Product",
+    "352291048 MT Rockport Trader",
+    "352292048 MT Nueces Chemical",
+    "352491038 MV Rio Bulk Carrier",
+    "352782019 MT Gulf Titan",
+    "352840192 MT Harbor Bay Crude",
+    "352918473 MT Rio Grande Tanker",
+    "416002317 MV Halcyon Drift",
+    "538084710 MT CC Chemical I",
+    "538192047 MT South Texas Product",
+    "538284017 MT Ingleside Star",
+    "538491038 MT Lone Star LNG",
+    "538591047 MT Chinook Spirit",
+    "538782019 MT Corpus Christi Star",
+    "636047292 MV Diamond Bulk",
+    "636084710 MV Corpus Bay Freighter",
+    "636172039 MT CC Chemical II",
+    "636209481 MV Port Royal",
+    "636291048 MT Permian Sun",
+    "636291058 MV Gulf Ferry Express",
+    "636482019 MT Gulf Coast Pioneer",
+    "636491038 MT Ingleside Pride",
+    "636582019 MT Corpus LNG I",
+    "636782019 MT Lone Star Suezmax",
+    "636882049 MT Refugio Bay Trader"
+   ],
+   "note": "port-call vessel absent from vessels.json"
+  },
+  {
+   "class": "vessel",
+   "used_in": "map_view.html VMETA",
+   "count": 7,
+   "ids": [
+    "229183047 Adriatic Carrier",
+    "319041827 Bayou Spirit",
+    "338109472 Gulf Meridian",
+    "371204893 Santos Provider",
+    "416002317 MV Halcyon Drift",
+    "477291038 Pacific Trader",
+    "503082914 Coastal Endeavor"
+   ],
+   "note": ""
+  },
+  {
+   "class": "aircraft",
+   "used_in": "adsb/*.csv",
+   "count": 4,
+   "ids": [
+    "7c1234 ",
+    "a3c001 KIII1",
+    "a3c002 KRIS1",
+    "a4d001 FEMA01"
+   ],
+   "note": "ADS-B aircraft absent from aircraft_registry.json"
+  },
+  {
+   "class": "facility",
+   "used_in": "public_health/ed_visits*.csv",
+   "count": 7,
+   "ids": [
+    "FAC-CCMC-001",
+    "FAC-DRMC-001",
+    "FAC-SHBA-001",
+    "FAC-SHE-001",
+    "FAC-SHE-002",
+    "FAC-SHMC-001",
+    "FAC-UCG-001"
+   ],
+   "note": "hospital ids in ED data absent from facility_registry.json"
+  },
+  {
+   "class": "facility",
+   "used_in": "public_health/hospital_capacity.csv",
+   "count": 4,
+   "ids": [
+    "FAC-CCMC-001",
+    "FAC-DRMC-001",
+    "FAC-SHBA-001",
+    "FAC-SHMC-001"
+   ],
+   "note": ""
+  },
+  {
+   "class": "host",
+   "used_in": "network_logs/siem_alerts.csv HostName",
+   "count": 21,
+   "ids": [
+    "FAC-UTL-01-P3",
+    "FW-EDGE-01",
+    "GW-SRV-DC-01",
+    "GW-SRV-FILE-01",
+    "GW-SRV-PRINT-01",
+    "GW-WS-IT-10",
+    "GW-WS-IT-11",
+    "GW-WS-IT-12",
+    "GW-WS-IT-14",
+    "GW-WS-IT-15",
+    "GW-WS-IT-20",
+    "GW-WS-IT-30",
+    "GW-WS-IT-44",
+    "GW-WS-IT-50",
+    "HIST-SRV-01",
+    "RTU-BKP",
+    "RTU-PUMP",
+    "RTU-PWR",
+    "SCADA-SRV-01",
+    "SUB-02",
+    "VPN-GW-01"
+   ],
+   "note": "SIEM host names absent from gw_host_registry.json"
+  },
+  {
+   "class": "host",
+   "used_in": "siem_alerts IPs",
+   "count": 30,
+   "ids": [
+    "10.72.1.1",
+    "10.72.1.12",
+    "10.72.1.14",
+    "10.72.1.15",
+    "10.72.1.20",
+    "10.72.1.21",
+    "10.72.1.4",
+    "10.72.1.44",
+    "10.72.1.5",
+    "10.72.1.50",
+    "10.72.1.55",
+    "10.72.2.1",
+    "10.72.2.3",
+    "10.72.2.5",
+    "10.72.3.13",
+    "10.72.3.14",
+    "10.72.3.15",
+    "10.72.3.17",
+    "10.72.3.19",
+    "10.72.3.21",
+    "10.72.3.22",
+    "10.72.3.25",
+    "10.72.3.27",
+    "10.72.3.28",
+    "10.72.3.29",
+    "10.72.3.31",
+    "10.72.3.33",
+    "10.72.3.36",
+    "10.72.3.38",
+    "10.72.3.39"
+   ],
+   "note": "internal IP with no host record"
+  },
+  {
+   "class": "host",
+   "used_in": "zeek logs IPs",
+   "count": 24,
+   "ids": [
+    "10.72.1.1",
+    "10.72.1.15",
+    "10.72.1.2",
+    "10.72.1.20",
+    "10.72.1.255",
+    "10.72.1.5",
+    "10.72.1.51",
+    "10.72.1.52",
+    "10.72.1.53",
+    "10.72.1.54",
+    "10.72.1.55",
+    "10.72.1.56",
+    "10.72.1.57",
+    "10.72.1.58",
+    "10.72.1.59",
+    "10.72.1.60",
+    "10.72.2.1",
+    "10.72.2.5",
+    "10.72.3.1",
+    "10.72.3.21",
+    "10.72.3.22",
+    "10.72.3.5",
+    "10.72.3.6",
+    "10.72.3.7"
+   ],
+   "note": "internal IP with no host record"
+  },
+  {
+   "class": "ot_asset",
+   "used_in": "telemetry historian AssetID",
+   "count": 1,
+   "ids": [
+    "GW-FAC-UTL-01"
+   ],
+   "note": "historian asset id absent from gridwater assets.json"
+  },
+  {
+   "class": "ot_asset",
+   "used_in": "maintenance/work_orders ASSETNUM",
+   "count": 12,
+   "ids": [
+    "GW-BKP-RTU",
+    "GW-GEN-01",
+    "GW-PP1-CHEM-FEED",
+    "GW-PP1-PUMP1",
+    "GW-PP1-PUMP2",
+    "GW-PP1-PUMP3",
+    "GW-PP1-PUMP4",
+    "GW-PP1-RTU",
+    "GW-PWR-RTU",
+    "GW-SUB01-BKR-MAIN",
+    "GW-SUB02-BKR-MAIN",
+    "GW-SUB03-BKR-MAIN"
+   ],
+   "note": "work-order asset numbers match no registry (assets.json, scada_tags, hosts)"
+  },
+  {
+   "class": "ot_asset",
+   "used_in": "maintenance/work_orders LOCATION",
+   "count": 5,
+   "ids": [
+    "PUMP-STATION-1",
+    "SUB-01",
+    "SUB-02",
+    "SUB-03",
+    "WATER-PLANT"
+   ],
+   "note": "work-order locations match no place or facility id"
+  },
+  {
+   "class": "social_account",
+   "used_in": "social_media/*.jsonl authors",
+   "count": 24,
+   "ids": [
+    "@CCHarborPilots (14 posts)",
+    "@CCReliefVolunteer (112 posts)",
+    "@CallerTimes (54 posts)",
+    "@DerekNancyRescue (52 posts)",
+    "@FEMARegion6 (35 posts)",
+    "@GridWaterCC (41 posts)",
+    "@GulfEnviroWatch (105 posts)",
+    "@KIIITVNews (31 posts)",
+    "@MariaRamirez_CC (94 posts)",
+    "@NationalHurricaneCenter (21 posts)",
+    "@Reporter_EvanK (78 posts)",
+    "@ShelterVolunteer_Ana (92 posts)",
+    "@SinaiHospitalCC (9 posts)",
+    "@TamaraMossCC (125 posts)",
+    "@WXwatcherSA (52 posts)",
+    "@abuelo_pescador (62 posts)",
+    "@fishermanchuy (115 posts)",
+    "@joseluisbarrera (93 posts)",
+    "@localDadCC (95 posts)",
+    "@luisa_corpus (101 posts)",
+    "@portworker_cc (57 posts)",
+    "@skipperboatCC (93 posts)",
+    "@txcoastalngo (77 posts)",
+    "@txdot_coastal (8 posts)"
+   ],
+   "note": "posting account absent from personas.json"
+  },
+  {
+   "class": "drone",
+   "used_in": "drone_video telemetry operator_id",
+   "count": 1,
+   "ids": [
+    "UNKNOWN-001"
+   ],
+   "note": "registry uses DRN-OP-UNK for the hostile drone"
+  },
+  {
+   "class": "sensor",
+   "used_in": "weather/*.csv",
+   "count": 3,
+   "ids": [
+    "BUOY42019",
+    "KCRP",
+    "KNGP"
+   ],
+   "note": "weather stations have no registry entry"
+  },
+  {
+   "class": "sensor",
+   "used_in": "00_scenario/places.json + answer key T1",
+   "count": 3,
+   "ids": [
+    "GAUGE-12",
+    "GAUGE-14",
+    "WW-xx"
+   ],
+   "note": "tide/river gauges and wastewater sampling named in the scenario have no registry entry and no data file"
+  },
+  {
+   "class": "cad_agency",
+   "used_in": "911/911_cad_records.csv",
+   "count": 2,
+   "ids": [
+    "MA_EMS",
+    "MA_FIRE"
+   ],
+   "note": "mutual-aid agencies have no registry entry"
+  },
+  {
+   "class": "adjuster",
+   "used_in": "payments/insurance_claims.csv",
+   "count": 3,
+   "ids": [
+    "ADJ-0912",
+    "ADJ-1455",
+    "ADJ-2871"
+   ],
+   "note": ""
+  },
+  {
+   "class": "organisation",
+   "used_in": "payments/financial_transactions.csv receiver",
+   "count": 8,
+   "ids": [
+    "City of Corpus Christi (4)",
+    "Corpus Christi Debris Solutions (21)",
+    "Gulf Coast Electric LLC (16)",
+    "Harbor City Structural Repair (10)",
+    "Nueces County (8)",
+    "Quellmar Fuel Partners (4)",
+    "Texas A&M Engineering Extension Service (5)",
+    "Vantorra Restoration LLC (3)"
+   ],
+   "note": "payees paid 3+ times with no entity record"
+  },
+  {
+   "class": "organisation",
+   "used_in": "payments/financial_transactions.csv sender",
+   "count": 5,
+   "ids": [
+    "FEMA / HHS — Disaster Recovery Division (25)",
+    "FEMA Individual Assistance (7)",
+    "Nueces County Emergency Relief Fund (6)",
+    "SBA Disaster Loan Program (13)",
+    "Texas Division of Emergency Management (9)"
+   ],
+   "note": ""
+  },
+  {
+   "class": "bank",
+   "used_in": "payments/financial_transactions.csv sender_routing",
+   "count": 1,
+   "ids": [
+    "021030004"
+   ],
+   "note": ""
+  },
+  {
+   "class": "organisation",
+   "used_in": "terminal_registry.json operator_entity_id",
+   "count": 2,
+   "ids": [
+    "ENT-ORG-001",
+    "ENT-ORG-005"
+   ],
+   "note": "ENT-ORG-* ids point at no record anywhere"
+  },
+  {
+   "class": "organisation",
+   "used_in": "supply/cargo_manifest.csv consignee",
+   "count": 33,
+   "ids": [
+    "Buckeye Texas Processing (21)",
+    "CC LNG Partners (2)",
+    "City of Corpus Christi (Emergency Reserve) (1)",
+    "Corpus Christi Bunker Depot (1)",
+    "Corpus Christi Chemical Depot LLC (3)",
+    "Corpus Christi Fuel Terminal LLC (11)",
+    "Corpus Christi Methanol Terminal LLC (1)",
+    "Corpus Christi Steel Service Center LLC (1)",
+    "Deere & Company Corpus Christi Depot (1)",
+    "ExxonMobil Oil Corp. (1)",
+    "FEMA Emergency Power Division (1)",
+    "FEMA Region 6 / TDEM (5)",
+    "Flint Hills Resources LP (23)",
+    "JERA Co. Inc. Japan (1)",
+    "Kalvora Maritime Holdings Ltd. (1)",
+    "Lone Star Distribution LLC (1)",
+    "Maxus Energy Partners LLC (16)",
+    "NAS Corpus Christi Emergency Fuel Reserve (1)",
+    "Novacarbon Europe GmbH (1)",
+    "NuStar Energy LP (17)",
+    "Nueces County Emergency Management (1)",
+    "Oxbow Carbon LLC (Rotterdam) (1)",
+    "Port Aransas Storage & Transfer LLC (12)",
+    "Quellmar Fuel Partners LLC (12)",
+    "Rendal Terminals LLC (21)",
+    "South Texas Petrochemical LLC (23)",
+    "Texas Gulf Agri Distribution LLC (2)",
+    "Texas Gulf Distribution LLC (12)",
+    "Tokyo Gas Trading Europe Ltd. (1)",
+    "US Army Transportation Command (2)",
+    "USACE Corpus Christi Recovery Operations (1)",
+    "Various Consignees (1)",
+    "Votorantim Cimentos SA (Brazil) (1)"
+   ],
+   "note": "consignees have no entity record"
+  },
+  {
+   "class": "organisation",
+   "used_in": "supply/vessel_arrivals.csv agent",
+   "count": 8,
+   "ids": [
+    "Corpus Christi Shipping Agents LLC (10)",
+    "Gulf Coast Marine Agency (12)",
+    "Gulf Meridian Agency Corp. (9)",
+    "Harbor Masters Agency (9)",
+    "Lone Star Port Services (9)",
+    "Nueces Bay Ship Agents (9)",
+    "South Texas Ship Agency (10)",
+    "Texas Maritime Services Inc. (10)"
+   ],
+   "note": "ship agents have no entity record"
+  }
+ ],
+ "unused_registry_entries": [
+  {
+   "class": "vessel",
+   "registry": "vessels.json",
+   "count": 5,
+   "ids": [
+    "237849102 MT Sennar Gulf",
+    "308594720 MT Narvik Pioneer",
+    "308728401 MV Gulf Petcoke",
+    "352047183 MT Gulf Chemist",
+    "352739841 MV Nueces Trader"
+   ],
+   "note": "registered vessel has no AIS track"
+  },
+  {
+   "class": "aircraft",
+   "registry": "aircraft_registry.json",
+   "count": 16,
+   "ids": [
+    "a00301 CLIPPER01 (ACF-CIVIL-001)",
+    "a00302 SKW7730 (ACF-CIVIL-002)",
+    "a44001 TXDPS44 (ACF-LAW-001)",
+    "a44002 TXDPS302 (ACF-LAW-002)",
+    "a55001 LIFESTAR1 (ACF-MED-001)",
+    "a55002 LIFESTAR2 (ACF-MED-002)",
+    "a66001 KIII7 (ACF-NEWS-001)",
+    "a77001 EAGLE424 (ACF-SURVEY-001)",
+    "a88001 AERO221 (ACF-EVAC-001)",
+    "ae0202 RCH441 (ACF-USAF-002)",
+    "ae0203 RCH801 (ACF-USAF-003)",
+    "ae2a01 NAV851 (ACF-NAVY-001)",
+    "ae2a02 NAV097 (ACF-NAVY-002)",
+    "ae3c01 CCAD31 (ACF-ARMY-001)",
+    "ae3c02 WARLORD01 (ACF-ARMY-002)",
+    "ae4d01 RIDGELINE01 (ACF-ARMY-ROT-001)"
+   ],
+   "note": "registered aircraft has no ADS-B track"
+  },
+  {
+   "class": "facility",
+   "registry": "facility_registry.json",
+   "count": 10,
+   "ids": [
+    "FAC-BCMC-002 Bay City Medical Center",
+    "FAC-CBECC-004 Coastal Bend Emergency Communications Center",
+    "FAC-CCUC-003 Calallen Community Urgent Care",
+    "FAC-MED-010 Nueces County Medical Examiner's Office",
+    "FAC-SHLT-005 American Bank Center — Emergency Shelter",
+    "FAC-SHLT-006 Calallen High School — Emergency Shelter",
+    "FAC-SHLT-007 Robstown ISD Gymnasium — Emergency Shelter",
+    "FAC-SHLT-008 Victoria Civic Center — Red Cross Shelter",
+    "FAC-SHLT-009 San Antonio City Shelter Network",
+    "FAC-SRMC-001 Shoreline Regional Medical Center"
+   ],
+   "note": "facility id never used by any stream"
+  },
+  {
+   "class": "host",
+   "registry": "gw_host_registry.json",
+   "count": 25,
+   "ids": [
+    "GW-BACKUP-PWR",
+    "GW-DCS-WTP",
+    "GW-DMZ-01",
+    "GW-ENG-01",
+    "GW-HIST-01",
+    "GW-HIST-02",
+    "GW-HMI-01",
+    "GW-HMI-02",
+    "GW-HMI-03",
+    "GW-IT-04",
+    "GW-IT-AD",
+    "GW-IT-EDR",
+    "GW-IT-EMAIL",
+    "GW-IT-FW",
+    "GW-MAXIMO",
+    "GW-NET-MON",
+    "GW-OT-FW",
+    "GW-PSTN-01",
+    "GW-RTU-PWR-01",
+    "GW-RTU-PWR-02",
+    "GW-RTU-WTP-01",
+    "GW-RTU-WW-01",
+    "GW-SCADA-SRV",
+    "HOST-911-01",
+    "HOST-PORTAL-01"
+   ],
+   "note": "registered host never appears in SIEM alerts"
+  },
+  {
+   "class": "host",
+   "registry": "gw_host_registry.json (IPs)",
+   "count": 18,
+   "ids": [
+    "10.100.5.10 HOST-911-01",
+    "10.72.1.22 GW-ENG-01",
+    "10.72.2.11 GW-HMI-02",
+    "10.72.2.12 GW-HMI-03",
+    "10.72.2.50 GW-BACKUP-PWR",
+    "10.72.3.12 GW-RTU-PWR-02",
+    "10.72.3.30 GW-RTU-WW-01",
+    "10.72.4.1 GW-OT-FW",
+    "10.72.4.50 GW-NET-MON",
+    "10.72.4.88 GW-DMZ-01",
+    "192.168.100.1 GW-IT-FW",
+    "192.168.100.10 GW-IT-EDR",
+    "192.168.100.20 GW-IT-EMAIL",
+    "192.168.100.44 GW-IT-04",
+    "192.168.100.5 GW-IT-AD",
+    "192.168.100.80 GW-PSTN-01",
+    "192.168.100.90 GW-MAXIMO",
+    "Public cloud (AWS us-east-1) HOST-PORTAL-01"
+   ],
+   "note": "registered IP never seen in SIEM or Zeek logs"
+  },
+  {
+   "class": "social_account",
+   "registry": "personas.json",
+   "count": 24,
+   "ids": [
+    "@CCBeachPhotog (SOC-019, resident)",
+    "@CCHopeVolunteers (SOC-032, resident)",
+    "@CCVetCenter_Vol (SOC-017, resident)",
+    "@CoastalDefendersOrg (SOC-029, observer)",
+    "@CoastlinePublicRadio (SOC-008, media)",
+    "@DisasterRespProf (SOC-030, observer)",
+    "@ElGolfoTaqueriaCC (SOC-018, resident)",
+    "@EnergyMktWatcher (SOC-024, industry)",
+    "@FishingWithFelipeCC (SOC-012, resident)",
+    "@GulfWatchPatriot (SOC-021, misinformation)",
+    "@GulfwaterMaritime (SOC-009, media)",
+    "@Harborline6News (SOC-007, media)",
+    "@IslandMomCC (SOC-016, resident)",
+    "@JourdanWattsNRG (SOC-028, observer)",
+    "@KNCB1480 (SOC-010, media)",
+    "@MarSecResearcher (SOC-027, industry)",
+    "@MaraEstormesMX (SOC-031, observer)",
+    "@MargaritaLozano_CC (SOC-011, resident)",
+    "@OldCCPete (SOC-015, resident)",
+    "@PortWatcherAIS (SOC-025, industry)",
+    "@RosendoCastilloTX (SOC-013, resident)",
+    "@SandraBeachCC (SOC-014, resident)",
+    "@ShrimpBoatRuiz (SOC-026, industry)",
+    "@TexasCoastAlert (SOC-023, misinformation)"
+   ],
+   "note": "persona has no posts in the feed"
+  },
+  {
+   "class": "drone",
+   "registry": "drone_operators.json",
+   "count": 7,
+   "ids": [
+    "DRN-OP-005",
+    "DRN-OP-006",
+    "DRN-OP-007",
+    "DRN-OP-008",
+    "DRN-OP-009",
+    "DRN-OP-010",
+    "DRN-OP-UNK"
+   ],
+   "note": ""
+  },
+  {
+   "class": "cad_unit",
+   "registry": "cad_units.json",
+   "count": 48,
+   "ids": [
+    "3B1",
+    "3B2",
+    "3B3",
+    "3S1",
+    "7B1",
+    "7B2",
+    "7B3",
+    "7S1",
+    "BC-1",
+    "BC-2",
+    "BC-3",
+    "CAPT-1",
+    "DET-1",
+    "DET-2",
+    "DET-3",
+    "ECC-1",
+    "FC-1",
+    "K9-1",
+    "K9-2",
+    "L-10",
+    "L-7",
+    "LT-1",
+    "LT-2",
+    "M-15",
+    "M-16",
+    "M-17",
+    "M-18",
+    "M-19",
+    "M-20",
+    "MCI-1",
+    "MCI-2",
+    "NCSO-201",
+    "NCSO-202",
+    "NCSO-CHEM1",
+    "NCSO-EV1",
+    "NCSO-LT1",
+    "NCSO-S1",
+    "NCSO-S2",
+    "PIO-1",
+    "SWAT-1",
+    "SWAT-2",
+    "T-3",
+    "T-5",
+    "TRF-1",
+    "TRF-2",
+    "TRF-3",
+    "WTR-1",
+    "WTR-5"
+   ],
+   "note": ""
+  },
+  {
+   "class": "organisation",
+   "registry": "entity_registry.json",
+   "count": 3,
+   "ids": [
+    "BANK-CC-003 Bay Area Savings & Loan",
+    "CON-SHELL-002 Lone Star Premier Construction LLC",
+    "GW-ENT-005 FastTrack Claims Services LLC"
+   ],
+   "note": "entity appears in neither claims nor transactions"
+  },
+  {
+   "class": "infrastructure",
+   "registry": "infrastructure_assets.json",
+   "count": 10,
+   "ids": [
+    "INF-CC-2027-00001",
+    "INF-CC-2027-00002",
+    "INF-CC-2027-00003",
+    "INF-CC-2027-00004",
+    "INF-CC-2027-00005",
+    "INF-CC-2027-00006",
+    "INF-CC-2027-00007",
+    "INF-CC-2027-00008",
+    "INF-CC-2027-00009",
+    "INF-CC-2027-00010"
+   ],
+   "note": "critical-infrastructure ids never appear in damage_assessment.csv (which uses CC-#####)"
+  },
+  {
+   "class": "terminal",
+   "registry": "terminal_registry.json",
+   "count": 2,
+   "ids": [
+    "TERM-09 Aransas Pass Entrance Channel Jetties",
+    "TERM-10 Naval Air Station Corpus Christi — Fuel Farm"
+   ],
+   "note": ""
+  }
+ ],
+ "id_conflicts": [
+  {
+   "class": "vessel",
+   "severity": "high",
+   "issue": "MMSI 308594720 carries different names",
+   "detail": {
+    "vessels.json": "MT Narvik Pioneer",
+    "vessel_arrivals": "MV Narvik Pioneer FEMA2"
+   }
+  },
+  {
+   "class": "vessel",
+   "severity": "low",
+   "issue": "MMSI 352091748 carries different names",
+   "detail": {
+    "vessels.json": "MT Ostrel Bay",
+    "AIS": "Ostrel Bay",
+    "vessel_arrivals": "MT Ostrel Bay",
+    "map VMETA": "Ostrel Bay"
+   }
+  },
+  {
+   "class": "vessel",
+   "severity": "low",
+   "issue": "MMSI 538847203 carries different names",
+   "detail": {
+    "vessels.json": "MT Kalvora Star",
+    "AIS": "Kalvora Star",
+    "vessel_arrivals": "MT Kalvora Star",
+    "map VMETA": "Kalvora Star"
+   }
+  },
+  {
+   "class": "vessel",
+   "severity": "medium",
+   "issue": "scenario entity VSL-0012 'MV Gulf Provider' keyed by placeholder Vessel; MMSI-SYN-0101",
+   "detail": {
+    "real_mmsi_in_data": [
+     "308441927"
+    ],
+    "vessel_id_in_vessels_json": [
+     "VSL-003"
+    ]
+   }
+  },
+  {
+   "class": "vessel",
+   "severity": "high",
+   "issue": "scenario entity VSL-0019 'Sealift ro-ro ship (synthetic name)' keyed by placeholder Vessel; MMSI-SYN-0119",
+   "detail": {
+    "real_mmsi_in_data": "no MMSI anywhere",
+    "vessel_id_in_vessels_json": null
+   }
+  },
+  {
+   "class": "vessel",
+   "severity": "medium",
+   "issue": "scenario entity VSL-0031 'MV Halcyon Drift' keyed by placeholder Vessel; MMSI-SYN-0131, IMO-SYN-9031",
+   "detail": {
+    "real_mmsi_in_data": [
+     "416002317"
+    ],
+    "vessel_id_in_vessels_json": null
+   }
+  },
+  {
+   "class": "vessel",
+   "severity": "medium",
+   "issue": "scenario entity VSL-0457 'FV Pelican Ridge' keyed by placeholder Vessel; MMSI-SYN-0457",
+   "detail": {
+    "real_mmsi_in_data": [
+     "338724891"
+    ],
+    "vessel_id_in_vessels_json": [
+     "VSL-004"
+    ]
+   }
+  },
+  {
+   "class": "vessel",
+   "severity": "high",
+   "issue": "scenario entity BRG-0044 'Barge 44' keyed by placeholder Barge; MMSI-SYN-0444",
+   "detail": {
+    "real_mmsi_in_data": "no MMSI anywhere",
+    "vessel_id_in_vessels_json": null
+   }
+  },
+  {
+   "class": "vessel",
+   "severity": "medium",
+   "issue": "scenario entity VSL-0041 'MT Kalvora Star' keyed by placeholder Vessel: crude tanker; MMSI-SYN-0141",
+   "detail": {
+    "real_mmsi_in_data": [
+     "538847203"
+    ],
+    "vessel_id_in_vessels_json": [
+     "VSL-001"
+    ]
+   }
+  },
+  {
+   "class": "vessel",
+   "severity": "medium",
+   "issue": "scenario entity VSL-0042 'MT Ostrel Bay' keyed by placeholder Vessel: crude tanker; MMSI-SYN-0142",
+   "detail": {
+    "real_mmsi_in_data": [
+     "352091748"
+    ],
+    "vessel_id_in_vessels_json": [
+     "VSL-002"
+    ]
+   }
+  },
+  {
+   "class": "vessel",
+   "severity": "medium",
+   "issue": "scenario entity VSL-0077 'Tug Corrin Bay' keyed by placeholder Vessel: harbor tug; MMSI-SYN-0177",
+   "detail": {
+    "real_mmsi_in_data": [
+     "338190847"
+    ],
+    "vessel_id_in_vessels_json": [
+     "VSL-005"
+    ]
+   }
+  },
+  {
+   "class": "vessel",
+   "severity": "medium",
+   "issue": "two id schemes for vessels",
+   "detail": {
+    "vessels.json": [
+     "VSL-001",
+     "VSL-002",
+     "VSL-003",
+     "VSL-004",
+     "..."
+    ],
+    "entities.json": [
+     "BRG-0044",
+     "VSL-0012",
+     "VSL-0019",
+     "VSL-0031",
+     "VSL-0041",
+     "VSL-0042",
+     "VSL-0077",
+     "VSL-0457"
+    ]
+   }
+  },
+  {
+   "class": "aircraft",
+   "severity": "high",
+   "issue": "icao24 ae1b01 callsign differs",
+   "detail": {
+    "registry": "GUNSMOKE01",
+    "adsb": "GNSMOKE1"
+   }
+  },
+  {
+   "class": "aircraft",
+   "severity": "high",
+   "issue": "icao24 ae1b02 callsign differs",
+   "detail": {
+    "registry": "GUNSMOKE02",
+    "adsb": "GNSMOKE2"
+   }
+  },
+  {
+   "class": "aircraft",
+   "severity": "low",
+   "issue": "icao24 ae0a01 described differently",
+   "detail": {
+    "registry": "CGNR6540 MH-60T Jayhawk / US Coast Guard Air Station Corpus Christi",
+    "map": "USCG MH-60T CGNR6540",
+    "adsb_callsign": "CGNR6540"
+   }
+  },
+  {
+   "class": "aircraft",
+   "severity": "low",
+   "issue": "icao24 ae0a02 described differently",
+   "detail": {
+    "registry": "CGNR6541 MH-60T Jayhawk / US Coast Guard Air Station Corpus Christi",
+    "map": "USCG MH-60T CGNR6541",
+    "adsb_callsign": "CGNR6541"
+   }
+  },
+  {
+   "class": "aircraft",
+   "severity": "low",
+   "issue": "icao24 ae0a03 described differently",
+   "detail": {
+    "registry": "CGAS2306 HC-144A Ocean Sentry / US Coast Guard Air Station Corpus Christi",
+    "map": "USCG HC-144A CGAS2306",
+    "adsb_callsign": "CGAS2306"
+   }
+  },
+  {
+   "class": "aircraft",
+   "severity": "low",
+   "issue": "icao24 ae1b01 described differently",
+   "detail": {
+    "registry": "GUNSMOKE01 UH-60L Black Hawk / Texas National Guard — 36th Combat Aviation Brigade",
+    "map": "GUNSMOKE01 (DoD ISR)",
+    "adsb_callsign": "GNSMOKE1"
+   }
+  },
+  {
+   "class": "aircraft",
+   "severity": "low",
+   "issue": "icao24 ae1b02 described differently",
+   "detail": {
+    "registry": "GUNSMOKE02 UH-60L Black Hawk / Texas National Guard — 36th Combat Aviation Brigade",
+    "map": "GUNSMOKE02 (DoD ISR)",
+    "adsb_callsign": "GNSMOKE2"
+   }
+  },
+  {
+   "class": "aircraft",
+   "severity": "low",
+   "issue": "icao24 ae0201 described differently",
+   "detail": {
+    "registry": "SYN41 C-17A Globemaster III / USAF / AMC",
+    "map": "SYN41 (Exercise Control)",
+    "adsb_callsign": "SYN41"
+   }
+  },
+  {
+   "class": "facility",
+   "severity": "high",
+   "issue": "hospital id schemes do not overlap at all",
+   "detail": {
+    "facility_registry.json": [
+     "FAC-SRMC-001 Shoreline Regional Medical Center",
+     "FAC-BCMC-002 Bay City Medical Center",
+     "FAC-CCUC-003 Calallen Community Urgent Care",
+     "FAC-MED-010 Nueces County Medical Examiner's Office"
+    ],
+    "ed_visits/hospital_capacity": [
+     "FAC-CCMC-001",
+     "FAC-DRMC-001",
+     "FAC-SHBA-001",
+     "FAC-SHE-001",
+     "FAC-SHE-002",
+     "FAC-SHMC-001",
+     "FAC-UCG-001"
+    ],
+    "places.json": "FAC-HOS-xx (placeholder)",
+    "news": "Shoreline Regional Medical Center, Bay City Medical Center"
+   }
+  },
+  {
+   "class": "host",
+   "severity": "high",
+   "issue": "three naming schemes for the same utility systems",
+   "detail": {
+    "gw_host_registry.json": [
+     "GW-BACKUP-PWR",
+     "GW-DCS-WTP",
+     "GW-DMZ-01",
+     "GW-ENG-01",
+     "GW-HIST-01",
+     "GW-HIST-02",
+     "GW-HMI-01",
+     "GW-HMI-02",
+     "..."
+    ],
+    "siem_alerts HostName": [
+     "FAC-UTL-01-P3",
+     "FW-EDGE-01",
+     "GW-SRV-DC-01",
+     "GW-SRV-FILE-01",
+     "GW-SRV-PRINT-01",
+     "GW-WS-IT-10",
+     "GW-WS-IT-11",
+     "GW-WS-IT-12",
+     "GW-WS-IT-14",
+     "GW-WS-IT-15",
+     "GW-WS-IT-20",
+     "GW-WS-IT-30",
+     "GW-WS-IT-44",
+     "GW-WS-IT-50",
+     "HIST-SRV-01",
+     "RTU-BKP",
+     "RTU-PUMP",
+     "RTU-PWR",
+     "SCADA-SRV-01",
+     "SUB-02",
+     "VPN-GW-01"
+    ],
+    "gridwater assets systems": [
+     "GW-SYS-HST-01",
+     "GW-SYS-JMP-01",
+     "GW-SYS-RTU-01",
+     "GW-SYS-RTU-02",
+     "GW-SYS-RTU-03",
+     "GW-SYS-RTU-04",
+     "GW-SYS-RTU-05",
+     "GW-SYS-SCADA-01"
+    ],
+    "restricted names in rules": [
+     "GW-WS-IT-04",
+     "GW-SYS-JMP-01"
+    ],
+    "registry has": [
+     "GW-ENG-01",
+     "GW-IT-04"
+    ]
+   }
+  },
+  {
+   "class": "ot_asset",
+   "severity": "high",
+   "issue": "pump / generator ids differ between scenario, telemetry and maintenance",
+   "detail": {
+    "entities.json": [
+     "EQP-1101 to 1104",
+     "EQP-2201"
+    ],
+    "work_orders": [
+     "GW-GEN-01",
+     "GW-PP1-PUMP1",
+     "GW-PP1-PUMP2",
+     "GW-PP1-PUMP3",
+     "GW-PP1-PUMP4"
+    ],
+    "historian": [
+     "GW-FAC-GEN-01",
+     "GW-FAC-UTL-01",
+     "GW-FAC-WTR-01",
+     "GW-FAC-WTR-02",
+     "GW-FAC-WTR-03"
+    ],
+    "answer key T1 expects": "EQP-1102, EQP-1103 by serial; SUP-0219 order"
+   }
+  },
+  {
+   "class": "social_account",
+   "severity": "low",
+   "issue": "character CHR-080 @coasttruthtx",
+   "detail": {
+    "in personas.json": true,
+    "posts in feed": 28,
+    "mentions in feed": 23
+   }
+  },
+  {
+   "class": "social_account",
+   "severity": "high",
+   "issue": "character CHR-081 @gulfwatchpatriot",
+   "detail": {
+    "in personas.json": true,
+    "posts in feed": 0,
+    "mentions in feed": 0
+   }
+  },
+  {
+   "class": "social_account",
+   "severity": "high",
+   "issue": "media accounts in the feed do not match the eight fictional outlets",
+   "detail": {
+    "feed": [
+     "BaysideLedger",
+     "CallerTimes",
+     "KIIITVNews"
+    ],
+    "personas.json media": [
+     "@BaysideLedger",
+     "@CoastlinePublicRadio",
+     "@GulfwaterMaritime",
+     "@Harborline6News",
+     "@KNCB1480"
+    ],
+    "note": "CallerTimes and KIIITVNews are real-world outlet names; Harborline6News/CoastlinePublicRadio/GulfwaterMaritime/KNCB1480 never post"
+   }
+  },
+  {
+   "class": "drone",
+   "severity": "high",
+   "issue": "hostile drone has four different ids",
+   "detail": {
+    "entities.json": "UAS-SYN-01 to 06",
+    "drone_operators.json": "DRN-OP-UNK",
+    "drone telemetry": "UNKNOWN-001 / FLT-UNKNOWN-0001",
+    "ADS-B": "icao24 7c1234 callsign UNKNOWN",
+    "aircraft_registry.json": "absent"
+   }
+  },
+  {
+   "class": "finance",
+   "severity": "high",
+   "issue": "fraud-ring identifiers differ between scenario and streams",
+   "detail": {
+    "entities.json": [
+     "SYN-PER-700001 to 700006",
+     "BANK-SYN-71, 72, 73",
+     "SUP-0388 Vantorra",
+     "SUP-0390 Quellmar"
+    ],
+    "insurance_claims claimant ids": [
+     "PER-LPH-*"
+    ],
+    "entity_registry.json": [
+     "CON-SHELL-001 RV Restoration LLC",
+     "CON-SHELL-002",
+     "BANK-CC-001..003",
+     "GW-ENT-005 FastTrack (GW- prefix clashes with gridwater GW-ENT-01..03)"
+    ],
+    "transactions": {
+     "RV Restoration LLC": 8,
+     "Quellmar Fuel Partners": 4,
+     "Vantorra Restoration LLC": 3
+    }
+   }
+  },
+  {
+   "class": "terminal",
+   "severity": "medium",
+   "issue": "TERM-01 exists as a Place and as a registry terminal; other terminals are not places",
+   "detail": {
+    "places.json": [
+     "ANC-OFF",
+     "TANK-0390",
+     "TERM-01",
+     "ENT-01"
+    ],
+    "terminal_registry.json": [
+     "TERM-01",
+     "TERM-02",
+     "TERM-03",
+     "TERM-04",
+     "TERM-05",
+     "TERM-06",
+     "TERM-07",
+     "TERM-08",
+     "TERM-09",
+     "TERM-10"
+    ]
+   }
+  },
+  {
+   "class": "utility",
+   "severity": "high",
+   "issue": "the utility operator has several names",
+   "detail": {
+    "GridWater": {
+     "stories": 0,
+     "public_facts": 0,
+     "msel": 0,
+     "registries": 9,
+     "social_media/_consolidated/tweets.jsonl": 462,
+     "network_logs/siem_alerts.csv": 0,
+     "public_health/eas_broadcasts.csv": 5,
+     "maintenance/work_orders.csv": 0
+    },
+    "CBPWA / Coastal Bend Power": {
+     "stories": 52,
+     "public_facts": 31,
+     "msel": 46,
+     "registries": 9,
+     "social_media/_consolidated/tweets.jsonl": 0,
+     "network_logs/siem_alerts.csv": 0,
+     "public_health/eas_broadcasts.csv": 0,
+     "maintenance/work_orders.csv": 0
+    },
+    "AEP Texas": {
+     "stories": 1,
+     "public_facts": 0,
+     "msel": 0,
+     "registries": 1,
+     "social_media/_consolidated/tweets.jsonl": 2,
+     "network_logs/siem_alerts.csv": 0,
+     "public_health/eas_broadcasts.csv": 0,
+     "maintenance/work_orders.csv": 0
+    },
+    "ERCOT": {
+     "stories": 6,
+     "public_facts": 1,
+     "msel": 8,
+     "registries": 2,
+     "social_media/_consolidated/tweets.jsonl": 0,
+     "network_logs/siem_alerts.csv": 0,
+     "public_health/eas_broadcasts.csv": 0,
+     "maintenance/work_orders.csv": 0
+    },
+    "City water department": {
+     "stories": 32,
+     "public_facts": 2,
+     "msel": 1,
+     "registries": 0,
+     "social_media/_consolidated/tweets.jsonl": 4,
+     "network_logs/siem_alerts.csv": 0,
+     "public_health/eas_broadcasts.csv": 0,
+     "maintenance/work_orders.csv": 0
+    }
+   }
+  },
+  {
+   "class": "registry_file",
+   "severity": "high",
+   "issue": "two different copies of aircraft_registry.json",
+   "detail": "DIVERGED (entity_catalogs 11790 bytes vs top-level 16371 bytes)"
+  },
+  {
+   "class": "registry_file",
+   "severity": "high",
+   "issue": "two different copies of drone_operators.json",
+   "detail": "DIVERGED (entity_catalogs 13129 bytes vs top-level 12265 bytes)"
+  },
+  {
+   "class": "registry_file",
+   "severity": "high",
+   "issue": "two different copies of entity_registry.json",
+   "detail": "DIVERGED (entity_catalogs 13143 bytes vs top-level 12142 bytes)"
+  },
+  {
+   "class": "registry_file",
+   "severity": "high",
+   "issue": "two different copies of facility_registry.json",
+   "detail": "DIVERGED (entity_catalogs 13416 bytes vs top-level 13003 bytes)"
+  },
+  {
+   "class": "registry_file",
+   "severity": "high",
+   "issue": "two different copies of gw_host_registry.json",
+   "detail": "DIVERGED (entity_catalogs 19990 bytes vs top-level 19977 bytes)"
+  },
+  {
+   "class": "registry_file",
+   "severity": "high",
+   "issue": "two different copies of infrastructure_assets.json",
+   "detail": "DIVERGED (entity_catalogs 17059 bytes vs top-level 14214 bytes)"
+  },
+  {
+   "class": "registry_file",
+   "severity": "high",
+   "issue": "two different copies of sensor_registry.json",
+   "detail": "DIVERGED (entity_catalogs 11298 bytes vs top-level 12377 bytes)"
+  },
+  {
+   "class": "registry_file",
+   "severity": "high",
+   "issue": "two different copies of terminal_registry.json",
+   "detail": "DIVERGED (entity_catalogs 8419 bytes vs top-level 11837 bytes)"
+  },
+  {
+   "class": "scenario_layer",
+   "severity": "medium",
+   "issue": "gridwater layer files are empty while GW-EVT events live in the base MSEL",
+   "detail": {
+    "scenarios/gridwater/00_scenario/msel.json": 0,
+    "GW-EVT in 00_scenario/msel.json": 24,
+    "README": "still says 'no events, facts or state yet'"
+   }
+  }
+ ],
+ "unregistered_named_entities": [
+  {
+   "name": "Coast Guard",
+   "kind": "organisation/facility/programme",
+   "mentions": 145,
+   "examples": [
+    "NWS-M057-01",
+    "NWS-M050-01",
+    "NWS-M049-01",
+    "NWS-M036-02",
+    "NWS-M031-02",
+    "NWS-M028-01"
+   ],
+   "exists_elsewhere_as": "places.json FAC-USCG-01"
+  },
+  {
+   "name": "O.N. Stevens Water Treatment Plant",
+   "kind": "organisation/facility/programme",
+   "mentions": 48,
+   "examples": [
+    "NWS-M060-01",
+    "NWS-M046-01",
+    "NWS-M041-01",
+    "NWS-P000-03",
+    "NWS-P001-11",
+    "NWS-P001-07"
+   ],
+   "exists_elsewhere_as": "places.json FAC-UTL-01"
+  },
+  {
+   "name": "Unified Command",
+   "kind": "organisation/facility/programme",
+   "mentions": 44,
+   "examples": [
+    "NWS-P001-03",
+    "NWS-P001-04",
+    "NWS-P001-05",
+    "NWS-P002-01",
+    "NWS-P002-02",
+    "NWS-P002-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Nueces County Office of Emergency Management",
+   "kind": "organisation/facility/programme",
+   "mentions": 39,
+   "examples": [
+    "NWS-M055-01",
+    "NWS-M054-01",
+    "NWS-M054-02",
+    "NWS-M040-02",
+    "NWS-M035-02",
+    "NWS-M005-02"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-025 affiliation (text only)"
+  },
+  {
+   "name": "Coast Guard Sector Corpus Christi",
+   "kind": "organisation/facility/programme",
+   "mentions": 32,
+   "examples": [
+    "NWS-M003-01",
+    "NWS-M003-05",
+    "NWS-M002-08",
+    "NWS-M002-06",
+    "NWS-P000-04",
+    "NWS-P000-06"
+   ],
+   "exists_elsewhere_as": "places.json FAC-USCG-01"
+  },
+  {
+   "name": "FEMA Region",
+   "kind": "organisation/facility/programme",
+   "mentions": 31,
+   "examples": [
+    "NWS-P000-11",
+    "NWS-P004-08",
+    "NWS-P004-06",
+    "NWS-P008-07",
+    "NWS-P008-06",
+    "NWS-P021-05"
+   ],
+   "exists_elsewhere_as": "drone_operators.json DRN-OP-001"
+  },
+  {
+   "name": "Harbor Bridge",
+   "kind": "organisation/facility/programme",
+   "mentions": 26,
+   "examples": [
+    "NWS-M056-01",
+    "NWS-M043-01",
+    "NWS-P000-04",
+    "NWS-P001-01",
+    "NWS-P001-10",
+    "NWS-P001-02"
+   ],
+   "exists_elsewhere_as": "places.json FAC-INF-01"
+  },
+  {
+   "name": "Continental Wire",
+   "kind": "organisation/facility/programme",
+   "mentions": 26,
+   "examples": [
+    "NWS-M040-01",
+    "NWS-M003-05",
+    "NWS-M001-03",
+    "NWS-P000-05",
+    "NWS-P001-04",
+    "NWS-P004-06"
+   ],
+   "exists_elsewhere_as": "outlets.json OUT-06"
+  },
+  {
+   "name": "Nueces Bay Causeway",
+   "kind": "organisation/facility/programme",
+   "mentions": 25,
+   "examples": [
+    "NWS-M059-02",
+    "NWS-M056-01",
+    "NWS-M043-01",
+    "NWS-M001-08",
+    "NWS-P001-01",
+    "NWS-P001-10"
+   ],
+   "exists_elsewhere_as": "places.json FAC-INF-01"
+  },
+  {
+   "name": "Texas General Land Office",
+   "kind": "organisation/facility/programme",
+   "mentions": 25,
+   "examples": [
+    "NWS-P001-03",
+    "NWS-P001-04",
+    "NWS-P002-01",
+    "NWS-P003-05",
+    "NWS-P004-07",
+    "NWS-P004-03"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-028 affiliation (text only)"
+  },
+  {
+   "name": "Vantorra Restoration",
+   "kind": "organisation/facility/programme",
+   "mentions": 25,
+   "examples": [
+    "NWS-P010-01",
+    "NWS-P011-02",
+    "NWS-P012-01",
+    "NWS-P076-03",
+    "NWS-P077-03",
+    "NWS-P078-01"
+   ],
+   "exists_elsewhere_as": "entities.json SUP-0388"
+  },
+  {
+   "name": "Lanternfish Energy Analytics",
+   "kind": "organisation/facility/programme",
+   "mentions": 24,
+   "examples": [
+    "NWS-M057-02",
+    "NWS-M036-01",
+    "NWS-M032-01",
+    "NWS-M028-01",
+    "NWS-M022-01",
+    "NWS-M014-01"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-064 affiliation (text only)"
+  },
+  {
+   "name": "National Weather Service",
+   "kind": "organisation/facility/programme",
+   "mentions": 24,
+   "examples": [
+    "NWS-M021-01",
+    "NWS-M021-02",
+    "NWS-M016-01",
+    "NWS-M010-01",
+    "NWS-M007-01",
+    "NWS-M007-02"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-029 affiliation (text only)"
+  },
+  {
+   "name": "Texas A&M University-Corpus Christi",
+   "kind": "organisation/facility/programme",
+   "mentions": 23,
+   "examples": [
+    "NWS-P001-05",
+    "NWS-P002-01",
+    "NWS-P003-06",
+    "NWS-P009-04",
+    "NWS-P021-01",
+    "NWS-P021-06"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-060 affiliation (text only)"
+  },
+  {
+   "name": "Texas Department of State Health Services",
+   "kind": "organisation/facility/programme",
+   "mentions": 22,
+   "examples": [
+    "NWS-P004-03",
+    "NWS-P004-04",
+    "NWS-P004-05",
+    "NWS-P004-06",
+    "NWS-P005-03",
+    "NWS-P005-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Cybersecurity and Infrastructure Security Agency",
+   "kind": "organisation/facility/programme",
+   "mentions": 16,
+   "examples": [
+    "NWS-P006-03",
+    "NWS-P023-01",
+    "NWS-P023-05",
+    "NWS-P029-05",
+    "NWS-P087-01",
+    "NWS-P105-01"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-030 affiliation (text only)"
+  },
+  {
+   "name": "Hargrove Bait & Tackle",
+   "kind": "organisation/facility/programme",
+   "mentions": 15,
+   "examples": [
+    "NWS-M059-01",
+    "NWS-M038-01",
+    "NWS-M037-01",
+    "NWS-M018-01",
+    "NWS-M009-01",
+    "NWS-P001-06"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-042 affiliation (text only)"
+  },
+  {
+   "name": "U.S. Coast Guard",
+   "kind": "organisation/facility/programme",
+   "mentions": 13,
+   "examples": [
+    "NWS-M001-07",
+    "NWS-P001-09",
+    "NWS-P002-07",
+    "NWS-P002-09",
+    "NWS-P003-07",
+    "NWS-P005-06"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Naval Air Station Joint Reserve Base Fort Worth",
+   "kind": "organisation/facility/programme",
+   "mentions": 12,
+   "examples": [
+    "NWS-M004-01",
+    "NWS-M004-02",
+    "NWS-M004-03",
+    "NWS-M004-04",
+    "NWS-M003-04",
+    "NWS-M003-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Coastal Bend Power",
+   "kind": "organisation/facility/programme",
+   "mentions": 11,
+   "examples": [
+    "NWS-P013-03",
+    "NWS-P014-04",
+    "NWS-P020-04",
+    "NWS-P035-05",
+    "PUB-203",
+    "GW-PUB-101"
+   ],
+   "exists_elsewhere_as": "gridwater assets GW-ENT-01"
+  },
+  {
+   "name": "Water Authority",
+   "kind": "organisation/facility/programme",
+   "mentions": 10,
+   "examples": [
+    "NWS-P013-03",
+    "NWS-P014-04",
+    "NWS-P020-04",
+    "NWS-P035-05",
+    "PUB-203",
+    "GW-PUB-101"
+   ],
+   "exists_elsewhere_as": "gridwater assets GW-ENT-01"
+  },
+  {
+   "name": "Defense Department",
+   "kind": "organisation/facility/programme",
+   "mentions": 9,
+   "examples": [
+    "NWS-M058-01",
+    "NWS-M048-01",
+    "NWS-M048-02",
+    "NWS-M047-02",
+    "NWS-M036-02",
+    "NWS-P008-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Aviation Administration",
+   "kind": "organisation/facility/programme",
+   "mentions": 8,
+   "examples": [
+    "NWS-M002-09",
+    "NWS-P009-03",
+    "NWS-P015-04",
+    "NWS-P039-02",
+    "NWS-P040-02",
+    "NWS-P047-01"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-034 affiliation (text only)"
+  },
+  {
+   "name": "FEMA Individual Assistance",
+   "kind": "organisation/facility/programme",
+   "mentions": 8,
+   "examples": [
+    "NWS-P000-11",
+    "NWS-P060-06",
+    "NWS-P090-05",
+    "NWS-P090-06",
+    "NWS-P090-07",
+    "PUB-141"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Task Force",
+   "kind": "organisation/facility/programme",
+   "mentions": 7,
+   "examples": [
+    "NWS-P001-08",
+    "NWS-P002-09",
+    "NWS-P003-07",
+    "NWS-P005-06",
+    "PUB-171",
+    "PUB-131"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Coastal Bend Public Works Authority",
+   "kind": "organisation/facility/programme",
+   "mentions": 7,
+   "examples": [
+    "NWS-P023-05",
+    "NWS-P028-04",
+    "NWS-P028-05",
+    "NWS-P029-05",
+    "NWS-P035-04",
+    "NWS-P036-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Navy Region Southeast",
+   "kind": "organisation/facility/programme",
+   "mentions": 7,
+   "examples": [
+    "NWS-P046-01",
+    "NWS-P046-02",
+    "NWS-P046-04",
+    "NWS-P096-01",
+    "NWS-P096-02",
+    "NWS-P112-01"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-032 affiliation (text only)"
+  },
+  {
+   "name": "Nueces County Sheriff's Office",
+   "kind": "organisation/facility/programme",
+   "mentions": 6,
+   "examples": [
+    "NWS-M001-08",
+    "NWS-P001-09",
+    "NWS-P001-08",
+    "NWS-P002-09",
+    "NWS-P003-07",
+    "NWS-P005-06"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Elena Ruiz of Coast Guard Sector Corpus Christi",
+   "kind": "organisation/facility/programme",
+   "mentions": 6,
+   "examples": [
+    "NWS-M001-11",
+    "NWS-P044-08",
+    "NWS-P046-02",
+    "NWS-P052-01",
+    "NWS-P058-01",
+    "NWS-P112-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Unified Command of the Coast Guard",
+   "kind": "organisation/facility/programme",
+   "mentions": 6,
+   "examples": [
+    "NWS-P006-02",
+    "NWS-P013-01",
+    "NWS-P030-01",
+    "NWS-P043-02",
+    "NWS-P044-06",
+    "NWS-P063-01"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Water Districts",
+   "kind": "organisation/facility/programme",
+   "mentions": 6,
+   "examples": [
+    "NWS-P018-03",
+    "NWS-P039-03",
+    "PUB-143",
+    "PUB-162",
+    "PUB-145",
+    "PUB-164"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "FBI's Houston Division",
+   "kind": "organisation/facility/programme",
+   "mentions": 6,
+   "examples": [
+    "NWS-P046-01",
+    "NWS-P047-01",
+    "NWS-P047-03",
+    "NWS-P104-02",
+    "NWS-P104-03",
+    "NWS-P113-01"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "JFK Causeway",
+   "kind": "organisation/facility/programme",
+   "mentions": 5,
+   "examples": [
+    "NWS-M059-01",
+    "NWS-M043-01",
+    "NWS-M038-01",
+    "NWS-M011-01",
+    "NWS-M008-02"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Corpus Christi Fire Department",
+   "kind": "organisation/facility/programme",
+   "mentions": 5,
+   "examples": [
+    "NWS-P001-09",
+    "NWS-P001-08",
+    "NWS-P002-09",
+    "NWS-P003-07",
+    "PUB-172"
+   ],
+   "exists_elsewhere_as": "drone_operators.json DRN-OP-003"
+  },
+  {
+   "name": "Emergency Management Agency",
+   "kind": "organisation/facility/programme",
+   "mentions": 5,
+   "examples": [
+    "NWS-P004-08",
+    "NWS-P004-06",
+    "NWS-P021-05",
+    "NWS-P066-03",
+    "GW-PUB-005"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Nueces County Commissioners Court",
+   "kind": "organisation/facility/programme",
+   "mentions": 5,
+   "examples": [
+    "NWS-P029-04",
+    "NWS-P045-08",
+    "NWS-P045-09",
+    "NWS-P045-11",
+    "PUB-146"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Operation Sandbar",
+   "kind": "organisation/facility/programme",
+   "mentions": 5,
+   "examples": [
+    "NWS-P030-08",
+    "NWS-P040-04",
+    "NWS-P090-06",
+    "NWS-P119-03",
+    "PUB-210"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "U.S. Attorney's Office for the Southern District of Texas",
+   "kind": "organisation/facility/programme",
+   "mentions": 5,
+   "examples": [
+    "NWS-P045-10",
+    "NWS-P090-06",
+    "NWS-P104-02",
+    "NWS-P105-03",
+    "NWS-P114-01"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Coast Guard's National Pollution Funds Center",
+   "kind": "organisation/facility/programme",
+   "mentions": 5,
+   "examples": [
+    "NWS-P063-01",
+    "NWS-P063-02",
+    "NWS-P094-01",
+    "NWS-P109-01",
+    "PUB-082"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Nueces County and FEMA",
+   "kind": "organisation/facility/programme",
+   "mentions": 5,
+   "examples": [
+    "NWS-P092-04",
+    "NWS-P093-01",
+    "NWS-P095-01",
+    "NWS-P099-01",
+    "NWS-P109-01"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Nueces County Emergency Management Coordinator",
+   "kind": "organisation/facility/programme",
+   "mentions": 4,
+   "examples": [
+    "NWS-M003-06",
+    "NWS-M002-07",
+    "PUB-171",
+    "PUB-131"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Division of Emergency Management",
+   "kind": "organisation/facility/programme",
+   "mentions": 4,
+   "examples": [
+    "NWS-M003-06",
+    "NWS-P002-08",
+    "NWS-P032-04",
+    "PUB-151"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Parks and Wildlife and the Texas Department of State Health Services",
+   "kind": "organisation/facility/programme",
+   "mentions": 4,
+   "examples": [
+    "NWS-P007-03",
+    "NWS-P009-04",
+    "NWS-P057-01",
+    "NWS-P104-01"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "City of Corpus Christi Water Department",
+   "kind": "organisation/facility/programme",
+   "mentions": 4,
+   "examples": [
+    "NWS-P030-06",
+    "NWS-P042-04",
+    "PUB-190",
+    "GW-PUB-001"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Landmark Pacific Holdings LLC",
+   "kind": "organisation/facility/programme",
+   "mentions": 4,
+   "examples": [
+    "NWS-P090-05",
+    "NWS-P090-06",
+    "NWS-P090-07",
+    "PUB-210"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "National Weather Service Corpus Christi",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-M002-10",
+    "NWS-P000-13",
+    "NWS-P000-09"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-029 affiliation (text only)"
+  },
+  {
+   "name": "Anchor and Rotor Weekly",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-M002-09",
+    "NWS-P007-05",
+    "NWS-P015-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Air Station Corpus Christi",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P001-08",
+    "NWS-P007-05",
+    "PUB-170"
+   ],
+   "exists_elsewhere_as": "places.json FAC-DOD-01"
+  },
+  {
+   "name": "National Guard",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P001-08",
+    "NWS-P002-08",
+    "NWS-P060-04"
+   ],
+   "exists_elsewhere_as": "aircraft_registry.json ACF-TXNG-001 operator"
+  },
+  {
+   "name": "Coast Guard Federal On-Scene Coordinator",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P002-07",
+    "NWS-P004-07",
+    "NWS-P007-06"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Commission on Environmental Quality",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P002-07",
+    "NWS-P002-10",
+    "PUB-190"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "National Response Center",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P002-07",
+    "NWS-P007-05",
+    "PUB-121"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "EPA Region",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P002-10",
+    "NWS-P002-11",
+    "NWS-P060-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Nueces County Medical Examiner",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P002-09",
+    "NWS-P005-06",
+    "NWS-P007-05"
+   ],
+   "exists_elsewhere_as": "facility_registry.json FAC-MED-010"
+  },
+  {
+   "name": "Oil Spill Liability Trust Fund",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P004-07",
+    "NWS-P007-06",
+    "NWS-P012-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Marine Safety Unit Corpus Christi",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P006-05",
+    "NWS-P016-03",
+    "PUB-120"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Richard King High School",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P008-07",
+    "PUB-140",
+    "PUB-142"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Coast Guard District",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P012-04",
+    "NWS-P016-03",
+    "PUB-173"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Boil Water Notice",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P012-07",
+    "PUB-163",
+    "PUB-145"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Corpus Christi Water Districts",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P013-04",
+    "NWS-P023-06",
+    "PUB-163"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Department of Insurance",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P025-04",
+    "NWS-P030-07",
+    "PUB-211"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas TDEM",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P029-04",
+    "NWS-P032-04",
+    "NWS-P038-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Insurance Council of Texas",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P030-07",
+    "PUB-211",
+    "PUB-214"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Department of Public Safety",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P030-08",
+    "NWS-P090-05",
+    "PUB-213"
+   ],
+   "exists_elsewhere_as": "aircraft_registry.json ACF-LAW-001 operator"
+  },
+  {
+   "name": "FastDry Coastal LLC",
+   "kind": "organisation/facility/programme",
+   "mentions": 3,
+   "examples": [
+    "NWS-P090-05",
+    "NWS-P090-06",
+    "PUB-210"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Navy Family Accountability and Assessment System",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-M027-01",
+    "NWS-M020-01"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "National Hurricane Center",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-M003-06",
+    "NWS-P000-09"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "U.S. Coast Guard Sector Corpus Christi",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-M002-08",
+    "NWS-P007-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Vessel Traffic Service Corpus Christi",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-M002-08",
+    "NWS-M001-07"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Corpus Christi International Airport",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-M002-09",
+    "PUB-180"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Department of Transportation",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-M001-08",
+    "NWS-P001-09"
+   ],
+   "exists_elsewhere_as": "drone_operators.json DRN-OP-002"
+  },
+  {
+   "name": "Coast Guard Sector Corpus Christi Commander",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P002-07",
+    "PUB-121"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Army National Guard",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P002-08",
+    "PUB-113"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Coast Guard Sector Corpus Christi and the Texas General Land",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P002-05",
+    "PUB-029"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Corpus Christi Fire Chief Alberto Rinc",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P002-09",
+    "NWS-P005-06"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Coast Guard FOSC",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P004-07",
+    "NWS-P007-06"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Parks and Wildlife Department",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P004-09",
+    "NWS-P020-03"
+   ],
+   "exists_elsewhere_as": "drone_operators.json DRN-OP-009"
+  },
+  {
+   "name": "Mar College East",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P008-07",
+    "PUB-142"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "FEMA's Individual Assistance",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P008-06",
+    "NWS-P057-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Water Services Director James Thornton",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P012-06",
+    "NWS-P012-07"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Nueces County Language Access Services",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P013-05",
+    "PUB-144"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Public Utility Commission of Texas and ERCOT",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P014-04",
+    "NWS-P020-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "FEMA's Mitigation Assessment Team",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P015-03",
+    "PUB-112"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "CBP Air and Marine Operations",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P015-04",
+    "PUB-182"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Air Force",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P015-04",
+    "NWS-P034-02"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Department of Licensing and Regulation",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P015-05",
+    "NWS-P040-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Cyber Command",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P021-04",
+    "GW-PUB-003"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Department of Homeland Security",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P021-05",
+    "NWS-P032-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Disaster Response Team",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P025-04",
+    "PUB-211"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Department of Insurance Commissioner",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P030-08",
+    "PUB-214"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Electric Reliability Council of Texas",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P032-04",
+    "NWS-P038-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "CBPWA and CISA",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P036-04",
+    "NWS-P045-10"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Office of the Texas Attorney General",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P040-04",
+    "PUB-153"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Hurricane Rafael Aerial Assessment Program",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P045-07",
+    "PUB-113"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Lisa Moreau of Navy Region Southeast",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P046-07",
+    "NWS-P058-05"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-032 affiliation (text only)"
+  },
+  {
+   "name": "Defense Logistics Agency",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P047-02",
+    "NWS-P093-02"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Call FEMA",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P066-01",
+    "NWS-P067-02"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Sofia Marquez of Texas A&M University-Corpus Christi",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P090-02",
+    "NWS-P092-03"
+   ],
+   "exists_elsewhere_as": "characters.json CHR-060 affiliation (text only)"
+  },
+  {
+   "name": "FEMA IA",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P090-05",
+    "PUB-212"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "National Center for Disaster Fraud",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "NWS-P090-05",
+    "NWS-P090-06"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Port Authority Director of Operations Julio Sandoval-Reeves",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "PUB-120",
+    "PUB-123"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "NOAA Hurricane Hunter",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "PUB-110",
+    "PUB-121"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "United States Coast Guard Sector Corpus Christi",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "PUB-121",
+    "PUB-122"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "FEMA Federal Coordinating Officer Dennis Park",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "PUB-111",
+    "PUB-113"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Texas Commission on Environmental Quality and EPA Region",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "PUB-192",
+    "PUB-195"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "US Coast Guard",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "PUB-172",
+    "PUB-181"
+   ],
+   "exists_elsewhere_as": "places.json FAC-USCG-01"
+  },
+  {
+   "name": "FBI Corpus Christi Resident Agency",
+   "kind": "organisation/facility/programme",
+   "mentions": 2,
+   "examples": [
+    "PUB-205",
+    "PUB-210"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Marisol Fuentes-Vega",
+   "kind": "person (not a character)",
+   "mentions": 5,
+   "examples": [
+    "NWS-P013-03",
+    "NWS-P045-09",
+    "NWS-P045-11",
+    "PUB-144",
+    "PUB-146"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Delia Sandoval",
+   "kind": "person (not a character)",
+   "mentions": 3,
+   "examples": [
+    "NWS-P012-05",
+    "NWS-P018-02",
+    "NWS-P021-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Patricia Odom",
+   "kind": "person (not a character)",
+   "mentions": 3,
+   "examples": [
+    "NWS-P014-04",
+    "NWS-P015-03",
+    "NWS-P020-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Raymond Okafor-Williams",
+   "kind": "person (not a character)",
+   "mentions": 2,
+   "examples": [
+    "NWS-M002-07",
+    "PUB-131"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Angela Dombrowski",
+   "kind": "person (not a character)",
+   "mentions": 2,
+   "examples": [
+    "NWS-P000-11",
+    "NWS-P004-08"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Annette Vogt",
+   "kind": "person (not a character)",
+   "mentions": 2,
+   "examples": [
+    "NWS-P002-10",
+    "NWS-P002-11"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "James Thornton",
+   "kind": "person (not a character)",
+   "mentions": 2,
+   "examples": [
+    "NWS-P012-06",
+    "NWS-P012-07"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Tara Espinoza",
+   "kind": "person (not a character)",
+   "mentions": 2,
+   "examples": [
+    "NWS-P029-04",
+    "NWS-P045-08"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Patricia Escamilla-Voss",
+   "kind": "person (not a character)",
+   "mentions": 2,
+   "examples": [
+    "PUB-133",
+    "PUB-134"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Nueces County Sheriff",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-M001-08"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Jennifer Mendoza",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-M001-07"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Patricia Cabrera",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P000-12"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Darlene Osei",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P001-08"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Alberto Rincón",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P002-09"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "James Oduya-Park",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P002-09"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Dave Breckman",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P002-09"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Warren Nichols",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P003-08"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Francisco Ibanez-Reyes",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P004-07"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Lorena Espinoza-Watts",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P004-08"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Ramon Flores-Alva",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P004-09"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Thomas Whitfield",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P007-06"
+   ],
+   "exists_elsewhere_as": "shares a surname with a character"
+  },
+  {
+   "name": "Marcus Webb",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P008-06"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Alicia Moreno",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P008-06"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Elena Murillo",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P012-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Rosa Guerrero",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P013-03"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Cassandra Trejo-Morales",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P013-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Barry Nguyen",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P014-04"
+   ],
+   "exists_elsewhere_as": "shares a surname with a character"
+  },
+  {
+   "name": "Dena Carver",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P015-04"
+   ],
+   "exists_elsewhere_as": "shares a surname with a character"
+  },
+  {
+   "name": "Ramona Fierro",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P015-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Chandra Mitchell",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P015-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Jason Park",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P016-03"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Anita Subramaniam",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P018-02"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "David Reyes",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P021-04"
+   ],
+   "exists_elsewhere_as": "shares a surname with a character"
+  },
+  {
+   "name": "Carla Dominguez",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P021-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Sara Okonkwo",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P021-06"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Renata Obasi",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P023-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Denny Ramirez",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P028-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "María Elena Flores",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P030-06"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Rosa Vásquez",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P030-07"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Carlos Medrano",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P042-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Priscilla Reyes",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P042-04"
+   ],
+   "exists_elsewhere_as": "shares a surname with a character"
+  },
+  {
+   "name": "Beatriz Soria",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P042-05"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Isabel Noriega",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P045-09"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Dolores Vasquez",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P057-04"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Angela Reyes",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P060-04"
+   ],
+   "exists_elsewhere_as": "shares a surname with a character"
+  },
+  {
+   "name": "Veronica Limas",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P090-07"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Adriana Flores",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "NWS-P090-07"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Dennis Park",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "PUB-111"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Delia Ostrowski-Han",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "PUB-172"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Rafael Montoya-Chen",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "PUB-112"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Operations Julio Sandoval-Reeves",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "PUB-123"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Brandon Lacey-Rhinehart",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "PUB-152"
+   ],
+   "exists_elsewhere_as": null
+  },
+  {
+   "name": "Renaldo Carver-Mossbach",
+   "kind": "person (not a character)",
+   "mentions": 1,
+   "examples": [
+    "PUB-210"
+   ],
+   "exists_elsewhere_as": null
+  }
+ ],
+ "graph_gaps": {
+  "real_world_org_names_in_synthetic_data": {
+   "Flint Hills": {
+    "06_data_streams/terminal_registry.json": 3,
+    "05_other_sources/supply/cargo_manifest.csv": 33,
+    "05_other_sources/supply/vessel_arrivals.csv": 1
+   },
+   "Buckeye": {
+    "06_data_streams/terminal_registry.json": 2,
+    "05_other_sources/supply/cargo_manifest.csv": 21
+   },
+   "NuStar": {
+    "05_other_sources/supply/cargo_manifest.csv": 17
+   },
+   "Maxus": {
+    "06_data_streams/terminal_registry.json": 2,
+    "05_other_sources/supply/cargo_manifest.csv": 16
+   },
+   "Caller[- ]?Times": {
+    "05_other_sources/social_media/_consolidated/tweets.jsonl": 112
+   },
+   "KIII": {
+    "06_data_streams/aircraft_registry.json": 4,
+    "05_other_sources/social_media/_consolidated/tweets.jsonl": 62,
+    "09_shared_state_timeline/viewer/map_view.html": 2
+   },
+   "KRIS": {
+    "09_shared_state_timeline/viewer/map_view.html": 2
+   },
+   "Sinai": {
+    "05_other_sources/social_media/_consolidated/tweets.jsonl": 9
+   },
+   "Driscoll": {
+    "09_shared_state_timeline/viewer/map_view.html": 2
+   },
+   "Valero": {
+    "05_other_sources/supply/cargo_manifest.csv": 12
+   },
+   "Citgo": {
+    "05_other_sources/supply/cargo_manifest.csv": 10
+   },
+   "AEP Texas": {
+    "06_data_streams/infrastructure_assets.json": 1,
+    "05_other_sources/social_media/_consolidated/tweets.jsonl": 2,
+    "09_shared_state_timeline/viewer/map_view.html": 1,
+    "news stories": 1
+   },
+   "American Bank Center": {
+    "06_data_streams/facility_registry.json": 1
+   }
+  },
+  "unregistered_named_entity_counts": {
+   "organisations_facilities_programmes_vessels": 107,
+   "people_not_characters": 53
+  },
+  "spot_checks": [
+   {
+    "name": "Rendal Terminals",
+    "stories": 38,
+    "facts": 1,
+    "scenario_entity": "ORG-0950",
+    "place": "TERM-01",
+    "registries": [
+     "sensor_registry.json",
+     "terminal_registry.json",
+     "vessels.json"
+    ]
+   },
+   {
+    "name": "Brightwake Marine Systems",
+    "stories": 11,
+    "facts": 1,
+    "scenario_entity": "SUP-0455",
+    "place": null,
+    "registries": [
+     "gw_host_registry.json"
+    ]
+   },
+   {
+    "name": "Vantorra Restoration",
+    "stories": 34,
+    "facts": 4,
+    "scenario_entity": "SUP-0388",
+    "place": null,
+    "registries": []
+   },
+   {
+    "name": "Quellmar Fuel Partners",
+    "stories": 28,
+    "facts": 4,
+    "scenario_entity": "SUP-0390",
+    "place": null,
+    "registries": [
+     "terminal_registry.json"
+    ]
+   },
+   {
+    "name": "Brannoch Maritime Holdings",
+    "stories": 7,
+    "facts": 1,
+    "scenario_entity": "ORG-0901",
+    "place": null,
+    "registries": []
+   },
+   {
+    "name": "Kalvora Star",
+    "stories": 34,
+    "facts": 1,
+    "scenario_entity": "VSL-0041",
+    "place": null,
+    "registries": [
+     "sensor_registry.json",
+     "terminal_registry.json",
+     "vessels.json"
+    ]
+   },
+   {
+    "name": "Ostrel Bay",
+    "stories": 34,
+    "facts": 1,
+    "scenario_entity": "VSL-0042",
+    "place": null,
+    "registries": [
+     "sensor_registry.json",
+     "terminal_registry.json",
+     "vessels.json"
+    ]
+   },
+   {
+    "name": "Corrin Bay",
+    "stories": 45,
+    "facts": 1,
+    "scenario_entity": "VSL-0077",
+    "place": null,
+    "registries": [
+     "terminal_registry.json",
+     "vessels.json"
+    ]
+   },
+   {
+    "name": "Pelican Ridge",
+    "stories": 10,
+    "facts": 1,
+    "scenario_entity": "VSL-0457",
+    "place": null,
+    "registries": [
+     "vessels.json"
+    ]
+   },
+   {
+    "name": "Gulf Provider",
+    "stories": 34,
+    "facts": 3,
+    "scenario_entity": "VSL-0012",
+    "place": null,
+    "registries": [
+     "terminal_registry.json",
+     "vessels.json"
+    ]
+   },
+   {
+    "name": "Shoreline Regional Medical Center",
+    "stories": 7,
+    "facts": 5,
+    "scenario_entity": null,
+    "place": null,
+    "registries": [
+     "aircraft_registry.json",
+     "facility_registry.json"
+    ]
+   },
+   {
+    "name": "Bay City Medical Center",
+    "stories": 6,
+    "facts": 5,
+    "scenario_entity": null,
+    "place": null,
+    "registries": [
+     "aircraft_registry.json",
+     "facility_registry.json"
+    ]
+   },
+   {
+    "name": "Unified Command",
+    "stories": 70,
+    "facts": 3,
+    "scenario_entity": null,
+    "place": null,
+    "registries": [
+     "aircraft_registry.json",
+     "sensor_registry.json",
+     "terminal_registry.json"
+    ]
+   },
+   {
+    "name": "FastDry Coastal",
+    "stories": 8,
+    "facts": 2,
+    "scenario_entity": null,
+    "place": null,
+    "registries": []
+   },
+   {
+    "name": "Operation Sandbar",
+    "stories": 8,
+    "facts": 1,
+    "scenario_entity": null,
+    "place": null,
+    "registries": []
+   },
+   {
+    "name": "Coastal Bend Power and Water Authority",
+    "stories": 5,
+    "facts": 7,
+    "scenario_entity": null,
+    "place": null,
+    "registries": [
+     "gw_host_registry.json"
+    ]
+   },
+   {
+    "name": "Texas General Land Office",
+    "stories": 35,
+    "facts": 2,
+    "scenario_entity": null,
+    "place": null,
+    "registries": []
+   },
+   {
+    "name": "Coast Guard Sector Corpus Christi",
+    "stories": 46,
+    "facts": 6,
+    "scenario_entity": null,
+    "place": "FAC-USCG-01",
+    "registries": [
+     "personas.json",
+     "terminal_registry.json"
+    ]
+   },
+   {
+    "name": "Nueces County Office of Emergency Management",
+    "stories": 39,
+    "facts": 1,
+    "scenario_entity": null,
+    "place": null,
+    "registries": [
+     "personas.json"
+    ]
+   },
+   {
+    "name": "Halcyon Drift",
+    "stories": 0,
+    "facts": 0,
+    "scenario_entity": "VSL-0031",
+    "place": null,
+    "registries": []
+   },
+   {
+    "name": "Gulf Relief Logistics",
+    "stories": 12,
+    "facts": 0,
+    "scenario_entity": "SUP-0102",
+    "place": null,
+    "registries": []
+   },
+   {
+    "name": "Delta Pumps",
+    "stories": 5,
+    "facts": 0,
+    "scenario_entity": "SUP-0219",
+    "place": null,
+    "registries": []
+   }
+  ],
+  "node_types_present": {
+   "Outlet": 8,
+   "Place": 29,
+   "Arc": 19,
+   "Thread": 22,
+   "Entity": 32,
+   "Event": 182,
+   "PublicFact": 176,
+   "Character": 58,
+   "Story": 518
+  },
+  "edge_types_present": {
+   "AFFILIATED_WITH": 35,
+   "BASED_AT": 48,
+   "APPEARS_IN_ARC": 122,
+   "RELATES_TO": 51,
+   "IN_ARC": 1226,
+   "SOURCED_FROM": 232,
+   "ABOUT_PLACE": 1273,
+   "REVEALS_EVENT": 142,
+   "PART_OF_THREAD": 291,
+   "AT_PLACE": 82,
+   "SURFACES_THREAD": 28,
+   "PUBLISHED_BY": 518,
+   "WRITTEN_BY": 528,
+   "QUOTES": 631,
+   "CITES_FACT": 2170,
+   "NEXT_IN_ARC": 1007,
+   "DEPICTS_EVENT": 1460,
+   "RELATED_TO": 1121,
+   "FOLLOWS_UP": 284,
+   "MENTIONS": 23
+  },
+  "node_types_missing": [
+   "Organization",
+   "Vessel",
+   "Aircraft",
+   "Facility",
+   "Terminal",
+   "Sensor",
+   "Host",
+   "ScadaTag",
+   "SocialAccount",
+   "DroneFlight",
+   "ResponseUnit",
+   "DataStream",
+   "DataRecord/Observation",
+   "AnswerKeyPath",
+   "Equipment",
+   "Contract",
+   "Claim",
+   "Alert",
+   "Neighborhood/Tract/ZIP"
+  ],
+  "entity_nodes": 32,
+  "entity_edge_types": {
+   "AFFILIATED_WITH": 12,
+   "AT_PLACE": 9
+  },
+  "orphans": [
+   {
+    "id": "GAUGE-14",
+    "type": "Place",
+    "label": "NOAA tide gauge on Corpus Christi Bay"
+   },
+   {
+    "id": "WQ-01 to WQ-06",
+    "type": "Place",
+    "label": "Water-quality sondes in the ship channel, Nueces Bay and Corpus Christi Bay"
+   },
+   {
+    "id": "VSL-0012",
+    "type": "Entity",
+    "label": "MV Gulf Provider"
+   },
+   {
+    "id": "VSL-0019",
+    "type": "Entity",
+    "label": "Sealift ro-ro ship (synthetic name)"
+   },
+   {
+    "id": "VSL-0457",
+    "type": "Entity",
+    "label": "FV Pelican Ridge"
+   },
+   {
+    "id": "BRG-0044",
+    "type": "Entity",
+    "label": "Barge 44"
+   },
+   {
+    "id": "ACF-0201",
+    "type": "Entity",
+    "label": "Military airlift"
+   },
+   {
+    "id": "ACF-0301",
+    "type": "Entity",
+    "label": "Civil relief charter"
+   },
+   {
+    "id": "EQP-1101 to 1104",
+    "type": "Entity",
+    "label": "O.N. Stevens pumps P-1 to P-4 (scenario IDs)"
+   },
+   {
+    "id": "EQP-2201",
+    "type": "Entity",
+    "label": "NAS Corpus Christi backup generator"
+   },
+   {
+    "id": "SYN-PER-700001 to 700006",
+    "type": "Entity",
+    "label": "Fraud ring claimants"
+   },
+   {
+    "id": "SOC-ACC-5001 to 5040",
+    "type": "Entity",
+    "label": "Coordinated network"
+   },
+   {
+    "id": "BANK-SYN-71, 72, 73",
+    "type": "Entity",
+    "label": "Receiving accounts"
+   },
+   {
+    "id": "DOM-SYN-01",
+    "type": "Entity",
+    "label": "Lure domain"
+   },
+   {
+    "id": "VSL-0041",
+    "type": "Entity",
+    "label": "MT Kalvora Star"
+   },
+   {
+    "id": "VSL-0042",
+    "type": "Entity",
+    "label": "MT Ostrel Bay"
+   },
+   {
+    "id": "UAS-SYN-01 to 06",
+    "type": "Entity",
+    "label": "Overflight drones"
+   },
+   {
+    "id": "DEV-01, DEV-02",
+    "type": "Entity",
+    "label": "Channel devices"
+   },
+   {
+    "id": "JAM-01",
+    "type": "Entity",
+    "label": "GPS interference transmitter"
+   }
+  ],
+  "orphan_cause": "build_graph.py creates Entity nodes but only ever links them when a character's affiliation.org_id points at one (AFFILIATED_WITH). MSEL events, facts and stories carry no entity ids (events have place_ids only), and several entity ids are ranges ('EQP-1101 to 1104', 'SOC-ACC-5001 to 5040') that nothing can reference. GAUGE-14 and 'WQ-01 to WQ-06' are Place nodes no event, fact or story lists.",
+  "events_without_place": [
+   "EVT-0104",
+   "EVT-0108",
+   "EVT-2201",
+   "EVT-0201",
+   "GW-EVT-001",
+   "GW-EVT-101",
+   "EVT-0202",
+   "EVT-1901",
+   "EVT-1902",
+   "EVT-1903",
+   "EVT-1201",
+   "EVT-1501",
+   "GW-EVT-002",
+   "GW-EVT-102",
+   "EVT-1401",
+   "EVT-1502",
+   "EVT-1904",
+   "EVT-2101",
+   "EVT-1202",
+   "EVT-1402",
+   "EVT-1905",
+   "GW-EVT-003",
+   "GW-EVT-103",
+   "EVT-1101",
+   "EVT-1503",
+   "EVT-1601",
+   "EVT-2102",
+   "GW-EVT-104",
+   "EVT-1203",
+   "EVT-1403",
+   "EVT-1701",
+   "EVT-2103",
+   "EVT-1102",
+   "EVT-1204",
+   "EVT-1301",
+   "EVT-1404",
+   "EVT-1504",
+   "EVT-1602",
+   "EVT-1702",
+   "EVT-2104",
+   "GW-EVT-004",
+   "EVT-1103",
+   "EVT-1205",
+   "EVT-1206",
+   "EVT-1302",
+   "EVT-1703",
+   "EVT-1906",
+   "EVT-2001",
+   "EVT-2002",
+   "EVT-2105",
+   "EVT-0309",
+   "EVT-1405",
+   "EVT-1603",
+   "EVT-1704",
+   "EVT-2003",
+   "EVT-2004",
+   "EVT-2005",
+   "EVT-1104",
+   "EVT-1705",
+   "EVT-2202",
+   "EVT-2006",
+   "EVT-1207",
+   "EVT-1505",
+   "EVT-1604",
+   "EVT-1706",
+   "EVT-1303",
+   "EVT-1707",
+   "EVT-1708",
+   "EVT-2007",
+   "GW-EVT-005",
+   "EVT-1105",
+   "EVT-1304",
+   "EVT-1406",
+   "EVT-1605",
+   "GW-EVT-006",
+   "GW-EVT-105",
+   "GW-EVT-007",
+   "EVT-1106",
+   "EVT-1305",
+   "EVT-1407",
+   "EVT-2106",
+   "GW-EVT-008",
+   "EVT-1408",
+   "EVT-1907",
+   "GW-EVT-009",
+   "EVT-1107",
+   "EVT-1606",
+   "EVT-2203",
+   "GW-EVT-010",
+   "EVT-1607",
+   "GW-EVT-011",
+   "GW-EVT-106",
+   "EVT-2008",
+   "EVT-1306",
+   "EVT-1409",
+   "EVT-1506",
+   "EVT-2107",
+   "GW-EVT-012",
+   "EVT-1608",
+   "GW-EVT-013",
+   "EVT-1507",
+   "EVT-1307",
+   "EVT-1609",
+   "GW-EVT-014",
+   "GW-EVT-107",
+   "EVT-1208",
+   "EVT-1410",
+   "EVT-1508",
+   "EVT-1908",
+   "EVT-2204",
+   "GW-EVT-015",
+   "GW-EVT-108",
+   "EVT-1509",
+   "EVT-2108",
+   "GW-EVT-016",
+   "EVT-1108",
+   "EVT-1308",
+   "EVT-1411",
+   "EVT-0415",
+   "EVT-2205",
+   "EVT-1610",
+   "EVT-2009",
+   "EVT-2206",
+   "EVT-0503",
+   "EVT-0504",
+   "EVT-0507",
+   "EVT-2207",
+   "EVT-0603"
+  ],
+  "events_without_thread": [],
+  "events_without_public_fact": [
+   "EVT-0101",
+   "EVT-0102",
+   "EVT-0105",
+   "EVT-0106",
+   "EVT-0107",
+   "EVT-2201",
+   "EVT-0209",
+   "GW-EVT-001",
+   "GW-EVT-101",
+   "EVT-1901",
+   "EVT-1902",
+   "EVT-1903",
+   "EVT-1201",
+   "EVT-1501",
+   "GW-EVT-002",
+   "GW-EVT-102",
+   "EVT-1401",
+   "EVT-1502",
+   "EVT-1904",
+   "EVT-2101",
+   "EVT-1202",
+   "GW-EVT-003",
+   "GW-EVT-103",
+   "EVT-0208",
+   "EVT-1101",
+   "EVT-1503",
+   "EVT-1601",
+   "GW-EVT-104",
+   "EVT-1403",
+   "EVT-1701",
+   "EVT-1204",
+   "EVT-1504",
+   "EVT-1702",
+   "GW-EVT-004",
+   "EVT-1103",
+   "EVT-1205",
+   "EVT-1906",
+   "EVT-2001",
+   "EVT-2002",
+   "EVT-1405",
+   "EVT-2005",
+   "EVT-1705",
+   "EVT-1505",
+   "EVT-1604",
+   "EVT-1303",
+   "GW-EVT-005",
+   "EVT-1105",
+   "EVT-1304",
+   "EVT-1605",
+   "GW-EVT-006",
+   "GW-EVT-105",
+   "GW-EVT-007",
+   "EVT-1106",
+   "GW-EVT-008",
+   "GW-EVT-009",
+   "EVT-1606",
+   "GW-EVT-010",
+   "GW-EVT-011",
+   "EVT-1306",
+   "EVT-1409",
+   "GW-EVT-012",
+   "GW-EVT-013",
+   "EVT-1609",
+   "GW-EVT-014",
+   "EVT-0403",
+   "EVT-0404",
+   "GW-EVT-015",
+   "GW-EVT-016",
+   "EVT-2205",
+   "EVT-2206",
+   "EVT-0504"
+  ],
+  "events_without_story": [
+   "EVT-0101",
+   "EVT-0102",
+   "EVT-0105",
+   "EVT-0106",
+   "EVT-0107",
+   "EVT-2201",
+   "EVT-0209",
+   "GW-EVT-001",
+   "GW-EVT-101",
+   "EVT-1901",
+   "EVT-1902",
+   "EVT-1903",
+   "EVT-1201",
+   "EVT-1501",
+   "GW-EVT-002",
+   "GW-EVT-102",
+   "EVT-1401",
+   "EVT-1502",
+   "EVT-1904",
+   "EVT-2101",
+   "EVT-1202",
+   "EVT-1905",
+   "GW-EVT-003",
+   "GW-EVT-103",
+   "EVT-0208",
+   "EVT-1101",
+   "EVT-1503",
+   "EVT-1601",
+   "GW-EVT-104",
+   "EVT-1403",
+   "EVT-1701",
+   "EVT-1102",
+   "EVT-1204",
+   "EVT-1301",
+   "EVT-1404",
+   "EVT-1504",
+   "EVT-1702",
+   "GW-EVT-004",
+   "EVT-1103",
+   "EVT-1205",
+   "EVT-1206",
+   "EVT-1302",
+   "EVT-1703",
+   "EVT-1906",
+   "EVT-2001",
+   "EVT-2002",
+   "EVT-2105",
+   "EVT-1405",
+   "EVT-1603",
+   "EVT-2003",
+   "EVT-2004",
+   "EVT-2005",
+   "EVT-1104",
+   "EVT-1705",
+   "EVT-2006",
+   "EVT-1207",
+   "EVT-1505",
+   "EVT-1604",
+   "EVT-1706",
+   "EVT-1303",
+   "EVT-1707",
+   "EVT-1708",
+   "EVT-2007",
+   "GW-EVT-005",
+   "EVT-1105",
+   "EVT-1304",
+   "EVT-1605",
+   "GW-EVT-006",
+   "GW-EVT-105",
+   "GW-EVT-007",
+   "EVT-1106",
+   "EVT-1305",
+   "EVT-2106",
+   "GW-EVT-008",
+   "EVT-1907",
+   "GW-EVT-009",
+   "EVT-1107",
+   "EVT-1606",
+   "EVT-2203",
+   "GW-EVT-010",
+   "GW-EVT-011",
+   "GW-EVT-106",
+   "EVT-2008",
+   "EVT-1306",
+   "EVT-1409",
+   "GW-EVT-012",
+   "GW-EVT-013",
+   "EVT-1507",
+   "EVT-1307",
+   "EVT-1609",
+   "GW-EVT-014",
+   "GW-EVT-107",
+   "EVT-1208",
+   "EVT-1410",
+   "EVT-1508",
+   "EVT-1908",
+   "EVT-2204",
+   "EVT-0403",
+   "EVT-0404",
+   "GW-EVT-015",
+   "GW-EVT-108",
+   "EVT-1509",
+   "EVT-2108",
+   "GW-EVT-016",
+   "EVT-1108",
+   "EVT-1308",
+   "EVT-2205",
+   "EVT-1610",
+   "EVT-2009",
+   "EVT-2206",
+   "EVT-2207"
+  ],
+  "facts_cited_by_no_story": [],
+  "facts_without_event": [
+   "PUB-001",
+   "PUB-003",
+   "PUB-004",
+   "PUB-005",
+   "PUB-007",
+   "PUB-008",
+   "PUB-010",
+   "PUB-011",
+   "PUB-012",
+   "PUB-014",
+   "PUB-017",
+   "PUB-101",
+   "PUB-021",
+   "PUB-102",
+   "PUB-022",
+   "PUB-031",
+   "PUB-036",
+   "PUB-037",
+   "PUB-103",
+   "PUB-045",
+   "PUB-048",
+   "PUB-051",
+   "PUB-106",
+   "GW-PUB-001",
+   "PUB-052",
+   "PUB-053",
+   "GW-PUB-002",
+   "PUB-057",
+   "GW-PUB-003",
+   "GW-PUB-004",
+   "PUB-104",
+   "GW-PUB-005",
+   "GW-PUB-006",
+   "GW-PUB-007",
+   "PUB-072",
+   "PUB-105",
+   "PUB-089",
+   "PUB-090",
+   "PUB-092",
+   "PUB-094",
+   "PUB-100"
+  ],
+  "facts_without_place": [
+   "PUB-009",
+   "PUB-013",
+   "PUB-015",
+   "PUB-017",
+   "PUB-140",
+   "PUB-180",
+   "PUB-200",
+   "PUB-120",
+   "PUB-201",
+   "PUB-110",
+   "PUB-130",
+   "PUB-141",
+   "PUB-160",
+   "PUB-202",
+   "PUB-170",
+   "PUB-203",
+   "PUB-033",
+   "PUB-121",
+   "PUB-161",
+   "PUB-171",
+   "PUB-190",
+   "PUB-191",
+   "PUB-034",
+   "PUB-131",
+   "PUB-212",
+   "PUB-111",
+   "PUB-192",
+   "PUB-041",
+   "PUB-172",
+   "PUB-122",
+   "PUB-173",
+   "PUB-193",
+   "PUB-047",
+   "PUB-142",
+   "PUB-174",
+   "PUB-132",
+   "PUB-143",
+   "PUB-204",
+   "PUB-144",
+   "PUB-052",
+   "GW-PUB-002",
+   "PUB-112",
+   "PUB-181",
+   "PUB-213",
+   "PUB-054",
+   "PUB-183",
+   "PUB-162",
+   "PUB-194",
+   "GW-PUB-101",
+   "PUB-150",
+   "PUB-205",
+   "GW-PUB-003",
+   "PUB-163",
+   "GW-PUB-004",
+   "GW-PUB-005",
+   "PUB-133",
+   "GW-PUB-102",
+   "PUB-123",
+   "PUB-145",
+   "PUB-211",
+   "PUB-214",
+   "PUB-151",
+   "PUB-182",
+   "GW-PUB-006",
+   "GW-PUB-103",
+   "PUB-152",
+   "PUB-153",
+   "PUB-206",
+   "PUB-113",
+   "PUB-134",
+   "PUB-146",
+   "GW-PUB-104",
+   "PUB-071",
+   "PUB-072",
+   "PUB-164",
+   "PUB-195",
+   "PUB-084",
+   "PUB-085",
+   "PUB-086",
+   "PUB-090",
+   "PUB-210",
+   "PUB-097",
+   "PUB-098"
+  ],
+  "facts_without_source_character": [
+   "PUB-140",
+   "PUB-180",
+   "PUB-200",
+   "PUB-120",
+   "PUB-201",
+   "PUB-110",
+   "PUB-130",
+   "PUB-141",
+   "PUB-160",
+   "PUB-202",
+   "PUB-170",
+   "PUB-203",
+   "PUB-121",
+   "PUB-161",
+   "PUB-171",
+   "PUB-190",
+   "PUB-191",
+   "PUB-131",
+   "PUB-212",
+   "PUB-111",
+   "PUB-192",
+   "PUB-172",
+   "PUB-122",
+   "PUB-173",
+   "PUB-193",
+   "PUB-142",
+   "PUB-174",
+   "PUB-132",
+   "PUB-143",
+   "PUB-204",
+   "GW-PUB-001",
+   "PUB-144",
+   "GW-PUB-002",
+   "PUB-112",
+   "PUB-181",
+   "PUB-213",
+   "PUB-183",
+   "PUB-162",
+   "PUB-194",
+   "GW-PUB-101",
+   "PUB-150",
+   "PUB-205",
+   "GW-PUB-003",
+   "PUB-163",
+   "GW-PUB-004",
+   "GW-PUB-005",
+   "PUB-133",
+   "GW-PUB-102",
+   "PUB-123",
+   "PUB-145",
+   "PUB-211",
+   "PUB-214",
+   "PUB-151",
+   "PUB-182",
+   "GW-PUB-006",
+   "GW-PUB-103",
+   "PUB-152",
+   "PUB-153",
+   "PUB-206",
+   "GW-PUB-007",
+   "PUB-113",
+   "PUB-134",
+   "PUB-146",
+   "GW-PUB-104",
+   "PUB-164",
+   "PUB-195",
+   "PUB-210"
+  ],
+  "stories_without_fact": [],
+  "stories_without_arc": [],
+  "stories_without_place": [
+   "NWS-M040-01",
+   "NWS-M003-06",
+   "NWS-M003-07",
+   "NWS-M002-07",
+   "NWS-M002-10",
+   "NWS-M002-08",
+   "NWS-M002-09",
+   "NWS-M001-08",
+   "NWS-M001-07",
+   "NWS-P000-13",
+   "NWS-P000-09",
+   "NWS-P000-10",
+   "NWS-P000-12",
+   "NWS-P000-11",
+   "NWS-P001-09",
+   "NWS-P001-08",
+   "NWS-P002-07",
+   "NWS-P002-08",
+   "NWS-P002-10",
+   "NWS-P002-11",
+   "NWS-P002-09",
+   "NWS-P003-07",
+   "NWS-P003-08",
+   "NWS-P004-07",
+   "NWS-P004-08",
+   "NWS-P004-09",
+   "NWS-P005-06",
+   "NWS-P006-05",
+   "NWS-P007-05",
+   "NWS-P007-06",
+   "NWS-P008-06",
+   "NWS-P010-06",
+   "NWS-P012-04",
+   "NWS-P012-05",
+   "NWS-P012-06",
+   "NWS-P012-07",
+   "NWS-P013-03",
+   "NWS-P014-04",
+   "NWS-P015-03",
+   "NWS-P015-04",
+   "NWS-P015-05",
+   "NWS-P016-03",
+   "NWS-P018-02",
+   "NWS-P020-03",
+   "NWS-P020-04",
+   "NWS-P021-04",
+   "NWS-P021-05",
+   "NWS-P021-06",
+   "NWS-P023-04",
+   "NWS-P023-05",
+   "NWS-P025-04",
+   "NWS-P028-04",
+   "NWS-P028-05",
+   "NWS-P029-04",
+   "NWS-P029-05",
+   "NWS-P030-05",
+   "NWS-P030-06",
+   "NWS-P030-07",
+   "NWS-P030-08",
+   "NWS-P032-04",
+   "NWS-P032-05",
+   "NWS-P035-04",
+   "NWS-P036-04",
+   "NWS-P038-04",
+   "NWS-P040-04",
+   "NWS-P042-04",
+   "NWS-P042-05",
+   "NWS-P045-07",
+   "NWS-P045-08",
+   "NWS-P045-09",
+   "NWS-P045-10",
+   "NWS-P046-06",
+   "NWS-P057-03",
+   "NWS-P057-04",
+   "NWS-P060-04",
+   "NWS-P060-05",
+   "NWS-P090-05",
+   "NWS-P090-06",
+   "NWS-P090-07",
+   "NWS-P119-03"
+  ],
+  "stories_without_event": [
+   "NWS-M060-01",
+   "NWS-M059-01",
+   "NWS-M059-02",
+   "NWS-M057-01",
+   "NWS-M055-01",
+   "NWS-M054-01",
+   "NWS-M054-02",
+   "NWS-M053-01",
+   "NWS-M052-01",
+   "NWS-M051-01",
+   "NWS-M046-01",
+   "NWS-M045-01",
+   "NWS-M045-02",
+   "NWS-M044-01",
+   "NWS-M043-01",
+   "NWS-M042-01",
+   "NWS-M041-01",
+   "NWS-M038-01",
+   "NWS-M037-01",
+   "NWS-M036-02",
+   "NWS-M035-02",
+   "NWS-M034-01",
+   "NWS-M033-01",
+   "NWS-M033-02",
+   "NWS-M031-01",
+   "NWS-M030-01",
+   "NWS-M030-02",
+   "NWS-M029-01",
+   "NWS-M026-01",
+   "NWS-M025-01",
+   "NWS-M023-01",
+   "NWS-M019-01",
+   "NWS-M012-01",
+   "NWS-M003-06",
+   "NWS-M003-07",
+   "NWS-M002-07",
+   "NWS-M002-10",
+   "NWS-M002-02",
+   "NWS-M002-08",
+   "NWS-M002-09",
+   "NWS-M002-04",
+   "NWS-M002-05",
+   "NWS-M002-12",
+   "NWS-M001-02",
+   "NWS-M001-08",
+   "NWS-M001-05",
+   "NWS-M001-07",
+   "NWS-M001-06",
+   "NWS-P000-13",
+   "NWS-P000-09",
+   "NWS-P000-10",
+   "NWS-P000-12",
+   "NWS-P000-11",
+   "NWS-P001-09",
+   "NWS-P001-08",
+   "NWS-P002-07",
+   "NWS-P002-08",
+   "NWS-P002-10",
+   "NWS-P002-11",
+   "NWS-P002-09",
+   "NWS-P003-07",
+   "NWS-P003-08",
+   "NWS-P003-10",
+   "NWS-P004-07",
+   "NWS-P004-08",
+   "NWS-P004-09",
+   "NWS-P005-06",
+   "NWS-P006-05",
+   "NWS-P007-05",
+   "NWS-P007-06",
+   "NWS-P008-06",
+   "NWS-P010-06",
+   "NWS-P012-04",
+   "NWS-P012-05",
+   "NWS-P015-04",
+   "NWS-P015-05",
+   "NWS-P016-03",
+   "NWS-P020-03",
+   "NWS-P023-05",
+   "NWS-P025-02",
+   "NWS-P028-04",
+   "NWS-P028-05",
+   "NWS-P029-05",
+   "NWS-P032-05",
+   "NWS-P035-04",
+   "NWS-P036-04",
+   "NWS-P045-10"
+  ],
+  "characters_in_no_story": [
+   "CHR-090 KESTREL operators (hidden)",
+   "CHR-091 L. Marrick (hidden)",
+   "CHR-092 Master of MV Halcyon Drift (hidden)",
+   "CHR-093 STATE-X special operations team (hidden)",
+   "CHR-094 Fraud ring identities (hidden)"
+  ],
+  "characters_with_text_only_org": [
+   "CHR-027 Rachel Ostrander -> FEMA Region 6",
+   "CHR-028 Cole Whitaker -> Texas General Land Office, oil spill program",
+   "CHR-029 Ben Arceneaux -> National Weather Service Corpus Christi",
+   "CHR-030 Kim Tran -> Cybersecurity and Infrastructure Security Agency (CISA)",
+   "CHR-032 Cmdr. Lisa Moreau -> Navy Region Southeast",
+   "CHR-033 Mark Ellery -> FBI Houston Division",
+   "CHR-034 Lynn Carver -> Federal Aviation Administration",
+   "CHR-035 Alan Reyes -> US Attorney's Office, Southern District of Texas",
+   "CHR-041 Huy Nguyen -> Independent shrimper",
+   "CHR-042 Bill Hargrove -> Hargrove Bait & Tackle (fictional)",
+   "CHR-049 Pastor Gloria Whitfield -> Neighborhood church relief hub (fictional)",
+   "CHR-060 Dr. Nathan Brooks -> Texas A&M University-Corpus Christi",
+   "CHR-061 Dr. Sofia Marquez -> Texas A&M University-Corpus Christi",
+   "CHR-062 Ian McCready -> Independent maritime security analyst",
+   "CHR-063 Dana Feld -> Northlight Threat Lab (fictional)",
+   "CHR-064 Grace Holloway -> Lanternfish Energy Analytics (fictional)",
+   "CHR-094 Fraud ring identities -> SYN-PER-700001 to 700006"
+  ],
+  "story_place_tags_not_place_nodes": [],
+  "places_with_no_edges": [
+   "GAUGE-14 NOAA tide gauge on Corpus Christi Bay",
+   "WQ-01 to WQ-06 Water-quality sondes in the ship channel, Nueces Bay and Corpus Christi Bay"
+  ],
+  "stream_geography_not_in_graph": {
+   "911 cities": {
+    "Corpus Christi": 5117
+   },
+   "911 beats": 11,
+   "ED visit ZIP codes": 13,
+   "census tracts": 56,
+   "note": "PLC-010/PLC-011 stand for groups of tracts but no tract, ZIP, beat or neighbourhood is a node"
+  },
+  "threads_without_answer_key": [
+   "T11",
+   "T12",
+   "T13",
+   "T14",
+   "T15",
+   "T16",
+   "T17",
+   "T19",
+   "T20",
+   "T21",
+   "T22",
+   "T18"
+  ],
+  "duplicate_registry_files": {
+   "aircraft_registry.json": "DIVERGED (entity_catalogs 11790 bytes vs top-level 16371 bytes)",
+   "drone_operators.json": "DIVERGED (entity_catalogs 13129 bytes vs top-level 12265 bytes)",
+   "entity_registry.json": "DIVERGED (entity_catalogs 13143 bytes vs top-level 12142 bytes)",
+   "facility_registry.json": "DIVERGED (entity_catalogs 13416 bytes vs top-level 13003 bytes)",
+   "gw_host_registry.json": "DIVERGED (entity_catalogs 19990 bytes vs top-level 19977 bytes)",
+   "infrastructure_assets.json": "DIVERGED (entity_catalogs 17059 bytes vs top-level 14214 bytes)",
+   "sensor_registry.json": "DIVERGED (entity_catalogs 11298 bytes vs top-level 12377 bytes)",
+   "terminal_registry.json": "DIVERGED (entity_catalogs 8419 bytes vs top-level 11837 bytes)"
+  },
+  "msel_observed_in_labels_with_no_stream": {
+   "ccfd_sar_incident_log": 9,
+   "All": 5,
+   "field_reports": 5,
+   "coast_guard_sector_cc_ops_log": 4,
+   "port_camera_archive_thermal": 4,
+   "cisa_investigation": 4,
+   "port_authority_closure_log": 3,
+   "port_camera_archive": 3,
+   "uscg_cotp_order_27_2027": 3,
+   "port_authority_storm_log": 3,
+   "cbecc_monthly_volume_report": 3,
+   "cbecc_after_action_summary": 3,
+   "fbi_operation_sandbar_case_file": 3,
+   "uscg_sector_ntrm": 3,
+   "nrc_incident_report": 3,
+   "jbsa_intel_fusion_report": 3,
+   "uscg_boarding_report_bt_cc_27_01": 3,
+   "cbecc_internal_audit_report": 3,
+   "fbi_field_team_custody_log": 3,
+   "cisa_field_assessment_note": 3,
+   "fema_mat_report": 3,
+   "srmc_lab_results_D+18": 3,
+   "bcmc_lab_results_D+18": 3,
+   "dshs_waterborne_investigation_records": 3,
+   "nueces_county_gastroenteritis_advisory_D+18": 3,
+   "cisa_fbi_advisory_D+21": 3,
+   "tf1_ops_summary": 3,
+   "cbpwa_dcs_alarm_suppression_log": 3,
+   "threat_intel": 3,
+   "cisa_notification": 3,
+   "fbi_case_file": 3,
+   "txdem_situational_display": 2,
+   "cbecc_shift_log": 2,
+   "mutual_aid_request_records": 2,
+   "txarng_video_archive": 2,
+   "txdem_sitrep": 2,
+   "port_authority_reopen_announcement": 2,
+   "uscg_sector_cc_investigation_case": 2,
+   "port_camera_status_log": 2,
+   "lph_internal_property_records": 2,
+   "duvall_sons_appraisal_files": 2,
+   "fema_ecims_suspicious_activity_flags": 2,
+   "fbi_operation_sandbar_press_release_d90": 2,
+   "doj_criminal_complaint_27-CC-7741": 2,
+   "out02_broadcast_archive_d90": 2,
+   "uscg_aerial_survey_2027-0918": 2,
+   "cbwr_field_response_log": 2,
+   "unified_command_operational_log": 2,
+   "uscg_pollution_case_file_2027-CC-0916": 2,
+   "epa_region6_on_scene_coordinator_report": 2,
+   "txdot_traffic_data_D-2": 2,
+   "nueces_county_shelter_registry": 2,
+   "cbpwa_communications_logs": 2,
+   "port_cc_security_camera_logs": 2,
+   "port_cc_security_logs": 2,
+   "cbpwa_outage_map": 2,
+   "fema_tir_analysis_report": 2,
+   "nueces_infoline_activation_record": 2,
+   "txdem_water_notice_distribution": 2,
+   "nclas_translation_delivery_timestamps": 2,
+   "cbpwa_boil_water_notice_issuance_log": 2,
+   "nclas_translation_job_log_D+12": 2,
+   "everbridge_transmission_records": 2,
+   "fbi_cyber_referral_FB-2027-TXCYB-1148": 2,
+   "cisa_utility_investigation_asn_records": 2,
+   "tdem_coastal_alert_escalation_D+24": 2,
+   "fbi_ip_response_D+30": 2,
+   "cisa_cross_reference_memorandum_D+30": 2,
+   "srmc_diesel_tank_logs_D+5": 2,
+   "cbpwa_power_restoration_sequencing_plan": 2,
+   "fema_esf7_fuel_delivery_log": 2,
+   "srmc_power_restoration_log_D+8": 2,
+   "cbpwa_restoration_notification": 2,
+   "nueces_county_public_health_surveillance_D+15": 2,
+   "dshs_preliminary_outbreak_report_D+22": 2,
+   "nueces_county_public_health_records": 2,
+   "srmc_nurse_handoff_recording_D+28": 2,
+   "tceq_permit_compliance_log": 2,
+   "o_n_stevens_operations_log": 2,
+   "endpoint_logs": 2,
+   "email_gateway": 2,
+   "gw_srv_hist01_access_log": 2,
+   "gw_srv_ot01_file_audit_log": 2,
+   "outage_map": 2,
+   "field_crew_reports": 2,
+   "change_management_logs": 2,
+   "security_incident_report": 2,
+   "vantage_behavioral_analytics_log": 2,
+   "pump_control_logs": 2,
+   "threat_intel_overlap": 2,
+   "fema_pre_event_baseline_package": 1,
+   "cbpwa_facility_records": 1,
+   "fema_opendata_portal": 1,
+   "nga_archive_receipt": 1,
+   "cbecc_press_release": 1,
+   "nueces_county_oem_activation_logs": 1,
+   "kncb_editorial_calendar_D-5": 1,
+   "nueces_oem_evacuation_order_issuance_log": 1,
+   "cc_oem_shelter_location_registry": 1,
+   "fema_ia_hotline_activation_records": 1,
+   "fema_press_release_D0": 1,
+   "lulac_advocacy_correspondence": 1,
+   "kncb_call_in_recordings_D+2": 1,
+   "fema_ia_hotline_operational_logs": 1,
+   "fema_press_release_D+8": 1,
+   "lulac_press_conference_transcript": 1,
+   "bayside_ledger_article_D+13": 1,
+   "harborline6_field_notes_D+13": 1,
+   "tdem_interim_report_D+21": 1,
+   "lulac_formal_complaint_D+21": 1,
+   "coastline_public_radio_transcript_D+21": 1,
+   "cbpwa_boil_water_lift_notice": 1,
+   "kncb_programming_log_D+30": 1,
+   "nueces_county_commissioners_testimony_transcript_D+45": 1,
+   "kncb_internal_alert_lag_analysis": 1,
+   "kncb_programming_log_D+45": 1,
+   "tdem_coastal_alert_reports_D-2": 1,
+   "nueces_oem_shelter_correction_log": 1,
+   "tdem_internal_escalation_records": 1,
+   "tx_ag_advisory_D+38": 1,
+   "cwservice_report_D+38": 1,
+   "srmc_hurricane_contingency_plan_activation_D-2": 1,
+   "bcmc_activation_log_D-2": 1,
+   "srmc_generator_activation_log": 1,
+   "ems_run_report_corpus_D0": 1,
+   "getac_mutual_aid_request_D+2": 1,
+   "srmc_public_capacity_statement": 1,
+   "srmc_bcmc_after_action_report_D+60": 1,
+   "nueces_county_public_health_final_cluster_report": 1,
+   "nueces_county_emergency_ops_log": 1,
+   "coast_guard_sector_cc_readiness_report": 1,
+   "coast_guard_ops_log": 1,
+   "nueces_county_sheriff_sar_log": 1,
+   "nueces_county_eoc_log": 1,
+   "coast_guard_isr_2027_cc_004": 1,
+   "nueces_county_eoc_final_count_cert": 1,
+   "sentinel_airspace_cuas_assessment_2027": 1,
+   "tceq_eoc_alert_queue": 1,
+   "nueces_county_health_department_records": 1,
+   "noaa_orr_gnome_model_output_archive": 1,
+   "uscg_msu_corpus_christi_case_file_2027-CC-0916": 1,
+   "unified_command_sitrep_d20": 1,
+   "cbwr_incident_summary_d20": 1,
+   "tceq_epa_final_remediation_assessment_2027-CC-0916": 1,
+   "epa_region6_closure_documentation": 1,
+   "nueces_county_oem_test_log_2027-0909": 1,
+   "nueces_county_oem_evacuation_order_2027-0913": 1,
+   "out03_generator_operations_log": 1,
+   "out02_broadcast_archive_2027-0915-1400Z": 1,
+   "cbpwa_boil_water_notice_2027-0926": 1,
+   "nueces_county_after_action_report_2028-03": 1,
+   "fema_jfo_cc_operations_log_d21": 1,
+   "cbpwa_press_conference_transcript_d21": 1,
+   "out02_broadcast_archive_2027-0921": 1,
+   "cbpwa_boil_water_notice_lift_2027-1026": 1,
+   "texas_dps_consumer_protection_bulletin_2027-0929": 1,
+   "nueces_county_oem_complaint_log": 1,
+   "fbi_cc_ra_case_file_27-CC-7741": 1,
+   "fema_ecims_flag_SA-2027-TX-4471": 1,
+   "state_farm_siu_referral_2027-10-14": 1,
+   "fema_disaster_declaration_DR-4890-TX": 1,
+   "fema_ia_registration_announcement": 1,
+   "fema_ia_application_database": 1,
+   "fema_ecims_case_SA-2027-TX-4471": 1
+  },
+  "msel_observed_in_label_variants": 317
+ },
+ "thread_completeness": [
+  {
+   "thread": "T1",
+   "name": "Storm cascade",
+   "msel_events": 34,
+   "day_span": [
+    -60,
+    110
+   ],
+   "public_facts": 36,
+   "fact_day_span": [
+    -21,
+    110
+   ],
+   "stories_via_events": 263,
+   "stories_via_arcs": 341,
+   "arcs": [
+    "ARC-HEALTH",
+    "ARC-MILITARY",
+    "ARC-PORT",
+    "ARC-RECOVERY",
+    "ARC-STORM",
+    "ARC-WATER"
+   ],
+   "streams_with_evidence_present": [
+    "911",
+    "adsb",
+    "ais",
+    "census",
+    "drone_video",
+    "env_sensors",
+    "infrastructure",
+    "maintenance",
+    "news",
+    "payments",
+    "public_health",
+    "satellite",
+    "supply",
+    "telemetry",
+    "weather"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "cbecc_after_action_summary",
+    "cbecc_monthly_volume_report",
+    "cbecc_shift_log",
+    "ccfd_sar_incident_log",
+    "coast_guard_sector_cc_ops_log",
+    "mutual_aid_request_records",
+    "port_authority_closure_log",
+    "port_authority_reopen_announcement",
+    "port_authority_storm_log",
+    "port_camera_archive",
+    "port_camera_status_log",
+    "txarng_video_archive",
+    "txdem_sitrep",
+    "txdem_situational_display",
+    "uscg_cotp_order_27_2027",
+    "uscg_sector_cc_investigation_case"
+   ],
+   "answer_key": true,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "16 evidence sources named in MSEL have no data stream (cbecc_after_action_summary, cbecc_monthly_volume_report, cbecc_shift_log, ccfd_sar_incident_log, coast_guard_sector_cc_ops_log…)",
+    "events run to D+110 but most streams stop at D+31 (Oct 15)",
+    "answer key cites ids with no record: EQP-1102, EQP-1103"
+   ]
+  },
+  {
+   "thread": "T2",
+   "name": "Dark vessel",
+   "msel_events": 15,
+   "day_span": [
+    -50,
+    100
+   ],
+   "public_facts": 14,
+   "fact_day_span": [
+    -60,
+    112
+   ],
+   "stories_via_events": 147,
+   "stories_via_arcs": 123,
+   "arcs": [
+    "ARC-AIS-ANOMALY",
+    "ARC-CONTRACTS",
+    "ARC-MILITARY"
+   ],
+   "streams_with_evidence_present": [
+    "ais",
+    "maintenance",
+    "payments",
+    "satellite",
+    "supply",
+    "telemetry"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "All",
+    "doj_criminal_complaint_27-CC-7741",
+    "duvall_sons_appraisal_files",
+    "fbi_operation_sandbar_case_file",
+    "fbi_operation_sandbar_press_release_d90",
+    "fema_ecims_suspicious_activity_flags",
+    "lph_internal_property_records",
+    "out02_broadcast_archive_d90"
+   ],
+   "answer_key": true,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "8 evidence sources named in MSEL have no data stream (All, doj_criminal_complaint_27-CC-7741, duvall_sons_appraisal_files, fbi_operation_sandbar_case_file, fbi_operation_sandbar_press_release_d90…)",
+    "events run to D+100 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T3",
+   "name": "Fraud ring",
+   "msel_events": 22,
+   "day_span": [
+    -40,
+    100
+   ],
+   "public_facts": 14,
+   "fact_day_span": [
+    -1,
+    114
+   ],
+   "stories_via_events": 118,
+   "stories_via_arcs": 61,
+   "arcs": [
+    "ARC-CONTRACTS",
+    "ARC-PORTAL-BREACH"
+   ],
+   "streams_with_evidence_present": [
+    "adsb",
+    "ais",
+    "drone_video",
+    "maintenance",
+    "network_logs",
+    "payments",
+    "satellite",
+    "supply",
+    "telemetry"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "All",
+    "cbwr_field_response_log",
+    "epa_region6_on_scene_coordinator_report",
+    "jbsa_intel_fusion_report",
+    "nrc_incident_report",
+    "port_authority_closure_log",
+    "port_authority_storm_log",
+    "port_camera_archive",
+    "port_camera_archive_thermal",
+    "unified_command_operational_log",
+    "uscg_aerial_survey_2027-0918",
+    "uscg_boarding_report_bt_cc_27_01",
+    "uscg_cotp_order_27_2027",
+    "uscg_pollution_case_file_2027-CC-0916",
+    "uscg_sector_ntrm"
+   ],
+   "answer_key": true,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "15 evidence sources named in MSEL have no data stream (All, cbwr_field_response_log, epa_region6_on_scene_coordinator_report, jbsa_intel_fusion_report, nrc_incident_report…)",
+    "events run to D+100 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T4",
+   "name": "KESTREL campaign",
+   "msel_events": 8,
+   "day_span": [
+    -35,
+    100
+   ],
+   "public_facts": 10,
+   "fact_day_span": [
+    2,
+    114
+   ],
+   "stories_via_events": 75,
+   "stories_via_arcs": 88,
+   "arcs": [
+    "ARC-PORTAL-BREACH",
+    "ARC-RUMORS",
+    "ARC-SPILL-CYBER"
+   ],
+   "streams_with_evidence_present": [
+    "ais",
+    "network_logs",
+    "news",
+    "payments",
+    "social_media"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "All"
+   ],
+   "answer_key": true,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "1 evidence sources named in MSEL have no data stream (All)",
+    "events run to D+100 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T5",
+   "name": "Equity gap",
+   "msel_events": 12,
+   "day_span": [
+    -7,
+    90
+   ],
+   "public_facts": 5,
+   "fact_day_span": [
+    1,
+    90
+   ],
+   "stories_via_events": 95,
+   "stories_via_arcs": 136,
+   "arcs": [
+    "ARC-AID",
+    "ARC-EQUITY"
+   ],
+   "streams_with_evidence_present": [
+    "911",
+    "census",
+    "drone_video",
+    "infrastructure",
+    "payments",
+    "public_health",
+    "social_media"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "cbecc_internal_audit_report",
+    "cbpwa_communications_logs",
+    "cisa_field_assessment_note",
+    "fbi_field_team_custody_log",
+    "nueces_county_shelter_registry",
+    "txdot_traffic_data_D-2"
+   ],
+   "answer_key": true,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "6 evidence sources named in MSEL have no data stream (cbecc_internal_audit_report, cbpwa_communications_logs, cisa_field_assessment_note, fbi_field_team_custody_log, nueces_county_shelter_registry…)",
+    "events run to D+90 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T6",
+   "name": "Tanker cyberattack",
+   "msel_events": 16,
+   "day_span": [
+    -33,
+    105
+   ],
+   "public_facts": 16,
+   "fact_day_span": [
+    -1,
+    115
+   ],
+   "stories_via_events": 150,
+   "stories_via_arcs": 159,
+   "arcs": [
+    "ARC-HEALTH",
+    "ARC-RECOVERY",
+    "ARC-SPILL",
+    "ARC-SPILL-CYBER"
+   ],
+   "streams_with_evidence_present": [
+    "ais",
+    "drone_video",
+    "env_sensors",
+    "maintenance",
+    "network_logs",
+    "news",
+    "payments",
+    "public_health",
+    "satellite",
+    "supply",
+    "telemetry"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "All",
+    "nrc_incident_report",
+    "port_camera_archive_thermal",
+    "uscg_boarding_report_bt_cc_27_01",
+    "uscg_sector_ntrm"
+   ],
+   "answer_key": true,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "5 evidence sources named in MSEL have no data stream (All, nrc_incident_report, port_camera_archive_thermal, uscg_boarding_report_bt_cc_27_01, uscg_sector_ntrm)",
+    "events run to D+105 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T7",
+   "name": "Opportunistic military attack",
+   "msel_events": 14,
+   "day_span": [
+    -40,
+    100
+   ],
+   "public_facts": 19,
+   "fact_day_span": [
+    -40,
+    112
+   ],
+   "stories_via_events": 104,
+   "stories_via_arcs": 230,
+   "arcs": [
+    "ARC-AIS-ANOMALY",
+    "ARC-CHANNEL-BLAST",
+    "ARC-DRONES",
+    "ARC-GPS",
+    "ARC-MILITARY",
+    "ARC-OVERSEAS",
+    "ARC-PORT",
+    "ARC-RECOVERY"
+   ],
+   "streams_with_evidence_present": [
+    "adsb",
+    "ais",
+    "drone_video",
+    "maintenance",
+    "news",
+    "payments",
+    "satellite",
+    "social_media",
+    "supply",
+    "telemetry"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "All",
+    "jbsa_intel_fusion_report",
+    "port_camera_archive_thermal",
+    "port_cc_security_camera_logs",
+    "port_cc_security_logs"
+   ],
+   "answer_key": true,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "5 evidence sources named in MSEL have no data stream (All, jbsa_intel_fusion_report, port_camera_archive_thermal, port_cc_security_camera_logs, port_cc_security_logs)",
+    "events run to D+100 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T11",
+   "name": "Aerial damage assessment corridor",
+   "msel_events": 8,
+   "day_span": [
+    -2,
+    45
+   ],
+   "public_facts": 4,
+   "fact_day_span": [
+    0,
+    45
+   ],
+   "stories_via_events": 4,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "adsb",
+    "census",
+    "infrastructure",
+    "satellite",
+    "weather"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "cbpwa_facility_records",
+    "cbpwa_outage_map",
+    "fema_mat_report",
+    "fema_opendata_portal",
+    "fema_pre_event_baseline_package",
+    "fema_tir_analysis_report",
+    "nga_archive_receipt",
+    "txarng_video_archive",
+    "txdem_sitrep",
+    "txdem_situational_display"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "10 evidence sources named in MSEL have no data stream (cbpwa_facility_records, cbpwa_outage_map, fema_mat_report, fema_opendata_portal, fema_pre_event_baseline_package…)",
+    "events run to D+45 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T12",
+   "name": "Dark vessel and port surveillance",
+   "msel_events": 8,
+   "day_span": [
+    -7,
+    30
+   ],
+   "public_facts": 4,
+   "fact_day_span": [
+    -1,
+    30
+   ],
+   "stories_via_events": 5,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "ais",
+    "maintenance",
+    "satellite"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "nrc_incident_report",
+    "port_authority_closure_log",
+    "port_authority_reopen_announcement",
+    "port_authority_storm_log",
+    "port_camera_archive",
+    "port_camera_archive_thermal",
+    "port_camera_status_log",
+    "uscg_boarding_report_bt_cc_27_01",
+    "uscg_cotp_order_27_2027",
+    "uscg_sector_cc_investigation_case",
+    "uscg_sector_ntrm"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "11 evidence sources named in MSEL have no data stream (nrc_incident_report, port_authority_closure_log, port_authority_reopen_announcement, port_authority_storm_log, port_camera_archive…)"
+   ]
+  },
+  {
+   "thread": "T13",
+   "name": "911 dispatch corpus",
+   "msel_events": 9,
+   "day_span": [
+    0,
+    45
+   ],
+   "public_facts": 6,
+   "fact_day_span": [
+    0,
+    45
+   ],
+   "stories_via_events": 6,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "911"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "cbecc_after_action_summary",
+    "cbecc_internal_audit_report",
+    "cbecc_monthly_volume_report",
+    "cbecc_press_release",
+    "cbecc_shift_log",
+    "ccfd_sar_incident_log",
+    "cisa_field_assessment_note",
+    "fbi_field_team_custody_log",
+    "mutual_aid_request_records",
+    "nueces_infoline_activation_record",
+    "txdem_water_notice_distribution"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "11 evidence sources named in MSEL have no data stream (cbecc_after_action_summary, cbecc_internal_audit_report, cbecc_monthly_volume_report, cbecc_press_release, cbecc_shift_log…)",
+    "events run to D+45 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T14",
+   "name": "Bilingual Emergency Communications",
+   "msel_events": 12,
+   "day_span": [
+    -5,
+    45
+   ],
+   "public_facts": 8,
+   "fact_day_span": [
+    -3,
+    45
+   ],
+   "stories_via_events": 19,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "census",
+    "public_health/eas_broadcasts.csv"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "bayside_ledger_article_D+13",
+    "bcmc_lab_results_D+18",
+    "cbpwa_boil_water_lift_notice",
+    "cbpwa_boil_water_notice_issuance_log",
+    "cc_oem_shelter_location_registry",
+    "coastline_public_radio_transcript_D+21",
+    "dshs_waterborne_investigation_records",
+    "everbridge_transmission_records",
+    "fema_ia_hotline_activation_records",
+    "fema_ia_hotline_operational_logs",
+    "fema_press_release_D+8",
+    "fema_press_release_D0",
+    "harborline6_field_notes_D+13",
+    "kncb_call_in_recordings_D+2",
+    "kncb_editorial_calendar_D-5",
+    "kncb_internal_alert_lag_analysis",
+    "kncb_programming_log_D+30",
+    "kncb_programming_log_D+45",
+    "lulac_advocacy_correspondence",
+    "lulac_formal_complaint_D+21",
+    "lulac_press_conference_transcript",
+    "nclas_translation_delivery_timestamps",
+    "nclas_translation_job_log_D+12",
+    "nueces_county_commissioners_testimony_transcript_D+45",
+    "nueces_county_gastroenteritis_advisory_D+18",
+    "nueces_county_oem_activation_logs",
+    "nueces_oem_evacuation_order_issuance_log",
+    "srmc_lab_results_D+18",
+    "tdem_interim_report_D+21"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "29 evidence sources named in MSEL have no data stream (bayside_ledger_article_D+13, bcmc_lab_results_D+18, cbpwa_boil_water_lift_notice, cbpwa_boil_water_notice_issuance_log, cc_oem_shelter_location_registry…)",
+    "events run to D+45 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T15",
+   "name": "Social Media Influence Operation",
+   "msel_events": 9,
+   "day_span": [
+    -7,
+    38
+   ],
+   "public_facts": 4,
+   "fact_day_span": [
+    21,
+    40
+   ],
+   "stories_via_events": 6,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "infrastructure",
+    "social_media"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "cbpwa_communications_logs",
+    "cisa_cross_reference_memorandum_D+30",
+    "cisa_fbi_advisory_D+21",
+    "cisa_utility_investigation_asn_records",
+    "cwservice_report_D+38",
+    "fbi_cyber_referral_FB-2027-TXCYB-1148",
+    "fbi_ip_response_D+30",
+    "nueces_county_shelter_registry",
+    "nueces_oem_shelter_correction_log",
+    "tdem_coastal_alert_escalation_D+24",
+    "tdem_coastal_alert_reports_D-2",
+    "tdem_internal_escalation_records",
+    "tx_ag_advisory_D+38",
+    "txdot_traffic_data_D-2"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "14 evidence sources named in MSEL have no data stream (cbpwa_communications_logs, cisa_cross_reference_memorandum_D+30, cisa_fbi_advisory_D+21, cisa_utility_investigation_asn_records, cwservice_report_D+38…)",
+    "events run to D+38 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T16",
+   "name": "Hospital Surge and Clinical Triage",
+   "msel_events": 10,
+   "day_span": [
+    -2,
+    60
+   ],
+   "public_facts": 5,
+   "fact_day_span": [
+    0,
+    60
+   ],
+   "stories_via_events": 10,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "census",
+    "public_health",
+    "telemetry"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "bcmc_activation_log_D-2",
+    "bcmc_lab_results_D+18",
+    "cbpwa_power_restoration_sequencing_plan",
+    "cbpwa_restoration_notification",
+    "dshs_preliminary_outbreak_report_D+22",
+    "dshs_waterborne_investigation_records",
+    "ems_run_report_corpus_D0",
+    "fema_esf7_fuel_delivery_log",
+    "getac_mutual_aid_request_D+2",
+    "nueces_county_gastroenteritis_advisory_D+18",
+    "nueces_county_public_health_final_cluster_report",
+    "nueces_county_public_health_records",
+    "nueces_county_public_health_surveillance_D+15",
+    "srmc_bcmc_after_action_report_D+60",
+    "srmc_diesel_tank_logs_D+5",
+    "srmc_generator_activation_log",
+    "srmc_hurricane_contingency_plan_activation_D-2",
+    "srmc_lab_results_D+18",
+    "srmc_nurse_handoff_recording_D+28",
+    "srmc_power_restoration_log_D+8",
+    "srmc_public_capacity_statement"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "21 evidence sources named in MSEL have no data stream (bcmc_activation_log_D-2, bcmc_lab_results_D+18, cbpwa_power_restoration_sequencing_plan, cbpwa_restoration_notification, dshs_preliminary_outbreak_report_D+22…)",
+    "events run to D+60 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T17",
+   "name": "Search and rescue operations",
+   "msel_events": 8,
+   "day_span": [
+    -1,
+    7
+   ],
+   "public_facts": 5,
+   "fact_day_span": [
+    1,
+    10
+   ],
+   "stories_via_events": 6,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "911",
+    "census",
+    "drone_video",
+    "supply"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "ccfd_sar_incident_log",
+    "coast_guard_isr_2027_cc_004",
+    "coast_guard_ops_log",
+    "coast_guard_sector_cc_ops_log",
+    "coast_guard_sector_cc_readiness_report",
+    "nueces_county_emergency_ops_log",
+    "nueces_county_eoc_final_count_cert",
+    "nueces_county_eoc_log",
+    "nueces_county_sheriff_sar_log",
+    "tf1_ops_summary"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "10 evidence sources named in MSEL have no data stream (ccfd_sar_incident_log, coast_guard_isr_2027_cc_004, coast_guard_ops_log, coast_guard_sector_cc_ops_log, coast_guard_sector_cc_readiness_report…)"
+   ]
+  },
+  {
+   "thread": "T19",
+   "name": "Drone and counter-UAV surveillance",
+   "msel_events": 8,
+   "day_span": [
+    -10,
+    30
+   ],
+   "public_facts": 4,
+   "fact_day_span": [
+    -2,
+    32
+   ],
+   "stories_via_events": 4,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "adsb",
+    "ais",
+    "drone_video",
+    "network_logs"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "jbsa_intel_fusion_report",
+    "port_cc_security_camera_logs",
+    "port_cc_security_logs",
+    "sentinel_airspace_cuas_assessment_2027"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "4 evidence sources named in MSEL have no data stream (jbsa_intel_fusion_report, port_cc_security_camera_logs, port_cc_security_logs, sentinel_airspace_cuas_assessment_2027)"
+   ]
+  },
+  {
+   "thread": "T20",
+   "name": "Environmental sensors and spill tracking",
+   "msel_events": 9,
+   "day_span": [
+    1,
+    60
+   ],
+   "public_facts": 6,
+   "fact_day_span": [
+    2,
+    60
+   ],
+   "stories_via_events": 6,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "ais",
+    "network_logs",
+    "telemetry"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "cbwr_field_response_log",
+    "cbwr_incident_summary_d20",
+    "epa_region6_closure_documentation",
+    "epa_region6_on_scene_coordinator_report",
+    "noaa_orr_gnome_model_output_archive",
+    "nueces_county_health_department_records",
+    "o_n_stevens_operations_log",
+    "tceq_eoc_alert_queue",
+    "tceq_epa_final_remediation_assessment_2027-CC-0916",
+    "tceq_permit_compliance_log",
+    "unified_command_operational_log",
+    "unified_command_sitrep_d20",
+    "uscg_aerial_survey_2027-0918",
+    "uscg_msu_corpus_christi_case_file_2027-CC-0916",
+    "uscg_pollution_case_file_2027-CC-0916"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "15 evidence sources named in MSEL have no data stream (cbwr_field_response_log, cbwr_incident_summary_d20, epa_region6_closure_documentation, epa_region6_on_scene_coordinator_report, noaa_orr_gnome_model_output_archive…)",
+    "events run to D+60 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T21",
+   "name": "Broadcast and emergency alert corpus",
+   "msel_events": 8,
+   "day_span": [
+    -5,
+    42
+   ],
+   "public_facts": 7,
+   "fact_day_span": [
+    -2,
+    42
+   ],
+   "stories_via_events": 14,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "public_health/eas_broadcasts.csv",
+    "weather"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "cbpwa_boil_water_notice_2027-0926",
+    "cbpwa_boil_water_notice_lift_2027-1026",
+    "cbpwa_press_conference_transcript_d21",
+    "fema_jfo_cc_operations_log_d21",
+    "nueces_county_after_action_report_2028-03",
+    "nueces_county_oem_evacuation_order_2027-0913",
+    "nueces_county_oem_test_log_2027-0909",
+    "out02_broadcast_archive_2027-0915-1400Z",
+    "out02_broadcast_archive_2027-0921",
+    "out03_generator_operations_log"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "10 evidence sources named in MSEL have no data stream (cbpwa_boil_water_notice_2027-0926, cbpwa_boil_water_notice_lift_2027-1026, cbpwa_press_conference_transcript_d21, fema_jfo_cc_operations_log_d21, nueces_county_after_action_report_2028-03…)",
+    "events run to D+42 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T22",
+   "name": "Insurance and disaster fraud",
+   "msel_events": 7,
+   "day_span": [
+    -30,
+    90
+   ],
+   "public_facts": 5,
+   "fact_day_span": [
+    3,
+    90
+   ],
+   "stories_via_events": 9,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "payments"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "doj_criminal_complaint_27-CC-7741",
+    "duvall_sons_appraisal_files",
+    "fbi_cc_ra_case_file_27-CC-7741",
+    "fbi_operation_sandbar_case_file",
+    "fbi_operation_sandbar_press_release_d90",
+    "fema_disaster_declaration_DR-4890-TX",
+    "fema_ecims_case_SA-2027-TX-4471",
+    "fema_ecims_flag_SA-2027-TX-4471",
+    "fema_ecims_suspicious_activity_flags",
+    "fema_ia_application_database",
+    "fema_ia_registration_announcement",
+    "lph_internal_property_records",
+    "nueces_county_oem_complaint_log",
+    "out02_broadcast_archive_d90",
+    "state_farm_siu_referral_2027-10-14",
+    "texas_dps_consumer_protection_bulletin_2027-0929"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "16 evidence sources named in MSEL have no data stream (doj_criminal_complaint_27-CC-7741, duvall_sons_appraisal_files, fbi_cc_ra_case_file_27-CC-7741, fbi_operation_sandbar_case_file, fbi_operation_sandbar_press_release_d90…)",
+    "events run to D+90 but most streams stop at D+31 (Oct 15)"
+   ]
+  },
+  {
+   "thread": "T8",
+   "name": "Grid intrusion",
+   "msel_events": 31,
+   "day_span": [
+    -14,
+    35
+   ],
+   "public_facts": 10,
+   "fact_day_span": [
+    14,
+    45
+   ],
+   "stories_via_events": 11,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "911",
+    "adsb",
+    "ais",
+    "census",
+    "drone_video",
+    "infrastructure",
+    "network_logs",
+    "news",
+    "social_media",
+    "telemetry"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "cbecc_internal_audit_report",
+    "cbpwa_dcs_alarm_suppression_log",
+    "cbpwa_outage_map",
+    "cbpwa_power_restoration_sequencing_plan",
+    "cbpwa_restoration_notification",
+    "change_management_logs",
+    "cisa_fbi_advisory_D+21",
+    "cisa_field_assessment_note",
+    "cisa_investigation",
+    "cisa_notification",
+    "email_gateway",
+    "endpoint_logs",
+    "fbi_case_file",
+    "fbi_field_team_custody_log",
+    "fema_esf7_fuel_delivery_log",
+    "fema_mat_report",
+    "fema_tir_analysis_report",
+    "field_crew_reports",
+    "field_reports",
+    "gw_srv_hist01_access_log",
+    "gw_srv_ot01_file_audit_log",
+    "outage_map",
+    "security_incident_report",
+    "srmc_diesel_tank_logs_D+5",
+    "srmc_power_restoration_log_D+8",
+    "threat_intel",
+    "vantage_behavioral_analytics_log"
+   ],
+   "answer_key": true,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no story arc surfaces this thread",
+    "27 evidence sources named in MSEL have no data stream (cbecc_internal_audit_report, cbpwa_dcs_alarm_suppression_log, cbpwa_outage_map, cbpwa_power_restoration_sequencing_plan, cbpwa_restoration_notification…)",
+    "events run to D+35 but most streams stop at D+31 (Oct 15)",
+    "answer key cites ids with no record: GW-ENG-VELA, GW-WS-OPS-02"
+   ]
+  },
+  {
+   "thread": "T9",
+   "name": "Water SCADA manipulation",
+   "msel_events": 18,
+   "day_span": [
+    -3,
+    42
+   ],
+   "public_facts": 13,
+   "fact_day_span": [
+    2,
+    42
+   ],
+   "stories_via_events": 22,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "911",
+    "census",
+    "infrastructure",
+    "network_logs",
+    "news",
+    "public_health",
+    "public_health/eas_broadcasts.csv",
+    "telemetry"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "bcmc_lab_results_D+18",
+    "cbpwa_boil_water_notice_issuance_log",
+    "cbpwa_dcs_alarm_suppression_log",
+    "ccfd_sar_incident_log",
+    "cisa_investigation",
+    "cisa_notification",
+    "dshs_preliminary_outbreak_report_D+22",
+    "dshs_waterborne_investigation_records",
+    "everbridge_transmission_records",
+    "fbi_case_file",
+    "fema_mat_report",
+    "field_reports",
+    "nclas_translation_job_log_D+12",
+    "nueces_county_gastroenteritis_advisory_D+18",
+    "nueces_county_public_health_records",
+    "nueces_county_public_health_surveillance_D+15",
+    "nueces_infoline_activation_record",
+    "o_n_stevens_operations_log",
+    "pump_control_logs",
+    "srmc_lab_results_D+18",
+    "srmc_nurse_handoff_recording_D+28",
+    "tceq_permit_compliance_log",
+    "tf1_ops_summary",
+    "threat_intel",
+    "threat_intel_overlap",
+    "txdem_water_notice_distribution"
+   ],
+   "answer_key": true,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no story arc surfaces this thread",
+    "26 evidence sources named in MSEL have no data stream (bcmc_lab_results_D+18, cbpwa_boil_water_notice_issuance_log, cbpwa_dcs_alarm_suppression_log, ccfd_sar_incident_log, cisa_investigation…)",
+    "events run to D+42 but most streams stop at D+31 (Oct 15)",
+    "answer key cites ids with no record: FAC-UTL-01-P3-SET-PSI, GW-ENG-VELA, GW-FAC-WTR-03-BSTR-SET-PSI, GW-FR-0912"
+   ]
+  },
+  {
+   "thread": "T10",
+   "name": "Hiding in the storm",
+   "msel_events": 17,
+   "day_span": [
+    -14,
+    30
+   ],
+   "public_facts": 5,
+   "fact_day_span": [
+    21,
+    32
+   ],
+   "stories_via_events": 6,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "network_logs",
+    "news",
+    "social_media",
+    "telemetry"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "change_management_logs",
+    "cisa_cross_reference_memorandum_D+30",
+    "cisa_fbi_advisory_D+21",
+    "cisa_investigation",
+    "cisa_notification",
+    "cisa_utility_investigation_asn_records",
+    "email_gateway",
+    "endpoint_logs",
+    "fbi_case_file",
+    "fbi_cyber_referral_FB-2027-TXCYB-1148",
+    "fbi_ip_response_D+30",
+    "field_crew_reports",
+    "field_reports",
+    "outage_map",
+    "pump_control_logs",
+    "security_incident_report",
+    "tdem_coastal_alert_escalation_D+24",
+    "threat_intel",
+    "threat_intel_overlap"
+   ],
+   "answer_key": true,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no story arc surfaces this thread",
+    "19 evidence sources named in MSEL have no data stream (change_management_logs, cisa_cross_reference_memorandum_D+30, cisa_fbi_advisory_D+21, cisa_investigation, cisa_notification…)"
+   ]
+  },
+  {
+   "thread": "T18",
+   "name": "Utility SOC / SIEM telemetry (GRIDWATER LAYER)",
+   "msel_events": 8,
+   "day_span": [
+    -14,
+    35
+   ],
+   "public_facts": 4,
+   "fact_day_span": [
+    20,
+    45
+   ],
+   "stories_via_events": 4,
+   "stories_via_arcs": 0,
+   "arcs": [],
+   "streams_with_evidence_present": [
+    "network_logs",
+    "telemetry"
+   ],
+   "streams_named_but_no_directory": [],
+   "observation_sources_with_no_stream": [
+    "cbpwa_dcs_alarm_suppression_log",
+    "gw_srv_hist01_access_log",
+    "gw_srv_ot01_file_audit_log",
+    "vantage_behavioral_analytics_log"
+   ],
+   "answer_key": false,
+   "arc_stages": {
+    "begin": true,
+    "escalation": true,
+    "discovery": true,
+    "resolution": true
+   },
+   "missing": [
+    "no answer key path",
+    "no story arc surfaces this thread",
+    "4 evidence sources named in MSEL have no data stream (cbpwa_dcs_alarm_suppression_log, gw_srv_hist01_access_log, gw_srv_ot01_file_audit_log, vantage_behavioral_analytics_log)",
+    "events run to D+35 but most streams stop at D+31 (Oct 15)"
+   ]
+  }
+ ],
+ "notes": [
+  "Vessel overlap: AIS∩registry=23, AIS∩port calls=20, registry∩port calls=24, AIS∩map=30."
+ ],
+ "recommended_schema": {
+  "principle": "One canonical id per real-world thing in a single master registry; every stream, scenario file, map layer and graph node refers to it. Placeholder keys (MMSI-SYN-*, ICAO-SYN-*, id ranges such as 'EQP-1101 to 1104') are replaced by the real keys used in the data, one record each.",
+  "node_types": {
+   "Organization": "agencies, companies, utilities, insurers, contractors, ship agents, outlets (key: ORG-*; aliases list; real_or_fictional flag)",
+   "Vessel": "key MMSI; props IMO, name, type, flag, operator -> Organization",
+   "Aircraft": "key icao24; props callsign, type, operator; includes drones with a remote id",
+   "Facility": "hospitals, shelters, terminals/berths, substations, plants, bases, PSAP (key FAC-*; lat/lon; operator)",
+   "Equipment": "pumps, generators, RTUs, breakers (key = asset number used in work orders and SCADA asset id)",
+   "Host": "IT/OT hosts (key hostname; ip; subnet) and domains",
+   "ScadaTag": "tag name -> Equipment/Facility",
+   "Sensor": "AQS, sondes, gauges, ASOS, buoys (key sensor id; lat/lon)",
+   "SocialAccount": "handle; account_type; operated_by -> Character/Organization; coordinated_network flag (internal)",
+   "ResponseUnit": "CAD unit ids -> agency Organization, station Facility",
+   "Area": "census tract, ZIP, CAD beat, water district, evacuation zone, neighbourhood (hierarchy WITHIN)",
+   "DataStream": "one node per delivered file family with time coverage, schema, key columns",
+   "Observation": "optional: the specific rows/time windows that evidence an Event (stream, key value, start, end)",
+   "AnswerKeyPath": "ordered steps per Thread, each step -> DataStream/Observation/entity",
+   "Alert": "EAS/WEA/boil-water notices with EN and ES release times",
+   "Contract": "awards and claims that stories and payments both reference"
+  },
+  "edge_types": {
+   "INVOLVES": "Event -> Vessel|Aircraft|Facility|Equipment|Host|Organization|SocialAccount (internal)",
+   "MENTIONS_ENTITY": "Story|PublicFact -> Organization|Vessel|Facility|... (public)",
+   "OPERATED_BY / OWNED_BY / PART_OF": "Vessel|Aircraft|Facility|Equipment|Host -> Organization|Facility",
+   "LOCATED_AT / WITHIN": "Facility|Sensor|Equipment -> Place|Area",
+   "EMPLOYED_BY": "Character -> Organization (replaces text-only affiliation)",
+   "OBSERVED_IN": "Event -> DataStream (replaces 317 free-text observed_in labels with a controlled list)",
+   "EVIDENCED_BY": "Event|AnswerKeyStep -> Observation",
+   "RECORDS": "DataStream -> entity type it is keyed on (e.g. AIS -> Vessel by MMSI)",
+   "HAS_STEP / NEXT_STEP / SOLVES": "AnswerKeyPath -> steps -> Thread",
+   "SAME_AS": "temporary alias edge while old ids are being retired",
+   "CALLED_AT": "Vessel -> Facility (terminal/berth) with ATA/ATD",
+   "PAID": "Organization -> Organization|Character with amount/date (from payments)",
+   "POSTED_BY / AMPLIFIES": "SocialAccount relations for the coordinated network"
+  }
+ },
+ "summary": {
+  "missing_registry_ids": 265,
+  "unused_registry_ids": 168,
+  "id_conflicts": 39,
+  "high_severity_conflicts": 21,
+  "unregistered_named_entities_listed": 160,
+  "graph": {
+   "nodes": 1044,
+   "edges": 11272,
+   "orphans": 19
+  },
+  "threads_without_answer_key": 12
+ }
+}

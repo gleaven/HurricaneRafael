@@ -1,0 +1,98 @@
+[
+  {
+    "source": "Satellite imagery",
+    "baseline": "1 optical pass a day; radar every 6 days, plus tasked passes at D-2, D+1, D+31",
+    "signal": "Flood extent at D+1; oil slick from D+1 to D+20; hull off the entrance channel at D+31 04:20Z and unmatched hull at 09:30Z; debris from D+10 to D+70",
+    "degradation": "Clouds block optical from D-2 to D+3; ±30 m geolocation error"
+  },
+  {
+    "source": "Drone video",
+    "baseline": "Weekly base inspections",
+    "signal": "Depot flood at D+2; debris surveys from D+10 to D+70",
+    "degradation": "Partial coverage; 5% of frames missing GPS tags"
+  },
+  {
+    "source": "Ship tracks (AIS)",
+    "baseline": "About 120 vessels a day in the area",
+    "signal": "Queue at D-3; Halcyon gap and spoof at D+31; Barge 44 at D+32; tug AIS stops at D+44; 14-day channel closure",
+    "degradation": "2–5% random message loss; coverage gaps from D0 to D+2"
+  },
+  {
+    "source": "Aircraft tracks (ADS-B)",
+    "baseline": "About 60 flights a day",
+    "signal": "Evacuation at D-4; 40 relief flights from D+34 to D+43; navigation-integrity drop near the Inner Harbor from D+38 to D+43",
+    "degradation": "Military aircraft broadcast only 50% of the time"
+  },
+  {
+    "source": "Environmental sensors",
+    "baseline": "15-minute readings from 2 river gauges, 20 air-quality sensors and 6 water-quality sondes",
+    "signal": "River rises from D-7 and peaks at D+1; hydrocarbon spikes at WQ-01 to WQ-06 from D0",
+    "degradation": "GAUGE-14 offline from D0 to D+5 (flooded)"
+  },
+  {
+    "source": "Equipment telemetry",
+    "baseline": "1-minute readings from 5 assets",
+    "signal": "P-2 and P-3 at D0; tanker cargo levels drop at D0 04:00Z; EQP-2201 at D+40",
+    "degradation": "Data lost during the outage from D0 to D+3"
+  },
+  {
+    "source": "Maintenance records",
+    "baseline": "About 15 work orders a week",
+    "signal": "Pump and generator work orders with technician notes; perimeter-sensor repairs; tanker cargo-system inspections; EOD and mine-clearance reports",
+    "degradation": "Typos in free text; 10% of records missing serials (never EQP-2201 at D+40)"
+  },
+  {
+    "source": "Supply and inventory",
+    "baseline": "Daily stock for about 200 SKUs",
+    "signal": "Relief containers; pump parts 25 days late; 380 m³ fuel receipt",
+    "degradation": "Receipts logged 1–3 days late"
+  },
+  {
+    "source": "Network security logs",
+    "baseline": "About 2 million events a day",
+    "signal": "Scans at D-35; vendor phishing at D-33; vendor sessions on tanker networks at D-20 and D0; phishing D+1 to D+3; credential stuffing D+62 to D+70",
+    "degradation": "Retention gaps; NAT hides some source IPs, but not ASN-SYN-64512"
+  },
+  {
+    "source": "Emergency 911 calls",
+    "baseline": "About 310 a day",
+    "signal": "Peak of 2,900 a day, 61% from low-income surge-zone tracts",
+    "degradation": "Location error up to 500 m; 8% duplicate calls"
+  },
+  {
+    "source": "Payments and claims",
+    "baseline": "About 1,500 transactions a day",
+    "signal": "Contracts; 48,000 claims; $3.9M diverted; 4,200 spill claims; 14-day crude-export halt",
+    "degradation": "1–5 day posting delays; vendor name variants"
+  },
+  {
+    "source": "Weather and climate",
+    "baseline": "Hourly grids",
+    "signal": "Rafael's track from D-10 to D+2",
+    "degradation": "None: use real or modeled grids as the physical driver"
+  },
+  {
+    "source": "Infrastructure maps",
+    "baseline": "Static layers",
+    "signal": "Bridge closure at D+1; substation status",
+    "degradation": "Status layer updated 1–3 days late"
+  },
+  {
+    "source": "Census demographics",
+    "baseline": "Static by tract",
+    "signal": "Low-income surge-zone tracts vs high-income tracts (ACS)",
+    "degradation": "None: reference data"
+  },
+  {
+    "source": "News and social media",
+    "baseline": "About 5,000 posts a day",
+    "signal": "18,000 rumor posts from D+2 to D+20; drone-light posts near NAS from D+1 to D+10; tug blast at D+44; second wave D+75 to D+85",
+    "degradation": "Bot and real posts mixed; 30% without geotags"
+  },
+  {
+    "source": "Public health",
+    "baseline": "Daily ER counts by hospital; wastewater twice a week",
+    "signal": "GI visits +180%; respiratory and skin complaints +60% in shoreline tracts from D+3 to D+21; low-income surge-zone tracts +40% at D+45",
+    "degradation": "1–2 day reporting lag; counts under 11 suppressed"
+  }
+]

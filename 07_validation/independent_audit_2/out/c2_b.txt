@@ -1,0 +1,145 @@
+=== M2 spill valves 2027-09-14T04:00Z-05:30Z
+    kalvora_star Counter({'CMD': 12, 'STATE': 12, 'ALARM': 6, 'REMOTE': 2, 'LOGIN': 1, 'EVENT': 1})
+  * kalvora_star non-level records 34
+       ('2027-09-14T03:52:16Z', 'REMOTE', 'RMT-GW', 'bw-eng-07', 'SESSION', 'ATTACH', 'BRW-S-27209; maintenance; ticket none')
+       ('2027-09-14T03:57:40Z', 'ALARM', 'RMT-GW', 'bw-eng-07', 'COT-LEVEL-HH-GROUP', 'INHIBIT ON', 'high-high level alarms inhibited')
+       ('2027-09-14T03:58:02Z', 'ALARM', 'RMT-GW', 'bw-eng-07', 'VALVE-POSITION-GROUP', 'INHIBIT ON', 'valve position discrepancy alarms inhibited')
+       ('2027-09-14T03:59:23Z', 'CMD', 'RMT-GW', 'bw-eng-07', 'DROP-VALVE-3P', 'OPEN', '')
+       ('2027-09-14T03:59:32Z', 'CMD', 'RMT-GW', 'bw-eng-07', 'DROP-VALVE-3S', 'OPEN', '')
+       ('2027-09-14T03:59:41Z', 'CMD', 'RMT-GW', 'bw-eng-07', 'DROP-VALVE-4P', 'OPEN', '')
+       ('2027-09-14T03:59:42Z', 'STATE', 'VALVE-CTRL', '', 'DROP-VALVE-3P', 'OPEN', 'position feedback')
+       ('2027-09-14T03:59:50Z', 'CMD', 'RMT-GW', 'bw-eng-07', 'DROP-VALVE-4S', 'OPEN', '')
+       ('2027-09-14T03:59:51Z', 'STATE', 'VALVE-CTRL', '', 'DROP-VALVE-3S', 'OPEN', 'position feedback')
+       ('2027-09-14T04:00:00Z', 'STATE', 'VALVE-CTRL', '', 'DROP-VALVE-4P', 'OPEN', 'position feedback')
+    ostrel_bay Counter({'CMD': 12, 'STATE': 12, 'ALARM': 6, 'REMOTE': 2, 'LOGIN': 1, 'EVENT': 1})
+  * ostrel_bay non-level records 34
+       ('2027-09-14T03:53:51Z', 'REMOTE', 'RMT-GW', 'bw-eng-07', 'SESSION', 'ATTACH', 'BRW-S-27223; maintenance; ticket none')
+       ('2027-09-14T03:57:47Z', 'ALARM', 'RMT-GW', 'bw-eng-07', 'COT-LEVEL-HH-GROUP', 'INHIBIT ON', 'high-high level alarms inhibited')
+       ('2027-09-14T03:58:09Z', 'ALARM', 'RMT-GW', 'bw-eng-07', 'VALVE-POSITION-GROUP', 'INHIBIT ON', 'valve position discrepancy alarms inhibited')
+       ('2027-09-14T03:59:30Z', 'CMD', 'RMT-GW', 'bw-eng-07', 'DROP-VALVE-2P', 'OPEN', '')
+       ('2027-09-14T03:59:39Z', 'CMD', 'RMT-GW', 'bw-eng-07', 'DROP-VALVE-2S', 'OPEN', '')
+       ('2027-09-14T03:59:48Z', 'CMD', 'RMT-GW', 'bw-eng-07', 'DROP-VALVE-5P', 'OPEN', '')
+       ('2027-09-14T03:59:49Z', 'STATE', 'VALVE-CTRL', '', 'DROP-VALVE-2P', 'OPEN', 'position feedback')
+       ('2027-09-14T03:59:57Z', 'CMD', 'RMT-GW', 'bw-eng-07', 'DROP-VALVE-5S', 'OPEN', '')
+       ('2027-09-14T03:59:58Z', 'STATE', 'VALVE-CTRL', '', 'DROP-VALVE-2S', 'OPEN', 'position feedback')
+       ('2027-09-14T04:00:07Z', 'STATE', 'VALVE-CTRL', '', 'DROP-VALVE-5P', 'OPEN', 'position feedback')
+  * remote sessions 09-14 2
+       ('BRW-S-27209', 'bw-eng-07', 'ASN 64512', '2027-09-14T03:52:10Z', '2027-09-14T05:35:12Z', 'MT Kalvora Star', 'SUCCESS')
+       ('BRW-S-27223', 'bw-eng-07', 'ASN 64512', '2027-09-14T03:53:45Z', '2027-09-14T05:35:52Z', 'MT Ostrel Bay', 'SUCCESS')
+    WQ-01 [('03:30', '17.9', 'S'), ('03:45', '18.7', 'S'), ('04:00', '21.9', 'S'), ('04:15', '18.6', 'S'), ('04:30', '19.1', 'S'), ('04:45', '86.2', 'S'), ('05:00', '426.8', 'S'), ('05:15', '806.7', 'S'), ('05:30', '1227.0', 'S'), ('05:45', '1615.3', 'S'), ('06:00', '1683.7', 'S'), ('06:15', '1801.8', 'S')]
+    WQ-02 [('03:30', '22.7', 'S'), ('03:45', '16.7', 'S'), ('04:00', '18.9', 'S'), ('04:15', '23.2', 'S'), ('04:30', '99.4', 'S'), ('04:45', '362.0', 'S'), ('05:00', '940.3', 'S'), ('05:15', '1340.9', 'S'), ('05:30', '1752.5', 'S'), ('05:45', '1749.8', 'S'), ('06:00', '1806.7', 'S'), ('06:15', '1878.1', 'S')]
+    WQ-05 [('03:30', '20.4', 'S'), ('03:45', '20.4', 'S'), ('04:00', '19.1', 'S'), ('04:15', '20.6', 'S'), ('04:30', '22.0', 'S'), ('04:45', '15.4', 'S'), ('05:00', '18.6', 'S'), ('05:15', '19.4', 'S'), ('05:30', '20.5', 'S'), ('05:45', '24.7', 'S'), ('06:00', '18.7', 'S'), ('06:15', '93.4', 'S')]
+  * camera events TERM-01 03:30-09Z 0
+  * 911 spill/hazmat D0 (local 22:00-08:00) 53
+       ('2027-09-13 22:11:34', 'HAZMATLVL1', '440 MCKINZIE RD', 'LEAKING CONTAINER BEHIND BUSINESS / SPANISH SPKR LANG LINE')
+       ('2027-09-14 00:09:12', 'GASLEAK', '1428 PR 22 N', 'STRONG ODOR OF GAS OUTSIDE')
+       ('2027-09-14 00:09:20', 'GASLEAK', '437 LEXINGTON AVE', 'RP STATES GAS LEAK PEOPLE FEELING ILL')
+       ('2027-09-14 00:16:53', 'GASLEAK', '236 CHIPITO ST', 'GAS METER HISSING')
+       ('2027-09-14 00:19:27', 'GASLEAK', '3853 MORGAN AVE', 'RP STATES GAS LEAK PEOPLE FEELING ILL')
+       ('2027-09-14 00:23:05', 'GASLEAK', '6005 S STAPLES ST', 'LINE STRUCK ODOR OF GAS')
+       ('2027-09-14 00:25:00', 'GASLEAK', '2426 S STAPLES ST', 'STRONG ODOR OF GAS OUTSIDE / SPANISH SPKR')
+       ('2027-09-14 00:47:13', 'GASLEAK', '1351 CROSSTOWN EXPY', 'RP STATES STRONG GAS ODOR AT THIS ADDRESS')
+  * port_conditions 09-13..09-15 17
+       ('COTP ORDER 27-2027', '2027-09-13T16:10:00Z', 'PORT CONDITION', 'SEG-ANCH', 'CLOSED', 'Port Condition Zulu effective 1700Z 13 SEP: ship channel closed to all traffic. Vessels at')
+       ('COTP ORDER 27-2027', '2027-09-13T16:10:00Z', 'PORT CONDITION', 'SEG-BAY', 'CLOSED', 'Port Condition Zulu effective 1700Z 13 SEP: ship channel closed to all traffic. Vessels at')
+       ('COTP ORDER 27-2027', '2027-09-13T16:10:00Z', 'PORT CONDITION', 'SEG-ENT', 'CLOSED', 'Port Condition Zulu effective 1700Z 13 SEP: ship channel closed to all traffic. Vessels at')
+       ('COTP ORDER 27-2027', '2027-09-13T16:10:00Z', 'PORT CONDITION', 'SEG-GIWW', 'CLOSED', 'Port Condition Zulu effective 1700Z 13 SEP: ship channel closed to all traffic. Vessels at')
+       ('COTP ORDER 27-2027', '2027-09-13T16:10:00Z', 'PORT CONDITION', 'SEG-INNER-E', 'CLOSED', 'Port Condition Zulu effective 1700Z 13 SEP: ship channel closed to all traffic. Vessels at')
+       ('COTP ORDER 27-2027', '2027-09-13T16:10:00Z', 'PORT CONDITION', 'SEG-INNER-W', 'CLOSED', 'Port Condition Zulu effective 1700Z 13 SEP: ship channel closed to all traffic. Vessels at')
+       ('COTP ORDER 27-2027', '2027-09-13T16:10:00Z', 'PORT CONDITION', 'SEG-LAQ', 'CLOSED', 'Port Condition Zulu effective 1700Z 13 SEP: ship channel closed to all traffic. Vessels at')
+       ('PCCA STORM LOG', '2027-09-14T02:40:00Z', 'NOTICE', '', '', 'Channel clear of traffic. Inner Harbor cameras dark on loss of shore power.')
+  * posts spill first 38
+       ('2027-09-14T00:06:33Z', 'OilPatchInsider', 'Half of U.S. crude exports go through that one channel. People should be paying attention #CorpusChristi #Rafael')
+       ('2027-09-14T00:49:43Z', 'CityofCCWater', 'RT @CCFDCCPD: Generators outside only, far from windows.')
+       ('2027-09-14T01:06:01Z', 'CityofCCWater', 'RT @CBPWA_Alerts: Crews are staged and mutual-aid crews are on the way. When winds exceed safe limits, restoration work stops until the storm passes. ')
+       ('2027-09-14T01:45:20Z', 'OilPatchInsider', 'RT @NationalHurricaneCenter: Hurricane Rafael Advisory 46A: Rafael is now a Category 3 hurricane; life-threatening storm surge of 9 to 12 feet expecte')
+       ('2027-09-14T02:01:14Z', 'OilPatchInsider', 'So. Half of U.S. crude exports go through that one channel. People should be paying attention. smh')
+=== M3 landfall 06:00Z / M4 SUB-01 trip 07:12Z
+    KRAS cols ['USAF', 'WBAN', 'StationID', 'StationName', 'StnLat', 'StnLon', 'StnElev_m', 'ObsDateTime', 'ReportType', 'SkyCondition', 'CloudBaseAGL_ft', 'Visibility_m'] n 8 [('04:13', '+RA', '52.0', '961.7'), ('05:13', '+RA', '34.2', '952.2'), ('06:13', 'RA', '23.0', '946.8')]
+    KNGP cols ['USAF', 'WBAN', 'StationID', 'StationName', 'StnLat', 'StnLon', 'StnElev_m', 'ObsDateTime', 'ReportType', 'SkyCondition', 'CloudBaseAGL_ft', 'Visibility_m'] n 12 [('04:13', '+RA', '51.0', '970.1'), ('05:13', '+RA', '53.9', '966.6'), ('06:13', '+RA', '39.8', '963.1'), ('07:13', '+RA', '31.8', '959.1')]
+    KCRP cols ['USAF', 'WBAN', 'StationID', 'StationName', 'StnLat', 'StnLon', 'StnElev_m', 'ObsDateTime', 'ReportType', 'SkyCondition', 'CloudBaseAGL_ft', 'Visibility_m'] n 15 [('04:13', '-RA', '32.0', '989.8'), ('05:13', 'RA', '33.4', '987.9'), ('06:13', '+RA', '33.7', '984.8'), ('07:13', '+RA', '42.5', '978.1'), ('08:13', '+RA', '46.8', '971.5')]
+    gauge PA [('05:00', '11.94', '10.36', 'p'), ('05:30', '12.39', '10.87', 'p'), ('06:00', '12.59', '11.12', 'p'), ('06:30', '11.86', '10.45', 'p'), ('07:00', '10.92', '9.57', 'p')]
+    outage total [('2027-09-14T05:00:00Z', 0), ('2027-09-14T05:15:00Z', 0), ('2027-09-14T05:30:00Z', 0), ('2027-09-14T05:45:00Z', 0), ('2027-09-14T06:00:00Z', 0), ('2027-09-14T06:15:00Z', 2425), ('2027-09-14T06:17:00Z', 5200), ('2027-09-14T06:30:00Z', 10052), ('2027-09-14T06:45:00Z', 13275), ('2027-09-14T07:00:00Z', 16686), ('2027-09-14T07:12:00Z', 24000), ('2027-09-14T07:15:00Z', 42500), ('2027-09-14T07:30:00Z', 45968), ('2027-09-14T07:45:00Z', 49304)]
+  * historian SUB01 07:00-07:20 11
+       ('2027-09-14T07:00:31Z', 'GW.SUB1.BKR1.STATUS.STS', '1', '192')
+       ('2027-09-14T07:00:31Z', 'GW.SUB1.RELA.TRIP.STS', '0', '192')
+       ('2027-09-14T07:00:31Z', 'GW.SUB1.RELB.TRIP.STS', '0', '192')
+       ('2027-09-14T07:00:31Z', 'GW.SUB1.RELC.TRIP.STS', '0', '192')
+       ('2027-09-14T07:05:31Z', 'GW.SUB1.BUS.VOLT.PV', '130.14', '192')
+       ('2027-09-14T07:12:24Z', 'GW.SUB1.BUS.VOLT.PV', '129.58', '192')
+       ('2027-09-14T07:12:26Z', 'GW.SUB1.BKR1.STATUS.STS', '2', '192')
+       ('2027-09-14T07:12:27Z', 'GW.SUB1.BUS.VOLT.PV', '0.00', '192')
+       ('2027-09-14T07:15:31Z', 'GW.SUB1.BATT.VOLT.PV', '129.8', '192')
+       ('2027-09-14T07:15:31Z', 'GW.SUB1.BKR1.STATUS.STS', '2', '192')
+       ('2027-09-14T07:15:31Z', 'GW.SUB1.BUS.VOLT.PV', '0.00', '192')
+  * hospital_capacity SRMC power 2
+       ('2027-09-14', 'GENERATOR', '2027-09-14T06:17:03Z', '2027-09-14T06:17:26Z')
+       ('2027-09-15', 'GENERATOR', '', '')
+  * EAS 09-14 1
+       ('SPW-2027-0914-001', 'SPW', '2027-09-14T05:45:00Z', '2027-09-14T05:50:00Z', 'SHELTER IN PLACE. Hurricane Rafael is making landfall. Do no')
+    911/hr local [('2027-09-13 20', 17), ('2027-09-13 21', 21), ('2027-09-13 22', 26), ('2027-09-13 23', 31), ('2027-09-14 00', 40), ('2027-09-14 01', 48), ('2027-09-14 02', 67), ('2027-09-14 03', 81), ('2027-09-14 04', 94), ('2027-09-14 05', 90), ('2027-09-14 06', 83), ('2027-09-14 07', 76), ('2027-09-14 08', 78), ('2027-09-14 09', 80), ('2027-09-14 10', 84), ('2027-09-14 11', 88), ('2027-09-14 12', 90), ('2027-09-14 13', 90), ('2027-09-14 14', 88), ('2027-09-14 15', 86), ('2027-09-14 16', 84), ('2027-09-14 17', 82), ('2027-09-14 18', 78), ('2027-09-14 19', 74), ('2027-09-14 20', 70), ('2027-09-14 21', 66), ('2027-09-14 22', 63), ('2027-09-14 23', 61)]
+  * siem 07:05-07:20 ot 24
+       ('2027-09-14T07:08:21Z', 'HISTORIAN_BULK_QUERY', 'GW-SYS-JMP-01', 'session_duration=555s tags_queried=152')
+       ('2027-09-14T07:08:26Z', 'DEVICE_COMM_LOSS', 'GW-SRV-HV-01', 'duration=2576s')
+       ('2027-09-14T07:08:32Z', 'MAINT_WINDOW_ACTIVITY', 'GW-NMS-01', '')
+       ('2027-09-14T07:08:42Z', 'DEVICE_COMM_LOSS', 'GW-SRV-HV-01', 'duration=719s')
+       ('2027-09-14T07:09:30Z', 'DEVICE_COMM_LOSS', 'GW-SRV-COMMS-01', 'duration=288s')
+       ('2027-09-14T07:10:13Z', 'DEVICE_COMM_LOSS', 'GW-SRV-WSUS-01', 'duration=2676s')
+       ('2027-09-14T07:10:13Z', 'UPS_ON_BATTERY', 'GW-SRV-OTPATCH-01', 'duration=2226s')
+       ('2027-09-14T07:10:22Z', 'UPS_ON_BATTERY', 'GW-SRV-ICCP-01', 'duration=1207s')
+  * work orders 09-14 07-09Z 4
+       ('WO-2027-32340', '2027-09-14T09:15:43Z', 'FAC-UTL-02', 'EM - Loss of primary power feed A to O.N. Stevens; patrol and repair line')
+       ('WO-2027-32342', '2027-09-14T09:19:03Z', 'FAC-UTL-02', 'EM - Loss of backup power feed B to the pump room; patrol and repair')
+       ('WO-2027-32344', '2027-09-14T09:25:43Z', 'EQP-1103', 'EM - Pump P-3 motor over-temperature trip while on standby power; inspect before')
+       ('WO-2027-32339', '2027-09-14T09:41:43Z', 'EQP-1102', 'EM - High-service pump P-2 failed on loss of both plant power feeds; will not re')
+=== M6 citywide boil water 2027-09-18T12:00Z; M10 D3/D4 2027-09-26T22:30Z
+  * EAS BWW 5
+       ('BWN-2027-0918-001', 'CEM', '2027-09-18T12:00:00Z', '2027-09-18T12:00:00Z', '2027-09-18T12:15:00Z', '2027-10-23T14:00:00Z', 'City of Corpus Christi - all w')
+       ('BWW-2027-0926-001', 'BWW', '2027-09-26T22:30:00Z', '2027-09-26T22:30:00Z', '2027-09-27T11:03:00Z', '2027-10-26T16:00:00Z', 'Corpus Christi Water Districts')
+       ('BWU-2027-1014-001', 'CEM', '2027-10-14T14:00:00Z', '2027-10-14T14:00:00Z', '2027-10-14T14:00:00Z', '', 'City of Corpus Christi; Water ')
+       ('BWA-2027-1023-001', 'BWA', '2027-10-23T14:00:00Z', '2027-10-23T14:00:00Z', '2027-10-23T14:00:00Z', '', 'City of Corpus Christi except ')
+       ('BWA-2027-1026-001', 'BWA', '2027-10-26T16:00:00Z', '2027-10-26T16:00:00Z', '2027-10-26T16:00:00Z', '', 'Corpus Christi Water Districts')
+  * relay log BWW-0926 8
+       ('BWW-2027-0926-001', 'The Bayside Ledger', '2027-09-26T22:30:00Z', 'RECEIVED')
+       ('BWW-2027-0926-001', 'Harborline 6 News', '2027-09-26T22:30:01Z', 'RECEIVED')
+       ('BWW-2027-0926-001', 'Coastline Public Radio', '2027-09-26T22:30:00Z', 'RECEIVED')
+       ('BWW-2027-0926-001', 'Gulfwater Maritime Report', '2027-09-26T22:30:00Z', 'RECEIVED')
+       ('BWW-2027-0926-001', 'Sabal Energy Wire', '2027-09-26T22:30:00Z', 'RECEIVED')
+       ('BWW-2027-0926-001', 'Anchor & Rotor Weekly', '2027-09-26T22:30:00Z', 'RECEIVED')
+       ('BWW-2027-0926-001', 'KNCB Coastal Bend Radio', '2027-09-26T22:30:00Z', 'RECEIVED')
+       ('BWW-2027-0926-001', 'WKCB-AM relay station', '2027-09-26T22:30:00Z', 'RELAYED')
+  * translation jobs 8
+       ('2027-09-09-STANDBY-001', '', '2027-09-09T14:00:00Z', '', '', 'STANDBY')
+       ('2027-09-12-EVAC-001', 'EVI-2027-0912-001', '2027-09-12T11:00:00Z', '2027-09-12T13:25:00Z', '2027-09-12T13:47:00Z', 'DELIVERED')
+       ('2027-09-13-SIP-001', 'SPW-2027-0913-001', '2027-09-13T18:00:00Z', '2027-09-14T01:26:00Z', '2027-09-14T01:52:00Z', 'DELIVERED LATE')
+       ('2027-09-18-BWN-001', 'BWN-2027-0918-001', '2027-09-18T11:35:00Z', '2027-09-18T11:55:00Z', '2027-09-18T12:15:00Z', 'DELIVERED')
+       ('2027-09-26-BWN-001', 'BWW-2027-0926-001', '2027-09-26T22:35:00Z', '2027-09-27T04:45:00Z', '2027-09-27T11:03:00Z', 'DELIVERED LATE')
+       ('2027-10-14-BW-001', 'BWU-2027-1014-001', '2027-10-14T09:00:00Z', '2027-10-14T10:50:00Z', '2027-10-14T14:00:00Z', 'DELIVERED')
+       ('2027-10-23-BW-001', 'BWA-2027-1023-001', '2027-10-23T09:00:00Z', '2027-10-23T10:50:00Z', '2027-10-23T14:00:00Z', 'DELIVERED')
+       ('2027-10-26-BW-001', 'BWA-2027-1026-001', '2027-10-26T11:00:00Z', '2027-10-26T12:50:00Z', '2027-10-26T16:00:00Z', 'DELIVERED')
+  * program log 09-26T22..09-27T12 alert items 4
+       ('2027-09-26T22:32:21Z', 'Harborline 6 News', 'ALERT READ', 'EN', 'BWW-2027-0926-001', 'BoilWaterNotice')
+       ('2027-09-26T22:35:33Z', 'Coastline Public Radio', 'ALERT READ', 'EN', 'BWW-2027-0926-001', 'BoilWaterNotice')
+       ('2027-09-27T11:03:00Z', 'KNCB Coastal Bend Radio', 'ALERT READ', 'ES', 'BWW-2027-0926-001', 'BoilWaterNotice')
+       ('2027-09-27T11:03:00Z', 'KNCB Coastal Bend Radio', 'ALERT READ', 'ES', 'BWW-2027-0926-001', 'First reading of the boil water notice for Districts 3 and 4')
+    911 WATERSAFE first 2027-09-26 18:05:00 by day [('2027-09-26', 390), ('2027-09-27', 288), ('2027-09-28', 254), ('2027-09-29', 237), ('2027-09-30', 200)]
+  * 911 boil/pressure narratives 09-18 07-12 local 4
+       ('2027-09-18 07:27:00', 'UTILEMER', 'NO WATER PRESSURE')
+       ('2027-09-18 09:34:20', 'UTILEMER', 'NO WATER PRESSURE')
+       ('2027-09-18 09:55:43', 'UTILEMER', 'NO WATER PRESSURE')
+       ('2027-09-18 10:29:00', 'UTILEMER', 'NO WATER PRESSURE / SPANISH SPKR')
+    zone4 press 09-26 [('12:00', '16.06', '192'), ('13:00', '16.48', '192'), ('14:00', '16.38', '192'), ('15:00', '16.13', '192'), ('15:52', '16.40', '192'), ('16:45', '16.57', '192'), ('17:45', '16.30', '192'), ('18:45', '16.42', '192'), ('19:45', '16.25', '192'), ('20:45', '15.89', '192'), ('21:45', '15.94', '192'), ('22:45', '15.58', '192')]
+  * work orders 09-26 3
+       ('WO-2027-31446', '2027-09-26T13:31:44Z', 'PM - Pressure test point gauge verification', 'MAINT-SCHED')
+       ('GW-FR-0912', '2027-09-26T15:44:00Z', 'Field report - minimal flow at residential hydrant test point, Loma Alta / Holly Rd; household taps ', 'lscott')
+       ('WO-2027-32432', '2027-09-26T17:20:00Z', 'CM - Zone 4 low-pressure alarm did not annunciate; check alarm configuration', 'janderson')
+  * posts D3/4 129
+       ('2027-09-26T22:30:06Z', 'CityofCCWater', 'BOIL WATER NOTICE for Water Districts 3 and 4, effective immediately, because of low pressure in that part of the system. About 48,000 residents are a')
+       ('2027-09-26T22:32:37Z', 'CCEmergencyMgmt', 'NEW: boil water notice specifically for Districts 3 and 4 (ZIP codes 78401, 78405, 78407, 78408, 78416, 78417). Boil all water for drinking and cookin')
+       ('2027-09-26T22:38:18Z', 'Walkerfam39', 'New boil water notice just for Districts 3 and 4. That is us. Again.')
+       ('2027-09-26T22:40:33Z', 'KevininDowntown', 'Again: New boil water notice just for Districts 3 and 4. That is us. Again. Stay safe! #boilwater')
+       ('2027-09-26T22:44:46Z', 'NWSCorpusChristi', 'RT @CCEmergencyMgmt: NEW: boil water notice specifically for Districts 3 and 4 (ZIP codes 78401, 78405, 78407, 78408, 78416, 78417). Boil all water fo')
+       ('2027-09-26T22:49:38Z', 'MaraEstormesMX', 'RT @CCEmergencyMgmt: NEW: boil water notice specifically for Districts 3 and 4 (ZIP codes 78401, 78405, 78407, 78408, 78416, 78417). Boil all water fo')
+       ('2027-09-26T22:50:59Z', 'MEdwards12', 'Honestly, New boil water notice just for Districts 3 and 4. That is us. Again.')
+       ('2027-09-26T22:51:07Z', 'DTurner70', 'New boil water notice just for Districts 3 and 4. That is us. Again')
+  * call-in log 09-26..28 0

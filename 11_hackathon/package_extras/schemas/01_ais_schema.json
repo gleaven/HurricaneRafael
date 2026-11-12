@@ -1,0 +1,156 @@
+{
+ "source": "ais",
+ "folder": "data/ais/",
+ "format": "CSV",
+ "standard": "USCG NAIS / MarineCadastre",
+ "reference": "https://marinecadastre.gov/ais/",
+ "notes": "CamelCase headers as in the MarineCadastre product, plus the transponder's Destination field. BaseDateTime is UTC ISO 8601 without a zone suffix. SOG in knots, COG/Heading in degrees true. One row per received position report; static fields are repeated on every row as broadcast.",
+ "entity_catalog": "registries/vessels.json (130 vessels) and registries/terminal_registry.json (45 berths, 77 slips, 30 anchorage positions)",
+ "fields": [
+  {
+   "name": "MMSI",
+   "type": "string(9)",
+   "example": "538847203",
+   "notes": "9-digit MMSI as broadcast; the first three digits are the flag's maritime identification digits. Joins vessels.json mmsi. Hulls with no transponder (vessels.json transceiver_class null) never appear."
+  },
+  {
+   "name": "BaseDateTime",
+   "type": "datetime",
+   "example": "2027-09-14T06:32:00",
+   "notes": "UTC ISO 8601, no timezone suffix"
+  },
+  {
+   "name": "LAT",
+   "type": "float",
+   "example": "27.81447",
+   "notes": "WGS-84 decimal degrees, -90 to 90"
+  },
+  {
+   "name": "LON",
+   "type": "float",
+   "example": "-97.40133",
+   "notes": "WGS-84 decimal degrees, -180 to 180"
+  },
+  {
+   "name": "SOG",
+   "type": "float",
+   "example": "8.4",
+   "notes": "Speed over ground in knots"
+  },
+  {
+   "name": "COG",
+   "type": "float",
+   "example": "213.5",
+   "notes": "Course over ground, degrees true 0–359.9"
+  },
+  {
+   "name": "Heading",
+   "type": "integer",
+   "example": "214",
+   "notes": "True heading 0-359; 511 = not available (common on Class B units)"
+  },
+  {
+   "name": "VesselName",
+   "type": "string",
+   "example": "KALVORA STAR",
+   "notes": "Uppercase, max 20 chars; vessels.json vessel_name without the MT/MV/FV prefix"
+  },
+  {
+   "name": "IMO",
+   "type": "string",
+   "example": "IMO9520027",
+   "notes": "Prefix 'IMO' + 7 digits with a valid check digit; blank if not assigned"
+  },
+  {
+   "name": "CallSign",
+   "type": "string",
+   "example": "V7RV3",
+   "notes": "Radio call sign, uppercase"
+  },
+  {
+   "name": "VesselType",
+   "type": "integer",
+   "example": "80",
+   "notes": "vessels.json ais_type_code: 80/84 tanker and LNG, 70/79 cargo and supply, 30 fishing, 31 towing, 33 dredging, 35 military, 36 sailing, 37 pleasure, 50 pilot, 51 rescue, 52 tug, 53 tender, 54 anti-pollution, 55 law enforcement, 60 passenger and ferry, 90 other"
+  },
+  {
+   "name": "Status",
+   "type": "integer",
+   "example": "0",
+   "notes": "0=under way using engine, 1=at anchor, 3=restricted manoeuvrability, 5=moored, 7=engaged in fishing, 15=not defined (all Class B units)"
+  },
+  {
+   "name": "Length",
+   "type": "integer",
+   "example": "248",
+   "notes": "Overall length in meters"
+  },
+  {
+   "name": "Width",
+   "type": "integer",
+   "example": "44",
+   "notes": "Beam in meters"
+  },
+  {
+   "name": "Draft",
+   "type": "float",
+   "example": "14.2"
+  },
+  {
+   "name": "Cargo",
+   "type": "integer",
+   "example": "1",
+   "notes": "Cargo type code per ITU-R M.1371 Table 18"
+  },
+  {
+   "name": "TransceiverClass",
+   "type": "string(1)",
+   "example": "A",
+   "notes": "A=Class A (SOLAS), B=Class B; vessels.json transceiver_class"
+  },
+  {
+   "name": "Destination",
+   "type": "string",
+   "example": "USCRP",
+   "notes": "Free text typed into the transponder (max 20 characters): usually a UN/LOCODE or port name. Blank for Class B."
+  }
+ ],
+ "registry": {
+  "vessel_id_format": "VSL-nnnn (barges BRG-nnnn); vessels are joined to AIS by MMSI",
+  "berth_id_format": "TERM-nn-Bnn",
+  "slip_id_format": "SLIP-<harbour>-nn",
+  "anchorage_position_id_format": "ANCH-nn",
+  "sea_gate_id_format": "GATE-<name>",
+  "counts": {
+   "vessels": 130,
+   "by_class": {
+    "barge": 4,
+    "bulk": 7,
+    "cargo": 9,
+    "charter": 5,
+    "coast_guard": 9,
+    "dredge": 1,
+    "ferry": 6,
+    "fishing": 11,
+    "lng": 5,
+    "navy": 4,
+    "offshore_supply": 3,
+    "passenger": 2,
+    "pilot": 3,
+    "public_safety": 3,
+    "recreational": 5,
+    "research": 1,
+    "roro": 2,
+    "spill_response": 5,
+    "survey": 1,
+    "tanker": 32,
+    "tug": 12
+   }
+  }
+ },
+ "files": {
+  "ais_YYYY-MM.csv": "Shore-station feed, one file per calendar month (2027-08 to 2028-01). Reception to about 45 nm offshore.",
+  "satellite/sais_YYYY-MM.csv": "Satellite-received feed, same columns, for positions beyond shore range to the edge of the Gulf area covered. Kept in a subfolder: it is a separate product from a separate receiver and is not merged with the shore feed.",
+  "README.md": "Plain-language description of the feed, the reporting intervals and what is absent."
+ }
+}

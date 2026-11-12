@@ -1,0 +1,1593 @@
+{
+  "source": "W2",
+  "scope": "Rewrite pass: FEMA timeline (PUB-103/104/105), spill claims and closures (PUB-106/082/040), full rewrites of NWS-P070-01, NWS-P093-01, NWS-P094-01, NWS-P113-01, and overseas-adjacency check of NWS-P046-04, NWS-P048-02, NWS-P059-02, NWS-P112-01. Searched all 393 stories by script for FEMA/aid, claims and closure wording; read every affected story in full.",
+  "stories_read": 62,
+  "findings": [
+    {
+      "id": "W2-001",
+      "severity": "medium",
+      "story_id": "NWS-P004-06",
+      "field": "new_story",
+      "replacement": {
+        "story_id": "NWS-P004-06",
+        "day": 4,
+        "time_local": "18:30",
+        "outlet_id": "OUT-06",
+        "section": "National",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Federal disaster declaration for Texas coast covers cleanup; aid to households awaits damage counts",
+        "dek": "FEMA says help for individual households after Hurricane Rafael depends on joint damage assessments now under way in Nueces, San Patricio and Aransas counties.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — A federal major disaster declaration for three Texas counties battered by Hurricane Rafael will help pay for debris removal and emergency protective measures, but aid to individual households will have to wait for damage assessments now under way, the Federal Emergency Management Agency said Saturday.",
+          "The declaration covers Nueces, San Patricio and Aransas counties, where Rafael came ashore on Mustang Island near Port Aransas early Tuesday as a Category 3 hurricane, pushing about 11 feet of storm surge into Corpus Christi and Nueces bays. Satellite imagery showed about 43 square miles flooded across the three counties.",
+          "\"This declaration lets the federal government start sharing the cost of the work that has to happen right now: clearing roads, hauling debris, protecting lives and property,\" said Rachel Ostrander, an external affairs officer for FEMA Region 6. \"Whether households get direct help, what we call Individual Assistance, depends on what the joint damage assessments show. Those teams are out now.\"",
+          "Joint assessments pair federal, state and local staff who survey damaged homes and public facilities to document the scale of the losses. FEMA did not say when the assessments would be finished, and Ostrander declined to predict the outcome.",
+          "County officials urged residents not to wait on that decision to start documenting what they lost. \"Take pictures before you tear anything out, and keep every receipt,\" said Dwayne Pruitt, public information officer for the Nueces County Office of Emergency Management. \"If household aid comes, you'll be glad you did. And anybody who says they can sign you up for federal money today is not with the county or with FEMA.\"",
+          "The storm left more than flooded homes. Two moored tankers at an Inner Harbor terminal released an estimated 9,000 barrels of crude, and on Saturday the Texas Department of State Health Services closed shellfish harvesting and Texas Parks and Wildlife closed fishing in Nueces and Corpus Christi bays. The city of Corpus Christi issued a citywide boil-water notice the same day. The port, which handles about half of U.S. crude exports, remains closed.",
+          "Ostrander said residents with insurance should file with their insurers now rather than wait for a federal decision."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-AID",
+            "ARC-STORM"
+          ],
+          "public_facts": [
+            "PUB-103",
+            "PUB-023",
+            "PUB-028",
+            "PUB-029",
+            "PUB-040",
+            "PUB-039",
+            "PUB-014",
+            "PUB-020"
+          ],
+          "characters_quoted": [
+            "CHR-027",
+            "CHR-025"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001",
+            "PLC-002",
+            "PLC-003"
+          ],
+          "topics": [
+            "fema",
+            "disaster declaration",
+            "individual assistance",
+            "damage assessments",
+            "debris removal",
+            "national"
+          ],
+          "follows_up": "NWS-P001-04"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0301",
+            "EVT-0305",
+            "EVT-0315",
+            "EVT-0317",
+            "EVT-0310",
+            "EVT-0207",
+            "EVT-0210"
+          ],
+          "batch": "C",
+          "status": "draft"
+        }
+      },
+      "reason": "PUB-103 (day 4) had no story: the federal major disaster declaration covers debris removal and emergency protective measures; household aid waits on joint damage assessments. No existing day-4 story (boil water x2, closures, crude, relief cargo) can carry it naturally. Day 4 goes from 5 to 6 stories (max 6).",
+      "status": "applied"
+    },
+    {
+      "id": "W2-002",
+      "severity": "medium",
+      "story_id": "NWS-P012-03",
+      "field": "new_story",
+      "replacement": {
+        "story_id": "NWS-P012-03",
+        "day": 12,
+        "time_local": "14:00",
+        "outlet_id": "OUT-02",
+        "section": "Local",
+        "byline": [
+          "CHR-007"
+        ],
+        "headline": "Oil on your property? A claims center for spill cleanup and damage opens today",
+        "dek": "The center is run for the owners of the two tankers that spilled crude in the Inner Harbor. Here's who can file now and how to get ready.",
+        "body": [
+          "If oil from the Inner Harbor spill fouled your property, or you paid to clean it up, there is now a place to send the bill.",
+          "A claims center run for the owners of the tankers MT Kalvora Star and MT Ostrel Bay opens today for spill cleanup and property damage claims, as federal oil spill law requires. The two tankers released an estimated 9,000 barrels of crude at the Rendal Terminals berth as Hurricane Rafael arrived, and surge and wind carried it onto North Beach, the Portland shoreline and marshes along the bays.",
+          "\"If oil came onto your property or you paid to get it off, file,\" says Cole Whitaker, a spokesperson for the Texas General Land Office's oil spill program. \"The center is run for the owners, not by the state. Our part is making sure people know it's there.\"",
+          "Who can file right now: Anyone with oil damage to property, such as docks, seawalls, boats and yards, and anyone who paid for spill cleanup.",
+          "Get ready: Take dated photos or video of the oil before it is gone. Save bills for any cleanup work. Get repair estimates in writing, and write down your claim number.",
+          "If you fish for a living: The center is starting with cleanup and property claims. Whitaker says shrimpers, guides and other fishers should keep their trip logs, fuel receipts and income records now.",
+          "Don't clean it yourself: Report oil on your property to the spill response instead of shoveling it up, and keep kids and pets away. Report oiled birds and animals to the wildlife hotline.",
+          "Watch for scams: Filing is free. Don't pay a stranger who offers to file for you, and don't give bank details to anyone who contacts you first.",
+          "Fishing remains closed in Nueces and Corpus Christi bays by order of Texas Parks and Wildlife, and shellfish harvesting by order of the Texas Department of State Health Services."
+        ],
+        "tags": {
+          "story_type": "explainer",
+          "arcs": [
+            "ARC-SPILL",
+            "ARC-AID"
+          ],
+          "public_facts": [
+            "PUB-106",
+            "PUB-029",
+            "PUB-030",
+            "PUB-031",
+            "PUB-040"
+          ],
+          "characters_quoted": [
+            "CHR-028"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001",
+            "PLC-002",
+            "TERM-01"
+          ],
+          "topics": [
+            "spill claims",
+            "claims center",
+            "property damage",
+            "cleanup costs",
+            "how to",
+            "scam warning"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0315",
+            "EVT-0314",
+            "EVT-0317"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "PUB-106 (day 12) had no story: a claims center run for the tankers' owners opens for spill cleanup and property damage claims. Neither day-12 story (sole-source contract explainer, church hub feature) can carry it. Day 12 goes from 2 to 3 stories (max 3).",
+      "status": "applied"
+    },
+    {
+      "id": "W2-003",
+      "severity": "medium",
+      "story_id": "NWS-P025-02",
+      "field": "new_story",
+      "replacement": {
+        "story_id": "NWS-P025-02",
+        "day": 25,
+        "time_local": "17:00",
+        "outlet_id": "OUT-02",
+        "section": "Local",
+        "byline": [
+          "CHR-006"
+        ],
+        "headline": "Not yet: State asks FEMA for household aid as damage checks lag",
+        "dek": "Texas has asked FEMA to add aid for households in three coastal counties. Until FEMA decides, nobody can register. Near the bay, families are waiting.",
+        "body": [
+          "At Pastor Gloria Whitfield's fellowship hall, the question comes every day: \"Pastora, when can we sign up for FEMA?\"",
+          "\"Not yet,\" Whitfield, 59, tells them. \"Nobody can sign up yet. I'd rather tell you the truth than tell you something nice.\"",
+          "Here's why. Texas has formally asked FEMA to add Individual Assistance, the program that helps households, to the federal disaster declaration for Nueces, San Patricio and Aransas counties. The declaration issued Sept. 18 covers debris removal and emergency protective measures. Help for families depends on joint damage assessments, and those are moving slowly.",
+          "\"We've got people trying to look at houses on streets they still can't drive down, and near shorelines where the spill response controls who goes in,\" says Dwayne Pruitt, public information officer for the Nueces County Office of Emergency Management. \"It's slow because it's big. That's the reason, not an excuse.\"",
+          "Rachel Ostrander, an external affairs officer for FEMA Region 6, says the agency has the state's request. \"When there's a decision, we'll announce it, and we'll tell people plainly how to apply,\" she says.",
+          "A few blocks from the hall, Rosa Elizondo, 38, has a bucket in her hallway catching a drip from the ceiling. She is a home health aide and a mother of three. She rents a duplex near the bay. No car, no savings for repairs. Her landlord says soon.",
+          "\"People think FEMA is like a store. You go, you ask, you get,\" Elizondo says. \"Nobody told us it's more like the bus. First it has to come.\"",
+          "Advocates say families without savings feel the wait most. Whitfield is starting a new page in her penciled binder for neighbors who will need help applying once aid opens.",
+          "What to do now: Take photos of damage before you clean up. Keep every receipt. If you have insurance, file your claim now. And if anyone offers to sign you up for federal aid today, it's a scam."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-AID",
+            "ARC-EQUITY"
+          ],
+          "public_facts": [
+            "PUB-104",
+            "PUB-103",
+            "PUB-053",
+            "PUB-037"
+          ],
+          "characters_quoted": [
+            "CHR-049",
+            "CHR-025",
+            "CHR-027",
+            "CHR-040"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-010",
+            "PLC-001",
+            "PLC-002",
+            "PLC-003"
+          ],
+          "topics": [
+            "fema",
+            "individual assistance",
+            "damage assessments",
+            "state request",
+            "church hub",
+            "renters",
+            "what to do"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "PUB-104 (day 25) had no story: assessments slowed by spill-zone access limits, flooded roads and the scale of damage; the state formally asks FEMA to add Individual Assistance; advocates say families without savings are waiting. The only day-25 story (Coastline marsh/seafood feature) cannot carry it. Harborline 6 is used so the piece does not sit beside the Ledger's day-26 hub feature by the same reporter. Day 25 goes from 1 to 2 stories (max 3).",
+      "status": "applied"
+    },
+    {
+      "id": "W2-004",
+      "severity": "medium",
+      "story_id": "NWS-P057-02",
+      "field": "new_story",
+      "replacement": {
+        "story_id": "NWS-P057-02",
+        "day": 57,
+        "time_local": "17:30",
+        "outlet_id": "OUT-03",
+        "section": "Equity",
+        "byline": [
+          "CHR-008"
+        ],
+        "headline": "FEMA approves aid for households, eight weeks after Rafael. Here's why it took this long",
+        "dek": "Registration for Individual Assistance opens Saturday in Nueces, San Patricio and Aransas counties. Officials say slowed damage assessments held up the decision.",
+        "body": [
+          "For eight weeks, the answer to the question asked most often in the Coastal Bend's hardest-hit neighborhoods has been the same two words: not yet. On Wednesday, the answer changed.",
+          "FEMA approved Individual Assistance for Nueces, San Patricio and Aransas counties, opening the way for federal help to households damaged by Hurricane Rafael. Registration opens Saturday, Nov. 13.",
+          "\"This is the decision people have been waiting for,\" said Rachel Ostrander, an external affairs officer for FEMA Region 6. \"Households with storm damage or losses can start registering Saturday. Use only FEMA's official website, its helpline or a disaster recovery center.\"",
+          "Why did it take this long? The federal disaster declaration issued four days after landfall covered debris removal and emergency protective measures, the costs local governments carry first. Help for individual households hinged on joint damage assessments by federal, state and local teams. Those dragged as teams ran into restrictions in the oiled zone, roads still under water and the sheer amount of damage. In October, the state formally asked FEMA to add Individual Assistance.",
+          "\"Nobody in our office liked telling people to wait,\" said Dwayne Pruitt, public information officer for the Nueces County Office of Emergency Management. \"But you can't approve help for houses nobody has been able to look at. Now we get to stop saying 'not yet.'\"",
+          "The wait fell hardest on households with the least cushion. Residents of low-income neighborhoods near the bay reported waiting days for help after the storm, church and neighborhood hubs handed out food and water before official distribution reached some blocks, and in late October health officials said emergency room visits from those neighborhoods were still about 40% above normal.",
+          "Ostrander said people can use the next three days to get ready: find a photo ID, insurance papers if they have them and pictures of the damage, and, for renters, something that shows they lived at the address. Pruitt said church and neighborhood hubs are a good place to start for anyone without a computer or a reliable phone.",
+          "Registering is free. Pruitt reminded residents that the city warned in September about phishing emails impersonating a disaster-aid portal, and said no one should register through a link that arrives by text or email.",
+          "Saturday will be the first day. For many families near the bay, it will not be the last thing they wait for."
+        ],
+        "tags": {
+          "story_type": "explainer",
+          "arcs": [
+            "ARC-AID",
+            "ARC-EQUITY"
+          ],
+          "public_facts": [
+            "PUB-105",
+            "PUB-103",
+            "PUB-104",
+            "PUB-053",
+            "PUB-037",
+            "PUB-069",
+            "PUB-041"
+          ],
+          "characters_quoted": [
+            "CHR-027",
+            "CHR-025"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001",
+            "PLC-002",
+            "PLC-003",
+            "PLC-010"
+          ],
+          "topics": [
+            "fema",
+            "individual assistance",
+            "approval",
+            "damage assessments",
+            "registration",
+            "equity"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0408",
+            "EVT-0306"
+          ],
+          "batch": "F",
+          "status": "draft"
+        }
+      },
+      "reason": "PUB-105 (day 57) had no story: FEMA approves Individual Assistance; registration opens Saturday, Nov. 13. The only day-57 story is a ship-channel explainer. Day 57 goes from 1 to 2 stories (max 2).",
+      "status": "applied"
+    },
+    {
+      "id": "W2-005",
+      "severity": "medium",
+      "story_id": "NWS-P004-03",
+      "field": "headline",
+      "old": "State closes fishing and shellfish harvesting",
+      "new": "Health and wildlife agencies close fishing and shellfish harvesting",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-006",
+      "severity": "medium",
+      "story_id": "NWS-P004-03",
+      "field": "body",
+      "old": "The state on Saturday closed fishing and shellfish harvesting in Nueces and Corpus Christi bays, shutting down fishing in both bays days after",
+      "new": "Texas Parks and Wildlife on Saturday closed fishing, and the Texas Department of State Health Services closed shellfish harvesting, in Nueces and Corpus Christi bays days after",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-007",
+      "severity": "high",
+      "story_id": "NWS-P004-03",
+      "field": "body",
+      "old": "\"Nobody wants to close a fishery, least of all in the middle of a season,\" said Cole Whitaker, spokesperson for the Texas General Land Office's oil spill program. \"But we are not going to let oiled seafood reach anybody's table. The closure stays until testing shows it's safe.\"",
+      "new": "\"Those closures are the health and wildlife agencies' call, and nobody at the Land Office is going to argue with keeping oiled seafood off anybody's table,\" said Cole Whitaker, spokesperson for the Texas General Land Office's oil spill program. \"Our job is to get the oil out of the water so the testing can come back clean.\"",
+      "reason": "PUB-040 and Whitaker's knowledge timeline: the closures belong to the state health and wildlife agencies; the Land Office spokesman must not speak as if his agency closes or reopens the bays.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-008",
+      "severity": "medium",
+      "story_id": "NWS-P004-04",
+      "field": "body",
+      "old": "and the state on Saturday closed fishing and shellfish harvesting in both bays.",
+      "new": "and on Saturday Texas Parks and Wildlife closed fishing and the Texas Department of State Health Services closed shellfish harvesting in both bays.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-009",
+      "severity": "medium",
+      "story_id": "NWS-P004-05",
+      "field": "body",
+      "old": "and the state closed fishing and shellfish harvesting in both bays Saturday.",
+      "new": "and the Texas Department of State Health Services and Texas Parks and Wildlife shut shellfish harvesting and fishing in both bays Saturday.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-010",
+      "severity": "medium",
+      "story_id": "NWS-P005-03",
+      "field": "body",
+      "old": "the state has closed fishing and shellfish harvesting in both bays.",
+      "new": "Texas Parks and Wildlife has closed fishing, and the Texas Department of State Health Services has closed shellfish harvesting, in both bays.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-011",
+      "severity": "medium",
+      "story_id": "NWS-P005-05",
+      "field": "body",
+      "old": "The state has closed fishing and shellfish harvesting in Nueces and Corpus Christi bays, and health officials say",
+      "new": "Texas Parks and Wildlife has closed fishing and the Texas Department of State Health Services has closed shellfish harvesting in Nueces and Corpus Christi bays, and health officials say",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-012",
+      "severity": "medium",
+      "story_id": "NWS-P007-03",
+      "field": "body",
+      "old": "It has also closed fishing and shellfish harvesting in Nueces and Corpus Christi bays.",
+      "new": "Texas Parks and Wildlife and the Texas Department of State Health Services have closed fishing and shellfish harvesting in Nueces and Corpus Christi bays.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office. ('It' referred back to 'the state'.)",
+      "status": "applied"
+    },
+    {
+      "id": "W2-013",
+      "severity": "medium",
+      "story_id": "NWS-P009-04",
+      "field": "body",
+      "old": "under the closure the state issued Sept. 18.",
+      "new": "under closures issued Sept. 18 by Texas Parks and Wildlife and the Texas Department of State Health Services.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-014",
+      "severity": "medium",
+      "story_id": "NWS-P013-02",
+      "field": "body",
+      "old": "Since Sept. 18, the state has closed fishing and shellfish harvesting in Nueces and Corpus Christi bays after",
+      "new": "Since Sept. 18, fishing in Nueces and Corpus Christi bays has been closed by Texas Parks and Wildlife, and shellfish harvesting by the Texas Department of State Health Services, after",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-015",
+      "severity": "medium",
+      "story_id": "NWS-P013-02",
+      "field": "body",
+      "old": "and the state has not said when it will be lifted.",
+      "new": "and neither agency has said when it will be lifted.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-016",
+      "severity": "medium",
+      "story_id": "NWS-P021-01",
+      "field": "headline",
+      "old": "State extends fishing closure",
+      "new": "Parks and Wildlife extends fishing closure",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-017",
+      "severity": "medium",
+      "story_id": "NWS-P021-01",
+      "field": "body",
+      "old": "The state has extended the closure of fishing and shellfish harvesting in Nueces and Corpus Christi bays, keeping",
+      "new": "Texas Parks and Wildlife has extended its fishing closure in Nueces and Corpus Christi bays, and shellfish harvesting stays closed under the Texas Department of State Health Services, keeping",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-018",
+      "severity": "high",
+      "story_id": "NWS-P021-01",
+      "field": "body",
+      "old": "said Cole Whitaker, a spokesman for the Texas General Land Office's oil spill program. \"Fish and shellfish can take up oil from the water and sediment, and we're not going to reopen these bays until testing shows the seafood is safe to eat.\" Whitaker did not give a new reopening date.",
+      "new": "said Cole Whitaker, a spokesman for the Texas General Land Office's oil spill program, which does not set the closures but helps run the cleanup that testing depends on. \"Fish and shellfish can take up oil from the water and sediment. These bays shouldn't reopen until testing shows the seafood is safe to eat.\" No new reopening date was given.",
+      "reason": "PUB-040 and Whitaker's knowledge timeline: the closures belong to the state health and wildlife agencies; the Land Office spokesman must not speak as if his agency closes or reopens the bays.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-019",
+      "severity": "medium",
+      "story_id": "NWS-P021-03",
+      "field": "body",
+      "old": "On Tuesday the state extended its closure of fishing and shellfish harvesting in Nueces and Corpus Christi bays.",
+      "new": "On Tuesday, Texas Parks and Wildlife extended its fishing closure in Nueces and Corpus Christi bays, where the Texas Department of State Health Services has also closed shellfish harvesting.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-020",
+      "severity": "medium",
+      "story_id": "NWS-P024-01",
+      "field": "body",
+      "old": "The state extended the closure of fishing and shellfish harvesting in Nueces and Corpus Christi bays on Tuesday.",
+      "new": "Texas Parks and Wildlife on Tuesday extended its fishing closure in Nueces and Corpus Christi bays, and shellfish harvesting there remains closed by the state health department.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-021",
+      "severity": "medium",
+      "story_id": "NWS-P025-01",
+      "field": "body",
+      "old": "On Tuesday the state extended the closure of fishing and shellfish harvesting in both bays.",
+      "new": "On Tuesday, Texas Parks and Wildlife extended its fishing closure in both bays; shellfish harvesting stays shut by order of the Texas Department of State Health Services.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-022",
+      "severity": "medium",
+      "story_id": "NWS-P026-01",
+      "field": "body",
+      "old": "The state was right to extend the closure of fishing and shellfish harvesting in Nueces and Corpus Christi bays on Tuesday.",
+      "new": "Texas Parks and Wildlife was right to extend its fishing closure in Nueces and Corpus Christi bays on Tuesday, and the state health department is right to keep shellfish harvesting shut.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-023",
+      "severity": "low",
+      "story_id": "NWS-P026-01",
+      "field": "body",
+      "old": "He is not asking the state to rush. He is asking it to show its work.",
+      "new": "He is not asking those agencies to rush. He is asking them to show their work.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-024",
+      "severity": "low",
+      "story_id": "NWS-P026-01",
+      "field": "body",
+      "old": "The state should keep a clock the rest of us can read.",
+      "new": "The agencies should keep a clock the rest of us can read.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-025",
+      "severity": "medium",
+      "story_id": "NWS-P027-01",
+      "field": "body",
+      "old": "The state extended the closure Oct. 5.",
+      "new": "Texas Parks and Wildlife extended its fishing closure Oct. 5, and the state health department's shellfish closure stands.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-026",
+      "severity": "medium",
+      "story_id": "NWS-P028-02",
+      "field": "body",
+      "old": "The state has closed fishing in Nueces and Corpus Christi bays because of the oil spill,",
+      "new": "Texas Parks and Wildlife has closed fishing in Nueces and Corpus Christi bays because of the oil spill,",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-027",
+      "severity": "low",
+      "story_id": "NWS-P028-02",
+      "field": "body",
+      "old": "I tell them to check with the state before they go.",
+      "new": "I tell them to check with Parks and Wildlife before they go.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-028",
+      "severity": "medium",
+      "story_id": "NWS-P029-01",
+      "field": "body",
+      "old": "The state extended the fishing and shellfish closure in Nueces and Corpus Christi bays on Oct. 5.",
+      "new": "Texas Parks and Wildlife extended its fishing closure in Nueces and Corpus Christi bays on Oct. 5, and the state health department's shellfish closure stays in place.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-029",
+      "severity": "medium",
+      "story_id": "NWS-P031-02",
+      "field": "body",
+      "old": "Four days after landfall, the state closed fishing and shellfish harvesting in Nueces and Corpus Christi bays after",
+      "new": "Four days after landfall, Texas Parks and Wildlife closed fishing and the Texas Department of State Health Services closed shellfish harvesting in Nueces and Corpus Christi bays after",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-030",
+      "severity": "medium",
+      "story_id": "NWS-P031-02",
+      "field": "body",
+      "old": "State officials have not said when the bays will reopen to fishing.",
+      "new": "Neither agency has said when the bays will reopen to fishing.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-031",
+      "severity": "medium",
+      "story_id": "NWS-P032-02",
+      "field": "body",
+      "old": "and the state has extended the closure.",
+      "new": "and Texas Parks and Wildlife has extended its fishing closure.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-032",
+      "severity": "low",
+      "story_id": "NWS-P032-02",
+      "field": "body",
+      "old": "I tell them, ask the state, and bring me a sandwich",
+      "new": "I tell them, ask Parks and Wildlife, and bring me a sandwich",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-033",
+      "severity": "medium",
+      "story_id": "NWS-P042-01",
+      "field": "body",
+      "old": "and the state closed fishing and shellfish harvesting four days after landfall. That closure has been extended.",
+      "new": "and four days after landfall Texas Parks and Wildlife closed fishing and the state health department closed shellfish harvesting. The fishing closure has been extended.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-034",
+      "severity": "low",
+      "story_id": "NWS-P042-01",
+      "field": "body",
+      "old": "First, the state and the Unified Command should finally publish",
+      "new": "First, the health and wildlife agencies and the Unified Command should finally publish",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-035",
+      "severity": "medium",
+      "story_id": "NWS-P050-02",
+      "field": "body",
+      "old": "The state closed fishing and shellfish harvesting in Nueces and Corpus Christi bays on Sept. 18, days after",
+      "new": "Texas Parks and Wildlife closed fishing and the Texas Department of State Health Services closed shellfish harvesting in Nueces and Corpus Christi bays on Sept. 18, days after",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-036",
+      "severity": "medium",
+      "story_id": "NWS-P057-01",
+      "field": "body",
+      "old": "The state's closure of fishing and shellfish harvesting in Nueces and Corpus Christi bays because of the oil spill is separate and remains in place. The channel reopening does not change it.",
+      "new": "The closures of fishing and shellfish harvesting in Nueces and Corpus Christi bays, set by Texas Parks and Wildlife and the Texas Department of State Health Services because of the oil spill, are separate and remain in place. The channel reopening does not change them.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-037",
+      "severity": "medium",
+      "story_id": "NWS-P058-01",
+      "field": "body",
+      "old": "The state's fishing closure in Nueces and Corpus Christi bays because of the oil spill is separate and stays in place.",
+      "new": "Texas Parks and Wildlife's fishing closure in Nueces and Corpus Christi bays because of the oil spill is separate and stays in place.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-038",
+      "severity": "medium",
+      "story_id": "NWS-P061-01",
+      "field": "body",
+      "old": "The state's fishing closure in the bays remains in place.",
+      "new": "Texas Parks and Wildlife's fishing closure in the bays remains in place.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-039",
+      "severity": "medium",
+      "story_id": "NWS-P061-01",
+      "field": "body",
+      "old": "Crews continue to check shorelines and marshes, he said. \"If people see oil",
+      "new": "Crews continue to check shorelines and marshes, he said, and a claims center run for the tankers' owners has taken cleanup and property damage claims since September. \"If people see oil",
+      "reason": "PUB-106 (day 12): the owners' claims center has been open for cleanup and property claims since Sept. 26; a day-61 story about 'who pays' should not read as if no claims channel exists.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-040",
+      "severity": "high",
+      "story_id": "NWS-P063-01",
+      "field": "headline",
+      "old": "Spill damage claims process opens for fishers and shoreline owners",
+      "new": "Spill claims center starts taking lost-income claims from fishers and shoreline businesses",
+      "reason": "PUB-106/PUB-082: claims are taken by a claims center run for the tankers' owners (cleanup and property claims from Sept. 26, lost-income claims from Nov. 16, National Pollution Funds Center after 90 days), not by state spill officials.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-041",
+      "severity": "high",
+      "story_id": "NWS-P063-01",
+      "field": "dek",
+      "old": "people who lost income or property can begin filing claims.",
+      "new": "people who lost income can begin filing claims with the tanker owners' claims center.",
+      "reason": "PUB-106/PUB-082: claims are taken by a claims center run for the tankers' owners (cleanup and property claims from Sept. 26, lost-income claims from Nov. 16, National Pollution Funds Center after 90 days), not by state spill officials.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-042",
+      "severity": "high",
+      "story_id": "NWS-P063-01",
+      "field": "body",
+      "old": "Commercial fishers and shoreline property owners hurt by the oil spill that spread across Nueces and Corpus Christi bays during Hurricane Rafael can now file damage claims, state spill officials said Tuesday.",
+      "new": "Commercial fishers and shoreline businesses that lost income to the oil spill that spread across Nueces and Corpus Christi bays during Hurricane Rafael can now file claims with the claims center run for the tankers' owners, which began taking lost-income claims Tuesday as federal oil spill law requires. Claims that go unpaid for 90 days can be taken to the Coast Guard's National Pollution Funds Center.",
+      "reason": "PUB-106/PUB-082: claims are taken by a claims center run for the tankers' owners (cleanup and property claims from Sept. 26, lost-income claims from Nov. 16, National Pollution Funds Center after 90 days), not by state spill officials.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-043",
+      "severity": "medium",
+      "story_id": "NWS-P063-01",
+      "field": "body",
+      "old": "The state closed fishing and shellfish harvesting in the two bays on Sept. 18 and extended the closure in early October. Cleanup moved to monitoring Oct. 28, but the fishing closure remains in place, and Whitaker said Tuesday there was no date for reopening.",
+      "new": "Texas Parks and Wildlife closed fishing and the Texas Department of State Health Services closed shellfish harvesting in the two bays on Sept. 18, and the fishing closure was extended in early October. Cleanup moved to monitoring Oct. 28, but the closures remain in place, and no reopening date has been set.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-044",
+      "severity": "medium",
+      "story_id": "NWS-P063-01",
+      "field": "body",
+      "old": "Whitaker said shoreline owners should document damage and cleanup costs and file through the same process.",
+      "new": "Whitaker said shoreline property owners have been able to file cleanup and property damage claims with the same center since September.",
+      "reason": "PUB-106/PUB-082: property claims opened Sept. 26; Nov. 16 is when the owners' claims center began taking lost-income claims from fishers and shoreline businesses.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-045",
+      "severity": "high",
+      "story_id": "NWS-P063-02",
+      "field": "dek",
+      "old": "Fishers and shoreline property owners hurt by the September oil spill can now file.",
+      "new": "Fishers and shoreline businesses that lost income to the September oil spill can now file.",
+      "reason": "PUB-106/PUB-082: claims are taken by a claims center run for the tankers' owners (cleanup and property claims from Sept. 26, lost-income claims from Nov. 16, National Pollution Funds Center after 90 days), not by state spill officials.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-046",
+      "severity": "high",
+      "story_id": "NWS-P063-02",
+      "field": "body",
+      "old": "The claims process for damage from the oil spill in Nueces and Corpus Christi bays opens this week for commercial fishers and shoreline property owners, state spill officials say.",
+      "new": "The claims center run for the tankers' owners begins taking lost-income claims this week from commercial fishers and shoreline businesses hurt by the oil spill in Nueces and Corpus Christi bays, as federal oil spill law requires. If a claim sits unpaid for 90 days, you can take it to the Coast Guard's National Pollution Funds Center.",
+      "reason": "PUB-106/PUB-082: claims are taken by a claims center run for the tankers' owners (cleanup and property claims from Sept. 26, lost-income claims from Nov. 16, National Pollution Funds Center after 90 days), not by state spill officials.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-047",
+      "severity": "high",
+      "story_id": "NWS-P063-02",
+      "field": "body",
+      "old": "Who can file: Commercial fishers who lost income because of the spill and the state's fishing closure in the bays, and people who own shoreline property damaged by the oil.",
+      "new": "Who can file: Commercial fishers who lost income because of the spill and the fishing closure in the bays, and shoreline businesses that lost income. Oil damage to shoreline property? That part of the center opened in September.",
+      "reason": "PUB-106/PUB-082: claims are taken by a claims center run for the tankers' owners (cleanup and property claims from Sept. 26, lost-income claims from Nov. 16, National Pollution Funds Center after 90 days), not by state spill officials.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-048",
+      "severity": "medium",
+      "story_id": "NWS-P063-02",
+      "field": "body",
+      "old": "The fishing and shellfish closure stays in effect until the state says otherwise.",
+      "new": "The fishing and shellfish closures stay in effect until Texas Parks and Wildlife and the state health department say otherwise.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-049",
+      "severity": "high",
+      "story_id": "NWS-P065-02",
+      "field": "body",
+      "old": "filed two days after the state's spill officials opened a claims process for fishers and shoreline owners hurt by the oil that spread across Nueces and Corpus Christi bays during Hurricane Rafael in September. The state closed fishing and shellfish harvesting in the bays on Sept. 18 and extended the closure in early October.",
+      "new": "filed two days after the claims center run for the tankers' owners began taking lost-income claims from fishers and shoreline businesses hurt by the oil that spread across Nueces and Corpus Christi bays during Hurricane Rafael in September. Texas Parks and Wildlife closed fishing in the bays on Sept. 18, the same day the state health department closed shellfish harvesting, and extended its closure in early October.",
+      "reason": "PUB-106/PUB-082: claims are taken by a claims center run for the tankers' owners (cleanup and property claims from Sept. 26, lost-income claims from Nov. 16, National Pollution Funds Center after 90 days), not by state spill officials. PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-050",
+      "severity": "medium",
+      "story_id": "NWS-P065-02",
+      "field": "body",
+      "old": "Whitaker said there is no date yet for reopening the bays.",
+      "new": "No date has been set for reopening the bays.",
+      "reason": "PUB-040 and Whitaker's knowledge timeline: the closures belong to the state health and wildlife agencies; the Land Office spokesman must not speak as if his agency closes or reopens the bays.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-051",
+      "severity": "medium",
+      "story_id": "NWS-P074-01",
+      "field": "body",
+      "old": "The state closed fishing and shellfish harvesting in both bays Sept. 18 and extended the closure in early October.",
+      "new": "Texas Parks and Wildlife closed fishing and the Texas Department of State Health Services closed shellfish harvesting in both bays Sept. 18, and the fishing closure was extended in early October.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-052",
+      "severity": "high",
+      "story_id": "NWS-P074-01",
+      "field": "body",
+      "old": "said the closure stays until the science supports lifting it.",
+      "new": "said the health and wildlife agencies will keep the closures until the science supports lifting them.",
+      "reason": "PUB-040 and Whitaker's knowledge timeline: the closures belong to the state health and wildlife agencies; the Land Office spokesman must not speak as if his agency closes or reopens the bays.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-053",
+      "severity": "medium",
+      "story_id": "NWS-P074-01",
+      "field": "body",
+      "old": "A damage claims process for fishers and shoreline owners opened Nov. 16.",
+      "new": "The claims center run for the tankers' owners began taking lost-income claims from fishers and shoreline businesses Nov. 16.",
+      "reason": "PUB-106/PUB-082: property claims opened Sept. 26; Nov. 16 is when the owners' claims center began taking lost-income claims from fishers and shoreline businesses.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-054",
+      "severity": "low",
+      "story_id": "NWS-P074-01",
+      "field": "body",
+      "old": "file through the claims process.",
+      "new": "file with the owners' claims center.",
+      "reason": "PUB-106/PUB-082: claims are taken by a claims center run for the tankers' owners (cleanup and property claims from Sept. 26, lost-income claims from Nov. 16, National Pollution Funds Center after 90 days), not by state spill officials.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-055",
+      "severity": "medium",
+      "story_id": "NWS-P087-01",
+      "field": "body",
+      "old": "A damage claims process for fishers and shoreline owners opened Nov. 16.",
+      "new": "The claims center run for the tankers' owners, open since Sept. 26 for cleanup and property damage claims, began taking lost-income claims Nov. 16.",
+      "reason": "PUB-106/PUB-082: property claims opened Sept. 26; Nov. 16 is when the owners' claims center began taking lost-income claims from fishers and shoreline businesses.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-056",
+      "severity": "medium",
+      "story_id": "NWS-P091-01",
+      "field": "body",
+      "old": "A damage claims process opened Nov. 16.",
+      "new": "The tanker owners' claims center began taking lost-income claims Nov. 16.",
+      "reason": "PUB-106/PUB-082: property claims opened Sept. 26; Nov. 16 is when the owners' claims center began taking lost-income claims from fishers and shoreline businesses.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-057",
+      "severity": "medium",
+      "story_id": "NWS-P104-01",
+      "field": "body",
+      "old": "The state's closure of fishing and shellfish harvesting in both bays, extended in October, remains in place.",
+      "new": "The closures of fishing and shellfish harvesting in both bays, set by Texas Parks and Wildlife and the Texas Department of State Health Services, remain in place.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-058",
+      "severity": "medium",
+      "story_id": "NWS-P104-01",
+      "field": "body",
+      "old": "A spill damage claims process for fishers and shoreline owners opened Nov. 16.",
+      "new": "The claims center run for the tankers' owners has taken their lost-income claims since Nov. 16.",
+      "reason": "PUB-106/PUB-082: property claims opened Sept. 26; Nov. 16 is when the owners' claims center began taking lost-income claims from fishers and shoreline businesses.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-059",
+      "severity": "high",
+      "story_id": "NWS-P104-01",
+      "field": "body",
+      "old": "Whitaker said reopening decisions will follow test results. \"We'll open when the data says so, not before,\" he said.",
+      "new": "Whitaker said the agencies' reopening decisions will follow test results. \"The bays open when the data says so, not before,\" he said.",
+      "reason": "PUB-040 and Whitaker's knowledge timeline: the closures belong to the state health and wildlife agencies; the Land Office spokesman must not speak as if his agency closes or reopens the bays.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-060",
+      "severity": "medium",
+      "story_id": "NWS-P105-02",
+      "field": "body",
+      "old": "A damage claims process for fishers and shoreline owners opened in November, and the state's fishing closure in Nueces and Corpus Christi bays remains in place.",
+      "new": "The claims center run for the tankers' owners has taken lost-income claims from fishers and shoreline businesses since November, and Texas Parks and Wildlife's fishing closure in Nueces and Corpus Christi bays remains in place.",
+      "reason": "PUB-106/PUB-082: claims are taken by a claims center run for the tankers' owners (cleanup and property claims from Sept. 26, lost-income claims from Nov. 16, National Pollution Funds Center after 90 days), not by state spill officials. PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-061",
+      "severity": "medium",
+      "story_id": "NWS-P109-01",
+      "field": "body",
+      "old": "If you fish or own shoreline property hurt by the September oil spill, a damage claims process has been open since November.",
+      "new": "If you fish or own shoreline property hurt by the September oil spill, file with the claims center run for the tankers' owners. It has taken property damage claims since September and lost-income claims since November. If a claim goes unpaid for 90 days, it can go to the Coast Guard's National Pollution Funds Center.",
+      "reason": "PUB-106/PUB-082: property claims opened Sept. 26; Nov. 16 is when the owners' claims center began taking lost-income claims from fishers and shoreline businesses.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-062",
+      "severity": "medium",
+      "story_id": "NWS-P112-02",
+      "field": "body",
+      "old": "and the state closed fishing and shellfish harvesting in both.",
+      "new": "and Texas Parks and Wildlife and the state health department closed fishing and shellfish harvesting in both.",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-063",
+      "severity": "medium",
+      "story_id": "NWS-P112-02",
+      "field": "body",
+      "old": "the job is the same: test, monitor and reopen when it's safe,\"",
+      "new": "the job is the same: monitor, keep testing and get the bays ready to reopen when it's safe,\"",
+      "reason": "PUB-040 and Whitaker's knowledge timeline: the closures belong to the state health and wildlife agencies; the Land Office spokesman must not speak as if his agency closes or reopens the bays.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-064",
+      "severity": "medium",
+      "story_id": "NWS-P112-02",
+      "field": "body",
+      "old": "Nguyen filed a spill damage claim in November, after the claims process opened.",
+      "new": "Nguyen filed a lost-income claim in November, after the tanker owners' claims center began accepting them.",
+      "reason": "PUB-106/PUB-082: property claims opened Sept. 26; Nov. 16 is when the owners' claims center began taking lost-income claims from fishers and shoreline businesses.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-065",
+      "severity": "medium",
+      "story_id": "NWS-P115-01",
+      "field": "body",
+      "old": "The state closed fishing and shellfish harvesting in both bays four days after Hurricane Rafael made landfall,",
+      "new": "Texas Parks and Wildlife closed fishing and the Texas Department of State Health Services closed shellfish harvesting in both bays four days after Hurricane Rafael made landfall,",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-066",
+      "severity": "low",
+      "story_id": "NWS-P115-01",
+      "field": "body",
+      "old": "The closure was extended in October,",
+      "new": "The fishing closure was extended in October,",
+      "reason": "PUB-040: shellfish harvesting was closed by the Texas Department of State Health Services and fishing by Texas Parks and Wildlife, not by 'the state' generically or the Land Office.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-067",
+      "severity": "high",
+      "story_id": "NWS-P115-01",
+      "field": "body",
+      "old": "\"We reopened what the testing supports, and nothing more,\" said Cole Whitaker",
+      "new": "\"The agencies reopened what the testing supports, and nothing more,\" said Cole Whitaker",
+      "reason": "PUB-040 and Whitaker's knowledge timeline: the closures belong to the state health and wildlife agencies; the Land Office spokesman must not speak as if his agency closes or reopens the bays.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-068",
+      "severity": "medium",
+      "story_id": "NWS-P115-01",
+      "field": "body",
+      "old": "The claims process for fishers and shoreline owners opened Nov. 16.",
+      "new": "Since September the tanker owners' claims center has taken property damage claims, and since Nov. 16 it has also taken lost-income claims from fishers and shoreline businesses.",
+      "reason": "PUB-106/PUB-082: property claims opened Sept. 26; Nov. 16 is when the owners' claims center began taking lost-income claims from fishers and shoreline businesses.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-069",
+      "severity": "medium",
+      "story_id": "NWS-P060-02",
+      "field": "body",
+      "old": "two months after Hurricane Rafael made landfall.",
+      "new": "two months after Hurricane Rafael made landfall; delayed damage assessments had held off FEMA's approval of individual assistance until Nov. 10.",
+      "reason": "PUB-103/104/105: registration opened two months after landfall because Individual Assistance was approved only Nov. 10, after delayed damage assessments; give the reason.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-070",
+      "severity": "medium",
+      "story_id": "NWS-P068-01",
+      "field": "body",
+      "old": "Two months after Hurricane Rafael, federal aid registration finally opened on the Coastal Bend.",
+      "new": "Two months after Hurricane Rafael, federal aid registration finally opened on the Coastal Bend, once FEMA, slowed by delayed damage assessments, approved individual assistance Nov. 10.",
+      "reason": "PUB-103/104/105: registration opened two months after landfall because Individual Assistance was approved only Nov. 10, after delayed damage assessments; give the reason.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-071",
+      "severity": "low",
+      "story_id": "NWS-P055-02",
+      "field": "body",
+      "old": "I tell them I'll know when you know, and I'll knock on your door the same day.\"",
+      "new": "I tell them I'll know when you know, and I'll knock on your door the same day.\" The state asked FEMA in October to add aid for households after damage assessments were slowed; no decision has been announced.",
+      "reason": "PUB-103/PUB-104: where a pre-approval story discusses federal help, note the declaration's limits and the pending request so readers know why no one can register yet.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-072",
+      "severity": "high",
+      "story_id": "NWS-P070-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P070-01",
+        "day": 70,
+        "time_local": "07:00",
+        "outlet_id": "OUT-01",
+        "section": "Local",
+        "byline": [
+          "CHR-001"
+        ],
+        "headline": "From declaration to deposit: how federal storm aid reaches a household, and where it can stall",
+        "dek": "Ten weeks after Rafael, many Coastal Bend households have registered for FEMA aid and are still waiting. Here is how the process works, step by step, and what officials say applicants can do now.",
+        "body": [
+          "Ten weeks after Hurricane Rafael made landfall, many households on the Coastal Bend have registered for federal disaster aid and are waiting to hear back. Others have not registered at all. Here is how the process has worked so far, and what officials say applicants can do this week.",
+          "Why registration came when it did. When the federal disaster declaration came Sept. 18, it paid for debris removal and emergency protective measures, not aid to families. Help for households had to wait on damage assessments, which dragged as teams worked around spill-zone limits and flooded streets. The state asked for Individual Assistance in October, FEMA approved it Nov. 10, and registration opened Nov. 13 to long lines at recovery centers.",
+          "After you register. FEMA reviews each application and may ask for more documents. Renters, for example, may be asked to show they lived at the damaged address. \"If we ask you for something, answer as fast as you can, and call the helpline if a letter doesn't make sense,\" said Rachel Ostrander, an external affairs officer for FEMA Region 6. \"A pending application is usually waiting on something. Find out what it is.\"",
+          "Getting paid. Approved aid is paid by check or by direct deposit. On Nov. 17, some applicants said their direct-deposit details had been changed without their knowledge, and on Nov. 19 FEMA confirmed unauthorized access to some applicant accounts. The agency has urged every applicant to log in through its official website and verify where the money is set to go. It has not said how many accounts were affected.",
+          "Not registered yet? Phone and online registration count the same as standing in line, county officials say. \"If two buses to a recovery center is what's stopping you, call instead, or find a church or neighborhood hub with a laptop out,\" said Dwayne Pruitt, public information officer for the Nueces County Office of Emergency Management.",
+          "Who is waiting longest. In the low-income neighborhoods near the bay, residents said help took days to arrive after the storm, and many households have no car. As the Ledger reported Monday, some applicants there now check their deposit details every morning while their applications sit.",
+          "Keep a folder. Put your registration number, every FEMA letter and a log of each call, with the date and the name of the person you spoke to, in one place. Ostrander said that record makes it faster to sort out a problem if one turns up."
+        ],
+        "tags": {
+          "story_type": "explainer",
+          "arcs": [
+            "ARC-AID",
+            "ARC-PORTAL-BREACH",
+            "ARC-EQUITY"
+          ],
+          "public_facts": [
+            "PUB-103",
+            "PUB-104",
+            "PUB-105",
+            "PUB-081",
+            "PUB-083",
+            "PUB-084",
+            "PUB-053",
+            "PUB-008"
+          ],
+          "characters_quoted": [
+            "CHR-027",
+            "CHR-025"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001",
+            "PLC-002",
+            "PLC-003",
+            "PLC-010"
+          ],
+          "topics": [
+            "fema",
+            "individual assistance",
+            "explainer",
+            "aid process",
+            "direct deposit",
+            "pending applications"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0501",
+            "EVT-0502"
+          ],
+          "batch": "G",
+          "status": "draft"
+        }
+      },
+      "reason": "Near-duplicate of NWS-P069-01 (same reporter and outlet, previous day: Elizondo's deposit check, pending application, leak, Whitfield's dinner). New angle: a process explainer from declaration to deposit, using the corrected FEMA timeline (PUB-103/104/105), with FEMA and county sources and a one-line reference back to Monday's story. Supersedes W1-014 (the replaced text no longer contains 'formed in the Gulf').",
+      "status": "applied"
+    },
+    {
+      "id": "W2-073",
+      "severity": "high",
+      "story_id": "NWS-P093-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P093-01",
+        "day": 93,
+        "time_local": "07:45",
+        "outlet_id": "OUT-02",
+        "section": "Local",
+        "byline": [
+          "CHR-007"
+        ],
+        "headline": "Door-to-door aid teams are coming. Put your papers in one envelope before the knock",
+        "dek": "Registration teams are headed to low-income surge-zone neighborhoods. Here's what to have ready, what renters can use as proof and how to help a neighbor get set.",
+        "body": [
+          "Door-to-door aid registration teams are headed to low-income neighborhoods in the surge zone, and you can make that visit shorter by getting your papers together now.",
+          "Nueces County and FEMA announced the visits Wednesday, two days after an analysis by Coastline Public Radio and a Texas A&M University-Corpus Christi researcher found those neighborhoods received aid dollars at about half their share of residents. The county has not released a schedule.",
+          "One envelope, by the door: Your ID and the Social Security numbers of the people in your home. A working phone number, even a borrowed one, where FEMA can call you back. Insurance papers if you have coverage. Photos of the damage, printed or on your phone.",
+          "Renters: FEMA needs to see that you lived at the address. A lease works. If yours is missing, handwritten or wrong, gather backups with your name and address on them, such as a utility bill, a pay stub or a letter from your child's school or your employer.",
+          "Already applied? You don't need to start over. Put your registration number and any FEMA letters in the envelope too.",
+          "\"The more you have in your hand when the team gets there, the shorter the visit and the fewer follow-up letters,\" said Rachel Ostrander, an external affairs officer for FEMA Region 6.",
+          "Is it really them? As Harborline 6 reported Wednesday, team members carry federal photo ID and never charge a fee. Nobody needs your password.",
+          "\"If your neighbor doesn't have a phone or a car, help them fill their envelope this weekend,\" said Dwayne Pruitt, spokesman for the Nueces County Office of Emergency Management. \"Then tell them a team is coming, so they open the door.\"",
+          "Harborline 6 will post the visit schedule on our live blog as soon as the county releases it."
+        ],
+        "tags": {
+          "story_type": "explainer",
+          "arcs": [
+            "ARC-AID",
+            "ARC-EQUITY"
+          ],
+          "public_facts": [
+            "PUB-092",
+            "PUB-091",
+            "PUB-081"
+          ],
+          "characters_quoted": [
+            "CHR-027",
+            "CHR-025"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-010",
+            "PLC-001"
+          ],
+          "topics": [
+            "door-to-door registration",
+            "fema",
+            "what to bring",
+            "renters",
+            "proof of occupancy",
+            "how to"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0601",
+            "EVT-0501"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "Near-duplicate of NWS-P092-02 (same producer and outlet, previous afternoon: ask for ID, no fee, no password, check your deposit). New angle per R4-018: what papers to have ready for a door-to-door visit, renters' proof of occupancy and helping a neighbor prepare, with one line referring back to Wednesday's scam-spotting story.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-074",
+      "severity": "high",
+      "story_id": "NWS-P094-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P094-01",
+        "day": 94,
+        "time_local": "08:15",
+        "outlet_id": "OUT-05",
+        "section": "Markets",
+        "byline": [
+          "CHR-011"
+        ],
+        "headline": "Corpus Christi spill claims move to lost income as tanker owners' tab stays open",
+        "dek": "A claims center run for the owners of the two tankers that spilled crude during Hurricane Rafael has added lost-income claims to cleanup and property claims. No total has been released.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Three months after about 9,000 barrels of crude spilled from two tankers at an Inner Harbor terminal in Corpus Christi, the cost of the release is still being counted through a claims center run for the vessels' owners, which has widened from cleanup and property claims to lost income.",
+          "The center opened Sept. 26 for spill cleanup and property damage claims and began taking lost-income claims from fishers and shoreline businesses Nov. 16, as federal oil spill law requires. Claims left unpaid for 90 days can be taken to the Coast Guard's National Pollution Funds Center.",
+          "The two tankers, MT Kalvora Star and MT Ostrel Bay, were moored at the Rendal Terminals berth as Hurricane Rafael arrived in mid-September. Surge and wind spread sheen across about 33 square miles of Nueces and Corpus Christi bays. Fishing there remains closed by Texas Parks and Wildlife and shellfish harvesting by the Texas Department of State Health Services.",
+          "\"The claims center is the owners' obligation, not the state's. Our job is making sure people know it exists and actually file,\" said Cole Whitaker, a spokesman for the Texas General Land Office's oil spill program. \"For a shrimper, that means trip logs and fuel receipts. For a shoreline business, it means the books.\"",
+          "Victor Lang, a spokesman for Rendal Terminals, which operates the berth, said claims tied to the vessels go through the owners' claims center. \"Our position hasn't changed. Rendal is cooperating fully, and questions about the vessels belong with their owners,\" he said.",
+          "How the release happened is still unresolved. In September the Coast Guard said it was looking at whether someone gained unauthorized remote access to the tankers' cargo-control systems, and Brightwake Marine Systems, a vendor for those systems, said its remote-maintenance credentials were misused and cut off all remote access. Investigators have released no findings.",
+          "Neither the claims center nor the Unified Command has released a count or dollar total of claims filed so far."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-SPILL",
+            "ARC-SPILL-CYBER"
+          ],
+          "public_facts": [
+            "PUB-106",
+            "PUB-082",
+            "PUB-029",
+            "PUB-030",
+            "PUB-040",
+            "PUB-057",
+            "PUB-042",
+            "PUB-047"
+          ],
+          "characters_quoted": [
+            "CHR-028",
+            "CHR-070"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "TERM-01",
+            "PORT-07",
+            "PLC-001",
+            "PLC-002"
+          ],
+          "topics": [
+            "oil spill",
+            "spill claims",
+            "lost income",
+            "tanker owners",
+            "liability",
+            "national pollution funds center"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0508",
+            "EVT-0315",
+            "EVT-0314",
+            "EVT-0317",
+            "EVT-0316"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "Near-duplicate of NWS-P086-01 (same outlet and analyst, same year-end 'two shutdowns, confidence not capacity' framing). New angle and sources: the tanker owners' spill claims tab (PUB-106/PUB-082) as a liability story for the energy trade, with the Land Office spokesman and the terminal's spokesman instead of the market analyst.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-075",
+      "severity": "high",
+      "story_id": "NWS-P113-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P113-01",
+        "day": 113,
+        "time_local": "08:00",
+        "outlet_id": "OUT-03",
+        "section": "Military & Community",
+        "byline": [
+          "CHR-009"
+        ],
+        "headline": "What Tuesday's attribution says, and what it leaves out",
+        "dek": "Officials blamed a foreign government they did not name for the tanker intrusion and the channel devices. Here is what was said, what wasn't, and what comes next.",
+        "body": [
+          "On Wednesday morning, ships moved past the Port Aransas jetties the way they have since mid-November, through water that Navy explosive ordnance disposal and mine countermeasures teams spent two weeks searching this fall. The question hanging over that water now has part of an answer.",
+          "On Tuesday, US officials attributed two things to a foreign government they did not name: the intrusion into two tankers' cargo systems as Hurricane Rafael arrived in September, and the explosive devices in the Corpus Christi Ship Channel. They called both attempts to exploit the hurricane.",
+          "The intrusion is the one the Coast Guard first described six days after landfall, when it said investigators were looking into possible unauthorized remote access to the cargo systems of two tankers, MT Kalvora Star and MT Ostrel Bay. The tankers released an estimated 9,000 barrels of crude at an Inner Harbor berth. There were two devices: one that exploded beside the harbor tug Corrin Bay near the jetties Oct. 28, injuring two crew members, and a second that Navy teams found near the entrance channel and rendered safe in early November.",
+          "What officials did not say is just as important. They did not name the government, describe their evidence or say whether anyone will be charged, and they did not tie the attribution to any other event.",
+          "\"We can confirm the investigation is continuing. We have no further comment,\" said Mark Ellery, a spokesman for the FBI's Houston Division.",
+          "An attribution is a government's public judgment about who is responsible. It is not a court case, and the evidence behind it is often kept out of public view.",
+          "For the companies that run ships and terminals, the practical advice has not changed, said Kim Tran, a regional cybersecurity advisor with the Cybersecurity and Infrastructure Security Agency. \"Who did it matters to investigators. For an operator, the job is the same either way: know every vendor that can reach your cargo systems remotely, and be able to cut them off fast,\" she said. Last week, the Coast Guard and CISA issued an advisory urging vessel operators to review that access.",
+          "Cmdr. Lisa Moreau, a Navy Region Southeast spokeswoman, said the teams that swept the channel did their work long before Tuesday. \"The channel was cleared in November, and it's open,\" she said. \"Who put the devices there is a question for investigators. Keeping the water safe is ours.\"",
+          "For the tug crews, line handlers and pilots who lost two weeks of work in the fall, Tuesday's announcement answers what happened more than who did it. Coastline Public Radio will report what officials release as the investigation continues."
+        ],
+        "tags": {
+          "story_type": "explainer",
+          "arcs": [
+            "ARC-SPILL-CYBER",
+            "ARC-CHANNEL-BLAST",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-097",
+            "PUB-042",
+            "PUB-029",
+            "PUB-067",
+            "PUB-070",
+            "PUB-078",
+            "PUB-079",
+            "PUB-095"
+          ],
+          "characters_quoted": [
+            "CHR-033",
+            "CHR-030",
+            "CHR-032"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "ENT-01",
+            "PORT-07",
+            "TERM-01"
+          ],
+          "topics": [
+            "attribution",
+            "explainer",
+            "tanker cyber intrusion",
+            "channel devices",
+            "investigation",
+            "vendor access"
+          ],
+          "follows_up": "NWS-P112-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0603",
+            "EVT-0316",
+            "EVT-0315",
+            "EVT-0413",
+            "EVT-0412",
+            "EVT-0414",
+            "EVT-0605"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "P113-01 laid the August exercises abroad, the Oct. 30 operations and the brigade delay beside the attribution, building the hidden thesis (who, and a deployment motive). PUB-097 attributes only the tanker intrusion and the channel devices to an unnamed foreign government as attempts to exploit the hurricane. Rewritten as an explainer of exactly what was and wasn't said, with no brigade, exercises, overseas operations or hint of which government; arcs no longer include ARC-OVERSEAS or ARC-MILITARY.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-076",
+      "severity": "high",
+      "story_id": "NWS-P046-04",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P046-04",
+        "day": 46,
+        "time_local": "14:00",
+        "outlet_id": "OUT-06",
+        "section": "Security",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Navy: explosive device caused Texas port blast",
+        "dek": "The blast that closed the Corpus Christi Ship Channel was caused by an explosive device, the Navy said Saturday. Officials have not said who placed it.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — The explosion that damaged a harbor tug and closed one of the nation's most important energy ports was caused by an explosive device, the Navy said Saturday, as Navy explosive ordnance disposal and mine countermeasures teams searched the Corpus Christi Ship Channel alongside the Coast Guard.",
+          "\"The blast near the jetties was caused by an explosive device,\" said Cmdr. Lisa Moreau, a public affairs officer for Navy Region Southeast. \"Our teams are searching the channel with the Coast Guard, and safety comes first.\" The FBI said it is investigating.",
+          "Officials have not said who placed the device, when or why.",
+          "Crude exports from the port, which handles about half of U.S. crude exports, are halted again, and traders are watching for a prolonged closure. No reopening date has been announced.",
+          "The Port of Corpus Christi is one of the Defense Department's designated strategic seaports. A Fort Hood aviation brigade had been scheduled to move its helicopters and equipment through the port for what the Army has described only as an overseas rotation. The movement was postponed before Hurricane Rafael and, the Army said Friday, has been delayed again by the channel closure. \"We'll be ready when the port is ready,\" said Maj. Darnell Price, a Fort Hood public affairs officer.",
+          "Abroad, a foreign state broadcaster mocked the closure as a sign of U.S. weakness.",
+          "The blast, around 1 a.m. Thursday near the jetties at Port Aransas, damaged the tug Corrin Bay and injured two crew members. The channel had partly reopened only two weeks earlier, after a month-long closure caused by the hurricane. Separately on Saturday, a crisis abroad escalated as an overseas power began military operations."
+        ],
+        "tags": {
+          "story_type": "analysis",
+          "arcs": [
+            "ARC-CHANNEL-BLAST",
+            "ARC-OVERSEAS",
+            "ARC-MILITARY"
+          ],
+          "public_facts": [
+            "PUB-070",
+            "PUB-071",
+            "PUB-068",
+            "PUB-072",
+            "PUB-007",
+            "PUB-067",
+            "PUB-073",
+            "PUB-014",
+            "PUB-058"
+          ],
+          "characters_quoted": [
+            "CHR-032",
+            "CHR-031"
+          ],
+          "characters_mentioned": [
+            "CHR-082"
+          ],
+          "places": [
+            "ENT-01",
+            "PORT-07",
+            "FAC-DOD-06"
+          ],
+          "topics": [
+            "explosive device",
+            "navy",
+            "strategic seaport",
+            "national security",
+            "foreign broadcaster",
+            "crisis abroad"
+          ],
+          "follows_up": "NWS-P044-05"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0414",
+            "EVT-0415",
+            "EVT-0413",
+            "EVT-0412",
+            "EVT-0401",
+            "EVT-0410"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Overseas adjacency after R3-002/R3-003: the body still runs the unsolved blast, 'none has publicly linked the blast to events overseas', the crisis abroad with 'a spotlight on U.S. forces' deployment timelines', then the brigade delay, which implies the blast targeted the deployment. Minimal fix: drop the 'events overseas' clause, replace the crisis paragraph with the export halt (PUB-073), and keep the crisis (PUB-071, its only remaining story) as a separate closing line with no deployment comment; drop the 'deployment timelines' topic from tags. Text otherwise unchanged.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-077",
+      "severity": "medium",
+      "story_id": "NWS-P048-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P048-02",
+        "day": 48,
+        "time_local": "12:15",
+        "outlet_id": "OUT-06",
+        "section": "Security",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Analysts flag ship-signal anomaly near Texas port weeks before blast; officials decline comment",
+        "dek": "A fishing vessel's identity was broadcast near the Corpus Christi entrance channel two weeks before an explosive device damaged a tug there. Federal officials would not discuss any connection.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — Maritime analysts said Monday that a fishing vessel's electronic identity was broadcast near the entrance to one of the nation's busiest energy ports about two weeks before an explosion there closed the channel, but federal officials declined to say whether the two are connected.",
+          "The blast happened around 1 a.m. Oct. 28 beside the harbor tug Corrin Bay near the jetties at Port Aransas, damaging the tug and injuring two crew members. The Navy said Saturday the explosion was caused by an explosive device. Navy explosive ordnance disposal and mine countermeasures teams are searching the channel with the Coast Guard, and the FBI is investigating.",
+          "Public ship-tracking data shows the identity of the fishing vessel FV Pelican Ridge broadcasting off Port Aransas in mid-October while the same vessel reported a position about 600 nautical miles away. Analysts have described the pattern as consistent with identity spoofing. On Monday they noted the signal appeared near the entrance channel.",
+          "\"It's a data point, not a conclusion,\" said Ian McCready, an independent maritime security analyst and former Coast Guard watchstander. \"Public tracking can show you a mismatch. It can't show you intent.\"",
+          "The Coast Guard declined to comment on any link. Mark Ellery, a spokesperson for the FBI's Houston Division, said: \"We can confirm we are investigating. We have no further comment.\"",
+          "The closure has stopped crude loadings at the Port of Corpus Christi, which handles about half of US crude exports. It has also delayed, for a second time, a Fort Hood aviation brigade's movement of helicopters and equipment through the port for an overseas rotation. The brigade's movement was first postponed when the channel closed ahead of Hurricane Rafael in September.",
+          "Officials have not said who placed the device or why, and the FBI declined further comment."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-AIS-ANOMALY",
+            "ARC-CHANNEL-BLAST",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-076",
+            "PUB-062",
+            "PUB-070",
+            "PUB-068",
+            "PUB-014",
+            "PUB-073",
+            "PUB-067"
+          ],
+          "characters_quoted": [
+            "CHR-062",
+            "CHR-033"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "ENT-01",
+            "PORT-07",
+            "FAC-DOD-06"
+          ],
+          "topics": [
+            "ais",
+            "identity spoofing",
+            "port of corpus christi",
+            "explosive device",
+            "fbi"
+          ],
+          "follows_up": "NWS-P048-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0411",
+            "EVT-0402",
+            "EVT-0414",
+            "EVT-0413",
+            "EVT-0412"
+          ],
+          "batch": "F",
+          "status": "draft"
+        }
+      },
+      "reason": "Overseas adjacency after R2-001: the spoofing story still runs the brigade delay, then a foreign state broadcaster, then 'officials have not said who placed the device', chaining spoofing, blast, brigade and a foreign state; its tags also still carry ARC-OVERSEAS ('Crisis abroad' storyline in the public release) and PUB-071 though the crisis is no longer in the text. Minimal fix: drop the broadcaster sentence (PUB-072 stays in P046-04 and P046-05) and drop ARC-OVERSEAS, PUB-071, PUB-072 and CHR-082 from tags (CHR-082 would otherwise trigger a validator warning). Text otherwise unchanged.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-078",
+      "severity": "medium",
+      "story_id": "NWS-P059-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P059-02",
+        "day": 59,
+        "time_local": "10:45",
+        "outlet_id": "OUT-06",
+        "section": "National",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Army brigade's equipment sails from Texas port after storm, blast delays",
+        "dek": "A Fort Hood aviation brigade's helicopters began loading at Corpus Christi a day after the ship channel reopened from a 14-day closure.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — A Fort Hood aviation brigade's helicopters and equipment began loading onto a sealift ship at the Port of Corpus Christi on Friday, months behind schedule after a hurricane and an explosion closed the Texas port's ship channel.",
+          "The equipment will sail over the next five days for what the Army described only as an overseas rotation. \"Loading is under way, and our soldiers are ready,\" said Maj. Darnell Price, a Fort Hood public affairs officer. He declined to give further details.",
+          "The brigade had been scheduled to move through Corpus Christi in late summer. Hurricane Rafael, which made landfall near Port Aransas as a Category 3 storm in September, forced the Coast Guard to close the channel. Then on Oct. 28, an explosion beside a harbor tug near the channel entrance injured two crew members and shut the waterway again. The Navy said the blast was caused by an explosive device, and Navy teams later found and rendered safe a second device. The channel reopened Thursday after a 14-day closure and a full sweep.",
+          "The FBI is investigating the explosion. Officials have not publicly identified who was responsible.",
+          "The Port of Corpus Christi, which handles about half of US crude exports, also serves as one of the military's strategic seaports for moving heavy equipment overseas. The two closures this fall halted both functions.",
+          "The Army first announced the rotation in July and has described it only as an overseas rotation. Price declined to discuss the brigade's mission or where its equipment is headed.",
+          "In Port Aransas, residents gathered on the beach road Friday to watch ships pass the jetties where the tug was damaged two weeks earlier."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-MILITARY",
+            "ARC-CHANNEL-BLAST",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-080",
+            "PUB-079",
+            "PUB-068",
+            "PUB-070",
+            "PUB-078",
+            "PUB-014",
+            "PUB-023",
+            "PUB-067",
+            "PUB-007"
+          ],
+          "characters_quoted": [
+            "CHR-031"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "FAC-DOD-06",
+            "ENT-01"
+          ],
+          "topics": [
+            "fort hood brigade",
+            "sealift",
+            "overseas rotation",
+            "national security",
+            "port of corpus christi"
+          ],
+          "follows_up": "NWS-P052-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0409",
+            "EVT-0414",
+            "EVT-0301",
+            "EVT-0413",
+            "EVT-0412"
+          ],
+          "batch": "F",
+          "status": "draft"
+        }
+      },
+      "reason": "Overseas adjacency after R3-005: the crisis sentence is gone from the text, but the tags still carry ARC-OVERSEAS and PUB-071, so the public release labels the brigade-sailing story with the 'Crisis abroad' storyline (implies the destination; R3-005 asked to drop PUB-071 from tags). Text unchanged; tags only.",
+      "status": "applied"
+    },
+    {
+      "id": "W2-079",
+      "severity": "high",
+      "story_id": "NWS-P112-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P112-01",
+        "day": 112,
+        "time_local": "10:30",
+        "outlet_id": "OUT-06",
+        "section": "National",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "US attributes Texas tanker intrusion and ship channel explosives to a foreign government",
+        "dek": "Officials did not name the government. They called the intrusion into two tankers' cargo systems and the explosive devices in the Corpus Christi Ship Channel attempts to exploit Hurricane Rafael.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — US officials on Tuesday attributed a cyber intrusion into two oil tankers' cargo systems and the explosive devices in the Corpus Christi Ship Channel to a foreign government, calling them attempts to exploit Hurricane Rafael. The officials did not name the government.",
+          "As the Category 3 storm arrived in September, oil spilled from two laden tankers, MT Kalvora Star and MT Ostrel Bay, moored at an Inner Harbor terminal. About 9,000 barrels were released, and the surge carried the oil into Nueces and Corpus Christi bays. Within a week, the Coast Guard said investigators were examining possible unauthorized remote access to the tankers' cargo-control systems.",
+          "On Oct. 28, an explosion beside a harbor tug near the Port Aransas jetties injured two crew members and closed the channel, the gateway for about half of US crude exports. The Navy said an explosive device caused the blast, and Navy teams later found and rendered safe a second device. The channel reopened after 14 days.",
+          "The closure halted crude exports from the nation's largest crude export gateway, and traders braced for a long shutdown. Loadings resumed after the channel reopened Nov. 11, and ships have moved through it since.",
+          "\"I'm not going to walk through the investigation,\" said Kim Tran, a regional cybersecurity advisor with the Cybersecurity and Infrastructure Security Agency. \"What I'll say to every operator is what we said last week: know who has remote access to your cargo systems, and take it away when they don't need it.\"",
+          "\"Our teams found and cleared those devices so the channel could reopen safely,\" said Cmdr. Lisa Moreau, a Navy Region Southeast spokeswoman. \"I won't describe them.\"",
+          "Officials did not describe the evidence behind the attribution."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-SPILL-CYBER",
+            "ARC-CHANNEL-BLAST",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-014",
+            "PUB-023",
+            "PUB-029",
+            "PUB-030",
+            "PUB-042",
+            "PUB-067",
+            "PUB-070",
+            "PUB-073",
+            "PUB-078",
+            "PUB-079",
+            "PUB-095",
+            "PUB-097"
+          ],
+          "characters_quoted": [
+            "CHR-030",
+            "CHR-032"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "TERM-01",
+            "ENT-01",
+            "PORT-07"
+          ],
+          "topics": [
+            "attribution",
+            "foreign government",
+            "tanker cyber intrusion",
+            "ship channel explosives",
+            "hurricane rafael"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0301",
+            "EVT-0315",
+            "EVT-0314",
+            "EVT-0316",
+            "EVT-0413",
+            "EVT-0412",
+            "EVT-0414",
+            "EVT-0605",
+            "EVT-0603"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "PUB-097 attributes only the tanker intrusion and the channel devices. After R2-003 the attribution story still lays the brigade delay, the strategic seaport and 'whether the two delays affected the brigade's mission' beside the attribution, implying a deployment motive (the same problem the P113-01 rewrite removes), and its tags (ARC-OVERSEAS, PUB-071, PUB-068, PUB-080) put the 'Crisis abroad' storyline on the attribution in the public release, implying which government. Minimal fix: replace the brigade paragraph with the export halt (PUB-073) and drop those tags (ARC-PORT replaces ARC-OVERSEAS). Text otherwise unchanged; also carries W1-071's spill-timing wording ('arrived in September') so the replacement does not undo it.",
+      "status": "applied"
+    }
+  ]
+}

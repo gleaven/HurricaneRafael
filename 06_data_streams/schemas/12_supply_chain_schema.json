@@ -1,0 +1,444 @@
+{
+ "source": "supply",
+ "folder": "05_other_sources/supply/",
+ "format": "CSV (normalized from USCG eNOAD / CBP ACE)",
+ "standard": "USCG eNOAD (33 CFR Part 160) + CBP ACE CAMIR bill of lading fields",
+ "reference": "https://www.nvmc.uscg.gov/",
+ "verified": true,
+ "notes": "Three related CSVs produced together with the AIS feed: vessel_arrivals.csv (one row per port call), cargo_manifest.csv (one row per bill of lading or air waybill) and port_conditions.csv (one row per Captain of the Port order and channel segment). The source systems use XML (eNOAD) and fixed-width CAMIR; the corpus normalises them to CSV. All times UTC. fuel_deliveries.csv in the same folder has its own schema file.",
+ "entity_catalog": "06_data_streams/vessels.json and 06_data_streams/terminal_registry.json",
+ "files": {
+  "vessel_arrivals": {
+   "filename": "vessel_arrivals.csv",
+   "description": "One row per port call by an ocean-going vessel: notice of arrival, anchorage, berth, departure.",
+   "fields": [
+    {
+     "name": "arrival_id",
+     "type": "string",
+     "example": "NOA-2027-CC-18441",
+     "notes": "Notice of arrival reference; primary key; cargo_manifest.csv arrival_id joins here"
+    },
+    {
+     "name": "vessel_name",
+     "type": "string",
+     "example": "PERMIAN SUN",
+     "notes": "Name as submitted on the notice (upper case, no MT/MV prefix)"
+    },
+    {
+     "name": "mmsi",
+     "type": "string",
+     "example": "636203266",
+     "notes": "9-digit MMSI; joins vessels.json and the AIS feed"
+    },
+    {
+     "name": "imo_number",
+     "type": "string",
+     "example": "IMO9290880",
+     "notes": "IMO number with prefix"
+    },
+    {
+     "name": "call_sign",
+     "type": "string",
+     "example": "D5BA7",
+     "notes": "Radio call sign"
+    },
+    {
+     "name": "flag_state",
+     "type": "string",
+     "example": "Liberia",
+     "notes": "Flag state"
+    },
+    {
+     "name": "vessel_type",
+     "type": "string",
+     "example": "Crude oil tanker (Suezmax)",
+     "notes": "Vessel type as declared"
+    },
+    {
+     "name": "port_of_arrival",
+     "type": "string",
+     "example": "USCRP",
+     "notes": "UN/LOCODE of the port of arrival (Corpus Christi)"
+    },
+    {
+     "name": "terminal",
+     "type": "string",
+     "example": "Inner Harbor Crude Export Terminal",
+     "notes": "terminal_registry.json terminal_name; blank if the vessel never berthed"
+    },
+    {
+     "name": "terminal_id",
+     "type": "string",
+     "example": "TERM-17",
+     "notes": "terminal_registry.json terminal_id"
+    },
+    {
+     "name": "berth_id",
+     "type": "string",
+     "example": "TERM-17-B01",
+     "notes": "terminal_registry.json berth_id of the first berth used"
+    },
+    {
+     "name": "anchorage_position_id",
+     "type": "string",
+     "example": "ANCH-02",
+     "notes": "terminal_registry.json anchorage position used while waiting offshore; blank if the vessel went straight in"
+    },
+    {
+     "name": "draft_arrival_m",
+     "type": "float",
+     "example": "8.4",
+     "notes": "Arrival draught in metres"
+    },
+    {
+     "name": "port_of_departure",
+     "type": "string",
+     "example": "ESALG",
+     "notes": "Last port (UN/LOCODE)"
+    },
+    {
+     "name": "next_port",
+     "type": "string",
+     "example": "ESALG",
+     "notes": "Declared next port (UN/LOCODE)"
+    },
+    {
+     "name": "noa_submitted_datetime",
+     "type": "datetime",
+     "example": "2027-08-04T10:49:57Z",
+     "notes": "When the notice of arrival was filed, UTC"
+    },
+    {
+     "name": "eta_datetime",
+     "type": "datetime",
+     "example": "2027-08-09T01:04:42Z",
+     "notes": "Estimated arrival at the sea buoy on the original notice, UTC"
+    },
+    {
+     "name": "eta_revised_datetime",
+     "type": "datetime",
+     "example": "",
+     "notes": "Revised estimate if the notice was updated; blank otherwise"
+    },
+    {
+     "name": "ata_anchorage_datetime",
+     "type": "datetime",
+     "example": "2027-08-08T22:56:46Z",
+     "notes": "Time anchored offshore, UTC; blank if the vessel did not anchor"
+    },
+    {
+     "name": "ata_datetime",
+     "type": "datetime",
+     "example": "2027-08-13T15:30:42Z",
+     "notes": "All fast at the berth, UTC; blank if not yet berthed at the end of the data"
+    },
+    {
+     "name": "atd_datetime",
+     "type": "datetime",
+     "example": "2027-08-15T06:20:00Z",
+     "notes": "Departure from the berth, UTC; blank if still alongside at the end of the data"
+    },
+    {
+     "name": "voyage_number",
+     "type": "string",
+     "example": "2027-PS-170",
+     "notes": "Carrier voyage number"
+    },
+    {
+     "name": "agent",
+     "type": "string",
+     "example": "Gulf Coast Marine Agency",
+     "notes": "Ship's agent (fictional)"
+    },
+    {
+     "name": "noa_status",
+     "type": "string",
+     "example": "DEPARTED",
+     "notes": "State of the call at the end of the data: DEPARTED, IN PORT, REMAINING IN PORT, AT ANCHORAGE, CANCELLED (the vessel did not call: diverted or voyage withdrawn)"
+    },
+    {
+     "name": "hold_log",
+     "type": "string",
+     "example": "",
+     "notes": "Dated entries the agent added to the notice while the vessel waited (port closed, berth occupied, order numbers)"
+    },
+    {
+     "name": "shift_berth_id",
+     "type": "string",
+     "example": "",
+     "notes": "Second berth if the vessel shifted within the port"
+    },
+    {
+     "name": "shift_datetime",
+     "type": "datetime",
+     "example": "",
+     "notes": "Time of the shift, UTC"
+    }
+   ]
+  },
+  "cargo_manifest": {
+   "filename": "cargo_manifest.csv",
+   "description": "One row per bill of lading (sea) or air waybill (relief cargo flown in).",
+   "fields": [
+    {
+     "name": "manifest_id",
+     "type": "string",
+     "example": "MAN-27-000002",
+     "notes": "Manifest line number; primary key"
+    },
+    {
+     "name": "bl_id",
+     "type": "string",
+     "example": "BL-CE-2027-8340",
+     "notes": "Bill of lading or air waybill number"
+    },
+    {
+     "name": "bl_type",
+     "type": "string",
+     "example": "Master",
+     "notes": "Master or House"
+    },
+    {
+     "name": "mode",
+     "type": "string",
+     "example": "SEA",
+     "notes": "SEA, AIR or ROAD"
+    },
+    {
+     "name": "direction",
+     "type": "string",
+     "example": "IMPORT",
+     "notes": "IMPORT, EXPORT or DOMESTIC"
+    },
+    {
+     "name": "arrival_id",
+     "type": "string",
+     "example": "NOA-2027-CC-18092",
+     "notes": "vessel_arrivals.csv arrival_id for sea cargo; blank for air cargo"
+    },
+    {
+     "name": "mmsi",
+     "type": "string",
+     "example": "538008157",
+     "notes": "Carrying vessel's MMSI (vessels.json); blank for air cargo"
+    },
+    {
+     "name": "vessel_name",
+     "type": "string",
+     "example": "CAPEHORN EAGLE",
+     "notes": "Carrying vessel, or the flight / aircraft for air cargo"
+    },
+    {
+     "name": "carrier",
+     "type": "string",
+     "example": "Capehorn Bulk Carriers Ltd.",
+     "notes": "Carrier (fictional)"
+    },
+    {
+     "name": "cargo_description",
+     "type": "string",
+     "example": "IRON ORE PELLETS",
+     "notes": "Commodity description as manifested"
+    },
+    {
+     "name": "hs_commodity_code",
+     "type": "string",
+     "example": "2601.12",
+     "notes": "Harmonized System code"
+    },
+    {
+     "name": "quantity",
+     "type": "float",
+     "example": "55500",
+     "notes": "Quantity in unit_of_measure"
+    },
+    {
+     "name": "unit_of_measure",
+     "type": "string",
+     "example": "MT",
+     "notes": "BBL barrels, MT metric tons, M3 cubic metres, PALLET, CONTAINER (40 FT), LOT, SHIPMENT"
+    },
+    {
+     "name": "cargo_weight_kg",
+     "type": "integer",
+     "example": "55500000",
+     "notes": "Gross weight in kilograms"
+    },
+    {
+     "name": "shipper_name",
+     "type": "string",
+     "example": "Capehorn Bulk Carriers Ltd.",
+     "notes": "Shipper (fictional)"
+    },
+    {
+     "name": "supplier_id",
+     "type": "string",
+     "example": "VND-0006",
+     "notes": "entity_registry.json id where the shipper is a registered supplier; blank otherwise"
+    },
+    {
+     "name": "consignee_name",
+     "type": "string",
+     "example": "Portland Reduction Works",
+     "notes": "Consignee (fictional); TO ORDER for negotiable export bills"
+    },
+    {
+     "name": "consignee_id",
+     "type": "string",
+     "example": "",
+     "notes": "entity_registry.json id where the consignee is a registered entity; blank otherwise"
+    },
+    {
+     "name": "port_of_lading",
+     "type": "string",
+     "example": "Santos",
+     "notes": "Port or airport of lading"
+    },
+    {
+     "name": "port_of_discharge",
+     "type": "string",
+     "example": "Corpus Christi, TX",
+     "notes": "Port or airport of discharge"
+    },
+    {
+     "name": "booking_date",
+     "type": "date",
+     "example": "2027-08-01",
+     "notes": "Date the consignment was booked. All dates in this file are calendar dates at the port (US Central time)"
+    },
+    {
+     "name": "planned_arrival_date",
+     "type": "date",
+     "example": "2027-08-10",
+     "notes": "Arrival date promised at booking"
+    },
+    {
+     "name": "arrival_date",
+     "type": "date",
+     "example": "2027-08-11",
+     "notes": "Date the cargo actually arrived (vessel berthed or aircraft landed); blank if it has not arrived"
+    },
+    {
+     "name": "release_date",
+     "type": "date",
+     "example": "2027-08-15",
+     "notes": "Date released to the consignee or, for exports, the sailing date; blank if not released"
+    },
+    {
+     "name": "hazmat_flag",
+     "type": "string",
+     "example": "N",
+     "notes": "Y/N"
+    },
+    {
+     "name": "un_number",
+     "type": "string",
+     "example": "",
+     "notes": "UN number for hazardous cargo (UN1267 crude oil, UN1972 LNG, UN1203 gasoline, UN1202 diesel)"
+    },
+    {
+     "name": "container_numbers",
+     "type": "string",
+     "example": "",
+     "notes": "Container numbers, semicolon-separated; blank for bulk cargo"
+    }
+   ]
+  },
+  "port_conditions": {
+   "filename": "port_conditions.csv",
+   "description": "Captain of the Port orders, hurricane port conditions and channel status by segment, in the style of Marine Safety Information Bulletins.",
+   "fields": [
+    {
+     "name": "order_id",
+     "type": "string",
+     "example": "MSIB 27-031",
+     "notes": "Marine Safety Information Bulletin, Captain of the Port order or port authority log number. One order may have several rows, one per segment"
+    },
+    {
+     "name": "issued_utc",
+     "type": "datetime",
+     "example": "2027-07-30T15:00:00Z",
+     "notes": "When the order was published, UTC"
+    },
+    {
+     "name": "effective_utc",
+     "type": "datetime",
+     "example": "2027-08-01T05:00:00Z",
+     "notes": "When it took effect, UTC. A segment's status holds until the next row for that segment"
+    },
+    {
+     "name": "authority",
+     "type": "string",
+     "example": "USCG Captain of the Port, Sector Corpus Christi",
+     "notes": "Issuing authority"
+    },
+    {
+     "name": "order_type",
+     "type": "string",
+     "example": "CHANNEL STATUS",
+     "notes": "PORT CONDITION, CHANNEL STATUS, VESSEL ORDER, SAFETY ZONE, SECURITY ZONE, NOTICE"
+    },
+    {
+     "name": "port_condition",
+     "type": "string",
+     "example": "WHISKEY",
+     "notes": "Hurricane port condition in force: SEASONAL ALERT, X-RAY, YANKEE, ZULU, RECOVERY, NORMAL"
+    },
+    {
+     "name": "segment_id",
+     "type": "string",
+     "example": "SEG-ENT",
+     "notes": "Channel segment: SEG-ENT entrance and jetties, SEG-BAY bay reaches, SEG-LAQ La Quinta Channel, SEG-INNER-E Inner Harbor to the Main Turning Basin, SEG-INNER-W Inner Harbor west of the Main Turning Basin, SEG-GIWW Intracoastal Waterway, SEG-ANCH offshore anchorage; blank for orders addressed to one vessel or terminal"
+    },
+    {
+     "name": "segment_name",
+     "type": "string",
+     "example": "Entrance channel and jetties",
+     "notes": "Plain name of the segment"
+    },
+    {
+     "name": "status",
+     "type": "string",
+     "example": "OPEN",
+     "notes": "OPEN, CLOSED, CLOSED TO INBOUND, CLOSED TO DEEP-DRAFT, RESTRICTED (see text); blank for orders not about a segment"
+    },
+    {
+     "name": "vessel_mmsi",
+     "type": "string",
+     "example": "",
+     "notes": "MMSI of the vessel an order is addressed to (vessels.json); blank otherwise"
+    },
+    {
+     "name": "terminal_id",
+     "type": "string",
+     "example": "",
+     "notes": "terminal_registry.json terminal an order refers to; blank otherwise"
+    },
+    {
+     "name": "text",
+     "type": "string",
+     "example": "Normal operations. All segments open to all traffic.",
+     "notes": "The operative text of the order"
+    }
+   ]
+  }
+ },
+ "scenario_notes": {
+  "coverage": "Port calls, manifests and orders from before 2027-08-15 to 2028-01-12.",
+  "port_state": "Arrivals, berthings and departures follow the orders in port_conditions.csv: no commercial movement in a closed segment; vessels that arrive during a closure wait at an anchorage position.",
+  "consistency": "Every berthing in vessel_arrivals.csv appears in the AIS feed as the same vessel moored at that berth for the same period, and every manifest line for sea cargo joins a port call."
+ },
+ "registry": {
+  "terminal_id_format": "TERM-nn",
+  "berth_id_format": "TERM-nn-Bnn",
+  "anchorage_position_id_format": "ANCH-nn",
+  "counts": {
+   "terminals": 25,
+   "berths": 45,
+   "harbours": 9,
+   "slips": 77,
+   "anchorage_positions": 30,
+   "sea_gates": 12
+  }
+ }
+}

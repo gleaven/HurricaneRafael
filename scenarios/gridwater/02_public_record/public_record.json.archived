@@ -1,0 +1,222 @@
+{
+  "facts": [
+    {
+      "id": "GW-PUB-001",
+      "day": 12,
+      "time_local": "17:30",
+      "type": "official_notice",
+      "source": "City of Corpus Christi Water Department",
+      "threads": [
+        "T9"
+      ],
+      "public_places": [
+        "FAC-UTL-01"
+      ],
+      "note": "City attributes low pressure to hurricane damage; the pump setpoint manipulation (GW-EVT-006) is not publicly known yet.",
+      "statement": "The City of Corpus Christi Water Department has issued a boil water notice for Districts 3 and 4, effective immediately. Low water pressure in the Zone 4 distribution system — a consequence of storm damage to treatment and pumping infrastructure — means that contamination cannot be ruled out. Approximately 48,000 residents are affected. All tap water must be brought to a rolling boil for one minute before drinking or cooking until further notice.",
+      "arcs": [],
+      "events": [],
+      "places": [
+        "FAC-UTL-01"
+      ]
+    },
+    {
+      "id": "GW-PUB-002",
+      "day": 14,
+      "time_local": "14:00",
+      "type": "utility_statement",
+      "source": "ERCOT / Coastal Bend Power & Water Authority",
+      "threads": [
+        "T8"
+      ],
+      "public_places": [
+        "GW-FAC-SUB-02",
+        "GW-FAC-SUB-03"
+      ],
+      "note": "Utility publicly attributes extended outages to storm-related relay issues. The relay modifications (GW-EVT-003) are not yet discovered.",
+      "statement": "Restoration crews working in Corpus Christi have encountered cascading substation failures in the northwest and central districts that are extending the recovery timeline beyond initial estimates. Crews are on-site at two facilities to investigate protective relay conditions exacerbated by storm debris. We expect the final 32,000 affected customers in those areas to be restored within 7 to 10 days. We appreciate their patience.",
+      "arcs": [],
+      "events": [],
+      "places": [
+        "GW-FAC-SUB-02",
+        "GW-FAC-SUB-03"
+      ]
+    },
+    {
+      "id": "GW-PUB-101",
+      "day": 20,
+      "time_local": "14:00",
+      "type": "official_advisory",
+      "source": "CBPWA Corporate Communications",
+      "statement": "Coastal Bend Power and Water Authority has confirmed that it is investigating anomalous access to internal network systems that may have occurred during the Hurricane Rafael response period. CBPWA's Security Operations Center identified unusual access patterns in network logs and has opened a formal security review in coordination with Vantage Security Systems, our SIEM and security technology partner. At this time there is no indication that customer data has been affected. CBPWA is working closely with relevant federal and state agencies. Additional information will be provided as the investigation progresses. CBPWA CISO Dr. Fatima Al-Rasheed-Obinna is leading the investigation.",
+      "arcs": [],
+      "events": [
+        "GW-EVT-106"
+      ],
+      "places": [
+        "CBPWA Security Operations Center"
+      ]
+    },
+    {
+      "id": "GW-PUB-003",
+      "day": 21,
+      "time_local": "12:00",
+      "type": "government_statement",
+      "source": "Texas Governor's Office / FBI / CISA",
+      "threads": [
+        "T8",
+        "T9",
+        "T10"
+      ],
+      "public_places": [],
+      "note": "First public acknowledgment of the cyber dimension. No attribution made. References CBPWA without naming it.",
+      "statement": "The Federal Bureau of Investigation and the Cybersecurity and Infrastructure Security Agency are investigating unauthorized access to control systems at a Corpus Christi utility. Texas Cyber Command has been activated to assist. The Governor has directed all critical infrastructure operators in the state to review remote-access security procedures and report any anomalies to CISA. This investigation is active and ongoing; no further operational details will be released at this time.",
+      "arcs": [],
+      "events": [],
+      "places": []
+    },
+    {
+      "id": "GW-PUB-004",
+      "day": 23,
+      "time_local": "15:00",
+      "type": "federal_advisory",
+      "source": "CISA",
+      "threads": [
+        "T8",
+        "T9",
+        "T10"
+      ],
+      "public_places": [],
+      "note": "CISA advisory references the incident without naming CBPWA. Advisory AA27-266A is a fictional document number.",
+      "statement": "CISA has issued Emergency Directive 27-02 directing all federal agencies operating industrial control systems to audit remote-access credentials and configuration change logs within 72 hours. The directive follows a confirmed ICS incident at a Texas utility in which a threat actor gained access via compromised remote-access credentials and made unauthorized changes to operational technology systems. Owners and operators of critical infrastructure are strongly encouraged to review CISA Advisory AA27-266A for indicators and mitigations.",
+      "arcs": [],
+      "events": [],
+      "places": []
+    },
+    {
+      "id": "GW-PUB-005",
+      "day": 28,
+      "time_local": "18:00",
+      "type": "emergency_declaration",
+      "source": "Texas Governor's Office",
+      "threads": [
+        "T8",
+        "T9",
+        "T10"
+      ],
+      "public_places": [],
+      "note": "Supplemental declaration triggered by GW-EVT-014 (SCADA isolation). FEMA cyber team is a fictional extension of the existing Rafael FEMA presence.",
+      "statement": "Governor has amended the existing Hurricane Rafael disaster declaration to include a cyber emergency component covering Corpus Christi utility infrastructure. The Federal Emergency Management Agency has deployed a cybersecurity rapid response team to assist local and state authorities. The affected utility has isolated its control systems as a precautionary measure; field crews are managing operations manually. The Governor's office emphasized that the water supply remains safe for boiled use and that electric restoration continues.",
+      "arcs": [],
+      "events": [],
+      "places": []
+    },
+    {
+      "id": "GW-PUB-102",
+      "day": 29,
+      "time_local": "12:00",
+      "type": "official_advisory",
+      "source": "CBPWA Corporate Communications",
+      "statement": "Coastal Bend Power and Water Authority has taken precautionary steps to isolate portions of its operational technology network following the identification of unauthorized access to network systems. These measures are being taken as part of an ongoing security investigation. The isolation is expected to cause no disruption to power or water service for CBPWA customers. CBPWA is cooperating with the Cybersecurity and Infrastructure Security Agency (CISA) and other relevant authorities. CBPWA emphasizes that the investigation is ongoing and no conclusions should be drawn about the nature or origin of the access at this time.",
+      "arcs": [],
+      "events": [
+        "GW-EVT-107"
+      ],
+      "places": [
+        "CBPWA",
+        "Corpus Christi"
+      ]
+    },
+    {
+      "id": "GW-PUB-006",
+      "day": 35,
+      "time_local": "15:00",
+      "type": "utility_statement",
+      "source": "Coastal Bend Power & Water Authority",
+      "threads": [
+        "T8"
+      ],
+      "public_places": [
+        "GW-FAC-SUB-02",
+        "GW-FAC-SUB-03"
+      ],
+      "note": "No mention of the cyber cause per law enforcement guidance. 'Relay inspection and hardening' is accurate but understated.",
+      "statement": "Coastal Bend Power & Water Authority is pleased to announce that the final 3,200 customers in northwest Corpus Christi have been restored to electric service following extensive relay inspection, repair, and hardening work by our crews and ERCOT partners. All Corpus Christi load zones are now above 99 percent restoration. We thank residents for their patience during this extended recovery period.",
+      "arcs": [],
+      "events": [],
+      "places": [
+        "GW-FAC-SUB-02",
+        "GW-FAC-SUB-03"
+      ]
+    },
+    {
+      "id": "GW-PUB-103",
+      "day": 36,
+      "time_local": "09:00",
+      "type": "official_advisory",
+      "source": "CBPWA Corporate Communications / CISA",
+      "statement": "Coastal Bend Power and Water Authority and the Cybersecurity and Infrastructure Security Agency have notified the public that CBPWA has completed an initial phase of remediation following a confirmed security incident affecting CBPWA's industrial control system network. CBPWA's security monitoring systems have returned to normal operational status. No customer data was exfiltrated. CISA has issued an ICS advisory (ICS-CERT-2027-CC-00441) to the broader critical infrastructure community regarding the attack techniques observed. CBPWA is conducting a comprehensive post-incident review and will implement additional security hardening measures identified during the investigation.",
+      "arcs": [],
+      "events": [
+        "GW-EVT-108"
+      ],
+      "places": [
+        "CBPWA",
+        "Corpus Christi"
+      ]
+    },
+    {
+      "id": "GW-PUB-007",
+      "day": 42,
+      "time_local": "13:00",
+      "type": "official_notice",
+      "source": "City of Corpus Christi Water Department",
+      "threads": [
+        "T9"
+      ],
+      "public_places": [
+        "FAC-UTL-01"
+      ],
+      "note": "30-day boil water notice lifted (D+12 to D+42). No mention of cyber cause.",
+      "statement": "The boil water notice for Districts 3 and 4 has been lifted, effective 1:00 PM today. Water pressure across all Zone 4 test points has been confirmed above 40 psi and water quality testing has met all TCEQ standards. The O.N. Stevens Water Treatment Plant is operating at full capacity. Residents may resume normal tap water use. The City thanks residents for their cooperation during the 30-day notice period.",
+      "arcs": [],
+      "events": [],
+      "places": [
+        "FAC-UTL-01"
+      ]
+    },
+    {
+      "id": "GW-PUB-104",
+      "day": 45,
+      "time_local": "10:00",
+      "type": "media_report",
+      "source": "OUT-05 Sabal Energy Wire",
+      "statement": "Sabal Energy Wire has obtained documents confirming that the prolonged power outages affecting portions of Corpus Christi following Hurricane Rafael were partly attributable to unauthorized modifications to protective relay settings at two CBPWA substations. The modifications, discovered during a security investigation that began October 2nd, caused affected relay groups to tolerate fault currents above their designed trip thresholds, extending grid restoration timelines by an estimated 11 to 18 days. CBPWA CISO Dr. Fatima Al-Rasheed-Obinna declined to comment on specific findings, citing an ongoing investigation. CISA confirmed that ICS-CERT advisory ICS-2027-CC-00441 covers incidents of this type.",
+      "arcs": [],
+      "events": [
+        "GW-EVT-107",
+        "GW-EVT-108"
+      ],
+      "places": [
+        "CBPWA",
+        "Corpus Christi",
+        "Harbor View",
+        "Crosstown"
+      ]
+    }
+  ],
+  "never_public": [
+    {
+      "id": "GW-NP-001",
+      "description": "KESTREL attribution: IP overlap between GW-SYS-JMP-01 session logs and KESTREL C2 infrastructure documented in classified FBI/CISA indicator set. Links the utility attack to Rafael T6/T7 (STATE-X dark network). Classification: TLP:RED."
+    },
+    {
+      "id": "GW-NP-002",
+      "description": "GW-ENG-VELA credential theft: the specific phishing email, the implant on GW-WS-IT-04, and the full session log export from GW-SYS-JMP-01 are law-enforcement sensitive and not released publicly during the scenario window."
+    },
+    {
+      "id": "GW-NP-003",
+      "description": "Relay modification details: the specific 27-UV threshold values modified on GW-SYS-RTU-01 through RTU-04 are withheld from public advisories to prevent adversary confirmation of success."
+    }
+  ]
+}

@@ -1,0 +1,789 @@
+{
+  "thread_id": "T17",
+  "name": "Search and rescue operations",
+  "color": "#c5520a",
+  "scenario": "rafael",
+  "lanes": [
+    "C",
+    "D"
+  ],
+  "truth": "Between D0 (06:00Z September 14, 2027) and D+5 (22:00Z September 19), Corpus Christi Fire Department, Nueces County Sheriff Search and Rescue, Texas Task Force 1, US Coast Guard Sector Corpus Christi, and 87 credentialed civilian vessel operators conducted 1,427 documented rescues across the greater Corpus Christi metro area. The worst flooding struck Flour Bluff (southern Mustang Island corridor), Calallen (northwest quadrant), and the low-lying neighborhoods of Districts 3 and 4 — the same zones later subject to the CBPWA boil-water advisory. Coast Guard HH-60 Jayhawk crews and contracted UAS operators using FLIR thermal imagers rescued 341 people from rooftops and second-story windows during the helicopter operations peak at D+1 06:00 CDT. Beginning D+7 and continuing through D+10, 11 SAR teams — primarily ground-water hybrid CCFD units — were dispatched to addresses in northwest and central Corpus Christi corresponding to the grid-anomaly zones near GW-FAC-SUB-02 (Harbor View Switching Station) and GW-FAC-SUB-03 (Crosstown Feeder Station) in response to 911 calls reporting trapped survivors. All 11 dispatches yielded no victims. Retrospective metadata analysis reveals the calls originated from prepaid burner phones using the same carrier prefix cluster identified in the T13 false-call corpus, strongly suggesting that STATE-X's KESTREL network deliberately drew SAR assets toward the utility attack zones at the precise window when CBPWA field crews were also being rerouted — a compound diversion intended to suppress physical inspection of the targeted substations during the relay configuration manipulation window.",
+  "phase_onset": 3,
+  "phase_peak": 3,
+  "msel_events": [
+    {
+      "event_id": "EVT-1701",
+      "time_label": "D-1",
+      "day": -1,
+      "day_end": null,
+      "time_utc": "18:00Z",
+      "threads": [
+        "T17"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Texas Task Force 1 (TF-1) deploys two swift-water rescue teams (Alpha and Bravo, 14 personnel each) from San Antonio via convoy to Corpus Christi staging area at Richard M. Borchard Regional Fairgrounds (Robstown, TX). Coastal Bend Emergency Communications Center Dispatch Chief Elena Vasquez-Okafor, the county's SAR coordinator, activates the Nueces County Emergency SAR pre-plan and inventories 23 rescue boats, 4 high-clearance vehicles, and 8 rescue trailers. Coast Guard Sector Corpus Christi pre-positions HH-60 Jayhawk CG-6033 and CG-6041 at NAS Corpus Christi, with aircrews briefed on expected surge zones: Flour Bluff, Calallen, North Beach. All SAR radio channels patched to NuecesNet EmComm backbone. Contracted UAS operator Meridian Aerial Systems (fictional) pre-stages two FLIR-equipped multirotor platforms at Corpus Christi International Airport.",
+      "observed_in": [
+        {
+          "stream": "sar_missions",
+          "what": "TF-1 convoy GPS track: departure SA 14:22 CDT, arrival Robstown 18:47 CDT, 4 vehicles, convoy ID TF1-CC-0913 | NAS Corpus Christi airfield log: CG-6033 and CG-6041 on-deck 19:15Z, crew rest waiver authorized | CCFD boat roster: 23 vessels registered, hull IDs CC-SAR-001 through CC-SAR-023, all fueled and manifested",
+          "when": {
+            "start_utc": "2027-09-13T18:00Z",
+            "end_utc": "2027-09-13T20:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "TF-1 convoy GPS track: departure SA 14:22 CDT, arrival Robstown 18:47 CDT, 4 vehicles, convoy ID TF1-CC-0913",
+        "NAS Corpus Christi airfield log: CG-6033 and CG-6041 on-deck 19:15Z, crew rest waiver authorized",
+        "CCFD boat roster: 23 vessels registered, hull IDs CC-SAR-001 through CC-SAR-023, all fueled and manifested"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-DOD-01",
+        "FAC-USCG-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "nueces_county_emergency_ops_log",
+        "coast_guard_sector_cc_readiness_report",
+        "tf1_deployment_manifest"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1702",
+      "time_label": "D0",
+      "day": 0,
+      "day_end": null,
+      "time_utc": "06:15Z",
+      "threads": [
+        "T17",
+        "T1"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Hurricane Rafael makes landfall at 06:00Z. By 06:15Z, Dispatch Chief Vasquez-Okafor activates the SAR operations plan. First rescue calls logged to 911 at 06:08Z (flooding in Flour Bluff, specifically Flour Bluff Drive and Waldron Road corridor). Coast Guard HH-60 CG-6033 launches from NAS Corpus Christi at 06:22Z into 60-kt sustained winds and 8-12 ft seas, reaching Flour Bluff at 06:44Z. First helicopter rescue: survivor pulled from rooftop at 4418 Flour Bluff Drive at 06:51Z. Ground SAR teams cannot operate in storm conditions; standby at Robstown staging. Radio traffic on Marine VHF 16 becomes dense; SAR tactical channel (NuecesNet SAR-TAC-1, 155.340 MHz) activated and staffed by CCFD comms unit. 14 calls for rescue logged in first hour, all in Flour Bluff and North Beach zones.",
+      "observed_in": [
+        {
+          "stream": "cad_911",
+          "what": "Fourteen calls tagged as rescue priority in the first hour after landfall, clustered in Flour Bluff and North Beach.",
+          "when": {
+            "start_utc": "2027-09-14T06:00Z",
+            "end_utc": "2027-09-14T07:15Z"
+          }
+        },
+        {
+          "stream": "sar_missions",
+          "what": "First helicopter mission: CG-6033 launches from NAS Corpus Christi at 06:22Z, first hoist 06:51Z in Flour Bluff.",
+          "when": {
+            "start_utc": "2027-09-14T06:15Z",
+            "end_utc": "2027-09-14T08:00Z"
+          }
+        },
+        {
+          "stream": "adsb",
+          "what": "CG-6033 departs NAS Corpus Christi at 06:22Z, arrives over Flour Bluff 06:44Z and hovers.",
+          "when": {
+            "start_utc": "2027-09-14T06:15Z",
+            "end_utc": "2027-09-14T08:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CG-6033 flight track: NAS CC departure 06:22Z, Flour Bluff arrival 06:44Z, first hoist 06:51Z at 27.6821N 97.2314W",
+        "911 CAD: 14 calls tagged SAR_PRIORITY in first 60 min, lat/lon clusters in Flour Bluff and North Beach",
+        "NuecesNet SAR-TAC-1 audio: CG-6033 aircrew reporting wave height 9 ft at 06:55Z, requesting ground standby"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-DOD-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "nueces_county_911_cad_log",
+        "coast_guard_sector_cc_ops_log",
+        "ccfd_sar_incident_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1703",
+      "time_label": "D+1",
+      "day": 1,
+      "day_end": null,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T17"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Helicopter rescue peak: 06:00-14:00 CDT (12:00-20:00Z) on D+1. Both Coast Guard HH-60s plus a Texas DPS AS350 and a Customs and Border Protection EC-120 (call sign CAMCC-02) conduct concurrent rescue operations. 341 survivors extracted from rooftops and second-story windows across Flour Bluff, Calallen, and the northern Port Aransas causeway debris field. FLIR thermal imagery from UAS operators Meridian Aerial Systems documents 112 survivor-location annotations for ground coordination. Ground SAR teams (CCFD, TF-1 Alpha and Bravo) begin boat operations at 11:00 CDT as storm surge begins receding; 48 additional rescues in the Calallen Creek flood plain by end of day. Coast Guard Sector commander Commander Delia Ostrowski-Han issues first operational update at 15:00 CDT. Total confirmed rescues at D+1 end of day: 486.",
+      "observed_in": [
+        {
+          "stream": "sar_missions",
+          "what": "Helicopter rescue peak on D+1: CG-6033 flies 7 sorties and CG-6041 6, with a DPS AS350 and a CBP EC-120; 341 survivors by air; TF-1 boat teams add rescues along Calallen Creek.",
+          "when": {
+            "start_utc": "2027-09-15T05:00Z",
+            "end_utc": "2027-09-16T05:00Z"
+          }
+        },
+        {
+          "stream": "adsb",
+          "what": "Four rescue helicopters fly repeated short sorties between NAS Corpus Christi and the Flour Bluff and North Beach communities, with hover segments at hoist points (Calallen is worked by boat teams).",
+          "when": {
+            "start_utc": "2027-09-15T05:00Z",
+            "end_utc": "2027-09-16T05:00Z"
+          }
+        },
+        {
+          "stream": "drone_telemetry",
+          "what": "Contract thermal-imaging UAS flights supporting the search.",
+          "when": {
+            "start_utc": "2027-09-15T05:00Z",
+            "end_utc": "2027-09-16T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "HH-60 CG-6033 flight log: 7 sorties D+1, 94 survivors, 6.1 flight hours, hoist operations at 23 discrete GPS waypoints",
+        "HH-60 CG-6041 flight log: 6 sorties D+1, 87 survivors, 5.8 flight hours",
+        "Meridian UAS thermal imagery annotations: 112 survivor markers with confidence scores 0.71-0.97, tagged by bounding box and water depth estimate",
+        "TF-1 Alpha boat ops: 18 rescues in Calallen Creek, GPS track shows 4.2 km coverage along creek corridor",
+        "NuecesNet SAR-TAC-1 audio: 6 hours continuous, 44 discrete radio exchanges, background noise SNR estimated -4 dB (heavy rainfall, rotor wash)"
+      ],
+      "public_fact": "PUB-170",
+      "place_ids": [
+        "FAC-USCG-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "coast_guard_ops_log",
+        "ccfd_sar_incident_log",
+        "meridian_uas_annotation_logs",
+        "tf1_ops_summary"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1704",
+      "time_label": "D+2",
+      "day": 2,
+      "day_end": null,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T17",
+        "T9"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "SAR teams begin systematic grid-search of Districts 3 and 4 — the neighborhoods that also include the O.N. Stevens Water Treatment Plant service area (FAC-UTL-01). These are low-elevation zones with significant post-surge flooding. SAR teams are present in the boil-water advisory zones before the SCADA manipulation of the water system begins (which will not commence until D+9). SAR ground crews document flood depth of 2.1-3.4 ft in the Greenwood/Molina neighborhood. 61 additional rescues in Districts 3-4 on this day. Texas TF-1 Bravo team deploys a FLIR-equipped inflatable rescue boat (IRB-7, hull ID TF1-IRB-07) to map the intersection of Holly Road and Leopard Street — which will later become a primary water distribution point during the boil-water event. Total cumulative rescues reach 702.",
+      "observed_in": [
+        {
+          "stream": "sar_missions",
+          "what": "CCFD flood-depth measurements: 23 manual soundings in D3/D4, range 0.8-3.4 ft, logged to incident command tablet | Nueces County GIS flood extent shapefile, 15:00Z snapshot: Districts 3-4 showing 68% inundation above 1.5 ft",
+          "when": {
+            "start_utc": "2027-09-16T12:00Z",
+            "end_utc": "2027-09-16T14:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "TF-1 Bravo IRB-7 GPS track: 14-km route through Districts 3-4, 61 survivor pickup waypoints logged, timestamps 10:14-17:42 CDT",
+        "CCFD flood-depth measurements: 23 manual soundings in D3/D4, range 0.8-3.4 ft, logged to incident command tablet",
+        "Nueces County GIS flood extent shapefile, 15:00Z snapshot: Districts 3-4 showing 68% inundation above 1.5 ft"
+      ],
+      "public_fact": "PUB-171",
+      "place_ids": [
+        "FAC-UTL-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "tf1_ops_summary",
+        "ccfd_sar_incident_log",
+        "nueces_county_gis_flood_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1705",
+      "time_label": "D+3",
+      "day": 3,
+      "day_end": null,
+      "time_utc": "08:00Z",
+      "threads": [
+        "T17"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "SAR operations transition from helicopter-primary to ground/boat-primary. CG-6033 returns to routine Coast Guard tasking; CG-6041 remains on standby. Civilian boat pool — 87 credentialed operators from the Corpus Christi Boating Association — integrated into the SAR plan under CCFD coordination. Dispatch Chief Vasquez-Okafor opens a second incident command post at Waldron Road Fire Station 18 to cover south Mustang Island. Active SAR teams peak at 34. Nueces County Sheriff SAR unit reports discovery of two elderly victims (deceased, non-rescue) in a submerged vehicle on Violet Road, flagged to Medical Examiner. Cumulative rescues: 1,041.",
+      "observed_in": [
+        {
+          "stream": "sar_missions",
+          "what": "From D+3 missions shift from helicopters to ground and boat teams: 87 credentialed civilian boats join; CG-6033 returns to routine tasking.",
+          "when": {
+            "start_utc": "2027-09-17T05:00Z",
+            "end_utc": "2027-09-20T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Civilian boat pool manifest: 87 vessels, operators credentialed under Nueces OEM plan, GPS trackers activated for all 87 hulls",
+        "CCFD ICP-2 activation log: Waldron Road Sta. 18, 08:14 CDT, staffed by Dispatch Ops Officer Tamara Nguyen-Reeves",
+        "Active team count: 34 teams (12 CCFD, 8 TF-1, 7 Sheriff, 7 civilian boat), tracked in NuecesNet resource board"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "ccfd_sar_incident_log",
+        "nueces_county_sheriff_sar_log",
+        "coast_guard_sector_cc_ops_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1706",
+      "time_label": "D+5",
+      "day": 5,
+      "day_end": null,
+      "time_utc": "22:00Z",
+      "threads": [
+        "T17"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "SAR operations formally transition to recovery/welfare check phase. Dispatch Chief Vasquez-Okafor and Commander Ostrowski-Han hold joint press briefing at 17:00 CDT at Nueces County EOC. Cumulative confirmed rescues certified at 1,427; 2 deceased located (Violet Road vehicle). Active team count reduced to 8 (skeleton teams for welfare checks). Texas TF-1 begins demobilization. Civilian boat pool formally stood down and vessels returned. NuecesNet SAR-TAC-1 traffic volume drops from 400+ events/day to 12. Meridian Aerial Systems UAS assets redeployed to damage assessment tasking (links to T11).",
+      "observed_in": [
+        {
+          "stream": "sar_missions",
+          "what": "CCFD incident log closed: 1,427 rescues confirmed, case numbers SAR-27-00001 through SAR-27-01427",
+          "when": {
+            "start_utc": "2027-09-19T22:00Z",
+            "end_utc": "2027-09-20T00:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Vasquez-Okafor and Ostrowski-Han joint press briefing audio (Coastline Public Radio OUT-03 recording, 17:04-17:38 CDT)",
+        "CCFD incident log closed: 1,427 rescues confirmed, case numbers SAR-27-00001 through SAR-27-01427",
+        "TF-1 demobilization manifest: 28 personnel, 6 vehicles, convoy departure 20:12 CDT toward San Antonio"
+      ],
+      "public_fact": "PUB-172",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "ccfd_sar_incident_log",
+        "coast_guard_sector_cc_ops_log",
+        "nueces_county_eoc_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1707",
+      "time_label": "D+7 to D+10",
+      "day": 7,
+      "day_end": 10,
+      "time_utc": "00:00Z",
+      "threads": [
+        "T17",
+        "T13"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "FALSE-CALL DIVERSION WINDOW (D+7 through D+10): Eleven of the 23 false calls of EVT-1303 and EVT-1304 (not additional calls) report trapped survivors: over four days from D+7 911 dispatch receives these 11 calls at addresses in northwest and central Corpus Christi that correspond geographically to the GW-FAC-SUB-02 (Harbor View Switching Station, 4821 Navigation Blvd) and GW-FAC-SUB-03 (Crosstown Feeder Station, 2201 Crosstown Expressway service road) perimeters. The calls describe elderly individuals trapped in flooded structures. All 11 calls are dispatched. SAR teams — primarily 2-person CCFD welfare-check units, still operational from the wind-down phase — respond to all 11. Zero victims found at any address. Retrospective analysis shows: (1) all 11 originating numbers are prepaid devices with carrier prefix 737-9XX, the same prefix cluster identified in T13 false calls; (2) GPS tracks from the 11 responding teams all route within 400m of either SUB-02 or SUB-03; (3) the call window (D+7-D+10) overlaps precisely with the CBPWA relay configuration maintenance window that KESTREL exploited for the extended power manipulation.",
+      "observed_in": [
+        {
+          "stream": "cad_911",
+          "what": "Eleven incidents (SAR-27-01428 to 01438) on D+7 to D+10 reporting trapped survivors, all closed 'no victim found', all within 0.4 km of SUB-02 or SUB-03.",
+          "when": {
+            "start_utc": "2027-09-21T05:00Z",
+            "end_utc": "2027-09-25T05:00Z"
+          }
+        },
+        {
+          "stream": "sar_missions",
+          "what": "Two-person welfare-check units respond to all eleven and find no one.",
+          "when": {
+            "start_utc": "2027-09-21T05:00Z",
+            "end_utc": "2027-09-25T05:00Z"
+          }
+        },
+        {
+          "stream": "avl",
+          "what": "The responding units' routes end in a tight cluster near Harbor View (SUB-02) and Crosstown (SUB-03).",
+          "when": {
+            "start_utc": "2027-09-21T05:00Z",
+            "end_utc": "2027-09-25T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "11 CAD incident records: SAR-27-01428 through SAR-27-01438, all coded NO_VICTIM_FOUND, lat/lon within 0.4 km of SUB-02 or SUB-03",
+        "11 originating phone numbers: all prepaid, carrier prefix 737-9XX, no registered owner, purchased across 4 Corpus Christi area retailers D-18 to D-12",
+        "SAR GPS track cluster: 11 team routes, mean endpoint 27.8041N 97.3975W (Harbor View area), cluster radius 380m, temporally dense D+7 to D+10",
+        "CCFD after-action note by Dispatch Ops Officer Nguyen-Reeves: 'Unusual volume of no-find welfare checks northwest sector, all originated from unregistered mobiles' — flagged but not escalated at time of writing",
+        "Cross-reference to T13: same 737-9XX prefix cluster appears in 23 T13 false emergency calls during D0-D+3 period"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PSAP-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "nueces_county_911_cad_log",
+        "ccfd_sar_incident_log",
+        "nueces_county_911_call_metadata"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1708",
+      "time_label": "D+7",
+      "day": 7,
+      "day_end": null,
+      "time_utc": "16:00Z",
+      "threads": [
+        "T17"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Final rescue count certified by Nueces County Emergency Management Coordinator at 1,427. Coast Guard Sector Corpus Christi submits formal Incident Summary Report (ISR-2027-CC-004) to Coast Guard District 8 (New Orleans). The ISR documents the operational breakdown: 341 helicopter hoists, 1,041 ground/boat rescues, 45 welfare check confirmations (survivors located but ambulatory), 2 fatalities located. The ISR's appendix lists GPS coordinates for all 1,427 rescue locations — a spatial dataset that, when analyzed alongside the false-call dispatch coordinates, reveals the northwest cluster anomaly. Dispatch Chief Vasquez-Okafor retains CCFD incident logs and submits a 90-day after-action review notice.",
+      "observed_in": [
+        {
+          "stream": "sar_missions",
+          "what": "Final mission table: 1,427 rescues with time, position and resource type, plus 11 no-find welfare checks.",
+          "when": {
+            "start_utc": "2027-09-14T05:00Z",
+            "end_utc": "2027-09-22T05:00Z"
+          }
+        },
+        {
+          "stream": "public_record",
+          "what": "Certified final rescue count of 1,427 and the Coast Guard incident summary report.",
+          "when": {
+            "start_utc": "2027-09-21T05:00Z",
+            "end_utc": "2027-09-22T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "ISR-2027-CC-004 Appendix A: 1,427 lat/lon rescue points with timestamps and resource type (helicopter/boat/ground)",
+        "Spatial cluster analysis (potential artifact): 1,427 rescue points cluster in Flour Bluff, Calallen, D3/D4 — with 11 welfare-check no-find points forming an outlier cluster near SUB-02/SUB-03 that separates visually from the legitimate rescue distribution"
+      ],
+      "public_fact": "PUB-173",
+      "place_ids": [
+        "PSAP-01",
+        "FAC-USCG-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "coast_guard_isr_2027_cc_004",
+        "nueces_county_eoc_final_count_cert"
+      ],
+      "observable": true,
+      "places_inferred": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "PUB-170",
+      "day": 1,
+      "time_local": "15:00",
+      "type": "official_statement",
+      "source": "US Coast Guard Sector Corpus Christi",
+      "statement": "Coast Guard Sector Corpus Christi reports that helicopter crews from Air Station Corpus Christi have conducted rescue operations continuously since 1:22 a.m. Tuesday, completing 180 hoist operations as of 3 p.m. Wednesday. Coast Guard HH-60 Jayhawk aircraft have operated in wind speeds up to 55 knots to reach survivors on rooftops and in second-story windows across the Flour Bluff and North Beach communities. Working alongside Texas Department of Public Safety Aviation and Customs and Border Protection Air units, Coast Guard crews have confirmed 341 persons rescued by air as of this report. Aerial thermal imaging has been instrumental in locating survivors in debris-filled floodwater. Ground and boat rescue operations have confirmed an additional 145 rescues, bringing the total to 486 persons. Coast Guard Sector Commander Delia Ostrowski-Han has requested mutual aid from Air Station Houston for additional rotary-wing support beginning tomorrow morning.",
+      "arcs": [],
+      "events": [
+        "EVT-1703"
+      ],
+      "places": [
+        "NAS Corpus Christi",
+        "Flour Bluff",
+        "North Beach"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-171",
+      "day": 2,
+      "time_local": "18:00",
+      "type": "official_statement",
+      "source": "Nueces County Office of Emergency Management",
+      "statement": "Nueces County Emergency Management Coordinator announces that combined SAR teams have reached a cumulative total of 702 confirmed rescues as of 18:00 today. Search operations have expanded into the Districts 3 and 4 areas where post-storm surge flooding has persisted at depths between two and three feet in low-lying neighborhoods. Texas Task Force 1 swift-water units are conducting systematic grid searches in the Greenwood and Molina neighborhoods. Coastal Bend Emergency Communications Center Dispatch Chief Elena Vasquez-Okafor reports that all known stranded survivors in Flour Bluff have been reached; operations are now focused on the Calallen and northwest mainland corridors. Residents who remain in their homes and require assistance are urged to place a bright-colored item in a visible window or on their roof. Do not attempt to enter floodwater on foot. Nueces County Emergency Management has confirmed 23 storm-related deaths as of this evening.",
+      "arcs": [],
+      "events": [
+        "EVT-1704"
+      ],
+      "places": [
+        "Districts 3 and 4",
+        "Greenwood",
+        "Molina",
+        "Calallen"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-172",
+      "day": 5,
+      "time_local": "17:00",
+      "type": "press_conference",
+      "source": "CCFD / US Coast Guard Sector Corpus Christi joint briefing",
+      "statement": "Coastal Bend Emergency Communications Center Dispatch Chief Elena Vasquez-Okafor and Coast Guard Sector Commander Delia Ostrowski-Han announced today that mass rescue operations in the Corpus Christi area have concluded, with 1,427 confirmed rescues over five days. The operation involved 34 coordinated teams at peak, including US Coast Guard, Texas Task Force 1, Corpus Christi Fire Department, Nueces County Sheriff Search and Rescue, and 87 credentialed civilian boat operators. Search teams recovered two bodies during the operation, both occupants of a submerged vehicle on Violet Road; the county's confirmed storm death toll stands at 23. Chief Vasquez-Okafor praised the performance of contracted UAS operators whose thermal imaging capabilities enabled the identification of survivors in darkness and debris. Commander Ostrowski-Han noted that this was the largest helicopter hoist rescue operation in Corpus Christi history. Remaining SAR resources will transition to welfare check mode; residents who have not yet been contacted by a welfare check team should call 211.",
+      "arcs": [],
+      "events": [
+        "EVT-1706"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Flour Bluff",
+        "Calallen",
+        "Violet Road"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-173",
+      "day": 7,
+      "time_local": "10:00",
+      "type": "official_report",
+      "source": "US Coast Guard Sector Corpus Christi",
+      "statement": "The US Coast Guard Sector Corpus Christi has submitted its formal Incident Summary Report for Operation Rafael SAR (ISR-2027-CC-004) to Coast Guard District 8. The report certifies 1,427 total rescues: 341 by helicopter hoist, 1,041 by surface vessel (Coast Guard, state, and civilian), and 45 ambulatory survivor contacts. The report notes that contracted unmanned aerial system operators provided 112 thermal imaging annotations directly used to coordinate surface rescue operations. The Coast Guard thanks the community of Corpus Christi and all mutual-aid partners for their outstanding response. A formal after-action review will be conducted within 90 days.",
+      "arcs": [],
+      "events": [
+        "EVT-1708"
+      ],
+      "places": [
+        "Corpus Christi"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-174",
+      "day": 10,
+      "time_local": "09:00",
+      "type": "media_report",
+      "source": "OUT-03 Coastline Public Radio",
+      "statement": "Coastline Public Radio has learned from Coastal Bend Emergency Communications Center dispatch records, obtained through a public records request, that 23 calls since September 21 from unregistered prepaid phones reported emergencies near two utility sites in northwest and central Corpus Christi, at least eleven of them trapped residents — but rescue teams found no one at any of those locations. Dispatch Chief Elena Vasquez-Okafor confirmed the no-find calls, attributing them to possible miscommunications from residents calling on behalf of neighbors who had already self-evacuated. The 211 welfare check line has received similar false-alarm contacts, the chief noted. No further investigation has been announced.",
+      "arcs": [],
+      "events": [
+        "EVT-1707"
+      ],
+      "places": [
+        "northwest Corpus Christi"
+      ],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "sar_active_teams",
+      "label": "Active SAR teams in field",
+      "kind": "number",
+      "group": "Health & emergency",
+      "unit": "teams",
+      "thread": "T17",
+      "description": "Number of coordinated SAR teams actively conducting rescue operations or welfare checks. Peaks at D+3 during full ground operations, declines after D+5 stand-down.",
+      "keyframes": [
+        {
+          "day": -1,
+          "value": 0
+        },
+        {
+          "day": 0,
+          "value": 6
+        },
+        {
+          "day": 1,
+          "value": 22
+        },
+        {
+          "day": 2,
+          "value": 30
+        },
+        {
+          "day": 3,
+          "value": 34
+        },
+        {
+          "day": 4,
+          "value": 29
+        },
+        {
+          "day": 5,
+          "value": 8
+        },
+        {
+          "day": 6,
+          "value": 8
+        },
+        {
+          "day": 7,
+          "value": 6
+        },
+        {
+          "day": 10,
+          "value": 2
+        },
+        {
+          "day": 14,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "sar_rescues_cumulative",
+      "label": "Cumulative confirmed rescues",
+      "kind": "number",
+      "group": "Health & emergency",
+      "unit": "persons",
+      "thread": "T17",
+      "description": "Running total of persons rescued and confirmed in CCFD incident log. Certified final count is 1,427 at D+7.",
+      "keyframes": [
+        {
+          "day": 0,
+          "value": 14
+        },
+        {
+          "day": 1,
+          "value": 486
+        },
+        {
+          "day": 2,
+          "value": 702
+        },
+        {
+          "day": 3,
+          "value": 1041
+        },
+        {
+          "day": 4,
+          "value": 1289
+        },
+        {
+          "day": 5,
+          "value": 1427
+        },
+        {
+          "day": 7,
+          "value": 1427
+        }
+      ]
+    },
+    {
+      "id": "sar_phase",
+      "label": "SAR operational phase",
+      "kind": "state",
+      "group": "Health & emergency",
+      "unit": null,
+      "thread": "T17",
+      "description": "Current phase of the SAR operation. Transitions: standby (pre-storm) to active (D0 landfall) to winding-down (D+5 stand-down) to welfare-check (D+6+) to closed (D+14).",
+      "states": [
+        "standby",
+        "active",
+        "winding-down",
+        "welfare-check",
+        "closed"
+      ],
+      "keyframes": [
+        {
+          "day": -1,
+          "value": "standby"
+        },
+        {
+          "day": 0,
+          "value": "active"
+        },
+        {
+          "day": 5,
+          "value": "winding-down"
+        },
+        {
+          "day": 6,
+          "value": "welfare-check"
+        },
+        {
+          "day": 14,
+          "value": "closed"
+        }
+      ]
+    },
+    {
+      "id": "sar_false_dispatch_count",
+      "label": "No-find SAR dispatches (cumulative)",
+      "kind": "number",
+      "group": "Hidden threads",
+      "unit": "incidents",
+      "thread": "T17",
+      "description": "Cumulative count of SAR dispatches that reached the designated address and found no victim. Normally expected to be 0-2; spikes to 11 at D+7-D+10 due to false calls. This variable is a hidden-thread signal — not visible in public reporting.",
+      "keyframes": [
+        {
+          "day": 0,
+          "value": 0
+        },
+        {
+          "day": 5,
+          "value": 1
+        },
+        {
+          "day": 7,
+          "value": 3
+        },
+        {
+          "day": 8,
+          "value": 6
+        },
+        {
+          "day": 9,
+          "value": 9
+        },
+        {
+          "day": 10,
+          "value": 11
+        },
+        {
+          "day": 14,
+          "value": 11
+        }
+      ]
+    }
+  ],
+  "news_arcs": [
+    {
+      "arc_id": "ARC-RESCUE",
+      "name": "Race against the tide",
+      "description": "Coverage of the SAR operation from first helicopter launches through the certified final rescue count. Centers on heroic narrative of 1,427 rescues, thermal imaging technology, and civilian boat volunteers.",
+      "thread": "T17",
+      "story_hooks": [
+        {
+          "day": 1,
+          "outlet": "OUT-02",
+          "character_note": "Commander Ostrowski-Han as primary source; thermal cameras key quote from aircrew",
+          "summary": "Harborline 6 live coverage 15:00 CDT: Coast Guard HH-60 crews describe pulling 341 survivors from rooftops in Flour Bluff. Thermal imagers key to locating victims in debris. Visual package includes UAS thermal footage of survivor on roof at 06:51Z.",
+          "public_facts_used": [
+            "PUB-170"
+          ]
+        },
+        {
+          "day": 2,
+          "outlet": "OUT-01",
+          "character_note": "Dispatch Chief Vasquez-Okafor quoted on District 3-4 operations; civilian boat volunteer featured",
+          "summary": "Bayside Ledger profile: volunteer boat captain Hector Maldonado-Cruz (fictional) describes navigating debris fields in Greenwood to reach elderly residents. 702 rescues reached; focus on the human stories in the low-lying neighborhoods.",
+          "public_facts_used": [
+            "PUB-171"
+          ]
+        },
+        {
+          "day": 5,
+          "outlet": "OUT-03",
+          "character_note": "Joint briefing audio from Vasquez-Okafor and Ostrowski-Han; 1,427 rescues lead",
+          "summary": "Coastline Public Radio live broadcast of joint press conference. 'Largest helicopter hoist rescue in Corpus Christi history' becomes the defining phrase. Texas TF-1 demobilization described. Two fatalities acknowledged.",
+          "public_facts_used": [
+            "PUB-172"
+          ]
+        },
+        {
+          "day": 10,
+          "outlet": "OUT-03",
+          "character_note": "Vasquez-Okafor gives benign explanation; reporter does not probe further",
+          "summary": "Brief Coastline Public Radio news item: eleven no-find welfare check calls in northwest CC, attributed to miscommunication. No follow-up announced.",
+          "public_facts_used": [
+            "PUB-174"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "ENT-SAR-01",
+      "name": "Elena Vasquez-Okafor",
+      "type": "person",
+      "role": "CBECC Dispatch Chief",
+      "note": "Fictional Dispatch Chief of the Coastal Bend Emergency Communications Center and county SAR coordinator. Primary incident commander for all ground SAR operations D0-D+14. Files the CCFD after-action report flagging no-find calls without escalating. Voice heard in multiple NuecesNet SAR-TAC-1 audio recordings."
+    },
+    {
+      "id": "ENT-SAR-02",
+      "name": "Commander Delia Ostrowski-Han",
+      "type": "person",
+      "role": "Coast Guard Sector Corpus Christi Commander",
+      "note": "Fictional USCG Sector commander. Oversees all Coast Guard air and surface SAR assets. Primary source for Coast Guard press statements. Signs ISR-2027-CC-004."
+    },
+    {
+      "id": "ENT-SAR-03",
+      "name": "Captain Ruben Espinoza-Ward",
+      "type": "person",
+      "role": "Texas Task Force 1 Alpha Team Leader",
+      "note": "Fictional TF-1 Alpha team leader, 14-person swift-water unit from San Antonio. Active D0-D+6. Authors daily TF-1 field reports."
+    },
+    {
+      "id": "ENT-SAR-04",
+      "name": "Meridian Aerial Systems",
+      "type": "contractor",
+      "role": "UAS thermal imaging contractor",
+      "note": "Fictional UAS contractor. Provides two FLIR-equipped multirotor platforms (call signs MAS-01 and MAS-02) for aerial thermal imaging. Provides 112 survivor-location annotations during D+1 peak operations. Transitions to damage assessment (T11) after D+5 SAR stand-down."
+    },
+    {
+      "id": "ENT-SAR-05",
+      "name": "Tamara Nguyen-Reeves",
+      "type": "person",
+      "role": "CCFD Dispatch Operations Officer",
+      "note": "Fictional CCFD officer who staffs ICP-2 at Waldron Road Station 18 from D+3. Authors the after-action note flagging the northwest no-find cluster. Her note is a key latent artifact for investigators."
+    }
+  ],
+  "data_assets_described": [
+    {
+      "asset_id": "DA-T17-001",
+      "name": "SAR GPS track dataset",
+      "description": "GPS tracks for all 34 peak SAR teams plus 87 civilian vessels, D0-D+10. Format: GeoJSON LineString per vessel per operational period. 1,427 rescue pickup points as Point features with timestamp, team_id, survivor_count attributes. 11 false-dispatch tracks identifiable by no-pickup endpoint near SUB-02/SUB-03 addresses.",
+      "ai_use_case": "Spatial-temporal clustering, GPS track anomaly detection, route optimization analysis, RL rescue prioritization"
+    },
+    {
+      "asset_id": "DA-T17-002",
+      "name": "Radio transcript corpus — NuecesNet SAR-TAC-1",
+      "description": "60 hours of synthetic VHF radio audio (155.340 MHz) from D0 through D+7, with accompanying transcripts. Audio includes background noise profiles: heavy rain, rotor wash, engine noise. 44 discrete exchanges on D+1 alone. STT challenge: low SNR (estimated -4 to +6 dB), speaker overlap, procedural brevity conventions.",
+      "ai_use_case": "STT in noisy VHF environment, speaker diarization, emergency communication NLP"
+    },
+    {
+      "asset_id": "DA-T17-003",
+      "name": "FLIR thermal imagery annotation set",
+      "description": "112 thermal image tiles from UAS platforms MAS-01 and MAS-02, each 640x512 px, covering D+1 operations. Annotations include bounding boxes for survivor detections, confidence scores 0.71-0.97, and water depth estimates derived from thermal contrast with known structure heights. 23 tiles show partial debris occlusion of survivors.",
+      "ai_use_case": "CV survivor detection from thermal imagery, water depth estimation, occlusion-robust detection"
+    }
+  ],
+  "answer_key_path": "An analyst combining (1) CCFD SAR incident GPS track data showing 11 team routes all terminating within 400m of GW-FAC-SUB-02 or SUB-03 during D+7-D+10, (2) 911 CAD metadata showing all 11 originating calls from prepaid numbers in the 737-9XX carrier prefix cluster (same cluster as T13 false calls during D0-D+3), and (3) the CBPWA maintenance window log (from T8) showing relay configuration access during the same D+7-D+10 window, can conclude that KESTREL operatives deliberately drew SAR teams toward the utility attack zones at the precise moment of the relay manipulation — using the same false-call playbook deployed during D0-D+3 to suppress emergency communications. The spatial cluster of GPS track endpoints (mean 27.8041N 97.3975W) is the geometric key: it does not correspond to any flooding-risk zone but instead forms a ring around the two substations. Cross-referencing with T8 (SCADA relay config writes D+7-D+10) and T13 (prepaid phone cluster) closes the detection chain.",
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

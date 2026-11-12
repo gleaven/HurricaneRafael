@@ -1,0 +1,73 @@
+# Changelog
+
+- 20261108T010131Z: snapshot `20261108T010131Z-before_hardening_pass.zip` (71 files) - before hardening pass
+- 20261108T013436Z: snapshot `20261108T013436Z-before_applying_canon_conflicts.json.zip` (78 files) - before applying canon_conflicts.json
+- 20261108T015614Z: snapshot `20261108T015614Z-before_applying_review1-RW.json,review1-R1.json,review1-R2.json,review1-R3.json,review1-R4.json,review1-R5.json.zip` (90 files) - before applying review1-RW.json,review1-R1.json,review1-R2.json,review1-R3.json,review1-R4.json,review1-R5.json
+- 20261108T023007Z: snapshot `20261108T023007Z-before_applying_rewrite-W1.json,rewrite-W2.json,rewrite-W3.json.zip` (93 files) - before applying rewrite-W1.json,rewrite-W2.json,rewrite-W3.json
+- 20261108T023104Z: snapshot `20261108T023104Z-before_post-rewrite_cleanups.zip` (93 files) - before post-rewrite cleanups
+- 20261108T023353Z: snapshot `20261108T023353Z-before_co-mention_fixes.zip` (98 files) - before co-mention fixes
+- 20261108T024850Z: snapshot `20261108T024850Z-before_applying_review2-T3.json,review2-T1.json,review2-T2.json,review2-T4.json.zip` (102 files) - before applying review2-T3.json,review2-T1.json,review2-T2.json,review2-T4.json
+- 2026-11-08: Hardening pass completed.
+  - **Canon:** character canon covering 43 characters; 11 fixes.
+  - **Checkers:** number/date checker and co-mention leak rules added.
+  - **Review pass 1:** five storyline reviewers plus a real-world fact check (169 findings, 140 text fixes).
+  - **Public record corrected:**
+    - storm formation and watch/warning timing;
+    - FEMA approval timeline;
+    - spill claims center;
+    - closure agencies;
+    - FBI Houston;
+    - Quellmar terminal made internal.
+  - **Rewrites:** 377 rewrite fixes (W1-W3) and 6 new stories.
+  - **Review pass 2:** four time-window reviewers (68 findings, 0 open high).
+  - **Final state:** 398 stories, all acceptance criteria 1-6 pass.
+- 20261108T025039Z: snapshot `20261108T025039Z-accepted_hardened_release.zip` (102 files) - accepted hardened release
+- 20261108T025140Z: snapshot `20261108T025140Z-accepted_hardened_release_(final_lock).zip` (95 files) - accepted hardened release (final lock)
+- 20261108T030413Z: snapshot `20261108T030413Z-before_quirk_resolution.zip` (96 files) - before quirk resolution
+- 20261108T032659Z: snapshot `20261108T032659Z-before_applying_rewrite-W4.json,rewrite-W5.json.zip` (98 files) - before applying rewrite-W4.json,rewrite-W5.json
+- 20261108T033743Z: snapshot `20261108T033743Z-before_applying_review3-T5.json.zip` (100 files) - before applying review3-T5.json
+- 2026-11-08: Validation round 3.
+  - **Integrity check added** (acceptance criterion 8). It removed 3 unsupported fact tags and added 1 knowledge-timeline entry.
+  - **Port closure:** follows Coast Guard port conditions (X-Ray Sept. 11, Yankee Sept. 12, Zulu Sept. 13; anchored ships to sea and back Sept. 17), via 54 W4 fixes.
+  - **FBI searches:** moved from Christmas Day to Mon., Dec. 27, via 10 W5 fixes and 3 new stories.
+  - **Review pass 3:** T5, 9 fixes, 0 high.
+  - **Style:** 'U.S.' standardized in story text.
+  - **Sync:** bible doc and scenario files synced to the JSON master.
+  - **Final state:** 402 stories.
+- 20261108T033914Z: snapshot `20261108T033914Z-accepted_release_round_3.zip` (100 files) - accepted release round 3
+- 20261108T134055Z: snapshot `20261108T134055Z-shared_state_timeline_v1.zip` (114 files) - shared state timeline v1
+- 20261108T141124Z: snapshot `20261108T141124Z-before_multi-scenario_refactor.zip` (115 files) - before multi-scenario refactor
+- 2026-11-08: Multi-scenario refactor (no change to Rafael content).
+  - **Registry and helpers:** `scenarios/registry.json` and scenario-scoped helpers in `common.py`.
+  - **Settings out of code:** public exclusions in each scenario's config; time zones from the IANA database via `local_timezone`; viewer threads and colors read from scenario files.
+  - **Layers:** the state builder accepts layer `state_layer.py` modules and merges layer events and facts.
+  - **New tools:** `new_scenario.py` (gridwater scaffolded with threads T8-T10, status: design) and `check_scenarios.py` (acceptance criterion 10).
+  - **Verified:** all Rafael data outputs are byte-identical before and after.
+- 20261108T141344Z: snapshot `20261108T141344Z-multi-scenario_refactor.zip` (126 files) - multi-scenario refactor
+- 20261108T143109Z: snapshot `20261108T143109Z-gridwater-scenario-design.zip` (126 files) - gridwater-scenario-design
+- 20261108T161311Z: snapshot `20261108T161311Z-all-22-threads-merged.zip` (143 files) - all-22-threads-merged
+- 20261108T171553Z: snapshot `20261108T171553Z-480-stories-22-threads-complete.zip` (149 files) - 480-stories-22-threads-complete
+- 2026-11-09 to 2026-11-10: **data layer rebuilt.**
+  - **Why:** the first run of a new geography checker found 70,381 violations in about half a million positions (35% of AIS fixes on land, 1,027 incident locations in water); most streams ended at D+31 and contradicted the news; registries disagreed; 12 threads had no answer key.
+  - **Geography:** real geometry in `99_reference/geo/` (USACE channel reaches and centerlines, NOAA land areas and anchorages, Census roads, 629 landmark points); `scripts/geo.py` (routing on channels, open water and streets) and `scripts/check_geo.py`.
+  - **Canon:** `00_scenario/canon_decisions.md` and `00_scenario/canon_timeline.json` (357 expected observations). One oil spill, one dark vessel, two drone phases, fixed boil-water and port timelines; D0 epoch corrected to 1820880000.
+  - **Registries:** rebuilt on real sites with one id per thing (130 vessels, 64 aircraft, 45 facilities, 315 units, 329 hosts, 331 tags, 309 social accounts, 259 organisations, 148 areas); internal notes moved to `06_data_streams/_internal/`; `stream_catalog.json` added (43 delivered streams).
+  - **Streams:** all 43 regenerated by deterministic generators in `scripts/streams/` for D-30 to D+119 (IT and security logs from D-60); old files moved to `_versions/streams_pre_regen_20261109/`. New streams include vehicle locations, port surveillance, drone detections, SAR missions, shelters, outage map, host audit and portal logs, vessel cargo-control logs, tide and river gauges, wastewater.
+  - **News:** 138 stories added in batches M, N and O plus one integration story (657 in all); conflicting facts and stories rewritten; 58 characters added (116).
+  - **Graph and keys:** knowledge graph rebuilt with registry entities, data streams and observations (4,327 nodes, 26,348 edges, 0 orphans); answer keys for all 22 threads (300 steps verified).
+  - **Viewers:** newsroom server with a game-master clock (`10_news_sites/newsroom/`); map viewer generated from the logs (`scripts/build_map.py`, `scripts/check_map.py`).
+  - **Checks added:** `check_streams.py`, `check_entities.py`, `check_geo.py`, `check_answer_keys.py`, `check_thread_completeness.py`, `check_map.py`; gates 11 to 15 in `07_validation/ACCEPTANCE.md`.
+  - **Audit:** one independent audit (`07_validation/independent_audit/REPORT.md`): 7 of 11 areas passed, 4 partial; the listed defects (author notes in three public statements, values that labelled hostile records, storm narratives before the storm, flags that marked exactly the fraud ring) were fixed at the generators and not re-audited.
+  - **Verified:** geography 0 violations in 4,812,596 positions; 357 of 357 observations; ten narrative criteria pass; files re-locked (no zip snapshot: the corpus is about 1.5 GB).
+  - **Open:** neither viewer has been seen in a browser; see the status doc for the rest.
+- 2026-11-11: Open items closed and final consistency sweep.
+  - **Geography:** full street network (12,786 roads) and inland water layer; map road matching leaves 0 unmatched gaps.
+  - **Audits:** second independent stream audit (24 defects) and independent narrative audit (54 defects) fixed at the generators and in the narrative fix scripts (`scripts/narrative_fixes/p01` to `p04`); with the first audit's 18 that is 96 defects. `07_validation/reports/audit_closure.md` has one row per defect, checked against the files: 92 closed, 4 partly closed, 0 open. Counting scripts in `07_validation/audit_closure_checks/`.
+  - **Found and fixed while verifying the closure table:** gateway sessions had no matching network flows and remote-desktop commands lay outside sessions (flows are now written from the session log); historian sessions through the gateway during the isolation window; four remaining one-count tells in the utility audit logs; the two injured tug crew arrived at a different hospital than the dispatch record named; narrative residues in six stories and one MSEL event.
+  - **Canon:** entry 23 in `00_scenario/canon_decisions.md`: FAC-BLD-020 is Nueces Bay Blood Services (the first replacement name was a real organisation); aid registration opens 2027-11-13T06:00Z and the first takeover burst is 06:01Z to 09:17Z; the storm-window alert flood is 73,785 alerts over six UTC days; helicopter rescues are in Flour Bluff and North Beach; GPS interference is observable in aircraft data only; telemetry drops out intermittently during the outage.
+  - **Catalogue and schemas:** `scripts/check_catalog.py` added; key columns, notes and schema fields corrected to what is on disk.
+  - **Checks:** `check_canon_decisions.py` (rules B21 to B24 added), `check_map.py --all --resume`, `check_catalog.py` and `build_delivery.py` are gates 16 to 19 in `07_validation/ACCEPTANCE.md`.
+  - **Coverage and materials:** 24 stories for the thin threads (681 in all); hackathon documents and delivery package (1,592 files, 1,084 MB; leak scan passes; 43 early mentions listed for review); static mock-up pages retired; superseded streams zipped.
+  - **Verified on 2026-11-11 after the last regeneration:** 357 of 357 expected observations (by family); entities 0 problems; answer keys 300 of 300 steps; thread completeness 0 gaps; canon decisions 0 violations; catalogue 0 problems; newsroom gating 0 problems; map build complete. The geography check, the all-days map check, the acceptance check and the lock are run by the closing gate pass and are not recorded here.
+  - **Open:** viewers not seen in a real browser; offline map uses its fallback view; about 180 lake and pond polygons not cross-checked and about 12 km of roads at Copano Bay and Egery Flats read as water; audit fixes not confirmed by a third independent audit; four closure rows partly closed.
+

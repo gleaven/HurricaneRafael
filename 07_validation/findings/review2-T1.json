@@ -1,0 +1,206 @@
+{
+  "source": "T1",
+  "scope": "Review pass 2, scenario days -60 to -1: all 44 changed stories in that window, the 13 unchanged-sample stories in that window, and the prev/next arc neighbors of every changed story (22 more, including 6 day 0-2 neighbors read for continuity only); read in full against the corrected public record, canon and outlet style.",
+  "stories_read": 79,
+  "findings": [
+    {
+      "id": "T1-001",
+      "severity": "low",
+      "story_id": "NWS-M002-04",
+      "field": "body",
+      "old": "Hurricane Rafael has put surge zones under a mandatory evacuation.",
+      "new": "County officials have made evacuation mandatory in the surge zones as Hurricane Rafael nears.",
+      "reason": "W3-020 rewording credits the storm with issuing the order; evacuation orders come from county officials (PUB-021).",
+      "status": "applied"
+    },
+    {
+      "id": "T1-002",
+      "severity": "low",
+      "story_id": "NWS-M001-04",
+      "field": "body",
+      "old": "Forecasters have upgraded the Coastal Bend to a hurricane warning.",
+      "new": "The Coastal Bend has been under a hurricane warning since Sunday afternoon.",
+      "reason": "W3-026 rewording reads as fresh Monday news and 'upgraded the Coastal Bend' is garbled; the warning was issued Sunday afternoon (PUB-102/PUB-022).",
+      "status": "applied"
+    },
+    {
+      "id": "T1-003",
+      "severity": "low",
+      "story_id": "NWS-M002-05",
+      "field": "body",
+      "old": "Up and down her block, the cars that were parked there on Friday were mostly gone by Sunday afternoon. Neighbors with cars had left on their own schedules, some on Saturday, some at first light.",
+      "new": "By Sunday afternoon, most of the parking spots on her block were empty. Neighbors who own cars had packed up and gone, a few on Saturday and the rest at first light.",
+      "reason": "After W3-021/022 these two sentences still mirror same-day NWS-M002-04 ('driveways that were full Friday were mostly empty by Sunday afternoon'; 'Families with cars left on Saturday or early Sunday, on their own schedule').",
+      "status": "applied"
+    },
+    {
+      "id": "T1-004",
+      "severity": "low",
+      "story_id": "NWS-M003-05",
+      "field": "body",
+      "old": "Two laden tankers remain moored at an Inner Harbor terminal with Coast Guard approval, the Coast Guard said, declining to identify them.",
+      "new": "Two laden tankers have Coast Guard permission to stay at an Inner Harbor terminal, the agency said, declining to identify them.",
+      "reason": "The same 18-word sentence runs in three same-day stories (NWS-M003-01, NWS-M003-03, NWS-M003-05); vary the wire's version.",
+      "status": "applied"
+    },
+    {
+      "id": "T1-005",
+      "severity": "low",
+      "story_id": "NWS-M003-03",
+      "field": "body",
+      "old": "Two laden tankers remain moored at an Inner Harbor terminal with Coast Guard approval, the Coast Guard said, without identifying the vessels or the terminal.",
+      "new": "The Coast Guard has also let two loaded tankers stay tied up at an Inner Harbor terminal, though it did not name the ships or the terminal.",
+      "reason": "Same sentence as same-day Gulfwater NWS-M003-01 and the wire NWS-M003-05; vary the Ledger's version (keeps PUB-020 content).",
+      "status": "applied"
+    },
+    {
+      "id": "T1-006",
+      "severity": "low",
+      "story_id": "NWS-M005-04",
+      "field": "body",
+      "old": "No hurricane watch is up yet, but the forecast cone for Hurricane Rafael covers Corpus Christi.",
+      "new": "Corpus Christi sits inside Rafael's forecast cone, though forecasters have not yet posted a hurricane watch.",
+      "reason": "W1-049 rewording stacks two 'but' clauses in a row ('...yet, but...' then 'But for households...') and echoes Harborline's NWS-M004-04 status line nearly word for word.",
+      "status": "applied"
+    },
+    {
+      "id": "T1-007",
+      "severity": "low",
+      "story_id": "NWS-M005-04",
+      "field": "body",
+      "old": "since the start of the school year",
+      "new": "since the county's hurricane fair in July",
+      "reason": "Continuity: she took the evacuation card at the July fair (NWS-M055-01) and has been putting it off since (canon CHR-040: kept the fair card).",
+      "status": "applied"
+    },
+    {
+      "id": "T1-008",
+      "severity": "low",
+      "story_id": "NWS-M004-02",
+      "field": "body",
+      "old": "That is why we are publishing this special edition ahead of our usual weekly edition.",
+      "new": "That is why this special edition is coming out before our regular weekly issue.",
+      "reason": "R3-021/W1-051 edits left 'edition ... edition' in one sentence.",
+      "status": "applied"
+    },
+    {
+      "id": "T1-009",
+      "severity": "low",
+      "story_id": "NWS-M022-01",
+      "field": "body",
+      "old": "Monthly export totals for August are expected after the month closes. Sabal Energy Wire will report them when available.",
+      "new": "Tanker-tracking firms will tally August loadings as the month winds down, and Sabal Energy Wire will report the totals when available.",
+      "reason": "Same outlet reports August's monthly high on Tuesday, Aug. 31 (NWS-M014-01, PUB-014), before the month closes; this line sets up that contradiction.",
+      "status": "applied"
+    },
+    {
+      "id": "T1-010",
+      "severity": "low",
+      "story_id": "NWS-M059-02",
+      "field": "body",
+      "old": "and from the water the bridges and the industrial skyline beyond them look close enough to touch.",
+      "new": "and from the open bay the bridges and the industrial skyline beyond them look closer than they are.",
+      "reason": "RW-023 moved the delta to the head of Nueces Bay, several miles from the causeway; 'close enough to touch' now contradicts the corrected geography.",
+      "status": "applied"
+    },
+    {
+      "id": "T1-011",
+      "severity": "medium",
+      "story_id": "NWS-M007-01",
+      "field": "story",
+      "old": "",
+      "new": "Metadata only (text is already correct): in tags.topics replace 'rain bands' with 'tropical moisture'.",
+      "reason": "Topics ship in the release and RSS categories; 'rain bands' on day -7 contradicts corrected PUB-016 (moisture plume and stalled front, not Rafael's bands).",
+      "status": "applied",
+      "resolution": "Applied by script (metadata/time_local), 2026-11-08."
+    },
+    {
+      "id": "T1-012",
+      "severity": "medium",
+      "story_id": "NWS-M007-02",
+      "field": "story",
+      "old": "",
+      "new": "Metadata only (text is already correct): in tags.topics replace 'rain bands' with 'tropical moisture'.",
+      "reason": "Topics ship in the release and RSS categories; 'rain bands' on day -7 contradicts corrected PUB-016 (moisture plume and stalled front, not Rafael's bands).",
+      "status": "applied",
+      "resolution": "Applied by script (metadata/time_local), 2026-11-08."
+    },
+    {
+      "id": "T1-013",
+      "severity": "medium",
+      "story_id": "NWS-M007-03",
+      "field": "story",
+      "old": "",
+      "new": "Metadata only (text is already correct): in tags.topics replace 'rain bands' with 'tropical moisture'.",
+      "reason": "Topics ship in the release and RSS categories; 'rain bands' on day -7 contradicts corrected PUB-016 (moisture plume and stalled front, not Rafael's bands).",
+      "status": "applied",
+      "resolution": "Applied by script (metadata/time_local), 2026-11-08."
+    },
+    {
+      "id": "T1-014",
+      "severity": "low",
+      "story_id": "NWS-M005-01",
+      "field": "story",
+      "old": "",
+      "new": "Metadata only (text is already correct): in tags.topics replace 'hurricane watch' with 'forecast cone' (or drop it where 'forecast cone' is already listed).",
+      "reason": "Topics ship in the release and RSS categories; a 'hurricane watch' topic on Sept. 9-10 implies a watch the corrected record says did not exist until Saturday (PUB-101).",
+      "status": "applied",
+      "resolution": "Applied by script (metadata/time_local), 2026-11-08."
+    },
+    {
+      "id": "T1-015",
+      "severity": "low",
+      "story_id": "NWS-M005-02",
+      "field": "story",
+      "old": "",
+      "new": "Metadata only (text is already correct): in tags.topics replace 'hurricane watch' with 'forecast cone' (or drop it where 'forecast cone' is already listed).",
+      "reason": "Topics ship in the release and RSS categories; a 'hurricane watch' topic on Sept. 9-10 implies a watch the corrected record says did not exist until Saturday (PUB-101).",
+      "status": "applied",
+      "resolution": "Applied by script (metadata/time_local), 2026-11-08."
+    },
+    {
+      "id": "T1-016",
+      "severity": "low",
+      "story_id": "NWS-M005-04",
+      "field": "story",
+      "old": "",
+      "new": "Metadata only (text is already correct): in tags.topics replace 'hurricane watch' with 'forecast cone' (or drop it where 'forecast cone' is already listed).",
+      "reason": "Topics ship in the release and RSS categories; a 'hurricane watch' topic on Sept. 9-10 implies a watch the corrected record says did not exist until Saturday (PUB-101).",
+      "status": "applied",
+      "resolution": "Applied by script (metadata/time_local), 2026-11-08."
+    },
+    {
+      "id": "T1-017",
+      "severity": "low",
+      "story_id": "NWS-M004-01",
+      "field": "story",
+      "old": "",
+      "new": "Metadata only (text is already correct): in tags.topics replace 'hurricane watch' with 'forecast cone' (or drop it where 'forecast cone' is already listed).",
+      "reason": "Topics ship in the release and RSS categories; a 'hurricane watch' topic on Sept. 9-10 implies a watch the corrected record says did not exist until Saturday (PUB-101).",
+      "status": "applied",
+      "resolution": "Applied by script (metadata/time_local), 2026-11-08."
+    },
+    {
+      "id": "T1-018",
+      "severity": "low",
+      "story_id": "NWS-M004-03",
+      "field": "story",
+      "old": "",
+      "new": "Metadata only (text is already correct): in tags.topics replace 'hurricane watch' with 'forecast cone' (or drop it where 'forecast cone' is already listed).",
+      "reason": "Topics ship in the release and RSS categories; a 'hurricane watch' topic on Sept. 9-10 implies a watch the corrected record says did not exist until Saturday (PUB-101).",
+      "status": "applied",
+      "resolution": "Applied by script (metadata/time_local), 2026-11-08."
+    },
+    {
+      "id": "T1-019",
+      "severity": "low",
+      "story_id": "NWS-M004-04",
+      "field": "story",
+      "old": "",
+      "new": "Metadata only (text is already correct): in tags.topics replace 'hurricane watch' with 'forecast cone' (or drop it where 'forecast cone' is already listed).",
+      "reason": "Topics ship in the release and RSS categories; a 'hurricane watch' topic on Sept. 9-10 implies a watch the corrected record says did not exist until Saturday (PUB-101).",
+      "status": "applied",
+      "resolution": "Applied by script (metadata/time_local), 2026-11-08."
+    }
+  ]
+}

@@ -1,0 +1,1396 @@
+{
+ "CCPD": {
+  "name": "Corpus Christi Police Department",
+  "radio_system": "Harris P25 Trunked",
+  "dispatch_channel": "CCPD-DISP-1",
+  "beats": [
+   {
+    "beat_id": "B01",
+    "name": "Downtown / North Beach",
+    "description": "Downtown core, North Beach waterfront, Harbor Bridge area, Cargo terminal district",
+    "neighborhoods": [
+     "Downtown",
+     "North Beach",
+     "Port of Corpus Christi",
+     "Harbor Bridge"
+    ],
+    "supervisor_unit": "1S1"
+   },
+   {
+    "beat_id": "B02",
+    "name": "Leopard Street Corridor",
+    "description": "Leopard Street commercial/industrial corridor, north of downtown, Up River Road area",
+    "neighborhoods": [
+     "Leopard Street",
+     "Hillcrest",
+     "Up River Road",
+     "Nueces River bottoms"
+    ],
+    "supervisor_unit": "2S1"
+   },
+   {
+    "beat_id": "B03",
+    "name": "Central / Morgan Ave",
+    "description": "Central Corpus Christi, Morgan Avenue corridor, Del Mar College area, TAMUCC vicinity",
+    "neighborhoods": [
+     "Central",
+     "Morgan Ave",
+     "Del Mar",
+     "South Bluff",
+     "Lamar Park"
+    ],
+    "supervisor_unit": "3S1"
+   },
+   {
+    "beat_id": "B04",
+    "name": "Southside / South Staples",
+    "description": "South Staples Street corridor, Saratoga area, La Palmera Mall, South residential",
+    "neighborhoods": [
+     "Southside",
+     "South Staples",
+     "Saratoga",
+     "Airline at Saratoga",
+     "Whitecap"
+    ],
+    "supervisor_unit": "4S1"
+   },
+   {
+    "beat_id": "B05",
+    "name": "Westside",
+    "description": "West Corpus Christi, Agnes Street, Highway 44 corridor, west residential areas",
+    "neighborhoods": [
+     "Westside",
+     "Agnes Street",
+     "Highway 44",
+     "Clarkwood",
+     "Violet"
+    ],
+    "supervisor_unit": "5S1"
+   },
+   {
+    "beat_id": "B06",
+    "name": "Flour Bluff",
+    "description": "Flour Bluff community, Waldron Road, Ennis Joslin corridor, back island access",
+    "neighborhoods": [
+     "Flour Bluff",
+     "Waldron Road",
+     "Ennis Joslin",
+     "Flour Bluff ISD area"
+    ],
+    "supervisor_unit": "6S1"
+   },
+   {
+    "beat_id": "B07",
+    "name": "Padre Island / SPID",
+    "description": "North Padre Island, South Padre Island Drive eastern end, JFK Causeway area",
+    "neighborhoods": [
+     "North Padre Island",
+     "Padre Island National Seashore area",
+     "JFK Causeway",
+     "Gulf of Mexico shoreline"
+    ],
+    "supervisor_unit": "7S1"
+   },
+   {
+    "beat_id": "B08",
+    "name": "Calallen / Northwest",
+    "description": "Calallen community, Northwest Corpus Christi, IH-37 corridor north of city, Violet area",
+    "neighborhoods": [
+     "Calallen",
+     "Northwest",
+     "IH-37 North",
+     "Annaville",
+     "Calallen ISD area"
+    ],
+    "supervisor_unit": "8S1"
+   },
+   {
+    "beat_id": "B09",
+    "name": "NAS / Oso Creek",
+    "description": "NAS Corpus Christi perimeter, Oso Creek corridor, South Alameda, Holly Road area",
+    "neighborhoods": [
+     "NAS Corpus Christi",
+     "Oso Creek",
+     "South Alameda",
+     "Holly Road",
+     "Oso Bay vicinity"
+    ],
+    "supervisor_unit": "9S1"
+   },
+   {
+    "beat_id": "B10",
+    "name": "Southeast",
+    "description": "Southeast Corpus Christi, Greenwood Drive, Gollihar Road area, South Park",
+    "neighborhoods": [
+     "Southeast",
+     "Greenwood",
+     "Gollihar",
+     "South Park",
+     "Airport Road"
+    ],
+    "supervisor_unit": "10S1"
+   },
+   {
+    "beat_id": "B11",
+    "name": "North / Airline-SPID",
+    "description": "North Corpus Christi, Airline Road corridor, SPID western end, Corpus Christi International Airport area",
+    "neighborhoods": [
+     "North",
+     "Airline Road",
+     "SPID West",
+     "Corpus Christi Airport",
+     "Mustang Road"
+    ],
+    "supervisor_unit": "11S1"
+   },
+   {
+    "beat_id": "B12",
+    "name": "Harbor / Industrial",
+    "description": "Port industrial zone, Rincon Point, ship channel, Refinery Row, La Quinta Channel",
+    "neighborhoods": [
+     "La Quinta",
+     "Rincon",
+     "Ship Channel",
+     "Refinery Row",
+     "Industrial District"
+    ],
+    "supervisor_unit": "12S1"
+   }
+  ],
+  "units": [
+   {
+    "unit_id": "1B1",
+    "type": "patrol",
+    "beat": "B01",
+    "description": "Beat 1 Patrol Unit 1",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "1B2",
+    "type": "patrol",
+    "beat": "B01",
+    "description": "Beat 1 Patrol Unit 2",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "1B3",
+    "type": "patrol",
+    "beat": "B01",
+    "description": "Beat 1 Patrol Unit 3",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "1S1",
+    "type": "supervisor",
+    "beat": "B01",
+    "description": "Beat 1 Sergeant",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "2B1",
+    "type": "patrol",
+    "beat": "B02",
+    "description": "Beat 2 Patrol Unit 1",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "2B2",
+    "type": "patrol",
+    "beat": "B02",
+    "description": "Beat 2 Patrol Unit 2",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "2B3",
+    "type": "patrol",
+    "beat": "B02",
+    "description": "Beat 2 Patrol Unit 3",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "2S1",
+    "type": "supervisor",
+    "beat": "B02",
+    "description": "Beat 2 Sergeant",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "3B1",
+    "type": "patrol",
+    "beat": "B03",
+    "description": "Beat 3 Patrol Unit 1",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "3B2",
+    "type": "patrol",
+    "beat": "B03",
+    "description": "Beat 3 Patrol Unit 2",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "3B3",
+    "type": "patrol",
+    "beat": "B03",
+    "description": "Beat 3 Patrol Unit 3",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "3S1",
+    "type": "supervisor",
+    "beat": "B03",
+    "description": "Beat 3 Sergeant",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "4B1",
+    "type": "patrol",
+    "beat": "B04",
+    "description": "Beat 4 Patrol Unit 1",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "4B2",
+    "type": "patrol",
+    "beat": "B04",
+    "description": "Beat 4 Patrol Unit 2",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "4B3",
+    "type": "patrol",
+    "beat": "B04",
+    "description": "Beat 4 Patrol Unit 3",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "4B4",
+    "type": "patrol",
+    "beat": "B04",
+    "description": "Beat 4 Patrol Unit 4",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "4S1",
+    "type": "supervisor",
+    "beat": "B04",
+    "description": "Beat 4 Sergeant",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "5B1",
+    "type": "patrol",
+    "beat": "B05",
+    "description": "Beat 5 Patrol Unit 1",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "5B2",
+    "type": "patrol",
+    "beat": "B05",
+    "description": "Beat 5 Patrol Unit 2",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "5B3",
+    "type": "patrol",
+    "beat": "B05",
+    "description": "Beat 5 Patrol Unit 3",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "5S1",
+    "type": "supervisor",
+    "beat": "B05",
+    "description": "Beat 5 Sergeant",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "6B1",
+    "type": "patrol",
+    "beat": "B06",
+    "description": "Beat 6 Patrol Unit 1 - Flour Bluff",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "6B2",
+    "type": "patrol",
+    "beat": "B06",
+    "description": "Beat 6 Patrol Unit 2 - Flour Bluff",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "6B3",
+    "type": "patrol",
+    "beat": "B06",
+    "description": "Beat 6 Patrol Unit 3 - Flour Bluff",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "6S1",
+    "type": "supervisor",
+    "beat": "B06",
+    "description": "Beat 6 Sergeant - Flour Bluff",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "7B1",
+    "type": "patrol",
+    "beat": "B07",
+    "description": "Beat 7 Patrol Unit 1 - Padre Island",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "7B2",
+    "type": "patrol",
+    "beat": "B07",
+    "description": "Beat 7 Patrol Unit 2 - Padre Island",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "7B3",
+    "type": "patrol",
+    "beat": "B07",
+    "description": "Beat 7 Patrol Unit 3 - Padre Island",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "7S1",
+    "type": "supervisor",
+    "beat": "B07",
+    "description": "Beat 7 Sergeant - Padre Island",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "8B1",
+    "type": "patrol",
+    "beat": "B08",
+    "description": "Beat 8 Patrol Unit 1 - Calallen",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "8B2",
+    "type": "patrol",
+    "beat": "B08",
+    "description": "Beat 8 Patrol Unit 2 - Calallen",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "8B3",
+    "type": "patrol",
+    "beat": "B08",
+    "description": "Beat 8 Patrol Unit 3 - Calallen",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "8S1",
+    "type": "supervisor",
+    "beat": "B08",
+    "description": "Beat 8 Sergeant - Calallen",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "9B1",
+    "type": "patrol",
+    "beat": "B09",
+    "description": "Beat 9 Patrol Unit 1 - NAS/Oso",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "9B2",
+    "type": "patrol",
+    "beat": "B09",
+    "description": "Beat 9 Patrol Unit 2 - NAS/Oso",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "9S1",
+    "type": "supervisor",
+    "beat": "B09",
+    "description": "Beat 9 Sergeant - NAS/Oso",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "10B1",
+    "type": "patrol",
+    "beat": "B10",
+    "description": "Beat 10 Patrol Unit 1 - Southeast",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "10B2",
+    "type": "patrol",
+    "beat": "B10",
+    "description": "Beat 10 Patrol Unit 2 - Southeast",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "10S1",
+    "type": "supervisor",
+    "beat": "B10",
+    "description": "Beat 10 Sergeant - Southeast",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "11B1",
+    "type": "patrol",
+    "beat": "B11",
+    "description": "Beat 11 Patrol Unit 1 - North",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "11B2",
+    "type": "patrol",
+    "beat": "B11",
+    "description": "Beat 11 Patrol Unit 2 - North",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "11B3",
+    "type": "patrol",
+    "beat": "B11",
+    "description": "Beat 11 Patrol Unit 3 - North",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "11S1",
+    "type": "supervisor",
+    "beat": "B11",
+    "description": "Beat 11 Sergeant - North",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "12B1",
+    "type": "patrol",
+    "beat": "B12",
+    "description": "Beat 12 Patrol Unit 1 - Harbor/Industrial",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "12B2",
+    "type": "patrol",
+    "beat": "B12",
+    "description": "Beat 12 Patrol Unit 2 - Harbor/Industrial",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "12S1",
+    "type": "supervisor",
+    "beat": "B12",
+    "description": "Beat 12 Sergeant - Harbor/Industrial",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "TRF-1",
+    "type": "traffic",
+    "beat": "citywide",
+    "description": "Traffic Unit 1 - Major Accident Investigation",
+    "vehicle": "Ford Police Interceptor Motorcycle"
+   },
+   {
+    "unit_id": "TRF-2",
+    "type": "traffic",
+    "beat": "citywide",
+    "description": "Traffic Unit 2 - Major Accident Investigation",
+    "vehicle": "Ford Police Interceptor Motorcycle"
+   },
+   {
+    "unit_id": "TRF-3",
+    "type": "traffic",
+    "beat": "citywide",
+    "description": "Traffic Supervision",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "DET-1",
+    "type": "detective",
+    "beat": "citywide",
+    "description": "CID Detective - Major Crimes",
+    "vehicle": "Unmarked Sedan"
+   },
+   {
+    "unit_id": "DET-2",
+    "type": "detective",
+    "beat": "citywide",
+    "description": "CID Detective - Property Crimes",
+    "vehicle": "Unmarked Sedan"
+   },
+   {
+    "unit_id": "DET-3",
+    "type": "detective",
+    "beat": "citywide",
+    "description": "CID Detective - Narcotics",
+    "vehicle": "Unmarked SUV"
+   },
+   {
+    "unit_id": "SWAT-1",
+    "type": "swat",
+    "beat": "citywide",
+    "description": "SWAT Team Leader",
+    "vehicle": "Armored BearCat"
+   },
+   {
+    "unit_id": "SWAT-2",
+    "type": "swat",
+    "beat": "citywide",
+    "description": "SWAT Tactical Unit",
+    "vehicle": "SWAT Van"
+   },
+   {
+    "unit_id": "K9-1",
+    "type": "k9",
+    "beat": "citywide",
+    "description": "K9 Unit 1 - Patrol/Tracking",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "K9-2",
+    "type": "k9",
+    "beat": "citywide",
+    "description": "K9 Unit 2 - Narcotics Detection",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "LT-1",
+    "type": "supervisor_lt",
+    "beat": "citywide",
+    "description": "Patrol Lieutenant - North Division",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "LT-2",
+    "type": "supervisor_lt",
+    "beat": "citywide",
+    "description": "Patrol Lieutenant - South Division",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "CAPT-1",
+    "type": "supervisor_capt",
+    "beat": "citywide",
+    "description": "Patrol Captain / Watch Commander",
+    "vehicle": "Chevy Tahoe PPV"
+   },
+   {
+    "unit_id": "PIO-1",
+    "type": "public_info",
+    "beat": "citywide",
+    "description": "Public Information Officer",
+    "vehicle": "Chevy Suburban"
+   },
+   {
+    "unit_id": "ECC-1",
+    "type": "command",
+    "beat": "citywide",
+    "description": "Emergency Command Center Unit",
+    "vehicle": "Mobile Command Post"
+   }
+  ]
+ },
+ "CCFD": {
+  "name": "Corpus Christi Fire Department",
+  "radio_system": "Harris P25 Trunked",
+  "dispatch_channel": "CCFD-DISP-1",
+  "stations": [
+   {
+    "station_id": "STA-1",
+    "station_number": 1,
+    "name": "Station 1 - Downtown",
+    "address": "601 N Chaparral St, Corpus Christi, TX 78401",
+    "neighborhood": "Downtown",
+    "battalion": "BC-1",
+    "apparatus": [
+     "E-1",
+     "T-1",
+     "R-1"
+    ]
+   },
+   {
+    "station_id": "STA-2",
+    "station_number": 2,
+    "name": "Station 2 - South Side",
+    "address": "5202 Kostoryz Rd, Corpus Christi, TX 78415",
+    "neighborhood": "South Side",
+    "battalion": "BC-2",
+    "apparatus": [
+     "E-2"
+    ]
+   },
+   {
+    "station_id": "STA-3",
+    "station_number": 3,
+    "name": "Station 3 - Calallen",
+    "address": "10101 Up River Rd, Corpus Christi, TX 78410",
+    "neighborhood": "Calallen",
+    "battalion": "BC-1",
+    "apparatus": [
+     "E-3"
+    ]
+   },
+   {
+    "station_id": "STA-5",
+    "station_number": 5,
+    "name": "Station 5 - Flour Bluff",
+    "address": "10125 Rodd Field Rd, Corpus Christi, TX 78418",
+    "neighborhood": "Flour Bluff",
+    "battalion": "BC-2",
+    "apparatus": [
+     "E-5",
+     "T-5",
+     "R-5"
+    ]
+   },
+   {
+    "station_id": "STA-6",
+    "station_number": 6,
+    "name": "Station 6 - North Beach",
+    "address": "2401 Timon Blvd, Corpus Christi, TX 78402",
+    "neighborhood": "North Beach",
+    "battalion": "BC-1",
+    "apparatus": [
+     "E-6"
+    ]
+   },
+   {
+    "station_id": "STA-7",
+    "station_number": 7,
+    "name": "Station 7 - South Staples",
+    "address": "5450 S Staples St, Corpus Christi, TX 78411",
+    "neighborhood": "South Staples",
+    "battalion": "BC-2",
+    "apparatus": [
+     "E-7",
+     "L-7"
+    ]
+   },
+   {
+    "station_id": "STA-8",
+    "station_number": 8,
+    "name": "Station 8 - Westside",
+    "address": "2602 Leopard St, Corpus Christi, TX 78408",
+    "neighborhood": "Leopard/Westside",
+    "battalion": "BC-1",
+    "apparatus": [
+     "E-8",
+     "HM-1"
+    ]
+   },
+   {
+    "station_id": "STA-10",
+    "station_number": 10,
+    "name": "Station 10 - Padre Island/SPID",
+    "address": "14353 S Padre Island Dr, Corpus Christi, TX 78418",
+    "neighborhood": "Padre Island / SPID East",
+    "battalion": "BC-2",
+    "apparatus": [
+     "E-10",
+     "L-10"
+    ]
+   },
+   {
+    "station_id": "STA-11",
+    "station_number": 11,
+    "name": "Station 11 - NAS Area / Oso",
+    "address": "5750 Everhart Rd, Corpus Christi, TX 78413",
+    "neighborhood": "NAS / Oso Creek",
+    "battalion": "BC-2",
+    "apparatus": [
+     "E-11"
+    ]
+   },
+   {
+    "station_id": "STA-12",
+    "station_number": 12,
+    "name": "Station 12 - Airline/Airport",
+    "address": "5002 Airline Rd, Corpus Christi, TX 78412",
+    "neighborhood": "Airline / Airport North",
+    "battalion": "BC-1",
+    "apparatus": [
+     "E-12"
+    ]
+   },
+   {
+    "station_id": "STA-14",
+    "station_number": 14,
+    "name": "Station 14 - Westside/Agnes",
+    "address": "5401 Agnes St, Corpus Christi, TX 78405",
+    "neighborhood": "Westside / Agnes",
+    "battalion": "BC-1",
+    "apparatus": [
+     "E-14",
+     "FU-1"
+    ]
+   }
+  ],
+  "units": [
+   {
+    "unit_id": "E-1",
+    "type": "engine",
+    "station": "STA-1",
+    "description": "Engine 1 - Downtown",
+    "vehicle": "Pierce Arrow XT Pumper",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "E-2",
+    "type": "engine",
+    "station": "STA-2",
+    "description": "Engine 2 - South Side",
+    "vehicle": "Pierce Arrow XT Pumper",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "E-3",
+    "type": "engine",
+    "station": "STA-3",
+    "description": "Engine 3 - Calallen",
+    "vehicle": "Pierce Arrow XT Pumper",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "E-5",
+    "type": "engine",
+    "station": "STA-5",
+    "description": "Engine 5 - Flour Bluff",
+    "vehicle": "Pierce Arrow XT Pumper",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "E-6",
+    "type": "engine",
+    "station": "STA-6",
+    "description": "Engine 6 - North Beach",
+    "vehicle": "Pierce Arrow XT Pumper",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "E-7",
+    "type": "engine",
+    "station": "STA-7",
+    "description": "Engine 7 - South Staples",
+    "vehicle": "Pierce Arrow XT Pumper",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "E-8",
+    "type": "engine",
+    "station": "STA-8",
+    "description": "Engine 8 - Westside",
+    "vehicle": "Pierce Arrow XT Pumper",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "E-10",
+    "type": "engine",
+    "station": "STA-10",
+    "description": "Engine 10 - Padre Island",
+    "vehicle": "Pierce Arrow XT Pumper",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "E-11",
+    "type": "engine",
+    "station": "STA-11",
+    "description": "Engine 11 - NAS/Oso",
+    "vehicle": "Pierce Arrow XT Pumper",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "E-12",
+    "type": "engine",
+    "station": "STA-12",
+    "description": "Engine 12 - Airline/Airport",
+    "vehicle": "Pierce Arrow XT Pumper",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "E-14",
+    "type": "engine",
+    "station": "STA-14",
+    "description": "Engine 14 - Westside/Agnes",
+    "vehicle": "Pierce Arrow XT Pumper",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "T-1",
+    "type": "truck",
+    "station": "STA-1",
+    "description": "Truck 1 - Downtown Aerial",
+    "vehicle": "Pierce Velocity 105ft Aerial",
+    "crew_min": 4
+   },
+   {
+    "unit_id": "T-3",
+    "type": "truck",
+    "station": "STA-3",
+    "description": "Truck 3 - Calallen Platform",
+    "vehicle": "Pierce Velocity 105ft Aerial",
+    "crew_min": 4
+   },
+   {
+    "unit_id": "T-5",
+    "type": "truck",
+    "station": "STA-5",
+    "description": "Truck 5 - Flour Bluff Aerial",
+    "vehicle": "Pierce Velocity 100ft Aerial",
+    "crew_min": 4
+   },
+   {
+    "unit_id": "L-7",
+    "type": "ladder",
+    "station": "STA-7",
+    "description": "Ladder 7 - South Staples",
+    "vehicle": "Pierce Quantum 75ft Quint",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "L-10",
+    "type": "ladder",
+    "station": "STA-10",
+    "description": "Ladder 10 - Padre Island",
+    "vehicle": "Pierce Quantum 75ft Quint",
+    "crew_min": 3
+   },
+   {
+    "unit_id": "R-1",
+    "type": "rescue",
+    "station": "STA-1",
+    "description": "Rescue 1 - Downtown Heavy Rescue",
+    "vehicle": "Pierce Heavy Rescue",
+    "crew_min": 4
+   },
+   {
+    "unit_id": "R-5",
+    "type": "rescue",
+    "station": "STA-5",
+    "description": "Rescue 5 - Flour Bluff Water Rescue",
+    "vehicle": "Pierce Medium Rescue w/ Boat",
+    "crew_min": 4
+   },
+   {
+    "unit_id": "BC-1",
+    "type": "battalion_chief",
+    "station": "STA-1",
+    "description": "Battalion Chief 1 - North Battalion",
+    "vehicle": "Chevy Tahoe Command",
+    "crew_min": 1
+   },
+   {
+    "unit_id": "BC-2",
+    "type": "battalion_chief",
+    "station": "STA-7",
+    "description": "Battalion Chief 2 - South Battalion",
+    "vehicle": "Chevy Tahoe Command",
+    "crew_min": 1
+   },
+   {
+    "unit_id": "BC-3",
+    "type": "battalion_chief",
+    "station": "STA-5",
+    "description": "Battalion Chief 3 - Day Battalion / Relief",
+    "vehicle": "Chevy Tahoe Command",
+    "crew_min": 1
+   },
+   {
+    "unit_id": "HM-1",
+    "type": "hazmat",
+    "station": "STA-8",
+    "description": "Hazmat Unit 1 - Regional Hazmat Team",
+    "vehicle": "Pierce Hazmat Truck",
+    "crew_min": 4
+   },
+   {
+    "unit_id": "FU-1",
+    "type": "foam",
+    "station": "STA-14",
+    "description": "Foam Unit 1 - Petroleum/Industrial Fires",
+    "vehicle": "Pierce Foam Tender",
+    "crew_min": 2
+   },
+   {
+    "unit_id": "WTR-1",
+    "type": "water_tender",
+    "station": "STA-3",
+    "description": "Water Tender 1 - Calallen Rural Support",
+    "vehicle": "International Water Tender 3000gal",
+    "crew_min": 2
+   },
+   {
+    "unit_id": "WTR-5",
+    "type": "water_tender",
+    "station": "STA-5",
+    "description": "Water Tender 5 - Flour Bluff Rural/Island Support",
+    "vehicle": "International Water Tender 3000gal",
+    "crew_min": 2
+   },
+   {
+    "unit_id": "FC-1",
+    "type": "fire_command",
+    "station": "STA-1",
+    "description": "Fire Command 1 - Deputy Chief Operations",
+    "vehicle": "Chevy Suburban Command",
+    "crew_min": 1
+   },
+   {
+    "unit_id": "BOAT-1",
+    "type": "fireboat",
+    "station": "STA-6",
+    "description": "Marine Unit 1 - Corpus Christi Bay Fireboat",
+    "vehicle": "24ft Aluminum Rescue Boat",
+    "crew_min": 2
+   },
+   {
+    "unit_id": "BOAT-2",
+    "type": "swiftwater",
+    "station": "STA-5",
+    "description": "Swift Water Rescue Boat 2 - Flour Bluff",
+    "vehicle": "18ft Inflatable Rescue Boat",
+    "crew_min": 2
+   },
+   {
+    "unit_id": "MA-ALICE-E1",
+    "type": "mutual_aid_engine",
+    "agency": "Alice FD",
+    "description": "Mutual Aid - Alice FD Engine 1",
+    "vehicle": "Pumper",
+    "crew_min": 3,
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-ALICE-E2",
+    "type": "mutual_aid_engine",
+    "agency": "Alice FD",
+    "description": "Mutual Aid - Alice FD Engine 2",
+    "vehicle": "Pumper",
+    "crew_min": 3,
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-ROBS-E1",
+    "type": "mutual_aid_engine",
+    "agency": "Robstown FD",
+    "description": "Mutual Aid - Robstown FD Engine 1",
+    "vehicle": "Pumper",
+    "crew_min": 3,
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-ROBS-T1",
+    "type": "mutual_aid_truck",
+    "agency": "Robstown FD",
+    "description": "Mutual Aid - Robstown FD Truck 1",
+    "vehicle": "Aerial",
+    "crew_min": 4,
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-SANPAT-E1",
+    "type": "mutual_aid_engine",
+    "agency": "San Patricio County FD",
+    "description": "Mutual Aid - San Patricio Co. Engine 1",
+    "vehicle": "Pumper",
+    "crew_min": 3,
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-SANPAT-WT1",
+    "type": "mutual_aid_tender",
+    "agency": "San Patricio County FD",
+    "description": "Mutual Aid - San Patricio Co. Water Tender",
+    "vehicle": "Water Tender",
+    "crew_min": 2,
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-SINTON-E1",
+    "type": "mutual_aid_engine",
+    "agency": "Sinton FD",
+    "description": "Mutual Aid - Sinton FD Engine 1",
+    "vehicle": "Pumper",
+    "crew_min": 3,
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-BISHOP-E1",
+    "type": "mutual_aid_engine",
+    "agency": "Bishop FD",
+    "description": "Mutual Aid - Bishop FD Engine 1",
+    "vehicle": "Pumper",
+    "crew_min": 3,
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "USAR-TX-1",
+    "type": "usar",
+    "agency": "TX-TF1 (Partial Deployment)",
+    "description": "Texas Task Force 1 - Urban Search and Rescue Strike Team",
+    "vehicle": "USAR Cache / 4-vehicle convoy",
+    "crew_min": 8,
+    "mutual_aid": true
+   }
+  ]
+ },
+ "CCEMS": {
+  "name": "Corpus Christi Emergency Medical Services",
+  "radio_system": "Harris P25 Trunked",
+  "dispatch_channel": "CCEMS-DISP-1",
+  "medical_director": "Medical Director - Nueces County EMS",
+  "units": [
+   {
+    "unit_id": "M-1",
+    "type": "als_ambulance",
+    "station": "STA-1",
+    "description": "Medic 1 - Downtown ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-2",
+    "type": "als_ambulance",
+    "station": "STA-2",
+    "description": "Medic 2 - South Side ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-3",
+    "type": "als_ambulance",
+    "station": "STA-3",
+    "description": "Medic 3 - Calallen ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-4",
+    "type": "als_ambulance",
+    "station": "STA-7",
+    "description": "Medic 4 - South Staples ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-5",
+    "type": "als_ambulance",
+    "station": "STA-5",
+    "description": "Medic 5 - Flour Bluff ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-6",
+    "type": "als_ambulance",
+    "station": "STA-6",
+    "description": "Medic 6 - North Beach ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-7",
+    "type": "als_ambulance",
+    "station": "STA-8",
+    "description": "Medic 7 - Westside ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-8",
+    "type": "als_ambulance",
+    "station": "STA-10",
+    "description": "Medic 8 - Padre Island ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-9",
+    "type": "als_ambulance",
+    "station": "STA-11",
+    "description": "Medic 9 - NAS/Oso ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-10",
+    "type": "als_ambulance",
+    "station": "STA-12",
+    "description": "Medic 10 - Airline/Airport ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-11",
+    "type": "als_ambulance",
+    "station": "STA-14",
+    "description": "Medic 11 - Westside/Agnes ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-12",
+    "type": "als_ambulance",
+    "station": "STA-7",
+    "description": "Medic 12 - South ALS (Second Unit)",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-13",
+    "type": "als_ambulance",
+    "station": "STA-1",
+    "description": "Medic 13 - Downtown ALS (Second Unit)",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-14",
+    "type": "als_ambulance",
+    "station": "STA-2",
+    "description": "Medic 14 - Central ALS",
+    "vehicle": "Ford F-450 Type I ALS",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-15",
+    "type": "bls_ambulance",
+    "station": "STA-5",
+    "description": "Medic 15 - Flour Bluff BLS",
+    "vehicle": "Ford F-350 Type III BLS",
+    "service_level": "BLS"
+   },
+   {
+    "unit_id": "M-16",
+    "type": "bls_ambulance",
+    "station": "STA-3",
+    "description": "Medic 16 - Calallen BLS",
+    "vehicle": "Ford F-350 Type III BLS",
+    "service_level": "BLS"
+   },
+   {
+    "unit_id": "M-17",
+    "type": "bls_ambulance",
+    "station": "STA-10",
+    "description": "Medic 17 - Padre Island BLS",
+    "vehicle": "Ford F-350 Type III BLS",
+    "service_level": "BLS"
+   },
+   {
+    "unit_id": "M-18",
+    "type": "bls_ambulance",
+    "station": "STA-8",
+    "description": "Medic 18 - Westside BLS",
+    "vehicle": "Ford F-350 Type III BLS",
+    "service_level": "BLS"
+   },
+   {
+    "unit_id": "M-19",
+    "type": "supervisor",
+    "station": "STA-1",
+    "description": "EMS Field Supervisor 1 - North Division",
+    "vehicle": "Chevy Tahoe EMS Command",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "M-20",
+    "type": "supervisor",
+    "station": "STA-7",
+    "description": "EMS Field Supervisor 2 - South Division",
+    "vehicle": "Chevy Tahoe EMS Command",
+    "service_level": "ALS"
+   },
+   {
+    "unit_id": "MCI-1",
+    "type": "mci_unit",
+    "station": "STA-1",
+    "description": "Mass Casualty Incident Unit 1 - Regional MCI Trailer (50-patient)",
+    "vehicle": "Freightliner MCI Trailer",
+    "service_level": "ALS",
+    "capacity": 50
+   },
+   {
+    "unit_id": "MCI-2",
+    "type": "mci_support",
+    "station": "STA-7",
+    "description": "Mass Casualty Support Vehicle - Supplies/Logistics",
+    "vehicle": "Ford F-550 Supply Truck",
+    "service_level": "support"
+   },
+   {
+    "unit_id": "MA-ALICE-M1",
+    "type": "mutual_aid_als",
+    "agency": "Alice EMS",
+    "description": "Mutual Aid - Alice EMS ALS Unit",
+    "vehicle": "Type I ALS",
+    "service_level": "ALS",
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-ALICE-M2",
+    "type": "mutual_aid_als",
+    "agency": "Alice EMS",
+    "description": "Mutual Aid - Alice EMS ALS Unit 2",
+    "vehicle": "Type I ALS",
+    "service_level": "ALS",
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-ROBS-M1",
+    "type": "mutual_aid_als",
+    "agency": "Robstown EMS",
+    "description": "Mutual Aid - Robstown EMS ALS Unit",
+    "vehicle": "Type I ALS",
+    "service_level": "ALS",
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-SANPAT-M1",
+    "type": "mutual_aid_als",
+    "agency": "San Patricio County EMS",
+    "description": "Mutual Aid - San Pat. Co. EMS ALS Unit 1",
+    "vehicle": "Type I ALS",
+    "service_level": "ALS",
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-SANPAT-M2",
+    "type": "mutual_aid_als",
+    "agency": "San Patricio County EMS",
+    "description": "Mutual Aid - San Pat. Co. EMS ALS Unit 2",
+    "vehicle": "Type I ALS",
+    "service_level": "ALS",
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-VICTORIA-M1",
+    "type": "mutual_aid_als",
+    "agency": "Victoria County EMS",
+    "description": "Mutual Aid - Victoria County EMS ALS Unit",
+    "vehicle": "Type I ALS",
+    "service_level": "ALS",
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "MA-BEEVILLE-M1",
+    "type": "mutual_aid_als",
+    "agency": "Bee County EMS",
+    "description": "Mutual Aid - Bee County EMS ALS Unit",
+    "vehicle": "Type I ALS",
+    "service_level": "ALS",
+    "mutual_aid": true
+   }
+  ]
+ },
+ "NCSO": {
+  "name": "Nueces County Sheriff's Office",
+  "radio_system": "Harris P25 Trunked",
+  "dispatch_channel": "NCSO-DISP-1",
+  "jurisdiction_note": "Unincorporated Nueces County; mutual aid within Corpus Christi city limits during declared disasters",
+  "units": [
+   {
+    "unit_id": "NCSO-101",
+    "type": "patrol",
+    "district": "District 1 - Northwest Unincorporated",
+    "description": "NCSO Patrol Unit 101 - Calallen/Violet area",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "NCSO-102",
+    "type": "patrol",
+    "district": "District 1 - Northwest Unincorporated",
+    "description": "NCSO Patrol Unit 102 - Clarkwood area",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "NCSO-103",
+    "type": "patrol",
+    "district": "District 2 - South Unincorporated",
+    "description": "NCSO Patrol Unit 103 - Flour Bluff/Mustang Island approach",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "NCSO-104",
+    "type": "patrol",
+    "district": "District 2 - South Unincorporated",
+    "description": "NCSO Patrol Unit 104 - South county rural",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "NCSO-105",
+    "type": "patrol",
+    "district": "District 3 - East / Port Aransas approach",
+    "description": "NCSO Patrol Unit 105 - Mustang Island/Port Aransas area",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "NCSO-106",
+    "type": "patrol",
+    "district": "District 3 - East / Port Aransas approach",
+    "description": "NCSO Patrol Unit 106 - Highway 361 corridor",
+    "vehicle": "Ford Police Interceptor"
+   },
+   {
+    "unit_id": "NCSO-S1",
+    "type": "supervisor",
+    "district": "Countywide",
+    "description": "NCSO Sergeant 1 - Patrol Supervisor",
+    "vehicle": "Chevy Tahoe"
+   },
+   {
+    "unit_id": "NCSO-S2",
+    "type": "supervisor",
+    "district": "Countywide",
+    "description": "NCSO Sergeant 2 - Patrol Supervisor South",
+    "vehicle": "Chevy Tahoe"
+   },
+   {
+    "unit_id": "NCSO-LT1",
+    "type": "lieutenant",
+    "district": "Countywide",
+    "description": "NCSO Lieutenant - Shift Commander",
+    "vehicle": "Chevy Tahoe"
+   },
+   {
+    "unit_id": "NCSO-201",
+    "type": "patrol",
+    "district": "Countywide / Mutual Aid",
+    "description": "NCSO Unit 201 - Mutual Aid to CCPD Beat 8",
+    "vehicle": "Ford Police Interceptor",
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "NCSO-202",
+    "type": "patrol",
+    "district": "Countywide / Mutual Aid",
+    "description": "NCSO Unit 202 - Mutual Aid to CCPD Beat 2",
+    "vehicle": "Ford Police Interceptor",
+    "mutual_aid": true
+   },
+   {
+    "unit_id": "NCSO-MRU1",
+    "type": "marine",
+    "district": "Coastal Waters",
+    "description": "NCSO Marine Unit 1 - 24ft Patrol Vessel",
+    "vehicle": "Marine Patrol Boat 24ft"
+   },
+   {
+    "unit_id": "NCSO-MRU2",
+    "type": "marine",
+    "district": "Coastal Waters",
+    "description": "NCSO Marine Unit 2 - 18ft Patrol Jon Boat",
+    "vehicle": "Jon Boat 18ft"
+   },
+   {
+    "unit_id": "NCSO-EV1",
+    "type": "evacuation",
+    "district": "Countywide",
+    "description": "NCSO Evacuation Coordination Unit",
+    "vehicle": "Chevy Suburban Command"
+   },
+   {
+    "unit_id": "NCSO-CHEM1",
+    "type": "command",
+    "district": "EOC Liaison",
+    "description": "NCSO EOC Liaison / Emergency Management",
+    "vehicle": "Chevy Suburban"
+   }
+  ]
+ }
+}

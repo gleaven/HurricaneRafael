@@ -1,0 +1,35 @@
+{
+ "source": "sar_missions",
+ "folder": "data/sar/",
+ "format": "CSV",
+ "files": {
+  "sar_missions.csv": "one row per rescue case (a person rescued, or a no-find check); rows of one sortie or deployment share mission_id. Columns: case_number, mission_id, agency, asset_id, asset_type, crew_element, launch_utc, on_scene_utc, recovery_utc, latitude, longitude, address, census_tract, persons, method, outcome, delivered_to, incident_number, delivered_utc",
+  "sar_asset_log.csv": "readiness, launch, offload, recovery and status entries per asset (UTC). Columns: time_utc, asset_id, crew_element, status, location, incident_number, note",
+  "flood_depth_soundings.csv": "manual flood-depth soundings by fire crews. Columns: time_utc, agency, unit_id (cad_units.json), latitude, longitude, address, census_tract, water_district (areas.json), depth_ft, method",
+  "flood_extent_snapshots.csv": "county GIS flood-extent statistics. Columns: time_utc, area, metric (for example share of area under more than 1.5 ft), value, source"
+ },
+ "notes": "asset_id is a cad_units.json unit id (boats, high-water vehicles, task-force teams, welfare-check teams) or an aircraft registration from aircraft_registry.json. Task-force boat squads report under their team's unit id with crew_element naming the squad. method: HOIST, AIR-LANDING, BOAT, HIGH-WATER VEHICLE, AMBULATORY CONTACT, WELFARE CHECK. A helicopter sortie runs from engine start to shutdown and makes several lifts; survivors leave the aircraft at the air station or a hospital helipad between lifts (OFFLOAD entries in the asset log). delivered_to is where the person was taken: a shelter or hospital (facility_registry.json), the air station, or a fire station used as a dry-ground collection point (cad_units.json stations[].station_id); delivered_utc is when. Shelter deliveries appear in shelters/shelter_intake_log.csv under the same mission_id.",
+ "joins": [
+  {
+   "field": "incident_number",
+   "to": "911/cad_incidents_*.csv incident_number"
+  },
+  {
+   "field": "delivered_to",
+   "to": "facility_registry.json facility_id or cad_units.json stations[].station_id"
+  },
+  {
+   "field": "census_tract",
+   "to": "areas.json tract"
+  },
+  {
+   "field": "mission_id",
+   "to": "shelters/shelter_intake_log.csv reference"
+  },
+  {
+   "field": "asset_id",
+   "to": "aircraft_registry.json registration (adsb tracks by icao24)"
+  }
+ ],
+ "location_rule": "rescue positions are on land beside a street (rule 'incident')"
+}

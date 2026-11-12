@@ -1,0 +1,994 @@
+{
+  "thread_id": "T19",
+  "name": "Drone and counter-UAV surveillance",
+  "color": "#5c2d91",
+  "scenario": "rafael",
+  "lanes": [
+    "C",
+    "D",
+    "I"
+  ],
+  "truth": "Beginning D-10 (September 4, 2027), STATE-X KESTREL operatives conducted five pre-attack drone reconnaissance sorties over two critical infrastructure targets in the Corpus Christi area. Three sorties surveyed GW-FAC-SUB-01 (Riverside Switching Station, the 345/138 kV transmission import point at 4201 Up River Road) on D-10, D-9, and D-8. Two sorties surveyed the Inner Harbor oil docks at Rendal Terminals (TERM-01, the berth of the two tankers attacked in T6) on D-5 and D-3. All five sorties used commercial off-the-shelf DJI-class multirotor platforms modified with encrypted 2.4/5.8 GHz control links and an additional 900 MHz data-exfiltration channel. The drones operated exclusively at night between 00:00 and 04:00 local time, at altitudes between 400 and 600 ft AGL — above the effective range of commercial security cameras and below the typical radar floor for FAA TRACON surveillance. No LAANC authorizations existed for any of the five sorties. CBP Air and Marine Operations Corpus Christi (CAMCC) Predator B aircraft CAMCC-04, on a routine pre-storm maritime patrol at D-9, detected an anomalous RF emission at 01:47Z near Up River Road — consistent with the 900 MHz data-exfiltration channel — using its Lynx multimode radar and the onboard AN/APS-149 electronic support measures suite. The detection was logged as 'possible drone activity' and routed to the FAA Corpus Christi TRACON, which found no corresponding primary radar return and no LAANC authorization, but took no further action. Three Coast Guard radar buoys at the Corpus Christi Bay shipping channel entrance (Buoys R-14, R-18, and R-22) recorded small-RCS tracks on D-8, D-5, and D-3, each consistent with a multirotor UAV at 400-600 ft AGL. After unidentified drones began overflying NAS Corpus Christi and the Army depot on the nights of D+1 to D+10 (T7, EVT-0318), the pre-storm tracks were retrospectively identified as reconnaissance by CAMCC and Coast Guard Sector intelligence staff. There were no sightings after D+11, and covert drones never appear in ADS-B. Critical cross-thread link: RF bearing lines from CAMCC-04's D-9 detection and two Coast Guard buoy track vectors from D-8 were triangulated to Berth 7, Ingleside Marina (Ingleside, TX, across Corpus Christi Bay). AIS records show the motor yacht 'Narwhal Dream', registered to front company Nereid Maritime Holdings LLC, moored at Ingleside Marina Berth 7 from D-12 to D-7, when it went AIS-dark. The pre-storm activity became public only on D+15 (PUB-181).",
+  "phase_onset": 2,
+  "phase_peak": 2,
+  "msel_events": [
+    {
+      "event_id": "EVT-1901",
+      "time_label": "D-10",
+      "day": -10,
+      "day_end": null,
+      "time_utc": "04:30Z",
+      "threads": [
+        "T19",
+        "T8"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "First drone sortie: Substation surveillance, Sortie 1 of 3. At approximately 23:30 local time (04:30Z), a DJI-class quadrotor (estimated Matrice 300 or equivalent) launches from an unlit commercial area approximately 0.9 km southwest of GW-FAC-SUB-01 (Riverside Switching Station, 4201 Up River Road). The drone flies three sweeping passes over the substation at 480-520 ft AGL, capturing high-resolution visual imagery and thermal data of the 345/138 kV transformer bank, the SCADA RTU enclosures, and the perimeter fence line. Total airborne time: approximately 22 minutes. No detection by CAMCC, FAA, or facility security (no camera coverage above 50 ft AGL). The drone's 900 MHz data-exfiltration channel transmits in 4-second bursts, aggregate 14.2 MB of imagery exfiltrated to ground station. Ground station RF bearing: 213 degrees magnetic from GW-FAC-SUB-01 (consistent with Ingleside Marina across Corpus Christi Bay, range approximately 7.4 km).",
+      "observed_in": [
+        {
+          "stream": "drone_detections",
+          "what": "FAA LAANC query D-10 to D-3 for Nueces and San Patricio counties: zero authorizations matching UAV operations in Riverside/Up River Road corridor or the Inner Harbor | CG Buoy R-14 AIS/radar log D-10 03:00-06:00Z: no track recorded (buoy sidelobe coverage gap in this geometry — substation is in radar shadow of Ship Channel Bridge)",
+          "when": {
+            "start_utc": "2027-09-04T04:30Z",
+            "end_utc": "2027-09-04T06:30Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FAA LAANC query D-10 to D-3 for Nueces and San Patricio counties: zero authorizations matching UAV operations in Riverside/Up River Road corridor or the Inner Harbor",
+        "CG Buoy R-14 AIS/radar log D-10 03:00-06:00Z: no track recorded (buoy sidelobe coverage gap in this geometry — substation is in radar shadow of Ship Channel Bridge)"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-002"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "faanex_laanc_database",
+        "camcc_radar_archive",
+        "cg_buoy_r14_r18_r22_track_archive"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1902",
+      "time_label": "D-9",
+      "day": -9,
+      "day_end": null,
+      "time_utc": "06:47Z",
+      "threads": [
+        "T19",
+        "T8",
+        "T3"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "CAMCC-04 RF anomaly detection: CBP Air and Marine Operations Corpus Christi Predator B (MQ-9 variant, call sign CAMCC-04) is on a scheduled pre-hurricane maritime patrol over Corpus Christi Bay at 01:47 local time (06:47Z). The aircraft's electronic support measures suite detects an intermittent 900 MHz emission at azimuth 047 degrees from the aircraft's position (27.8114N 97.4028W), estimated origin range 6.8 km — placing the emission source in the vicinity of the Ingleside Marina waterfront. CAMCC-04 also picks up a secondary 2.4 GHz emission burst (consistent with drone command link) at azimuth 048 degrees, same geometry. Emissions last 4 seconds (consistent with burst data-link transmission). The aircraft operator logs the detection as 'possible sUAS or maritime communication — no radar return at indicated range, possible surface-based transmitter.' The log is routed to FAA Corpus Christi TRACON via standard protocol. Simultaneously, a second drone (Sortie 2 of 3, same quadrotor type) is conducting its second substation surveillance pass at 480 ft AGL over GW-FAC-SUB-01.",
+      "observed_in": [
+        {
+          "stream": "drone_detections",
+          "what": "CAMCC-04 mission log entry 06:47Z D-9: 'ESM contact, freq=902.4 MHz, azimuth=047 deg, duration=4.1s, secondary contact 2.437 GHz same azimuth, no radar return, logged to TRACON' | FAA Corpus Christi TRACON incident log: received CAMCC notification 06:52Z, LAANC check negative, no primary radar return in area, closed as 'possible maritime radio, non-aviation' | RF bearing line 1: CAMCC-04 position 27.8114N 97.4028W, bearing 047 deg mag — projects to...",
+          "when": {
+            "start_utc": "2027-09-05T06:47Z",
+            "end_utc": "2027-09-05T08:47Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CAMCC-04 mission log entry 06:47Z D-9: 'ESM contact, freq=902.4 MHz, azimuth=047 deg, duration=4.1s, secondary contact 2.437 GHz same azimuth, no radar return, logged to TRACON'",
+        "FAA Corpus Christi TRACON incident log: received CAMCC notification 06:52Z, LAANC check negative, no primary radar return in area, closed as 'possible maritime radio, non-aviation'",
+        "RF bearing line 1: CAMCC-04 position 27.8114N 97.4028W, bearing 047 deg mag — projects to Ingleside Marina Berth 7 at range 6.8 km (27.8341N 97.2178W)"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-002"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "camcc_04_mission_log",
+        "faa_tracon_cc_incident_log",
+        "camcc_esg_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1903",
+      "time_label": "D-8",
+      "day": -8,
+      "day_end": null,
+      "time_utc": "04:15Z",
+      "threads": [
+        "T19",
+        "T8"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "Coast Guard Buoy R-18 track record — Sortie 3 of 3 (final substation sortie): CG radar buoy R-18 (27.8201N 97.3914W, Corpus Christi Bay mid-channel) records a small-RCS track at 04:15Z at an altitude of approximately 480 ft (derived from radar elevation angle). Track duration: 18 minutes, consistent with a multirotor UAV transiting from the Ingleside Marina area northwest toward Up River Road and returning. Track RCS estimated 0.012 m2, consistent with a 10-15 kg commercial multirotor. Track speed: 11-14 m/s. No corresponding AIS target. No LAANC. The buoy track is logged to the Coast Guard Sector Corpus Christi maritime surveillance database but is not flagged for review in real-time — the small-RCS threshold filter is set to 0.05 m2 for active alerting, so the track is recorded only in the raw archive. After D+1, this raw archive becomes a critical evidence source. RF bearing line 2 (from buoy track start vector): origin bearing 162 degrees from GW-FAC-SUB-01, consistent with Ingleside Marina Berth 7.",
+      "observed_in": [
+        {
+          "stream": "drone_detections",
+          "what": "CG Buoy R-18 raw track archive entry D-8 04:15-04:33Z: RCS=0.012 m2, altitude=482 ft AGL (estimated), speed=12.4 m/s avg, track origin bearing from GW-FAC-SUB-01=162 deg mag, track vector consistent with transit from Ingleside Marina | Retrospective alert: same track, below RCS alerting threshold (0.012 vs 0.050 m2 threshold), only surfaced in post-D+1 raw archive review",
+          "when": {
+            "start_utc": "2027-09-06T04:15Z",
+            "end_utc": "2027-09-06T06:15Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CG Buoy R-18 raw track archive entry D-8 04:15-04:33Z: RCS=0.012 m2, altitude=482 ft AGL (estimated), speed=12.4 m/s avg, track origin bearing from GW-FAC-SUB-01=162 deg mag, track vector consistent with transit from Ingleside Marina",
+        "Retrospective alert: same track, below RCS alerting threshold (0.012 vs 0.050 m2 threshold), only surfaced in post-D+1 raw archive review"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-USCG-01",
+        "PLC-002"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cg_buoy_r18_track_archive",
+        "cg_sector_cc_maritime_surveillance_db"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1904",
+      "time_label": "D-5",
+      "day": -5,
+      "day_end": null,
+      "time_utc": "05:00Z",
+      "threads": [
+        "T19",
+        "T6"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "Port surveillance, Sortie 1 of 2: first drone reconnaissance of the Inner Harbor oil docks at Rendal Terminals (TERM-01), the berth where two laden tankers will ride out the storm. The drone launches at approximately midnight local time (05:00Z) from a vehicle parked in the industrial area along the north side of the Inner Harbor. The sortie covers the berth at 400-440 ft AGL in two passes, capturing imagery of the dock, the loading arms, the access road and the vessel alongside. Flight time: 19 minutes. The 900 MHz data link transmits 11.7 MB of imagery. CG Buoy R-22 (Inner Harbor approach) records a small-RCS track at 04:58-05:17Z, RCS 0.014 m2, altitude approximately 410 ft AGL — below the active alert threshold. The ground station for this sortie is different from the substation sorties: bearing analysis places it on the north side of the Inner Harbor, not at Ingleside Marina.",
+      "observed_in": [
+        {
+          "stream": "drone_detections",
+          "what": "CG Buoy R-22 raw track archive D-5 04:58-05:17Z: RCS=0.014 m2, altitude=411 ft AGL, speed=10.8 m/s, track consistent with a two-pass survey pattern over the TERM-01 berth | Port of Corpus Christi security camera logs D-5: dock cameras show no anomalous activity at ground level; no sky-facing cameras in the port security system | LAANC database: no authorizations in Port of Corpus Christi inner harbor airspace D-5 to D-3",
+          "when": {
+            "start_utc": "2027-09-09T05:00Z",
+            "end_utc": "2027-09-09T07:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CG Buoy R-22 raw track archive D-5 04:58-05:17Z: RCS=0.014 m2, altitude=411 ft AGL, speed=10.8 m/s, track consistent with a two-pass survey pattern over the TERM-01 berth",
+        "Port of Corpus Christi security camera logs D-5: dock cameras show no anomalous activity at ground level; no sky-facing cameras in the port security system",
+        "LAANC database: no authorizations in Port of Corpus Christi inner harbor airspace D-5 to D-3"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "TERM-01",
+        "PORT-07",
+        "PLC-002"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cg_buoy_r22_track_archive",
+        "port_cc_security_camera_logs",
+        "faanex_laanc_database"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1905",
+      "time_label": "D-3",
+      "day": -3,
+      "day_end": null,
+      "time_utc": "04:45Z",
+      "threads": [
+        "T19",
+        "T6"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "Port surveillance, Sortie 2 of 2 (final pre-storm sortie): second and final reconnaissance of the Rendal Terminals berth (TERM-01) at approximately 23:45 local time (04:45Z). The sortie repeats the D-5 survey pattern over the berth and its waterside approach and briefly covers the Harbor Bridge span at the Inner Harbor entrance. Flight time: 23 minutes, altitude 480-510 ft AGL. 900 MHz burst transmissions total 9.3 MB. The Hurricane Rafael pre-storm TFR takes effect the following day (D-2), so D-3 is the last viable sortie window before the storm. CG Buoy R-22 again records a small-RCS track, duration 21 minutes, same RCS and altitude profile as the D-5 sortie.",
+      "observed_in": [
+        {
+          "stream": "drone_detections",
+          "what": "CG Buoy R-22 raw track archive D-3 04:45-05:08Z: RCS=0.015 m2, altitude=491 ft AGL, speed=11.1 m/s, survey pattern geometry overlaps D-5 track within 80m at all corresponding bearing angles | FAA TFR database: Rafael TFR (TFR-2027-CC-0441) activated D-2 00:01 local time, covering Corpus Christi metro including Port airspace — this is the operational deadline that makes D-3 the last viable sortie window",
+          "when": {
+            "start_utc": "2027-09-11T04:45Z",
+            "end_utc": "2027-09-11T06:45Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CG Buoy R-22 raw track archive D-3 04:45-05:08Z: RCS=0.015 m2, altitude=491 ft AGL, speed=11.1 m/s, survey pattern geometry overlaps D-5 track within 80m at all corresponding bearing angles",
+        "FAA TFR database: Rafael TFR (TFR-2027-CC-0441) activated D-2 00:01 local time, covering Corpus Christi metro including Port airspace — this is the operational deadline that makes D-3 the last viable sortie window"
+      ],
+      "public_fact": "PUB-180",
+      "place_ids": [
+        "TERM-01",
+        "FAC-INF-01",
+        "PORT-07"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cg_buoy_r22_track_archive",
+        "faanex_tfr_database",
+        "port_cc_security_logs"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1906",
+      "time_label": "D+2",
+      "day": 2,
+      "day_end": null,
+      "time_utc": "18:00Z",
+      "threads": [
+        "T19",
+        "T7",
+        "T6"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "Retroactive identification: after residents report lights over NAS Corpus Christi on the first night after landfall (EVT-0318), CBP Air and Marine Operations and Coast Guard Sector intelligence review all pre-storm records for unexplained small-UAS activity. The two CG Buoy R-22 tracks (D-5 and D-3) over the Inner Harbor oil docks and the R-18 track (D-8) are pulled from the raw archive. CAMCC-04's D-9 ESM detection is cross-referenced with the R-18 track: the two RF bearing lines are computed and triangulated, and the triangle closes on Ingleside Marina Berth 7. Coast Guard Sector intelligence pulls the AIS records for that berth: a motor yacht registered as 'Narwhal Dream' (front company: Nereid Maritime Holdings LLC, a shell in the Brannoch Maritime Holdings network; the yacht is the drone crew's support craft and is not the AIS-spoofing vessel of the channel thread) was moored there from D-12 to D-7 and went AIS-dark at D-7 00:14Z — 36 hours after the last substation sortie and 2 days before the port sorties began from a different ground station. The pre-storm sorties (utility and port) and the post-storm base overflights are treated from here on as one campaign.",
+      "observed_in": [
+        {
+          "stream": "drone_detections",
+          "what": "RF triangulation computation: bearing 1 (CAMCC-04, D-9) + bearing 2 (CG R-18 track origin vector, D-8) = intersection at Ingleside Marina Berth 7, geometric error ellipse radius 180m | Intelligence fusion note: 'High confidence that the Berth 7 vessel served as control and relay point for the substation drone sorties D-10 to D-8. Port sorties D-5 and D-3 operated from a separate ground station on the north side of the Inner Harbor. No LAANC...",
+          "when": {
+            "start_utc": "2027-09-16T18:00Z",
+            "end_utc": "2027-09-16T20:00Z"
+          }
+        },
+        {
+          "stream": "ais",
+          "what": "AIS archive: vessel 'Narwhal Dream' (Nereid Maritime Holdings LLC, Marshall Islands flag) moored Ingleside Marina Berth 7 D-12 to D-7, AIS last seen 2027-09-07T00:14Z, then AIS-dark",
+          "when": {
+            "start_utc": "2027-09-16T18:00Z",
+            "end_utc": "2027-09-16T20:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "RF triangulation computation: bearing 1 (CAMCC-04, D-9) + bearing 2 (CG R-18 track origin vector, D-8) = intersection at Ingleside Marina Berth 7, geometric error ellipse radius 180m",
+        "AIS archive: vessel 'Narwhal Dream' (Nereid Maritime Holdings LLC, Marshall Islands flag) moored Ingleside Marina Berth 7 D-12 to D-7, AIS last seen 2027-09-07T00:14Z, then AIS-dark",
+        "Intelligence fusion note: 'High confidence that the Berth 7 vessel served as control and relay point for the substation drone sorties D-10 to D-8. Port sorties D-5 and D-3 operated from a separate ground station on the north side of the Inner Harbor. No LAANC authorization for any of the five sorties.'"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-DOD-01",
+        "FAC-USCG-01",
+        "PORT-07",
+        "PLC-002"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "jbsa_intel_fusion_report",
+        "camcc_04_mission_log",
+        "cg_sector_cc_maritime_surveillance_db",
+        "cg_ais_archive"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "jbsa_intel_fusion_report",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1907",
+      "time_label": "D+14",
+      "day": 14,
+      "day_end": null,
+      "time_utc": "16:00Z",
+      "threads": [
+        "T19"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "FAA/CBP joint report on unauthorized UAS activity: FAA and CBP Air and Marine Operations issue a joint unclassified summary report (FAA-CBP-UAV-2027-CC-001) covering pre-storm unauthorized UAS activity in the Corpus Christi area. The report identifies five anomalous track events (CG buoy tracks D-8, D-5, D-3; CAMCC-04 ESM detections D-9) and notes that none had corresponding LAANC authorizations. The report does not publicly attribute the activity to any nation-state actor. It recommends activation of a counter-UAS detection program for the Corpus Christi port and critical infrastructure corridor. Sentinel Airspace Inc. (fictional counter-UAS vendor) is identified as a potential rapid-deployment partner. The report is releasable at FOUO level and shared with CISA, TSA, and the Port of Corpus Christi Authority on D+14; the public statement, which gives no number, place or timing, follows at 11:00 local on D+15 (PUB-181).",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "FAA-CBP-UAV-2027-CC-001 track summary: 5 anomalous UAS tracks documented, D-10 to D-3, two location clusters (Up River Road corridor and Inner Harbor oil-dock corridor), zero LAANC authorizations | Report recommendation: 'Deploy RF-sensing counter-UAS ground network at minimum 3 sites: the Inner Harbor oil docks, Riverside Switching Station, and Corpus Christi Bay shipping lane entrance'",
+          "when": {
+            "start_utc": "2027-09-28T16:00Z",
+            "end_utc": "2027-09-28T18:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FAA-CBP-UAV-2027-CC-001 track summary: 5 anomalous UAS tracks documented, D-10 to D-3, two location clusters (Up River Road corridor and Inner Harbor oil-dock corridor), zero LAANC authorizations",
+        "Report recommendation: 'Deploy RF-sensing counter-UAS ground network at minimum 3 sites: the Inner Harbor oil docks, Riverside Switching Station, and Corpus Christi Bay shipping lane entrance'"
+      ],
+      "public_fact": "PUB-181",
+      "place_ids": [
+        "PORT-07",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "faa_cbp_uav_report_2027_cc_001"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1908",
+      "time_label": "D+30",
+      "day": 30,
+      "day_end": null,
+      "time_utc": "14:00Z",
+      "threads": [
+        "T19"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Counter-UAS assessment and program announcement: Sentinel Airspace Inc. (fictional counter-UAS vendor) completes a site survey and publishes an unclassified counter-UAS program proposal for the Corpus Christi critical infrastructure corridor. The proposal recommends a 7-node RF detection and direction-finding network covering the Port of Corpus Christi, GW-FAC-SUB-01, and the Corpus Christi Ship Channel. Estimated drone detection probability at the thresholds relevant to the pre-storm sorties (DJI-class, 400-600 ft AGL, encrypted link): 73% with existing buoy network, 94% with the proposed Sentinel Airspace ground network upgrade. The assessment notes that the pre-storm sorties would have been detected with 91% probability by the proposed network. CBPWA CISO Dr. Al-Rasheed-Obinna (from T18) is cited as endorsing the proposal for the substation component.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "The port and CBPWA announce a joint counter-drone monitoring programme (public on D+32).",
+          "when": {
+            "start_utc": "2027-10-14T05:00Z",
+            "end_utc": "2027-10-17T05:00Z"
+          }
+        },
+        {
+          "stream": "drone_detections",
+          "what": "New fixed sensors at port and utility sites begin reporting status rows.",
+          "when": {
+            "start_utc": "2027-10-16T05:00Z",
+            "end_utc": "2027-10-25T05:00Z"
+          }
+        },
+        {
+          "stream": "news",
+          "what": "Coverage of the counter-drone programme.",
+          "when": {
+            "start_utc": "2027-10-16T05:00Z",
+            "end_utc": "2027-10-20T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Sentinel Airspace Inc. site survey report SA-CC-2027-001: 7 proposed sensor nodes with coverage polygons, detection probability matrices for DJI-class UAVs at 400-600 ft AGL with encrypted vs unencrypted links",
+        "Detection probability retrospective: 'If Sentinel Airspace network had been operational D-10 to D-3, estimated detection rate for observed sorties: 91%. Current buoy network achieved passive archive recording of 3 of 5 sorties but generated no real-time alerts due to RCS threshold mismatch.'"
+      ],
+      "public_fact": "PUB-182",
+      "place_ids": [
+        "PORT-07",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "sentinel_airspace_cuas_assessment_2027",
+        "cbpwa_ciso_endorsement_letter"
+      ],
+      "observable": true,
+      "places_inferred": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "PUB-180",
+      "day": -2,
+      "time_local": "08:00",
+      "type": "official_notice",
+      "source": "FAA Flight Standards District Office — South Texas",
+      "statement": "The Federal Aviation Administration has issued Temporary Flight Restriction TFR-2027-CC-0441 effective 00:01 local time September 12, 2027, covering the greater Corpus Christi metropolitan area in advance of Hurricane Rafael. The TFR prohibits all unmanned aircraft operations within 30 nautical miles of Corpus Christi International Airport up to 3,000 ft AGL, except for aircraft operating under emergency authorizations issued by the FAA Command Center. Operators with questions should contact the FAA Corpus Christi FSDO. This TFR will remain in effect until further notice.",
+      "arcs": [],
+      "events": [
+        "EVT-1905"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Corpus Christi International Airport"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-181",
+      "day": 15,
+      "time_local": "11:00",
+      "type": "press_release",
+      "source": "FAA and US Customs and Border Protection Air and Marine Operations",
+      "statement": "The Federal Aviation Administration and US Customs and Border Protection Air and Marine Operations today confirmed that investigators have identified multiple incidents of unauthorized unmanned aircraft system operations in the Corpus Christi area during the period preceding Hurricane Rafael. The aircraft operated without required FAA authorizations and were detected through a combination of radar and electronic sensor records. CBP Air and Marine Operations Corpus Christi (CAMCC) and the US Coast Guard are coordinating with the FAA and appropriate law enforcement agencies. Due to the ongoing nature of the investigation, no additional details about the number, location, or timing of the incidents can be released at this time. CBP and FAA jointly urge any members of the public with information about unauthorized drone operations in the Corpus Christi area between September 4 and September 12, 2027, to contact the FBI field office at 361-888-3111.",
+      "arcs": [],
+      "events": [
+        "EVT-1907"
+      ],
+      "places": [
+        "Corpus Christi"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-182",
+      "day": 32,
+      "time_local": "10:00",
+      "type": "press_release",
+      "source": "Port of Corpus Christi Authority / CBPWA joint statement",
+      "statement": "The Port of Corpus Christi Authority and Coastal Bend Power and Water Authority today announced a joint counter-unmanned aircraft initiative for the Corpus Christi critical infrastructure corridor, following a recommendation in the FAA-CBP joint report on pre-storm unauthorized drone activity. The initiative will deploy an RF-sensing detection and direction-finding network at multiple sites across the port and utility infrastructure corridor, operated in coordination with the FAA and CBP Air and Marine Operations. Sentinel Airspace Inc. has been selected as the technology provider following a competitive evaluation. The network is expected to be operational within 90 days. Port Director Marcus Obianwu-Kelley and CBPWA CISO Dr. Fatima Al-Rasheed-Obinna jointly signed the agreement.",
+      "arcs": [],
+      "events": [
+        "EVT-1908"
+      ],
+      "places": [
+        "Port of Corpus Christi",
+        "Corpus Christi"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-183",
+      "day": 16,
+      "time_local": "19:30",
+      "type": "media_report",
+      "source": "OUT-04 Gulfwater Maritime Report",
+      "statement": "Gulfwater Maritime Report has confirmed with sources familiar with the investigation that federal authorities are examining whether commercial drones conducted surveillance flights over the Port of Corpus Christi and at least one local power utility facility in the days before Hurricane Rafael. Sources say the flights were detected through radar records maintained by the Coast Guard. No organization has claimed responsibility. The timing of the flights — the week before Hurricane Rafael landfall — has drawn attention from investigators given subsequent damage to critical infrastructure during and after the storm. The FBI has asked for public tips.",
+      "arcs": [],
+      "events": [
+        "EVT-1907"
+      ],
+      "places": [
+        "Port of Corpus Christi",
+        "Corpus Christi"
+      ],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "tfr_active",
+      "label": "Temporary flight restriction status",
+      "kind": "state",
+      "group": "Public knowledge",
+      "unit": null,
+      "thread": "T19",
+      "description": "Current FAA TFR status over Corpus Christi area. Affects whether drone operations are legally authorized and whether LAANC checks can exclude UAV activity. Storm TFR and security TFR are distinct.",
+      "states": [
+        "none",
+        "storm-TFR",
+        "security-TFR"
+      ],
+      "keyframes": [
+        {
+          "day": -10,
+          "value": "none"
+        },
+        {
+          "day": -2,
+          "value": "storm-TFR"
+        },
+        {
+          "day": 7,
+          "value": "storm-TFR"
+        },
+        {
+          "day": 14,
+          "value": "security-TFR"
+        },
+        {
+          "day": 60,
+          "value": "none"
+        }
+      ]
+    },
+    {
+      "id": "cuas_alert_level",
+      "label": "Counter-UAS alert level",
+      "kind": "state",
+      "group": "Cyber & information",
+      "unit": null,
+      "thread": "T19",
+      "description": "Current operational status of counter-UAS awareness and response posture for Corpus Christi critical infrastructure. Begins at normal (no active program); becomes elevated after FAA/CBP joint report; active after Sentinel Airspace deployment.",
+      "states": [
+        "normal",
+        "elevated",
+        "active"
+      ],
+      "keyframes": [
+        {
+          "day": -14,
+          "value": "normal"
+        },
+        {
+          "day": 14,
+          "value": "normal"
+        },
+        {
+          "day": 15,
+          "value": "elevated"
+        },
+        {
+          "day": 30,
+          "value": "elevated"
+        },
+        {
+          "day": 60,
+          "value": "active"
+        }
+      ]
+    },
+    {
+      "id": "uav_track_confidence",
+      "label": "Anomalous UAV track identification confidence",
+      "kind": "number",
+      "group": "Hidden threads",
+      "unit": "confidence score (0.0-1.0)",
+      "thread": "T19",
+      "description": "Composite confidence score that the recorded buoy tracks and CAMCC-04 ESM contacts represent the KESTREL drone reconnaissance sorties, as assessed by the investigation. Starts at 0 (not detected); rises as evidence is reviewed post-D+1 and triangulation is completed. Hidden-thread variable.",
+      "keyframes": [
+        {
+          "day": -10,
+          "value": 0.0
+        },
+        {
+          "day": -9,
+          "value": 0.0
+        },
+        {
+          "day": 0,
+          "value": 0.0
+        },
+        {
+          "day": 1,
+          "value": 0.15
+        },
+        {
+          "day": 7,
+          "value": 0.42
+        },
+        {
+          "day": 14,
+          "value": 0.71
+        },
+        {
+          "day": 21,
+          "value": 0.88
+        },
+        {
+          "day": 30,
+          "value": 0.93
+        }
+      ]
+    },
+    {
+      "id": "cuas_active_sensors",
+      "label": "Active counter-UAS sensor nodes (count)",
+      "kind": "number",
+      "group": "Cyber & information",
+      "unit": "nodes",
+      "thread": "T19",
+      "description": "Number of active counter-UAS RF sensor nodes in the Corpus Christi critical infrastructure corridor. Zero before the Sentinel Airspace deployment. Rises to 7 at D+60.",
+      "keyframes": [
+        {
+          "day": -14,
+          "value": 0
+        },
+        {
+          "day": 30,
+          "value": 0
+        },
+        {
+          "day": 45,
+          "value": 3
+        },
+        {
+          "day": 60,
+          "value": 7
+        }
+      ]
+    }
+  ],
+  "news_arcs": [
+    {
+      "arc_id": "ARC-CUAS",
+      "name": "Eyes in the dark",
+      "thread": "T19",
+      "description": "Public coverage begins with the FAA/CBP statement on D+15 and the counter-UAS program on D+32. The link between the pre-storm flights, the tanker berth and the utility is never made publicly.",
+      "story_hooks": [
+        {
+          "story_id": "NWS-M002-09",
+          "day": -2,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "FAA shuts Corpus Christi airspace: TFR-2027-CC-0441 suspends all commercial and general aviation ahead of Rafael",
+          "public_facts_used": [
+            "PUB-180"
+          ]
+        },
+        {
+          "story_id": "NWS-P002-06",
+          "day": 2,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "Flour Bluff residents post videos of lights hovering over NAS Corpus Christi at night",
+          "public_facts_used": [
+            "PUB-032"
+          ]
+        },
+        {
+          "story_id": "NWS-P005-05",
+          "day": 5,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Week one after Rafael: Boil your water, watch for scam emails, and depot workers keep standing by",
+          "public_facts_used": [
+            "PUB-032"
+          ]
+        },
+        {
+          "story_id": "NWS-P006-04",
+          "day": 6,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Training aircraft begin returning to NAS Corpus Christi and NAS Kingsville",
+          "public_facts_used": [
+            "PUB-043",
+            "PUB-032"
+          ]
+        },
+        {
+          "story_id": "NWS-P007-01",
+          "day": 7,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Flour Bluff stargazer's videos of lights over the air station draw questions",
+          "public_facts_used": [
+            "PUB-032",
+            "PUB-043"
+          ]
+        },
+        {
+          "story_id": "NWS-P009-01",
+          "day": 9,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "FBI confirms it is investigating drone reports near NAS Corpus Christi",
+          "public_facts_used": [
+            "PUB-048",
+            "PUB-043",
+            "PUB-032"
+          ]
+        },
+        {
+          "story_id": "NWS-P009-03",
+          "day": 9,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "Lights over the air station: who investigates, and what residents should do",
+          "public_facts_used": [
+            "PUB-048",
+            "PUB-043",
+            "PUB-032"
+          ]
+        },
+        {
+          "story_id": "NWS-P010-03",
+          "day": 10,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Week in review: aircraft back on the ramp, FBI looking into drone reports",
+          "public_facts_used": [
+            "PUB-048",
+            "PUB-043"
+          ]
+        },
+        {
+          "story_id": "NWS-P011-01",
+          "day": 11,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "No new drone sightings reported over the air station after ten days",
+          "public_facts_used": [
+            "PUB-051",
+            "PUB-048",
+            "PUB-043",
+            "PUB-032"
+          ]
+        },
+        {
+          "story_id": "NWS-P015-04",
+          "day": 15,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Federal Agencies Open Probe into Pre-Storm Drone Flights Near Corpus Christi Utilities",
+          "public_facts_used": [
+            "PUB-181"
+          ]
+        },
+        {
+          "story_id": "NWS-P016-40",
+          "day": 16,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Federal authorities examining pre-storm drone flights over port and a utility site, sources say",
+          "public_facts_used": [
+            "PUB-183",
+            "PUB-181",
+            "PUB-048"
+          ]
+        },
+        {
+          "story_id": "NWS-P017-01",
+          "day": 17,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Families: Quieter nights, an easing stomach bug and a fake aid site to avoid",
+          "public_facts_used": [
+            "PUB-051",
+            "PUB-048"
+          ]
+        },
+        {
+          "story_id": "NWS-P017-50",
+          "day": 17,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Report of pre-storm drone flights over port and utility site adds a security question for energy operators",
+          "public_facts_used": [
+            "PUB-183",
+            "PUB-181",
+            "PUB-048"
+          ]
+        },
+        {
+          "story_id": "NWS-P022-02",
+          "day": 22,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "In Flour Bluff, the night sky over the air station has gone quiet. The questions haven't.",
+          "public_facts_used": [
+            "PUB-051",
+            "PUB-048",
+            "PUB-043",
+            "PUB-032"
+          ]
+        },
+        {
+          "story_id": "NWS-P024-01",
+          "day": 24,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Week in review: emergency fuel contract appears in federal records; boil-water notice stretches on",
+          "public_facts_used": [
+            "PUB-051",
+            "PUB-048"
+          ]
+        },
+        {
+          "story_id": "NWS-P028-60",
+          "day": 28,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Four weeks after Rafael: where things stand for base families",
+          "public_facts_used": [
+            "PUB-051",
+            "PUB-048",
+            "PUB-043"
+          ]
+        },
+        {
+          "story_id": "NWS-P029-01",
+          "day": 29,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Recovery checklist: what's still closed and what's changed, a month after Rafael",
+          "public_facts_used": [
+            "PUB-051",
+            "PUB-048"
+          ]
+        },
+        {
+          "story_id": "NWS-P032-05",
+          "day": 32,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Port of Corpus Christi and CBPWA announce joint counter-UAS program after unauthorized drone activity identified pre-storm",
+          "public_facts_used": [
+            "PUB-182"
+          ]
+        },
+        {
+          "story_id": "NWS-P035-40",
+          "day": 35,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Port and utility to field drone-detection network across infrastructure corridor",
+          "public_facts_used": [
+            "PUB-182",
+            "PUB-181",
+            "PUB-183"
+          ]
+        },
+        {
+          "story_id": "NWS-P035-02",
+          "day": 35,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Flour Bluff watches the relief airlift roll in",
+          "public_facts_used": [
+            "PUB-032",
+            "PUB-043",
+            "PUB-048",
+            "PUB-051"
+          ]
+        },
+        {
+          "story_id": "NWS-P088-01",
+          "day": 88,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Geminid meteor shower peaks Monday night: a Flour Bluff skywatcher's tips",
+          "public_facts_used": [
+            "PUB-032",
+            "PUB-043",
+            "PUB-048",
+            "PUB-051"
+          ]
+        },
+        {
+          "story_id": "NWS-P096-01",
+          "day": 96,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "Navy orders security review at Texas air stations, citing drone reports and channel attack",
+          "public_facts_used": [
+            "PUB-032",
+            "PUB-043",
+            "PUB-048",
+            "PUB-051"
+          ]
+        },
+        {
+          "story_id": "NWS-P096-02",
+          "day": 96,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Navy reviews security at Texas air stations after hurricane and port blast",
+          "public_facts_used": [
+            "PUB-032",
+            "PUB-048"
+          ]
+        },
+        {
+          "story_id": "NWS-P096-60",
+          "day": 96,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Navy orders security review at Texas air stations",
+          "public_facts_used": [
+            "PUB-032",
+            "PUB-043",
+            "PUB-048",
+            "PUB-051"
+          ]
+        },
+        {
+          "story_id": "NWS-P096-40",
+          "day": 96,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Navy orders security review at Texas air stations, citing drone reports and the channel attack",
+          "public_facts_used": [
+            "PUB-182"
+          ]
+        },
+        {
+          "story_id": "NWS-P097-01",
+          "day": 97,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Flour Bluff man who filmed lights over air station welcomes Navy review",
+          "public_facts_used": [
+            "PUB-032",
+            "PUB-043",
+            "PUB-048",
+            "PUB-051"
+          ]
+        },
+        {
+          "story_id": "NWS-P101-02",
+          "day": 101,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Navy security review: what families need to know",
+          "public_facts_used": [
+            "PUB-043",
+            "PUB-051"
+          ]
+        },
+        {
+          "story_id": "NWS-P109-40",
+          "day": 109,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Corpus Christi 2028: six items on the operator's watch list",
+          "public_facts_used": [
+            "PUB-182"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "ENT-UAV-01",
+      "name": "CAMCC Operations Supervisor Desiree Whitmore-Ajani",
+      "type": "person",
+      "role": "CBP Air and Marine Operations Corpus Christi supervisor",
+      "note": "Fictional CBP CAMCC operations supervisor. Oversees the CAMCC-04 Predator B fleet. Receives the D-9 ESM detection report from CAMCC-04 aircrew and routes it to FAA TRACON per standard protocol. Later, post-D+1, initiates the retrospective review of CAMCC-04 mission logs that surfaces the D-9 RF bearing data. Principal CBP character for T19."
+    },
+    {
+      "id": "ENT-UAV-02",
+      "name": "Sentinel Airspace Inc.",
+      "type": "organization",
+      "role": "Counter-UAS technology vendor",
+      "note": "Fictional counter-UAS vendor. Provides RF-sensing direction-finding sensor network. Authors the site survey report SA-CC-2027-001. Selected for the Port/CBPWA joint counter-UAS program at D+30. Network uses passive RF direction-finding at 900 MHz and 2.4/5.8 GHz with sub-10-degree bearing accuracy, optimized for detection of encrypted commercial drone links."
+    },
+    {
+      "id": "ENT-UAV-03",
+      "name": "Marcus Obianwu-Kelley",
+      "type": "person",
+      "role": "Port of Corpus Christi Director",
+      "note": "Fictional Port Director. Cosigns the counter-UAS program agreement with CBPWA CISO Dr. Al-Rasheed-Obinna at D+30. Cited in PUB-182."
+    },
+    {
+      "id": "ENT-UAV-04",
+      "name": "Narwhal Dream",
+      "type": "vessel",
+      "role": "KESTREL support vessel (drone C2 platform)",
+      "note": "Fictional motor yacht registered to Nereid Maritime Holdings LLC (Marshall Islands flag), a front company. Moored at Ingleside Marina Berth 7 D-12 to D-7. Served as the control and relay point for the three substation reconnaissance sorties. Went AIS-dark D-7 00:14Z, 36 hours after the last substation sortie and 2 days before the port sorties began from a separate ground station."
+    }
+  ],
+  "data_assets_described": [
+    {
+      "asset_id": "DA-T19-001",
+      "name": "CG radar buoy track archive — anomalous tracks",
+      "description": "Raw radar track data from Coast Guard buoys R-14, R-18, and R-22 for D-14 through D+7. Five anomalous small-RCS tracks (D-8, D-5, D-3 at R-22; D-8 at R-18; R-14 null for D-10 geometry). Each track: timestamp, lat/lon waypoints at 10-second intervals, altitude AGL estimate, RCS estimate, bearing from named reference points. Format: CSV with header; baseline non-anomalous tracks included for ML training (thousands of records per buoy per day).",
+      "ai_use_case": "CV (radar) drone detection and classification, anomaly detection in airspace track data, RCS-based vehicle classification"
+    },
+    {
+      "asset_id": "DA-T19-002",
+      "name": "CAMCC-04 ESM detection log",
+      "description": "Electronic support measures detection log from CAMCC-04 Predator B, D-9 sortie. Includes: frequency, bearing, duration, amplitude, modulation type for all ESM contacts during the mission. The 902.4 MHz and 2.437 GHz contacts at 06:47Z are the key records. Format: JSON with metadata fields per contact.",
+      "ai_use_case": "RF signal analysis, drone C2 link detection, sensor fusion (radar + RF)"
+    },
+    {
+      "asset_id": "DA-T19-003",
+      "name": "RF triangulation computation dataset",
+      "description": "Computed bearing lines from CAMCC-04 (bearing 047 deg from 27.8114N 97.4028W) and CG R-18 track origin vector (bearing 162 deg from GW-FAC-SUB-01) with intersection computation at Ingleside Marina Berth 7 (27.8341N 97.2178W). Includes error ellipse (radius 180m) and AIS records for Berth 7 (Narwhal Dream, D-12 to D-7). Format: GeoJSON with bearing lines as LineString features and intersection as Point with confidence metadata.",
+      "ai_use_case": "Geospatial clustering of track start/end points, timeline correlation across data sources, sensor fusion"
+    }
+  ],
+  "answer_key_path": "The key detection chain requires cross-domain data fusion across four sources: (1) Coast Guard buoy R-18 and R-22 raw track archives (small-RCS tracks that never generated real-time alerts because of the alert threshold), (2) the CAMCC-04 ESM log (RF bearing line from the D-9 mission), (3) the FAA LAANC database (zero authorizations across all sortie dates and locations), and (4) AIS records for Ingleside Marina Berth 7 (Narwhal Dream moored D-12 to D-7). The geometric linkage is the RF triangulation: the CAMCC-04 bearing crossed with the R-18 track origin vector closes on the marina berth. The temporal linkage is the yacht going AIS-dark at D-7 00:14Z, after the last substation sortie and before the two port sorties over the Rendal Terminals berth (D-5, D-3), which flew from a different ground station on the north side of the Inner Harbor. The pre-storm sorties are then joined to the post-storm night overflights of NAS Corpus Christi and the Army depot (D+1 to D+10, T7) as one campaign: utility reconnaissance (T8), tanker-berth reconnaissance (T6) and base overflights (T7). There is no drone activity after D+11, and no covert drone ever appears in ADS-B.",
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

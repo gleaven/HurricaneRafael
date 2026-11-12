@@ -1,0 +1,100 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
+ ],
+ "id": "CORVUS-SAR-20271216T041800Z-APPROACH",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.2,
+     27.62
+    ],
+    [
+     -96.72,
+     27.62
+    ],
+    [
+     -96.72,
+     27.98
+    ],
+    [
+     -97.2,
+     27.98
+    ],
+    [
+     -97.2,
+     27.62
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.2,
+  27.62,
+  -96.72,
+  27.98
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "CORVUS-SAR-20271216T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/CORVUS-SAR-20271216T041800Z-APPROACH/sigma0_vv.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/CORVUS-SAR-20271216T041800Z-APPROACH/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-12-16T04:18:00Z",
+  "title": "Night radar pass, approaches and anchorage",
+  "description": "Routine night acquisition of the approaches and anchorage. Vessel detections (hulls of 40 m or more): 3 at the offshore anchorage, 8 alongside in the Inner Harbor, 1 under way in the ship channel.",
+  "platform": "Corvus-SAR-2",
+  "instruments": [
+   "X-band SAR"
+  ],
+  "constellation": "Corvus-SAR",
+  "gsd": 3,
+  "view:off_nadir": 12.8,
+  "view:sun_azimuth": 271.9,
+  "view:sun_elevation": -61.5,
+  "proj:epsg": 32614,
+  "sar:instrument_mode": "stripmap",
+  "sar:frequency_band": "X",
+  "sar:polarizations": [
+   "VV",
+   "VH"
+  ],
+  "detections": {
+   "vessels": {
+    "offshore_anchorage": 3,
+    "inner_harbor_alongside": 8,
+    "ship_channel_under_way": 1
+   }
+  }
+ }
+}

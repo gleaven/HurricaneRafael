@@ -1,0 +1,153 @@
+{
+ "source": "adsb",
+ "folder": "05_other_sources/adsb/",
+ "format": "CSV",
+ "standard": "OpenSky Network StateVector CSV export",
+ "reference": "https://openskynetwork.github.io/opensky-api/",
+ "verified": true,
+ "notes": "OpenSky CSV is the research standard for ADS-B data. Fields match the StateVector object. Timestamps are Unix epoch (integer seconds), NOT ISO 8601. Altitude in meters (OpenSky uses metric). ADS-B Exchange uses feet and slightly different field names \u2014 do NOT mix the two schemas.",
+ "entity_catalog": "06_data_streams/aircraft_registry.json (64 aircraft, 25 airfields, 89 parking positions)",
+ "entity_catalog_needed": false,
+ "entity_catalog_note": "Built. icao24 joins aircraft_registry.json aircraft[].icao24.",
+ "fields": [
+  {
+   "name": "icao24",
+   "type": "string",
+   "example": "ae5d83",
+   "notes": "ICAO 24-bit transponder address, lowercase hex, from aircraft_registry.json. US civil addresses start with 'a'; US military and Coast Guard with 'ae'."
+  },
+  {
+   "name": "callsign",
+   "type": "string",
+   "example": "C6033   ",
+   "notes": "8 characters, space-padded. The aircraft_registry.json callsign; registry call signs longer than 8 characters keep their first six characters and their two-digit number (GUNSMOKE02 appears as GUNSMO02, JAVELINA31 as JAVELI31, PELICAN21 as PELICA21, RIDGELINE01 as RIDGEL01). Join on icao24, not on callsign."
+  },
+  {
+   "name": "origin_country",
+   "type": "string",
+   "example": "United States",
+   "notes": "Inferred from ICAO24 block"
+  },
+  {
+   "name": "time_position",
+   "type": "integer",
+   "example": 1820902920,
+   "notes": "Unix epoch of last position report; null if more than 15 s since last fix. 2027-09-14T00:00:00Z = 1820880000."
+  },
+  {
+   "name": "last_contact",
+   "type": "integer",
+   "example": 1820902921,
+   "notes": "Unix epoch of last received message of any type"
+  },
+  {
+   "name": "longitude",
+   "type": "float",
+   "example": -97.3844,
+   "notes": "WGS-84 decimal degrees"
+  },
+  {
+   "name": "latitude",
+   "type": "float",
+   "example": 27.7681,
+   "notes": "WGS-84 decimal degrees"
+  },
+  {
+   "name": "baro_altitude",
+   "type": "float",
+   "example": 304.8,
+   "notes": "Barometric (pressure) altitude in METERS, standard setting; blank on the ground. Differs from geo_altitude by the weather: in the low pressure of the hurricane it reads several hundred metres high."
+  },
+  {
+   "name": "on_ground",
+   "type": "boolean",
+   "example": false,
+   "notes": "True if surface position report"
+  },
+  {
+   "name": "velocity",
+   "type": "float",
+   "example": 72.3,
+   "notes": "Ground speed in m/s"
+  },
+  {
+   "name": "true_track",
+   "type": "float",
+   "example": 193.5,
+   "notes": "Direction of travel, degrees true 0\u2013360, clockwise from north"
+  },
+  {
+   "name": "vertical_rate",
+   "type": "float",
+   "example": -1.3,
+   "notes": "m/s; positive = climbing, negative = descending"
+  },
+  {
+   "name": "sensors",
+   "type": "string",
+   "example": "",
+   "notes": "Comma-separated receiver serial numbers; blank if no filtering applied"
+  },
+  {
+   "name": "geo_altitude",
+   "type": "float",
+   "example": 320.0,
+   "notes": "GNSS height in meters (use this for height above the ground near sea level)."
+  },
+  {
+   "name": "squawk",
+   "type": "string",
+   "example": "7700",
+   "notes": "4-digit octal transponder code. 1200 = visual flight rules, 1277 = search and rescue; other values are assigned codes."
+  },
+  {
+   "name": "spi",
+   "type": "boolean",
+   "example": false,
+   "notes": "Special Purpose Indicator \u2014 ident button pressed"
+  },
+  {
+   "name": "position_source",
+   "type": "integer",
+   "example": 0,
+   "notes": "0=ADS-B, 1=ASTERIX, 2=MLAT (multilateration: position computed by the receiver network, not reported by the aircraft), 3=FLARM"
+  },
+  {
+   "name": "category",
+   "type": "integer",
+   "example": 7,
+   "notes": "ADS-B emitter category (OpenSky numbering): 0=no info, 1=no category info, 2=light, 3=small, 4=large, 5=high vortex large, 6=heavy, 7=high performance, 8=rotorcraft, 14=unmanned aerial vehicle. aircraft_registry.json adsb_emitter_category."
+  },
+  {
+   "name": "nic",
+   "type": "integer",
+   "example": 8,
+   "notes": "Navigation Integrity Category 0-11 from the aircraft operational status / position messages (extension to the state-vector export). Normal GPS gives 8 or more; values drop when the GPS signal is degraded."
+  },
+  {
+   "name": "nac_p",
+   "type": "integer",
+   "example": 10,
+   "notes": "Navigation Accuracy Category for Position 0-11 (extension, same source as nic). Normal GPS gives 9 or more."
+  }
+ ],
+ "scenario_notes": {
+  "coverage": "2027-08-15T00:00Z to 2028-01-12T06:00Z. A row exists only while an aircraft is in line of sight of one of the area's receivers (Corpus Christi International, NAS Corpus Christi, Port Aransas, Rockport, Kingsville): out to about 150 nautical miles at altitude, much less for low-flying aircraft. Aircraft arriving from or leaving for distant fields appear and disappear at the edge of coverage.",
+  "cadence": "About every 10 seconds on the ground while moving and in the air near airfields or in a hover; every 30 seconds for low-level work; every 60 seconds en route. One row when parked at the start and end of a flight.",
+  "ground_positions": "Rows with on_ground true are on real runways, ramps and helipads (scripts/check_geo.py rule aircraft_ground).",
+  "who_transmits": "Only aircraft in aircraft_registry.json. Small unmanned aircraft do not carry ADS-B and never appear here.",
+  "integrity_fields": "nic and nac_p are normally 7 to 10. Values near zero, scattered positions and position_source 2 mean the aircraft's GPS was not giving a trustworthy position at that moment."
+ },
+ "registry": {
+  "aircraft_id_format": "ACF-<operator>-nnn, ACF-02nn (military airlift), ACF-03nn (civil relief charter)",
+  "airfield_id_format": "FAA location identifier (CRP, NGP, NQI, NFW...)",
+  "parking_position_id_format": "PARK-<airfield>-<ramp letter>nn or PARK-HELI-<FAA id>",
+  "counts": {
+   "aircraft": 64,
+   "airfields": 25,
+   "parking_positions": 89
+  }
+ },
+ "files": "adsb_YYYY-MM.csv, one file per calendar month (UTC), rows sorted by time_position then icao24",
+ "generator": "scripts/streams/gen_aviation.py (deterministic)"
+}

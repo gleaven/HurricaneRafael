@@ -1,0 +1,1477 @@
+{
+ "metadata": {
+  "catalog": "sensor_registry",
+  "version": "2.0",
+  "scenario": "Hurricane Rafael (fictional)",
+  "description": "Fixed environmental sensors: 6 water-quality sondes, 20 air monitors, tide gauges, 2 stream gauges, weather stations, buoys, bridge wind sensors, wastewater sampling sites.",
+  "coordinates": "Coordinates are real published points (reference/geo/landmarks.geojson) or points beside real roads; see position_basis on each record and reference/geo/SOURCES_*.md.",
+  "note": "Outage and failure behaviour during the storm is not described here; it is in the data."
+ },
+ "water_quality_sondes": [
+  {
+   "sensor_id": "WQ-01",
+   "sensor_name": "Inner Harbor - Industrial Canal",
+   "sensor_type": "Multiparameter water-quality sonde",
+   "operator": "Texas General Land Office / TCEQ",
+   "latitude": 27.81758,
+   "longitude": -97.42496,
+   "position_basis": "in water on the centreline of the USACE Industrial Canal reach (CESWG_CC_09_INC_9)",
+   "water_body": "Corpus Christi Ship Channel, Inner Harbor",
+   "installation": "piling mount",
+   "parameters": [
+    "dissolved_oxygen_mgL",
+    "turbidity_NTU",
+    "total_hydrocarbons_ppb",
+    "temperature_C",
+    "conductivity_uScm",
+    "pH"
+   ],
+   "reporting_interval_minutes": 15
+  },
+  {
+   "sensor_id": "WQ-02",
+   "sensor_name": "Inner Harbor entrance at the Harbor Bridge",
+   "sensor_type": "Multiparameter water-quality sonde",
+   "operator": "Texas General Land Office / TCEQ",
+   "latitude": 27.81169,
+   "longitude": -97.38994,
+   "position_basis": "in water on the centreline of the USACE reach between Beacon 82 and the Main Turning Basin (CESWG_CC_07_BTB_7)",
+   "water_body": "Corpus Christi Ship Channel, Inner Harbor",
+   "installation": "piling mount",
+   "parameters": [
+    "dissolved_oxygen_mgL",
+    "turbidity_NTU",
+    "total_hydrocarbons_ppb",
+    "temperature_C",
+    "conductivity_uScm",
+    "pH"
+   ],
+   "reporting_interval_minutes": 15
+  },
+  {
+   "sensor_id": "WQ-03",
+   "sensor_name": "Nueces Bay - southwest",
+   "sensor_type": "Multiparameter water-quality sonde",
+   "operator": "Texas General Land Office / TCEQ",
+   "latitude": 27.852,
+   "longitude": -97.445,
+   "position_basis": "open water of Nueces Bay, 764 m from the nearest shore in the NOAA land layer",
+   "water_body": "Nueces Bay",
+   "installation": "moored buoy",
+   "parameters": [
+    "dissolved_oxygen_mgL",
+    "turbidity_NTU",
+    "total_hydrocarbons_ppb",
+    "temperature_C",
+    "salinity_ppt"
+   ],
+   "reporting_interval_minutes": 15
+  },
+  {
+   "sensor_id": "WQ-04",
+   "sensor_name": "Corpus Christi Bay - mid-bay",
+   "sensor_type": "Multiparameter water-quality sonde",
+   "operator": "Texas General Land Office / TCEQ",
+   "latitude": 27.77,
+   "longitude": -97.25,
+   "position_basis": "open water of Corpus Christi Bay, 4839 m from the nearest shore in the NOAA land layer",
+   "water_body": "Corpus Christi Bay",
+   "installation": "moored buoy",
+   "parameters": [
+    "dissolved_oxygen_mgL",
+    "turbidity_NTU",
+    "total_hydrocarbons_ppb",
+    "temperature_C",
+    "salinity_ppt"
+   ],
+   "reporting_interval_minutes": 15
+  },
+  {
+   "sensor_id": "WQ-05",
+   "sensor_name": "Inner Harbor - Tule Lake Channel",
+   "sensor_type": "Multiparameter water-quality sonde",
+   "operator": "Texas General Land Office / TCEQ",
+   "latitude": 27.81652,
+   "longitude": -97.45919,
+   "position_basis": "in water on the centreline of the USACE Tule Lake Channel reach (CESWG_CC_12_TLC_12)",
+   "water_body": "Corpus Christi Ship Channel, Inner Harbor",
+   "installation": "piling mount",
+   "parameters": [
+    "dissolved_oxygen_mgL",
+    "turbidity_NTU",
+    "total_hydrocarbons_ppb",
+    "temperature_C",
+    "conductivity_uScm",
+    "pH"
+   ],
+   "reporting_interval_minutes": 15
+  },
+  {
+   "sensor_id": "WQ-06",
+   "sensor_name": "Corpus Christi Bay - off North Beach",
+   "sensor_type": "Multiparameter water-quality sonde",
+   "operator": "Texas General Land Office / TCEQ",
+   "latitude": 27.825,
+   "longitude": -97.372,
+   "position_basis": "open water of Corpus Christi Bay, 964 m from the nearest shore in the NOAA land layer",
+   "water_body": "Corpus Christi Bay",
+   "installation": "moored buoy",
+   "parameters": [
+    "dissolved_oxygen_mgL",
+    "turbidity_NTU",
+    "total_hydrocarbons_ppb",
+    "temperature_C",
+    "salinity_ppt"
+   ],
+   "reporting_interval_minutes": 15
+  }
+ ],
+ "air_monitors": [
+  {
+   "sensor_id": "AQS-480-001",
+   "sensor_name": "Inner Harbor / Navigation Boulevard",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "industrial",
+   "operator": "TCEQ",
+   "latitude": 27.79466,
+   "longitude": -97.45342,
+   "position_basis": "real site: fire station at 501 North Navigation Boulevard [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "ozone",
+    "SO2",
+    "benzene",
+    "total_nonmethane_hydrocarbons",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-002",
+   "sensor_name": "Southside / Cunningham",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "neighbourhood",
+   "operator": "TCEQ",
+   "latitude": 27.75159,
+   "longitude": -97.42803,
+   "position_basis": "real site: Cunningham Middle School [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "ozone"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-003",
+   "sensor_name": "Airport",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "background",
+   "operator": "TCEQ",
+   "latitude": 27.77335,
+   "longitude": -97.51298,
+   "position_basis": "real site: KCRP Corpus Christi Intl (METAR/TAF station) [NWS Aviation Weather Center API stationinfo]",
+   "parameters": [
+    "PM2.5",
+    "ozone"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-004",
+   "sensor_name": "North Beach",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "industrial",
+   "operator": "TCEQ",
+   "latitude": 27.82916,
+   "longitude": -97.38433,
+   "position_basis": "placed beside Timon Blvd (no published point in the reference set)",
+   "parameters": [
+    "PM2.5",
+    "ozone",
+    "SO2",
+    "benzene",
+    "total_nonmethane_hydrocarbons",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-005",
+   "sensor_name": "Hillcrest",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "fenceline community",
+   "operator": "TCEQ",
+   "latitude": 27.80701,
+   "longitude": -97.41651,
+   "position_basis": "placed beside Palm Dr (no published point in the reference set)",
+   "parameters": [
+    "PM2.5",
+    "ozone",
+    "SO2",
+    "benzene",
+    "total_nonmethane_hydrocarbons",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-006",
+   "sensor_name": "Oak Park",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "fenceline community",
+   "operator": "TCEQ",
+   "latitude": 27.79629,
+   "longitude": -97.43723,
+   "position_basis": "real site: Oak Park Elementary School [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "ozone",
+    "SO2",
+    "benzene",
+    "total_nonmethane_hydrocarbons",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-007",
+   "sensor_name": "Tuloso-Midway",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "industrial",
+   "operator": "TCEQ",
+   "latitude": 27.83163,
+   "longitude": -97.55625,
+   "position_basis": "real site: Tuloso Midway Middle School [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "ozone",
+    "SO2",
+    "benzene",
+    "total_nonmethane_hydrocarbons",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-008",
+   "sensor_name": "Calallen",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "neighbourhood",
+   "operator": "TCEQ",
+   "latitude": 27.86372,
+   "longitude": -97.62572,
+   "position_basis": "real site: Calallen Middle School [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "ozone"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-009",
+   "sensor_name": "Flour Bluff",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "neighbourhood",
+   "operator": "TCEQ",
+   "latitude": 27.64516,
+   "longitude": -97.2899,
+   "position_basis": "real site: Flour Bluff Junior High School [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "ozone"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-010",
+   "sensor_name": "Portland shoreline",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "community",
+   "operator": "TCEQ",
+   "latitude": 27.89254,
+   "longitude": -97.30406,
+   "position_basis": "real site: East Cliff Elementary School [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "total_VOC",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "409"
+  },
+  {
+   "sensor_id": "AQS-480-011",
+   "sensor_name": "Ingleside",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "industrial",
+   "operator": "TCEQ",
+   "latitude": 27.86801,
+   "longitude": -97.21505,
+   "position_basis": "real site: fire station at 2425 8th Street [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "ozone",
+    "SO2",
+    "benzene",
+    "total_nonmethane_hydrocarbons",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "409"
+  },
+  {
+   "sensor_id": "AQS-480-012",
+   "sensor_name": "Port Aransas",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "community",
+   "operator": "TCEQ",
+   "latitude": 27.83246,
+   "longitude": -97.061,
+   "position_basis": "real site: Port Aransas High School [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "total_VOC",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-013",
+   "sensor_name": "Molina",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "community",
+   "operator": "TCEQ",
+   "latitude": 27.75793,
+   "longitude": -97.4534,
+   "position_basis": "real site: West Oso Elementary School [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "total_VOC",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-014",
+   "sensor_name": "Downtown bayfront",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "community",
+   "operator": "TCEQ",
+   "latitude": 27.79591,
+   "longitude": -97.40423,
+   "position_basis": "real site: Corpus Christi City Hall [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "total_VOC",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-015",
+   "sensor_name": "Del Mar",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "neighbourhood",
+   "operator": "TCEQ",
+   "latitude": 27.7649,
+   "longitude": -97.40637,
+   "position_basis": "real site: Del Mar College (Heritage Campus) [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "ozone"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-016",
+   "sensor_name": "Refinery Row west / Up River Road",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "industrial",
+   "operator": "TCEQ",
+   "latitude": 27.81366,
+   "longitude": -97.4736,
+   "position_basis": "placed beside Up River Rd (no published point in the reference set)",
+   "parameters": [
+    "PM2.5",
+    "ozone",
+    "SO2",
+    "benzene",
+    "total_nonmethane_hydrocarbons",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-017",
+   "sensor_name": "Gregory",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "community",
+   "operator": "TCEQ",
+   "latitude": 27.92436,
+   "longitude": -97.28757,
+   "position_basis": "real site: Austin Elementary School [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "total_VOC",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "409"
+  },
+  {
+   "sensor_id": "AQS-480-018",
+   "sensor_name": "Padre Island",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "background",
+   "operator": "TCEQ",
+   "latitude": 27.59725,
+   "longitude": -97.22294,
+   "position_basis": "real site: Seashore Middle Academy [USGS National Structures Dataset]",
+   "parameters": [
+    "PM2.5",
+    "ozone"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-480-019",
+   "sensor_name": "NAS Corpus Christi fence line",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "community",
+   "operator": "TCEQ",
+   "latitude": 27.68493,
+   "longitude": -97.27279,
+   "position_basis": "placed beside Lexington Blvd (no published point in the reference set)",
+   "parameters": [
+    "PM2.5",
+    "total_VOC",
+    "H2S"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355"
+  },
+  {
+   "sensor_id": "AQS-MOB-001",
+   "sensor_name": "Mobile air monitoring unit (home base)",
+   "sensor_type": "Air-quality monitor",
+   "site_type": "mobile",
+   "operator": "TCEQ mobile monitoring",
+   "latitude": 27.79256,
+   "longitude": -97.45272,
+   "position_basis": "placed beside Navigation Blvd (no published point in the reference set)",
+   "parameters": [
+    "benzene",
+    "total_VOC",
+    "H2S",
+    "SO2"
+   ],
+   "reporting_interval_minutes": 15,
+   "state_code": "48",
+   "county_code": "355",
+   "mobile": true,
+   "deployment_rule": "Deployed positions are reported with each reading and must lie on a road in the reference network."
+  }
+ ],
+ "tide_gauges": [
+  {
+   "sensor_id": "GAUGE-14",
+   "sensor_name": "NOAA tide gauge 8775296 USS Lexington, Corpus Christi Bay",
+   "station_number": "8775296",
+   "sensor_type": "Tide / water-level gauge",
+   "operator": "NOAA National Ocean Service",
+   "latitude": 27.8149,
+   "longitude": -97.3892,
+   "position_basis": "real site: NOAA CO-OPS 8775296 USS Lexington, Corpus Christi Bay [NOAA CO-OPS Metadata API]",
+   "parameters": [
+    "water_level_ft_MLLW",
+    "surge_above_predicted_ft",
+    "air_temperature_C",
+    "water_temperature_C",
+    "wind_speed_kt",
+    "barometric_pressure_mb"
+   ],
+   "reporting_interval_minutes": 15,
+   "aliases": [
+    "NOAA tide gauge on Corpus Christi Bay"
+   ]
+  },
+  {
+   "sensor_id": "TG-8775237",
+   "sensor_name": "NOAA tide gauge 8775237 Port Aransas",
+   "station_number": "8775237",
+   "sensor_type": "Tide / water-level gauge",
+   "operator": "NOAA National Ocean Service",
+   "latitude": 27.8397,
+   "longitude": -97.0725,
+   "position_basis": "real site: NOAA CO-OPS 8775237 Port Aransas [NOAA CO-OPS Metadata API]",
+   "parameters": [
+    "water_level_ft_MLLW",
+    "surge_above_predicted_ft",
+    "air_temperature_C",
+    "water_temperature_C",
+    "wind_speed_kt",
+    "barometric_pressure_mb"
+   ],
+   "reporting_interval_minutes": 6
+  },
+  {
+   "sensor_id": "TG-8775241",
+   "sensor_name": "NOAA tide gauge 8775241 Aransas, Aransas Pass",
+   "station_number": "8775241",
+   "sensor_type": "Tide / water-level gauge",
+   "operator": "NOAA National Ocean Service",
+   "latitude": 27.8366,
+   "longitude": -97.0391,
+   "position_basis": "real site: NOAA CO-OPS 8775241 Aransas, Aransas Pass [NOAA CO-OPS Metadata API]",
+   "parameters": [
+    "water_level_ft_MLLW",
+    "surge_above_predicted_ft",
+    "air_temperature_C",
+    "water_temperature_C",
+    "wind_speed_kt",
+    "barometric_pressure_mb"
+   ],
+   "reporting_interval_minutes": 6
+  },
+  {
+   "sensor_id": "TG-8775792",
+   "sensor_name": "NOAA tide gauge 8775792 Packery Channel",
+   "station_number": "8775792",
+   "sensor_type": "Tide / water-level gauge",
+   "operator": "NOAA National Ocean Service",
+   "latitude": 27.6333,
+   "longitude": -97.2367,
+   "position_basis": "real site: NOAA CO-OPS 8775792 Packery Channel [NOAA CO-OPS Metadata API]",
+   "parameters": [
+    "water_level_ft_MLLW",
+    "surge_above_predicted_ft",
+    "air_temperature_C",
+    "water_temperature_C",
+    "wind_speed_kt",
+    "barometric_pressure_mb"
+   ],
+   "reporting_interval_minutes": 6
+  },
+  {
+   "sensor_id": "TG-8775870",
+   "sensor_name": "NOAA tide gauge 8775870 Bob Hall Pier, Corpus Christi",
+   "station_number": "8775870",
+   "sensor_type": "Tide / water-level gauge",
+   "operator": "NOAA National Ocean Service",
+   "latitude": 27.58,
+   "longitude": -97.2167,
+   "position_basis": "real site: NOAA CO-OPS 8775870 Bob Hall Pier, Corpus Christi [NOAA CO-OPS Metadata API]",
+   "parameters": [
+    "water_level_ft_MLLW",
+    "surge_above_predicted_ft",
+    "air_temperature_C",
+    "water_temperature_C",
+    "wind_speed_kt",
+    "barometric_pressure_mb"
+   ],
+   "reporting_interval_minutes": 6
+  },
+  {
+   "sensor_id": "TG-8774770",
+   "sensor_name": "NOAA tide gauge 8774770 Rockport",
+   "station_number": "8774770",
+   "sensor_type": "Tide / water-level gauge",
+   "operator": "NOAA National Ocean Service",
+   "latitude": 28.02167,
+   "longitude": -97.04667,
+   "position_basis": "real site: NOAA CO-OPS 8774770 Rockport [NOAA CO-OPS Metadata API]",
+   "parameters": [
+    "water_level_ft_MLLW",
+    "surge_above_predicted_ft",
+    "air_temperature_C",
+    "water_temperature_C",
+    "wind_speed_kt",
+    "barometric_pressure_mb"
+   ],
+   "reporting_interval_minutes": 6
+  }
+ ],
+ "stream_gauges": [
+  {
+   "sensor_id": "GAUGE-12",
+   "sensor_name": "Nueces River gauge at Calallen",
+   "sensor_type": "Stream gauge (stage, discharge, water quality)",
+   "operator": "USGS / National Weather Service",
+   "latitude": 27.89986,
+   "longitude": -97.63082,
+   "position_basis": "real site: I-37 Nueces River bridge (southbound mainlanes) [USDOT NTAD National Bridge Inventory]; bridge-mounted (the river is not resolved in the NOAA land layer)",
+   "installation": "bridge piling",
+   "parameters": [
+    "stage_ft",
+    "discharge_cfs",
+    "temperature_C",
+    "specific_conductance_uScm"
+   ],
+   "reporting_interval_minutes": 15
+  },
+  {
+   "sensor_id": "GAUGE-13",
+   "sensor_name": "Oso Creek gauge at Yorktown Boulevard",
+   "sensor_type": "Stream gauge (stage, discharge)",
+   "operator": "USGS / National Weather Service",
+   "latitude": 27.64066,
+   "longitude": -97.34376,
+   "position_basis": "mid-point of the 120 m stretch of Yorktown Blvd (Census TIGER) over Oso Bay water (Census areal hydrography); bridge-mounted",
+   "installation": "bridge piling",
+   "parameters": [
+    "stage_ft",
+    "discharge_cfs"
+   ],
+   "reporting_interval_minutes": 15
+  }
+ ],
+ "weather_stations": [
+  {
+   "sensor_id": "KCRP",
+   "sensor_name": "KCRP Corpus Christi Intl",
+   "sensor_type": "Automated surface weather station",
+   "operator": "NWS / FAA / US Navy",
+   "latitude": 27.77335,
+   "longitude": -97.51298,
+   "position_basis": "real site: KCRP Corpus Christi Intl (METAR/TAF station) [NWS Aviation Weather Center API stationinfo]",
+   "parameters": [
+    "wind",
+    "gust",
+    "visibility",
+    "sky",
+    "temperature",
+    "dew_point",
+    "pressure",
+    "precipitation"
+   ],
+   "reporting_interval_minutes": 60,
+   "in_delivered_stream": true
+  },
+  {
+   "sensor_id": "KNGP",
+   "sensor_name": "KNGP Corpus Christi/Truax Field NAS",
+   "sensor_type": "Automated surface weather station",
+   "operator": "NWS / FAA / US Navy",
+   "latitude": 27.688,
+   "longitude": -97.292,
+   "position_basis": "real site: KNGP Corpus Christi/Truax Field NAS (METAR/TAF station) [NWS Aviation Weather Center API stationinfo]",
+   "parameters": [
+    "wind",
+    "gust",
+    "visibility",
+    "sky",
+    "temperature",
+    "dew_point",
+    "pressure",
+    "precipitation"
+   ],
+   "reporting_interval_minutes": 60,
+   "in_delivered_stream": true
+  },
+  {
+   "sensor_id": "KNGW",
+   "sensor_name": "KNGW Corpus Christi/Cabaniss Field",
+   "sensor_type": "Automated surface weather station",
+   "operator": "NWS / FAA / US Navy",
+   "latitude": 27.702,
+   "longitude": -97.442,
+   "position_basis": "real site: KNGW Corpus Christi/Cabaniss Field (station record) [NWS Aviation Weather Center API stationinfo]",
+   "parameters": [
+    "wind",
+    "gust",
+    "visibility",
+    "sky",
+    "temperature",
+    "dew_point",
+    "pressure",
+    "precipitation"
+   ],
+   "reporting_interval_minutes": 60,
+   "in_delivered_stream": false
+  },
+  {
+   "sensor_id": "KRAS",
+   "sensor_name": "KRAS Port Aransas/Mustang Beach Airport",
+   "sensor_type": "Automated surface weather station",
+   "operator": "NWS / FAA / US Navy",
+   "latitude": 27.80835,
+   "longitude": -97.08532,
+   "position_basis": "real site: KRAS Port Aransas/Mustang Beach Airport (METAR station) [NWS Aviation Weather Center API stationinfo]",
+   "parameters": [
+    "wind",
+    "gust",
+    "visibility",
+    "sky",
+    "temperature",
+    "dew_point",
+    "pressure",
+    "precipitation"
+   ],
+   "reporting_interval_minutes": 60,
+   "in_delivered_stream": false
+  },
+  {
+   "sensor_id": "KRKP",
+   "sensor_name": "KRKP Rockport/Aransas County Airport",
+   "sensor_type": "Automated surface weather station",
+   "operator": "NWS / FAA / US Navy",
+   "latitude": 28.08366,
+   "longitude": -97.04669,
+   "position_basis": "real site: KRKP Rockport/Aransas County Airport (METAR station) [NWS Aviation Weather Center API stationinfo]",
+   "parameters": [
+    "wind",
+    "gust",
+    "visibility",
+    "sky",
+    "temperature",
+    "dew_point",
+    "pressure",
+    "precipitation"
+   ],
+   "reporting_interval_minutes": 60,
+   "in_delivered_stream": false
+  },
+  {
+   "sensor_id": "KTFP",
+   "sensor_name": "KTFP Ingleside Regional / McCampbell-Porter",
+   "sensor_type": "Automated surface weather station",
+   "operator": "NWS / FAA / US Navy",
+   "latitude": 27.91318,
+   "longitude": -97.21321,
+   "position_basis": "real site: KTFP Ingleside Regional / McCampbell-Porter (METAR station) [NWS Aviation Weather Center API stationinfo]",
+   "parameters": [
+    "wind",
+    "gust",
+    "visibility",
+    "sky",
+    "temperature",
+    "dew_point",
+    "pressure",
+    "precipitation"
+   ],
+   "reporting_interval_minutes": 60,
+   "in_delivered_stream": false
+  },
+  {
+   "sensor_id": "KNQI",
+   "sensor_name": "KNQI Kingsville NAS",
+   "sensor_type": "Automated surface weather station",
+   "operator": "NWS / FAA / US Navy",
+   "latitude": 27.507,
+   "longitude": -97.81,
+   "position_basis": "real site: KNQI Kingsville NAS (METAR/TAF station) [NWS Aviation Weather Center API stationinfo]",
+   "parameters": [
+    "wind",
+    "gust",
+    "visibility",
+    "sky",
+    "temperature",
+    "dew_point",
+    "pressure",
+    "precipitation"
+   ],
+   "reporting_interval_minutes": 60,
+   "in_delivered_stream": false
+  }
+ ],
+ "buoys": [
+  {
+   "sensor_id": "42020",
+   "sensor_name": "NDBC buoy 42020 Corpus Christi, TX",
+   "sensor_type": "Moored ocean buoy",
+   "operator": "NOAA National Data Buoy Center",
+   "latitude": 26.97,
+   "longitude": -96.679,
+   "position_basis": "real site: NDBC buoy 42020 Corpus Christi, TX [NOAA NDBC station table]",
+   "parameters": [
+    "wind",
+    "gust",
+    "wave_height",
+    "dominant_period",
+    "pressure",
+    "air_temperature",
+    "water_temperature"
+   ],
+   "reporting_interval_minutes": 60
+  },
+  {
+   "sensor_id": "42019",
+   "sensor_name": "NDBC buoy 42019 Freeport, TX",
+   "sensor_type": "Moored ocean buoy",
+   "operator": "NOAA National Data Buoy Center",
+   "latitude": 27.908,
+   "longitude": -95.343,
+   "position_basis": "real site: NDBC buoy 42019 Freeport, TX [NOAA NDBC station table]",
+   "parameters": [
+    "wind",
+    "gust",
+    "wave_height",
+    "dominant_period",
+    "pressure",
+    "air_temperature",
+    "water_temperature"
+   ],
+   "reporting_interval_minutes": 60
+  }
+ ],
+ "bridge_wind_sensors": [
+  {
+   "sensor_id": "RWIS-HB-01",
+   "sensor_name": "Harbor Bridge wind sensor",
+   "sensor_type": "Road weather station (wind, gust, deck temperature)",
+   "operator": "Texas Department of Transportation",
+   "asset_id": "FAC-INF-01A",
+   "latitude": 27.81097,
+   "longitude": -97.39678,
+   "position_basis": "at the land abutment of FAC-INF-01A",
+   "parameters": [
+    "wind_speed_mph",
+    "gust_mph",
+    "wind_direction"
+   ],
+   "reporting_interval_minutes": 5,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "sensor_id": "RWIS-NBC-01",
+   "sensor_name": "Nueces Bay Causeway wind sensor",
+   "sensor_type": "Road weather station (wind, gust, deck temperature)",
+   "operator": "Texas Department of Transportation",
+   "asset_id": "FAC-INF-01B",
+   "latitude": 27.85231,
+   "longitude": -97.35869,
+   "position_basis": "at the land abutment of FAC-INF-01B",
+   "parameters": [
+    "wind_speed_mph",
+    "gust_mph",
+    "wind_direction"
+   ],
+   "reporting_interval_minutes": 5,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "sensor_id": "RWIS-JFK-01",
+   "sensor_name": "JFK Causeway wind sensor",
+   "sensor_type": "Road weather station (wind, gust, deck temperature)",
+   "operator": "Texas Department of Transportation",
+   "asset_id": "FAC-INF-02",
+   "latitude": 27.63508,
+   "longitude": -97.24076,
+   "position_basis": "at the land abutment of FAC-INF-02",
+   "parameters": [
+    "wind_speed_mph",
+    "gust_mph",
+    "wind_direction"
+   ],
+   "reporting_interval_minutes": 5,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ],
+ "wastewater_sampling_sites": [
+  {
+   "site_id": "WW-01",
+   "sensor_name": "New Broadway Wastewater Treatment Plant influent sampler",
+   "sensor_type": "Wastewater surveillance sampling site",
+   "operator": "Corpus Christi-Nueces County Public Health District",
+   "asset_id": "WW-01",
+   "latitude": 27.80288,
+   "longitude": -97.40104,
+   "position_basis": "at parent site WW-01",
+   "parameters": [
+    "norovirus_GII_copies_per_L",
+    "sars_cov_2_copies_per_L"
+   ],
+   "sampling": "twice a week",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "WW-02",
+   "sensor_name": "Oso Wastewater Treatment Plant influent sampler",
+   "sensor_type": "Wastewater surveillance sampling site",
+   "operator": "Corpus Christi-Nueces County Public Health District",
+   "asset_id": "WW-02",
+   "latitude": 27.70828,
+   "longitude": -97.33912,
+   "position_basis": "at parent site WW-02",
+   "parameters": [
+    "norovirus_GII_copies_per_L",
+    "sars_cov_2_copies_per_L"
+   ],
+   "sampling": "twice a week",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "WW-03",
+   "sensor_name": "Greenwood Wastewater Treatment Plant influent sampler",
+   "sensor_type": "Wastewater surveillance sampling site",
+   "operator": "Corpus Christi-Nueces County Public Health District",
+   "asset_id": "WW-03",
+   "latitude": 27.71713,
+   "longitude": -97.45754,
+   "position_basis": "at parent site WW-03",
+   "parameters": [
+    "norovirus_GII_copies_per_L",
+    "sars_cov_2_copies_per_L"
+   ],
+   "sampling": "twice a week",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "WW-04",
+   "sensor_name": "Laguna Madre Wastewater Treatment Plant influent sampler",
+   "sensor_type": "Wastewater surveillance sampling site",
+   "operator": "Corpus Christi-Nueces County Public Health District",
+   "asset_id": "WW-04",
+   "latitude": 27.67173,
+   "longitude": -97.27004,
+   "position_basis": "at parent site WW-04",
+   "parameters": [
+    "norovirus_GII_copies_per_L",
+    "sars_cov_2_copies_per_L"
+   ],
+   "sampling": "twice a week",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "WW-05",
+   "sensor_name": "Whitecap Wastewater Treatment Plant influent sampler",
+   "sensor_type": "Wastewater surveillance sampling site",
+   "operator": "Corpus Christi-Nueces County Public Health District",
+   "asset_id": "WW-05",
+   "latitude": 27.60309,
+   "longitude": -97.25095,
+   "position_basis": "at parent site WW-05",
+   "parameters": [
+    "norovirus_GII_copies_per_L",
+    "sars_cov_2_copies_per_L"
+   ],
+   "sampling": "twice a week",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ],
+ "port_surveillance_sensors": [
+  {
+   "sensor_id": "RADAR-BUOY-NE",
+   "sensor_name": "Buoy-NE, entrance channel off the Port Aransas jetties",
+   "sensor_type": "radar buoy",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.81889,
+   "longitude": -96.99892,
+   "range_nm": 9.5,
+   "berths_in_view": [],
+   "position_basis": "in water",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "RADAR-BUOY-SW",
+   "sensor_name": "Buoy-SW, bay reach of the ship channel",
+   "sensor_type": "radar buoy",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.82002,
+   "longitude": -97.25991,
+   "range_nm": 7.0,
+   "berths_in_view": [],
+   "position_basis": "in water",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-01",
+   "sensor_name": "Rendal Terminals berths 7 and 8",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.81484,
+   "longitude": -97.40132,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-01-B07",
+    " TERM-01-B08"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-02",
+   "sensor_name": "Public cargo docks",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.81191,
+   "longitude": -97.40361,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-07-B01",
+    " TERM-07-B02",
+    " TERM-07-B03",
+    " TERM-07-B04"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-03",
+   "sensor_name": "Main Turning Basin, south bank",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.81484,
+   "longitude": -97.40767,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-17-B01",
+    " TERM-17-B02",
+    " TERM-17-B03",
+    " TERM-13-B02",
+    " TERM-15-B02"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-04",
+   "sensor_name": "Harbor Bridge, channel entrance to the Inner Harbor",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.81191,
+   "longitude": -97.39574,
+   "range_nm": null,
+   "berths_in_view": [],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-05",
+   "sensor_name": "Industrial Canal",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.81371,
+   "longitude": -97.41757,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-13-B01",
+    " TERM-15-B01",
+    " TERM-12-B01"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-06",
+   "sensor_name": "Avery Point Turning Basin",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.82025,
+   "longitude": -97.43281,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-06-B01",
+    " TERM-06-B02"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-07",
+   "sensor_name": "Chemical Turning Basin",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.82227,
+   "longitude": -97.4356,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-02-B01",
+    " TERM-19-B01",
+    " TERM-19-B02",
+    " TERM-20-B01"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-08",
+   "sensor_name": "Tule Lake Channel",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.81529,
+   "longitude": -97.46302,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-18-B01",
+    " TERM-18-B02",
+    " TERM-18-B03",
+    " TERM-18-B04",
+    " TERM-11-B01",
+    " TERM-11-B02"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-09",
+   "sensor_name": "Tule Lake Turning Basin",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.82453,
+   "longitude": -97.49221,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-04-B01",
+    " TERM-04-B02",
+    " TERM-14-B01",
+    " TERM-14-B02",
+    " TERM-05-B01"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-10",
+   "sensor_name": "Viola Turning Basin",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.84233,
+   "longitude": -97.52141,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-05-B02",
+    " TERM-05-B03",
+    " TERM-16-B01"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-11",
+   "sensor_name": "La Quinta LNG berth",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.88063,
+   "longitude": -97.27007,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-03-B01"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-12",
+   "sensor_name": "La Quinta bulk docks",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.88063,
+   "longitude": -97.27591,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-09-B01",
+    " TERM-10-B01"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-13",
+   "sensor_name": "Port Aransas jetties, channel entrance",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.83467,
+   "longitude": -97.04615,
+   "range_nm": null,
+   "berths_in_view": [],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "CAM-14",
+   "sensor_name": "Harbor Island",
+   "sensor_type": "fixed camera",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": 27.84796,
+   "longitude": -97.06214,
+   "range_nm": null,
+   "berths_in_view": [
+    "TERM-23-B01",
+    " TERM-23-B02"
+   ],
+   "position_basis": "on land beside the channel",
+   "stream": "port_surveillance"
+  },
+  {
+   "sensor_id": "VTS-CC",
+   "sensor_name": "Port of Corpus Christi vessel traffic service",
+   "sensor_type": "vessel traffic log",
+   "operator": "Port of Corpus Christi Authority / Coast Guard Sector Corpus Christi",
+   "latitude": null,
+   "longitude": null,
+   "range_nm": null,
+   "berths_in_view": [],
+   "position_basis": "a log kept at the vessel traffic centre; no position",
+   "stream": "port_surveillance"
+  }
+ ],
+ "drone_detection_sensors": [
+  {
+   "sensor_id": "USCG-RDR-R14",
+   "name": "Coast Guard radar buoy R-14, ship channel east of the Harbor Bridge",
+   "sensor_type": "X-band surface-search radar, raw plot archive",
+   "owner": "U.S. Coast Guard Sector Corpus Christi",
+   "latitude": 27.812,
+   "longitude": -97.384,
+   "nominal_range_m": 2500,
+   "reporting_since_utc": "2024-03-11T00:00:00Z",
+   "sensor_name": "Coast Guard radar buoy R-14, ship channel east of the Harbor Bridge",
+   "operator": "U.S. Coast Guard Sector Corpus Christi",
+   "position_basis": "in water",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "USCG-RDR-R18",
+   "name": "Coast Guard radar buoy R-18, Tule Lake Channel",
+   "sensor_type": "X-band surface-search radar, raw plot archive",
+   "owner": "U.S. Coast Guard Sector Corpus Christi",
+   "latitude": 27.8165,
+   "longitude": -97.4592,
+   "nominal_range_m": 2500,
+   "reporting_since_utc": "2024-03-12T00:00:00Z",
+   "sensor_name": "Coast Guard radar buoy R-18, Tule Lake Channel",
+   "operator": "U.S. Coast Guard Sector Corpus Christi",
+   "position_basis": "in water",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "USCG-RDR-R22",
+   "name": "Coast Guard radar buoy R-22, Main Turning Basin",
+   "sensor_type": "X-band surface-search radar, raw plot archive",
+   "owner": "U.S. Coast Guard Sector Corpus Christi",
+   "latitude": 27.8132,
+   "longitude": -97.404,
+   "nominal_range_m": 2500,
+   "reporting_since_utc": "2024-03-12T00:00:00Z",
+   "sensor_name": "Coast Guard radar buoy R-22, Main Turning Basin",
+   "operator": "U.S. Coast Guard Sector Corpus Christi",
+   "position_basis": "in water",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "ESM-CAMCC04",
+   "name": "Electronic support measures receiver aboard CBP aircraft CAMCC-04 (position is the aircraft's)",
+   "sensor_type": "airborne RF intercept and direction finding",
+   "owner": "U.S. Customs and Border Protection, Air and Marine Operations",
+   "latitude": null,
+   "longitude": null,
+   "nominal_range_m": 60000,
+   "reporting_since_utc": "2026-01-15T00:00:00Z",
+   "sensor_name": "Electronic support measures receiver aboard CBP aircraft CAMCC-04 (position is the aircraft's)",
+   "operator": "U.S. Customs and Border Protection, Air and Marine Operations",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "NASCC-PS-01",
+   "name": "NAS Corpus Christi perimeter sensor, north perimeter",
+   "sensor_type": "RF direction finder and short-range radar",
+   "owner": "Naval Air Station Corpus Christi security department",
+   "latitude": 27.7052,
+   "longitude": -97.285,
+   "nominal_range_m": 1800,
+   "reporting_since_utc": "2025-06-02T00:00:00Z",
+   "sensor_name": "NAS Corpus Christi perimeter sensor, north perimeter",
+   "operator": "Naval Air Station Corpus Christi security department",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "NASCC-PS-02",
+   "name": "NAS Corpus Christi perimeter sensor, west gate",
+   "sensor_type": "RF direction finder and short-range radar",
+   "owner": "Naval Air Station Corpus Christi security department",
+   "latitude": 27.69036,
+   "longitude": -97.2985,
+   "nominal_range_m": 1800,
+   "reporting_since_utc": "2025-06-02T00:00:00Z",
+   "sensor_name": "NAS Corpus Christi perimeter sensor, west gate",
+   "operator": "Naval Air Station Corpus Christi security department",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "NASCC-PS-03",
+   "name": "NAS Corpus Christi perimeter sensor, south perimeter",
+   "sensor_type": "RF direction finder and short-range radar",
+   "owner": "Naval Air Station Corpus Christi security department",
+   "latitude": 27.683,
+   "longitude": -97.276,
+   "nominal_range_m": 1800,
+   "reporting_since_utc": "2025-06-02T00:00:00Z",
+   "sensor_name": "NAS Corpus Christi perimeter sensor, south perimeter",
+   "operator": "Naval Air Station Corpus Christi security department",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "NASCC-PS-04",
+   "name": "NAS Corpus Christi perimeter sensor, Army depot hangar line",
+   "sensor_type": "RF direction finder and short-range radar",
+   "owner": "Naval Air Station Corpus Christi security department",
+   "latitude": 27.699,
+   "longitude": -97.2775,
+   "nominal_range_m": 1800,
+   "reporting_since_utc": "2025-06-02T00:00:00Z",
+   "sensor_name": "NAS Corpus Christi perimeter sensor, Army depot hangar line",
+   "operator": "Naval Air Station Corpus Christi security department",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "NASCC-PS-05",
+   "name": "NAS Corpus Christi portable RF detector, flight line",
+   "sensor_type": "portable RF detector (bearing only)",
+   "owner": "Naval Air Station Corpus Christi security department",
+   "latitude": 27.6935,
+   "longitude": -97.283,
+   "nominal_range_m": 2500,
+   "reporting_since_utc": "2027-09-21T22:00:00Z",
+   "sensor_name": "NAS Corpus Christi portable RF detector, flight line",
+   "operator": "Naval Air Station Corpus Christi security department",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "SENT-RF-01",
+   "name": "Counter-UAS RF node, Port of Corpus Christi, Main Turning Basin north shore",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8166,
+   "longitude": -97.401,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-16T15:00:00Z",
+   "sensor_name": "Counter-UAS RF node, Port of Corpus Christi, Main Turning Basin north shore",
+   "operator": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "SENT-RF-02",
+   "name": "Counter-UAS RF node, Port of Corpus Christi, cargo docks",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8118,
+   "longitude": -97.4075,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-16T18:30:00Z",
+   "sensor_name": "Counter-UAS RF node, Port of Corpus Christi, cargo docks",
+   "operator": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "SENT-RF-03",
+   "name": "Counter-UAS RF node, Port of Corpus Christi, Avery Point",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8205,
+   "longitude": -97.435,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-18T16:00:00Z",
+   "sensor_name": "Counter-UAS RF node, Port of Corpus Christi, Avery Point",
+   "operator": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "SENT-RF-04",
+   "name": "Counter-UAS RF node, Port of Corpus Christi, Tule Lake",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8235,
+   "longitude": -97.483,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-19T20:15:00Z",
+   "sensor_name": "Counter-UAS RF node, Port of Corpus Christi, Tule Lake",
+   "operator": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "SENT-RF-05",
+   "name": "Counter-UAS RF node, CBPWA Riverside Switching Station",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8098,
+   "longitude": -97.4553,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-20T15:40:00Z",
+   "sensor_name": "Counter-UAS RF node, CBPWA Riverside Switching Station",
+   "operator": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "SENT-RF-06",
+   "name": "Counter-UAS RF node, CBPWA Harbor View Substation",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8025,
+   "longitude": -97.4525,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-22T17:05:00Z",
+   "sensor_name": "Counter-UAS RF node, CBPWA Harbor View Substation",
+   "operator": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  },
+  {
+   "sensor_id": "SENT-RF-07",
+   "name": "Counter-UAS RF node, Harbor Bridge south approach",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.81451,
+   "longitude": -97.39325,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-23T19:20:00Z",
+   "sensor_name": "Counter-UAS RF node, Harbor Bridge south approach",
+   "operator": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "position_basis": "on land",
+   "stream": "drone_detections"
+  }
+ ]
+}

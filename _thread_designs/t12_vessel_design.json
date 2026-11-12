@@ -1,0 +1,828 @@
+{
+  "thread_id": "T12",
+  "name": "Dark vessel and port surveillance",
+  "color": "#1a7a4a",
+  "scenario": "rafael",
+  "lanes": [
+    "C",
+    "D",
+    "I"
+  ],
+  "truth": "The Port of Corpus Christi's surveillance network — fixed cameras, two radar buoys, the AIS relay and Coast Guard vessel traffic logs — gives an independent physical record of two hidden events; it adds no vessel or incident of its own. First, it brackets the tanker valve attack (T6): cameras show MT Kalvora Star and MT Ostrel Bay intact at the Rendal Terminals berth until the cameras lose power at 02:30Z on D0, and the recovered radar buffer shows no other vessel moving in the channel from Port Condition Zulu through D+1, so the release can only have come from the ships' own cargo systems; the D+5 inspections then find valves opened with no console or deck-log entry and alarms inhibited. Second, after the partial reopening it records the dark vessel (T2, T7): on D+31 MV Halcyon Drift's AIS goes silent for 14 hours, a vessel broadcasting FV Pelican Ridge's identity appears at the anchorage, and radar holds contacts with no AIS match — two hulls side by side at the anchorage and one loitering about 2 nm off the entrance channel. Fusing radar tracks with AIS against the all-contacts-correlated baseline of D-7 to D-1 exposes the gap, the spoof and the uncorrelated hulls.",
+  "phase_onset": 2,
+  "phase_peak": 3,
+  "msel_events": [
+    {
+      "event_id": "EVT-1201",
+      "time_label": "D-7",
+      "day": -7,
+      "day_end": null,
+      "time_utc": "21:00Z",
+      "threads": [
+        "T12",
+        "T2"
+      ],
+      "lanes": [
+        "D",
+        "I"
+      ],
+      "description": "Port surveillance baseline. The Port of Corpus Christi AIS relay and the Coast Guard Sector Corpus Christi vessel traffic picture log MV Halcyon Drift (VSL-0031) at the offshore anchorage under its true MMSI, as they have intermittently since D-45 (EVT-0104). The tanker has filed no notice of arrival and worked no cargo; its pattern — hold among laden crude tankers waiting for berths, shift a few miles, return — is unremarkable on any single day, and nothing is flagged: a tanker holding offshore without orders is common during the export boom. The continuous position history recorded here is the baseline against which the vessel's 14-hour AIS silence on D+31 (EVT-0402) stands out.",
+      "observed_in": [
+        {
+          "stream": "ais",
+          "what": "AIS archive D-14 to D-7: Halcyon Drift reports continuously at anchor-watch intervals with navigational status 'at anchor'; no reporting gap longer than a few minutes; no destination entered. | Analyst note for fusion tools: the pre-storm record contains no AIS gap for this vessel. Any tool that reports one before D+31 is wrong.",
+          "when": {
+            "start_utc": "2027-09-07T21:00Z",
+            "end_utc": "2027-09-07T23:00Z"
+          }
+        },
+        {
+          "stream": "port_surveillance",
+          "what": "Vessel Traffic Service log: no notice of arrival and no agent of record at the Port of Corpus Christi for the vessel during the period.",
+          "when": {
+            "start_utc": "2027-09-07T21:00Z",
+            "end_utc": "2027-09-07T23:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "AIS archive D-14 to D-7: Halcyon Drift reports continuously at anchor-watch intervals with navigational status 'at anchor'; no reporting gap longer than a few minutes; no destination entered.",
+        "Vessel Traffic Service log: no notice of arrival and no agent of record at the Port of Corpus Christi for the vessel during the period.",
+        "Analyst note for fusion tools: the pre-storm record contains no AIS gap for this vessel. Any tool that reports one before D+31 is wrong."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "ANC-OFF",
+        "FAC-USCG-01",
+        "PORT-07",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "uscg_sector_cc_ais_log",
+        "port_ais_relay_archive",
+        "uscg_vessel_traffic_service_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1202",
+      "time_label": "D-3",
+      "day": -3,
+      "day_end": null,
+      "time_utc": "04:30Z",
+      "threads": [
+        "T12",
+        "T2"
+      ],
+      "lanes": [
+        "D",
+        "I"
+      ],
+      "description": "Port Condition X-Ray. As the Coast Guard sets X-Ray (EVT-0207), the port's radar buoy at the entrance channel (Buoy-NE) tracks the offshore anchorage. Every ship-sized radar return correlates to an AIS identity, including Halcyon Drift, whose radar-derived length matches the dimensions in its AIS static data. This all-contacts-correlated picture is the pre-storm baseline for radar-to-AIS fusion: on D+31 the same sensor holds contacts with no AIS match (EVT-0403, EVT-0411).",
+      "observed_in": [
+        {
+          "stream": "port_surveillance",
+          "what": "As the Coast Guard sets X-Ray (EVT-0207), the port's radar buoy at the entrance channel (Buoy-NE) tracks the offshore anchorage.",
+          "when": {
+            "start_utc": "2027-09-11T04:30Z",
+            "end_utc": "2027-09-11T06:30Z"
+          }
+        },
+        {
+          "stream": "ais",
+          "what": "Buoy-NE radar log D-3 04:30Z–06:00Z: all ship-sized tracks at the anchorage and in the approach are matched to AIS identities by the port's track-fusion software; unmatched-track count 0. | Radar-derived length estimates for the anchored tankers fall within the buoy's stated error of their AIS-declared lengths, including Halcyon Drift. | Baseline statistic for later comparison: fraction of ship-sized radar tracks with an AIS match, D-7 to D-1 = 100%.",
+          "when": {
+            "start_utc": "2027-09-11T04:30Z",
+            "end_utc": "2027-09-11T06:30Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Buoy-NE radar log D-3 04:30Z–06:00Z: all ship-sized tracks at the anchorage and in the approach are matched to AIS identities by the port's track-fusion software; unmatched-track count 0.",
+        "Radar-derived length estimates for the anchored tankers fall within the buoy's stated error of their AIS-declared lengths, including Halcyon Drift.",
+        "Baseline statistic for later comparison: fraction of ship-sized radar tracks with an AIS match, D-7 to D-1 = 100%."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "ANC-OFF",
+        "ENT-01"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "port_radar_buoy_logs",
+        "uscg_sector_cc_radar_archive",
+        "port_ais_relay_archive"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1203",
+      "time_label": "D-1",
+      "day": -1,
+      "day_end": null,
+      "time_utc": "17:00Z",
+      "threads": [
+        "T12",
+        "T6",
+        "T1"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "At noon local (17:00Z) the Captain of the Port sets Port Condition Zulu (PUB-108, PUB-120): the ship channel closes to all traffic and the vessels still holding at the offshore anchorage are ordered to sea, to be clear by 18:00 local. Port cameras at the entrance channel and the Buoy-NE radar record the last departures; by evening the anchorage is empty. Halcyon Drift leaves with the others, AIS on. Inside the Inner Harbor, the cameras covering the Rendal Terminals berth (TERM-01) show MT Kalvora Star and MT Ostrel Bay still moored with storm lines doubled — the only laden deep-draft ships left in port, by Coast Guard approval (EVT-0210).",
+      "observed_in": [
+        {
+          "stream": "port_conditions",
+          "what": "COTP Order 27-2027: Port Condition Zulu effective 17:00Z D-1; channel closed to all traffic; vessels at the offshore anchorage directed to sea. Order served on the agents of every vessel in or approaching the port.",
+          "when": {
+            "start_utc": "2027-09-13T17:00Z",
+            "end_utc": "2027-09-13T19:00Z"
+          }
+        },
+        {
+          "stream": "port_surveillance",
+          "what": "Port camera and Buoy-NE record of the anchorage emptying between 17:00Z and 23:00Z D-1; every departing track matched to an AIS identity. | Inner Harbor camera frames D-1 22:00Z: two tankers alongside at TERM-01; no other deep-draft vessel at any Inner Harbor or La Quinta berth.",
+          "when": {
+            "start_utc": "2027-09-13T17:00Z",
+            "end_utc": "2027-09-13T19:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "COTP Order 27-2027: Port Condition Zulu effective 17:00Z D-1; channel closed to all traffic; vessels at the offshore anchorage directed to sea. Order served on the agents of every vessel in or approaching the port.",
+        "Port camera and Buoy-NE record of the anchorage emptying between 17:00Z and 23:00Z D-1; every departing track matched to an AIS identity.",
+        "Inner Harbor camera frames D-1 22:00Z: two tankers alongside at TERM-01; no other deep-draft vessel at any Inner Harbor or La Quinta berth."
+      ],
+      "public_fact": "PUB-120",
+      "place_ids": [
+        "TERM-01",
+        "ANC-OFF",
+        "ENT-01"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "port_authority_closure_log",
+        "port_camera_archive",
+        "port_radar_buoy_logs",
+        "uscg_cotp_order_27_2027"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1204",
+      "time_label": "D0",
+      "day": 0,
+      "day_end": null,
+      "time_utc": "02:15Z",
+      "threads": [
+        "T12",
+        "T6",
+        "T1"
+      ],
+      "lanes": [
+        "D",
+        "I"
+      ],
+      "description": "Last look before landfall. With the channel closed, the port's radar buoys (Buoy-NE at the entrance channel, Buoy-SW on the bay reach) record no vessel movement anywhere in the channel after the anchorage empties. The Inner Harbor cameras lose mains power at 02:30Z; the last frames from the camera covering TERM-01 show both tankers alongside and no sheen on the water. Buoy-SW's data uplink fails at 03:40Z when its antenna is damaged, but the buoy keeps recording to its onboard buffer. No camera sees the berth between 04:00Z and 05:30Z, when the cargo valves are open (EVT-0313).",
+      "observed_in": [
+        {
+          "stream": "port_surveillance",
+          "what": "Port camera archive: last frame from the TERM-01 camera 02:29Z D0 — two tankers moored, mooring lines intact, no visible sheen. Cameras offline from 02:30Z (power loss). | Buoy-SW live feed lost 03:38Z D0 (antenna damage); onboard buffer continues recording. Buoy-NE remains online until 05:10Z.",
+          "when": {
+            "start_utc": "2027-09-14T02:15Z",
+            "end_utc": "2027-09-14T04:15Z"
+          }
+        },
+        {
+          "stream": "port_conditions",
+          "what": "Port Authority storm log 02:40Z: 'Channel clear of traffic. Inner Harbor cameras dark on loss of shore power.'",
+          "when": {
+            "start_utc": "2027-09-14T02:15Z",
+            "end_utc": "2027-09-14T04:15Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Port camera archive: last frame from the TERM-01 camera 02:29Z D0 — two tankers moored, mooring lines intact, no visible sheen. Cameras offline from 02:30Z (power loss).",
+        "Buoy-SW live feed lost 03:38Z D0 (antenna damage); onboard buffer continues recording. Buoy-NE remains online until 05:10Z.",
+        "Port Authority storm log 02:40Z: 'Channel clear of traffic. Inner Harbor cameras dark on loss of shore power.'"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "TERM-01",
+        "ENT-01",
+        "PORT-07"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "port_camera_archive",
+        "port_radar_buoy_logs_recovered",
+        "port_authority_storm_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1205",
+      "time_label": "D+1",
+      "day": 1,
+      "day_end": null,
+      "time_utc": "16:00Z",
+      "threads": [
+        "T12",
+        "T6"
+      ],
+      "lanes": [
+        "D",
+        "I"
+      ],
+      "description": "Recovered radar buffer rules out a third vessel. Port technicians reach Buoy-SW and recover its onboard buffer, closing the gap in the live feed (D0 03:38Z to D+1 11:00Z). The record shows no vessel under way in the bay reach or the Inner Harbor approach at any time from Port Condition Zulu through the morning of D+1: no collision, no allision, no unknown hull near TERM-01. Together with the camera record of both tankers intact at their berth minutes before the release, this leaves the ships' own cargo systems as the only possible source — the physical-surveillance half of the finding that cyber responders reach from the vendor session logs (EVT-0316).",
+      "observed_in": [
+        {
+          "stream": "port_surveillance",
+          "what": "Buoy-SW buffer recovery log BUOY-SW-REC-20270915: continuous radar record D0 03:38Z through D+1 11:00Z; ship-sized tracks under way in the channel during the window: 0. | Vessel Traffic Service log D-1 23:00Z to D+1 12:00Z: no transits, no pilot orders, no tug movements. | Port camera archive: first post-storm frame from a restored Inner Harbor camera (D+1 14:10Z) shows both tankers still alongside at TERM-01, heavy sheen in the basin, containment boom...",
+          "when": {
+            "start_utc": "2027-09-15T16:00Z",
+            "end_utc": "2027-09-15T18:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Buoy-SW buffer recovery log BUOY-SW-REC-20270915: continuous radar record D0 03:38Z through D+1 11:00Z; ship-sized tracks under way in the channel during the window: 0.",
+        "Vessel Traffic Service log D-1 23:00Z to D+1 12:00Z: no transits, no pilot orders, no tug movements.",
+        "Port camera archive: first post-storm frame from a restored Inner Harbor camera (D+1 14:10Z) shows both tankers still alongside at TERM-01, heavy sheen in the basin, containment boom not yet deployed."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "TERM-01",
+        "PORT-07"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "port_radar_buoy_logs_recovered",
+        "uscg_vessel_traffic_service_log",
+        "port_camera_archive"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1206",
+      "time_label": "D+1 to D+5",
+      "day": 1,
+      "day_end": 5,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T12",
+        "T6"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Post-storm aerial passes and satellite imagery document the oil spreading from the Rendal Terminals berth (TERM-01) out of the ship channel into Nueces and Corpus Christi bays (EVT-0314): first seen in NOAA SAR imagery on the morning of D0 (EVT-1102), covering about 85 km² (33 square miles) by D+2. Rendal Terminals reports the discharge to the National Response Center. The Captain of the Port establishes a safety zone in the Inner Harbor; the channel stays closed. As port cameras return to service they record boom going out at the berth, both tankers still moored, and skimmers working the Inner Harbor.",
+      "observed_in": [
+        {
+          "stream": "satellite",
+          "what": "Radar pass on D0 (08:30Z): oil-on-water signature in the Inner Harbor around TERM-01. Optical scene on D+2: sheen across Nueces Bay and the western half of Corpus Christi Bay, about 85 square km, with oil on North Beach.",
+          "when": {
+            "start_utc": "2027-09-14T05:00Z",
+            "end_utc": "2027-09-17T05:00Z"
+          }
+        },
+        {
+          "stream": "public_record",
+          "what": "National Response Center report filed by the terminal operator on D0: crude oil discharge from two moored tankers at the Inner Harbor berth, volume unknown.",
+          "when": {
+            "start_utc": "2027-09-14T05:00Z",
+            "end_utc": "2027-09-16T05:00Z"
+          }
+        },
+        {
+          "stream": "port_conditions",
+          "what": "Captain of the Port safety zone in the Inner Harbor; the channel stays closed.",
+          "when": {
+            "start_utc": "2027-09-14T05:00Z",
+            "end_utc": "2027-09-17T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "NOAA SAR D0 pass (08:30Z): oil-on-water signature (dampened backscatter) in the Inner Harbor around TERM-01. First detection of the slick.",
+        "Optical satellite imagery D+2: sheen across Nueces Bay and the western half of Corpus Christi Bay, about 85 km² in total, with oil on North Beach and Portland shorelines.",
+        "NRC incident report filed by the terminal operator on D0: crude oil discharge from two moored tankers at the Inner Harbor berth, volume unknown at time of report, cause under investigation.",
+        "Coast Guard Notice to Mariners: safety zone in the Inner Harbor; ship channel closed to all traffic until further notice."
+      ],
+      "public_fact": "PUB-121",
+      "place_ids": [
+        "TERM-01",
+        "PORT-07",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "noaa_sar_imagery",
+        "sentinel2_optical_imagery",
+        "uscg_sector_ntrm",
+        "nrc_incident_report",
+        "port_camera_archive"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1207",
+      "time_label": "D+5",
+      "day": 5,
+      "day_end": null,
+      "time_utc": "08:00Z",
+      "threads": [
+        "T12",
+        "T6"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Coast Guard marine inspectors and pollution investigators complete inspections aboard MT Kalvora Star and MT Ostrel Bay at the berth. On both ships the cargo manifold valves that the crews found open and closed by hand have no corresponding entry in the cargo-control console logs or the deck logs, and the alarm panels show the cargo alarms inhibited for the period of the release. The inspection reports give the cyber responders (EVT-0316) physical confirmation that the valve movements did not come from the crews' consoles. The port hands its camera, radar and AIS archive for D-3 to D+5 to the investigation.",
+      "observed_in": [
+        {
+          "stream": "vessel_ot_logs",
+          "what": "Coast Guard inspection reports (one per vessel, official use only): manifold valves found open on the morning of D0 with no console or deck-log entry ordering them open; crews' statements agree that no cargo operation was under way. | Cargo alarm panels on both vessels: high-level and valve-position alarms recorded as inhibited from shortly before 04:00Z until crews reset them after 05:30Z. | Cargo reconciliation: combined shortfall against the loading...",
+          "when": {
+            "start_utc": "2027-09-19T08:00Z",
+            "end_utc": "2027-09-19T10:00Z"
+          }
+        },
+        {
+          "stream": "port_surveillance",
+          "what": "The port hands its camera, radar and AIS archive for D-3 to D+5 to the investigation.",
+          "when": {
+            "start_utc": "2027-09-19T08:00Z",
+            "end_utc": "2027-09-19T10:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Coast Guard inspection reports (one per vessel, official use only): manifold valves found open on the morning of D0 with no console or deck-log entry ordering them open; crews' statements agree that no cargo operation was under way.",
+        "Cargo alarm panels on both vessels: high-level and valve-position alarms recorded as inhibited from shortly before 04:00Z until crews reset them after 05:30Z.",
+        "Cargo reconciliation: combined shortfall against the loading documents of about 9,000 barrels, matching the Unified Command estimate (PUB-029)."
+      ],
+      "public_fact": "PUB-122",
+      "place_ids": [
+        "TERM-01"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "uscg_inspection_reports_kalvora_star_ostrel_bay",
+        "vessel_cargo_logs",
+        "port_surveillance_archive_transfer"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "uscg_inspection_reports_kalvora_star_ostrel_bay",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1208",
+      "time_label": "D+30",
+      "day": 30,
+      "day_end": null,
+      "time_utc": "16:00Z",
+      "threads": [
+        "T12",
+        "T2",
+        "T1"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "The ship channel partly reopens (EVT-0401; PUB-058, PUB-123): the outer and bay reaches are cleared for deep-draft traffic while the inner channel stays restricted for vessel decontamination until D+44 (EVT-0410). The port's surveillance network is back in service in time for the night that follows: 8 of 14 fixed cameras are online and both radar buoys are reporting. On D+31 it records Halcyon Drift's 14-hour AIS silence, a vessel broadcasting FV Pelican Ridge's identity at the anchorage, and radar contacts with no AIS match — two hulls side by side at the anchorage and one loitering about 2 nm off the entrance channel (EVT-0402, EVT-0403, EVT-0411).",
+      "observed_in": [
+        {
+          "stream": "port_conditions",
+          "what": "Partial reopening: outer and bay reaches cleared for deep-draft traffic; inner channel restricted until D+44.",
+          "when": {
+            "start_utc": "2027-10-14T16:00Z",
+            "end_utc": "2027-10-14T18:00Z"
+          }
+        },
+        {
+          "stream": "port_surveillance",
+          "what": "Sensor status on D+30: 8 of 14 fixed cameras and both radar buoys reporting. Overnight into D+31 the share of ship-sized radar tracks with an AIS match falls below 100 percent for the first time since before the storm.",
+          "when": {
+            "start_utc": "2027-10-14T05:00Z",
+            "end_utc": "2027-10-16T05:00Z"
+          }
+        },
+        {
+          "stream": "ais",
+          "what": "First deep-draft transits since the storm.",
+          "when": {
+            "start_utc": "2027-10-14T05:00Z",
+            "end_utc": "2027-10-16T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Port Authority surveillance status D+30: 8 of 14 fixed cameras operational; Buoy-NE online; Buoy-SW antenna repaired D+18 and reporting.",
+        "Buoy-NE radar and AIS relay, night of D+30 into D+31: fraction of ship-sized radar tracks with an AIS match falls below 100% for the first time since the baseline (EVT-1202) — see EVT-0403 and EVT-0411.",
+        "Six cameras along the Inner Harbor remain offline pending replacement parts."
+      ],
+      "public_fact": "PUB-123",
+      "place_ids": [
+        "ENT-01",
+        "PORT-07"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "port_authority_reopen_announcement",
+        "port_camera_status_log",
+        "port_radar_buoy_logs",
+        "port_ais_relay_archive"
+      ],
+      "observable": true,
+      "places_inferred": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "PUB-120",
+      "day": -1,
+      "time_local": "12:00",
+      "type": "official_statement",
+      "source": "Port of Corpus Christi Authority / USCG Captain of the Port",
+      "statement": "The Port of Corpus Christi Authority and the United States Coast Guard Captain of the Port have set Port Condition Zulu for the Port of Corpus Christi effective noon today, September 13, 2027, in advance of Hurricane Rafael. The Corpus Christi Ship Channel is closed to all commercial vessel traffic. Inbound traffic has been suspended since Port Condition Yankee was set on Sunday. Vessels still holding at the offshore anchorage have been directed to put to sea and must be clear of the anchorage by 6:00 p.m. today. Two laden tankers have Coast Guard approval to remain moored at an Inner Harbor terminal through the storm. Port Authority Director of Operations Julio Sandoval-Reeves stated: 'We have coordinated the safe departure of the vessels that were waiting offshore, and we are in contact with every vessel remaining in port. The safety of mariners and port workers is our highest priority.' The port will remain closed until post-storm surveys of channel depth, aids to navigation and terminal infrastructure are complete. Vessel agents should contact USCG Vessel Traffic Service Corpus Christi.",
+      "arcs": [
+        "ARC-PORT",
+        "ARC-COMMUNITY"
+      ],
+      "events": [
+        "EVT-1203"
+      ],
+      "places": [
+        "Port of Corpus Christi",
+        "Corpus Christi Bay",
+        "Corpus Christi Ship Channel"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-121",
+      "day": 2,
+      "time_local": "10:00",
+      "type": "press_release",
+      "source": "USCG Sector Corpus Christi / National Response Center",
+      "statement": "The United States Coast Guard Sector Corpus Christi confirms that crude oil released at the Rendal Terminals berth in the Inner Harbor as Hurricane Rafael arrived has been carried by storm surge and wind out of the Corpus Christi Ship Channel into Nueces Bay and Corpus Christi Bay. Coast Guard overflights and NOAA aerial imagery this morning show sheen across about 33 square miles of the two bays, with oil on shorelines and in marshes. The source is the two moored tankers identified by the Unified Command on Wednesday, MT Kalvora Star and MT Ostrel Bay; the estimated release remains about 9,000 barrels, and the cause is under investigation. With winds dropping, response crews are deploying containment boom, and a wildlife hotline has opened. The National Response Center has been notified. The Captain of the Port has established a safety zone in the Inner Harbor, and the ship channel remains closed. The public is advised to avoid contact with oil and oiled shoreline and to stay out of affected waters until further notice.",
+      "arcs": [
+        "ARC-SPILL",
+        "ARC-PORT"
+      ],
+      "events": [
+        "EVT-1206"
+      ],
+      "places": [
+        "Corpus Christi Bay",
+        "Nueces Bay",
+        "Port of Corpus Christi",
+        "Corpus Christi Ship Channel"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-122",
+      "day": 6,
+      "time_local": "15:00",
+      "type": "press_release",
+      "source": "USCG Sector Corpus Christi",
+      "statement": "The United States Coast Guard Sector Corpus Christi confirms that marine inspectors and pollution investigators completed inspections aboard MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth yesterday, September 19, 2027. Both crews are safe. Both vessels remain moored under a Captain of the Port order and will not move until the investigation and the owners' obligations under federal oil spill law are addressed. Investigators documented the condition of the cargo systems on both ships and are examining possible unauthorized remote access to the tankers' cargo-control systems, with federal cyber teams assisting. The Coast Guard will not characterize the cause of the release while the investigation is open. The oil spill response continues, with containment boom deployed along affected shoreline in Nueces and Corpus Christi bays.",
+      "arcs": [
+        "ARC-SPILL"
+      ],
+      "events": [
+        "EVT-1207"
+      ],
+      "places": [
+        "Corpus Christi Ship Channel",
+        "Port of Corpus Christi"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-123",
+      "day": 30,
+      "time_local": "14:00",
+      "type": "press_release",
+      "source": "Port of Corpus Christi Authority",
+      "statement": "The Port of Corpus Christi Authority announced today that the Corpus Christi Ship Channel has partly reopened to commercial traffic, 30 days after Hurricane Rafael closed it. The Coast Guard cleared the outer and bay reaches of the channel after surveys of channel depth and aids to navigation. The inner channel remains restricted while vessels and berths affected by the Inner Harbor oil spill are decontaminated; no date has been set for lifting that restriction. Ships waiting at the offshore anchorage will be brought in by priority, and the backlog will delay some cargo, including relief shipments. Port Authority Director of Operations Julio Sandoval-Reeves said: 'We are grateful for the patience of our customers and maritime partners. The port team, together with the Coast Guard, NOAA and our contractor crews, worked extraordinary hours to restore safe navigation after one of the most demanding storm responses in our history.' Six port security cameras along the Inner Harbor remain offline pending replacement parts. The Coast Guard investigation into the tanker oil release remains open.",
+      "arcs": [
+        "ARC-PORT",
+        "ARC-SPILL"
+      ],
+      "events": [
+        "EVT-1208"
+      ],
+      "places": [
+        "Port of Corpus Christi",
+        "Corpus Christi Ship Channel"
+      ],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "port_camera_coverage",
+      "label": "Port camera network coverage",
+      "kind": "number",
+      "group": "Port & maritime",
+      "unit": "%",
+      "thread": "T12",
+      "description": "Percentage of Port of Corpus Christi camera network (14 cameras) that are operational and transmitting.",
+      "keyframes": [
+        {
+          "day": -7,
+          "value": 100
+        },
+        {
+          "day": -1,
+          "value": 100
+        },
+        {
+          "day": 0,
+          "value": 71
+        },
+        {
+          "day": 1,
+          "value": 57
+        },
+        {
+          "day": 3,
+          "value": 57
+        },
+        {
+          "day": 7,
+          "value": 64
+        },
+        {
+          "day": 15,
+          "value": 64
+        },
+        {
+          "day": 22,
+          "value": 71
+        },
+        {
+          "day": 30,
+          "value": 57
+        },
+        {
+          "day": 45,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "ais_track_confidence",
+      "label": "Halcyon Drift AIS track confidence",
+      "kind": "state",
+      "group": "Port & maritime",
+      "thread": "T12",
+      "description": "Confidence level of the AIS track for MV Halcyon Drift (VSL-0031). Continuous until the 14-hour silence on D+31 (EVT-0402); the spoofed FV Pelican Ridge identity is reported publicly on D+38.",
+      "states": [
+        {
+          "value": "confirmed",
+          "color": "#1a7a4a",
+          "label": "Confirmed AIS track"
+        },
+        {
+          "value": "gap_undetected",
+          "color": "#6b7280",
+          "label": "AIS gap — undetected"
+        },
+        {
+          "value": "gap_flagged",
+          "color": "#fbbf24",
+          "label": "AIS gap — flagged, under review"
+        },
+        {
+          "value": "radar_only",
+          "color": "#f97316",
+          "label": "Radar track only — no AIS"
+        },
+        {
+          "value": "confirmed_post_gap",
+          "color": "#15803d",
+          "label": "AIS resumed — position confirmed"
+        }
+      ],
+      "keyframes": [
+        {
+          "day": -45,
+          "value": "confirmed"
+        },
+        {
+          "day": 31,
+          "value": "radar_only"
+        },
+        {
+          "day": 32,
+          "value": "confirmed_post_gap"
+        },
+        {
+          "day": 38,
+          "value": "gap_flagged"
+        }
+      ]
+    },
+    {
+      "id": "coast_guard_patrol_level",
+      "label": "USCG Sector CC patrol level",
+      "kind": "state",
+      "group": "Port & maritime",
+      "thread": "T12",
+      "description": "Operational patrol posture of USCG Sector Corpus Christi relative to normal.",
+      "states": [
+        {
+          "value": "normal",
+          "color": "#6b7280",
+          "label": "Normal operations"
+        },
+        {
+          "value": "elevated_prestorm",
+          "color": "#fbbf24",
+          "label": "Elevated — pre-storm"
+        },
+        {
+          "value": "standdown_storm",
+          "color": "#dc2626",
+          "label": "Storm stand-down (assets secured)"
+        },
+        {
+          "value": "surge_response",
+          "color": "#f97316",
+          "label": "Surge response — all assets"
+        },
+        {
+          "value": "investigation_posture",
+          "color": "#1a7a4a",
+          "label": "Investigation posture"
+        },
+        {
+          "value": "elevated_ongoing",
+          "color": "#15803d",
+          "label": "Elevated — ongoing investigation"
+        }
+      ],
+      "keyframes": [
+        {
+          "day": -7,
+          "value": "normal"
+        },
+        {
+          "day": -3,
+          "value": "elevated_prestorm"
+        },
+        {
+          "day": -1,
+          "value": "elevated_prestorm"
+        },
+        {
+          "day": 0,
+          "value": "standdown_storm"
+        },
+        {
+          "day": 1,
+          "value": "surge_response"
+        },
+        {
+          "day": 3,
+          "value": "surge_response"
+        },
+        {
+          "day": 5,
+          "value": "investigation_posture"
+        },
+        {
+          "day": 15,
+          "value": "investigation_posture"
+        },
+        {
+          "day": 30,
+          "value": "elevated_ongoing"
+        }
+      ]
+    }
+  ],
+  "news_arcs": [
+    {
+      "arc_id": "ARC-SPILL",
+      "name": "Inner Harbor oil spill and the port's surveillance record",
+      "thread": "T12",
+      "description": "Public coverage that touches this thread's facts: the Zulu closure, the spill moving into the bays, the tanker inspections and the partial reopening. The surveillance record itself is never public.",
+      "story_hooks": [
+        {
+          "story_id": "NWS-M001-07",
+          "day": -1,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Port Condition Zulu: Corpus Christi ship channel shut to all traffic; anchorage empties as Rafael closes in",
+          "public_facts_used": [
+            "PUB-120"
+          ]
+        },
+        {
+          "story_id": "NWS-M001-11",
+          "day": -1,
+          "outlet": "OUT-08",
+          "outlet_name": "KNCB Coastal Bend Radio",
+          "headline": "Canal cerrado y viento en aumento: lo que debe saber esta noche / Channel closed, winds rising: what to know tonight",
+          "public_facts_used": [
+            "PUB-120"
+          ]
+        },
+        {
+          "story_id": "NWS-P002-07",
+          "day": 2,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Coast Guard confirms Inner Harbor crude has reached both bays; safety zone set, boom going out as winds drop",
+          "public_facts_used": [
+            "PUB-121"
+          ]
+        },
+        {
+          "story_id": "NWS-P006-05",
+          "day": 6,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Coast Guard completes inspections aboard Kalvora Star and Ostrel Bay; both tankers held at berth",
+          "public_facts_used": [
+            "PUB-122"
+          ]
+        },
+        {
+          "story_id": "NWS-P007-06",
+          "day": 7,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Coast Guard designates owners of Kalvora Star and Ostrel Bay as responsible parties; trust fund opened at $4.2 million",
+          "public_facts_used": [
+            "PUB-122"
+          ]
+        },
+        {
+          "story_id": "NWS-P016-03",
+          "day": 16,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Held at the berth: what a Captain of the Port order means for Kalvora Star and Ostrel Bay",
+          "public_facts_used": [
+            "PUB-122"
+          ]
+        },
+        {
+          "story_id": "NWS-P030-05",
+          "day": 30,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Port authority: ships to move by priority as channel partly reopens; no date for the inner channel",
+          "public_facts_used": [
+            "PUB-123"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "GW-ENT-14",
+      "name": "USCG Marine Safety Unit Corpus Christi — tanker inspection team",
+      "type": "government_unit",
+      "note": "Fictional Coast Guard team that completed the D+5 inspections aboard MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth."
+    },
+    {
+      "id": "GW-ENT-15",
+      "name": "Port of Corpus Christi Radar Buoy Network",
+      "type": "infrastructure",
+      "note": "Two radar buoys maintained by the Port of Corpus Christi Authority: Buoy-NE (entrance channel off the Port Aransas jetties) and Buoy-SW (bay reach of the ship channel). Both have onboard data buffers that preserved data through the D0–D+1 comm outage. Exact positions are set in the sensor registry from 99_reference/geo."
+    },
+    {
+      "id": "GW-ENT-16",
+      "name": "Oceanic Transparency Project",
+      "type": "ngo",
+      "note": "Fictional independent maritime vessel tracking and transparency organization. Publishes public AIS analysis and vessel track reconstructions."
+    }
+  ],
+  "answer_key_path": "Two chains. (1) Tanker release, T6: the port camera archive shows MT Kalvora Star and MT Ostrel Bay intact at TERM-01 with no sheen at 02:29Z D0, minutes before the cameras lose power; the recovered Buoy-SW radar buffer shows no vessel under way in the channel from Port Condition Zulu through the morning of D+1; the NOAA SAR pass at 08:30Z D0 shows oil around the berth. With no other hull present, the oil can only have come from the two ships' own cargo systems, and the D+5 inspection reports (valves opened with no console or deck-log entry, cargo alarms inhibited) join to the vendor remote-session finding in T6 (EVT-0316). (2) Dark vessel, T2 and T7: build the radar-to-AIS match rate from Buoy-NE for D-7 to D-1 (100%, EVT-1202) and compare it with the night of D+30 into D+31. The AIS archive shows MV Halcyon Drift silent from 02:00Z to 16:00Z on D+31 after months of continuous reporting (EVT-1201, EVT-0402); in the same window an MMSI belonging to FV Pelican Ridge appears at the anchorage while that vessel's own reports place it about 600 nm away; radar holds an uncorrelated hull loitering about 2 nm off the entrance channel at 04:20Z (EVT-0411) and two hulls side by side at 09:30Z (EVT-0403). A tool that fuses radar tracks with AIS identities, flags identity collisions and measures gaps against each vessel's own baseline recovers the gap, the spoof and both uncorrelated contacts.",
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

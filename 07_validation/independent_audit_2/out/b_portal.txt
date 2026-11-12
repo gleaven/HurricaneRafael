@@ -1,0 +1,28 @@
+events {'page_view': 31025, 'login_failed': 220810, 'account_created': 30058, 'application_submitted': 30058, 'login_success': 1914, 'profile_updated: email address': 268, 'profile_updated: phone number': 434, 'profile_updated: direct deposit': 881, 'profile_updated: mailing address': 331}
+networks [('ASN 64512', 223552), ('ASN 22773', 13926), ('ASN 11427', 13655), ('ASN 21928', 13628), ('ASN 7018', 13601), ('ASN 20057', 13525), ('ASN 64500', 8120), ('ASN 20115', 7914), ('ASN 7922', 7858)]
+path/event combos
+   ('POST', '/login', '401', 'login_failed') 220274
+   ('POST', '/account/register', '201', 'account_created') 30058
+   ('POST', '/applications', '201', 'application_submitted') 30058
+   ('GET', '/status', '200', 'page_view') 4439
+   ('GET', '/', '200', 'page_view') 4203
+   ('GET', '/es/ayuda', '200', 'page_view') 4203
+   ('GET', '/disasters/current', '200', 'page_view') 4192
+   ('GET', '/help/documents', '200', 'page_view') 4149
+   ('GET', '/help/eligibility', '200', 'page_view') 4149
+   ('GET', '/login', '200', 'page_view') 4047
+   ('POST', '/login', '200', 'login_success') 1914
+   ('POST', '/account/direct-deposit', '200', 'profile_updated: direct deposit') 881
+   ('POST', '/account/phone-number', '200', 'profile_updated: phone number') 434
+   ('POST', '/account/mailing-address', '200', 'profile_updated: mailing address') 331
+   ('GET', '/account/register', '200', 'page_view') 285
+   ('GET', '/owa', '404', 'page_view') 285
+   ('GET', '/account/recover', '200', 'page_view') 281
+   ('GET', '/admin', '404', 'page_view') 280
+   ('POST', '/api/v1/session', '401', 'login_failed') 276
+   ('GET', '/.well-known/security.txt', '200', 'page_view') 269
+   ('POST', '/account/email-address', '200', 'profile_updated: email address') 268
+   ('POST', '/login.aspx', '401', 'login_failed') 260
+   ('GET', '/help/contact', '200', 'page_view') 243
+login_success before 2027-11-13 by month {'reg-2027-11-12': 9}
+64512 rows 223552

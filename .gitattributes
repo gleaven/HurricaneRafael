@@ -1,0 +1,9 @@
+# Files are locked by SHA-256 in 07_validation/manifest.lock.json.
+# Never let git rewrite line endings, or the lock check fails after a checkout on Windows.
+* -text
+
+# Generated data: keep it out of language statistics and collapse it in diffs.
+05_other_sources/** linguist-generated
+09_shared_state_timeline/viewer/map_data/** linguist-generated
+04_knowledge_graph/** linguist-generated
+99_reference/geo/*.geojson linguist-generated

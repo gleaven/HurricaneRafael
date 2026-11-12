@@ -1,0 +1,3092 @@
+{
+ "what": "USFWS National Wetlands Inventory class at interior points of override polygons (audit of 2026-11-11). v2_index = feature index in _parts/water_overrides_local.v2_interrupted.geojson. Query points are interior points computed for the lookup only (pole of inaccessibility on a 5 m raster); they are not used as geometry anywhere.",
+ "url_pattern": "https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0/query?geometry=<lon>,<lat>&geometryType=esriGeometryPoint&inSR=4326&outFields=ATTRIBUTE,WETLAND_TYPE&returnGeometry=false&f=json",
+ "fetched": "2026-11-11",
+ "controls": "6 points fetched twice (main session and subagent batches) returned identical codes",
+ "rows": [
+  {
+   "v2_index": 0,
+   "objectid": 82900,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.5,
+    27.75,
+    -97.425,
+    27.825
+   ],
+   "query_lon": -97.43636,
+   "query_lat": 27.82074,
+   "nwi": [
+    [
+     "E1UBLx",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 2,
+   "objectid": 82902,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.5,
+    27.75,
+    -97.425,
+    27.825
+   ],
+   "query_lon": -97.44778,
+   "query_lat": 27.81614,
+   "nwi": [
+    [
+     "PEM1Cx",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 3,
+   "objectid": 82903,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.425,
+    27.75,
+    -97.35,
+    27.825
+   ],
+   "query_lon": -97.42031,
+   "query_lat": 27.82191,
+   "nwi": [
+    [
+     "L2UBK",
+     "Lake"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 5,
+   "objectid": 82905,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.425,
+    27.75,
+    -97.35,
+    27.825
+   ],
+   "query_lon": -97.4161,
+   "query_lat": 27.82191,
+   "nwi": [],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 6,
+   "objectid": 82906,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.75,
+    -97.05,
+    27.825
+   ],
+   "query_lon": -97.0883,
+   "query_lat": 27.8126,
+   "nwi": [
+    [
+     "E2USMx",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 6,
+   "objectid": 82906,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.75,
+    -97.05,
+    27.825
+   ],
+   "query_lon": -97.0878,
+   "query_lat": 27.8122,
+   "nwi": [
+    [
+     "E2USMx",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 6,
+   "objectid": 82906,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.75,
+    -97.05,
+    27.825
+   ],
+   "query_lon": -97.0855,
+   "query_lat": 27.8105,
+   "nwi": [
+    [
+     "E2USMx",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 7,
+   "objectid": 82907,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.575,
+    27.825,
+    -97.5,
+    27.9
+   ],
+   "query_lon": -97.52161,
+   "query_lat": 27.83719,
+   "nwi": [
+    [
+     "PEM1Fx",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 8,
+   "objectid": 82908,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.575,
+    27.825,
+    -97.5,
+    27.9
+   ],
+   "query_lon": -97.52075,
+   "query_lat": 27.83782,
+   "nwi": [],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 9,
+   "objectid": 82909,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.575,
+    27.825,
+    -97.5,
+    27.9
+   ],
+   "query_lon": -97.51349,
+   "query_lat": 27.83476,
+   "nwi": [
+    [
+     "PEM1Cx",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 10,
+   "objectid": 82910,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.425,
+    27.825,
+    -97.35,
+    27.9
+   ],
+   "query_lon": -97.36507,
+   "query_lat": 27.88023,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 11,
+   "objectid": 82911,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.35,
+    27.825,
+    -97.275,
+    27.9
+   ],
+   "query_lon": -97.32948,
+   "query_lat": 27.86968,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 12,
+   "objectid": 82912,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.825,
+    -97.125,
+    27.9
+   ],
+   "query_lon": -97.15206,
+   "query_lat": 27.88365,
+   "nwi": [
+    [
+     "E1UBLx",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 14,
+   "objectid": 82914,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.825,
+    -97.125,
+    27.9
+   ],
+   "query_lon": -97.17359,
+   "query_lat": 27.86432,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 16,
+   "objectid": 82916,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.825,
+    -97.05,
+    27.9
+   ],
+   "query_lon": -97.0598,
+   "query_lat": 27.89879,
+   "nwi": [
+    [
+     "E1AB3L",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 19,
+   "objectid": 89318,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.35,
+    27.525,
+    -97.275,
+    27.6
+   ],
+   "query_lon": -97.29627,
+   "query_lat": 27.59226,
+   "nwi": [
+    [
+     "E2EM1P",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 20,
+   "objectid": 89319,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.35,
+    27.525,
+    -97.275,
+    27.6
+   ],
+   "query_lon": -97.31379,
+   "query_lat": 27.58888,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 23,
+   "objectid": 89322,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.35,
+    27.525,
+    -97.275,
+    27.6
+   ],
+   "query_lon": -97.33374,
+   "query_lat": 27.53922,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 25,
+   "objectid": 89324,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.275,
+    27.525,
+    -97.2,
+    27.6
+   ],
+   "query_lon": -97.24006,
+   "query_lat": 27.58897,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 44,
+   "objectid": 89343,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    27.9,
+    -96.975,
+    27.975
+   ],
+   "query_lon": -96.99329,
+   "query_lat": 27.94521,
+   "nwi": [
+    [
+     "E2USN",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 45,
+   "objectid": 89344,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    27.9,
+    -96.975,
+    27.975
+   ],
+   "query_lon": -96.99644,
+   "query_lat": 27.94025,
+   "nwi": [
+    [
+     "E1UBL",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 51,
+   "objectid": 89350,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    28.05,
+    -96.975,
+    28.125
+   ],
+   "query_lon": -97.04995,
+   "query_lat": 28.11817,
+   "nwi": [
+    [
+     "E2EM1N",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 53,
+   "objectid": 89352,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    28.05,
+    -96.975,
+    28.125
+   ],
+   "query_lon": -97.04604,
+   "query_lat": 28.11763,
+   "nwi": [
+    [
+     "E2EM1N",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 72,
+   "objectid": 127446,
+   "geoid": null,
+   "name": "Laguna Larga",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.40127,
+   "query_lat": 27.56509,
+   "nwi": [
+    [
+     "PEM1A",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 72,
+   "objectid": 127446,
+   "geoid": null,
+   "name": "Laguna Larga",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.39701,
+   "query_lat": 27.56603,
+   "nwi": [
+    [
+     "PEM1A",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 73,
+   "objectid": 127502,
+   "geoid": null,
+   "name": "Laguna Larga",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.40336,
+   "query_lat": 27.56801,
+   "nwi": [
+    [
+     "PEM1J",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 78,
+   "objectid": 150541,
+   "geoid": null,
+   "name": "Tule Lk",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.75,
+    -97.5,
+    27.825
+   ],
+   "query_lon": -97.50404,
+   "query_lat": 27.82106,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 81,
+   "objectid": 212834,
+   "geoid": null,
+   "name": "Swan Lk",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.17446,
+   "query_lat": 28.04882,
+   "nwi": [
+    [
+     "E1UBL",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 82,
+   "objectid": 212834,
+   "geoid": null,
+   "name": "Swan Lk",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.17664,
+   "query_lat": 28.05319,
+   "nwi": [
+    [
+     "E1UBL",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 86,
+   "objectid": 213477,
+   "geoid": null,
+   "name": "Laguna Larga",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.39787,
+   "query_lat": 27.56135,
+   "nwi": [
+    [
+     "PEM1A",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 86,
+   "objectid": 213477,
+   "geoid": null,
+   "name": "Laguna Larga",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.39513,
+   "query_lat": 27.56139,
+   "nwi": [
+    [
+     "PEM1F",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 89,
+   "objectid": 282440,
+   "geoid": null,
+   "name": "Nueces Riv",
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.575,
+    27.825,
+    -97.5,
+    27.9
+   ],
+   "query_lon": -97.5044,
+   "query_lat": 27.84359,
+   "nwi": [
+    [
+     "E1UBL",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 93,
+   "objectid": 660897,
+   "geoid": null,
+   "name": "Laguna Larga",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.38416,
+   "query_lat": 27.56549,
+   "nwi": [
+    [
+     "PEM1F",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 93,
+   "objectid": 660897,
+   "geoid": null,
+   "name": "Laguna Larga",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.38178,
+   "query_lat": 27.56486,
+   "nwi": [
+    [
+     "PEM1F",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 96,
+   "objectid": 833082,
+   "geoid": null,
+   "name": "Meadowlark Lk",
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    28.05,
+    -96.975,
+    28.125
+   ],
+   "query_lon": -97.04787,
+   "query_lat": 28.06558,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 97,
+   "objectid": 833083,
+   "geoid": null,
+   "name": "Fresh Water Lk",
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.17659,
+   "query_lat": 27.96098,
+   "nwi": [
+    [
+     "L2UBFh",
+     "Lake"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 98,
+   "objectid": 833357,
+   "geoid": null,
+   "name": "Fresh Water Lk",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.19055,
+   "query_lat": 28.02966,
+   "nwi": [
+    [
+     "L1UBHh",
+     "Lake"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 103,
+   "objectid": 973949,
+   "geoid": null,
+   "name": "Sandpiper Lk",
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    28.05,
+    -96.975,
+    28.125
+   ],
+   "query_lon": -97.04894,
+   "query_lat": 28.06536,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 105,
+   "objectid": 1094130,
+   "geoid": null,
+   "name": "Oso Lk",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.675,
+    -97.275,
+    27.75
+   ],
+   "query_lon": -97.35167,
+   "query_lat": 27.71218,
+   "nwi": [
+    [
+     "PUBHh",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 106,
+   "objectid": 1252936,
+   "geoid": null,
+   "name": "Laguna Larga",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.39361,
+   "query_lat": 27.55833,
+   "nwi": [
+    [
+     "PEM1F",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 106,
+   "objectid": 1252936,
+   "geoid": null,
+   "name": "Laguna Larga",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.3932,
+   "query_lat": 27.55652,
+   "nwi": [
+    [
+     "PEM1F",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 107,
+   "objectid": 1259182,
+   "geoid": null,
+   "name": "Fresh Water Lk",
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.17929,
+   "query_lat": 27.96005,
+   "nwi": [
+    [
+     "L2UBFh",
+     "Lake"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 107,
+   "objectid": 1259182,
+   "geoid": null,
+   "name": "Fresh Water Lk",
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.17862,
+   "query_lat": 27.9608,
+   "nwi": [],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 113,
+   "objectid": 1624735,
+   "geoid": null,
+   "name": "Laguna Larga",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.37604,
+   "query_lat": 27.53178,
+   "nwi": [
+    [
+     "L2UBF",
+     "Lake"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 114,
+   "objectid": 1635333,
+   "geoid": null,
+   "name": "Mud Flats",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.25758,
+   "query_lat": 28.04877,
+   "nwi": [
+    [
+     "E2USN",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 115,
+   "objectid": 1635333,
+   "geoid": null,
+   "name": "Mud Flats",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.25509,
+   "query_lat": 28.05184,
+   "nwi": [
+    [
+     "E2EM1N",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 115,
+   "objectid": 1635333,
+   "geoid": null,
+   "name": "Mud Flats",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.25316,
+   "query_lat": 28.05251,
+   "nwi": [
+    [
+     "E2EM1N",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 117,
+   "objectid": 1666886,
+   "geoid": null,
+   "name": "Sandpiper Cnl",
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    28.05,
+    -96.975,
+    28.125
+   ],
+   "query_lon": -97.04579,
+   "query_lat": 28.0659,
+   "nwi": [],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 119,
+   "objectid": 1762311,
+   "geoid": null,
+   "name": "Nueces Riv",
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.5,
+    27.825,
+    -97.425,
+    27.9
+   ],
+   "query_lon": -97.49607,
+   "query_lat": 27.84566,
+   "nwi": [
+    [
+     "E1UBL",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 120,
+   "objectid": 1762311,
+   "geoid": null,
+   "name": "Nueces Riv",
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.575,
+    27.825,
+    -97.5,
+    27.9
+   ],
+   "query_lon": -97.50029,
+   "query_lat": 27.84661,
+   "nwi": [
+    [
+     "E1UBL",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 128,
+   "objectid": 1930141,
+   "geoid": null,
+   "name": "Swan Lk",
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.825,
+    -97.125,
+    27.9
+   ],
+   "query_lon": -97.19654,
+   "query_lat": 27.86991,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 130,
+   "objectid": 1930429,
+   "geoid": null,
+   "name": "Spears Lk",
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.19873,
+   "query_lat": 27.96991,
+   "nwi": [
+    [
+     "L2UBFh",
+     "Lake"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 131,
+   "objectid": 1930429,
+   "geoid": null,
+   "name": "Spears Lk",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.9,
+    -97.2,
+    27.975
+   ],
+   "query_lon": -97.20122,
+   "query_lat": 27.97054,
+   "nwi": [
+    [
+     "PEM1Fh",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 131,
+   "objectid": 1930429,
+   "geoid": null,
+   "name": "Spears Lk",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.9,
+    -97.2,
+    27.975
+   ],
+   "query_lon": -97.20071,
+   "query_lat": 27.96878,
+   "nwi": [
+    [
+     "PEM1Fh",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 132,
+   "objectid": 1930429,
+   "geoid": null,
+   "name": "Spears Lk",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.20426,
+   "query_lat": 27.97559,
+   "nwi": [],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 132,
+   "objectid": 1930429,
+   "geoid": null,
+   "name": "Spears Lk",
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.20264,
+   "query_lat": 27.97667,
+   "nwi": [
+    [
+     "PEM1Fh",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 141,
+   "objectid": 79866,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.14049,
+   "query_lat": 27.98455,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 142,
+   "objectid": 79867,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.11617,
+   "query_lat": 27.97505,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 143,
+   "objectid": 79867,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.9,
+    -97.05,
+    27.975
+   ],
+   "query_lon": -97.11693,
+   "query_lat": 27.97324,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 144,
+   "objectid": 79868,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.9,
+    -97.05,
+    27.975
+   ],
+   "query_lon": -97.11007,
+   "query_lat": 27.9417,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 145,
+   "objectid": 79869,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.10175,
+   "query_lat": 27.99379,
+   "nwi": [
+    [
+     "PEM1Cx",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 146,
+   "objectid": 79871,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.11708,
+   "query_lat": 28.00614,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 165,
+   "objectid": 438662,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.19578,
+   "query_lat": 27.96022,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 167,
+   "objectid": 438664,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.19665,
+   "query_lat": 27.95594,
+   "nwi": [
+    [
+     "E1UBL",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 168,
+   "objectid": 502228,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.275,
+    27.6,
+    -97.2,
+    27.675
+   ],
+   "query_lon": -97.20071,
+   "query_lat": 27.63543,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 172,
+   "objectid": 533792,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.6,
+    -97.275,
+    27.675
+   ],
+   "query_lon": -97.28875,
+   "query_lat": 27.63904,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 173,
+   "objectid": 533793,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.2,
+    27.675,
+    -96.85,
+    27.75
+   ],
+   "query_lon": -97.15374,
+   "query_lat": 27.7353,
+   "nwi": [
+    [
+     "E1AB3L",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 174,
+   "objectid": 560779,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.23747,
+   "query_lat": 28.0554,
+   "nwi": [
+    [
+     "PUBHh",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 176,
+   "objectid": 575025,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.08347,
+   "query_lat": 28.04589,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 182,
+   "objectid": 577788,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.9,
+    -97.05,
+    27.975
+   ],
+   "query_lon": -97.12378,
+   "query_lat": 27.95869,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 184,
+   "objectid": 577790,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    28.05,
+    -96.975,
+    28.125
+   ],
+   "query_lon": -97.04335,
+   "query_lat": 28.1079,
+   "nwi": [
+    [
+     "PEM1A",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 185,
+   "objectid": 578065,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    28.05,
+    -96.975,
+    28.125
+   ],
+   "query_lon": -97.03883,
+   "query_lat": 28.0951,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 186,
+   "objectid": 578066,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.07417,
+   "query_lat": 28.07405,
+   "nwi": [
+    [
+     "PEM1A",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 193,
+   "objectid": 617872,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -96.975,
+    27.9,
+    -96.85,
+    27.975
+   ],
+   "query_lon": -96.97008,
+   "query_lat": 27.95634,
+   "nwi": [
+    [
+     "PEM1F",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 195,
+   "objectid": 617874,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    27.9,
+    -96.975,
+    27.975
+   ],
+   "query_lon": -96.98389,
+   "query_lat": 27.95098,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 196,
+   "objectid": 617875,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.12683,
+   "query_lat": 27.9887,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 197,
+   "objectid": 617876,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.14171,
+   "query_lat": 27.97013,
+   "nwi": [
+    [
+     "PEM1F",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 198,
+   "objectid": 617877,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.1513,
+   "query_lat": 27.95179,
+   "nwi": [
+    [
+     "PEM1A",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 199,
+   "objectid": 617878,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.15445,
+   "query_lat": 27.9471,
+   "nwi": [
+    [
+     "PEM1Fx",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 205,
+   "objectid": 621252,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.18644,
+   "query_lat": 28.05305,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 210,
+   "objectid": 643440,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    27.9,
+    -96.975,
+    27.975
+   ],
+   "query_lon": -96.98725,
+   "query_lat": 27.94909,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 211,
+   "objectid": 643441,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.17243,
+   "query_lat": 28.04147,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 212,
+   "objectid": 643442,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.11449,
+   "query_lat": 28.04481,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 213,
+   "objectid": 643443,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.1214,
+   "query_lat": 28.04481,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 218,
+   "objectid": 787235,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.08864,
+   "query_lat": 28.03471,
+   "nwi": [
+    [
+     "PEM1A",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 219,
+   "objectid": 787236,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.10027,
+   "query_lat": 28.03156,
+   "nwi": [],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 220,
+   "objectid": 787237,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.09819,
+   "query_lat": 28.01714,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 221,
+   "objectid": 787238,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    28.05,
+    -96.975,
+    28.125
+   ],
+   "query_lon": -97.03233,
+   "query_lat": 28.10569,
+   "nwi": [
+    [
+     "PUBH",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 222,
+   "objectid": 787240,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.09545,
+   "query_lat": 28.02845,
+   "nwi": [
+    [
+     "PEM1/SS1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 223,
+   "objectid": 787241,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.0954,
+   "query_lat": 28.02692,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 224,
+   "objectid": 826914,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.41062,
+   "query_lat": 27.55621,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 228,
+   "objectid": 858129,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.21838,
+   "query_lat": 28.06747,
+   "nwi": [
+    [
+     "E2USN",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 237,
+   "objectid": 883942,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.12119,
+   "query_lat": 28.01376,
+   "nwi": [
+    [
+     "PEM1Ch",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 241,
+   "objectid": 917235,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.24564,
+   "query_lat": 28.04728,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 242,
+   "objectid": 917235,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.24402,
+   "query_lat": 28.05075,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 244,
+   "objectid": 934065,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.21792,
+   "query_lat": 28.05855,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 244,
+   "objectid": 934065,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.20736,
+   "query_lat": 28.06626,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 244,
+   "objectid": 934065,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.20426,
+   "query_lat": 28.06351,
+   "nwi": [
+    [
+     "E2EM1N",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 246,
+   "objectid": 934067,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.21467,
+   "query_lat": 28.06473,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 247,
+   "objectid": 934068,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.1907,
+   "query_lat": 28.05742,
+   "nwi": [
+    [
+     "PEM1F",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 250,
+   "objectid": 934304,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.53299,
+   "query_lat": 27.55724,
+   "nwi": [
+    [
+     "PEM1/SS1A",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 252,
+   "objectid": 964160,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.43311,
+   "query_lat": 27.55048,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 254,
+   "objectid": 973950,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.10845,
+   "query_lat": 28.03845,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 255,
+   "objectid": 996425,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.12206,
+   "query_lat": 28.00591,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 255,
+   "objectid": 996425,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.12028,
+   "query_lat": 28.00966,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 256,
+   "objectid": 996426,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.12079,
+   "query_lat": 28.0211,
+   "nwi": [
+    [
+     "E2USN",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 259,
+   "objectid": 1056443,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.6,
+    -97.275,
+    27.675
+   ],
+   "query_lon": -97.28281,
+   "query_lat": 27.65269,
+   "nwi": [
+    [
+     "E1UBL",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 263,
+   "objectid": 1090940,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.09032,
+   "query_lat": 28.06671,
+   "nwi": [
+    [
+     "E1AB3L",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 264,
+   "objectid": 1120065,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.1967,
+   "query_lat": 27.96297,
+   "nwi": [
+    [
+     "E2AB3M",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 266,
+   "objectid": 1166430,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.575,
+    27.825,
+    -97.5,
+    27.9
+   ],
+   "query_lon": -97.50694,
+   "query_lat": 27.82795,
+   "nwi": [
+    [
+     "L2UBFx",
+     "Lake"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 267,
+   "objectid": 1166430,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.75,
+    -97.5,
+    27.825
+   ],
+   "query_lon": -97.50938,
+   "query_lat": 27.82308,
+   "nwi": [
+    [
+     "L2UBFx",
+     "Lake"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 268,
+   "objectid": 1166431,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.425,
+    27.825,
+    -97.35,
+    27.9
+   ],
+   "query_lon": -97.40203,
+   "query_lat": 27.83165,
+   "nwi": [
+    [
+     "L2USK",
+     "Lake"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 269,
+   "objectid": 1175565,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.6,
+    -97.275,
+    27.675
+   ],
+   "query_lon": -97.28073,
+   "query_lat": 27.65657,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 270,
+   "objectid": 1175566,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.6,
+    -97.275,
+    27.675
+   ],
+   "query_lon": -97.285,
+   "query_lat": 27.64593,
+   "nwi": [
+    [
+     "E1AB3L",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 275,
+   "objectid": 1206403,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -96.975,
+    27.9,
+    -96.85,
+    27.975
+   ],
+   "query_lon": -96.9611,
+   "query_lat": 27.96779,
+   "nwi": [
+    [
+     "PEM1F",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 276,
+   "objectid": 1206404,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.15364,
+   "query_lat": 27.95693,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 277,
+   "objectid": 1242981,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.6154,
+   "query_lat": 27.59821,
+   "nwi": [],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 279,
+   "objectid": 1260301,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.21279,
+   "query_lat": 28.00884,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 284,
+   "objectid": 1307040,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.22224,
+   "query_lat": 28.07838,
+   "nwi": [
+    [
+     "E2EM1N",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 284,
+   "objectid": 1307040,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.22112,
+   "query_lat": 28.08189,
+   "nwi": [
+    [
+     "E2EM1N",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 285,
+   "objectid": 1341936,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.2,
+    27.675,
+    -96.85,
+    27.75
+   ],
+   "query_lon": -97.14115,
+   "query_lat": 27.73899,
+   "nwi": [
+    [
+     "E1UBLx",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 286,
+   "objectid": 1498831,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.33298,
+   "query_lat": 28.08352,
+   "nwi": [
+    [
+     "PEM1Fh",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 287,
+   "objectid": 1565668,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.19324,
+   "query_lat": 27.95504,
+   "nwi": [
+    [
+     "E2USN",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 288,
+   "objectid": 1565669,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.17847,
+   "query_lat": 27.9517,
+   "nwi": [
+    [
+     "PUSCx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 289,
+   "objectid": 1565670,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.19944,
+   "query_lat": 27.94377,
+   "nwi": [
+    [
+     "E2USP",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 291,
+   "objectid": 1565671,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.19335,
+   "query_lat": 27.94846,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 300,
+   "objectid": 1569574,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.19197,
+   "query_lat": 27.95977,
+   "nwi": [
+    [
+     "E2USM",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 314,
+   "objectid": 1666874,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.10926,
+   "query_lat": 27.98717,
+   "nwi": [
+    [
+     "PEM1C",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 317,
+   "objectid": 1667667,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.05,
+    28.05,
+    -96.975,
+    28.125
+   ],
+   "query_lon": -97.03609,
+   "query_lat": 28.10208,
+   "nwi": [
+    [
+     "PUSCh",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 318,
+   "objectid": 1667668,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.06691,
+   "query_lat": 28.07302,
+   "nwi": [
+    [
+     "PEM1Ad",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 319,
+   "objectid": 1667669,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.125,
+    27.975,
+    -97.05,
+    28.05
+   ],
+   "query_lon": -97.09799,
+   "query_lat": 28.02439,
+   "nwi": [
+    [
+     "PUBFx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 322,
+   "objectid": 1863356,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.14054,
+   "query_lat": 27.96761,
+   "nwi": [
+    [
+     "PUBFx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 323,
+   "objectid": 1903950,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.22203,
+   "query_lat": 27.99469,
+   "nwi": [
+    [
+     "PEM1Cx",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 324,
+   "objectid": 1903951,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.19081,
+   "query_lat": 27.96346,
+   "nwi": [
+    [
+     "E1UBL",
+     "Estuarine and Marine Deepwater"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 333,
+   "objectid": 1927842,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.52644,
+   "query_lat": 28.06256,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 336,
+   "objectid": 1927845,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.21645,
+   "query_lat": 28.00425,
+   "nwi": [
+    [
+     "PUBHx",
+     "Freshwater Pond"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 338,
+   "objectid": 1930436,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.975,
+    -97.125,
+    28.05
+   ],
+   "query_lon": -97.2198,
+   "query_lat": 27.98613,
+   "nwi": [],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 339,
+   "objectid": 1930437,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.9,
+    -97.125,
+    27.975
+   ],
+   "query_lon": -97.17568,
+   "query_lat": 27.94949,
+   "nwi": [
+    [
+     "PEM1A",
+     "Freshwater Emergent Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 343,
+   "objectid": 2034185,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    28.05,
+    -97.05,
+    28.125
+   ],
+   "query_lon": -97.22737,
+   "query_lat": 28.08401,
+   "nwi": [
+    [
+     "E2EM1P",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  },
+  {
+   "v2_index": 351,
+   "objectid": 2129872,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.825,
+    -97.125,
+    27.9
+   ],
+   "query_lon": -97.1643,
+   "query_lat": 27.87311,
+   "nwi": [
+    [
+     "E2EM1P",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "main session (second sample; for index 107 the point is the GNIS coordinate of Fresh Water Lake, gaz_id 1336200)"
+  },
+  {
+   "v2_index": 351,
+   "objectid": 2129872,
+   "geoid": null,
+   "name": null,
+   "zone": "harbour_tile",
+   "clip_rect": [
+    -97.2,
+    27.825,
+    -97.125,
+    27.9
+   ],
+   "query_lon": -97.16019,
+   "query_lat": 27.87662,
+   "nwi": [
+    [
+     "E2EM1P",
+     "Estuarine and Marine Wetland"
+    ]
+   ],
+   "fetched_by": "main session"
+  },
+  {
+   "v2_index": 353,
+   "objectid": 2232887,
+   "geoid": null,
+   "name": null,
+   "zone": "coastal_band",
+   "clip_rect": [
+    -97.65,
+    27.525,
+    -97.35,
+    27.6
+   ],
+   "query_lon": -97.38817,
+   "query_lat": 27.58437,
+   "nwi": [
+    [
+     "L2UBF",
+     "Lake"
+    ]
+   ],
+   "fetched_by": "subagent batch"
+  }
+ ]
+}

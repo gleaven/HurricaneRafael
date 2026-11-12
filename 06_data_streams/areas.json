@@ -1,0 +1,4002 @@
+{
+ "metadata": {
+  "catalog": "areas",
+  "version": "1.0",
+  "generated": "2026-11-09",
+  "scenario": "Hurricane Rafael (fictional)",
+  "description": "Named areas used across the corpus: counties, cities, neighbourhoods, ZIP codes, water districts and pressure zones, evacuation zones, census tracts, patrol beats.",
+  "extents": "Boxes are honest approximations: each says how it was derived in extent_basis. None is a legal or postal boundary. Use reference_point for placement and bbox only as a search window.",
+  "coordinates": "Coordinates are real published points (99_reference/geo/landmarks.geojson) or points beside real roads; see position_basis on each record and 99_reference/geo/SOURCES_*.md."
+ },
+ "areas": [
+  {
+   "area_id": "PLC-001",
+   "name": "Nueces County",
+   "area_type": "county",
+   "reference_point": {
+    "latitude": 27.7949,
+    "longitude": -97.40076
+   },
+   "reference_point_basis": "real site: Nueces County Courthouse",
+   "bbox": [
+    -97.68285,
+    27.58805,
+    -97.05217,
+    27.86372
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 228 reference landmarks in Corpus Christi, Robstown, Port Aransas; not the legal boundary",
+   "fips": "48355"
+  },
+  {
+   "area_id": "PLC-002",
+   "name": "San Patricio County",
+   "area_type": "county",
+   "reference_point": {
+    "latitude": 28.03732,
+    "longitude": -97.51469
+   },
+   "reference_point_basis": "real site: San Patricio County Courthouse",
+   "bbox": [
+    -97.59164,
+    27.82119,
+    -97.06195,
+    28.0417
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 88 reference landmarks in Portland, Ingleside, Aransas Pass, Gregory, Taft, Sinton, Odem; not the legal boundary",
+   "fips": "48409"
+  },
+  {
+   "area_id": "PLC-003",
+   "name": "Aransas County",
+   "area_type": "county",
+   "reference_point": {
+    "latitude": 28.02593,
+    "longitude": -97.05292
+   },
+   "reference_point_basis": "real site: Aransas County Courthouse",
+   "bbox": [
+    -97.09671,
+    27.97267,
+    -97.0388,
+    28.06555
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 26 reference landmarks in Rockport, Fulton; not the legal boundary",
+   "fips": "48007"
+  },
+  {
+   "area_id": "PLC-004",
+   "name": "Kleberg County",
+   "area_type": "county",
+   "reference_point": {
+    "latitude": 27.49718,
+    "longitude": -97.81306
+   },
+   "reference_point_basis": "real site: NAS Kingsville",
+   "bbox": null,
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "outside the reference window; no extent",
+   "fips": "48273"
+  },
+  {
+   "area_id": "AREA-CITY-CORPUSCHRISTI",
+   "name": "Corpus Christi",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 27.80059,
+    "longitude": -97.39639
+   },
+   "reference_point_basis": "real site: Corpus Christi (USGS GNIS populated place)",
+   "bbox": [
+    -97.66194,
+    27.58805,
+    -97.22294,
+    27.86372
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 202 reference landmarks with a Corpus Christi address; not the city limits",
+   "within": [
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-CITY-PORTARANSAS",
+   "name": "Port Aransas",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 27.83392,
+    "longitude": -97.06111
+   },
+   "reference_point_basis": "real site: Port Aransas (USGS GNIS populated place)",
+   "bbox": [
+    -97.15783,
+    27.70003,
+    -97.05217,
+    27.84496
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 11 reference landmarks with a Port Aransas address; not the city limits",
+   "within": [
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-CITY-ROBSTOWN",
+   "name": "Robstown",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 27.79031,
+    "longitude": -97.66889
+   },
+   "reference_point_basis": "real site: Robstown (USGS GNIS populated place)",
+   "bbox": [
+    -97.68285,
+    27.67247,
+    -97.59579,
+    27.86071
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 15 reference landmarks with a Robstown address; not the city limits",
+   "within": [
+    "PLC-001"
+   ],
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-CITY-PORTLAND",
+   "name": "Portland",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 27.87725,
+    "longitude": -97.32389
+   },
+   "reference_point_basis": "real site: Portland (USGS GNIS populated place)",
+   "bbox": [
+    -97.34599,
+    27.8739,
+    -97.27605,
+    27.90348
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 13 reference landmarks with a Portland address; not the city limits",
+   "within": [
+    "PLC-002"
+   ]
+  },
+  {
+   "area_id": "AREA-CITY-INGLESIDE",
+   "name": "Ingleside",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 27.87781,
+    "longitude": -97.21166
+   },
+   "reference_point_basis": "real site: Ingleside (USGS GNIS populated place)",
+   "bbox": [
+    -97.24393,
+    27.82119,
+    -97.16513,
+    27.87869
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 20 reference landmarks with a Ingleside address; not the city limits",
+   "within": [
+    "PLC-002"
+   ]
+  },
+  {
+   "area_id": "AREA-CITY-ARANSASPASS",
+   "name": "Aransas Pass",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 27.90947,
+    "longitude": -97.15
+   },
+   "reference_point_basis": "real site: Aransas Pass (USGS GNIS populated place)",
+   "bbox": [
+    -97.17721,
+    27.84806,
+    -97.06195,
+    27.93684
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 26 reference landmarks with a Aransas Pass address; not the city limits",
+   "within": [
+    "PLC-002"
+   ]
+  },
+  {
+   "area_id": "AREA-CITY-GREGORY",
+   "name": "Gregory",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 27.92225,
+    "longitude": -97.29
+   },
+   "reference_point_basis": "real site: Gregory (USGS GNIS populated place)",
+   "bbox": [
+    -97.29217,
+    27.87314,
+    -97.24611,
+    27.92436
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 7 reference landmarks with a Gregory address; not the city limits",
+   "within": [
+    "PLC-002"
+   ]
+  },
+  {
+   "area_id": "AREA-CITY-TAFT",
+   "name": "Taft",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 27.97891,
+    "longitude": -97.39861
+   },
+   "reference_point_basis": "real site: Taft (USGS GNIS populated place)",
+   "bbox": [
+    -97.40248,
+    27.96863,
+    -97.38578,
+    27.9874
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 6 reference landmarks with a Taft address; not the city limits",
+   "within": [
+    "PLC-002"
+   ]
+  },
+  {
+   "area_id": "AREA-CITY-SINTON",
+   "name": "Sinton",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 28.03669,
+    "longitude": -97.50917
+   },
+   "reference_point_basis": "real site: Sinton (USGS GNIS populated place)",
+   "bbox": [
+    -97.51821,
+    28.0264,
+    -97.49666,
+    28.0417
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 10 reference landmarks with a Sinton address; not the city limits",
+   "within": [
+    "PLC-002"
+   ]
+  },
+  {
+   "area_id": "AREA-CITY-ODEM",
+   "name": "Odem",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 27.95058,
+    "longitude": -97.58222
+   },
+   "reference_point_basis": "real site: Odem (USGS GNIS populated place)",
+   "bbox": [
+    -97.59164,
+    27.94685,
+    -97.58222,
+    27.9507
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 6 reference landmarks with a Odem address; not the city limits",
+   "within": [
+    "PLC-002"
+   ],
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-CITY-ROCKPORT",
+   "name": "Rockport",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 28.02058,
+    "longitude": -97.05444
+   },
+   "reference_point_basis": "real site: Rockport (USGS GNIS populated place)",
+   "bbox": [
+    -97.09671,
+    27.97267,
+    -97.04301,
+    28.05667
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 22 reference landmarks with a Rockport address; not the city limits",
+   "within": [
+    "PLC-003"
+   ]
+  },
+  {
+   "area_id": "AREA-CITY-FULTON",
+   "name": "Fulton",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 28.06141,
+    "longitude": -97.04111
+   },
+   "reference_point_basis": "real site: Fulton (USGS GNIS populated place)",
+   "bbox": [
+    -97.04272,
+    28.06141,
+    -97.0388,
+    28.06555
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 4 reference landmarks with a Fulton address; not the city limits",
+   "within": [
+    "PLC-003"
+   ]
+  },
+  {
+   "area_id": "AREA-CITY-BAYSIDE",
+   "name": "Bayside",
+   "area_type": "city",
+   "reference_point": {
+    "latitude": 28.09391,
+    "longitude": -97.21472
+   },
+   "reference_point_basis": "real site: Bayside (USGS GNIS populated place)",
+   "bbox": [
+    -97.23503,
+    28.07588,
+    -97.19441,
+    28.11193
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 4 km box around the reference point",
+   "within": [
+    "PLC-003"
+   ],
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-CITY-KINGSVILLE",
+   "name": "Kingsville",
+   "area_type": "city",
+   "reference_point": null,
+   "reference_point_basis": "outside the reference window",
+   "bbox": null,
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "outside the reference window; no extent",
+   "within": [
+    "PLC-004"
+   ],
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-CITY-ALICE",
+   "name": "Alice",
+   "area_type": "city",
+   "reference_point": null,
+   "reference_point_basis": "outside the reference window",
+   "bbox": null,
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "outside the reference window; no extent",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-NBH-NORTHBEACH",
+   "name": "North Beach",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.82976,
+    "longitude": -97.38457
+   },
+   "reference_point_basis": "placed beside Seagull Blvd (no published point in the reference set); nearest street to the centre of the local street file",
+   "bbox": [
+    -97.395,
+    27.815,
+    -97.375,
+    27.845
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "the window for which all 86 Census TIGER local streets were collected (roads_local_north_beach.geojson); the core of the neighbourhood, not its full boundary",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "local_streets_file": "99_reference/geo/roads_local_north_beach.geojson"
+  },
+  {
+   "area_id": "AREA-NBH-HILLCREST",
+   "name": "Hillcrest",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.80637,
+    "longitude": -97.41326
+   },
+   "reference_point_basis": "placed beside W Broadway St (no published point in the reference set); nearest street to the centre of the local street file",
+   "bbox": [
+    -97.425,
+    27.8,
+    -97.4,
+    27.815
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "the window for which all 87 Census TIGER local streets were collected (roads_local_hillcrest.geojson); the core of the neighbourhood, not its full boundary",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "local_streets_file": "99_reference/geo/roads_local_hillcrest.geojson"
+  },
+  {
+   "area_id": "AREA-NBH-MOLINA",
+   "name": "Molina",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.7674,
+    "longitude": -97.4455
+   },
+   "reference_point_basis": "placed beside FM 665 (no published point in the reference set); nearest street to the centre of the local street file",
+   "bbox": [
+    -97.455,
+    27.755,
+    -97.43,
+    27.775
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "the window for which all 139 Census TIGER local streets were collected (roads_local_molina.geojson); the core of the neighbourhood, not its full boundary",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "local_streets_file": "99_reference/geo/roads_local_molina.geojson"
+  },
+  {
+   "area_id": "AREA-NBH-FLOURBLUFF",
+   "name": "Flour Bluff",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.67054,
+    "longitude": -97.30216
+   },
+   "reference_point_basis": "placed beside Graham Rd (no published point in the reference set); nearest street to the centre of the local street file",
+   "bbox": [
+    -97.32,
+    27.655,
+    -97.285,
+    27.685
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "the window for which all 209 Census TIGER local streets were collected (roads_local_flour_bluff.geojson); the core of the neighbourhood, not its full boundary",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "local_streets_file": "99_reference/geo/roads_local_flour_bluff.geojson"
+  },
+  {
+   "area_id": "AREA-NBH-CALALLEN",
+   "name": "Calallen",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.86746,
+    "longitude": -97.62514
+   },
+   "reference_point_basis": "placed beside Ave C (no published point in the reference set); nearest street to the centre of the local street file",
+   "bbox": [
+    -97.64,
+    27.855,
+    -97.61,
+    27.88
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "the window for which all 124 Census TIGER local streets were collected (roads_local_calallen.geojson); the core of the neighbourhood, not its full boundary",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "local_streets_file": "99_reference/geo/roads_local_calallen.geojson"
+  },
+  {
+   "area_id": "AREA-NBH-DOWNTOWN",
+   "name": "Downtown",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.79501,
+    "longitude": -97.39805
+   },
+   "reference_point_basis": "placed beside N Carancahua St (no published point in the reference set); nearest street to the centre of the local street file",
+   "bbox": [
+    -97.405,
+    27.785,
+    -97.39,
+    27.805
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "the window for which all 151 Census TIGER local streets were collected (roads_local_downtown.geojson); the core of the neighbourhood, not its full boundary",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "local_streets_file": "99_reference/geo/roads_local_downtown.geojson"
+  },
+  {
+   "area_id": "AREA-NBH-OAKPARK",
+   "name": "Oak Park",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.79629,
+    "longitude": -97.43723
+   },
+   "reference_point_basis": "real site: Oak Park Elementary School",
+   "bbox": [
+    -97.44637,
+    27.78817,
+    -97.42809,
+    27.8044
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 1.8 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-NBH-GREENWOOD",
+   "name": "Greenwood",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.74406,
+    "longitude": -97.4456
+   },
+   "reference_point_basis": "placed beside State Hwy 358 (no published point in the reference set)",
+   "bbox": [
+    -97.45779,
+    27.73324,
+    -97.43341,
+    27.75488
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.4 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-NBH-ANNAVILLE",
+   "name": "Annaville",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.83864,
+    "longitude": -97.58306
+   },
+   "reference_point_basis": "real site: Annaville",
+   "bbox": [
+    -97.60337,
+    27.82061,
+    -97.56275,
+    27.85667
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 4 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-NBH-VIOLET",
+   "name": "Violet",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.78364,
+    "longitude": -97.59528
+   },
+   "reference_point_basis": "real site: Violet",
+   "bbox": [
+    -97.61051,
+    27.77012,
+    -97.58005,
+    27.79716
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 3 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-NBH-CLARKWOOD",
+   "name": "Clarkwood",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.78448,
+    "longitude": -97.53972
+   },
+   "reference_point_basis": "real site: Clarkwood",
+   "bbox": [
+    -97.55496,
+    27.77096,
+    -97.52449,
+    27.798
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 3 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-NBH-SOUTHSIDE",
+   "name": "Southside",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.70169,
+    "longitude": -97.38393
+   },
+   "reference_point_basis": "placed beside Holly Rd (no published point in the reference set)",
+   "bbox": [
+    -97.42455,
+    27.66564,
+    -97.34331,
+    27.73774
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 8 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-NBH-WESTSIDE",
+   "name": "Westside",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.78564,
+    "longitude": -97.44507
+   },
+   "reference_point_basis": "placed beside Agnes St (no published point in the reference set)",
+   "bbox": [
+    -97.47046,
+    27.76311,
+    -97.41968,
+    27.80817
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 5 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-NBH-PADREISLAND",
+   "name": "Padre Island",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.61492,
+    "longitude": -97.22138
+   },
+   "reference_point_basis": "placed beside S Padre Island Dr (no published point in the reference set)",
+   "bbox": [
+    -97.262,
+    27.57887,
+    -97.18076,
+    27.65097
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 8 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-NBH-MUSTANGISLAND",
+   "name": "Mustang Island",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.71824,
+    "longitude": -97.14669
+   },
+   "reference_point_basis": "placed beside State Hwy 361 (no published point in the reference set)",
+   "bbox": [
+    -97.23809,
+    27.63712,
+    -97.05529,
+    27.79936
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 18 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-NBH-INNERHARBOR",
+   "name": "Inner Harbor",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.81204,
+    "longitude": -97.43152
+   },
+   "reference_point_basis": "placed beside Buddy Lawrence Dr (no published point in the reference set)",
+   "bbox": [
+    -97.52294,
+    27.80804,
+    -97.39558,
+    27.84595
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "extent of the USACE Inner Harbor channel reaches (Main Turning Basin to Viola Turning Basin), widened about 450 m south to take in the docks and the reference point",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-NBH-LEOPARD",
+   "name": "Leopard Street corridor",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.79667,
+    "longitude": -97.43004
+   },
+   "reference_point_basis": "placed beside Leopard St (no published point in the reference set)",
+   "bbox": [
+    -97.45543,
+    27.77414,
+    -97.40465,
+    27.8192
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 5 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-NBH-DELMAR",
+   "name": "Del Mar",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.7649,
+    "longitude": -97.40637
+   },
+   "reference_point_basis": "real site: Del Mar College (Heritage Campus)",
+   "bbox": [
+    -97.41653,
+    27.75589,
+    -97.39621,
+    27.77392
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-NBH-TULOSO",
+   "name": "Tuloso",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.82922,
+    "longitude": -97.57544
+   },
+   "reference_point_basis": "real site: Tuloso Midway High School",
+   "bbox": [
+    -97.59575,
+    27.81119,
+    -97.55513,
+    27.84725
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 4 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ]
+  },
+  {
+   "area_id": "AREA-NBH-WASHINGTONCOLES",
+   "name": "Washington-Coles",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.79979,
+    "longitude": -97.40072
+   },
+   "reference_point_basis": "real site: Coles High School",
+   "bbox": [
+    -97.40783,
+    27.79348,
+    -97.39361,
+    27.8061
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 1.4 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-NBH-NAS",
+   "name": "NAS Corpus Christi",
+   "area_type": "neighbourhood",
+   "reference_point": {
+    "latitude": 27.69242,
+    "longitude": -97.27931
+   },
+   "reference_point_basis": "real site: Naval Air Station Corpus Christi installation parcel at the airfield (centroid computed from the published boundary) [USDOT NTAD Military Bases]",
+   "bbox": [
+    -97.30978,
+    27.66538,
+    -97.24884,
+    27.71946
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 6 km box around the reference point; the neighbourhood boundary is not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-ZIP-78336",
+   "name": "ZIP 78336 (Aransas Pass)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.90722,
+    "longitude": -97.15657
+   },
+   "reference_point_basis": "real site: H T Faulk Elementary School (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.17349,
+    27.9069,
+    -97.14949,
+    27.91594
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 8 public landmarks whose street address carries this ZIP; not the postal boundary",
+   "zip": "78336"
+  },
+  {
+   "area_id": "AREA-ZIP-78359",
+   "name": "ZIP 78359 (Gregory)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.92357,
+    "longitude": -97.2921
+   },
+   "reference_point_basis": "real site: Gregory City Hall (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.29217,
+    27.91919,
+    -97.28757,
+    27.92436
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 4 public landmarks whose street address carries this ZIP; not the postal boundary",
+   "zip": "78359"
+  },
+  {
+   "area_id": "AREA-ZIP-78362",
+   "name": "ZIP 78362 (Ingleside)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.87575,
+    "longitude": -97.21462
+   },
+   "reference_point_basis": "real site: Blaschke Sheldon Elementary School (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.2191,
+    27.86153,
+    -97.20428,
+    27.87869
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 9 public landmarks whose street address carries this ZIP (3 outlying addresses dropped); not the postal boundary",
+   "zip": "78362"
+  },
+  {
+   "area_id": "AREA-ZIP-78373",
+   "name": "ZIP 78373 (Port Aransas)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.83103,
+    "longitude": -97.06257
+   },
+   "reference_point_basis": "real site: Brundrett Middle School (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.06871,
+    27.83103,
+    -97.061,
+    27.83592
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 6 public landmarks whose street address carries this ZIP (1 outlying addresses dropped); not the postal boundary",
+   "zip": "78373"
+  },
+  {
+   "area_id": "AREA-ZIP-78374",
+   "name": "ZIP 78374 (Portland)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.89308,
+    "longitude": -97.32046
+   },
+   "reference_point_basis": "real site: Gregory - Portland Middle School (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.34599,
+    27.8739,
+    -97.30406,
+    27.90348
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 11 public landmarks whose street address carries this ZIP; not the postal boundary",
+   "zip": "78374"
+  },
+  {
+   "area_id": "AREA-ZIP-78380",
+   "name": "ZIP 78380 (Robstown)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.78024,
+    "longitude": -97.59579
+   },
+   "reference_point_basis": "real site: Annaville Fire Department",
+   "bbox": [
+    -97.6161,
+    27.76221,
+    -97.57548,
+    27.79826
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 4 km box around the reference point (fewer than three public landmarks carry this ZIP)",
+   "zip": "78380"
+  },
+  {
+   "area_id": "AREA-ZIP-78382",
+   "name": "ZIP 78382 (Rockport)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 28.02507,
+    "longitude": -97.05626
+   },
+   "reference_point_basis": "real site: Rockport Volunteer Fire Department Main Station (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.08817,
+    28.024,
+    -97.04301,
+    28.05667
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 11 public landmarks whose street address carries this ZIP (1 outlying addresses dropped); not the postal boundary",
+   "zip": "78382"
+  },
+  {
+   "area_id": "AREA-ZIP-78401",
+   "name": "ZIP 78401 (Downtown / Hillcrest)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.79488,
+    "longitude": -97.40009
+   },
+   "reference_point_basis": "real site: Nueces County Sheriff's Office (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.40489,
+    27.78615,
+    -97.39472,
+    27.80258
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 7 public landmarks whose street address carries this ZIP; not the postal boundary",
+   "zip": "78401"
+  },
+  {
+   "area_id": "AREA-ZIP-78402",
+   "name": "ZIP 78402 (North Beach)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.81389,
+    "longitude": -97.39222
+   },
+   "reference_point_basis": "real site: Texas State Aquarium",
+   "bbox": [
+    -97.41253,
+    27.79586,
+    -97.37191,
+    27.83192
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 4 km box around the reference point (fewer than three public landmarks carry this ZIP)",
+   "zip": "78402"
+  },
+  {
+   "area_id": "AREA-ZIP-78404",
+   "name": "ZIP 78404 (South Bluff / Del Mar)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.7672,
+    "longitude": -97.39788
+   },
+   "reference_point_basis": "real site: Menger Elementary School (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.4103,
+    27.7617,
+    -97.38326,
+    27.78265
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 12 public landmarks whose street address carries this ZIP; not the postal boundary",
+   "zip": "78404"
+  },
+  {
+   "area_id": "AREA-ZIP-78405",
+   "name": "ZIP 78405 (Westside / Molina)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.77645,
+    "longitude": -97.43491
+   },
+   "reference_point_basis": "real site: Harold T Branch Academy (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.45927,
+    27.76587,
+    -97.41629,
+    27.78188
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 7 public landmarks whose street address carries this ZIP; not the postal boundary",
+   "zip": "78405"
+  },
+  {
+   "area_id": "AREA-ZIP-78406",
+   "name": "ZIP 78406 (Airport)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.77228,
+    "longitude": -97.49311
+   },
+   "reference_point_basis": "placed beside FM 763 (no published point in the reference set)",
+   "bbox": [
+    -97.51342,
+    27.75425,
+    -97.4728,
+    27.79031
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 4 km box around the reference point (fewer than three public landmarks carry this ZIP)",
+   "zip": "78406"
+  },
+  {
+   "area_id": "AREA-ZIP-78407",
+   "name": "ZIP 78407 (Hillcrest / Refinery Row)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.80546,
+    "longitude": -97.41836
+   },
+   "reference_point_basis": "placed beside Dempsey St (no published point in the reference set)",
+   "bbox": [
+    -97.43867,
+    27.78743,
+    -97.39805,
+    27.82349
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 4 km box around the reference point (fewer than three public landmarks carry this ZIP)",
+   "zip": "78407"
+  },
+  {
+   "area_id": "AREA-ZIP-78408",
+   "name": "ZIP 78408 (Leopard Street / Oak Park)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.79629,
+    "longitude": -97.43723
+   },
+   "reference_point_basis": "real site: Oak Park Elementary School (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.45342,
+    27.7912,
+    -97.42269,
+    27.79645
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 5 public landmarks whose street address carries this ZIP (2 outlying addresses dropped); not the postal boundary",
+   "zip": "78408"
+  },
+  {
+   "area_id": "AREA-ZIP-78409",
+   "name": "ZIP 78409 (Tuloso)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.82191,
+    "longitude": -97.5219
+   },
+   "reference_point_basis": "placed beside I- 37 (no published point in the reference set)",
+   "bbox": [
+    -97.54221,
+    27.80388,
+    -97.50159,
+    27.83994
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 4 km box around the reference point (fewer than three public landmarks carry this ZIP)",
+   "zip": "78409"
+  },
+  {
+   "area_id": "AREA-ZIP-78410",
+   "name": "ZIP 78410 (Calallen / Annaville)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.8495,
+    "longitude": -97.59356
+   },
+   "reference_point_basis": "real site: Annaville Volunteer Fire Department Station 1 (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.6417,
+    27.81089,
+    -97.51328,
+    27.86199
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 14 public landmarks whose street address carries this ZIP; not the postal boundary",
+   "zip": "78410"
+  },
+  {
+   "area_id": "AREA-ZIP-78411",
+   "name": "ZIP 78411 (Central Southside)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.73606,
+    "longitude": -97.38654
+   },
+   "reference_point_basis": "real site: Annapolis Christian Academy (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.40292,
+    27.71057,
+    -97.38248,
+    27.75353
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 17 public landmarks whose street address carries this ZIP; not the postal boundary",
+   "zip": "78411"
+  },
+  {
+   "area_id": "AREA-ZIP-78412",
+   "name": "ZIP 78412 (Airline / Bay Area)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.71703,
+    "longitude": -97.35678
+   },
+   "reference_point_basis": "real site: Cullen Place Elementary School (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.37082,
+    27.69277,
+    -97.32896,
+    27.72649
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 15 public landmarks whose street address carries this ZIP; not the postal boundary",
+   "zip": "78412"
+  },
+  {
+   "area_id": "AREA-ZIP-78413",
+   "name": "ZIP 78413 (South Staples)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.68896,
+    "longitude": -97.40632
+   },
+   "reference_point_basis": "real site: Dawson Elementary School (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.42086,
+    27.67055,
+    -97.37873,
+    27.70677
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 12 public landmarks whose street address carries this ZIP; not the postal boundary",
+   "zip": "78413"
+  },
+  {
+   "area_id": "AREA-ZIP-78414",
+   "name": "ZIP 78414 (Southside / Yorktown)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.67381,
+    "longitude": -97.36627
+   },
+   "reference_point_basis": "real site: Coastal Bend Adventist Junior Academy (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.38359,
+    27.65451,
+    -97.33818,
+    27.69324
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 18 public landmarks whose street address carries this ZIP (1 outlying addresses dropped); not the postal boundary",
+   "zip": "78414"
+  },
+  {
+   "area_id": "AREA-ZIP-78415",
+   "name": "ZIP 78415 (Kostoryz / South Park)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.72684,
+    "longitude": -97.41301
+   },
+   "reference_point_basis": "real site: Premier High School (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.4301,
+    27.70438,
+    -97.40233,
+    27.76111
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 14 public landmarks whose street address carries this ZIP (1 outlying addresses dropped); not the postal boundary",
+   "zip": "78415"
+  },
+  {
+   "area_id": "AREA-ZIP-78416",
+   "name": "ZIP 78416 (Greenwood / Horne)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.75381,
+    "longitude": -97.43537
+   },
+   "reference_point_basis": "real site: Student Support Center (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.4534,
+    27.73388,
+    -97.41651,
+    27.7647
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 13 public landmarks whose street address carries this ZIP; not the postal boundary",
+   "zip": "78416"
+  },
+  {
+   "area_id": "AREA-ZIP-78417",
+   "name": "ZIP 78417 (Old Brownsville Road)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.75179,
+    "longitude": -97.46581
+   },
+   "reference_point_basis": "placed beside FM 665 (no published point in the reference set)",
+   "bbox": [
+    -97.48612,
+    27.73376,
+    -97.4455,
+    27.76982
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 4 km box around the reference point (fewer than three public landmarks carry this ZIP)",
+   "zip": "78417"
+  },
+  {
+   "area_id": "AREA-ZIP-78418",
+   "name": "ZIP 78418 (Flour Bluff / Padre Island)",
+   "area_type": "zip",
+   "reference_point": {
+    "latitude": 27.64458,
+    "longitude": -97.29614
+   },
+   "reference_point_basis": "real site: Flour Bluff High School (the public landmark nearest the centre of the ZIP's landmarks)",
+   "bbox": [
+    -97.30208,
+    27.61955,
+    -97.2899,
+    27.65717
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "bounding box of 6 public landmarks whose street address carries this ZIP (3 outlying addresses dropped); not the postal boundary",
+   "zip": "78418"
+  },
+  {
+   "area_id": "AREA-WD-1",
+   "name": "Water District 1 (Northwest: Calallen, Annaville, Tuloso)",
+   "area_type": "water_district",
+   "reference_point": {
+    "latitude": 27.8495,
+    "longitude": -97.59356
+   },
+   "reference_point_basis": "reference point of ZIP 78410",
+   "bbox": [
+    -97.6417,
+    27.80388,
+    -97.50159,
+    27.86199
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the member ZIP boxes; ZIP membership assigned for the exercise (public notices name only Districts 3 and 4)",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "zips": [
+    "78410",
+    "78409"
+   ],
+   "aliases": [
+    "District 1",
+    "Water District 1"
+   ],
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-WD-2",
+   "name": "Water District 2 (Southside)",
+   "area_type": "water_district",
+   "reference_point": {
+    "latitude": 27.73606,
+    "longitude": -97.38654
+   },
+   "reference_point_basis": "reference point of ZIP 78411",
+   "bbox": [
+    -97.4301,
+    27.65451,
+    -97.32896,
+    27.76111
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the member ZIP boxes; ZIP membership assigned for the exercise (public notices name only Districts 3 and 4)",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "zips": [
+    "78411",
+    "78412",
+    "78413",
+    "78414",
+    "78415"
+   ],
+   "aliases": [
+    "District 2",
+    "Water District 2"
+   ],
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-WD-3",
+   "name": "Water District 3",
+   "area_type": "water_district",
+   "reference_point": {
+    "latitude": 27.77645,
+    "longitude": -97.43491
+   },
+   "reference_point_basis": "reference point of ZIP 78405",
+   "bbox": [
+    -97.48612,
+    27.73376,
+    -97.41629,
+    27.78188
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the member ZIP boxes; ZIP membership from the boil-water notice's ZIP list",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "zips": [
+    "78405",
+    "78416",
+    "78417"
+   ],
+   "aliases": [
+    "District 3",
+    "Water District 3"
+   ],
+   "described_bounds": "Leopard Street (north), Highway 286 (east), Agnes Street (south), Staples Street (west) - as worded in the notice, for Districts 3 and 4 together",
+   "population_note": "Districts 3 and 4 together: about 48,000 residents on the mains covered by the boil-water notice (the utility's count). Census tracts that touch the two districts hold 60,348 people, because tract edges do not follow the district line."
+  },
+  {
+   "area_id": "AREA-WD-4",
+   "name": "Water District 4",
+   "area_type": "water_district",
+   "reference_point": {
+    "latitude": 27.79488,
+    "longitude": -97.40009
+   },
+   "reference_point_basis": "reference point of ZIP 78401",
+   "bbox": [
+    -97.45342,
+    27.78615,
+    -97.39472,
+    27.82349
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the member ZIP boxes; ZIP membership from the boil-water notice's ZIP list",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "zips": [
+    "78401",
+    "78407",
+    "78408"
+   ],
+   "aliases": [
+    "District 4",
+    "Water District 4"
+   ],
+   "described_bounds": "Leopard Street (north), Highway 286 (east), Agnes Street (south), Staples Street (west) - as worded in the notice, for Districts 3 and 4 together",
+   "population_note": "Districts 3 and 4 together: about 48,000 residents on the mains covered by the boil-water notice (the utility's count). Census tracts that touch the two districts hold 60,348 people, because tract edges do not follow the district line."
+  },
+  {
+   "area_id": "AREA-WD-5",
+   "name": "Water District 5 (Bayfront, Flour Bluff and Padre Island)",
+   "area_type": "water_district",
+   "reference_point": {
+    "latitude": 27.64458,
+    "longitude": -97.29614
+   },
+   "reference_point_basis": "reference point of ZIP 78418",
+   "bbox": [
+    -97.41253,
+    27.61955,
+    -97.2899,
+    27.83192
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the member ZIP boxes; ZIP membership assigned for the exercise (public notices name only Districts 3 and 4)",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "zips": [
+    "78418",
+    "78402",
+    "78404"
+   ],
+   "aliases": [
+    "District 5",
+    "Water District 5"
+   ],
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-WD-3-4",
+   "name": "Water Districts 3 and 4 (boil-water notice area)",
+   "area_type": "water_district_group",
+   "reference_point": {
+    "latitude": 27.77645,
+    "longitude": -97.43491
+   },
+   "reference_point_basis": "reference point of ZIP 78405",
+   "bbox": [
+    -97.48612,
+    27.73376,
+    -97.39472,
+    27.82349
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the member ZIP boxes",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI",
+    "PLC-001"
+   ],
+   "members": [
+    "AREA-WD-3",
+    "AREA-WD-4"
+   ],
+   "zips": [
+    "78405",
+    "78416",
+    "78417",
+    "78401",
+    "78407",
+    "78408"
+   ],
+   "population": 48000,
+   "population_basis": "about 48,000 residents, as stated in the boil-water notice",
+   "pressure_zone": "AREA-PZ-4",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-PZ-1",
+   "name": "Pressure Zone 1 (Northwest)",
+   "area_type": "pressure_zone",
+   "reference_point": {
+    "latitude": 27.8495,
+    "longitude": -97.59356
+   },
+   "reference_point_basis": "reference point of AREA-WD-1",
+   "bbox": [
+    -97.6417,
+    27.80388,
+    -97.50159,
+    27.86199
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the member water districts",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "water_districts": [
+    "AREA-WD-1"
+   ],
+   "regulatory_minimum_psi": 20,
+   "normal_confirmation_psi": 40,
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-PZ-2",
+   "name": "Pressure Zone 2 (Southside)",
+   "area_type": "pressure_zone",
+   "reference_point": {
+    "latitude": 27.73606,
+    "longitude": -97.38654
+   },
+   "reference_point_basis": "reference point of AREA-WD-2",
+   "bbox": [
+    -97.4301,
+    27.65451,
+    -97.32896,
+    27.76111
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the member water districts",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "water_districts": [
+    "AREA-WD-2"
+   ],
+   "regulatory_minimum_psi": 20,
+   "normal_confirmation_psi": 40,
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-PZ-3",
+   "name": "Pressure Zone 3 (West / Clarkwood)",
+   "area_type": "pressure_zone",
+   "reference_point": {
+    "latitude": 27.78448,
+    "longitude": -97.53972
+   },
+   "reference_point_basis": "real site: Clarkwood (USGS GNIS populated place)",
+   "bbox": [
+    -97.57019,
+    27.75744,
+    -97.50926,
+    27.81152
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 6 km box around the reference point",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "water_districts": [],
+   "regulatory_minimum_psi": 20,
+   "normal_confirmation_psi": 40,
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-PZ-4",
+   "name": "Pressure Zone 4 (Zone 4 distribution system)",
+   "area_type": "pressure_zone",
+   "reference_point": {
+    "latitude": 27.77645,
+    "longitude": -97.43491
+   },
+   "reference_point_basis": "reference point of AREA-WD-3",
+   "bbox": [
+    -97.48612,
+    27.73376,
+    -97.39472,
+    27.82349
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the member water districts",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "water_districts": [
+    "AREA-WD-3",
+    "AREA-WD-4"
+   ],
+   "aliases": [
+    "Zone 4",
+    "Zone 4 distribution system"
+   ],
+   "regulatory_minimum_psi": 20,
+   "normal_confirmation_psi": 40,
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-PZ-5",
+   "name": "Pressure Zone 5 (East / Islands)",
+   "area_type": "pressure_zone",
+   "reference_point": {
+    "latitude": 27.64458,
+    "longitude": -97.29614
+   },
+   "reference_point_basis": "reference point of AREA-WD-5",
+   "bbox": [
+    -97.41253,
+    27.61955,
+    -97.2899,
+    27.83192
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the member water districts",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "water_districts": [
+    "AREA-WD-5"
+   ],
+   "regulatory_minimum_psi": 20,
+   "normal_confirmation_psi": 40,
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-TRACT-480101",
+   "name": "Census Tract 4801.01 (North Beach)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.82663,
+    "longitude": -97.38633
+   },
+   "reference_point_basis": "placed beside Surfside Blvd (no published point in the reference set)",
+   "bbox": [
+    -97.39902,
+    27.81536,
+    -97.37364,
+    27.8379
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-A"
+   ],
+   "geoid": "1400000US48355480101",
+   "tract": "480101",
+   "neighbourhood_name": "North Beach",
+   "evacuation_zone": "A",
+   "population": 4135,
+   "median_household_income": 31040.0,
+   "persons_below_poverty": 1083,
+   "hispanic_or_latino": 2932,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-480201",
+   "name": "Census Tract 4802.01 (Rincon Point)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.83563,
+    "longitude": -97.38102
+   },
+   "reference_point_basis": "placed beside Timon Blvd (no published point in the reference set)",
+   "bbox": [
+    -97.39371,
+    27.82436,
+    -97.36833,
+    27.8469
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-A"
+   ],
+   "geoid": "1400000US48355480201",
+   "tract": "480201",
+   "neighbourhood_name": "Rincon Point",
+   "evacuation_zone": "A",
+   "population": 2792,
+   "median_household_income": 28181.0,
+   "persons_below_poverty": 926,
+   "hispanic_or_latino": 1858,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-480301",
+   "name": "Census Tract 4803.01 (Bayfront Downtown)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.79461,
+    "longitude": -97.39414
+   },
+   "reference_point_basis": "placed beside Lawrence St (no published point in the reference set)",
+   "bbox": [
+    -97.40683,
+    27.78334,
+    -97.38145,
+    27.80588
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-A"
+   ],
+   "geoid": "1400000US48355480301",
+   "tract": "480301",
+   "neighbourhood_name": "Bayfront Downtown",
+   "evacuation_zone": "A",
+   "population": 5175,
+   "median_household_income": 35120.0,
+   "persons_below_poverty": 1335,
+   "hispanic_or_latino": 3444,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-480401",
+   "name": "Census Tract 4804.01 (Port/Channel N)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.81743,
+    "longitude": -97.41728
+   },
+   "reference_point_basis": "placed beside Navigation Blvd (no published point in the reference set)",
+   "bbox": [
+    -97.42997,
+    27.80616,
+    -97.40459,
+    27.8287
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-A"
+   ],
+   "geoid": "1400000US48355480401",
+   "tract": "480401",
+   "neighbourhood_name": "Port/Channel N",
+   "evacuation_zone": "A",
+   "population": 2222,
+   "median_household_income": 28569.0,
+   "persons_below_poverty": 663,
+   "hispanic_or_latino": 1585,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-480501",
+   "name": "Census Tract 4805.01 (Port/Channel S)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.80599,
+    "longitude": -97.43149
+   },
+   "reference_point_basis": "placed beside Buddy Lawrence Dr (no published point in the reference set)",
+   "bbox": [
+    -97.44418,
+    27.79472,
+    -97.4188,
+    27.81726
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-A"
+   ],
+   "geoid": "1400000US48355480501",
+   "tract": "480501",
+   "neighbourhood_name": "Port/Channel S",
+   "evacuation_zone": "A",
+   "population": 3027,
+   "median_household_income": 29216.0,
+   "persons_below_poverty": 987,
+   "hispanic_or_latino": 2130,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-480601",
+   "name": "Census Tract 4806.01 (Mustang Island N)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.80364,
+    "longitude": -97.09083
+   },
+   "reference_point_basis": "real site: Mustang Beach",
+   "bbox": [
+    -97.10352,
+    27.79238,
+    -97.07813,
+    27.81491
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-A"
+   ],
+   "geoid": "1400000US48355480601",
+   "tract": "480601",
+   "neighbourhood_name": "Mustang Island N",
+   "evacuation_zone": "A",
+   "population": 1280,
+   "median_household_income": 53050.0,
+   "persons_below_poverty": 144,
+   "hispanic_or_latino": 488,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-480701",
+   "name": "Census Tract 4807.01 (Mustang Island S)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.70028,
+    "longitude": -97.15854
+   },
+   "reference_point_basis": "placed beside State Hwy 361 (no published point in the reference set)",
+   "bbox": [
+    -97.17123,
+    27.68901,
+    -97.14585,
+    27.71155
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-A"
+   ],
+   "geoid": "1400000US48355480701",
+   "tract": "480701",
+   "neighbourhood_name": "Mustang Island S",
+   "evacuation_zone": "A",
+   "population": 1106,
+   "median_household_income": 61934.0,
+   "persons_below_poverty": 108,
+   "hispanic_or_latino": 385,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-480801",
+   "name": "Census Tract 4808.01 (North Padre Coast)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.60015,
+    "longitude": -97.22247
+   },
+   "reference_point_basis": "placed beside State Park Road 22 (no published point in the reference set)",
+   "bbox": [
+    -97.23516,
+    27.58888,
+    -97.20978,
+    27.61142
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-A"
+   ],
+   "geoid": "1400000US48355480801",
+   "tract": "480801",
+   "neighbourhood_name": "North Padre Coast",
+   "evacuation_zone": "A",
+   "population": 1033,
+   "median_household_income": 53147.0,
+   "persons_below_poverty": 126,
+   "hispanic_or_latino": 441,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-480901",
+   "name": "Census Tract 4809.01 (Flour Bluff Shore)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.65936,
+    "longitude": -97.27771
+   },
+   "reference_point_basis": "placed beside Laguna Shores Rd (no published point in the reference set)",
+   "bbox": [
+    -97.2904,
+    27.64809,
+    -97.26502,
+    27.67063
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-A"
+   ],
+   "geoid": "1400000US48355480901",
+   "tract": "480901",
+   "neighbourhood_name": "Flour Bluff Shore",
+   "evacuation_zone": "A",
+   "population": 6590,
+   "median_household_income": 38126.0,
+   "persons_below_poverty": 1574,
+   "hispanic_or_latino": 3571,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-481001",
+   "name": "Census Tract 4810.01 (Calallen Riverside)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.87445,
+    "longitude": -97.62518
+   },
+   "reference_point_basis": "placed beside Ripple Rd (no published point in the reference set)",
+   "bbox": [
+    -97.63787,
+    27.86318,
+    -97.61249,
+    27.88572
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-A"
+   ],
+   "geoid": "1400000US48355481001",
+   "tract": "481001",
+   "neighbourhood_name": "Calallen Riverside",
+   "evacuation_zone": "A",
+   "population": 4938,
+   "median_household_income": 41350.0,
+   "persons_below_poverty": 1020,
+   "hispanic_or_latino": 2997,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-481101",
+   "name": "Census Tract 4811.01 (South Central CC)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.75736,
+    "longitude": -97.40053
+   },
+   "reference_point_basis": "placed beside S Staples St (no published point in the reference set)",
+   "bbox": [
+    -97.41322,
+    27.74609,
+    -97.38784,
+    27.76863
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355481101",
+   "tract": "481101",
+   "neighbourhood_name": "South Central CC",
+   "evacuation_zone": "B",
+   "population": 7675,
+   "median_household_income": 42294.0,
+   "persons_below_poverty": 1467,
+   "hispanic_or_latino": 4839,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-481201",
+   "name": "Census Tract 4812.01 (Molina)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.76718,
+    "longitude": -97.44573
+   },
+   "reference_point_basis": "placed beside FM 665 (no published point in the reference set)",
+   "bbox": [
+    -97.45842,
+    27.75591,
+    -97.43304,
+    27.77845
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355481201",
+   "tract": "481201",
+   "neighbourhood_name": "Molina",
+   "evacuation_zone": "B",
+   "population": 7338,
+   "median_household_income": 36474.0,
+   "persons_below_poverty": 2009,
+   "hispanic_or_latino": 5815,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-481301",
+   "name": "Census Tract 4813.01 (Hillcrest)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.80607,
+    "longitude": -97.41215
+   },
+   "reference_point_basis": "placed beside Kennedy Ave (no published point in the reference set)",
+   "bbox": [
+    -97.42484,
+    27.7948,
+    -97.39946,
+    27.81734
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355481301",
+   "tract": "481301",
+   "neighbourhood_name": "Hillcrest",
+   "evacuation_zone": "B",
+   "population": 8124,
+   "median_household_income": 39488.0,
+   "persons_below_poverty": 2141,
+   "hispanic_or_latino": 5952,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-481401",
+   "name": "Census Tract 4814.01 (Westside CC)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.78575,
+    "longitude": -97.43501
+   },
+   "reference_point_basis": "placed beside Agnes St (no published point in the reference set)",
+   "bbox": [
+    -97.4477,
+    27.77448,
+    -97.42232,
+    27.79702
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355481401",
+   "tract": "481401",
+   "neighbourhood_name": "Westside CC",
+   "evacuation_zone": "B",
+   "population": 8784,
+   "median_household_income": 40071.0,
+   "persons_below_poverty": 1871,
+   "hispanic_or_latino": 6292,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-481501",
+   "name": "Census Tract 4815.01 (Del Mar Heights)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.76571,
+    "longitude": -97.39667
+   },
+   "reference_point_basis": "placed beside S Alameda St (no published point in the reference set)",
+   "bbox": [
+    -97.40936,
+    27.75444,
+    -97.38398,
+    27.77698
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355481501",
+   "tract": "481501",
+   "neighbourhood_name": "Del Mar Heights",
+   "evacuation_zone": "B",
+   "population": 6088,
+   "median_household_income": 47182.0,
+   "persons_below_poverty": 1033,
+   "hispanic_or_latino": 3496,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-481601",
+   "name": "Census Tract 4816.01 (Saxet Heights)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.79714,
+    "longitude": -97.46005
+   },
+   "reference_point_basis": "placed beside Leopard St (no published point in the reference set)",
+   "bbox": [
+    -97.47274,
+    27.78587,
+    -97.44736,
+    27.80841
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355481601",
+   "tract": "481601",
+   "neighbourhood_name": "Saxet Heights",
+   "evacuation_zone": "B",
+   "population": 5597,
+   "median_household_income": 51277.0,
+   "persons_below_poverty": 834,
+   "hispanic_or_latino": 3122,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-481701",
+   "name": "Census Tract 4817.01 (Cunningham)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.75159,
+    "longitude": -97.42803
+   },
+   "reference_point_basis": "real site: Cunningham Middle School",
+   "bbox": [
+    -97.44073,
+    27.74033,
+    -97.41534,
+    27.76286
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355481701",
+   "tract": "481701",
+   "neighbourhood_name": "Cunningham",
+   "evacuation_zone": "B",
+   "population": 7836,
+   "median_household_income": 46418.0,
+   "persons_below_poverty": 1364,
+   "hispanic_or_latino": 5068,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-481801",
+   "name": "Census Tract 4818.01 (Carroll Lane)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.7419,
+    "longitude": -97.38988
+   },
+   "reference_point_basis": "placed beside S Staples St (no published point in the reference set)",
+   "bbox": [
+    -97.40257,
+    27.73063,
+    -97.37719,
+    27.75317
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355481801",
+   "tract": "481801",
+   "neighbourhood_name": "Carroll Lane",
+   "evacuation_zone": "B",
+   "population": 7175,
+   "median_household_income": 45756.0,
+   "persons_below_poverty": 1175,
+   "hispanic_or_latino": 4406,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-481901",
+   "name": "Census Tract 4819.01 (Flour Bluff Central)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.66913,
+    "longitude": -97.29929
+   },
+   "reference_point_basis": "placed beside Graham Rd (no published point in the reference set)",
+   "bbox": [
+    -97.31198,
+    27.65786,
+    -97.2866,
+    27.6804
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355481901",
+   "tract": "481901",
+   "neighbourhood_name": "Flour Bluff Central",
+   "evacuation_zone": "B",
+   "population": 11309,
+   "median_household_income": 44782.0,
+   "persons_below_poverty": 2012,
+   "hispanic_or_latino": 5984,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-482001",
+   "name": "Census Tract 4820.01 (Flour Bluff East)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.66049,
+    "longitude": -97.28799
+   },
+   "reference_point_basis": "placed beside Waldron Rd (no published point in the reference set)",
+   "bbox": [
+    -97.30068,
+    27.64922,
+    -97.2753,
+    27.67176
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355482001",
+   "tract": "482001",
+   "neighbourhood_name": "Flour Bluff East",
+   "evacuation_zone": "B",
+   "population": 8225,
+   "median_household_income": 46474.0,
+   "persons_below_poverty": 1681,
+   "hispanic_or_latino": 4524,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-482101",
+   "name": "Census Tract 4821.01 (Airline South)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.68498,
+    "longitude": -97.36433
+   },
+   "reference_point_basis": "placed beside Airline Rd (no published point in the reference set)",
+   "bbox": [
+    -97.37702,
+    27.67371,
+    -97.35164,
+    27.69625
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355482101",
+   "tract": "482101",
+   "neighbourhood_name": "Airline South",
+   "evacuation_zone": "B",
+   "population": 10239,
+   "median_household_income": 52573.0,
+   "persons_below_poverty": 1550,
+   "hispanic_or_latino": 6214,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-482201",
+   "name": "Census Tract 4822.01 (South Park)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.73421,
+    "longitude": -97.41687
+   },
+   "reference_point_basis": "placed beside McArdle Rd (no published point in the reference set)",
+   "bbox": [
+    -97.42956,
+    27.72294,
+    -97.40418,
+    27.74548
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-B"
+   ],
+   "geoid": "1400000US48355482201",
+   "tract": "482201",
+   "neighbourhood_name": "South Park",
+   "evacuation_zone": "B",
+   "population": 7522,
+   "median_household_income": 40268.0,
+   "persons_below_poverty": 1633,
+   "hispanic_or_latino": 5135,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-482301",
+   "name": "Census Tract 4823.01 (Airline North)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.71503,
+    "longitude": -97.36264
+   },
+   "reference_point_basis": "placed beside Airline Rd (no published point in the reference set)",
+   "bbox": [
+    -97.37533,
+    27.70376,
+    -97.34995,
+    27.7263
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355482301",
+   "tract": "482301",
+   "neighbourhood_name": "Airline North",
+   "evacuation_zone": "C",
+   "population": 11105,
+   "median_household_income": 60534.0,
+   "persons_below_poverty": 1581,
+   "hispanic_or_latino": 5951,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-482401",
+   "name": "Census Tract 4824.01 (Clarkwood)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.78448,
+    "longitude": -97.53972
+   },
+   "reference_point_basis": "real site: Clarkwood",
+   "bbox": [
+    -97.55242,
+    27.77321,
+    -97.52703,
+    27.79574
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355482401",
+   "tract": "482401",
+   "neighbourhood_name": "Clarkwood",
+   "evacuation_zone": "C",
+   "population": 7999,
+   "median_household_income": 56653.0,
+   "persons_below_poverty": 1038,
+   "hispanic_or_latino": 4705,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-482501",
+   "name": "Census Tract 4825.01 (Calallen Central)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.85586,
+    "longitude": -97.62972
+   },
+   "reference_point_basis": "real site: Five Points",
+   "bbox": [
+    -97.64242,
+    27.84459,
+    -97.61703,
+    27.86713
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355482501",
+   "tract": "482501",
+   "neighbourhood_name": "Calallen Central",
+   "evacuation_zone": "C",
+   "population": 12144,
+   "median_household_income": 56136.0,
+   "persons_below_poverty": 1554,
+   "hispanic_or_latino": 7177,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-482601",
+   "name": "Census Tract 4826.01 (Calallen North)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.86753,
+    "longitude": -97.62306
+   },
+   "reference_point_basis": "real site: Calallen",
+   "bbox": [
+    -97.63575,
+    27.85626,
+    -97.61036,
+    27.87879
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355482601",
+   "tract": "482601",
+   "neighbourhood_name": "Calallen North",
+   "evacuation_zone": "C",
+   "population": 10890,
+   "median_household_income": 52676.0,
+   "persons_below_poverty": 1658,
+   "hispanic_or_latino": 6668,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-482701",
+   "name": "Census Tract 4827.01 (Violet)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.78364,
+    "longitude": -97.59528
+   },
+   "reference_point_basis": "real site: Violet",
+   "bbox": [
+    -97.60797,
+    27.77238,
+    -97.58259,
+    27.79491
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355482701",
+   "tract": "482701",
+   "neighbourhood_name": "Violet",
+   "evacuation_zone": "C",
+   "population": 7111,
+   "median_household_income": 47422.0,
+   "persons_below_poverty": 1174,
+   "hispanic_or_latino": 4501,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-482801",
+   "name": "Census Tract 4828.01 (Annaville)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.83864,
+    "longitude": -97.58306
+   },
+   "reference_point_basis": "real site: Annaville",
+   "bbox": [
+    -97.59575,
+    27.82737,
+    -97.57036,
+    27.84991
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355482801",
+   "tract": "482801",
+   "neighbourhood_name": "Annaville",
+   "evacuation_zone": "C",
+   "population": 7719,
+   "median_household_income": 52997.0,
+   "persons_below_poverty": 1267,
+   "hispanic_or_latino": 4518,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-482901",
+   "name": "Census Tract 4829.01 (Robstown Urban)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.79031,
+    "longitude": -97.66889
+   },
+   "reference_point_basis": "real site: Robstown",
+   "bbox": [
+    -97.68159,
+    27.77904,
+    -97.6562,
+    27.80157
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355482901",
+   "tract": "482901",
+   "neighbourhood_name": "Robstown Urban",
+   "evacuation_zone": "C",
+   "population": 11374,
+   "median_household_income": 36489.0,
+   "persons_below_poverty": 3179,
+   "hispanic_or_latino": 9394,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-483001",
+   "name": "Census Tract 4830.01 (Robstown East)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.79416,
+    "longitude": -97.65672
+   },
+   "reference_point_basis": "placed beside State Hwy 44 (no published point in the reference set)",
+   "bbox": [
+    -97.66941,
+    27.78289,
+    -97.64403,
+    27.80543
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355483001",
+   "tract": "483001",
+   "neighbourhood_name": "Robstown East",
+   "evacuation_zone": "C",
+   "population": 6505,
+   "median_household_income": 35732.0,
+   "persons_below_poverty": 1977,
+   "hispanic_or_latino": 5148,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-483101",
+   "name": "Census Tract 4831.01 (Petronila Area)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.67198,
+    "longitude": -97.63584
+   },
+   "reference_point_basis": "real site: Petronila",
+   "bbox": [
+    -97.64853,
+    27.66071,
+    -97.62314,
+    27.68325
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355483101",
+   "tract": "483101",
+   "neighbourhood_name": "Petronila Area",
+   "evacuation_zone": "C",
+   "population": 2914,
+   "median_household_income": 42174.0,
+   "persons_below_poverty": 500,
+   "hispanic_or_latino": 1989,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-483201",
+   "name": "Census Tract 4832.01 (SPID Corridor W)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.72293,
+    "longitude": -97.42753
+   },
+   "reference_point_basis": "placed beside Holly Rd (no published point in the reference set)",
+   "bbox": [
+    -97.44022,
+    27.71166,
+    -97.41484,
+    27.7342
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355483201",
+   "tract": "483201",
+   "neighbourhood_name": "SPID Corridor W",
+   "evacuation_zone": "C",
+   "population": 8574,
+   "median_household_income": 61564.0,
+   "persons_below_poverty": 1025,
+   "hispanic_or_latino": 4062,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-483301",
+   "name": "Census Tract 4833.01 (SPID Corridor E)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.70584,
+    "longitude": -97.37176
+   },
+   "reference_point_basis": "placed beside S Staples St (no published point in the reference set)",
+   "bbox": [
+    -97.38445,
+    27.69457,
+    -97.35907,
+    27.71711
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355483301",
+   "tract": "483301",
+   "neighbourhood_name": "SPID Corridor E",
+   "evacuation_zone": "C",
+   "population": 8736,
+   "median_household_income": 58501.0,
+   "persons_below_poverty": 1150,
+   "hispanic_or_latino": 4278,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-483401",
+   "name": "Census Tract 4834.01 (Greenwood)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.74406,
+    "longitude": -97.4456
+   },
+   "reference_point_basis": "placed beside State Hwy 358 (no published point in the reference set)",
+   "bbox": [
+    -97.45829,
+    27.73279,
+    -97.43291,
+    27.75533
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355483401",
+   "tract": "483401",
+   "neighbourhood_name": "Greenwood",
+   "evacuation_zone": "C",
+   "population": 10320,
+   "median_household_income": 63666.0,
+   "persons_below_poverty": 1032,
+   "hispanic_or_latino": 4681,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-483501",
+   "name": "Census Tract 4835.01 (Stonegate)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.67541,
+    "longitude": -97.39083
+   },
+   "reference_point_basis": "placed beside FM 2444 (no published point in the reference set)",
+   "bbox": [
+    -97.40352,
+    27.66414,
+    -97.37814,
+    27.68668
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355483501",
+   "tract": "483501",
+   "neighbourhood_name": "Stonegate",
+   "evacuation_zone": "C",
+   "population": 8035,
+   "median_household_income": 69940.0,
+   "persons_below_poverty": 708,
+   "hispanic_or_latino": 3434,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-483601",
+   "name": "Census Tract 4836.01 (Chapman Ranch Area)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.58643,
+    "longitude": -97.45333
+   },
+   "reference_point_basis": "real site: Chapman Ranch",
+   "bbox": [
+    -97.46603,
+    27.57516,
+    -97.44064,
+    27.5977
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-C"
+   ],
+   "geoid": "1400000US48355483601",
+   "tract": "483601",
+   "neighbourhood_name": "Chapman Ranch Area",
+   "evacuation_zone": "C",
+   "population": 3127,
+   "median_household_income": 50274.0,
+   "persons_below_poverty": 514,
+   "hispanic_or_latino": 1982,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-483701",
+   "name": "Census Tract 4837.01 (Calallen NW)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.87201,
+    "longitude": -97.64416
+   },
+   "reference_point_basis": "placed beside an unnamed road (no published point in the reference set)",
+   "bbox": [
+    -97.65685,
+    27.86074,
+    -97.63147,
+    27.88328
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355483701",
+   "tract": "483701",
+   "neighbourhood_name": "Calallen NW",
+   "evacuation_zone": "D",
+   "population": 12790,
+   "median_household_income": 70740.0,
+   "persons_below_poverty": 1107,
+   "hispanic_or_latino": 5252,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-483801",
+   "name": "Census Tract 4838.01 (Northwest CC)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.83503,
+    "longitude": -97.56667
+   },
+   "reference_point_basis": "real site: Arlington Heights",
+   "bbox": [
+    -97.57936,
+    27.82376,
+    -97.55397,
+    27.8463
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355483801",
+   "tract": "483801",
+   "neighbourhood_name": "Northwest CC",
+   "evacuation_zone": "D",
+   "population": 15835,
+   "median_household_income": 74260.0,
+   "persons_below_poverty": 1131,
+   "hispanic_or_latino": 5960,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-483901",
+   "name": "Census Tract 4839.01 (Cimmaron)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.66041,
+    "longitude": -97.38474
+   },
+   "reference_point_basis": "placed beside Yorktown Blvd (no published point in the reference set)",
+   "bbox": [
+    -97.39743,
+    27.64914,
+    -97.37205,
+    27.67168
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355483901",
+   "tract": "483901",
+   "neighbourhood_name": "Cimmaron",
+   "evacuation_zone": "D",
+   "population": 12768,
+   "median_household_income": 76259.0,
+   "persons_below_poverty": 989,
+   "hispanic_or_latino": 5014,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-484001",
+   "name": "Census Tract 4840.01 (Oso Creek NW)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.70584,
+    "longitude": -97.4264
+   },
+   "reference_point_basis": "placed beside State Hwy 357 E (no published point in the reference set)",
+   "bbox": [
+    -97.43909,
+    27.69457,
+    -97.41371,
+    27.71711
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355484001",
+   "tract": "484001",
+   "neighbourhood_name": "Oso Creek NW",
+   "evacuation_zone": "D",
+   "population": 12278,
+   "median_household_income": 68962.0,
+   "persons_below_poverty": 1008,
+   "hispanic_or_latino": 5460,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-484101",
+   "name": "Census Tract 4841.01 (Padre Island NW)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.61492,
+    "longitude": -97.22138
+   },
+   "reference_point_basis": "placed beside S Padre Island Dr (no published point in the reference set)",
+   "bbox": [
+    -97.23407,
+    27.60365,
+    -97.20869,
+    27.62619
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355484101",
+   "tract": "484101",
+   "neighbourhood_name": "Padre Island NW",
+   "evacuation_zone": "D",
+   "population": 10339,
+   "median_household_income": 65481.0,
+   "persons_below_poverty": 1017,
+   "hispanic_or_latino": 4384,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-484201",
+   "name": "Census Tract 4842.01 (Bishop Area)",
+   "area_type": "census_tract",
+   "reference_point": null,
+   "reference_point_basis": "outside the reference window",
+   "bbox": null,
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "outside the reference window; no reference point or extent",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355484201",
+   "tract": "484201",
+   "neighbourhood_name": "Bishop Area",
+   "evacuation_zone": "D",
+   "population": 5559,
+   "median_household_income": 43664.0,
+   "persons_below_poverty": 1103,
+   "hispanic_or_latino": 4263,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-484301",
+   "name": "Census Tract 4843.01 (Driscoll Area)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.67448,
+    "longitude": -97.74862
+   },
+   "reference_point_basis": "real site: Driscoll",
+   "bbox": [
+    -97.76131,
+    27.66321,
+    -97.73592,
+    27.68575
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355484301",
+   "tract": "484301",
+   "neighbourhood_name": "Driscoll Area",
+   "evacuation_zone": "D",
+   "population": 1758,
+   "median_household_income": 38913.0,
+   "persons_below_poverty": 500,
+   "hispanic_or_latino": 1369,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-484401",
+   "name": "Census Tract 4844.01 (Agua Dulce)",
+   "area_type": "census_tract",
+   "reference_point": null,
+   "reference_point_basis": "outside the reference window",
+   "bbox": null,
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "outside the reference window; no reference point or extent",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355484401",
+   "tract": "484401",
+   "neighbourhood_name": "Agua Dulce",
+   "evacuation_zone": "D",
+   "population": 1535,
+   "median_household_income": 35753.0,
+   "persons_below_poverty": 463,
+   "hispanic_or_latino": 1294,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-484501",
+   "name": "Census Tract 4845.01 (Rural NE Nueces)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.81198,
+    "longitude": -97.53917
+   },
+   "reference_point_basis": "real site: McNorton",
+   "bbox": [
+    -97.55186,
+    27.80071,
+    -97.52647,
+    27.82324
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355484501",
+   "tract": "484501",
+   "neighbourhood_name": "Rural NE Nueces",
+   "evacuation_zone": "D",
+   "population": 2350,
+   "median_household_income": 47194.0,
+   "persons_below_poverty": 445,
+   "hispanic_or_latino": 1438,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-484601",
+   "name": "Census Tract 4846.01 (Rural NW Nueces)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.86071,
+    "longitude": -97.675
+   },
+   "reference_point_basis": "real site: Annaville Fire Department Station 2",
+   "bbox": [
+    -97.68769,
+    27.84944,
+    -97.6623,
+    27.87197
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355484601",
+   "tract": "484601",
+   "neighbourhood_name": "Rural NW Nueces",
+   "evacuation_zone": "D",
+   "population": 2017,
+   "median_household_income": 45499.0,
+   "persons_below_poverty": 374,
+   "hispanic_or_latino": 1284,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-484701",
+   "name": "Census Tract 4847.01 (Rural S Nueces)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.60254,
+    "longitude": -97.70695
+   },
+   "reference_point_basis": "real site: Concordia",
+   "bbox": [
+    -97.71964,
+    27.59127,
+    -97.69425,
+    27.6138
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355484701",
+   "tract": "484701",
+   "neighbourhood_name": "Rural S Nueces",
+   "evacuation_zone": "D",
+   "population": 2491,
+   "median_household_income": 40114.0,
+   "persons_below_poverty": 541,
+   "hispanic_or_latino": 1718,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-484801",
+   "name": "Census Tract 4848.01 (Rural SW Nueces)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.76245,
+    "longitude": -97.74096
+   },
+   "reference_point_basis": "real site: Spring Gardens",
+   "bbox": [
+    -97.75365,
+    27.75118,
+    -97.72827,
+    27.77371
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355484801",
+   "tract": "484801",
+   "neighbourhood_name": "Rural SW Nueces",
+   "evacuation_zone": "D",
+   "population": 2133,
+   "median_household_income": 38253.0,
+   "persons_below_poverty": 575,
+   "hispanic_or_latino": 1535,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-484901",
+   "name": "Census Tract 4849.01 (Industrial Corridor)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.81278,
+    "longitude": -97.46977
+   },
+   "reference_point_basis": "placed beside Up River Rd (no published point in the reference set)",
+   "bbox": [
+    -97.48246,
+    27.80151,
+    -97.45708,
+    27.82405
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355484901",
+   "tract": "484901",
+   "neighbourhood_name": "Industrial Corridor",
+   "evacuation_zone": "D",
+   "population": 1718,
+   "median_household_income": 43039.0,
+   "persons_below_poverty": 292,
+   "hispanic_or_latino": 1038,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-485001",
+   "name": "Census Tract 4850.01 (Nueces River Bottom)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.8611,
+    "longitude": -97.60264
+   },
+   "reference_point_basis": "placed beside Up River Rd (no published point in the reference set)",
+   "bbox": [
+    -97.61533,
+    27.84983,
+    -97.58995,
+    27.87237
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355485001",
+   "tract": "485001",
+   "neighbourhood_name": "Nueces River Bottom",
+   "evacuation_zone": "D",
+   "population": 1288,
+   "median_household_income": 36665.0,
+   "persons_below_poverty": 381,
+   "hispanic_or_latino": 979,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-485101",
+   "name": "Census Tract 4851.01 (East Flats)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.83382,
+    "longitude": -97.06574
+   },
+   "reference_point_basis": "placed beside an unnamed road (no published point in the reference set)",
+   "bbox": [
+    -97.07843,
+    27.82255,
+    -97.05305,
+    27.84509
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355485101",
+   "tract": "485101",
+   "neighbourhood_name": "East Flats",
+   "evacuation_zone": "D",
+   "population": 3400,
+   "median_household_income": 40470.0,
+   "persons_below_poverty": 711,
+   "hispanic_or_latino": 2236,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-485201",
+   "name": "Census Tract 4852.01 (South County Rural)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.69253,
+    "longitude": -97.58167
+   },
+   "reference_point_basis": "real site: Tierra Grande",
+   "bbox": [
+    -97.59436,
+    27.68127,
+    -97.56897,
+    27.7038
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355485201",
+   "tract": "485201",
+   "neighbourhood_name": "South County Rural",
+   "evacuation_zone": "D",
+   "population": 2254,
+   "median_household_income": 39959.0,
+   "persons_below_poverty": 506,
+   "hispanic_or_latino": 1568,
+   "income_quartile": 1,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-485301",
+   "name": "Census Tract 4853.01 (Padre Balli Area)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.59801,
+    "longitude": -97.22273
+   },
+   "reference_point_basis": "placed beside State Park Road 22 (no published point in the reference set)",
+   "bbox": [
+    -97.23542,
+    27.58674,
+    -97.21004,
+    27.60928
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355485301",
+   "tract": "485301",
+   "neighbourhood_name": "Padre Balli Area",
+   "evacuation_zone": "D",
+   "population": 1673,
+   "median_household_income": 53288.0,
+   "persons_below_poverty": 219,
+   "hispanic_or_latino": 748,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-485401",
+   "name": "Census Tract 4854.01 (Laguna Shores)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.64478,
+    "longitude": -97.28455
+   },
+   "reference_point_basis": "placed beside Laguna Shores Rd (no published point in the reference set)",
+   "bbox": [
+    -97.29724,
+    27.63351,
+    -97.27186,
+    27.65605
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355485401",
+   "tract": "485401",
+   "neighbourhood_name": "Laguna Shores",
+   "evacuation_zone": "D",
+   "population": 3577,
+   "median_household_income": 49881.0,
+   "persons_below_poverty": 571,
+   "hispanic_or_latino": 1949,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-485501",
+   "name": "Census Tract 4855.01 (Oso Bay Area)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.70402,
+    "longitude": -97.33714
+   },
+   "reference_point_basis": "placed beside Ennis Joslin Rd (no published point in the reference set)",
+   "bbox": [
+    -97.34983,
+    27.69275,
+    -97.32445,
+    27.71529
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355485501",
+   "tract": "485501",
+   "neighbourhood_name": "Oso Bay Area",
+   "evacuation_zone": "D",
+   "population": 4488,
+   "median_household_income": 57763.0,
+   "persons_below_poverty": 568,
+   "hispanic_or_latino": 2201,
+   "income_quartile": 4,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-TRACT-485601",
+   "name": "Census Tract 4856.01 (Naval Air Station)",
+   "area_type": "census_tract",
+   "reference_point": {
+    "latitude": 27.69242,
+    "longitude": -97.27931
+   },
+   "reference_point_basis": "real site: Naval Air Station Corpus Christi installation parcel at the airfield (centroid computed from the published boundary) [USDOT NTAD Military Bases]",
+   "bbox": [
+    -97.292,
+    27.68115,
+    -97.26662,
+    27.70369
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 2.5 km box around the reference point; tract boundaries are not in the reference set (the tract table is synthetic)",
+   "within": [
+    "PLC-001",
+    "AREA-EVAC-D"
+   ],
+   "geoid": "1400000US48355485601",
+   "tract": "485601",
+   "neighbourhood_name": "Naval Air Station",
+   "evacuation_zone": "D",
+   "population": 6755,
+   "median_household_income": 49016.0,
+   "persons_below_poverty": 586,
+   "hispanic_or_latino": 2049,
+   "income_quartile": null,
+   "attributes_source": "05_other_sources/census/acs_nueces_tracts.csv"
+  },
+  {
+   "area_id": "AREA-EVAC-A",
+   "name": "Evacuation Zone A",
+   "area_type": "evacuation_zone",
+   "reference_point": {
+    "latitude": 27.82663,
+    "longitude": -97.38633
+   },
+   "reference_point_basis": "reference point of AREA-TRACT-480101",
+   "bbox": [
+    -97.63787,
+    27.58888,
+    -97.07813,
+    27.88572
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the nominal boxes of its 10 member tracts",
+   "within": [
+    "PLC-001"
+   ],
+   "description": "Barrier islands, bayfront and all areas at highest surge risk",
+   "member_tracts": [
+    "AREA-TRACT-480101",
+    "AREA-TRACT-480201",
+    "AREA-TRACT-480301",
+    "AREA-TRACT-480401",
+    "AREA-TRACT-480501",
+    "AREA-TRACT-480601",
+    "AREA-TRACT-480701",
+    "AREA-TRACT-480801",
+    "AREA-TRACT-480901",
+    "AREA-TRACT-481001"
+   ],
+   "population": 32298,
+   "order_class": "mandatory"
+  },
+  {
+   "area_id": "AREA-EVAC-B",
+   "name": "Evacuation Zone B",
+   "area_type": "evacuation_zone",
+   "reference_point": {
+    "latitude": 27.75736,
+    "longitude": -97.40053
+   },
+   "reference_point_basis": "reference point of AREA-TRACT-481101",
+   "bbox": [
+    -97.47274,
+    27.64922,
+    -97.2753,
+    27.81734
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the nominal boxes of its 12 member tracts",
+   "within": [
+    "PLC-001"
+   ],
+   "description": "Low-lying coastal areas inland of Zone A",
+   "member_tracts": [
+    "AREA-TRACT-481101",
+    "AREA-TRACT-481201",
+    "AREA-TRACT-481301",
+    "AREA-TRACT-481401",
+    "AREA-TRACT-481501",
+    "AREA-TRACT-481601",
+    "AREA-TRACT-481701",
+    "AREA-TRACT-481801",
+    "AREA-TRACT-481901",
+    "AREA-TRACT-482001",
+    "AREA-TRACT-482101",
+    "AREA-TRACT-482201"
+   ],
+   "population": 95912,
+   "order_class": "mandatory"
+  },
+  {
+   "area_id": "AREA-EVAC-C",
+   "name": "Evacuation Zone C",
+   "area_type": "evacuation_zone",
+   "reference_point": {
+    "latitude": 27.71503,
+    "longitude": -97.36264
+   },
+   "reference_point_basis": "reference point of AREA-TRACT-482301",
+   "bbox": [
+    -97.68159,
+    27.57516,
+    -97.34995,
+    27.87879
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the nominal boxes of its 14 member tracts",
+   "within": [
+    "PLC-001"
+   ],
+   "description": "Areas below 10 feet of elevation and mobile or manufactured homes inland of Zone B",
+   "member_tracts": [
+    "AREA-TRACT-482301",
+    "AREA-TRACT-482401",
+    "AREA-TRACT-482501",
+    "AREA-TRACT-482601",
+    "AREA-TRACT-482701",
+    "AREA-TRACT-482801",
+    "AREA-TRACT-482901",
+    "AREA-TRACT-483001",
+    "AREA-TRACT-483101",
+    "AREA-TRACT-483201",
+    "AREA-TRACT-483301",
+    "AREA-TRACT-483401",
+    "AREA-TRACT-483501",
+    "AREA-TRACT-483601"
+   ],
+   "population": 116553,
+   "order_class": "mandatory"
+  },
+  {
+   "area_id": "AREA-EVAC-D",
+   "name": "Evacuation Zone D",
+   "area_type": "evacuation_zone",
+   "reference_point": {
+    "latitude": 27.87201,
+    "longitude": -97.64416
+   },
+   "reference_point_basis": "reference point of AREA-TRACT-483701",
+   "bbox": [
+    -97.76131,
+    27.58674,
+    -97.05305,
+    27.88328
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "union of the nominal boxes of its 20 member tracts",
+   "within": [
+    "PLC-001"
+   ],
+   "description": "Inland areas with minimal surge risk",
+   "member_tracts": [
+    "AREA-TRACT-483701",
+    "AREA-TRACT-483801",
+    "AREA-TRACT-483901",
+    "AREA-TRACT-484001",
+    "AREA-TRACT-484101",
+    "AREA-TRACT-484201",
+    "AREA-TRACT-484301",
+    "AREA-TRACT-484401",
+    "AREA-TRACT-484501",
+    "AREA-TRACT-484601",
+    "AREA-TRACT-484701",
+    "AREA-TRACT-484801",
+    "AREA-TRACT-484901",
+    "AREA-TRACT-485001",
+    "AREA-TRACT-485101",
+    "AREA-TRACT-485201",
+    "AREA-TRACT-485301",
+    "AREA-TRACT-485401",
+    "AREA-TRACT-485501",
+    "AREA-TRACT-485601"
+   ],
+   "population": 107006,
+   "order_class": "shelter in place"
+  },
+  {
+   "area_id": "AREA-EVAC-E",
+   "name": "Evacuation Zone E",
+   "area_type": "evacuation_zone",
+   "reference_point": null,
+   "reference_point_basis": "no tract in the scenario's tract table is assigned to this zone",
+   "bbox": null,
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "not defined",
+   "within": [
+    "PLC-001"
+   ],
+   "description": "Remaining inland and rural areas",
+   "member_tracts": [],
+   "population": null,
+   "order_class": "shelter in place"
+  },
+  {
+   "area_id": "AREA-BEAT-B01",
+   "name": "Beat 01 - Downtown / North Beach",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.79995,
+    "longitude": -97.39537
+   },
+   "reference_point_basis": "placed beside N Mesquite St (no published point in the reference set)",
+   "bbox": [
+    -97.42076,
+    27.77742,
+    -97.36998,
+    27.82248
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 5 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B01",
+   "neighbourhoods": [
+    "Downtown",
+    "North Beach",
+    "Port of Corpus Christi",
+    "Harbor Bridge"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-BEAT-B02",
+   "name": "Beat 02 - Leopard Street Corridor",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.79668,
+    "longitude": -97.43016
+   },
+   "reference_point_basis": "placed beside Leopard St (no published point in the reference set)",
+   "bbox": [
+    -97.45555,
+    27.77415,
+    -97.40477,
+    27.81921
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 5 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B02",
+   "neighbourhoods": [
+    "Leopard Street",
+    "Hillcrest",
+    "Up River Road",
+    "Nueces River bottoms"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-BEAT-B03",
+   "name": "Beat 03 - Central / Morgan Ave",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.7751,
+    "longitude": -97.40407
+   },
+   "reference_point_basis": "placed beside 10th St (no published point in the reference set)",
+   "bbox": [
+    -97.42946,
+    27.75257,
+    -97.37868,
+    27.79763
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 5 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B03",
+   "neighbourhoods": [
+    "Central",
+    "Morgan Ave",
+    "Del Mar",
+    "South Bluff",
+    "Lamar Park"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-BEAT-B04",
+   "name": "Beat 04 - Southside / South Staples",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.70289,
+    "longitude": -97.38633
+   },
+   "reference_point_basis": "placed beside Holly Rd (no published point in the reference set)",
+   "bbox": [
+    -97.42695,
+    27.66684,
+    -97.34571,
+    27.73894
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 8 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B04",
+   "neighbourhoods": [
+    "Southside",
+    "South Staples",
+    "Saratoga",
+    "Airline at Saratoga",
+    "Whitecap"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-BEAT-B05",
+   "name": "Beat 05 - Westside",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.78197,
+    "longitude": -97.45228
+   },
+   "reference_point_basis": "placed beside S Navigation Blvd (no published point in the reference set)",
+   "bbox": [
+    -97.48275,
+    27.75493,
+    -97.42181,
+    27.80901
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 6 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B05",
+   "neighbourhoods": [
+    "Westside",
+    "Agnes Street",
+    "Highway 44",
+    "Clarkwood",
+    "Violet"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-BEAT-B06",
+   "name": "Beat 06 - Flour Bluff",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.66376,
+    "longitude": -97.29078
+   },
+   "reference_point_basis": "placed beside Graham Rd (no published point in the reference set)",
+   "bbox": [
+    -97.32632,
+    27.63221,
+    -97.25524,
+    27.69531
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 7 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B06",
+   "neighbourhoods": [
+    "Flour Bluff",
+    "Waldron Road",
+    "Ennis Joslin",
+    "Flour Bluff ISD area"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-BEAT-B07",
+   "name": "Beat 07 - Padre Island / SPID",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.61492,
+    "longitude": -97.22138
+   },
+   "reference_point_basis": "placed beside S Padre Island Dr (no published point in the reference set)",
+   "bbox": [
+    -97.27216,
+    27.56985,
+    -97.1706,
+    27.65999
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 10 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B07",
+   "neighbourhoods": [
+    "North Padre Island",
+    "Padre Island National Seashore area",
+    "JFK Causeway",
+    "Gulf of Mexico shoreline"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-BEAT-B08",
+   "name": "Beat 08 - Calallen / Northwest",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.86013,
+    "longitude": -97.62998
+   },
+   "reference_point_basis": "placed beside Teague Ln (no published point in the reference set)",
+   "bbox": [
+    -97.68076,
+    27.81506,
+    -97.5792,
+    27.9052
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 10 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B08",
+   "neighbourhoods": [
+    "Calallen",
+    "Northwest",
+    "IH-37 North",
+    "Annaville",
+    "Calallen ISD area"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-BEAT-B09",
+   "name": "Beat 09 - NAS / Oso Creek",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.69887,
+    "longitude": -97.33381
+   },
+   "reference_point_basis": "placed beside Ennis Joslin Rd (no published point in the reference set)",
+   "bbox": [
+    -97.36935,
+    27.66732,
+    -97.29827,
+    27.73042
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 7 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B09",
+   "neighbourhoods": [
+    "NAS Corpus Christi",
+    "Oso Creek",
+    "South Alameda",
+    "Holly Road",
+    "Oso Bay vicinity"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-BEAT-B10",
+   "name": "Beat 10 - Southeast",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.74441,
+    "longitude": -97.42037
+   },
+   "reference_point_basis": "placed beside Gollihar Rd (no published point in the reference set)",
+   "bbox": [
+    -97.45084,
+    27.71737,
+    -97.3899,
+    27.77145
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 6 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B10",
+   "neighbourhoods": [
+    "Southeast",
+    "Greenwood",
+    "Gollihar",
+    "South Park",
+    "Airport Road"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-BEAT-B11",
+   "name": "Beat 11 - North / Airline-SPID",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.71802,
+    "longitude": -97.36624
+   },
+   "reference_point_basis": "placed beside Gollihar Rd (no published point in the reference set)",
+   "bbox": [
+    -97.40178,
+    27.68647,
+    -97.3307,
+    27.74957
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 7 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B11",
+   "neighbourhoods": [
+    "North",
+    "Airline Road",
+    "SPID West",
+    "Corpus Christi Airport",
+    "Mustang Road"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  },
+  {
+   "area_id": "AREA-BEAT-B12",
+   "name": "Beat 12 - Harbor / Industrial",
+   "area_type": "patrol_beat",
+   "reference_point": {
+    "latitude": 27.80278,
+    "longitude": -97.44064
+   },
+   "reference_point_basis": "placed beside Service Rd (no published point in the reference set)",
+   "bbox": [
+    -97.48126,
+    27.76673,
+    -97.40002,
+    27.83883
+   ],
+   "bbox_order": "lon_min, lat_min, lon_max, lat_max",
+   "extent_basis": "nominal 8 km box around the reference point; beat boundaries are not in the reference set",
+   "within": [
+    "AREA-CITY-CORPUSCHRISTI"
+   ],
+   "beat_id": "B12",
+   "neighbourhoods": [
+    "La Quinta",
+    "Rincon",
+    "Ship Channel",
+    "Refinery Row",
+    "Industrial District"
+   ],
+   "agency": "CCPD",
+   "reference_only": true,
+   "reference_reason": "geographic reference used for joins; no stream keys on this id"
+  }
+ ]
+}

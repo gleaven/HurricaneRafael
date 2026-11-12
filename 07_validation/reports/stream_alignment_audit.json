@@ -1,0 +1,5975 @@
+{
+ "generated": "2026-11-09T22:40:52+00:00",
+ "scenario_span_days": [
+  -60,
+  119
+ ],
+ "counts_by_severity": {
+  "blocker": 34,
+  "major": 35,
+  "minor": 5
+ },
+ "matrix_counts": {
+  "missing": 111,
+  "present": 16,
+  "present-but-wrong-time": 12,
+  "present-but-wrong-values": 34,
+  "no-stream": 112,
+  "in-span-unverified": 7
+ },
+ "stream_coverage": {
+  "ais": {
+   "start": -43.33,
+   "end": 31.0,
+   "start_utc": "2027-08-01 16:00Z",
+   "end_utc": "2027-10-15 00:00Z",
+   "events_outside": [
+    "EVT-0104",
+    "EVT-0404",
+    "EVT-0414",
+    "EVT-0413",
+    "EVT-0409"
+   ]
+  },
+  "adsb": {
+   "start": -10.0,
+   "end": 60.0,
+   "start_utc": "2027-09-04 00:00Z",
+   "end_utc": "2027-11-12 23:59Z",
+   "events_outside": []
+  },
+  "drone_video": {
+   "start": 0.38,
+   "end": 31.02,
+   "start_utc": "2027-09-14 09:00Z",
+   "end_utc": "2027-10-15 00:29Z",
+   "events_outside": [
+    "EVT-0505"
+   ]
+  },
+  "satellite": {
+   "start": -30.0,
+   "end": 30.58,
+   "start_utc": "2027-08-15 00:00Z",
+   "end_utc": "2027-10-14 14:00Z",
+   "events_outside": [
+    "EVT-0104",
+    "EVT-0411",
+    "EVT-0403",
+    "EVT-0505"
+   ]
+  },
+  "weather": {
+   "start": -30.0,
+   "end": 31.0,
+   "start_utc": "2027-08-15 00:00Z",
+   "end_utc": "2027-10-15 00:00Z",
+   "events_outside": []
+  },
+  "env_sensors": {
+   "start": -30.0,
+   "end": 31.01,
+   "start_utc": "2027-08-15 00:00Z",
+   "end_utc": "2027-10-15 00:15Z",
+   "events_outside": [
+    "EVT-2009"
+   ]
+  },
+  "telemetry": {
+   "start": -30.0,
+   "end": 31.0,
+   "start_utc": "2027-08-15 00:00Z",
+   "end_utc": "2027-10-15 00:00Z",
+   "events_outside": [
+    "EVT-0102",
+    "EVT-0103",
+    "GW-EVT-015",
+    "EVT-0406",
+    "EVT-0407",
+    "GW-EVT-016",
+    "EVT-0602"
+   ]
+  },
+  "maintenance": {
+   "start": -29.33,
+   "end": 31.67,
+   "start_utc": "2027-08-15 16:00Z",
+   "end_utc": "2027-10-15 16:00Z",
+   "events_outside": [
+    "EVT-0102",
+    "EVT-0103",
+    "EVT-0406",
+    "EVT-0407",
+    "EVT-0414",
+    "EVT-0409",
+    "EVT-0506",
+    "EVT-0602"
+   ]
+  },
+  "supply": {
+   "start": -29.75,
+   "end": 28.5,
+   "start_utc": "2027-08-15 06:00Z",
+   "end_utc": "2027-10-12 12:00Z",
+   "events_outside": [
+    "EVT-0401",
+    "EVT-0404",
+    "EVT-0405",
+    "EVT-0406",
+    "EVT-0414",
+    "EVT-0409",
+    "EVT-0506",
+    "EVT-0602"
+   ]
+  },
+  "payments": {
+   "start": 0.0,
+   "end": 60.05,
+   "start_utc": "2027-09-14 00:00Z",
+   "end_utc": "2027-11-13 01:07Z",
+   "events_outside": [
+    "EVT-0103",
+    "EVT-0105",
+    "EVT-0204",
+    "EVT-0502",
+    "EVT-0503",
+    "EVT-0504",
+    "EVT-0505",
+    "EVT-0506",
+    "EVT-0601"
+   ]
+  },
+  "network_logs": {
+   "start": -60.0,
+   "end": 28.91,
+   "start_utc": "2027-07-15 23:59Z",
+   "end_utc": "2027-10-12 21:54Z",
+   "events_outside": [
+    "GW-EVT-108",
+    "EVT-0502"
+   ]
+  },
+  "911": {
+   "start": -5.0,
+   "end": 31.78,
+   "start_utc": "2027-09-09 00:03Z",
+   "end_utc": "2027-10-15 18:40Z",
+   "events_outside": [
+    "EVT-0101",
+    "EVT-0601"
+   ]
+  },
+  "public_health": {
+   "start": -7.0,
+   "end": 91.0,
+   "start_utc": "2027-09-07 00:00Z",
+   "end_utc": "2027-12-14 00:00Z",
+   "events_outside": [
+    "EVT-0101"
+   ]
+  },
+  "eas": {
+   "start": -6.62,
+   "end": 14.5,
+   "start_utc": "2027-09-07 09:00Z",
+   "end_utc": "2027-09-28 12:00Z",
+   "events_outside": [
+    "EVT-2108"
+   ]
+  },
+  "social_media": {
+   "start": -13.68,
+   "end": 119.85,
+   "start_utc": "2027-08-31 07:46Z",
+   "end_utc": "2028-01-11 20:21Z",
+   "events_outside": []
+  },
+  "infrastructure": {
+   "start": 1.0,
+   "end": 21.0,
+   "start_utc": "2027-09-15 00:00Z",
+   "end_utc": "2027-10-05 00:00Z",
+   "events_outside": [
+    "EVT-0601",
+    "EVT-0604"
+   ]
+  },
+  "census": {
+   "start": -60,
+   "end": 119,
+   "start_utc": "2027-07-16 00:00Z",
+   "end_utc": "2028-01-11 00:00Z",
+   "events_outside": []
+  },
+  "map_vs_logs": {
+   "vessels": [
+    {
+     "id": "229183047",
+     "name": "Adriatic Carrier",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -25.0,
+      -14.20075
+     ],
+     "log_span": [
+      -30.0,
+      -11.17
+     ],
+     "common_samples": 44,
+     "median_nm": 16.6,
+     "max_nm": 152.9
+    },
+    {
+     "id": "248137094",
+     "name": "MT Halcyon Aegis",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -12.0,
+      -4.27188
+     ],
+     "log_span": [
+      -18.33,
+      9.82
+     ],
+     "common_samples": 68,
+     "median_nm": 69.3,
+     "max_nm": 141.5
+    },
+    {
+     "id": "248291047",
+     "name": "MT Galveston Star",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -8.0,
+      3.72812
+     ],
+     "log_span": [
+      -13.33,
+      -3.0
+     ],
+     "common_samples": 56,
+     "median_nm": 2.5,
+     "max_nm": 98.3
+    },
+    {
+     "id": "308441927",
+     "name": "MV Gulf Provider",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -13.0,
+      -2.20075
+     ],
+     "log_span": [
+      -13.33,
+      0.24
+     ],
+     "common_samples": 109,
+     "median_nm": 59.3,
+     "max_nm": 211.8
+    },
+    {
+     "id": "319041827",
+     "name": "Bayou Spirit",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -28.0,
+      -22.27188
+     ],
+     "log_span": [
+      -30.0,
+      -7.38
+     ],
+     "common_samples": 23,
+     "median_nm": 17.4,
+     "max_nm": 152.3
+    },
+    {
+     "id": "338047291",
+     "name": "Laguna Queen",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30.0,
+      29.49033
+     ],
+     "log_span": [
+      -13.33,
+      31.0
+     ],
+     "common_samples": 616,
+     "median_nm": 8.9,
+     "max_nm": 27.1
+    },
+    {
+     "id": "338109472",
+     "name": "Gulf Meridian",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -20.0,
+      -14.27188
+     ],
+     "log_span": [
+      -25.0,
+      -8.18
+     ],
+     "common_samples": 23,
+     "median_nm": 1.0,
+     "max_nm": 154.6
+    },
+    {
+     "id": "338119047",
+     "name": "CCPILOT-1",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30.0,
+      32.42801
+     ],
+     "log_span": [
+      -13.33,
+      31.0
+     ],
+     "common_samples": 641,
+     "median_nm": 18.2,
+     "max_nm": 26.7
+    },
+    {
+     "id": "338119048",
+     "name": "CCPILOT-2",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30.0,
+      32.42801
+     ],
+     "log_span": [
+      -13.33,
+      31.0
+     ],
+     "common_samples": 641,
+     "median_nm": 18.1,
+     "max_nm": 25.1
+    },
+    {
+     "id": "338130026",
+     "name": "USCGC Dependable",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      70.2255
+     ],
+     "log_span": [
+      -13.33,
+      31.0
+     ],
+     "common_samples": 641,
+     "median_nm": 9.4,
+     "max_nm": 26.4
+    },
+    {
+     "id": "338130074",
+     "name": "USCGC Capelin",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      70.2255
+     ],
+     "log_span": [
+      -13.33,
+      31.0
+     ],
+     "common_samples": 641,
+     "median_nm": 8.8,
+     "max_nm": 23.9
+    },
+    {
+     "id": "338190847",
+     "name": "Corrin Bay",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30.0,
+      29.49033
+     ],
+     "log_span": [
+      -13.33,
+      31.0
+     ],
+     "common_samples": 617,
+     "median_nm": 9.8,
+     "max_nm": 24.5
+    },
+    {
+     "id": "338284017",
+     "name": "Rockport Mariner",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30.0,
+      29.49033
+     ],
+     "log_span": [
+      -13.33,
+      31.0
+     ],
+     "common_samples": 617,
+     "median_nm": 9.6,
+     "max_nm": 23.4
+    },
+    {
+     "id": "338284901",
+     "name": "MV Gulf Surveyor",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      70.2255
+     ],
+     "log_span": [
+      -5.0,
+      31.0
+     ],
+     "common_samples": 575,
+     "median_nm": 9.2,
+     "max_nm": 25.2
+    },
+    {
+     "id": "338471028",
+     "name": "MV Deepwater Scout",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      70.2255
+     ],
+     "log_span": [
+      -5.0,
+      31.0
+     ],
+     "common_samples": 573,
+     "median_nm": 9.1,
+     "max_nm": 25.4
+    },
+    {
+     "id": "338724891",
+     "name": "FV Pelican Ridge",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30.0,
+      16.91538
+     ],
+     "log_span": [
+      -13.33,
+      1.0
+     ],
+     "common_samples": 163,
+     "median_nm": 17.9,
+     "max_nm": 79.6
+    },
+    {
+     "id": "352091748",
+     "name": "Ostrel Bay",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -15.0,
+      -7.27188
+     ],
+     "log_span": [
+      -13.92,
+      31.0
+     ],
+     "common_samples": 90,
+     "median_nm": 37.0,
+     "max_nm": 135.0
+    },
+    {
+     "id": "352874016",
+     "name": "MT Orinda Bay",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -5.0,
+      5.72812
+     ],
+     "log_span": [
+      -18.33,
+      -0.51
+     ],
+     "common_samples": 72,
+     "median_nm": 30.5,
+     "max_nm": 130.9
+    },
+    {
+     "id": "371204893",
+     "name": "Santos Provider",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -24.0,
+      -18.27188
+     ],
+     "log_span": [
+      -30.0,
+      -5.04
+     ],
+     "common_samples": 23,
+     "median_nm": 0.5,
+     "max_nm": 154.5
+    },
+    {
+     "id": "416002317",
+     "name": "MV Halcyon Drift",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -45.0,
+      34.63769
+     ],
+     "log_span": [
+      -43.33,
+      31.0
+     ],
+     "common_samples": 1013,
+     "median_nm": 19.2,
+     "max_nm": 773.9
+    },
+    {
+     "id": "477291038",
+     "name": "Pacific Trader",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -21.0,
+      -10.20075
+     ],
+     "log_span": [
+      -30.0,
+      -10.0
+     ],
+     "common_samples": 98,
+     "median_nm": 73.9,
+     "max_nm": 182.9
+    },
+    {
+     "id": "503082914",
+     "name": "Coastal Endeavor",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -22.0,
+      -6.20075
+     ],
+     "log_span": [
+      -13.0,
+      -6.02
+     ],
+     "common_samples": 149,
+     "median_nm": 83.8,
+     "max_nm": 167.0
+    },
+    {
+     "id": "538109473",
+     "name": "MV Capehorn Eagle",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -9.0,
+      1.79925
+     ],
+     "log_span": [
+      -13.33,
+      3.0
+     ],
+     "common_samples": 141,
+     "median_nm": 20.6,
+     "max_nm": 164.6
+    },
+    {
+     "id": "538261094",
+     "name": "MT Brazos Star",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -3.0,
+      7.72812
+     ],
+     "log_span": [
+      -18.33,
+      -1.51
+     ],
+     "common_samples": 24,
+     "median_nm": 33.6,
+     "max_nm": 161.0
+    },
+    {
+     "id": "538371849",
+     "name": "MT Pacific Prism",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -1.0,
+      10.72812
+     ],
+     "log_span": [
+      -13.33,
+      -1.0
+     ],
+     "common_samples": 0,
+     "median_nm": null,
+     "max_nm": null
+    },
+    {
+     "id": "538482730",
+     "name": "MT Corpus Prince",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -28.0,
+      -22.27188
+     ],
+     "log_span": [
+      -13.33,
+      0.0
+     ],
+     "common_samples": 0,
+     "median_nm": null,
+     "max_nm": null
+    },
+    {
+     "id": "538847203",
+     "name": "Kalvora Star",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -18.0,
+      -11.27188
+     ],
+     "log_span": [
+      -14.0,
+      31.0
+     ],
+     "common_samples": 26,
+     "median_nm": 7.6,
+     "max_nm": 134.8
+    },
+    {
+     "id": "636027849",
+     "name": "MV Sable Horizon",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -10.0,
+      5.79925
+     ],
+     "log_span": [
+      -13.33,
+      -1.0
+     ],
+     "common_samples": 104,
+     "median_nm": 2.5,
+     "max_nm": 382.8
+    },
+    {
+     "id": "636094183",
+     "name": "MT Valdris Sun",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -20.0,
+      -14.27188
+     ],
+     "log_span": [
+      -13.33,
+      -2.51
+     ],
+     "common_samples": 0,
+     "median_nm": null,
+     "max_nm": null
+    },
+    {
+     "id": "636184027",
+     "name": "MT Aransas Spirit",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -24.0,
+      -18.27188
+     ],
+     "log_span": [
+      -13.33,
+      -3.0
+     ],
+     "common_samples": 0,
+     "median_nm": null,
+     "max_nm": null
+    }
+   ],
+   "aircraft": [
+    {
+     "id": "7c1234",
+     "name": "Unidentified UAV (PHANTOM)",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      30.0,
+      30.16667
+     ],
+     "log_span": [
+      30.0,
+      30.17
+     ],
+     "common_samples": 9,
+     "median_nm": 3.1,
+     "max_nm": 3.7
+    },
+    {
+     "id": "a3c001",
+     "name": "KIII-TV News Helicopter",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      90
+     ],
+     "log_span": [
+      0.0,
+      60.0
+     ],
+     "common_samples": 2880,
+     "median_nm": 0.0,
+     "max_nm": 23.8
+    },
+    {
+     "id": "a3c002",
+     "name": "KRIS-TV News Helicopter",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      90
+     ],
+     "log_span": [
+      0.0,
+      60.0
+     ],
+     "common_samples": 2881,
+     "median_nm": 0.0,
+     "max_nm": 29.8
+    },
+    {
+     "id": "a4d001",
+     "name": "FEMA01 (FEMA Air Ops)",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      35.0
+     ],
+     "log_span": [
+      -7.0,
+      30.0
+     ],
+     "common_samples": 1441,
+     "median_nm": 0.0,
+     "max_nm": 163.0
+    },
+    {
+     "id": "ae0201",
+     "name": "SYN41 (Exercise Control)",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      90
+     ],
+     "log_span": [
+      -5.0,
+      6.0
+     ],
+     "common_samples": 289,
+     "median_nm": 126.5,
+     "max_nm": 187.7
+    },
+    {
+     "id": "ae0a01",
+     "name": "USCG MH-60T CGNR6540",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      16.0
+     ],
+     "log_span": [
+      0.0,
+      15.0
+     ],
+     "common_samples": 720,
+     "median_nm": 0.0,
+     "max_nm": 28.0
+    },
+    {
+     "id": "ae0a02",
+     "name": "USCG MH-60T CGNR6541",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      90
+     ],
+     "log_span": [
+      0.0,
+      15.0
+     ],
+     "common_samples": 721,
+     "median_nm": 0.0,
+     "max_nm": 121.7
+    },
+    {
+     "id": "ae0a03",
+     "name": "USCG HC-144A CGAS2306",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      19.0
+     ],
+     "log_span": [
+      -7.0,
+      15.0
+     ],
+     "common_samples": 1057,
+     "median_nm": 0.0,
+     "max_nm": 256.6
+    },
+    {
+     "id": "ae1b01",
+     "name": "GUNSMOKE01 (DoD ISR)",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      90
+     ],
+     "log_span": [
+      -10.0,
+      15.0
+     ],
+     "common_samples": 1110,
+     "median_nm": 204.4,
+     "max_nm": 4304.4
+    },
+    {
+     "id": "ae1b02",
+     "name": "GUNSMOKE02 (DoD ISR)",
+     "in_map": true,
+     "in_log": true,
+     "map_span": [
+      -30,
+      90
+     ],
+     "log_span": [
+      -9.0,
+      44.0
+     ],
+     "common_samples": 2502,
+     "median_nm": 204.4,
+     "max_nm": 4304.4
+    }
+   ]
+  }
+ },
+ "findings": [
+  {
+   "id": "AUD-001",
+   "stream": "ais",
+   "severity": "blocker",
+   "kind": "coverage",
+   "events": [
+    "EVT-0104",
+    "EVT-0404",
+    "EVT-0409",
+    "EVT-0413",
+    "EVT-0414"
+   ],
+   "detail": "Stream spans D-43.33..D+31 (2027-08-01 16:00Z .. 2027-10-15 00:00Z). 5 MSEL event(s) that name it fall outside: 1 before (EVT-0104 D-45), 4 after (EVT-0404 D+32, EVT-0414 D+44, EVT-0413 D+44, EVT-0409 D+59).",
+   "recommended_fix": "Extend the stream to cover D-60..D+59 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-002",
+   "stream": "drone_video",
+   "severity": "major",
+   "kind": "coverage",
+   "events": [
+    "EVT-0505"
+   ],
+   "detail": "Stream spans D+0.38..D+31.02 (2027-09-14 09:00Z .. 2027-10-15 00:29Z). 1 MSEL event(s) that name it fall outside: 0 before (-), 1 after (EVT-0505 D+70).",
+   "recommended_fix": "Extend the stream to cover D+0..D+70 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-003",
+   "stream": "satellite",
+   "severity": "blocker",
+   "kind": "coverage",
+   "events": [
+    "EVT-0104",
+    "EVT-0403",
+    "EVT-0411",
+    "EVT-0505"
+   ],
+   "detail": "Stream spans D-30..D+30.58 (2027-08-15 00:00Z .. 2027-10-14 14:00Z). 4 MSEL event(s) that name it fall outside: 1 before (EVT-0104 D-45), 3 after (EVT-0411 D+31, EVT-0403 D+31, EVT-0505 D+70).",
+   "recommended_fix": "Extend the stream to cover D-60..D+70 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-004",
+   "stream": "env_sensors",
+   "severity": "major",
+   "kind": "coverage",
+   "events": [
+    "EVT-2009"
+   ],
+   "detail": "Stream spans D-30..D+31.01 (2027-08-15 00:00Z .. 2027-10-15 00:15Z). 1 MSEL event(s) that name it fall outside: 0 before (-), 1 after (EVT-2009 D+60).",
+   "recommended_fix": "Extend the stream to cover D-30..D+60 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-005",
+   "stream": "telemetry",
+   "severity": "blocker",
+   "kind": "coverage",
+   "events": [
+    "EVT-0102",
+    "EVT-0103",
+    "EVT-0406",
+    "EVT-0407",
+    "EVT-0602",
+    "GW-EVT-015",
+    "GW-EVT-016"
+   ],
+   "detail": "Stream spans D-30..D+31 (2027-08-15 00:00Z .. 2027-10-15 00:00Z). 7 MSEL event(s) that name it fall outside: 2 before (EVT-0102 D-55, EVT-0103 D-50), 5 after (GW-EVT-015 D+35, EVT-0406 D+36, EVT-0407 D+40, GW-EVT-016 D+42, EVT-0602 D+95).",
+   "recommended_fix": "Extend the stream to cover D-60..D+95 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-006",
+   "stream": "maintenance",
+   "severity": "blocker",
+   "kind": "coverage",
+   "events": [
+    "EVT-0102",
+    "EVT-0103",
+    "EVT-0406",
+    "EVT-0407",
+    "EVT-0409",
+    "EVT-0414",
+    "EVT-0506",
+    "EVT-0602"
+   ],
+   "detail": "Stream spans D-29.33..D+31.67 (2027-08-15 16:00Z .. 2027-10-15 16:00Z). 8 MSEL event(s) that name it fall outside: 2 before (EVT-0102 D-55, EVT-0103 D-50), 6 after (EVT-0406 D+36, EVT-0407 D+40, EVT-0414 D+44, EVT-0409 D+59, EVT-0506 D+72, EVT-0602 D+95).",
+   "recommended_fix": "Extend the stream to cover D-60..D+95 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-007",
+   "stream": "supply",
+   "severity": "blocker",
+   "kind": "coverage",
+   "events": [
+    "EVT-0401",
+    "EVT-0404",
+    "EVT-0405",
+    "EVT-0406",
+    "EVT-0409",
+    "EVT-0414",
+    "EVT-0506",
+    "EVT-0602"
+   ],
+   "detail": "Stream spans D-29.75..D+28.50 (2027-08-15 06:00Z .. 2027-10-12 12:00Z). 8 MSEL event(s) that name it fall outside: 0 before (-), 8 after (EVT-0401 D+30, EVT-0404 D+32, EVT-0405 D+34, EVT-0406 D+36, EVT-0414 D+44, EVT-0409 D+59, EVT-0506 D+72, EVT-0602 D+95).",
+   "recommended_fix": "Extend the stream to cover D-30..D+95 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-008",
+   "stream": "payments",
+   "severity": "blocker",
+   "kind": "coverage",
+   "events": [
+    "EVT-0103",
+    "EVT-0105",
+    "EVT-0204",
+    "EVT-0502",
+    "EVT-0503",
+    "EVT-0504",
+    "EVT-0505",
+    "EVT-0506",
+    "EVT-0601"
+   ],
+   "detail": "Stream spans D+0..D+60.05 (2027-09-14 00:00Z .. 2027-11-13 01:07Z). 9 MSEL event(s) that name it fall outside: 3 before (EVT-0103 D-50, EVT-0105 D-40, EVT-0204 D-5), 6 after (EVT-0502 D+62, EVT-0503 D+64, EVT-0504 D+66, EVT-0505 D+70, EVT-0506 D+72, EVT-0601 D+90).",
+   "recommended_fix": "Extend the stream to cover D-60..D+90 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-009",
+   "stream": "network_logs",
+   "severity": "major",
+   "kind": "coverage",
+   "events": [
+    "EVT-0502",
+    "GW-EVT-108"
+   ],
+   "detail": "Stream spans D-60..D+28.91 (2027-07-15 23:59Z .. 2027-10-12 21:54Z). 2 MSEL event(s) that name it fall outside: 0 before (-), 2 after (GW-EVT-108 D+35, EVT-0502 D+62).",
+   "recommended_fix": "Extend the stream to cover D-60..D+62 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-010",
+   "stream": "911",
+   "severity": "major",
+   "kind": "coverage",
+   "events": [
+    "EVT-0101",
+    "EVT-0601"
+   ],
+   "detail": "Stream spans D-5..D+31.78 (2027-09-09 00:03Z .. 2027-10-15 18:40Z). 2 MSEL event(s) that name it fall outside: 1 before (EVT-0101 D-60), 1 after (EVT-0601 D+90).",
+   "recommended_fix": "Extend the stream to cover D-60..D+90 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-011",
+   "stream": "public_health",
+   "severity": "major",
+   "kind": "coverage",
+   "events": [
+    "EVT-0101"
+   ],
+   "detail": "Stream spans D-7..D+91 (2027-09-07 00:00Z .. 2027-12-14 00:00Z). 1 MSEL event(s) that name it fall outside: 1 before (EVT-0101 D-60), 0 after (-).",
+   "recommended_fix": "Extend the stream to cover D-60..D+91 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-012",
+   "stream": "eas",
+   "severity": "major",
+   "kind": "coverage",
+   "events": [
+    "EVT-2108"
+   ],
+   "detail": "Stream spans D-6.62..D+14.50 (2027-09-07 09:00Z .. 2027-09-28 12:00Z). 1 MSEL event(s) that name it fall outside: 0 before (-), 1 after (EVT-2108 D+42).",
+   "recommended_fix": "Extend the stream to cover D-7..D+42 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-013",
+   "stream": "infrastructure",
+   "severity": "major",
+   "kind": "coverage",
+   "events": [
+    "EVT-0601",
+    "EVT-0604"
+   ],
+   "detail": "Stream spans D+1..D+21 (2027-09-15 00:00Z .. 2027-10-05 00:00Z). 2 MSEL event(s) that name it fall outside: 0 before (-), 2 after (EVT-0601 D+90, EVT-0604 D+110).",
+   "recommended_fix": "Extend the stream to cover D+1..D+110 (at minimum through the last event that names it) and generate the records those events require."
+  },
+  {
+   "id": "AUD-014",
+   "stream": "(none)",
+   "severity": "major",
+   "kind": "no-stream",
+   "events": [
+    "EVT-1101",
+    "EVT-1102",
+    "EVT-1103",
+    "EVT-1104",
+    "EVT-1105",
+    "EVT-1106",
+    "EVT-1107",
+    "EVT-1108",
+    "EVT-1202",
+    "EVT-1203",
+    "EVT-1204",
+    "EVT-1205",
+    "EVT-1206",
+    "EVT-1207",
+    "EVT-1208",
+    "EVT-1301",
+    "EVT-1302",
+    "EVT-1303",
+    "EVT-1304",
+    "EVT-1305",
+    "EVT-1306",
+    "EVT-1307",
+    "EVT-1308",
+    "EVT-1401",
+    "EVT-1402",
+    "EVT-1403",
+    "EVT-1404",
+    "EVT-1405",
+    "EVT-1406",
+    "EVT-1407",
+    "EVT-1408",
+    "EVT-1409",
+    "EVT-1410",
+    "EVT-1411",
+    "EVT-1501",
+    "EVT-1502",
+    "EVT-1503",
+    "EVT-1504",
+    "EVT-1505",
+    "EVT-1506",
+    "EVT-1507",
+    "EVT-1508",
+    "EVT-1509",
+    "EVT-1601",
+    "EVT-1602",
+    "EVT-1603",
+    "EVT-1604",
+    "EVT-1605",
+    "EVT-1606",
+    "EVT-1607",
+    "EVT-1608",
+    "EVT-1609",
+    "EVT-1610",
+    "EVT-1701",
+    "EVT-1702",
+    "EVT-1703",
+    "EVT-1704",
+    "EVT-1705",
+    "EVT-1706",
+    "EVT-1707",
+    "EVT-1708",
+    "EVT-1901",
+    "EVT-1902",
+    "EVT-1903",
+    "EVT-1904",
+    "EVT-1905",
+    "EVT-1906",
+    "EVT-1907",
+    "EVT-1908",
+    "EVT-2001",
+    "EVT-2002",
+    "EVT-2003",
+    "EVT-2004",
+    "EVT-2005",
+    "EVT-2006",
+    "EVT-2007",
+    "EVT-2008",
+    "EVT-2009",
+    "EVT-2101",
+    "EVT-2102",
+    "EVT-2103",
+    "EVT-2104",
+    "EVT-2105",
+    "EVT-2106",
+    "EVT-2107",
+    "EVT-2108",
+    "EVT-2201",
+    "EVT-2202",
+    "EVT-2203",
+    "EVT-2204",
+    "EVT-2205",
+    "EVT-2206",
+    "EVT-2207",
+    "GW-EVT-003",
+    "GW-EVT-005",
+    "GW-EVT-008",
+    "GW-EVT-009",
+    "GW-EVT-010",
+    "GW-EVT-011",
+    "GW-EVT-012",
+    "GW-EVT-013",
+    "GW-EVT-014",
+    "GW-EVT-015",
+    "GW-EVT-016",
+    "GW-EVT-101",
+    "GW-EVT-102",
+    "GW-EVT-103",
+    "GW-EVT-104",
+    "GW-EVT-105",
+    "GW-EVT-106",
+    "GW-EVT-107",
+    "GW-EVT-108"
+   ],
+   "detail": "100 distinct sources named in observed_in have no data file at all (bespoke logs from the T11-T22 thread designs such as ccfd_sar_incident_log, ipaws_alert_archive_*, port_radar_buoy_logs, platform_post_archive_*, srmc_census_records_*, fema_ia_application_database, coastal_alert_cib_scan_*). Event-source pairs with no stream, by thread: T8 27, T9 17, T10 12, T14 12, T3 11, T16 10, T1 10, T15 9, T13 9, T20 9, T18 8, T19 8, T21 8, T11 8, T17 8, T22 7, T5 7, T12 7, T7 4, T6 4, T2 3.",
+   "recommended_fix": "Decide per thread: either map each named log onto an existing stream (and make that stream carry the artifact), or generate a small purpose-built file per log under 05_other_sources/<thread>/. Until then T11-T22 detection artifacts exist only as prose in the MSEL."
+  },
+  {
+   "id": "AUD-015",
+   "stream": "canon",
+   "severity": "blocker",
+   "kind": "public-record-conflict",
+   "events": [
+    "EVT-1305",
+    "EVT-1407",
+    "EVT-2106"
+   ],
+   "detail": "Districts 3-4 boil-water notice issue time on D+12: PUB-204 says 09:00 local (EVT-2106 14:00Z); PUB-143 and GW-PUB-001 say 17:30 local (EVT-1407 22:30Z); PUB-132, timed 15:00, already refers to 'today's boil water notice'; PUB-144 says 5:30 p.m. and KNCB received it the next morning. News follows the afternoon version: D+12.70 The Bayside Ledger 'City Issues Boil Water Notice for Districts 3 and 4; Storm Damage to P'; D+12.70 Harborline 6 News 'Emergency Alert Blasts Across Coastal Bend Phones and TVs: Boil Water '; D+13.30 KNCB Coastal Bend Radio 'AVISO DE HERVIR AGUA para los Distritos 3 y 4: KNCB recibió el aviso o'; D+13.50 Coastline Public Radio 'Spanish Boil Water Warning Came 12 Hours Too Late — Families in Distri'.",
+   "recommended_fix": "Options: (a) 17:30 local, Spanish at 06:03 next day [news, T14, newsroom]; (b) 09:00 local, Spanish 21:00 [T21 design]. Recommend (a); retime PUB-204/EVT-2106 and move PUB-132 after 17:30."
+  },
+  {
+   "id": "AUD-016",
+   "stream": "canon",
+   "severity": "blocker",
+   "kind": "public-record-conflict",
+   "events": [
+    "EVT-1410",
+    "EVT-2108",
+    "GW-EVT-016"
+   ],
+   "detail": "Districts 3-4 notice lifted: PUB-145 says D+30 09:00 (EVT-1410); PUB-206 says D+42 11:00 and GW-PUB-007 D+42 13:00 (EVT-2108, GW-EVT-016). News: D+30.50 The Bayside Ledger 'City lifts boil-water notice for most neighborhoods; Districts 3 and 4'; D+35.40 The Bayside Ledger 'With ER hallways clear again, health officials say keep boiling until '; D+36.70 Harborline 6 News 'Pump parts are here. Here's why you still need to boil your water.'; D+39.40 The Bayside Ledger 'Boil-water notice lifted after 35 days'.",
+   "recommended_fix": "Options: (a) D+42 at 11:00 local [news]; (b) D+30. Recommend (a); rewrite PUB-145/EVT-1410 as a partial lift or delete; make 11:00 vs 13:00 one time."
+  },
+  {
+   "id": "AUD-017",
+   "stream": "canon",
+   "severity": "major",
+   "kind": "public-record-conflict",
+   "events": [
+    "EVT-0310",
+    "EVT-0406"
+   ],
+   "detail": "A citywide notice runs D+4..D+39 (PUB-039, PUB-063, EVT-0310/0406), so a separate Districts 3-4 notice issued on D+12 is issued inside an area already under notice, and the T14 'Spanish speakers were not told' gap needs the citywide notice to have been lifted for them first. News handles it as: citywide lifted for most at D+30 with 3-4 remaining, then 'lifted after 35 days' at D+39, then 3-4 at D+42.",
+   "recommended_fix": "State explicitly: citywide D+4..D+30 for most districts; Districts 3-4 never lifted and re-issued/extended on D+12 for a new cause; final lift D+42. Adjust PUB-063 wording."
+  },
+  {
+   "id": "AUD-018",
+   "stream": "canon",
+   "severity": "blocker",
+   "kind": "public-record-conflict",
+   "events": [
+    "EVT-0313",
+    "EVT-1201",
+    "EVT-1207",
+    "EVT-2001",
+    "EVT-2007"
+   ],
+   "detail": "Two different oil spills. Base canon (T6, PUB-024, PUB-029, all Ledger/Gulfwater stories): about 9,000 barrels from MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth at 04:00Z on D0, named publicly on D+1. T12/T20 (PUB-121, PUB-122, PUB-193, EVT-2001/1207/2007): 180,000 gallons from the anchored 'Auriga Meridian' from 04:30Z on D+1, boarded D+5, named responsible party D+7; its IMO is 9512847 in EVT-1201 and 9742831 in PUB-193. T19/T12 also describe a 'kinetic attack at Pier 9, D+1..D+3' (EVT-1205, EVT-1906) that the base scenario and public record do not contain; the social feed's D+1 'ship channel blast' follows it.",
+   "recommended_fix": "Options: (a) keep the two-tanker valve attack as the only spill and fold Auriga Meridian into the Halcyon Drift dark-vessel thread; (b) keep both as separate incidents with separate dates and volumes. Recommend (a) and rewrite PUB-121/122/193 and EVT-12xx/20xx accordingly; drop the Pier 9 attack."
+  },
+  {
+   "id": "AUD-019",
+   "stream": "canon",
+   "severity": "blocker",
+   "kind": "public-record-conflict",
+   "events": [
+    "EVT-0401",
+    "EVT-0410",
+    "EVT-1208"
+   ],
+   "detail": "Port reopening: PUB-058/EVT-0401 say the channel partly reopens at D+30 with the inner channel restricted to D+44; PUB-123/EVT-1208 say the port returned to FULL commercial operations on D+30 after a phased reopening 'that began September 25' (D+11). Arrivals log and social feed follow the phased version (tankers berthing from D+7).",
+   "recommended_fix": "Options: (a) closed D0..D+30, partial D+30..D+44, closed again D+44..D+58 [news, Gulfwater]; (b) phased from D+11. Recommend (a); rewrite PUB-123/EVT-1208 as the partial reopening."
+  },
+  {
+   "id": "AUD-020",
+   "stream": "canon",
+   "severity": "major",
+   "kind": "public-record-conflict",
+   "events": [
+    "EVT-0303",
+    "EVT-1302"
+   ],
+   "detail": "911 peak: PUB-026/EVT-0303 give about 2,900 calls a day at D+1 ('nearly ten times normal'); PUB-131/EVT-1302 give a record 2,109 on D+2 with 1,940 on D+1. News headlines also carry 1,840 calls and 1,100 rescue calls on landfall day.",
+   "recommended_fix": "Options: (a) 2,900 on D+1 is the peak, 2,109 on D+2 is the record for rescue calls only; (b) 2,109 is the peak. Recommend (a) with the wording fix."
+  },
+  {
+   "id": "AUD-021",
+   "stream": "canon",
+   "severity": "major",
+   "kind": "public-record-conflict",
+   "events": [
+    "EVT-0501",
+    "EVT-1404",
+    "EVT-2205"
+   ],
+   "detail": "FEMA Individual Assistance: PUB-141 (D0 08:30) says IA registration 'is now open ... following the presidential disaster declaration'; PUB-103 (D+4) says the declaration covers debris and protective measures only; PUB-105/EVT-0501 approve IA at D+57 with registration D+60 (a listed known quirk); PUB-142 (D+8) announces a Spanish option on the IA line. EVT-2205 cites DR-4890-TX while the damage file uses FEMA-DR-TX-2027-4821.",
+   "recommended_fix": "Recommend: D0/D+8 items become the FEMA helpline and disaster-declaration information line, not IA registration; one disaster number."
+  },
+  {
+   "id": "AUD-022",
+   "stream": "canon",
+   "severity": "minor",
+   "kind": "public-record-conflict",
+   "events": [
+    "EVT-0301",
+    "EVT-2104"
+   ],
+   "detail": "Landfall figures vary: Category 3 at 110 kt (126 mph) in HURDAT/NHC posts; '115 miles per hour' in PUB-203; 125 mph in a Ledger retrospective; surge 3.4 m / about 11 ft (EVT-0301, PUB-023) vs 12 ft and 10-14 ft elsewhere; fatalities 12 (EVT-2105) vs 23 (Ledger, D+2). PUB-140 calls Sept. 11, 2027 a Tuesday (it is a Saturday).",
+   "recommended_fix": "Fix to one set: 110 kt / 125 mph, 11 ft, and one fatality series."
+  },
+  {
+   "id": "AUD-023",
+   "stream": "canon",
+   "severity": "major",
+   "kind": "msel-conflict",
+   "events": [
+    "EVT-0318",
+    "EVT-1901",
+    "EVT-1907"
+   ],
+   "detail": "Drone timeline: base canon has six post-storm nights over NAS Corpus Christi and the depot (EVT-0318, PUB-032, PUB-043, PUB-051); T19 has five pre-storm sorties over substations and Pier 9 (D-10..D-3) and a D+14 FAA/CBP report (PUB-181); streams add a D+30/31 port loiter. Hospital, sensor and utility names also differ between layers (SRMC/BCMC vs FAC-CCMC..; CBPWA vs GridWater; McKinley Substation vs GW-FAC-SUB-01..05).",
+   "recommended_fix": "Keep both drone phases as canon (pre-storm utility/pier reconnaissance, post-storm base overflights); delete the D+30 loiter; publish one name table for hospitals, utility and substations."
+  },
+  {
+   "id": "AUD-024",
+   "stream": "map_view",
+   "severity": "blocker",
+   "kind": "map-log-mismatch",
+   "events": [],
+   "detail": "The map's embedded vessel tracks were rebuilt after the AIS log and no longer match it. Same 30 MMSIs in both, but: 4 vessels have no overlapping time at all (map and log place the port call in different weeks: MT Pacific Prism, MT Corpus Prince, MT Valdris Sun, MT Aransas Spirit); of the 26 that overlap, 22 differ by a median of more than 5 nm (worst medians: Coastal Endeavor 84 nm, Pacific Trader 74 nm, MT Halcyon Aegis 69 nm, MV Gulf Provider 59 nm, Ostrel Bay 37 nm, MT Brazos Star 34 nm; worst single difference 774 nm, MV Halcyon Drift). Map tracks run to D+70 for patrol craft while the log stops at D+31; the log starts harbor craft at D-13 while the map starts them at D-30.",
+   "recommended_fix": "Generate tracks once (after the geography fix) and write both the AIS CSV and the map's VTRK from that one source; add a check that fails when they differ."
+  },
+  {
+   "id": "AUD-025",
+   "stream": "map_view",
+   "severity": "major",
+   "kind": "map-log-mismatch",
+   "events": [],
+   "detail": "Aircraft: same 10 airframes. Sortie positions mostly agree (median 0 nm for helicopters), but the map extends every aircraft to D-30..D+90 as parked while the logs cover shorter windows, and these differ badly: FEMA01 (FEMA Air Ops) median 0 nm, max 163 nm (map D-30..D+35, log D-7..D+30); SYN41 (Exercise Control) median 126 nm, max 188 nm (map D-30..D+90, log D-5..D+6); USCG MH-60T CGNR6541 median 0 nm, max 122 nm (map D-30..D+90, log D+0..D+15); USCG HC-144A CGAS2306 median 0 nm, max 257 nm (map D-30..D+19, log D-7..D+15); GUNSMOKE01 (DoD ISR) median 204 nm, max 4304 nm (map D-30..D+90, log D-10..D+15); GUNSMOKE02 (DoD ISR) median 204 nm, max 4304 nm (map D-30..D+90, log D-9..D+44).",
+   "recommended_fix": "Same single-source rule as vessels; check the GUNSMOKE transit points (a >4,000 nm jump indicates a bad coordinate)."
+  },
+  {
+   "id": "AUD-026",
+   "stream": "adsb + network_logs",
+   "severity": "blocker",
+   "kind": "wrong-epoch",
+   "events": [],
+   "detail": "ADS-B (time_position/last_contact) and the Zeek logs (ts) were generated with epoch 1821024000 as 'D0 00:00Z'. That value is 2027-09-15T16:00:00Z; the correct value is 1820880000. Decoded properly, every ADS-B fix and every Zeek record is 40 hours later than intended and than the ISO-timestamped streams (AIS, SIEM, historian, 911...): the Coast Guard's first post-storm sortie lands on D+2 instead of D+0.4, the SUB-02 breaker DNP3 notice lands on 2027-09-22T18:14Z. Zeek's per-day folders were split by the true date, so folder names and intended days disagree as well. Schema files carrying the wrong anchor: 10_network_logs_schema.json. All other ADS-B and Zeek findings in this report use the intended time (anchor subtracted) so that this defect is not counted twice.",
+   "recommended_fix": "Regenerate with 1820880000 (or shift every epoch by -144000 s and re-split the Zeek day folders); fix the two schema files; put the anchor in one shared constant."
+  },
+  {
+   "id": "AUD-027",
+   "stream": "ais",
+   "severity": "major",
+   "kind": "entity-mismatch",
+   "events": [],
+   "detail": "AIS has 30 MMSIs; vessels.json has 28. In AIS but not in the registry: Adriatic Carrier, Bayou Spirit, Coastal Endeavor, Gulf Meridian, MV Halcyon Drift, Pacific Trader, Santos Provider. In the registry with no AIS track: MT Gulf Chemist, MT Narvik Pioneer, MT Sennar Gulf, MV Gulf Petcoke, MV Nueces Trader. Scenario entities VSL-0019 (sealift ship), BRG-0044 (Barge 44) have no track; MSEL T12 vessels Auriga Meridian, Costana Bay (MMSI 345821766) and Narwhal Dream have none either.",
+   "recommended_fix": "Make vessels.json the single roster; give every scenario vessel one MMSI and regenerate AIS from it."
+  },
+  {
+   "id": "AUD-028",
+   "stream": "ais",
+   "severity": "blocker",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0207",
+    "EVT-0301",
+    "EVT-1203"
+   ],
+   "detail": "10 vessels report speed over 1 kt between Port Condition Zulu (D-1 18:00Z) and 12 h after landfall, i.e. under way through a Category 3 eyewall: USCGC Dependable (66 fixes), Corrin Bay (62 fixes), CCPILOT-2 (61 fixes), MV Gulf Surveyor (61 fixes), CCPILOT-1 (60 fixes), USCGC Capelin (60 fixes), Rockport Mariner (60 fixes), MV Deepwater Scout (54 fixes), Laguna Queen (50 fixes), MV Gulf Provider (48 fixes). Rendering rules also call for AIS coverage gaps D0..D+2; the stream has none.",
+   "recommended_fix": "Moor or shelter every vessel from Zulu until the post-storm survey; add receiver outages D0..D+2."
+  },
+  {
+   "id": "AUD-029",
+   "stream": "ais",
+   "severity": "major",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0401",
+    "EVT-0410"
+   ],
+   "detail": "Cargo/tanker movement while the ship channel is closed (D0..D+30 per PUB-058/EVT-0401): MT Halcyon Aegis (96 fixes), MV Halcyon Drift (3456 fixes).",
+   "recommended_fix": "After the canon decision on reopening date, restrict deep-draft movement to the open windows."
+  },
+  {
+   "id": "AUD-030",
+   "stream": "ais",
+   "severity": "blocker",
+   "kind": "missing-evidence",
+   "events": [
+    "EVT-0104",
+    "EVT-0402",
+    "EVT-0403",
+    "EVT-0411"
+   ],
+   "detail": "MV Halcyon Drift (MMSI 416002317) track runs D-43.33..D+31. At D-45 (EVT-0104: loitering among crude-export tankers) there is no data; the first fixes are 532-852 nm from the Corpus Christi anchorage. Gaps over 10 h: D-0.86 for 6.9 d. The stream stops at 2027-10-15 00:00Z, about two hours before the D+31 02:00Z AIS silence and the Pelican Ridge identity spoof (EVT-0402, PUB-062); FV Pelican Ridge's own track ends at D+1 so the 'same vessel 600 nm away' signal cannot be shown. Scenario key MMSI-SYN-0131 / MMSI-SYN-0457 do not match the MMSIs used (416002317 / 338724891).",
+   "recommended_fix": "Regenerate: Halcyon Drift present off the port from D-45, a 14 h gap from D+31 02:00Z, a spoofed Pelican Ridge identity at the anchorage during the gap, and the real Pelican Ridge ~600 nm away the same night."
+  },
+  {
+   "id": "AUD-031",
+   "stream": "ais",
+   "severity": "blocker",
+   "kind": "missing-evidence",
+   "events": [
+    "EVT-0404",
+    "EVT-0409",
+    "EVT-0413",
+    "EVT-0414"
+   ],
+   "detail": "Nothing after 2027-10-15 00:00Z: Barge 44's fuel run up the channel (D+32), the tug Corrin Bay's AIS stopping at the jetties (D+44 06:10Z), the 14-day closure (D+44..D+58) and the sealift sailing (D+59..D+64) are all absent.",
+   "recommended_fix": "Extend AIS to D+119 with these four signals."
+  },
+  {
+   "id": "AUD-032",
+   "stream": "ais",
+   "severity": "major",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0207"
+   ],
+   "detail": "Offshore queue at Port Condition Yankee (D-2): 0 vessels are slow/stopped east of the jetties in the data; canon is 14 held inbound vessels including MV Gulf Provider (PUB-107).",
+   "recommended_fix": "Generate the 14-vessel anchorage queue from D-2, dispersing to sea at Zulu and returning D+3 (PUB-109)."
+  },
+  {
+   "id": "AUD-033",
+   "stream": "adsb",
+   "severity": "major",
+   "kind": "entity-mismatch",
+   "events": [
+    "EVT-0205",
+    "EVT-0405"
+   ],
+   "detail": "ADS-B has 10 aircraft; aircraft_registry.json lists 22. No track for: AERO221 (a88001), CCAD31 (ae3c01), CLIPPER01 (a00301), EAGLE424 (a77001), KIII7 (a66001), LIFESTAR1 (a55001), LIFESTAR2 (a55002), NAV097 (ae2a02), NAV851 (ae2a01), RCH441 (ae0202), RCH801 (ae0203), RIDGELINE01 (ae4d01), SKW7730 (a00302), TXDPS302 (a44002), TXDPS44 (a44001), WARLORD01 (ae3c02).",
+   "recommended_fix": "Generate tracks for every registry aircraft or trim the registry."
+  },
+  {
+   "id": "AUD-034",
+   "stream": "adsb",
+   "severity": "major",
+   "kind": "implausible",
+   "events": [],
+   "detail": "Sorties longer than any of these aircraft can fly without landing: SYN41 ae0201 airborne 44 h from D+2.33; CGAS2306 ae0a03 airborne 21 h from D-6.50; CGAS2306 ae0a03 airborne 20 h from D+1.08; CGAS2306 ae0a03 airborne 14 h from D+2.75; CGAS2306 ae0a03 airborne 16 h from D+6.08; GUNSMOKE01 ae1b01 airborne 46 h from D-6.75; GUNSMOKE01 ae1b01 airborne 22 h from D-2; GUNSMOKE01 ae1b01 airborne 26 h from D+1.08; GUNSMOKE01 ae1b01 airborne 20 h from D+3.42; GUNSMOKE01 ae1b01 airborne 20 h from D+6.75; GUNSMOKE02 ae1b02 airborne 28 h from D-3; GUNSMOKE02 ae1b02 airborne 20 h from D+1.50; GUNSMOKE02 ae1b02 airborne 20 h from D+4.08; GUNSMOKE02 ae1b02 airborne 24 h from D+29.",
+   "recommended_fix": "Cap sortie length by type (MH-60 ~4 h, HC-144 ~10 h, news helicopter ~2.5 h, ISR per platform) and insert landings."
+  },
+  {
+   "id": "AUD-035",
+   "stream": "adsb",
+   "severity": "blocker",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0301",
+    "EVT-1102"
+   ],
+   "detail": "Aircraft airborne inside the FAA TFR (from D-2 13:00Z, PUB-180) or within ~8 h of landfall: CGNR6540 D+0.38..D+0.54; GUNSMOKE01 D-2..D-1.08. The one flight canon does place in this window, NOAA42's 08:30Z reconnaissance pass (EVT-1102, PUB-110), is absent.",
+   "recommended_fix": "Ground everything except the Hurricane Hunter during the TFR and eyewall passage; first Coast Guard hoists begin 06:22 local on D+1 (PUB-170)."
+  },
+  {
+   "id": "AUD-036",
+   "stream": "adsb",
+   "severity": "blocker",
+   "kind": "missing-evidence",
+   "events": [
+    "EVT-0205",
+    "EVT-0405",
+    "EVT-0412",
+    "EVT-1103"
+   ],
+   "detail": "Canon signals with no data: NAS training aircraft evacuating to Fort Worth at D-4; 26 C-17 and 14 charter relief flights D+34..D+43 (the latest track ends D+60); GPS-interference integrity drop D+38..D+43 (file has no NIC/NACp columns); Texas ARNG UH-60 flights D+1.",
+   "recommended_fix": "Add the flights and a navigation-integrity column; extend to D+119."
+  },
+  {
+   "id": "AUD-037",
+   "stream": "adsb",
+   "severity": "major",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0318",
+    "EVT-1907"
+   ],
+   "detail": "An 'UNKNOWN' hostile UAV transmits ADS-B for 4 h at D+30 (ICAO 7c1234). Canon overflights are D+1..D+10 at night over NAS Corpus Christi and the depot, pre-storm sorties D-10..D-3, and no sightings after D+11 (PUB-051). A covert small drone would not carry ADS-B. The matching drone-telemetry file is dated D+30.99, about a day later.",
+   "recommended_fix": "Remove from ADS-B; represent hostile drones only through radar/RF/visual-report streams on the canon nights."
+  },
+  {
+   "id": "AUD-038",
+   "stream": "adsb",
+   "severity": "major",
+   "kind": "stale-copy",
+   "events": [],
+   "detail": "adsb/_consolidated/adsb_positions.csv is an older generation than the per-aircraft files (rows per-file vs consolidated: 7c1234 241/720, a3c001 86374/25070, a3c002 86407/25974, a4d001 43222/19489, ae0201 8658/3007, ae0a01 21573/28023, ae0a02 21607/22881, ae0a03 31687/33396, ae1b01 33275/25844, ae1b02 75035/25844).",
+   "recommended_fix": "Rebuild every _consolidated file from the per-source files in one step, or delete the consolidated copies."
+  },
+  {
+   "id": "AUD-039",
+   "stream": "drone_video",
+   "severity": "major",
+   "kind": "missing-evidence",
+   "events": [
+    "EVT-0307",
+    "EVT-0318",
+    "EVT-0505",
+    "EVT-1104",
+    "EVT-1105",
+    "EVT-1108",
+    "EVT-1901",
+    "EVT-1903",
+    "EVT-1904",
+    "EVT-1905"
+   ],
+   "detail": "11 flights, D+0.38..D+31.02. Missing: depot hangar survey at D+2 (no flight on D+2 at all); weekly base inspections; debris surveys D+10..D+70 (one flight after D+5); Argus/FEMA Phase 2 utility-yard passes D+8 and Phase 4 at D+45; any trace of the hostile sorties (pre-storm D-10..D-3, post-storm nights D+1..D+10).",
+   "recommended_fix": "Add the missing flights; extend to D+70."
+  },
+  {
+   "id": "AUD-040",
+   "stream": "drone_video",
+   "severity": "blocker",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0318",
+    "EVT-1907"
+   ],
+   "detail": "UNIDENTIFIED-D30 is on-board telemetry (gimbal angles, video filename) from an unidentified drone loitering over the Inner Harbor at D+30.99. Nobody could hold a hostile drone's own flight log, and the date conflicts with PUB-051 (no sightings after D+11) and with PUB-182 (counter-UAS program announced D+32 citing pre-storm activity).",
+   "recommended_fix": "Delete; if a D+30 sighting is wanted, add it to the MSEL and public record first."
+  },
+  {
+   "id": "AUD-041",
+   "stream": "drone_video",
+   "severity": "minor",
+   "kind": "implausible",
+   "events": [
+    "EVT-0301"
+   ],
+   "detail": "CCFD-SAR-D00 flies at D+0.38 (about 04:00 local, three hours after landfall, in darkness and tropical-storm-force wind). KIII-NEWS-* uses a real station's call letters; the scenario's TV outlet is Harborline 6.",
+   "recommended_fix": "Move to daylight D+1; rename KIII flights."
+  },
+  {
+   "id": "AUD-042",
+   "stream": "satellite",
+   "severity": "blocker",
+   "kind": "missing-evidence",
+   "events": [
+    "EVT-0104",
+    "EVT-0208",
+    "EVT-0305",
+    "EVT-0403",
+    "EVT-0411",
+    "EVT-0505"
+   ],
+   "detail": "13 scenes, D-30..D+30.58; rendering rules call for 1 optical pass a day and radar every 6 days. Tasked passes missing: D-2 radar reference (EVT-0208); D+31 04:20Z hull off the entrance channel (EVT-0411); D+31 09:30Z two hulls side by side (EVT-0403); debris passes to D+70 (EVT-0505); D-45 Halcyon Drift loiter (EVT-0104).",
+   "recommended_fix": "Add the tasked passes; fill the daily/6-day cadence across D-60..D+119."
+  },
+  {
+   "id": "AUD-043",
+   "stream": "satellite",
+   "severity": "major",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0314",
+    "EVT-0401",
+    "EVT-2008"
+   ],
+   "detail": "Scene descriptions that contradict canon: D+0.25 puts the eye at 27.75N 97.13W; canon landfall is Mustang Island near Port Aransas; D+5.54 is titled 'Channel reopening assessment' (canon partial reopening D+30); D+14.54 says the spill is contained/no sheen (canon: slick D+1..D+20, contained D+20); optical scenes timestamped 00:00Z (19:00 local, near sunset): D-30, D-14.",
+   "recommended_fix": "Rewrite descriptions after the canon decisions; use mid-morning local times for optical passes."
+  },
+  {
+   "id": "AUD-044",
+   "stream": "weather",
+   "severity": "blocker",
+   "kind": "implausible",
+   "events": [
+    "EVT-0301"
+   ],
+   "detail": "Temperatures are physically wrong: the daily cycle is 3-4 C with the warmest hours around 00:00Z-03:00Z (evening) and 33 C at midnight local; mid-October means are ~31 C (Corpus Christi normals: highs ~29, lows ~19); the offshore buoy warms 3 C after the storm. Landfall winds are wrong: KCRP, 30 km inland, logs sustained wind near the storm's maximum and gusts of ~160 kt (above Category 5), pressure moves in flat steps, KNGP's peak wind comes four hours before landfall, the buoy flat-lines at 30.9 m/s for 12 h, and no station drops out although posts in the social stream say 'KCRP down' and rendering rules call for outage. Per station: BUOY42019: warmest hour 01:00Z (20:00 local), midnight-to-3am local mean 31.0 C, diurnal range 4.4 C, October mean 31.4 C; peak sustained wind 30.9 m/s (60 kt) at D-0.17, peak gust 46.3 m/s (90 kt); minimum pressure 993.4 mb at D+0.04; longest run of near-identical pressure during the storm 9 h; no outage | KCRP: warmest hour 01:00Z (20:00 local), midnight-to-3am local mean 31.3 C, diurnal range 5.0 C, October mean 31.4 C; peak sustained wind 54.8 m/s (107 kt) at D+0.08, peak gust 82.2 m/s (160 kt); minimum pressure 944.2 mb at D+0.42; longest run of near-identical pressure during the storm 6 h; no outage | KNGP: warmest hour 23:00Z (18:00 local), midnight-to-3am local mean 31.3 C, diurnal range 4.7 C, October mean 31.6 C; peak sustained wind 54.2 m/s (105 kt) at D-0.17, peak gust 81.3 m/s (158 kt); minimum pressure 943.4 mb at D+0.33; longest run of near-identical pressure during the storm 5 h; no outage.",
+   "recommended_fix": "Regenerate from the storm track with a parametric wind/pressure model, a real diurnal cycle and seasonal cooling, station dropouts through the eyewall, and extend to D+119."
+  },
+  {
+   "id": "AUD-045",
+   "stream": "env_sensors",
+   "severity": "major",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0203",
+    "EVT-0301",
+    "EVT-0313",
+    "EVT-0314"
+   ],
+   "detail": "Sondes: WQ-01 Inner Harbor Channel — Upstream of TER: first rise D+0.39, peak 2364 ppb at D+0.70; max surge 0.10 m at D-29.70; WQ-02 Inner Harbor Channel — Downstream (Cor: first rise D+0.44, peak 1952 ppb at D+1.09; max surge 0.10 m at D-13.70; WQ-03 Nueces Bay — Southwest (near Calallen : first rise D+0.69, peak 1259 ppb at D+1.35; max surge 0.10 m at D-16.78; WQ-04 Corpus Christi Bay — Mid-Bay: first rise D+1.21, peak 500 ppb at D+1.47; max surge 0.11 m at D-16.70; WQ-05 Nueces River at Calallen — Upstream Ga: first rise none, peak 9 ppb at D+15.94; max surge 0.10 m at D-15.71; WQ-06 Corpus Christi Bay — NOAA Tide Gauge (: first rise none, peak 9 ppb at D-3.79; max surge 2.94 m at D+0.43. Canon: valves open 04:00Z..05:30Z on D0 beside the berth (EVT-0313) so WQ-01 should react within the hour, not at ~09:20Z; surge is 3.4 m at 06:00Z (EVT-0301) but only WQ-06 shows any surge (2.94 m at ~10:20Z) and the Inner Harbor sondes show none; the tide gauge is supposed to be offline D0..D+5 (rendering rules, GAUGE-14); the Nueces River rise from D-7 (EVT-0203) is absent. Rendering rules promise 2 river gauges and 20 air sensors; the stream has 0 and 5.",
+   "recommended_fix": "Tie hydrocarbon onset to 04:00Z D0, put surge on every tidal sonde peaking 06:00Z, take the tide gauge offline D0..D+5, add river-stage gauges."
+  },
+  {
+   "id": "AUD-046",
+   "stream": "env_sensors",
+   "severity": "minor",
+   "kind": "implausible",
+   "events": [
+    "EVT-2004"
+   ],
+   "detail": "Benzene more than 3x baseline before any oil was released (D-5..D0): AQS-480-001 4 readings, AQS-480-002 49 readings, AQS-480-003 49 readings, AQS-480-004 5 readings.",
+   "recommended_fix": "Keep pre-landfall air readings at baseline."
+  },
+  {
+   "id": "AUD-047",
+   "stream": "env_sensors",
+   "severity": "major",
+   "kind": "entity-mismatch",
+   "events": [
+    "EVT-2002",
+    "EVT-2003",
+    "EVT-2006",
+    "EVT-2009"
+   ],
+   "detail": "T20 names the TCEQ buoy network (CC-BAY-04, Nueces Bay buoys) with first anomaly D+1 18:00Z and a 60-day assessment at D+60; the stream uses sonde ids WQ-01..06, shows the anomaly from D+0.4 and ends D+31.01.",
+   "recommended_fix": "Pick one sensor naming scheme and extend to at least D+60."
+  },
+  {
+   "id": "AUD-048",
+   "stream": "telemetry",
+   "severity": "blocker",
+   "kind": "answer-leak",
+   "events": [
+    "GW-EVT-003",
+    "GW-EVT-005",
+    "GW-EVT-006",
+    "GW-EVT-007"
+   ],
+   "detail": "The historian has an AttackSig column set to 'Y' on every row of 20 tags from D-5 onward (18440 rows): GW.HST.AFTER_HRS_ACCESS.PV, GW.HST.SESSION_CNT.PV, GW.JMP.ACTIVE_SESSIONS.PV, GW.JMP.SRC_IP_GEO.PV, GW.RTU1.CFG_HASH.PV, GW.RTU2.CFG_HASH.PV, GW.RTU3.CFG_HASH.PV, GW.RTU4.CFG_HASH.PV .... It labels the answer and, being constant per tag, carries no timing information.",
+   "recommended_fix": "Drop the column from the released files (keep ground truth in the answer key)."
+  },
+  {
+   "id": "AUD-049",
+   "stream": "telemetry",
+   "severity": "blocker",
+   "kind": "cross-stream-time",
+   "events": [
+    "GW-EVT-005",
+    "GW-EVT-007"
+   ],
+   "detail": "The two malicious breaker-open commands are at four different times in four sources. Canon: SUB-02 D+7 14:30Z, SUB-03 D+10 19:45Z. Historian: 2027-09-21 00:00Z, 2027-09-24 00:00Z. SIEM alert: 2027-09-21 14:23Z. Zeek DNP3 notice: 2027-09-21 02:14Z, 2027-09-24 02:14Z. Work orders: 2027-09-21 10:00Z, 2027-09-24 03:00Z.",
+   "recommended_fix": "Generate all four from the MSEL timestamp (command, then breaker state, then alert, then work order minutes to hours later)."
+  },
+  {
+   "id": "AUD-050",
+   "stream": "telemetry",
+   "severity": "major",
+   "kind": "wrong-time",
+   "events": [
+    "GW-EVT-003",
+    "GW-EVT-009",
+    "GW-EVT-010",
+    "GW-EVT-103"
+   ],
+   "detail": "Relay threshold 0.88->0.94 pu is written at 2027-09-11 00:00Z on SUB1 and SUB2 (canon D-3 17:00Z; config file write 22:11Z). RTU config-hash changes: RTU1 2027-09-11 00:00Z; RTU2 2027-09-21 00:00Z; RTU3 2027-09-24 00:00Z; RTU4 2027-09-11 01:00Z. The thresholds are never restored inside the stream although work orders restore relay settings at D+15.6 and canon resets them by D+35.",
+   "recommended_fix": "Align to GW-EVT-003/103 times; add the restoration steps."
+  },
+  {
+   "id": "AUD-051",
+   "stream": "telemetry",
+   "severity": "blocker",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0302",
+    "EVT-0310",
+    "EVT-0406",
+    "GW-EVT-004",
+    "GW-EVT-008",
+    "GW-EVT-015"
+   ],
+   "detail": "The storm outage lasts about five hours in the historian: substation bus voltage is down D+0.25..D+0.38 and O.N. Stevens pump pressure is low D+0.25..D+0.42, then every asset returns to normal. Canon: both plant feeds fail at 09:00Z, P-2 fails and stays out until D+38, citywide low pressure drives a boil-water notice D+4..D+39, SUB-01 trips at 07:12Z, restoration is staged through D+35, and rendering rules say telemetry is lost D0..D+3. P-3's setpoint drop at D+9 (85->68 psi) is present, but with the plant otherwise healthy the District 3/4 low-pressure signal has no storm damage to hide in.",
+   "recommended_fix": "Rebuild plant and grid telemetry from the MSEL: staged restoration, P-2 out to D+38, data gap D0..D+3, and extend to D+119."
+  },
+  {
+   "id": "AUD-052",
+   "stream": "telemetry",
+   "severity": "major",
+   "kind": "corrupt-values",
+   "events": [
+    "GW-EVT-010"
+   ],
+   "detail": "GW.SUB4.REL.CFG_HASH.PV turns from a hash into random decimals at D+0.25 (16 changed values), so the SUB-04 relay-config finding at D+16 cannot be made.",
+   "recommended_fix": "Regenerate as a hash that changes once at the write."
+  },
+  {
+   "id": "AUD-053",
+   "stream": "telemetry",
+   "severity": "major",
+   "kind": "missing-evidence",
+   "events": [
+    "GW-EVT-011",
+    "GW-EVT-013",
+    "GW-EVT-102",
+    "GW-EVT-105"
+   ],
+   "detail": "Tags meant to carry the intrusion are flat noise with no event: GW.SCADA.ALARM_SUPR_CNT.PV 22.7-27.2; GW.HST.AFTER_HRS_ACCESS.PV 0.9-1.1; GW.JMP.ACTIVE_SESSIONS.PV 2.1-2.8. No after-hours historian session at D-7 02:44Z, no alarm-suppression peak at D+9 04:00Z, no 14 jump-host sessions, no historian gap on the Colorado River booster.",
+   "recommended_fix": "Drive these tags from the GW-EVT timeline."
+  },
+  {
+   "id": "AUD-054",
+   "stream": "telemetry",
+   "severity": "major",
+   "kind": "missing-evidence",
+   "events": [
+    "EVT-0102",
+    "EVT-0103",
+    "EVT-0313",
+    "EVT-0407",
+    "EVT-0602",
+    "EVT-2003"
+   ],
+   "detail": "Assets the base scenario depends on have no telemetry at all: pump vibration (EQP-1102 trend from D-55), NAS backup generator EQP-2201 (healthy D-50, fails D+40), tanker cargo levels/valves (D0 04:00Z), raw-water TPH at the plant intake (D+2). Asset ids are GW-FAC-UTL-01 pumps 1-4; the scenario's EQP-1101..1104 never appear.",
+   "recommended_fix": "Add these assets and map EQP ids to tags in scada_tags.json."
+  },
+  {
+   "id": "AUD-055",
+   "stream": "maintenance",
+   "severity": "blocker",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0302",
+    "EVT-0310",
+    "EVT-0406",
+    "GW-EVT-016"
+   ],
+   "detail": "Work orders close out the water crisis weeks early: P-2 rebuilt D+17.75 (canon parts arrive D+36, restored D+38); 'all districts online' D+24.67; boil-water zones restored D+16.67 (canon lifts D+39 and D+42); P-3 setpoint restored D+16.42 while the historian still shows 68 psi at D+31.",
+   "recommended_fix": "Regenerate from the MSEL dates; the 25-day parts delay (EVT-0308/0406) should be visible as open work orders."
+  },
+  {
+   "id": "AUD-056",
+   "stream": "maintenance",
+   "severity": "major",
+   "kind": "entity-mismatch",
+   "events": [
+    "EVT-0102",
+    "EVT-0103",
+    "EVT-0206",
+    "EVT-0307",
+    "EVT-0318",
+    "EVT-0407",
+    "EVT-0414",
+    "EVT-0506"
+   ],
+   "detail": "94 work orders, all one utility (asset ids GW-PP1-PUMP1.., GW-SUB01-BKR-MAIN; the historian uses GW-FAC-UTL-01/GW-FAC-SUB-01 and the scenario EQP-1101..). About 2 a day against the 15 a week in the rendering rules is fine, but nothing covers NAS Corpus Christi (generator EQP-2201, perimeter sensors), the Army depot, tanker cargo-system inspections or EOD/mine-clearance reports.",
+   "recommended_fix": "Use one asset-id scheme across historian, work orders and scada_tags.json; add NAS, depot, tanker and EOD records."
+  },
+  {
+   "id": "AUD-057",
+   "stream": "supply",
+   "severity": "blocker",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0401",
+    "EVT-0409",
+    "EVT-0414"
+   ],
+   "detail": "The arrivals log runs a different port timeline: 14 tanker/LNG calls berth between D+7 and D+18 while canon keeps the channel closed until a partial reopening at D+30 (PUB-058, EVT-0401); MV Gulf Provider berths D+6.58 (canon D+33, 'about a month late', PUB-059); the sealift call is D+28.50 (canon sails D+59..D+64); the log ends D+28.50 so the D+44..D+58 closure is absent.",
+   "recommended_fix": "Canon decision on reopening first (see canon findings), then regenerate arrivals through D+119."
+  },
+  {
+   "id": "AUD-058",
+   "stream": "supply",
+   "severity": "major",
+   "kind": "entity-mismatch",
+   "events": [
+    "EVT-0204",
+    "EVT-0308",
+    "EVT-0312",
+    "EVT-0404",
+    "EVT-0406"
+   ],
+   "detail": "20 of 74 MMSIs in the arrivals log have an AIS track; 10 AIS vessels have no port call. No scenario supplier ids (SUP-0102, SUP-0219, SUP-0388, SUP-0390) appear, and there is no inventory/receipt data: pump parts ordered D+2 and received D+36, the 380 m3 fuel receipt at D+32, daily stock for ~200 SKUs.",
+   "recommended_fix": "Generate arrivals from the same vessel roster as AIS; add a receipts/inventory file keyed by SUP ids."
+  },
+  {
+   "id": "AUD-059",
+   "stream": "payments",
+   "severity": "blocker",
+   "kind": "missing-evidence",
+   "events": [
+    "EVT-0105",
+    "EVT-0311",
+    "EVT-0312",
+    "EVT-0501",
+    "EVT-0502",
+    "EVT-0503",
+    "EVT-0504",
+    "EVT-0505",
+    "EVT-0508",
+    "EVT-2206"
+   ],
+   "detail": "230 transactions, D+4.97..D+60.05. Mentions: SUP ids 0, BANK-SYN 0, PIID-SYN 0, Brannoch 0, prepaid 0. Missing: vendor registry showing SUP-0388/0390 sharing an address and BANK-SYN-71 at D-40; the $14.2M (D+10) and $2.1M (D+12) awards; FEMA IA registrations from D+60 (48,000 claims); 410 hijacked accounts routing $3.9M D+64..D+80; prepaid-card clusters D+66..D+80; debris billing at 2.3x tonnage (D+70); 4,200 spill claims; the 94 fraudulent FEMA IA applications of D+60..D+62.",
+   "recommended_fix": "Add vendor-registry, contract-award and FEMA IA files; extend transactions to D+119 with the canon account ids."
+  },
+  {
+   "id": "AUD-060",
+   "stream": "payments",
+   "severity": "major",
+   "kind": "contradiction",
+   "events": [
+    "EVT-2201",
+    "EVT-2202",
+    "EVT-2204"
+   ],
+   "detail": "Insurance claims: all 400 have loss_date 2027-09-14 (correct: that is landfall day, not a defect); report dates run D+0..D+30; 20 are inspected before they are reported. 94 claims belong to the LPH ring; canon is 230 inflated policies (EVT-2201) with claim runners activated at D+3 (EVT-2202), and 52 LPH claims are reported before D+3. 400 claims stands in for 142,000 (PUB-211) with no sampling note.",
+   "recommended_fix": "Fix inspection<report rows; start LPH filings at D+3; document the sampling ratio."
+  },
+  {
+   "id": "AUD-061",
+   "stream": "network_logs",
+   "severity": "blocker",
+   "kind": "entity-mismatch",
+   "events": [
+    "GW-EVT-001",
+    "GW-EVT-002",
+    "GW-EVT-101",
+    "GW-EVT-102",
+    "GW-EVT-103"
+   ],
+   "detail": "SIEM host names share 0 of 21 with gw_host_registry.json (SIEM: FAC-UTL-01-P3, FW-EDGE-01, GW-SRV-DC-01, GW-SRV-FILE-01, GW-SRV-PRINT-01, GW-WS-IT-10, GW-WS-IT-11, GW-WS-IT-12, GW-WS-IT-14, GW-WS-IT-15 ...; registry uses GW-WS-IT-04, GW-SYS-JMP-01, GW-HIST-01, GW-RTU-PWR-01...). The registry puts IT hosts on 192.168.100.0/24; SIEM and Zeek put them on 10.72.1.0/24. The intrusion story in the SIEM is a different one: RDP brute force on GW-WS-IT-14 as svc_backup at D-6.9, lateral movement D-3.0. Canon: implant on GW-WS-IT-04 at D-14 03:17Z, historian sessions from D-7 02:44Z through the jump host, relay file write D-3 22:11Z.",
+   "recommended_fix": "Regenerate SIEM and Zeek from gw_host_registry.json and the GW-EVT timeline."
+  },
+  {
+   "id": "AUD-062",
+   "stream": "network_logs",
+   "severity": "major",
+   "kind": "contradiction",
+   "events": [
+    "GW-EVT-104"
+   ],
+   "detail": "Storm-window alert flood is absent: SIEM daily counts D-2..D+4 are 25, 34, 61, 54, 44, 57, 53; canon is 4,812 / 7,341 / 18,340 / 16,207 / 14,884 / 12,201 / 6,633 (GW-EVT-104). Zeek conn volume is flat (~750/day) through landfall and the multi-day outage.",
+   "recommended_fix": "Scale volumes (or document a sampling ratio) and add the outage/reconnect pattern."
+  },
+  {
+   "id": "AUD-063",
+   "stream": "network_logs",
+   "severity": "blocker",
+   "kind": "coverage",
+   "events": [
+    "EVT-0106",
+    "EVT-0107",
+    "EVT-0209",
+    "EVT-0306",
+    "EVT-0313",
+    "EVT-0502",
+    "GW-EVT-010",
+    "GW-EVT-011",
+    "GW-EVT-012",
+    "GW-EVT-013",
+    "GW-EVT-014",
+    "GW-EVT-106",
+    "GW-EVT-107",
+    "GW-EVT-108"
+   ],
+   "detail": "Zeek conn/dns/notice run D-60..D+15.07 and SIEM D-13.96..D+28.91. Everything from the D+16 relay-file finding to the D+35 clean baseline is outside Zeek, and the base scenario's network events are not represented in any log: KESTREL scans from ASN-SYN-64512 (D-35), Brightwake phishing (D-33), vendor sessions on tanker networks (D-20, D0 04:00Z), aid-portal phishing (D+1..D+3), credential stuffing (D+62..D+70). External addresses seen: 91.108.56.33 x361, 45.77.218.95 x8, 185.220.101.47 x2, 212.129.33.11 x1.",
+   "recommended_fix": "Extend to D+119; add portal, vendor and tanker-network logs."
+  },
+  {
+   "id": "AUD-064",
+   "stream": "911",
+   "severity": "blocker",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0101",
+    "EVT-0303",
+    "EVT-1301",
+    "EVT-1302",
+    "EVT-1307"
+   ],
+   "detail": "Daily records: baseline 88 (canon 310), peak 418 on D+2 (canon 2,900 a day in PUB-026/EVT-0303, or 2,109 on D+2 in PUB-131/EVT-1302), D+28 87 (canon 380). The file is a sample, but at two different rates: 28% of canon at baseline and 14% at peak, so the 'nearly ten times normal' ratio comes out as 4.8x. No sampling note exists.",
+   "recommended_fix": "Either generate full volume or sample at one stated rate; settle 2,900 vs 2,109 first."
+  },
+  {
+   "id": "AUD-065",
+   "stream": "911",
+   "severity": "major",
+   "kind": "contradiction",
+   "events": [
+    "EVT-1303",
+    "EVT-1304",
+    "EVT-1305",
+    "EVT-1707"
+   ],
+   "detail": "False/unfounded calls by day D+7..D+10: 7, 0, 3, 2 (canon 23: 9 in four hours on D+7 then 14 over D+8..D+10; plus 11 false trapped-resident calls, PUB-174). An unexplained cluster of false industrial alarms sits at D+28..D+30: 19, 13, 13. The boil-water call surge on D+12 (EVT-1305, PUB-132) is not visible: D+11 159, D+12 131, D+13 166.",
+   "recommended_fix": "Regenerate the false-call windows and the D+12 surge; remove or explain the D+28 cluster."
+  },
+  {
+   "id": "AUD-066",
+   "stream": "911",
+   "severity": "major",
+   "kind": "missing-evidence",
+   "events": [
+    "EVT-0303",
+    "EVT-0601"
+   ],
+   "detail": "No census-tract or income field, so '61% from low-income surge-zone tracts' and the D+90 equity review (median response 2.1x) cannot be computed. Timestamps carry no zone (2027-09-09 00:03:04): local or UTC is undocumented. Stream covers D-5..D+31.78 only.",
+   "recommended_fix": "Add tract GEOID (join to census/), state the time zone, extend to D-60..D+119."
+  },
+  {
+   "id": "AUD-067",
+   "stream": "public_health",
+   "severity": "blocker",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0101",
+    "EVT-0310",
+    "EVT-0317",
+    "EVT-0408",
+    "EVT-1606",
+    "EVT-1607",
+    "EVT-1609"
+   ],
+   "detail": "ED visits: baseline 49 a day (canon 520; ~10% sample, undocumented). GI visits: baseline 9.7, D+6..D+14 mean 14.3 (canon +180% -> 27), D+18..D+22 mean 12.2 (canon outbreak peak 340 cases a day, 94% from Districts 3-4, PUB-162/163). Respiratory: baseline 10.3, D+3..D+21 mean 14.6 (canon +60% near oiled shorelines). Neither the norovirus wave nor the Cryptosporidium/Giardia cluster that drives T9/T14/T16 exists in the data.",
+   "recommended_fix": "Regenerate with the two GI waves, shoreline respiratory rise, ZIP/district concentration and the D+45 low-income residual."
+  },
+  {
+   "id": "AUD-068",
+   "stream": "public_health",
+   "severity": "blocker",
+   "kind": "entity-mismatch",
+   "events": [
+    "EVT-1601",
+    "EVT-1602",
+    "EVT-1603",
+    "EVT-1604",
+    "EVT-1605"
+   ],
+   "detail": "Facilities in the stream: FAC-CCMC-001, FAC-DRMC-001, FAC-SHBA-001, FAC-SHE-001, FAC-SHE-002, FAC-SHMC-001, FAC-UCG-001. Canon hospitals are Shoreline Regional Medical Center (SRMC, 500 beds) and Bay City Medical Center (BCMC, 280 beds). Highest occupancy in hospital_capacity.csv is FAC-DRMC-001 at 181 of 186 beds (97%) on 2027-09-16; canon is SRMC 700/500 (140%) and BCMC 331/280 (118%) on D+2 (PUB-161, PUB-164). No generator/diesel status for the D+5 fuel crisis or the D+8 power restoration.",
+   "recommended_fix": "Rename/resize facilities to the canon hospitals (facility_registry.json too) and regenerate capacity."
+  },
+  {
+   "id": "AUD-069",
+   "stream": "eas",
+   "severity": "blocker",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0310",
+    "EVT-1407",
+    "EVT-1410",
+    "EVT-2102",
+    "EVT-2103",
+    "EVT-2104",
+    "EVT-2106",
+    "EVT-2108"
+   ],
+   "detail": "The alert log follows a different timeline from the public record. Hurricane warning D-2.50 (canon D-2 17:00Z/18:00Z, PUB-200, EVT-2102). First mandatory evacuation D-1.75 (canon D-1 12:00Z, PUB-201, EVT-2103). Boil-water alerts: BoilWaterNotice D+0.33 Corpus Christi Water Zone 1 ; BoilWaterNotice D+1.58 Corpus Christi Water Zone 2 ; BoilWaterLift D+2.38 Corpus Christi Water Zone 1; BoilWaterLift D+14.50 All Corpus Christi Water Zon; canon is citywide D+4..D+39 (PUB-039, PUB-063) and Districts 3-4 from D+12 to D+42 (PUB-143/204, PUB-206). The file uses 'Water Zone 1/2/3' and 'GridWater'; canon uses Districts 3-4 and CBPWA. Log ends D+14.50: no D+12 notice (the 12-hour Spanish delay that T14/T21 are built on), no lifts.",
+   "recommended_fix": "Rebuild from PUB-200..206, PUB-143/144 and EVT-21xx/14xx; one row per IPAWS alert with EN/ES release times."
+  },
+  {
+   "id": "AUD-070",
+   "stream": "social_media",
+   "severity": "blocker",
+   "kind": "restricted-term",
+   "events": [
+    "EVT-0104",
+    "EVT-0402"
+   ],
+   "detail": "52 public posts name 'MV Halcyon Drift' (first D+4.50 by @Reporter_EvanK; also @BaysideLedger, GulfEnviroWatch, Reporter_EvanK, USCGSectorCC, fishermanchuy). restricted_terms.json lists it as never public. Posts also discuss a 'Panama ship' AIS gap from D+12, weeks before the D+31 event.",
+   "recommended_fix": "Remove; run the restricted-terms leak guard over every public-facing stream, not only news."
+  },
+  {
+   "id": "AUD-071",
+   "stream": "social_media",
+   "severity": "blocker",
+   "kind": "contradiction",
+   "events": [
+    "EVT-0309",
+    "EVT-0310",
+    "EVT-0318",
+    "EVT-0413",
+    "EVT-1208"
+   ],
+   "detail": "The feed tells a different story from the news corpus: a 'ship channel blast' at 02:30 local on D+1 (9 posts D+1..D+2; canon has no explosion until the tug blast at D+44, and 1 posts mention that one); a citywide boil-water notice at D+1.5 (canon D+4); the spill vessel 'unnamed' for months (canon names MT Kalvora Star and MT Ostrel Bay on D+1, PUB-029); port 'fully reopened' D+30 with a convoy (canon partial); utility called 'GridWater' (canon CBPWA); 'seizing homes' rumor first at D+6.83 (canon D+2, PUB-033); 0 posts about lights/drones over the air station (canon D+2, PUB-032).",
+   "recommended_fix": "Regenerate the feed from the public record after the canon decisions."
+  },
+  {
+   "id": "AUD-072",
+   "stream": "social_media",
+   "severity": "major",
+   "kind": "entity-mismatch",
+   "events": [
+    "EVT-0309",
+    "EVT-0507",
+    "EVT-1501",
+    "EVT-1502",
+    "EVT-1504",
+    "EVT-1505"
+   ],
+   "detail": "32 accounts post; personas.json lists 32 and only 8 overlap. Not in the registry: CCHarborPilots, CCReliefVolunteer, CallerTimes, DerekNancyRescue, FEMARegion6, GridWaterCC, GulfEnviroWatch, KIIITVNews, MariaRamirez_CC, NationalHurricaneCenter .... Registry accounts that never post: CCBeachPhotog, CCHopeVolunteers, CCVetCenter_Vol, CoastalDefendersOrg, CoastlinePublicRadio, DisasterRespProf, ElGolfoTaqueriaCC, EnergyMktWatcher, FishingWithFelipeCC, GulfWatchPatriot .... The coordinated network is 2 accounts (@CoastTruthTX 28 posts, @TruthAboutRafael 9); canon is 40 accounts and 18,000 posts (EVT-0309) / 47 pre-positioned accounts (EVT-1501), with @GulfWatchPatriot (PUB-034) and @TXCoastalWatchdog absent. Handles of real organizations and outlets are used: NationalHurricaneCenter, PortCorpusChristi, CallerTimes, KIIITVNews, FEMARegion6, USCGSectorCC; fictional outlets Harborline 6 / KNCB / Coastline have no posts.",
+   "recommended_fix": "One persona roster; generate the bot network at a stated sampling ratio; replace real outlet handles with the scenario outlets."
+  },
+  {
+   "id": "AUD-073",
+   "stream": "infrastructure",
+   "severity": "minor",
+   "kind": "coverage",
+   "events": [
+    "EVT-0601",
+    "EVT-0604",
+    "EVT-1107"
+   ],
+   "detail": "Damage assessments run D+1..D+21 (522 records) and stop before household assessments are said to finish (PUB-104: slowed, IA not approved until D+57). No tract id for the D+90 equity review.",
+   "recommended_fix": "Extend assessments to ~D+55 with the slow tail; add tract GEOID."
+  },
+  {
+   "id": "AUD-074",
+   "stream": "(all)",
+   "severity": "minor",
+   "kind": "documentation",
+   "events": [],
+   "detail": "05_other_sources/README.md still says 'to build next' and promises a truth_event_id on every record plus H3 cells; no stream has either. Zeek per-day folders cover 2027-07-17..2027-09-30. scenarios/gridwater/05_streams/ is empty and its msel.json is an empty list (events live in 00_scenario/msel.json).",
+   "recommended_fix": "Rewrite the README per stream: span, sampling ratio, time zone, id scheme, known gaps."
+  }
+ ],
+ "event_matrix": [
+  {
+   "event_id": "EVT-0101",
+   "day": -60,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "911",
+   "stream": "911",
+   "status": "missing",
+   "note": "911 stream starts D-5; baseline 310/day is ~87/day in the file"
+  },
+  {
+   "event_id": "EVT-0101",
+   "day": -60,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "public health",
+   "stream": "public_health",
+   "status": "missing",
+   "note": "ED stream starts D-7; baseline 520 visits/day is ~50/day in the file"
+  },
+  {
+   "event_id": "EVT-0101",
+   "day": -60,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "census",
+   "stream": "census",
+   "status": "present",
+   "note": "static ACS tract tables"
+  },
+  {
+   "event_id": "EVT-0102",
+   "day": -55,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Telemetry",
+   "stream": "telemetry",
+   "status": "missing",
+   "note": "historian starts D-30; no vibration tag exists for P-2"
+  },
+  {
+   "event_id": "EVT-0102",
+   "day": -55,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "present-but-wrong-time",
+   "note": "P-2 vibration work order at D-26 and CLOSED; canon D-55 and deferred (stream starts D-29)"
+  },
+  {
+   "event_id": "EVT-0103",
+   "day": -50,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2"
+   ],
+   "observed_in": "Telemetry",
+   "stream": "telemetry",
+   "status": "missing",
+   "note": "no NAS generator EQP-2201 telemetry in any stream"
+  },
+  {
+   "event_id": "EVT-0103",
+   "day": -50,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "no NAS/EQP-2201 records (stream is CBPWA only)"
+  },
+  {
+   "event_id": "EVT-0103",
+   "day": -50,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2"
+   ],
+   "observed_in": "payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "no fuel-supplier payments before the storm"
+  },
+  {
+   "event_id": "EVT-0104",
+   "day": -45,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2"
+   ],
+   "observed_in": "Ship tracks",
+   "stream": "ais",
+   "status": "present-but-wrong-values",
+   "note": "Halcyon Drift track starts D-43.3 mid-Gulf (Havana transit); MSEL has it loitering among tankers off Corpus Christi at D-45 under its true MMSI"
+  },
+  {
+   "event_id": "EVT-0104",
+   "day": -45,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2"
+   ],
+   "observed_in": "satellite",
+   "stream": "satellite",
+   "status": "missing",
+   "note": "catalog starts D-30"
+  },
+  {
+   "event_id": "EVT-0105",
+   "day": -40,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T3"
+   ],
+   "observed_in": "Payments (vendor registry)",
+   "stream": "payments",
+   "status": "missing",
+   "note": "no vendor registry; no SUP ids or BANK-SYN accounts anywhere in the stream"
+  },
+  {
+   "event_id": "EVT-0106",
+   "day": -35,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T4"
+   ],
+   "observed_in": "Network logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "logs are CBPWA-only; no aid-portal or NAS logistics traffic, no ASN-SYN-64512"
+  },
+  {
+   "event_id": "EVT-0107",
+   "day": -33,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "Network logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "no Brightwake phishing"
+  },
+  {
+   "event_id": "EVT-2201",
+   "day": -30,
+   "day_end": -5,
+   "time_utc": null,
+   "threads": [
+    "T22",
+    "T2"
+   ],
+   "observed_in": "lph_internal_property_records",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0201",
+   "day": -21,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Weather",
+   "stream": "weather",
+   "status": "missing",
+   "note": "weather stream starts D-30; outlook is D-21 but is a forecast product, not an observation"
+  },
+  {
+   "event_id": "EVT-0209",
+   "day": -20,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "Network logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "no tanker cargo-network sessions"
+  },
+  {
+   "event_id": "GW-EVT-001",
+   "day": -14,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T8",
+    "T10"
+   ],
+   "observed_in": "endpoint_logs",
+   "stream": "network_logs",
+   "status": "present-but-wrong-values",
+   "note": "no implant on GW-WS-IT-04 at D-14; SIEM shows an RDP brute force on GW-WS-IT-14 at D-6.9 instead"
+  },
+  {
+   "event_id": "GW-EVT-101",
+   "day": -14,
+   "day_end": null,
+   "time_utc": "03:17Z",
+   "threads": [
+    "T18",
+    "T8",
+    "T10"
+   ],
+   "observed_in": "sentinel_edge_siem_logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "no beacon alert at D-14 03:17Z; first external-IP contact not tied to GW-WS-IT-04"
+  },
+  {
+   "event_id": "GW-EVT-101",
+   "day": -14,
+   "day_end": null,
+   "time_utc": "03:17Z",
+   "threads": [
+    "T18",
+    "T8",
+    "T10"
+   ],
+   "observed_in": "cbpwa_soc_queue_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0202",
+   "day": -10,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Weather",
+   "stream": "weather",
+   "status": "present",
+   "note": "stations cover D-10"
+  },
+  {
+   "event_id": "EVT-1901",
+   "day": -10,
+   "day_end": null,
+   "time_utc": "04:30Z",
+   "threads": [
+    "T19",
+    "T8"
+   ],
+   "observed_in": "faanex_laanc_database",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1902",
+   "day": -9,
+   "day_end": null,
+   "time_utc": "06:47Z",
+   "threads": [
+    "T19",
+    "T8",
+    "T3"
+   ],
+   "observed_in": "camcc_04_mission_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1903",
+   "day": -8,
+   "day_end": null,
+   "time_utc": "04:15Z",
+   "threads": [
+    "T19",
+    "T8"
+   ],
+   "observed_in": "cg_buoy_r18_track_archive",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0203",
+   "day": -7,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Environmental sensors",
+   "stream": "env_sensors",
+   "status": "missing",
+   "note": "no river stage series; WQ-05 (Nueces River at Calallen) shows no rise from D-7"
+  },
+  {
+   "event_id": "EVT-1501",
+   "day": -7,
+   "day_end": null,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T15",
+    "T5"
+   ],
+   "observed_in": "platform_account_metadata_records",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-002",
+   "day": -7,
+   "day_end": -4,
+   "time_utc": null,
+   "threads": [
+    "T8",
+    "T10"
+   ],
+   "observed_in": "vpn_logs",
+   "stream": "network_logs",
+   "status": "present-but-wrong-values",
+   "note": "lateral movement alert at D-3.0 from GW-WS-IT-14 as svc_backup; canon D-7..D-4 via the field-engineer VPN account"
+  },
+  {
+   "event_id": "GW-EVT-102",
+   "day": -7,
+   "day_end": null,
+   "time_utc": "02:44Z",
+   "threads": [
+    "T18",
+    "T8"
+   ],
+   "observed_in": "sentinel_edge_siem_logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "no after-hours historian session at D-7 02:44Z"
+  },
+  {
+   "event_id": "GW-EVT-102",
+   "day": -7,
+   "day_end": null,
+   "time_utc": "02:44Z",
+   "threads": [
+    "T18",
+    "T8"
+   ],
+   "observed_in": "cbpwa_siem_exception_rules",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1201",
+   "day": -7,
+   "day_end": null,
+   "time_utc": "21:00Z",
+   "threads": [
+    "T12",
+    "T3",
+    "T4"
+   ],
+   "observed_in": "uscg_sector_cc_ais_log",
+   "stream": "ais",
+   "status": "missing",
+   "note": "no Auriga Meridian MMSI or track in the stream"
+  },
+  {
+   "event_id": "EVT-0204",
+   "day": -5,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Supply",
+   "stream": "supply",
+   "status": "present-but-wrong-values",
+   "note": "Gulf Provider manifest exists but no SUP-0102 / 40-container booking reference"
+  },
+  {
+   "event_id": "EVT-0204",
+   "day": -5,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "no SUP-0102 booking payment"
+  },
+  {
+   "event_id": "EVT-1904",
+   "day": -5,
+   "day_end": null,
+   "time_utc": "05:00Z",
+   "threads": [
+    "T19",
+    "T7"
+   ],
+   "observed_in": "cg_buoy_r22_track_archive",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1502",
+   "day": -5,
+   "day_end": -2,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T15",
+    "T5"
+   ],
+   "observed_in": "platform_post_archive_D-5_to_D-2",
+   "stream": "social_media",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions TXCoastalWatchdog"
+  },
+  {
+   "event_id": "EVT-1502",
+   "day": -5,
+   "day_end": -2,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T15",
+    "T5"
+   ],
+   "observed_in": "txdot_traffic_data_D-2",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1401",
+   "day": -5,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T14"
+   ],
+   "observed_in": "nueces_county_oem_activation_logs",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2101",
+   "day": -5,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "nueces_county_oem_test_log_2027-0909",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0205",
+   "day": -4,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Aircraft tracks",
+   "stream": "adsb",
+   "status": "missing",
+   "note": "no NAS training-aircraft evacuation flights (registry NAV851/NAV097 have no track)"
+  },
+  {
+   "event_id": "EVT-0205",
+   "day": -4,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "no NAS records"
+  },
+  {
+   "event_id": "EVT-0206",
+   "day": -4,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "no Army depot records"
+  },
+  {
+   "event_id": "EVT-0206",
+   "day": -4,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "supply",
+   "stream": "supply",
+   "status": "missing",
+   "note": "no Army depot records"
+  },
+  {
+   "event_id": "EVT-0207",
+   "day": -3,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1",
+    "T2"
+   ],
+   "observed_in": "Ship tracks",
+   "stream": "ais",
+   "status": "present-but-wrong-values",
+   "note": "no 14-vessel offshore queue: most inbound vessels end their tracks before D-3"
+  },
+  {
+   "event_id": "EVT-0207",
+   "day": -3,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1",
+    "T2"
+   ],
+   "observed_in": "satellite",
+   "stream": "satellite",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions Gulf Provider, Halcyon Drift"
+  },
+  {
+   "event_id": "EVT-0207",
+   "day": -3,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1",
+    "T2"
+   ],
+   "observed_in": "supply",
+   "stream": "supply",
+   "status": "present-but-wrong-values",
+   "note": "3 vessels 'held at anchorage' (canon 14)"
+  },
+  {
+   "event_id": "EVT-0210",
+   "day": -3,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "Ship tracks",
+   "stream": "ais",
+   "status": "present",
+   "note": "Kalvora Star / Ostrel Bay stationary through the storm"
+  },
+  {
+   "event_id": "EVT-0210",
+   "day": -3,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "supply",
+   "stream": "supply",
+   "status": "present-but-wrong-time",
+   "note": "arrivals log has both tankers arriving D-2.4/D-2.2; AIS has them at berth from D-14; MSEL approval is D-3"
+  },
+  {
+   "event_id": "EVT-1202",
+   "day": -3,
+   "day_end": null,
+   "time_utc": "04:30Z",
+   "threads": [
+    "T12",
+    "T3"
+   ],
+   "observed_in": "port_radar_buoy_logs",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1905",
+   "day": -3,
+   "day_end": null,
+   "time_utc": "04:45Z",
+   "threads": [
+    "T19",
+    "T7"
+   ],
+   "observed_in": "cg_buoy_r22_track_archive",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1402",
+   "day": -3,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T14"
+   ],
+   "observed_in": "kncb_broadcast_logs_D-3",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-003",
+   "day": -3,
+   "day_end": null,
+   "time_utc": "17:00Z",
+   "threads": [
+    "T8",
+    "T9",
+    "T10"
+   ],
+   "observed_in": "scada_config_audit",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-003",
+   "day": -3,
+   "day_end": null,
+   "time_utc": "17:00Z",
+   "threads": [
+    "T8",
+    "T9",
+    "T10"
+   ],
+   "observed_in": "relay_config_files",
+   "stream": "telemetry",
+   "status": "present-but-wrong-time",
+   "note": "relay UV threshold 0.88->0.94 and RTU1 config hash change at D-3 00:00Z; canon 17:00Z-22:11Z"
+  },
+  {
+   "event_id": "GW-EVT-103",
+   "day": -3,
+   "day_end": null,
+   "time_utc": "22:11Z",
+   "threads": [
+    "T18",
+    "T8"
+   ],
+   "observed_in": "sentinel_edge_siem_logs",
+   "stream": "network_logs",
+   "status": "present-but-wrong-time",
+   "note": "'Unauthorized Modbus Write' alerts at D-3 00:34Z/01:15Z; canon relay config write 22:11Z"
+  },
+  {
+   "event_id": "GW-EVT-103",
+   "day": -3,
+   "day_end": null,
+   "time_utc": "22:11Z",
+   "threads": [
+    "T18",
+    "T8"
+   ],
+   "observed_in": "cbpwa_soc_queue_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0208",
+   "day": -2,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Satellite",
+   "stream": "satellite",
+   "status": "missing",
+   "note": "no D-2 radar reference pass (nearest PRE-03 at D-7)"
+  },
+  {
+   "event_id": "GW-EVT-104",
+   "day": -2,
+   "day_end": 3,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T18",
+    "T8",
+    "T10"
+   ],
+   "observed_in": "sentinel_edge_siem_logs",
+   "stream": "network_logs",
+   "status": "present-but-wrong-values",
+   "note": "SIEM has 25-61 alerts/day through the storm; canon 4,812..18,340/day (74,120 in the window)"
+  },
+  {
+   "event_id": "GW-EVT-104",
+   "day": -2,
+   "day_end": 3,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T18",
+    "T8",
+    "T10"
+   ],
+   "observed_in": "cbpwa_soc_storm_mode_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1101",
+   "day": -2,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T11"
+   ],
+   "observed_in": "nas_cc_imagery_archive",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1601",
+   "day": -2,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T16"
+   ],
+   "observed_in": "srmc_hurricane_contingency_plan_activation_D-2",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2102",
+   "day": -2,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "nws_corpus_christi_wfo_operations_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2102",
+   "day": -2,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "ipaws_alert_archive_HUW-2027-0912-001",
+   "stream": "eas",
+   "status": "present-but-wrong-time",
+   "note": "hurricane warning logged 2027-09-11 12:00Z, about 30 h before canon (D-2 18:00Z)"
+  },
+  {
+   "event_id": "EVT-1503",
+   "day": -2,
+   "day_end": null,
+   "time_utc": "19:30Z",
+   "threads": [
+    "T15"
+   ],
+   "observed_in": "tdem_coastal_alert_reports_D-2",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2103",
+   "day": -1,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "nueces_county_oem_evacuation_order_2027-0913",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2103",
+   "day": -1,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "ipaws_alert_archive_EVI-2027-0913-001",
+   "stream": "eas",
+   "status": "present-but-wrong-time",
+   "note": "evacuation orders logged 2027-09-12 06:00Z (Zone A) and 09-13 18:00Z (B, C); canon one order for A/B/C at D-1 12:00Z"
+  },
+  {
+   "event_id": "EVT-1203",
+   "day": -1,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T12",
+    "T3",
+    "T1"
+   ],
+   "observed_in": "port_authority_closure_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1403",
+   "day": -1,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T14"
+   ],
+   "observed_in": "wea_transmission_logs",
+   "stream": "eas",
+   "status": "present-but-wrong-values",
+   "note": "row at D-1 18:00Z is an evacuation order for Zones B/C, not shelter-in-place guidance for C-E"
+  },
+  {
+   "event_id": "EVT-1403",
+   "day": -1,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T14"
+   ],
+   "observed_in": "nclas_translation_delivery_timestamps",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1701",
+   "day": -1,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T17"
+   ],
+   "observed_in": "nueces_county_emergency_ops_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0303",
+   "day": 0,
+   "day_end": 2,
+   "time_utc": null,
+   "threads": [
+    "T1",
+    "T5"
+   ],
+   "observed_in": "911",
+   "stream": "911",
+   "status": "present-but-wrong-values",
+   "note": "peak 418 records/day; canon 2,900/day (PUB-026) or 2,109 (PUB-131)"
+  },
+  {
+   "event_id": "EVT-0314",
+   "day": 0,
+   "day_end": 2,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "Environmental sensors",
+   "stream": "env_sensors",
+   "status": "present",
+   "note": "hydrocarbon rise at WQ-01..04 from D+0.4, bay sondes by D+1.2"
+  },
+  {
+   "event_id": "EVT-0314",
+   "day": 0,
+   "day_end": 2,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "satellite",
+   "stream": "satellite",
+   "status": "present",
+   "note": "oil sheen described from the D+1.6 optical scene"
+  },
+  {
+   "event_id": "EVT-0314",
+   "day": 0,
+   "day_end": 2,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "drone video",
+   "stream": "drone_video",
+   "status": "in-span-unverified",
+   "note": "no entity id or name to search for"
+  },
+  {
+   "event_id": "EVT-1204",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "02:15Z",
+   "threads": [
+    "T12",
+    "T3",
+    "T1"
+   ],
+   "observed_in": "port_radar_buoy_logs_recovered",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0313",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "04:00Z",
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "Network logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "no vendor-session commands to tankers at D0 04:00Z"
+  },
+  {
+   "event_id": "EVT-0313",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "04:00Z",
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "telemetry",
+   "stream": "telemetry",
+   "status": "missing",
+   "note": "no tanker cargo-level/valve telemetry"
+  },
+  {
+   "event_id": "EVT-0313",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "04:00Z",
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "no tanker cargo-system inspection"
+  },
+  {
+   "event_id": "EVT-0301",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "06:00Z",
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Weather",
+   "stream": "weather",
+   "status": "present-but-wrong-values",
+   "note": "landfall visible, but values are implausible (see weather findings)"
+  },
+  {
+   "event_id": "EVT-0301",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "06:00Z",
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "satellite",
+   "stream": "satellite",
+   "status": "present",
+   "note": "landfall SAR scene at 06:00Z"
+  },
+  {
+   "event_id": "EVT-1301",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "06:00Z",
+   "threads": [
+    "T13",
+    "T1"
+   ],
+   "observed_in": "cbecc_cad_volume_log",
+   "stream": "911",
+   "status": "present-but-wrong-values",
+   "note": "spike begins but scaled ~7x below canon"
+  },
+  {
+   "event_id": "EVT-1301",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "06:00Z",
+   "threads": [
+    "T13",
+    "T1"
+   ],
+   "observed_in": "cbecc_shift_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1504",
+   "day": 0,
+   "day_end": 2,
+   "time_utc": "06:00Z",
+   "threads": [
+    "T15",
+    "T5"
+   ],
+   "observed_in": "platform_post_archive_D0_to_D+2",
+   "stream": "social_media",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions McKinley Substation, TXCoastalWatchdog"
+  },
+  {
+   "event_id": "EVT-1504",
+   "day": 0,
+   "day_end": 2,
+   "time_utc": "06:00Z",
+   "threads": [
+    "T15",
+    "T5"
+   ],
+   "observed_in": "coastal_alert_cib_scan_D0",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2104",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "06:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "ipaws_alert_archive_SPW-2027-0914-001",
+   "stream": "eas",
+   "status": "present",
+   "note": "shelter-in-place at 05:30Z (canon 05:45Z), Spanish WEA never sent"
+  },
+  {
+   "event_id": "EVT-2104",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "06:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "out03_generator_operations_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-004",
+   "day": 0,
+   "day_end": 1,
+   "time_utc": "06:00Z",
+   "threads": [
+    "T8",
+    "T10"
+   ],
+   "observed_in": "ercot_operations_log",
+   "stream": "telemetry",
+   "status": "present-but-wrong-values",
+   "note": "all substations drop at 06:00Z exactly and all return at D+0.42; canon SUB-01 trips 07:12Z and restoration runs to D+35"
+  },
+  {
+   "event_id": "EVT-1702",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "06:15Z",
+   "threads": [
+    "T17",
+    "T1"
+   ],
+   "observed_in": "nueces_county_911_cad_log",
+   "stream": "911",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions CG-6033"
+  },
+  {
+   "event_id": "EVT-1702",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "06:15Z",
+   "threads": [
+    "T17",
+    "T1"
+   ],
+   "observed_in": "coast_guard_sector_cc_ops_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1602",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T16"
+   ],
+   "observed_in": "srmc_ed_patient_log_D0",
+   "stream": "public_health",
+   "status": "present-but-wrong-values",
+   "note": "facility ids are FAC-CCMC/SHMC/DRMC...; SRMC/BCMC do not exist in the stream"
+  },
+  {
+   "event_id": "EVT-1602",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T16"
+   ],
+   "observed_in": "srmc_generator_activation_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1102",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "08:30Z",
+   "threads": [
+    "T11",
+    "T1"
+   ],
+   "observed_in": "noaa_sar_imagery",
+   "stream": "satellite",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions Auriga Meridian, GW-FAC-SUB-02, NOAA42"
+  },
+  {
+   "event_id": "EVT-1102",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "08:30Z",
+   "threads": [
+    "T11",
+    "T1"
+   ],
+   "observed_in": "nhc_data_relay",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0302",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "09:00Z",
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Telemetry",
+   "stream": "telemetry",
+   "status": "present-but-wrong-values",
+   "note": "all O.N. Stevens pumps recover to normal pressure by D+0.46; canon has P-2 failed until D+38 and low pressure for weeks"
+  },
+  {
+   "event_id": "EVT-0302",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "09:00Z",
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "present-but-wrong-values",
+   "note": "storm work orders exist but P-2 is repaired by D+17.8 (canon D+38) and assets use GW-PP1-* ids not EQP-110x"
+  },
+  {
+   "event_id": "EVT-0302",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "09:00Z",
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "maps",
+   "stream": "infrastructure",
+   "status": "in-span-unverified",
+   "note": "no entity id or name to search for"
+  },
+  {
+   "event_id": "EVT-1404",
+   "day": 0,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T14"
+   ],
+   "observed_in": "fema_ia_hotline_activation_records",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0304",
+   "day": 1,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1",
+    "T5"
+   ],
+   "observed_in": "Maps",
+   "stream": "infrastructure",
+   "status": "present",
+   "note": "bridge damage records"
+  },
+  {
+   "event_id": "EVT-0304",
+   "day": 1,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1",
+    "T5"
+   ],
+   "observed_in": "drone video",
+   "stream": "drone_video",
+   "status": "present",
+   "note": "TXDOT-BRIDGE-D01 over the Harbor Bridge on D+1"
+  },
+  {
+   "event_id": "EVT-0304",
+   "day": 1,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1",
+    "T5"
+   ],
+   "observed_in": "911",
+   "stream": "911",
+   "status": "present",
+   "note": "bridge-closure narratives on D+1"
+  },
+  {
+   "event_id": "EVT-0305",
+   "day": 1,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Satellite",
+   "stream": "satellite",
+   "status": "present-but-wrong-values",
+   "note": "D+1 scene is optical; flood extent appears in the D+0.5 SAR text with no 112 km2 figure"
+  },
+  {
+   "event_id": "EVT-0306",
+   "day": 1,
+   "day_end": 3,
+   "time_utc": null,
+   "threads": [
+    "T4"
+   ],
+   "observed_in": "Network logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "no aid-portal phishing D+1..D+3"
+  },
+  {
+   "event_id": "EVT-0315",
+   "day": 1,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "no Unified Command / response spending"
+  },
+  {
+   "event_id": "EVT-0318",
+   "day": 1,
+   "day_end": 10,
+   "time_utc": null,
+   "threads": [
+    "T7"
+   ],
+   "observed_in": "Social media",
+   "stream": "social_media",
+   "status": "missing",
+   "note": "no posts about lights/drones over NAS Corpus Christi (0 tweets containing 'drone')"
+  },
+  {
+   "event_id": "EVT-0318",
+   "day": 1,
+   "day_end": 10,
+   "time_utc": null,
+   "threads": [
+    "T7"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "no perimeter-sensor repairs"
+  },
+  {
+   "event_id": "EVT-1302",
+   "day": 1,
+   "day_end": 2,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T13",
+    "T1"
+   ],
+   "observed_in": "cbecc_cad_volume_log",
+   "stream": "911",
+   "status": "present-but-wrong-values",
+   "note": "D+2 is the peak day (418) but canon is 2,109"
+  },
+  {
+   "event_id": "EVT-1302",
+   "day": 1,
+   "day_end": 2,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T13",
+    "T1"
+   ],
+   "observed_in": "txtf1_dispatch_records",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1302",
+   "day": 1,
+   "day_end": 2,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T13",
+    "T1"
+   ],
+   "observed_in": "uscg_helo_dispatch_log",
+   "stream": "adsb",
+   "status": "present",
+   "note": "Coast Guard helicopters CGNR6540/6541 fly rescue sorties D+1..D+2"
+  },
+  {
+   "event_id": "EVT-1205",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "03:40Z",
+   "threads": [
+    "T12",
+    "T3",
+    "T6",
+    "T7"
+   ],
+   "observed_in": "port_radar_buoy_logs_recovered",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1205",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "03:40Z",
+   "threads": [
+    "T12",
+    "T3",
+    "T6",
+    "T7"
+   ],
+   "observed_in": "uscg_vessel_traffic_service_log",
+   "stream": "ais",
+   "status": "in-span-unverified",
+   "note": "continuous stream covers the date; values not checked for this event"
+  },
+  {
+   "event_id": "EVT-2001",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "04:30Z",
+   "threads": [
+    "T20",
+    "T6",
+    "T3"
+   ],
+   "observed_in": "auriga_meridian_valve_historian",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2001",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "04:30Z",
+   "threads": [
+    "T20",
+    "T6",
+    "T3"
+   ],
+   "observed_in": "coast_guard_vessel_traffic_service_log",
+   "stream": "ais",
+   "status": "missing",
+   "note": "no Auriga Meridian track; no VTS log"
+  },
+  {
+   "event_id": "EVT-1206",
+   "day": 1,
+   "day_end": 5,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T12",
+    "T6",
+    "T3"
+   ],
+   "observed_in": "noaa_sar_imagery",
+   "stream": "satellite",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions Auriga Meridian"
+  },
+  {
+   "event_id": "EVT-1206",
+   "day": 1,
+   "day_end": 5,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T12",
+    "T6",
+    "T3"
+   ],
+   "observed_in": "uscg_sector_ntrm",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1703",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T17"
+   ],
+   "observed_in": "coast_guard_ops_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1703",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T17"
+   ],
+   "observed_in": "meridian_uas_annotation_logs",
+   "stream": "drone_video",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions CG-6033"
+  },
+  {
+   "event_id": "EVT-2105",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "out02_broadcast_archive_2027-0915-1400Z",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1103",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T11",
+    "T1"
+   ],
+   "observed_in": "txarng_flight_logs",
+   "stream": "adsb",
+   "status": "missing",
+   "note": "no Texas ARNG UH-60 tracks"
+  },
+  {
+   "event_id": "EVT-1103",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T11",
+    "T1"
+   ],
+   "observed_in": "txarng_video_archive",
+   "stream": "drone_video",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions GW-FAC-SUB-01, GW-FAC-SUB-02"
+  },
+  {
+   "event_id": "EVT-1103",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T11",
+    "T1"
+   ],
+   "observed_in": "txdem_sitrep",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1906",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T19",
+    "T7",
+    "T3"
+   ],
+   "observed_in": "jbsa_intel_fusion_report",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1906",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T19",
+    "T7",
+    "T3"
+   ],
+   "observed_in": "cg_ais_archive",
+   "stream": "ais",
+   "status": "in-span-unverified",
+   "note": "continuous stream covers the date; values not checked for this event"
+  },
+  {
+   "event_id": "EVT-2002",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T20"
+   ],
+   "observed_in": "tceq_buoy_network_telemetry",
+   "stream": "env_sensors",
+   "status": "present-but-wrong-values",
+   "note": "sonde ids are WQ-01..06, MSEL cites TCEQ buoy CC-BAY-04; first anomaly D+0.4 not D+1 18:00Z"
+  },
+  {
+   "event_id": "EVT-2002",
+   "day": 1,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T20"
+   ],
+   "observed_in": "tceq_eoc_alert_queue",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0307",
+   "day": 2,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Drone video",
+   "stream": "drone_video",
+   "status": "missing",
+   "note": "no flight on D+2 and none over the Army depot"
+  },
+  {
+   "event_id": "EVT-0307",
+   "day": 2,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "no depot hangar records"
+  },
+  {
+   "event_id": "EVT-0308",
+   "day": 2,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Supply",
+   "stream": "supply",
+   "status": "missing",
+   "note": "no pump-parts order from Delta Pumps / SUP-0219"
+  },
+  {
+   "event_id": "EVT-0308",
+   "day": 2,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "no SUP-0219 order"
+  },
+  {
+   "event_id": "EVT-0309",
+   "day": 2,
+   "day_end": 20,
+   "time_utc": null,
+   "threads": [
+    "T4"
+   ],
+   "observed_in": "Social media",
+   "stream": "social_media",
+   "status": "present-but-wrong-values",
+   "note": "2 coordinated accounts and 6 'seizing homes' posts starting D+6.8; canon 40 accounts / 18,000 posts from D+2"
+  },
+  {
+   "event_id": "EVT-0316",
+   "day": 2,
+   "day_end": 5,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "Network logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "no responder findings"
+  },
+  {
+   "event_id": "EVT-0316",
+   "day": 2,
+   "day_end": 5,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "no tanker cargo-system records"
+  },
+  {
+   "event_id": "EVT-2003",
+   "day": 2,
+   "day_end": null,
+   "time_utc": "06:00Z",
+   "threads": [
+    "T20",
+    "T9"
+   ],
+   "observed_in": "fac_utl_01_historian_yokogawa",
+   "stream": "telemetry",
+   "status": "missing",
+   "note": "no raw-water TPH tag at FAC-UTL-01"
+  },
+  {
+   "event_id": "EVT-2003",
+   "day": 2,
+   "day_end": null,
+   "time_utc": "06:00Z",
+   "threads": [
+    "T20",
+    "T9"
+   ],
+   "observed_in": "tceq_permit_compliance_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2005",
+   "day": 2,
+   "day_end": null,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T20"
+   ],
+   "observed_in": "noaa_orr_gnome_model_output_archive",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1603",
+   "day": 2,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T16"
+   ],
+   "observed_in": "srmc_census_records_D+2",
+   "stream": "public_health",
+   "status": "present-but-wrong-values",
+   "note": "peak occupancy 96% of 383 beds; canon 140% of 500 (SRMC) and 118% of 280 (BCMC)"
+  },
+  {
+   "event_id": "EVT-1603",
+   "day": 2,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T16"
+   ],
+   "observed_in": "getac_mutual_aid_request_D+2",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1704",
+   "day": 2,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T17",
+    "T9"
+   ],
+   "observed_in": "tf1_ops_summary",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2004",
+   "day": 2,
+   "day_end": 5,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T20"
+   ],
+   "observed_in": "tceq_ambient_air_monitoring_network",
+   "stream": "env_sensors",
+   "status": "present",
+   "note": "benzene peaks D+0.6..D+1.1 (MSEL window D+2..D+5)"
+  },
+  {
+   "event_id": "EVT-2004",
+   "day": 2,
+   "day_end": 5,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T20"
+   ],
+   "observed_in": "nueces_county_health_department_records",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1405",
+   "day": 2,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T14"
+   ],
+   "observed_in": "kncb_call_in_recordings_D+2",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0317",
+   "day": 3,
+   "day_end": 21,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "Public health",
+   "stream": "public_health",
+   "status": "present-but-wrong-values",
+   "note": "respiratory visits not +60% at shoreline facilities"
+  },
+  {
+   "event_id": "EVT-2202",
+   "day": 3,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T22",
+    "T2"
+   ],
+   "observed_in": "fbi_operation_sandbar_case_file",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1705",
+   "day": 3,
+   "day_end": null,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T17"
+   ],
+   "observed_in": "ccfd_sar_incident_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1104",
+   "day": 3,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T11",
+    "T1"
+   ],
+   "observed_in": "argus_flight_logs",
+   "stream": "adsb",
+   "status": "missing",
+   "note": "no Argus UAV tracks"
+  },
+  {
+   "event_id": "EVT-1104",
+   "day": 3,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T11",
+    "T1"
+   ],
+   "observed_in": "fema_gis_unit_output",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1104",
+   "day": 3,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T11",
+    "T1"
+   ],
+   "observed_in": "fema_preliminary_pda",
+   "stream": "infrastructure",
+   "status": "in-span-unverified",
+   "note": "no entity id or name to search for"
+  },
+  {
+   "event_id": "EVT-0310",
+   "day": 4,
+   "day_end": 14,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Public health",
+   "stream": "public_health",
+   "status": "present-but-wrong-values",
+   "note": "GI visits do not rise +180% D+6..D+14"
+  },
+  {
+   "event_id": "EVT-2006",
+   "day": 4,
+   "day_end": null,
+   "time_utc": "16:30Z",
+   "threads": [
+    "T20",
+    "T3"
+   ],
+   "observed_in": "tceq_buoy_network_nueces_bay",
+   "stream": "env_sensors",
+   "status": "in-span-unverified",
+   "note": "continuous stream covers the date; values not checked for this event"
+  },
+  {
+   "event_id": "EVT-2006",
+   "day": 4,
+   "day_end": null,
+   "time_utc": "16:30Z",
+   "threads": [
+    "T20",
+    "T3"
+   ],
+   "observed_in": "uscg_aerial_survey_2027-0918",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1207",
+   "day": 5,
+   "day_end": null,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T12",
+    "T3",
+    "T6"
+   ],
+   "observed_in": "uscg_boarding_report_bt_cc_27_01",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1207",
+   "day": 5,
+   "day_end": null,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T12",
+    "T3",
+    "T6"
+   ],
+   "observed_in": "valve_maintenance_log",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions Auriga Meridian"
+  },
+  {
+   "event_id": "EVT-1505",
+   "day": 5,
+   "day_end": 20,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T15",
+    "T5",
+    "T8"
+   ],
+   "observed_in": "platform_post_archive_D+5_to_D+20",
+   "stream": "social_media",
+   "status": "present-but-wrong-values",
+   "note": "no ERCOT-blame narrative (0 posts mention ERCOT)"
+  },
+  {
+   "event_id": "EVT-1505",
+   "day": 5,
+   "day_end": 20,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T15",
+    "T5",
+    "T8"
+   ],
+   "observed_in": "coastal_alert_cib_scan_D+5_to_D+20",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1604",
+   "day": 5,
+   "day_end": null,
+   "time_utc": "17:00Z",
+   "threads": [
+    "T16",
+    "T8"
+   ],
+   "observed_in": "srmc_diesel_tank_logs_D+5",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1706",
+   "day": 5,
+   "day_end": null,
+   "time_utc": "22:00Z",
+   "threads": [
+    "T17"
+   ],
+   "observed_in": "ccfd_sar_incident_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1707",
+   "day": 7,
+   "day_end": 10,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T17",
+    "T13"
+   ],
+   "observed_in": "nueces_county_911_cad_log",
+   "stream": "911",
+   "status": "present-but-wrong-values",
+   "note": "unfounded trapped-resident calls D+7..D+10 total 12, not 11 in NW Corpus Christi; addresses not checked"
+  },
+  {
+   "event_id": "EVT-1707",
+   "day": 7,
+   "day_end": 10,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T17",
+    "T13"
+   ],
+   "observed_in": "ccfd_sar_incident_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1303",
+   "day": 7,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T13",
+    "T5",
+    "T8"
+   ],
+   "observed_in": "cbecc_cad_incident_records",
+   "stream": "911",
+   "status": "present-but-wrong-values",
+   "note": "7 unfounded calls on D+7 (canon 9 in a 4-hour window near utility sites)"
+  },
+  {
+   "event_id": "EVT-1303",
+   "day": 7,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T13",
+    "T5",
+    "T8"
+   ],
+   "observed_in": "cbecc_call_audio_archive",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2007",
+   "day": 7,
+   "day_end": null,
+   "time_utc": "14:30Z",
+   "threads": [
+    "T20",
+    "T3"
+   ],
+   "observed_in": "unified_command_operational_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-005",
+   "day": 7,
+   "day_end": null,
+   "time_utc": "14:30Z",
+   "threads": [
+    "T8",
+    "T10"
+   ],
+   "observed_in": "scada_event_log",
+   "stream": "telemetry",
+   "status": "present-but-wrong-time",
+   "note": "SUB2 breaker opens D+7 00:00Z in historian; canon 14:30Z (SIEM 14:23Z, Zeek D+8 02:14Z)"
+  },
+  {
+   "event_id": "GW-EVT-005",
+   "day": 7,
+   "day_end": null,
+   "time_utc": "14:30Z",
+   "threads": [
+    "T8",
+    "T10"
+   ],
+   "observed_in": "field_crew_reports",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1708",
+   "day": 7,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T17"
+   ],
+   "observed_in": "coast_guard_isr_2027_cc_004",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1304",
+   "day": 8,
+   "day_end": 10,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T13",
+    "T5"
+   ],
+   "observed_in": "cbecc_cad_incident_records",
+   "stream": "911",
+   "status": "present-but-wrong-values",
+   "note": "5 unfounded calls D+8..D+10 (canon 14, total 23)"
+  },
+  {
+   "event_id": "EVT-1304",
+   "day": 8,
+   "day_end": 10,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T13",
+    "T5"
+   ],
+   "observed_in": "cbecc_call_audio_archive",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1105",
+   "day": 8,
+   "day_end": null,
+   "time_utc": "10:30Z",
+   "threads": [
+    "T11",
+    "T8"
+   ],
+   "observed_in": "argus_flight_logs",
+   "stream": "adsb",
+   "status": "missing",
+   "note": "no Argus UAV tracks"
+  },
+  {
+   "event_id": "EVT-1105",
+   "day": 8,
+   "day_end": null,
+   "time_utc": "10:30Z",
+   "threads": [
+    "T11",
+    "T8"
+   ],
+   "observed_in": "fema_gis_unit_output",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1105",
+   "day": 8,
+   "day_end": null,
+   "time_utc": "10:30Z",
+   "threads": [
+    "T11",
+    "T8"
+   ],
+   "observed_in": "fema_phase2_pda",
+   "stream": "infrastructure",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions GW-FAC-SUB-02, GW-FAC-SUB-03"
+  },
+  {
+   "event_id": "EVT-1605",
+   "day": 8,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T16",
+    "T8"
+   ],
+   "observed_in": "srmc_power_restoration_log_D+8",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1605",
+   "day": 8,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T16",
+    "T8"
+   ],
+   "observed_in": "srmc_census_records_D+8",
+   "stream": "public_health",
+   "status": "in-span-unverified",
+   "note": "continuous stream covers the date; values not checked for this event"
+  },
+  {
+   "event_id": "EVT-1406",
+   "day": 8,
+   "day_end": null,
+   "time_utc": "15:00Z",
+   "threads": [
+    "T14"
+   ],
+   "observed_in": "fema_ia_hotline_operational_logs",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-006",
+   "day": 9,
+   "day_end": null,
+   "time_utc": "02:00Z",
+   "threads": [
+    "T9",
+    "T10"
+   ],
+   "observed_in": "scada_historian",
+   "stream": "telemetry",
+   "status": "present",
+   "note": "P-3 setpoint 85->68 psi at D+9 00:00Z (canon 02:00Z); never restored within the stream"
+  },
+  {
+   "event_id": "GW-EVT-105",
+   "day": 9,
+   "day_end": null,
+   "time_utc": "04:00Z",
+   "threads": [
+    "T18",
+    "T8",
+    "T9"
+   ],
+   "observed_in": "sentinel_edge_siem_logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "no alarm-suppression alert at D+9 04:00Z"
+  },
+  {
+   "event_id": "GW-EVT-105",
+   "day": 9,
+   "day_end": null,
+   "time_utc": "04:00Z",
+   "threads": [
+    "T18",
+    "T8",
+    "T9"
+   ],
+   "observed_in": "cbpwa_dcs_alarm_suppression_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0311",
+   "day": 10,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T3"
+   ],
+   "observed_in": "Payments",
+   "stream": "payments",
+   "status": "present-but-wrong-values",
+   "note": "3 payments to Vantorra Restoration LLC but no PIID-SYN-0071 / $14.2M award record"
+  },
+  {
+   "event_id": "GW-EVT-007",
+   "day": 10,
+   "day_end": null,
+   "time_utc": "19:45Z",
+   "threads": [
+    "T8",
+    "T10"
+   ],
+   "observed_in": "scada_event_log",
+   "stream": "telemetry",
+   "status": "present-but-wrong-time",
+   "note": "SUB3 breaker opens D+10 00:00Z in historian; canon 19:45Z"
+  },
+  {
+   "event_id": "EVT-1106",
+   "day": 11,
+   "day_end": null,
+   "time_utc": "09:15Z",
+   "threads": [
+    "T11",
+    "T8"
+   ],
+   "observed_in": "cbas_tir_flight_logs",
+   "stream": "adsb",
+   "status": "missing",
+   "note": "no Cessna 208B thermal-survey track"
+  },
+  {
+   "event_id": "EVT-1106",
+   "day": 11,
+   "day_end": null,
+   "time_utc": "09:15Z",
+   "threads": [
+    "T11",
+    "T8"
+   ],
+   "observed_in": "fema_tir_analysis_report",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1106",
+   "day": 11,
+   "day_end": null,
+   "time_utc": "09:15Z",
+   "threads": [
+    "T11",
+    "T8"
+   ],
+   "observed_in": "fema_phase2_pda",
+   "stream": "infrastructure",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions GW-FAC-SUB-02, GW-FAC-SUB-03"
+  },
+  {
+   "event_id": "EVT-0312",
+   "day": 12,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "observed_in": "Payments",
+   "stream": "payments",
+   "status": "present-but-wrong-values",
+   "note": "4 payments to Quellmar Fuel Partners but no PIID-SYN-0075 / $2.1M award record"
+  },
+  {
+   "event_id": "EVT-0312",
+   "day": 12,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "observed_in": "supply",
+   "stream": "supply",
+   "status": "missing",
+   "note": "no fuel contract / SUP-0390 receipt"
+  },
+  {
+   "event_id": "EVT-2106",
+   "day": 12,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "ipaws_alert_archive_BWW-2027-0926-001",
+   "stream": "eas",
+   "status": "missing",
+   "note": "no Districts 3-4 boil-water alert on D+12; the file ends D+14.5 with different zones"
+  },
+  {
+   "event_id": "EVT-2106",
+   "day": 12,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "cbpwa_boil_water_notice_2027-0926",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1305",
+   "day": 12,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T13",
+    "T9"
+   ],
+   "observed_in": "cbecc_cad_volume_log",
+   "stream": "911",
+   "status": "present-but-wrong-values",
+   "note": "no boil-water call surge on D+12 (131 calls, below D+11)"
+  },
+  {
+   "event_id": "EVT-1305",
+   "day": 12,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T13",
+    "T9"
+   ],
+   "observed_in": "nueces_infoline_activation_record",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-008",
+   "day": 12,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T9"
+   ],
+   "observed_in": "field_reports",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-008",
+   "day": 12,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T9"
+   ],
+   "observed_in": "water_pressure_telemetry",
+   "stream": "telemetry",
+   "status": "present",
+   "note": "P-3 discharge pressure at 68 psi from D+9"
+  },
+  {
+   "event_id": "EVT-1407",
+   "day": 12,
+   "day_end": null,
+   "time_utc": "22:30Z",
+   "threads": [
+    "T14",
+    "T9"
+   ],
+   "observed_in": "cbpwa_boil_water_notice_issuance_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1407",
+   "day": 12,
+   "day_end": null,
+   "time_utc": "22:30Z",
+   "threads": [
+    "T14",
+    "T9"
+   ],
+   "observed_in": "everbridge_transmission_records",
+   "stream": "eas",
+   "status": "missing",
+   "note": "no D+12 17:30 notice or its Spanish release time"
+  },
+  {
+   "event_id": "EVT-1408",
+   "day": 13,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T14"
+   ],
+   "observed_in": "kncb_broadcast_logs_D+13",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1907",
+   "day": 14,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T19"
+   ],
+   "observed_in": "faa_cbp_uav_report_2027_cc_001",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-009",
+   "day": 14,
+   "day_end": null,
+   "time_utc": "22:00Z",
+   "threads": [
+    "T8"
+   ],
+   "observed_in": "relay_config_audit",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2203",
+   "day": 15,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T22"
+   ],
+   "observed_in": "texas_dps_consumer_protection_bulletin_2027-0929",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1606",
+   "day": 15,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T16",
+    "T9"
+   ],
+   "observed_in": "srmc_ed_admissions_log_D+15",
+   "stream": "public_health",
+   "status": "missing",
+   "note": "no District 3/4 gastroenteritis cluster from D+15"
+  },
+  {
+   "event_id": "EVT-1606",
+   "day": 15,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T16",
+    "T9"
+   ],
+   "observed_in": "nueces_county_public_health_surveillance_D+15",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1107",
+   "day": 15,
+   "day_end": null,
+   "time_utc": "13:00Z",
+   "threads": [
+    "T11",
+    "T8",
+    "T9"
+   ],
+   "observed_in": "fema_mat_report",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1107",
+   "day": 15,
+   "day_end": null,
+   "time_utc": "13:00Z",
+   "threads": [
+    "T11",
+    "T8",
+    "T9"
+   ],
+   "observed_in": "fema_phase2_pda_final",
+   "stream": "infrastructure",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions GW-FAC-SUB-02, GW-FAC-SUB-03"
+  },
+  {
+   "event_id": "GW-EVT-010",
+   "day": 16,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T8",
+    "T10"
+   ],
+   "observed_in": "relay_config_files",
+   "stream": "telemetry",
+   "status": "present-but-wrong-values",
+   "note": "GW.SUB4.REL.CFG_HASH.PV is corrupted into decimals from D+0.25"
+  },
+  {
+   "event_id": "GW-EVT-010",
+   "day": 16,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T8",
+    "T10"
+   ],
+   "observed_in": "change_management_logs",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1607",
+   "day": 18,
+   "day_end": 22,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T16",
+    "T9",
+    "T14"
+   ],
+   "observed_in": "srmc_lab_results_D+18",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-106",
+   "day": 18,
+   "day_end": null,
+   "time_utc": "14:33Z",
+   "threads": [
+    "T18",
+    "T8"
+   ],
+   "observed_in": "sentinel_edge_siem_logs",
+   "stream": "network_logs",
+   "status": "present-but-wrong-time",
+   "note": "ML anomaly alert at D+10.1; canon D+18 14:33Z"
+  },
+  {
+   "event_id": "GW-EVT-106",
+   "day": 18,
+   "day_end": null,
+   "time_utc": "14:33Z",
+   "threads": [
+    "T18",
+    "T8"
+   ],
+   "observed_in": "cbpwa_ciso_incident_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-011",
+   "day": 18,
+   "day_end": null,
+   "time_utc": "21:00Z",
+   "threads": [
+    "T8",
+    "T9",
+    "T10"
+   ],
+   "observed_in": "vpn_session_logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "Zeek ends D+17; no 14-session VPN review evidence"
+  },
+  {
+   "event_id": "GW-EVT-011",
+   "day": 18,
+   "day_end": null,
+   "time_utc": "21:00Z",
+   "threads": [
+    "T8",
+    "T9",
+    "T10"
+   ],
+   "observed_in": "threat_intel",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2008",
+   "day": 20,
+   "day_end": null,
+   "time_utc": "17:00Z",
+   "threads": [
+    "T20"
+   ],
+   "observed_in": "unified_command_sitrep_d20",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2008",
+   "day": 20,
+   "day_end": null,
+   "time_utc": "17:00Z",
+   "threads": [
+    "T20"
+   ],
+   "observed_in": "tceq_buoy_network_telemetry",
+   "stream": "env_sensors",
+   "status": "present",
+   "note": "hydrocarbons back near baseline by ~D+22"
+  },
+  {
+   "event_id": "EVT-1306",
+   "day": 21,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T13",
+    "T5",
+    "T8"
+   ],
+   "observed_in": "cbecc_internal_audit_report",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-012",
+   "day": 21,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T8",
+    "T9",
+    "T10"
+   ],
+   "observed_in": "cisa_investigation",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1506",
+   "day": 21,
+   "day_end": null,
+   "time_utc": "17:00Z",
+   "threads": [
+    "T15",
+    "T8",
+    "T10"
+   ],
+   "observed_in": "cisa_fbi_advisory_D+21",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1506",
+   "day": 21,
+   "day_end": null,
+   "time_utc": "17:00Z",
+   "threads": [
+    "T15",
+    "T8",
+    "T10"
+   ],
+   "observed_in": "platform_post_archive_D+21_to_D+45",
+   "stream": "social_media",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions TXCoastalWatchdog"
+  },
+  {
+   "event_id": "EVT-1409",
+   "day": 21,
+   "day_end": null,
+   "time_utc": "19:00Z",
+   "threads": [
+    "T14"
+   ],
+   "observed_in": "tdem_interim_report_D+21",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2107",
+   "day": 21,
+   "day_end": null,
+   "time_utc": "19:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "fema_jfo_cc_operations_log_d21",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1608",
+   "day": 22,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T16",
+    "T9"
+   ],
+   "observed_in": "dshs_preliminary_outbreak_report_D+22",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-013",
+   "day": 23,
+   "day_end": null,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T9",
+    "T10"
+   ],
+   "observed_in": "scada_historian",
+   "stream": "telemetry",
+   "status": "present-but-wrong-values",
+   "note": "no historian gap/anomaly on GW-FAC-WTR-03 tags"
+  },
+  {
+   "event_id": "GW-EVT-013",
+   "day": 23,
+   "day_end": null,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T9",
+    "T10"
+   ],
+   "observed_in": "threat_intel_overlap",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1507",
+   "day": 24,
+   "day_end": null,
+   "time_utc": "20:00Z",
+   "threads": [
+    "T15",
+    "T10"
+   ],
+   "observed_in": "fbi_cyber_referral_FB-2027-TXCYB-1148",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1307",
+   "day": 28,
+   "day_end": null,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T13",
+    "T1"
+   ],
+   "observed_in": "cbecc_monthly_volume_report",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-107",
+   "day": 28,
+   "day_end": null,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T18",
+    "T8"
+   ],
+   "observed_in": "cbpwa_ciso_incident_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-107",
+   "day": 28,
+   "day_end": null,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T18",
+    "T8"
+   ],
+   "observed_in": "cbpwa_scada_isolation_work_order",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "stream covers the date but no record mentions GW-SYS-JMP-01, GW-WS-IT-04"
+  },
+  {
+   "event_id": "GW-EVT-107",
+   "day": 28,
+   "day_end": null,
+   "time_utc": "08:00Z",
+   "threads": [
+    "T18",
+    "T8"
+   ],
+   "observed_in": "sentinel_edge_siem_logs",
+   "stream": "network_logs",
+   "status": "present-but-wrong-time",
+   "note": "matching records exist but nearest is D+14.65 (event D+28.33)"
+  },
+  {
+   "event_id": "EVT-1609",
+   "day": 28,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T16",
+    "T9"
+   ],
+   "observed_in": "srmc_census_records_D+28",
+   "stream": "public_health",
+   "status": "missing",
+   "note": "no cluster to decline"
+  },
+  {
+   "event_id": "EVT-1609",
+   "day": 28,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T16",
+    "T9"
+   ],
+   "observed_in": "srmc_nurse_handoff_recording_D+28",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-014",
+   "day": 28,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T8",
+    "T9",
+    "T10"
+   ],
+   "observed_in": "scada_operations_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0401",
+   "day": 30,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Ship tracks",
+   "stream": "ais",
+   "status": "present-but-wrong-values",
+   "note": "harbor craft and survey vessels move throughout D0..D+30; no visible reopening step"
+  },
+  {
+   "event_id": "EVT-0401",
+   "day": 30,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "supply",
+   "stream": "supply",
+   "status": "present-but-wrong-time",
+   "note": "Gulf Provider berths D+6.6 in the arrivals log; canon D+33 after the D+30 partial reopening"
+  },
+  {
+   "event_id": "EVT-0410",
+   "day": 30,
+   "day_end": 44,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "Ship tracks",
+   "stream": "ais",
+   "status": "missing",
+   "note": "stream ends D+31; restriction runs to D+44"
+  },
+  {
+   "event_id": "EVT-0410",
+   "day": 30,
+   "day_end": 44,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "drone video",
+   "stream": "drone_video",
+   "status": "missing",
+   "note": "no shoreline-cleanup flights D+30..D+44"
+  },
+  {
+   "event_id": "EVT-0410",
+   "day": 30,
+   "day_end": 44,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "no cleanup payments"
+  },
+  {
+   "event_id": "EVT-2204",
+   "day": 30,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T22"
+   ],
+   "observed_in": "fbi_cc_ra_case_file_27-CC-7741",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1410",
+   "day": 30,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T14"
+   ],
+   "observed_in": "cbpwa_boil_water_lift_notice",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1908",
+   "day": 30,
+   "day_end": null,
+   "time_utc": "14:00Z",
+   "threads": [
+    "T19"
+   ],
+   "observed_in": "sentinel_airspace_cuas_assessment_2027",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1208",
+   "day": 30,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T12",
+    "T1"
+   ],
+   "observed_in": "port_authority_reopen_announcement",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1508",
+   "day": 30,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T15",
+    "T10"
+   ],
+   "observed_in": "fbi_ip_response_D+30",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0402",
+   "day": 31,
+   "day_end": null,
+   "time_utc": "02:00Z",
+   "threads": [
+    "T2"
+   ],
+   "observed_in": "Ship tracks",
+   "stream": "ais",
+   "status": "missing",
+   "note": "stream ends 2027-10-15T00:00Z, two hours before the AIS gap/spoof begins; Pelican Ridge track ends D+1"
+  },
+  {
+   "event_id": "EVT-0411",
+   "day": 31,
+   "day_end": null,
+   "time_utc": "04:20Z",
+   "threads": [
+    "T7",
+    "T2"
+   ],
+   "observed_in": "Satellite",
+   "stream": "satellite",
+   "status": "missing",
+   "note": "catalog ends D+30.58; pass needed D+31 04:20Z"
+  },
+  {
+   "event_id": "EVT-0403",
+   "day": 31,
+   "day_end": null,
+   "time_utc": "09:30Z",
+   "threads": [
+    "T2"
+   ],
+   "observed_in": "Satellite",
+   "stream": "satellite",
+   "status": "missing",
+   "note": "catalog ends D+30.58; pass needed D+31 09:30Z"
+  },
+  {
+   "event_id": "EVT-0404",
+   "day": 32,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "observed_in": "Ship tracks",
+   "stream": "ais",
+   "status": "missing",
+   "note": "Barge 44 has no MMSI/track; stream ends D+31"
+  },
+  {
+   "event_id": "EVT-0404",
+   "day": 32,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "observed_in": "supply",
+   "stream": "supply",
+   "status": "missing",
+   "note": "no 380 m3 fuel receipt; stream ends D+27"
+  },
+  {
+   "event_id": "EVT-0404",
+   "day": 32,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "observed_in": "payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "no fuel invoices from D+33"
+  },
+  {
+   "event_id": "EVT-0405",
+   "day": 34,
+   "day_end": 43,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Aircraft tracks",
+   "stream": "adsb",
+   "status": "missing",
+   "note": "no C-17 / charter relief flights D+34..D+43 (registry RCH441/RCH801/CLIPPER01/SKW7730 have no track)"
+  },
+  {
+   "event_id": "EVT-0405",
+   "day": 34,
+   "day_end": 43,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "supply",
+   "stream": "supply",
+   "status": "missing",
+   "note": "stream ends D+27"
+  },
+  {
+   "event_id": "GW-EVT-108",
+   "day": 35,
+   "day_end": null,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T18"
+   ],
+   "observed_in": "sentinel_edge_siem_logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "SIEM ends D+28.9; clean baseline is D+35"
+  },
+  {
+   "event_id": "GW-EVT-108",
+   "day": 35,
+   "day_end": null,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T18"
+   ],
+   "observed_in": "cbpwa_ciso_incident_log",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-015",
+   "day": 35,
+   "day_end": null,
+   "time_utc": "20:00Z",
+   "threads": [
+    "T8"
+   ],
+   "observed_in": "ercot_operations_log",
+   "stream": "telemetry",
+   "status": "missing",
+   "note": "stream ends D+31; final restoration D+35"
+  },
+  {
+   "event_id": "GW-EVT-015",
+   "day": 35,
+   "day_end": null,
+   "time_utc": "20:00Z",
+   "threads": [
+    "T8"
+   ],
+   "observed_in": "field_reports",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0406",
+   "day": 36,
+   "day_end": 39,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Supply",
+   "stream": "supply",
+   "status": "missing",
+   "note": "no pump-parts receipt at D+36"
+  },
+  {
+   "event_id": "EVT-0406",
+   "day": 36,
+   "day_end": 39,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "stream ends D+31.7"
+  },
+  {
+   "event_id": "EVT-0406",
+   "day": 36,
+   "day_end": 39,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "telemetry",
+   "stream": "telemetry",
+   "status": "missing",
+   "note": "stream ends D+31; P-2 restoration D+38"
+  },
+  {
+   "event_id": "EVT-0412",
+   "day": 38,
+   "day_end": 43,
+   "time_utc": null,
+   "threads": [
+    "T7",
+    "T3"
+   ],
+   "observed_in": "Aircraft tracks",
+   "stream": "adsb",
+   "status": "missing",
+   "note": "no navigation-integrity (NIC/NACp) columns and no flights in the window"
+  },
+  {
+   "event_id": "EVT-1509",
+   "day": 38,
+   "day_end": null,
+   "time_utc": "15:00Z",
+   "threads": [
+    "T15"
+   ],
+   "observed_in": "tx_ag_advisory_D+38",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0407",
+   "day": 40,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2"
+   ],
+   "observed_in": "Telemetry",
+   "stream": "telemetry",
+   "status": "missing",
+   "note": "no EQP-2201 telemetry; stream ends D+31"
+  },
+  {
+   "event_id": "EVT-0407",
+   "day": 40,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "stream ends D+31.7"
+  },
+  {
+   "event_id": "EVT-2108",
+   "day": 42,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "ipaws_alert_archive_BWA-2027-1026-001",
+   "stream": "eas",
+   "status": "missing",
+   "note": "outside stream span D-6.62..D+14.50"
+  },
+  {
+   "event_id": "EVT-2108",
+   "day": 42,
+   "day_end": null,
+   "time_utc": "16:00Z",
+   "threads": [
+    "T21"
+   ],
+   "observed_in": "cbpwa_boil_water_notice_lift_2027-1026",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "GW-EVT-016",
+   "day": 42,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T9"
+   ],
+   "observed_in": "water_pressure_telemetry",
+   "stream": "telemetry",
+   "status": "missing",
+   "note": "stream ends D+31; certification D+42"
+  },
+  {
+   "event_id": "GW-EVT-016",
+   "day": 42,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T9"
+   ],
+   "observed_in": "cisa_investigation",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0414",
+   "day": 44,
+   "day_end": 58,
+   "time_utc": null,
+   "threads": [
+    "T7"
+   ],
+   "observed_in": "Ship tracks",
+   "stream": "ais",
+   "status": "missing",
+   "note": "stream ends D+31; closure D+44..D+58"
+  },
+  {
+   "event_id": "EVT-0414",
+   "day": 44,
+   "day_end": 58,
+   "time_utc": null,
+   "threads": [
+    "T7"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "no EOD / mine-clearance reports"
+  },
+  {
+   "event_id": "EVT-0414",
+   "day": 44,
+   "day_end": 58,
+   "time_utc": null,
+   "threads": [
+    "T7"
+   ],
+   "observed_in": "supply",
+   "stream": "supply",
+   "status": "missing",
+   "note": "stream ends D+27"
+  },
+  {
+   "event_id": "EVT-0414",
+   "day": 44,
+   "day_end": 58,
+   "time_utc": null,
+   "threads": [
+    "T7"
+   ],
+   "observed_in": "payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "transactions end D+60 with no export-halt signal"
+  },
+  {
+   "event_id": "EVT-0413",
+   "day": 44,
+   "day_end": null,
+   "time_utc": "06:10Z",
+   "threads": [
+    "T7"
+   ],
+   "observed_in": "Ship tracks",
+   "stream": "ais",
+   "status": "missing",
+   "note": "Corrin Bay track ends D+31; blast is D+44"
+  },
+  {
+   "event_id": "EVT-0413",
+   "day": 44,
+   "day_end": null,
+   "time_utc": "06:10Z",
+   "threads": [
+    "T7"
+   ],
+   "observed_in": "social media",
+   "stream": "social_media",
+   "status": "missing",
+   "note": "no posts about the D+44 jetty blast; the stream has a different 'ship channel blast' at D+1 02:30 local"
+  },
+  {
+   "event_id": "EVT-0408",
+   "day": 45,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1",
+    "T5"
+   ],
+   "observed_in": "Public health",
+   "stream": "public_health",
+   "status": "present-but-wrong-values",
+   "note": "no +40% residual in low-income tracts at D+45"
+  },
+  {
+   "event_id": "EVT-1308",
+   "day": 45,
+   "day_end": null,
+   "time_utc": "00:00Z",
+   "threads": [
+    "T13"
+   ],
+   "observed_in": "cbecc_monthly_volume_report",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1108",
+   "day": 45,
+   "day_end": null,
+   "time_utc": "17:00Z",
+   "threads": [
+    "T11"
+   ],
+   "observed_in": "fema_phase4_completion_report",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-1411",
+   "day": 45,
+   "day_end": null,
+   "time_utc": "17:00Z",
+   "threads": [
+    "T14"
+   ],
+   "observed_in": "nueces_county_commissioners_testimony_transcript_D+45",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2205",
+   "day": 57,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T22"
+   ],
+   "observed_in": "fema_disaster_declaration_DR-4890-TX",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0409",
+   "day": 59,
+   "day_end": 64,
+   "time_utc": null,
+   "threads": [
+    "T7",
+    "T1"
+   ],
+   "observed_in": "Ship tracks",
+   "stream": "ais",
+   "status": "missing",
+   "note": "no sealift vessel track; stream ends D+31"
+  },
+  {
+   "event_id": "EVT-0409",
+   "day": 59,
+   "day_end": 64,
+   "time_utc": null,
+   "threads": [
+    "T7",
+    "T1"
+   ],
+   "observed_in": "supply",
+   "stream": "supply",
+   "status": "present-but-wrong-time",
+   "note": "'MV Roosevelt Island' sealift call logged D+28.5..D+30.8; canon outload sails D+59..D+64"
+  },
+  {
+   "event_id": "EVT-0409",
+   "day": 59,
+   "day_end": 64,
+   "time_utc": null,
+   "threads": [
+    "T7",
+    "T1"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "stream ends D+31.7"
+  },
+  {
+   "event_id": "EVT-0501",
+   "day": 60,
+   "day_end": 89,
+   "time_utc": null,
+   "threads": [
+    "T5"
+   ],
+   "observed_in": "Payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "transactions end D+60; no FEMA IA claims"
+  },
+  {
+   "event_id": "EVT-0508",
+   "day": 60,
+   "day_end": 89,
+   "time_utc": null,
+   "threads": [
+    "T6"
+   ],
+   "observed_in": "Payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "no spill damage claims"
+  },
+  {
+   "event_id": "EVT-2206",
+   "day": 60,
+   "day_end": 62,
+   "time_utc": "00:01Z",
+   "threads": [
+    "T22"
+   ],
+   "observed_in": "fema_ia_application_database",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2009",
+   "day": 60,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T20"
+   ],
+   "observed_in": "tceq_epa_final_remediation_assessment_2027-CC-0916",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-2009",
+   "day": 60,
+   "day_end": null,
+   "time_utc": "12:00Z",
+   "threads": [
+    "T20"
+   ],
+   "observed_in": "tceq_buoy_network_telemetry",
+   "stream": "env_sensors",
+   "status": "missing",
+   "note": "outside stream span D-30..D+31.01"
+  },
+  {
+   "event_id": "EVT-1610",
+   "day": 60,
+   "day_end": null,
+   "time_utc": "18:00Z",
+   "threads": [
+    "T16"
+   ],
+   "observed_in": "srmc_bcmc_after_action_report_D+60",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0502",
+   "day": 62,
+   "day_end": 70,
+   "time_utc": null,
+   "threads": [
+    "T4"
+   ],
+   "observed_in": "Network logs",
+   "stream": "network_logs",
+   "status": "missing",
+   "note": "logs end D+29 (SIEM) / D+17 (Zeek); credential stuffing D+62..D+70"
+  },
+  {
+   "event_id": "EVT-0502",
+   "day": 62,
+   "day_end": 70,
+   "time_utc": null,
+   "threads": [
+    "T4"
+   ],
+   "observed_in": "payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "transactions end D+60"
+  },
+  {
+   "event_id": "EVT-0503",
+   "day": 64,
+   "day_end": 80,
+   "time_utc": null,
+   "threads": [
+    "T3",
+    "T4"
+   ],
+   "observed_in": "Payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "transactions end D+60; no BANK-SYN-71/72/73"
+  },
+  {
+   "event_id": "EVT-0504",
+   "day": 66,
+   "day_end": 80,
+   "time_utc": null,
+   "threads": [
+    "T3"
+   ],
+   "observed_in": "Payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "no prepaid-card purchases"
+  },
+  {
+   "event_id": "EVT-0505",
+   "day": 70,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T3"
+   ],
+   "observed_in": "Payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "no debris tonnage billing"
+  },
+  {
+   "event_id": "EVT-0505",
+   "day": 70,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T3"
+   ],
+   "observed_in": "drone video",
+   "stream": "drone_video",
+   "status": "missing",
+   "note": "outside stream span D+0.38..D+31.02"
+  },
+  {
+   "event_id": "EVT-0505",
+   "day": 70,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T3"
+   ],
+   "observed_in": "satellite",
+   "stream": "satellite",
+   "status": "missing",
+   "note": "catalog ends D+30.58; debris passes needed to D+70"
+  },
+  {
+   "event_id": "EVT-0506",
+   "day": 72,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "observed_in": "Maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "stream ends D+31.7"
+  },
+  {
+   "event_id": "EVT-0506",
+   "day": 72,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "observed_in": "supply",
+   "stream": "supply",
+   "status": "missing",
+   "note": "stream ends D+27"
+  },
+  {
+   "event_id": "EVT-0506",
+   "day": 72,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "observed_in": "payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "transactions end D+60"
+  },
+  {
+   "event_id": "EVT-0507",
+   "day": 75,
+   "day_end": 85,
+   "time_utc": null,
+   "threads": [
+    "T4"
+   ],
+   "observed_in": "Social media",
+   "stream": "social_media",
+   "status": "present-but-wrong-values",
+   "note": "no 'contractors are stealing aid' wave D+75..D+85"
+  },
+  {
+   "event_id": "EVT-0601",
+   "day": 90,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T5"
+   ],
+   "observed_in": "Census",
+   "stream": "census",
+   "status": "present",
+   "note": "static ACS tract tables (aid and response data needed from other streams)"
+  },
+  {
+   "event_id": "EVT-0601",
+   "day": 90,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T5"
+   ],
+   "observed_in": "payments",
+   "stream": "payments",
+   "status": "missing",
+   "note": "no aid-by-tract data"
+  },
+  {
+   "event_id": "EVT-0601",
+   "day": 90,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T5"
+   ],
+   "observed_in": "911",
+   "stream": "911",
+   "status": "missing",
+   "note": "stream ends D+31 and has no census-tract field for the equity analysis"
+  },
+  {
+   "event_id": "EVT-0601",
+   "day": 90,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T5"
+   ],
+   "observed_in": "maps",
+   "stream": "infrastructure",
+   "status": "missing",
+   "note": "outside stream span D+1..D+21"
+  },
+  {
+   "event_id": "EVT-2207",
+   "day": 90,
+   "day_end": null,
+   "time_utc": "19:00Z",
+   "threads": [
+    "T22",
+    "T2"
+   ],
+   "observed_in": "fbi_operation_sandbar_press_release_d90",
+   "stream": "no_stream",
+   "status": "no-stream",
+   "note": "named log is not a data stream in 05_other_sources"
+  },
+  {
+   "event_id": "EVT-0602",
+   "day": 95,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2",
+    "T7"
+   ],
+   "observed_in": "Telemetry",
+   "stream": "telemetry",
+   "status": "missing",
+   "note": "stream ends D+31"
+  },
+  {
+   "event_id": "EVT-0602",
+   "day": 95,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2",
+    "T7"
+   ],
+   "observed_in": "maintenance",
+   "stream": "maintenance",
+   "status": "missing",
+   "note": "stream ends D+31.7"
+  },
+  {
+   "event_id": "EVT-0602",
+   "day": 95,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T2",
+    "T7"
+   ],
+   "observed_in": "supply",
+   "stream": "supply",
+   "status": "missing",
+   "note": "stream ends D+27"
+  },
+  {
+   "event_id": "EVT-0604",
+   "day": 110,
+   "day_end": null,
+   "time_utc": null,
+   "threads": [
+    "T1"
+   ],
+   "observed_in": "Maps",
+   "stream": "infrastructure",
+   "status": "missing",
+   "note": "outside stream span D+1..D+21"
+  }
+ ]
+}

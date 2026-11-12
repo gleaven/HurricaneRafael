@@ -1,0 +1,364 @@
+{
+ "source": "payments",
+ "folder": "05_other_sources/payments/",
+ "format": "CSV",
+ "standard": "Claims in an ACORD-style property and casualty layout; ledger in a simplified ACH, wire and card layout; aid applications, awards and invoices as plain tables",
+ "reference": "https://www.acord.org/standards-architecture/acord-standards",
+ "verified": true,
+ "notes": "Nine CSV files produced by scripts/streams/gen_finance.py. No column says which records are improper; findings come from joining the files to each other and to entity_registry.json, organizations.json and areas.json. Dates without a time are local calendar dates; timestamps are UTC.",
+ "entity_catalog": "06_data_streams/entity_registry.json (insurers, brokers, appraisers, adjusters, vendors, contracts, banks, accounts, policyholders, policies, merchants); organisations in organizations.json",
+ "files": {
+  "insurance_claims": {
+   "filename": "insurance_claims.csv",
+   "description": "Policy transactions (new business, renewals, endorsements) from mid-July 2027, property claims after Hurricane Rafael, and oil-spill damage claims lodged at the claims centre.",
+   "sampling": "Property claims are the claims on the 1,904 policies in entity_registry.json: about 0.6 percent (1 in 170) of the roughly 187,000 claims and $2.1 billion reported for the three counties by Oct. 14, so totals scale by about 170. Spill claims are complete (about 4,200).",
+   "record_types": {
+    "policy_transaction": "transaction_id, transaction_type, transaction_date, prior/new replacement cost value, county assessed value, appraisal order fields",
+    "claim": "claim_id, claim_program ('property insurance' or 'oil spill claims centre (Oil Pollution Act)'), loss, filing, adjuster, estimate, payment and status fields"
+   },
+   "key_fields": [
+    {
+     "name": "policy_id",
+     "type": "string",
+     "notes": "policies[].policy_number in entity_registry.json; empty for spill claims"
+    },
+    {
+     "name": "insurer_id / broker_id / appraiser_id / adjuster_id / holder_id",
+     "type": "string",
+     "notes": "entity_registry.json"
+    },
+    {
+     "name": "loss_date",
+     "type": "date",
+     "notes": "never before 2027-09-14"
+    },
+    {
+     "name": "filed_date",
+     "type": "date",
+     "notes": "first notice of loss; rises from landfall, few in the first two days"
+    },
+    {
+     "name": "latitude / longitude",
+     "type": "float",
+     "notes": "point beside the street in property_address, on land (property claims only)"
+    },
+    {
+     "name": "contractor_estimate_supplier_id",
+     "type": "string",
+     "notes": "vendors[].vendor_id of the contractor whose estimate supports the claim"
+    },
+    {
+     "name": "estimate_document_id / damage_narrative_id / photo_ids",
+     "type": "string",
+     "notes": "document and image identifiers; the same identifier on different claims means the same document or photograph"
+    },
+    {
+     "name": "payment_account_id",
+     "type": "string",
+     "notes": "insurer's disbursement account; the payment appears in financial_transactions.csv with the claim id as reference"
+    }
+   ],
+   "columns": [
+    "record_type",
+    "claim_id",
+    "transaction_id",
+    "claim_program",
+    "policy_id",
+    "policy_type",
+    "insurer_id",
+    "broker_id",
+    "holder_id",
+    "claimant_name",
+    "claimant_category",
+    "property_address",
+    "area_id",
+    "latitude",
+    "longitude",
+    "transaction_type",
+    "transaction_date",
+    "prior_rcv_usd",
+    "new_rcv_usd",
+    "county_assessed_value_usd",
+    "appraisal_order_id",
+    "appraisal_order_date",
+    "appraisal_priority",
+    "appraiser_id",
+    "appraiser_initials",
+    "loss_date",
+    "loss_cause",
+    "filed_date",
+    "fnol_channel",
+    "adjuster_id",
+    "adjuster_assigned_date",
+    "inspection_date",
+    "claimed_usd",
+    "contractor_estimate_supplier_id",
+    "estimate_document_id",
+    "assignment_of_benefits",
+    "damage_narrative_id",
+    "photo_ids",
+    "paid_usd",
+    "paid_date",
+    "payment_account_id",
+    "status",
+    "status_date"
+   ]
+  },
+  "aid_applications": {
+   "filename": "aid_applications.csv",
+   "description": "FEMA Individual Assistance under DR-4821-TX: one row per event. Registration opened 2027-11-13T00:00Z (public launch Saturday Nov. 13).",
+   "record_types": {
+    "application": "submitted_utc, channel (web, phone, recovery centre, door-to-door), source address and device for web and kiosk submissions, household and damage fields, deposit details",
+    "determination": "decision with assistance_type, amount_usd and status",
+    "disbursement": "payment to the deposit account on file at that time; status paid or reissued",
+    "account_change": "changed_utc, field_changed, the login that preceded it (login_utc, login_ip_seen_before Y/N), new and previous deposit details"
+   },
+   "key_fields": [
+    {
+     "name": "application_id",
+     "type": "string",
+     "notes": "IA-4821-nnnnnnn"
+    },
+    {
+     "name": "account_id",
+     "type": "string",
+     "notes": "applicant portal account"
+    },
+    {
+     "name": "area_id / tract",
+     "type": "string",
+     "notes": "areas.json: AREA-TRACT-<tract> for Nueces County, AREA-CITY-* for San Patricio and Aransas counties"
+    },
+    {
+     "name": "deposit_routing_number / deposit_account_masked",
+     "type": "string",
+     "notes": "join to financial_institutions[].routing_number and accounts[].account_number_masked in entity_registry.json"
+    },
+    {
+     "name": "source_asn",
+     "type": "integer",
+     "notes": "autonomous system of the source address"
+    }
+   ],
+   "columns": [
+    "record_id",
+    "record_type",
+    "application_id",
+    "account_id",
+    "submitted_utc",
+    "changed_utc",
+    "event_utc",
+    "channel",
+    "source_ip",
+    "source_asn",
+    "device_id",
+    "area_id",
+    "tract",
+    "zip",
+    "county",
+    "applicant_name",
+    "damaged_address",
+    "household_size",
+    "primary_language",
+    "tenure",
+    "self_reported_damage",
+    "damage_photo_hashes",
+    "field_changed",
+    "login_utc",
+    "login_ip_seen_before",
+    "deposit_routing_number",
+    "deposit_account_masked",
+    "previous_deposit_account_masked",
+    "assistance_type",
+    "amount_usd",
+    "status"
+   ]
+  },
+  "financial_transactions": {
+   "filename": "financial_transactions.csv",
+   "description": "Ledger of the 104 accounts in entity_registry.json (vendors' business accounts and insurers' claim disbursement accounts), 2027-08-15 to 2028-01-12, with running balance.",
+   "key_fields": [
+    {
+     "name": "timestamp",
+     "type": "datetime UTC",
+     "notes": ""
+    },
+    {
+     "name": "account_id",
+     "type": "string",
+     "notes": "accounts[].account_id"
+    },
+    {
+     "name": "counterparty_id",
+     "type": "string",
+     "notes": "another registry account, an organisation (ORG-*), a card merchant (MER-*), an exchange endpoint (CRYPTO-*), or empty for individuals"
+    },
+    {
+     "name": "merchant_city",
+     "type": "string",
+     "notes": "city of the merchant for card purchases"
+    },
+    {
+     "name": "reference",
+     "type": "string",
+     "notes": "invoice payment reference, claim id or aid application id"
+    }
+   ],
+   "columns": [
+    "transaction_id",
+    "timestamp",
+    "account_id",
+    "institution_id",
+    "direction",
+    "amount_usd",
+    "channel",
+    "counterparty_id",
+    "counterparty_name",
+    "counterparty_account_masked",
+    "merchant_city",
+    "description",
+    "reference",
+    "balance_after_usd"
+   ]
+  },
+  "contracts": {
+   "files": {
+    "contracts_vendor_registry.csv": "vendor registrations: supplier_id, UEI, address, registration date, bank account and alternate account",
+    "contracts_business_filings.csv": "state formation filings for the vendors and, from the day they were filed, court filings that concern them",
+    "contracts_awards.csv": "award records: piid, awarding body, supplier, value, procurement method, offers received, period, funding",
+    "contracts_invoices.csv": "invoices with quantity, unit, unit price, work area, remit account, approval and payment dates, status",
+    "contracts_actions.csv": "dated contract actions: modifications, remittance changes, deficiency reports, suspensions, payment holds",
+    "contracts_debris_monitoring.csv": "the county's weekly debris estimates by zone from drone photogrammetry and satellite change detection, for comparison with billed tonnage"
+   },
+   "key_fields": [
+    {
+     "name": "supplier_id",
+     "type": "string",
+     "notes": "vendors[].vendor_id"
+    },
+    {
+     "name": "piid",
+     "type": "string",
+     "notes": "contracts[].contract_id; empty for small purchases, which carry po_number"
+    },
+    {
+     "name": "bank_account_id / remit_bank_account_id",
+     "type": "string",
+     "notes": "accounts[].account_id"
+    },
+    {
+     "name": "work_area_id / area_id",
+     "type": "string",
+     "notes": "areas.json"
+    }
+   ],
+   "columns": {
+    "contracts_vendor_registry.csv": [
+     "supplier_id",
+     "uei",
+     "legal_name",
+     "business_type",
+     "registered_address",
+     "registration_date",
+     "bank_account_id",
+     "bank_institution_id",
+     "bank_account_masked",
+     "alternate_bank_account_id",
+     "state_license"
+    ],
+    "contracts_business_filings.csv": [
+     "filing_number",
+     "filing_date",
+     "filing_type",
+     "entity_name",
+     "supplier_id",
+     "registered_agent",
+     "organizer",
+     "management",
+     "governing_persons",
+     "remarks"
+    ],
+    "contracts_awards.csv": [
+     "piid",
+     "awarding_body",
+     "awarding_org_id",
+     "supplier_id",
+     "supplier_name",
+     "description",
+     "award_date",
+     "value_usd",
+     "procurement_method",
+     "offers_received",
+     "period_start",
+     "period_end",
+     "naics",
+     "funding",
+     "supplier_signatory"
+    ],
+    "contracts_invoices.csv": [
+     "invoice_id",
+     "piid",
+     "po_number",
+     "supplier_id",
+     "buyer",
+     "buyer_org_id",
+     "invoice_date",
+     "period_start",
+     "period_end",
+     "description",
+     "work_area_id",
+     "quantity",
+     "unit",
+     "unit_price_usd",
+     "amount_usd",
+     "remit_bank_account_id",
+     "approved_date",
+     "paid_date",
+     "payment_reference",
+     "status",
+     "hold_date"
+    ],
+    "contracts_actions.csv": [
+     "action_date",
+     "piid",
+     "supplier_id",
+     "action_type",
+     "authority",
+     "description"
+    ],
+    "contracts_debris_monitoring.csv": [
+     "survey_id",
+     "survey_date",
+     "zone_id",
+     "area_id",
+     "piid",
+     "supplier_id",
+     "period_start",
+     "period_end",
+     "method",
+     "estimated_tons_removed",
+     "estimated_cubic_yards"
+    ]
+   }
+  }
+ },
+ "join_keys": {
+  "policy_id": "policies[].policy_number",
+  "holder_id": "policyholders[].holder_id",
+  "insurer_id": "insurers[].insurer_id",
+  "adjuster_id": "adjusters[].adjuster_id",
+  "supplier_id": "vendors[].vendor_id",
+  "piid": "contracts[].contract_id",
+  "account_id (ledger)": "accounts[].account_id",
+  "application_id": "IA-4821-nnnnnnn",
+  "area_id / tract": "06_data_streams/areas.json and 05_other_sources/census",
+  "reference (ledger)": "contracts_invoices.payment_reference, insurance_claims.claim_id, aid_applications.application_id"
+ },
+ "coverage": {
+  "contracts": "vendor registrations from 2005; awards, invoices and actions 2027-07-16 to 2028-01-11",
+  "insurance_claims": "policy transactions from 2027-07-16; claims 2027-09-14 to 2028-01-11",
+  "aid_applications": "2027-11-13T00:00Z to 2028-01-12",
+  "financial_transactions": "2027-08-15 to 2028-01-12"
+ },
+ "generator": "scripts/streams/gen_finance.py (deterministic); probes in scripts/streams/probes_social_finance.py"
+}

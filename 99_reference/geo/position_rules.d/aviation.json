@@ -1,0 +1,50 @@
+{
+ "sources": [
+  {
+   "name": "Drone telemetry launch and flight positions",
+   "glob": "05_other_sources/drone_video/drone_telemetry_*.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "on_land_or_air",
+   "id": "flight_id"
+  },
+  {
+   "name": "Drone detection sensor sites (land)",
+   "glob": "05_other_sources/drone_detections/sensor_sites.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "land_fixed",
+   "id": "sensor_id",
+   "allow_missing": true,
+   "where": [
+    "sensor_type",
+    [
+     "RF direction finder and short-range radar",
+     "portable RF detector (bearing only)",
+     "RF sensing and direction finding node"
+    ]
+   ]
+  },
+  {
+   "name": "Drone detection radar buoys (water)",
+   "glob": "05_other_sources/drone_detections/sensor_sites.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "water_fixed",
+   "id": "sensor_id",
+   "allow_missing": true,
+   "where": [
+    "sensor_type",
+    "X-band surface-search radar, raw plot archive"
+   ]
+  },
+  {
+   "name": "Drone sighting observers",
+   "glob": "05_other_sources/drone_detections/sighting_reports.csv",
+   "lat": "observer_latitude",
+   "lon": "observer_longitude",
+   "rule": "land_fixed",
+   "id": "report_id"
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+=== M13 NAS generator failure 2027-10-24
+  * base_status 10-22..27 NAS 6
+       ('2027-10-22', '89', 'operational', '30 min under load: normal', '')
+       ('2027-10-23', '89', 'operational', '30 min under load: normal', '')
+       ('2027-10-24', '61', 'FAILED during commercial power interruption; out of service', 'failed under load 2027-10-24', 'Backup generator EQP-2201 failed to carry load during a commercial power interruption. Cau')
+       ('2027-10-25', '61', 'FAILED during commercial power interruption; out of service', 'failed under load 2027-10-24', '')
+       ('2027-10-26', '61', 'FAILED during commercial power interruption; out of service', 'failed under load 2027-10-24', '')
+       ('2027-10-27', '61', 'FAILED during commercial power interruption; out of service', 'failed under load 2027-10-24', '')
+    outage_map max customers_out per feeder-row by day {'2027-10-23': 110, '2027-10-24': 110, '2027-10-25': 260, '2027-10-26': 0}
+  * work orders 10-24/25 mention generator/NAS 13
+       ('WO-2027-31597', '2027-10-24T14:11:17Z', 'CBPWA-CC', 'PM - Booster pump inspection')
+       ('WO-2027-31599', '2027-10-24T19:08:07Z', 'CBPWA-CC', 'CM - Lift station pump ragging; pull and clear')
+       ('NASCC-PW-27-2800', '2027-10-24T19:31:00Z', 'NASCC', 'EM - Backup generator EQP-2201 failed to carry load during commercial power interruption')
+       ('WO-2027-31602', '2027-10-25T12:52:59Z', 'CBPWA-CC', 'PM - Storage tank level transmitter check')
+       ('NASCC-PW-27-2804', '2027-10-25T14:00:00Z', 'NASCC', 'EM - Rental generator for critical loads while EQP-2201 is out of service')
+       ('WO-2027-31626', '2027-10-25T15:00:00Z', 'CBPWA-CC', 'PM - Standby generator weekly test run (30 min under load)')
+  * posts generator NAS 29
+       ('2027-10-25T14:00:42Z', 'AnchorRotorWeekly', 'Station backup generator failed during power interruption; power restored https://t.co/0bac117b2c')
+       ('2027-10-25T18:17:45Z', 'Harborline6News', 'NAS Corpus Christi backup generator fails during outage; power restored https://t.co/d6cfba7a01')
+       ('2027-10-25T18:23:32Z', 'TylerBrandtH6', 'RT @Harborline6News: NAS Corpus Christi backup generator fails during outage; power restored https://t.co/d6cfba7a01')
+       ('2027-10-25T20:00:40Z', 'NASCorpusChristi', 'A backup generator at the station failed during a power interruption today. Power has been restored and the cause is under review.')
+  * 911 10-24 power 29
+       ('2027-10-24 00:10:19', 'DWNPWRLINE', 'POLE LEANING LINES LOW')
+       ('2027-10-24 02:03:30', 'DWNPWRLINE', 'LINE DOWN IN YARD / SPANISH SPKR LANG LINE')
+       ('2027-10-24 02:15:57', 'DWNPWRLINE', 'POLE LEANING LINES LOW')
+       ('2027-10-24 02:49:26', 'DWNPWRLINE', 'POWER LINE ON FENCE ARCING')
+=== M14 jetty blast 2027-10-28T06:10Z
+  * AIS CORRIN BAY 34
+       ('2027-10-28T05:50:12', '27.84352', '-97.05886', '8.5', '0')
+       ('2027-10-28T05:50:39', '27.84334', '-97.05769', '8.4', '0')
+       ('2027-10-28T05:50:58', '27.84302', '-97.05689', '9.4', '0')
+       ('2027-10-28T05:51:07', '27.84288', '-97.05652', '9.6', '0')
+       ('2027-10-28T05:51:55', '27.84177', '-97.05447', '9.5', '0')
+       ('2027-10-28T05:52:53', '27.84046', '-97.05203', '9.3', '0')
+       ('2027-10-28T05:53:52', '27.83913', '-97.04956', '9.3', '0')
+       ('2027-10-28T05:54:56', '27.83769', '-97.04689', '9.6', '0')
+       ('2027-10-28T05:55:51', '27.83644', '-97.04456', '9.2', '0')
+       ('2027-10-28T05:56:47', '27.83518', '-97.04222', '9.4', '0')
+       ('2027-10-28T05:57:45', '27.83386', '-97.03978', '9.3', '0')
+       ('2027-10-28T05:58:47', '27.83245', '-97.03716', '9.4', '0')
+       ('2027-10-28T05:59:48', '27.83107', '-97.03459', '9.5', '0')
+       ('2027-10-28T06:00:14', '27.83048', '-97.03350', '9.4', '0')
+  * ED injury arrivals 06:10-10:00Z 0
+  * 911 explosion / transports 18
+       ('2027-10-28 01:11:35', 'EXPLOSION', 'PA-1', 'REFER', '', 'EXPLOSION HEARD FLASH SEEN OVER WATER // USCG SECTOR NOTIFIE')
+       ('2027-10-28 01:13:38', 'EXPLOSION', '', 'DUP', '', 'HOUSE SHOOK LOUD BLAST FROM SHIP CHANNEL AREA / SPANISH SPKR')
+       ('2027-10-28 01:16:19', 'EXPLOSION', 'PA-1', 'REFER', '', 'LOUD BOOM WINDOWS RATTLED DIRECTION OF CHANNEL / SPANISH SPK')
+       ('2027-10-28 01:17:49', 'MEDEMER', 'M-8', 'TRNSPT', 'FAC-BCMC-002', 'FEMALE 19 YOA FELL UNABLE TO GET UP')
+       ('2027-10-28 01:18:33', 'EXPLOSION', '', 'DUP', '', 'HOUSE SHOOK LOUD BLAST FROM SHIP CHANNEL AREA // USCG SECTOR')
+       ('2027-10-28 01:20:42', 'EXPLOSION', '', 'DUP', '', 'EXPLOSION HEARD FLASH SEEN OVER WATER / SPANISH SPKR // USCG')
+       ('2027-10-28 01:22:58', 'EXPLOSION', '', 'DUP', '', 'LOUD BOOM WINDOWS RATTLED DIRECTION OF CHANNEL // USCG SECTO')
+       ('2027-10-28 01:25:36', 'EXPLOSION', '', 'DUP', '', 'EXPLOSION HEARD FLASH SEEN OVER WATER // USCG SECTOR NOTIFIE')
+       ('2027-10-28 01:28:42', 'EXPLOSION', '', 'DUP', '', 'HOUSE SHOOK LOUD BLAST FROM SHIP CHANNEL AREA / SPANISH SPKR')
+       ('2027-10-28 01:30:25', 'TRAUMAALS', 'M-4', 'TRNSPT', 'FAC-SCMH-012', 'FALL FROM LADDER FEMALE 20 YOA / SPANISH SPKR')
+       ('2027-10-28 01:31:13', 'EXPLOSION', '', 'DUP', '', 'RP HEARD LOUD EXPLOSION TOWARD JETTIES // USCG SECTOR NOTIFI')
+       ('2027-10-28 01:33:49', 'EXPLOSION', '', 'DUP', '', 'RP HEARD LOUD EXPLOSION TOWARD JETTIES / SPANISH SPKR // USC')
+       ('2027-10-28 01:35:17', 'MEDEMER', 'M-1', 'TRNSPT', 'FAC-SRMC-001', 'MALE 51 YOA ABD PAIN VOMITING / SPANISH SPKR LANG LINE')
+       ('2027-10-28 01:36:25', 'EXPLOSION', '', 'DUP', '', 'HOUSE SHOOK LOUD BLAST FROM SHIP CHANNEL AREA // USCG SECTOR')
+  * posts blast 83
+       ('2027-10-28T06:14:27Z', 'Andre_Moore', 'Huge boom from the direction of the jetties about 1am. Windows rattled. #CorpusChristi')
+       ('2027-10-28T06:21:09Z', 'Darnell_Brown', 'Huge boom from the direction of the jetties about 1am. Windows rattled.')
+       ('2027-10-28T06:25:30Z', 'TrudyAransasPa', 'Huge boom from the direction of the jetties about 1am. Windows rattled')
+       ('2027-10-28T06:27:07Z', 'DDavis87', 'WHAT was that explosion?? Whole house shook. Port Aransas!')
+       ('2027-10-28T06:28:54Z', 'Andre_Moore', 'Huge boom from the direction of the jetties about 1am. Windows rattled.')
+       ('2027-10-28T06:30:07Z', 'PaulinPortArans', 'Huge boom from the direction of the jetties about 1am. Windows rattled.')
+  * EAS 10-28 0
+    PA gauge [('06:00', '0.83', '0.06'), ('06:06', '0.79', '0.06'), ('06:12', '0.8', '0.07'), ('06:18', '0.74', '0.06'), ('06:24', '0.74', '0.06')]
+=== M15 first account takeover 2027-11-15T19:37Z
+    diverted aid credits 416 first 2027-11-19T12:11:06Z last 2027-12-02T14:51:24Z sum 3900000 [('****0147', 416)]
+    prepaid tx 1292 2027-08-16T19:54:38Z 2028-01-11T20:39:02Z 2130012 [('ACCT-40203', 1256), ('ACCT-40310', 2), ('ACCT-42348', 2)]
+    aid rows with assistance_type 61573 [('disbursement', 31088), ('determination', 30485)]
+    aid payments to the three accounts 424 2027-11-19T12:11:06Z 2027-12-06T13:23:32Z 3949083
+  * posts deposit 63
+       ('2027-11-17T14:50:45Z', 'salty_CentralCi', 'Check your FEMA account. Somebody changed my direct deposit. smh #FEMA')
+       ('2027-11-17T16:21:25Z', 'TinaHall61', 'FEMA site shows a bank account for my deposit that is NOT mine. I did not change anything')
+       ('2027-11-17T16:50:17Z', 'BClark62', 'Morning update: FEMA site shows a bank account for my deposit that is NOT mine. I did not change anything. Stay safe.')
+       ('2027-11-17T17:06:24Z', 'Karen1996', 'Update: Check your FEMA account. Somebody changed my direct deposit')

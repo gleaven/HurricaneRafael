@@ -1,0 +1,30 @@
+{
+ "note": "Position sources of the ground emergency stream family (scripts/streams/gen_ground*.py). The AVL, 911 and damage-assessment sources are already in position_rules.json; scripts/streams/verify_ground_geo.py runs all of them file by file.",
+ "sources": [
+  {
+   "name": "SAR rescue positions",
+   "glob": "05_other_sources/sar/sar_missions.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "incident",
+   "id": "case_number"
+  },
+  {
+   "name": "SAR flood depth soundings",
+   "glob": "05_other_sources/sar/flood_depth_soundings.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "vehicle",
+   "tolerance_m": 30,
+   "id": "unit_id"
+  },
+  {
+   "name": "Damage structures near a street",
+   "glob": "05_other_sources/infrastructure/damage_assessment.csv",
+   "lat": "LATITUDE",
+   "lon": "LONGITUDE",
+   "rule": "incident",
+   "id": "structure_id"
+  }
+ ]
+}

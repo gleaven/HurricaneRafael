@@ -1,0 +1,241 @@
+{
+  "note": "Fictional GW-* assets mapped to real AEP Texas / ERCOT and City of Corpus Christi Water topology. All entity names, system IDs and personnel are fictional. Physical locations, voltage classes and pipeline routes follow public infrastructure records.",
+  "entities": [
+    {
+      "id": "GW-ENT-01",
+      "name": "Coastal Bend Power & Water Authority",
+      "abbrev": "CBPWA",
+      "type": "utility_operator",
+      "note": "Fictional combined electric-and-water operator standing in for the real mix of AEP Texas / ERCOT (grid) and City of Corpus Christi Water Department (water). Operates the substations and water treatment assets below under a single SCADA umbrella."
+    },
+    {
+      "id": "GW-ENT-02",
+      "name": "Meridian Controls Corp",
+      "abbrev": "MCC",
+      "type": "scada_vendor",
+      "note": "Fictional OT vendor. Supplies the SCADA master station, RTUs and historian used by CBPWA."
+    },
+    {
+      "id": "GW-ENT-03",
+      "name": "ClearPath Network Solutions",
+      "abbrev": "CPNS",
+      "type": "remote_access_vendor",
+      "note": "Fictional VPN / remote-access vendor. Supplies GW-SYS-JMP-01, the jump host used for remote relay configuration and historian access."
+    }
+  ],
+  "facilities": [
+    {
+      "id": "GW-FAC-SUB-01",
+      "name": "Riverside Switching Station",
+      "type": "substation",
+      "voltage_kv": "345/138",
+      "operator": "GW-ENT-01",
+      "real_analog": "White Point Energy Center substation (AEP Texas / ERCOT, 345/138 kV transmission interconnect, north shore of Corpus Christi Bay)",
+      "coordinates_approx": "27.84 N, 97.46 W",
+      "note": "Primary 345-kV import point for the Corpus Christi peninsula; loss here causes cascading load-shedding on the south side."
+    },
+    {
+      "id": "GW-FAC-SUB-02",
+      "name": "Harbor View Substation",
+      "type": "substation",
+      "voltage_kv": "138/69",
+      "operator": "GW-ENT-01",
+      "real_analog": "Nueces Bay substation (138/69 kV, northwest Corpus Christi)",
+      "coordinates_approx": "27.80 N, 97.51 W",
+      "note": "Feeds the northwest industrial and residential load. Trip propagates to Harbor Bridge and port distribution feeders."
+    },
+    {
+      "id": "GW-FAC-SUB-03",
+      "name": "Crosstown Substation",
+      "type": "substation",
+      "voltage_kv": "138/69",
+      "operator": "GW-ENT-01",
+      "real_analog": "Highway 9 substation (138/69 kV, central Corpus Christi)",
+      "coordinates_approx": "27.76 N, 97.42 W",
+      "note": "Central peninsula substation feeding Districts 3 and 4. Loss contributes to water-pressure drop because it backs up FAC-UTL-01 auxiliary pumps."
+    },
+    {
+      "id": "GW-FAC-SUB-04",
+      "name": "Southside Substation",
+      "type": "substation",
+      "voltage_kv": "138/69",
+      "operator": "GW-ENT-01",
+      "real_analog": "Westside substation (138/69 kV, west Corpus Christi / Calallen corridor)",
+      "coordinates_approx": "27.78 N, 97.56 W",
+      "note": "Serves west-side residential and the Calallen corridor. Last of the four affected substations to show modified relay configurations."
+    },
+    {
+      "id": "GW-FAC-SUB-05",
+      "name": "Bayside Substation",
+      "type": "substation",
+      "voltage_kv": "138",
+      "operator": "GW-ENT-01",
+      "real_analog": "Oso Creek substation (138 kV, south Corpus Christi)",
+      "coordinates_approx": "27.72 N, 97.39 W",
+      "note": "South-side substation; not compromised but used as the unaffected comparison baseline in the outage-footprint analysis."
+    },
+    {
+      "id": "GW-FAC-GEN-01",
+      "name": "Palisade Energy Center",
+      "type": "generation",
+      "fuel": "natural gas",
+      "capacity_mw": 390,
+      "operator": "GW-ENT-01",
+      "real_analog": "Barney M. Davis Power Plant (gas turbine, Corpus Christi north shore, ~384 MW nameplate)",
+      "coordinates_approx": "27.84 N, 97.44 W",
+      "note": "Local peaking unit; dispatched during storm restoration but cannot compensate for relay trips at GW-FAC-SUB-01 alone."
+    },
+    {
+      "id": "GW-FAC-WTR-01",
+      "name": "Texana Booster Station 1",
+      "type": "water_pump_station",
+      "operator": "GW-ENT-01",
+      "real_analog": "Mary Rhodes Pipeline Phase I — Pump Station 1 (Lake Texana, Edna TX, start of 101-mile raw-water pipeline)",
+      "coordinates_approx": "28.97 N, 96.65 W",
+      "note": "Lifts raw water from Lake Texana into the Mary Rhodes Phase I pipeline. Not on the CBPWA SCADA but feeds FAC-UTL-01 raw water supply."
+    },
+    {
+      "id": "GW-FAC-WTR-02",
+      "name": "Texana Booster Station 2",
+      "type": "water_pump_station",
+      "operator": "GW-ENT-01",
+      "real_analog": "Mary Rhodes Pipeline Phase I — Pump Station 2 (mid-route booster, ~50 miles from Lake Texana)",
+      "coordinates_approx": "28.60 N, 97.10 W",
+      "note": "Mid-route booster on Phase I pipeline. Manual backup if SCADA is unavailable."
+    },
+    {
+      "id": "GW-FAC-WTR-03",
+      "name": "Colorado River Booster Station",
+      "type": "water_pump_station",
+      "operator": "GW-ENT-01",
+      "real_analog": "Mary Rhodes Pipeline Phase II — Booster Pump Station (near Bay City TX; 42-mile pipeline from Colorado River diversion to 6-MG ground storage tank; fiber-optic SCADA comms)",
+      "coordinates_approx": "28.98 N, 96.01 W",
+      "note": "Phase II booster. Its historian logs unauthorized setpoint changes on D+23 — a key detection artifact for T9."
+    },
+    {
+      "id": "GW-FAC-TK-01",
+      "name": "Northwest Storage Tank 1",
+      "type": "water_storage_tank",
+      "capacity_mg": 6,
+      "operator": "GW-ENT-01",
+      "note": "One of 9 distribution storage tanks; first to drop below 50% on D+10 due to pump-pressure reduction."
+    },
+    {
+      "id": "GW-FAC-TK-02",
+      "name": "Northwest Storage Tank 2",
+      "type": "water_storage_tank",
+      "capacity_mg": 4,
+      "operator": "GW-ENT-01"
+    },
+    {
+      "id": "GW-FAC-TK-03",
+      "name": "Central Storage Tank",
+      "type": "water_storage_tank",
+      "capacity_mg": 5,
+      "operator": "GW-ENT-01"
+    },
+    {
+      "id": "GW-FAC-TK-04",
+      "name": "Southside Tank 1",
+      "type": "water_storage_tank",
+      "capacity_mg": 4,
+      "operator": "GW-ENT-01"
+    },
+    {
+      "id": "GW-FAC-TK-05",
+      "name": "Southside Tank 2",
+      "type": "water_storage_tank",
+      "capacity_mg": 3,
+      "operator": "GW-ENT-01"
+    },
+    {
+      "id": "GW-FAC-TK-06",
+      "name": "East Side Tank",
+      "type": "water_storage_tank",
+      "capacity_mg": 4,
+      "operator": "GW-ENT-01"
+    },
+    {
+      "id": "GW-FAC-TK-07",
+      "name": "Calallen Tank",
+      "type": "water_storage_tank",
+      "capacity_mg": 3,
+      "operator": "GW-ENT-01"
+    },
+    {
+      "id": "GW-FAC-TK-08",
+      "name": "Port District Tank",
+      "type": "water_storage_tank",
+      "capacity_mg": 2,
+      "operator": "GW-ENT-01"
+    },
+    {
+      "id": "GW-FAC-TK-09",
+      "name": "Clarkwood Tank",
+      "type": "water_storage_tank",
+      "capacity_mg": 3,
+      "operator": "GW-ENT-01"
+    }
+  ],
+  "systems": [
+    {
+      "id": "GW-SYS-SCADA-01",
+      "name": "Meridian SCADA Master Station",
+      "type": "scada_master",
+      "vendor": "GW-ENT-02",
+      "version": "Meridian HorizonView 4.2",
+      "hosted_at": "CBPWA Operations Center, Corpus Christi",
+      "note": "Controls relay settings and breaker operations at all five substations and pump setpoints at FAC-UTL-01, GW-FAC-WTR-01 to WTR-03. Alarm history is stored in the Meridian historian (GW-SYS-HST-01)."
+    },
+    {
+      "id": "GW-SYS-HST-01",
+      "name": "Meridian Historian",
+      "type": "data_historian",
+      "vendor": "GW-ENT-02",
+      "note": "Stores all SCADA tag values and alarm events. The D+23 unauthorized setpoint change at GW-FAC-WTR-03 is preserved here and is a primary detection artifact."
+    },
+    {
+      "id": "GW-SYS-JMP-01",
+      "name": "ClearPath VPN Gateway",
+      "type": "remote_access_jump_host",
+      "vendor": "GW-ENT-03",
+      "version": "ClearPath SecureReach 2.1",
+      "note": "Remote-access jump host used by CBPWA field engineers to configure relays and push SCADA setpoints. Session logs show 14 authenticated sessions from non-Texas IP blocks during D-3 to D+28."
+    },
+    {
+      "id": "GW-SYS-RTU-01",
+      "name": "RTU at GW-FAC-SUB-01",
+      "type": "rtu",
+      "vendor": "GW-ENT-02",
+      "substation": "GW-FAC-SUB-01"
+    },
+    {
+      "id": "GW-SYS-RTU-02",
+      "name": "RTU at GW-FAC-SUB-02",
+      "type": "rtu",
+      "vendor": "GW-ENT-02",
+      "substation": "GW-FAC-SUB-02"
+    },
+    {
+      "id": "GW-SYS-RTU-03",
+      "name": "RTU at GW-FAC-SUB-03",
+      "type": "rtu",
+      "vendor": "GW-ENT-02",
+      "substation": "GW-FAC-SUB-03"
+    },
+    {
+      "id": "GW-SYS-RTU-04",
+      "name": "RTU at GW-FAC-SUB-04",
+      "type": "rtu",
+      "vendor": "GW-ENT-02",
+      "substation": "GW-FAC-SUB-04"
+    },
+    {
+      "id": "GW-SYS-RTU-05",
+      "name": "RTU at GW-FAC-SUB-05",
+      "type": "rtu",
+      "vendor": "GW-ENT-02",
+      "substation": "GW-FAC-SUB-05"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "scenario": "Coastal Bend utility cyberattack",
+  "d0_date": "2027-09-14",
+  "local_timezone": "America/Chicago",
+  "day_range": [
+    -60,
+    119
+  ],
+  "public_exclusions": {
+    "places": ["GW-SYS-JMP-01", "GW-WS-IT-04"],
+    "leak_phrases": ["KESTREL", "GW-ENG-VELA", "ClearPath SecureReach", "Meridian HorizonView", "TLP:RED"],
+    "note": "Jump host ID, compromised workstation, stolen credential name, and classified attribution phrases must never appear in public outputs. The KESTREL link is classified; public reporting refers only to 'sophisticated threat actor'."
+  }
+}

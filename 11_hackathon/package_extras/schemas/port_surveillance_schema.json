@@ -1,0 +1,322 @@
+{
+ "source": "port_surveillance",
+ "folder": "data/port_surveillance/",
+ "format": "CSV",
+ "standard": "Radar track table and operator logs as exported by a port vessel traffic service (no single public standard; column names are plain)",
+ "notes": "All times UTC with a Z suffix. Vessels are joined by MMSI to registries/vessels.json, berths to terminal_registry.json. Sensors are described in sensors.csv in the same folder.",
+ "entity_catalog": "sensors.csv (this folder), registries/vessels.json, registries/terminal_registry.json",
+ "files": {
+  "sensors": {
+   "filename": "sensors.csv",
+   "description": "The sensors and where they are.",
+   "fields": [
+    {
+     "name": "sensor_id",
+     "type": "string",
+     "example": "RADAR-BUOY-NE",
+     "notes": "Primary key for this folder"
+    },
+    {
+     "name": "sensor_type",
+     "type": "string",
+     "example": "radar buoy",
+     "notes": "radar buoy, fixed camera, vessel traffic log"
+    },
+    {
+     "name": "name",
+     "type": "string",
+     "example": "Buoy-NE, entrance channel off the Port Aransas jetties",
+     "notes": ""
+    },
+    {
+     "name": "latitude",
+     "type": "float",
+     "example": "27.81889",
+     "notes": "Sensor position; blank for the traffic log"
+    },
+    {
+     "name": "longitude",
+     "type": "float",
+     "example": "-96.99892",
+     "notes": ""
+    },
+    {
+     "name": "range_nm",
+     "type": "float",
+     "example": "9.5",
+     "notes": "Radar range, nautical miles"
+    },
+    {
+     "name": "berths_in_view",
+     "type": "string",
+     "example": "TERM-01-B07; TERM-01-B08",
+     "notes": "terminal_registry.json berths a camera covers"
+    }
+   ]
+  },
+  "radar_tracks": {
+   "filename": "radar_tracks_YYYY-MM.csv",
+   "description": "Radar plots, one row per plot, one file per month.",
+   "fields": [
+    {
+     "name": "time_utc",
+     "type": "datetime",
+     "example": "2027-08-15T00:00:03Z",
+     "notes": "Time of the plot, UTC"
+    },
+    {
+     "name": "sensor_id",
+     "type": "string",
+     "example": "RADAR-BUOY-NE",
+     "notes": "sensors.csv sensor_id"
+    },
+    {
+     "name": "track_id",
+     "type": "string",
+     "example": "NE-000001",
+     "notes": "Tracker's own number for the contact; a contact lost and picked up again gets a new one"
+    },
+    {
+     "name": "latitude",
+     "type": "float",
+     "example": "27.83867",
+     "notes": "WGS-84; a few metres of plot noise"
+    },
+    {
+     "name": "longitude",
+     "type": "float",
+     "example": "-97.05224",
+     "notes": ""
+    },
+    {
+     "name": "range_nm",
+     "type": "float",
+     "example": "3.07",
+     "notes": "Range from the buoy, nautical miles"
+    },
+    {
+     "name": "bearing_deg",
+     "type": "float",
+     "example": "292.8",
+     "notes": "Bearing from the buoy, degrees true"
+    },
+    {
+     "name": "speed_kn",
+     "type": "float",
+     "example": "0.0",
+     "notes": "Tracker's speed estimate, knots"
+    },
+    {
+     "name": "course_deg",
+     "type": "float",
+     "example": "129.7",
+     "notes": "Tracker's course estimate, degrees true"
+    },
+    {
+     "name": "est_length_m",
+     "type": "integer",
+     "example": "18",
+     "notes": "Length estimated from the echo, metres"
+    },
+    {
+     "name": "size_class",
+     "type": "string",
+     "example": "small",
+     "notes": "ship (50 m and over) or small"
+    },
+    {
+     "name": "ais_correlated",
+     "type": "string",
+     "example": "Y",
+     "notes": "Y if the tracker matched the plot to an AIS report received at the same time, N if not"
+    },
+    {
+     "name": "correlated_mmsi",
+     "type": "string",
+     "example": "367487046",
+     "notes": "MMSI of the matched AIS report (vessels.json); blank when ais_correlated is N"
+    },
+    {
+     "name": "ingest_utc",
+     "type": "datetime",
+     "example": "2027-08-15T00:00:05Z",
+     "notes": "When the plot reached the shore archive, UTC"
+    }
+   ]
+  },
+  "camera_events": {
+   "filename": "camera_events.csv",
+   "description": "Camera log.",
+   "fields": [
+    {
+     "name": "time_utc",
+     "type": "datetime",
+     "example": "2027-08-15T00:00:00Z",
+     "notes": "UTC"
+    },
+    {
+     "name": "sensor_id",
+     "type": "string",
+     "example": "CAM-01",
+     "notes": "sensors.csv sensor_id"
+    },
+    {
+     "name": "event_type",
+     "type": "string",
+     "example": "FRAME",
+     "notes": "FRAME routine summary of what is in view; PASSAGE vessel passing the camera; BERTH ARRIVAL, BERTH DEPARTURE; INCIDENT operator entry"
+    },
+    {
+     "name": "direction",
+     "type": "string",
+     "example": "",
+     "notes": "INBOUND / OUTBOUND for passages"
+    },
+    {
+     "name": "mmsi",
+     "type": "string",
+     "example": "",
+     "notes": "MMSI where the operator or analytics identified the vessel (vessels.json); blank if unidentified"
+    },
+    {
+     "name": "vessel_name",
+     "type": "string",
+     "example": "",
+     "notes": "Name read or matched; blank if unidentified"
+    },
+    {
+     "name": "est_length_m",
+     "type": "integer",
+     "example": "",
+     "notes": "Length estimated from the image, metres"
+    },
+    {
+     "name": "berth_id",
+     "type": "string",
+     "example": "",
+     "notes": "terminal_registry.json berth concerned"
+    },
+    {
+     "name": "vessels_in_view",
+     "type": "string",
+     "example": "none",
+     "notes": "What is at the berths in view"
+    },
+    {
+     "name": "water_surface",
+     "type": "string",
+     "example": "clear",
+     "notes": "Operator's description of the water surface"
+    },
+    {
+     "name": "note",
+     "type": "string",
+     "example": "",
+     "notes": "Operator's note"
+    }
+   ]
+  },
+  "vessel_traffic_log": {
+   "filename": "vessel_traffic_log.csv",
+   "description": "Checkpoint passages with pilot and tug assignments.",
+   "fields": [
+    {
+     "name": "time_utc",
+     "type": "datetime",
+     "example": "2027-08-15T00:02:35Z",
+     "notes": "UTC"
+    },
+    {
+     "name": "checkpoint",
+     "type": "string",
+     "example": "JETTIES",
+     "notes": "Reporting point passed"
+    },
+    {
+     "name": "direction",
+     "type": "string",
+     "example": "INBOUND",
+     "notes": "INBOUND / OUTBOUND"
+    },
+    {
+     "name": "mmsi",
+     "type": "string",
+     "example": "338190847",
+     "notes": "vessels.json mmsi"
+    },
+    {
+     "name": "vessel_name",
+     "type": "string",
+     "example": "CORRIN BAY",
+     "notes": ""
+    },
+    {
+     "name": "vessel_class",
+     "type": "string",
+     "example": "tug",
+     "notes": "vessels.json class"
+    },
+    {
+     "name": "pilot_order_id",
+     "type": "string",
+     "example": "",
+     "notes": "Pilot order number for piloted movements"
+    },
+    {
+     "name": "pilot_boat",
+     "type": "string",
+     "example": "",
+     "notes": "Pilot boat used"
+    },
+    {
+     "name": "tugs",
+     "type": "string",
+     "example": "",
+     "notes": "Assist tugs, semicolon-separated"
+    },
+    {
+     "name": "from_place",
+     "type": "string",
+     "example": "",
+     "notes": "Berth, anchorage position or SEA"
+    },
+    {
+     "name": "to_place",
+     "type": "string",
+     "example": "",
+     "notes": "Berth, anchorage position or SEA"
+    }
+   ]
+  },
+  "sensor_status": {
+   "filename": "sensor_status.csv",
+   "description": "Sensor health.",
+   "fields": [
+    {
+     "name": "time_utc",
+     "type": "datetime",
+     "example": "2027-08-15T00:00:00Z",
+     "notes": "UTC; hourly, plus a row at each change"
+    },
+    {
+     "name": "sensor_id",
+     "type": "string",
+     "example": "CAM-01",
+     "notes": "sensors.csv sensor_id"
+    },
+    {
+     "name": "status",
+     "type": "string",
+     "example": "ONLINE",
+     "notes": "ONLINE, OFFLINE, NO UPLINK (recording on board, link down), BUFFER RECOVERED, ARCHIVE EXPORT"
+    },
+    {
+     "name": "detail",
+     "type": "string",
+     "example": "",
+     "notes": "Fault or restoration detail as logged"
+    }
+   ]
+  }
+ }
+}

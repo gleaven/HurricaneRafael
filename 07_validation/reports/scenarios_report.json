@@ -1,0 +1,3481 @@
+{
+  "checks": 695,
+  "failed": [],
+  "results": [
+    {
+      "check": "scenario ids unique",
+      "pass": true,
+      "detail": "['rafael', 'gridwater']"
+    },
+    {
+      "check": "layer prefixes non-empty and unique",
+      "pass": true,
+      "detail": "['GW']"
+    },
+    {
+      "check": "rafael: root exists",
+      "pass": true,
+      "detail": "."
+    },
+    {
+      "check": "rafael: has 00_scenario/config.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: has 00_scenario/threads.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: has 00_scenario/msel.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: has 02_public_record/public_record.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: threads file matches registry",
+      "pass": true,
+      "detail": "['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T11', 'T12', 'T13', 'T14', 'T15', 'T16', 'T17', 'T19', 'T20', 'T21', 'T22', 'T8', 'T9', 'T10', 'T18'] vs ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T11', 'T12', 'T13', 'T14', 'T15', 'T16', 'T17', 'T19', 'T20', 'T21', 'T22', 'T8', 'T9', 'T10', 'T18']"
+    },
+    {
+      "check": "thread T1 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T2 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T3 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T4 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T5 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T6 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T7 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T11 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T12 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T13 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T14 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T15 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T16 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T17 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T19 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T20 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T21 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T22 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T8 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T9 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T10 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "thread T18 unique across scenarios",
+      "pass": true,
+      "detail": "also in None"
+    },
+    {
+      "check": "event id EVT-0101 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0101 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0102 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0102 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0103 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0103 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0104 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0104 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0105 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0105 thread T3 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0108 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0108 thread T7 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0106 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0106 thread T4 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0107 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0107 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2201 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2201 thread T22 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-2201 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0201 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0201 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0209 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0209 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-001 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-001 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-001 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-101 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-101 thread T18 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-101 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-101 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0202 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0202 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1901 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1901 thread T19 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1901 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1902 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1902 thread T19 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1902 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1902 thread T3 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1903 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1903 thread T19 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1903 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0203 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0203 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1201 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1201 thread T12 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1201 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1501 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1501 thread T15 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1501 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-002 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-002 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-002 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-102 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-102 thread T18 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-102 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0204 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0204 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1401 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1401 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1502 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1502 thread T15 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1502 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1904 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1904 thread T19 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1904 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2101 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2101 thread T21 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0205 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0205 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0206 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0206 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0207 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0207 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0207 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0210 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0210 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1202 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1202 thread T12 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1202 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1402 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1402 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1905 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1905 thread T19 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1905 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-003 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-003 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-003 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-003 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-103 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-103 thread T18 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-103 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0208 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0208 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1101 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1101 thread T11 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1503 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1503 thread T15 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1601 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1601 thread T16 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2102 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2102 thread T21 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-104 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-104 thread T18 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-104 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-104 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1203 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1203 thread T12 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1203 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1203 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1403 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1403 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1701 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1701 thread T17 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2103 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2103 thread T21 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0301 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0301 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0302 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0302 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0303 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0303 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0303 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0313 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0313 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0314 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0314 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1102 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1102 thread T11 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1102 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1204 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1204 thread T12 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1204 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1204 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1301 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1301 thread T13 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1301 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1404 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1404 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1504 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1504 thread T15 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1504 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1602 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1602 thread T16 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1702 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1702 thread T17 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1702 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2104 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2104 thread T21 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-004 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-004 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-004 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0304 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0304 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0304 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0305 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0305 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0306 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0306 thread T4 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0315 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0315 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0318 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0318 thread T7 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1103 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1103 thread T11 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1103 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1205 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1205 thread T12 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1205 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1206 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1206 thread T12 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1206 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1302 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1302 thread T13 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1302 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1703 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1703 thread T17 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1906 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1906 thread T19 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1906 thread T7 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1906 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2001 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2001 thread T20 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-2001 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2002 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2002 thread T20 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-2002 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2105 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2105 thread T21 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0307 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0307 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0308 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0308 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0309 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0309 thread T4 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0316 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0316 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1405 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1405 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1603 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1603 thread T16 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1704 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1704 thread T17 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1704 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2003 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2003 thread T20 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-2003 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2004 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2004 thread T20 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2005 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2005 thread T20 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0317 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0317 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1104 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1104 thread T11 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1104 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1705 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1705 thread T17 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2202 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2202 thread T22 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-2202 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0310 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0310 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2006 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2006 thread T20 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-2006 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1207 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1207 thread T12 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1207 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1505 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1505 thread T15 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1505 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1505 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1604 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1604 thread T16 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1604 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1706 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1706 thread T17 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1303 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1303 thread T13 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1303 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1303 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1707 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1707 thread T17 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1707 thread T13 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1708 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1708 thread T17 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2007 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2007 thread T20 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-2007 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-005 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-005 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-005 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1105 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1105 thread T11 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1105 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1304 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1304 thread T13 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1304 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1406 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1406 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1605 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1605 thread T16 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1605 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-006 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-006 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-006 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-105 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-105 thread T18 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-105 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-105 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0311 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0311 thread T3 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-007 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-007 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-007 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1106 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1106 thread T11 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1106 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0312 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0312 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0312 thread T3 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1305 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1305 thread T13 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1305 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1407 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1407 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1407 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2106 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2106 thread T21 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-008 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-008 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1408 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1408 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1907 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1907 thread T19 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-009 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-009 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1107 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1107 thread T11 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1107 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1107 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1606 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1606 thread T16 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1606 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2203 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2203 thread T22 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-010 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-010 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-010 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1607 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1607 thread T16 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1607 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1607 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-011 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-011 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-011 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-011 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-106 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-106 thread T18 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-106 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2008 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2008 thread T20 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1306 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1306 thread T13 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1306 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1306 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1409 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1409 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1506 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1506 thread T15 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1506 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1506 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2107 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2107 thread T21 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-012 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-012 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-012 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-012 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1608 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1608 thread T16 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1608 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-013 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-013 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-013 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1507 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1507 thread T15 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1507 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1307 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1307 thread T13 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1307 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1609 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1609 thread T16 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1609 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-014 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-014 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-014 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-014 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-107 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-107 thread T18 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event GW-EVT-107 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0401 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0401 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0410 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0410 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1208 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1208 thread T12 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1208 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1208 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1410 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1410 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1508 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1508 thread T15 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-1508 thread T10 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1908 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1908 thread T19 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2204 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2204 thread T22 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0402 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0402 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0402 thread T12 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0403 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0403 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0403 thread T12 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0411 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0411 thread T7 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0411 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0411 thread T12 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0404 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0404 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0404 thread T3 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0405 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0405 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-015 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-015 thread T8 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-108 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-108 thread T18 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0406 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0406 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0412 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0412 thread T7 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0412 thread T3 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1509 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1509 thread T15 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0407 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0407 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2108 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2108 thread T21 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id GW-EVT-016 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event GW-EVT-016 thread T9 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0413 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0413 thread T7 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0414 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0414 thread T7 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0408 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0408 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0408 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1108 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1108 thread T11 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1308 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1308 thread T13 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1411 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1411 thread T14 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0415 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0415 thread T7 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2205 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2205 thread T22 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0409 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0409 thread T7 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0409 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0501 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0501 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0508 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0508 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-1610 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-1610 thread T16 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2009 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2009 thread T20 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2206 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2206 thread T22 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0502 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0502 thread T4 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0503 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0503 thread T3 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0503 thread T4 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0504 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0504 thread T3 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0505 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0505 thread T3 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0506 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0506 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0506 thread T3 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0507 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0507 thread T4 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0601 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0601 thread T5 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-2207 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-2207 thread T22 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-2207 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0602 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0602 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0602 thread T7 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0603 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0603 thread T2 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0603 thread T3 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0603 thread T4 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0603 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rafael: event EVT-0603 thread T7 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0605 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0605 thread T6 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "event id EVT-0604 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "rafael: event EVT-0604 thread T1 belongs to scenario",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "fact id PUB-001 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-002 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-003 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-004 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-005 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-006 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-007 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-008 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-009 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-010 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-011 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-012 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-013 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-014 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-015 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-016 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-017 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-018 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-019 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-020 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-101 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-140 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-021 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-102 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-107 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-180 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-200 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-022 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-108 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-120 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-201 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-023 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-024 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-025 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-110 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-130 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-141 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-160 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-202 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-026 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-027 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-028 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-029 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-170 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-203 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-030 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-031 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-032 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-033 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-121 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-161 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-171 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-190 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-191 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-034 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-035 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-036 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-037 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-038 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-109 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-131 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-212 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-039 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-040 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-103 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-111 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-192 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-041 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-172 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-042 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-043 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-044 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-045 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-122 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-173 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-193 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-046 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-047 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-142 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-048 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-049 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-050 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-174 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-051 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-106 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-132 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-143 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-204 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id GW-PUB-001 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-144 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-052 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-053 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id GW-PUB-002 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-112 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-181 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-213 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-054 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-183 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-162 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-055 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-056 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-194 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id GW-PUB-101 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-057 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-150 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-205 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id GW-PUB-003 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-147 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-163 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id GW-PUB-004 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-104 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id GW-PUB-005 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-133 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id GW-PUB-102 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-058 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-123 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-145 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-211 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-214 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-151 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-182 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-059 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-060 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id GW-PUB-006 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-061 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id GW-PUB-103 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-062 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-152 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-063 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-064 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-153 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-065 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-206 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id GW-PUB-007 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-066 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-067 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-068 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-069 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-113 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-134 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-146 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id GW-PUB-104 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-070 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-071 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-072 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-073 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-074 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-075 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-076 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-077 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-078 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-105 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-079 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-080 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-081 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-164 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-195 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-082 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-083 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-084 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-085 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-086 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-087 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-088 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-089 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-090 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-091 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-210 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-092 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-093 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-094 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-095 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-096 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-097 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-098 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-099 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "fact id PUB-100 unique across scenarios",
+      "pass": true,
+      "detail": "None"
+    },
+    {
+      "check": "gridwater: root exists",
+      "pass": true,
+      "detail": "./scenarios/gridwater"
+    },
+    {
+      "check": "gridwater: has 00_scenario/config.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "gridwater: has 00_scenario/threads.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "gridwater: has 00_scenario/msel.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "gridwater: has 02_public_record/public_record.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "gridwater: base world exists and is a base_world",
+      "pass": true,
+      "detail": "rafael"
+    },
+    {
+      "check": "gridwater: threads file matches registry",
+      "pass": true,
+      "detail": "[] vs []"
+    },
+    {
+      "check": "state variable gw_sub01_status prefixed gw_",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "state variable gw_sub02_status prefixed gw_",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "state variable gw_sub03_status prefixed gw_",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "state variable gw_sub04_status prefixed gw_",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "state variable gw_pump_p3_status prefixed gw_",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "state variable gw_scada_isolated prefixed gw_",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "state variable gw_grid_outage_customers prefixed gw_",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "state variable gw_zone4_pressure_psi prefixed gw_",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "state variable gw_alarm_suppressed_count prefixed gw_",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

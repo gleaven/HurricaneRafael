@@ -1,0 +1,2117 @@
+{
+  "source": "W3",
+  "scope": "De-duplication pass over all 393 stories: cross-story sentences of 10+ words that are verbatim or near-verbatim (normalized similarity > 0.9), repeated character quotes, and four reviewer-flagged catchphrases (Holloway efficiency theme, Akins 'plan B', Brooks surge analogies, Harborline 6 deposit checklists). Earliest occurrence kept; later ones reworded. Excludes NWS-P070-01, NWS-P093-01, NWS-P094-01, NWS-P113-01 (whole-story rewrites elsewhere).",
+  "stories_read": 393,
+  "findings": [
+    {
+      "id": "W3-001",
+      "severity": "medium",
+      "story_id": "NWS-M036-01",
+      "field": "body",
+      "old": "\"That's good news for the region, but it also means the system is running with very little slack.\"",
+      "new": "\"That's good news for the region. Every tanker that loads is work for pilots, tug crews and line handlers.\"",
+      "reason": "Holloway's efficiency/slack catchphrase recurs in six pre-storm stories; Ledger use varied (kept in NWS-M057-02 and NWS-M014-01).",
+      "status": "applied"
+    },
+    {
+      "id": "W3-002",
+      "severity": "low",
+      "story_id": "NWS-M032-01",
+      "field": "dek",
+      "old": "analysts see steady demand but little slack in the system.",
+      "new": "analysts see steady demand and a predictable loading rhythm.",
+      "reason": "Dek follows the varied Holloway paragraph below.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-003",
+      "severity": "medium",
+      "story_id": "NWS-M032-01",
+      "field": "body",
+      "old": "Holloway repeated her caution that the hub's efficiency comes with concentration risk. \"When this much export capacity runs through one channel, you watch anything that could close that channel,\" she said. \"Weather, maintenance, a grounding. It doesn't take much.\"",
+      "new": "Holloway said that predictability has its own value. \"Buyers plan around Corpus because the dates hold, and they pay for that certainty in ways that never show up on an invoice,\" she said. \"Reliability is a product too.\"",
+      "reason": "Holloway's efficiency/concentration-risk catchphrase recurs in six pre-storm stories; Sabal use varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-004",
+      "severity": "low",
+      "story_id": "NWS-M022-01",
+      "field": "body",
+      "old": "Waiting at anchor for a berth has become routine for tankers calling at the Coastal Bend.",
+      "new": "Tankers calling at the Coastal Bend now routinely spend time at anchor before a berth opens.",
+      "reason": "Near-verbatim of NWS-M028-01 (Gulfwater); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-005",
+      "severity": "medium",
+      "story_id": "NWS-M022-01",
+      "field": "body",
+      "old": "Holloway said the concentration of export capacity in a single ship channel was an efficiency in normal weeks and a vulnerability in abnormal ones. \"One channel, one set of jetties, one anchorage,\" she said. \"That is great until it isn't.\"",
+      "new": "Holloway said buyers read the anchorage like a gauge. \"Count the ships waiting and you know how hard the terminals are working,\" she said. \"Right now the gauge says full.\"",
+      "reason": "Holloway's efficient-until-interrupted catchphrase recurs in six pre-storm stories; Sabal use varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-006",
+      "severity": "medium",
+      "story_id": "NWS-M014-02",
+      "field": "body",
+      "old": "\"Concentration is efficient. You build the pipes, the tanks and the docks in one place, and you get very good at it,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"One channel is a strength until it's the only thing anybody's talking about.\"",
+      "new": "\"Corpus got to half the market by being very good at one thing in one place,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"The pipes, the tanks and the docks all grew up around that channel.\"",
+      "reason": "Same-day Sabal story (NWS-M014-01) carries Holloway's 'efficient until something interrupts it' line; Ledger quote varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-007",
+      "severity": "low",
+      "story_id": "NWS-M012-01",
+      "field": "body",
+      "old": "County emergency managers have urged residents without cars to register for evacuation assistance before a storm.",
+      "new": "Residents without cars should sign up for evacuation assistance before a storm, county emergency managers have said.",
+      "reason": "Near-verbatim of Harborline 6 line in NWS-M021-02; reworded in Ledger voice.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-008",
+      "severity": "low",
+      "story_id": "NWS-M010-02",
+      "field": "body",
+      "old": "No watches or warnings are in effect for the Coastal Bend as of Saturday afternoon.",
+      "new": "As of Saturday afternoon, the Coastal Bend is not under any watch or warning.",
+      "reason": "Same-day near-verbatim of the Ledger's NWS-M010-01 status line; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-009",
+      "severity": "low",
+      "story_id": "NWS-M009-02",
+      "field": "body",
+      "old": "County emergency managers have urged residents without cars to register with the state's evacuation assistance registry so planners know where to send buses.",
+      "new": "The county's answer has been the state's evacuation assistance registry: residents without cars are urged to sign up so planners know where to send buses.",
+      "reason": "Repeats the same reporter's sentence in NWS-M019-01 ten days earlier; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-010",
+      "severity": "low",
+      "story_id": "NWS-M008-02",
+      "field": "body",
+      "old": "No watches or warnings are in effect for the Coastal Bend as of Monday afternoon.",
+      "new": "There is still no watch or warning for the Coastal Bend as of Monday afternoon.",
+      "reason": "Template sentence shared with NWS-M010-01 and other stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-011",
+      "severity": "low",
+      "story_id": "NWS-M006-03",
+      "field": "body",
+      "old": "No watches or warnings are in effect for the Coastal Bend as of Wednesday afternoon.",
+      "new": "As of Wednesday afternoon, nothing is posted for the Coastal Bend: no watch, no warning.",
+      "reason": "Template sentence shared with NWS-M010-01 and other stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-012",
+      "severity": "low",
+      "story_id": "NWS-M004-02",
+      "field": "body",
+      "old": "NAS Corpus Christi and NAS Kingsville are flying their training aircraft to Naval Air Station Joint Reserve Base Fort Worth ahead of Hurricane Rafael.",
+      "new": "Training aircraft from NAS Corpus Christi and NAS Kingsville are headed to Naval Air Station Joint Reserve Base Fort Worth to get out of Hurricane Rafael's way.",
+      "reason": "Same-day near-verbatim of NWS-M004-01 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-013",
+      "severity": "low",
+      "story_id": "NWS-M004-04",
+      "field": "body",
+      "old": "Corpus Christi Army Depot has halted work and secured its helicopters in hangars.",
+      "new": "At Corpus Christi Army Depot, work has stopped and the helicopters are locked down in hangars.",
+      "reason": "Same-day verbatim of NWS-M004-02 (Anchor & Rotor); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-014",
+      "severity": "low",
+      "story_id": "NWS-M003-02",
+      "field": "body",
+      "old": "Two laden tankers remain moored at an Inner Harbor terminal with Coast Guard approval, the Coast Guard said. It did not identify the vessels or the terminal.",
+      "new": "The Coast Guard has allowed two laden tankers to stay moored at an Inner Harbor terminal. Neither the vessels nor the terminal was named.",
+      "reason": "Same-day verbatim of NWS-M003-01 (Gulfwater); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-015",
+      "severity": "low",
+      "story_id": "NWS-M003-03",
+      "field": "body",
+      "old": "The Coast Guard shut the Corpus Christi Ship Channel to vessel traffic ahead of Hurricane Rafael. Fourteen vessels are waiting at the offshore anchorage east of Port Aransas, and crude exports from the port have halted.",
+      "new": "With Hurricane Rafael approaching, the Coast Guard has shut the Corpus Christi Ship Channel to vessels. Crude exports from the port have stopped, and 14 vessels are riding at the offshore anchorage east of Port Aransas.",
+      "reason": "Two sentences near-verbatim of same-day NWS-M003-01 (Gulfwater); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-016",
+      "severity": "low",
+      "story_id": "NWS-M003-05",
+      "field": "body",
+      "old": "Rafael became a hurricane over warm Gulf water earlier in the week, and forecasters have warned it could strengthen rapidly.",
+      "new": "Rafael strengthened into a hurricane over warm Gulf water earlier in the week, and forecasters have cautioned that it could intensify quickly.",
+      "reason": "Near-verbatim of NWS-M005-01 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-017",
+      "severity": "medium",
+      "story_id": "NWS-M003-05",
+      "field": "body",
+      "old": "\"Vessels remaining in port do so with Coast Guard approval,\" said Lt. Cmdr. Elena Ruiz",
+      "new": "\"Any vessel still in port is there with our approval,\" said Lt. Cmdr. Elena Ruiz",
+      "reason": "Ruiz quote repeats her same-day line in NWS-M003-01 (Gulfwater); fresh wording.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-018",
+      "severity": "low",
+      "story_id": "NWS-M002-02",
+      "field": "body",
+      "old": "A mandatory evacuation is in effect for surge zones ahead of Hurricane Rafael. Here is what you need to know right now.",
+      "new": "Surge zones are under a mandatory evacuation as Hurricane Rafael approaches. Here is what you need to know right now.",
+      "reason": "Same-day verbatim of NWS-M002-01 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-019",
+      "severity": "low",
+      "story_id": "NWS-M002-03",
+      "field": "body",
+      "old": "A mandatory evacuation is in effect for surge zones ahead of Hurricane Rafael. On Mustang Island, the signs are everywhere.",
+      "new": "The mandatory evacuation for surge zones is in force, and on Mustang Island the signs are everywhere.",
+      "reason": "Same-day verbatim of NWS-M002-01 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-020",
+      "severity": "low",
+      "story_id": "NWS-M002-04",
+      "field": "body",
+      "old": "A mandatory evacuation is in effect for surge zones ahead of Hurricane Rafael. Shelters have opened inland, and county buses are picking up residents who do not have cars.",
+      "new": "Hurricane Rafael has put surge zones under a mandatory evacuation. Inland shelters are open, and county buses are making pickups for residents who do not have cars.",
+      "reason": "Two sentences verbatim of same-day NWS-M002-01 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-021",
+      "severity": "low",
+      "story_id": "NWS-M002-05",
+      "field": "body",
+      "old": "Bus service and transit gaps leave many households without cars in low-income neighborhoods near the bay, a problem advocates raised all summer as they pushed for more evacuation rides.",
+      "new": "Many households in the low-income neighborhoods near the bay have no car, and advocates spent the summer pointing to bus service and transit gaps as they pushed for more evacuation rides.",
+      "reason": "Same-day near-verbatim of NWS-M002-04 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-022",
+      "severity": "low",
+      "story_id": "NWS-M002-05",
+      "field": "body",
+      "old": "Dwayne Pruitt, public information officer for the Nueces County Office of Emergency Management, said county buses were working through ride requests.",
+      "new": "County buses were still working through ride requests, said Dwayne Pruitt, public information officer for the Nueces County Office of Emergency Management.",
+      "reason": "Same-day near-verbatim of NWS-M002-04 (Coastline); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-023",
+      "severity": "low",
+      "story_id": "NWS-M001-02",
+      "field": "body",
+      "old": "Rafael is forecast to make landfall near Port Aransas as a Category 3 hurricane with 9 to 12 feet of storm surge.",
+      "new": "Forecasters expect Rafael to come ashore near Port Aransas as a Category 3 hurricane, pushing 9 to 12 feet of storm surge.",
+      "reason": "Same-day near-verbatim of the Ledger headline (NWS-M001-01); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-024",
+      "severity": "low",
+      "story_id": "NWS-M001-03",
+      "field": "body",
+      "old": "NAS Corpus Christi and NAS Kingsville flew their training aircraft to Naval Air Station Joint Reserve Base Fort Worth on Friday, and Corpus Christi Army Depot, the Army's primary helicopter maintenance depot, halted work and secured helicopters in its hangars.",
+      "new": "The Navy moved training aircraft from NAS Corpus Christi and NAS Kingsville to Naval Air Station Joint Reserve Base Fort Worth on Friday, while Corpus Christi Army Depot, the Army's primary helicopter maintenance depot, stopped work and put its helicopters indoors.",
+      "reason": "Repeats the wire's own sentence from NWS-M003-05 two days earlier; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-025",
+      "severity": "medium",
+      "story_id": "NWS-M001-03",
+      "field": "body",
+      "old": "\"When the wind picks up, we can't send a bus into it,\" said Dwayne Pruitt",
+      "new": "\"There comes a point where we can't safely send a bus out, and we are getting close to it,\" said Dwayne Pruitt",
+      "reason": "Pruitt quote repeats his same-day line in NWS-M001-02 (Harborline 6); fresh quote, same message.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-026",
+      "severity": "low",
+      "story_id": "NWS-M001-04",
+      "field": "body",
+      "old": "A hurricane warning is in effect for the Coastal Bend.",
+      "new": "Forecasters have upgraded the Coastal Bend to a hurricane warning.",
+      "reason": "Status line identical across three outlets on day -1; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-027",
+      "severity": "low",
+      "story_id": "NWS-M001-04",
+      "field": "body",
+      "old": "Shelters are open inland, and county buses are picking up residents without cars.",
+      "new": "The county has opened shelters inland and is sending buses for residents without cars.",
+      "reason": "Same-day verbatim of NWS-M001-01 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-028",
+      "severity": "low",
+      "story_id": "NWS-M001-05",
+      "field": "body",
+      "old": "Hurricane Rafael is forecast to make landfall near Port Aransas as a Category 3 with 9 to 12 feet of storm surge. A mandatory evacuation for surge zones has been in effect since Sunday. Shelters are open inland, and county buses are picking up residents without cars.",
+      "new": "Rafael is due to hit near Port Aransas as a Category 3 storm with 9 to 12 feet of storm surge behind it. Surge zones have been under a mandatory evacuation order since Sunday. Shelters are open inland, and the county's buses are out collecting people who have no car.",
+      "reason": "Three sentences repeat the same day's Ledger breaking story (NWS-M001-01) nearly word for word; editorial reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-029",
+      "severity": "low",
+      "story_id": "NWS-M001-06",
+      "field": "body",
+      "old": "Rafael is forecast to make landfall near Port Aransas as a Category 3 with 9 to 12 feet of surge.",
+      "new": "Forecasters say Rafael will reach the coast near Port Aransas as a Category 3, with 9 to 12 feet of surge.",
+      "reason": "Same-day near-verbatim of the Ledger headline and Harborline 6 breaking story; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-030",
+      "severity": "medium",
+      "story_id": "NWS-P000-06",
+      "field": "body",
+      "old": "\"Conditions do not allow responders on the water at this time,\" said Lt. Cmdr. Elena Ruiz, the sector's public affairs officer.",
+      "new": "\"We cannot put responders on the water in these conditions,\" said Lt. Cmdr. Elena Ruiz, the sector's public affairs officer.",
+      "reason": "Ruiz quote identical to same-day NWS-P000-04 (Ledger); fresh wording in her formal voice.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-031",
+      "severity": "low",
+      "story_id": "NWS-P001-02",
+      "field": "body",
+      "old": "The county ordered surge zones evacuated Sunday and arranged buses for residents without cars.",
+      "new": "Surge zones were ordered evacuated Sunday, with county buses sent for residents who had no car.",
+      "reason": "Near-verbatim of NWS-P000-08 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-032",
+      "severity": "low",
+      "story_id": "NWS-P001-06",
+      "field": "body",
+      "old": "Hurricane Rafael made landfall on Mustang Island around 1 a.m. Tuesday as a Category 3 storm, close to this town",
+      "new": "Rafael came ashore on Mustang Island as a Category 3 storm around 1 a.m. Tuesday, close to this town",
+      "reason": "Landfall sentence verbatim of NWS-P000-08 (Coastline) and NWS-P001-07; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-033",
+      "severity": "low",
+      "story_id": "NWS-P001-06",
+      "field": "body",
+      "old": "Hargrove, 64, has ridden out two storms on the island and does not recommend it.",
+      "new": "Hargrove, 64, has sat through two storms on the island and tells people not to try it.",
+      "reason": "Near-verbatim of NWS-M018-01 (Ledger profile); reworded, same facts.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-034",
+      "severity": "low",
+      "story_id": "NWS-P001-07",
+      "field": "body",
+      "old": "Hurricane Rafael made landfall on Mustang Island around 1 a.m. Tuesday as a Category 3 storm, and the days ahead",
+      "new": "Rafael struck Mustang Island in the early hours of Tuesday, around 1 a.m., as a Category 3 storm, and the days ahead",
+      "reason": "Landfall sentence verbatim of NWS-P000-08 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-035",
+      "severity": "low",
+      "story_id": "NWS-P002-03",
+      "field": "body",
+      "old": "County officials said Wednesday that 911 calls peaked at about 2,900 a day during the storm, nearly ten times normal, and that most came from low-lying neighborhoods near the bay like hers.",
+      "new": "Most of the storm's 911 calls came from low-lying neighborhoods near the bay like hers, county officials said Wednesday; at the peak, calls reached about 2,900 a day, nearly ten times normal.",
+      "reason": "Near-verbatim of NWS-P001-05 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-036",
+      "severity": "low",
+      "story_id": "NWS-P002-05",
+      "field": "body",
+      "old": "Both tankers had remained alongside through the storm with Coast Guard approval after the channel closed Saturday.",
+      "new": "The Coast Guard had approved both tankers staying alongside through the storm after Saturday's channel closure.",
+      "reason": "Near-verbatim of Gulfwater's NWS-P000-06; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-037",
+      "severity": "low",
+      "story_id": "NWS-P002-05",
+      "field": "body",
+      "old": "Fourteen vessels were holding at the offshore anchorage east of Port Aransas when the channel closed.",
+      "new": "The closure left 14 vessels holding at the offshore anchorage east of Port Aransas.",
+      "reason": "Near-verbatim of NWS-P000-04 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-038",
+      "severity": "medium",
+      "story_id": "NWS-P003-06",
+      "field": "body",
+      "old": "\"Think of the harbor as a cup and the surge as somebody pouring a bucket into it,\" said Dr. Nathan Brooks, a coastal oceanographer at Texas A&M University-Corpus Christi. \"Anything floating on top goes over the rim. It goes where the water goes",
+      "new": "\"The surge lifted the whole harbor at once, and anything floating on top rode up and out with it,\" said Dr. Nathan Brooks, a coastal oceanographer at Texas A&M University-Corpus Christi. \"It goes where the water goes",
+      "reason": "Third surge analogy in three days (pan, bathtub ring, cup); plain explanation instead.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-039",
+      "severity": "low",
+      "story_id": "NWS-P004-03",
+      "field": "body",
+      "old": "The Unified Command estimates that about 9,000 barrels spilled from the tankers MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth as the storm arrived.",
+      "new": "The spill, which the Unified Command puts at about 9,000 barrels, came from the tankers MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth as the storm arrived.",
+      "reason": "Repeats the same reporter's sentence in NWS-P002-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-040",
+      "severity": "low",
+      "story_id": "NWS-P004-05",
+      "field": "body",
+      "old": "Fourteen vessels were holding at the offshore anchorage east of Port Aransas when the channel closed.",
+      "new": "Anchorage count at closure: 14 vessels, east of Port Aransas.",
+      "reason": "Repeats Gulfwater's own sentence from two days earlier and the Ledger's NWS-P000-04; terse trade-style variant.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-041",
+      "severity": "low",
+      "story_id": "NWS-P005-05",
+      "field": "body",
+      "old": "The City of Corpus Christi is warning employees and residents about phishing emails that impersonate a disaster-aid portal.",
+      "new": "The City of Corpus Christi has warned its employees and residents about phishing emails dressed up as a disaster-aid portal.",
+      "reason": "Same-day verbatim of Harborline 6 lead (NWS-P005-01); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-042",
+      "severity": "low",
+      "story_id": "NWS-P006-03",
+      "field": "body",
+      "old": "A Unified Command led by the Coast Guard and the Texas General Land Office has estimated the release at about 9,000 barrels.",
+      "new": "The Coast Guard and the Texas General Land Office, which lead a Unified Command on the spill, put the release at about 9,000 barrels.",
+      "reason": "Same-day near-verbatim of NWS-P006-02 (Gulfwater); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-043",
+      "severity": "medium",
+      "story_id": "NWS-P006-03",
+      "field": "body",
+      "old": "\"Investigators are examining possible unauthorized remote access to the vessels' cargo-control systems, and federal cyber teams are assisting,\" said Lt. Cmdr. Elena Ruiz, a spokeswoman for Coast Guard Sector Corpus Christi. \"We are not going to get ahead of the investigation.\"",
+      "new": "Investigators are looking into possible unauthorized remote access to the vessels' cargo-control systems, with federal cyber teams helping, said Lt. Cmdr. Elena Ruiz, a spokeswoman for Coast Guard Sector Corpus Christi. \"We are not going to get ahead of the investigation,\" she said.",
+      "reason": "Ruiz quote nearly identical to same-day NWS-P006-02 (Gulfwater); paraphrased, her second line kept.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-044",
+      "severity": "low",
+      "story_id": "NWS-P007-02",
+      "field": "body",
+      "old": "Teresa Gallegos, a spokeswoman for the city's water utility, said she understands the frustration.",
+      "new": "The frustration is understandable, said Teresa Gallegos, a spokeswoman for the city's water utility.",
+      "reason": "Near-verbatim of NWS-P005-02 (Coastline); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-045",
+      "severity": "low",
+      "story_id": "NWS-P007-04",
+      "field": "body",
+      "old": "Fourteen vessels moved to the offshore anchorage east of Port Aransas when the channel closed.",
+      "new": "When the channel shut, 14 vessels shifted to the offshore anchorage east of Port Aransas.",
+      "reason": "Verbatim of NWS-P000-04 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-046",
+      "severity": "low",
+      "story_id": "NWS-P008-01",
+      "field": "body",
+      "old": "The city has been under a boil-water notice since Saturday, after the O.N. Stevens Water Treatment Plant lost both power feeds in the storm and its pumps were damaged.",
+      "new": "The city has been under a boil-water notice since Saturday; the storm cut both power feeds to the O.N. Stevens Water Treatment Plant and damaged its pumps.",
+      "reason": "Near-verbatim of NWS-P001-07 (Anchor & Rotor); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-047",
+      "severity": "low",
+      "story_id": "NWS-P008-03",
+      "field": "body",
+      "old": "Boil tap water at a rolling boil for two minutes before drinking, cooking, brushing teeth or making ice or baby formula, or use bottled water.",
+      "new": "Use bottled water, or boil tap water at a rolling boil for two minutes, for drinking, cooking, brushing teeth, making ice and mixing baby formula.",
+      "reason": "Boil-water instruction near-verbatim of Anchor & Rotor's (NWS-P005-05); Harborline 6 gets its own service wording.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-048",
+      "severity": "low",
+      "story_id": "NWS-P009-04",
+      "field": "body",
+      "old": "Sheen covered about 33 square miles of water, and oil came ashore on North Beach and Portland shorelines and in marshes along the bays.",
+      "new": "At its widest, the sheen covered about 33 square miles of water; oil reached North Beach, the Portland shoreline and marshes along the bays.",
+      "reason": "Near-verbatim of NWS-P007-03 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-049",
+      "severity": "low",
+      "story_id": "NWS-P010-02",
+      "field": "body",
+      "old": "Boil tap water at a rolling boil for two minutes before drinking, cooking, brushing teeth or making ice or baby formula. Or use bottled water.",
+      "new": "Bottled water is fine; otherwise boil tap water at a rolling boil for two minutes before drinking, cooking, brushing teeth, making ice or mixing baby formula.",
+      "reason": "Boil-water instruction near-verbatim of Anchor & Rotor's (NWS-P006-04); Harborline 6 wording.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-050",
+      "severity": "low",
+      "story_id": "NWS-P010-03",
+      "field": "body",
+      "old": "\"We can confirm we are investigating,\" spokesperson Mark Ellery said. \"We have no further comment.\"",
+      "new": "\"We can confirm we are investigating,\" spokesperson Mark Ellery said Thursday. \"We have no further comment.\"",
+      "reason": "Ellery quote identical to NWS-P009-03; marked as the same Thursday statement.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-051",
+      "severity": "low",
+      "story_id": "NWS-P011-01",
+      "field": "body",
+      "old": "The FBI's Houston division confirmed Thursday that it is investigating reports of drones near the air station.",
+      "new": "On Thursday, the FBI's Houston division confirmed an investigation into the drone reports near the air station.",
+      "reason": "Verbatim of NWS-P010-03 (Anchor & Rotor); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-052",
+      "severity": "low",
+      "story_id": "NWS-P014-01",
+      "field": "body",
+      "old": "Shah said people should keep doing what has worked. Boil tap water at a rolling boil for two minutes before drinking, cooking, brushing teeth or making ice or formula, or use bottled water.",
+      "new": "Shah said people should keep doing what has worked: bottled water, or tap water held at a rolling boil for two minutes before it is used for drinking, cooking, brushing teeth, ice or formula.",
+      "reason": "Boil-water instruction near-verbatim of other outlets' service boxes; Ledger wording.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-053",
+      "severity": "low",
+      "story_id": "NWS-P014-03",
+      "field": "body",
+      "old": "During the evacuation, residents without cars waited for county buses.",
+      "new": "When the evacuation order came, people without cars had to wait for a county bus.",
+      "reason": "Same-day near-verbatim of NWS-P014-02 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-054",
+      "severity": "low",
+      "story_id": "NWS-P015-02",
+      "field": "body",
+      "old": "Church and neighborhood hubs handed out food and water before official distribution reached some of those neighborhoods.",
+      "new": "In some of those neighborhoods, food and water from church and neighborhood hubs arrived before official distribution did.",
+      "reason": "Near-verbatim of NWS-P005-04 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-055",
+      "severity": "low",
+      "story_id": "NWS-P017-01",
+      "field": "body",
+      "old": "The city says the water plant's damaged pumps need replacement parts and temporary pumps are limiting capacity.",
+      "new": "Temporary pumps are limiting capacity while the plant waits on replacement parts for its damaged pumps, the city says.",
+      "reason": "Repeats Anchor & Rotor's sentence from the week before (NWS-P010-03); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-056",
+      "severity": "low",
+      "story_id": "NWS-P020-02",
+      "field": "body",
+      "old": "Bring tap water to a rolling boil for two minutes before drinking, cooking, brushing teeth or making ice or baby formula. Bottled water is safe.",
+      "new": "Any tap water used for drinking, cooking, brushing teeth, ice or baby formula needs two minutes at a rolling boil first. Bottled water is safe.",
+      "reason": "Boil-water instruction near-verbatim of other outlets' service boxes; Ledger wording.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-057",
+      "severity": "medium",
+      "story_id": "NWS-P022-02",
+      "field": "body",
+      "old": "\"We remain aware of the reports and we continue to work with the appropriate authorities,\" said Lt. Marcus Hale",
+      "new": "\"Nothing has changed on our end. We're still working with the appropriate authorities,\" said Lt. Marcus Hale",
+      "reason": "Hale quote nearly identical to NWS-P011-01 (Harborline 6); fresh wording in his brief style.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-058",
+      "severity": "low",
+      "story_id": "NWS-P023-01",
+      "field": "body",
+      "old": "Kim Tran, a regional cybersecurity advisor with the Cybersecurity and Infrastructure Security Agency, said the agency continues to support the Coast Guard.",
+      "new": "The Cybersecurity and Infrastructure Security Agency is still supporting the Coast Guard, said Kim Tran, a regional cybersecurity advisor with the agency.",
+      "reason": "Near-verbatim of NWS-P006-03 (wire); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-059",
+      "severity": "low",
+      "story_id": "NWS-P026-02",
+      "field": "body",
+      "old": "Whitfield, 59, began handing out food and water from her church within days of Hurricane Rafael, before official distribution reached some neighborhoods near the bay.",
+      "new": "Whitfield, 59, had her church handing out food and water within days of Hurricane Rafael, and in some neighborhoods near the bay that help came before official distribution did.",
+      "reason": "Repeats the same reporter's sentence in NWS-P012-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-060",
+      "severity": "low",
+      "story_id": "NWS-P027-01",
+      "field": "body",
+      "old": "The land. Satellite imagery showed about 43 square miles flooded across Nueces, San Patricio and Aransas counties.",
+      "new": "The land. About 43 square miles across Nueces, San Patricio and Aransas counties flooded, according to satellite imagery.",
+      "reason": "Repeats the Ledger's NWS-P001-02 sentence; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-061",
+      "severity": "low",
+      "story_id": "NWS-P028-01",
+      "field": "body",
+      "old": "Replacement parts for the damaged pumps at the O.N. Stevens Water Treatment Plant are delayed and shipping from out of state, the city said last week.",
+      "new": "The city said last week that replacement pump parts for the O.N. Stevens Water Treatment Plant are delayed and shipping from out of state.",
+      "reason": "Repeats the lede of the Ledger's NWS-P020-02; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-062",
+      "severity": "low",
+      "story_id": "NWS-P029-01",
+      "field": "body",
+      "old": "The citywide boil-water notice issued Sept. 18 is still in effect.",
+      "new": "The Sept. 18 citywide boil-water notice has not been lifted.",
+      "reason": "Near-verbatim of the Ledger's NWS-P014-01; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-063",
+      "severity": "low",
+      "story_id": "NWS-P029-01",
+      "field": "body",
+      "old": "Keep washing hands with soap and boiled or bottled water.",
+      "new": "Keep up the handwashing, with soap and boiled or bottled water.",
+      "reason": "Verbatim of the Ledger's NWS-P028-01 a day earlier; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-064",
+      "severity": "low",
+      "story_id": "NWS-P029-02",
+      "field": "body",
+      "old": "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Crude exports from the Port of Corpus Christi remained halted Wednesday, more than a month after the Coast Guard closed the Corpus Christi Ship Channel ahead of Hurricane Rafael.",
+      "new": "CORPUS CHRISTI, Texas (Sabal Energy Wire) — More than a month after the Coast Guard shut the Corpus Christi Ship Channel ahead of Hurricane Rafael, crude exports from the Port of Corpus Christi were still halted Wednesday.",
+      "reason": "Lede template identical to Sabal's NWS-P007-04; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-065",
+      "severity": "low",
+      "story_id": "NWS-P029-02",
+      "field": "body",
+      "old": "Fourteen vessels moved to the offshore anchorage east of Port Aransas when the channel closed.",
+      "new": "At the anchorage east of Port Aransas, 14 vessels were waiting when the channel shut.",
+      "reason": "Verbatim of NWS-P000-04 and Sabal's own NWS-P007-04; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-066",
+      "severity": "low",
+      "story_id": "NWS-P031-02",
+      "field": "body",
+      "old": "The Unified Command of the Coast Guard and the Texas General Land Office estimated the release at about 9,000 barrels.",
+      "new": "About 9,000 barrels went into the water, by the Unified Command's estimate.",
+      "reason": "Near-verbatim of NWS-P006-02 and others; shortened recap.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-067",
+      "severity": "low",
+      "story_id": "NWS-P032-02",
+      "field": "body",
+      "old": "Hurricane Rafael came ashore on Mustang Island near Port Aransas around 1 a.m. Sept. 14 as a Category 3 storm, pushing about 11 feet of surge into the bays.",
+      "new": "Rafael, a Category 3 storm, hit Mustang Island near Port Aransas around 1 a.m. Sept. 14 and pushed about 11 feet of surge into the bays.",
+      "reason": "Landfall sentence repeats the Ledger's NWS-P015-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-068",
+      "severity": "medium",
+      "story_id": "NWS-P033-02",
+      "field": "body",
+      "old": "\"Next season I want a backup plan on paper before the first hurricane watch,\" he said. \"Land route, other ports, something.\"",
+      "new": "\"I had one lane, and the lane closed,\" he said. \"That's on me to fix before next season.\"",
+      "reason": "Akins's plan-B line recurs in four stories; varied (kept in NWS-P004-05 and NWS-P099-02).",
+      "status": "applied"
+    },
+    {
+      "id": "W3-069",
+      "severity": "low",
+      "story_id": "NWS-P039-01",
+      "field": "body",
+      "old": "Replacement parts were delayed after the supplier's local warehouse flooded.",
+      "new": "The parts had been held up because the supplier's local warehouse flooded.",
+      "reason": "Near-verbatim of NWS-P035-01 (Ledger, four days earlier); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-070",
+      "severity": "low",
+      "story_id": "NWS-P040-01",
+      "field": "body",
+      "old": "The city lifted its citywide boil-water notice Saturday after pump repairs and testing at the O.N. Stevens Water Treatment Plant.",
+      "new": "On Saturday, after pump repairs and testing at the O.N. Stevens Water Treatment Plant, the city lifted its citywide boil-water notice.",
+      "reason": "Verbatim of the previous day's Ledger lede (NWS-P039-01); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-071",
+      "severity": "low",
+      "story_id": "NWS-P043-02",
+      "field": "body",
+      "old": "Sheen spread across about 33 square miles, and oil reached marshes and the North Beach and Portland shorelines.",
+      "new": "The sheen eventually covered about 33 square miles, with oil reaching the marshes and the shorelines at North Beach and Portland.",
+      "reason": "Near-verbatim of the same reporter's column a day earlier (NWS-P042-01); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-072",
+      "severity": "low",
+      "story_id": "NWS-P043-02",
+      "field": "body",
+      "old": "A marsh isn't a parking lot.",
+      "new": "A marsh doesn't heal on a schedule.",
+      "reason": "Echoes Brooks's parking-lot analogy from NWS-P009-04; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-073",
+      "severity": "low",
+      "story_id": "NWS-P043-02",
+      "field": "body",
+      "old": "Investigators have said they are examining possible unauthorized remote access to the tankers' cargo-control systems.",
+      "new": "The official answer so far is that investigators are examining possible unauthorized remote access to the tankers' cargo-control systems.",
+      "reason": "Near-verbatim of the same reporter's NWS-P031-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-074",
+      "severity": "medium",
+      "story_id": "NWS-P044-01",
+      "field": "body",
+      "old": "The Corpus Christi Ship Channel is closed to all vessel traffic until further notice. The cause is unknown",
+      "new": "No vessel will move in the Corpus Christi Ship Channel until further notice. The cause is unknown",
+      "reason": "Ruiz said the identical sentence in NWS-M003-01; fresh wording for the second closure.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-075",
+      "severity": "low",
+      "story_id": "NWS-P044-03",
+      "field": "body",
+      "old": "The port handles about half of U.S. crude exports.",
+      "new": "About half of U.S. crude exports load at this port.",
+      "reason": "Same-day verbatim of NWS-P044-02 (Ledger); varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-076",
+      "severity": "low",
+      "story_id": "NWS-P045-02",
+      "field": "body",
+      "old": "The tug was damaged and two crew members were injured.",
+      "new": "It damaged the tug and hurt two crew members.",
+      "reason": "Verbatim of Gulfwater's NWS-P044-03; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-077",
+      "severity": "medium",
+      "story_id": "NWS-P046-01",
+      "field": "body",
+      "old": "\"We can confirm the FBI is investigating,\" said Mark Ellery, a spokesperson for the FBI's Houston Division. \"We have no further comment at this time.\"",
+      "new": "Mark Ellery, a spokesperson for the FBI's Houston Division, confirmed the bureau is investigating and declined further comment.",
+      "reason": "Ellery's line repeats his drone-story quote (NWS-P009-03); paraphrased.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-078",
+      "severity": "low",
+      "story_id": "NWS-P046-02",
+      "field": "body",
+      "old": "The tug was damaged and two crew members were injured.",
+      "new": "Two crew members were hurt and the tug damaged.",
+      "reason": "Repeats Gulfwater's own NWS-P044-03 and Anchor & Rotor; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-079",
+      "severity": "medium",
+      "story_id": "NWS-P046-04",
+      "field": "body",
+      "old": "\"The blast near the jetties was caused by an explosive device,\" said Cmdr. Lisa Moreau, a public affairs officer for Navy Region Southeast. \"Our teams are searching the channel with the Coast Guard, and safety comes first.\"",
+      "new": "An explosive device caused the blast near the jetties, said Cmdr. Lisa Moreau, a public affairs officer for Navy Region Southeast. \"Our teams are searching the channel with the Coast Guard, and safety comes first,\" she said.",
+      "reason": "Moreau quote identical to same-day NWS-P046-01 (Ledger); first line paraphrased.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-080",
+      "severity": "low",
+      "story_id": "NWS-P046-04",
+      "field": "body",
+      "old": "The Port of Corpus Christi is one of the Defense Department's designated strategic seaports.",
+      "new": "The Defense Department counts the Port of Corpus Christi among its designated strategic seaports.",
+      "reason": "Repeats the wire's own NWS-P044-05 sentence; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-081",
+      "severity": "medium",
+      "story_id": "NWS-P046-04",
+      "field": "body",
+      "old": "\"We'll be ready when the port is ready,\" said Maj. Darnell Price, a Fort Hood public affairs officer.",
+      "new": "\"The brigade will be ready to go as soon as the channel is,\" said Maj. Darnell Price, a Fort Hood public affairs officer.",
+      "reason": "Price's quote is identical to his line in NWS-P045-03 the day before; fresh wording, same message.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-082",
+      "severity": "low",
+      "story_id": "NWS-P046-04",
+      "field": "body",
+      "old": "Crude exports from the port, which handles about half of U.S. crude exports, are halted again",
+      "new": "Loadings at the port, the source of about half of U.S. crude exports, are halted again",
+      "reason": "Same-day verbatim of NWS-P046-01 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-083",
+      "severity": "low",
+      "story_id": "NWS-P047-02",
+      "field": "body",
+      "old": "After the storm, it reported hangar roof damage and water intrusion, and workers were told to stand by.",
+      "new": "Rafael damaged hangar roofs and let water in, and employees were told to stand by.",
+      "reason": "Near-verbatim of NWS-P008-04 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-084",
+      "severity": "low",
+      "story_id": "NWS-P047-04",
+      "field": "body",
+      "old": "Navy explosive ordnance disposal and mine countermeasures teams are searching the channel with the Coast Guard. The FBI is investigating.",
+      "new": "Navy teams that clear explosives and mines are out on the channel with the Coast Guard. The FBI is investigating.",
+      "reason": "Verbatim of NWS-P046-05 and three other outlets; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-085",
+      "severity": "low",
+      "story_id": "NWS-P047-05",
+      "field": "body",
+      "old": "The city lifted its boil-water notice after 35 days.",
+      "new": "After 35 days, the city's boil-water notice came off.",
+      "reason": "Near-verbatim of Harborline 6's NWS-P041-02; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-086",
+      "severity": "low",
+      "story_id": "NWS-P047-05",
+      "field": "body",
+      "old": "The FBI traced the GPS interference pilots reported this month to a transmitter in a parked vehicle near an Inner Harbor fuel terminal.",
+      "new": "The GPS interference pilots reported this month came, the FBI says, from a transmitter in a parked vehicle near an Inner Harbor fuel terminal.",
+      "reason": "Same-day near-verbatim of NWS-P047-02 (Anchor & Rotor); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-087",
+      "severity": "low",
+      "story_id": "NWS-P048-01",
+      "field": "body",
+      "old": "Navy explosive ordnance disposal and mine countermeasures teams are searching the channel with the Coast Guard, and the FBI is investigating.",
+      "new": "Navy explosive ordnance disposal and mine countermeasures teams and the Coast Guard are working the channel jointly; the FBI is investigating.",
+      "reason": "Verbatim of NWS-P046-01 and NWS-P048-02; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-088",
+      "severity": "low",
+      "story_id": "NWS-P048-02",
+      "field": "body",
+      "old": "The Navy said Saturday the explosion was caused by an explosive device. Navy explosive ordnance disposal and mine countermeasures teams are searching the channel with the Coast Guard, and the FBI is investigating.",
+      "new": "On Saturday the Navy attributed the explosion to an explosive device, and its explosive ordnance disposal and mine countermeasures teams have since been sweeping the channel with the Coast Guard. The FBI is investigating.",
+      "reason": "Two sentences verbatim of Gulfwater's and the Ledger's recaps; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-089",
+      "severity": "medium",
+      "story_id": "NWS-P048-02",
+      "field": "body",
+      "old": "Mark Ellery, a spokesperson for the FBI's Houston Division, said: \"We can confirm we are investigating. We have no further comment.\"",
+      "new": "The FBI would say only that it is investigating, according to Mark Ellery, a spokesperson for its Houston Division.",
+      "reason": "Ellery quote identical to NWS-P009-03; paraphrased.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-090",
+      "severity": "low",
+      "story_id": "NWS-P049-01",
+      "field": "body",
+      "old": "The Navy said Saturday the blast was caused by an explosive device.",
+      "new": "The Navy announced Saturday that an explosive device was to blame.",
+      "reason": "Verbatim of NWS-P048-01 and others; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-091",
+      "severity": "low",
+      "story_id": "NWS-P049-02",
+      "field": "body",
+      "old": "An aviation brigade was scheduled to move its helicopters and equipment through the Port of Corpus Christi in late summer for an overseas rotation.",
+      "new": "A Fort Hood aviation brigade's helicopters and equipment were supposed to pass through the Port of Corpus Christi in late summer on the way to an overseas rotation.",
+      "reason": "Repeats the same reporter's sentence in NWS-P045-03; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-092",
+      "severity": "low",
+      "story_id": "NWS-P049-03",
+      "field": "body",
+      "old": "The port handles about half of US crude exports, analysts say.",
+      "new": "Analysts estimate the port moves about half of all US crude exports.",
+      "reason": "Background line repeated verbatim in Ledger and three Sabal stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-093",
+      "severity": "low",
+      "story_id": "NWS-P050-01",
+      "field": "body",
+      "old": "The Navy said Saturday that the blast was caused by an explosive device. The FBI is investigating.",
+      "new": "The FBI is investigating the blast, which the Navy has attributed to an explosive device.",
+      "reason": "Verbatim of NWS-P048-01 and others; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-094",
+      "severity": "low",
+      "story_id": "NWS-P051-01",
+      "field": "body",
+      "old": "Navy explosive ordnance disposal and mine countermeasures teams are searching the channel with the Coast Guard.",
+      "new": "The Coast Guard is working with Navy explosive ordnance disposal and mine countermeasures teams to search the channel.",
+      "reason": "Verbatim of NWS-P046-05 and other outlets; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-095",
+      "severity": "low",
+      "story_id": "NWS-P052-02",
+      "field": "body",
+      "old": "The first explosion, around 1 a.m. Oct. 28 near the jetties at Port Aransas, damaged the tug Corrin Bay and injured two crew members. The Navy later said it was caused by an explosive device. Navy explosive ordnance disposal and mine countermeasures teams have been searching the channel with the Coast Guard since.",
+      "new": "The first explosion went off around 1 a.m. Oct. 28 near the Port Aransas jetties, injuring two crew members aboard the tug Corrin Bay and damaging the vessel. The Navy later said an explosive device was responsible, and the search by its explosive ordnance disposal and mine countermeasures teams, alongside the Coast Guard, has not let up since.",
+      "reason": "Recap repeats the wire's own NWS-P046-04 and other outlets nearly word for word; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-096",
+      "severity": "medium",
+      "story_id": "NWS-P052-02",
+      "field": "body",
+      "old": "The FBI is investigating. \"We can confirm we are investigating,\" said Mark Ellery, a spokesperson for the FBI's Houston Division. \"We are not going to discuss evidence.\"",
+      "new": "The FBI is investigating, its Houston Division spokesperson, Mark Ellery, confirmed. \"We are not going to discuss evidence,\" he said.",
+      "reason": "Ellery quote identical to NWS-P009-03; first line paraphrased.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-097",
+      "severity": "low",
+      "story_id": "NWS-P052-03",
+      "field": "body",
+      "old": "The first device detonated around 1 a.m. Oct. 28 beside the harbor tug Corrin Bay near the jetties, damaging the tug and injuring two crew members.",
+      "new": "The first device detonated around 1 a.m. Oct. 28 alongside the harbor tug Corrin Bay near the jetties, injuring two of its crew and damaging the tug.",
+      "reason": "Near-verbatim of NWS-P048-02 (wire); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-098",
+      "severity": "low",
+      "story_id": "NWS-P052-04",
+      "field": "body",
+      "old": "An aviation brigade there was scheduled to move its helicopters and equipment through the Port of Corpus Christi in late summer for an overseas rotation.",
+      "new": "One of the post's aviation brigades had been due to send its helicopters and equipment through the Port of Corpus Christi in late summer, bound for an overseas rotation.",
+      "reason": "Repeats the same reporter's sentence in NWS-P045-03 and NWS-P049-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-099",
+      "severity": "low",
+      "story_id": "NWS-P055-01",
+      "field": "body",
+      "old": "The Navy has said the Oct. 28 blast was caused by an explosive device. The FBI is investigating.",
+      "new": "The Navy has attributed the Oct. 28 blast to an explosive device, and the FBI is investigating.",
+      "reason": "Near-verbatim of NWS-P051-01 and others; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-100",
+      "severity": "low",
+      "story_id": "NWS-P055-02",
+      "field": "body",
+      "old": "Residents in neighborhoods like hers waited days for help after the storm, and church and neighborhood hubs handed out food and water before official distribution reached some blocks.",
+      "new": "After the storm, people in neighborhoods like hers waited days for help; on some blocks, the first food and water came from church and neighborhood hubs, not official distribution.",
+      "reason": "Near-verbatim of NWS-P051-02 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-101",
+      "severity": "low",
+      "story_id": "NWS-P057-01",
+      "field": "body",
+      "old": "The Navy has said the blast was caused by an explosive device, and the FBI is investigating.",
+      "new": "According to the Navy, an explosive device caused the blast. The FBI is investigating.",
+      "reason": "Near-verbatim of NWS-P052-01 (Harborline 6); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-102",
+      "severity": "medium",
+      "story_id": "NWS-P057-01",
+      "field": "body",
+      "old": "\"The channel will reopen when the search is complete and the Captain of the Port is satisfied it is safe,\" said Lt. Cmdr. Elena Ruiz",
+      "new": "\"The search has to be complete, and the Captain of the Port has to be satisfied the channel is safe. Then it reopens,\" said Lt. Cmdr. Elena Ruiz",
+      "reason": "Ruiz quote identical to NWS-P052-01 (Harborline 6); fresh wording, same facts.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-103",
+      "severity": "medium",
+      "story_id": "NWS-P057-01",
+      "field": "body",
+      "old": "\"When we say it is clear, we want it to be clear,\" said Cmdr. Lisa Moreau, a Navy public affairs officer.",
+      "new": "\"The search is finished when the teams say it is finished, not when the calendar says so,\" said Cmdr. Lisa Moreau, a Navy public affairs officer.",
+      "reason": "Moreau quote identical to NWS-P049-02 (Coastline); fresh quote in her safety-first voice.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-104",
+      "severity": "low",
+      "story_id": "NWS-P058-01",
+      "field": "body",
+      "old": "Navy teams found a second explosive device near the entrance last Friday and rendered it safe.",
+      "new": "A second explosive device, found near the entrance last Friday, was rendered safe by Navy teams.",
+      "reason": "Near-verbatim of NWS-P055-01 (Sabal); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-105",
+      "severity": "low",
+      "story_id": "NWS-P058-03",
+      "field": "body",
+      "old": "The port handles about half of US crude exports, analysts say.",
+      "new": "Roughly half of US crude exports leave through the port, by analysts' count.",
+      "reason": "Background line repeated verbatim in Ledger and three Sabal stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-106",
+      "severity": "low",
+      "story_id": "NWS-P059-02",
+      "field": "body",
+      "old": "The channel reopened Thursday after a 14-day closure and a full sweep.",
+      "new": "After a full sweep, the channel reopened Thursday, ending a 14-day closure.",
+      "reason": "Same-day verbatim of NWS-P059-01 (Coastline); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-107",
+      "severity": "low",
+      "story_id": "NWS-P061-01",
+      "field": "body",
+      "old": "The Unified Command led by the Coast Guard and the Texas General Land Office estimated the release at about 9,000 barrels.",
+      "new": "Responders working under the Coast Guard and the Texas General Land Office have put the release at about 9,000 barrels.",
+      "reason": "Near-verbatim of NWS-P006-02 and others; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-108",
+      "severity": "medium",
+      "story_id": "NWS-P062-01",
+      "field": "body",
+      "old": "Akins said the bigger lesson was about planning. \"Twice this fall the cargo was ready and the water wasn't,\" he said. \"Next year, I want a plan B that doesn't depend on that channel for everything.\"",
+      "new": "Akins said the fall wore on his customers as much as on him. \"Twice this fall the cargo was ready and the water wasn't,\" he said. \"You can only tell somebody 'it's at anchor' so many times.\"",
+      "reason": "Plan-B quote nearly identical to NWS-P099-02; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-109",
+      "severity": "low",
+      "story_id": "NWS-P062-01",
+      "field": "body",
+      "old": "The closure halted crude loadings at a port that handles about half of US crude exports.",
+      "new": "At a port that handles about half of US crude exports, the closure stopped crude loadings cold.",
+      "reason": "Verbatim of the same reporter's NWS-P058-02; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-110",
+      "severity": "low",
+      "story_id": "NWS-P065-01",
+      "field": "body",
+      "old": "The Army said the equipment would sail over five days for an overseas rotation.",
+      "new": "Over five days, the equipment will sail for an overseas rotation, the Army said.",
+      "reason": "Near-verbatim of NWS-P061-02 (Gulfwater); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-111",
+      "severity": "low",
+      "story_id": "NWS-P065-01",
+      "field": "body",
+      "old": "At the depot: Corpus Christi Army Depot remains at full production with parts support from DLA Distribution Corpus Christi.",
+      "new": "At the depot: Still at full production at Corpus Christi Army Depot, with DLA Distribution Corpus Christi supplying parts.",
+      "reason": "Standing item verbatim of the previous edition (NWS-P058-04); varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-112",
+      "severity": "low",
+      "story_id": "NWS-P065-02",
+      "field": "body",
+      "old": "Nguyen started the season with what he called a fair run, squeezed by fuel prices.",
+      "new": "His season had started out fair, he said, though fuel prices ate into it.",
+      "reason": "Near-verbatim of NWS-P050-02 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-113",
+      "severity": "medium",
+      "story_id": "NWS-P066-01",
+      "field": "body",
+      "old": "What to do right now:",
+      "new": "If you applied, here's the short version:",
+      "reason": "Fourth near-identical HL6 deposit checklist in a week; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-114",
+      "severity": "low",
+      "story_id": "NWS-P066-01",
+      "field": "body",
+      "old": "Go to FEMA's official website by typing the address yourself. Don't use links in texts or emails.",
+      "new": "Type FEMA's official web address into your browser. A link in a text or email could take you somewhere else.",
+      "reason": "Checklist item near-identical to NWS-P064-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-115",
+      "severity": "low",
+      "story_id": "NWS-P066-01",
+      "field": "body",
+      "old": "Check the bank account listed for direct deposit. If it's not yours, call FEMA's helpline. Write down the date, the time and who you spoke to.",
+      "new": "Look at the bank account where your aid will be deposited. Not yours? Call FEMA's helpline, and keep a note of when you called and who answered.",
+      "reason": "Checklist item near-identical to NWS-P064-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-116",
+      "severity": "low",
+      "story_id": "NWS-P066-01",
+      "field": "body",
+      "old": "Tell your bank.",
+      "new": "Let your bank know, too.",
+      "reason": "Checklist item near-identical to NWS-P064-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-117",
+      "severity": "low",
+      "story_id": "NWS-P066-01",
+      "field": "body",
+      "old": "Change your FEMA account password to one you don't use anywhere else. Turn on any extra sign-in protection offered.",
+      "new": "Pick a new FEMA password you've never used anywhere else, and switch on extra sign-in protection if the site offers it.",
+      "reason": "Checklist item near-identical to NWS-P064-01 and NWS-P067-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-118",
+      "severity": "medium",
+      "story_id": "NWS-P066-02",
+      "field": "body",
+      "old": "\"We have confirmed unauthorized access to some applicant accounts,\" Rachel Ostrander, an external affairs officer for FEMA Region 6, said in a statement. \"We are urging every applicant to log in and verify their direct-deposit information. If anything looks wrong, call our helpline right away.\"",
+      "new": "In a statement, Rachel Ostrander, an external affairs officer for FEMA Region 6, said the agency had confirmed that some applicant accounts were accessed without authorization. \"Please log in and look at where your payment is set to go,\" she said. \"If it isn't your account, call our helpline right away.\"",
+      "reason": "Ostrander quotes identical to same-day NWS-P066-01 (Harborline 6); first line paraphrased, fresh second quote.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-119",
+      "severity": "medium",
+      "story_id": "NWS-P066-03",
+      "field": "body",
+      "old": "\"We have confirmed unauthorized access to some applicant accounts,\" said Rachel Ostrander, an external affairs officer for FEMA Region 6. \"Every applicant should log in and verify their direct-deposit information. If anything looks wrong, call our helpline.\"",
+      "new": "Rachel Ostrander, an external affairs officer for FEMA Region 6, confirmed unauthorized access to some applicant accounts. \"Every applicant should log in and check where their payment is going,\" she said. \"If the bank details aren't yours, call our helpline.\"",
+      "reason": "Ostrander quote identical to same-day NWS-P066-01 and NWS-P066-02; paraphrased, fresh wording.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-120",
+      "severity": "low",
+      "story_id": "NWS-P067-01",
+      "field": "body",
+      "old": "FEMA confirmed Friday that some disaster aid applicant accounts were accessed without authorization and urged every applicant to verify their direct-deposit information.",
+      "new": "On Friday, FEMA confirmed unauthorized access to some disaster aid applicant accounts and asked every applicant to check their direct-deposit information.",
+      "reason": "Near-verbatim of NWS-P066-01 (Harborline 6); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-121",
+      "severity": "low",
+      "story_id": "NWS-P067-01",
+      "field": "body",
+      "old": "FEMA has not said how many accounts were affected or how they were accessed.",
+      "new": "How many accounts were affected, and how they were accessed, FEMA has not said.",
+      "reason": "Near-verbatim of NWS-P066-03 (wire); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-122",
+      "severity": "low",
+      "story_id": "NWS-P067-02",
+      "field": "body",
+      "old": "FEMA says some disaster aid applicant accounts were accessed without authorization and wants every applicant to verify their direct-deposit information. Here's how, step by step.",
+      "new": "Some disaster aid applicant accounts were accessed without authorization, FEMA says, so every applicant should make sure their direct-deposit information is right. Here's how, step by step.",
+      "reason": "Lede near-verbatim of Harborline 6's NWS-P066-01 and other outlets; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-123",
+      "severity": "low",
+      "story_id": "NWS-P069-01",
+      "field": "body",
+      "old": "Her application is still pending while FEMA reviews a school letter she submitted to prove she lives in her rental, she said.",
+      "new": "She said FEMA is still reviewing a school letter she submitted as proof that she lives in her rental, so her application remains pending.",
+      "reason": "Near-verbatim of NWS-P067-01 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-124",
+      "severity": "low",
+      "story_id": "NWS-P069-01",
+      "field": "body",
+      "old": "FEMA confirmed Friday that some applicant accounts had been accessed without authorization and urged every applicant to verify their direct-deposit information.",
+      "new": "On Friday, FEMA said some applicant accounts had been accessed without authorization, and it has asked all applicants to double-check their direct-deposit details.",
+      "reason": "Near-verbatim of NWS-P067-01 (Coastline) and NWS-P066-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-125",
+      "severity": "low",
+      "story_id": "NWS-P069-02",
+      "field": "body",
+      "old": "The port handles about half of US crude exports, analysts say.",
+      "new": "The port is the outlet for about half of US crude exports, according to analysts.",
+      "reason": "Background line repeated verbatim in Ledger and three Sabal stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-126",
+      "severity": "low",
+      "story_id": "NWS-P069-02",
+      "field": "body",
+      "old": "how buyers weigh two closures in two months, one from a hurricane and one from the blast.",
+      "new": "how buyers weigh this fall's back-to-back shutdowns.",
+      "reason": "Repeats Sabal's NWS-P058-03 phrase word for word; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-127",
+      "severity": "low",
+      "story_id": "NWS-P069-02",
+      "field": "body",
+      "old": "Officials have not discussed a cause beyond the Navy's statement that it was caused by an explosive device.",
+      "new": "Beyond the Navy's statement that an explosive device caused the blast, officials have said nothing about a cause.",
+      "reason": "Verbatim of Sabal's NWS-P058-03; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-128",
+      "severity": "medium",
+      "story_id": "NWS-P070-02",
+      "field": "body",
+      "old": "Here is what to do:",
+      "new": "Harborline 6's step-by-step guide from Saturday has the details. The five-minute version:",
+      "reason": "Third HL6 deposit checklist in four days; points back to the step-by-step guide and compresses.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-129",
+      "severity": "low",
+      "story_id": "NWS-P070-02",
+      "field": "body",
+      "old": "Sign in only through FEMA's official website or app. Type the address yourself. Don't tap a link in a text or email.",
+      "new": "Open FEMA's site or app yourself, not from a link someone sent you, and sign in.",
+      "reason": "Checklist item near-identical to NWS-P064-01/NWS-P067-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-130",
+      "severity": "low",
+      "story_id": "NWS-P070-02",
+      "field": "body",
+      "old": "Compare the routing and account numbers on file with your own bank records.",
+      "new": "Find your payment details and hold them up against a check or your banking app.",
+      "reason": "Checklist item near-identical to NWS-P067-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-131",
+      "severity": "low",
+      "story_id": "NWS-P070-02",
+      "field": "body",
+      "old": "If something changed that you didn't change, call the FEMA helpline and your bank the same day.",
+      "new": "See numbers you didn't enter? Call the FEMA helpline and your bank that day.",
+      "reason": "Checklist item near-identical to NWS-P064-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-132",
+      "severity": "low",
+      "story_id": "NWS-P070-02",
+      "field": "body",
+      "old": "Change your password, and don't reuse one you use anywhere else.",
+      "new": "Last, swap your password for one you've never used anywhere else.",
+      "reason": "Checklist item near-identical to NWS-P064-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-133",
+      "severity": "low",
+      "story_id": "NWS-P071-01",
+      "field": "body",
+      "old": "What to do right now:",
+      "new": "What changes for you:",
+      "reason": "Third HL6 'What to do right now' checklist in a week; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-134",
+      "severity": "low",
+      "story_id": "NWS-P071-01",
+      "field": "body",
+      "old": "Log in through FEMA's official website or app and confirm your bank details.",
+      "new": "The advice to confirm your bank details on FEMA's official website or app still stands.",
+      "reason": "Checklist item near-identical to earlier HL6 lists; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-135",
+      "severity": "low",
+      "story_id": "NWS-P071-01",
+      "field": "body",
+      "old": "Report anything unusual to FEMA and to your bank.",
+      "new": "Spot something off? FEMA and your bank both need to hear about it.",
+      "reason": "Checklist item near-identical to earlier HL6 lists; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-136",
+      "severity": "low",
+      "story_id": "NWS-P071-01",
+      "field": "body",
+      "old": "No internet? Call the FEMA helpline or visit a recovery center to check your information.",
+      "new": "Without internet access, the FEMA helpline or a recovery center can help you check your information.",
+      "reason": "Repeats the 'No internet?' item from NWS-P070-02 a day earlier; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-137",
+      "severity": "low",
+      "story_id": "NWS-P071-01",
+      "field": "body",
+      "old": "Traveling for Thanksgiving? Check before you leave. It takes five minutes.",
+      "new": "Heading out of town for Thanksgiving? Do it before you go.",
+      "reason": "Repeats the five-minutes-before-Thanksgiving framing of NWS-P070-02; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-138",
+      "severity": "medium",
+      "story_id": "NWS-P071-02",
+      "field": "body",
+      "old": "\"We've added verification, and we're asking everyone to check their deposit information, even people who think they're fine.\"",
+      "new": "\"We've added verification. Check your deposit information anyway, even if you're sure nothing changed.\"",
+      "reason": "Ostrander quote nearly identical to same-day NWS-P071-01 (Harborline 6); fresh wording.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-139",
+      "severity": "low",
+      "story_id": "NWS-P072-02",
+      "field": "body",
+      "old": "On Wednesday, the agency said 410 applicant accounts had been taken over by attackers using passwords stolen from other sites, and that affected applicants would be repaid.",
+      "new": "On Wednesday, the agency disclosed that attackers armed with passwords stolen from other sites had taken over 410 applicant accounts. It said affected applicants would be repaid.",
+      "reason": "Same-day near-verbatim of NWS-P072-01 (Anchor & Rotor); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-140",
+      "severity": "low",
+      "story_id": "NWS-P073-01",
+      "field": "body",
+      "old": "Fishing and shellfish harvesting in Nueces and Corpus Christi bays have been closed since Sept. 18 because of the oil spill.",
+      "new": "And because of the oil spill, fishing and shellfish harvesting in Nueces and Corpus Christi bays have stayed closed since Sept. 18.",
+      "reason": "Verbatim of the Ledger's NWS-P053-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-141",
+      "severity": "low",
+      "story_id": "NWS-P076-01",
+      "field": "body",
+      "old": "FEMA said last week that 410 applicant accounts were taken over by attackers using passwords stolen from other sites, and that affected applicants will be repaid.",
+      "new": "Last week FEMA said 410 applicant accounts were hijacked with passwords stolen from other sites. Affected applicants will be repaid, the agency says.",
+      "reason": "Near-verbatim of NWS-P072-01 and NWS-P072-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-142",
+      "severity": "low",
+      "story_id": "NWS-P077-01",
+      "field": "body",
+      "old": "The storm pushed about 11 feet of surge into Corpus Christi and Nueces bays and flooded about 43 square miles across the three coastal counties.",
+      "new": "A surge of about 11 feet swept into Corpus Christi and Nueces bays, and floodwater covered about 43 square miles of the three coastal counties.",
+      "reason": "Verbatim of the Ledger's NWS-P073-01 four days earlier; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-143",
+      "severity": "medium",
+      "story_id": "NWS-P077-01",
+      "field": "body",
+      "old": "\"Picture the surge as a giant hand pushing the whole bay inland for a few hours,\" he said. \"Whatever was floating in the ship channel went along for the ride.\"",
+      "new": "\"For a few hours, the surge moved the whole bay inland,\" he said. \"Whatever was floating in the ship channel moved with it.\"",
+      "reason": "Another Brooks surge analogy (already recycled once, see R2-026); plain explanation.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-144",
+      "severity": "low",
+      "story_id": "NWS-P077-01",
+      "field": "body",
+      "old": "\"I'd be wary of anyone who gives you a date.\"",
+      "new": "\"The honest answer is that we'll know more after another season of monitoring.\"",
+      "reason": "Repeats Brooks's no-date line from NWS-P043-02; fresh quote.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-145",
+      "severity": "low",
+      "story_id": "NWS-P077-02",
+      "field": "body",
+      "old": "Oct. 30: Navy says an explosive device caused the blast. Navy explosive ordnance disposal and mine countermeasures teams search the channel with the Coast Guard.",
+      "new": "Oct. 30: Navy says an explosive device caused the blast; a joint Navy-Coast Guard search of the channel is under way.",
+      "reason": "Timeline item verbatim of other outlets' blast recaps; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-146",
+      "severity": "low",
+      "story_id": "NWS-P079-01",
+      "field": "body",
+      "old": "The records do not show which figure is closer to what was removed.",
+      "new": "Which number better reflects what was actually hauled away, the records do not say.",
+      "reason": "Near-verbatim of the Ledger's NWS-P078-01 a day earlier; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-147",
+      "severity": "medium",
+      "story_id": "NWS-P079-02",
+      "field": "body",
+      "old": "Quellmar says its fuel met specifications. \"All product we delivered meets specifications,\" Nadia Kerr, the company's operations manager, said in a statement.",
+      "new": "Quellmar says its fuel met specifications, and operations manager Nadia Kerr has said the company will cooperate with the Navy's review.",
+      "reason": "Kerr's quote identical to NWS-P075-01 (Ledger); paraphrased using her earlier public statement.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-148",
+      "severity": "medium",
+      "story_id": "NWS-P079-02",
+      "field": "body",
+      "old": "\"We'll share what we can when the review is complete,\" Hale said.",
+      "new": "\"I don't have a timeline to give you,\" Hale said. \"When there's something we can release, we'll release it.\"",
+      "reason": "Hale's quote identical to NWS-P051-01; fresh quote in his brief, reassuring voice.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-149",
+      "severity": "low",
+      "story_id": "NWS-P079-03",
+      "field": "body",
+      "old": "WHAT'S TRUE: Records obtained by the Bayside Ledger show Vantorra Restoration billed for about 2.3 times the debris tonnage the county's own drone and satellite surveys estimated.",
+      "new": "WHAT'S TRUE: The Bayside Ledger obtained records showing Vantorra Restoration billed for about 2.3 times the debris tonnage estimated by the county's own drone and satellite surveys.",
+      "reason": "Verbatim of Harborline 6's NWS-P078-02 a day earlier; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-150",
+      "severity": "low",
+      "story_id": "NWS-P082-01",
+      "field": "body",
+      "old": "Health officials advised residents in September to avoid contact with oil, and emergency rooms saw respiratory and skin complaints from people near oiled shorelines.",
+      "new": "In September, emergency rooms saw respiratory and skin complaints from people near oiled shorelines, and health officials told residents to avoid contact with oil.",
+      "reason": "Near-verbatim of the same reporter's NWS-P061-01; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-151",
+      "severity": "low",
+      "story_id": "NWS-P083-02",
+      "field": "body",
+      "old": "Worried about your own aid? Log in to your FEMA account through the official website or app and check your status and deposit details.",
+      "new": "Questions about your own FEMA application go to FEMA's helpline or official website.",
+      "reason": "December deposit-check line near-identical to NWS-P079-03 four days earlier; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-152",
+      "severity": "low",
+      "story_id": "NWS-P085-01",
+      "field": "body",
+      "old": "A review is not a charge and not a finding of wrongdoing.",
+      "new": "A review is neither a charge nor a finding that anyone did wrong.",
+      "reason": "Near-verbatim of NWS-P084-02 (Harborline 6); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-153",
+      "severity": "low",
+      "story_id": "NWS-P085-01",
+      "field": "body",
+      "old": "The Navy suspended Quellmar Fuel Partners, the emergency fuel supplier for Naval Air Station Corpus Christi, on Nov. 28 pending a fuel quality review linked to the station's October generator failure.",
+      "new": "Quellmar Fuel Partners, the emergency fuel supplier for Naval Air Station Corpus Christi, was suspended by the Navy on Nov. 28 pending a review of fuel quality connected to the station's October generator failure.",
+      "reason": "Near-verbatim of Harborline 6's NWS-P084-02 a day earlier; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-154",
+      "severity": "medium",
+      "story_id": "NWS-P085-02",
+      "field": "body",
+      "old": "\"Whatever they ask for, they'll get.\"",
+      "new": "\"If they need documents from us, they'll have them.\"",
+      "reason": "Pruitt quote identical to NWS-P084-01 (Ledger) a day earlier; fresh wording.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-155",
+      "severity": "low",
+      "story_id": "NWS-P087-01",
+      "field": "body",
+      "old": "Fishing and shellfish harvesting in Nueces and Corpus Christi bays remain closed.",
+      "new": "Nueces and Corpus Christi bays are still closed to fishing and shellfish harvesting.",
+      "reason": "Verbatim of NWS-P044-06 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-156",
+      "severity": "low",
+      "story_id": "NWS-P087-01",
+      "field": "body",
+      "old": "Investigation: On Sept. 20, the Coast Guard said investigators were examining possible unauthorized remote access to the tankers' cargo-control systems, with federal cyber teams assisting.",
+      "new": "Investigation: The Coast Guard disclosed Sept. 20 that investigators, assisted by federal cyber teams, were looking at possible unauthorized remote access to the tankers' cargo-control systems.",
+      "reason": "Background item repeats Gulfwater's NWS-P013-01 nearly word for word; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-157",
+      "severity": "low",
+      "story_id": "NWS-P088-01",
+      "field": "body",
+      "old": "The station said it was aware of drone reports and working with authorities, and the FBI confirmed it was investigating.",
+      "new": "At the time, the station said it knew of the drone reports and was working with authorities; the FBI confirmed an investigation.",
+      "reason": "Near-verbatim of Harborline 6's NWS-P035-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-158",
+      "severity": "low",
+      "story_id": "NWS-P090-01",
+      "field": "body",
+      "old": "During the evacuation, residents without cars waited for county buses.",
+      "new": "When the order to leave came, those without cars depended on county buses and waited for them.",
+      "reason": "Recap sentence repeated across five stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-159",
+      "severity": "low",
+      "story_id": "NWS-P090-03",
+      "field": "body",
+      "old": "Low-income neighborhoods in Hurricane Rafael's storm surge zone received aid dollars at about half their share of residents, according to an analysis released Monday by Coastline Public Radio and Dr. Sofia Marquez, a disaster equity researcher at Texas A&M University-Corpus Christi.",
+      "new": "In Hurricane Rafael's storm surge zone, low-income neighborhoods got aid dollars at about half their share of residents, an analysis released Monday by Coastline Public Radio and Dr. Sofia Marquez, a disaster equity researcher at Texas A&M University-Corpus Christi, found.",
+      "reason": "Same-day near-verbatim of NWS-P090-01 (Coastline); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-160",
+      "severity": "low",
+      "story_id": "NWS-P090-03",
+      "field": "body",
+      "old": "During the evacuation, residents without cars waited for county buses.",
+      "new": "Residents without cars spent the evacuation waiting on county buses.",
+      "reason": "Recap sentence repeated across five stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-161",
+      "severity": "low",
+      "story_id": "NWS-P091-01",
+      "field": "body",
+      "old": "Aid: FEMA individual assistance registration opened Nov. 13 in Nueces, San Patricio and Aransas counties.",
+      "new": "Aid: Residents of Nueces, San Patricio and Aransas counties have been able to register for FEMA individual assistance since Nov. 13.",
+      "reason": "Near-verbatim of NWS-P065-01 (Anchor & Rotor); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-162",
+      "severity": "low",
+      "story_id": "NWS-P091-01",
+      "field": "body",
+      "old": "In a separate action, the Navy suspended the air station's emergency fuel supplier, Quellmar Fuel Partners, on Nov. 28 pending a fuel quality review; the company says its fuel meets specifications.",
+      "new": "Separately, on Nov. 28, the Navy suspended Quellmar Fuel Partners, which supplies emergency fuel to the air station, pending a fuel quality review. Quellmar says its fuel meets specifications.",
+      "reason": "Near-verbatim of NWS-P076-03 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-163",
+      "severity": "low",
+      "story_id": "NWS-P091-01",
+      "field": "body",
+      "old": "A federal inspector general opened a review of emergency debris and fuel contracts in the region Dec. 7.",
+      "new": "A federal inspector general followed on Dec. 7 with a review of emergency debris and fuel contracts in the region.",
+      "reason": "IG recap repeated near-verbatim in seven stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-164",
+      "severity": "low",
+      "story_id": "NWS-P091-02",
+      "field": "body",
+      "old": "The median 911 response time in those neighborhoods was 2.1 times that of high-income areas.",
+      "new": "In those neighborhoods, the median 911 response time ran 2.1 times that of high-income areas.",
+      "reason": "Verbatim of NWS-P090-01 (Coastline); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-165",
+      "severity": "low",
+      "story_id": "NWS-P091-02",
+      "field": "body",
+      "old": "If you already applied, check your deposit details through FEMA's official website or app.",
+      "new": "If you already applied and have questions about your status, FEMA's helpline can help.",
+      "reason": "Third December repeat of the HL6 deposit-check line; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-166",
+      "severity": "low",
+      "story_id": "NWS-P092-02",
+      "field": "body",
+      "old": "\"Our people carry federal photo ID, and they never charge a fee,\" said Rachel Ostrander",
+      "new": "\"Every one of our people will have federal photo ID, and none of them will charge you a fee,\" said Rachel Ostrander",
+      "reason": "Ostrander quote nearly identical to same-day NWS-P092-01 (Ledger); varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-167",
+      "severity": "low",
+      "story_id": "NWS-P092-02",
+      "field": "body",
+      "old": "Already applied? You don't need to apply again. Check your status and deposit details through the official website or app.",
+      "new": "Already applied? You don't need to apply again; your status and deposit details are on FEMA's official website or app.",
+      "reason": "Near-identical to the deposit-check line in NWS-P079-03; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-168",
+      "severity": "low",
+      "story_id": "NWS-P095-01",
+      "field": "body",
+      "old": "Elizondo, 38, is a home health aide and a mother of three.",
+      "new": "Elizondo, 38, works as a home health aide and is raising three children.",
+      "reason": "Bio sentence identical to NWS-M029-01 (Coastline, Aug.); reworded, same facts.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-169",
+      "severity": "low",
+      "story_id": "NWS-P096-01",
+      "field": "body",
+      "old": "The channel reopened Nov. 11 after a 14-day closure and a full sweep.",
+      "new": "After a 14-day closure and a full sweep, the channel reopened Nov. 11.",
+      "reason": "Verbatim of the same reporter's NWS-P082-02; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-170",
+      "severity": "low",
+      "story_id": "NWS-P096-02",
+      "field": "body",
+      "old": "Two days later, residents began posting videos of lights hovering over the air station at night.",
+      "new": "Within two days, videos of lights hovering over the air station at night were circulating online.",
+      "reason": "Near-verbatim of NWS-P022-02 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-171",
+      "severity": "low",
+      "story_id": "NWS-P096-02",
+      "field": "body",
+      "old": "The Navy said the blast was caused by an explosive device, and Navy teams later found and rendered safe a second device.",
+      "new": "The Navy blamed an explosive device for the blast, and its teams later found a second device and rendered it safe.",
+      "reason": "Verbatim of the wire's own NWS-P059-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-172",
+      "severity": "low",
+      "story_id": "NWS-P097-02",
+      "field": "body",
+      "old": "Records obtained by the Ledger and reported Dec. 1 show the company billed for about 2.3 times the debris tonnage that the county's own drone and satellite surveys estimated.",
+      "new": "The Ledger reported Dec. 1 that, according to records it obtained, the company's bills covered about 2.3 times the debris tonnage estimated by the county's own drone and satellite surveys.",
+      "reason": "Near-verbatim of the same reporter's NWS-P084-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-173",
+      "severity": "low",
+      "story_id": "NWS-P097-02",
+      "field": "body",
+      "old": "In October, the station's backup generator failed during a power interruption.",
+      "new": "The station's backup generator then failed during a power interruption in October.",
+      "reason": "Verbatim of NWS-P093-02 (Coastline); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-174",
+      "severity": "low",
+      "story_id": "NWS-P097-02",
+      "field": "body",
+      "old": "On Dec. 7, a federal inspector general opened a review of emergency debris and fuel contracts in the Coastal Bend.",
+      "new": "On Dec. 7, a federal inspector general announced a review of the Coastal Bend's emergency debris and fuel contracts.",
+      "reason": "IG recap repeated near-verbatim in seven stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-175",
+      "severity": "low",
+      "story_id": "NWS-P098-01",
+      "field": "body",
+      "old": "Public AIS data showed the identity of the fishing vessel FV Pelican Ridge broadcasting off Port Aransas one night in mid-October while the same vessel reported a position about 600 nautical miles away.",
+      "new": "One night in mid-October, public AIS data placed the identity of the fishing vessel FV Pelican Ridge off Port Aransas, even as the same vessel reported a position about 600 nautical miles away.",
+      "reason": "Near-verbatim of NWS-P048-02 (wire); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-176",
+      "severity": "low",
+      "story_id": "NWS-P098-01",
+      "field": "body",
+      "old": "On Sunday, the Navy ordered a security review at its Texas air stations, citing drone reports and the channel attack.",
+      "new": "The Navy on Sunday ordered its Texas air stations to undergo a security review, pointing to the drone reports and the channel attack.",
+      "reason": "Near-verbatim of the Coastline headline (NWS-P096-01); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-177",
+      "severity": "low",
+      "story_id": "NWS-P099-01",
+      "field": "body",
+      "old": "During the mandatory evacuation, residents without cars waited for county buses.",
+      "new": "Under the mandatory evacuation, households without cars had to wait for the county's buses.",
+      "reason": "Recap sentence repeated across five stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-178",
+      "severity": "low",
+      "story_id": "NWS-P101-01",
+      "field": "body",
+      "old": "An analysis released last week by Coastline Public Radio and a Texas A&M University-Corpus Christi researcher found low-income surge-zone neighborhoods received aid dollars at about half their share of residents.",
+      "new": "Last week, Coastline Public Radio and a Texas A&M University-Corpus Christi researcher published the numbers: aid dollars reached low-income surge-zone neighborhoods at about half their share of residents.",
+      "reason": "Recap repeated near-verbatim in five stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-179",
+      "severity": "low",
+      "story_id": "NWS-P101-01",
+      "field": "body",
+      "old": "Two days later, Nueces County and FEMA announced door-to-door aid registration in those neighborhoods.",
+      "new": "Two days after that, the county and FEMA said registration teams would go door to door there.",
+      "reason": "Near-verbatim of the same reporter's NWS-P095-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-180",
+      "severity": "low",
+      "story_id": "NWS-P102-01",
+      "field": "body",
+      "old": "A federal inspector general opened a review of emergency debris and fuel contracts in the Coastal Bend on Dec. 7.",
+      "new": "Separately, a federal inspector general has been reviewing the region's emergency debris and fuel contracts since Dec. 7.",
+      "reason": "IG recap repeated near-verbatim in seven stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-181",
+      "severity": "medium",
+      "story_id": "NWS-P102-02",
+      "field": "body",
+      "old": "\"We can confirm we are investigating. We have no further comment,\" says Mark Ellery, a spokesman for the FBI's Houston Division.",
+      "new": "\"I can confirm the investigation, and that's all I can say today,\" says Mark Ellery, a spokesman for the FBI's Houston Division.",
+      "reason": "Ellery quote identical to NWS-P048-02 and NWS-P009-03; fresh wording in his voice.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-182",
+      "severity": "low",
+      "story_id": "NWS-P102-02",
+      "field": "body",
+      "old": "Quellmar holds a $2.1 million emergency fuel contract for NAS Corpus Christi. The Navy suspended it in November",
+      "new": "Quellmar's emergency fuel contract with NAS Corpus Christi is worth $2.1 million. The Navy suspended the company in November",
+      "reason": "Same-day near-verbatim of NWS-P102-01 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-183",
+      "severity": "low",
+      "story_id": "NWS-P102-02",
+      "field": "body",
+      "old": "A federal inspector general is also reviewing emergency debris and fuel contracts in the Coastal Bend. It's not clear whether today's searches are connected to that review.",
+      "new": "Emergency debris and fuel contracts in the Coastal Bend are also under review by a federal inspector general. Officials have not said whether today's searches are connected to that review.",
+      "reason": "Both sentences near-verbatim of same-day NWS-P102-01 (Ledger); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-184",
+      "severity": "low",
+      "story_id": "NWS-P103-01",
+      "field": "body",
+      "old": "And on Dec. 7, a federal inspector general opened a review of emergency debris and fuel contracts across the Coastal Bend.",
+      "new": "And a federal inspector general's review of emergency debris and fuel contracts across the Coastal Bend has been under way since Dec. 7.",
+      "reason": "IG recap repeated near-verbatim in seven stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-185",
+      "severity": "low",
+      "story_id": "NWS-P105-01",
+      "field": "body",
+      "old": "On Sept. 22, Brightwake Marine Systems, a vendor that maintains tanker cargo systems, said its remote-maintenance credentials had been misused and that it had revoked all remote access.",
+      "new": "On Sept. 22, vendor Brightwake Marine Systems, which maintains tanker cargo systems, reported that its remote-maintenance credentials had been misused and said it had revoked all remote access.",
+      "reason": "Near-verbatim of Gulfwater's NWS-P087-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-186",
+      "severity": "low",
+      "story_id": "NWS-P105-01",
+      "field": "body",
+      "old": "No finding on the source of the tanker access has been released.",
+      "new": "Officials have not released any finding on the source of the tanker access.",
+      "reason": "Near-verbatim of Gulfwater's NWS-P098-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-187",
+      "severity": "low",
+      "story_id": "NWS-P107-01",
+      "field": "body",
+      "old": "Church and neighborhood hubs handed out food and water before official distribution reached some neighborhoods.",
+      "new": "In some neighborhoods, churches and neighborhood hubs were handing out food and water before official distribution arrived.",
+      "reason": "Near-verbatim of NWS-P005-04 and NWS-P015-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-188",
+      "severity": "low",
+      "story_id": "NWS-P107-01",
+      "field": "body",
+      "old": "October. The boil-water notice was lifted Oct. 23 after pump repairs and testing.",
+      "new": "October. Pump repairs and testing cleared the way for the city to lift the boil-water notice Oct. 23.",
+      "reason": "Near-verbatim of the Ledger's NWS-P098-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-189",
+      "severity": "low",
+      "story_id": "NWS-P107-01",
+      "field": "body",
+      "old": "December. An analysis by Coastline Public Radio and a Texas A&M University-Corpus Christi researcher found low-income surge-zone neighborhoods received aid dollars at about half their share of residents.",
+      "new": "December. Coastline Public Radio and a Texas A&M University-Corpus Christi researcher reported that low-income surge-zone neighborhoods had received aid dollars at about half their share of residents.",
+      "reason": "Recap repeated near-verbatim in five stories; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-190",
+      "severity": "low",
+      "story_id": "NWS-P108-01",
+      "field": "body",
+      "old": "October. The station became a relief hub, with 26 military C-17 flights and 14 civilian charters landing over ten days.",
+      "new": "October. Over ten days, 26 military C-17 flights and 14 civilian charters landed at the station as it served as a relief hub.",
+      "reason": "Repeats Anchor & Rotor's own NWS-P094-02 sentence; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-191",
+      "severity": "low",
+      "story_id": "NWS-P108-01",
+      "field": "body",
+      "old": "December. The Navy ordered a security review at its Texas air stations, citing drone reports and the channel attack.",
+      "new": "December. Citing the drone reports and the channel attack, the Navy ordered a security review at its Texas air stations.",
+      "reason": "Near-verbatim of NWS-P096-01 and NWS-P098-01; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-192",
+      "severity": "low",
+      "story_id": "NWS-P109-01",
+      "field": "body",
+      "old": "FEMA has added extra verification and says affected applicants will be repaid.",
+      "new": "Affected applicants will be repaid, the agency says, and accounts now have extra verification.",
+      "reason": "Near-verbatim of Harborline 6's NWS-P093-01; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-193",
+      "severity": "low",
+      "story_id": "NWS-P112-02",
+      "field": "body",
+      "old": "Six days after landfall, the Coast Guard said investigators were examining possible unauthorized remote access to the tankers' cargo-control systems.",
+      "new": "By Sept. 20, six days after landfall, investigators were examining possible unauthorized remote access to the tankers' cargo-control systems, the Coast Guard said.",
+      "reason": "Same-day near-verbatim of NWS-P112-01 (wire); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-194",
+      "severity": "low",
+      "story_id": "NWS-P112-03",
+      "field": "body",
+      "old": "Investigation history. On Sept. 20, the Coast Guard said investigators were examining possible unauthorized remote access to the tankers' cargo-control systems, with federal cyber teams assisting.",
+      "new": "Investigation history. The cyber thread dates to Sept. 20, when the Coast Guard first said it was looking into possible unauthorized remote access to the tankers' cargo-control systems with help from federal cyber teams.",
+      "reason": "Background item repeats Gulfwater's NWS-P013-01 and NWS-P087-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-195",
+      "severity": "low",
+      "story_id": "NWS-P112-03",
+      "field": "body",
+      "old": "Port condition. The ship channel has been open since Nov. 11, when it reopened after a 14-day closure and full sweep.",
+      "new": "Port condition. Open. The channel returned to service Nov. 11 after a full sweep ended its 14-day closure.",
+      "reason": "Repeats Gulfwater's own NWS-P098-01 sentence; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-196",
+      "severity": "low",
+      "story_id": "NWS-P112-03",
+      "field": "body",
+      "old": "On Dec. 28, the Coast Guard and the Cybersecurity and Infrastructure Security Agency issued a joint maritime cyber advisory urging vessel operators to review vendor remote access to cargo systems.",
+      "new": "The Dec. 28 joint maritime cyber advisory from the Coast Guard and the Cybersecurity and Infrastructure Security Agency tells vessel operators to review vendor remote access to cargo systems.",
+      "reason": "Near-verbatim of Gulfwater's NWS-P105-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-197",
+      "severity": "low",
+      "story_id": "NWS-P112-04",
+      "field": "body",
+      "old": "The channel reopened Nov. 11 after a 14-day closure and a full sweep.",
+      "new": "Once the full sweep was done, the channel reopened Nov. 11, two weeks after the blast.",
+      "reason": "Verbatim of NWS-P082-02 and NWS-P096-01 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-198",
+      "severity": "low",
+      "story_id": "NWS-P113-02",
+      "field": "body",
+      "old": "Last week, the Coast Guard and the Cybersecurity and Infrastructure Security Agency urged vessel operators to review vendor remote access to cargo systems.",
+      "new": "That came a week after the Coast Guard and the Cybersecurity and Infrastructure Security Agency told vessel operators to review the remote access their vendors have to cargo systems.",
+      "reason": "Near-verbatim of NWS-P106-01 (Coastline); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-199",
+      "severity": "low",
+      "story_id": "NWS-P114-01",
+      "field": "body",
+      "old": "Vantorra received a $14.2 million sole-source debris contract from the county Sept. 24.",
+      "new": "The county awarded Vantorra a $14.2 million sole-source debris contract on Sept. 24.",
+      "reason": "Verbatim of the same reporter's NWS-P102-01; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-200",
+      "severity": "low",
+      "story_id": "NWS-P114-01",
+      "field": "body",
+      "old": "Quellmar received a $2.1 million emergency fuel contract for Naval Air Station Corpus Christi.",
+      "new": "Quellmar was awarded a $2.1 million contract to supply emergency fuel to Naval Air Station Corpus Christi.",
+      "reason": "Near-verbatim of the same reporter's NWS-P102-01; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-201",
+      "severity": "low",
+      "story_id": "NWS-P114-03",
+      "field": "body",
+      "old": "The filing says both firms are owned by an offshore company, Brannoch Maritime Holdings.",
+      "new": "According to the filing, an offshore company, Brannoch Maritime Holdings, owns both firms.",
+      "reason": "Same-day near-verbatim of NWS-P114-02 (Harborline 6); reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-202",
+      "severity": "low",
+      "story_id": "NWS-P115-02",
+      "field": "body",
+      "old": "In October, the station's backup generator failed during a power interruption. On Nov. 28, the Navy suspended Quellmar pending a fuel quality review linked to that failure.",
+      "new": "The station's backup generator failed during an October power interruption, and the Navy suspended Quellmar on Nov. 28 pending a fuel quality review tied to that failure.",
+      "reason": "Two sentences verbatim of NWS-P093-02 and NWS-P097-02; merged and reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-203",
+      "severity": "low",
+      "story_id": "NWS-P116-01",
+      "field": "body",
+      "old": "and that bank accounts tied to the firms received about $3.9 million in diverted disaster aid.",
+      "new": "and that about $3.9 million in diverted disaster aid landed in bank accounts tied to the firms.",
+      "reason": "Near-verbatim of NWS-P115-02 (Anchor & Rotor); reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-204",
+      "severity": "low",
+      "story_id": "NWS-P116-01",
+      "field": "body",
+      "old": "Oct. 25: The station says its backup generator failed during a power interruption.",
+      "new": "Oct. 25: During a power interruption, the station's backup generator fails, the station says.",
+      "reason": "Near-verbatim of the Ledger's NWS-P075-01; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-205",
+      "severity": "low",
+      "story_id": "NWS-P116-01",
+      "field": "body",
+      "old": "Nov. 28: The Navy suspends Quellmar pending a fuel quality review linked to the generator failure.",
+      "new": "Nov. 28: Quellmar is suspended by the Navy, pending a fuel quality review tied to the generator failure.",
+      "reason": "Near-verbatim of the same reporter's NWS-P097-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-206",
+      "severity": "low",
+      "story_id": "NWS-P116-01",
+      "field": "body",
+      "old": "Dec. 3: The county pauses payments to Vantorra pending an audit.",
+      "new": "Dec. 3: Payments to Vantorra are put on hold while the county audits its billing.",
+      "reason": "Near-verbatim of the same reporter's NWS-P097-02; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-207",
+      "severity": "low",
+      "story_id": "NWS-P116-01",
+      "field": "body",
+      "old": "Dec. 7: A federal inspector general opens a review of emergency debris and fuel contracts in the Coastal Bend.",
+      "new": "Dec. 7: Emergency debris and fuel contracts across the Coastal Bend come under a federal inspector general's review.",
+      "reason": "Timeline item verbatim of the Ledger's NWS-P084-01 headline; varied.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-208",
+      "severity": "low",
+      "story_id": "NWS-P118-01",
+      "field": "body",
+      "old": "The Coast Guard and the Cybersecurity and Infrastructure Security Agency urged vessel operators to review vendor remote access to cargo systems.",
+      "new": "Vessel operators were told by the Coast Guard and the Cybersecurity and Infrastructure Security Agency to review vendor remote access to cargo systems.",
+      "reason": "Near-verbatim of NWS-P106-01 and NWS-P113-02; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-209",
+      "severity": "low",
+      "story_id": "NWS-P119-02",
+      "field": "body",
+      "old": "The Navy ordered a security review at its Texas air stations.",
+      "new": "The Navy put its Texas air stations under a security review.",
+      "reason": "Near-verbatim of the Ledger's NWS-P113-03; reworded.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-210",
+      "severity": "low",
+      "story_id": "NWS-P119-02",
+      "field": "body",
+      "old": "A December analysis by Coastline Public Radio and a Texas A&M University-Corpus Christi researcher found low-income surge-zone neighborhoods like hers received aid dollars at about half their share of residents.",
+      "new": "Low-income surge-zone neighborhoods like hers received aid dollars at about half their share of residents, according to a December analysis by Coastline Public Radio and a Texas A&M University-Corpus Christi researcher.",
+      "reason": "Recap repeated near-verbatim in five stories; reordered.",
+      "status": "applied"
+    },
+    {
+      "id": "W3-211",
+      "severity": "low",
+      "story_id": "NWS-P119-02",
+      "field": "body",
+      "old": "Last week, US officials attributed the channel devices, along with an intrusion into two tankers' cargo systems, to a foreign government they did not name.",
+      "new": "Last week, US officials said a foreign government, which they did not name, was behind both the channel devices and an intrusion into two tankers' cargo systems.",
+      "reason": "Near-verbatim of NWS-P118-01 (Ledger); reworded.",
+      "status": "applied"
+    }
+  ]
+}

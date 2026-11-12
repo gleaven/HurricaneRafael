@@ -1,0 +1,834 @@
+{
+ "blocking_gaps": 0,
+ "threads": [
+  {
+   "thread": "T1",
+   "name": "Storm cascade",
+   "events": 34,
+   "days": [
+    -60,
+    110
+   ],
+   "stages": {
+    "beginning": 11,
+    "escalation": 12,
+    "discovery": 44,
+    "resolution": 17
+   },
+   "public_facts": 36,
+   "first_public_day": -21,
+   "stories": 520,
+   "story_days": [
+    -60,
+    119
+   ],
+   "data_streams": [
+    "adsb",
+    "ais",
+    "avl",
+    "base_status_reports",
+    "cad_911",
+    "cargo_manifests",
+    "census",
+    "damage_assessment",
+    "drone_telemetry",
+    "eas_alerts",
+    "ed_visits",
+    "outage_map",
+    "port_arrivals",
+    "port_conditions",
+    "port_surveillance",
+    "sar_missions",
+    "satellite",
+    "scada_historian",
+    "storm_advisories",
+    "syndromic",
+    "tide_river_gauges",
+    "wastewater",
+    "weather",
+    "work_orders"
+   ],
+   "observations": 79,
+   "not_observable_events": [],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T2",
+   "name": "Dark vessel",
+   "events": 18,
+   "days": [
+    -50,
+    100
+   ],
+   "stages": {
+    "beginning": 6,
+    "escalation": 6,
+    "discovery": 22,
+    "resolution": 9
+   },
+   "public_facts": 15,
+   "first_public_day": -60,
+   "stories": 259,
+   "story_days": [
+    -60,
+    119
+   ],
+   "data_streams": [
+    "ais",
+    "base_status_reports",
+    "broadcast_logs",
+    "contracts",
+    "fuel_deliveries",
+    "insurance_claims",
+    "port_arrivals",
+    "port_conditions",
+    "port_surveillance",
+    "satellite",
+    "work_orders"
+   ],
+   "observations": 38,
+   "not_observable_events": [
+    "EVT-0603"
+   ],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T3",
+   "name": "Fraud ring",
+   "events": 11,
+   "days": [
+    -40,
+    100
+   ],
+   "stages": {
+    "beginning": 3,
+    "escalation": 5,
+    "discovery": 14,
+    "resolution": 5
+   },
+   "public_facts": 9,
+   "first_public_day": 10,
+   "stories": 175,
+   "story_days": [
+    3,
+    119
+   ],
+   "data_streams": [
+    "adsb",
+    "aid_applications",
+    "ais",
+    "contracts",
+    "drone_detections",
+    "drone_telemetry",
+    "financial_transactions",
+    "fuel_deliveries",
+    "satellite",
+    "work_orders"
+   ],
+   "observations": 18,
+   "not_observable_events": [
+    "EVT-0603"
+   ],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T4",
+   "name": "KESTREL campaign",
+   "events": 7,
+   "days": [
+    -35,
+    100
+   ],
+   "stages": {
+    "beginning": 2,
+    "escalation": 3,
+    "discovery": 12,
+    "resolution": 4
+   },
+   "public_facts": 10,
+   "first_public_day": 2,
+   "stories": 120,
+   "story_days": [
+    2,
+    119
+   ],
+   "data_streams": [
+    "aid_applications",
+    "financial_transactions",
+    "host_audit_logs",
+    "portal_access_logs",
+    "social_media"
+   ],
+   "observations": 10,
+   "not_observable_events": [
+    "EVT-0603"
+   ],
+   "answer_key_steps": 8,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T5",
+   "name": "Equity gap",
+   "events": 12,
+   "days": [
+    -7,
+    90
+   ],
+   "stages": {
+    "beginning": 4,
+    "escalation": 4,
+    "discovery": 10,
+    "resolution": 4
+   },
+   "public_facts": 5,
+   "first_public_day": 1,
+   "stories": 210,
+   "story_days": [
+    -45,
+    119
+   ],
+   "data_streams": [
+    "aid_applications",
+    "avl",
+    "cad_911",
+    "census",
+    "drone_telemetry",
+    "ed_visits",
+    "sar_missions",
+    "shelters",
+    "social_media"
+   ],
+   "observations": 20,
+   "not_observable_events": [
+    "EVT-1306"
+   ],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T6",
+   "name": "Tanker cyberattack",
+   "events": 24,
+   "days": [
+    -33,
+    105
+   ],
+   "stages": {
+    "beginning": 8,
+    "escalation": 8,
+    "discovery": 32,
+    "resolution": 17
+   },
+   "public_facts": 20,
+   "first_public_day": -2,
+   "stories": 275,
+   "story_days": [
+    -3,
+    119
+   ],
+   "data_streams": [
+    "adsb",
+    "air_quality",
+    "ais",
+    "drone_detections",
+    "drone_telemetry",
+    "ed_visits",
+    "host_audit_logs",
+    "insurance_claims",
+    "port_arrivals",
+    "port_conditions",
+    "port_surveillance",
+    "satellite",
+    "syndromic",
+    "vessel_ot_logs",
+    "water_quality"
+   ],
+   "observations": 47,
+   "not_observable_events": [
+    "EVT-0603"
+   ],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T7",
+   "name": "Opportunistic military attack",
+   "events": 11,
+   "days": [
+    -40,
+    100
+   ],
+   "stages": {
+    "beginning": 3,
+    "escalation": 5,
+    "discovery": 24,
+    "resolution": 6
+   },
+   "public_facts": 18,
+   "first_public_day": -40,
+   "stories": 342,
+   "story_days": [
+    -60,
+    119
+   ],
+   "data_streams": [
+    "adsb",
+    "ais",
+    "base_status_reports",
+    "cad_911",
+    "cargo_manifests",
+    "drone_detections",
+    "port_arrivals",
+    "port_conditions",
+    "port_surveillance",
+    "satellite",
+    "social_media"
+   ],
+   "observations": 25,
+   "not_observable_events": [
+    "EVT-0603"
+   ],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T11",
+   "name": "Aerial damage assessment corridor",
+   "events": 8,
+   "days": [
+    -2,
+    45
+   ],
+   "stages": {
+    "beginning": 2,
+    "escalation": 4,
+    "discovery": 8,
+    "resolution": 4
+   },
+   "public_facts": 4,
+   "first_public_day": 0,
+   "stories": 13,
+   "story_days": [
+    0,
+    45
+   ],
+   "data_streams": [
+    "adsb",
+    "damage_assessment",
+    "drone_telemetry",
+    "outage_map",
+    "satellite"
+   ],
+   "observations": 16,
+   "not_observable_events": [],
+   "answer_key_steps": 14,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T12",
+   "name": "Dark vessel and port surveillance",
+   "events": 11,
+   "days": [
+    -7,
+    31
+   ],
+   "stages": {
+    "beginning": 3,
+    "escalation": 5,
+    "discovery": 13,
+    "resolution": 2
+   },
+   "public_facts": 6,
+   "first_public_day": -1,
+   "stories": 103,
+   "story_days": [
+    -55,
+    119
+   ],
+   "data_streams": [
+    "ais",
+    "port_conditions",
+    "port_surveillance",
+    "satellite",
+    "vessel_ot_logs"
+   ],
+   "observations": 23,
+   "not_observable_events": [],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T13",
+   "name": "911 dispatch corpus",
+   "events": 9,
+   "days": [
+    0,
+    45
+   ],
+   "stages": {
+    "beginning": 3,
+    "escalation": 3,
+    "discovery": 11,
+    "resolution": 4
+   },
+   "public_facts": 6,
+   "first_public_day": 0,
+   "stories": 17,
+   "story_days": [
+    0,
+    45
+   ],
+   "data_streams": [
+    "avl",
+    "cad_911",
+    "eas_alerts",
+    "sar_missions"
+   ],
+   "observations": 15,
+   "not_observable_events": [
+    "EVT-1306"
+   ],
+   "answer_key_steps": 14,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T14",
+   "name": "Bilingual Emergency Communications",
+   "events": 12,
+   "days": [
+    -5,
+    45
+   ],
+   "stages": {
+    "beginning": 4,
+    "escalation": 4,
+    "discovery": 20,
+    "resolution": 8
+   },
+   "public_facts": 9,
+   "first_public_day": -3,
+   "stories": 29,
+   "story_days": [
+    -3,
+    119
+   ],
+   "data_streams": [
+    "broadcast_logs",
+    "census",
+    "eas_alerts",
+    "ed_visits",
+    "shelters",
+    "syndromic"
+   ],
+   "observations": 27,
+   "not_observable_events": [],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T15",
+   "name": "Social Media Influence Operation",
+   "events": 9,
+   "days": [
+    -7,
+    38
+   ],
+   "stages": {
+    "beginning": 3,
+    "escalation": 3,
+    "discovery": 10,
+    "resolution": 6
+   },
+   "public_facts": 4,
+   "first_public_day": 21,
+   "stories": 34,
+   "story_days": [
+    2,
+    83
+   ],
+   "data_streams": [
+    "shelters",
+    "social_media"
+   ],
+   "observations": 13,
+   "not_observable_events": [
+    "EVT-1507"
+   ],
+   "answer_key_steps": 9,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T16",
+   "name": "Hospital Surge and Clinical Triage",
+   "events": 10,
+   "days": [
+    -2,
+    60
+   ],
+   "stages": {
+    "beginning": 3,
+    "escalation": 4,
+    "discovery": 12,
+    "resolution": 5
+   },
+   "public_facts": 5,
+   "first_public_day": 0,
+   "stories": 48,
+   "story_days": [
+    0,
+    119
+   ],
+   "data_streams": [
+    "ed_visits",
+    "fuel_deliveries",
+    "hospital_capacity",
+    "outage_map",
+    "scada_historian",
+    "syndromic"
+   ],
+   "observations": 20,
+   "not_observable_events": [],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T17",
+   "name": "Search and rescue operations",
+   "events": 8,
+   "days": [
+    -1,
+    7
+   ],
+   "stages": {
+    "beginning": 2,
+    "escalation": 4,
+    "discovery": 11,
+    "resolution": 4
+   },
+   "public_facts": 5,
+   "first_public_day": 1,
+   "stories": 16,
+   "story_days": [
+    1,
+    10
+   ],
+   "data_streams": [
+    "adsb",
+    "avl",
+    "cad_911",
+    "drone_telemetry",
+    "sar_missions"
+   ],
+   "observations": 15,
+   "not_observable_events": [],
+   "answer_key_steps": 14,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T19",
+   "name": "Drone and counter-UAV surveillance",
+   "events": 8,
+   "days": [
+    -10,
+    30
+   ],
+   "stages": {
+    "beginning": 2,
+    "escalation": 4,
+    "discovery": 10,
+    "resolution": 4
+   },
+   "public_facts": 4,
+   "first_public_day": -2,
+   "stories": 23,
+   "story_days": [
+    -2,
+    109
+   ],
+   "data_streams": [
+    "ais",
+    "drone_detections"
+   ],
+   "observations": 11,
+   "not_observable_events": [],
+   "answer_key_steps": 8,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T20",
+   "name": "Environmental sensors and spill tracking",
+   "events": 9,
+   "days": [
+    0,
+    60
+   ],
+   "stages": {
+    "beginning": 3,
+    "escalation": 3,
+    "discovery": 13,
+    "resolution": 6
+   },
+   "public_facts": 6,
+   "first_public_day": 2,
+   "stories": 91,
+   "story_days": [
+    0,
+    119
+   ],
+   "data_streams": [
+    "adsb",
+    "air_quality",
+    "scada_historian",
+    "syndromic",
+    "vessel_ot_logs",
+    "water_quality"
+   ],
+   "observations": 15,
+   "not_observable_events": [
+    "EVT-2005"
+   ],
+   "answer_key_steps": 10,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T21",
+   "name": "Broadcast and emergency alert corpus",
+   "events": 8,
+   "days": [
+    -5,
+    42
+   ],
+   "stages": {
+    "beginning": 2,
+    "escalation": 4,
+    "discovery": 14,
+    "resolution": 4
+   },
+   "public_facts": 7,
+   "first_public_day": -2,
+   "stories": 19,
+   "story_days": [
+    -2,
+    105
+   ],
+   "data_streams": [
+    "broadcast_logs",
+    "eas_alerts"
+   ],
+   "observations": 14,
+   "not_observable_events": [],
+   "answer_key_steps": 13,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T22",
+   "name": "Insurance and disaster fraud",
+   "events": 7,
+   "days": [
+    -30,
+    90
+   ],
+   "stages": {
+    "beginning": 2,
+    "escalation": 3,
+    "discovery": 8,
+    "resolution": 2
+   },
+   "public_facts": 5,
+   "first_public_day": 3,
+   "stories": 16,
+   "story_days": [
+    3,
+    104
+   ],
+   "data_streams": [
+    "aid_applications",
+    "broadcast_logs",
+    "insurance_claims"
+   ],
+   "observations": 9,
+   "not_observable_events": [],
+   "answer_key_steps": 4,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T8",
+   "name": "Grid intrusion",
+   "events": 31,
+   "days": [
+    -15,
+    35
+   ],
+   "stages": {
+    "beginning": 10,
+    "escalation": 11,
+    "discovery": 32,
+    "resolution": 16
+   },
+   "public_facts": 10,
+   "first_public_day": 14,
+   "stories": 27,
+   "story_days": [
+    10,
+    105
+   ],
+   "data_streams": [
+    "cad_911",
+    "damage_assessment",
+    "drone_detections",
+    "drone_telemetry",
+    "fuel_deliveries",
+    "hospital_capacity",
+    "host_audit_logs",
+    "outage_map",
+    "sar_missions",
+    "scada_historian",
+    "siem_alerts",
+    "social_media",
+    "work_orders",
+    "zeek_logs"
+   ],
+   "observations": 57,
+   "not_observable_events": [
+    "EVT-1306"
+   ],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T9",
+   "name": "Water SCADA manipulation",
+   "events": 18,
+   "days": [
+    -3,
+    42
+   ],
+   "stages": {
+    "beginning": 6,
+    "escalation": 6,
+    "discovery": 29,
+    "resolution": 10
+   },
+   "public_facts": 13,
+   "first_public_day": 2,
+   "stories": 100,
+   "story_days": [
+    0,
+    111
+   ],
+   "data_streams": [
+    "broadcast_logs",
+    "cad_911",
+    "census",
+    "damage_assessment",
+    "eas_alerts",
+    "ed_visits",
+    "hospital_capacity",
+    "host_audit_logs",
+    "sar_missions",
+    "scada_historian",
+    "siem_alerts",
+    "syndromic",
+    "work_orders"
+   ],
+   "observations": 35,
+   "not_observable_events": [],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T10",
+   "name": "Hiding in the storm",
+   "events": 17,
+   "days": [
+    -15,
+    30
+   ],
+   "stages": {
+    "beginning": 5,
+    "escalation": 7,
+    "discovery": 16,
+    "resolution": 9
+   },
+   "public_facts": 5,
+   "first_public_day": 21,
+   "stories": 25,
+   "story_days": [
+    14,
+    105
+   ],
+   "data_streams": [
+    "host_audit_logs",
+    "outage_map",
+    "scada_historian",
+    "siem_alerts",
+    "social_media",
+    "work_orders",
+    "zeek_logs"
+   ],
+   "observations": 28,
+   "not_observable_events": [
+    "EVT-1507"
+   ],
+   "answer_key_steps": 16,
+   "gaps": [],
+   "needs_story_content": []
+  },
+  {
+   "thread": "T18",
+   "name": "Utility SOC / SIEM telemetry",
+   "events": 8,
+   "days": [
+    -14,
+    35
+   ],
+   "stages": {
+    "beginning": 2,
+    "escalation": 4,
+    "discovery": 11,
+    "resolution": 5
+   },
+   "public_facts": 4,
+   "first_public_day": 20,
+   "stories": 24,
+   "story_days": [
+    14,
+    105
+   ],
+   "data_streams": [
+    "host_audit_logs",
+    "siem_alerts",
+    "work_orders",
+    "zeek_logs"
+   ],
+   "observations": 14,
+   "not_observable_events": [],
+   "answer_key_steps": 14,
+   "gaps": [],
+   "needs_story_content": []
+  }
+ ]
+}

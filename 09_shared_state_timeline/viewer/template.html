@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rafael Shared State Timeline</title>
+<style>
+:root{--bg:#f4f6f8;--panel:#ffffff;--ink:#1c2430;--muted:#5b6676;--faint:#8a95a5;--grid:#e4e8ed;--line:#d3d9e1;--accent:#2f6fb0;--accent-ink:#ffffff;
+ --phase:rgba(20,40,70,.035);--hover:rgba(47,111,176,.08);--play:#d6336c;--chip:#eef1f5;--shadow:0 1px 2px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.06)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e131a;--panel:#151c25;--ink:#e5eaf0;--muted:#9aa7b8;--faint:#6f7c8d;--grid:#212b37;--line:#2a3544;
+ --accent:#5b9be0;--accent-ink:#0e131a;--phase:rgba(255,255,255,.03);--hover:rgba(91,155,224,.12);--play:#ff5c8a;--chip:#1e2733;--shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#0e131a;--panel:#151c25;--ink:#e5eaf0;--muted:#9aa7b8;--faint:#6f7c8d;--grid:#212b37;--line:#2a3544;--accent:#5b9be0;--accent-ink:#0e131a;
+ --phase:rgba(255,255,255,.03);--hover:rgba(91,155,224,.12);--play:#ff5c8a;--chip:#1e2733;--shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:13px/1.35 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow:hidden}
+#app{display:grid;grid-template-rows:auto auto 1fr auto;height:100vh}
+header{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line)}
+h1{font-size:15px;margin:0 8px 0 0;font-weight:650;letter-spacing:.2px;white-space:nowrap}
+h1 small{font-weight:500;color:var(--muted);margin-left:6px}
+.ctl{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.lbl{color:var(--muted);font-size:12px}
+button,select,input{font:inherit;color:var(--ink);background:var(--chip);border:1px solid var(--line);border-radius:7px;padding:4px 9px;cursor:pointer}
+input[type=search]{cursor:text;width:150px}
+button:hover,select:hover{border-color:var(--accent)}
+button.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;border-radius:0;border-right:1px solid var(--line);padding:4px 9px;background:var(--chip)}
+.seg button:last-child{border-right:0}
+.chip{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:3px 9px;font-size:12px}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+#ovwrap{padding:6px 16px 6px 16px;background:var(--panel);border-bottom:1px solid var(--line)}
+#ov{display:block;width:100%;height:58px;cursor:grab}
+#body{display:grid;grid-template-columns:1fr 360px;min-height:0}
+#scroller{overflow:auto;position:relative;min-width:0}
+#axisRow{position:sticky;top:0;z-index:5;display:flex;background:var(--panel);border-bottom:1px solid var(--line)}
+#axisHead{flex:none;width:250px;padding:6px 10px;font-size:11px;color:var(--muted);border-right:1px solid var(--line);display:flex;align-items:flex-end}
+#axis{display:block;height:40px;flex:1}
+#rows{display:flex;position:relative}
+#labels{flex:none;width:250px;position:relative;border-right:1px solid var(--line);background:var(--panel);z-index:3}
+.row{position:absolute;left:0;right:0;display:flex;align-items:center;gap:6px;padding:0 8px 0 10px;white-space:nowrap;overflow:hidden;border-bottom:1px solid transparent}
+.row.var{font-size:12px}.row.var:hover{background:var(--hover)}
+.row .name{overflow:hidden;text-overflow:ellipsis;flex:1}
+.row .val{color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums;max-width:95px;overflow:hidden;text-overflow:ellipsis}
+.row.group{font-weight:650;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);cursor:pointer;background:var(--bg);border-top:1px solid var(--line)}
+.row.group .chev{display:inline-block;width:12px;transition:transform .15s}.row.group.collapsed .chev{transform:rotate(-90deg)}
+.badge{font-size:9.5px;font-weight:700;letter-spacing:.4px;border-radius:4px;padding:1px 4px;flex:none}
+.b-truth{background:#7b5ea7;color:#fff}.b-int{background:#5b6676;color:#fff}.b-asm{border:1px dashed var(--faint);color:var(--muted)}
+.row.dim{opacity:.35}
+#cwrap{flex:1;position:relative;min-width:0}
+#main{display:block;cursor:crosshair}
+aside{border-left:1px solid var(--line);background:var(--panel);overflow:auto;padding:12px 14px 20px}
+aside h2{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin:16px 0 6px;font-weight:650}
+#clock{font-size:17px;font-weight:650;font-variant-numeric:tabular-nums}
+#clock2{color:var(--muted);font-size:12px;margin-top:2px}
+#map{width:100%;height:auto;display:block;border-radius:10px;background:var(--bg);margin-top:10px}
+.snapg{margin:8px 0 2px;font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.5px}
+.snap{display:grid;grid-template-columns:1fr auto;gap:2px 8px;align-items:center;font-size:12px;padding:2px 0}
+.snap .k{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.snap .v{font-variant-numeric:tabular-nums;text-align:right;max-width:190px}
+.pill{display:inline-block;border-radius:6px;padding:1px 7px;font-size:11.5px;font-weight:600;max-width:190px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle}
+.evl{display:flex;gap:8px;padding:6px 8px;border-radius:8px;cursor:pointer;font-size:12px;align-items:flex-start}
+.evl:hover{background:var(--hover)}
+.evl .when{color:var(--muted);font-size:11px;white-space:nowrap;font-variant-numeric:tabular-nums}
+#detail{border:1px solid var(--line);border-radius:10px;padding:10px;margin-top:8px;display:none;box-shadow:var(--shadow)}
+#tip{position:fixed;pointer-events:none;z-index:50;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:7px 9px;box-shadow:var(--shadow);
+ font-size:12px;max-width:340px;display:none}
+#tip b{font-weight:650}
+footer{display:flex;flex-wrap:wrap;gap:6px 16px;padding:6px 16px;background:var(--panel);border-top:1px solid var(--line);color:var(--muted);font-size:11.5px}
+kbd{font:11px ui-monospace,Menlo,Consolas,monospace;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 4px;background:var(--chip)}
+@media (max-width:1050px){#body{grid-template-columns:1fr}aside{display:none}}
+@media (max-width:700px){#labels,#axisHead{width:150px}h1 small{display:none}}
+</style>
+</head>
+<body>
+<div id="app">
+<header>
+  <h1>Hurricane Rafael · Shared State Timeline<small>ground truth every data stream reads</small></h1>
+  <div class="ctl"><span class="lbl">View</span>
+    <div class="seg" id="modes">
+      <button data-m="truth" class="on" title="Everything, including hidden ground truth">Truth</button>
+      <button data-m="public" title="Only what the public can know">Public</button>
+      <button data-m="C" title="Civilian lane">Civilian</button>
+      <button data-m="D" title="DoD lane">DoD</button>
+      <button data-m="I" title="Intelligence community lane">IC</button>
+    </div></div>
+  <div class="ctl"><span class="lbl">Jump</span>
+    <select id="preset">
+      <option value="all">All 180 days</option>
+      <option value="storm">Storm approach (D-12 to D+3)</option>
+      <option value="landfall">Landfall 48 hours</option>
+      <option value="spill">Spill and water (D-1 to D+45)</option>
+      <option value="blast">Dark vessel and blast (D+28 to D+60)</option>
+      <option value="money">Money and attribution (D+55 to D+119)</option>
+    </select></div>
+  <div class="ctl">
+    <button id="play" title="Play / pause (Space)">▶ Play</button>
+    <select id="speed" title="Playback speed"><option value="2">2 h/s</option><option value="6" selected>6 h/s</option><option value="24">1 day/s</option><option value="72">3 days/s</option></select>
+    <button id="numMode" title="Switch numeric rows between horizon charts and area charts">Horizon</button>
+    <input type="search" id="q" placeholder="Filter rows…" aria-label="Filter rows">
+    <button id="theme" title="Toggle light/dark">◐</button>
+  </div>
+  <div class="ctl" id="threads"><span class="lbl">Threads</span></div>
+</header>
+<div id="ovwrap"><canvas id="ov" aria-label="Overview of all 180 days; drag the window to move"></canvas></div>
+<div id="body">
+  <div id="scroller">
+    <div id="axisRow"><div id="axisHead">Scenario day · local date</div><canvas id="axis"></canvas></div>
+    <div id="rows"><div id="labels"></div><div id="cwrap"><canvas id="main"></canvas></div></div>
+  </div>
+  <aside>
+    <div id="clock"></div><div id="clock2"></div>
+    <svg id="map" viewBox="0 0 340 300" role="img" aria-label="Storm track and local status map"></svg>
+    <div id="detail"></div>
+    <h2>Events within 24 hours</h2><div id="near"></div>
+    <h2>State at playhead</h2><div id="snapshot"></div>
+  </aside>
+</div>
+<footer>
+  <span><kbd>←</kbd><kbd>→</kbd> hour · <kbd>Shift</kbd> day · <kbd>PgUp</kbd><kbd>PgDn</kbd> week</span>
+  <span><kbd>Space</kbd> play</span><span><kbd>Ctrl</kbd>/<kbd>⌘</kbd> + wheel or <kbd>+</kbd><kbd>-</kbd> zoom</span>
+  <span>Drag or <kbd>Shift</kbd> + wheel to pan · click to move the playhead · double-click to zoom in</span>
+  <span id="legend"></span>
+</footer>
+</div>
+<div id="tip"></div>
+<script>
+const DATA = /*__DATA__*/null;
+(function(){
+"use strict";
+const VAR = DATA.variables.variables, META = DATA.variables.meta, GROUPS = DATA.variables.groups;
+const SEG = DATA.segments, SER = DATA.series.series, ST0 = DATA.series.t0, EV = DATA.events, TRACK = DATA.track;
+const T0 = META.t0_hour, T1 = META.t1_hour + 1, LANDFALL = META.landfall_t, DST = META.dst_end_t;
+const THREADS = DATA.threads; // {id: [name, color]} from every registered scenario that has data
+const GROUPCOLOR = {"Storm & weather":"#d0473a","Port & maritime":"#2f6fb0","Water & power":"#1f9aa6","Spill & environment":"#9a6a2f","Health & emergency":"#c2407a",
+  "Military":"#5d7a3a","Hidden threads":"#7b5ea7","Cyber & information":"#4b5bb5","Public knowledge":"#2f6fb0","Aid & money":"#3f8f6b","Scenario":"#7a8a99"};
+const LABEL_W = () => document.getElementById("labels").offsetWidth;
+const GH = 24, SH = 22, NH = 26, EH = 26;
+let v0 = T0, v1 = T1, tp = LANDFALL, mode = "truth", numMode = "horizon", search = "";
+const selThreads = new Set(), collapsed = new Set(["Scenario"]);
+let lanes = [], totalH = 0, W = 800, playing = false, speed = 6, lastTs = 0;
+const $ = id => document.getElementById(id);
+const cv = $("main"), ctx = cv.getContext("2d"), ax = $("axis"), actx = ax.getContext("2d"), ov = $("ov"), octx = ov.getContext("2d");
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const varById = Object.fromEntries(VAR.map(v => [v.id, v]));
+
+// ---------- time helpers
+function localParts(t){ const off = t < DST ? -5 : -6; const d = new Date(Date.UTC(2027,8,14) + (t + off) * 3600e3);
+  return {d, tz: off === -5 ? "CDT" : "CST"}; }
+const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], MO = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmtLocal(t, withTime=true){ const {d, tz} = localParts(t); let h = d.getUTCHours(), ap = h >= 12 ? "PM" : "AM"; h = h % 12 || 12;
+  const mm = String(d.getUTCMinutes()).padStart(2,"0");
+  return `${WD[d.getUTCDay()]}, ${MO[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}` + (withTime ? ` · ${h}:${mm} ${ap} ${tz}` : ""); }
+function dlabel(t){ const day = Math.floor(t / 24); return day === 0 ? "D0" : (day > 0 ? "D+" + day : "D" + day); }
+function fmtUTC(t){ const day = Math.floor(t/24), h = ((Math.floor(t) % 24) + 24) % 24; return `${dlabel(t)} ${String(h).padStart(2,"0")}:00Z`; }
+
+// ---------- value lookup
+function stateAt(id, t){ const s = SEG[id]; let lo = 0, hi = s.length - 1;
+  while (lo <= hi){ const m = (lo + hi) >> 1; if (t < s[m][0]) hi = m - 1; else if (t >= s[m][1]) lo = m + 1; else return s[m]; } return null; }
+function numAt(id, t){ const a = SER[id]; const i = Math.max(0, Math.min(a.length - 1, Math.round(t) - ST0)); return a[i]; }
+function fmtNum(v, x){ if (x == null) return "–"; const f = v.fmt || "0"; const dp = f.includes(".") ? f.split(".")[1].length : 0;
+  return Number(x).toLocaleString(undefined, {minimumFractionDigits: dp, maximumFractionDigits: dp}) + (v.unit ? " " + v.unit : ""); }
+function colorFor(v, val){ return (v.states && v.states[val]) || "#9aa5b1"; }
+function inkOn(hex){ const c = hex.replace("#",""); const r = parseInt(c.substr(0,2),16), g = parseInt(c.substr(2,2),16), b = parseInt(c.substr(4,2),16);
+  return (0.299*r + 0.587*g + 0.114*b) > 150 ? "#14191f" : "#ffffff"; }
+
+// ---------- visibility
+function varVisible(v){
+  if (search && !(v.label.toLowerCase().includes(search) || v.group.toLowerCase().includes(search))) return false;
+  if (mode === "truth") return true;
+  if (mode === "public") return v.visibility === "public";
+  return v.lanes.includes(mode) && v.visibility !== "hidden";
+}
+function eventVisible(e){
+  if (mode === "truth") return true;
+  if (mode === "public") return e.kind === "public";
+  return e.kind === "public" || (e.lanes || []).includes(mode);
+}
+const threadHit = threads => selThreads.size === 0 || (threads || []).some(t => selThreads.has(t));
+
+// ---------- layout
+function buildLanes(){
+  lanes = []; let y = 0;
+  const evGroup = "Events";
+  lanes.push({type:"group", id:evGroup, label:"Events", y, h:GH}); y += GH;
+  if (!collapsed.has(evGroup)){
+    if (mode !== "public"){ lanes.push({type:"events", kind:"truth", label: mode === "truth" ? "Ground-truth events (MSEL)" : "Ground truth observable to lane", y, h:EH}); y += EH; }
+    lanes.push({type:"events", kind:"public", label:"Public facts (news may report)", y, h:EH}); y += EH;
+  }
+  for (const g of GROUPS){
+    const vs = VAR.filter(v => v.group === g && varVisible(v)); if (!vs.length) continue;
+    lanes.push({type:"group", id:g, label:g, y, h:GH}); y += GH;
+    if (collapsed.has(g)) continue;
+    for (const v of vs){ const h = v.kind === "number" ? NH : SH; lanes.push({type:"var", v, label:v.label, y, h}); y += h; }
+  }
+  totalH = y + 8;
+  const L = $("labels"); L.innerHTML = ""; L.style.height = totalH + "px";
+  for (const ln of lanes){
+    const d = document.createElement("div"); d.style.top = ln.y + "px"; d.style.height = ln.h + "px";
+    if (ln.type === "group"){
+      d.className = "row group" + (collapsed.has(ln.id) ? " collapsed" : ""); d.innerHTML = `<span class="chev">▾</span><span class="name">${ln.label}</span>`;
+      d.title = "Click to collapse or expand"; d.onclick = () => { collapsed.has(ln.id) ? collapsed.delete(ln.id) : collapsed.add(ln.id); buildLanes(); };
+      if (GROUPCOLOR[ln.id]) d.style.boxShadow = `inset 3px 0 0 ${GROUPCOLOR[ln.id]}`;
+    } else if (ln.type === "events"){
+      d.className = "row var"; d.innerHTML = `<span class="name">${ln.label}</span>`;
+    } else {
+      const v = ln.v; d.className = "row var" + (threadHit(v.threads) ? "" : " dim"); ln.el = d;
+      const b = v.visibility === "hidden" ? '<span class="badge b-truth" title="Hidden ground truth">TRUTH</span>' : v.visibility === "internal" ? '<span class="badge b-int" title="Internal data, not public">INT</span>' : "";
+      const a = v.assumption ? '<span class="badge b-asm" title="Includes builder assumptions beyond the event list">A</span>' : "";
+      d.innerHTML = `<span class="name" title="${v.description || v.label}${v.source ? "\nSource: " + v.source : ""}">${v.label}</span>${b}${a}<span class="val"></span>`;
+    }
+    L.appendChild(d); ln.dom = d;
+  }
+  resize();
+}
+function resize(){
+  const dpr = window.devicePixelRatio || 1; W = Math.max(200, $("cwrap").clientWidth);
+  cv.width = W * dpr; cv.height = totalH * dpr; cv.style.width = W + "px"; cv.style.height = totalH + "px"; ctx.setTransform(dpr,0,0,dpr,0,0);
+  ax.width = W * dpr; ax.height = 40 * dpr; ax.style.width = W + "px"; actx.setTransform(dpr,0,0,dpr,0,0);
+  const ow = $("ovwrap").clientWidth - 32; ov.width = ow * dpr; ov.height = 58 * dpr; ov.style.width = ow + "px"; octx.setTransform(dpr,0,0,dpr,0,0);
+  draw();
+}
+const X = t => (t - v0) / (v1 - v0) * W, TX = x => v0 + x / W * (v1 - v0);
+
+// ---------- hatch pattern for hidden truth
+let hatch = null;
+function getHatch(){ if (hatch) return hatch; const p = document.createElement("canvas"); p.width = p.height = 8; const c = p.getContext("2d");
+  c.strokeStyle = "rgba(255,255,255,.28)"; c.lineWidth = 1.2; c.beginPath(); c.moveTo(0,8); c.lineTo(8,0); c.stroke(); hatch = ctx.createPattern(p, "repeat"); return hatch; }
+
+// ---------- ticks
+function ticks(){
+  const span = v1 - v0; let step;
+  if (span > 24*90) step = 24*14; else if (span > 24*40) step = 24*7; else if (span > 24*12) step = 24*2; else if (span > 24*4) step = 24;
+  else if (span > 36) step = 6; else if (span > 12) step = 3; else step = 1;
+  const out = []; let t = Math.ceil(v0 / step) * step; for (; t <= v1; t += step) out.push(t); return {out, step};
+}
+
+// ---------- drawing
+let raf = 0; function draw(){ if (!raf) raf = requestAnimationFrame(render); }
+function render(){
+  raf = 0; const ink = css("--ink"), muted = css("--muted"), grid = css("--grid"), phase = css("--phase"), play = css("--play"), panel = css("--panel");
+  ctx.clearRect(0,0,W,totalH);
+  // phase bands
+  (SEG.phase || []).forEach((s,i) => { if (i % 2 === 0){ ctx.fillStyle = phase; ctx.fillRect(X(s[0]), 0, X(s[1]) - X(s[0]), totalH); } });
+  const {out, step} = ticks();
+  ctx.strokeStyle = grid; ctx.lineWidth = 1; ctx.beginPath(); for (const t of out){ const x = Math.round(X(t)) + .5; ctx.moveTo(x,0); ctx.lineTo(x,totalH); } ctx.stroke();
+  for (const ln of lanes){
+    if (ln.type === "group"){ ctx.fillStyle = css("--bg"); ctx.fillRect(0, ln.y, W, ln.h); ctx.fillStyle = grid; ctx.fillRect(0, ln.y, W, 1); continue; }
+    if (ln.type === "events"){ drawEvents(ln); continue; }
+    const v = ln.v, dim = !threadHit(v.threads); ctx.globalAlpha = dim ? 0.22 : 1;
+    if (v.kind === "state") drawState(ln, v); else drawNumber(ln, v);
+    ctx.globalAlpha = 1;
+  }
+  // landfall + playhead
+  const lx = X(LANDFALL); ctx.setLineDash([3,3]); ctx.strokeStyle = "#c8402f"; ctx.globalAlpha = .7; ctx.beginPath(); ctx.moveTo(lx,0); ctx.lineTo(lx,totalH); ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha = 1;
+  const px = X(tp); ctx.strokeStyle = play; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(px,0); ctx.lineTo(px,totalH); ctx.stroke(); ctx.lineWidth = 1;
+  renderAxis(out, step); renderOverview(); updateValues(); renderSide();
+}
+function drawState(ln, v){
+  const segs = SEG[v.id], y = ln.y + 3, h = ln.h - 6; ctx.font = "11px system-ui,sans-serif"; ctx.textBaseline = "middle";
+  for (const [s, e, val] of segs){
+    if (e < v0 || s > v1) continue; const xa = Math.max(0, X(s)), xb = Math.min(W, X(e)); const w = Math.max(1, xb - xa); const col = colorFor(v, val);
+    const quiet = /^(None|No system|No activity|Inactive|Out of area|Nothing reported|No incident|No declaration|No spill|Not scheduled|Not yet booked|Dormant|No notice)$/.test(val);
+    ctx.fillStyle = col; ctx.globalAlpha *= quiet ? 0.35 : 1; roundRect(xa + 0.5, y, w - 1, h, 3); ctx.fill(); ctx.globalAlpha = threadHit(v.threads) ? 1 : 0.22;
+    if (v.visibility === "hidden" && !quiet){ ctx.fillStyle = getHatch(); roundRect(xa + 0.5, y, w - 1, h, 3); ctx.fill(); }
+    const tw = ctx.measureText(val).width; if (w > tw + 10 && !quiet){ ctx.fillStyle = inkOn(col); ctx.fillText(val, xa + 6, y + h / 2 + 0.5); }
+  }
+}
+function drawNumber(ln, v){
+  const arr = SER[v.id], [mn, mx] = v.scale || [0,1], y = ln.y + 2, h = ln.h - 4, col = GROUPCOLOR[v.group] || "#2f6fb0";
+  const n = val => { let r = (val - mn) / (mx - mn); r = Math.max(0, Math.min(1, r)); return v.invert ? 1 - r : r; };
+  const samp = x => { const ta = TX(x), tb = TX(x + 1); let a = Math.max(0, Math.floor(ta) - ST0), b = Math.min(arr.length - 1, Math.ceil(tb) - ST0);
+    if (b < a) b = a; let m = -Infinity; for (let i = a; i <= b; i++) if (arr[i] > m) m = arr[i]; return m; };
+  if (numMode === "horizon"){
+    ctx.fillStyle = col; ctx.globalAlpha *= 0.12; ctx.fillRect(0, y, W, h); ctx.globalAlpha = threadHit(v.threads) ? 1 : 0.22;
+    for (let x = Math.max(0, Math.floor(X(T0))); x < Math.min(W, X(T1)); x++){
+      const r = n(samp(x)); const b1 = Math.min(r * 2, 1), b2 = Math.max(r * 2 - 1, 0);
+      if (b1 > 0){ ctx.fillStyle = col; ctx.globalAlpha *= 0.45; ctx.fillRect(x, y + h - b1 * h, 1, b1 * h); ctx.globalAlpha = threadHit(v.threads) ? 1 : 0.22; }
+      if (b2 > 0){ ctx.fillStyle = col; ctx.fillRect(x, y + h - b2 * h, 1, b2 * h); }
+    }
+  } else {
+    ctx.beginPath(); ctx.moveTo(Math.max(0, X(T0)), y + h);
+    for (let x = Math.max(0, Math.floor(X(T0))); x < Math.min(W, X(T1)); x++) ctx.lineTo(x, y + h - n(samp(x)) * h);
+    ctx.lineTo(Math.min(W, X(T1)), y + h); ctx.closePath(); ctx.fillStyle = col; ctx.globalAlpha *= 0.3; ctx.fill(); ctx.globalAlpha = threadHit(v.threads) ? 1 : 0.22;
+    ctx.strokeStyle = col; ctx.lineWidth = 1.2; ctx.beginPath();
+    for (let x = Math.max(0, Math.floor(X(T0))); x < Math.min(W, X(T1)); x++){ const yy = y + h - n(samp(x)) * h; x === 0 ? ctx.moveTo(x, yy) : ctx.lineTo(x, yy); }
+    ctx.stroke(); ctx.lineWidth = 1;
+  }
+  if (v.visibility === "hidden"){ ctx.strokeStyle = "#7b5ea7"; ctx.setLineDash([2,3]); ctx.strokeRect(0.5, y + 0.5, W - 1, h - 1); ctx.setLineDash([]); }
+}
+function evColor(e){ if (e.kind === "public" && !(e.threads || []).length) return css("--accent"); const t = (e.threads || [])[0]; return t ? THREADS[t][1] : "#7a8a99"; }
+function drawEvents(ln){
+  const y = ln.y + ln.h / 2; const list = EV.filter(e => e.kind === ln.kind && eventVisible(e) && e.t >= v0 - 24 && e.t <= v1 + 24);
+  for (const e of list){
+    const x = X(e.t), hit = threadHit(e.threads); ctx.globalAlpha = hit ? 1 : 0.18;
+    if (e.t_end){ ctx.fillStyle = evColor(e); ctx.globalAlpha *= 0.25; ctx.fillRect(x, y - 3, Math.max(1, X(e.t_end) - x), 6); ctx.globalAlpha = hit ? 1 : 0.18; }
+    ctx.fillStyle = evColor(e); ctx.beginPath();
+    if (e.kind === "truth"){ ctx.moveTo(x, y - 6); ctx.lineTo(x + 5, y); ctx.lineTo(x, y + 6); ctx.lineTo(x - 5, y); ctx.closePath(); }
+    else ctx.arc(x, y, 4, 0, Math.PI * 2);
+    ctx.fill(); if (e === selectedEv){ ctx.strokeStyle = css("--ink"); ctx.lineWidth = 2; ctx.stroke(); ctx.lineWidth = 1; }
+  }
+  ctx.globalAlpha = 1;
+}
+function roundRect(x, y, w, h, r){ r = Math.min(r, w / 2, h / 2); ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+
+function renderAxis(out, step){
+  const c = actx, muted = css("--muted"), ink = css("--ink"); c.clearRect(0,0,W,40); c.fillStyle = css("--panel"); c.fillRect(0,0,W,40);
+  // phases on top line
+  c.font = "600 10.5px system-ui,sans-serif"; c.textBaseline = "middle";
+  (SEG.phase || []).forEach((s,i) => { const xa = Math.max(0, X(s[0])), xb = Math.min(W, X(s[1])); if (xb <= xa) return;
+    c.fillStyle = varById.phase.states[s[2]]; c.globalAlpha = .22; c.fillRect(xa, 0, xb - xa, 13); c.globalAlpha = 1;
+    const lab = s[2].replace(/^Phase \d: /, ""); if (xb - xa > c.measureText(lab).width + 8){ c.fillStyle = ink; c.fillText(lab, xa + 4, 7); } });
+  c.font = "11px system-ui,sans-serif"; c.fillStyle = muted; c.strokeStyle = css("--line");
+  let lastX = -999;
+  for (const t of out){ const x = X(t); c.beginPath(); c.moveTo(x + .5, 14); c.lineTo(x + .5, 40); c.stroke();
+    let lab; if (step >= 24){ const {d} = localParts(t + 12); lab = `${dlabel(t)} · ${MO[d.getUTCMonth()]} ${d.getUTCDate()}`; }
+    else { const h = ((t % 24) + 24) % 24; lab = h === 0 ? `${dlabel(t)} 00Z` : `${String(h).padStart(2,"0")}Z`; }
+    if (x - lastX > c.measureText(lab).width + 10){ c.fillStyle = Math.floor(t/24) === 0 && step >= 24 ? "#c8402f" : muted; c.fillText(lab, x + 4, 27); lastX = x; } }
+  const px = X(tp); c.fillStyle = css("--play"); c.beginPath(); c.moveTo(px - 6, 40); c.lineTo(px + 6, 40); c.lineTo(px, 32); c.closePath(); c.fill();
+}
+
+// ---------- overview (overview+detail)
+function renderOverview(){
+  const ow = ov.clientWidth, c = octx, OX = t => (t - T0) / (T1 - T0) * ow; c.clearRect(0,0,ow,58);
+  const rowsDef = [["storm_max_wind_kt","#d0473a"],["calls_911_per_day","#c2407a"],["vessels_at_anchorage","#2f6fb0"],["oil_slick_km2","#9a6a2f"]];
+  rowsDef.forEach(([id, col], r) => { const v = varById[id], a = SER[id], [mn, mx] = v.scale; const y0 = 4 + r * 11, h = 10;
+    c.fillStyle = col; c.globalAlpha = .75; for (let x = 0; x < ow; x++){ const i = Math.round(T0 + x / ow * (T1 - T0)) - ST0; const r2 = Math.max(0, Math.min(1, (a[Math.max(0,Math.min(a.length-1,i))] - mn) / (mx - mn)));
+      if (r2 > 0.01) c.fillRect(x, y0 + h - r2 * h, 1, r2 * h); } c.globalAlpha = 1; });
+  const cs = varById.channel_status; for (const [s, e, val] of SEG.channel_status){ c.fillStyle = colorFor(cs, val); c.fillRect(OX(s), 49, OX(e) - OX(s), 5); }
+  for (const e of EV){ if (!eventVisible(e)) continue; c.fillStyle = evColor(e); c.globalAlpha = threadHit(e.threads) ? .9 : .15; c.fillRect(OX(e.t), e.kind === "truth" ? 45 : 0, 1, 3); } c.globalAlpha = 1;
+  // brush
+  const bx = OX(v0), bw = OX(v1) - bx; c.fillStyle = css("--bg"); c.globalAlpha = .55; c.fillRect(0, 0, bx, 58); c.fillRect(bx + bw, 0, ow - bx - bw, 58); c.globalAlpha = 1;
+  c.strokeStyle = css("--accent"); c.lineWidth = 2; c.strokeRect(bx + 1, 1, Math.max(3, bw - 2), 56); c.lineWidth = 1;
+  c.fillStyle = css("--play"); c.fillRect(OX(tp) - 1, 0, 2, 58);
+}
+
+// ---------- side panel
+let selectedEv = null;
+function updateValues(){
+  for (const ln of lanes){ if (ln.type !== "var" || !ln.dom) continue; const v = ln.v, el = ln.dom.querySelector(".val"); if (!el) continue;
+    if (v.kind === "state"){ const s = stateAt(v.id, tp); el.textContent = s ? s[2] : "–"; } else el.textContent = fmtNum(v, numAt(v.id, tp)); }
+}
+function renderSide(){
+  $("clock").textContent = fmtLocal(tp); const ph = stateAt("phase", tp);
+  $("clock2").textContent = `${fmtUTC(tp)} · ${ph ? ph[2] : ""}` + (Math.abs(tp - LANDFALL) < 0.5 ? " · LANDFALL" : "");
+  // snapshot
+  let html = ""; for (const g of GROUPS){ const vs = VAR.filter(v => v.group === g && varVisible(v) && v.id !== "phase"); if (!vs.length) continue;
+    html += `<div class="snapg">${g}</div>`;
+    for (const v of vs){ let val;
+      if (v.kind === "state"){ const s = stateAt(v.id, tp), c = colorFor(v, s ? s[2] : ""); val = `<span class="pill" style="background:${c};color:${inkOn(c)}" title="${s ? s[2] : ""}">${s ? s[2] : "–"}</span>`; }
+      else val = fmtNum(v, numAt(v.id, tp));
+      const tag = v.visibility === "hidden" ? ' <span class="badge b-truth">T</span>' : "";
+      html += `<div class="snap" style="opacity:${threadHit(v.threads) ? 1 : .4}"><span class="k" title="${v.label}">${v.label}${tag}</span><span class="v">${val}</span></div>`; } }
+  $("snapshot").innerHTML = html;
+  // near events
+  const near = EV.filter(e => eventVisible(e) && Math.abs(e.t - tp) <= 24).slice(0, 14);
+  $("near").innerHTML = near.length ? near.map(e => `<div class="evl" data-id="${e.id}"><span class="dot" style="background:${evColor(e)};margin-top:4px;${e.kind === "truth" ? "border-radius:2px;transform:rotate(45deg)" : ""}"></span><div><div class="when">${fmtUTC(e.t)} · ${e.id}</div>${esc(e.label)}</div></div>`).join("")
+    : `<div class="lbl">No events within 24 hours.</div>`;
+  $("near").querySelectorAll(".evl").forEach(n => n.onclick = () => selectEvent(EV.find(e => e.id === n.dataset.id)));
+  renderMap();
+}
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function selectEvent(e){
+  selectedEv = e; const d = $("detail"); if (!e){ d.style.display = "none"; draw(); return; }
+  const th = (e.threads || []).map(t => `<span class="chip" style="background:${THREADS[t][1]}22"><span class="dot" style="background:${THREADS[t][1]}"></span>${t} ${THREADS[t][0]}</span>`).join(" ");
+  const extra = e.kind === "truth" ? `<div class="lbl" style="margin-top:6px">Observed in: ${(e.observed_in || []).join(", ")}<br>Lanes: ${(e.lanes || []).join(", ")} · Places: ${(e.places || []).join(", ") || "–"}</div>`
+    : `<div class="lbl" style="margin-top:6px">Storylines: ${(e.arcs || []).join(", ")}${e.events && e.events.length && mode === "truth" ? "<br>Reflects: " + e.events.join(", ") : ""}</div>`;
+  d.innerHTML = `<div class="lbl">${e.kind === "truth" ? "Ground-truth event" : "Public fact"} · ${e.id}</div><div style="font-weight:650;margin:4px 0">${esc(e.label)}</div>
+    <div class="lbl">${fmtLocal(e.t)} · ${fmtUTC(e.t)}</div><div style="margin-top:6px;display:flex;gap:4px;flex-wrap:wrap">${th}</div>${extra}
+    <div style="margin-top:8px"><button id="goEv">Move playhead here</button> <button id="closeEv">Close</button></div>`;
+  d.style.display = "block"; $("goEv").onclick = () => { setTp(e.t, true); }; $("closeEv").onclick = () => selectEvent(null); draw();
+}
+
+// ---------- map (schematic, equirectangular)
+const COAST = [[[-97.4,25.9],[-97.43,26.55],[-97.35,27.2],[-97.4,27.8],[-97.0,28.0],[-96.4,28.45],[-95.4,28.9],[-94.8,29.3],[-93.87,29.73],[-93.3,29.8],[-92.3,29.55],[-91.3,29.4],[-90.4,29.1],[-89.4,28.9],[-89.15,29.3],[-89.6,30.05],[-88.9,30.4],[-88.1,30.25],[-87.2,30.35],[-85.7,30.15],[-85.0,29.7],[-84.0,30.0],[-83.0,29.15],[-82.7,27.7],[-81.9,26.6],[-81.1,25.1],[-80.4,25.2],[-80.0,25.5]],
+  [[-97.4,25.9],[-97.75,23.8],[-97.85,22.2],[-97.4,20.95],[-96.1,19.2],[-94.4,18.15],[-91.8,18.65],[-90.55,19.85],[-90.4,20.85],[-89.65,21.3],[-87.1,21.6],[-86.8,21.15],[-87.45,20.2],[-88.3,18.5],[-88.2,17.5],[-88.6,16.2],[-87.95,15.85],[-85.0,15.95],[-83.15,15.0],[-82.5,13.5]],
+  [[-84.95,21.87],[-83.6,22.75],[-82.35,23.15],[-81.6,23.05],[-80.0,23.2],[-80.0,22.1],[-80.45,22.1],[-81.2,22.25],[-82.3,22.3],[-83.2,22.2],[-84.0,21.9],[-84.95,21.87]]];
+const MAPB = {lon0:-100, lon1:-79.5, lat0:14, lat1:31.5}, MW = 340, MH = 210;
+const MP = (lon, lat) => [ (lon - MAPB.lon0) / (MAPB.lon1 - MAPB.lon0) * MW, MH - (lat - MAPB.lat0) / (MAPB.lat1 - MAPB.lat0) * MH ];
+const LOCAL = [["Port Aransas",-97.06,27.83,"port"],["Corpus Christi",-97.40,27.80,"city"],["NAS Corpus Christi",-97.29,27.69,"nas"],["O.N. Stevens plant",-97.62,27.87,"water"],
+  ["Inner Harbor terminal",-97.47,27.815,"term"],["Offshore anchorage",-96.95,27.76,"anch"],["Harbor Bridge",-97.395,27.815,"bridge"]];
+function renderMap(){
+  const svg = $("map"), muted = css("--muted"), line = css("--line"), ink = css("--ink"), bg = css("--panel");
+  let s = `<rect x="0" y="0" width="340" height="210" fill="${css("--bg")}"/>`;
+  for (const poly of COAST){ s += `<polyline fill="none" stroke="${muted}" stroke-width="1" opacity=".55" points="${poly.map(p => MP(p[0], p[1]).join(",")).join(" ")}"/>`; }
+  s += `<text x="150" y="95" font-size="10" fill="${muted}" opacity=".7">Gulf</text><text x="250" y="168" font-size="9" fill="${muted}" opacity=".6">Caribbean</text>`;
+  const pts = TRACK.map(p => [MP(p.lon, p.lat), p]);
+  for (let i = 1; i < pts.length; i++){ const [a, pa] = pts[i-1], [b, pb] = pts[i]; const past = pb.t <= tp;
+    s += `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="${windCol(pb.wind_kt)}" stroke-width="${past ? 2.4 : 1.2}" ${past ? "" : 'stroke-dasharray="3 3"'} opacity="${past ? 1 : .5}"/>`; }
+  const cc = MP(-97.4, 27.8); s += `<circle cx="${cc[0]}" cy="${cc[1]}" r="3" fill="${ink}"/><text x="${cc[0] - 4}" y="${cc[1] - 6}" font-size="9" fill="${ink}" text-anchor="end">Corpus Christi</text>`;
+  const cur = trackAt(tp);
+  if (cur){ const p = MP(cur.lon, cur.lat), r = 4 + cur.wind / 12;
+    s += `<circle cx="${p[0]}" cy="${p[1]}" r="${r}" fill="${windCol(cur.wind)}" opacity=".18"/><circle cx="${p[0]}" cy="${p[1]}" r="4.5" fill="${windCol(cur.wind)}" stroke="${bg}" stroke-width="1.5"/>
+      <text x="${p[0] + 8}" y="${p[1] + 3}" font-size="9.5" font-weight="600" fill="${ink}">${stageAt(tp)} · ${Math.round(cur.wind)} kt</text>`; }
+  // local inset
+  const IX = 8, IY = 214, IW = 324, IH = 80, L0 = -97.72, L1 = -96.85, A0 = 27.62, A1 = 27.95;
+  const LP = (lon, lat) => [IX + (lon - L0) / (L1 - L0) * IW, IY + IH - (lat - A0) / (A1 - A0) * IH];
+  s += `<rect x="${IX}" y="${IY}" width="${IW}" height="${IH}" rx="8" fill="${css("--bg")}" stroke="${line}"/><text x="${IX + 6}" y="${IY + 12}" font-size="9" fill="${muted}">Corpus Christi area (schematic)</text>`;
+  const slick = numAt("oil_slick_km2", tp); if (slick > 0.5){ const c = LP(-97.36, 27.84); s += `<circle cx="${c[0]}" cy="${c[1]}" r="${4 + Math.sqrt(slick) * 2.4}" fill="#3a2a1a" opacity=".35"/>`; }
+  for (const [name, lon, lat, kind] of LOCAL){ const p = LP(lon, lat); const col = localCol(kind);
+    s += `<circle cx="${p[0]}" cy="${p[1]}" r="5" fill="${col}" stroke="${bg}" stroke-width="1.2"><title>${name}</title></circle>`;
+    const lab = kind === "anch" ? `${name} (${numAt("vessels_at_anchorage", tp)})` : name;
+    const right = p[0] < IX + IW - 90; s += `<text x="${right ? p[0] + 7 : p[0] - 7}" y="${p[1] + (kind === "bridge" ? -6 : kind === "term" ? 12 : 3)}" font-size="8.5" fill="${ink}" text-anchor="${right ? "start" : "end"}">${lab}</text>`; }
+  if (mode === "truth" || mode === "I"){ const h = stateAt("halcyon_drift", tp); if (h && /anchorage|dark|Laying|transfer|Loitering|sea/i.test(h[2])){
+    const pos = /Laying/.test(h[2]) ? LP(-97.02, 27.82) : /Loitering|sea/.test(h[2]) ? LP(-96.9, 27.66) : LP(-96.93, 27.73);
+    s += `<rect x="${pos[0] - 4}" y="${pos[1] - 4}" width="8" height="8" transform="rotate(45 ${pos[0]} ${pos[1]})" fill="#7b5ea7" stroke="${bg}"><title>Halcyon Drift: ${h[2]}</title></rect>`; } }
+  svg.innerHTML = s;
+}
+function windCol(w){ return w >= 96 ? "#c8402f" : w >= 64 ? "#e07a1f" : w >= 34 ? "#d9a227" : "#8aa0b3"; }
+function trackAt(t){ if (t < TRACK[0].t || t > TRACK[TRACK.length - 1].t) return null;
+  for (let i = 1; i < TRACK.length; i++){ const a = TRACK[i-1], b = TRACK[i]; if (t >= a.t && t <= b.t){ const f = (t - a.t) / (b.t - a.t || 1);
+    return {lat: a.lat + (b.lat - a.lat) * f, lon: a.lon + (b.lon - a.lon) * f, wind: a.wind_kt + (b.wind_kt - a.wind_kt) * f}; } } return null; }
+function stageAt(t){ const s = stateAt("storm_stage", t); return s ? s[2] : ""; }
+function localCol(kind){ const pick = (id) => { const s = stateAt(id, tp); return s ? colorFor(varById[id], s[2]) : "#999"; };
+  if (kind === "port" || kind === "anch") return pick("channel_status"); if (kind === "water") return pick("boil_water_notice");
+  if (kind === "nas") return pick("nas_cc_aircraft"); if (kind === "bridge") return pick("bridges"); if (kind === "term") return pick("spill_response");
+  const o = numAt("power_outage_pct", tp); return o > 40 ? "#c8402f" : o > 10 ? "#e07a1f" : o > 1 ? "#d9a227" : "#3f8f6b"; }
+
+// ---------- interaction
+function clampView(){ const span = Math.max(6, Math.min(T1 - T0, v1 - v0)); if (v0 < T0){ v0 = T0; v1 = v0 + span; } if (v1 > T1){ v1 = T1; v0 = v1 - span; } }
+function zoomAt(t, f){ const a = t - (t - v0) * f, b = t + (v1 - t) * f; v0 = a; v1 = b; clampView(); draw(); }
+function pan(dt){ v0 += dt; v1 += dt; clampView(); draw(); }
+function setTp(t, center){ tp = Math.max(T0, Math.min(T1 - 1, t)); if (center && (tp < v0 || tp > v1)){ const span = v1 - v0; v0 = tp - span / 2; v1 = tp + span / 2; clampView(); } draw(); }
+let drag = null;
+cv.addEventListener("mousedown", e => { drag = {x: e.clientX, v0, v1, moved: false}; cv.style.cursor = "grabbing"; });
+window.addEventListener("mousemove", e => {
+  if (drag){ const dx = e.clientX - drag.x; if (Math.abs(dx) > 3) drag.moved = true; if (drag.moved){ const dt = -dx / W * (drag.v1 - drag.v0); v0 = drag.v0 + dt; v1 = drag.v1 + dt; clampView(); draw(); } hideTip(); return; }
+  if (ovDrag) return; });
+window.addEventListener("mouseup", e => { if (drag){ if (!drag.moved){ const r = cv.getBoundingClientRect(); const t = TX(e.clientX - r.left); const ln = laneAt(e.clientY - r.top);
+      const ev = ln && ln.type === "events" ? nearestEvent(ln, e.clientX - r.left) : null; if (ev) selectEvent(ev); setTp(t); } cv.style.cursor = "crosshair"; drag = null; } ovDrag = null; });
+cv.addEventListener("dblclick", e => { const r = cv.getBoundingClientRect(); zoomAt(TX(e.clientX - r.left), 0.5); });
+cv.addEventListener("wheel", e => { const r = cv.getBoundingClientRect(), t = TX(e.clientX - r.left);
+  if (e.ctrlKey || e.metaKey || e.altKey){ e.preventDefault(); zoomAt(t, Math.exp(e.deltaY * 0.0018)); }
+  else if (e.shiftKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)){ e.preventDefault(); pan(((e.shiftKey ? e.deltaY : 0) + e.deltaX) / W * (v1 - v0)); } }, {passive: false});
+cv.addEventListener("mousemove", e => { if (drag) return; const r = cv.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top; const ln = laneAt(y); if (!ln){ hideTip(); return; }
+  const t = TX(x); let html = "";
+  if (ln.type === "events"){ const ev = nearestEvent(ln, x); if (ev) html = `<b>${ev.id}</b> · ${fmtUTC(ev.t)}<br>${esc(ev.label)}`; }
+  else if (ln.type === "var"){ const v = ln.v; if (v.kind === "state"){ const s = stateAt(v.id, t); if (s) html = `<b>${v.label}</b><br>${esc(s[2])}<br><span class="lbl">${fmtUTC(s[0])} → ${fmtUTC(s[1])}</span>`; }
+    else html = `<b>${v.label}</b><br>${fmtNum(v, numAt(v.id, t))}<br><span class="lbl">${fmtLocal(t)}</span>`; if (html && v.source) html += `<br><span class="lbl">Source: ${esc(v.source)}</span>`; }
+  html ? showTip(html, e.clientX, e.clientY) : hideTip(); });
+cv.addEventListener("mouseleave", hideTip);
+function laneAt(y){ return lanes.find(l => y >= l.y && y < l.y + l.h); }
+function nearestEvent(ln, x){ let best = null, bd = 8; for (const e of EV){ if (e.kind !== ln.kind || !eventVisible(e)) continue; const d = Math.abs(X(e.t) - x); if (d < bd){ bd = d; best = e; } } return best; }
+const tip = $("tip"); function showTip(h, x, y){ tip.innerHTML = h; tip.style.display = "block"; const r = tip.getBoundingClientRect();
+  tip.style.left = Math.min(window.innerWidth - r.width - 8, x + 14) + "px"; tip.style.top = Math.min(window.innerHeight - r.height - 8, y + 14) + "px"; }
+function hideTip(){ tip.style.display = "none"; }
+let ovDrag = null;
+ov.addEventListener("mousedown", e => { const r = ov.getBoundingClientRect(), x = e.clientX - r.left, t = T0 + x / r.width * (T1 - T0);
+  if (t < v0 || t > v1){ const span = v1 - v0; v0 = t - span / 2; v1 = t + span / 2; clampView(); draw(); }
+  ovDrag = {x: e.clientX, v0, v1, w: r.width}; });
+window.addEventListener("mousemove", e => { if (!ovDrag) return; const dt = (e.clientX - ovDrag.x) / ovDrag.w * (T1 - T0); v0 = ovDrag.v0 + dt; v1 = ovDrag.v1 + dt; clampView(); draw(); });
+ov.addEventListener("wheel", e => { e.preventDefault(); zoomAt((v0 + v1) / 2, Math.exp(e.deltaY * 0.0018)); }, {passive: false});
+window.addEventListener("keydown", e => { if (e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
+  const k = e.key; if (k === "ArrowRight"){ setTp(tp + (e.shiftKey ? 24 : 1), true); e.preventDefault(); } else if (k === "ArrowLeft"){ setTp(tp - (e.shiftKey ? 24 : 1), true); e.preventDefault(); }
+  else if (k === "PageDown"){ setTp(tp + 168, true); e.preventDefault(); } else if (k === "PageUp"){ setTp(tp - 168, true); e.preventDefault(); }
+  else if (k === " "){ togglePlay(); e.preventDefault(); } else if (k === "+" || k === "="){ zoomAt(tp, 0.6); } else if (k === "-" || k === "_"){ zoomAt(tp, 1.6); }
+  else if (k === "Home"){ setTp(T0, true); } else if (k === "End"){ setTp(T1 - 1, true); } else if (k === "Escape") selectEvent(null); });
+function togglePlay(){ playing = !playing; $("play").textContent = playing ? "❚❚ Pause" : "▶ Play"; $("play").classList.toggle("on", playing); lastTs = 0; if (playing) requestAnimationFrame(step); }
+function step(ts){ if (!playing) return; if (lastTs){ const dt = (ts - lastTs) / 1000; tp += dt * speed; if (tp >= T1 - 1){ tp = T1 - 1; togglePlay(); }
+    const span = v1 - v0; if (tp > v1 - span * 0.1){ v0 = tp - span * 0.3; v1 = v0 + span; clampView(); } draw(); } lastTs = ts; requestAnimationFrame(step); }
+$("play").onclick = togglePlay; $("speed").onchange = e => speed = +e.target.value;
+$("numMode").onclick = () => { numMode = numMode === "horizon" ? "area" : "horizon"; $("numMode").textContent = numMode === "horizon" ? "Horizon" : "Area"; draw(); };
+$("q").oninput = e => { search = e.target.value.trim().toLowerCase(); buildLanes(); };
+$("modes").querySelectorAll("button").forEach(b => b.onclick = () => { mode = b.dataset.m; $("modes").querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b)); selectEvent(null); buildLanes(); });
+$("theme").onclick = () => { const cur = document.documentElement.getAttribute("data-theme"); const dark = cur ? cur === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.setAttribute("data-theme", dark ? "light" : "dark"); hatch = null; draw(); };
+const PRESETS = {all:[T0,T1], storm:[-12*24,3*24], landfall:[-24,48], spill:[-24,45*24], blast:[28*24,60*24], money:[55*24,T1]};
+$("preset").onchange = e => { const [a, b] = PRESETS[e.target.value]; v0 = a; v1 = b; clampView(); if (tp < v0 || tp > v1) tp = Math.min(Math.max(tp, v0), v1 - 1); draw(); };
+const TH = $("threads"); for (const [k, [name, col]] of Object.entries(THREADS)){ const b = document.createElement("button"); b.className = "chip"; b.title = name;
+  b.innerHTML = `<span class="dot" style="background:${col}"></span>${k}`; b.onclick = () => { selThreads.has(k) ? selThreads.delete(k) : selThreads.add(k); b.classList.toggle("on", selThreads.has(k)); buildLanes(); }; TH.appendChild(b); }
+$("legend").innerHTML = `<span class="dot" style="background:#7b5ea7;border-radius:2px;transform:rotate(45deg)"></span> ground-truth event &nbsp; <span class="dot" style="background:var(--accent)"></span> public fact &nbsp; <span class="badge b-truth">TRUTH</span> hidden &nbsp; <span class="badge b-int">INT</span> internal &nbsp; <span class="badge b-asm">A</span> assumption`;
+new ResizeObserver(() => resize()).observe($("scroller"));
+// start on the storm approach with the playhead at landfall
+v0 = PRESETS.storm[0]; v1 = PRESETS.storm[1]; $("preset").value = "storm";
+buildLanes();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	notice
+#open	2027-11-17-00-00-00
+#fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
+#types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
+1826437453.545752	-	10.14.21.27	142.177.115.137	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+#close	2027-11-18-00-00-00

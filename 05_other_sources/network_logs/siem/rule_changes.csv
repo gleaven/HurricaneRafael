@@ -1,0 +1,8 @@
+time_utc,action,rule_id,rule_type,description,changed_by,change_ticket
+2027-08-19T11:34:20Z,CREATE,MAINT-EXCEPT-0892,exception,auto-acknowledge SE3-OT-1104 when source is GW-SYS-JMP-01,svc_fieldops_ext,
+2027-08-24T15:02:00Z,CREATE,MAINT-EXCEPT-0893,exception,auto-acknowledge SE3-OT-6010 during approved windows,aclark,CHG-27-0812
+2027-08-31T14:22:00Z,UPDATE,WL-NET-0117,whitelist,104.21.88.0/24 added to vendor CDN range,tperez,
+2027-09-14T06:14:05Z,ACTIVATE,SE3-BULK-STORM-01,bulk dismissal,storm mode: dismiss LOW and MEDIUM alerts from 44 device-availability and OT maintenance rule families,jperez,EOC-ACT-27-09
+2027-09-18T14:00:00Z,DEACTIVATE,SE3-BULK-STORM-01,bulk dismissal,storm mode ended,jperez,EOC-ACT-27-09
+2027-10-18T15:20:00Z,DELETE,MAINT-EXCEPT-0892,exception,removed (AUDIT-EXC-2027-10),falrasheedobinna,SI-2027-CC-001
+2027-10-19T00:30:00Z,REPORT,AUDIT-EXC-2027-10,audit,"exception rule audit complete: 41 rules reviewed, 1 removed",bflores,SI-2027-CC-001

@@ -1,0 +1,142 @@
+=== M7 breaker SUB-02 2027-09-21T14:28:15Z
+  * scada_command_log 1
+       {'time_utc': '2027-09-21T14:28:15Z', 'scada_server': 'GW-SYS-SCADA-01', 'workstation': 'GW-WS-OPS-02', 'operator': '', 'command': 'BREAKER OPEN', 'device': 'GW-SUB02-CB-7', 'result': 'EXECUTED', 'origin': 'remote desktop', 'console_session_id': '', 'origin_hos
+  * historian SUB02 status/cmd changes 2
+       ('2027-09-21T14:28:15Z', 'GW.SUB2.BKR1.CMD.SP', '0', '192')
+       ('2027-09-21T14:28:17Z', 'GW.SUB2.BKR1.STATUS.STS', '0', '192')
+  * historian SUB02 load tags around 0
+      tags [('GW.SUB2.BKR1.CMD.SP', 1), ('GW.SUB2.BKR1.STATUS.STS', 2), ('GW.SUB2.BUS.MW.PV', 2), ('GW.RTU2.CPU_LOAD.PV', 1), ('GW.SUB2.CB6.CURR.PV', 1)]
+  * outage_map SUB-02 feeders 12
+       ('2027-09-21T14:00:00Z', 'GW-SUB02-CB-5', '6300', 'STORM', '4')
+       ('2027-09-21T14:00:00Z', 'GW-SUB02-CB-6', '0', '', '0')
+       ('2027-09-21T14:00:00Z', 'GW-SUB02-CB-8', '6300', 'STORM', '4')
+       ('2027-09-21T14:15:00Z', 'GW-SUB02-CB-5', '6300', 'STORM', '4')
+       ('2027-09-21T14:15:00Z', 'GW-SUB02-CB-6', '0', '', '0')
+       ('2027-09-21T14:15:00Z', 'GW-SUB02-CB-8', '6300', 'STORM', '4')
+       ('2027-09-21T14:30:00Z', 'GW-SUB02-CB-5', '6300', 'STORM', '4')
+       ('2027-09-21T14:30:00Z', 'GW-SUB02-CB-6', '8400', 'STORM', '6')
+       ('2027-09-21T14:30:00Z', 'GW-SUB02-CB-8', '6300', 'STORM', '4')
+       ('2027-09-21T14:45:00Z', 'GW-SUB02-CB-5', '6300', 'STORM', '4')
+       ('2027-09-21T14:45:00Z', 'GW-SUB02-CB-6', '8400', 'STORM', '6')
+       ('2027-09-21T14:45:00Z', 'GW-SUB02-CB-8', '6300', 'STORM', '4')
+  * work_orders reported 14-16Z 1
+       ('WO-2027-32429', '2027-09-21T14:39:15Z', 'GW-SUB02-BKR-MAIN', 'EM - Harbor View main breaker CB-7 open; restored circuits lost again. Inspect breaker, re', 'RELAY', 'acantu')
+  * remote_access_sessions 3
+       ('RAS-20318', '2027-09-21T14:20:37Z', '2027-09-21T16:53:14Z', 'US', 'GW-SRV-HIST-01')
+       ('RAS-20319', '2027-09-21T14:24:39Z', '2027-09-21T14:32:01Z', 'NL', 'GW-SRV-HIST-01;GW-WS-OPS-02')
+       ('RAS-20320', '2027-09-21T14:48:45Z', '2027-09-21T15:01:42Z', 'US', 'GW-SRV-HIST-01')
+  * historian_access 3
+       ('HIST-20270921-00848', '2027-09-21T14:24:58Z', 'GW-SYS-JMP-01', 'bulk read', 'pump_setpoints;booster_setpoints')
+       ('HIST-20270921-00857', '2027-09-21T14:30:24Z', 'GW-SRV-HIST-DMZ', 'trend', 'breaker_status')
+       ('HIST-20270921-00860', '2027-09-21T14:40:39Z', 'GW-WS-OPS-05', 'trend', 'tank_level')
+  * alarm_suppression 10
+       ('2027-09-21T14:25:15Z', 'ADD', 'water quality sensor', 'GW-ENG-VELA', '65')
+       ('2027-09-21T14:25:15Z', 'ADD', 'pump flow', 'GW-ENG-VELA', '66')
+       ('2027-09-21T14:25:15Z', 'ADD', 'substation relay', 'GW-ENG-VELA', '67')
+  * siem JMP/SCADA alerts 14:20-14:40 10
+       ('2027-09-21T14:21:57Z', 'DEVICE_COMM_LOSS', 'GW-SRV-HIST-03', '', '', 'BENIGN_TRUE_POSITIVE')
+       ('2027-09-21T14:24:20Z', 'MAINT_WINDOW_ACTIVITY', 'GW-SRV-SIEM-03', '', '', 'AUTO_ACK')
+       ('2027-09-21T14:24:57Z', 'HISTORIAN_BULK_QUERY', 'GW-SYS-JMP-01', 'GW-SRV-HIST-01', 'GW-SYS-JMP-01\\svc_fieldops_ext', 'AUTO_ACK')
+       ('2027-09-21T14:25:04Z', 'MAINT_WINDOW_ACTIVITY', 'GW-SRV-PAM-01', '', '', 'AUTO_ACK')
+       ('2027-09-21T14:25:19Z', 'ALARM_SUPPRESSION_CHANGE', 'GW-SYS-JMP-01', 'GW-SYS-SCADA-01', 'GW-ENG-VELA', 'BENIGN_TRUE_POSITIVE')
+       ('2027-09-21T14:29:37Z', 'DEVICE_COMM_LOSS', 'GW-SRV-MAXIMO-01', '', '', 'AUTHORIZED_MAINTENANCE')
+       ('2027-09-21T14:32:36Z', 'MAINT_WINDOW_ACTIVITY', 'GW-SRV-HV-03', '', '', 'AUTO_ACK')
+       ('2027-09-21T14:35:53Z', 'MAINT_WINDOW_ACTIVITY', 'GW-SRV-HV-02', '', '', 'AUTO_ACK')
+       ('2027-09-21T14:38:10Z', 'HISTORIAN_BULK_QUERY', 'GW-WTP-HMI-02', 'GW-SRV-HIST-01', 'GW-WTR-SAENZ', 'AUTHORIZED_MAINTENANCE')
+       ('2027-09-21T14:39:48Z', 'DEVICE_COMM_LOSS', 'GW-NMS-01', '', '', 'BENIGN_TRUE_POSITIVE')
+  * zeek conn involving JMP 10.72.4.88 14:20-14:35 4
+       ('14:24:29', '10.14.20.26', '10.72.4.88', '443', 'ssl', '4168.585526', '478252', '1458762')
+       ('14:24:37', '45.141.152.61', '10.72.4.88', '443', 'ssl', '444.000000', '1778000', '1100000')
+       ('14:24:58', '10.72.4.88', '10.72.1.10', '5450', '-', '420.000000', '27200', '2366000')
+       ('14:26:40', '10.72.4.88', '10.72.2.12', '3389', 'rdp', '190.000000', '240000', '3600000')
+  * zeek conn JMP->OT (orig=JMP) whole day 2
+       ('14:24:58', '10.72.4.88', '10.72.1.10', '5450', '-', '420.000000', '27200', '2366000')
+       ('14:26:40', '10.72.4.88', '10.72.2.12', '3389', 'rdp', '190.000000', '240000', '3600000')
+=== M8 P-3 setpoint 2027-09-23T02:04:01Z
+  * ot_config 2
+       ('2027-09-23T02:04:01Z', 'GW-SYS-RTU-UTL1', 'P-3 discharge pressure setpoint (psi)', '85', '68', 'remote write', 'GW-ENG-VELA', 'GW-SYS-JMP-01', '')
+       ('2027-09-23T02:08:00Z', 'GW-SYS-RTU-WTR3', 'booster discharge setpoint (psi)', '72', '54', 'remote write', 'GW-ENG-VELA', 'GW-SYS-JMP-01', '')
+       GW.DIST.ZONE4.DEMAND.PV 9 [('01:30', '13.74'), ('02:05', '13.13'), ('03:05', '12.83'), ('03:55', '12.26'), ('04:20', '11.68'), ('04:40', '11.07'), ('04:55', '10.49'), ('05:15', '9.96'), ('05:45', '9.43')]
+       GW.UTL1.PUMP3.BEARTEMP.PV 5 [('01:30', '135.7'), ('02:25', '133.0'), ('02:55', '130.4'), ('04:15', '127.7'), ('06:00', '125.2')]
+       GW.UTL1.PUMP3.CURR.PV 6 [('01:30', '103.8'), ('02:05', '92.7'), ('03:05', '92.6'), ('04:05', '92.5'), ('05:05', '92.6'), ('06:05', '92.9')]
+       GW.DIST.ZONE4.PRESS.PV 20 [('01:40', '29.38'), ('02:05', '29.38'), ('02:30', '27.43'), ('03:00', '25.52'), ('03:30', '23.99'), ('04:00', '22.76'), ('04:30', '21.78'), ('05:00', '20.99'), ('05:30', '20.36')]
+       GW.UTL1.PUMP3.PRESS.PV 6 [('01:45', '68.46'), ('02:05', '67.27'), ('03:05', '67.22'), ('04:05', '67.15'), ('05:05', '67.35'), ('06:05', '67.50')]
+       GW.UTL1.PUMP3.FLOW.PV 6 [('01:50', '1660'), ('02:05', '584'), ('03:05', '578'), ('04:05', '573'), ('05:05', '561'), ('06:05', '558')]
+       GW.UTL1.PUMP3.VIB.PV 8 [('01:55', '0.185'), ('02:10', '0.199'), ('02:20', '0.216'), ('02:35', '0.198'), ('03:35', '0.206'), ('03:55', '0.188'), ('04:55', '0.191'), ('05:55', '0.193')]
+       GW.UTL1.PUMP3.PRESS.SP 2 [('02:04', '68.00'), ('02:05', '68.00')]
+  * zeek JMP flows 01:55-02:15 5
+       ('01:59:23', '45.141.152.61', '10.72.4.88', '443', 'ssl', '784.000000', '2084000', '2600000')
+       ('01:59:44', '10.72.4.88', '10.72.1.10', '5450', '-', '760.000000', '45520', '4747600')
+       ('02:03:56', '10.72.4.88', '10.72.30.10', '502', 'modbus', '2.200000', '2400', '1800')
+       ('02:06:53', '10.14.20.22', '10.72.4.88', '443', 'ssl', '1471.920414', '369221', '7128807')
+       ('02:07:55', '10.72.4.88', '10.72.33.10', '502', 'modbus', '2.200000', '2400', '1800')
+=== M9 SUB-03 2027-09-24T19:43:46Z
+  * scada_command_log 1
+       ('2027-09-24T19:43:46Z', 'GW-SYS-SCADA-01', 'GW-WS-OPS-02', '', 'BREAKER OPEN', 'GW-SUB03-CB-12', 'EXECUTED', 'remote desktop', '', 'GW-SYS-JMP-01')
+  * outage_map SUB-03 12
+       ('2027-09-24T19:15:00Z', 'GW-SUB03-CB-10', '0', '')
+       ('2027-09-24T19:15:00Z', 'GW-SUB03-CB-11', '3900', 'STORM')
+       ('2027-09-24T19:15:00Z', 'GW-SUB03-CB-9', '4300', 'STORM')
+       ('2027-09-24T19:30:00Z', 'GW-SUB03-CB-10', '0', '')
+       ('2027-09-24T19:30:00Z', 'GW-SUB03-CB-11', '3900', 'STORM')
+       ('2027-09-24T19:30:00Z', 'GW-SUB03-CB-9', '4300', 'STORM')
+       ('2027-09-24T19:45:00Z', 'GW-SUB03-CB-10', '6800', 'STORM')
+       ('2027-09-24T19:45:00Z', 'GW-SUB03-CB-11', '3900', 'STORM')
+       ('2027-09-24T19:45:00Z', 'GW-SUB03-CB-9', '4300', 'STORM')
+       ('2027-09-24T20:00:00Z', 'GW-SUB03-CB-10', '6800', 'STORM')
+       ('2027-09-24T20:00:00Z', 'GW-SUB03-CB-11', '3900', 'STORM')
+       ('2027-09-24T20:00:00Z', 'GW-SUB03-CB-9', '4300', 'STORM')
+=== M16 isolation 2027-10-12T12:00Z
+  * historian SYSTEM 18
+       ('2027-10-12T10:00:44Z', 'GW.HST.SERVER.COMMS.STS', '1', '192')
+       ('2027-10-12T10:00:44Z', 'GW.JMP.SERVER.COMMS.STS', '1', '192')
+       ('2027-10-12T10:00:44Z', 'GW.SCADA.EXT_ISOLATED.STS', '0', '192')
+       ('2027-10-12T10:00:44Z', 'GW.SCADA.SERVER.COMMS.STS', '1', '192')
+       ('2027-10-12T11:00:44Z', 'GW.HST.SERVER.COMMS.STS', '1', '192')
+       ('2027-10-12T11:00:44Z', 'GW.JMP.SERVER.COMMS.STS', '1', '192')
+       ('2027-10-12T11:00:44Z', 'GW.SCADA.EXT_ISOLATED.STS', '0', '192')
+       ('2027-10-12T11:00:44Z', 'GW.SCADA.SERVER.COMMS.STS', '1', '192')
+       ('2027-10-12T12:00:00Z', 'GW.JMP.SERVER.COMMS.STS', '0', '192')
+       ('2027-10-12T12:00:00Z', 'GW.SCADA.EXT_ISOLATED.STS', '1', '192')
+  * work_orders 10-12 8
+       ('WO-2027-OT-0881', '2027-10-12T08:00:00Z', 'EM - Isolate SCADA and control networks from external connectivity; remote-access gateway offline')
+       ('WO-2027-32437', '2027-10-12T12:24:00Z', 'EM - Place SUB1 protection and breaker control in local manual operation')
+       ('WO-2027-32438', '2027-10-12T12:28:00Z', 'EM - Place SUB2 protection and breaker control in local manual operation')
+       ('WO-2027-32444', '2027-10-12T12:30:00Z', 'EM - Temporary generator supply for pump P-4 (pump-room backup feed out of service)')
+       ('WO-2027-32440', '2027-10-12T12:32:00Z', 'EM - Place SUB3 protection and breaker control in local manual operation')
+       ('WO-2027-32442', '2027-10-12T12:36:00Z', 'EM - Place SUB4 protection and breaker control in local manual operation')
+       ('WO-2027-32443', '2027-10-12T12:40:00Z', 'EM - Place SUB5 protection and breaker control in local manual operation')
+       ('WO-2027-31512', '2027-10-12T14:16:38Z', 'PM - Transformer T1 oil sample and DGA')
+  * remote sessions 10-11T20..10-20T20 4
+       ('RAS-20434', '2027-10-20T13:44:10Z', 'GW-ENG-BAKER', 'US')
+       ('RAS-20435', '2027-10-20T14:03:58Z', 'GW-ENG-RAMOS', 'US')
+       ('RAS-20436', '2027-10-20T15:57:54Z', 'GW-ENG-RUIZ', 'US')
+       ('RAS-20437', '2027-10-20T18:20:00Z', 'svc_vantage_mgmt', 'US')
+  * scada cmds via remote desktop in window 4
+       ('2027-10-12T18:39:52Z', 'automation', '')
+       ('2027-10-14T10:26:35Z', 'remote desktop', 'GW-SYS-JMP-01')
+       ('2027-10-18T02:36:14Z', 'remote desktop', 'GW-SYS-JMP-01')
+       ('2027-10-18T14:08:14Z', 'remote desktop', 'GW-SYS-JMP-01')
+  * historian_access from JMP in window 4
+       ('HIST-20271013-00996', '2027-10-13T19:07:18Z', 'GW-SYS-JMP-01')
+       ('HIST-20271014-01003', '2027-10-14T20:50:40Z', 'GW-SYS-JMP-01')
+       ('HIST-20271014-01015', '2027-10-14T22:25:23Z', 'GW-SYS-JMP-01')
+       ('HIST-20271016-01031', '2027-10-16T17:54:06Z', 'GW-SYS-JMP-01')
+  * siem alerts src JMP in window 31
+       ('2027-10-12T21:36:38Z', 'HISTORIAN_BULK_QUERY', 'GW-SYS-JMP-01')
+       ('2027-10-14T13:18:34Z', 'OT_FILE_WRITE', 'GW-SYS-JMP-01')
+       ('2027-10-14T13:36:31Z', 'HISTORIAN_BULK_QUERY', 'GW-SYS-JMP-01')
+       ('2027-10-14T13:59:31Z', 'OT_FILE_WRITE', 'GW-SYS-JMP-01')
+       ('2027-10-14T18:07:21Z', 'HISTORIAN_BULK_QUERY', 'GW-SYS-JMP-01')
+       ('2027-10-14T20:41:39Z', 'OT_FILE_WRITE', 'GW-SYS-JMP-01')
+  * ot_config in window 4
+       ('2027-10-12T12:14:00Z', 'GW-SYS-RTU-UTL1', 'P-3 discharge pressure setpoint (psi)', '68', '85', 'local panel', 'GW-OPS-PEREZ', 'GW-WTP-HMI-01', 'SI-2027-CC-001')
+       ('2027-10-12T12:26:00Z', 'GW-SYS-RTU-WTR3', 'booster discharge setpoint (psi)', '54', '72', 'local panel', 'GW-OPS-PEREZ', 'local panel', 'SI-2027-CC-001')
+       ('2027-10-19T16:12:43Z', 'GW-SYS-RTU-01', 'relay 27-UV pickup (pu)', '0.94', '0.88', 'local panel', 'GW-OPS-PHAM', 'local panel', 'SI-2027-CC-001')
+       ('2027-10-19T16:47:43Z', 'GW-SYS-RTU-02', 'relays R-02A/B/C overcurrent trip (A)', '2400', '1200', 'local panel', 'GW-OPS-PHAM', 'local panel', 'SI-2027-CC-001')
+  * file_integrity from JMP in window 0
+  * alarm_suppression in window 82
+       ('2027-10-12T12:30:00Z', 'REMOVE', 'GW-OPS-PEREZ', 'GW-WS-OPS-01')
+       ('2027-10-12T12:30:20Z', 'REMOVE', 'GW-OPS-PEREZ', 'GW-WS-OPS-01')
+       ('2027-10-12T12:30:40Z', 'REMOVE', 'GW-OPS-PEREZ', 'GW-WS-OPS-01')
+       ('2027-10-12T12:31:00Z', 'REMOVE', 'GW-OPS-PEREZ', 'GW-WS-OPS-01')

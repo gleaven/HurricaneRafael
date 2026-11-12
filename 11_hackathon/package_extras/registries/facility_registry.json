@@ -1,0 +1,1080 @@
+{
+ "metadata": {
+  "catalog": "facility_registry",
+  "version": "2.0",
+  "scenario": "Hurricane Rafael (fictional)",
+  "description": "Hospitals, clinics, shelters, distribution sites, relief hubs, recovery centres and emergency-management facilities. Operators are fictional; sites are real.",
+  "coordinates": "Coordinates are real published points (reference/geo/landmarks.geojson) or points beside real roads; see position_basis on each record and reference/geo/SOURCES_*.md.",
+  "id_scheme": "FAC-<ABBR>-<NNN>; military and Coast Guard facilities keep their scenario place ids (FAC-DOD-01, FAC-USCG-01).",
+  "figures_note": "Records marked figures = 'scenario value' carry ordinary reference figures chosen for the exercise; figures taken from public statements say so."
+ },
+ "facilities": [
+  {
+   "facility_id": "FAC-SRMC-001",
+   "facility_name": "Shoreline Regional Medical Center",
+   "facility_name_abbrev": "SRMC",
+   "facility_type": "Hospital, acute care with emergency department",
+   "facility_type_code": "HOSP-ED",
+   "address": "600 Elizabeth Street, Corpus Christi, TX 78404",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78404",
+   "latitude": 27.77811,
+   "longitude": -97.39455,
+   "position_basis": "real site: hospital at 600 Elizabeth Street [USGS National Structures Dataset]",
+   "licensed_beds": 500,
+   "ed_beds": 68,
+   "icu_beds": 40,
+   "ventilators": 32,
+   "trauma_level": "Level II",
+   "helipad": true,
+   "ed_baseline_visits_per_day": 220,
+   "backup_power": {
+    "diesel_storage_gal": 24000,
+    "tanks": 2,
+    "estimated_runtime_days_at_storm_load": 9.2
+   },
+   "bilingual_clinical_staff": true,
+   "figures": "as stated in hospital statements"
+  },
+  {
+   "facility_id": "FAC-BCMC-002",
+   "facility_name": "Bay City Medical Center",
+   "facility_name_abbrev": "BCMC",
+   "facility_type": "Hospital, acute care with emergency department",
+   "facility_type_code": "HOSP-ED",
+   "address": "7101 South Padre Island Drive, Corpus Christi, TX 78412",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78412",
+   "latitude": 27.69302,
+   "longitude": -97.34498,
+   "position_basis": "real site: hospital at 7101 South Padre Island Drive [USGS National Structures Dataset]",
+   "licensed_beds": 280,
+   "ed_beds": 42,
+   "icu_beds": 28,
+   "ventilators": 18,
+   "trauma_level": "Level III",
+   "helipad": true,
+   "ed_baseline_visits_per_day": 120,
+   "backup_power": {
+    "diesel_storage_gal": 6000,
+    "tanks": 1
+   },
+   "bilingual_clinical_staff": true,
+   "figures": "beds and diesel as stated in hospital statements; other figures: scenario value"
+  },
+  {
+   "facility_id": "FAC-LPMC-011",
+   "facility_name": "Lamar Park Medical Center",
+   "facility_name_abbrev": "LPMC",
+   "facility_type": "Hospital, acute care with emergency department",
+   "facility_type_code": "HOSP-ED",
+   "address": "3315 South Alameda Street, Corpus Christi, TX 78411",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78411",
+   "latitude": 27.75289,
+   "longitude": -97.38889,
+   "position_basis": "real site: hospital at 3315 South Alameda Street [USGS National Structures Dataset]",
+   "licensed_beds": 186,
+   "ed_beds": 24,
+   "icu_beds": 16,
+   "ventilators": 10,
+   "trauma_level": "Level IV",
+   "helipad": false,
+   "ed_baseline_visits_per_day": 70,
+   "backup_power": {
+    "diesel_storage_gal": 4000,
+    "tanks": 1
+   },
+   "figures": "scenario value"
+  },
+  {
+   "facility_id": "FAC-SCMH-012",
+   "facility_name": "Saratoga Community Hospital",
+   "facility_name_abbrev": "SCMH",
+   "facility_type": "Hospital, acute care with emergency department",
+   "facility_type_code": "HOSP-ED",
+   "address": "5950 Saratoga Boulevard, Corpus Christi, TX 78414",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78414",
+   "latitude": 27.68396,
+   "longitude": -97.37708,
+   "position_basis": "real site: hospital at 5950 Saratoga Boulevard [USGS National Structures Dataset]",
+   "licensed_beds": 94,
+   "ed_beds": 18,
+   "icu_beds": 8,
+   "ventilators": 6,
+   "trauma_level": "Level IV",
+   "helipad": true,
+   "ed_baseline_visits_per_day": 45,
+   "backup_power": {
+    "diesel_storage_gal": 2500,
+    "tanks": 1
+   },
+   "figures": "scenario value"
+  },
+  {
+   "facility_id": "FAC-FPCH-013",
+   "facility_name": "Five Points Community Hospital",
+   "facility_name_abbrev": "FPCH",
+   "facility_type": "Hospital, acute care with emergency department",
+   "facility_type_code": "HOSP-ED",
+   "address": "13725 Northwest Boulevard, Corpus Christi, TX 78410",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78410",
+   "latitude": 27.85495,
+   "longitude": -97.63541,
+   "position_basis": "real site: hospital at 13725 Northwest Boulevard [USGS National Structures Dataset]",
+   "licensed_beds": 110,
+   "ed_beds": 16,
+   "icu_beds": 8,
+   "ventilators": 6,
+   "trauma_level": "Level IV",
+   "helipad": false,
+   "ed_baseline_visits_per_day": 35,
+   "backup_power": {
+    "diesel_storage_gal": 3000,
+    "tanks": 1
+   },
+   "figures": "scenario value"
+  },
+  {
+   "facility_id": "FAC-GCCH-014",
+   "facility_name": "Gulf Coast Children's Hospital",
+   "facility_name_abbrev": "GCCH",
+   "facility_type": "Hospital, acute care with emergency department",
+   "facility_type_code": "HOSP-ED",
+   "address": "3533 South Alameda Street, Corpus Christi, TX 78411",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78411",
+   "latitude": 27.7487,
+   "longitude": -97.38621,
+   "position_basis": "real site: hospital at 3533 South Alameda Street [USGS National Structures Dataset]",
+   "licensed_beds": 190,
+   "ed_beds": 22,
+   "icu_beds": 24,
+   "ventilators": 20,
+   "trauma_level": "Pediatric Level III",
+   "helipad": true,
+   "ed_baseline_visits_per_day": 30,
+   "backup_power": {
+    "diesel_storage_gal": 5000,
+    "tanks": 1
+   },
+   "figures": "scenario value"
+  },
+  {
+   "facility_id": "FAC-ABCH-015",
+   "facility_name": "Aransas Bay Community Hospital",
+   "facility_name_abbrev": "ABCH",
+   "facility_type": "Hospital, critical access with emergency department",
+   "facility_type_code": "HOSP-ED",
+   "address": "Aransas Pass, TX",
+   "city": "Aransas Pass",
+   "county": "San Patricio",
+   "state": "TX",
+   "zip": null,
+   "latitude": 27.91332,
+   "longitude": -97.15935,
+   "position_basis": "real site: hospital heliport [USDOT NTAD Aviation Facilities]",
+   "licensed_beds": 45,
+   "ed_beds": 8,
+   "icu_beds": 4,
+   "ventilators": 3,
+   "trauma_level": "Level IV",
+   "helipad": true,
+   "ed_baseline_visits_per_day": 18,
+   "backup_power": {
+    "diesel_storage_gal": 1500,
+    "tanks": 1
+   },
+   "figures": "scenario value"
+  },
+  {
+   "facility_id": "FAC-CCUC-003",
+   "facility_name": "Calallen Community Urgent Care",
+   "facility_type": "Urgent care clinic",
+   "facility_type_code": "URGENT",
+   "address": "Northwest Boulevard, Corpus Christi, TX 78410",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78410",
+   "latitude": 27.85547,
+   "longitude": -97.63027,
+   "position_basis": "placed beside Northwest Blvd (no published point in the reference set)",
+   "exam_rooms": 10,
+   "figures": "scenario value",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-STCH-016",
+   "facility_name": "South Texas Community Health Center",
+   "facility_type": "Community health clinic",
+   "facility_type_code": "CLINIC",
+   "address": "South Staples Street, Corpus Christi, TX 78411",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78411",
+   "latitude": 27.72402,
+   "longitude": -97.37818,
+   "position_basis": "placed beside S Staples St (no published point in the reference set)",
+   "exam_rooms": 14,
+   "figures": "scenario value",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-FBUC-017",
+   "facility_name": "Flour Bluff Urgent Care",
+   "facility_type": "Urgent care clinic",
+   "facility_type_code": "URGENT",
+   "address": "Waldron Road, Corpus Christi, TX 78418",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78418",
+   "latitude": 27.6666,
+   "longitude": -97.28417,
+   "position_basis": "placed beside Waldron Rd (no published point in the reference set)",
+   "exam_rooms": 8,
+   "figures": "scenario value",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-SSUC-018",
+   "facility_name": "Southside Urgent Care",
+   "facility_type": "Urgent care clinic",
+   "facility_type_code": "URGENT",
+   "address": "Saratoga Boulevard, Corpus Christi, TX 78413",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78413",
+   "latitude": 27.68853,
+   "longitude": -97.39092,
+   "position_basis": "placed beside Saratoga Blvd (no published point in the reference set)",
+   "exam_rooms": 9,
+   "figures": "scenario value",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-PHD-019",
+   "facility_name": "Corpus Christi-Nueces County Public Health District",
+   "facility_type": "Public health department",
+   "facility_type_code": "PUBHEALTH",
+   "address": "Horne Road, Corpus Christi, TX 78416",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78416",
+   "latitude": 27.75659,
+   "longitude": -97.42891,
+   "position_basis": "placed beside Horne Rd (no published point in the reference set)",
+   "phone": "361-826-7200",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-MED-010",
+   "facility_name": "Nueces County Medical Examiner's Office",
+   "facility_type": "Medical examiner",
+   "facility_type_code": "ME",
+   "address": "2610 Hospital Blvd, Corpus Christi, TX 78405",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78405",
+   "latitude": 27.78002,
+   "longitude": -97.41629,
+   "position_basis": "real site: hospital at 2606 Hospital Boulevard [USGS National Structures Dataset]",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-BLD-020",
+   "facility_name": "Nueces Bay Blood Services",
+   "facility_type": "Blood donation centre",
+   "facility_type_code": "BLOOD",
+   "address": "Ayers Street, Corpus Christi, TX 78415",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78415",
+   "latitude": 27.75257,
+   "longitude": -97.41721,
+   "position_basis": "placed beside Ayers St (no published point in the reference set)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-CBECC-004",
+   "facility_name": "Coastal Bend Emergency Communications Center",
+   "facility_name_abbrev": "CBECC",
+   "aliases": [
+    "Corpus Christi-Nueces County 911 center",
+    "PSAP-01"
+   ],
+   "facility_type": "Emergency communications centre (911 PSAP)",
+   "facility_type_code": "PSAP",
+   "address": "321 John Sartain Street, Corpus Christi, TX 78401",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78401",
+   "latitude": 27.79305,
+   "longitude": -97.39472,
+   "position_basis": "real site: Corpus Christi Police Department [USGS National Structures Dataset]",
+   "consoles": 18,
+   "baseline_calls_per_day": 310,
+   "information_line": "NuecesInfoLine 361-826-INFO",
+   "figures": "baseline as stated by the centre; consoles: scenario value",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-EOC-021",
+   "facility_name": "Nueces County Emergency Operations Center",
+   "aliases": [
+    "Nueces County Office of Emergency Management",
+    "Nueces County Courthouse"
+   ],
+   "facility_type": "Emergency operations centre",
+   "facility_type_code": "EOC",
+   "address": "901 Leopard Street, Corpus Christi, TX 78401",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78401",
+   "latitude": 27.7949,
+   "longitude": -97.40076,
+   "position_basis": "real site: Nueces County Courthouse [USGS National Structures Dataset]",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-GOV-022",
+   "facility_name": "Corpus Christi City Hall",
+   "facility_type": "City government",
+   "facility_type_code": "GOV",
+   "address": "1201 Leopard Street, Corpus Christi, TX 78401",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78401",
+   "latitude": 27.79591,
+   "longitude": -97.40423,
+   "position_basis": "real site: Corpus Christi City Hall [USGS National Structures Dataset]",
+   "phone": "361-826-1600",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-JFO-023",
+   "facility_name": "FEMA Joint Field Office",
+   "aliases": [
+    "Federal Emergency Management Agency Joint Field Office"
+   ],
+   "facility_type": "Federal joint field office",
+   "facility_type_code": "JFO",
+   "address": "South Padre Island Drive, Corpus Christi, TX 78415",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78415",
+   "latitude": 27.72268,
+   "longitude": -97.40212,
+   "position_basis": "placed beside State Hwy 358 (no published point in the reference set)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-CLM-024",
+   "facility_name": "Inner Harbor Spill Claims Center",
+   "aliases": [
+    "claims center"
+   ],
+   "facility_type": "Oil spill claims centre",
+   "facility_type_code": "CLAIMS",
+   "address": "Leopard Street, Corpus Christi, TX 78401",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78401",
+   "latitude": 27.79597,
+   "longitude": -97.40902,
+   "position_basis": "placed beside Leopard St (no published point in the reference set)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-USCG-01",
+   "facility_name": "US Coast Guard Sector Corpus Christi",
+   "aliases": [
+    "Coast Guard Sector Corpus Christi",
+    "Unified Command",
+    "Unified Command Joint Information Center"
+   ],
+   "facility_type": "Coast Guard sector headquarters",
+   "facility_type_code": "USCG",
+   "address": "Corpus Christi International Airport, Corpus Christi, TX 78406",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78406",
+   "latitude": 27.77228,
+   "longitude": -97.49311,
+   "position_basis": "placed beside FM 763 (no published point in the reference set)",
+   "roles": [
+    "unified_command_post",
+    "joint_information_center"
+   ],
+   "phone": "(361) 555-0147",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-NWS-025",
+   "facility_name": "National Weather Service Corpus Christi",
+   "facility_type": "Weather forecast office",
+   "facility_type_code": "NWS",
+   "address": "Corpus Christi International Airport, Corpus Christi, TX 78406",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78406",
+   "latitude": 27.78397,
+   "longitude": -97.5061,
+   "position_basis": "placed beside Agnes St (no published point in the reference set)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-SHLT-007",
+   "facility_name": "Richard M. Borchard Regional Fairgrounds",
+   "aliases": [
+    "Robstown Fairgrounds",
+    "Richard M. Borchard Fairgrounds"
+   ],
+   "facility_type": "Emergency shelter, regional fairgrounds",
+   "facility_type_code": "SHELTER",
+   "address": "Robstown, TX 78380",
+   "city": "Robstown",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78380",
+   "latitude": 27.80524,
+   "longitude": -97.66676,
+   "position_basis": "placed beside FM 1889 (no published point in the reference set)",
+   "roles": [
+    "shelter",
+    "staging_area",
+    "water_distribution",
+    "fema_outreach"
+   ],
+   "shelter": {
+    "capacity": 2500,
+    "serves_evacuation_zones": [
+     "A",
+     "B",
+     "C"
+    ],
+    "figures": "scenario value",
+    "pets": true,
+    "medical_station": true
+   }
+  },
+  {
+   "facility_id": "FAC-SHLT-006",
+   "facility_name": "Calallen ISD Fieldhouse",
+   "aliases": [
+    "Calallen High School"
+   ],
+   "facility_type": "Emergency shelter, school fieldhouse",
+   "facility_type_code": "SHELTER",
+   "address": "4001 Wildcat Drive, Corpus Christi, TX 78410",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78410",
+   "latitude": 27.85759,
+   "longitude": -97.63635,
+   "position_basis": "real site: Calallen High School [USGS National Structures Dataset]",
+   "roles": [
+    "shelter",
+    "water_distribution"
+   ],
+   "shelter": {
+    "capacity": 600,
+    "serves_evacuation_zones": [
+     "A",
+     "B",
+     "C"
+    ],
+    "figures": "scenario value",
+    "pets": false,
+    "medical_station": true
+   }
+  },
+  {
+   "facility_id": "FAC-SHLT-026",
+   "facility_name": "Richard King High School",
+   "facility_type": "Emergency shelter, school",
+   "facility_type_code": "SHELTER",
+   "address": "5225 Gollihar Rd, Corpus Christi, TX 78412",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78412",
+   "latitude": 27.71877,
+   "longitude": -97.37082,
+   "position_basis": "real site: Richard King High School [USGS National Structures Dataset]",
+   "roles": [
+    "shelter",
+    "recovery_help_point"
+   ],
+   "shelter": {
+    "capacity": 900,
+    "serves_evacuation_zones": [
+     "A",
+     "B",
+     "D"
+    ],
+    "figures": "scenario value",
+    "pets": false
+   }
+  },
+  {
+   "facility_id": "FAC-SHLT-027",
+   "facility_name": "West Oso High School",
+   "facility_type": "Emergency shelter, school",
+   "facility_type_code": "SHELTER",
+   "address": "754 Flato Road, Corpus Christi, TX 78405",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78405",
+   "latitude": 27.76972,
+   "longitude": -97.45927,
+   "position_basis": "real site: West Oso High School [USGS National Structures Dataset]",
+   "roles": [
+    "shelter"
+   ],
+   "shelter": {
+    "capacity": 500,
+    "serves_evacuation_zones": [
+     "A",
+     "B"
+    ],
+    "figures": "scenario value",
+    "pets": false
+   }
+  },
+  {
+   "facility_id": "FAC-SHLT-028",
+   "facility_name": "Solomon P. Ortiz Community Center",
+   "facility_type": "Emergency shelter, community centre",
+   "facility_type_code": "SHELTER",
+   "address": "Robstown, TX 78380",
+   "city": "Robstown",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78380",
+   "latitude": 27.80003,
+   "longitude": -97.66559,
+   "position_basis": "placed beside E Ave J (no published point in the reference set)",
+   "roles": [
+    "shelter",
+    "fema_outreach"
+   ],
+   "shelter": {
+    "capacity": 300,
+    "serves_evacuation_zones": [
+     "C"
+    ],
+    "figures": "scenario value",
+    "pets": false
+   }
+  },
+  {
+   "facility_id": "FAC-SHLT-029",
+   "facility_name": "Flour Bluff ISD Gymnasium",
+   "facility_type": "Post-storm shelter, school gymnasium",
+   "facility_type_code": "SHELTER",
+   "address": "2505 Waldron Road, Corpus Christi, TX 78418",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78418",
+   "latitude": 27.64458,
+   "longitude": -97.29614,
+   "position_basis": "real site: Flour Bluff High School [USGS National Structures Dataset]",
+   "roles": [
+    "shelter",
+    "fema_outreach"
+   ],
+   "shelter": {
+    "capacity": 450,
+    "serves_evacuation_zones": [],
+    "figures": "scenario value",
+    "pets": false,
+    "note": "Inside an evacuation zone; used after landfall only."
+   }
+  },
+  {
+   "facility_id": "FAC-SCH-030",
+   "facility_name": "Zavala Elementary School",
+   "aliases": [
+    "Zavala Elementary"
+   ],
+   "facility_type": "Public school",
+   "facility_type_code": "SCHOOL",
+   "address": "3125 Ruth Street, Corpus Christi, TX 78405",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78405",
+   "latitude": 27.78188,
+   "longitude": -97.42612,
+   "position_basis": "real site: Zavala Elementary School [USGS National Structures Dataset]",
+   "designated_shelter": false,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-SCH-031",
+   "facility_name": "Collier Elementary",
+   "facility_type": "Public school",
+   "facility_type_code": "SCHOOL",
+   "address": "Leopard Street, Corpus Christi, TX 78408",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78408",
+   "latitude": 27.79659,
+   "longitude": -97.44208,
+   "position_basis": "placed beside Leopard St (no published point in the reference set)",
+   "designated_shelter": false,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-SCH-032",
+   "facility_name": "Yeager Elementary School",
+   "facility_type": "Public school",
+   "facility_type_code": "SCHOOL",
+   "address": "5414 Tripoli Drive, Corpus Christi, TX 78411",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78411",
+   "latitude": 27.71423,
+   "longitude": -97.39672,
+   "position_basis": "real site: Yeager Elementary School [USGS National Structures Dataset]",
+   "roles": [
+    "water_distribution"
+   ],
+   "designated_shelter": false,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-SCH-033",
+   "facility_name": "Tuloso-Midway High School Gym",
+   "aliases": [
+    "Tuloso-Midway High School",
+    "Tuloso-Midway HS"
+   ],
+   "facility_type": "Public school gymnasium",
+   "facility_type_code": "SCHOOL",
+   "address": "2653 McKinzie Road, Corpus Christi, TX 78410",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78410",
+   "latitude": 27.82922,
+   "longitude": -97.57544,
+   "position_basis": "real site: Tuloso Midway High School [USGS National Structures Dataset]",
+   "roles": [
+    "water_distribution"
+   ],
+   "designated_shelter": false,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-SCH-034",
+   "facility_name": "Cunningham Middle School",
+   "facility_type": "Public school",
+   "facility_type_code": "SCHOOL",
+   "address": "4321 Prescott Street, Corpus Christi, TX 78416",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78416",
+   "latitude": 27.75159,
+   "longitude": -97.42803,
+   "position_basis": "real site: Cunningham Middle School [USGS National Structures Dataset]",
+   "roles": [
+    "water_distribution"
+   ],
+   "designated_shelter": false,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-COM-035",
+   "facility_name": "Woodlawn Community Center",
+   "aliases": [
+    "Woodlawn Ctr"
+   ],
+   "facility_type": "Community centre",
+   "facility_type_code": "COMMUNITY",
+   "address": "Woodlawn Drive area, Corpus Christi, TX 78412",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78412",
+   "latitude": 27.70248,
+   "longitude": -97.3517,
+   "position_basis": "placed beside McArdle Rd (no published point in the reference set)",
+   "roles": [
+    "water_distribution"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-COM-036",
+   "facility_name": "Cefe Valenzuela Park",
+   "facility_type": "City park",
+   "facility_type_code": "COMMUNITY",
+   "address": "Old Brownsville Road, Corpus Christi, TX 78417",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78417",
+   "latitude": 27.75272,
+   "longitude": -97.46442,
+   "position_basis": "placed beside Old Brownsville Rd (no published point in the reference set)",
+   "roles": [
+    "water_distribution"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-COM-037",
+   "facility_name": "Brownie's Corner Community Center",
+   "facility_type": "Community centre",
+   "facility_type_code": "COMMUNITY",
+   "address": "Hillcrest, Corpus Christi, TX 78407",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78407",
+   "latitude": 27.80536,
+   "longitude": -97.41324,
+   "position_basis": "placed beside Peabody Ave (no published point in the reference set)",
+   "roles": [
+    "water_distribution"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-HUB-038",
+   "facility_name": "Neighborhood church relief hub",
+   "facility_type": "Church fellowship hall relief hub",
+   "facility_type_code": "RELIEF-HUB",
+   "address": "Hillcrest / Washington-Coles, Corpus Christi, TX 78401",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78401",
+   "latitude": 27.80376,
+   "longitude": -97.40599,
+   "position_basis": "placed beside an unnamed road (no published point in the reference set)",
+   "roles": [
+    "food_and_water_distribution",
+    "neighbour_registry"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-HUB-039",
+   "facility_name": "St. John's Episcopal Church",
+   "facility_type": "Church aid distribution point",
+   "facility_type_code": "RELIEF-HUB",
+   "address": "Staples Street, Corpus Christi, TX 78404",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78404",
+   "latitude": 27.77602,
+   "longitude": -97.40174,
+   "position_basis": "placed beside S Staples St (no published point in the reference set)",
+   "roles": [
+    "food_and_water_distribution"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-DRC-040",
+   "facility_name": "Oveal Williams Senior Center",
+   "facility_type": "FEMA Disaster Recovery Center",
+   "facility_type_code": "DRC",
+   "address": "1414 Martin Luther King Drive, Corpus Christi, TX 78401",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78401",
+   "latitude": 27.79799,
+   "longitude": -97.40913,
+   "position_basis": "placed beside Martin Luther King Dr (no published point in the reference set)",
+   "roles": [
+    "disaster_recovery_center"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-DRC-041",
+   "facility_name": "FEMA Disaster Recovery Center, Ayers Street",
+   "facility_type": "FEMA Disaster Recovery Center",
+   "facility_type_code": "DRC",
+   "address": "5301 Ayers Street, Corpus Christi, TX 78415",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78415",
+   "latitude": 27.73195,
+   "longitude": -97.42993,
+   "position_basis": "placed beside Ayers St (no published point in the reference set)",
+   "roles": [
+    "disaster_recovery_center"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-DRC-042",
+   "facility_name": "Memorial Coliseum Annex",
+   "aliases": [
+    "Memorial Coliseum"
+   ],
+   "facility_type": "FEMA Disaster Recovery Center",
+   "facility_type_code": "DRC",
+   "address": "902 N. Shoreline Blvd, Corpus Christi, TX 78401",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78401",
+   "latitude": 27.79802,
+   "longitude": -97.3917,
+   "position_basis": "placed beside N Shoreline Blvd (no published point in the reference set)",
+   "roles": [
+    "disaster_recovery_center"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-COL-043",
+   "facility_name": "Del Mar College East Campus",
+   "aliases": [
+    "Del Mar College"
+   ],
+   "facility_type": "Community college campus",
+   "facility_type_code": "COLLEGE",
+   "address": "101 Baldwin Boulevard 2nd Floor, Corpus Christi, TX 78404",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78404",
+   "latitude": 27.76358,
+   "longitude": -97.40763,
+   "position_basis": "real site: Del Mar College East Campus [USGS National Structures Dataset]",
+   "roles": [
+    "recovery_help_point"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-COL-044",
+   "facility_name": "Texas A&M University-Corpus Christi",
+   "facility_type": "University",
+   "facility_type_code": "COLLEGE",
+   "address": "6300 Ocean Drive, Corpus Christi, TX 78412",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78412",
+   "latitude": 27.71347,
+   "longitude": -97.32473,
+   "position_basis": "real site: Texas A&M University-Corpus Christi [USGS National Structures Dataset]",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-DOD-01",
+   "facility_name": "Naval Air Station Corpus Christi",
+   "aliases": [
+    "NAS Corpus Christi"
+   ],
+   "facility_type": "Navy installation",
+   "facility_type_code": "MIL",
+   "address": "Naval Air Station Corpus Christi, TX 78419",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78419",
+   "latitude": 27.69242,
+   "longitude": -97.27931,
+   "position_basis": "real site: Naval Air Station Corpus Christi installation parcel at the airfield (centroid computed from the published boundary) [USDOT NTAD Military Bases]"
+  },
+  {
+   "facility_id": "FAC-DOD-02",
+   "facility_name": "Corpus Christi Army Depot",
+   "aliases": [
+    "CCAD"
+   ],
+   "facility_type": "Army depot on NAS Corpus Christi",
+   "facility_type_code": "MIL",
+   "address": "Naval Air Station Corpus Christi, TX 78419",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78419",
+   "latitude": 27.69948,
+   "longitude": -97.27681,
+   "position_basis": "placed beside Ocean Dr (no published point in the reference set)"
+  },
+  {
+   "facility_id": "FAC-DOD-05",
+   "facility_name": "DLA Distribution Corpus Christi",
+   "facility_type": "Defense Logistics Agency distribution site",
+   "facility_type_code": "MIL",
+   "address": "Naval Air Station Corpus Christi, TX 78419",
+   "city": "Corpus Christi",
+   "county": "Nueces",
+   "state": "TX",
+   "zip": "78419",
+   "latitude": 27.68532,
+   "longitude": -97.27255,
+   "position_basis": "placed beside Lexington Blvd (no published point in the reference set)"
+  }
+ ],
+ "out_of_area": [
+  {
+   "facility_id": "FAC-SHLT-OOA-01",
+   "facility_name": "Alice High School",
+   "facility_type": "Emergency shelter, school",
+   "city": "Alice",
+   "county": "Jim Wells",
+   "state": "TX",
+   "position_basis": "outside the reference window; city only",
+   "roles": [
+    "shelter"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-SHLT-OOA-02",
+   "facility_name": "American Red Cross shelters, Bexar and Karnes counties",
+   "facility_type": "Emergency shelters, evacuation destination",
+   "city": "San Antonio area",
+   "county": "Bexar / Karnes",
+   "state": "TX",
+   "position_basis": "outside the reference window; county only",
+   "roles": [
+    "shelter"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-HOSP-OOA-03",
+   "facility_name": "San Antonio trauma centers",
+   "facility_type": "Hospitals receiving transfers",
+   "city": "San Antonio",
+   "county": "Bexar",
+   "state": "TX",
+   "position_basis": "outside the reference window; city only",
+   "roles": [
+    "transfer_destination"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-HOSP-OOA-04",
+   "facility_name": "Smaller hospitals in Robstown and Kingsville",
+   "facility_type": "Hospitals receiving diverted ambulances",
+   "city": "Robstown / Kingsville",
+   "county": "Nueces / Kleberg",
+   "state": "TX",
+   "position_basis": "outside the reference window; city only",
+   "roles": [
+    "diversion_destination"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-DOD-03",
+   "facility_name": "Naval Air Station Kingsville",
+   "facility_type": "Navy installation",
+   "city": "Kingsville",
+   "county": "Kleberg",
+   "state": "TX",
+   "latitude": 27.49718,
+   "longitude": -97.81306,
+   "position_basis": "real site: NAS Kingsville [USDOT NTAD Military Bases]"
+  },
+  {
+   "facility_id": "FAC-DOD-04",
+   "facility_name": "NAS Joint Reserve Base Fort Worth",
+   "facility_type": "Navy installation",
+   "city": "Fort Worth",
+   "county": "Tarrant",
+   "state": "TX",
+   "position_basis": "outside the reference window; city only",
+   "aliases": [
+    "Naval Air Station Joint Reserve Base Fort Worth"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "facility_id": "FAC-DOD-06",
+   "facility_name": "Fort Hood",
+   "facility_type": "Army installation",
+   "city": "Killeen",
+   "county": "Bell",
+   "state": "TX",
+   "position_basis": "outside the reference window; city only",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ]
+}

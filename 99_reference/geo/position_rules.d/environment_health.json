@@ -1,0 +1,40 @@
+{
+ "note": "Position sources written by the environment and health generators (scripts/streams/gen_environment.py).",
+ "sources": [
+  {
+   "name": "Tide gauge records",
+   "glob": "05_other_sources/env_sensors/gauge_TG-*.csv",
+   "lat": "Latitude",
+   "lon": "Longitude",
+   "rule": "water_fixed",
+   "id": "SensorID",
+   "shore_ok": true
+  },
+  {
+   "name": "Bay tide gauge record",
+   "glob": "05_other_sources/env_sensors/gauge_GAUGE-14.csv",
+   "lat": "Latitude",
+   "lon": "Longitude",
+   "rule": "water_fixed",
+   "id": "SensorID",
+   "shore_ok": true
+  },
+  {
+   "name": "Stream gauge records",
+   "glob": "05_other_sources/env_sensors/gauge_GAUGE-1[23].csv",
+   "lat": "Latitude",
+   "lon": "Longitude",
+   "rule": "vehicle",
+   "tolerance_m": 40,
+   "id": "SensorID"
+  },
+  {
+   "name": "Buoy records",
+   "glob": "05_other_sources/weather/BUOY*_observations.csv",
+   "lat": "StnLat",
+   "lon": "StnLon",
+   "rule": "water_fixed",
+   "id": "StationID"
+  }
+ ]
+}

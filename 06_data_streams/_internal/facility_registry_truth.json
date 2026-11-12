@@ -1,0 +1,683 @@
+{
+ "generated": "2026-11-09",
+ "not_for_participants": true,
+ "registry": "facility_registry.json",
+ "truth": {
+  "FAC-SRMC-001": {
+   "reference_landmark": {
+    "name": "CHRISTUS Spohn Hospital Corpus Christi - Shoreline",
+    "category": "hospital",
+    "address": "600 Elizabeth Street, Corpus Christi, TX, 78404",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 49 Hospitals/Medical Centers)",
+    "source_id": "permanent_identifier 47eed73b-f1cd-4b85-870d-b0418da373c2; GNIS 2015731"
+   },
+   "canon_place_id": "FAC-HOS-xx",
+   "role": "Primary surge hospital (T16). On generator D0 06:17Z to D+8 09:14 local (McKinley Substation). 140% of licensed beds at 07:00 local D+2; triage tent in the south parking structure.",
+   "sources": [
+    "EVT-1601",
+    "EVT-1602",
+    "EVT-1603",
+    "EVT-1605",
+    "PUB-160",
+    "PUB-161",
+    "PUB-164"
+   ]
+  },
+  "FAC-BCMC-002": {
+   "reference_landmark": {
+    "name": "Corpus Christi Medical Center - Bay Area",
+    "category": "hospital",
+    "address": "7101 South Padre Island Drive, Corpus Christi, TX, 78412",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 49 Hospitals/Medical Centers)",
+    "source_id": "permanent_identifier 9cd878b4-627e-41ea-a8e7-df57a96a3fc3; GNIS 2015734"
+   },
+   "canon_place_id": "FAC-HOS-xx",
+   "role": "Second surge hospital; 118% (331 patients) at D+2; redirects non-critical ambulances to smaller facilities.",
+   "sources": [
+    "EVT-1603",
+    "PUB-160"
+   ]
+  },
+  "FAC-LPMC-011": {
+   "reference_landmark": {
+    "name": "Corpus Christi Medical Center - Doctors Regional",
+    "category": "hospital",
+    "address": "3315 South Alameda Street, Corpus Christi, TX, 78411",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 49 Hospitals/Medical Centers)",
+    "source_id": "permanent_identifier 92793831-9177-47dd-abf4-99a27253dcbc; GNIS 2094836"
+   }
+  },
+  "FAC-SCMH-012": {
+   "reference_landmark": {
+    "name": "CHRISTUS Spohn Hospital Corpus Christi - South",
+    "category": "hospital",
+    "address": "5950 Saratoga Boulevard, Corpus Christi, TX, 78414",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 49 Hospitals/Medical Centers)",
+    "source_id": "permanent_identifier e814d124-6422-44b0-9e10-45d3db3b715f; GNIS 2015732"
+   }
+  },
+  "FAC-FPCH-013": {
+   "reference_landmark": {
+    "name": "Corpus Christi Medical Center - Northwest Regional",
+    "category": "hospital",
+    "address": "13725 Northwest Boulevard, Corpus Christi, TX, 78410",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 49 Hospitals/Medical Centers)",
+    "source_id": "permanent_identifier 72672d0c-5d7d-47ec-94db-4abe7d6d0165; GNIS 1345348"
+   }
+  },
+  "FAC-GCCH-014": {
+   "reference_landmark": {
+    "name": "Driscoll Children's Hospital",
+    "category": "hospital",
+    "address": "3533 South Alameda Street, Corpus Christi, TX, 78411",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 49 Hospitals/Medical Centers)",
+    "source_id": "permanent_identifier 2af2acc6-a3ce-49a0-9f90-64156b18cefc; GNIS 1334626"
+   }
+  },
+  "FAC-ABCH-015": {
+   "reference_landmark": {
+    "name": "North Bay General Hospital Inc (TE00)",
+    "category": "helipad",
+    "address": "Aransas Pass, TX",
+    "source": "USDOT NTAD Aviation Facilities (FAA NASR, eff. 2026/10/29)",
+    "source_id": "FAA site 23345.01; LID TE00"
+   }
+  },
+  "_hospital_baseline": {
+   "note": "Nueces County ER baseline is 520 visits a day (EVT-0101); SRMC's 220 is canon (EVT-1602); the other five Nueces hospitals' baselines are an allocation that sums to 520."
+  },
+  "FAC-MED-010": {
+   "reference_landmark": {
+    "name": "CHRISTUS Spohn Hospital Corpus Christi - Memorial",
+    "category": "hospital",
+    "address": "2606 Hospital Boulevard, Corpus Christi, TX, 78405",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 49 Hospitals/Medical Centers)",
+    "source_id": "permanent_identifier c07c667f-06f3-4c57-a21b-a27570f11d17; GNIS 2015733"
+   },
+   "role": "Confirms storm deaths.",
+   "sources": [
+    "NWS-P002-09"
+   ]
+  },
+  "FAC-CBECC-004": {
+   "reference_landmark": {
+    "name": "Corpus Christi Police Department",
+    "category": "police",
+    "address": "321 John Sartain Street, Corpus Christi, TX, 78401",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 53 Police Stations)",
+    "source_id": "permanent_identifier 3087d3f8-58fb-4ef9-b3ee-b98ac3105b5c; GNIS 2335018"
+   },
+   "role": "911 centre; peak about 2,900 calls on D+1; phishing target HOST-911-01.",
+   "sources": [
+    "PUB-130",
+    "PUB-131",
+    "PUB-132"
+   ]
+  },
+  "FAC-EOC-021": {
+   "reference_landmark": {
+    "name": "Nueces County Courthouse",
+    "category": "venue",
+    "address": "901 Leopard Street, Corpus Christi",
+    "source": "USGS National Structures Dataset (structures MapServer layer 40 Courthouses)",
+    "source_id": "name 'Nueces County Courthouse'"
+   }
+  },
+  "FAC-GOV-022": {
+   "reference_landmark": {
+    "name": "Corpus Christi City Hall",
+    "category": "venue",
+    "address": "1201 Leopard Street, Corpus Christi, TX, 78401",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 39 City/Town Halls)",
+    "source_id": "permanent_identifier 936d3a5e-35bd-4b2b-98cf-071ec8361c68; GNIS 2753465"
+   }
+  },
+  "FAC-SHLT-006": {
+   "reference_landmark": {
+    "name": "Calallen High School",
+    "category": "school",
+    "address": "4001 Wildcat Drive, Corpus Christi, TX, 78410",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier 283655cd-7af9-418d-9a3b-943ce6804821"
+   },
+   "role": "Shelter in the D-1 order ('Calallen ISD Fieldhouse'); 'Calallen High School' water distribution site in PUB-132.",
+   "sources": [
+    "PUB-201",
+    "PUB-132"
+   ]
+  },
+  "FAC-SHLT-026": {
+   "reference_landmark": {
+    "name": "Richard King High School",
+    "category": "school",
+    "address": "5225 Gollihar Road, Corpus Christi, TX, 78412",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier 397a3252-36c4-40b6-9ff2-ec0cc6fabe56"
+   },
+   "role": "Correct Zone D shelter (EVT-1403); named with West Oso HS in KNCB's D-3 broadcast (PUB-140); in-person FEMA help from D+8.",
+   "sources": [
+    "EVT-1403",
+    "PUB-140",
+    "NWS-P008-07"
+   ]
+  },
+  "FAC-SHLT-027": {
+   "reference_landmark": {
+    "name": "West Oso High School",
+    "category": "school",
+    "address": "754 Flato Road, Corpus Christi, TX, 78405",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier fdc894a3-3dba-4225-b7d9-a55493c888b8"
+   },
+   "role": "Designated shelter in PUB-140.",
+   "sources": [
+    "PUB-140"
+   ]
+  },
+  "FAC-SHLT-029": {
+   "reference_landmark": {
+    "name": "Flour Bluff High School",
+    "category": "school",
+    "address": "2505 Waldron Road, Corpus Christi, TX, 78418",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier d924b4c1-a0a3-461e-b4ec-23ca6152945c"
+   },
+   "role": "FEMA outreach site from D+9 ('Flour Bluff ISD gymnasium').",
+   "sources": [
+    "NWS-P008-06"
+   ]
+  },
+  "FAC-SCH-030": {
+   "reference_landmark": {
+    "name": "Zavala Elementary School",
+    "category": "school",
+    "address": "3125 Ruth Street, Corpus Christi, TX, 78405",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier b6f1bd51-7725-4d90-9ffe-15bea98c9aa4"
+   },
+   "role": "Never a shelter. False-shelter posts by the coordinated network sent at least 23 callers to 2-1-1 on D-1 (T15).",
+   "sources": [
+    "PUB-152",
+    "NWS-P038-60"
+   ]
+  },
+  "FAC-SCH-032": {
+   "reference_landmark": {
+    "name": "Yeager Elementary School",
+    "category": "school",
+    "address": "5414 Tripoli Drive, Corpus Christi, TX, 78411",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier 110792c4-4c87-4948-b267-860849311848"
+   },
+   "role": "Bottled water point for Districts 3 and 4.",
+   "sources": [
+    "NWS-P012-06"
+   ]
+  },
+  "FAC-SCH-033": {
+   "reference_landmark": {
+    "name": "Tuloso Midway High School",
+    "category": "school",
+    "address": "2653 McKinzie Road, Corpus Christi, TX, 78410",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier 3c6f5f20-e0c3-4ad7-bbeb-aff9f93415f0"
+   },
+   "role": "Bottled water site in the D+12 notice.",
+   "sources": [
+    "PUB-204"
+   ]
+  },
+  "FAC-SCH-034": {
+   "reference_landmark": {
+    "name": "Cunningham Middle School",
+    "category": "school",
+    "address": "4321 Prescott Street, Corpus Christi, TX, 78416",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier bfd83ca4-89e9-4ce9-b1e3-973c26762a58"
+   },
+   "role": "Water distribution site in PUB-132.",
+   "sources": [
+    "PUB-132"
+   ]
+  },
+  "FAC-COL-043": {
+   "reference_landmark": {
+    "name": "Del Mar College East Campus",
+    "category": "school",
+    "address": "101 Baldwin Boulevard 2nd Floor, Corpus Christi, TX, 78404",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier 72bd7e54-f1cf-40fd-ad43-271aae24adc8"
+   }
+  },
+  "FAC-COL-044": {
+   "reference_landmark": {
+    "name": "Texas A&M University-Corpus Christi",
+    "category": "school",
+    "address": "6300 Ocean Drive, Corpus Christi",
+    "source": "USGS National Structures Dataset (structures MapServer layer 56 Colleges/Universities)",
+    "source_id": "name 'Texas A and M University at Corpus Christi'"
+   }
+  },
+  "FAC-DOD-01": {
+   "reference_landmark": {
+    "name": "Naval Air Station Corpus Christi - installation parcel nearest Corpus Christi Nas (Truax Fld) (NGP)",
+    "category": "military",
+    "address": null,
+    "source": "USDOT NTAD Military Bases (DoD MIRTA) polygon OBJECTID 483",
+    "source_id": "siteName \"Naval Air Station Corpus Christi\"; polygon ring 7 of 21"
+   },
+   "role": "Drone overflights D+1 to D+10; backup generator EQP-2201 fails D+40.",
+   "sources": [
+    "EVT-0318",
+    "EVT-0407"
+   ]
+  },
+  "FAC-SHLT-007": {
+   "role": "Shelter named in the D-1 evacuation order; Texas Task Force 1 staging from D-1 13:00 local; bottled water point for the Districts 3/4 notice; FEMA outreach from D+9.",
+   "sources": [
+    "PUB-201",
+    "PUB-203",
+    "EVT-1701",
+    "NWS-P012-06",
+    "NWS-P008-06"
+   ]
+  },
+  "FAC-SHLT-028": {
+   "role": "FEMA outreach site from D+9.",
+   "sources": [
+    "NWS-P008-06"
+   ],
+   "placement_note": "Canon gives no location; placed in Robstown near the school of the same name."
+  },
+  "FAC-SCH-031": {
+   "role": "Not a shelter. KNCB's improvised Spanish advisory on D-1 wrongly sent Zone D residents here instead of Richard King High School (T14).",
+   "sources": [
+    "EVT-1403"
+   ]
+  },
+  "FAC-COM-035": {
+   "role": "Bottled water site in the D+12 notice.",
+   "sources": [
+    "PUB-204"
+   ]
+  },
+  "FAC-COM-036": {
+   "role": "Bottled water site in the D+12 notice.",
+   "sources": [
+    "PUB-204"
+   ]
+  },
+  "FAC-COM-037": {
+   "role": "Water distribution site in PUB-132.",
+   "sources": [
+    "PUB-132"
+   ]
+  },
+  "FAC-HUB-038": {
+   "role": "Pastor Gloria Whitfield's (CHR-049) relief hub; fed the neighbourhood before official distribution arrived (PUB-037). Canon never names the church.",
+   "sources": [
+    "PUB-037",
+    "NWS-M051-01"
+   ]
+  },
+  "FAC-HUB-039": {
+   "role": "Informal aid distribution since D+2.",
+   "sources": [
+    "NWS-P057-03"
+   ]
+  },
+  "FAC-DRC-040": {
+   "role": "Disaster Recovery Center opened after Individual Assistance approval (D+57).",
+   "sources": [
+    "NWS-P057-03",
+    "NWS-P057-04",
+    "NWS-P090-07"
+   ]
+  },
+  "FAC-DRC-041": {
+   "role": "Disaster Recovery Center opened after Individual Assistance approval (D+57).",
+   "sources": [
+    "NWS-P057-03",
+    "NWS-P057-04",
+    "NWS-P090-07"
+   ]
+  },
+  "FAC-DRC-042": {
+   "role": "Disaster Recovery Center opened after Individual Assistance approval (D+57).",
+   "sources": [
+    "NWS-P057-03",
+    "NWS-P057-04",
+    "NWS-P090-07"
+   ]
+  },
+  "FAC-USCG-01": {
+   "role": "Leads the Unified Command with the Texas General Land Office.",
+   "sources": [
+    "PUB-029"
+   ],
+   "overlap_note": "Coast Guard aircraft and boats belong to the aviation and maritime registries."
+  },
+  "FAC-CLM-024": {
+   "role": "Opens D+12 for cleanup and property claims; lost-income claims from D+63.",
+   "sources": [
+    "PUB-106"
+   ],
+   "placement_note": "Canon gives no address."
+  },
+  "FAC-JFO-023": {
+   "role": "Joint statement with CBPWA on D+21.",
+   "sources": [
+    "PUB-205"
+   ],
+   "placement_note": "Canon gives no address."
+  }
+ },
+ "id_migration": [
+  {
+   "old": "FAC-CCMC-001",
+   "new": "FAC-SRMC-001",
+   "old_used_in": "05_other_sources/public_health (ed_visits, hospital_capacity)",
+   "note": "largest hospital in the old stream (383 beds); canon has 500"
+  },
+  {
+   "old": "FAC-SHMC-001",
+   "new": "FAC-BCMC-002",
+   "old_used_in": "05_other_sources/public_health",
+   "note": "second hospital in the old stream (294 beds); canon has 280"
+  },
+  {
+   "old": "FAC-DRMC-001",
+   "new": "FAC-LPMC-011",
+   "old_used_in": "05_other_sources/public_health",
+   "note": "186 beds in both"
+  },
+  {
+   "old": "FAC-SHBA-001",
+   "new": "FAC-SCMH-012",
+   "old_used_in": "05_other_sources/public_health",
+   "note": "94 beds in both"
+  },
+  {
+   "old": "FAC-UCG-001",
+   "new": "FAC-CCUC-003",
+   "old_used_in": "05_other_sources/public_health",
+   "note": "urgent care"
+  },
+  {
+   "old": "FAC-SHE-001",
+   "new": "FAC-SHLT-007",
+   "old_used_in": "05_other_sources/public_health",
+   "note": "shelter medical station (inferred)"
+  },
+  {
+   "old": "FAC-SHE-002",
+   "new": "FAC-SHLT-006",
+   "old_used_in": "05_other_sources/public_health",
+   "note": "shelter medical station (inferred)"
+  },
+  {
+   "old": "FAC-HOS-xx",
+   "new": [
+    "FAC-SRMC-001",
+    "FAC-BCMC-002",
+    "FAC-LPMC-011",
+    "FAC-SCMH-012",
+    "FAC-FPCH-013",
+    "FAC-GCCH-014"
+   ],
+   "old_used_in": "00_scenario/places.json",
+   "note": "placeholder for the Nueces County emergency departments"
+  },
+  {
+   "old": "PSAP-01",
+   "new": "FAC-CBECC-004",
+   "old_used_in": "00_scenario/places.json",
+   "note": ""
+  },
+  {
+   "old": "FAC-SHLT-005 (American Bank Center)",
+   "new": null,
+   "old_used_in": "old facility_registry.json",
+   "note": "removed: not in canon and inside surge Zone A"
+  },
+  {
+   "old": "FAC-SHLT-007 (Robstown ISD Gymnasium)",
+   "new": "FAC-SHLT-007",
+   "old_used_in": "old facility_registry.json",
+   "note": "canon name is Richard M. Borchard Regional Fairgrounds"
+  },
+  {
+   "old": "FAC-SHLT-006 (Calallen High School)",
+   "new": "FAC-SHLT-006",
+   "old_used_in": "old facility_registry.json",
+   "note": "canon shelter name is Calallen ISD Fieldhouse; same campus"
+  },
+  {
+   "old": "FAC-SHLT-008 (Victoria Civic Center)",
+   "new": "FAC-SHLT-OOA-02",
+   "old_used_in": "old facility_registry.json",
+   "note": "not in canon; out-of-area shelters are in Bexar and Karnes counties"
+  },
+  {
+   "old": "FAC-SHLT-009 (San Antonio City Shelter Network)",
+   "new": "FAC-SHLT-OOA-02",
+   "old_used_in": "old facility_registry.json",
+   "note": ""
+  },
+  {
+   "old": "McKinley Substation",
+   "new": "GW-FAC-DSS-01",
+   "old_used_in": "EVT-1602, EVT-1605, EVT-1504",
+   "note": "see infrastructure_assets"
+  }
+ ],
+ "landmarks_used": {
+  "CHRISTUS Spohn Hospital Corpus Christi - Shoreline": [
+   "FAC-SRMC-001"
+  ],
+  "Corpus Christi Medical Center - Bay Area": [
+   "FAC-BCMC-002"
+  ],
+  "Corpus Christi Medical Center - Doctors Regional": [
+   "FAC-LPMC-011"
+  ],
+  "CHRISTUS Spohn Hospital Corpus Christi - South": [
+   "FAC-SCMH-012"
+  ],
+  "Corpus Christi Medical Center - Northwest Regional": [
+   "FAC-FPCH-013"
+  ],
+  "Driscoll Children's Hospital": [
+   "FAC-GCCH-014"
+  ],
+  "North Bay General Hospital Inc (TE00)": [
+   "FAC-ABCH-015"
+  ],
+  "CHRISTUS Spohn Hospital Corpus Christi - Memorial": [
+   "FAC-MED-010"
+  ],
+  "Corpus Christi Police Department": [
+   "FAC-CBECC-004",
+   "PD-HQ"
+  ],
+  "Nueces County Courthouse": [
+   "FAC-EOC-021"
+  ],
+  "Corpus Christi City Hall": [
+   "FAC-GOV-022",
+   "AQS-480-014"
+  ],
+  "Calallen High School": [
+   "FAC-SHLT-006"
+  ],
+  "Richard King High School": [
+   "FAC-SHLT-026"
+  ],
+  "West Oso High School": [
+   "FAC-SHLT-027"
+  ],
+  "Flour Bluff High School": [
+   "FAC-SHLT-029"
+  ],
+  "Zavala Elementary School": [
+   "FAC-SCH-030"
+  ],
+  "Yeager Elementary School": [
+   "FAC-SCH-032"
+  ],
+  "Tuloso Midway High School": [
+   "FAC-SCH-033"
+  ],
+  "Cunningham Middle School": [
+   "FAC-SCH-034",
+   "AQS-480-002"
+  ],
+  "Del Mar College East Campus": [
+   "FAC-COL-043"
+  ],
+  "Texas A&M University-Corpus Christi": [
+   "FAC-COL-044"
+  ],
+  "Naval Air Station Corpus Christi - installation parcel nearest Corpus Christi Nas (Truax Fld) (NGP)": [
+   "FAC-DOD-01"
+  ],
+  "Corpus Christi Fire Department Station 1": [
+   "STA-1"
+  ],
+  "Corpus Christi Fire Department Station 8": [
+   "STA-2"
+  ],
+  "Corpus Christi Fire Department Station 2": [
+   "STA-3"
+  ],
+  "Corpus Christi Fire Department Station 3": [
+   "STA-4"
+  ],
+  "Corpus Christi Fire Department Station 4": [
+   "STA-5"
+  ],
+  "Corpus Christi Fire Department Station 14": [
+   "STA-7"
+  ],
+  "Corpus Christi Fire Department Station 5": [
+   "STA-8"
+  ],
+  "Corpus Christi Fire Department Station 7": [
+   "STA-9"
+  ],
+  "Corpus Christi Fire Department Station 15": [
+   "STA-10"
+  ],
+  "Corpus Christi Fire Department Station 6": [
+   "STA-11"
+  ],
+  "Corpus Christi Fire Department Station 11": [
+   "STA-12"
+  ],
+  "Corpus Christi Fire Department Station 9": [
+   "STA-13",
+   "AQS-480-001"
+  ],
+  "Corpus Christi Fire Department Station 10": [
+   "STA-14"
+  ],
+  "Annaville Volunteer Fire Department Station 1": [
+   "STA-15"
+  ],
+  "Corpus Christi Fire Department Station 16": [
+   "STA-16"
+  ],
+  "Corpus Christi Fire Station 17": [
+   "STA-17"
+  ],
+  "Corpus Christi Fire Department Station 13": [
+   "STA-18"
+  ],
+  "Nueces County Sheriff's Office": [
+   "SO-ANNEX",
+   "SO-MAIN"
+  ],
+  "Port Aransas Police Department": [
+   "PA-PS"
+  ],
+  "Robstown Fire Department": [
+   "MA-STA-ROBS"
+  ],
+  "James L Bishop Fire Station": [
+   "MA-STA-PORT"
+  ],
+  "Aransas Pass Fire Department": [
+   "MA-STA-APAS"
+  ],
+  "Ingleside Volunteer Fire Department": [
+   "MA-STA-INGL",
+   "AQS-480-011"
+  ],
+  "Sinton Volunteer Fire Department": [
+   "MA-STA-SINT"
+  ],
+  "Annaville Fire Department Station 2": [
+   "MA-STA-ANNA"
+  ],
+  "Flour Bluff Fire Department - Nueces County Emergency Services District 2": [
+   "MA-STA-FBFD"
+  ],
+  "San Patricio County Sheriff's Office": [
+   "MA-STA-SANPAT"
+  ],
+  "O.N. Stevens Water Treatment Plant": [
+   "GW-FAC-UTL-01"
+  ],
+  "New Broadway WWTF (Corpus Christi)": [
+   "WW-01"
+  ],
+  "Oso WWTP (Corpus Christi)": [
+   "WW-02"
+  ],
+  "Greenwood Plant WWTP (Corpus Christi)": [
+   "WW-03"
+  ],
+  "Laguna Madre WWTP (Corpus Christi / Flour Bluff)": [
+   "WW-04"
+  ],
+  "Whitecap WWTP (Corpus Christi / Padre Island)": [
+   "WW-05"
+  ],
+  "Corpus Christi Intl (CRP/KCRP)": [
+   "FAC-AIR-CRP"
+  ],
+  "KCRP Corpus Christi Intl (METAR/TAF station)": [
+   "AQS-480-003"
+  ],
+  "Oak Park Elementary School": [
+   "AQS-480-006"
+  ],
+  "Tuloso Midway Middle School": [
+   "AQS-480-007"
+  ],
+  "Calallen Middle School": [
+   "AQS-480-008"
+  ],
+  "Flour Bluff Junior High School": [
+   "AQS-480-009"
+  ],
+  "East Cliff Elementary School": [
+   "AQS-480-010"
+  ],
+  "Port Aransas High School": [
+   "AQS-480-012"
+  ],
+  "West Oso Elementary School": [
+   "AQS-480-013"
+  ],
+  "Del Mar College (Heritage Campus)": [
+   "AQS-480-015"
+  ],
+  "Austin Elementary School": [
+   "AQS-480-017"
+  ],
+  "Seashore Middle Academy": [
+   "AQS-480-018"
+  ]
+ }
+}

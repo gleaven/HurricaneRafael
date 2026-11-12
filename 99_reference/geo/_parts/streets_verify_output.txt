@@ -1,0 +1,78 @@
+== 1. roads_local_all.geojson: basics
+features 12786 | unique source_oid 12786 | vertices 49778 | km 7523.6
+geometry types {'LineString': 12786} | min vertices per feature 2
+lon range -97.87520 .. -96.97183 | lat range 27.49218 .. 28.23861  (features are whole, so they may leave the request box -97.70..-96.98 / 27.55..28.08)
+vertices inside request box: 49087 of 49778 (98.61%)
+max decimals in any coordinate: 5
+longest single segment: 14223 m
+  class local  mtfcc S1400: features 11294 vertices  43456 km   6891.6
+  class local  mtfcc S1630: features   597 vertices   2259 km    154.2
+  class local  mtfcc S1640: features    98 vertices    704 km    167.5
+  class local  mtfcc S1730: features     8 vertices     20 km      1.5
+  class local  mtfcc S1740: features   581 vertices   2455 km    272.7
+  class local  mtfcc S1780: features   143 vertices    528 km     21.2
+  class other  mtfcc S1750: features    14 vertices     55 km      2.9
+  class track  mtfcc S1500: features     2 vertices      6 km      0.8
+  class walk   mtfcc S1710: features    49 vertices    295 km     11.2
+  named features: 8966, unnamed (NAME null): 3820
+
+== 2. fetch bookkeeping (server order index = resultOffset + position)
+pages 38 | indices covered 12786 contiguous 0..12785: True | overlap order mismatches 0
+server returnCountOnly for whole box: 12786 | unique OIDs fetched: 12786 | written: 12786 => EQUAL
+
+== 3. per-tile counts: features of the written file intersecting each tile vs server returnCountOnly
+   (the written geometry is simplified by <=3 m and rounded to 1e-5 deg, so a feature that only touches a tile edge can differ;
+    "lo..hi" = local count with the tile shrunk / grown by 6e-5 deg (~6 m); the server count must fall inside)
+  tile 0_0  -97.70,27.550,-97.58,27.656  server   204  written   204  EQUAL  band 204..204 ok
+  tile 1_0  -97.58,27.550,-97.46,27.656  server   107  written   107  EQUAL  band 106..107 ok
+  tile 2_0  -97.46,27.550,-97.34,27.656  server   433  written   433  EQUAL  band 430..435 ok
+  tile 3_0  -97.34,27.550,-97.22,27.656  server   673  written   673  EQUAL  band 673..674 ok
+  tile 4_0  -97.22,27.550,-97.10,27.656  server    64  written    64  EQUAL  band 62..64 ok
+  tile 5_0  -97.10,27.550,-96.98,27.656  server     0  written     0  EQUAL  band 0..0 ok
+  tile 0_1  -97.70,27.656,-97.58,27.762  server   102  written   102  EQUAL  band 102..103 ok
+  tile 1_1  -97.58,27.656,-97.46,27.762  server   347  written   347  EQUAL  band 347..348 ok
+  tile 2_1  -97.46,27.656,-97.34,27.762  server  3057  written  3057  EQUAL  band 3050..3061 ok
+  tile 3_1  -97.34,27.656,-97.22,27.762  server   670  written   670  EQUAL  band 669..671 ok
+  tile 4_1  -97.22,27.656,-97.10,27.762  server    55  written    55  EQUAL  band 55..55 ok
+  tile 5_1  -97.10,27.656,-96.98,27.762  server     0  written     0  EQUAL  band 0..0 ok
+  tile 0_2  -97.70,27.762,-97.58,27.868  server   849  written   849  EQUAL  band 849..852 ok
+  tile 1_2  -97.58,27.762,-97.46,27.868  server   800  written   800  EQUAL  band 799..802 ok
+  tile 2_2  -97.46,27.762,-97.34,27.868  server  1233  written  1233  EQUAL  band 1231..1236 ok
+  tile 3_2  -97.34,27.762,-97.22,27.868  server    59  written    59  EQUAL  band 59..59 ok
+  tile 4_2  -97.22,27.762,-97.10,27.868  server   152  written   152  EQUAL  band 151..153 ok
+  tile 5_2  -97.10,27.762,-96.98,27.868  server   279  written   279  EQUAL  band 279..279 ok
+  tile 0_3  -97.70,27.868,-97.58,27.974  server   415  written   415  EQUAL  band 413..415 ok
+  tile 1_3  -97.58,27.868,-97.46,27.974  server   111  written   111  EQUAL  band 111..113 ok
+  tile 2_3  -97.46,27.868,-97.34,27.974  server   185  written   186  diff +1  band 180..186 ok
+  tile 3_3  -97.34,27.868,-97.22,27.974  server   569  written   569  EQUAL  band 568..570 ok
+  tile 4_3  -97.22,27.868,-97.10,27.974  server   805  written   805  EQUAL  band 805..805 ok
+  tile 5_3  -97.10,27.868,-96.98,27.974  server    60  written    60  EQUAL  band 58..60 ok
+  tile 0_4  -97.70,27.974,-97.58,28.080  server   109  written   109  EQUAL  band 109..109 ok
+  tile 1_4  -97.58,27.974,-97.46,28.080  server   526  written   526  EQUAL  band 526..526 ok
+  tile 2_4  -97.46,27.974,-97.34,28.080  server   266  written   266  EQUAL  band 265..266 ok
+  tile 3_4  -97.34,27.974,-97.22,28.080  server   139  written   139  EQUAL  band 139..140 ok
+  tile 4_4  -97.22,27.974,-97.10,28.080  server   165  written   165  EQUAL  band 164..165 ok
+  tile 5_4  -97.10,27.974,-96.98,28.080  server   986  written   986  EQUAL  band 986..986 ok
+tiles: 30 | exactly equal: 29 | server count inside the +-6 m band: 30 | sum server 13420, sum written 13421
+whole box: server 12786, written features intersecting the box 12786
+
+== 4. earlier files found again in roads_local_all (match on source_oid; geometry = every old vertex within 10 m of the new line and vice versa)
+  roads_local_calallen.geojson                   features 124 found 124 (100.0%) | segments  398 found  398 (100.0%) | geometry within 10 m: 124 | worst deviation 5.8 m
+  roads_local_downtown.geojson                   features 151 found 151 (100.0%) | segments  312 found  312 (100.0%) | geometry within 10 m: 151 | worst deviation 5.9 m
+  roads_local_flour_bluff.geojson                features 209 found 209 (100.0%) | segments  452 found  452 (100.0%) | geometry within 10 m: 209 | worst deviation 6.1 m
+  roads_local_hillcrest.geojson                  features  87 found  87 (100.0%) | segments  221 found  221 (100.0%) | geometry within 10 m: 87 | worst deviation 5.9 m
+  roads_local_interchange_ramps.geojson          features  71 found  71 (100.0%) | segments  154 found  154 (100.0%) | geometry within 10 m: 71 | worst deviation 5.2 m
+  roads_local_molina.geojson                     features 139 found 139 (100.0%) | segments  345 found  345 (100.0%) | geometry within 10 m: 139 | worst deviation 5.7 m
+  roads_local_north_beach.geojson                features  86 found  86 (100.0%) | segments  188 found  188 (100.0%) | geometry within 10 m: 86 | worst deviation 5.6 m
+  roads_local_port_aransas.geojson               features 198 found 198 (100.0%) | segments  442 found  442 (100.0%) | geometry within 10 m: 198 | worst deviation 5.7 m
+  roads_arterial.geojson                         features 152 found 152 (100.0%) | segments  766 found  766 (100.0%) | geometry within 10 m: 152 | worst deviation 5.8 m
+  roads_major.geojson (layer-8 FM routes only)   features  25 found  24 (96.0%) | segments  245 found  240 (98.0%) | geometry within 10 m: 24 | worst deviation 5.7 m | missing: [('1104470259717', 'FM 70')]
+
+== 5. connectivity of roads_major + roads_arterial + roads_local_all (unique source_oid)
+network features 13124 | km 8988.2
+  all classes                                | endpoints snapped to lines within 12 m                     | components   105 | largest 98.58% of length (8860.6 of 8988.2 km, 12931 features) | 2nd 14.5 km, 3rd 13.6 km | features outside largest: 193 (127.6 km)
+  all classes                                | endpoints snapped within 12 m + geometric crossings noded  | components    24 | largest 99.57% of length (8949.7 of 8988.2 km, 13066 features) | 2nd 13.6 km, 3rd 6.4 km | features outside largest: 58 (38.5 km)
+  drivable only (walk/track/other removed)   | endpoints snapped to lines within 12 m                     | components   105 | largest 98.57% of length (8844.7 of 8973.3 km, 12864 features) | 2nd 14.5 km, 3rd 13.6 km | features outside largest: 195 (128.5 km)
+  drivable only (walk/track/other removed)   | endpoints snapped within 12 m + geometric crossings noded  | components    24 | largest 99.56% of length (8933.7 of 8973.3 km, 12999 features) | 2nd 13.6 km, 3rd 6.4 km | features outside largest: 60 (39.6 km)
+
+plot written: _parts/streets_check.png

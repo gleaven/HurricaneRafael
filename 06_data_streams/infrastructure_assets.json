@@ -1,0 +1,985 @@
+{
+ "_catalog": "infrastructure_assets",
+ "_version": "2.0",
+ "_generated": "2026-11-09",
+ "_description": "Utility, transport and fuel assets with parent/child and 'serves' relations. One id per asset; SCADA tag prefixes and work-order asset numbers are attributes.",
+ "_coordinates": "Coordinates are real published points (99_reference/geo/landmarks.geojson) or points beside real roads; see position_basis on each record and 99_reference/geo/SOURCES_*.md.",
+ "_fema_disaster": "DR-4821-TX",
+ "_fips": "48355",
+ "assets": [
+  {
+   "asset_id": "GW-FAC-SUB-01",
+   "name": "Riverside Switching Station",
+   "asset_type": "substation",
+   "operator": "Coastal Bend Power and Water Authority",
+   "aliases": [
+    "SUB-01",
+    "INF-CC-2027-00004"
+   ],
+   "serves": [
+    "GW-FAC-SUB-02",
+    "GW-FAC-SUB-03",
+    "GW-FAC-UTL-01"
+   ],
+   "latitude": 27.80951,
+   "longitude": -97.45564,
+   "position_basis": "placed beside Up River Rd (no published point in the reference set)",
+   "address": "4201 Up River Road, Corpus Christi, TX",
+   "voltage_kv": "345/138",
+   "scada_tag_prefix": "GW.SUB1",
+   "rtu_id": "GW-SYS-RTU-01",
+   "maximo_location": "SUB-01",
+   "equipment": [
+    {
+     "equipment_id": "GW-SUB01-BKR-MAIN",
+     "name": "Main breaker CB-1",
+     "scada_tag_prefix": "GW.SUB1.BKR1"
+    },
+    {
+     "equipment_id": "GW-SUB01-REL-27",
+     "name": "Undervoltage relay 27-UV",
+     "scada_tag_prefix": "GW.SUB1.REL"
+    }
+   ],
+   "equipment_detail": "06_data_streams/scada_tags.json (feeders, relays, transformer, bus)"
+  },
+  {
+   "asset_id": "GW-FAC-SUB-02",
+   "name": "Harbor View Substation",
+   "asset_type": "substation",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-SUB-01",
+   "aliases": [
+    "SUB-02",
+    "Harbor View Switching Station",
+    "Harbor View"
+   ],
+   "serves": [
+    "AREA-NBH-HILLCREST",
+    "AREA-NBH-OAKPARK",
+    "AREA-NBH-INNERHARBOR"
+   ],
+   "latitude": 27.8021,
+   "longitude": -97.45287,
+   "position_basis": "placed beside Navigation Blvd (no published point in the reference set)",
+   "address": "4821 Navigation Blvd, Corpus Christi, TX",
+   "voltage_kv": "138/69",
+   "scada_tag_prefix": "GW.SUB2",
+   "rtu_id": "GW-SYS-RTU-02",
+   "maximo_location": "SUB-02",
+   "equipment": [
+    {
+     "equipment_id": "GW-SUB02-BKR-MAIN",
+     "name": "Main breaker CB-7",
+     "scada_tag_prefix": "GW.SUB2.BKR1"
+    },
+    {
+     "equipment_id": "GW-SUB02-REL-27",
+     "name": "Undervoltage relay 27-UV",
+     "scada_tag_prefix": "GW.SUB2.REL"
+    }
+   ],
+   "equipment_detail": "06_data_streams/scada_tags.json (feeders, relays, transformer, bus)"
+  },
+  {
+   "asset_id": "GW-FAC-SUB-03",
+   "name": "Crosstown Substation",
+   "asset_type": "substation",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-SUB-01",
+   "aliases": [
+    "SUB-03",
+    "Crosstown Feeder Station",
+    "Crosstown"
+   ],
+   "serves": [
+    "AREA-WD-3",
+    "AREA-WD-4",
+    "GW-FAC-UTL-01"
+   ],
+   "latitude": 27.7706,
+   "longitude": -97.41624,
+   "position_basis": "placed beside Crosstown Fwy (no published point in the reference set)",
+   "address": "2201 Crosstown Expressway service road, Corpus Christi, TX",
+   "voltage_kv": "138/69",
+   "scada_tag_prefix": "GW.SUB3",
+   "rtu_id": "GW-SYS-RTU-03",
+   "maximo_location": "SUB-03",
+   "equipment": [
+    {
+     "equipment_id": "GW-SUB03-BKR-MAIN",
+     "name": "Main breaker CB-12",
+     "scada_tag_prefix": "GW.SUB3.BKR1"
+    },
+    {
+     "equipment_id": "GW-SUB03-REL-27",
+     "name": "Undervoltage relay 27-UV",
+     "scada_tag_prefix": "GW.SUB3.REL"
+    }
+   ],
+   "equipment_detail": "06_data_streams/scada_tags.json (feeders, relays, transformer, bus)"
+  },
+  {
+   "asset_id": "GW-FAC-SUB-04",
+   "name": "Southside Substation",
+   "asset_type": "substation",
+   "operator": "Coastal Bend Power and Water Authority",
+   "aliases": [
+    "SUB-04",
+    "INF-CC-2027-00005"
+   ],
+   "serves": [
+    "AREA-WD-2"
+   ],
+   "latitude": 27.74299,
+   "longitude": -97.42308,
+   "position_basis": "placed beside Ayers St (no published point in the reference set)",
+   "address": "5800 Ayers St, Corpus Christi, TX",
+   "voltage_kv": "138/69",
+   "scada_tag_prefix": "GW.SUB4",
+   "rtu_id": "GW-SYS-RTU-04",
+   "maximo_location": "SUB-04",
+   "equipment": [
+    {
+     "equipment_id": "GW-SUB04-BKR-MAIN",
+     "name": "Main breaker CB-13",
+     "scada_tag_prefix": "GW.SUB4.BKR1"
+    },
+    {
+     "equipment_id": "GW-SUB04-REL-27",
+     "name": "Undervoltage relay 27-UV",
+     "scada_tag_prefix": "GW.SUB4.REL"
+    }
+   ],
+   "equipment_detail": "06_data_streams/scada_tags.json (feeders, relays, transformer, bus)"
+  },
+  {
+   "asset_id": "GW-FAC-SUB-05",
+   "name": "Bayside Substation",
+   "asset_type": "substation",
+   "operator": "Coastal Bend Power and Water Authority",
+   "aliases": [
+    "SUB-05"
+   ],
+   "serves": [
+    "AREA-WD-5",
+    "GW-FAC-DSS-01"
+   ],
+   "latitude": 27.70022,
+   "longitude": -97.33461,
+   "position_basis": "placed beside Ennis Joslin Rd (no published point in the reference set)",
+   "address": "Ennis Joslin Road, Corpus Christi, TX",
+   "voltage_kv": "138",
+   "scada_tag_prefix": "GW.SUB5",
+   "rtu_id": "GW-SYS-RTU-05",
+   "maximo_location": "SUB-05",
+   "equipment": [
+    {
+     "equipment_id": "GW-SUB05-BKR-MAIN",
+     "name": "Main breaker CB-17",
+     "scada_tag_prefix": "GW.SUB5.BKR1"
+    },
+    {
+     "equipment_id": "GW-SUB05-REL-27",
+     "name": "Undervoltage relay 27-UV",
+     "scada_tag_prefix": "GW.SUB5.REL"
+    }
+   ],
+   "equipment_detail": "06_data_streams/scada_tags.json (feeders, relays, transformer, bus)"
+  },
+  {
+   "asset_id": "GW-FAC-DSS-01",
+   "name": "McKinley Substation",
+   "asset_type": "distribution_substation",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-SUB-05",
+   "aliases": [
+    "McKinley"
+   ],
+   "serves": [
+    "FAC-SRMC-001",
+    "AREA-NBH-DOWNTOWN"
+   ],
+   "latitude": 27.77838,
+   "longitude": -97.40003,
+   "position_basis": "placed beside Morgan Ave (no published point in the reference set)",
+   "address": "Morgan Avenue, Corpus Christi, TX",
+   "voltage_kv": "69/12.5",
+   "equipment": [
+    {
+     "equipment_id": "GW-DSS01-BKR-MAIN",
+     "name": "Main breaker",
+     "scada_tag_prefix": "GW.DSS1.BKR1"
+    }
+   ],
+   "scada_tag_prefix": "GW.DSS1",
+   "equipment_detail": "06_data_streams/scada_tags.json"
+  },
+  {
+   "asset_id": "GW-FAC-GEN-01",
+   "name": "Palisade Energy Center",
+   "asset_type": "generation",
+   "operator": "Coastal Bend Power and Water Authority",
+   "latitude": 27.81203,
+   "longitude": -97.41602,
+   "position_basis": "placed beside Nueces Bay Blvd (no published point in the reference set)",
+   "address": "Nueces Bay Boulevard, Corpus Christi, TX",
+   "fuel": "natural gas",
+   "capacity_mw": 390,
+   "scada_tag_prefix": "GW.GEN1",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "GW-FAC-OPS-01",
+   "name": "CBPWA Operations Center",
+   "asset_type": "operations_center",
+   "operator": "Coastal Bend Power and Water Authority",
+   "aliases": [
+    "CBPWA Security Operations Center",
+    "CBPWA Operations Center, Corpus Christi"
+   ],
+   "latitude": 27.79611,
+   "longitude": -97.41801,
+   "position_basis": "placed beside Leopard St (no published point in the reference set)",
+   "address": "Leopard Street, Corpus Christi, TX",
+   "hosts": [
+    "GW-SYS-SCADA-01",
+    "GW-SYS-HST-01"
+   ],
+   "phone": "(361) 555-0280"
+  },
+  {
+   "asset_id": "GW-FAC-UTL-01",
+   "name": "O.N. Stevens Water Treatment Plant",
+   "asset_type": "water_treatment_plant",
+   "operator": "Coastal Bend Power and Water Authority",
+   "aliases": [
+    "FAC-UTL-01",
+    "INF-CC-2027-00003",
+    "WATER-PLANT",
+    "The O.N. Stevens Water Treatment Plant"
+   ],
+   "serves": [
+    "AREA-WD-1",
+    "AREA-WD-2",
+    "AREA-WD-3",
+    "AREA-WD-4",
+    "AREA-WD-5"
+   ],
+   "latitude": 27.86056,
+   "longitude": -97.62139,
+   "position_basis": "real site: O.N. Stevens Water Treatment Plant [EPA Facility Registry Service - FRS_INTERESTS FeatureServer/0]",
+   "address": "Up River Road at Calallen, Corpus Christi, TX 78410",
+   "capacity_mgd": 75,
+   "scada_tag_prefix": "GW.UTL1",
+   "permit": "WQ-2019-0074-PWS"
+  },
+  {
+   "asset_id": "EQP-1101",
+   "name": "High-service pump P-1",
+   "asset_type": "pump",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-UTL-01",
+   "aliases": [
+    "P-1",
+    "GW-PP1-PUMP1"
+   ],
+   "latitude": 27.86056,
+   "longitude": -97.62139,
+   "position_basis": "at parent site GW-FAC-UTL-01",
+   "scada_tag_prefix": "GW.UTL1.PUMP1",
+   "maximo_assetnum": "GW-PP1-PUMP1",
+   "maximo_location": "PUMP-STATION-1",
+   "nsn": "NSN-SYN-4320-0001"
+  },
+  {
+   "asset_id": "EQP-1102",
+   "name": "High-service pump P-2",
+   "asset_type": "pump",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-UTL-01",
+   "aliases": [
+    "P-2",
+    "GW-PP1-PUMP2"
+   ],
+   "latitude": 27.86056,
+   "longitude": -97.62139,
+   "position_basis": "at parent site GW-FAC-UTL-01",
+   "scada_tag_prefix": "GW.UTL1.PUMP2",
+   "maximo_assetnum": "GW-PP1-PUMP2",
+   "maximo_location": "PUMP-STATION-1",
+   "nsn": "NSN-SYN-4320-0001"
+  },
+  {
+   "asset_id": "EQP-1103",
+   "name": "High-service pump P-3",
+   "asset_type": "pump",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-UTL-01",
+   "aliases": [
+    "P-3",
+    "GW-PP1-PUMP3"
+   ],
+   "latitude": 27.86056,
+   "longitude": -97.62139,
+   "position_basis": "at parent site GW-FAC-UTL-01",
+   "scada_tag_prefix": "GW.UTL1.PUMP3",
+   "maximo_assetnum": "GW-PP1-PUMP3",
+   "maximo_location": "PUMP-STATION-1",
+   "nsn": "NSN-SYN-4320-0001"
+  },
+  {
+   "asset_id": "EQP-1104",
+   "name": "High-service pump P-4",
+   "asset_type": "pump",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-UTL-01",
+   "aliases": [
+    "P-4",
+    "GW-PP1-PUMP4"
+   ],
+   "latitude": 27.86056,
+   "longitude": -97.62139,
+   "position_basis": "at parent site GW-FAC-UTL-01",
+   "scada_tag_prefix": "GW.UTL1.PUMP4",
+   "maximo_assetnum": "GW-PP1-PUMP4",
+   "maximo_location": "PUMP-STATION-1",
+   "nsn": "NSN-SYN-4320-0001"
+  },
+  {
+   "asset_id": "EQP-1110",
+   "name": "High-service pump station (C-pump station)",
+   "asset_type": "pump_station",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-UTL-01",
+   "aliases": [
+    "PUMP-STATION-1",
+    "C-pump station"
+   ],
+   "latitude": 27.86056,
+   "longitude": -97.62139,
+   "position_basis": "at parent site GW-FAC-UTL-01"
+  },
+  {
+   "asset_id": "EQP-1120",
+   "name": "Raw water intake, primary",
+   "asset_type": "intake",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-UTL-01",
+   "aliases": [
+    "raw water intake"
+   ],
+   "latitude": 27.86056,
+   "longitude": -97.62139,
+   "position_basis": "at parent site GW-FAC-UTL-01",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "EQP-1121",
+   "name": "Raw water intake, secondary (800 m upstream)",
+   "asset_type": "intake",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-UTL-01",
+   "latitude": 27.86056,
+   "longitude": -97.62139,
+   "position_basis": "at parent site GW-FAC-UTL-01",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "EQP-1130",
+   "name": "Chemical feed system",
+   "asset_type": "chemical_feed",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-UTL-01",
+   "aliases": [
+    "GW-PP1-CHEM-FEED"
+   ],
+   "latitude": 27.86056,
+   "longitude": -97.62139,
+   "position_basis": "at parent site GW-FAC-UTL-01",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "EQP-1140",
+   "name": "Plant standby generator",
+   "asset_type": "generator",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-UTL-01",
+   "aliases": [
+    "GW-GEN-01"
+   ],
+   "latitude": 27.86056,
+   "longitude": -97.62139,
+   "position_basis": "at parent site GW-FAC-UTL-01",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "FAC-UTL-02",
+   "name": "Transmission feeds to O.N. Stevens",
+   "asset_type": "transmission_line_group",
+   "operator": "Coastal Bend Power and Water Authority",
+   "parent_asset_id": "GW-FAC-UTL-01",
+   "serves": [
+    "GW-FAC-UTL-01"
+   ],
+   "latitude": 27.8614,
+   "longitude": -97.61638,
+   "position_basis": "placed beside Up River Rd (no published point in the reference set)",
+   "feeds": [
+    {
+     "feed_id": "FAC-UTL-02-A",
+     "name": "Primary feed",
+     "from": "GW-FAC-SUB-01"
+    },
+    {
+     "feed_id": "FAC-UTL-02-B",
+     "name": "Backup feed (pump room)",
+     "from": "GW-FAC-SUB-03"
+    }
+   ]
+  },
+  {
+   "asset_id": "GW-FAC-TK-01",
+   "name": "Northwest Storage Tank 1",
+   "asset_type": "water_storage_tank",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-1"
+   ],
+   "latitude": 27.84612,
+   "longitude": -97.58791,
+   "position_basis": "placed beside Leopard St (no published point in the reference set)",
+   "capacity_mg": 6,
+   "scada_tag_prefix": "GW.TK01"
+  },
+  {
+   "asset_id": "GW-FAC-TK-02",
+   "name": "Northwest Storage Tank 2",
+   "asset_type": "water_storage_tank",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-1"
+   ],
+   "latitude": 27.83174,
+   "longitude": -97.57337,
+   "position_basis": "placed beside McKinzie Rd (no published point in the reference set)",
+   "capacity_mg": 4,
+   "scada_tag_prefix": "GW.TK02"
+  },
+  {
+   "asset_id": "GW-FAC-TK-03",
+   "name": "Central Storage Tank",
+   "asset_type": "water_storage_tank",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-4"
+   ],
+   "latitude": 27.7774,
+   "longitude": -97.42504,
+   "position_basis": "placed beside Morgan Ave (no published point in the reference set)",
+   "capacity_mg": 5,
+   "scada_tag_prefix": "GW.TK03"
+  },
+  {
+   "asset_id": "GW-FAC-TK-04",
+   "name": "Southside Tank 1",
+   "asset_type": "water_storage_tank",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-2"
+   ],
+   "latitude": 27.70859,
+   "longitude": -97.39782,
+   "position_basis": "placed beside Holly Rd (no published point in the reference set)",
+   "capacity_mg": 4,
+   "scada_tag_prefix": "GW.TK04"
+  },
+  {
+   "asset_id": "GW-FAC-TK-05",
+   "name": "Southside Tank 2",
+   "asset_type": "water_storage_tank",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-2"
+   ],
+   "latitude": 27.66713,
+   "longitude": -97.39796,
+   "position_basis": "placed beside Yorktown Blvd (no published point in the reference set)",
+   "capacity_mg": 3,
+   "scada_tag_prefix": "GW.TK05"
+  },
+  {
+   "asset_id": "GW-FAC-TK-06",
+   "name": "East Side Tank",
+   "asset_type": "water_storage_tank",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-5"
+   ],
+   "latitude": 27.71204,
+   "longitude": -97.363,
+   "position_basis": "placed beside Airline Rd (no published point in the reference set)",
+   "capacity_mg": 4,
+   "scada_tag_prefix": "GW.TK06"
+  },
+  {
+   "asset_id": "GW-FAC-TK-07",
+   "name": "Calallen Tank",
+   "asset_type": "water_storage_tank",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-1"
+   ],
+   "latitude": 27.85633,
+   "longitude": -97.6406,
+   "position_basis": "placed beside Northwest Blvd (no published point in the reference set)",
+   "capacity_mg": 3,
+   "scada_tag_prefix": "GW.TK07"
+  },
+  {
+   "asset_id": "GW-FAC-TK-08",
+   "name": "Port District Tank",
+   "asset_type": "water_storage_tank",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-4"
+   ],
+   "latitude": 27.79799,
+   "longitude": -97.41397,
+   "position_basis": "placed beside N Port Ave (no published point in the reference set)",
+   "capacity_mg": 2,
+   "scada_tag_prefix": "GW.TK08"
+  },
+  {
+   "asset_id": "GW-FAC-TK-09",
+   "name": "Clarkwood Tank",
+   "asset_type": "water_storage_tank",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-3"
+   ],
+   "latitude": 27.78428,
+   "longitude": -97.53501,
+   "position_basis": "placed beside Agnes St (no published point in the reference set)",
+   "capacity_mg": 3,
+   "scada_tag_prefix": "GW.TK09"
+  },
+  {
+   "asset_id": "GW-PT-Z4-01",
+   "name": "Zone 4 pressure test point 01",
+   "asset_type": "pressure_test_point",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-4"
+   ],
+   "latitude": 27.79706,
+   "longitude": -97.43195,
+   "position_basis": "placed beside Leopard St (no published point in the reference set)"
+  },
+  {
+   "asset_id": "GW-PT-Z4-02",
+   "name": "Zone 4 pressure test point 02",
+   "asset_type": "pressure_test_point",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-4"
+   ],
+   "latitude": 27.79256,
+   "longitude": -97.41787,
+   "position_basis": "placed beside N Port Ave (no published point in the reference set)"
+  },
+  {
+   "asset_id": "GW-PT-Z4-03",
+   "name": "Zone 4 pressure test point 03",
+   "asset_type": "pressure_test_point",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-4"
+   ],
+   "latitude": 27.78626,
+   "longitude": -97.42799,
+   "position_basis": "placed beside Agnes St (no published point in the reference set)"
+  },
+  {
+   "asset_id": "GW-PT-Z4-04",
+   "name": "Zone 4 pressure test point 04",
+   "asset_type": "pressure_test_point",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-4"
+   ],
+   "latitude": 27.77642,
+   "longitude": -97.4318,
+   "position_basis": "placed beside Morgan Ave (no published point in the reference set)"
+  },
+  {
+   "asset_id": "GW-PT-Z4-05",
+   "name": "Zone 4 pressure test point 05",
+   "asset_type": "pressure_test_point",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-4"
+   ],
+   "latitude": 27.79409,
+   "longitude": -97.45291,
+   "position_basis": "placed beside Navigation Blvd (no published point in the reference set)"
+  },
+  {
+   "asset_id": "GW-PT-Z4-06",
+   "name": "Zone 4 pressure test point 06",
+   "asset_type": "pressure_test_point",
+   "operator": "Coastal Bend Power and Water Authority",
+   "serves": [
+    "AREA-PZ-4"
+   ],
+   "latitude": 27.79842,
+   "longitude": -97.41112,
+   "position_basis": "placed beside Martin Luther King Dr (no published point in the reference set)"
+  },
+  {
+   "asset_id": "WW-01",
+   "name": "New Broadway Wastewater Treatment Plant",
+   "asset_type": "wastewater_treatment_plant",
+   "operator": "City of Corpus Christi",
+   "aliases": [
+    "WW-xx"
+   ],
+   "latitude": 27.80288,
+   "longitude": -97.40104,
+   "position_basis": "real site: New Broadway WWTF (Corpus Christi) [EPA FRS - ICIS Wastewater Treatment Plants]",
+   "sampling": "wastewater surveillance, twice a week"
+  },
+  {
+   "asset_id": "WW-02",
+   "name": "Oso Wastewater Treatment Plant",
+   "asset_type": "wastewater_treatment_plant",
+   "operator": "City of Corpus Christi",
+   "aliases": [
+    "WW-xx"
+   ],
+   "latitude": 27.70828,
+   "longitude": -97.33912,
+   "position_basis": "real site: Oso WWTP (Corpus Christi) [EPA FRS - ICIS Wastewater Treatment Plants]",
+   "sampling": "wastewater surveillance, twice a week"
+  },
+  {
+   "asset_id": "WW-03",
+   "name": "Greenwood Wastewater Treatment Plant",
+   "asset_type": "wastewater_treatment_plant",
+   "operator": "City of Corpus Christi",
+   "aliases": [
+    "WW-xx"
+   ],
+   "latitude": 27.71713,
+   "longitude": -97.45754,
+   "position_basis": "real site: Greenwood Plant WWTP (Corpus Christi) [EPA FRS - ICIS Wastewater Treatment Plants]",
+   "sampling": "wastewater surveillance, twice a week"
+  },
+  {
+   "asset_id": "WW-04",
+   "name": "Laguna Madre Wastewater Treatment Plant",
+   "asset_type": "wastewater_treatment_plant",
+   "operator": "City of Corpus Christi",
+   "aliases": [
+    "WW-xx"
+   ],
+   "latitude": 27.67173,
+   "longitude": -97.27004,
+   "position_basis": "real site: Laguna Madre WWTP (Corpus Christi / Flour Bluff) [EPA FRS - ICIS Wastewater Treatment Plants]",
+   "sampling": "wastewater surveillance, twice a week"
+  },
+  {
+   "asset_id": "WW-05",
+   "name": "Whitecap Wastewater Treatment Plant",
+   "asset_type": "wastewater_treatment_plant",
+   "operator": "City of Corpus Christi",
+   "aliases": [
+    "WW-xx"
+   ],
+   "latitude": 27.60309,
+   "longitude": -97.25095,
+   "position_basis": "real site: Whitecap WWTP (Corpus Christi / Padre Island) [EPA FRS - ICIS Wastewater Treatment Plants]",
+   "sampling": "wastewater surveillance, twice a week"
+  },
+  {
+   "asset_id": "GW-LS-01",
+   "name": "North Beach Lift Station",
+   "asset_type": "wastewater_lift_station",
+   "operator": "City of Corpus Christi",
+   "latitude": 27.82338,
+   "longitude": -97.38877,
+   "position_basis": "placed beside Timon Blvd (no published point in the reference set)"
+  },
+  {
+   "asset_id": "GW-LS-02",
+   "name": "Flour Bluff Lift Station",
+   "asset_type": "wastewater_lift_station",
+   "operator": "City of Corpus Christi",
+   "latitude": 27.65322,
+   "longitude": -97.27912,
+   "position_basis": "placed beside Laguna Shores Rd (no published point in the reference set)"
+  },
+  {
+   "asset_id": "GW-LS-03",
+   "name": "Molina Lift Station",
+   "asset_type": "wastewater_lift_station",
+   "operator": "City of Corpus Christi",
+   "latitude": 27.76596,
+   "longitude": -97.4462,
+   "position_basis": "placed beside Old Brownsville Rd (no published point in the reference set)"
+  },
+  {
+   "asset_id": "GW-LS-04",
+   "name": "Hillcrest Lift Station",
+   "asset_type": "wastewater_lift_station",
+   "operator": "City of Corpus Christi",
+   "latitude": 27.8025,
+   "longitude": -97.41105,
+   "position_basis": "placed beside N Port Ave (no published point in the reference set)"
+  },
+  {
+   "asset_id": "FAC-INF-01A",
+   "name": "Harbor Bridge",
+   "asset_type": "bridge",
+   "operator": "Texas Department of Transportation",
+   "aliases": [
+    "FAC-INF-01",
+    "INF-CC-2027-00001",
+    "The Harbor Bridge"
+   ],
+   "latitude": 27.81097,
+   "longitude": -97.39678,
+   "position_basis": "land abutment on State Hwy 35, 0 m along the road from the published mid-span point",
+   "route": "US 181",
+   "span_midpoint": {
+    "latitude": 27.81194,
+    "longitude": -97.39565,
+    "source": "National Bridge Inventory"
+   },
+   "connects": [
+    "AREA-NBH-DOWNTOWN",
+    "AREA-NBH-NORTHBEACH"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "FAC-INF-01B",
+   "name": "Nueces Bay Causeway",
+   "asset_type": "causeway",
+   "operator": "Texas Department of Transportation",
+   "aliases": [
+    "FAC-INF-01"
+   ],
+   "latitude": 27.85231,
+   "longitude": -97.35869,
+   "position_basis": "land abutment on State Hwy 35, 130 m along the road from the published mid-span point",
+   "route": "US 181",
+   "span_midpoint": {
+    "latitude": 27.85039,
+    "longitude": -97.36159,
+    "source": "National Bridge Inventory"
+   },
+   "connects": [
+    "AREA-NBH-NORTHBEACH",
+    "AREA-CITY-PORTLAND"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "FAC-INF-02",
+   "name": "JFK Causeway",
+   "asset_type": "causeway",
+   "operator": "Texas Department of Transportation",
+   "latitude": 27.63508,
+   "longitude": -97.24076,
+   "position_basis": "land abutment on J F Kennedy Cswy, 0 m along the road from the published mid-span point",
+   "route": "Park Road 22",
+   "span_midpoint": {
+    "latitude": 27.63466,
+    "longitude": -97.23984,
+    "source": "National Bridge Inventory"
+   },
+   "connects": [
+    "AREA-NBH-FLOURBLUFF",
+    "AREA-NBH-PADREISLAND"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "FAC-AIR-CRP",
+   "name": "Corpus Christi International Airport",
+   "asset_type": "airport",
+   "operator": "City of Corpus Christi",
+   "aliases": [
+    "INF-CC-2027-00010",
+    "KCRP"
+   ],
+   "latitude": 27.77218,
+   "longitude": -97.50242,
+   "position_basis": "real site: Corpus Christi Intl (CRP/KCRP) [USDOT NTAD Aviation Facilities]",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "TANK-0390",
+   "name": "Quellmar Fuel Partners storage terminal",
+   "asset_type": "fuel_terminal",
+   "operator": "Quellmar Fuel Partners",
+   "latitude": 27.81337,
+   "longitude": -97.45227,
+   "position_basis": "placed beside Navigation Blvd (no published point in the reference set)",
+   "address": "Navigation Boulevard, Inner Harbor industrial area, Corpus Christi, TX"
+  },
+  {
+   "asset_id": "EQP-2201",
+   "name": "NAS Corpus Christi backup generator",
+   "asset_type": "generator",
+   "operator": "US Navy",
+   "parent_asset_id": "FAC-DOD-01",
+   "latitude": 27.68428,
+   "longitude": -97.27993,
+   "position_basis": "placed beside an unnamed road (no published point in the reference set)",
+   "nsn": "NSN-SYN-6115-0001"
+  },
+  {
+   "asset_id": "EQP-3101",
+   "name": "Shoreline Regional Medical Center emergency generator",
+   "asset_type": "generator",
+   "operator": "Shoreline Regional Medical Center",
+   "parent_asset_id": "FAC-SRMC-001",
+   "latitude": 27.77811,
+   "longitude": -97.39455,
+   "position_basis": "at parent site FAC-SRMC-001",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "EQP-3102",
+   "name": "Shoreline Regional Medical Center diesel tank a",
+   "asset_type": "fuel_tank",
+   "operator": "Shoreline Regional Medical Center",
+   "parent_asset_id": "FAC-SRMC-001",
+   "latitude": 27.77811,
+   "longitude": -97.39455,
+   "position_basis": "at parent site FAC-SRMC-001",
+   "capacity_gal": 12000
+  },
+  {
+   "asset_id": "EQP-3103",
+   "name": "Shoreline Regional Medical Center diesel tank b",
+   "asset_type": "fuel_tank",
+   "operator": "Shoreline Regional Medical Center",
+   "parent_asset_id": "FAC-SRMC-001",
+   "latitude": 27.77811,
+   "longitude": -97.39455,
+   "position_basis": "at parent site FAC-SRMC-001",
+   "capacity_gal": 12000
+  },
+  {
+   "asset_id": "EQP-3201",
+   "name": "Bay City Medical Center emergency generator",
+   "asset_type": "generator",
+   "operator": "Bay City Medical Center",
+   "parent_asset_id": "FAC-BCMC-002",
+   "latitude": 27.69302,
+   "longitude": -97.34498,
+   "position_basis": "at parent site FAC-BCMC-002",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "EQP-3202",
+   "name": "Bay City Medical Center diesel tank",
+   "asset_type": "fuel_tank",
+   "operator": "Bay City Medical Center",
+   "parent_asset_id": "FAC-BCMC-002",
+   "latitude": 27.69302,
+   "longitude": -97.34498,
+   "position_basis": "at parent site FAC-BCMC-002",
+   "capacity_gal": 6000
+  }
+ ],
+ "remote_assets": [
+  {
+   "asset_id": "GW-FAC-WTR-01",
+   "name": "Texana Booster Station 1",
+   "asset_type": "water_pump_station",
+   "operator": "Coastal Bend Power and Water Authority",
+   "location_text": "Lake Texana, near Edna, TX",
+   "scada_tag_prefix": "GW.WTR1",
+   "position_basis": "outside the reference window; locality only",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "GW-FAC-WTR-02",
+   "name": "Texana Booster Station 2",
+   "asset_type": "water_pump_station",
+   "operator": "Coastal Bend Power and Water Authority",
+   "location_text": "Raw-water pipeline mid-route, about 50 miles from Lake Texana",
+   "scada_tag_prefix": "GW.WTR2",
+   "position_basis": "outside the reference window; locality only",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "asset_id": "GW-FAC-WTR-03",
+   "name": "Colorado River Booster Station",
+   "asset_type": "water_pump_station",
+   "operator": "Coastal Bend Power and Water Authority",
+   "location_text": "Near Bay City, TX",
+   "scada_tag_prefix": "GW.WTR3",
+   "position_basis": "outside the reference window; locality only",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ],
+ "asset_type_guide": [
+  "airport",
+  "bridge",
+  "causeway",
+  "chemical_feed",
+  "distribution_substation",
+  "fuel_tank",
+  "fuel_terminal",
+  "generation",
+  "generator",
+  "intake",
+  "operations_center",
+  "pressure_test_point",
+  "pump",
+  "pump_station",
+  "substation",
+  "transmission_line_group",
+  "wastewater_lift_station",
+  "wastewater_treatment_plant",
+  "water_pump_station",
+  "water_storage_tank",
+  "water_treatment_plant"
+ ],
+ "maintenance_sites": [
+  {
+   "site_id": "CBPWA-CC",
+   "name": "Coastal Bend Power and Water Authority, Corpus Christi (work-order site code)",
+   "org": "Coastal Bend Power and Water Authority"
+  },
+  {
+   "site_id": "CCAD",
+   "name": "Corpus Christi Army Depot (work-order site code)",
+   "org": "U.S. Army"
+  },
+  {
+   "site_id": "NASCC",
+   "name": "Naval Air Station Corpus Christi (work-order site code)",
+   "org": "U.S. Navy"
+  }
+ ]
+}

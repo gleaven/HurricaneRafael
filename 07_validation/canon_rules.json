@@ -1,0 +1,921 @@
+{
+ "_about": {
+  "purpose": "Machine-checkable form of 00_scenario/canon_decisions.md. scripts/check_canon_decisions.py fails on text that contradicts a decision.",
+  "scopes": {
+   "stories": "03_news/stories/batch-*.json headline, dek and body (dated by story day)",
+   "facts": "public record statements, base and gridwater (dated by fact day)",
+   "newsroom": "10_news_sites/newsroom/build_data.py and data/*.json",
+   "internal": "MSEL, thread designs, threads, answer keys, characters, registries' participant-facing text",
+   "registries": "06_data_streams/*.json and entity_catalogs (participant-facing)",
+   "other_sources": "05_other_sources public-voice files (press releases, broadcast logs, EAS text, shelter and health notices, official social accounts); read-only, hits are reported and do not fail the run"
+  },
+  "quantity_values": "Allowed values per day window are read from 07_validation/reports/narrative_figures.json (written by scripts/build_narrative_figures.py from the 'quantities' below)."
+ },
+ "banned": [
+  {
+   "id": "B01",
+   "decision": "standing constraint: never public",
+   "pattern": "KESTREL|GW-ENG-VELA|ClearPath\\s+SecureReach|GW-SYS-JMP-01|GW-WS-IT-04|Halcyon\\s+Drift|Barge\\s*44|STATE-X",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B02",
+   "decision": "standing constraint: the utility is the Coastal Bend Power and Water Authority",
+   "pattern": "GridWater|GRIDWATER",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "registries",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B03",
+   "decision": "00_scenario/canon_decisions.md 1 (one oil spill)",
+   "pattern": "Auriga|Meridian\\s+(?:Star|Marine)|Costana|Pier\\s+9\\b|second (?:oil )?spill|anchorage spill",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "internal",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B04",
+   "decision": "00_scenario/canon_decisions.md (one disaster number, DR-4821-TX)",
+   "pattern": "DR-4890|FEMA-DR-TX-2027",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "internal",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B05",
+   "decision": "00_scenario/canon_decisions.md (insured losses $2.1 billion, about 187,000 claims)",
+   "pattern": "\\$3\\.8\\s?(?:billion|B)\\b|142,000 claims",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "internal",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B06",
+   "decision": "00_scenario/canon_decisions.md (FBI Houston Division)",
+   "pattern": "FBI(?:'s)? San Antonio|San Antonio (?:Division|Field Office)|FBI SAC San Antonio",
+   "flags": "",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "internal",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B07",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (one name per organisation): Fort Hood",
+   "pattern": "Fort Cavazos",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "internal",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B08",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11: 'Zone 4' is an engineering term, never public",
+   "pattern": "\\bZone 4\\b|\\bZona 4\\b",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B09",
+   "decision": "writer guide: no scenario day notation in public text",
+   "pattern": "\\bD[+-]\\d{1,3}\\b|\\bD0\\b|\\bDay \\d{1,3}\\b(?! of)",
+   "flags": "",
+   "scopes": [
+    "stories",
+    "facts"
+   ]
+  },
+  {
+   "id": "B10",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11: boil time is two minutes",
+   "pattern": "(?:one|1)(?: full)? minute[^.]{0,40}(?:boil|before)|boil[^.]{0,60}(?:one|1)(?: full)? minute|un minuto(?: completo)?",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B11",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (one name per organisation): 911 centre",
+   "pattern": "(?:Corpus Christi Fire Department|CCFD) Dispatch Chief|Nueces County 911 (?:center|Center|dispatch records)|Corpus Christi[–-]Nueces County 911",
+   "flags": "",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "internal",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B12",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (one name per organisation): health district",
+   "pattern": "(?<!Corpus Christi-)(?<!Corpus Christi–)Nueces County (?:Public )?Health(?: District| Department)?\\b",
+   "flags": "",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B13",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (one name per organisation): utility",
+   "pattern": "Coastal Bend Public Works Authority|AEP Texas|AUTORIDAD DE AGUA Y ENERGIA",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "internal",
+    "registries",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B13b",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (one name per organisation): utility is written 'Power and Water'",
+   "pattern": "Coastal Bend Power & Water",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "internal",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B14",
+   "decision": "real places, fictional companies",
+   "pattern": "South Texas Blood|Coastal Bend Blood Center|La Quinta Terminal Complex|Taft Docks|Biden",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "internal",
+    "registries",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B15",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11: helicopter rescues are 341, hoists 180 at the first count",
+   "pattern": "\\b47 (?:rooftop|hoist|helicopter)",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "internal",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B16",
+   "decision": "00_scenario/canon_decisions.md 7 (Individual Assistance approved Nov. 10, registration Nov. 13): no '43-day' wait",
+   "pattern": "43[- ]day|Day 50",
+   "scopes": [
+    "stories",
+    "facts"
+   ]
+  },
+  {
+   "id": "B17",
+   "decision": "00_scenario/canon_decisions.md 4 (Spanish notice 12 hours 33 minutes late)",
+   "pattern": "24[- ]hour (?:lag|delay|gap)[^.]{0,60}(?:Spanish|notif)|(?:Spanish|notif)[^.]{0,60}24[- ]hour (?:lag|delay|gap)",
+   "scopes": [
+    "stories",
+    "facts",
+    "internal",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B18",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11: thread T18 name",
+   "pattern": "GRIDWATER LAYER",
+   "flags": "",
+   "scopes": [
+    "internal"
+   ]
+  },
+  {
+   "id": "B19",
+   "decision": "00_scenario/canon_decisions.md (five water districts)",
+   "pattern": "[Dd]istricts 1 (?:through|to|-) 6|six water districts",
+   "scopes": [
+    "stories",
+    "facts",
+    "internal",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B20",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11: Districts 3 and 4 are Westside/Molina and downtown/Hillcrest/Northside, not Calallen",
+   "pattern": "Calallen-area resident|Cunningham Middle School|Brownie's Corner|Leopard Street to the north",
+   "scopes": [
+    "stories",
+    "facts",
+    "internal",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B21",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (11): the drone crew's support craft and its owner are never public",
+   "pattern": "Narwhal Dream|Nereid Maritime",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "other_sources"
+   ]
+  },
+  {
+   "id": "B22",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (23c): the storm-window SIEM flood is 73,785 alerts over the six UTC days Sept. 12 to 17",
+   "pattern": "74,120",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "internal",
+    "registries"
+   ]
+  },
+  {
+   "id": "B23",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (23b): aid registration opens 06:00Z on Nov. 13 (midnight local); the first account-takeover burst is 06:01Z to 09:17Z",
+   "pattern": "D\\+60 00:01|2027-11-13T00:01|13 Nov(?:ember)? (?:2027 )?00:01",
+   "flags": "",
+   "scopes": [
+    "internal",
+    "registries"
+   ]
+  },
+  {
+   "id": "B24",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (23d): helicopter rescues are in Flour Bluff and North Beach; Calallen is worked by boat teams",
+   "pattern": "(?:helicopters?|hoisted|airlifted|aircrews?)[^.(]{0,70}\\b(?:in|from|over|at) Calallen|Calallen[^.]{0,50}(?:hoisted|airlifted|by helicopter)",
+   "scopes": [
+    "stories",
+    "facts",
+    "newsroom",
+    "other_sources"
+   ]
+  }
+ ],
+ "gated": [
+  {
+   "id": "G00",
+   "decision": "02_public_record/restricted_terms.json (loaded as is)",
+   "from_file": "02_public_record/restricted_terms.json"
+  },
+  {
+   "id": "G01",
+   "decision": "00_scenario/canon_decisions.md (contractor fraud names public from the Dec. 13 arrests)",
+   "pattern": "FastDry|Operation Sandbar",
+   "from_day": 90
+  },
+  {
+   "id": "G02",
+   "decision": "00_scenario/canon_decisions.md 3 (pre-storm drone flights public from Sept. 29)",
+   "pattern": "(?:drones?|unmanned aircraft|UAS)[^.]{0,90}(?:before (?:Hurricane )?Rafael|before the storm|before landfall|pre-storm|preceding (?:Hurricane )?Rafael|leading up to)|(?:before (?:Hurricane )?Rafael|before the storm|before landfall|pre-storm)[^.]{0,90}(?:unauthorized|unidentified) (?:drones?|unmanned)",
+   "from_day": 15,
+   "not_before_day": 0
+  },
+  {
+   "id": "G03",
+   "decision": "00_scenario/canon_decisions.md 2 (AIS anomaly public from Oct. 22)",
+   "pattern": "spoof|AIS (?:anomal|identity)|false (?:AIS|vessel identity)",
+   "from_day": 38,
+   "not_before_day": 0
+  },
+  {
+   "id": "G04",
+   "decision": "00_scenario/canon_decisions.md 5 (channel closed from landfall to Oct. 14)",
+   "pattern": "(?:ship channel|channel|port)\\b[^.]{0,30}\\b(?:has |have |was |is now |partly |partially )?(?:reopened|re-opened)",
+   "from_day": 30,
+   "not_before_day": 0
+  },
+  {
+   "id": "G05",
+   "decision": "00_scenario/canon_decisions.md 7 (aid registration opens Nov. 13; announced Nov. 10)",
+   "pattern": "registration (?:is now|is|has) open|(?:can|may) now (?:register|apply) (?:for|with) FEMA|ya (?:puede|pueden) (?:inscribirse|registrarse)|Individual Assistance (?:was|has been|is) approved|aprobó la Asistencia Individual",
+   "from_day": 57,
+   "not_before_day": 0
+  },
+  {
+   "id": "G06",
+   "decision": "00_scenario/canon_decisions.md 4 (citywide notice lifted Oct. 23)",
+   "pattern": "(?:citywide )?boil[- ]water notice (?:was|has been|is) lifted|lifted (?:its|the) (?:citywide )?boil[- ]water notice|levant(?:ó|a|aron) el aviso de hervir",
+   "from_day": 39,
+   "not_before_day": 0
+  },
+  {
+   "id": "G07",
+   "decision": "00_scenario/canon_decisions.md 4 (Districts 3 and 4 notice issued Sept. 26)",
+   "pattern": "NuecesInfoLine|boil[- ]water notice for Districts 3 and 4|aviso de hervir (?:el )?agua para los Distritos 3 y 4",
+   "from_day": 12
+  },
+  {
+   "id": "G08",
+   "decision": "00_scenario/canon_decisions.md 6 (deliberate interference public from Oct. 5)",
+   "pattern": "cyber ?attack[^.]{0,60}(?:utility|CBPWA|Power and Water)|(?:utility|CBPWA|Power and Water)[^.]{0,60}cyber ?attack|deliberate interference with (?:utility|control)",
+   "from_day": 21
+  },
+  {
+   "id": "G09",
+   "decision": "00_scenario/canon_decisions.md (counter-drone network announced Oct. 16)",
+   "pattern": "Sentinel Airspace",
+   "from_day": 32
+  }
+ ],
+ "windows": [
+  {
+   "id": "W01",
+   "decision": "00_scenario/canon_decisions.md 3 (overflights Sept. 15-24; none after Sept. 25)",
+   "pattern": "(?<![Nn]o )(?:new|another|more|fresh) (?:drone )?(?:sightings?|lights) (?:were |was )?(?:reported|seen|filmed)|drones? (?:were|was) (?:seen|spotted|reported) (?:again )?(?:last night|overnight|Tuesday night|this week)",
+   "story_days": [
+    2,
+    11
+   ]
+  },
+  {
+   "id": "W02",
+   "decision": "00_scenario/canon_decisions.md (curfew Sept. 15 to Oct. 5)",
+   "pattern": "curfew (?:remains|is|stays) in (?:effect|place)|toque de queda (?:sigue|continúa|está) (?:en vigor|vigente)",
+   "story_days": [
+    1,
+    21
+   ]
+  },
+  {
+   "id": "W03",
+   "decision": "00_scenario/canon_decisions.md 4 (citywide notice Sept. 18 to Oct. 23; Districts 3 and 4 to Oct. 26)",
+   "pattern": "(?:remains?|still|sigue[n]?) under (?:a|the) (?:citywide )?boil[- ]water notice|boil[- ]water notice (?:remains|is still) in effect|aviso de hervir (?:el )?agua sigue (?:en vigor|vigente)",
+   "story_days": [
+    4,
+    42
+   ]
+  },
+  {
+   "id": "W04",
+   "decision": "00_scenario/canon_decisions.md 5 (channel closed Sept. 14 to Oct. 14 and Oct. 28 to Nov. 11)",
+   "pattern": "(?:ship )?channel (?:remains|is still|stays) closed|canal (?:sigue|permanece) cerrado",
+   "story_days_any": [
+    [
+     -1,
+     29
+    ],
+    [
+     44,
+     57
+    ]
+   ]
+  }
+ ],
+ "event_dates": [
+  {
+   "id": "E01",
+   "decision": "00_scenario/canon_decisions.md (landfall Tuesday Sept. 14, 1 a.m.)",
+   "pattern": "(?:Rafael|[Hh]urricane|storm) (?:made landfall|came ashore|struck)[^.;]{0,25}?\\b(Sept(?:\\.|ember)|Oct(?:\\.|ober)|Nov(?:\\.|ember)) (\\d{1,2})\\b|landfall on (Sept(?:\\.|ember)|Oct(?:\\.|ober)|Nov(?:\\.|ember)) (\\d{1,2})\\b",
+   "expect": [
+    [
+     9,
+     14
+    ]
+   ]
+  },
+  {
+   "id": "E02",
+   "decision": "00_scenario/canon_decisions.md 4 (citywide notice issued Sept. 18, lifted Oct. 23)",
+   "pattern": "citywide (?:boil[- ]water )?notice[^.;]{0,30}(?:issued|began|in effect since|since|lifted|ended)[^.;]{0,12}(Sept(?:\\.|ember)|Oct(?:\\.|ober)|Nov(?:\\.|ember)) (\\d{1,2})\\b",
+   "expect": [
+    [
+     9,
+     18
+    ],
+    [
+     10,
+     23
+    ]
+   ]
+  },
+  {
+   "id": "E03",
+   "decision": "00_scenario/canon_decisions.md 5 (blast Oct. 28; second device Nov. 5; reopened Nov. 11; partial reopening Oct. 14)",
+   "pattern": "(?:blast|explosion) (?:on |of )(Sept(?:\\.|ember)|Oct(?:\\.|ober)|Nov(?:\\.|ember)) (\\d{1,2})\\b|\\b(Sept(?:\\.|ember)|Oct(?:\\.|ober)|Nov(?:\\.|ember)) (\\d{1,2}) (?:blast|explosion)",
+   "expect": [
+    [
+     10,
+     28
+    ]
+   ]
+  },
+  {
+   "id": "E04",
+   "decision": "00_scenario/canon_decisions.md 4 (Districts 3 and 4 notice Sept. 26; lifted Oct. 26)",
+   "pattern": "Districts 3 and 4[^.;]{0,60}(?:issued|since|lifted|began)[^.;]{0,12}(Sept(?:\\.|ember)|Oct(?:\\.|ober)) (\\d{1,2})\\b",
+   "expect": [
+    [
+     9,
+     26
+    ],
+    [
+     10,
+     26
+    ],
+    [
+     9,
+     29
+    ]
+   ]
+  },
+  {
+   "id": "E05",
+   "decision": "00_scenario/canon_decisions.md 7 (aid approved Nov. 10, registration Nov. 13)",
+   "pattern": "registration[^.;]{0,40}(?:opens|opened|open|begins|began)[^.;]{0,15}(Nov(?:\\.|ember)|Oct(?:\\.|ober)) (\\d{1,2})\\b",
+   "expect": [
+    [
+     11,
+     13
+    ]
+   ]
+  }
+ ],
+ "weekday": {
+  "id": "WD",
+  "decision": "00_scenario/canon_decisions.md 8 and the scenario clock (day 0 = Tuesday 2027-09-14)",
+  "explicit_dates": "fail",
+  "lead_said_weekday": "report"
+ },
+ "quantities": [
+  {
+   "id": "barrels_spilled",
+   "decision": "00_scenario/canon_decisions.md 1",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:barrels|barriles)\\b",
+   "allowed": [
+    {
+     "value": 9000,
+     "from_day": 1
+    }
+   ]
+  },
+  {
+   "id": "oil_water_gallons",
+   "decision": "PUB-194",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:gallons|galones)\\b",
+   "allowed": [
+    {
+     "value": 142000,
+     "from_day": 20
+    },
+    {
+     "value": 42,
+     "from_day": 1
+    }
+   ]
+  },
+  {
+   "id": "calls_911",
+   "decision": "00_scenario/canon_decisions.md 6 and Decisions 2026-11-11",
+   "pattern": "(?<![\\d,])(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?)(?: 911| 9-1-1| emergency| rescue| rescue-related| false| unfounded| de emergencia)? (?:calls|llamadas)\\b",
+   "ignore": [
+    911,
+    311,
+    211
+   ],
+   "allowed": [
+    {
+     "value": 2900,
+     "from_day": 1
+    },
+    {
+     "value": 1840,
+     "from_day": 3
+    },
+    {
+     "value": 1100,
+     "from_day": 3
+    },
+    {
+     "value": 7300,
+     "from_day": 3
+    },
+    {
+     "value": 1000,
+     "from_day": 3
+    },
+    {
+     "value": 23,
+     "from_day": 10
+    },
+    {
+     "value": 380,
+     "from_day": 29
+    },
+    {
+     "value": 310,
+     "from_day": 29
+    },
+    {
+     "value": 44200,
+     "from_day": 29
+    },
+    {
+     "value": 56000,
+     "from_day": 45
+    }
+   ]
+  },
+  {
+   "id": "rescue_requests",
+   "decision": "00_scenario/canon_decisions.md 6",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:rescue requests|requests for rescue|solicitudes de rescate)",
+   "allowed": [
+    {
+     "value": 2109,
+     "from_day": 3
+    }
+   ]
+  },
+  {
+   "id": "rescues",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (SAR)",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:confirmed |people |residents |personas |total )?(?:rescued|rescues|rescatad[ao]s|rescates|hoists?|hoist operations|helicopter rescues|surface rescues)\\b",
+   "allowed": [
+    {
+     "value": 180,
+     "from_day": 1
+    },
+    {
+     "value": 145,
+     "from_day": 1
+    },
+    {
+     "value": 486,
+     "from_day": 1
+    },
+    {
+     "value": 341,
+     "from_day": 1
+    },
+    {
+     "value": 702,
+     "from_day": 2
+    },
+    {
+     "value": 1427,
+     "from_day": 5
+    },
+    {
+     "value": 1041,
+     "from_day": 7
+    },
+    {
+     "value": 45,
+     "from_day": 7
+    }
+   ],
+   "monotonic_total": [
+    486,
+    702,
+    1427
+   ]
+  },
+  {
+   "id": "deaths",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (deaths 12 on Sept. 15, 23 from Sept. 16)",
+   "pattern": "(?:(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?)|(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|twenty-three|doce|catorce|veintitrés))\\s+(?:confirmed |storm-related |storm |hurricane-related )*(?:deaths|dead|fatalities|muertes|muertos|fallecidos)\\b",
+   "allowed": [
+    {
+     "value": 12,
+     "from_day": 1,
+     "to_day": 1
+    },
+    {
+     "value": 23,
+     "from_day": 2
+    }
+   ]
+  },
+  {
+   "id": "customers_out",
+   "decision": "00_scenario/canon_decisions.md (outage peak 72,000)",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:customers|clientes|homes and businesses)\\b",
+   "narrative_only": true,
+   "note": "Stories state only these three points; the utility's own posts in the data streams follow the daily outage curve.",
+   "allowed": [
+    {
+     "value": 72000,
+     "from_day": 1
+    },
+    {
+     "value": 32000,
+     "from_day": 14
+    },
+    {
+     "value": 3200,
+     "from_day": 35
+    }
+   ]
+  },
+  {
+   "id": "area_square_miles",
+   "decision": "PUB-028, PUB-030",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:square miles|millas cuadradas)",
+   "allowed": [
+    {
+     "value": 43,
+     "from_day": 1
+    },
+    {
+     "value": 33,
+     "from_day": 2
+    }
+   ]
+  },
+  {
+   "id": "survey_square_km",
+   "decision": "PUB-111, PUB-113",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:square kilometers|kilómetros cuadrados)",
+   "allowed": [
+    {
+     "value": 180,
+     "from_day": 4
+    },
+    {
+     "value": 183,
+     "from_day": 45
+    }
+   ]
+  },
+  {
+   "id": "structures",
+   "decision": "PUB-111",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?)(?: to [\\d,]+)? (?:structures|estructuras)\\b",
+   "allowed": [
+    {
+     "value": 4200,
+     "from_day": 4
+    },
+    {
+     "value": 5800,
+     "from_day": 4
+    }
+   ]
+  },
+  {
+   "id": "dollars",
+   "decision": "00_scenario/canon_decisions.md (insured losses $2.1 billion) and the contract facts",
+   "pattern": "\\$(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?)(?: |-)?(billion|million|mil millones|millones|M\\b|B\\b)",
+   "unit_group": 2,
+   "allowed": [
+    {
+     "value": "4.2 million",
+     "from_day": 7
+    },
+    {
+     "value": "14.2 million",
+     "from_day": 10
+    },
+    {
+     "value": "2.1 million",
+     "from_day": 20
+    },
+    {
+     "value": "2.1 billion",
+     "from_day": 30
+    },
+    {
+     "value": "125 billion",
+     "from_day": 30
+    },
+    {
+     "value": "30 billion",
+     "from_day": 30
+    },
+    {
+     "value": "8.2 million",
+     "from_day": 60
+    },
+    {
+     "value": "5.6 million",
+     "from_day": 60
+    },
+    {
+     "value": "0.9 million",
+     "from_day": 60
+    },
+    {
+     "value": "140 million",
+     "from_day": 75
+    },
+    {
+     "value": "23 million",
+     "from_day": 90
+    },
+    {
+     "value": "3.9 million",
+     "from_day": 114
+    }
+   ]
+  },
+  {
+   "id": "insurance_claims",
+   "decision": "00_scenario/canon_decisions.md (about 187,000 claims)",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:property |insurance |property insurance )(?:claims|reclamos|reclamaciones)\\b",
+   "allowed": [
+    {
+     "value": 187000,
+     "from_day": 30
+    }
+   ]
+  },
+  {
+   "id": "illness_cases",
+   "decision": "PUB-162, PUB-164",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:confirmed |documented |probable |laboratory-confirmed |hurricane-related )*(?:cases|casos|patients|pacientes|people sickened)\\b",
+   "ignore_below": 100,
+   "allowed": [
+    {
+     "value": 600,
+     "from_day": 18
+    },
+    {
+     "value": 1820,
+     "from_day": 60
+    },
+    {
+     "value": 4217,
+     "from_day": 60
+    },
+    {
+     "value": 4200,
+     "from_day": 60
+    }
+   ]
+  },
+  {
+   "id": "accounts",
+   "decision": "PUB-054, PUB-151/152, PUB-085",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:social media |fake |inauthentic |coordinated |aid |applicant )*(?:accounts|cuentas)\\b",
+   "allowed": [
+    {
+     "value": 40,
+     "from_day": 16
+    },
+    {
+     "value": 847,
+     "from_day": 32
+    },
+    {
+     "value": 410,
+     "from_day": 71
+    }
+   ]
+  },
+  {
+   "id": "wind_mph",
+   "decision": "canon_timeline storm (125 mph at landfall)",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?)[- ]?(?:mph|miles per hour|millas por hora)\\b",
+   "requires": "made landfall|came ashore|tocó tierra|at landfall",
+   "min_day": 0,
+   "note": "From landfall on, the landfall intensity is 125 mph; pre-landfall advisories follow the storm track.",
+   "allowed": [
+    {
+     "value": 125,
+     "from_day": 0
+    }
+   ]
+  },
+  {
+   "id": "surge_feet",
+   "decision": "PUB-023, PUB-102 (forecast 9 to 12 feet; measured about 11)",
+   "pattern": "(?:surge|marejada)[^.]{0,50}?\\b(\\d+)(?: to \\d+| a \\d+)?[- ](?:feet|foot|pies)|\\b(\\d+)(?:[- ]to[- ]\\d+| a \\d+)?[- ](?:feet|foot|pies)[^.]{0,25}(?:surge|marejada)",
+   "allowed": [
+    {
+     "value": 9,
+     "from_day": -2
+    },
+    {
+     "value": 12,
+     "from_day": -2,
+     "to_day": 0
+    },
+    {
+     "value": 11,
+     "from_day": 0
+    }
+   ]
+  },
+  {
+   "id": "boil_notice_days",
+   "decision": "00_scenario/canon_decisions.md 4",
+   "pattern": "(?:after|lasted|for|tras|durante) (\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:days|días)[^.]{0,60}(?:boil|hervir)|(?:boil|hervir)[^.]{0,80}?\\b(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:days|días)",
+   "allowed": [
+    {
+     "value": 35,
+     "from_day": 39
+    },
+    {
+     "value": 30,
+     "from_day": 42
+    }
+   ]
+  },
+  {
+   "id": "districts_3_4_residents",
+   "decision": "00_scenario/canon_decisions.md Decisions 2026-11-11 (about 48,000 residents served)",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:residents|residentes|people|personas)[^.]{0,60}Distri(?:cts|tos) 3|Distri(?:cts|tos) 3 (?:and|y) 4[^.]{0,80}?\\b(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:residents|residentes|people|personas)",
+   "ignore_below": 1000,
+   "allowed": [
+    {
+     "value": 48000,
+     "from_day": 12
+    }
+   ]
+  },
+  {
+   "id": "arrests",
+   "decision": "PUB-210",
+   "pattern": "(?:(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?)|(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|twenty-three|doce|catorce|veintitrés)) (?:arrests|people arrested|arrestos|detenidos)\\b",
+   "allowed": [
+    {
+     "value": 14,
+     "from_day": 90
+    }
+   ]
+  },
+  {
+   "id": "relief_containers",
+   "decision": "PUB-018",
+   "pattern": "(\\d{1,3}(?:,\\d{3})+|\\d+(?:\\.\\d+)?) (?:relief )?(?:containers|contenedores)\\b",
+   "allowed": [
+    {
+     "value": 40,
+     "from_day": -5
+    }
+   ]
+  },
+  {
+   "id": "spanish_notice_delay_hours",
+   "decision": "00_scenario/canon_decisions.md 4",
+   "pattern": "\\b(\\d+) hours?(?: and| y)? (?:\\d+ minut\\w+ )?(?:later|after|delay|gap|late|después|de retraso|de demora)|(\\d+)[- ]hour (?:delay|gap|lag)|demoras? de (?:hasta )?(\\d+) horas",
+   "requires": "Spanish|español|KNCB|translation|traducción",
+   "allowed": [
+    {
+     "value": 12,
+     "from_day": 13
+    },
+    {
+     "value": 2,
+     "from_day": 13
+    },
+    {
+     "value": 7,
+     "from_day": 13
+    },
+    {
+     "value": 9,
+     "from_day": 13
+    }
+   ]
+  }
+ ]
+}

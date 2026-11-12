@@ -1,0 +1,89 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+ ],
+ "id": "VANTAGE-VHR-20271111T163400Z-DEBRIS-FB",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.3119,
+     27.6567
+    ],
+    [
+     -97.2957,
+     27.6567
+    ],
+    [
+     -97.2957,
+     27.6711
+    ],
+    [
+     -97.3119,
+     27.6711
+    ],
+    [
+     -97.3119,
+     27.6567
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.3119,
+  27.6567,
+  -97.2957,
+  27.6711
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "VANTAGE-VHR-20271111T163400Z-DEBRIS-FB.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20271111T163400Z-DEBRIS-FB/visual.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20271111T163400Z-DEBRIS-FB/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-11-11T16:34:00Z",
+  "title": "Debris staging site FB",
+  "description": "Debris staging site beside Flour Bluff Dr. Pile outlines and haul-truck queue are resolved; suitable for pile-footprint and volume measurement.",
+  "platform": "Vantage-VHR-2",
+  "instruments": [
+   "panchromatic and multispectral imager"
+  ],
+  "constellation": "Vantage-VHR",
+  "gsd": 0.3,
+  "view:off_nadir": 15.4,
+  "view:sun_azimuth": 149.1,
+  "view:sun_elevation": 38.9,
+  "proj:epsg": 32614,
+  "eo:cloud_cover": 21,
+  "tasking": "county debris monitoring"
+ }
+}

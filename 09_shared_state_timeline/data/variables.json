@@ -1,0 +1,1651 @@
+{
+ "meta": {
+  "scenario": "Hurricane Rafael",
+  "t0_hour": -1440,
+  "t1_hour": 2879,
+  "hours": 4320,
+  "d0_date": "2027-09-14",
+  "landfall_t": 6,
+  "time_note": "t = hours from D0 00:00Z (Sept. 14, 2027). Local time is UTC-5 (CDT) until Nov. 7, 2027 07:00Z (t = 1303), then UTC-6 (CST).",
+  "dst_end_t": 1303,
+  "relief_flights_total": 40,
+  "generated_by": "scripts/build_world_state.py"
+ },
+ "groups": [
+  "Storm & weather",
+  "Port & maritime",
+  "Water & power",
+  "Spill & environment",
+  "Health & emergency",
+  "Military",
+  "Hidden threads",
+  "Cyber & information",
+  "Public knowledge",
+  "Aid & money",
+  "Scenario"
+ ],
+ "variables": [
+  {
+   "id": "storm_max_wind_kt",
+   "kind": "number",
+   "label": "Storm maximum wind",
+   "group": "Storm & weather",
+   "unit": "kt",
+   "source": "Scenario track (EVT-0202, EVT-0301)",
+   "fmt": "0",
+   "scale": [
+    0,
+    120
+   ],
+   "description": "Maximum sustained wind of Rafael along its track; 0 when no system exists.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public"
+  },
+  {
+   "id": "storm_stage",
+   "kind": "state",
+   "label": "Storm stage",
+   "group": "Storm & weather",
+   "source": "EVT-0202, EVT-0301; PUB-015, PUB-017, PUB-022",
+   "states": {
+    "No system": "#c9cfd6",
+    "Tropical wave": "#9fb7c9",
+    "Tropical storm": "#d9a227",
+    "Hurricane Cat 1": "#e07a1f",
+    "Hurricane Cat 2": "#d4552a",
+    "Hurricane Cat 3": "#c8402f",
+    "Tropical depression": "#c9b458",
+    "Remnant low": "#b8c2cc"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "nws_advisory",
+   "kind": "state",
+   "label": "NWS advisories (local)",
+   "group": "Storm & weather",
+   "source": "PUB-013, PUB-015, PUB-018, PUB-101, PUB-102, PUB-022",
+   "states": {
+    "None": "#c9cfd6",
+    "Active-season outlook": "#b9c6d3",
+    "Storm forms (Caribbean)": "#9fb7c9",
+    "Cone covers Corpus Christi": "#d9a227",
+    "Hurricane watch": "#e07a1f",
+    "Hurricane warning": "#c8402f",
+    "Warnings lifted": "#2a9d8f"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "storm_distance_km",
+   "kind": "number",
+   "label": "Distance from Corpus Christi",
+   "group": "Storm & weather",
+   "unit": "km",
+   "fmt": "0",
+   "scale": [
+    0,
+    2500
+   ],
+   "invert": true,
+   "source": "Derived from track",
+   "description": "Great-circle distance from the storm center to downtown Corpus Christi (capped at 2,500 km).",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public"
+  },
+  {
+   "id": "bay_water_level_ft",
+   "kind": "number",
+   "label": "Bay water level (tide gauge)",
+   "group": "Storm & weather",
+   "unit": "ft",
+   "fmt": "0.0",
+   "scale": [
+    0,
+    12
+   ],
+   "source": "EVT-0301 (3.4 m surge); PUB-023",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "description": "Water level above datum at the NOAA tide gauge on Corpus Christi Bay (GAUGE-14). The gauge goes offline from landfall to D+5 in the rendering rules, but the true level is kept here.",
+   "threads": [],
+   "assumption": false,
+   "visibility": "public"
+  },
+  {
+   "id": "rain_rate_in_hr",
+   "kind": "number",
+   "label": "Rain rate (Corpus Christi)",
+   "group": "Storm & weather",
+   "unit": "in/hr",
+   "fmt": "0.00",
+   "scale": [
+    0,
+    2
+   ],
+   "source": "EVT-0203 (moisture plume), EVT-0301; PUB-016",
+   "assumption": true,
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "nueces_river_stage_ft",
+   "kind": "number",
+   "label": "Nueces River stage at Calallen",
+   "group": "Storm & weather",
+   "unit": "ft",
+   "fmt": "0.0",
+   "scale": [
+    0,
+    15
+   ],
+   "source": "EVT-0203; PUB-016",
+   "assumption": true,
+   "lanes": [
+    "C"
+   ],
+   "threads": [],
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "port_condition",
+   "kind": "state",
+   "label": "Coast Guard port condition",
+   "group": "Port & maritime",
+   "source": "PUB-020, PUB-107, PUB-108, PUB-058, PUB-067, PUB-079",
+   "states": {
+    "Normal": "#3f8f6b",
+    "X-Ray": "#d9a227",
+    "Yankee": "#e07a1f",
+    "Zulu": "#c8402f",
+    "Post-storm closure": "#8f1d2c",
+    "Partial reopening": "#e8a33d",
+    "Security closure": "#6d1222",
+    "Open": "#2a9d8f"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "channel_status",
+   "kind": "state",
+   "label": "Ship channel",
+   "group": "Port & maritime",
+   "source": "PUB-107, PUB-108, PUB-058, PUB-066, PUB-067, PUB-079",
+   "states": {
+    "Open": "#3f8f6b",
+    "Closed to inbound": "#e07a1f",
+    "Closed to all": "#8f1d2c",
+    "Open (inner channel restricted)": "#e8a33d",
+    "Closed (explosive device)": "#6d1222"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "vessels_at_anchorage",
+   "kind": "number",
+   "label": "Vessels at offshore anchorage",
+   "group": "Port & maritime",
+   "unit": "ships",
+   "fmt": "0",
+   "scale": [
+    0,
+    30
+   ],
+   "source": "PUB-107 (14 on Sept. 12), PUB-108 (to sea), PUB-109 (return), PUB-058",
+   "description": "Ships waiting at the anchorage east of Port Aransas. Exactly 14 from the Yankee closure until Zulu sends them to sea; back from Sept. 17.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public"
+  },
+  {
+   "id": "crude_exports",
+   "kind": "state",
+   "label": "Crude exports",
+   "group": "Port & maritime",
+   "source": "PUB-020, PUB-107, PUB-073, PUB-079",
+   "states": {
+    "Normal": "#3f8f6b",
+    "Winding down": "#d9a227",
+    "Halted": "#8f1d2c",
+    "Limited": "#e8a33d",
+    "Resuming": "#2a9d8f"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "export_activity_pct",
+   "kind": "number",
+   "label": "Export loading activity",
+   "group": "Port & maritime",
+   "unit": "% of normal",
+   "fmt": "0",
+   "scale": [
+    0,
+    110
+   ],
+   "assumption": true,
+   "source": "Derived from channel status",
+   "description": "Scenario index of tanker loading at the port (100 = normal). Not a published number.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "visibility": "public"
+  },
+  {
+   "id": "relief_ship_gulf_provider",
+   "kind": "state",
+   "label": "MV Gulf Provider (40 relief containers)",
+   "group": "Port & maritime",
+   "source": "EVT-0204, EVT-0401; PUB-018, PUB-059",
+   "states": {
+    "Not yet booked": "#c9cfd6",
+    "Booked, inbound": "#4a78c2",
+    "Waiting at anchorage": "#d9a227",
+    "At sea (riding out storm)": "#e07a1f",
+    "Berthed, unloading": "#2a9d8f",
+    "Departed": "#7a8a99"
+   },
+   "lanes": [
+    "C",
+    "D"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "brigade_outload",
+   "kind": "state",
+   "label": "Fort Hood brigade outload",
+   "group": "Port & maritime",
+   "source": "PUB-007, PUB-020, PUB-068, PUB-080; EVT-0409",
+   "states": {
+    "Not scheduled": "#c9cfd6",
+    "Planned (late summer)": "#4a78c2",
+    "Postponed (storm)": "#d9a227",
+    "Delayed again (channel closed)": "#e07a1f",
+    "Loading": "#e8a33d",
+    "Sailing": "#2a9d8f",
+    "Departed": "#7a8a99"
+   },
+   "lanes": [
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "onstevens_power_feeds",
+   "kind": "state",
+   "label": "O.N. Stevens power feeds",
+   "group": "Water & power",
+   "source": "EVT-0302; PUB-025",
+   "assumption": true,
+   "lanes": [
+    "C"
+   ],
+   "states": {
+    "Both feeds up": "#3f8f6b",
+    "Both feeds down": "#8f1d2c",
+    "One feed restored": "#e8a33d"
+   },
+   "description": "Restoration times are builder assumptions (not in the public record).",
+   "threads": [],
+   "visibility": "public",
+   "unit": ""
+  },
+  {
+   "id": "water_capacity_pct",
+   "kind": "number",
+   "label": "Water plant pumping capacity",
+   "group": "Water & power",
+   "unit": "%",
+   "fmt": "0",
+   "scale": [
+    0,
+    100
+   ],
+   "source": "EVT-0302, EVT-0406",
+   "assumption": true,
+   "lanes": [
+    "C"
+   ],
+   "threads": [],
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "pump_p2_vibration_mm_s",
+   "kind": "number",
+   "label": "Pump P-2 vibration (EQP-1102)",
+   "group": "Water & power",
+   "unit": "mm/s",
+   "fmt": "0.0",
+   "scale": [
+    0,
+    10
+   ],
+   "visibility": "internal",
+   "source": "EVT-0102, EVT-0302, EVT-0406",
+   "lanes": [
+    "C"
+   ],
+   "description": "Equipment telemetry ground truth. 0 while the pump is failed.",
+   "threads": [],
+   "assumption": false
+  },
+  {
+   "id": "boil_water_notice",
+   "kind": "state",
+   "label": "Citywide boil-water notice",
+   "group": "Water & power",
+   "source": "EVT-0310, EVT-0406; PUB-039, PUB-063",
+   "states": {
+    "No notice": "#3f8f6b",
+    "Boil-water notice": "#c8402f"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "water_pressure",
+   "kind": "state",
+   "label": "Water pressure",
+   "group": "Water & power",
+   "source": "PUB-025",
+   "states": {
+    "Normal": "#3f8f6b",
+    "Low citywide": "#e07a1f"
+   },
+   "lanes": [
+    "C"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "power_outage_pct",
+   "kind": "number",
+   "label": "Customers without power (Coastal Bend)",
+   "group": "Water & power",
+   "unit": "%",
+   "fmt": "0",
+   "scale": [
+    0,
+    80
+   ],
+   "assumption": true,
+   "source": "Scenario assumption (no public figure)",
+   "lanes": [
+    "C",
+    "D"
+   ],
+   "threads": [],
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "bridges",
+   "kind": "state",
+   "label": "Harbor Bridge and Nueces Bay Causeway",
+   "group": "Water & power",
+   "source": "EVT-0304; PUB-027, PUB-036",
+   "states": {
+    "Open": "#3f8f6b",
+    "Closed (wind)": "#8f1d2c"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "oil_released_bbl",
+   "kind": "number",
+   "label": "Oil released (cumulative)",
+   "group": "Spill & environment",
+   "unit": "bbl",
+   "fmt": "0",
+   "scale": [
+    0,
+    9000
+   ],
+   "source": "EVT-0313; PUB-029",
+   "threads": [
+    "T6"
+   ],
+   "description": "Valves opened 04:00Z (11 p.m. Monday local), closed by 05:30Z.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "assumption": false,
+   "visibility": "public"
+  },
+  {
+   "id": "oil_slick_km2",
+   "kind": "number",
+   "label": "Oil slick extent",
+   "group": "Spill & environment",
+   "unit": "km²",
+   "fmt": "0",
+   "scale": [
+    0,
+    90
+   ],
+   "source": "EVT-0314; PUB-030 (about 33 sq mi)",
+   "threads": [
+    "T6"
+   ],
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "water_hydrocarbon_index",
+   "kind": "number",
+   "label": "Hydrocarbon reading (sondes WQ-01 to 06)",
+   "group": "Spill & environment",
+   "unit": "index",
+   "fmt": "0",
+   "scale": [
+    0,
+    100
+   ],
+   "visibility": "internal",
+   "source": "EVT-0314; rendering rules",
+   "threads": [
+    "T6"
+   ],
+   "lanes": [
+    "C"
+   ],
+   "assumption": false,
+   "description": ""
+  },
+  {
+   "id": "spill_response",
+   "kind": "state",
+   "label": "Spill response",
+   "group": "Spill & environment",
+   "source": "PUB-024, PUB-029, PUB-031, PUB-066",
+   "threads": [
+    "T6"
+   ],
+   "states": {
+    "None": "#c9cfd6",
+    "Spill reported": "#c8402f",
+    "Unified Command (on hold, wind)": "#e07a1f",
+    "Active cleanup": "#e8a33d",
+    "Monitoring": "#2a9d8f"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "fishing_closure",
+   "kind": "state",
+   "label": "Bay fishing",
+   "group": "Spill & environment",
+   "source": "PUB-040, PUB-099",
+   "threads": [
+    "T6"
+   ],
+   "lanes": [
+    "C"
+   ],
+   "states": {
+    "Open": "#3f8f6b",
+    "Closed (Parks and Wildlife)": "#8f1d2c",
+    "Partly reopened": "#e8a33d"
+   },
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "shellfish_closure",
+   "kind": "state",
+   "label": "Shellfish harvesting",
+   "group": "Spill & environment",
+   "source": "PUB-040",
+   "threads": [
+    "T6"
+   ],
+   "lanes": [
+    "C"
+   ],
+   "states": {
+    "Open": "#3f8f6b",
+    "Closed (State Health Services)": "#8f1d2c"
+   },
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "spill_claims_process",
+   "kind": "state",
+   "label": "Spill claims center",
+   "group": "Spill & environment",
+   "source": "PUB-106, PUB-082",
+   "threads": [
+    "T6"
+   ],
+   "lanes": [
+    "C"
+   ],
+   "states": {
+    "None": "#c9cfd6",
+    "Property claims open": "#4a78c2",
+    "Lost-income claims open": "#2f6fb0"
+   },
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "spill_claims_cumulative",
+   "kind": "number",
+   "label": "Spill damage claims (cumulative)",
+   "group": "Spill & environment",
+   "unit": "claims",
+   "fmt": "0",
+   "scale": [
+    0,
+    4500
+   ],
+   "source": "EVT-0508; PUB-099 (about 4,200)",
+   "threads": [
+    "T6"
+   ],
+   "lanes": [
+    "C"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "calls_911_per_day",
+   "kind": "number",
+   "label": "911 calls (daily rate)",
+   "group": "Health & emergency",
+   "unit": "calls/day",
+   "fmt": "0",
+   "scale": [
+    0,
+    3000
+   ],
+   "source": "EVT-0101, EVT-0303; PUB-026 (2,900 peak)",
+   "lanes": [
+    "C"
+   ],
+   "description": "Daily call rate expressed at hourly resolution. Peak about 2,900 on landfall day; baseline about 310.",
+   "threads": [],
+   "assumption": false,
+   "visibility": "public"
+  },
+  {
+   "id": "er_stomach_illness_x",
+   "kind": "number",
+   "label": "ER stomach-illness visits (x normal)",
+   "group": "Health & emergency",
+   "unit": "x",
+   "fmt": "0.00",
+   "scale": [
+    0,
+    3
+   ],
+   "source": "EVT-0310; PUB-046 (+180%)",
+   "lanes": [
+    "C"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "er_respiratory_x",
+   "kind": "number",
+   "label": "ER respiratory/skin near shorelines (x normal)",
+   "group": "Health & emergency",
+   "unit": "x",
+   "fmt": "0.00",
+   "scale": [
+    0,
+    2
+   ],
+   "source": "EVT-0317; PUB-038",
+   "threads": [
+    "T6"
+   ],
+   "lanes": [
+    "C"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "er_low_income_tracts_x",
+   "kind": "number",
+   "label": "ER visits, low-income surge-zone tracts (x normal)",
+   "group": "Health & emergency",
+   "unit": "x",
+   "fmt": "0.00",
+   "scale": [
+    0,
+    2
+   ],
+   "source": "EVT-0408; PUB-069 (+40% on Oct. 29)",
+   "threads": [
+    "T5"
+   ],
+   "lanes": [
+    "C"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "wastewater_norovirus_x",
+   "kind": "number",
+   "label": "Wastewater norovirus signal (x baseline)",
+   "group": "Health & emergency",
+   "unit": "x",
+   "fmt": "0.0",
+   "scale": [
+    0,
+    9
+   ],
+   "source": "EVT-0310; PUB-044",
+   "lanes": [
+    "C"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "shelters_open",
+   "kind": "number",
+   "label": "Shelters open",
+   "group": "Health & emergency",
+   "unit": "shelters",
+   "fmt": "0",
+   "scale": [
+    0,
+    10
+   ],
+   "assumption": true,
+   "source": "PUB-021 (shelters open inland); counts assumed",
+   "lanes": [
+    "C"
+   ],
+   "threads": [],
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "nas_cc_aircraft",
+   "kind": "state",
+   "label": "NAS Corpus Christi aircraft",
+   "group": "Military",
+   "source": "EVT-0205; PUB-019, PUB-045",
+   "lanes": [
+    "D",
+    "C"
+   ],
+   "states": {
+    "Home station": "#3f8f6b",
+    "Evacuated to NAS JRB Fort Worth": "#4a78c2",
+    "Returning": "#2a9d8f"
+   },
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "army_depot",
+   "kind": "state",
+   "label": "Corpus Christi Army Depot",
+   "group": "Military",
+   "source": "EVT-0206, EVT-0307, EVT-0409; PUB-035, PUB-075",
+   "lanes": [
+    "D"
+   ],
+   "states": {
+    "Normal production": "#3f8f6b",
+    "Work halted, aircraft secured": "#d9a227",
+    "Storm damage, stand-by": "#8f1d2c",
+    "Partial work": "#e8a33d",
+    "Full production": "#2a9d8f"
+   },
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "relief_flights",
+   "kind": "number",
+   "label": "Relief flights landing (per hour)",
+   "group": "Military",
+   "unit": "flights",
+   "fmt": "0",
+   "scale": [
+    0,
+    1
+   ],
+   "source": "EVT-0405; PUB-060 (26 military + 14 civil)",
+   "lanes": [
+    "D",
+    "C"
+   ],
+   "description": "One mark per landing; 40 between Oct. 18 and Oct. 27.",
+   "threads": [],
+   "assumption": false,
+   "visibility": "public"
+  },
+  {
+   "id": "nas_readiness_pct",
+   "kind": "number",
+   "label": "NAS Corpus Christi readiness",
+   "group": "Military",
+   "unit": "%",
+   "fmt": "0",
+   "scale": [
+    50,
+    100
+   ],
+   "visibility": "internal",
+   "source": "EVT-0103, EVT-0407, EVT-0602 (92 -> 61 -> 85)",
+   "lanes": [
+    "D"
+   ],
+   "threads": [
+    "T2"
+   ],
+   "description": "DoD-internal; never public.",
+   "assumption": false
+  },
+  {
+   "id": "base_generator",
+   "kind": "state",
+   "label": "NAS backup generator EQP-2201",
+   "group": "Military",
+   "visibility": "internal",
+   "source": "EVT-0103, EVT-0312, EVT-0404, EVT-0407, EVT-0506",
+   "lanes": [
+    "D"
+   ],
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "states": {
+    "Healthy (regular supplier)": "#3f8f6b",
+    "Emergency fuel contract (Quellmar)": "#4a78c2",
+    "Running on Quellmar fuel": "#a35a9b",
+    "Failed (fouled injectors)": "#c8402f",
+    "Overhaul parts ordered": "#e8a33d",
+    "Overhauled": "#2a9d8f"
+   },
+   "assumption": false,
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "drone_overflights",
+   "kind": "state",
+   "label": "Drone overflights at NAS (truth)",
+   "group": "Military",
+   "visibility": "hidden",
+   "source": "EVT-0318",
+   "lanes": [
+    "D",
+    "I"
+   ],
+   "threads": [
+    "T7"
+   ],
+   "states": {
+    "No activity": "#c9cfd6",
+    "Overflight": "#7b5ea7"
+   },
+   "assumption": false,
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "perimeter_sensors",
+   "kind": "state",
+   "label": "NAS perimeter sensors",
+   "group": "Military",
+   "visibility": "internal",
+   "source": "EVT-0318 (sensors down)",
+   "assumption": true,
+   "lanes": [
+    "D"
+   ],
+   "threads": [
+    "T7"
+   ],
+   "states": {
+    "Normal": "#3f8f6b",
+    "Degraded (storm damage)": "#e07a1f",
+    "Restored": "#2a9d8f"
+   },
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "gps_interference",
+   "kind": "state",
+   "label": "GPS interference (truth)",
+   "group": "Military",
+   "visibility": "hidden",
+   "source": "EVT-0412",
+   "lanes": [
+    "D",
+    "I",
+    "C"
+   ],
+   "threads": [
+    "T7",
+    "T3"
+   ],
+   "states": {
+    "None": "#c9cfd6",
+    "Active (JAM-01 near TANK-0390)": "#7b5ea7"
+   },
+   "assumption": false,
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "halcyon_drift",
+   "kind": "state",
+   "label": "MV Halcyon Drift (truth)",
+   "group": "Hidden threads",
+   "visibility": "hidden",
+   "source": "EVT-0104, EVT-0207, EVT-0402, EVT-0403, EVT-0411",
+   "lanes": [
+    "I"
+   ],
+   "threads": [
+    "T2",
+    "T7"
+   ],
+   "states": {
+    "Out of area": "#c9cfd6",
+    "Loitering offshore (true MMSI)": "#9b87c4",
+    "At anchorage": "#7b5ea7",
+    "At sea (storm)": "#8c7ab8",
+    "AIS dark": "#2b2140",
+    "Laying devices off entrance": "#c8402f",
+    "Ship-to-ship transfer to Barge 44": "#e07a1f",
+    "At anchorage (AIS on)": "#7b5ea7",
+    "Departed area (assumed)": "#c9cfd6"
+   },
+   "assumption": false,
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "spoofed_identity",
+   "kind": "state",
+   "label": "Spoofed AIS identity (truth)",
+   "group": "Hidden threads",
+   "visibility": "hidden",
+   "source": "EVT-0402",
+   "lanes": [
+    "I"
+   ],
+   "threads": [
+    "T2"
+   ],
+   "states": {
+    "Inactive": "#c9cfd6",
+    "Broadcasting MMSI-SYN-0457": "#7b5ea7"
+   },
+   "assumption": false,
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "devices_in_channel",
+   "kind": "number",
+   "label": "Explosive devices in channel (truth)",
+   "group": "Hidden threads",
+   "unit": "devices",
+   "fmt": "0",
+   "scale": [
+    0,
+    2
+   ],
+   "visibility": "hidden",
+   "source": "EVT-0411, EVT-0413, EVT-0414",
+   "lanes": [
+    "D",
+    "I"
+   ],
+   "threads": [
+    "T7"
+   ],
+   "assumption": false,
+   "description": ""
+  },
+  {
+   "id": "contaminated_fuel_m3",
+   "kind": "number",
+   "label": "Transferred fuel in Quellmar tanks (truth)",
+   "group": "Hidden threads",
+   "unit": "m³",
+   "fmt": "0",
+   "scale": [
+    0,
+    400
+   ],
+   "visibility": "hidden",
+   "source": "EVT-0404; drawdown assumed",
+   "assumption": true,
+   "lanes": [
+    "D",
+    "I"
+   ],
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "description": ""
+  },
+  {
+   "id": "kestrel_activity",
+   "kind": "state",
+   "label": "KESTREL activity (truth)",
+   "group": "Cyber & information",
+   "visibility": "hidden",
+   "source": "EVT-0106, EVT-0107, EVT-0209, EVT-0313, EVT-0306, EVT-0502",
+   "lanes": [
+    "I",
+    "C",
+    "D"
+   ],
+   "threads": [
+    "T4",
+    "T6"
+   ],
+   "states": {
+    "Dormant": "#c9cfd6",
+    "Reconnaissance scans": "#b8a6d9",
+    "Vendor phishing (Brightwake)": "#9b87c4",
+    "Inside tanker networks": "#7b5ea7",
+    "Valve commands sent": "#c8402f",
+    "Phishing wave (city, NAS)": "#a35a9b",
+    "Credential stuffing (aid portal)": "#8f2d6e"
+   },
+   "assumption": false,
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "rumor_posts_per_day",
+   "kind": "number",
+   "label": "Coordinated rumor posts (daily rate)",
+   "group": "Cyber & information",
+   "unit": "posts/day",
+   "fmt": "0",
+   "scale": [
+    0,
+    2700
+   ],
+   "source": "EVT-0309, EVT-0507 (18,000 posts, 40 accounts)",
+   "lanes": [
+    "C",
+    "I"
+   ],
+   "threads": [
+    "T4"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "accounts_taken_over",
+   "kind": "number",
+   "label": "Aid accounts taken over (cumulative)",
+   "group": "Cyber & information",
+   "unit": "accounts",
+   "fmt": "0",
+   "scale": [
+    0,
+    420
+   ],
+   "visibility": "internal",
+   "source": "EVT-0502; public from PUB-085 (day 71)",
+   "lanes": [
+    "C",
+    "I"
+   ],
+   "threads": [
+    "T4"
+   ],
+   "assumption": false,
+   "description": ""
+  },
+  {
+   "id": "spill_cause_public",
+   "kind": "state",
+   "label": "Public knowledge: spill cause",
+   "group": "Public knowledge",
+   "source": "PUB-024, PUB-042, PUB-047, PUB-097",
+   "threads": [
+    "T6"
+   ],
+   "states": {
+    "No spill": "#c9cfd6",
+    "Cause unknown": "#7a8a99",
+    "Possible unauthorized remote access": "#4a78c2",
+    "Vendor credentials misused": "#2f6fb0",
+    "Attributed to a foreign government": "#1d4f86"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "blast_cause_public",
+   "kind": "state",
+   "label": "Public knowledge: channel blast",
+   "group": "Public knowledge",
+   "source": "PUB-067, PUB-070, PUB-078, PUB-097",
+   "threads": [
+    "T7"
+   ],
+   "states": {
+    "No incident": "#c9cfd6",
+    "Cause unknown": "#7a8a99",
+    "Explosive device confirmed": "#4a78c2",
+    "Second device found": "#2f6fb0",
+    "Attributed to a foreign government": "#1d4f86"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "drones_public",
+   "kind": "state",
+   "label": "Public knowledge: drones",
+   "group": "Public knowledge",
+   "source": "PUB-032, PUB-043, PUB-048, PUB-051, PUB-093",
+   "threads": [
+    "T7"
+   ],
+   "states": {
+    "Nothing reported": "#c9cfd6",
+    "Residents' videos": "#7a8a99",
+    "NAS aware": "#4a78c2",
+    "FBI investigating": "#2f6fb0",
+    "Sightings stopped": "#8fb3d9",
+    "Navy security review": "#1d4f86"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "gps_public",
+   "kind": "state",
+   "label": "Public knowledge: GPS interference",
+   "group": "Public knowledge",
+   "source": "PUB-064, PUB-067, PUB-074",
+   "threads": [
+    "T7"
+   ],
+   "states": {
+    "Nothing reported": "#c9cfd6",
+    "FAA notice: interference": "#4a78c2",
+    "Interference stopped": "#8fb3d9",
+    "Transmitter found (parked vehicle)": "#2f6fb0"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "ais_anomaly_public",
+   "kind": "state",
+   "label": "Public knowledge: AIS anomaly",
+   "group": "Public knowledge",
+   "source": "PUB-062, PUB-076",
+   "threads": [
+    "T2",
+    "T7"
+   ],
+   "states": {
+    "Nothing reported": "#c9cfd6",
+    "Identity in two places reported": "#4a78c2",
+    "Analysts note timing vs blast": "#2f6fb0"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "fema_status",
+   "kind": "state",
+   "label": "FEMA aid status",
+   "group": "Aid & money",
+   "source": "PUB-103, PUB-104, PUB-105, PUB-081, PUB-092",
+   "threads": [
+    "T5"
+   ],
+   "lanes": [
+    "C"
+   ],
+   "states": {
+    "No declaration": "#c9cfd6",
+    "Declaration (public assistance only)": "#4a78c2",
+    "State requests household aid": "#d9a227",
+    "Household aid approved": "#e8a33d",
+    "Registration open": "#2a9d8f",
+    "Door-to-door registration": "#3f8f6b"
+   },
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "aid_registrations_cumulative",
+   "kind": "number",
+   "label": "FEMA aid registrations (cumulative)",
+   "group": "Aid & money",
+   "unit": "claims",
+   "fmt": "0",
+   "scale": [
+    0,
+    52000
+   ],
+   "source": "EVT-0501 (48,000 in 30 days)",
+   "threads": [
+    "T5"
+   ],
+   "lanes": [
+    "C"
+   ],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "debris_contract_vantorra",
+   "kind": "state",
+   "label": "Debris contract: Vantorra",
+   "group": "Aid & money",
+   "source": "PUB-049, PUB-088, PUB-089, PUB-090, PUB-094, PUB-098",
+   "threads": [
+    "T3"
+   ],
+   "lanes": [
+    "C",
+    "I"
+   ],
+   "states": {
+    "None": "#c9cfd6",
+    "Awarded $14.2M (sole-source)": "#4a78c2",
+    "Overbilling records reported": "#d9a227",
+    "Payments paused": "#e07a1f",
+    "Inspector general review": "#d4552a",
+    "FBI search warrants": "#c8402f",
+    "Forfeiture filing (Brannoch)": "#8f1d2c"
+   },
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "fuel_contract_quellmar",
+   "kind": "state",
+   "label": "Fuel contract: Quellmar",
+   "group": "Aid & money",
+   "source": "EVT-0312, EVT-0404; PUB-056, PUB-087, PUB-094, PUB-098",
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "lanes": [
+    "D",
+    "C",
+    "I"
+   ],
+   "states": {
+    "None": "#c9cfd6",
+    "Awarded $2.1M (emergency)": "#4a78c2",
+    "Delivering transferred fuel (truth)": "#a35a9b",
+    "Suspended by Navy": "#e07a1f",
+    "FBI search warrants": "#c8402f",
+    "Forfeiture filing (Brannoch)": "#8f1d2c"
+   },
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "diverted_aid_musd",
+   "kind": "number",
+   "label": "Diverted disaster aid (truth, cumulative)",
+   "group": "Aid & money",
+   "unit": "$M",
+   "fmt": "0.0",
+   "scale": [
+    0,
+    4
+   ],
+   "visibility": "hidden",
+   "source": "EVT-0503 ($3.9M); public only from PUB-098 (day 114)",
+   "threads": [
+    "T3",
+    "T4"
+   ],
+   "lanes": [
+    "C",
+    "I"
+   ],
+   "assumption": false,
+   "description": ""
+  },
+  {
+   "id": "phase",
+   "kind": "state",
+   "label": "Scenario phase",
+   "group": "Scenario",
+   "source": "00_scenario/phases.json",
+   "states": {
+    "Phase 1: Baseline": "#a9b8c6",
+    "Phase 2: Signals": "#d9b75b",
+    "Phase 3: Landfall": "#c8402f",
+    "Phase 4: Response": "#e08a3c",
+    "Phase 5: Recovery": "#5aa0b8",
+    "Phase 6: Review": "#6b8fc9"
+   },
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "unit": "",
+   "description": ""
+  },
+  {
+   "id": "gw_sub01_status",
+   "kind": "state",
+   "scenario": "gridwater",
+   "label": "GW-FAC-SUB-01 (Riverside)",
+   "states": {
+    "online": "#3f8f6b",
+    "tripped": "#c8402f"
+   },
+   "group": "Water & power",
+   "color": "#e0a100",
+   "unit": "status",
+   "thread": "T8",
+   "note": "Adversary-modified relay (0.94 pu trip threshold vs 0.88 pu nominal) caused premature trip at D0. Restored D+1.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "gw_sub02_status",
+   "kind": "state",
+   "scenario": "gridwater",
+   "label": "GW-FAC-SUB-02 (Harbor View)",
+   "states": {
+    "online": "#3f8f6b",
+    "degraded": "#e07a1f",
+    "tripped": "#c8402f"
+   },
+   "group": "Water & power",
+   "color": "#e0a100",
+   "unit": "status",
+   "thread": "T8",
+   "note": "Adversary remote breaker-open at D+7 during restoration. Re-energized D+35 after relay audit.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "gw_sub03_status",
+   "kind": "state",
+   "scenario": "gridwater",
+   "label": "GW-FAC-SUB-03 (Crosstown)",
+   "states": {
+    "online": "#3f8f6b",
+    "degraded": "#e07a1f",
+    "tripped": "#c8402f"
+   },
+   "group": "Water & power",
+   "color": "#e0a100",
+   "unit": "status",
+   "thread": "T8",
+   "note": "Second adversary remote OPEN at D+10; also cut backup feeder to FAC-UTL-01 pump room.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "gw_sub04_status",
+   "kind": "state",
+   "scenario": "gridwater",
+   "label": "GW-FAC-SUB-04 (Southside)",
+   "states": {
+    "online": "#3f8f6b",
+    "degraded": "#e07a1f"
+   },
+   "group": "Water & power",
+   "color": "#e0a100",
+   "unit": "status",
+   "thread": "T8",
+   "note": "Relay config file modified D-3 (unauthorized write detected D+16), but substation was not commanded to trip.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "gw_pump_p3_status",
+   "kind": "state",
+   "scenario": "gridwater",
+   "label": "FAC-UTL-01 Pump P-3",
+   "states": {
+    "normal": "#3f8f6b",
+    "reduced": "#e07a1f",
+    "setpoint_lowered": "#c8402f"
+   },
+   "group": "Water & power",
+   "color": "#0f8b8d",
+   "unit": "status",
+   "thread": "T9",
+   "note": "Setpoint lowered from 85 to 68 psi by adversary at D+9; alarm suppression masked the effect for 3 days.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "gw_scada_isolated",
+   "kind": "state",
+   "scenario": "gridwater",
+   "label": "GW-SYS-SCADA-01 network status",
+   "states": {
+    "connected": "#3f8f6b",
+    "isolated": "#c8402f",
+    "restored": "#2a9d8f"
+   },
+   "group": "Cyber & information",
+   "color": "#7a8a99",
+   "unit": "status",
+   "thread": "T8",
+   "note": "Isolation ended adversary access; also ended remote ERCOT visibility for 7 days.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "gw_grid_outage_customers",
+   "kind": "number",
+   "scenario": "gridwater",
+   "t0": -1440.0,
+   "label": "Corpus Christi customers without power",
+   "group": "Water & power",
+   "unit": "customers",
+   "color": "#e0a100",
+   "thread": "T8",
+   "note": "Combines genuine storm outage with adversary-caused increments (D+7 +8,400; D+10 +6,800). Normal storm-only restoration curve would have reached ~5,000 by D+21; adversary interference held it at 36,000.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "gw_zone4_pressure_psi",
+   "kind": "number",
+   "scenario": "gridwater",
+   "t0": -1440.0,
+   "label": "Zone 4 water distribution pressure",
+   "group": "Water & power",
+   "unit": "psi",
+   "color": "#0f8b8d",
+   "thread": "T9",
+   "note": "Drops to 14 psi by D+10; regulatory threshold is 20 psi; boil water notice issued D+12. Remains below 20 psi until D+28 SCADA restoration.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  },
+  {
+   "id": "gw_alarm_suppressed_count",
+   "kind": "number",
+   "scenario": "gridwater",
+   "t0": -1440.0,
+   "label": "Active SCADA alarm suppressions",
+   "group": "Cyber & information",
+   "unit": "count",
+   "color": "#9c27b0",
+   "thread": "T10",
+   "note": "5 suppressions added D-3 17:09Z (same session as relay modifications). Masks relay trip alarms and Zone 4 low-pressure alarm until D+28 SCADA rebuild.",
+   "lanes": [
+    "C",
+    "D",
+    "I"
+   ],
+   "threads": [],
+   "assumption": false,
+   "visibility": "public",
+   "description": ""
+  }
+ ]
+}

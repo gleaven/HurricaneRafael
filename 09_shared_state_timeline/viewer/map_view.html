@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rafael Map</title>
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+:root{--bg:#0e1318;--panel:#151c23;--panel2:#1b242d;--line:#2a3541;--fg:#e6edf3;--muted:#8b9aa8;--acc:#4fb3d9;--warn:#f2b632;--bad:#e5534b;--ok:#3fb27f}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--fg);font:13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+#app{display:grid;grid-template-columns:270px 1fr 330px;grid-template-rows:auto 1fr auto;height:100vh}
+#top{grid-column:1/4;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding:8px 14px;background:var(--panel);border-bottom:1px solid var(--line)}
+#clock{font:600 20px/1.1 ui-monospace,Consolas,monospace;letter-spacing:.02em}
+#clock small{display:block;font:500 12px system-ui;color:var(--muted);letter-spacing:0}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);font-weight:600;white-space:nowrap}
+.chip b{font-weight:700}.dot{width:9px;height:9px;border-radius:50%;background:var(--ok);display:inline-block}
+#alerts{display:flex;gap:6px;flex-wrap:wrap;max-width:46vw}
+.alert{background:#5c1a1a;border-color:#a33;color:#ffd9d6}.alert.adv{background:#4d3c10;border-color:#8a6d1c;color:#ffe9b0}
+#left,#right{background:var(--panel);overflow:auto;padding:10px 12px}
+#left{border-right:1px solid var(--line)}#right{border-left:1px solid var(--line)}
+h3{margin:12px 0 6px;font:700 11px system-ui;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+h3:first-child{margin-top:0}
+.seg{display:flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.seg button{flex:1;background:var(--panel2);color:var(--fg);border:0;border-right:1px solid var(--line);padding:6px 2px;font:600 12px system-ui;cursor:pointer}
+.seg button:last-child{border-right:0}.seg button.on{background:var(--acc);color:#06222d}
+.layer{display:flex;align-items:center;gap:7px;padding:3px 0;cursor:pointer;user-select:none}
+.layer input{accent-color:var(--acc);margin:0}.layer .n{margin-left:auto;color:var(--muted);font:600 11px ui-monospace,Consolas,monospace}
+.layer.off{opacity:.38;cursor:not-allowed}.layer svg{flex:none}
+.sub{margin-left:22px}
+.slider{display:grid;grid-template-columns:62px 1fr 34px;align-items:center;gap:6px;margin:3px 0;color:var(--muted)}
+.slider input{width:100%;accent-color:var(--acc)}
+#mapwrap{position:relative;overflow:hidden;background:#0b2233}
+#map{position:absolute;inset:0;background:transparent}
+canvas.ov{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#base{z-index:0}#map{z-index:2}#wxc{z-index:450}#night{z-index:449;background:#03101f;opacity:0;transition:opacity .4s}#assets{z-index:460}
+.leaflet-container{background:transparent}
+.leaflet-control-attribution{background:rgba(10,15,20,.6)!important;color:#9ab!important}
+#tip{position:absolute;z-index:470;pointer-events:none;background:rgba(10,16,22,.93);border:1px solid var(--line);border-radius:6px;padding:5px 8px;max-width:280px;display:none;font-size:12px}
+#loading{position:absolute;z-index:480;left:50%;top:12px;transform:translateX(-50%);background:rgba(10,16,22,.9);border:1px solid var(--line);border-radius:999px;padding:4px 12px;display:none}
+#bottom{grid-column:1/4;background:var(--panel);border-top:1px solid var(--line);padding:6px 14px 8px}
+#ctl{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:5px}
+#ctl button,#ctl select{background:var(--panel2);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:5px 9px;font:600 12px system-ui;cursor:pointer}
+#ctl button.play{background:var(--acc);color:#06222d;min-width:64px}
+#ctl .sp{flex:1}#ctl label{color:var(--muted)}
+#tl{width:100%;height:54px;display:block;cursor:pointer;border-radius:6px}
+#fine{width:100%;margin:4px 0 0;accent-color:var(--acc)}
+.ev{border-left:3px solid var(--line);padding:5px 8px;margin:0 0 6px;background:var(--panel2);border-radius:0 6px 6px 0;cursor:pointer}
+.ev.now{border-left-color:var(--warn)}.ev.fact{border-left-color:var(--acc)}.ev.hidden-ev{border-left-color:var(--bad)}
+.ev .h{display:flex;gap:6px;color:var(--muted);font:600 11px ui-monospace,Consolas,monospace}.ev .h span:last-child{margin-left:auto}
+.ev p{margin:3px 0 0}
+#sel{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;margin-bottom:10px}
+#sel h4{margin:0 0 2px;font-size:15px}#sel .k{color:var(--muted)}#sel table{border-collapse:collapse;width:100%;margin-top:6px}
+#sel td{padding:1px 0;vertical-align:top}#sel td:first-child{color:var(--muted);width:92px}
+#sel .truth{margin-top:7px;padding:6px 8px;border:1px dashed var(--bad);border-radius:6px;color:#ffd0cc}
+#sel button{margin-top:8px;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:4px 9px;cursor:pointer}
+.muted{color:var(--muted)}.legend{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 8px;margin-top:4px}
+.legend div{display:flex;align-items:center;gap:6px;color:var(--muted)}
+@media (max-width:1000px){#app{display:flex;flex-direction:column;height:auto;min-height:100vh}#top{order:0}#mapwrap{order:1;height:62vh;min-height:320px;flex:none}#bottom{order:2}#left{order:3}#right{order:4}#left,#right{border:0;border-top:1px solid var(--line);max-height:none;overflow:visible}}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="top">
+    <div id="clock">—<small>loading</small></div>
+    <span class="chip" id="port"><span class="dot"></span>Port <b>—</b></span>
+    <span class="chip" id="storm" style="display:none">Rafael <b>—</b></span>
+    <span class="chip" id="outchip" style="display:none">Customers out <b>—</b></span>
+    <div id="alerts"></div>
+  </div>
+  <div id="left">
+    <h3>Perspective</h3>
+    <div class="seg" id="persp">
+      <button data-p="T" class="on" title="Everything, including hidden events and internal roles">Truth</button>
+      <button data-p="P" title="What the public could see: broadcast AIS and ADS-B, public sensors, alerts, published facts">Public</button>
+      <button data-p="C" title="Civil authorities: adds dispatch, vehicles, rescues, damage surveys">Civilian</button>
+      <button data-p="D" title="Defense: public picture plus base sensors and military activity">DoD</button>
+      <button data-p="I" title="Intelligence: adds port surveillance and all detections">IC</button>
+    </div>
+    <div class="muted" id="pnote" style="margin-top:5px"></div>
+    <h3>Layers</h3>
+    <div id="layers"></div>
+    <h3>Weather</h3>
+    <div class="slider"><span>Cloud</span><input type="range" id="o-cloud" min="0" max="100" value="55"><span id="v-cloud">55%</span></div>
+    <div class="slider"><span>Rain rate</span><input type="range" id="o-rain" min="0" max="100" value="45"><span id="v-rain">45%</span></div>
+    <div class="slider"><span>Rain total</span><input type="range" id="o-acc" min="0" max="100" value="0"><span id="v-acc">0%</span></div>
+    <div class="slider"><span>Wind</span><input type="range" id="o-wind" min="0" max="100" value="60"><span id="v-wind">60%</span></div>
+    <div class="slider"><span>Surge</span><input type="range" id="o-surge" min="0" max="100" value="55"><span id="v-surge">55%</span></div>
+    <div class="slider"><span>Night</span><input type="range" id="o-night" min="0" max="100" value="35"><span id="v-night">35%</span></div>
+    <h3>Basemap</h3>
+    <div class="seg" id="basesel"><button data-b="sat" class="on">Satellite</button><button data-b="ref">Chart (offline)</button></div>
+    <h3>Legend</h3>
+    <div class="legend" id="legend"></div>
+  </div>
+  <div id="mapwrap">
+    <canvas id="base" class="ov"></canvas>
+    <div id="map"></div>
+    <div id="night" class="ov"></div>
+    <canvas id="wxc" class="ov"></canvas>
+    <canvas id="assets" class="ov"></canvas>
+    <div id="tip"></div>
+    <div id="loading">loading day…</div>
+  </div>
+  <div id="right">
+    <div id="sel" style="display:none"></div>
+    <h3>Events <span class="muted" id="evcount" style="text-transform:none;letter-spacing:0"></span></h3>
+    <div class="seg" id="evwin" style="margin-bottom:8px"><button data-w="6">±6 h</button><button data-w="24" class="on">±24 h</button><button data-w="168">±7 d</button><button data-w="0">All so far</button></div>
+    <div id="events"></div>
+  </div>
+  <div id="bottom">
+    <div id="ctl">
+      <button data-step="-86400" title="Back one day (PgUp)">−1 d</button><button data-step="-3600">−1 h</button><button data-step="-900" title="Back 15 minutes (←)">−15 m</button>
+      <button class="play" id="play" title="Space">Play</button>
+      <button data-step="900" title="Forward 15 minutes (→)">+15 m</button><button data-step="3600">+1 h</button><button data-step="86400" title="Forward one day (PgDn)">+1 d</button>
+      <label>Speed <select id="speed"><option value="300">5 min / s</option><option value="900" selected>15 min / s</option><option value="3600">1 h / s</option><option value="21600">6 h / s</option></select></label>
+      <label><input type="checkbox" id="follow"> follow selected</label>
+      <span class="sp"></span>
+      <span class="muted" id="tlhint">Drag the timeline; ←/→ step 15 minutes</span>
+    </div>
+    <canvas id="tl"></canvas>
+    <input type="range" id="fine" min="0" max="14495" step="1" value="2880" aria-label="Time, 15-minute steps">
+  </div>
+</div>
+<!-- Map library, in order of preference: a local copy (viewer/vendor/leaflet/, see vendor/README.txt), the CDN, then the built-in stand-in below. -->
+<script src="vendor/leaflet/leaflet.js"></script>
+<script>if (!window.L) document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"><\/script>');</script>
+<script id="fallback">
+/* Built-in stand-in for the map library, used only when Leaflet could not be loaded (no internet).
+   It provides the few calls this page makes: a Web Mercator view with drag-to-pan, wheel and
+   button zoom, and the same events. There are no imagery tiles in this mode; the page switches to
+   the offline chart, which is drawn from map_data/reference.js. */
+if (!window.L) (function () {
+  "use strict";
+  window.__mapFallback = true;
+  function px(lat, lng, z) {
+    var s = 256 * Math.pow(2, z), sin = Math.sin(Math.max(-85, Math.min(85, lat)) * Math.PI / 180);
+    return [(lng + 180) / 360 * s, (0.5 - Math.log((1 + sin) / (1 - sin)) / (4 * Math.PI)) * s];
+  }
+  function ll(x, y, z) {
+    var s = 256 * Math.pow(2, z), n = Math.PI - 2 * Math.PI * y / s;
+    return {lat: 180 / Math.PI * Math.atan(0.5 * (Math.exp(n) - Math.exp(-n))), lng: x / s * 360 - 180};
+  }
+  function arr(p) { return p.lat !== undefined ? [p.lat, p.lng] : p; }
+  function MiniMap(id, o) {
+    var self = this;
+    this.el = typeof id === 'string' ? document.getElementById(id) : id;
+    this.o = o || {}; this.h = {}; this.c = [0, 0]; this.z = 10; this.w = 800; this.ht = 600;
+    this.invalidateSize();
+    var el = this.el, drag = null, moved = 0;
+    if (el.style) { el.style.touchAction = 'none'; el.style.cursor = 'grab'; }
+    function pt(e) { var r = el.getBoundingClientRect(); return {x: e.clientX - r.left, y: e.clientY - r.top}; }
+    el.addEventListener('pointerdown', function (e) { drag = pt(e); moved = 0; if (el.setPointerCapture) { try { el.setPointerCapture(e.pointerId); } catch (x) {} } });
+    el.addEventListener('pointermove', function (e) {
+      var p = pt(e);
+      if (drag) {
+        var dx = p.x - drag.x, dy = p.y - drag.y; moved += Math.abs(dx) + Math.abs(dy); drag = p;
+        var c = px(self.c[0], self.c[1], self.z), n = ll(c[0] - dx, c[1] - dy, self.z);
+        self.c = [n.lat, n.lng]; self.fire('move');
+      } else self.fire('mousemove', {containerPoint: p, latlng: self.containerPointToLatLng(p)});
+    });
+    function up(e) { if (!drag) return; var p = pt(e); drag = null; if (moved < 5) self.fire('click', {containerPoint: p, latlng: self.containerPointToLatLng(p)}); else self.fire('moveend'); }
+    el.addEventListener('pointerup', up); el.addEventListener('pointercancel', function () { drag = null; });
+    el.addEventListener('pointerleave', function () { if (!drag) self.fire('mouseout'); });
+    var acc = 0;
+    el.addEventListener('wheel', function (e) {
+      if (e.preventDefault) e.preventDefault();
+      acc += e.deltaY; if (Math.abs(acc) < 60) return;
+      self.zoomAround(pt(e), acc < 0 ? 1 : -1); acc = 0;
+    }, {passive: false});
+    el.addEventListener('dblclick', function (e) { self.zoomAround(pt(e), 1); });
+    if (document.createElement && el.appendChild) {
+      var box = document.createElement('div');
+      box.style.cssText = 'position:absolute;left:10px;top:10px;z-index:500;display:flex;flex-direction:column;border-radius:4px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.5)';
+      ['+', '−'].forEach(function (t, i) {
+        var b = document.createElement('button');
+        b.textContent = t; b.title = i ? 'Zoom out' : 'Zoom in';
+        b.style.cssText = 'width:30px;height:30px;border:0;border-bottom:1px solid #ccc;background:#fff;color:#222;font:700 18px/1 system-ui,sans-serif;cursor:pointer';
+        b.addEventListener('pointerdown', function (e) { if (e.stopPropagation) e.stopPropagation(); });
+        b.addEventListener('click', function (e) { if (e.stopPropagation) e.stopPropagation(); self.zoomAround({x: self.w / 2, y: self.ht / 2}, i ? -1 : 1); });
+        box.appendChild(b);
+      });
+      el.appendChild(box);
+    }
+  }
+  MiniMap.prototype = {
+    on: function (types, f) { var h = this.h; types.split(' ').forEach(function (t) { (h[t] = h[t] || []).push(f); }); return this; },
+    fire: function (t, e) { (this.h[t] || []).forEach(function (f) { f(e || {}); }); },
+    setView: function (c, z) { c = arr(c); this.c = [c[0], c[1]]; if (z !== undefined) this.z = z; this.fire('move'); this.fire('zoom'); this.fire('moveend'); return this; },
+    panTo: function (c) { c = arr(c); this.c = [c[0], c[1]]; this.fire('move'); this.fire('moveend'); return this; },
+    getZoom: function () { return this.z; },
+    getCenter: function () { return {lat: this.c[0], lng: this.c[1]}; },
+    invalidateSize: function () { var r = this.el.getBoundingClientRect(); if (r.width) { this.w = r.width; this.ht = r.height; } return this; },
+    latLngToContainerPoint: function (p) { p = arr(p); var a = px(p[0], p[1], this.z), c = px(this.c[0], this.c[1], this.z); return {x: a[0] - c[0] + this.w / 2, y: a[1] - c[1] + this.ht / 2}; },
+    containerPointToLatLng: function (p) { var x = p.x !== undefined ? p.x : p[0], y = p.y !== undefined ? p.y : p[1], c = px(this.c[0], this.c[1], this.z); return ll(c[0] + x - this.w / 2, c[1] + y - this.ht / 2, this.z); },
+    getBounds: function () { var a = this.containerPointToLatLng({x: 0, y: 0}), b = this.containerPointToLatLng({x: this.w, y: this.ht}); return {getSouth: function () { return b.lat; }, getNorth: function () { return a.lat; }, getWest: function () { return a.lng; }, getEast: function () { return b.lng; },
+        getNorthWest: function () { return {lat: a.lat, lng: a.lng}; }, getSouthEast: function () { return {lat: b.lat, lng: b.lng}; },
+        getNorthEast: function () { return {lat: a.lat, lng: b.lng}; }, getSouthWest: function () { return {lat: b.lat, lng: a.lng}; },
+        getCenter: function () { return {lat: (a.lat + b.lat) / 2, lng: (a.lng + b.lng) / 2}; }}; },
+    zoomAround: function (p, dz) {
+      var z = Math.max(this.o.minZoom || 3, Math.min(this.o.maxZoom || 18, this.z + dz)); if (z === this.z) return;
+      var at = this.containerPointToLatLng(p); this.z = z;
+      var a = px(at.lat, at.lng, z), n = ll(a[0] - (p.x - this.w / 2), a[1] - (p.y - this.ht / 2), z);
+      this.c = [n.lat, n.lng]; this.fire('zoom'); this.fire('move'); this.fire('zoomend'); this.fire('moveend');
+    },
+    removeLayer: function () { return this; }, addLayer: function () { return this; }
+  };
+  window.L = {map: function (id, o) { return new MiniMap(id, o); }, tileLayer: function () { return {addTo: function () { return this; }}; }};
+})();
+</script>
+<script src="map_data/index.js"></script>
+<script src="map_data/reference.js"></script>
+<script src="map_data/summary.js"></script>
+<script>
+"use strict";
+/* Rafael map viewer. Every moving thing drawn here comes from map_data/, which scripts/build_map.py
+   builds from the delivered logs. The pure functions (decode, positionAt, storm model, visibility)
+   are also exercised by scripts/check_map.py and a node harness. */
+var RM = (typeof window !== 'undefined' ? window : globalThis).RAFAEL_MAP || {days: {}};
+var IDX = RM.index || {}, REF = RM.ref || {}, SUM = RM.summary || {};
+var D0 = IDX.d0 || 1820880000, DAY = 86400;
+var T_MIN = D0 + (IDX.first_day || -30) * DAY, T_MAX = D0 + ((IDX.last_day || 120)) * DAY + 6 * 3600 - 900;
+
+/* ------------------------------------------------------------------ time */
+function utcOffset(t) { return t < 1825570800 ? -5 : -6; }
+function pad2(n) { return (n < 10 ? '0' : '') + n; }
+var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], WD = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+function localParts(t) { var o = utcOffset(t), d = new Date((t + o * 3600) * 1000); return {y: d.getUTCFullYear(), m: d.getUTCMonth(), d: d.getUTCDate(), wd: d.getUTCDay(), h: d.getUTCHours(), mi: d.getUTCMinutes(), tz: o === -5 ? 'CDT' : 'CST'}; }
+function scenarioDay(t) { var o = utcOffset(t); return Math.floor((t + o * 3600 - (D0)) / DAY); }
+function dLabel(t) { var n = scenarioDay(t); return 'D' + (n >= 0 ? '+' : '−') + Math.abs(n); }
+function fmtLocal(t) { var p = localParts(t); return WD[p.wd] + ' ' + p.d + ' ' + MON[p.m] + ' ' + p.y + ', ' + pad2(p.h) + ':' + pad2(p.mi) + ' ' + p.tz; }
+function fmtShort(t) { var p = localParts(t); return p.d + ' ' + MON[p.m] + ' ' + pad2(p.h) + ':' + pad2(p.mi); }
+function fmtZ(t) { var d = new Date(t * 1000); return pad2(d.getUTCHours()) + ':' + pad2(d.getUTCMinutes()) + 'Z'; }
+function dayIndex(t) { return Math.floor((t - D0) / DAY); }
+function sunElevation(t, lat, lon) {   /* degrees; good to about a degree */
+  var d = (t - 946728000) / 86400, g = (357.529 + 0.98560028 * d) * Math.PI / 180, q = 280.459 + 0.98564736 * d;
+  var L = (q + 1.915 * Math.sin(g) + 0.020 * Math.sin(2 * g)) * Math.PI / 180, e = 23.439 * Math.PI / 180;
+  var dec = Math.asin(Math.sin(e) * Math.sin(L)), ra = Math.atan2(Math.cos(e) * Math.sin(L), Math.cos(L));
+  var gmst = (18.697374558 + 24.06570982441908 * d) % 24, ha = (gmst * 15 + lon) * Math.PI / 180 - ra, la = lat * Math.PI / 180;
+  return Math.asin(Math.sin(la) * Math.sin(dec) + Math.cos(la) * Math.cos(dec) * Math.cos(ha)) * 180 / Math.PI;
+}
+
+/* ------------------------------------------------------------------ tracks */
+function decodeParts(list, w) {       /* delta-coded flat arrays -> [{t,la,lo,z}] typed arrays */
+  var out = [];
+  for (var k = 0; k < list.length; k++) {
+    var f = list[k], n = f.length / w, t = new Int32Array(n), la = new Int32Array(n), lo = new Int32Array(n), z = w > 3 ? new Int32Array(n) : null;
+    var a = 0, b = 0, c = 0, d = 0;
+    for (var i = 0; i < n; i++) { a += f[i * w]; b += f[i * w + 1]; c += f[i * w + 2]; t[i] = a; la[i] = b; lo[i] = c; if (z) { d += f[i * w + 3]; z[i] = d; } }
+    out.push({t: t, la: la, lo: lo, z: z});
+  }
+  return out;
+}
+function decodeDay(day) {
+  if (day._dec) return day;
+  var k;
+  day.V = {}; for (k in day.v) day.V[k] = decodeParts(day.v[k], 3);
+  day.A = {}; for (k in day.a) day.A[k] = decodeParts(day.a[k], 4);
+  day.C = {}; for (k in day.c) day.C[k] = decodeParts(day.c[k], 3);
+  day.D = day.d.map(function (f) { return {m: f, parts: decodeParts([f.p], 4)}; });
+  day.X = day.x.map(function (f) { return {m: f, parts: decodeParts([f.p], 4)}; });
+  day.R = day.r.map(function (f) { return {m: f, parts: decodeParts(f.p, 3)}; });
+  day.v = day.a = day.c = null; day._dec = true;
+  return day;
+}
+function bearing(la1, lo1, la2, lo2) {
+  var y = (lo2 - lo1) * Math.cos((la1 + la2) / 2e5 * Math.PI / 180), x = la2 - la1;
+  return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+}
+function positionAt(parts, sec) {     /* linear interpolation by time between kept vertices; null when no part covers sec */
+  for (var k = 0; k < parts.length; k++) {
+    var p = parts[k], n = p.t.length;
+    if (sec < p.t[0] || sec > p.t[n - 1]) continue;
+    var lo = 0, hi = n - 1;
+    while (hi - lo > 1) { var m = (lo + hi) >> 1; if (p.t[m] <= sec) lo = m; else hi = m; }
+    if (n === 1 || p.t[hi] <= sec) lo = hi = (p.t[hi] <= sec ? hi : lo);
+    var f = hi === lo || p.t[hi] === p.t[lo] ? 0 : (sec - p.t[lo]) / (p.t[hi] - p.t[lo]);
+    var la = p.la[lo] + (p.la[hi] - p.la[lo]) * f, lon = p.lo[lo] + (p.lo[hi] - p.lo[lo]) * f;
+    var moving = hi !== lo && (Math.abs(p.la[hi] - p.la[lo]) + Math.abs(p.lo[hi] - p.lo[lo]) > 2);
+    var hdg = null, j;
+    if (moving) hdg = bearing(p.la[lo], p.lo[lo], p.la[hi], p.lo[hi]);
+    else { for (j = lo; j > 0 && hdg === null; j--) if (Math.abs(p.la[j] - p.la[j - 1]) + Math.abs(p.lo[j] - p.lo[j - 1]) > 2) hdg = bearing(p.la[j - 1], p.lo[j - 1], p.la[j], p.lo[j]); }
+    var spd = 0;
+    if (moving) { var dy = (p.la[hi] - p.la[lo]) * 1.1095, dx = (p.lo[hi] - p.lo[lo]) * 0.9848; spd = Math.sqrt(dx * dx + dy * dy) / Math.max(1, p.t[hi] - p.t[lo]); }
+    return {la: la / 1e5, lo: lon / 1e5, moving: moving, hdg: hdg, spd: spd, z: p.z ? p.z[lo] + (p.z[hi] - p.z[lo]) * f : null, part: p, i: lo};
+  }
+  return null;
+}
+function trail(pos, sec, back) {      /* vertices of the path over the last `back` seconds, ending at the current position */
+  var p = pos.part, pts = [[pos.la, pos.lo]], i = pos.i, t0 = sec - back;
+  while (i >= 0 && p.t[i] >= t0) { pts.push([p.la[i] / 1e5, p.lo[i] / 1e5]); i--; }
+  if (i >= 0 && i + 1 < p.t.length) { var f = (t0 - p.t[i]) / Math.max(1, p.t[i + 1] - p.t[i]); if (f > 0 && f < 1) pts.push([(p.la[i] + (p.la[i + 1] - p.la[i]) * f) / 1e5, (p.lo[i] + (p.lo[i + 1] - p.lo[i]) * f) / 1e5]); }
+  return pts;
+}
+function lastChange(flat, w, sec) {   /* [t, v, ...] changes -> values at sec */
+  if (!flat) return null;
+  var r = null;
+  for (var i = 0; i < flat.length; i += w) { if (flat[i] <= sec) r = i; else break; }
+  return r === null ? null : flat.slice(r + 1, r + w);
+}
+
+/* ------------------------------------------------------------------ storm (same vortex as scripts/streams/envmodel.py) */
+var KT = 0.514444, PN = 1010.5, TRK = IDX.storm_track || [], LANDFALL = IDX.landfall || (D0 + 21600);
+function distBearingNm(la1, lo1, la2, lo2) {
+  var dy = (la2 - la1) * 60, dx = (lo2 - lo1) * 60 * Math.cos((la1 + la2) / 2 * Math.PI / 180);
+  return [Math.sqrt(dx * dx + dy * dy), (Math.atan2(dx, dy) * 180 / Math.PI + 360) % 360];
+}
+function stormAt(t) {
+  var h = (t - D0) / 3600;
+  if (!TRK.length || h < TRK[0][0] || h > TRK[TRK.length - 1][0]) return null;
+  for (var i = 0; i < TRK.length - 1; i++) {
+    var a = TRK[i], b = TRK[i + 1];
+    if (a[0] <= h && h <= b[0]) {
+      var f = b[0] > a[0] ? (h - a[0]) / (b[0] - a[0]) : 0, db = distBearingNm(a[1], a[2], b[1], b[2]), hl = (t - LANDFALL) / 3600;
+      return {lat: a[1] + (b[1] - a[1]) * f, lon: a[2] + (b[2] - a[2]) * f, vmax: a[3] + (b[3] - a[3]) * f, pc: a[4] + (b[4] - a[4]) * f, hdg: db[1],
+              speed: db[0] / Math.max(1e-6, b[0] - a[0]), rmax: hl <= 0 ? 10 : Math.min(24, 10 + hl * 1.3)};
+    }
+  }
+  return null;
+}
+function stormPoint(st, lat, lon, land) {   /* {v m/s, dir from, rain mm/h, r nm} */
+  if (!st || st.vmax < 22) return null;
+  var rb = distBearingNm(st.lat, st.lon, lat, lon), r = Math.max(0.6, rb[0]), th = rb[1], rm = st.rmax;
+  var v = r < rm ? st.vmax * Math.pow(r / rm, 1.15) : st.vmax * Math.pow(rm / r, 0.58);
+  v *= (1 + 0.10 * Math.sin((th - st.hdg) * Math.PI / 180)) * (land === undefined ? 0.85 : land) * 0.92;
+  var inten = Math.max(0, (st.vmax - 25) / 85), core = 30 * inten * Math.exp(-Math.pow((r - rm) / (1.1 * rm), 2)), bands = 5 * inten * Math.exp(-r / 100);
+  if (r < 0.45 * rm) core *= 0.15;
+  return {v: v * KT, dir: (th + 70) % 360, rain: core + bands, r: r, th: th, inten: inten};
+}
+function stormCategory(v) { return v >= 137 ? 'Cat 5' : v >= 113 ? 'Cat 4' : v >= 96 ? 'Cat 3' : v >= 83 ? 'Cat 2' : v >= 64 ? 'Cat 1' : v >= 34 ? 'Tropical storm' : 'Depression'; }
+
+/* ------------------------------------------------------------------ who can see what */
+var VIS = {vessels: 'PCDIT', radar: 'DIT', aircraft: 'PCDIT', vehicles: 'CT', incidents: 'CT', sar: 'CDT', damage: 'CDIT', drones: 'CDIT', det: 'CDIT', birds: 'DIT',
+           sensors: 'PCDIT', outages: 'PCDIT', shelters: 'PCDIT', port: 'PCDIT', events: 'PCDIT', infra: 'PCDIT', stations: 'PCDIT', reference: 'PCDIT'};
+function canSee(layer, persp) { return (VIS[layer] || '').indexOf(persp) >= 0; }
+function eventVisible(e, persp, t) {
+  if (e.t > t) return false;
+  if (e.k === 'f') return true;                         /* published facts: everyone, from their public time */
+  if (persp === 'T') return true;
+  if (persp === 'D') return e.ln && e.ln.indexOf('D') >= 0;
+  if (persp === 'I') return e.ln && e.ln.indexOf('I') >= 0;
+  return false;                                         /* public and civilian audiences only ever see published facts */
+}
+var NEVER = (IDX.never_public || []).map(function (p) { try { return new RegExp(p, 'i'); } catch (e) { return null; } }).filter(Boolean);
+function publicSafe(s) { for (var i = 0; i < NEVER.length; i++) if (NEVER[i].test(s)) return false; return true; }
+function vesselName(mmsi, persp) {
+  var v = (IDX.vessels || {})[mmsi];
+  if (!v) return 'MMSI ' + mmsi;
+  if (v.np && (persp === 'P' || persp === 'C')) return 'Vessel, MMSI ' + mmsi;
+  return v.n;
+}
+
+if (typeof module !== 'undefined') { module.exports = {decodeParts: decodeParts, decodeDay: decodeDay, positionAt: positionAt, stormAt: stormAt, stormPoint: stormPoint, eventVisible: eventVisible, canSee: canSee, vesselName: vesselName, sunElevation: sunElevation, dLabel: dLabel, fmtLocal: fmtLocal, lastChange: lastChange, trail: trail}; }
+
+/* ====================================================================================== UI */
+if (typeof document !== 'undefined') (function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var S = {t: D0 - 2 * DAY + 17 * 3600, persp: 'T', playing: false, speed: 900, sel: null, follow: false, evwin: 24, base: 'sat',
+           op: {cloud: .55, rain: .45, acc: 0, wind: .6, surge: .55, night: .35}, hits: [], counts: {}};
+  var LAYERS = [
+    ['vessels', 'Vessels (AIS)', true, [['v_deep', 'Tankers, LNG, cargo', true], ['v_work', 'Tugs, pilots, ferries, dredges', true], ['v_gov', 'Coast Guard, Navy, public safety', true], ['v_small', 'Fishing, charter, recreational', true]]],
+    ['radar', 'Radar contacts without AIS', true],
+    ['aircraft', 'Aircraft (ADS-B)', true, [['a_heli', 'Helicopters', true], ['a_fixed', 'Fixed-wing', true]]],
+    ['vehicles', 'Response vehicles (AVL)', true, [['c_ems', 'Ambulances', true], ['c_fire', 'Fire and rescue', true], ['c_law', 'Police and sheriff', true], ['c_other', 'Buses, high-water, other', true]]],
+    ['incidents', '911 incidents', true], ['sar', 'Rescues under way', true], ['damage', 'Damage surveys', false],
+    ['drones', 'Authorised drone flights', true], ['det', 'Drone detections and sightings', true], ['birds', 'Detections: birds and clutter', false],
+    ['sensors', 'Sensors (live readings)', true], ['outages', 'Power outages', true], ['shelters', 'Shelters', true], ['port', 'Channel status and berths', true],
+    ['events', 'Events', true], ['infra', 'Facilities and infrastructure', false], ['stations', 'Fire, EMS and police stations', false], ['reference', 'Channels, anchorages, roads', false]];
+  var ON = {};
+  LAYERS.forEach(function (l) { ON[l[0]] = l[2]; (l[3] || []).forEach(function (s) { ON[s[0]] = s[2]; }); });
+
+  /* ---------------- map */
+  var map = L.map('map', {zoomAnimation: false, fadeAnimation: false, zoomControl: true, minZoom: 5, maxZoom: 18, preferCanvas: true}).setView([27.80, -97.22], 11);
+  var sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {maxZoom: 18, attribution: 'Imagery: Esri, Maxar, Earthstar Geographics. Geometry: USACE, NOAA, US Census.'}).addTo(map);
+  var cBase = $('base'), cWx = $('wxc'), cA = $('assets'), ctxB = cBase.getContext('2d'), ctxW = cWx.getContext('2d'), ctx = cA.getContext('2d');
+  var W = 0, H = 0, DPR = Math.min(2, window.devicePixelRatio || 1), dirty = true, baseDirty = true;
+  function resize() {
+    var r = $('mapwrap').getBoundingClientRect(); W = Math.round(r.width); H = Math.round(r.height);
+    [cBase, cA].forEach(function (c) { c.width = W * DPR; c.height = H * DPR; });
+    cWx.width = Math.ceil(W / 5); cWx.height = Math.ceil(H / 5);
+    map.invalidateSize(false); baseDirty = dirty = true; sizeTimeline();
+  }
+  function XY(la, lo) { var p = map.latLngToContainerPoint([la, lo]); return [p.x, p.y]; }
+  map.on('move zoom moveend zoomend resize', function () { baseDirty = dirty = true; });
+
+  /* ---------------- day chunks */
+  var loading = {};
+  RM.onDay = function (n) { delete loading[n]; decodeDay(RM.days[n]); $('loading').style.display = Object.keys(loading).length ? 'block' : 'none'; dirty = true; };
+  function dayName(n) { return 'day_' + (n < 0 ? 'm' : 'p') + ('00' + Math.abs(n)).slice(-3) + '.js'; }
+  function need(n) {
+    if (n < IDX.first_day || n > IDX.last_day || RM.days[n] || loading[n]) return;
+    loading[n] = true; $('loading').style.display = 'block';
+    var s = document.createElement('script'); s.src = 'map_data/' + dayName(n); s.dataset.day = n;
+    s.onerror = function () { delete loading[n]; $('loading').textContent = 'missing ' + dayName(n); };
+    document.head.appendChild(s);
+  }
+  function ensureDays() {
+    var n = dayIndex(S.t); need(n); need(n + 1); need(n - 1);
+    Object.keys(RM.days).forEach(function (k) { if (Math.abs(k - n) > 2) { delete RM.days[k]; var el = document.querySelector('script[data-day="' + k + '"]'); if (el) el.remove(); } });
+    return RM.days[n] && RM.days[n]._dec ? RM.days[n] : null;
+  }
+
+  /* ---------------- icons: SVG path data in a 24-unit box, nose up */
+  var P = {
+    ship: 'M0,-11 L3.6,-5.5 L3.6,8.5 Q3.6,10.5 0,10.5 Q-3.6,10.5 -3.6,8.5 L-3.6,-5.5 Z',
+    tug: 'M0,-7 L4.2,-2.5 L4.2,5 Q4.2,7.5 0,7.5 Q-4.2,7.5 -4.2,5 L-4.2,-2.5 Z',
+    ferry: 'M0,-9 L4.2,-4.5 L4.2,4.5 L0,9 L-4.2,4.5 L-4.2,-4.5 Z',
+    small: 'M0,-7 L2.8,-1 L2.6,6 L-2.6,6 L-2.8,-1 Z',
+    barge: 'M-3.6,-9 L3.6,-9 L3.6,9 L-3.6,9 Z',
+    navy: 'M0,-12 L2.6,-4 L2.6,9 L0,11 L-2.6,9 L-2.6,-4 Z',
+    plane: 'M0,-11 L1.5,-7 L1.6,-2 L10,3 L10,5 L1.6,2.5 L1.2,7.5 L4,9.6 L4,11 L0,10 L-4,11 L-4,9.6 L-1.2,7.5 L-1.6,2.5 L-10,5 L-10,3 L-1.6,-2 L-1.5,-7 Z',
+    heavy: 'M0,-12 L1.9,-8 L2,-2.5 L12,4.5 L12,6.8 L2,3.6 L1.6,8 L5,10.4 L5,12 L0,11 L-5,12 L-5,10.4 L-1.6,8 L-2,3.6 L-12,6.8 L-12,4.5 L-2,-2.5 L-1.9,-8 Z',
+    trainer: 'M0,-10 L1.3,-6 L1.4,-2.6 L9,-2 L9,0.4 L1.4,1.2 L1,7 L3.4,8.2 L3.4,9.6 L0,9 L-3.4,9.6 L-3.4,8.2 L-1,7 L-1.4,1.2 L-9,0.4 L-9,-2 L-1.4,-2.6 L-1.3,-6 Z',
+    uav: 'M0,-9 L1,-3 L11,-1.6 L11,0 L1,0.6 L0.7,6 L3.6,9 L2.8,9.8 L0,7.6 L-2.8,9.8 L-3.6,9 L-0.7,6 L-1,0.6 L-11,0 L-11,-1.6 L-1,-3 Z',
+    heliBody: 'M0,-6 Q3,-6 3,-2 L2.4,3 L0.9,4 L0.7,10 L2.6,10.6 L2.6,11.6 L-2.6,11.6 L-2.6,10.6 L-0.7,10 L-0.9,4 L-2.4,3 L-3,-2 Q-3,-6 0,-6 Z',
+    car: 'M-3,-6 Q-3,-7.5 0,-7.5 Q3,-7.5 3,-6 L3,6 Q3,7 0,7 Q-3,7 -3,6 Z',
+    truck: 'M-3.3,-8 L3.3,-8 L3.3,8 L-3.3,8 Z',
+    bus: 'M-3.2,-10 L3.2,-10 L3.2,10 L-3.2,10 Z',
+    quad: 'M-6,-6 L6,6 M6,-6 L-6,6',
+    diamond: 'M0,-8 L8,0 L0,8 L-8,0 Z',
+    pin: 'M0,0 L-5,-9 A6,6 0 1,1 5,-9 Z'
+  };
+  var P2 = {}; Object.keys(P).forEach(function (k) { P2[k] = new Path2D(P[k]); });
+  var VCLASS = {tanker: ['ship', '#e0503c', 'v_deep', 'T'], lng: ['ship', '#f08a24', 'v_deep', 'L'], bulk: ['ship', '#b08a5a', 'v_deep', 'B'], cargo: ['ship', '#c9a26b', 'v_deep', 'C'], roro: ['ship', '#9fb0c8', 'v_deep', 'R'],
+    passenger: ['ferry', '#58c4c9', 'v_work', ''], tug: ['tug', '#f2c230', 'v_work', ''], barge: ['barge', '#8f8f7a', 'v_work', ''], pilot: ['small', '#ffffff', 'v_work', 'P'], ferry: ['ferry', '#2ed3b7', 'v_work', 'F'],
+    dredge: ['barge', '#c58b3c', 'v_work', 'D'], spill_response: ['tug', '#ff7ab8', 'v_work', 'S'], offshore_supply: ['tug', '#d9b36a', 'v_work', ''], survey: ['small', '#7ad0ff', 'v_work', ''], research: ['small', '#7ad0ff', 'v_work', ''],
+    coast_guard: ['navy', '#ff6a1a', 'v_gov', ''], navy: ['navy', '#9aa7b4', 'v_gov', ''], public_safety: ['small', '#4c8dff', 'v_gov', ''],
+    fishing: ['small', '#39b56a', 'v_small', ''], charter: ['small', '#b48cf0', 'v_small', ''], recreational: ['small', '#d7b8ff', 'v_small', '']};
+  var ACLASS = {heli: ['heli', '#ffe14d'], light: ['plane', '#eaf2ff'], trainer: ['trainer', '#ffd9a0'], airliner: ['heavy', '#ffffff'], heavy: ['heavy', '#b9c8d6'], uav: ['uav', '#9ee6ff']};
+  var UCLASS = {ambulance: ['car', '#ffffff', 'c_ems'], engine: ['truck', '#e0392b', 'c_fire'], boat: ['small', '#ff9d2e', 'c_fire'], highwater: ['truck', '#7c8f3a', 'c_other'], patrol: ['car', '#2f6fe0', 'c_law'], bus: ['bus', '#f5c518', 'c_other'], truck: ['truck', '#a7794a', 'c_other']};
+  var NAVSTAT = {0: 'under way', 1: 'at anchor', 2: 'not under command', 3: 'restricted manoeuvrability', 5: 'moored', 7: 'fishing', 8: 'sailing'};
+  var USTAT = {ENR: 'en route', ONS: 'on scene', TRN: 'transporting', HSP: 'at hospital', RTQ: 'returning to quarters', AIQ: 'in quarters', AVL: 'available'};
+
+  function drawIcon(x, y, key, color, hdg, s, opts) {
+    opts = opts || {};
+    ctx.save(); ctx.translate(x, y); ctx.rotate((hdg || 0) * Math.PI / 180); ctx.scale(s, s);
+    ctx.lineJoin = 'round';
+    if (key === 'heli') {
+      ctx.fillStyle = color; ctx.strokeStyle = 'rgba(0,0,0,.85)'; ctx.lineWidth = 1 / s; ctx.fill(P2.heliBody); ctx.stroke(P2.heliBody);
+      ctx.beginPath(); ctx.arc(0, -1, 9, 0, 6.2832); ctx.strokeStyle = 'rgba(255,255,255,.75)'; ctx.lineWidth = 1.1 / s; ctx.stroke();
+      var ph = opts.spin || 0; ctx.beginPath(); ctx.moveTo(-9 * Math.cos(ph), -1 - 9 * Math.sin(ph)); ctx.lineTo(9 * Math.cos(ph), -1 + 9 * Math.sin(ph)); ctx.moveTo(9 * Math.sin(ph), -1 - 9 * Math.cos(ph)); ctx.lineTo(-9 * Math.sin(ph), -1 + 9 * Math.cos(ph)); ctx.stroke();
+    } else if (key === 'quad') {
+      ctx.strokeStyle = color; ctx.lineWidth = 1.6 / s; ctx.stroke(P2.quad);
+      [[-6, -6], [6, 6], [6, -6], [-6, 6]].forEach(function (q) { ctx.beginPath(); ctx.arc(q[0], q[1], 3, 0, 6.2832); ctx.stroke(); });
+      ctx.fillStyle = color; ctx.fillRect(-2, -2, 4, 4);
+    } else {
+      ctx.fillStyle = color; ctx.strokeStyle = opts.stroke || 'rgba(0,0,0,.85)'; ctx.lineWidth = (opts.lw || 1) / s;
+      if (opts.hollow) { ctx.setLineDash([2.5, 2]); ctx.strokeStyle = color; ctx.lineWidth = 1.5 / s; ctx.stroke(P2[key]); }
+      else { ctx.fill(P2[key]); ctx.stroke(P2[key]); }
+      if (opts.deck) opts.deck(ctx);
+    }
+    ctx.restore();
+  }
+  var DECK = {
+    T: function (c) { c.fillStyle = 'rgba(40,10,5,.75)'; [-3, 1, 5].forEach(function (y) { c.beginPath(); c.arc(0, y, 1.6, 0, 6.2832); c.fill(); }); c.fillStyle = '#fff'; c.fillRect(-2.2, 7.2, 4.4, 1.8); },
+    L: function (c) { c.fillStyle = 'rgba(255,255,255,.9)'; [-3.4, 0.4, 4.2].forEach(function (y) { c.beginPath(); c.arc(0, y, 2.3, 0, 6.2832); c.fill(); }); },
+    B: function (c) { c.fillStyle = 'rgba(50,35,15,.75)'; [-4.5, -1, 2.5].forEach(function (y) { c.fillRect(-2.2, y, 4.4, 2.6); }); c.fillStyle = '#fff'; c.fillRect(-2.2, 7.2, 4.4, 1.8); },
+    C: function (c) { var col = ['#d35400', '#2980b9', '#27ae60', '#8e44ad']; for (var i = 0; i < 4; i++) { c.fillStyle = col[i]; c.fillRect(-2.4, -5 + i * 2.9, 4.8, 2.3); } c.fillStyle = '#fff'; c.fillRect(-2.2, 7.6, 4.4, 1.6); },
+    R: function (c) { c.fillStyle = 'rgba(255,255,255,.85)'; c.fillRect(-2.6, -5, 5.2, 13); },
+    P: function (c) { c.fillStyle = '#e25822'; c.fillRect(-2.6, 0, 5.2, 2); },
+    F: function (c) { c.fillStyle = 'rgba(255,255,255,.9)'; c.fillRect(-2.6, -3, 5.2, 6); },
+    D: function (c) { c.strokeStyle = '#3a2a10'; c.lineWidth = 1; c.beginPath(); c.moveTo(0, -9); c.lineTo(0, -15); c.stroke(); },
+    S: function (c) { c.fillStyle = '#fff'; c.fillRect(-2.2, -1, 4.4, 3); },
+    cg: function (c) { c.fillStyle = '#fff'; c.beginPath(); c.moveTo(-2.6, -2); c.lineTo(2.6, -4.5); c.lineTo(2.6, -1.5); c.lineTo(-2.6, 1); c.closePath(); c.fill(); },
+    amb: function (c) { c.fillStyle = '#e0392b'; c.fillRect(-0.9, -3.4, 1.8, 6.8); c.fillRect(-2.4, -0.9, 4.8, 1.8); },
+    eng: function (c) { c.fillStyle = '#fff'; c.fillRect(-3.3, -1, 6.6, 1.6); c.fillStyle = '#ffd24d'; c.fillRect(-2.2, 3, 4.4, 3.4); },
+    pol: function (c) { c.fillStyle = '#fff'; c.fillRect(-3, -2.4, 6, 4.8); c.fillStyle = '#ff3b30'; c.fillRect(-2.4, -0.7, 2.2, 1.4); c.fillStyle = '#3b82ff'; c.fillRect(0.2, -0.7, 2.2, 1.4); },
+    bus: function (c) { c.fillStyle = '#222'; for (var i = 0; i < 4; i++) c.fillRect(-2.4, -8 + i * 4.4, 4.8, 1.4); },
+    hw: function (c) { c.fillStyle = '#2b3515'; c.fillRect(-3.3, -8, 6.6, 4); }
+  };
+
+  /* ---------------- drawing helpers */
+  function hit(x, y, r, kind, id, title, sub) { S.hits.push([x, y, r, kind, id, title, sub]); }
+  function label(x, y, text, color) { ctx.font = '600 11px system-ui'; ctx.lineWidth = 3; ctx.strokeStyle = 'rgba(0,0,0,.75)'; ctx.strokeText(text, x, y); ctx.fillStyle = color || '#fff'; ctx.fillText(text, x, y); }
+  function inView(x, y, m) { m = m || 30; return x > -m && y > -m && x < W + m && y < H + m; }
+  function poly(c, ring, close) {
+    c.beginPath();
+    for (var i = 0; i < ring.length; i++) { var p = XY(ring[i][0] / 1e5, ring[i][1] / 1e5); if (i) c.lineTo(p[0], p[1]); else c.moveTo(p[0], p[1]); }
+    if (close) c.closePath();
+  }
+
+  /* ---------------- base chart (shows through when satellite tiles are missing or switched off) */
+  function drawBase() {
+    baseDirty = false;
+    ctxB.setTransform(DPR, 0, 0, DPR, 0, 0);
+    ctxB.fillStyle = '#0b2a40'; ctxB.fillRect(0, 0, W, H);
+    if (!REF.land) return;
+    var z = map.getZoom(), b = map.getBounds(), s = b.getSouth() * 1e5, n = b.getNorth() * 1e5, w = b.getWest() * 1e5, e = b.getEast() * 1e5;
+    function vis(ring) { var a = ring[0]; if (a[0] > s - 60000 && a[0] < n + 60000 && a[1] > w - 60000 && a[1] < e + 60000) return true; var m = ring[ring.length >> 1]; return m[0] > s - 60000 && m[0] < n + 60000 && m[1] > w - 60000 && m[1] < e + 60000; }
+    ctxB.fillStyle = '#1d2b25'; ctxB.strokeStyle = '#3c5347'; ctxB.lineWidth = 1;
+    (REF.coarse || []).forEach(function (r) { poly(ctxB, r, true); ctxB.fill(); });
+    ctxB.fillStyle = '#0b2a40';
+    var bx = REF.box; if (bx) { var p1 = XY(bx[3], bx[0]), p2 = XY(bx[1], bx[2]); ctxB.fillRect(p1[0], p1[1], p2[0] - p1[0], p2[1] - p1[1]); }
+    ctxB.fillStyle = '#22332b';
+    REF.land.forEach(function (r) { if (z < 9 || vis(r)) { poly(ctxB, r, true); ctxB.fill(); if (z >= 11) ctxB.stroke(); } });
+    ctxB.fillStyle = '#0b2a40'; (REF.water || []).forEach(function (r) { poly(ctxB, r, true); ctxB.fill(); });
+    ctxB.fillStyle = 'rgba(70,150,210,.45)'; REF.channels.forEach(function (c) { poly(ctxB, c.r, true); ctxB.fill(); });
+    if (z >= 13) { ctxB.strokeStyle = '#3d4640'; ctxB.lineWidth = z >= 15 ? 1.2 : 0.7; ctxB.beginPath(); REF.roads.forEach(function (r) { if (r.c !== 'l') return; var a = r.l[0]; if (a[0] < s - 1500 || a[0] > n + 1500 || a[1] < w - 1500 || a[1] > e + 1500) return; var q = XY(a[0] / 1e5, a[1] / 1e5); ctxB.moveTo(q[0], q[1]); for (var i = 1; i < r.l.length; i++) { q = XY(r.l[i][0] / 1e5, r.l[i][1] / 1e5); ctxB.lineTo(q[0], q[1]); } }); ctxB.stroke(); }
+    REF.roads.forEach(function (r) { if (r.c === 'l') return; if (z < 10 && r.c !== 'p') return; if (z < 12 && r.c === 'a') return; if (!vis(r.l)) return; ctxB.strokeStyle = r.c === 'p' ? '#8a6f4a' : '#5b5346'; ctxB.lineWidth = r.c === 'p' ? 1.6 : 1; poly(ctxB, r.l, false); ctxB.stroke(); });
+  }
+
+  /* ---------------- port status */
+  var SEGMAP = {'SEG-ENT': /CC_0[1-4]/, 'SEG-BAY': /CC_(05|06|6A|07)/, 'SEG-INNER-E': /CC_08/, 'SEG-INNER-W': /CC_(09|1\d)/, 'SEG-LAQ': /_LA_/, 'SEG-GIWW': /_GI_/};
+  function portAt(t) {
+    var seg = {}, pc = '', last = null;
+    (IDX.port || []).forEach(function (r) { if (r.t > t) return; if (r.pc) pc = r.pc; if (r.seg && r.st) seg[r.seg] = r.st; if (r.st) last = r; });
+    return {seg: seg, pc: pc, last: last};
+  }
+  function statColor(st) { return !st ? '#4aa3df' : /^OPEN$/.test(st) ? '#3fb27f' : /CLOSED$/.test(st) || st === 'CLOSED' ? '#e5534b' : '#f2b632'; }
+
+  /* ---------------- weather canvas */
+  var parts = [], accCache = {h: null, grid: null}, wxAnim = 0;
+  var AG = {lo0: -99.2, la0: 25.8, n: 76, m: 76, d: 0.05};
+  function accumulated(t) {            /* storm rainfall total (mm) on a regional grid, integrated hourly along the track */
+    var h1 = Math.min(Math.floor((t - D0) / 3600), 60), from = -60, g;
+    if (accCache.grid && accCache.h === h1) return accCache.grid;
+    if (accCache.grid && accCache.h < h1) { g = accCache.grid; from = accCache.h + 1; } else g = new Float32Array(AG.n * AG.m);
+    for (var k = from; k <= h1; k++) {
+      var st = stormAt(D0 + k * 3600); if (!st || st.vmax < 22) continue;
+      for (var j = 0; j < AG.m; j++) for (var i = 0; i < AG.n; i++) { var sp = stormPoint(st, AG.la0 + j * AG.d, AG.lo0 + i * AG.d); if (sp) g[j * AG.n + i] += sp.rain; }
+    }
+    accCache = {h: h1, grid: g}; return g;
+  }
+  function accAt(g, la, lo) { var i = Math.round((lo - AG.lo0) / AG.d), j = Math.round((la - AG.la0) / AG.d); return (i < 0 || j < 0 || i >= AG.n || j >= AG.m) ? 0 : g[j * AG.n + i]; }
+  function stationWind(day, sec) {     /* mean of reporting stations: [u, v] m/s (towards), and rain mm/h */
+    var u = 0, v = 0, n = 0, rain = 0, rn = 0;
+    if (day && day.s) { var slot = Math.min(23, Math.floor(sec / 3600)); ['wx', 'buoy'].forEach(function (g) { var d = day.s[g] || {}; for (var k in d) { var r = d[k][slot]; if (!r || r[1] == null || r[2] == null) continue; var a = (r[1] + 180) * Math.PI / 180; u += r[2] * Math.sin(a); v += r[2] * Math.cos(a); n++; if (g === 'wx' && r[5] != null) { rain += r[5]; rn++; } } }); }
+    return n ? [u / n, v / n, rn ? rain / rn : 0] : [1.5, 3, 0];
+  }
+  function drawWeather(day, sec) {
+    var w = cWx.width, h = cWx.height, img = ctxW.createImageData(w, h), d = img.data, st = stormAt(S.t), op = S.op;
+    var b = map.getBounds(), nw = b.getNorthWest(), se = b.getSouthEast(), acc = op.acc > 0.01 ? accumulated(S.t) : null, sw = stationWind(day, sec);
+    var active = st && st.vmax >= 22, ph = (S.t / 5200) % 6.2832;
+    /* surge: inverse-distance field of tide-gauge residuals (ft above prediction) */
+    var gs = [];
+    if (op.surge > 0.01 && day && day.s && day.s.gauge) { var slot = Math.min(95, Math.floor(sec / 900)); (IDX.sensors || []).forEach(function (sn) { if (sn.k !== 'gauge') return; var r = (day.s.gauge[sn.id] || [])[slot]; if (r && r[1] != null && r[1] > 0.8) gs.push([sn.la, sn.lo, r[1]]); }); }
+    var bgRain = sw[2];
+    for (var y = 0; y < h; y++) {
+      /* latitude from the Mercator row so the field stays registered at every zoom */
+      var la = map.containerPointToLatLng([0, (y + 0.5) * 5]).lat;
+      for (var x = 0; x < w; x++) {
+        var lo = nw.lng + (se.lng - nw.lng) * (x + 0.5) / w, R = 0, G = 0, B = 0, A = 0, o = (y * w + x) * 4;
+        if (active) {
+          var sp = stormPoint(st, la, lo);
+          var rm = st.rmax, r = sp.r, band = r > 2.2 * rm ? 0.35 + 1.3 * Math.pow(Math.max(0, Math.sin(ph + r / 21 - sp.th * Math.PI / 90)), 2) : 1, rain = sp.rain * band;
+          var cloud = Math.min(1, (r < 0.45 * rm ? 0.12 : 1) * sp.inten * (1.25 * Math.exp(-Math.pow((r - rm * 1.6) / (rm * 5), 2)) + 0.9 * Math.exp(-r / 150) * (0.45 + 0.55 * band)));
+          cloud *= Math.min(1, st.vmax / 60);
+          if (op.cloud > 0.01 && cloud > 0.02) { R = 236; G = 240; B = 245; A = cloud * op.cloud * 0.95; }
+          if (op.rain > 0.01 && rain > 0.6) {
+            var q = Math.min(1, rain / 32), rr = q < .33 ? 60 : q < .66 ? 250 : 240, gg = q < .33 ? 190 : q < .66 ? 210 : 70, bb = q < .33 ? 110 : q < .66 ? 60 : 60, ra = Math.min(.85, .25 + q) * op.rain;
+            R = R * (1 - ra) + rr * ra; G = G * (1 - ra) + gg * ra; B = B * (1 - ra) + bb * ra; A = A + ra * (1 - A);
+          }
+        } else if (bgRain > 0.3 && op.cloud > 0.01) { var c2 = Math.min(.5, bgRain / 12) * op.cloud * (0.75 + 0.25 * Math.sin(lo * 37 + la * 53 + ph)); R = 215; G = 222; B = 230; A = c2; }
+        if (acc) { var mm = accAt(acc, la, lo); if (mm > 12) { var qa = Math.min(1, mm / 400), aa = Math.min(.8, .2 + qa) * op.acc; R = R * (1 - aa) + (40 + 140 * qa) * aa; G = G * (1 - aa) + (90 - 40 * qa) * aa; B = B * (1 - aa) + (200 - 20 * qa) * aa; A = A + aa * (1 - A); } }
+        if (gs.length) { var num = 0, den = 0, near = 9e9; for (var k = 0; k < gs.length; k++) { var dy = (la - gs[k][0]) * 111, dx = (lo - gs[k][1]) * 98, dd = dx * dx + dy * dy + 4; num += gs[k][2] / dd; den += 1 / dd; if (dd < near) near = dd; }
+          if (near < 900) { var ft = num / den, sa = Math.min(.75, ft / 12) * op.surge * Math.max(0, 1 - near / 900); R = R * (1 - sa) + 120 * sa; G = G * (1 - sa) + 60 * sa; B = B * (1 - sa) + 220 * sa; A = A + sa * (1 - A); } }
+        d[o] = R; d[o + 1] = G; d[o + 2] = B; d[o + 3] = Math.round(Math.min(1, A) * 255);
+      }
+    }
+    ctxW.putImageData(img, 0, 0);
+  }
+  function drawWind(day, sec, dt) {    /* streaks advected by the wind field; drawn on the asset canvas under the icons */
+    if (S.op.wind < 0.02) return;
+    var st = stormAt(S.t), active = st && st.vmax >= 22, sw = stationWind(day, sec), b = map.getBounds(), n = Math.round(W * H / 2600);
+    while (parts.length < n) parts.push({x: Math.random() * W, y: Math.random() * H, a: Math.random() * 60});
+    parts.length = n;
+    var mpp = 40075016 * Math.cos(map.getCenter().lat * Math.PI / 180) / Math.pow(2, map.getZoom() + 8);
+    ctx.lineCap = 'round';
+    for (var i = 0; i < n; i++) {
+      var p = parts[i], ll = map.containerPointToLatLng([p.x, p.y]), u = sw[0], v = sw[1], spd;
+      if (active) { var sp = stormPoint(st, ll.lat, ll.lng); if (sp) { var a = (sp.dir + 180) * Math.PI / 180, wv = Math.max(sp.v, 0); var bl = Math.min(1, wv / 12); u = u * (1 - bl) + wv * Math.sin(a) * bl; v = v * (1 - bl) + wv * Math.cos(a) * bl; } }
+      spd = Math.sqrt(u * u + v * v);
+      var px = Math.max(6, Math.min(46, spd * 1.6)), k = px / Math.max(spd, 0.1), x2 = p.x + u * k * 0.5, y2 = p.y - v * k * 0.5;
+      var col = spd > 33 ? '255,90,80' : spd > 17 ? '255,200,90' : '200,230,255';
+      ctx.strokeStyle = 'rgba(' + col + ',' + (Math.min(.9, .25 + spd / 40) * S.op.wind * Math.min(1, p.a / 12)).toFixed(3) + ')'; ctx.lineWidth = spd > 17 ? 1.6 : 1.1;
+      ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(x2, y2); ctx.stroke();
+      var adv = Math.max(.4, Math.min(9, spd * 0.22)) * (dt || 1); p.x += u / Math.max(spd, .1) * adv; p.y -= v / Math.max(spd, .1) * adv; p.a++;
+      if (p.a > 70 || p.x < -20 || p.y < -20 || p.x > W + 20 || p.y > H + 20) { p.x = Math.random() * W; p.y = Math.random() * H; p.a = 0; }
+    }
+  }
+
+  /* ---------------- the frame */
+  var lastFrame = 0, spin = 0, lastAnim = 0;
+  function frame(now) {
+    requestAnimationFrame(frame);
+    var dtReal = Math.min(.2, (now - lastFrame) / 1000 || 0); lastFrame = now;
+    if (S.playing) { S.t = Math.min(T_MAX, S.t + S.speed * dtReal); if (S.t >= T_MAX) setPlaying(false); dirty = true; }
+    var windy = S.op.wind > 0.02;
+    if (!dirty && (!windy || now - lastAnim < 60)) return;      /* idle: only the wind streaks move, at a modest rate */
+    lastAnim = now;
+    spin += dtReal * 14;
+    if (baseDirty) drawBase();
+    var day = ensureDays(), n = dayIndex(S.t), sec = S.t - D0 - n * DAY;
+    if (dirty || (wxAnim++ % 20 === 0)) drawWeather(day, sec);
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0); ctx.clearRect(0, 0, W, H);
+    S.hits = []; S.counts = {};
+    drawWind(day, sec, dtReal * 30);
+    drawStatic(day, sec);
+    if (day) drawMoving(day, sec);
+    drawEvents();
+    drawStormMark();
+    if (dirty) { updateTop(day, sec); updatePanels(); drawTimeline(); }
+    dirty = false;
+  }
+  function cnt(k, n) { S.counts[k] = (S.counts[k] || 0) + (n === undefined ? 1 : n); }
+  function vis(layer) { return ON[layer] && canSee(layer, S.persp); }
+
+  function drawStatic(day, sec) {
+    var z = map.getZoom(), pa = portAt(S.t), i, p;
+    if (vis('reference')) {
+      ctx.lineWidth = 1; ctx.strokeStyle = 'rgba(120,200,255,.8)'; (REF.channels || []).forEach(function (c) { poly(ctx, c.r, true); ctx.stroke(); });
+      ctx.setLineDash([5, 4]); ctx.strokeStyle = 'rgba(255,120,220,.8)'; (REF.anchorages || []).forEach(function (r) { poly(ctx, r, true); ctx.stroke(); }); ctx.setLineDash([]);
+      if (z >= 11) { ctx.strokeStyle = 'rgba(255,225,160,.55)'; (REF.roads || []).forEach(function (r) { if (r.c === 'l') return; if (r.c === 'a' && z < 13) return; poly(ctx, r.l, false); ctx.stroke(); }); }
+    }
+    if (vis('port')) {
+      (REF.channels || []).forEach(function (c) { var st = null; for (var k in SEGMAP) if (SEGMAP[k].test(c.id)) st = pa.seg[k]; if (st == null) return; ctx.fillStyle = statColor(st); ctx.globalAlpha = /^OPEN$/.test(st) ? .16 : .42; poly(ctx, c.r, true); ctx.fill(); ctx.globalAlpha = 1; });
+      if (pa.seg['SEG-ANCH']) { ctx.strokeStyle = statColor(pa.seg['SEG-ANCH']); ctx.setLineDash([6, 4]); ctx.lineWidth = 1.5; (REF.anchorages || []).forEach(function (r) { poly(ctx, r, true); ctx.stroke(); }); ctx.setLineDash([]); }
+      if (z >= 13) (IDX.berths || []).forEach(function (bt) { p = XY(bt.la, bt.lo); if (!inView(p[0], p[1])) return; ctx.fillStyle = '#ffd98a'; ctx.fillRect(p[0] - 2, p[1] - 2, 4, 4); if (z >= 15) label(p[0] + 5, p[1] + 3, bt.id, '#ffd98a'); });
+      if (z >= 12) (IDX.terminals || []).forEach(function (tm) { p = XY(tm.la, tm.lo); if (!inView(p[0], p[1])) return; hit(p[0], p[1], 8, 'terminal', tm.id, tm.n, tm.t); if (z >= 14) label(p[0] + 6, p[1] - 6, tm.n, '#ffe6b0'); });
+    }
+    if (vis('damage') && IDX.damage) {
+      var dm = IDX.damage, col = ['#f2e07a', '#f2b632', '#ef7d2c', '#e5534b', '#9aa7b4', '#7fb37f', '#c9c9c9'], sz = z >= 15 ? 4 : z >= 13 ? 3 : 2, nd = 0;
+      for (i = 0; i < dm.length; i += 4) { if (dm[i] > S.t) break; p = XY(dm[i + 1] / 1e5, dm[i + 2] / 1e5); nd++; if (!inView(p[0], p[1], 4)) continue; ctx.fillStyle = col[dm[i + 3]] || '#ccc'; ctx.fillRect(p[0] - sz / 2, p[1] - sz / 2, sz, sz); }
+      cnt('damage', nd);
+    }
+    if (vis('infra')) {
+      (IDX.infrastructure || []).forEach(function (a) { p = XY(a.la, a.lo); if (!inView(p[0], p[1])) return; ctx.fillStyle = /substation/.test(a.t) ? '#ffe14d' : /water|pump|tank|intake/.test(a.t) ? '#58c4ff' : '#c9b8ff'; ctx.strokeStyle = '#000'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p[0], p[1] - 6); ctx.lineTo(p[0] + 6, p[1]); ctx.lineTo(p[0], p[1] + 6); ctx.lineTo(p[0] - 6, p[1]); ctx.closePath(); ctx.fill(); ctx.stroke(); hit(p[0], p[1], 8, 'infra', a.id, a.n, a.t.replace(/_/g, ' ')); if (z >= 13) label(p[0] + 8, p[1] + 4, a.n, '#fff'); cnt('infra'); });
+      (IDX.facilities || []).forEach(function (f) { p = XY(f.la, f.lo); if (!inView(p[0], p[1])) return; var hosp = /HOSP|URGENT|CLINIC/.test(f.t); ctx.fillStyle = hosp ? '#fff' : '#b9e3ff'; ctx.strokeStyle = '#000'; ctx.lineWidth = 1; ctx.fillRect(p[0] - 5, p[1] - 5, 10, 10); ctx.strokeRect(p[0] - 5, p[1] - 5, 10, 10); if (hosp) { ctx.fillStyle = '#e0392b'; ctx.fillRect(p[0] - 1.2, p[1] - 4, 2.4, 8); ctx.fillRect(p[0] - 4, p[1] - 1.2, 8, 2.4); } hit(p[0], p[1], 8, 'facility', f.id, f.n, f.tt); if (z >= 13) label(p[0] + 8, p[1] + 4, f.n, '#fff'); cnt('infra'); });
+    }
+    if (vis('stations')) (IDX.stations || []).forEach(function (s) { p = XY(s.la, s.lo); if (!inView(p[0], p[1])) return; ctx.fillStyle = s.a === 'CCPD' || s.a === 'NCSO' || s.a === 'PAPD' ? '#2f6fe0' : '#e0392b'; ctx.strokeStyle = '#fff'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(p[0], p[1] - 7); ctx.lineTo(p[0] + 6, p[1] - 2); ctx.lineTo(p[0] + 6, p[1] + 5); ctx.lineTo(p[0] - 6, p[1] + 5); ctx.lineTo(p[0] - 6, p[1] - 2); ctx.closePath(); ctx.fill(); ctx.stroke(); hit(p[0], p[1], 8, 'station', s.id, s.n, (IDX.agencies || {})[s.a] || s.a); cnt('stations'); });
+    if (vis('shelters')) { var sd = scenarioDay(S.t); Object.keys(IDX.shelters || {}).forEach(function (k) { var s = IDX.shelters[k], c = s.d[sd]; if (!c || c[1] !== 'OPEN') return; p = XY(s.la, s.lo); var r = 6 + 16 * Math.sqrt(c[0] / Math.max(1, s.cap)); ctx.fillStyle = 'rgba(63,178,127,.30)'; ctx.strokeStyle = '#3fb27f'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(p[0], p[1], r, 0, 6.2832); ctx.fill(); ctx.stroke(); label(p[0] - 3, p[1] + 4, 'S', '#fff'); if (z >= 10) label(p[0] + r + 3, p[1] + 4, c[0] + ' / ' + s.cap, '#bff0d8'); hit(p[0], p[1], r + 2, 'shelter', k, s.n, 'Shelter, ' + c[0] + ' of ' + s.cap + ' places taken; ' + c[2] + '% Spanish-speaking'); cnt('shelters'); }); }
+    if (vis('outages') && day && day.o) { var slot = Math.min(23, Math.floor(sec / 3600)); Object.keys(day.o).forEach(function (k) { var r = day.o[k][slot], a = (IDX.areas || {})[k]; if (!r || !a || !r[0]) return; p = XY(a.la, a.lo); var fr = r[0] / Math.max(1, r[1]), rad = 8 + 22 * Math.sqrt(fr); ctx.fillStyle = 'rgba(20,20,25,' + (0.25 + 0.5 * fr).toFixed(2) + ')'; ctx.strokeStyle = '#ffd24d'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(p[0], p[1], rad, 0, 6.2832); ctx.fill(); ctx.stroke(); ctx.fillStyle = '#ffd24d'; ctx.beginPath(); ctx.moveTo(p[0] + 1, p[1] - 7); ctx.lineTo(p[0] - 4, p[1] + 1); ctx.lineTo(p[0], p[1] + 1); ctx.lineTo(p[0] - 1, p[1] + 7); ctx.lineTo(p[0] + 4, p[1] - 1); ctx.lineTo(p[0], p[1] - 1); ctx.closePath(); ctx.fill(); if (z >= 11) label(p[0] + rad + 3, p[1] + 4, a.n + ' ' + Math.round(fr * 100) + '% out', '#ffe9a8'); hit(p[0], p[1], rad, 'outage', k, a.n, r[0].toLocaleString() + ' of ' + r[1].toLocaleString() + ' customers without power'); cnt('outages'); }); }
+    if (vis('sensors') && day && day.s) drawSensors(day, sec, z);
+    if (vis('sar')) { var sr = IDX.sar || []; for (i = 0; i < sr.length; i++) { var m = sr[i]; if (m[0] > S.t) break; if (m[2] < S.t - 1800) continue; p = XY(m[3] / 1e5, m[4] / 1e5); if (!inView(p[0], p[1])) continue; var live = S.t <= m[2], on = S.t >= m[1]; ctx.globalAlpha = live ? 1 : .35; ctx.strokeStyle = '#ff7a1a'; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(p[0], p[1], 6, 0, 6.2832); ctx.stroke(); ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.setLineDash([4.7, 4.7]); ctx.beginPath(); ctx.arc(p[0], p[1], 6, 0, 6.2832); ctx.stroke(); ctx.setLineDash([]); if (live && on) { ctx.strokeStyle = 'rgba(255,122,26,' + (0.5 + 0.5 * Math.sin(spin)).toFixed(2) + ')'; ctx.beginPath(); ctx.arc(p[0], p[1], 11, 0, 6.2832); ctx.stroke(); } ctx.globalAlpha = 1; hit(p[0], p[1], 9, 'sar', i, 'Rescue: ' + m[7].toLowerCase() + ', ' + m[8] + ' ' + (m[8] === 1 ? 'person' : 'people'), m[10] + ' ' + m[5] + ' (' + m[6] + '), ' + (on ? 'on scene since ' + fmtZ(m[1]) : 'launched ' + fmtZ(m[0])) + '; ' + m[9].toLowerCase()); if (live) cnt('sar'); } }
+  }
+  function badge(x, y, text, bg, fg) { ctx.font = '600 10.5px ui-monospace,Consolas,monospace'; var w = ctx.measureText(text).width + 8; ctx.fillStyle = bg; ctx.strokeStyle = 'rgba(0,0,0,.6)'; ctx.lineWidth = 1; ctx.beginPath(); ctx.rect(x, y - 8, w, 15); ctx.fill(); ctx.stroke(); ctx.fillStyle = fg || '#fff'; ctx.fillText(text, x + 4, y + 3); }
+  function drawSensors(day, sec, z) {
+    var h = Math.min(23, Math.floor(sec / 3600)), q = Math.min(95, Math.floor(sec / 900)), hh = Math.min(47, Math.floor(sec / 1800));
+    (IDX.sensors || []).forEach(function (s) {
+      var p = XY(s.la, s.lo); if (!inView(p[0], p[1])) return; var r, txt = null, bg = 'rgba(20,30,40,.85)', sub = '', off = false;
+      if (s.k === 'gauge') { r = ((day.s.gauge || {})[s.id] || [])[q]; if (r && r[0] != null) { txt = r[0].toFixed(1) + ' ft' + (r[1] != null && Math.abs(r[1]) >= 0.5 ? ' (' + (r[1] > 0 ? '+' : '') + r[1].toFixed(1) + ')' : ''); bg = r[1] > 6 ? 'rgba(160,40,200,.9)' : r[1] > 2 ? 'rgba(90,70,220,.9)' : 'rgba(30,80,140,.9)'; sub = 'water level ' + r[0].toFixed(2) + ' ft MLLW, ' + (r[1] == null ? '' : (r[1] > 0 ? '+' : '') + r[1].toFixed(2) + ' ft against prediction'); } else off = true; }
+      else if (s.k === 'wx' || s.k === 'buoy') { r = ((day.s[s.k] || {})[s.st] || (day.s[s.k] || {})[s.id] || [])[h]; if (r && r[2] != null) { var kt = r[2] / 0.5144, g = r[3] != null ? r[3] / 0.5144 : null; txt = Math.round(kt) + (g ? 'G' + Math.round(g) : '') + ' kt'; bg = kt >= 64 ? 'rgba(200,40,40,.92)' : kt >= 34 ? 'rgba(220,130,20,.92)' : 'rgba(30,60,90,.88)'; sub = 'wind ' + Math.round(r[1]) + '° at ' + Math.round(kt) + ' kt' + (g ? ', gust ' + Math.round(g) : '') + (r[0] != null ? '; ' + r[0].toFixed(1) + ' °C' : '') + (r[4] != null ? '; ' + r[4].toFixed(1) + ' mb' : '') + (s.k === 'wx' && r[5] ? '; rain ' + r[5] + ' mm/h' : ''); if (r[1] != null) { ctx.save(); ctx.translate(p[0], p[1]); ctx.rotate((r[1] + 180) * Math.PI / 180); ctx.strokeStyle = '#fff'; ctx.lineWidth = 2; var L2 = 10 + Math.min(26, kt * .45); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -L2); ctx.lineTo(-3.5, -L2 + 6); ctx.moveTo(0, -L2); ctx.lineTo(3.5, -L2 + 6); ctx.stroke(); ctx.restore(); } } else off = true; }
+      else if (s.k === 'wq') { r = ((day.s.wq || {})[s.id] || [])[hh]; if (r && r[0] != null) { txt = (r[0] >= 1000 ? (r[0] / 1000).toFixed(1) + 'k' : Math.round(r[0])) + ' ppb'; bg = r[0] > 500 ? 'rgba(120,20,20,.92)' : r[0] > 100 ? 'rgba(150,90,10,.92)' : 'rgba(20,70,60,.88)'; sub = 'hydrocarbons ' + r[0] + ' ppb' + (r[1] != null ? '; salinity ' + r[1] + ' psu' : '') + (r[2] != null ? '; turbidity ' + r[2] + ' NTU' : ''); } else off = true; }
+      else if (s.k === 'aq') { r = ((day.s.aq || {})[s.id] || [])[h]; if (r && r[0] != null) { var flag = (r[2] != null && r[2] > 5) || (r[1] != null && r[1] > 8) || r[0] > 35; txt = flag ? (r[2] != null && r[2] > 5 ? 'benzene ' + r[2].toFixed(1) : r[1] > 8 ? 'H2S ' + r[1].toFixed(0) : 'PM ' + Math.round(r[0])) : null; bg = 'rgba(150,60,10,.92)'; sub = 'PM2.5 ' + r[0] + ' µg/m³' + (r[1] != null ? '; H2S ' + r[1] + ' ppb' : '') + (r[2] != null ? '; benzene ' + r[2] + ' ppb' : '') + (r[3] != null ? '; TNMHC ' + r[3] + ' ppbC' : ''); } else off = true; }
+      else return;
+      ctx.fillStyle = off ? '#555' : s.k === 'gauge' ? '#58a6ff' : s.k === 'wq' ? '#2ed3b7' : s.k === 'aq' ? '#c9b8ff' : '#fff'; ctx.strokeStyle = '#000'; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(p[0], p[1], 4, 0, 6.2832); ctx.fill(); ctx.stroke();
+      if (off && z >= 10) badge(p[0] + 7, p[1], 'no data', 'rgba(60,60,60,.9)', '#ccc'); else if (txt && z >= 10) badge(p[0] + 7, p[1], txt, bg);
+      hit(p[0], p[1], 7, 'sensor', s.id, s.n, off ? 'not reporting' : sub); cnt('sensors');
+    });
+  }
+
+  function drawMoving(day, sec) {
+    var z = map.getZoom(), sc = z >= 15 ? 1.5 : z >= 13 ? 1.2 : z >= 11 ? 1.0 : z >= 9 ? 0.8 : 0.62, k, pos, p, meta, cls, i;
+    /* incidents */
+    if (vis('incidents')) { var inc = day.i || [], ni = 0; for (i = 0; i < inc.length; i++) { var r = inc[i]; if (r[0] > sec) break; if (r[1] < sec - 1200) continue; var open = r[1] >= sec; if (open) ni++; p = XY(r[2] / 1e5, r[3] / 1e5); if (!inView(p[0], p[1], 6)) continue; var c = r[6] === 'CCFD' || /FIRE/.test(r[6]) ? '255,110,60' : /EMS/.test(r[6]) ? '120,255,170' : '90,160,255', fresh = sec - r[0] < 900; ctx.fillStyle = 'rgba(' + c + ',' + (open ? .9 : .3) + ')'; ctx.beginPath(); ctx.arc(p[0], p[1], open ? (r[5] === 'P1' ? 4 : 3) : 2, 0, 6.2832); ctx.fill(); if (fresh) { ctx.strokeStyle = 'rgba(' + c + ',' + (1 - (sec - r[0]) / 900).toFixed(2) + ')'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(p[0], p[1], 4 + (sec - r[0]) / 60, 0, 6.2832); ctx.stroke(); } if (z >= 12) hit(p[0], p[1], 5, 'incident', i, ((IDX.natures || {})[r[4]] || r[4]), r[7] + ', ' + r[5] + ', ' + ((IDX.agencies || {})[r[6]] || r[6]) + (r[8] ? ', unit ' + r[8] : '') + '; received ' + fmtZ(D0 + day.n * DAY + r[0]) + (open ? '' : ', closed')); } cnt('incidents', ni); }
+    /* radar contacts with no AIS */
+    if (vis('radar')) day.R.forEach(function (f) { pos = positionAt(f.parts, sec); if (!pos) return; p = XY(pos.la, pos.lo); cnt('radar'); if (!inView(p[0], p[1])) return; drawIcon(p[0], p[1], f.m.sz === 'small' ? 'small' : 'ship', '#ff4fd8', pos.hdg, sc, {hollow: true}); hit(p[0], p[1], 10, 'radar', f.m.id, 'Radar contact, no AIS', 'track ' + f.m.id + ' from ' + f.m.s + '; about ' + f.m.len + ' m, ' + (pos.spd * 1.944).toFixed(1) + ' kn'); if (z >= 12) label(p[0] + 9, p[1] - 6, 'no AIS', '#ff9ae9'); });
+    /* vessels */
+    if (vis('vessels')) for (k in day.V) {
+      meta = (IDX.vessels || {})[k] || {c: 'cargo', n: 'MMSI ' + k, len: 0}; cls = VCLASS[meta.c] || VCLASS.cargo;
+      if (!ON[cls[2]]) continue;
+      pos = positionAt(day.V[k], sec); if (!pos) continue; cnt('vessels'); cnt(cls[2]);
+      p = XY(pos.la, pos.lo); if (!inView(p[0], p[1], 60)) continue;
+      var st = lastChange(day.vs[k], 2, sec), nav = st ? st[0] : 0, hdg = pos.hdg;
+      if (!pos.moving) { var hd = lastChange(day.vh[k], 2, sec); if (hd) hdg = hd[0]; }
+      if (pos.moving && z >= 10) { var tr = trail(pos, sec, meta.c === 'ferry' ? 600 : 1500); ctx.strokeStyle = cls[1]; ctx.globalAlpha = .55; ctx.lineWidth = 1.5; ctx.beginPath(); for (i = 0; i < tr.length; i++) { var q = XY(tr[i][0], tr[i][1]); if (i) ctx.lineTo(q[0], q[1]); else ctx.moveTo(q[0], q[1]); } ctx.stroke(); ctx.globalAlpha = 1; }
+      var mpp = 40075016 * Math.cos(pos.la * Math.PI / 180) / Math.pow(2, z + 8), s2 = Math.max(sc * (cls[0] === 'ship' ? 1 : .85), meta.len ? meta.len / mpp / 21 : 0);
+      var deck = meta.c === 'coast_guard' ? DECK.cg : DECK[cls[3]];
+      drawIcon(p[0], p[1], cls[0], cls[1], hdg, s2, {deck: z >= 10 ? deck : null});
+      if (nav === 1 && z >= 10) { ctx.strokeStyle = '#fff'; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(p[0], p[1], 10 * s2 + 3, 0, 6.2832); ctx.setLineDash([2, 3]); ctx.stroke(); ctx.setLineDash([]); }
+      var nm = vesselName(k, S.persp);
+      if (S.sel && S.sel.kind === 'vessel' && S.sel.id === k) selectRing(p[0], p[1], 14 * s2 + 4);
+      if (z >= 13 || (z >= 11 && cls[2] === 'v_deep')) label(p[0] + 9 * s2 + 3, p[1] + 4, nm, '#fff');
+      hit(p[0], p[1], Math.max(9, 10 * s2), 'vessel', k, nm, (meta.sc || meta.c) + ', ' + (pos.moving ? (pos.spd * 1.944).toFixed(1) + ' kn' : NAVSTAT[nav] || 'stopped'));
+    }
+    /* vehicles */
+    if (vis('vehicles')) for (k in day.C) {
+      meta = (IDX.units || {})[k] || {k: 'truck', a: '', d: k}; cls = UCLASS[meta.k] || UCLASS.truck; if (!ON[cls[2]]) continue;
+      pos = positionAt(day.C[k], sec); if (!pos) continue; cnt('vehicles'); cnt(cls[2]);
+      p = XY(pos.la, pos.lo); if (!inView(p[0], p[1])) continue;
+      var us = lastChange(day.cs[k], 3, sec) || ['', ''], busy = us[0] === 'ENR' || us[0] === 'TRN' || us[0] === 'ONS';
+      if (z < 11 && !busy) { ctx.fillStyle = cls[1]; ctx.fillRect(p[0] - 1.5, p[1] - 1.5, 3, 3); continue; }
+      if (pos.moving && z >= 12) { var tv = trail(pos, sec, 150); ctx.strokeStyle = us[0] === 'TRN' ? '#ff5d5d' : cls[1]; ctx.globalAlpha = .75; ctx.lineWidth = 2; ctx.beginPath(); for (i = 0; i < tv.length; i++) { var q2 = XY(tv[i][0], tv[i][1]); if (i) ctx.lineTo(q2[0], q2[1]); else ctx.moveTo(q2[0], q2[1]); } ctx.stroke(); ctx.globalAlpha = 1; }
+      var dk = meta.k === 'ambulance' ? DECK.amb : meta.k === 'engine' ? DECK.eng : meta.k === 'patrol' ? DECK.pol : meta.k === 'bus' ? DECK.bus : meta.k === 'highwater' ? DECK.hw : null;
+      drawIcon(p[0], p[1], cls[0], cls[1], pos.hdg, sc * (meta.k === 'bus' ? 1 : .9), {deck: z >= 12 ? dk : null});
+      if (pos.moving && (us[0] === 'ENR' || us[0] === 'TRN') && Math.sin(spin * 1.7) > 0) { ctx.fillStyle = meta.k === 'patrol' ? '#5aa0ff' : '#ff4040'; ctx.beginPath(); ctx.arc(p[0], p[1], 2.4, 0, 6.2832); ctx.fill(); }
+      if (S.sel && S.sel.kind === 'vehicle' && S.sel.id === k) selectRing(p[0], p[1], 14);
+      if (z >= 14) label(p[0] + 8, p[1] + 4, k, '#fff');
+      hit(p[0], p[1], 9, 'vehicle', k, k + ', ' + (meta.d || meta.t || ''), (USTAT[us[0]] || us[0] || 'no status') + (us[1] ? ', incident ' + us[1] : '') + (pos.moving ? ', ' + Math.round(pos.spd * 3.6) + ' km/h' : ''));
+    }
+    /* authorised drones */
+    if (vis('drones')) day.D.forEach(function (f) { pos = positionAt(f.parts, sec); if (!pos) return; cnt('drones'); p = XY(pos.la, pos.lo); if (!inView(p[0], p[1])) return; if (z >= 12) { var tr = trail(pos, sec, 240); ctx.strokeStyle = 'rgba(120,255,220,.7)'; ctx.lineWidth = 1; ctx.beginPath(); for (i = 0; i < tr.length; i++) { var q = XY(tr[i][0], tr[i][1]); if (i) ctx.lineTo(q[0], q[1]); else ctx.moveTo(q[0], q[1]); } ctx.stroke(); } drawIcon(p[0], p[1], /fixed-wing/i.test(f.m.md) ? 'uav' : 'quad', '#7dffdd', pos.hdg, sc * .9); var op = (IDX.drone_ops || {})[f.m.op] || {}; hit(p[0], p[1], 9, 'drone', f.m.id, 'Drone: ' + f.m.ms, (op.n || f.m.op) + ', ' + f.m.md + ', ' + Math.round(pos.z || 0) + ' m above ground'); if (z >= 13) label(p[0] + 9, p[1] + 4, f.m.ms, '#bfffee'); });
+    /* drone detections: what sensors saw, not cooperative aircraft */
+    if (canSee('birds', S.persp) && (ON.det || ON.birds)) day.X.forEach(function (f) {      /* sensor detections belong to the base and port operators */
+      var nat = f.m.c === 'bird' || f.m.c === 'clutter'; if (nat ? !ON.birds : !ON.det) return;
+      pos = positionAt(f.parts, sec); if (!pos) return; cnt(nat ? 'birds' : 'det'); p = XY(pos.la, pos.lo); if (!inView(p[0], p[1])) return;
+      if (nat) { ctx.fillStyle = 'rgba(200,200,200,.55)'; ctx.fillRect(p[0] - 1.5, p[1] - 1.5, 3, 3); return; }
+      var col = f.m.au ? '#7dffdd' : f.m.al ? '#ff4040' : '#ffb347', tr = trail(pos, sec, 120);
+      ctx.strokeStyle = col; ctx.setLineDash([3, 3]); ctx.lineWidth = 1.2; ctx.beginPath(); for (i = 0; i < tr.length; i++) { var q = XY(tr[i][0], tr[i][1]); if (i) ctx.lineTo(q[0], q[1]); else ctx.moveTo(q[0], q[1]); } ctx.stroke(); ctx.setLineDash([]);
+      ctx.save(); ctx.translate(p[0], p[1]); ctx.strokeStyle = col; ctx.lineWidth = 2; ctx.stroke(P2.diamond); ctx.restore(); label(p[0] - 3, p[1] + 4, f.m.au ? '✓' : '?', col);
+      if (f.m.al && !f.m.au) { ctx.strokeStyle = 'rgba(255,64,64,' + (0.5 + 0.5 * Math.sin(spin * 1.3)).toFixed(2) + ')'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(p[0], p[1], 14, 0, 6.2832); ctx.stroke(); }
+      hit(p[0], p[1], 11, 'det', f.m.id, 'Detection: ' + f.m.c + (f.m.au ? ' (authorised flight)' : ''), f.m.k.replace('_', ' ') + ' by ' + f.m.s + ', track ' + f.m.id + ', ' + Math.round(pos.z || 0) + ' m' + (f.m.al ? '; alert raised' : ''));
+    });
+    /* sighting reports: where the observer stood and which way they were looking */
+    if (vis('det')) (IDX.sightings || []).forEach(function (g) {
+      if (g.t > S.t || S.t > g.t + Math.max(1200, g.dur * 60)) return; cnt('det'); p = XY(g.la, g.lo); if (!inView(p[0], p[1])) return;
+      var known = /matched|resolved/.test(g.dp), col = known ? '#7dffdd' : '#ffd24d';
+      if (g.dir !== null) { var a = g.dir * Math.PI / 180, len = 2500 / (40075016 * Math.cos(g.la * Math.PI / 180) / Math.pow(2, z + 8)); var gr = ctx.createLinearGradient(p[0], p[1], p[0] + Math.sin(a) * len, p[1] - Math.cos(a) * len); gr.addColorStop(0, col); gr.addColorStop(1, 'rgba(255,210,77,0)'); ctx.strokeStyle = gr; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(p[0], p[1]); ctx.lineTo(p[0] + Math.sin(a) * len, p[1] - Math.cos(a) * len); ctx.stroke(); }
+      ctx.fillStyle = col; ctx.strokeStyle = '#000'; ctx.lineWidth = 1; ctx.beginPath(); ctx.ellipse(p[0], p[1], 7, 4.5, 0, 0, 6.2832); ctx.fill(); ctx.stroke(); ctx.fillStyle = '#000'; ctx.beginPath(); ctx.arc(p[0], p[1], 2.2, 0, 6.2832); ctx.fill();
+      hit(p[0], p[1], 9, 'sighting', g.id, 'Sighting report, ' + g.who + ', ' + fmtZ(g.t), g.x + ' (' + g.by + '; ' + g.dp + ')');
+    });
+    /* aircraft */
+    if (vis('aircraft')) for (k in day.A) {
+      meta = (IDX.aircraft || {})[k] || {k: 'light', cs: k, md: ''}; cls = ACLASS[meta.k] || ACLASS.light; var grp = meta.k === 'heli' ? 'a_heli' : 'a_fixed'; if (!ON[grp]) continue;
+      pos = positionAt(day.A[k], sec); if (!pos) continue; cnt('aircraft'); cnt(grp);
+      p = XY(pos.la, pos.lo); if (!inView(p[0], p[1], 40)) continue;
+      var ground = pos.z !== null && pos.z < 0, big = meta.k === 'heavy' || meta.k === 'airliner';
+      if (!ground && z >= 8) { var ta = trail(pos, sec, 240); ctx.strokeStyle = 'rgba(255,255,255,.5)'; ctx.lineWidth = 1; ctx.setLineDash([6, 4]); ctx.beginPath(); for (i = 0; i < ta.length; i++) { var q3 = XY(ta[i][0], ta[i][1]); if (i) ctx.lineTo(q3[0], q3[1]); else ctx.moveTo(q3[0], q3[1]); } ctx.stroke(); ctx.setLineDash([]); }
+      if (!ground) { ctx.fillStyle = 'rgba(0,0,0,.28)'; ctx.beginPath(); ctx.ellipse(p[0] + 5, p[1] + 7, 7 * sc, 3 * sc, 0, 0, 6.2832); ctx.fill(); }
+      ctx.globalAlpha = ground ? .7 : 1;
+      drawIcon(p[0], p[1], cls[0], cls[1], pos.hdg, sc * (big ? 1.25 : 1) * (ground ? .8 : 1), {spin: ground ? 0 : spin});
+      ctx.globalAlpha = 1;
+      var ni = day.an[k], degraded = false; if (ni) for (i = 0; i < ni.length; i += 2) if (ni[i] <= sec && sec <= ni[i + 1]) degraded = true;
+      if (degraded) { ctx.strokeStyle = '#ff4fd8'; ctx.setLineDash([2, 2]); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(p[0], p[1], 15, 0, 6.2832); ctx.stroke(); ctx.setLineDash([]); }
+      if (S.sel && S.sel.kind === 'aircraft' && S.sel.id === k) selectRing(p[0], p[1], 17);
+      var cs = meta.cs || k; if (z >= 10) label(p[0] + 12, p[1] - 4, cs + (ground ? '' : ' ' + Math.round((pos.z || 0) * 3.281 / 100) * 100 + ' ft'), '#fff');
+      hit(p[0], p[1], 12, 'aircraft', k, cs + ', ' + (meta.md || meta.k), (meta.op || '') + '; ' + (ground ? 'on the ground' : Math.round((pos.z || 0) * 3.281) + ' ft, ' + Math.round(pos.spd * 1.944) + ' kt') + (degraded ? '; position integrity degraded' : ''));
+    }
+  }
+  function selectRing(x, y, r) { ctx.strokeStyle = '#4fb3d9'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, r, 0, 6.2832); ctx.stroke(); ctx.strokeStyle = 'rgba(79,179,217,.4)'; ctx.lineWidth = 6; ctx.stroke(); if (S.follow) map.panTo(map.containerPointToLatLng([x, y]), {animate: false}); }
+
+  /* ---------------- events */
+  function evActive(e) { return e.t1 ? e.t1 : e.t + DAY; }
+  function drawEvents() {
+    if (!vis('events')) return;
+    var z = map.getZoom(), wide = {}, ev = IDX.events || [], n = 0;
+    for (var i = 0; i < ev.length; i++) {
+      var e = ev[i]; if (e.t > S.t) break; if (!eventVisible(e, S.persp, S.t)) continue; n++;
+      if (e.la === undefined) continue;
+      var age = S.t - e.t, live = S.t <= evActive(e), fresh = age < 6 * 3600;
+      if (e.aw) { if (live) { var key = e.la + ',' + e.lo; (wide[key] = wide[key] || []).push(e); } continue; }
+      var p = XY(e.la, e.lo); if (!inView(p[0], p[1])) continue;
+      var col = e.k === 'f' ? '#4fb3d9' : '#e5534b';
+      ctx.globalAlpha = fresh ? 1 : live ? .9 : .38;
+      ctx.save(); ctx.translate(p[0], p[1]); ctx.scale(fresh ? 1.35 : live ? 1.1 : .85, fresh ? 1.35 : live ? 1.1 : .85); ctx.fillStyle = col; ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.2; ctx.fill(P2.pin); ctx.stroke(P2.pin); ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(0, -11, 2.2, 0, 6.2832); ctx.fill(); ctx.restore();
+      if (fresh) { ctx.strokeStyle = col; ctx.lineWidth = 2; ctx.globalAlpha = Math.max(0, 1 - ((spin * .12) % 1)); ctx.beginPath(); ctx.arc(p[0], p[1], 6 + ((spin * .12) % 1) * 22, 0, 6.2832); ctx.stroke(); }
+      ctx.globalAlpha = 1;
+      if (S.sel && S.sel.kind === 'event' && S.sel.id === e.id) selectRing(p[0], p[1] - 10, 16);
+      if (z >= 12 && live) label(p[0] + 9, p[1] - 12, e.id, '#fff');
+      hit(p[0], p[1] - 9, 11, 'event', e.id, (e.k === 'f' ? 'Published: ' : 'Event: ') + e.id + ', ' + fmtShort(e.t), e.x.slice(0, 220) + (e.x.length > 220 ? '…' : ''));
+    }
+    Object.keys(wide).forEach(function (k) { var l = wide[k], p = XY(l[0].la, l[0].lo); if (!inView(p[0], p[1])) return; ctx.fillStyle = 'rgba(79,179,217,.9)'; ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(p[0], p[1], 11, 0, 6.2832); ctx.fill(); ctx.stroke(); ctx.font = '700 11px system-ui'; ctx.fillStyle = '#06222d'; ctx.textAlign = 'center'; ctx.fillText(l.length, p[0], p[1] + 4); ctx.textAlign = 'left'; hit(p[0], p[1], 12, 'eventgroup', k, l.length + ' area-wide ' + (l.length === 1 ? 'event' : 'events') + ' (' + (l[0].pn || '') + ')', l.slice(-3).map(function (e) { return e.id; }).join(', ')); });
+    S.evShown = n;
+  }
+  function drawStormMark() {
+    var st = stormAt(S.t); if (!st || st.vmax < 22) return;
+    var p = XY(st.lat, st.lon); ctx.strokeStyle = '#fff'; ctx.lineWidth = 2.5;
+    for (var a = 0; a < 2; a++) { ctx.beginPath(); for (var i = 0; i <= 24; i++) { var th = a * Math.PI + i / 24 * 3.6 + spin * .25, r = 5 + i * .9; var x = p[0] + r * Math.cos(th), y = p[1] + r * Math.sin(th); if (i) ctx.lineTo(x, y); else ctx.moveTo(x, y); } ctx.stroke(); }
+    ctx.fillStyle = '#e5534b'; ctx.beginPath(); ctx.arc(p[0], p[1], 5, 0, 6.2832); ctx.fill();
+    label(p[0] + 28, p[1] + 4, 'Rafael, ' + stormCategory(st.vmax) + ', ' + Math.round(st.vmax) + ' kt, ' + Math.round(st.pc) + ' mb', '#fff');
+    if (map.getZoom() <= 9) { ctx.strokeStyle = 'rgba(255,255,255,.5)'; ctx.setLineDash([4, 5]); ctx.lineWidth = 1.5; ctx.beginPath(); TRK.forEach(function (t, i) { var q = XY(t[1], t[2]); if (i) ctx.lineTo(q[0], q[1]); else ctx.moveTo(q[0], q[1]); }); ctx.stroke(); ctx.setLineDash([]); }
+  }
+
+  /* ---------------- panels */
+  function updateTop(day, sec) {
+    $('clock').innerHTML = dLabel(S.t) + ' · ' + fmtLocal(S.t) + '<small>' + fmtZ(S.t) + ' · ' + (S.playing ? 'playing' : 'paused') + ' · perspective: ' + {T: 'Truth', P: 'Public', C: 'Civilian', D: 'DoD', I: 'IC'}[S.persp] + '</small>';
+    var pa = portAt(S.t), inner = pa.seg['SEG-INNER-E'] || pa.seg['SEG-BAY'] || '';
+    $('port').innerHTML = '<span class="dot" style="background:' + statColor(inner) + '"></span>Port <b>' + (pa.pc || '—') + (inner ? ' · ' + inner.toLowerCase() : '') + '</b>';
+    var st = stormAt(S.t);
+    if (st && st.vmax >= 22) { var dnm = distBearingNm(27.80, -97.40, st.lat, st.lon)[0]; $('storm').style.display = ''; $('storm').innerHTML = 'Rafael <b>' + stormCategory(st.vmax) + ' ' + Math.round(st.vmax) + ' kt · ' + Math.round(dnm) + ' nm from Corpus Christi</b>'; } else $('storm').style.display = 'none';
+    var out = 0, served = 0; if (day && day.o) { var slot = Math.min(23, Math.floor(sec / 3600)); for (var k in day.o) { var r = day.o[k][slot]; if (r) { out += r[0]; served += r[1]; } } }
+    if (out > 0) { $('outchip').style.display = ''; $('outchip').innerHTML = 'Customers out <b>' + out.toLocaleString() + '</b>'; } else $('outchip').style.display = 'none';
+    var html = '';
+    (IDX.alerts || []).forEach(function (a) { if (a.t > S.t || (a.x && a.x < S.t)) return; var es = a.es === null ? 'no Spanish release' : a.es > S.t ? 'Spanish pending' : ''; html += '<span class="chip alert' + (/Boil|Advisory|Watch/i.test(a.ty) ? ' adv' : '') + '" title="' + a.h.replace(/"/g, '&quot;') + '">' + a.ty.replace(/([a-z])([A-Z])/g, '$1 $2') + (es ? ' · <b>' + es + '</b>' : '') + '</span>'; });
+    $('alerts').innerHTML = html;
+    var el = sunElevation(S.t, 27.8, -97.4); $('night').style.opacity = (Math.max(0, Math.min(1, (4 - el) / 12)) * S.op.night).toFixed(2);
+    $('fine').value = Math.round((S.t - T_MIN) / 900);
+  }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
+  function updatePanels() {
+    LAYERS.forEach(function (l) { var el = $('n-' + l[0]); if (el) el.textContent = canSee(l[0], S.persp) ? (S.counts[l[0]] !== undefined ? S.counts[l[0]] : (l[0] === 'events' ? (S.evShown || 0) : '')) : '—'; (l[3] || []).forEach(function (s) { var e2 = $('n-' + s[0]); if (e2) e2.textContent = S.counts[s[0]] || 0; }); });
+    var ev = IDX.events || [], rows = [], w = S.evwin * 3600;
+    for (var i = ev.length - 1; i >= 0; i--) { var e = ev[i]; if (e.t > S.t) { if (S.persp === 'T' && w && e.t - S.t <= w) rows.push([e, true]); continue; } if (w && S.t - e.t > w) break; if (eventVisible(e, S.persp, S.t)) rows.push([e, false]); if (rows.length > 120) break; }
+    $('evcount').textContent = '(' + rows.length + ')';
+    $('events').innerHTML = rows.map(function (r) { var e = r[0], fresh = !r[1] && S.t - e.t < 6 * 3600; return '<div class="ev ' + (e.k === 'f' ? 'fact' : 'hidden-ev') + (fresh ? ' now' : '') + '" data-id="' + esc(e.id) + '"' + (r[1] ? ' style="opacity:.55"' : '') + '><div class="h"><span>' + esc(e.id) + '</span><span>' + (e.k === 'f' ? 'published' : 'ground truth') + (r[1] ? ' · upcoming' : '') + '</span><span>' + dLabel(e.t) + ' ' + fmtShort(e.t) + '</span></div><p>' + esc(e.x.length > 260 ? e.x.slice(0, 260) + '…' : e.x) + '</p>' + (e.pn ? '<div class="muted">' + esc(e.pn) + (e.aw ? ' (area-wide)' : '') + (e.th && e.th.length && S.persp === 'T' ? ' · ' + esc(e.th.join(', ')) : '') + '</div>' : '') + '</div>'; }).join('') || '<div class="muted">Nothing in this window for this audience.</div>';
+    renderSel();
+  }
+  function row(k, v) { return v === '' || v == null ? '' : '<tr><td>' + k + '</td><td>' + esc(v) + '</td></tr>'; }
+  function renderSel() {
+    var s = S.sel, el = $('sel'); if (!s) { el.style.display = 'none'; return; }
+    var day = RM.days[dayIndex(S.t)], sec = S.t - D0 - dayIndex(S.t) * DAY, h = '', pos, m, truth = '';
+    if (s.kind === 'vessel') { m = (IDX.vessels || {})[s.id] || {}; pos = day && day.V && day.V[s.id] ? positionAt(day.V[s.id], sec) : null; var st = day && day.vs ? lastChange(day.vs[s.id], 2, sec) : null;
+      h = '<h4>' + esc(vesselName(s.id, S.persp)) + '</h4><div class="k">' + esc(m.sc || m.c || 'vessel') + '</div><table>' + row('MMSI', s.id) + row('Flag', m.fl) + row('Operator', m.np && (S.persp === 'P' || S.persp === 'C') ? '' : m.op) + row('Size', m.len ? m.len + ' m × ' + m.bm + ' m, draft ' + m.dr + ' m' : '') + row('Status', pos ? (pos.moving ? 'under way, ' + (pos.spd * 1.944).toFixed(1) + ' kn, heading ' + Math.round(pos.hdg || 0) + '°' : (NAVSTAT[st ? st[0] : 5] || 'stopped')) : 'no AIS position at this time') + row('Position', pos ? pos.la.toFixed(5) + ', ' + pos.lo.toFixed(5) : '') + '</table>'; truth = m.tr; }
+    else if (s.kind === 'aircraft') { m = (IDX.aircraft || {})[s.id] || {}; pos = day && day.A && day.A[s.id] ? positionAt(day.A[s.id], sec) : null;
+      h = '<h4>' + esc(m.cs || s.id) + '</h4><div class="k">' + esc(m.md || '') + '</div><table>' + row('ICAO24', s.id) + row('Registration', m.reg) + row('Operator', m.op) + row('Role', m.rl) + row('Status', pos ? (pos.z < 0 ? 'on the ground' : Math.round(pos.z * 3.281) + ' ft, ' + Math.round(pos.spd * 1.944) + ' kt, track ' + Math.round(pos.hdg || 0) + '°') : 'not in ADS-B coverage at this time') + row('Position', pos ? pos.la.toFixed(5) + ', ' + pos.lo.toFixed(5) : '') + '</table>'; truth = m.tr; }
+    else if (s.kind === 'vehicle') { m = (IDX.units || {})[s.id] || {}; pos = day && day.C && day.C[s.id] ? positionAt(day.C[s.id], sec) : null; var us = day && day.cs ? lastChange(day.cs[s.id], 3, sec) : null;
+      h = '<h4>' + esc(s.id) + '</h4><div class="k">' + esc(m.d || m.t || '') + '</div><table>' + row('Agency', (IDX.agencies || {})[m.a] || m.a) + row('Home station', m.hs) + row('Status', us ? (USTAT[us[0]] || us[0]) : '') + row('Incident', us ? us[1] : '') + row('Speed', pos && pos.moving ? Math.round(pos.spd * 3.6) + ' km/h' : pos ? 'stopped' : '') + row('Position', pos ? pos.la.toFixed(5) + ', ' + pos.lo.toFixed(5) : 'no AVL fix at this time') + '</table>'; }
+    else if (s.kind === 'event') { var e = (IDX.events || []).filter(function (x) { return x.id === s.id; })[0]; if (e) h = '<h4>' + esc(e.id) + '</h4><div class="k">' + (e.k === 'f' ? 'published ' : 'ground-truth event, ') + dLabel(e.t) + ' · ' + fmtLocal(e.t) + '</div><p>' + esc(e.x) + '</p><table>' + row('Place', e.pn) + (S.persp === 'T' ? row('Threads', (e.th || []).map(function (t) { return t + ' ' + ((IDX.threads || {})[t] || ''); }).join('; ')) + row('Reveals', (e.ev || []).join(', ')) + row('Observable', e.k === 'm' ? (e.ob ? 'yes, in delivered streams' : 'no') : '') : '') + '</table>'; }
+    else { h = '<h4>' + esc(s.title) + '</h4><div class="k">' + esc(s.sub || '') + '</div>'; if (s.kind === 'infra') { var a = (IDX.infrastructure || []).filter(function (x) { return x.id === s.id; })[0]; if (a) { h += '<table>' + row('Id', a.id) + row('Also known as', (a.al || []).join(', ')) + '</table>'; truth = a.tr; } } }
+    if (truth && S.persp === 'T') h += '<div class="truth"><b>Ground truth:</b> ' + esc(truth) + '</div>';
+    el.innerHTML = h + '<button id="selclose">Clear selection</button>'; el.style.display = '';
+    $('selclose').onclick = function () { S.sel = null; dirty = true; };
+  }
+
+  /* ---------------- timeline */
+  var tl = $('tl'), tctx = tl.getContext('2d'), TW = 0, TH = 54, tlBase = null;
+  function sizeTimeline() { var r = tl.getBoundingClientRect(); TW = Math.round(r.width); tl.width = TW * DPR; tl.height = TH * DPR; tlBase = null; dirty = true; }
+  function tx(t) { return (t - T_MIN) / (T_MAX - T_MIN) * TW; }
+  function buildTimelineBase() {
+    var c = document.createElement('canvas'); c.width = TW * DPR; c.height = TH * DPR; var g = c.getContext('2d'); g.setTransform(DPR, 0, 0, DPR, 0, 0);
+    for (var x = 0; x < TW; x++) { var t = T_MIN + (x + .5) / TW * (T_MAX - T_MIN), el = sunElevation(t, 27.8, -97.4), d = Math.max(0, Math.min(1, (el + 6) / 18)); g.fillStyle = 'rgb(' + Math.round(14 + 40 * d) + ',' + Math.round(22 + 52 * d) + ',' + Math.round(34 + 62 * d) + ')'; g.fillRect(x, 0, 1, TH); }
+    var mx = 1, k; for (k in SUM) mx = Math.max(mx, SUM[k].i + SUM[k].vx / 40);
+    g.fillStyle = 'rgba(79,179,217,.75)';
+    for (k in SUM) { var x0 = tx(D0 + k * DAY), x1 = tx(D0 + (+k + 1) * DAY), hgt = Math.sqrt((SUM[k].i + SUM[k].vx / 40) / mx) * (TH - 22); g.fillRect(x0 + .5, TH - 4 - hgt, Math.max(1, x1 - x0 - 1), hgt); }
+    g.fillStyle = 'rgba(229,83,75,.9)'; g.fillRect(tx(LANDFALL) - 1, 0, 2, TH);
+    g.font = '600 10px system-ui'; g.fillStyle = '#cdd9e5';
+    for (var dd = -30; dd <= 119; dd += 10) { var xx = tx(D0 + dd * DAY + 5 * 3600); g.fillStyle = 'rgba(255,255,255,.35)'; g.fillRect(xx, 0, 1, 6); g.fillStyle = '#cdd9e5'; g.fillText('D' + (dd >= 0 ? '+' : '−') + Math.abs(dd), xx + 3, 11); }
+    (IDX.milestones || []).forEach(function (m) { if (m.t < T_MIN || m.t > T_MAX) return; var xm = tx(m.t); g.fillStyle = '#f2b632'; g.beginPath(); g.moveTo(xm, TH - 4); g.lineTo(xm - 4, TH); g.lineTo(xm + 4, TH); g.closePath(); g.fill(); g.fillRect(xm - .5, 14, 1, TH - 18); });
+    return c;
+  }
+  function drawTimeline() {
+    if (!TW) return; if (!tlBase) tlBase = buildTimelineBase();
+    tctx.setTransform(1, 0, 0, 1, 0, 0); tctx.drawImage(tlBase, 0, 0); tctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    var x = tx(S.t); tctx.fillStyle = '#fff'; tctx.fillRect(x - 1, 0, 2, TH); tctx.beginPath(); tctx.moveTo(x - 6, 0); tctx.lineTo(x + 6, 0); tctx.lineTo(x, 8); tctx.closePath(); tctx.fill();
+  }
+  function tlTime(ev) { var r = tl.getBoundingClientRect(); var f = Math.max(0, Math.min(1, (ev.clientX - r.left) / r.width)); return Math.round((T_MIN + f * (T_MAX - T_MIN)) / 900) * 900; }
+  var dragging = false;
+  tl.addEventListener('pointerdown', function (e) { dragging = true; tl.setPointerCapture(e.pointerId); setTime(tlTime(e)); });
+  tl.addEventListener('pointermove', function (e) { if (dragging) setTime(tlTime(e)); else { var t = tlTime(e), best = null; (IDX.milestones || []).forEach(function (m) { if (Math.abs(tx(m.t) - tx(t)) < 6) best = m; }); $('tlhint').textContent = best ? best.l + ' · ' + fmtShort(best.t) : dLabel(t) + ' · ' + fmtShort(t); } });
+  tl.addEventListener('pointerup', function () { dragging = false; });
+
+  /* ---------------- controls */
+  function setTime(t) { S.t = Math.max(T_MIN, Math.min(T_MAX, t)); dirty = true; }
+  function setPlaying(p) { S.playing = p; $('play').textContent = p ? 'Pause' : 'Play'; dirty = true; }
+  $('play').onclick = function () { setPlaying(!S.playing); };
+  $('speed').onchange = function () { S.speed = +this.value; };
+  $('follow').onchange = function () { S.follow = this.checked; dirty = true; };
+  $('fine').max = Math.round((T_MAX - T_MIN) / 900);
+  $('fine').oninput = function () { setTime(T_MIN + this.value * 900); };
+  Array.prototype.forEach.call(document.querySelectorAll('#ctl button[data-step]'), function (b) { b.onclick = function () { setTime(Math.round((S.t + (+b.dataset.step)) / 900) * 900); }; });
+  document.addEventListener('keydown', function (e) {
+    if (/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
+    var st = e.shiftKey ? 3600 : 900;
+    if (e.key === ' ') { e.preventDefault(); setPlaying(!S.playing); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); setTime(Math.round((S.t + st) / 900) * 900); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); setTime(Math.round((S.t - st) / 900) * 900); }
+    else if (e.key === 'PageDown') { e.preventDefault(); setTime(S.t + DAY); } else if (e.key === 'PageUp') { e.preventDefault(); setTime(S.t - DAY); }
+  });
+  ['cloud', 'rain', 'acc', 'wind', 'surge', 'night'].forEach(function (k) { $('o-' + k).oninput = function () { S.op[k] = this.value / 100; $('v-' + k).textContent = this.value + '%'; dirty = true; }; });
+  Array.prototype.forEach.call(document.querySelectorAll('#persp button'), function (b) { b.onclick = function () { S.persp = b.dataset.p; Array.prototype.forEach.call(document.querySelectorAll('#persp button'), function (x) { x.classList.toggle('on', x === b); }); buildLayers(); if (S.sel && !selAllowed()) S.sel = null; dirty = true; }; });
+  Array.prototype.forEach.call(document.querySelectorAll('#evwin button'), function (b) { b.onclick = function () { S.evwin = +b.dataset.w; Array.prototype.forEach.call(document.querySelectorAll('#evwin button'), function (x) { x.classList.toggle('on', x === b); }); dirty = true; }; });
+  Array.prototype.forEach.call(document.querySelectorAll('#basesel button'), function (b) { b.onclick = function () { S.base = b.dataset.b; Array.prototype.forEach.call(document.querySelectorAll('#basesel button'), function (x) { x.classList.toggle('on', x === b); }); if (S.base === 'sat') sat.addTo(map); else map.removeLayer(sat); dirty = true; }; });
+  if (window.__mapFallback) {              /* map library not loaded: offline chart only */
+    S.base = 'ref';
+    Array.prototype.forEach.call(document.querySelectorAll('#basesel button'), function (x) { x.classList.toggle('on', x.dataset.b === 'ref'); if (x.dataset.b === 'sat') { x.disabled = true; x.title = 'Needs an internet connection'; } });
+    var note = document.createElement('div');
+    note.textContent = 'Offline mode: map library and satellite imagery unavailable, showing the built-in chart.';
+    note.style.cssText = 'position:absolute;left:50px;top:10px;z-index:500;background:rgba(10,15,20,.8);color:#cde;font:12px system-ui,sans-serif;padding:6px 10px;border-radius:4px;pointer-events:none';
+    $('mapwrap').appendChild(note);
+  }
+  function selAllowed() { var k = S.sel.kind; return k === 'vessel' ? canSee('vessels', S.persp) : k === 'vehicle' ? canSee('vehicles', S.persp) : k === 'aircraft' ? true : true; }
+  var NOTE = {T: 'Everything: all logs, hidden events, internal roles, vessels seen only by radar.', P: 'Open sources only: broadcast AIS and ADS-B, public sensors and alerts, published facts from the day they were published. Names that were never made public are withheld.',
+              C: 'Civil authorities: the public picture plus dispatch, vehicles, rescues, drone surveys and damage assessments.', D: 'Defense: the public picture plus base and port sensors, drone detections, rescues, and events in the defense lane.',
+              I: 'Intelligence: adds port surveillance contacts, all detections, and events in the intelligence lane.'};
+  function buildLayers() {
+    $('pnote').textContent = NOTE[S.persp];
+    var h = '';
+    LAYERS.forEach(function (l) { var ok = canSee(l[0], S.persp); h += '<label class="layer' + (ok ? '' : ' off') + '" title="' + (ok ? '' : 'Not available to this audience') + '"><input type="checkbox" data-l="' + l[0] + '"' + (ON[l[0]] && ok ? ' checked' : '') + (ok ? '' : ' disabled') + '>' + l[1] + '<span class="n" id="n-' + l[0] + '"></span></label>'; if (l[3] && ok) h += '<div class="sub">' + l[3].map(function (s) { return '<label class="layer"><input type="checkbox" data-l="' + s[0] + '"' + (ON[s[0]] ? ' checked' : '') + '>' + s[1] + '<span class="n" id="n-' + s[0] + '"></span></label>'; }).join('') + '</div>'; });
+    $('layers').innerHTML = h;
+    Array.prototype.forEach.call(document.querySelectorAll('#layers input'), function (i) { i.onchange = function () { ON[i.dataset.l] = i.checked; dirty = true; }; });
+  }
+  function svgIcon(key, color, extra) { return '<svg width="22" height="22" viewBox="-13 -13 26 26"><path d="' + P[key] + '" fill="' + (key === 'quad' ? 'none' : color) + '" stroke="' + (key === 'quad' || extra === 'hollow' ? color : '#000') + '" stroke-width="' + (key === 'quad' ? 1.6 : .8) + '"' + (extra === 'hollow' ? ' fill-opacity="0" stroke-dasharray="2.5 2"' : '') + '/>' + (key === 'heliBody' ? '<circle cx="0" cy="-1" r="9" fill="none" stroke="#ddd" stroke-width="1"/>' : '') + '</svg>'; }
+  $('legend').innerHTML = [['ship', '#e0503c', 'Tanker'], ['ship', '#f08a24', 'LNG carrier'], ['ship', '#c9a26b', 'Cargo, bulk'], ['tug', '#f2c230', 'Tug'], ['ferry', '#2ed3b7', 'Ferry'], ['small', '#ffffff', 'Pilot boat'], ['navy', '#ff6a1a', 'Coast Guard'], ['navy', '#9aa7b4', 'Navy'],
+    ['small', '#39b56a', 'Fishing'], ['ship', '#ff4fd8', 'Radar only, no AIS', 'hollow'], ['heliBody', '#ffe14d', 'Helicopter'], ['plane', '#eaf2ff', 'Light aircraft'], ['trainer', '#ffd9a0', 'Trainer'], ['heavy', '#ffffff', 'Airliner, airlift'], ['uav', '#9ee6ff', 'Unmanned aircraft'],
+    ['car', '#ffffff', 'Ambulance'], ['truck', '#e0392b', 'Fire engine'], ['car', '#2f6fe0', 'Police'], ['bus', '#f5c518', 'Bus'], ['truck', '#7c8f3a', 'High-water vehicle'], ['quad', '#7dffdd', 'Authorised drone'], ['diamond', '#ffb347', 'Drone detection', 'hollow'], ['pin', '#e5534b', 'Hidden event'], ['pin', '#4fb3d9', 'Published fact']]
+    .map(function (r) { return '<div>' + svgIcon(r[0], r[1], r[3]) + r[2] + '</div>'; }).join('');
+  $('events').addEventListener('click', function (e) { var d = e.target.closest('.ev'); if (!d) return; var ev = (IDX.events || []).filter(function (x) { return x.id === d.dataset.id; })[0]; if (!ev) return; S.sel = {kind: 'event', id: ev.id}; if (ev.la !== undefined) map.setView([ev.la, ev.lo], Math.max(map.getZoom(), 12)); dirty = true; });
+
+  /* ---------------- pointer: hover and select */
+  function nearest(x, y) { var best = null, bd = 1e9, pri = {vessel: 0, aircraft: 0, vehicle: 0, radar: 0, det: 0, drone: 0}; for (var i = S.hits.length - 1; i >= 0; i--) { var h = S.hits[i], d = Math.hypot(h[0] - x, h[1] - y) - (h[3] in pri ? 3 : 0); if (d <= h[2] + 2 && d < bd) { bd = d; best = h; } } return best; }
+  map.on('mousemove', function (e) { var h = nearest(e.containerPoint.x, e.containerPoint.y), tip = $('tip'); if (!h) { tip.style.display = 'none'; $('map').style.cursor = ''; return; } tip.innerHTML = '<b>' + esc(h[5]) + '</b>' + (h[6] ? '<br><span class="muted">' + esc(h[6]) + '</span>' : ''); tip.style.display = 'block'; tip.style.left = Math.min(W - 290, e.containerPoint.x + 14) + 'px'; tip.style.top = Math.min(H - 60, e.containerPoint.y + 14) + 'px'; $('map').style.cursor = 'pointer'; });
+  map.on('mouseout', function () { $('tip').style.display = 'none'; });
+  map.on('click', function (e) { var h = nearest(e.containerPoint.x, e.containerPoint.y); S.sel = h ? {kind: h[3], id: h[4], title: h[5], sub: h[6]} : null; dirty = true; });
+
+  window.addEventListener('resize', resize);
+  window.__rafael = {S: S, ON: ON, setTime: setTime, frame: frame, map: map};      /* for the smoke test in _test/smoke.js */
+  buildLayers(); resize(); requestAnimationFrame(frame);
+  if (!RM.index) $('clock').innerHTML = 'Map data not found<small>run python scripts/build_map.py --resume</small>';
+})();
+</script>
+</body>
+</html>

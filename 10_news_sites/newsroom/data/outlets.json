@@ -1,0 +1,295 @@
+[
+ {
+  "id": "OUT-01",
+  "slug": "ledger",
+  "name": "The Bayside Ledger",
+  "kind": "Local daily newspaper",
+  "site": "bayside-ledger.example",
+  "lang": "en",
+  "sections": [
+   {
+    "name": "Local",
+    "slug": "local",
+    "count": 82
+   },
+   {
+    "name": "Weather",
+    "slug": "weather",
+    "count": 11
+   },
+   {
+    "name": "Business",
+    "slug": "business",
+    "count": 28
+   },
+   {
+    "name": "Health",
+    "slug": "health",
+    "count": 23
+   },
+   {
+    "name": "Military",
+    "slug": "military",
+    "count": 2
+   },
+   {
+    "name": "Investigations",
+    "slug": "investigations",
+    "count": 16
+   },
+   {
+    "name": "Opinion",
+    "slug": "opinion",
+    "count": 13
+   }
+  ],
+  "count": 175,
+  "authors": [
+   "Dana Whitlock",
+   "Ellie Navarro",
+   "Grant Okafor",
+   "Marisol Treviño",
+   "Ruben Castañeda"
+  ]
+ },
+ {
+  "id": "OUT-02",
+  "slug": "harborline6",
+  "name": "Harborline 6 News",
+  "kind": "Local TV station",
+  "site": "harborline6.example",
+  "lang": "en",
+  "sections": [
+   {
+    "name": "Breaking",
+    "slug": "breaking",
+    "count": 28
+   },
+   {
+    "name": "Local",
+    "slug": "local",
+    "count": 61
+   },
+   {
+    "name": "Weather",
+    "slug": "weather",
+    "count": 5
+   },
+   {
+    "name": "Traffic",
+    "slug": "traffic",
+    "count": 5
+   }
+  ],
+  "count": 99,
+  "authors": [
+   "Keisha Monroe",
+   "Tyler Brandt"
+  ]
+ },
+ {
+  "id": "OUT-03",
+  "slug": "coastline",
+  "name": "Coastline Public Radio",
+  "kind": "Regional public radio",
+  "site": "coastline-radio.example",
+  "lang": "en",
+  "sections": [
+   {
+    "name": "Environment",
+    "slug": "environment",
+    "count": 14
+   },
+   {
+    "name": "Equity",
+    "slug": "equity",
+    "count": 35
+   },
+   {
+    "name": "Health",
+    "slug": "health",
+    "count": 8
+   },
+   {
+    "name": "Military & Community",
+    "slug": "military-community",
+    "count": 27
+   },
+   {
+    "name": "Investigations",
+    "slug": "investigations",
+    "count": 1
+   }
+  ],
+  "count": 85,
+  "authors": [
+   "Priya Raman",
+   "Sam Delacroix"
+  ]
+ },
+ {
+  "id": "OUT-04",
+  "slug": "gulfwater",
+  "name": "Gulfwater Maritime Report",
+  "kind": "Maritime trade publication",
+  "site": "gulfwater-maritime.example",
+  "lang": "en",
+  "sections": [
+   {
+    "name": "Ports",
+    "slug": "ports",
+    "count": 33
+   },
+   {
+    "name": "Tankers",
+    "slug": "tankers",
+    "count": 12
+   },
+   {
+    "name": "Security",
+    "slug": "security",
+    "count": 17
+   },
+   {
+    "name": "Regulation",
+    "slug": "regulation",
+    "count": 11
+   }
+  ],
+  "count": 73,
+  "authors": [
+   "Henrik Aalto"
+  ]
+ },
+ {
+  "id": "OUT-05",
+  "slug": "sabal",
+  "name": "Sabal Energy Wire",
+  "kind": "Energy and markets wire",
+  "site": "sabal-energy.example",
+  "lang": "en",
+  "sections": [
+   {
+    "name": "Crude",
+    "slug": "crude",
+    "count": 30
+   },
+   {
+    "name": "Refining",
+    "slug": "refining",
+    "count": 2
+   },
+   {
+    "name": "Power & Utilities",
+    "slug": "power-utilities",
+    "count": 9
+   },
+   {
+    "name": "Markets",
+    "slug": "markets",
+    "count": 32
+   },
+   {
+    "name": "Policy",
+    "slug": "policy",
+    "count": 1
+   }
+  ],
+  "count": 74,
+  "authors": [
+   "Lucia Ferraro"
+  ]
+ },
+ {
+  "id": "OUT-06",
+  "slug": "continental",
+  "name": "Continental Wire Service",
+  "kind": "National news wire",
+  "site": "continental-wire.example",
+  "lang": "en",
+  "sections": [
+   {
+    "name": "National",
+    "slug": "national",
+    "count": 33
+   },
+   {
+    "name": "Security",
+    "slug": "security",
+    "count": 9
+   },
+   {
+    "name": "World",
+    "slug": "world",
+    "count": 2
+   }
+  ],
+  "count": 44,
+  "authors": [
+   "Noah Pemberton"
+  ]
+ },
+ {
+  "id": "OUT-07",
+  "slug": "anchor-rotor",
+  "name": "Anchor & Rotor Weekly",
+  "kind": "Military community weekly",
+  "site": "anchor-rotor.example",
+  "lang": "en",
+  "sections": [
+   {
+    "name": "Base News",
+    "slug": "base-news",
+    "count": 25
+   },
+   {
+    "name": "Readiness",
+    "slug": "readiness",
+    "count": 6
+   },
+   {
+    "name": "Families",
+    "slug": "families",
+    "count": 20
+   }
+  ],
+  "count": 51,
+  "authors": [
+   "Carla Benavides"
+  ]
+ },
+ {
+  "id": "OUT-08",
+  "slug": "kncb",
+  "name": "KNCB Coastal Bend Radio",
+  "kind": "Spanish-language AM radio (1480 AM)",
+  "site": "kncb1480.example",
+  "lang": "es",
+  "sections": [
+   {
+    "name": "Emergencias",
+    "slug": "emergencias",
+    "count": 29
+   },
+   {
+    "name": "Local",
+    "slug": "local",
+    "count": 20
+   },
+   {
+    "name": "Comunidad",
+    "slug": "comunidad",
+    "count": 20
+   },
+   {
+    "name": "Salud",
+    "slug": "salud",
+    "count": 11
+   }
+  ],
+  "count": 80,
+  "authors": [
+   "Carla Benavides"
+  ]
+ }
+]

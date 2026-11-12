@@ -1,0 +1,82 @@
+{
+  "scenario": "Hurricane Rafael",
+  "schema_version": "1.0",
+  "d0_date": "2027-09-14",
+  "d0_landfall_time_utc": "06:00Z",
+  "local_timezone": "America/Chicago",
+  "day_range": [
+    -60,
+    119
+  ],
+  "calendar_note": "All scenario time is relative to D0 (landfall). Change d0_date to remap every output; nothing else stores calendar dates.",
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Baseline",
+      "start_day": -60,
+      "end_day": -31
+    },
+    {
+      "phase": 2,
+      "name": "Signals",
+      "start_day": -30,
+      "end_day": -1
+    },
+    {
+      "phase": 3,
+      "name": "Landfall",
+      "start_day": 0,
+      "end_day": 29
+    },
+    {
+      "phase": 4,
+      "name": "Response",
+      "start_day": 30,
+      "end_day": 59
+    },
+    {
+      "phase": 5,
+      "name": "Recovery",
+      "start_day": 60,
+      "end_day": 89
+    },
+    {
+      "phase": 6,
+      "name": "Review",
+      "start_day": 90,
+      "end_day": 119
+    }
+  ],
+  "id_formats": {
+    "story": "NWS-M045-01 for day -45; NWS-P000-03 for day 0; NWS-P112-02 for day 112 (M = minus, P = zero or plus)",
+    "character": "CHR-###",
+    "outlet": "OUT-##",
+    "arc": "ARC-NAME",
+    "public_fact": "PUB-###",
+    "event": "EVT-#### (ground truth, internal only)"
+  },
+  "realism_rules": [
+    "Real: places, counties, military installations, ports, infrastructure, government agencies.",
+    "Fictional: people, companies, news outlets, ship and aircraft identities, the storm, the foreign sponsor (never named).",
+    "Never name or quote real elected officials or agency heads; quotes come from fictional spokespeople, residents, workers and experts in characters.json.",
+    "Misconduct belongs only to fictional companies, people and the unnamed foreign state.",
+    "Counts, dollar amounts and damage are scenario values, not real statistics."
+  ],
+  "public_exclusions": {
+    "places": [
+      "STATE-X",
+      "TANK-0390",
+      "GW-SYS-JMP-01",
+      "GW-WS-IT-04"
+    ],
+    "leak_phrases": [
+      "Quellmar fuel terminal",
+      "KESTREL",
+      "GW-ENG-VELA",
+      "ClearPath SecureReach",
+      "Meridian HorizonView",
+      "TLP:RED"
+    ],
+    "note": "Places never shown in public outputs, and phrases that must never appear in them. Read by build_graph, build_release and check_acceptance for every registered scenario."
+  }
+}

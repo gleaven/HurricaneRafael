@@ -1,0 +1,17 @@
+{
+  "civilian": {
+    "story": "prepare for the storm, absorb the 911 surge, manage the water crisis and the tanker spill under Unified Command, move relief supplies, pay claims, then review fraud and equity.",
+    "sees": "weather, river gauges, water-quality sondes, oil-slick imagery, 911, ER and wastewater data, pump telemetry and maintenance, supply delays, contracts and payments, census, maps, social media rumors.",
+    "blind_spots": "has no view of the AIS gap or radar detection; sees the fraud only as payment anomalies until D+70; doesn't know SUP-0390's fuel went to NAS Corpus Christi."
+  },
+  "dod": {
+    "story": "set the readiness baseline, evacuate aircraft, recover from depot storm damage and phishing, fly relief, support the spill response, lose the base generator, clear the mined channel, re-launch the delayed deployment, then run the after-action review.",
+    "sees": "base telemetry and maintenance, aircraft and sealift tracks, drone video, base network logs, its own fuel contract and supply records.",
+    "blind_spots": "has no view of benefits fraud; treats SUP-0390 as a bad fuel vendor, not part of a network; misses the drone overflights while perimeter sensors are down; can't tie the mines to Halcyon Drift's dark window until the IC shares it."
+  },
+  "ic": {
+    "story": "build pattern of life on Halcyon Drift, detect KESTREL reconnaissance, track phishing and disinformation during landfall, catch the dark-vessel transfer, trace the tanker intrusion to the stolen vendor credentials, connect the dark-vessel window to the mining, link the credential stuffing, then attribute the network to Brannoch Maritime Holdings.",
+    "sees": "ship and aircraft tracks, optical and radar imagery, social media and news, network intrusion indicators.",
+    "blind_spots": "needs civilian payment and vendor records and DoD maintenance records to prove the fuel and money trail."
+  }
+}

@@ -1,0 +1,676 @@
+[
+  {
+    "event_id": "GW-EVT-001",
+    "time_label": "D-14",
+    "day": -14,
+    "day_end": null,
+    "time_utc": null,
+    "threads": [
+      "T8",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "I"
+    ],
+    "description": "STATE-X/KESTREL operator sends spearphish email to three CBPWA IT staff. One recipient opens an attachment, loading a staged implant on the corporate workstation GW-WS-IT-04. This is the initial access point.",
+    "observed_in": [
+      "endpoint_logs",
+      "email_gateway",
+      "network_flows"
+    ],
+    "detection_artifacts": [
+      "Email gateway log: delivery of 'FEMA-PREP-GUIDANCE-2027.pdf.exe' from spoofed domain cbpwa-vendor-support[.]com at 08:14 CDT",
+      "Endpoint AV log: GW-WS-IT-04 disabled Windows Defender at 08:21 CDT (silent, no alert raised)",
+      "DNS query log: GW-WS-IT-04 resolves update-cdn.meridiancontrols[.]net (lookalike domain, not the real vendor) at 08:23 CDT"
+    ],
+    "not_observed": "CBPWA IT did not detect this. SCADA vendor Meridian Controls Corp later confirmed the domain is not theirs."
+  },
+  {
+    "event_id": "GW-EVT-101",
+    "time_label": "D-14",
+    "day": -14,
+    "day_end": null,
+    "time_utc": "03:17Z",
+    "threads": [
+      "T18",
+      "T8",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "Initial implant beacon: workstation GW-WS-IT-04 (IT network, CBPWA admin wing, assigned to fictitious contractor account 'svc_fieldops_ext') executes a payload dropped via a targeted spearphish email (the DRIFTGLASS initial access vector, documented in T8). At 03:17Z the implant makes its first C2 beacon: an HTTPS POST to 104.21.88.43 (port 443) with a 318-byte payload body matching a known KESTREL beacon format. Sentinel Edge 3.1 logs the event as rule SE3-NET-9941 (Outbound connection to flagged IP). Alert priority: LOW. The alert sits in the SOC queue for 11 hours before an analyst reviews and closes it as 'false positive — cloud CDN traffic.' This closure is logged with analyst ID SOC-AN-02.",
+    "observed_in": [
+      "sentinel_edge_siem_logs",
+      "gw_ws_it04_netflow",
+      "cbpwa_soc_queue_log"
+    ],
+    "detection_artifacts": [
+      "Sentinel Edge 3.1 alert SE3-NET-9941-20270831T0317Z: src=10.14.22.47 (GW-WS-IT-04), dst=104.21.88.43:443, bytes_out=318, rule=FLAGGED_IP_OUTBOUND, priority=LOW",
+      "SOC queue closure record: analyst SOC-AN-02, closure_time=2027-08-31T14:22Z, disposition=FALSE_POSITIVE, notes='Cloud CDN, whitelisted vendor range'",
+      "Netflow record: session duration 4.2s, 318 bytes out, 212 bytes in, protocol TLS 1.3, SNI field: update-cdn.vantagesec-telemetry.net (typosquat of legitimate Vantage Security Systems telemetry domain)"
+    ],
+    "public_fact": null
+  },
+  {
+    "event_id": "GW-EVT-002",
+    "time_label": "D-7",
+    "day": -7,
+    "day_end": -4,
+    "time_utc": null,
+    "threads": [
+      "T8",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "I"
+    ],
+    "description": "Adversary moves laterally from corporate network to OT DMZ. Uses stolen credentials of CBPWA field engineer 'GW-ENG-VELA' to authenticate to ClearPath VPN Gateway (GW-SYS-JMP-01) and browse the Meridian SCADA historian. Relay configuration baselines for all five substations are exfiltrated.",
+    "observed_in": [
+      "vpn_logs",
+      "historian_access_logs",
+      "network_flows"
+    ],
+    "detection_artifacts": [
+      "GW-SYS-JMP-01 session log: 11 authenticated sessions under GW-ENG-VELA from IP block 185.220.x.x (hosted in a Tor exit relay node, geolocation: Central European ISP) between D-7 and D-4, total 4.1 GB outbound",
+      "Meridian historian audit log: read queries on all relay config tags for GW-FAC-SUB-01 through SUB-05 at D-6 23:40 UTC",
+      "Network flow: historian host to GW-WS-IT-04 (compromised workstation) over TCP 445 at D-6, 1.9 GB"
+    ],
+    "not_observed": "GW-ENG-VELA was on vacation. CBPWA did not flag out-of-region VPN access or after-hours historian access; no anomaly detection was in place for the OT DMZ."
+  },
+  {
+    "event_id": "GW-EVT-102",
+    "time_label": "D-7",
+    "day": -7,
+    "day_end": null,
+    "time_utc": "02:44Z",
+    "threads": [
+      "T18",
+      "T8"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "After-hours historian access, first session: at 02:44Z (21:44 CDT previous day), a process running under the GW-SYS-JMP-01 service account (the ClearPath VPN jump host, already compromised) initiates a historian query session against the CBPWA PI Historian server (GW-SRV-HIST-01). The session queries 847 tag values across all five substation relay groups (GW-FAC-SUB-01 through 05), with particular concentration on protection relay settings tags and transformer tap position tags. Session duration: 14 minutes 22 seconds. This is session 1 of 14 after-hours historian access sessions that will occur between D-7 and D+16. Sentinel Edge logs the access as rule SE3-OT-1104 (Historian access outside business hours), priority LOW. The alert is auto-acknowledged by a scheduled maintenance exception rule that covers the jump host service account for the 00:00-04:00Z window — an exception inserted into the SIEM ruleset 19 days earlier by an unknown change with no associated change ticket.",
+    "observed_in": [
+      "sentinel_edge_siem_logs",
+      "gw_srv_hist01_access_log",
+      "cbpwa_siem_exception_rules"
+    ],
+    "detection_artifacts": [
+      "Sentinel Edge 3.1 alert SE3-OT-1104-20270907T0244Z: src=GW-SYS-JMP-01, dst=GW-SRV-HIST-01, session_duration=862s, tags_queried=847, priority=LOW, disposition=AUTO_ACK (exception rule MAINT-EXCEPT-0892)",
+      "MAINT-EXCEPT-0892 change log: rule created 2027-08-19T11:34Z, changed_by=svc_fieldops_ext, no_change_ticket_ref — this is the KESTREL suppression pre-positioning",
+      "PI Historian access log: session ID HIST-20270907-00441, account=GW-SYS-JMP-01\\svc_fieldops_ext, 847 tags, all relay and tap-position groups, duration 14:22"
+    ],
+    "public_fact": null
+  },
+  {
+    "event_id": "GW-EVT-003",
+    "time_label": "D-3",
+    "day": -3,
+    "day_end": null,
+    "time_utc": "17:00Z",
+    "threads": [
+      "T8",
+      "T9",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "I"
+    ],
+    "description": "With Hurricane Rafael approaching, adversary pre-stages payload on GW-SYS-JMP-01 and modifies relay undervoltage trip thresholds on GW-SYS-RTU-01 (at GW-FAC-SUB-01) from 0.88 pu to 0.94 pu, making it far more likely to trip during a voltage sag. Alarm suppression list in GW-SYS-SCADA-01 is quietly extended to include the five relay trip alarms. This staging happens during the pre-storm period when CBPWA staff are focused on hurricane preparation.",
+    "observed_in": [
+      "scada_config_audit",
+      "relay_config_files",
+      "historian"
+    ],
+    "detection_artifacts": [
+      "GW-SYS-RTU-01 config change log: relay 27-UV threshold written to 0.94 pu at 17:04 UTC by session user 'GW-ENG-VELA'; prior value 0.88 pu; authorized change window was closed (storm prep freeze)",
+      "GW-SYS-SCADA-01 alarm suppression file: relay trip alarms for SUB-01 through SUB-04 added to suppression list at 17:09 UTC — same session",
+      "Change-management system: no work order exists for either modification"
+    ],
+    "not_observed": "No CBPWA engineer reviewed the config change log during storm preparation. Alarm suppression was not logged to a separate audit trail."
+  },
+  {
+    "event_id": "GW-EVT-103",
+    "time_label": "D-3",
+    "day": -3,
+    "day_end": null,
+    "time_utc": "22:11Z",
+    "threads": [
+      "T18",
+      "T8"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "Relay config file write: at 22:11Z (17:11 CDT), the compromised jump host account writes a modified relay configuration file to the CBPWA relay config management share (\\\\gw-srv-ot-01\\relayconfigs\\sub02\\rtu_config_draft.xml). The file contains altered overcurrent trip thresholds for three protective relays at GW-FAC-SUB-02 (Harbor View). The write generates Sentinel Edge alert SE3-OT-2201 (Unauthorized write to protected OT config path), priority MEDIUM. The SOC duty analyst (SOC-AN-01) is in the middle of a storm preparation briefing and reviews the alert 47 minutes later. The analyst marks it as 'authorized maintenance — storm prep' and closes it without opening a ticket, based on a note from the CBPWA ops supervisor that relay settings 'may be adjusted ahead of storm.' This closure is the most consequential single error in the SOC timeline. The relay config change is what enables the extended power manipulation documented in T8.",
+    "observed_in": [
+      "sentinel_edge_siem_logs",
+      "gw_srv_ot01_file_audit_log",
+      "cbpwa_soc_queue_log"
+    ],
+    "detection_artifacts": [
+      "Sentinel Edge 3.1 alert SE3-OT-2201-20270911T2211Z: src=GW-SYS-JMP-01, action=FILE_WRITE, path=\\\\gw-srv-ot-01\\relayconfigs\\sub02\\rtu_config_draft.xml, priority=MEDIUM",
+      "SOC closure record: analyst SOC-AN-01, closure_time=2027-09-11T22:58Z, disposition=AUTHORIZED_MAINTENANCE, notes='Storm prep relay adjustment per ops supervisor note'",
+      "File audit log: file hash sha256=a3f8c2d1e9b04517 (modified), previous hash sha256=d7e1a0f3c2b18429 (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C"
+    ],
+    "public_fact": null
+  },
+  {
+    "event_id": "GW-EVT-104",
+    "time_label": "D-2 to D+3",
+    "day": -2,
+    "day_end": 3,
+    "time_utc": "00:00Z",
+    "threads": [
+      "T18",
+      "T8",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "STORM-WINDOW SIEM FLOOD: Hurricane Rafael makes landfall D0 06:00Z. In the 60-hour window D-2 00:00Z through D+3 06:00Z, Sentinel Edge 3.1 receives 74,120 total alerts — a 5.1x burst above baseline. Alert sources: generator failover state changes (22,314), sensor timeout events (18,047), comms-link drop/restore cycles (17,801), and legitimate storm-related OT reconnect storms (15,958). Mixed in: 3 adversary-correlated alerts (1 historian session, 1 relay config write, 1 alarm suppression change) that account for approximately 0.004% of storm-window volume. The two on-duty SOC analysts activate 'storm mode' (bulk-dismiss rule SE3-BULK-STORM-01) at D0 06:14Z. Storm mode auto-dismisses all LOW and MEDIUM alerts from a whitelist of 44 known-noisy sources. Three adversary-correlated alerts fall within the whitelist scope and are mass-dismissed. False positive rate peaks at 94.2% on D0. SOC analyst fatigue index (internal metric) reaches 87/100 by D+1 midshift.",
+    "observed_in": [
+      "sentinel_edge_siem_logs",
+      "cbpwa_soc_storm_mode_log",
+      "cbpwa_siem_bulk_dismiss_audit"
+    ],
+    "detection_artifacts": [
+      "Sentinel Edge daily alert volume: D-2: 4,812, D-1: 7,341, D0: 18,340 (peak), D+1: 16,207, D+2: 14,884, D+3: 12,201, D+4: 6,633 (returning toward baseline)",
+      "Storm mode activation log: SE3-BULK-STORM-01 activated D0 06:14Z by SOC-AN-01, 44 source-whitelist entries, auto-dismissed 68,912 alerts in storm window",
+      "Mass-dismissed adversary alert IDs: SE3-OT-1104-20270914T0831Z (historian session), SE3-NET-9941-20270915T0117Z (C2 beacon), SE3-OT-3301-20270915T0944Z (alarm suppression change)",
+      "SOC shift log D0: 'Storm mode activated, managing volume. 18K alerts in first 12 hrs. All hands on generator failover response.'"
+    ],
+    "public_fact": null
+  },
+  {
+    "event_id": "GW-EVT-004",
+    "time_label": "D0",
+    "day": 0,
+    "day_end": 1,
+    "time_utc": "06:00Z",
+    "threads": [
+      "T8",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "I"
+    ],
+    "description": "Hurricane Rafael makes landfall (06:00Z). Storm-driven voltage sags across the ERCOT Corpus Christi load zone. Because relay GW-SYS-RTU-01 was pre-modified to trip at 0.94 pu, GW-FAC-SUB-01 trips at 07:12Z — roughly 90 minutes after landfall — at a voltage level that would not normally cause a trip, adding about 24,000 customers to the genuine storm outage total. The trip is indistinguishable from storm damage in real-time restoration dashboards.",
+    "observed_in": [
+      "ercot_operations_log",
+      "scada_event_log",
+      "outage_map"
+    ],
+    "detection_artifacts": [
+      "ERCOT EMS log: GW-FAC-SUB-01 trips at D0 07:12Z; recorded as 'storm protective action'",
+      "GW-SYS-RTU-01 event log: 27-UV protection pick-up at 0.939 pu — 1 mpu above the modified threshold, within normal storm-sag range",
+      "Pre-storm relay test report (D-30): same relay last tested at 0.88 pu threshold; mismatch with D0 event data",
+      "Post-storm ERCOT replay: contemporaneous voltage at GW-FAC-SUB-05 (Bayside, unmodified) was 0.91 pu at the same moment — above the original trip setting, so SUB-05 stayed online as expected"
+    ],
+    "not_observed": "During the storm, no engineer compared trip voltage with pre-storm test records. The outage was attributed to the hurricane in all initial reports."
+  },
+  {
+    "event_id": "GW-EVT-005",
+    "time_label": "D+7",
+    "day": 7,
+    "day_end": null,
+    "time_utc": "14:30Z",
+    "threads": [
+      "T8",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "During the restoration effort, adversary remotely triggers a breaker-open command at GW-FAC-SUB-02 (Harbor View, 138/69 kV) via GW-SYS-JMP-01. The substation had been partially restored the night before. The trip affects 8,400 customers in the northwest quadrant who had just had power restored. CBPWA attributes the event to 'a loose protective relay aggravated by residual storm debris'.",
+    "observed_in": [
+      "scada_event_log",
+      "ercot_operations_log",
+      "field_crew_reports"
+    ],
+    "detection_artifacts": [
+      "GW-SYS-SCADA-01 command log: breaker-OPEN command sent to SUB-02 CB-7 at D+7 14:28Z from workstation GW-WS-OPS-02 (located in CBPWA Operations Center); no operator was logged in on that workstation at the time",
+      "GW-SYS-JMP-01 session log: active session from IP 45.141.x.x (commercial VPS, Netherlands) at 14:27–14:33Z",
+      "ERCOT operations log: trip recorded as 'protective relay operation'; restoration crew dispatched — no physical cause found on-site"
+    ],
+    "not_observed": "CBPWA did not audit SCADA operator-command logs during the restoration rush. The 'loose relay' explanation closed the ticket without a root-cause investigation."
+  },
+  {
+    "event_id": "GW-EVT-006",
+    "time_label": "D+9",
+    "day": 9,
+    "day_end": null,
+    "time_utc": "02:00Z",
+    "threads": [
+      "T9",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "Adversary lowers the discharge pressure setpoint on FAC-UTL-01 Pump P-3 from 85 psi to 68 psi via SCADA. This reduces the treated-water output pressure feeding distribution Zone 4 (Districts 3–4, ~48,000 residents). The alarm suppression installed on D-3 prevents the low-pressure alarm from reaching the CBPWA control room. By 06:00Z (01:00 CDT), Zone 4 pressure drops to 19 psi — below the 20 psi regulatory threshold.",
+    "observed_in": [
+      "scada_historian",
+      "water_pressure_telemetry",
+      "pump_control_logs"
+    ],
+    "detection_artifacts": [
+      "Meridian historian tag: FAC-UTL-01-P3-SET-PSI drops from 85 to 68 at D+9 02:04Z; modified by user 'GW-ENG-VELA' (same compromised credential)",
+      "Historian pressure tag: ZONE4-DIST-PSI crosses 20 psi downward at D+9 05:51Z; remains suppressed in SCADA alarm console until D+12",
+      "Pump P-3 vibration sensor log: motor amperage drops 11 A at the same time, consistent with reduced load — not consistent with storm or pipe damage",
+      "Historian alarm suppression log: ZONE4-LOW-PRES alarm suppressed since D-3 17:09Z (same session that modified relay settings)"
+    ],
+    "not_observed": "Because the pressure alarm was suppressed, CBPWA control room operators saw no indication of the problem for three days. Field water quality crews were diverted to storm-damage areas."
+  },
+  {
+    "event_id": "GW-EVT-105",
+    "time_label": "D+9",
+    "day": 9,
+    "day_end": null,
+    "time_utc": "04:00Z",
+    "threads": [
+      "T18",
+      "T8",
+      "T9"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "Suppressed alarm count peaks: Sentinel Edge reports that the CBPWA DCS alarm suppression list (which controls what alarms appear on the operator HMI at FAC-UTL-01 and GW-FAC-SUB-01 through 05) has been modified 7 times since D-5. Total suppressed alarms: 94 (baseline: 12). The SCADA historian shows the suppression list changes were made via the GW-SYS-JMP-01 jump host account. The effect: operators at FAC-UTL-01 cannot see pump flow anomalies that began at D+9 02:00Z (the water system SCADA manipulation documented in T9). Sentinel Edge logs the cumulative suppression change as alert SE3-OT-3301 (Alarm suppression list bulk modification), priority HIGH — the first HIGH priority adversary-correlated alert in the entire intrusion timeline. However, it is reviewed by an analyst who attributes it to 'storm recovery HMI cleanup' and closes without escalation, noting that suppression list changes are common during storm recovery when operators manually silence storm-noise alarms.",
+    "observed_in": [
+      "sentinel_edge_siem_logs",
+      "cbpwa_dcs_alarm_suppression_log",
+      "gw_srv_scada01_config_audit"
+    ],
+    "detection_artifacts": [
+      "Sentinel Edge alert SE3-OT-3301-20270923T0400Z: suppressed_alarm_count=94 (threshold=30), change_count_since_D-5=7, source=GW-SYS-JMP-01, priority=HIGH",
+      "DCS alarm suppression list diff: 82 alarms added since D-5, clusters in pump flow, water quality sensor, and substation relay alarm categories",
+      "SOC closure record: SOC-AN-03, closure_time=2027-09-23T09:17Z, disposition=KNOWN_BEHAVIOR, notes='Storm recovery HMI cleanup, ops team managing sensor noise'"
+    ],
+    "public_fact": null
+  },
+  {
+    "event_id": "GW-EVT-007",
+    "time_label": "D+10",
+    "day": 10,
+    "day_end": null,
+    "time_utc": "19:45Z",
+    "threads": [
+      "T8",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "Adversary sends a second breaker-open command, this time to GW-FAC-SUB-03 (Crosstown, 138/69 kV), tripping 6,800 customers in central Corpus Christi including the backup generator feed to FAC-UTL-01's pump room. This makes the pressure problem at FAC-UTL-01 worse: with the backup feeder offline, Pump P-4 also loses supply, dropping Zone 4 pressure further to 14 psi.",
+    "observed_in": [
+      "scada_event_log",
+      "ercot_operations_log",
+      "water_pressure_telemetry"
+    ],
+    "detection_artifacts": [
+      "GW-SYS-SCADA-01 command log: breaker-OPEN sent to SUB-03 CB-12 at D+10 19:43Z from workstation GW-WS-OPS-02 (again, no logged-in operator)",
+      "ERCOT EMS: 6,800-customer outage block logged at 19:45Z; crew dispatched, found 'no apparent physical cause' at SUB-03",
+      "FAC-UTL-01 historian: pump P-4 current drops to zero at 19:48Z; ZONE4-DIST-PSI falls to 14 psi at 20:10Z"
+    ],
+    "not_observed": "The connection between the SUB-03 trip and the pump room feeder was not made in real-time; the backup-feeder circuit is on a different CBPWA SCADA display page from the main substation page."
+  },
+  {
+    "event_id": "GW-EVT-008",
+    "time_label": "D+12",
+    "day": 12,
+    "day_end": null,
+    "time_utc": "16:00Z",
+    "threads": [
+      "T9"
+    ],
+    "lanes": [
+      "C",
+      "D"
+    ],
+    "description": "A CBPWA field operator physically inspecting Zone 4 infrastructure notices that household taps in the Loma Alta neighborhood (District 4) are running at a trickle. She calls in a potential main-break and pressure check. Control room runs a manual pressure query — which bypasses the suppressed alarm — and sees ZONE4-DIST-PSI at 16 psi. CBPWA director orders a boil water notice for Districts 3 and 4 (48,000 residents). The outage of SUB-03 and the pump setpoint reduction are both blamed on hurricane damage.",
+    "observed_in": [
+      "field_reports",
+      "water_pressure_telemetry",
+      "public_record"
+    ],
+    "public_fact": "GW-PUB-001",
+    "detection_artifacts": [
+      "CBPWA field report GW-FR-0912: 'minimal flow at residential hydrant test point Loma Alta / Holly Rd; estimated 16-18 psi'; logged D+12 15:44Z",
+      "Control room manual query: ZONE4-DIST-PSI = 16.4 psi at 15:52Z; first time below-threshold reading was manually reviewed",
+      "Boil water notice issued D+12 17:30 CDT; posted to City of Corpus Christi website and sent to media"
+    ],
+    "not_observed": "The manual query that revealed the low pressure was not correlated with the alarm-suppression status; nobody asked why the alarm hadn't fired."
+  },
+  {
+    "event_id": "GW-EVT-009",
+    "time_label": "D+14",
+    "day": 14,
+    "day_end": null,
+    "time_utc": "22:00Z",
+    "threads": [
+      "T8"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "ERCOT engineers comparing pre-storm and post-storm relay settings files notice that GW-FAC-SUB-01 RTU-01 relay 27-UV threshold reads 0.94 pu in the current config — inconsistent with the 0.88 pu value in the D-30 commissioning test report. The engineer flags it as a 'possible configuration drift' and opens an internal ticket. CBPWA is notified. No cyber cause is considered yet.",
+    "observed_in": [
+      "relay_config_audit",
+      "ercot_internal_ticket"
+    ],
+    "detection_artifacts": [
+      "ERCOT relay audit report: GW-SYS-RTU-01 config dump shows 27-UV = 0.94 pu; commissioning record from D-30 shows 0.88 pu",
+      "ERCOT ticket #TXRC-2027-09-28-004: 'possible relay config drift at Riverside Switching Station; investigating'",
+      "Change-management system: no approved work order for a relay threshold change at SUB-01 since the commissioning date"
+    ],
+    "not_observed": "The engineer suspected calibration drift or software glitch, not an adversary. The ticket was flagged 'low priority' because the substation was back online."
+  },
+  {
+    "event_id": "GW-EVT-010",
+    "time_label": "D+16",
+    "day": 16,
+    "day_end": null,
+    "time_utc": "18:00Z",
+    "threads": [
+      "T8",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "CBPWA field engineers, re-commissioning GW-FAC-SUB-04 (Southside), find that the relay configuration file on GW-SYS-RTU-04 has a modification timestamp of D-3 17:11Z — during the storm-preparation freeze — with no matching work order. The relay was not modified to trip (it was simply a file they checked), but the unauthorized write is undeniable. CBPWA security manager is briefed. The existing ERCOT relay-drift ticket is re-elevated.",
+    "observed_in": [
+      "relay_config_files",
+      "change_management_logs",
+      "security_incident_report"
+    ],
+    "detection_artifacts": [
+      "GW-SYS-RTU-04 config file metadata: last_modified = 2027-09-11T17:11Z; last_modified_by = 'GW-ENG-VELA'",
+      "GW-ENG-VELA HR record: on approved vacation Sept 7–21; documented out of state",
+      "GW-SYS-JMP-01 session log matching the timestamp: source IP 185.220.x.x (same Tor exit node as D-7 reconnaissance sessions)",
+      "CBPWA security incident report GW-SIR-001 opened D+16 18:30 CDT"
+    ],
+    "not_observed": "CBPWA initially treated this as a possible insider threat involving GW-ENG-VELA, not an external actor using stolen credentials."
+  },
+  {
+    "event_id": "GW-EVT-011",
+    "time_label": "D+18",
+    "day": 18,
+    "day_end": null,
+    "time_utc": "21:00Z",
+    "threads": [
+      "T8",
+      "T9",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "CBPWA IT security pulls GW-SYS-JMP-01 session logs at the request of the security manager. They find 14 authenticated sessions from non-Texas IP blocks across the D-7 to D+16 window, all using GW-ENG-VELA's credential, all sourced from commercial VPS or Tor exit nodes. Texas Cyber Command (TCC) is notified. CISA ICS-CERT notified by CBPWA counsel.",
+    "observed_in": [
+      "vpn_session_logs",
+      "threat_intel",
+      "cisa_notification"
+    ],
+    "detection_artifacts": [
+      "GW-SYS-JMP-01 session log export: 14 sessions, source IPs spanning Netherlands, Romania, Singapore VPS blocks; all authenticated as GW-ENG-VELA; total session time 11.4 hours",
+      "CBPWA notification to Texas Cyber Command at D+18 21:15Z",
+      "CBPWA notification to CISA ICS-CERT via HSIN portal at D+18 21:40Z",
+      "Meridian historian audit log shared with CISA: confirms alarm suppression and setpoint changes trace to same VPN sessions"
+    ],
+    "not_observed": "CBPWA did not yet publicly disclose the incident, citing ongoing investigation and law enforcement guidance."
+  },
+  {
+    "event_id": "GW-EVT-106",
+    "time_label": "D+18",
+    "day": 18,
+    "day_end": null,
+    "time_utc": "14:33Z",
+    "threads": [
+      "T18",
+      "T8"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "VPN anomaly discovery — the SOC connects the dots: Sentinel Edge ML anomaly module (Vantage Behavioral Analytics 2.1) flags historian access session 14 (of 14) as a 3.8-sigma outlier at 14:33Z. The session queried all five substation relay configuration tag groups simultaneously — a query pattern never seen in 180 days of historian baseline. The alert (SE3-ML-0044) is tagged ANOMALY_HIGH and routed to the CBPWA CISO Dr. Fatima Al-Rasheed-Obinna directly per the high-priority ML alert policy. Dr. Al-Rasheed-Obinna reviews the full 14-session historian access cluster (D-7 to D+18) and identifies source ASN AS-209144 as the common origin — a Latvian VPN exit node. She correlates this with the D-3 relay config write (GW-EVT-103, now re-escalated) and opens Security Incident SI-2027-CC-001. This is the moment the SOC first connects the historian access, the relay config writes, and the VPN origin into a coherent threat picture.",
+    "observed_in": [
+      "sentinel_edge_siem_logs",
+      "cbpwa_ciso_incident_log",
+      "vantage_behavioral_analytics_log"
+    ],
+    "detection_artifacts": [
+      "Sentinel Edge ML alert SE3-ML-0044-20271002T1433Z: session_id=HIST-20271002-00917, src_asn=AS-209144, tags_queried=1,241 (all relay config groups, all 5 substations), anomaly_score=3.84 sigma, priority=ANOMALY_HIGH",
+      "CISO incident intake SI-2027-CC-001: opened 2027-10-02T15:11Z by Dr. Fatima Al-Rasheed-Obinna, initial scope: historian access cluster 14 sessions D-7 to D+18, source ASN AS-209144",
+      "14-session historian access log cluster: session IDs HIST-20270907-00441 through HIST-20271002-00917, all from GW-SYS-JMP-01 or AS-209144 VPN exits, aggregate 11,847 tags queried"
+    ],
+    "public_fact": "GW-PUB-101"
+  },
+  {
+    "event_id": "GW-EVT-012",
+    "time_label": "D+21",
+    "day": 21,
+    "day_end": null,
+    "time_utc": "16:00Z",
+    "threads": [
+      "T8",
+      "T9",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "CISA ICS-CERT team arrives on-site. FBI Joint Cyber Task Force opens a full investigation. The Governor announces publicly that a 'cyber incident at a Texas utility is under investigation.' CBPWA issues a press release confirming 'unauthorized access to control systems' but does not attribute. TCC and CISA confirm that the outage-footprint mismatch — areas without storm-track-consistent wind damage that nonetheless lost power — is a key investigative indicator.",
+    "observed_in": [
+      "cisa_investigation",
+      "fbi_case_file",
+      "public_record"
+    ],
+    "public_fact": "GW-PUB-003",
+    "detection_artifacts": [
+      "CISA ICS-CERT on-site report GW-ICS-2027-01: 'relay configuration modifications on four substations are inconsistent with storm damage; alarm suppression list changes predate the storm; evidence of persistent remote-access via stolen credential'",
+      "Outage-footprint analysis: 32,000 customers in areas with <60 mph measured gust speeds experienced multi-day outages; comparable areas in past hurricanes restored within 36 hours",
+      "FBI case file opened: 18-CR-TX-27-4412; cooperating witness interview with GW-ENG-VELA confirms credential was stolen (phish email identified)"
+    ],
+    "not_observed": "No attribution to a specific nation-state made public at this stage."
+  },
+  {
+    "event_id": "GW-EVT-013",
+    "time_label": "D+23",
+    "day": 23,
+    "day_end": null,
+    "time_utc": "08:00Z",
+    "threads": [
+      "T9",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "CISA forensic team exports GW-SYS-HST-01 historian data and finds the GW-FAC-WTR-03 (Colorado River Booster) historian also shows unauthorized setpoint changes on D+9 (02:04Z) — the same session that modified the pump P-3 setpoint at FAC-UTL-01. Additionally, threat-intel team identifies that two of the 14 VPN session source IPs overlap with known KESTREL command-and-control infrastructure documented in a classified indicator set shared with the Texas Cyber Command under TLP:RED.",
+    "observed_in": [
+      "scada_historian",
+      "threat_intel_overlap"
+    ],
+    "detection_artifacts": [
+      "Meridian historian tag export: GW-FAC-WTR-03-BSTR-SET-PSI changed from 72 to 54 psi at D+9 02:08Z — reduces flow into the Phase II pipeline, compounding FAC-UTL-01 raw-water shortage",
+      "TI match report (classified, TLP:RED): IPs 45.141.x.x and 185.220.x.x appear in prior KESTREL IOC set associated with Rafael T6/T7 infrastructure; same adversary cluster",
+      "CISA advisory draft citing 'known threat actor infrastructure' without naming a nation-state"
+    ],
+    "not_observed": "The KESTREL link is classified; public reporting refers only to 'sophisticated threat actor'."
+  },
+  {
+    "event_id": "GW-EVT-014",
+    "time_label": "D+28",
+    "day": 28,
+    "day_end": null,
+    "time_utc": "12:00Z",
+    "threads": [
+      "T8",
+      "T9",
+      "T10"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "CBPWA, on CISA guidance, isolates GW-SYS-SCADA-01 from all external network connectivity and GW-SYS-JMP-01 is taken offline. All five substations switch to manual relay operations. FAC-UTL-01 Pump P-3 setpoint is manually restored to 85 psi; Pump P-4 feeder supply restored from a temporary generator. Zone 4 pressure begins rising. Governor issues a supplemental emergency declaration covering the cyber component.",
+    "observed_in": [
+      "scada_operations_log",
+      "public_record",
+      "field_reports"
+    ],
+    "public_fact": "GW-PUB-005",
+    "detection_artifacts": [
+      "SCADA operations log: 'EXTERNAL NETWORK ISOLATED' flag set at D+28 12:00Z by CBPWA CISO",
+      "FAC-UTL-01 historian: P3-SET-PSI restored to 85 at 12:14Z; ZONE4-DIST-PSI climbs from 16 to 24 psi over 90 minutes",
+      "ClearPath VPN Gateway GW-SYS-JMP-01 powered off at 12:30Z; no further adversary sessions possible"
+    ],
+    "not_observed": "With SCADA isolated, CBPWA lost remote visibility into substation relay status for 7 days while manual operations were stood up."
+  },
+  {
+    "event_id": "GW-EVT-107",
+    "time_label": "D+28",
+    "day": 28,
+    "day_end": null,
+    "time_utc": "08:00Z",
+    "threads": [
+      "T18",
+      "T8"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "SCADA isolation: following 10 days of investigation under SI-2027-CC-001, CBPWA's incident response team (supplemented by Vantage Security Systems senior support engineer Marcus Teitelbaum-Park) confirms that GW-SYS-JMP-01 is compromised and that the ClearPath VPN jump host has been used as the pivot point for all OT-network historian and relay config access. At 08:00Z D+28, with ERCOT and TCEQ emergency coordination, CBPWA executes a controlled SCADA isolation: GW-SYS-JMP-01 is taken offline, the ClearPath VPN service is suspended, and the historian server GW-SRV-HIST-01 is isolated from the external-facing IT network. All 94 suppressed alarms in the DCS suppression list are restored. The relay config changes at SUB-02 are identified and reverification of all five substation relay settings begins. Sentinel Edge alert volume returns toward baseline; the C2 beacon from GW-WS-IT-04 goes silent within 2 hours (host isolated).",
+    "observed_in": [
+      "cbpwa_ciso_incident_log",
+      "cbpwa_scada_isolation_work_order",
+      "sentinel_edge_siem_logs"
+    ],
+    "detection_artifacts": [
+      "CBPWA SCADA isolation work order WO-2027-OT-0881: initiated 08:00Z D+28, authorized by Dr. Al-Rasheed-Obinna and CBPWA Operations Director, scope: JMP-01 offline, ClearPath VPN suspended, HIST-01 isolated",
+      "Post-isolation Sentinel Edge alert volume: D+28 post-08:00Z = 1,847 alerts (90% drop from D+27), C2 beacon SE3-NET-9941 last seen D+28 10:04Z",
+      "Relay config re-verification report: SUB-02 relays R-02A/B/C found with anomalous overcurrent thresholds (2400A vs baseline 1200A); SUB-03 relay R-03A also modified"
+    ],
+    "public_fact": "GW-PUB-102"
+  },
+  {
+    "event_id": "GW-EVT-015",
+    "time_label": "D+35",
+    "day": 35,
+    "day_end": null,
+    "time_utc": "20:00Z",
+    "threads": [
+      "T8"
+    ],
+    "lanes": [
+      "C",
+      "D"
+    ],
+    "description": "With all relay configurations manually verified and reset to pre-storm baselines, ERCOT completes the final switching sequence to restore GW-FAC-SUB-02 and GW-FAC-SUB-03 to service. The last 3,200 customers in northwest Corpus Christi are restored to power. CBPWA issues a statement crediting 'extensive relay repair and hardening work by crews'; the cyber cause is not disclosed in the press release.",
+    "observed_in": [
+      "ercot_operations_log",
+      "public_record",
+      "field_reports"
+    ],
+    "public_fact": "GW-PUB-006",
+    "detection_artifacts": [
+      "ERCOT EMS: final switching sequence completed at D+35 20:14Z; all Corpus Christi load zones at ≥99.2% restoration",
+      "Relay audit completion report GW-RAR-001: all five substations confirmed at commissioning-baseline settings; no further anomalies found"
+    ],
+    "not_observed": "The public statement does not mention the cyber incident, per law enforcement guidance."
+  },
+  {
+    "event_id": "GW-EVT-108",
+    "time_label": "D+35",
+    "day": 35,
+    "day_end": null,
+    "time_utc": "00:00Z",
+    "threads": [
+      "T18"
+    ],
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "description": "Clean SIEM baseline restored: after 7 days of remediation (new SCADA jump host infrastructure deployed, all service accounts rotated, historian access whitelist rebuilt), Sentinel Edge 3.1 returns to a clean operational baseline. The exception rule MAINT-EXCEPT-0892 (the KESTREL-inserted suppression that auto-acknowledged historian access alerts) is identified during the ruleset audit and removed. Daily alert volume: 2,312 (within 4% of pre-intrusion baseline). False positive rate: 11.3% (normal for OT SIEM). The gw_siem_false_positive_rate variable returns to baseline range. CBPWA SOC staffing is increased from 2 to 4 analysts per shift. Dr. Al-Rasheed-Obinna submits a preliminary incident report to CISA (ICS-CERT notification filed).",
+    "observed_in": [
+      "sentinel_edge_siem_logs",
+      "cbpwa_ciso_incident_log",
+      "cbpwa_soc_staffing_log"
+    ],
+    "detection_artifacts": [
+      "Sentinel Edge daily volume D+35: 2,312 alerts, false_positive_rate=11.3%, no open ML anomaly alerts",
+      "Exception rule audit report: MAINT-EXCEPT-0892 identified as anomalous (no change ticket, created by svc_fieldops_ext, 19 days before first historian session), removed D+34",
+      "CISA ICS-CERT notification: filed D+35, ticket ICS-2027-CC-00441, scope: OT historian access, relay config modification, alarm suppression list manipulation"
+    ],
+    "public_fact": "GW-PUB-103"
+  },
+  {
+    "event_id": "GW-EVT-016",
+    "time_label": "D+42",
+    "day": 42,
+    "day_end": null,
+    "time_utc": "18:00Z",
+    "threads": [
+      "T9"
+    ],
+    "lanes": [
+      "C",
+      "D"
+    ],
+    "description": "O.N. Stevens Water Treatment Plant (FAC-UTL-01) certified at full 75 MGD capacity with all four pumps operating at correct setpoints. Zone 4 distribution pressure confirmed above 40 psi across all test points. Boil water notice for Districts 3 and 4 is officially lifted. Joint CISA/FBI forensic report filed internally; classified attribution findings shared with the Texas Governor's office.",
+    "observed_in": [
+      "water_pressure_telemetry",
+      "public_record",
+      "cisa_investigation"
+    ],
+    "public_fact": "GW-PUB-007",
+    "detection_artifacts": [
+      "TCEQ certification: FAC-UTL-01 pressure test at all 48 Zone 4 test points; minimum 41 psi; boil water notice lifted at D+42 18:00Z",
+      "CBPWA press release D+42: 'O.N. Stevens fully operational; boil water notice lifted for Districts 3 and 4'",
+      "CISA/FBI joint report (classified, TLP:RED): timeline of intrusion, attribution to KESTREL cluster, link to Rafael T6/T7 activities"
+    ],
+    "not_observed": "The classified attribution is not publicly released. Public announcement credits restoration crews and does not mention the cyber intrusion."
+  }
+]

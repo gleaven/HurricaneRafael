@@ -1,0 +1,745 @@
+{
+  "thread_id": "T15",
+  "name": "Social Media Influence Operation",
+  "color": "#9b2c8f",
+  "scenario": "rafael",
+  "lanes": [
+    "C",
+    "I"
+  ],
+  "truth": "STATE-X operated a coordinated inauthentic behavior (CIB) network on social media beginning D-5, managed through the same KESTREL operational infrastructure used for the utility SCADA cyberattack (T8) and the covert actions against the port and the air station (T7). The network went through three distinct phases: pre-storm amplification of false evacuation routes and shelter locations designed to create congestion and distrust of official guidance; post-landfall blame deflection targeting CBPWA/ERCOT to suppress organic inquiry into anomalous outage patterns; and post-attribution suppression designed to discredit the CISA investigation announced D+21. Two specific accounts — @TXCoastalWatchdog and @NuecesLocalNews — posted high-volume ERCOT-blame content in Phase 2 and later resolved to ASN 198765 (a KESTREL-linked autonomous system block), the same ASN that hosted the VPN exit nodes used in the utility SCADA intrusion (T8). This infrastructure overlap is the KESTREL network's fingerprint connecting the social operation to the physical cyberattack. Teams that pursue the IP overlap trail from the CISA utility investigation into the platform content-removal data will find the two accounts and confirm the state-nexus. The false shelter location posts in Phase 1 directed an estimated 400–600 evacuees toward Zavala Elementary (which had been closed as a shelter) and away from the Richard King High School shelter, contributing to 2–3 hours of traffic confusion on US-181 northbound during the D-2 evacuation window.",
+  "phase_onset": 2,
+  "phase_peak": 3,
+  "msel_events": [
+    {
+      "event_id": "EVT-1501",
+      "time_label": "D-7",
+      "day": -7,
+      "day_end": null,
+      "time_utc": "00:00Z",
+      "threads": [
+        "T15",
+        "T5"
+      ],
+      "lanes": [
+        "I"
+      ],
+      "description": "KESTREL network operators pre-position 47 social media accounts across two unnamed platforms, with account creation dates clustered between D-7 and D-5. Accounts present as Corpus Christi-area residents: profile photos are AI-generated, bios reference local landmarks (H-E-B on Gollihar, NAS jogging trails, Whataburger on SPID), and location tags are Nueces County. The accounts spend D-7 to D-5 building posting history (weather commentary, sports, local interest) to age their profiles before shifting to operational content. Account creation metadata shows 31 of 47 accounts were created within a 36-hour window (D-7 00:00Z to D-5 12:00Z).",
+      "observed_in": [
+        {
+          "stream": "social_media",
+          "what": "Account creation cluster: 31 of 47 accounts created between 2027-09-07 00:00Z and 2027-09-09 12:00Z. Normal user account creation for Nueces County shows ~12–18 new local accounts per day; the 36-hour spike represents 2.4–2.6x the baseline rate. | Profile image analysis: 23 of 47 accounts use GAN-generated faces (detected by frequency-domain artifact signature). Remaining 24 use stock photography sourced to 3 image libraries. | Bio keyword clustering:...",
+          "when": {
+            "start_utc": "2027-09-07T00:00Z",
+            "end_utc": "2027-09-07T02:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Account creation cluster: 31 of 47 accounts created between 2027-09-07 00:00Z and 2027-09-09 12:00Z. Normal user account creation for Nueces County shows ~12–18 new local accounts per day; the 36-hour spike represents 2.4–2.6x the baseline rate.",
+        "Profile image analysis: 23 of 47 accounts use GAN-generated faces (detected by frequency-domain artifact signature). Remaining 24 use stock photography sourced to 3 image libraries.",
+        "Bio keyword clustering: 38 of 47 accounts mention at least two of: 'Corpus Christi', 'South Texas', 'Nueces County', 'Coastal Bend' — abnormally high local-identity saturation for genuine new accounts."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "platform_account_metadata_records",
+        "coastal_alert_cib_scan_D-5",
+        "kestrel_infrastructure_analysis"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "kestrel_infrastructure_analysis",
+          "stream": "threat_intelligence"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1502",
+      "time_label": "D-5",
+      "day": -5,
+      "day_end": -2,
+      "time_utc": "08:00Z",
+      "threads": [
+        "T15",
+        "T5"
+      ],
+      "lanes": [
+        "C",
+        "I"
+      ],
+      "description": "Phase 1 begins. The bot network shifts from profile-building to operational content. Primary vectors: (1) false shelter location posts asserting Zavala Elementary (3184 Retta Drive) is open as an official evacuation shelter — it is not on the county shelter list; (2) route misinformation suggesting US-77 through Victoria is 'closed due to flooding' (false at D-5) and advising evacuees to route via US-181 northbound (a narrower route that creates bottleneck); (3) amplification of storm-surge fear content designed to trigger premature and panicked evacuation of Zones B and C before their order (07:00 CDT D-1) and of Zones D and E, which are never ordered out, increasing road congestion. The two highest-posting accounts in this phase are @TXCoastalWatchdog (22 posts D-5 to D-2) and @NuecesLocalNews (19 posts D-5 to D-2).",
+      "observed_in": [
+        {
+          "stream": "social_media",
+          "what": "Phase 1 posts from the pre-positioned accounts: claims that Zavala Elementary is an official evacuation shelter and that US-77 through Victoria is closed by flooding, with evacuees steered to US-181.",
+          "when": {
+            "start_utc": "2027-09-09T05:00Z",
+            "end_utc": "2027-09-13T05:00Z"
+          }
+        },
+        {
+          "stream": "shelters",
+          "what": "The official shelter registry never lists Zavala Elementary; the shelters open on D-2 are the ones named in the county orders.",
+          "when": {
+            "start_utc": "2027-09-09T05:00Z",
+            "end_utc": "2027-09-14T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Post content sample (@TXCoastalWatchdog, D-5 14:32Z): 'Just confirmed with a city worker friend — Zavala Elementary on Retta Dr IS open as evacuation shelter. They just hadn't updated the official site. #HurricaneRafael #CorpusChristi'",
+        "Post content sample (@NuecesLocalNews, D-5 16:14Z): 'BREAKING: US-77 near Victoria has sections underwater per TxDOT scanner. Avoid. Take 181 north instead. Sharing what I know. #Rafael2027 #Evacuate'",
+        "TxDOT traffic count US-181 northbound at FM 666 interchange, D-2 12:00–18:00 CDT: 4,200 vehicles/hour vs 2027 baseline avg of 1,850 vehicles/hour. 127% above baseline.",
+        "Nueces County 211 call log D-2: 23 calls referencing Zavala Elementary as a shelter. OEM corrected the false information by recorded message update at 15:30 CDT D-2."
+      ],
+      "public_fact": null,
+      "place_ids": [],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "platform_post_archive_D-5_to_D-2",
+        "txdot_traffic_data_D-2",
+        "nueces_county_shelter_registry",
+        "coastal_alert_cib_scan_D-5"
+      ],
+      "observable": true
+    },
+    {
+      "event_id": "EVT-1503",
+      "time_label": "D-2",
+      "day": -2,
+      "day_end": null,
+      "time_utc": "19:30Z",
+      "threads": [
+        "T15"
+      ],
+      "lanes": [
+        "C",
+        "I"
+      ],
+      "description": "Texas Division of Emergency Management (TDEM) social media monitoring team flags three false shelter-location posts to Nueces County OEM at 14:00 CDT. OEM issues correction through its official channels. Coastal Alert (fictional social media monitoring tool used by TDEM) surfaces a cluster of 11 accounts posting near-identical false shelter content within 2-hour windows — a velocity anomaly consistent with coordinated behavior. TDEM analyst Priya Subramaniam-Nair flags the cluster internally but it is not escalated to FBI or CISA at this point — the team's assessment is 'misinformation, likely local, not state actor.'",
+      "observed_in": [
+        {
+          "stream": "social_media",
+          "what": "A cluster of 11 accounts posts 34 near-identical false shelter-location messages within 2 h 17 min on D-2.",
+          "when": {
+            "start_utc": "2027-09-12T05:00Z",
+            "end_utc": "2027-09-13T05:00Z"
+          }
+        },
+        {
+          "stream": "public_record",
+          "what": "County OEM correction of the false shelter locations through its official channels.",
+          "when": {
+            "start_utc": "2027-09-12T05:00Z",
+            "end_utc": "2027-09-14T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Coastal Alert report D-2 14:00 CDT: 'Cluster ID CA-2027-RAF-0012. 11 accounts, 34 posts, timespan 2h 17m. Semantic similarity score 0.91 (threshold for CIB flag: 0.75). Topic: false shelter location (Zavala Elementary). Recommended action: platform report.'",
+        "TDEM internal assessment D-2 16:00 CDT: 'Likely local misinformation. No indicators of state actor. Flagged to platforms for review. Escalation: not recommended at this time.'"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "tdem_coastal_alert_reports_D-2",
+        "nueces_oem_shelter_correction_log",
+        "tdem_internal_escalation_records"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1504",
+      "time_label": "D0",
+      "day": 0,
+      "day_end": 2,
+      "time_utc": "06:00Z",
+      "threads": [
+        "T15",
+        "T5"
+      ],
+      "lanes": [
+        "C",
+        "I"
+      ],
+      "description": "At landfall (D0 06:00Z), the bot network pivots. False shelter and route content is retired; Phase 2 begins immediately with ERCOT-blame content. The network amplifies and in some cases fabricates quotes from unnamed CBPWA workers alleging that the utility 'knew the substations were vulnerable' and failed to harden them pre-storm. The posts do not use utility-attack language; they frame the outages as preventable negligence, suppressing organic inquiry into the anomalous restoration timeline. Volume spikes: @TXCoastalWatchdog posts 31 times on D0 alone, @NuecesLocalNews posts 28 times. Network coordination signature: 60% of Phase 2 posts are made within 4 minutes of a seed post from one of these two anchor accounts.",
+      "observed_in": [
+        {
+          "stream": "social_media",
+          "what": "Post content sample (@TXCoastalWatchdog, D0 09:14Z): 'Sources inside CBPWA telling me those transmission lines were flagged in 2024 and 2025 inspections. Nothing was done. This outage isn't Rafael — it's negligence. #CBPWA #CorpusChristiOUT' | Post content sample (@NuecesLocalNews, D0 11:47Z): 'A utility worker (staying anon) says the McKinley Substation transformer was on a replacement watchlist since 2025. No budget approved. Now 85,000 homes dark....",
+          "when": {
+            "start_utc": "2027-09-14T06:00Z",
+            "end_utc": "2027-09-17T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Post content sample (@TXCoastalWatchdog, D0 09:14Z): 'Sources inside CBPWA telling me those transmission lines were flagged in 2024 and 2025 inspections. Nothing was done. This outage isn't Rafael — it's negligence. #CBPWA #CorpusChristiOUT'",
+        "Post content sample (@NuecesLocalNews, D0 11:47Z): 'A utility worker (staying anon) says the McKinley Substation transformer was on a replacement watchlist since 2025. No budget approved. Now 85,000 homes dark. Where's the accountability? #Rafael'",
+        "Coordination signature: of 143 Phase 2 posts D0–D+2, 86 (60.1%) were published within 240 seconds of a @TXCoastalWatchdog or @NuecesLocalNews post on the same sub-topic. Organic coordination at this level is statistically improbable (p < 0.001 under null model)."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "platform_post_archive_D0_to_D+2",
+        "coastal_alert_cib_scan_D0",
+        "cbpwa_communications_logs"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "cbpwa_communications_logs",
+          "reason": "unmapped"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1505",
+      "time_label": "D+5",
+      "day": 5,
+      "day_end": 20,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T15",
+        "T5",
+        "T8"
+      ],
+      "lanes": [
+        "C",
+        "I"
+      ],
+      "description": "Phase 2 continues through D+20. The network's ERCOT-blame narrative gains organic traction — real users adopt the framing and amplify it, making the synthetic signal harder to isolate from genuine public frustration. This organic amplification is intentional: the KESTREL playbook seeds narratives designed to become self-sustaining. By D+10, the authentic-to-inauthentic ratio of ERCOT-blame posts is estimated at 7:1 (7 genuine users for each bot post). The bot accounts begin tapering posting volume as the narrative achieves organic momentum. This reduces their detection surface. Coastal Alert detects no new CIB clusters during D+5 to D+20 because individual account posting rates have dropped below the velocity-anomaly threshold.",
+      "observed_in": [
+        {
+          "stream": "social_media",
+          "what": "Phase 2: the utility-blame narrative runs to about 14,200 posts by D+10, most from genuine users; the pre-positioned accounts keep posting within minutes of two lead accounts.",
+          "when": {
+            "start_utc": "2027-09-19T05:00Z",
+            "end_utc": "2027-10-05T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Coastal Alert weekly report D+10: 'CIB velocity anomalies: none detected this period. ERCOT-blame narrative volume: 14,200 posts (87% from accounts with >90-day history). Assessment: organic frustration with utility response. No CIB indicators.'",
+        "Retrospective analysis (post D+21): If the D-7 account cluster (EVT-1501) had been connected to Phase 2 posting patterns, the 47 pre-positioned accounts account for 1,840 of the 14,200 total ERCOT-blame posts (12.9%) — but this connection was not made in real time."
+      ],
+      "public_fact": null,
+      "place_ids": [],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "platform_post_archive_D+5_to_D+20",
+        "coastal_alert_cib_scan_D+5_to_D+20",
+        "tdem_social_monitoring_weekly_report"
+      ],
+      "observable": true
+    },
+    {
+      "event_id": "EVT-1506",
+      "time_label": "D+21",
+      "day": 21,
+      "day_end": null,
+      "time_utc": "17:00Z",
+      "threads": [
+        "T15",
+        "T8",
+        "T10"
+      ],
+      "lanes": [
+        "C",
+        "I"
+      ],
+      "description": "CISA and FBI issue a joint public advisory confirming an investigation into 'anomalous SCADA system activity' at a Texas coastal utility during the Hurricane Rafael response period. The advisory does not name CBPWA or the specific system but is widely understood to refer to the grid intrusion (T8). Within 90 minutes of the advisory publication, Phase 3 begins: the bot network pivots to attribution-suppression content. Key narrative: 'CISA is covering for CBPWA by blaming hackers instead of utility negligence.' The two anchor accounts (@TXCoastalWatchdog, @NuecesLocalNews) resume high-volume posting after their Phase 2 tapering period — an anomaly Coastal Alert detects within 48 hours.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "CISA and FBI issue a joint public advisory confirming an investigation into 'anomalous SCADA system activity' at a Texas coastal utility during the Hurricane Rafael response period.",
+          "when": {
+            "start_utc": "2027-10-05T17:00Z",
+            "end_utc": "2027-10-05T19:00Z"
+          }
+        },
+        {
+          "stream": "social_media",
+          "what": "Post content sample (@TXCoastalWatchdog, D+21 19:52Z): 'Convenient timing: CISA announces 'investigation' the same week CBPWA faces a legislative inquiry. Classic deflection play. The outages were negligence. This 'hack' narrative protects them from lawsuits. #RafaelTruth' | Coastal Alert anomaly report D+22: 'Accounts @TXCoastalWatchdog and @NuecesLocalNews resumed high-velocity posting after 11-day low-volume period. Velocity spike: 400% above their...",
+          "when": {
+            "start_utc": "2027-10-05T17:00Z",
+            "end_utc": "2027-10-05T19:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Post content sample (@TXCoastalWatchdog, D+21 19:52Z): 'Convenient timing: CISA announces 'investigation' the same week CBPWA faces a legislative inquiry. Classic deflection play. The outages were negligence. This 'hack' narrative protects them from lawsuits. #RafaelTruth'",
+        "Post content sample (@NuecesLocalNews, D+21 20:17Z): 'Talked to two engineers. They say the SCADA story doesn't add up — the failures were consistent with storm damage, not an attack. Someone wants us looking at hackers, not utility executives. Wake up. #CBPWA'",
+        "Coastal Alert anomaly report D+22: 'Accounts @TXCoastalWatchdog and @NuecesLocalNews resumed high-velocity posting after 11-day low-volume period. Velocity spike: 400% above their D+5–D+19 baseline. Topic shift: ERCOT-negligence → CISA-coverup. Flagging for FBI liaison review.'"
+      ],
+      "public_fact": "PUB-150",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cisa_fbi_advisory_D+21",
+        "platform_post_archive_D+21_to_D+45",
+        "coastal_alert_cib_scan_D+22"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1507",
+      "time_label": "D+24",
+      "day": 24,
+      "day_end": null,
+      "time_utc": "20:00Z",
+      "threads": [
+        "T15",
+        "T10"
+      ],
+      "lanes": [
+        "I"
+      ],
+      "description": "TDEM analyst Priya Subramaniam-Nair, following up on the Coastal Alert D+22 flag, requests IP/ASN data from the two platform providers for accounts @TXCoastalWatchdog and @NuecesLocalNews under a law enforcement referral to FBI Cyber Division (referral number FB-2027-TXCYB-1148). The request will take 5–7 days to process. Separately, the CISA utility investigation team (T8) has already identified ASN 198765 as the hosting block for KESTREL VPN exit nodes used in the grid intrusion. The two investigative threads are running in parallel but have not yet been cross-referenced. This is the hidden connection point: when the FBI returns IP data showing @TXCoastalWatchdog and @NuecesLocalNews resolved to ASN 198765, the two threads will converge.",
+      "observed_in": [],
+      "detection_artifacts": [
+        "CISA utility investigation technical annex (classified, shared with FBI D+18): 'VPN exit node ASN: 198765 (Meridian Transit Hosting, registered Netherlands). Session source IPs: 198.51.47.0/24 and 198.51.48.0/24. Used in SCADA intrusion sessions D+1 03:11Z to D+1 05:44Z.'",
+        "FBI referral FB-2027-TXCYB-1148 request: IP address records for accounts @TXCoastalWatchdog and @NuecesLocalNews from D-7 through D+22. Expected response: D+29 to D+31."
+      ],
+      "public_fact": null,
+      "place_ids": [],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fbi_cyber_referral_FB-2027-TXCYB-1148",
+        "cisa_utility_investigation_asn_records",
+        "tdem_coastal_alert_escalation_D+24"
+      ],
+      "observable": false,
+      "not_observable_reason": "A law-enforcement records request. The account behaviour it concerns is in social_media."
+    },
+    {
+      "event_id": "EVT-1508",
+      "time_label": "D+30",
+      "day": 30,
+      "day_end": null,
+      "time_utc": "16:00Z",
+      "threads": [
+        "T15",
+        "T10"
+      ],
+      "lanes": [
+        "I"
+      ],
+      "description": "FBI Cyber Division returns IP records to TDEM and Coastal Alert team. @TXCoastalWatchdog's account activity from D-5 through D+22 resolves to source IPs in the 198.51.47.0/24 block — ASN 198765. @NuecesLocalNews resolves to 198.51.48.0/24 — also ASN 198765. The CISA utility investigation lead, upon receiving the cross-reference notification from FBI, confirms: same ASN, same /16 supernet as the KESTREL VPN exit nodes used in the grid intrusion. The connection is classified at this stage. TDEM is briefed under NDA. The two accounts are suspended by the platforms following FBI notification. 45 of the original 47 pre-positioned accounts are still active at D+30 (two were removed by platforms earlier for TOS violations).",
+      "observed_in": [
+        {
+          "stream": "social_media",
+          "what": "FBI IP response: '@TXCoastalWatchdog: account IP log D-5 through D+22. Primary IPs: 198.51.47.112, 198.51.47.118, 198.51.47.203. ASN: 198765, Meridian Transit Hosting, NL.' | FBI IP response: '@NuecesLocalNews: account IP log D-5 through D+22. Primary IPs: 198.51.48.44, 198.51.48.91. ASN: 198765, Meridian Transit Hosting, NL.' | CISA cross-reference memo (classified): 'ASN 198765 previously identified in CBPWA SCADA intrusion analysis. The social media...",
+          "when": {
+            "start_utc": "2027-10-14T16:00Z",
+            "end_utc": "2027-10-14T18:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FBI IP response: '@TXCoastalWatchdog: account IP log D-5 through D+22. Primary IPs: 198.51.47.112, 198.51.47.118, 198.51.47.203. ASN: 198765, Meridian Transit Hosting, NL.'",
+        "FBI IP response: '@NuecesLocalNews: account IP log D-5 through D+22. Primary IPs: 198.51.48.44, 198.51.48.91. ASN: 198765, Meridian Transit Hosting, NL.'",
+        "CISA cross-reference memo (classified): 'ASN 198765 previously identified in CBPWA SCADA intrusion analysis. The social media accounts @TXCoastalWatchdog and @NuecesLocalNews share hosting infrastructure with the KESTREL VPN exit network. High confidence: common operator. Recommend elevation to NSC-level coordination.'"
+      ],
+      "public_fact": "PUB-151",
+      "place_ids": [],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fbi_ip_response_D+30",
+        "cisa_cross_reference_memorandum_D+30",
+        "platform_account_suspension_logs_D+30"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "fbi_ip_response_D+30",
+          "stream": "investigative_files"
+        },
+        {
+          "label": "cisa_cross_reference_memorandum_D+30",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true
+    },
+    {
+      "event_id": "EVT-1509",
+      "time_label": "D+38",
+      "day": 38,
+      "day_end": null,
+      "time_utc": "15:00Z",
+      "threads": [
+        "T15"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "Platforms remove the accounts on D+38 (PUB-152); two days later, on D+40, the Texas Attorney General's office issues a public advisory (PUB-153) warning Texans about social media misinformation related to Hurricane Rafael response, including false claims about CISA investigations and utility company accountability. The advisory does not name specific accounts or state actor attribution (the FBI finding is still classified). Platforms announce removal of 'coordinated inauthentic behavior networks' totaling 847 accounts related to Hurricane Rafael content — the 45 remaining KESTREL accounts are among those removed, along with hundreds of organic-but-low-quality accounts. The CIB network is effectively shut down by D+38. Continental Wire Service (OUT-06) reports the account removal.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "Texas Attorney General advisory on storm misinformation; platform announcement removing 847 accounts for coordinated inauthentic behaviour.",
+          "when": {
+            "start_utc": "2027-10-22T05:00Z",
+            "end_utc": "2027-10-25T05:00Z"
+          }
+        },
+        {
+          "stream": "social_media",
+          "what": "The removed accounts stop posting; their account objects show suspended status.",
+          "when": {
+            "start_utc": "2027-10-22T05:00Z",
+            "end_utc": "2027-10-25T05:00Z"
+          }
+        },
+        {
+          "stream": "news",
+          "what": "Wire and local coverage of the removals.",
+          "when": {
+            "start_utc": "2027-10-22T05:00Z",
+            "end_utc": "2027-10-25T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Platform joint announcement D+38: '847 accounts removed for coordinated inauthentic behavior related to Hurricane Rafael public safety content. Accounts had demonstrated patterns of velocity anomaly, semantic duplication, and infrastructure reuse indicative of an organized influence operation.'",
+        "Removal population breakdown (internal, not public): 47 KESTREL pre-positioned accounts (45 active, 2 previously removed), 800 organic-but-TOS-violating accounts amplifying the same narratives."
+      ],
+      "public_fact": "PUB-152",
+      "place_ids": [],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "tx_ag_advisory_D+38",
+        "platform_cib_removal_announcement_D+38",
+        "cwservice_report_D+38"
+      ],
+      "observable": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "PUB-150",
+      "day": 21,
+      "time_local": "12:00",
+      "type": "press_release",
+      "source": "CISA / FBI",
+      "statement": "The Cybersecurity and Infrastructure Security Agency (CISA) and the Federal Bureau of Investigation today announced a joint investigation into anomalous activity affecting industrial control systems at a coastal electric utility in Texas during the Hurricane Rafael response period. The activity was identified during routine review of utility incident reports submitted under the Cyber Incident Reporting for Critical Infrastructure Act. CISA and FBI are working with the affected utility and state partners to assess the scope, origin, and impact of the activity. No attribution has been made at this time. Utilities in the Gulf Coast region are encouraged to review and implement CISA's operational technology security guidelines and report anomalous ICS activity through the CISA 24/7 operations center. This investigation is ongoing and additional information will be provided as appropriate.",
+      "arcs": [
+        "ARC-SPILL-CYBER"
+      ],
+      "events": [
+        "EVT-1506"
+      ],
+      "places": [
+        "Texas Gulf Coast"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-151",
+      "day": 32,
+      "time_local": "14:00",
+      "type": "press_release",
+      "source": "Texas Division of Emergency Management",
+      "statement": "The Texas Division of Emergency Management, working with federal partners, has identified and referred to law enforcement a network of social media accounts that disseminated false public safety information during Hurricane Rafael. The accounts distributed incorrect evacuation shelter locations, false road closure information, and misleading content about utility restoration and federal investigations. TDEM's social media monitoring tool, Coastal Alert, detected anomalous posting behavior consistent with coordinated inauthentic behavior. TDEM has referred account information to the FBI and has coordinated with social media platforms on account review. Members of the public who encountered false shelter or evacuation information during the Rafael response are asked to report it to TDEM's public information line at 512-424-2208. TDEM reminds the public to verify emergency information through official sources: NuecesCountyOEM.org, 2-1-1 Texas, and local broadcast stations designated in the Corpus Christi Emergency Alert System.",
+      "arcs": [
+        "ARC-SPILL-CYBER"
+      ],
+      "events": [
+        "EVT-1507",
+        "EVT-1508"
+      ],
+      "places": [
+        "Nueces County"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-152",
+      "day": 38,
+      "time_local": "11:00",
+      "type": "news_article",
+      "source": "Continental Wire Service (OUT-06)",
+      "statement": "Two major social media platforms announced Friday the removal of 847 accounts engaged in coordinated inauthentic behavior related to Hurricane Rafael public safety communications. The companies said the accounts had spread false evacuation shelter locations, fabricated road closure reports, and promoted misleading claims about the cause of extended power outages in Corpus Christi. The platforms said the accounts showed 'clear indicators of artificial coordination' including synchronized posting times, shared infrastructure, and near-identical content across different handles. The joint announcement followed referrals from the Texas Division of Emergency Management and the FBI's Cyber Division. Neither platform attributed the network to a specific actor or government. Texas Attorney General spokesperson Brandon Lacey-Rhinehart said the state was 'continuing to investigate the origin and intent of this coordinated effort to undermine public safety during a natural disaster.' The discovery of the false shelter posts is of particular concern: Nueces County OEM confirmed that at least 23 residents called the county 211 line on the day before landfall asking about Zavala Elementary as a shelter location, based on social media posts that have since been removed.",
+      "arcs": [
+        "ARC-SPILL-CYBER"
+      ],
+      "events": [
+        "EVT-1509"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Nueces County"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-153",
+      "day": 40,
+      "time_local": "09:00",
+      "type": "advisory",
+      "source": "Texas Office of the Attorney General",
+      "statement": "The Office of the Texas Attorney General today issued a consumer advisory warning Texans about misinformation campaigns targeting emergency communications during natural disasters. During Hurricane Rafael, coordinated social media accounts posted false information including incorrect evacuation shelter addresses, fabricated road closure reports, and misleading claims about the causes of utility outages in the Corpus Christi area. The OAG advises Texans to: verify emergency information only through official government websites and designated emergency broadcast stations; report suspected misinformation to local emergency management or through the FBI's Internet Crime Complaint Center (IC3.gov); and be cautious of social media accounts with limited post history that suddenly begin posting high volumes of local emergency content. The OAG is cooperating with the FBI's ongoing investigation into the organized distribution of false public safety information during the Rafael response period.",
+      "arcs": [],
+      "events": [
+        "EVT-1509"
+      ],
+      "places": [],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "social_cib_intensity",
+      "label": "CIB network activity index (0–100)",
+      "kind": "number",
+      "group": "Cyber & information",
+      "unit": "index",
+      "thread": "T15",
+      "description": "Composite index of coordinated inauthentic behavior network activity related to Hurricane Rafael, normalized to 0–100. Incorporates posting volume from pre-positioned accounts, semantic similarity between account posts, coordination time-window violations, and estimated reach (organic amplification). Values above 60 indicate detectable CIB; above 80 indicate high-confidence coordinated operation.",
+      "range": [
+        0,
+        100
+      ],
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 0
+        },
+        {
+          "day": -7,
+          "value": 2
+        },
+        {
+          "day": -5,
+          "value": 45
+        },
+        {
+          "day": -2,
+          "value": 68
+        },
+        {
+          "day": 0,
+          "value": 82
+        },
+        {
+          "day": 2,
+          "value": 91
+        },
+        {
+          "day": 5,
+          "value": 55
+        },
+        {
+          "day": 10,
+          "value": 28
+        },
+        {
+          "day": 20,
+          "value": 18
+        },
+        {
+          "day": 21,
+          "value": 74
+        },
+        {
+          "day": 24,
+          "value": 62
+        },
+        {
+          "day": 30,
+          "value": 41
+        },
+        {
+          "day": 38,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "false_shelter_reports_active",
+      "label": "False shelter location reports active",
+      "kind": "state",
+      "group": "Public knowledge",
+      "unit": "status",
+      "thread": "T15",
+      "description": "Whether active social media posts directing evacuees to incorrect shelter locations (specifically Zavala Elementary) are circulating in Corpus Christi information space.",
+      "states": {
+        "inactive": "#3f8f6b",
+        "active": "#c8402f",
+        "corrected": "#e07a1f"
+      },
+      "keyframes": [
+        {
+          "day": -5,
+          "state": "active"
+        },
+        {
+          "day": -2,
+          "state": "corrected"
+        },
+        {
+          "day": 0,
+          "state": "inactive"
+        }
+      ]
+    },
+    {
+      "id": "cib_phase",
+      "label": "CIB campaign phase",
+      "kind": "state",
+      "group": "Hidden threads",
+      "unit": "phase",
+      "thread": "T15",
+      "description": "Current operational phase of the KESTREL-linked CIB social media campaign. 'pre-storm amplification': false shelter/route content and storm fear amplification. 'blame deflection': ERCOT/CBPWA negligence narrative suppressing anomalous outage inquiry. 'attribution suppression': discrediting CISA investigation and promoting cover-up framing. 'dormant': network activity effectively suspended.",
+      "states": {
+        "dormant": "#aaaaaa",
+        "pre-storm amplification": "#e07a1f",
+        "blame deflection": "#c8402f",
+        "attribution suppression": "#9b2c8f"
+      },
+      "keyframes": [
+        {
+          "day": -60,
+          "state": "dormant"
+        },
+        {
+          "day": -5,
+          "state": "pre-storm amplification"
+        },
+        {
+          "day": 0,
+          "state": "blame deflection"
+        },
+        {
+          "day": 21,
+          "state": "attribution suppression"
+        },
+        {
+          "day": 38,
+          "state": "dormant"
+        }
+      ]
+    },
+    {
+      "id": "kestrel_social_infra_status",
+      "label": "KESTREL social infrastructure exposure",
+      "kind": "state",
+      "group": "Hidden threads",
+      "unit": "status",
+      "thread": "T15",
+      "description": "Investigative knowledge status of the link between the CIB social accounts and KESTREL infrastructure (ASN 198765). 'unknown': no investigative connection made. 'suspected': CIB anomaly flagged but not linked to state actor. 'identified': FBI/CISA confirm ASN overlap with KESTREL VPN nodes.",
+      "states": {
+        "unknown": "#aaaaaa",
+        "suspected": "#e07a1f",
+        "identified": "#c8402f"
+      },
+      "keyframes": [
+        {
+          "day": -7,
+          "state": "unknown"
+        },
+        {
+          "day": 22,
+          "state": "suspected"
+        },
+        {
+          "day": 30,
+          "state": "identified"
+        }
+      ]
+    }
+  ],
+  "news_arcs": [
+    {
+      "arc_id": "ARC-DISINFO",
+      "name": "The network behind the noise",
+      "description": "Coverage of coordinated inauthentic behavior during Hurricane Rafael: false shelter posts causing evacuation confusion, the organic amplification of utility-blame narratives, and the eventual platform removal of 847 accounts. The classified KESTREL link remains out of public view.",
+      "thread": "T15",
+      "story_hooks": [
+        {
+          "day": -2,
+          "outlet": "OUT-02",
+          "character_note": "Harborline 6 field reporter at Zone D shelter; OEM correction on air",
+          "summary": "Nueces County OEM issues correction about Zavala Elementary not being a shelter after callers and social posts spread the false information. Harborline 6 covers the correction; does not yet identify it as coordinated.",
+          "public_facts_used": []
+        },
+        {
+          "day": 32,
+          "outlet": "OUT-01",
+          "character_note": "Bayside Ledger breaking news; TDEM spokesperson",
+          "summary": "TDEM announces referral of CIB accounts to FBI. First public acknowledgment that false shelter posts were coordinated rather than organic misinformation. Zavala Elementary false posts mentioned specifically.",
+          "public_facts_used": [
+            "PUB-151"
+          ]
+        },
+        {
+          "day": 38,
+          "outlet": "OUT-06",
+          "character_note": "Continental Wire Service national pickup",
+          "summary": "Platforms announce removal of 847-account CIB network. National story notes the false shelter posts and their potential evacuation impact. No state-actor attribution in public reporting.",
+          "public_facts_used": [
+            "PUB-152",
+            "PUB-153"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity_id": "ENT-1501",
+      "name": "Priya Subramaniam-Nair",
+      "role": "Social Media Monitoring Analyst, Texas Division of Emergency Management",
+      "type": "character",
+      "thread": "T15",
+      "affiliation": "TDEM",
+      "description": "Fictional. TDEM analyst based in Austin, TX. Operates Coastal Alert monitoring platform. First to flag the D-2 shelter location cluster and the D+22 anchor-account velocity anomaly. Initiates FBI referral FB-2027-TXCYB-1148. Does not appear in public statements; known only from internal logs."
+    },
+    {
+      "entity_id": "ENT-1502",
+      "name": "@TXCoastalWatchdog",
+      "role": "KESTREL bot account (anchor node)",
+      "type": "account",
+      "thread": "T15",
+      "affiliation": "KESTREL network",
+      "description": "Fictional social media account. Created D-7. 22 Phase 1 posts (false shelter/routes), 31 posts on D0 alone (ERCOT-blame), 18 Phase 3 posts (CISA coverup). Primary anchor of CIB network. Source IP resolves to ASN 198765, same as KESTREL VPN exit nodes used in T8 grid intrusion. Suspended D+30 following FBI notification."
+    },
+    {
+      "entity_id": "ENT-1503",
+      "name": "@NuecesLocalNews",
+      "role": "KESTREL bot account (anchor node)",
+      "type": "account",
+      "thread": "T15",
+      "affiliation": "KESTREL network",
+      "description": "Fictional social media account. Created D-7. 19 Phase 1 posts, 28 D0 posts, coordinated with @TXCoastalWatchdog in 60% of Phase 2 posts. Source IP resolves to ASN 198765. Suspended D+30."
+    },
+    {
+      "entity_id": "ENT-1504",
+      "name": "Coastal Alert",
+      "role": "Social media monitoring platform",
+      "type": "tool",
+      "thread": "T15",
+      "affiliation": "TDEM",
+      "description": "Fictional social media CIB detection tool used by TDEM. Generates cluster reports with semantic similarity scores, velocity anomaly flags, and account age analysis. Missed the Phase 1-to-Phase 2 continuity because individual accounts fell below velocity thresholds during the tapering period (D+5–D+20). Flagged the D+22 anchor-account velocity spike that initiated the FBI referral."
+    }
+  ],
+  "answer_key_path": "Teams establish the detection path as follows: (1) Collect the Coastal Alert cluster reports from D-2 and D+22 — these are the two detection moments. (2) Note that the D-2 cluster (false shelters) and the D+22 velocity anomaly involve overlapping accounts, with @TXCoastalWatchdog and @NuecesLocalNews appearing in both. (3) Pull the FBI IP response (D+30): both anchor accounts resolve to ASN 198765 (Meridian Transit Hosting, NL). (4) Cross-reference with the CISA utility investigation technical annex (T8): ASN 198765 is the KESTREL VPN exit network block used in the grid SCADA intrusion. (5) This is the KESTREL fingerprint — the same operational infrastructure was used for the social influence campaign and the physical cyberattack, confirming both are STATE-X operations and linking T15 to T8/T10. (6) Quantify the real-world impact of Phase 1: at least 23 Nueces County 211 calls referencing the false Zavala Elementary shelter, US-181 northbound at 227% baseline traffic during the D-2 evacuation window, and an estimated 400–600 evacuees misdirected based on TxDOT traffic pattern analysis.",
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

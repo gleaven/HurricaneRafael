@@ -1,0 +1,45 @@
+{
+ "source": "public_record",
+ "folder": "05_other_sources/press_releases/",
+ "format": "JSON Lines, one file per local month (statements_YYYY-MM.jsonl)",
+ "fields": [
+  {
+   "name": "id",
+   "notes": "statement id"
+  },
+  {
+   "name": "issued_local",
+   "notes": "ISO 8601 with UTC offset"
+  },
+  {
+   "name": "date_local",
+   "notes": ""
+  },
+  {
+   "name": "time_local",
+   "notes": "HH:MM; where the record gave no time of day, a time before the first same-day news report"
+  },
+  {
+   "name": "issuer",
+   "notes": "organisation or person issuing the statement"
+  },
+  {
+   "name": "type",
+   "notes": "press_release, emergency_alert, official_statement, media_report, ..."
+  },
+  {
+   "name": "text",
+   "notes": "the statement"
+  },
+  {
+   "name": "speakers",
+   "notes": "named spokespeople: name, role, organization"
+  },
+  {
+   "name": "places",
+   "notes": "place names"
+  }
+ ],
+ "notes": "Public fields of the public record. NOTICE-* records are official notices that the event log describes and the fact list does not carry separately.",
+ "generator_reference": "What the data must show, and when, is in 00_scenario/canon_timeline.json (internal). This schema describes format and joins only. Generators: scripts/streams/gen_ground.py and gen_ground_public.py; checks: scripts/check_streams.py, scripts/check_geo.py."
+}

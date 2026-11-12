@@ -1,0 +1,993 @@
+{
+  "thread_id": "T16",
+  "name": "Hospital Surge and Clinical Triage",
+  "color": "#2e7d6b",
+  "scenario": "rafael",
+  "lanes": [
+    "C",
+    "D"
+  ],
+  "truth": "Shoreline Regional Medical Center (SRMC) and Bay City Medical Center (BCMC) together experienced two distinct surge waves during Hurricane Rafael. The first wave (D0–D+7) was storm-trauma-driven and expected; SRMC hit 140% inpatient capacity by D+2, running on generator power from D0 through D+8 with a critical diesel supply crisis at D+5. The second wave (D+15–D+28) was an acute gastroenteritis cluster that most emergency managers initially attributed to displacement stress and food spoilage — but its precise geographic and temporal signature reveals it as a consequence of the T9 water-pressure manipulation. The gastroenteritis admissions, when geocoded, cluster in Districts 3–4 (the boil-water zone) with a 3-day lag from the Zone 4 pressure drop event (D+12) that confirmed the SCADA manipulation had succeeded. The cluster onset at D+15 is also 3 days after the English boil-water notice was issued (D+12) and 2 days after the Spanish notice reached KNCB (D+13). This timing difference is not coincidental: analysis of admission records by household primary language shows that Spanish-dominant households in Districts 3–4 had a statistically higher admission rate in the first 48 hours of the cluster (D+15–D+16) than English-dominant households in the same geographic area, consistent with 24 fewer hours of protective behavior (boiling water). The gastroenteritis cluster is thus independent epidemiological confirmation that (a) the water-pressure manipulation caused real pathogen exposure, and (b) the Spanish-language alert delay (T14) measurably worsened health outcomes. The public health finding is not classified; the connection to the deliberate SCADA manipulation is classified.",
+  "phase_onset": 3,
+  "phase_peak": 4,
+  "msel_events": [
+    {
+      "event_id": "EVT-1601",
+      "time_label": "D-2",
+      "day": -2,
+      "day_end": null,
+      "time_utc": "16:00Z",
+      "threads": [
+        "T16"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "SRMC Chief Medical Officer Dr. Patricia Cabrera activates the hospital's Hurricane Contingency Plan at 11:00 CDT. All elective surgeries scheduled for D-1 through D+5 are cancelled or postponed (47 cases). ICU and telemetry units begin converting non-critical patients to step-down status to free capacity. BCMC (Bay City Medical Center) follows with its own contingency activation at 13:30 CDT. SRMC sets up an external triage tent in the south parking structure to handle overflow. Blood supply is confirmed at 7-day reserve. Diesel generator tanks topped to full capacity (12,000 gallons at SRMC, 6,000 gallons at BCMC). An emergency surgical team (trauma surgeon, two ORs on standby) is assembled for the 72-hour post-landfall window.",
+      "observed_in": [
+        {
+          "stream": "hospital_capacity",
+          "what": "SRMC capacity worksheet D-2 11:00 CDT: licensed beds 500, available beds 487, storm-cleared target 440 (87% occupancy ceiling pre-storm). 47 elective procedures postponed. | SRMC diesel tank log D-2: Tank A 12,000 gal (100%), Tank B 11,850 gal (98.75%). Generator auto-test successful. Estimated runtime at storm load: 9.2 days.",
+          "when": {
+            "start_utc": "2027-09-12T16:00Z",
+            "end_utc": "2027-09-12T18:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "SRMC capacity worksheet D-2 11:00 CDT: licensed beds 500, available beds 487, storm-cleared target 440 (87% occupancy ceiling pre-storm). 47 elective procedures postponed.",
+        "SRMC diesel tank log D-2: Tank A 12,000 gal (100%), Tank B 11,850 gal (98.75%). Generator auto-test successful. Estimated runtime at storm load: 9.2 days."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-HOS-xx"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "srmc_hurricane_contingency_plan_activation_D-2",
+        "bcmc_activation_log_D-2",
+        "hospital_supply_manifests"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "hospital_supply_manifests",
+          "stream": "hospital_internal_records"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1602",
+      "time_label": "D0",
+      "day": 0,
+      "day_end": null,
+      "time_utc": "08:00Z",
+      "threads": [
+        "T16"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Hurricane Rafael makes landfall at 06:00Z. SRMC loses commercial power at 06:17Z as the McKinley Substation (GW-FAC-DSS-01, the distribution substation feeding the hospital; storm damage, not one of the five manipulated transmission substations) fails. Generator power activates automatically within 23 seconds. By 10:00 CDT, the first storm-trauma patients arrive by EMS: 4 crush injuries (structural collapse, South Padre Island Drive area), 7 lacerations requiring sutures, 2 near-drownings (storm surge, Flour Bluff area). By 18:00 CDT, the SRMC ED has seen 118 patients (baseline daily volume: 220; 118 in 12 hours tracks to 236/day, 107% of baseline). ICU adds 6 ventilator patients. BCMC ED similarly overwhelmed: 74 patients by 18:00 CDT. SRMC charge nurse Ana Lucía Montoya-Reyes coordinates triage with the external tent, triaging Spanish-speaking patients directly in Spanish to reduce assessment time.",
+      "observed_in": [
+        {
+          "stream": "ed_visits",
+          "what": "SRMC ED census D0: 118 patients by 18:00 CDT. Trauma: 4 crush injuries, 2 near-drowning, 11 laceration/wound, 8 fracture, 19 other storm-related, 74 non-storm. Admission rate: 31% (37 of 118 admitted). | EMS run report summary D0: 44 EMS calls dispatched to SRMC, 28 to BCMC. Total Rafael-related transport D0: 72. Major trauma (ISS > 15): 6 patients.",
+          "when": {
+            "start_utc": "2027-09-14T08:00Z",
+            "end_utc": "2027-09-14T10:00Z"
+          }
+        },
+        {
+          "stream": "hospital_capacity",
+          "what": "SRMC generator activation log: Commercial power loss 06:17:03Z. Generator start 06:17:26Z. Activation lag: 23 seconds. All critical systems online by 06:17:50Z.",
+          "when": {
+            "start_utc": "2027-09-14T08:00Z",
+            "end_utc": "2027-09-14T10:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "SRMC generator activation log: Commercial power loss 06:17:03Z. Generator start 06:17:26Z. Activation lag: 23 seconds. All critical systems online by 06:17:50Z.",
+        "SRMC ED census D0: 118 patients by 18:00 CDT. Trauma: 4 crush injuries, 2 near-drowning, 11 laceration/wound, 8 fracture, 19 other storm-related, 74 non-storm. Admission rate: 31% (37 of 118 admitted).",
+        "EMS run report summary D0: 44 EMS calls dispatched to SRMC, 28 to BCMC. Total Rafael-related transport D0: 72. Major trauma (ISS > 15): 6 patients."
+      ],
+      "public_fact": "PUB-160",
+      "place_ids": [
+        "FAC-HOS-xx",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "srmc_ed_patient_log_D0",
+        "bcmc_ed_patient_log_D0",
+        "srmc_generator_activation_log",
+        "ems_run_report_corpus_D0"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1603",
+      "time_label": "D+2",
+      "day": 2,
+      "day_end": null,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T16"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "SRMC hits 140% licensed bed capacity at 07:00 CDT D+2: 700 patients in a 500-bed hospital. Hallway beds are deployed on the 3rd and 4th floor surgical wings. The external triage tent holds 62 patients awaiting internal placement. BCMC is at 118% capacity (331 patients, 280 licensed beds). Dr. Cabrera declares an internal emergency and requests Texas GETAC (Governor's Emergency and Trauma Advisory Council) mutual aid. A FEMA Medical Task Force from San Antonio is requested but cannot arrive for 36–48 hours due to road conditions on I-37. SRMC issues a public capacity statement. BCMC redirects non-critical ambulances to smaller facilities in Robstown and Kingsville.",
+      "observed_in": [
+        {
+          "stream": "hospital_capacity",
+          "what": "GETAC mutual aid request filed 11:30 CDT D+2: 'SRMC at 140% capacity, BCMC at 118%. Request FEMA MTF-9 (San Antonio) and supplemental nursing staff. ETA pending road assessment.' | SRMC census D+2 07:00 CDT: 700 inpatients (140% of 500-bed capacity). ICU: 48/40 beds (120%). Med/Surg: 312/280 (111.4%). Hallway patients: 89. Triage tent: 62. | BCMC census D+2 09:00 CDT: 331 inpatients (118.2% of 280-bed capacity). ED boarding: 44 patients awaiting...",
+          "when": {
+            "start_utc": "2027-09-16T12:00Z",
+            "end_utc": "2027-09-16T14:00Z"
+          }
+        },
+        {
+          "stream": "public_record",
+          "what": "SRMC issues a public capacity statement.",
+          "when": {
+            "start_utc": "2027-09-16T12:00Z",
+            "end_utc": "2027-09-16T14:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "SRMC census D+2 07:00 CDT: 700 inpatients (140% of 500-bed capacity). ICU: 48/40 beds (120%). Med/Surg: 312/280 (111.4%). Hallway patients: 89. Triage tent: 62.",
+        "BCMC census D+2 09:00 CDT: 331 inpatients (118.2% of 280-bed capacity). ED boarding: 44 patients awaiting inpatient beds.",
+        "GETAC mutual aid request filed 11:30 CDT D+2: 'SRMC at 140% capacity, BCMC at 118%. Request FEMA MTF-9 (San Antonio) and supplemental nursing staff. ETA pending road assessment.'"
+      ],
+      "public_fact": "PUB-161",
+      "place_ids": [
+        "FAC-HOS-xx",
+        "PLC-004"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "srmc_census_records_D+2",
+        "bcmc_census_records_D+2",
+        "getac_mutual_aid_request_D+2",
+        "srmc_public_capacity_statement"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "getac_mutual_aid_request_D+2",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1604",
+      "time_label": "D+5",
+      "day": 5,
+      "day_end": null,
+      "time_utc": "17:00Z",
+      "threads": [
+        "T16",
+        "T8"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "SRMC diesel supply crisis. The hospital's Tank A is depleted after 5 days of generator operation at 85% load (high load due to extended critical care patients). Tank B is at 23% (2,730 gallons). SRMC logistics coordinator estimates 14–18 hours of remaining fuel at current burn rate. SRMC submits Priority 1 fuel request to CBPWA/county emergency fuel depot. The extended grid outage (T8 — the SCADA manipulation has kept power offline longer than storm damage alone would have) is the proximate cause: a typical storm-only outage would have restored commercial power to SRMC by D+3 based on CBPWA's pre-storm restoration sequencing. FEMA ESF-7 (Logistics) coordinates a diesel delivery from the Corpus Christi fuel depot at Port of CC. First delivery arrives D+5 21:00 CDT (8,000 gallons). The crisis is resolved but it exposed the hospital's vulnerability to extended generation.",
+      "observed_in": [
+        {
+          "stream": "fuel_deliveries",
+          "what": "SRMC generator diesel: Tank A empty at 11:30 CDT on D+5, Tank B at 23 percent with about 14 hours of runtime; an emergency federal delivery arrives the same day.",
+          "when": {
+            "start_utc": "2027-09-19T05:00Z",
+            "end_utc": "2027-09-21T05:00Z"
+          }
+        },
+        {
+          "stream": "hospital_capacity",
+          "what": "SRMC on generator power from D0; fuel-hours remaining falls below one day on D+5.",
+          "when": {
+            "start_utc": "2027-09-14T05:00Z",
+            "end_utc": "2027-09-23T05:00Z"
+          }
+        },
+        {
+          "stream": "outage_map",
+          "what": "The feeder serving SRMC is still out on D+5 although the hospital is a first-priority restoration.",
+          "when": {
+            "start_utc": "2027-09-14T05:00Z",
+            "end_utc": "2027-09-23T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "SRMC diesel tank log D+5 12:00 CDT: Tank A 0 gal (depleted 11:30 CDT). Tank B 2,730 gal (22.75%). Current burn rate: 192 gal/hr. Remaining runtime: 14.2 hours.",
+        "CBPWA restoration sequencing plan (pre-storm): SRMC classified Priority 1 for restoration within 48 hours of outage onset. Actual restoration: D+8. Delta: 6 days beyond plan. The extended delay is consistent with T8 SCADA manipulation preventing substation switching.",
+        "FEMA ESF-7 delivery log: 8,000 gallons diesel, delivered SRMC loading dock 21:00 CDT D+5. Tank B refilled to 100% (10,730 gal total). Priority escalation authorized by FEMA Federal Coordinating Officer."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-HOS-xx",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "srmc_diesel_tank_logs_D+5",
+        "cbpwa_power_restoration_sequencing_plan",
+        "fema_esf7_fuel_delivery_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1605",
+      "time_label": "D+8",
+      "day": 8,
+      "day_end": null,
+      "time_utc": "14:00Z",
+      "threads": [
+        "T16",
+        "T8"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Commercial power is restored to SRMC at 09:14 CDT D+8 when CBPWA restores the McKinley Substation. The hospital transitions off generator power — total generator runtime: 8 days 3 hours 3 minutes. SRMC census has declined from 140% peak to 108% (540 patients) as the acute trauma wave passes and patients are transferred or discharged. BCMC similarly returns to commercial power and begins normalizing capacity. FEMA Medical Task Force 9 (San Antonio) arrived D+6 and has been managing overflow; they begin standing down.",
+      "observed_in": [
+        {
+          "stream": "hospital_capacity",
+          "what": "SRMC returns to commercial power at 09:14 CDT on D+8 after 8 days 3 hours on generator; census 540 (108 percent), BCMC 298.",
+          "when": {
+            "start_utc": "2027-09-22T05:00Z",
+            "end_utc": "2027-09-23T05:00Z"
+          }
+        },
+        {
+          "stream": "outage_map",
+          "what": "The feeder serving SRMC is restored at 09:14 CDT on D+8.",
+          "when": {
+            "start_utc": "2027-09-22T05:00Z",
+            "end_utc": "2027-09-23T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "SRMC power restoration log: McKinley Substation restored 09:14:33 CDT D+8. Generator to standby 09:19:04 CDT. Commercial power stable. Generator run-hours meter: 195h 03m over about 200 hours on backup power.",
+        "SRMC census D+8 12:00 CDT: 540 patients (108%). BCMC census: 298 (106.4%). Both facilities remain above licensed capacity but trending toward normal range."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-HOS-xx",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "srmc_power_restoration_log_D+8",
+        "cbpwa_restoration_notification",
+        "srmc_census_records_D+8"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1606",
+      "time_label": "D+15",
+      "day": 15,
+      "day_end": null,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T16",
+        "T9"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Nueces County Public Health officer Dr. Brennan Calloway-Watts notices an unusual pattern in SRMC ED admissions: 14 patients presenting with acute gastroenteritis (vomiting, diarrhea, fever) in the 24 hours ending D+15 noon — this is 3.5x the baseline rate for this presentation. 11 of 14 patients are from Districts 3 or 4 (the boil-water zone). Dr. Calloway-Watts orders a stool culture panel and contacts the Texas Department of State Health Services (DSHS) to open a foodborne illness inquiry. At this point, the connection to the boil-water notice is not yet made — the working hypothesis is food spoilage from extended power outages. BCMC reports 8 similar presentations in the same 24-hour period.",
+      "observed_in": [
+        {
+          "stream": "ed_visits",
+          "what": "SRMC ED admissions log D+14 12:00 CDT to D+15 12:00 CDT: gastroenteritis presentations: 14. Baseline for this period (5-year avg): 4.0. Rate: 3.5x baseline. | BCMC ED gastroenteritis admissions D+14–D+15: 8 presentations. District 3–4 origin: 6 of 8 (75%).",
+          "when": {
+            "start_utc": "2027-09-29T12:00Z",
+            "end_utc": "2027-09-29T14:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "SRMC ED admissions log D+14 12:00 CDT to D+15 12:00 CDT: gastroenteritis presentations: 14. Baseline for this period (5-year avg): 4.0. Rate: 3.5x baseline.",
+        "Admission geocoding D+14–D+15: 11 of 14 (78.6%) from District 3 (zip 78405, 78416) or District 4 (zip 78407, 78408).",
+        "BCMC ED gastroenteritis admissions D+14–D+15: 8 presentations. District 3–4 origin: 6 of 8 (75%)."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-HOS-xx",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "srmc_ed_admissions_log_D+15",
+        "bcmc_ed_admissions_log_D+15",
+        "nueces_county_public_health_surveillance_D+15"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "nueces_county_public_health_surveillance_D+15",
+          "reason": "unmapped"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1607",
+      "time_label": "D+18",
+      "day": 18,
+      "day_end": 22,
+      "time_utc": "00:00Z",
+      "threads": [
+        "T16",
+        "T9",
+        "T14"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "The gastroenteritis cluster peaks at 340 cases per day across both hospitals (SRMC: 218/day, BCMC: 122/day) during D+18–D+22. Lab cultures confirm Cryptosporidium parvum and Giardia lamblia as co-dominant pathogens — both are waterborne, confirming the water supply as the source rather than food spoilage. DSHS opens a waterborne disease outbreak investigation. Nueces County public health issues a public advisory on D+18. The geographic footprint is confirmed: 94.3% of cases originate from Districts 3–4. Linguistic analysis of admission records shows that Spanish-dominant households (identified by primary language on intake forms) account for a disproportionate share of D+15–D+16 admissions compared to later in the cluster peak, consistent with the 12-hour notification delay (T14): English-dominant households had an extra day to begin boiling water before the pathogen load caused illness.",
+      "observed_in": [
+        {
+          "stream": "ed_visits",
+          "what": "Stool panels from D+18: Cryptosporidium and Giardia positives; gastrointestinal admissions of about 218 a day at SRMC and 122 at BCMC from D+18 to D+22, almost all from Districts 3 and 4.",
+          "when": {
+            "start_utc": "2027-09-29T05:00Z",
+            "end_utc": "2027-10-07T05:00Z"
+          }
+        },
+        {
+          "stream": "syndromic",
+          "what": "Gastrointestinal syndrome cluster peaks at about 340 cases a day across both hospitals on D+18 to D+22.",
+          "when": {
+            "start_utc": "2027-09-29T05:00Z",
+            "end_utc": "2027-10-07T05:00Z"
+          }
+        },
+        {
+          "stream": "public_record",
+          "what": "County health advisory on a waterborne disease cluster in Districts 3 and 4 (D+18).",
+          "when": {
+            "start_utc": "2027-10-02T05:00Z",
+            "end_utc": "2027-10-03T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "SRMC lab panel results D+18: Stool cultures from 34 patients. Cryptosporidium parvum: 22 positive (64.7%). Giardia lamblia: 19 positive (55.9%). Co-infection: 14 patients (41.2%). Both pathogens are exclusively waterborne. Zero food-vehicle pathogens detected (no Salmonella, E. coli O157:H7, norovirus).",
+        "Geographic footprint D+15–D+22: total admissions both hospitals: 1,820. District 3–4 origin: 1,717 (94.3%). District 1–2 (non-boil-water zone): 103 (5.7%).",
+        "Early-wave language analysis (D+15–D+16, first 48 hrs): of 97 admissions from Districts 3–4, 64 (66.0%) identified Spanish as primary household language on intake form. Spanish-dominant share of Districts 3–4 population: approximately 46.7% (Census ACS). Over-representation in early wave: 41.3 percentage points, consistent with the behavioral lag from the 12-hour 33-minute notification delay.",
+        "Late-wave language analysis (D+20–D+22): Spanish-dominant share of admissions: 49.1% — essentially proportional to population share. Early-wave over-representation resolved by late wave, consistent with eventual Spanish notification reducing protective behavior gap."
+      ],
+      "public_fact": "PUB-162",
+      "place_ids": [
+        "FAC-HOS-xx",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "srmc_lab_results_D+18",
+        "bcmc_lab_results_D+18",
+        "dshs_waterborne_investigation_records",
+        "nueces_county_gastroenteritis_advisory_D+18"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1608",
+      "time_label": "D+22",
+      "day": 22,
+      "day_end": null,
+      "time_utc": "16:00Z",
+      "threads": [
+        "T16",
+        "T9"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "DSHS Epidemiology team completes the preliminary outbreak analysis on D+22 and issues findings to the Corpus Christi-Nueces County Public Health District and CBPWA; the public release follows at 10:00 local on D+23 (PUB-163). The report confirms: waterborne cluster, Districts 3–4 exclusive, temporally correlated with the period of anomalous low pressure in the distribution system following Hurricane Rafael (the Districts 3–4 boil-water notice window D+12–D+42). The report does not identify the cause of the pressure drop as deliberate — CBPWA has not yet disclosed the SCADA findings publicly. DSHS notes the pressure drop is consistent with 'widespread pipe damage' or 'pump system disruption.' The 3-day lag from pressure drop (D+12) to cluster onset (D+15) is consistent with incubation periods for Cryptosporidium (1–12 days, median ~7 days) and Giardia (1–3 weeks, median ~7–10 days) — the 3-day lag is at the low end, suggesting a large pathogen dose from severe pressure reversal.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "State preliminary outbreak report (D+22 to D+23): Cryptosporidium and Giardia, municipal water as vehicle, Districts 3 and 4 only.",
+          "when": {
+            "start_utc": "2027-10-06T05:00Z",
+            "end_utc": "2027-10-08T05:00Z"
+          }
+        },
+        {
+          "stream": "syndromic",
+          "what": "Case counts by onset date form a point-source curve: rise from D+15, peak D+18 to D+22, decline after D+23.",
+          "when": {
+            "start_utc": "2027-09-29T05:00Z",
+            "end_utc": "2027-10-13T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "DSHS preliminary outbreak report: 'Outbreak Agent: Cryptosporidium parvum (primary), Giardia lamblia (co-occurring). Outbreak vehicle: municipal water supply, Districts 3–4 service zone. Time of exposure: September 26–27, 2027 (consistent with boil-water notice issuance period). Attack rate: approximately 3.6% of Districts 3–4 population (1,717 cases / 48,000 residents).'",
+        "Epidemiological curve (epi curve): cases by symptom onset date form a point-source pattern with rapid rise D+15, peak D+18–D+22, decline D+23 onward — classic signature of a single contamination event rather than ongoing exposure.",
+        "Incubation period analysis: median incubation 3 days suggests high initial dose. DSHS notes: 'The abruptness of the pressure drop in Zone 4 (documented at 11:47 CDT D+12) may have created backflow conditions drawing external contamination into the distribution system at high concentration.'"
+      ],
+      "public_fact": "PUB-163",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "dshs_preliminary_outbreak_report_D+22",
+        "cbpwa_scada_incident_internal_records",
+        "nueces_county_public_health_records"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1609",
+      "time_label": "D+28",
+      "day": 28,
+      "day_end": null,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T16",
+        "T9"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Gastroenteritis admissions decline to 18 per day across both hospitals (D+28 baseline), approaching pre-storm endemic levels. SRMC census is at 95% (475 patients) — below licensed capacity for the first time since D0. BCMC is at 89% (249 patients). The decline follows the Districts 3–4 boil-water notice taking hold in both languages; Zone 4 pressure itself only begins to recover on D+28, when the pump setpoint is restored (GW-EVT-014). Total cluster admissions: 1,820 patients across both facilities over 13 days. No deaths attributed directly to the gastroenteritis cluster, though 4 elderly patients with severe dehydration experienced prolonged hospitalizations. SRMC charge nurse Ana Lucía Montoya-Reyes leads a debriefing of the clinical response in a voice-recorded handoff session, noting that the cluster disproportionately affected elderly, pediatric, and dialysis-dependent patients in Districts 3–4.",
+      "observed_in": [
+        {
+          "stream": "hospital_capacity",
+          "what": "SRMC census 475 (95 percent) on D+28, below licensed capacity for the first time since D0.",
+          "when": {
+            "start_utc": "2027-10-12T05:00Z",
+            "end_utc": "2027-10-13T05:00Z"
+          }
+        },
+        {
+          "stream": "ed_visits",
+          "what": "Gastrointestinal admissions fall from about 218 a day (D+18 to D+22) to 94 (D+25) and 18 (D+28).",
+          "when": {
+            "start_utc": "2027-10-06T05:00Z",
+            "end_utc": "2027-10-13T05:00Z"
+          }
+        },
+        {
+          "stream": "scada_historian",
+          "what": "Zone 4 distribution pressure recovers once the P-3 setpoint is restored on D+28; the admissions decline follows it.",
+          "when": {
+            "start_utc": "2027-10-12T05:00Z",
+            "end_utc": "2027-10-15T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "SRMC gastroenteritis admission rate trend: D+15: 14/day → D+18: 218/day → D+22: 218/day → D+25: 94/day → D+28: 18/day. Decline onset correlates with water pressure restoration in Zone 4 beginning D+24.",
+        "SRMC nurse handoff transcript excerpt (Ana Lucía Montoya-Reyes, D+28 06:30 CDT): 'Los pacientes del cluster de agua mayoritariamente venían del sur — Molina, Oak Park, el área de South Bluff. Muchos eran pacientes de diálisis que tuvieron que pausar tratamiento durante el corte de luz. Les avisamos en español pero llegó tarde — eso sí lo vimos en los ingresos del primer día.'"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-HOS-xx",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "srmc_census_records_D+28",
+        "bcmc_census_records_D+28",
+        "srmc_nurse_handoff_recording_D+28",
+        "cbpwa_water_pressure_restoration_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1610",
+      "time_label": "D+60",
+      "day": 60,
+      "day_end": null,
+      "time_utc": "18:00Z",
+      "threads": [
+        "T16"
+      ],
+      "lanes": [
+        "D"
+      ],
+      "description": "SRMC and BCMC jointly release their Hurricane Rafael After-Action Report on hospital operations. The report documents: total Rafael-related admissions D0–D+30 (4,217), the two surge waves (D0–D+7 trauma wave, D+15–D+28 waterborne disease cluster), generator run-hours (195 h on the meter over about 200 hours on backup power), diesel crisis at D+5, and the pediatric/elderly/dialysis subgroup impacts during the gastroenteritis cluster. The report recommends: 72-hour on-site diesel reserve for extended grid outage scenarios, pre-positioned water quality testing protocols for boil-water events, and language-appropriate clinical communication resources for Spanish-dominant patients. The report explicitly notes that the boil-water notification delay 'may have contributed to disproportionate exposure among Spanish-dominant households in Districts 3–4.' This is the first official document linking the T14 alert delay to T16 health outcomes in the public record.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "SRMC/BCMC AAR, Section 4.3: 'The waterborne disease cluster (D+15–D+28) produced 1,820 admissions across both facilities. Geographic analysis confirms 94.3% of cases originated in Water Districts 3–4. Early-cluster admission data suggests Spanish-dominant households presented at higher rates in the first 48 hours (D+15–D+16), consistent with a delayed receipt of the Spanish-language boil-water notice.' | AAR summary table: Total Rafael-related...",
+          "when": {
+            "start_utc": "2027-11-13T18:00Z",
+            "end_utc": "2027-11-13T20:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "SRMC/BCMC AAR, Section 4.3: 'The waterborne disease cluster (D+15–D+28) produced 1,820 admissions across both facilities. Geographic analysis confirms 94.3% of cases originated in Water Districts 3–4. Early-cluster admission data suggests Spanish-dominant households presented at higher rates in the first 48 hours (D+15–D+16), consistent with a delayed receipt of the Spanish-language boil-water notice.'",
+        "AAR summary table: Total Rafael-related admissions: 4,217. Trauma wave (D0–D+7): 2,397. Waterborne cluster (D+15–D+28): 1,820. Generator run-hours meter: 195h 03m (about 200 hours elapsed on backup power). Diesel crisis events: 1 (D+5). Patient fatalities attributable to Rafael response: 0 direct."
+      ],
+      "public_fact": "PUB-164",
+      "place_ids": [
+        "FAC-HOS-xx",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "srmc_bcmc_after_action_report_D+60",
+        "nueces_county_public_health_final_cluster_report"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "srmc_bcmc_after_action_report_D+60",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "PUB-160",
+      "day": 0,
+      "time_local": "14:00",
+      "type": "press_release",
+      "source": "Shoreline Regional Medical Center",
+      "statement": "Shoreline Regional Medical Center is operating under its Hurricane Contingency Plan following Hurricane Rafael landfall. The hospital is on generator power and all patient care systems are fully operational. We are receiving storm-related trauma patients and are coordinating with Nueces County Emergency Management and FEMA to manage patient volumes. Our emergency department is open and accepting patients. Bay City Medical Center is also open and operating. Patients with non-emergency conditions are encouraged to use urgent care facilities when possible to allow both hospitals to focus on critical storm-related injuries. For life-threatening emergencies, call 911. Shoreline Regional Medical Center and Bay City Medical Center are committed to serving all Corpus Christi-area residents during this crisis, and bilingual clinical staff are available at both facilities.",
+      "arcs": [
+        "ARC-HEALTH"
+      ],
+      "events": [
+        "EVT-1602"
+      ],
+      "places": [
+        "Shoreline Regional Medical Center",
+        "Bay City Medical Center"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-161",
+      "day": 2,
+      "time_local": "11:00",
+      "type": "press_release",
+      "source": "Shoreline Regional Medical Center",
+      "statement": "Shoreline Regional Medical Center has reached maximum patient capacity and is operating above its licensed bed count due to the volume of storm-related injuries and medical needs following Hurricane Rafael. We have deployed additional patient care areas and are working with regional partners to manage the surge. Bay City Medical Center is also operating above capacity. Shoreline Regional has requested mutual aid support from the Texas Department of State Health Services and FEMA's National Disaster Medical System. We continue to operate on generator power. We ask that community members donate blood if they are able — the Nueces Bay Blood Services is accepting donations at its Ayers Street location. All Corpus Christi area residents with life-threatening emergencies should call 911. We are grateful to our clinical staff who are working around the clock to care for our community.",
+      "arcs": [
+        "ARC-HEALTH",
+        "ARC-AID"
+      ],
+      "events": [
+        "EVT-1603"
+      ],
+      "places": [
+        "Shoreline Regional Medical Center",
+        "Bay City Medical Center",
+        "Nueces Bay Blood Services"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-162",
+      "day": 18,
+      "time_local": "15:00",
+      "type": "health_advisory",
+      "source": "Corpus Christi-Nueces County Public Health District",
+      "statement": "HEALTH ADVISORY: Waterborne Disease Cluster — Districts 3 and 4. The Corpus Christi-Nueces County Public Health District is investigating an elevated number of cases of acute gastrointestinal illness, including vomiting, diarrhea, nausea, and stomach cramps, among residents of Water Districts 3 and 4. As of today, Shoreline Regional Medical Center and Bay City Medical Center have treated more than 600 patients with these symptoms since September 29, the majority of whom reside in Districts 3 and 4. Laboratory tests have confirmed the presence of Cryptosporidium and Giardia — waterborne parasites — in multiple patient samples. These findings are consistent with consumption of untreated water. All residents in Districts 3 and 4 must continue to boil all water used for drinking, cooking, brushing teeth, and making ice until further notice. Boil water vigorously for two minutes before use. If you are experiencing severe dehydration, bloody diarrhea, or are immunocompromised, seek emergency medical care immediately. Additional information will be provided as the investigation continues. For questions, call the Corpus Christi-Nueces County Public Health District line: 361-826-7200.",
+      "arcs": [
+        "ARC-HEALTH",
+        "ARC-WATER"
+      ],
+      "events": [
+        "EVT-1607"
+      ],
+      "places": [
+        "Districts 3 and 4",
+        "Shoreline Regional Medical Center",
+        "Bay City Medical Center"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-163",
+      "day": 23,
+      "time_local": "10:00",
+      "type": "press_release",
+      "source": "Texas Department of State Health Services",
+      "statement": "The Texas Department of State Health Services has completed a preliminary investigation into the waterborne disease outbreak affecting Corpus Christi Water Districts 3 and 4. DSHS has confirmed that Cryptosporidium parvum and Giardia lamblia are the causative agents of the outbreak. Both pathogens are transmitted exclusively through contaminated water. The investigation determined that exposure occurred during the period of low water pressure in Districts 3 and 4 following Hurricane Rafael, consistent with the Boil Water Notice issued by the City of Corpus Christi on September 26, 2027. DSHS is coordinating with the City of Corpus Christi, Coastal Bend Power and Water Authority, and the Corpus Christi-Nueces County Public Health District on the ongoing public health response. The Boil Water Notice for Districts 3 and 4 remains in effect. Residents should continue to boil all water before consumption. DSHS advises all immunocompromised individuals, infants, and elderly residents in the affected area to contact their healthcare provider if they have experienced any gastrointestinal symptoms.",
+      "arcs": [
+        "ARC-HEALTH",
+        "ARC-WATER"
+      ],
+      "events": [
+        "EVT-1608"
+      ],
+      "places": [
+        "Districts 3 and 4"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-164",
+      "day": 60,
+      "time_local": "10:00",
+      "type": "report_summary",
+      "source": "Shoreline Regional Medical Center / Bay City Medical Center",
+      "statement": "Shoreline Regional Medical Center and Bay City Medical Center today released their joint Hurricane Rafael Hospital Operations After-Action Report. The report documents the response of both facilities from September 11 through October 14, 2027. Combined, the two hospitals treated 4,217 hurricane-related patients over that period. The response involved two distinct patient surge waves: a trauma wave from landfall on September 14 through September 21, during which SRMC operated at up to 140% licensed bed capacity on generator power, and a waterborne disease cluster from September 29 through October 12, during which 1,820 patients were treated for Cryptosporidium and Giardia infection. The cluster was geographically concentrated in Water Districts 3 and 4. The report notes that early-cluster admissions disproportionately included patients from Spanish-dominant households, a pattern the report identifies as potentially related to the delay in Spanish-language boil-water notification. No patient deaths were directly attributable to the hospital surge response. The report recommends expanded generator diesel reserves, pre-positioned water testing capabilities, and enhanced multilingual patient communication protocols for future mass casualty and public health emergency events.",
+      "arcs": [
+        "ARC-HEALTH",
+        "ARC-WATER"
+      ],
+      "events": [
+        "EVT-1610"
+      ],
+      "places": [
+        "Shoreline Regional Medical Center",
+        "Bay City Medical Center",
+        "Districts 3 and 4"
+      ],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "srmc_capacity_pct",
+      "label": "SRMC inpatient capacity (% of licensed beds)",
+      "kind": "number",
+      "group": "Health & emergency",
+      "unit": "percent",
+      "thread": "T16",
+      "description": "Shoreline Regional Medical Center inpatient census as a percentage of its 500 licensed beds. Values above 100% indicate the hospital is operating above licensed capacity, using hallway beds, tent overflow, and mutual aid patients.",
+      "range": [
+        0,
+        160
+      ],
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 82
+        },
+        {
+          "day": -2,
+          "value": 87
+        },
+        {
+          "day": 0,
+          "value": 95
+        },
+        {
+          "day": 1,
+          "value": 118
+        },
+        {
+          "day": 2,
+          "value": 140
+        },
+        {
+          "day": 5,
+          "value": 128
+        },
+        {
+          "day": 8,
+          "value": 108
+        },
+        {
+          "day": 12,
+          "value": 97
+        },
+        {
+          "day": 15,
+          "value": 102
+        },
+        {
+          "day": 18,
+          "value": 128
+        },
+        {
+          "day": 22,
+          "value": 136
+        },
+        {
+          "day": 25,
+          "value": 118
+        },
+        {
+          "day": 28,
+          "value": 95
+        },
+        {
+          "day": 30,
+          "value": 88
+        },
+        {
+          "day": 60,
+          "value": 83
+        }
+      ]
+    },
+    {
+      "id": "bcmc_capacity_pct",
+      "label": "BCMC inpatient capacity (% of licensed beds)",
+      "kind": "number",
+      "group": "Health & emergency",
+      "unit": "percent",
+      "thread": "T16",
+      "description": "Bay City Medical Center inpatient census as a percentage of its 280 licensed beds.",
+      "range": [
+        0,
+        140
+      ],
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 79
+        },
+        {
+          "day": -2,
+          "value": 85
+        },
+        {
+          "day": 0,
+          "value": 92
+        },
+        {
+          "day": 2,
+          "value": 118
+        },
+        {
+          "day": 5,
+          "value": 112
+        },
+        {
+          "day": 8,
+          "value": 106
+        },
+        {
+          "day": 12,
+          "value": 94
+        },
+        {
+          "day": 15,
+          "value": 97
+        },
+        {
+          "day": 18,
+          "value": 119
+        },
+        {
+          "day": 22,
+          "value": 125
+        },
+        {
+          "day": 25,
+          "value": 108
+        },
+        {
+          "day": 28,
+          "value": 89
+        },
+        {
+          "day": 60,
+          "value": 80
+        }
+      ]
+    },
+    {
+      "id": "gastro_cases_per_day",
+      "label": "Acute gastroenteritis admissions per day (both hospitals)",
+      "kind": "number",
+      "group": "Health & emergency",
+      "unit": "cases/day",
+      "thread": "T16",
+      "description": "Combined daily acute gastroenteritis admissions at SRMC and BCMC. Baseline (non-disaster): 4 per day. Values above 12 (3x baseline) trigger public health cluster investigation. The waterborne disease cluster from D+15 to D+28 is caused by Cryptosporidium and Giardia from the T9 water pressure manipulation in Districts 3–4.",
+      "range": [
+        0,
+        350
+      ],
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 4
+        },
+        {
+          "day": 0,
+          "value": 5
+        },
+        {
+          "day": 12,
+          "value": 4
+        },
+        {
+          "day": 14,
+          "value": 7
+        },
+        {
+          "day": 15,
+          "value": 22
+        },
+        {
+          "day": 16,
+          "value": 68
+        },
+        {
+          "day": 17,
+          "value": 185
+        },
+        {
+          "day": 18,
+          "value": 288
+        },
+        {
+          "day": 20,
+          "value": 340
+        },
+        {
+          "day": 22,
+          "value": 322
+        },
+        {
+          "day": 24,
+          "value": 198
+        },
+        {
+          "day": 25,
+          "value": 94
+        },
+        {
+          "day": 27,
+          "value": 36
+        },
+        {
+          "day": 28,
+          "value": 18
+        },
+        {
+          "day": 30,
+          "value": 7
+        },
+        {
+          "day": 60,
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "hospital_generator_status",
+      "label": "SRMC generator/power status",
+      "kind": "state",
+      "group": "Health & emergency",
+      "unit": "status",
+      "thread": "T16",
+      "description": "Power status at Shoreline Regional Medical Center. 'normal': commercial grid power. 'generator': operating on diesel generator backup. 'critical': generator operating with less than 24 hours of fuel remaining.",
+      "states": {
+        "normal": "#3f8f6b",
+        "generator": "#e07a1f",
+        "critical": "#c8402f"
+      },
+      "keyframes": [
+        {
+          "day": -60,
+          "state": "normal"
+        },
+        {
+          "day": 0,
+          "state": "generator"
+        },
+        {
+          "day": 5,
+          "state": "critical"
+        },
+        {
+          "day": 5.5,
+          "state": "generator"
+        },
+        {
+          "day": 8,
+          "state": "normal"
+        }
+      ]
+    }
+  ],
+  "news_arcs": [
+    {
+      "arc_id": "ARC-HOSP",
+      "name": "The hospitals hold the line",
+      "description": "Coverage of SRMC and BCMC during the Hurricane Rafael response: the trauma wave, the generator diesel crisis, and the waterborne disease cluster. The cluster story becomes the public health story of the recovery phase and eventually surfaces the connection between the boil-water notification delay and disproportionate outcomes in Spanish-dominant households.",
+      "thread": "T16",
+      "story_hooks": [
+        {
+          "day": 2,
+          "outlet": "OUT-02",
+          "character_note": "Harborline 6 live outside SRMC; Dr. Osei-Mensah brief statement",
+          "summary": "Harborline 6 covers SRMC hitting 140% capacity. Dr. Osei-Mensah declines on-camera interview but provides brief written statement on mutual aid request. Triage tent visible in background footage.",
+          "public_facts_used": [
+            "PUB-161"
+          ]
+        },
+        {
+          "day": 18,
+          "outlet": "OUT-01",
+          "character_note": "Bayside Ledger; public health officer Dr. Calloway-Watts",
+          "summary": "Bayside Ledger breaks the gastroenteritis cluster story after the county public health advisory. Cryptosporidium/Giardia confirmation leads to waterborne angle. First article to mention potential connection to boil-water notice period.",
+          "public_facts_used": [
+            "PUB-162"
+          ]
+        },
+        {
+          "day": 23,
+          "outlet": "OUT-03",
+          "character_note": "Coastline Public Radio feature on the two surge waves and what they reveal about infrastructure interdependence",
+          "summary": "In-depth public radio segment on how the extended power outage (wave 1) and waterborne cluster (wave 2) are connected through infrastructure failure cascades. DSHS findings aired. Charge nurse Ana Lucía Montoya-Reyes speaks in English and Spanish about the cluster and notification delay.",
+          "public_facts_used": [
+            "PUB-163"
+          ]
+        },
+        {
+          "day": 60,
+          "outlet": "OUT-01",
+          "character_note": "Bayside Ledger follow-up on AAR; focus on the Spanish-dominant early-wave disparity",
+          "summary": "After-action report release prompts detailed Bayside Ledger article on the finding that Spanish-dominant households were over-represented in early gastroenteritis admissions. The article links T14 (notification delay) to T16 (health outcomes) in the public record for the first time.",
+          "public_facts_used": [
+            "PUB-164"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity_id": "ENT-1601",
+      "name": "Dr. Valentina Osei-Mensah",
+      "role": "Chief Medical Officer, Shoreline Regional Medical Center",
+      "type": "character",
+      "thread": "T16",
+      "affiliation": "SRMC",
+      "language": "English",
+      "description": "Fictional. CMO of SRMC, 52 years old, 14 years at Shoreline. Leads the hospital's Hurricane Contingency Plan activation at D-2. Declares internal emergency at D+2 and requests GETAC mutual aid. Primary public voice for SRMC during the trauma surge. Does not appear in public statements about the gastroenteritis cluster, deferring to public health."
+    },
+    {
+      "entity_id": "ENT-1602",
+      "name": "Ana Lucía Montoya-Reyes",
+      "role": "Charge Nurse, SRMC Emergency Department",
+      "type": "character",
+      "thread": "T16",
+      "affiliation": "SRMC",
+      "language": "Spanish-dominant bilingual",
+      "description": "Fictional. 38-year-old bilingual charge nurse, born in Reynosa, Tamaulipas, 11 years at SRMC. Coordinates Spanish-language triage directly on D0, reducing assessment time for Spanish-dominant patients. Leads nurse debriefing at D+28 (voice-recorded handoff, in Spanish). Her handoff transcript is a key synthetic clinical audio training artifact with natural code-switching. Notes in debriefing that Spanish-dominant patients were over-represented in early cluster admissions."
+    },
+    {
+      "entity_id": "ENT-1603",
+      "name": "Dr. Brennan Calloway-Watts",
+      "role": "Public Health Officer, Nueces County",
+      "type": "character",
+      "thread": "T16",
+      "affiliation": "Nueces County Public Health",
+      "language": "English",
+      "description": "Fictional. County public health officer, 46 years old. First to notice the D+15 gastroenteritis cluster in ED admissions data and open the DSHS inquiry. Issues the D+18 public health advisory. Coordinates with DSHS throughout the cluster investigation. Does not make the deliberate-attack connection — his team's hypothesis is infrastructure damage causing distribution contamination, not manipulation."
+    }
+  ],
+  "answer_key_path": "Teams establish the detection path as follows: (1) Pull SRMC and BCMC admissions data for D+14–D+28 and geocode to patient home address (zip/district). The cluster in Districts 3–4 is immediately visible. (2) Build the epidemic curve: point-source shape with 3-day onset-to-peak, confirmed by DSHS stool culture results (Cryptosporidium + Giardia, waterborne only). (3) Cross-reference cluster onset date (D+15, 3 days after D+12) with the Zone 4 pressure drop timestamp (D+12 11:47 CDT from T9 SCADA records) — the lag matches Cryptosporidium/Giardia incubation at high exposure dose. (4) This independently confirms the T9 water pressure manipulation had real-world public health consequences. (5) Stratify early-cluster admissions (D+15–D+16) by household primary language from intake forms: Spanish-dominant households over-represented by 41 percentage points above their share of Districts 3–4 population. This is statistically explained by the 12-hour 33-minute notification lag: English-dominant households had 3 days to boil water; Spanish-dominant households had only 2 days (English notice D+12, Spanish notice D+13). (6) The hospital data thus provides independent confirmation of both the T9 water manipulation (via the waterborne cluster footprint) and the T14 alert delay (via the early-wave language disparity). The hidden truth — that the pressure manipulation was deliberate — is not visible in the hospital data alone but the hospital data proves real harm occurred and cannot be explained by storm damage alone.",
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

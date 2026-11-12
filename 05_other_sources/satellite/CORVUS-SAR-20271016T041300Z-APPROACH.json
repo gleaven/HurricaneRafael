@@ -1,0 +1,108 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
+ ],
+ "id": "CORVUS-SAR-20271016T041300Z-APPROACH",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.2,
+     27.62
+    ],
+    [
+     -96.72,
+     27.62
+    ],
+    [
+     -96.72,
+     27.98
+    ],
+    [
+     -97.2,
+     27.98
+    ],
+    [
+     -97.2,
+     27.62
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.2,
+  27.62,
+  -96.72,
+  27.98
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "CORVUS-SAR-20271016T041300Z-APPROACH.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/CORVUS-SAR-20271016T041300Z-APPROACH/sigma0_vv.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/CORVUS-SAR-20271016T041300Z-APPROACH/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-10-16T04:13:00Z",
+  "title": "Night radar pass, approaches and anchorage",
+  "description": "Tasked night acquisition of the approaches and anchorage (harbour reopening watch). Vessel detections (hulls of 40 m or more): 12 at the offshore anchorage, 14 alongside in the Inner Harbor, 4 under way in the ship channel. One small hull with no AIS correlation (off Port Aransas); below the size that must carry AIS.",
+  "platform": "Corvus-SAR-4",
+  "instruments": [
+   "X-band SAR"
+  ],
+  "constellation": "Corvus-SAR",
+  "gsd": 3,
+  "view:off_nadir": 5.8,
+  "view:sun_azimuth": 298.0,
+  "view:sun_elevation": -55.8,
+  "proj:epsg": 32614,
+  "sar:instrument_mode": "stripmap",
+  "sar:frequency_band": "X",
+  "sar:polarizations": [
+   "VV",
+   "VH"
+  ],
+  "tasking": "port security, harbour reopening watch",
+  "detections": {
+   "vessels": {
+    "offshore_anchorage": 12,
+    "inner_harbor_alongside": 14,
+    "ship_channel_under_way": 4,
+    "uncorrelated": [
+     {
+      "description": "small hull off Port Aransas",
+      "length_m": 16,
+      "ais_match": false
+     }
+    ]
+   }
+  }
+ }
+}

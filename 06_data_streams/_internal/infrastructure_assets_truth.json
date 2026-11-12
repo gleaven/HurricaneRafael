@@ -1,0 +1,328 @@
+{
+ "generated": "2026-11-09",
+ "not_for_participants": true,
+ "registry": "infrastructure_assets.json",
+ "truth": {
+  "GW-FAC-SUB-01": {
+   "role": "Relay undervoltage threshold changed 0.88 to 0.94 pu at D-3 17:00Z; trips at 07:12Z on D0 adding about 24,000 customers to the storm outage. First drone sortie target (D-10).",
+   "sources": [
+    "GW-EVT-003",
+    "GW-EVT-004",
+    "EVT-1901"
+   ]
+  },
+  "GW-FAC-SUB-02": {
+   "role": "Breaker-open command to CB-7 at D+7 14:30Z (8,400 customers); final restoration D+35. Follow-up inspection flagged by the FEMA survey (PUB-112). False 'trapped survivor' calls cluster around it D+7 to D+10.",
+   "sources": [
+    "GW-EVT-005",
+    "GW-EVT-015",
+    "PUB-112",
+    "EVT-1707"
+   ]
+  },
+  "GW-FAC-SUB-03": {
+   "role": "Breaker-open at D+10 19:45Z (6,800 customers; backup feed to the water plant pump room lost); restored D+35.",
+   "sources": [
+    "GW-EVT-007",
+    "GW-EVT-015",
+    "PUB-112"
+   ]
+  },
+  "GW-FAC-SUB-04": {
+   "role": "Not operated maliciously; a relay configuration timestamp of D-3 was later found on its RTU.",
+   "sources": [
+    "GW-EVT-010"
+   ]
+  },
+  "GW-FAC-SUB-05": {
+   "role": "Unaffected comparison baseline."
+  },
+  "GW-FAC-DSS-01": {
+   "role": "Feeder substation for Shoreline Regional Medical Center. Storm outage from 06:17Z D0; restored 09:14 local D+8. It is not one of the five transmission substations, which is why the hospital stays on commercial power when SUB-02 and SUB-03 are opened. Named in influence-operation posts on D0 (EVT-1504).",
+   "sources": [
+    "EVT-1602",
+    "EVT-1605",
+    "EVT-1504"
+   ],
+   "decision": "Alias resolved 2026-11-09: 69/12.5 kV distribution substation fed from Bayside (SUB-05)."
+  },
+  "GW-FAC-OPS-01": {
+   "role": "Workstation GW-WS-OPS-02 here issued the D+7 breaker command with no operator logged in.",
+   "sources": [
+    "GW-EVT-005",
+    "GW-PUB-101"
+   ],
+   "placement_note": "Canon gives no address."
+  },
+  "_placement": {
+   "note": "Substation street addresses come from the thread designs (EVT-1901, EVT-1707, old registry); each asset is placed beside that real road. The designs' own coordinates (for example 27.8041N 97.3975W for 'Harbor View area') pre-date the real geography and are superseded."
+  },
+  "GW-FAC-UTL-01": {
+   "reference_landmark": {
+    "name": "O.N. Stevens Water Treatment Plant",
+    "category": "water_plant",
+    "address": null,
+    "source": "EPA Facility Registry Service - FRS_INTERESTS FeatureServer/0",
+    "source_id": "PRIMARY_NAME 'O.N. STEVENS WATER TREATMENT PLANT'"
+   },
+   "role": "Both power feeds fail 09:00Z D0; P-2 fails, P-3 overheats; citywide low pressure; raw-water TPH 0.42 mg/L at 06:00Z D+2 (intake switched to the secondary). P-3 discharge setpoint lowered 85 to 68 psi at D+8 21:00 local and restored D+28; P-2 back D+38; certified at full capacity D+42.",
+   "sources": [
+    "EVT-0302",
+    "PUB-025",
+    "EVT-2003",
+    "PUB-190",
+    "GW-EVT-006",
+    "GW-EVT-014",
+    "EVT-0406",
+    "GW-EVT-016"
+   ]
+  },
+  "EQP-1102": {
+   "role": "P-2: vibration trend from D-55, fails at D0, parts ordered D+2 from SUP-0219 (quoted 9 days, arrive D+36), restored D+38.",
+   "sources": [
+    "EVT-0102",
+    "EVT-0302",
+    "EVT-0308",
+    "EVT-0406"
+   ]
+  },
+  "EQP-1103": {
+   "role": "P-3: overheats at D0; target of the D+8 setpoint change.",
+   "sources": [
+    "EVT-0302",
+    "GW-EVT-006"
+   ]
+  },
+  "EQP-1104": {
+   "role": "P-4 loses supply when SUB-03 opens at D+10 (Zone 4 falls to 14 psi).",
+   "sources": [
+    "GW-EVT-007"
+   ]
+  },
+  "FAC-UTL-02": {
+   "role": "Both feeds fail at D0; the backup feed is lost again when SUB-03 opens at D+10. Hardening planned at D+110.",
+   "sources": [
+    "EVT-0302",
+    "GW-EVT-007",
+    "PUB-096"
+   ]
+  },
+  "GW-FAC-TK-01": {
+   "role": "First tank below 50% on D+10.",
+   "sources": [
+    "scenarios/gridwater/00_scenario/assets.json"
+   ]
+  },
+  "_pressure_test_points": {
+   "note": "Canon says Zone 4 pressure is above 40 psi 'at all test points' on D+42 but does not list them; six points are defined on real streets inside Districts 3 and 4."
+  },
+  "WW-01": {
+   "reference_landmark": {
+    "name": "New Broadway WWTF (Corpus Christi)",
+    "category": "wastewater",
+    "address": null,
+    "source": "EPA FRS - ICIS Wastewater Treatment Plants (FRS_Wastewater FeatureServer/0)",
+    "source_id": "NPDES TX0047066"
+   },
+   "role": "Norovirus signal in wastewater from D+5 (PUB-044).",
+   "sources": [
+    "EVT-0310",
+    "PUB-044"
+   ]
+  },
+  "WW-02": {
+   "reference_landmark": {
+    "name": "Oso WWTP (Corpus Christi)",
+    "category": "wastewater",
+    "address": null,
+    "source": "EPA FRS - ICIS Wastewater Treatment Plants (FRS_Wastewater FeatureServer/0)",
+    "source_id": "NPDES TX0047058"
+   }
+  },
+  "WW-03": {
+   "reference_landmark": {
+    "name": "Greenwood Plant WWTP (Corpus Christi)",
+    "category": "wastewater",
+    "address": null,
+    "source": "EPA FRS - ICIS Wastewater Treatment Plants (FRS_Wastewater FeatureServer/0)",
+    "source_id": "NPDES TX0047074"
+   }
+  },
+  "WW-04": {
+   "reference_landmark": {
+    "name": "Laguna Madre WWTP (Corpus Christi / Flour Bluff)",
+    "category": "wastewater",
+    "address": null,
+    "source": "EPA FRS - ICIS Wastewater Treatment Plants (FRS_Wastewater FeatureServer/0)",
+    "source_id": "NPDES TX0047104"
+   }
+  },
+  "WW-05": {
+   "reference_landmark": {
+    "name": "Whitecap WWTP (Corpus Christi / Padre Island)",
+    "category": "wastewater",
+    "address": null,
+    "source": "EPA FRS - ICIS Wastewater Treatment Plants (FRS_Wastewater FeatureServer/0)",
+    "source_id": "NPDES TX0047121"
+   }
+  },
+  "FAC-AIR-CRP": {
+   "reference_landmark": {
+    "name": "Corpus Christi Intl (CRP/KCRP)",
+    "category": "airport",
+    "address": "Corpus Christi, TX",
+    "source": "USDOT NTAD Aviation Facilities (FAA NASR, eff. 2026/10/29)",
+    "source_id": "FAA site 23657.2; LID CRP"
+   }
+  },
+  "FAC-INF-01A": {
+   "role": "Closed as the storm hit; reopened after inspection on D+3. State review of wind-closure procedures at D+110.",
+   "sources": [
+    "EVT-0304",
+    "PUB-027",
+    "PUB-036",
+    "PUB-096"
+   ]
+  },
+  "FAC-INF-01B": {
+   "role": "Closed D0 to D+3 with the Harbor Bridge; cut Portland and North Beach off from downtown.",
+   "sources": [
+    "PUB-027",
+    "PUB-036"
+   ]
+  },
+  "TANK-0390": {
+   "role": "GPS interference transmitter (JAM-01) operated from a parked vehicle near here D+38 to D+43; supplier of the contaminated NAS fuel.",
+   "sources": [
+    "EVT-0404",
+    "PUB-074",
+    "EVT-0407"
+   ]
+  },
+  "EQP-2201": {
+   "role": "Fails on water-contaminated fuel on D+40 (public D+41).",
+   "sources": [
+    "EVT-0407",
+    "PUB-065"
+   ]
+  },
+  "EQP-3101": {
+   "role": "Starts 23 s after commercial power loss at 06:17:03Z D0; runs 195 h 03 m; diesel low at D+5 12:00 local.",
+   "sources": [
+    "EVT-1602",
+    "EVT-1604",
+    "EVT-1605"
+   ]
+  },
+  "GW-FAC-WTR-03": {
+   "role": "Booster setpoint changed in the same session as the P-3 change (02:04Z D+9).",
+   "sources": [
+    "GW-EVT-013"
+   ]
+  }
+ },
+ "id_migration": [
+  {
+   "old": "EQP-1101 to 1104",
+   "new": [
+    "EQP-1101",
+    "EQP-1102",
+    "EQP-1103",
+    "EQP-1104"
+   ],
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "scenario ids kept as the equipment ids"
+  },
+  {
+   "old": "GW-PP1-PUMP1..4 (work orders ASSETNUM)",
+   "new": [
+    "EQP-1101",
+    "EQP-1102",
+    "EQP-1103",
+    "EQP-1104"
+   ],
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "now `maximo_assetnum` on each pump"
+  },
+  {
+   "old": "GW.UTL1.PUMP1..4 (historian tags)",
+   "new": [
+    "EQP-1101",
+    "EQP-1102",
+    "EQP-1103",
+    "EQP-1104"
+   ],
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "now `scada_tag_prefix` on each pump"
+  },
+  {
+   "old": "GW-GEN-01 (work orders, location WATER-PLANT)",
+   "new": "EQP-1140",
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "the water plant's standby generator, not the Navy generator"
+  },
+  {
+   "old": "EQP-2201",
+   "new": "EQP-2201",
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "NAS Corpus Christi backup generator (unchanged)"
+  },
+  {
+   "old": "FAC-UTL-01",
+   "new": "GW-FAC-UTL-01",
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "historian asset id; FAC-UTL-01 kept as an alias"
+  },
+  {
+   "old": "FAC-INF-01",
+   "new": [
+    "FAC-INF-01A",
+    "FAC-INF-01B"
+   ],
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "bridge and causeway are separate assets"
+  },
+  {
+   "old": "INF-CC-2027-00002 (ship channel levee)",
+   "new": null,
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "removed: not in canon"
+  },
+  {
+   "old": "INF-CC-2027-00006 (SPID commercial corridor)",
+   "new": null,
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "removed: an area, not an asset"
+  },
+  {
+   "old": "INF-CC-2027-00007 (North Beach residential area)",
+   "new": "AREA-NBH-NORTHBEACH",
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "see areas.json"
+  },
+  {
+   "old": "INF-CC-2027-00008 (INAMAR Petroleum Terminal)",
+   "new": "TERM-01 (terminal_registry.json)",
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "not canon; the canon terminal is Rendal Terminals, owned by the maritime registry"
+  },
+  {
+   "old": "INF-CC-2027-00009 (Calallen flood control channel)",
+   "new": null,
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "removed: not in canon"
+  },
+  {
+   "old": "McKinley Substation",
+   "new": "GW-FAC-DSS-01",
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "distribution substation feeding SRMC"
+  },
+  {
+   "old": "critical_infrastructure (list key)",
+   "new": "assets",
+   "old_used_in": "old registries, 00_scenario, 05_other_sources/maintenance and telemetry",
+   "note": "list key renamed; `structure_id` is now `asset_id`"
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+ ],
+ "id": "VANTAGE-VHR-20270930T163100Z-DEBRIS-CAL",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.6128,
+     27.8368
+    ],
+    [
+     -97.5965,
+     27.8368
+    ],
+    [
+     -97.5965,
+     27.8513
+    ],
+    [
+     -97.6128,
+     27.8513
+    ],
+    [
+     -97.6128,
+     27.8368
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.6128,
+  27.8368,
+  -97.5965,
+  27.8513
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "VANTAGE-VHR-20270930T163100Z-DEBRIS-CAL.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20270930T163100Z-DEBRIS-CAL/visual.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20270930T163100Z-DEBRIS-CAL/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-09-30T16:31:00Z",
+  "title": "Debris staging site CAL",
+  "description": "Debris staging site beside Jacob St. Pile outlines and haul-truck queue are resolved; suitable for pile-footprint and volume measurement.",
+  "platform": "Vantage-VHR-2",
+  "instruments": [
+   "panchromatic and multispectral imager"
+  ],
+  "constellation": "Vantage-VHR",
+  "gsd": 0.3,
+  "view:off_nadir": 3.6,
+  "view:sun_azimuth": 135.0,
+  "view:sun_elevation": 49.5,
+  "proj:epsg": 32614,
+  "eo:cloud_cover": 9,
+  "tasking": "county debris monitoring"
+ }
+}

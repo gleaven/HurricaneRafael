@@ -1,0 +1,262 @@
+{
+ "source": "census",
+ "folder": "05_other_sources/census/",
+ "format": "CSV",
+ "standard": "US Census Bureau — American Community Survey (ACS) 5-Year Estimates",
+ "reference": "https://data.census.gov/",
+ "verified": true,
+ "notes": "Synthetic ACS-style 5-year estimates for 56 tracts in Nueces County (FIPS 48355). Identifiers follow the Census GEOID pattern but the values are invented for the exercise and are not Census Bureau estimates; tract boundaries are not real. Population, income, poverty and Hispanic-origin values are identical to the tract records in areas.json. GEOID / TRACT is the join key.",
+ "entity_catalog": "06_data_streams/areas.json (area_type census_tract: AREA-TRACT-<TRACT>, each with a reference point on land, evacuation zone and ACS attributes)",
+ "fields": [
+  {
+   "name": "GEOID",
+   "type": "string",
+   "example": "48355000100",
+   "notes": "11-digit GEOID: 2-digit state FIPS + 3-digit county FIPS + 6-digit tract. Nueces County=48355."
+  },
+  {
+   "name": "NAME",
+   "type": "string",
+   "example": "Census Tract 1, Nueces County, Texas",
+   "notes": "Human-readable tract name"
+  },
+  {
+   "name": "STATE",
+   "type": "string",
+   "example": "48",
+   "notes": "2-digit state FIPS. Texas=48."
+  },
+  {
+   "name": "COUNTY",
+   "type": "string",
+   "example": "355",
+   "notes": "3-digit county FIPS. Nueces=355."
+  },
+  {
+   "name": "TRACT",
+   "type": "string",
+   "example": "000100",
+   "notes": "6-digit census tract code"
+  },
+  {
+   "name": "B01003_001E",
+   "type": "integer",
+   "example": 4847,
+   "notes": "Total population (Table B01003)"
+  },
+  {
+   "name": "B01002_001E",
+   "type": "float",
+   "example": 34.2,
+   "notes": "Median age (Table B01002)"
+  },
+  {
+   "name": "B19013_001E",
+   "type": "integer",
+   "example": 42500,
+   "notes": "Median household income (Table B19013), USD"
+  },
+  {
+   "name": "B17001_002E",
+   "type": "integer",
+   "example": 1203,
+   "notes": "Population below poverty level (Table B17001)"
+  },
+  {
+   "name": "B03003_003E",
+   "type": "integer",
+   "example": 2941,
+   "notes": "Hispanic or Latino population (Table B03003)"
+  },
+  {
+   "name": "B25002_003E",
+   "type": "integer",
+   "example": 312,
+   "notes": "Vacant housing units (Table B25002)"
+  },
+  {
+   "name": "B27001_001E",
+   "type": "integer",
+   "example": 4847,
+   "notes": "Total civilian population (Table B27001)"
+  },
+  {
+   "name": "B08201_001E",
+   "type": "integer",
+   "example": 1235,
+   "notes": "Households (Table B08201, vehicles available)"
+  },
+  {
+   "name": "B08201_002E",
+   "type": "integer",
+   "example": 271,
+   "notes": "Households with no vehicle available"
+  },
+  {
+   "name": "S1601_C01_001E",
+   "type": "integer",
+   "example": 3846,
+   "notes": "Population 5 years and over (Table S1601)"
+  },
+  {
+   "name": "S1601_C05_001E",
+   "type": "integer",
+   "example": 1730,
+   "notes": "Population 5 years and over who speak English less than 'very well'"
+  },
+  {
+   "name": "AREA_ID",
+   "type": "string",
+   "notes": "tract id in areas.json (AREA-TRACT-…)"
+  },
+  {
+   "name": "B01003_001EA",
+   "type": "number",
+   "notes": "annotation for total population"
+  },
+  {
+   "name": "B08301_001E",
+   "type": "number",
+   "notes": "see ACS table B08301"
+  },
+  {
+   "name": "B15003_022E",
+   "type": "number",
+   "notes": "see ACS table B15003"
+  },
+  {
+   "name": "B25003_002E",
+   "type": "number",
+   "notes": "see ACS table B25003"
+  },
+  {
+   "name": "B25003_003E",
+   "type": "number",
+   "notes": "see ACS table B25003"
+  },
+  {
+   "name": "B25077_001E",
+   "type": "number",
+   "notes": "see ACS table B25077"
+  },
+  {
+   "name": "EVAC_ZONE",
+   "type": "string",
+   "notes": "evacuation zone letter"
+  },
+  {
+   "name": "EVAC_ZONE_AREA_ID",
+   "type": "string",
+   "notes": "evacuation zone id in areas.json"
+  },
+  {
+   "name": "NEIGHBORHOOD_NAME",
+   "type": "string",
+   "notes": "neighbourhood the tract belongs to"
+  },
+  {
+   "name": "NOTES",
+   "type": "string",
+   "notes": "free text"
+  },
+  {
+   "name": "POP_DENSITY",
+   "type": "string",
+   "notes": "residents per square mile"
+  },
+  {
+   "name": "POP_EST",
+   "type": "string",
+   "notes": "derived or join column (see the tract index file)"
+  },
+  {
+   "name": "PREF_EVAC_ZONE",
+   "type": "string",
+   "notes": "derived or join column (see the tract index file)"
+  },
+  {
+   "name": "REF_LATITUDE",
+   "type": "string",
+   "notes": "derived or join column (see the tract index file)"
+  },
+  {
+   "name": "REF_LONGITUDE",
+   "type": "string",
+   "notes": "derived or join column (see the tract index file)"
+  },
+  {
+   "name": "WATER_DISTRICT_AREA_ID",
+   "type": "string",
+   "notes": "water district id in areas.json"
+  }
+ ],
+ "joins": [
+  {
+   "field": "TRACT / GEOID",
+   "to": "areas.json AREA-TRACT-<TRACT> (tract, geoid)"
+  },
+  {
+   "field": "PREF_EVAC_ZONE / EVAC_ZONE",
+   "to": "areas.json AREA-EVAC-<zone>"
+  }
+ ],
+ "coverage": "static reference table",
+ "files": {
+  "acs_nueces_tracts.csv": [
+   "GEOID",
+   "NAME",
+   "STATE",
+   "COUNTY",
+   "TRACT",
+   "B01003_001E",
+   "B01002_001E",
+   "B19013_001E",
+   "B17001_002E",
+   "B03003_003E",
+   "B08301_001E",
+   "B25077_001E",
+   "B25003_002E",
+   "B25003_003E",
+   "B15003_022E",
+   "B27001_001E",
+   "B25002_003E",
+   "B01003_001EA",
+   "POP_DENSITY",
+   "PREF_EVAC_ZONE",
+   "B08201_001E",
+   "B08201_002E",
+   "S1601_C01_001E",
+   "S1601_C05_001E"
+  ],
+  "nueces_tract_index.csv": {
+   "columns": [
+    "TRACT",
+    "GEOID",
+    "AREA_ID",
+    "NEIGHBORHOOD_NAME",
+    "EVAC_ZONE",
+    "EVAC_ZONE_AREA_ID",
+    "WATER_DISTRICT_AREA_ID",
+    "POP_EST",
+    "REF_LATITUDE",
+    "REF_LONGITUDE",
+    "NOTES"
+   ],
+   "notes": "AREA_ID, EVAC_ZONE_AREA_ID and WATER_DISTRICT_AREA_ID are ids in areas.json. A tract's water district is the district whose box contains the tract's reference point; district lines do not follow tract lines, so tract totals for Districts 3 and 4 exceed the 48,000 residents in the notice area."
+  }
+ },
+ "generator": "scripts/streams/gen_census.py (deterministic)",
+ "fields_removed_2026_11_11": [
+  "pct_hispanic",
+  "B16004_025E",
+  "B08141_001E",
+  "B08141_002E",
+  "pct_no_vehicle",
+  "B25070_010E",
+  "B27001_005E",
+  "ALAND",
+  "AWATER",
+  "INTPTLAT",
+  "INTPTLON"
+ ]
+}

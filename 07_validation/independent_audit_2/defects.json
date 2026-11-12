@@ -1,0 +1,194 @@
+[
+ {
+  "id": "D2-01",
+  "severity": "blocker",
+  "stream": "zeek_logs",
+  "file": "05_other_sources/network_logs/zeek/*/conn.log, ssl.log, dns.log",
+  "evidence": "ssl.log server names: 55,276 end in .example, 168 in .net (all the beacon to 104.21.88.43); dns.log: only non-.example names are update-cdn.meridiancontrols.net (1) and update-cdn.vantagesec-telemetry.net (55). conn.log: every address outside 10/8, 172.20/16, 100.64/10, 198.18/15 is hostile (104.21.88.43 x168 as responder; 8 source addresses x14). service rdp/modbus/dnp3 and port 4000 occur 9 times, all hostile actions (2027-09-11 17:04:17 dnp3, 17:09:18 rdp, 22:11:22 dnp3; 09-21 14:26:40 rdp, 14:28:13 :4000; 09-23 02:03:56, 02:07:55 modbus; 09-24 19:42:11 rdp, 19:43:44 :4000). 0 of 354 benign external remote sessions and 0 of 42 benign remote-desktop commands have a flow; README says background flows are sampled 1 in 200.",
+  "suggested_fix": "Give benign traffic the same name and address space as the attacker (or move the attacker into .example and 198.18/15); add routine OT-protocol and RDP flows; keep or sample hostile and benign flows by one rule; emit flows for benign remote sessions."
+ },
+ {
+  "id": "D2-02",
+  "severity": "major",
+  "stream": "drone_detections",
+  "file": "05_other_sources/drone_detections/detections_2027-09.csv, sighting_reports.csv",
+  "evidence": "Hostile tracks have the lowest sequence numbers (R22-270906-00001, R22-270906-00002, R22-270909-00003, R22-270911-00004, R18-270906-00001, R14-270906-00001/00002; R22's first August track is 00005); hostile ESM contact is CAMCC04-270905-00976 among 00131-00148. Sighting reports SR-*-0001..0027 are exactly the 27 hostile-night reports. Dispositions 'logged; no sensor confirmation' (17) and 'logged; forwarded to investigators' (10) only on those. rf_signature 'analog-style video downlink burst' (2), 'frequency-hopping burst, data link' (1), 'frequency-hopping, 2.4 GHz control link' (1) only on hostile rows; class 'unknown emitter' on 2 of 977 ESM rows.",
+  "suggested_fix": "Number tracks and reports in time order after merging; give benign unresolved reports the same dispositions; reuse the signature strings on benign emitters."
+ },
+ {
+  "id": "D2-03",
+  "severity": "major",
+  "stream": "host_audit_logs, vessel_ot_logs",
+  "file": "05_other_sources/network_logs/audit/{historian_access,file_integrity,endpoint_protection,scada_command_log,alarm_suppression_audit,ot_config_changes,remote_access_sessions}.csv; telemetry/vessel_cargo_control_remote_sessions.csv",
+  "evidence": "historian_access query_type 'bulk read' = exactly the 14 hostile sessions, their ids step by 37 (00441, 00515, 00552 ... 00922), tag_groups in own notation. file_integrity diff_summary filled on 1 of 161 rows. endpoint_protection: 1 REALTIME_PROTECTION_DISABLED in 7,190 rows with detail 'setting changed locally; no alert generated' (698 ENABLED rows, nothing else disabled). scada_command_log: devices GW-SUB02-CB-7 and GW-SUB03-CB-12 once each (others 32-49), remote desktop with empty operator 2 of 42. alarm_suppression_audit: GW-ENG-VELA = 82 rows = all hostile ADDs; 12 benign ADDs by 'operator shift supervisor' at 14:00:00Z every third day. ot_config_changes new_value '... (17:11 local)'. remote_access_sessions: multi-host target_hosts on 5 rows, all hostile. Tanker sessions: hostile ids 27177-27238 (one benign id inside), all hostile logins 18-23 h local vs benign 9-15 h, duration multiple of 60 on 9/15 vs 1/60, login second 00 on 8/15 vs 6/60.",
+  "suggested_fix": "Add benign bulk reads, diff summaries, disable/enable pairs, multi-target sessions and named-operator commands on those breakers; remove narrator texts; one generator for ids, seconds and durations; let the engineer account make ordinary suppression changes too."
+ },
+ {
+  "id": "D2-04",
+  "severity": "major",
+  "stream": "sar_missions",
+  "file": "05_other_sources/sar/sar_missions.csv, sar_asset_log.csv vs adsb/adsb_2027-09.csv",
+  "evidence": "Of 341 helicopter rescues 1 has an ADS-B fix of the airframe within 600 m at on-scene time, 138 farther, 202 no fix within 3 min. Of 29 sorties 3 launches and 2 recoveries match within 2 min, 4 have no airborne fix. SARM-27-0014/0016/0018 (CG-6033, 2027-09-15T05:20-11:02Z, 54 rescues) while ADS-B has CG-6033 on the ground 02:24:33-11:05:05Z. 13 of 29 sorties carry exactly 18 survivors; every D+1 sortie lasts 102 minutes.",
+  "suggested_fix": "Regenerate the SAR log from ADS-B airborne intervals (or the tracks from the log); cap survivors per sortie near 6; vary sortie length."
+ },
+ {
+  "id": "D2-05",
+  "severity": "major",
+  "stream": "host_audit_logs, siem_alerts, zeek_logs",
+  "file": "05_other_sources/network_logs/audit/scada_command_log.csv, historian_access.csv; siem/siem_alerts_2027-10.csv; zeek/2027-10-12..19/conn.log",
+  "evidence": "Jump host powered off 2027-10-12T12:00Z-10-19T20:00Z (0 remote sessions, 0 Zeek flows) but scada_command_log has 3 'remote desktop' commands from GW-SYS-JMP-01 (10-14T10:26:35Z, 10-18T02:36:14Z, 10-18T14:08:14Z), historian_access 4 sessions with client GW-SYS-JMP-01 (HIST-20271013-00996, -20271014-01003, -01015, -20271016-01031), SIEM 31 alerts with src_host GW-SYS-JMP-01. Zeek: 72 flows from GW-WTP-LAB-01 (10.72.30.50, zone ot-wtp) to the internet and corporate servers in the window.",
+  "suggested_fix": "Make every benign generator honour the isolation window; move the laboratory workstation to an IT zone or silence it."
+ },
+ {
+  "id": "D2-06",
+  "severity": "major",
+  "stream": "zeek_logs",
+  "file": "05_other_sources/network_logs/zeek/**",
+  "evidence": "0 of 107,931 dns.log uids exist in conn.log (61,522 DNS connections; 6 shared 4-tuples). Service/port pairs random for directory traffic (krb on 389/135/445, ldap on 88/135/445, smb on 88/135/389; about 50,000 rows). All 307,420 connections have conn_state SF.",
+  "suggested_fix": "Write dns.log from the DNS connections; set service by port; add S0/REJ/RSTO states."
+ },
+ {
+  "id": "D2-07",
+  "severity": "major",
+  "stream": "contracts, fuel_deliveries",
+  "file": "05_other_sources/payments/contracts_invoices.csv, contracts_actions.csv; supply/fuel_deliveries.csv; social_media NASCorpusChristi 2027-10-25T20:00Z",
+  "evidence": "VND-0002 invoices: 10 invoices, 291,000 gal, $1,686,474, tickets QF-2100..2109, service dates 2027-10-17..11-22. fuel_deliveries: 9 deliveries from VND-0002, 17,467 gal, tickets FT-50412..FT-50463, 2027-09-28..10-23; from 10-26 DLA supplies 'while the emergency contract is under review' (deficiency report 11-26, suspension 11-28). Action 2027-10-15 'Deliveries to begin when the ship channel reopens' after deliveries on 09-28, 10-05, 10-12. Failure dated 10-24 in base_status_reports and NASCC-PW-27-2800, 'Oct. 25' in contracts_actions, 'today' in the 10-25 post.",
+  "suggested_fix": "One delivery ledger for both files with shared ticket numbers; decide in canon whether fuel over-billing exists; align dates."
+ },
+ {
+  "id": "D2-08",
+  "severity": "major",
+  "stream": "shelters, sar_missions",
+  "file": "05_other_sources/shelters/shelter_daily_census.csv vs sar/sar_missions.csv",
+  "evidence": "SAR delivers 612 people to FAC-SHLT-027 (capacity 500) 09-15..09-19, 274 on 09-16 when census shows 4 new arrivals and occupancy 499 -> 484; FAC-SHLT-026 gets 239 by SAR vs 104 census arrivals; 33 deliveries to FAC-SHLT-029 on 09-14, before it opens 09-15 12:00.",
+  "suggested_fix": "Build census arrivals from bus trips plus SAR deliveries; respect capacity and opening times."
+ },
+ {
+  "id": "D2-09",
+  "severity": "major",
+  "stream": "damage_assessment",
+  "file": "05_other_sources/infrastructure/damage_assessment.csv, utility_site_survey.csv",
+  "evidence": "ASMT_DATE hours uniform over 24 h for all types (field verification 245 at 00 h, 206 at 10 h). 1,266 of 3,139 non-elevated structures with >= 5 ft flood rated MIN or lower (CC-100959: slab, 6.3 ft, MIN). Port Aransas (78373): 140 structures, 34% major/destroyed, 4.5 ft vs 78402: 45%, 6.1 ft. Manufactured homes: 593 two-storey, 1,350 of 2,567 over 2,000 sq ft. 303 addresses shared. utility_site_survey RGB rows at 09:00:03Z-10:30:00Z (before sunrise); SUB-02 row 10:30:00Z precedes its tile-set acquisition 10:34-10:51Z.",
+  "suggested_fix": "Daylight hours for field and optical work; derive level from depth, foundation and roof loss; raise Port Aransas exposure; constrain attributes by occupancy."
+ },
+ {
+  "id": "D2-10",
+  "severity": "minor",
+  "stream": "social_media",
+  "file": "05_other_sources/social_media/RubenCastaneda_.jsonl, GrantOkaforCC.jsonl, KeishaMonroeH6.jsonl",
+  "evidence": "'If you waited more than a day for help after the storm, I want to hear from you.' posted 30 times before landfall, first 2027-07-16T12:57Z.",
+  "suggested_fix": "Gate the template on D+1."
+ },
+ {
+  "id": "D2-11",
+  "severity": "minor",
+  "stream": "ais, avl, drone_telemetry, gps_integrity_reports",
+  "file": "05_other_sources/ais/ais_2027-10.csv, avl/avl_2027-10_*.csv, drone_video/drone_telemetry_2027-10.csv",
+  "evidence": "ADS-B mean NIC falls 7.95 -> 5.0-5.8 on 10-22..10-27, but KALVORA STAR (moored about 2 km from the transmitter) keeps 2-4 m AIS scatter, AVL road offset median 1.5 m vs 1.7 m a week earlier, 20 drone flights in the window show no effect; gps_integrity_reports has no file.",
+  "suggested_fix": "Add scatter and integrity loss inside the radius, or state in canon that only aviation receivers were affected."
+ },
+ {
+  "id": "D2-12",
+  "severity": "minor",
+  "stream": "scada_historian",
+  "file": "05_other_sources/telemetry/historian_WTP_202709.csv",
+  "evidence": "GW.UTL1.PUMP3.PRESS.PV is 74.6 at 2027-09-22T18:15Z, 68.2 at 22:30Z, 68.46 at 09-23T01:45Z, i.e. at the post-attack value before the setpoint write at 02:04:01Z; it moves 1 psi at the write while flow drops 1,660 -> 584 in one sample.",
+  "suggested_fix": "Hold about 85 psi until 02:04:01Z, then step."
+ },
+ {
+  "id": "D2-13",
+  "severity": "minor",
+  "stream": "drone_telemetry, damage_assessment",
+  "file": "05_other_sources/drone_video/logs/flight_log.csv, infrastructure/utility_site_survey.csv, 00_scenario/canon_timeline.json",
+  "evidence": "FEMA-UAV-0922-UTL-01..03 take off 10:03-10:56Z (05:03-05:56 local) with a visible-band camera; site-survey RGB rows from 09:00:03Z; sunrise about 12:17Z. Canon aerial_evidence gives 10:30Z.",
+  "suggested_fix": "Move the D+8 pass after 12:30Z or make it thermal."
+ },
+ {
+  "id": "D2-14",
+  "severity": "minor",
+  "stream": "ed_visits, cad_911",
+  "file": "05_other_sources/public_health/ed_visits_*.csv, 911/cad_incidents_2027-10.csv",
+  "evidence": "Canon: two tug crew injured at 2027-10-28T06:10Z. ED line lists 06:00-12:00Z: 9 injury arrivals, none blast, burn or marine; 11 EXPLOSION calls are REFER or DUP with no transport.",
+  "suggested_fix": "Add two arrivals by helicopter or EMS after 06:44Z."
+ },
+ {
+  "id": "D2-15",
+  "severity": "minor",
+  "stream": "satellite",
+  "file": "05_other_sources/satellite/CORVUS-SAR-20271015T042000Z-APPROACH.json, CORVUS-SAR-20271015T093000Z-ANCHORAGE.json",
+  "evidence": "The only two passes off the fixed 6-day 04:18/09:29 cycle and the only ones with an uncorrelated-vessel block, yet described as 'Routine'. 04:20Z text 'small hull ... no AIS correlation' vs radar NE-001301 (180 m, 27.7779,-96.9292) and AIS 'PELICAN RIDGE' transmitting there.",
+  "suggested_fix": "Put them on the cycle or mark them as tasked; reword."
+ },
+ {
+  "id": "D2-16",
+  "severity": "minor",
+  "stream": "portal_access_logs",
+  "file": "05_other_sources/network_logs/portal/*.csv",
+  "evidence": "9 account_created rows 2027-11-12T23:42:24Z-23:58:40Z; exactly 220,000 failed logins, all 512 bytes, 3,540-3,557 per address over 64 addresses; 0 failures against existing accounts and none before a takeover; 1,504 benign logins = one per profile change; 31,025 page views for 30,058 registrations; seven browser families at 11,657-11,972; probe ids 'guess-xxxxxx'; base logistics benign rows all 'login_success'.",
+  "suggested_fix": "Open at 00:00 local on 13 Nov; jitter counts and sizes; add benign logins and failures."
+ },
+ {
+  "id": "D2-17",
+  "severity": "minor",
+  "stream": "shelters",
+  "file": "05_other_sources/shelters/evacuation_bus_trips.csv",
+  "evidence": "29 bus arrivals on 2027-09-12 before the 08:00 opening (for example NC-BUS-02 at FAC-SHLT-027, 07:30:15).",
+  "suggested_fix": "Shift first pickups or open earlier."
+ },
+ {
+  "id": "D2-18",
+  "severity": "minor",
+  "stream": "outage_map",
+  "file": "05_other_sources/telemetry/outage_map.csv, 00_scenario/canon_timeline.json",
+  "evidence": "The only outage on 2027-10-24 is 110 customers in AREA-NBH-TULOSO (GW-SUB01-CB-4) from 10-23T22:45Z to 10-24T01:30Z; nothing near the air station or at 19:31Z (work order NASCC-PW-27-2800), although base status reports a 'commercial power interruption'. 0 customers out until 06:15Z on landfall night.",
+  "suggested_fix": "Add a short Flour Bluff outage on 10-24; start the storm ramp earlier."
+ },
+ {
+  "id": "D2-19",
+  "severity": "minor",
+  "stream": "aid_applications, financial_transactions",
+  "file": "05_other_sources/payments/aid_applications.csv, financial_transactions.csv",
+  "evidence": "424 disbursements, $3,949,083, to ****1073/****5333/****3176 in the aid file vs 416 credits, exactly $3,900,000.00, in the bank file (2027-11-19T12:11:06Z..12-02).",
+  "suggested_fix": "Generate the credits from the disbursements."
+ },
+ {
+  "id": "D2-20",
+  "severity": "minor",
+  "stream": "aid_applications, cad_911, host_audit_logs",
+  "file": "05_other_sources/payments/aid_applications.csv, 911/cad_incidents_2027-09.csv, network_logs/audit/settings_audits.csv",
+  "evidence": "Flag SA-2027-TX-4471 on 74 rows, all ring, all at 2027-11-16T16:14:02Z; phrase 'PEOPLE (ARE) IN DANGER NOW' 12 times in CAD, all on false calls; settings_audits '14 session records'.",
+  "suggested_fix": "Split the ring over case numbers shared with outsiders; reuse the phrase in real calls; drop the count."
+ },
+ {
+  "id": "D2-21",
+  "severity": "minor",
+  "stream": "base_status_reports, drone_detections",
+  "file": "05_other_sources/maintenance/base_status_reports.csv, drone_detections/sensor_status_2027-09.csv, sighting_reports.csv",
+  "evidence": "Perimeter sensors 'degraded' 09-15..09-24 in base status vs offline 2027-09-14T06:00Z..09-26T16-20Z in the sensor log; no sighting report before 2027-09-15; SR-270915-0028 'after sunset' at 13:04:40Z; unresolved debris-site drone reports on D+22, 25, 39, 66.",
+  "suggested_fix": "Align dates; add pre-storm benign reports; choose text by hour."
+ },
+ {
+  "id": "D2-22",
+  "severity": "minor",
+  "stream": "host_audit_logs, siem_alerts, canon",
+  "file": "05_other_sources/network_logs/audit/ot_config_changes.csv, siem/siem_alerts_*.csv, 00_scenario/canon_timeline.json",
+  "evidence": "Still open from audit 1: SUB-02 relay write 2027-09-11T22:11:07Z not in ot_config_changes; SIEM close notes random (DEVICE_COMM_LOSS 'Password mistyped' x1,579). Canon '74,120 alerts in 60 hours (5.1x baseline)' matches no window (best 60 h 41,593; D-2..D+3 73,785).",
+  "suggested_fix": "As audit 1; correct the canon sentence."
+ },
+ {
+  "id": "D2-23",
+  "severity": "minor",
+  "stream": "several",
+  "file": "sar/, network_logs/audit/alarm_suppression_audit.csv, maintenance/base_status_reports.csv, siem/daily_summary.csv, drone_video/",
+  "evidence": "102-minute SAR sorties; 82 suppression removals 20 s apart from 2027-10-12T12:30:00Z; benign suppression changes every third day 14:00:00Z; depot readiness +2 a day; SIEM recovery 235, 598, 922, 1257, 1588, 1927, 2312; survey aircraft launched 20 s apart; one maximum height per drone model; 0 missing frames in 444 flights.",
+  "suggested_fix": "Add jitter."
+ },
+ {
+  "id": "D2-24",
+  "severity": "minor",
+  "stream": "contracts, cad_911, port_surveillance, catalog",
+  "file": "05_other_sources/payments/contracts_*.csv, 911/, port_surveillance/README.md, 06_data_streams/stream_catalog.json",
+  "evidence": "Four ordinary awards invoiced at 1.5-3.4x value (PA-ER-2027-2934 $737,646 on $220,400); WATERSAFE code unused for the citywide notice (first 2027-09-26 18:05 local); README 'Produced by python3 scripts/streams/gen_maritime.py'; nine catalogued streams have path_glob null.",
+  "suggested_fix": "Tidy individually."
+ }
+]

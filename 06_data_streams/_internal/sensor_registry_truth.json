@@ -1,0 +1,257 @@
+{
+ "generated": "2026-11-09",
+ "not_for_participants": true,
+ "registry": "sensor_registry.json",
+ "truth": {
+  "WQ-01": {
+   "role": "Sentinel sonde for the Inner Harbor spill (valves open 04:00Z to 05:30Z D0); should react within the hour. Exact relation to the TERM-01 berth is set by the maritime registry.",
+   "sources": [
+    "EVT-0313",
+    "EVT-2001"
+   ]
+  },
+  "WQ-03": {
+   "role": "Oil reaches Nueces Bay marshes by D+2.",
+   "sources": [
+    "PUB-030"
+   ]
+  },
+  "WQ-06": {
+   "role": "Oil reaches North Beach by D+2 to D+3.",
+   "sources": [
+    "PUB-030",
+    "NWS-P003-05"
+   ]
+  },
+  "GAUGE-14": {
+   "role": "Canon bay tide gauge. Offline D0 to D+5 (flooded); surge about 3.4 m at 06:00Z D0 is seen at the other gauges.",
+   "sources": [
+    "00_scenario/rendering_rules.json",
+    "EVT-0301"
+   ]
+  },
+  "GAUGE-12": {
+   "role": "Nueces River rises from D-7 with pre-storm rain (EVT-0203).",
+   "sources": [
+    "EVT-0203",
+    "PUB-016"
+   ]
+  },
+  "GAUGE-13": {
+   "role": "Second river gauge promised by the rendering rules; no canon event names it."
+  },
+  "AQS-480-001": {
+   "reference_landmark": {
+    "name": "Corpus Christi Fire Department Station 9",
+    "category": "fire_station",
+    "address": "501 North Navigation Boulevard, Corpus Christi, TX, 78408",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 51 Fire Stations/EMS Stations)",
+    "source_id": "permanent_identifier 413074cd-0495-4f8b-b9c9-fb967cc5a279; GNIS 2334256"
+   },
+   "role": "Nearest regulatory monitor to the Inner Harbor spill; respiratory and skin complaints near oiled shorelines D+3 to D+21 (PUB-038, PUB-191).",
+   "sources": [
+    "PUB-038",
+    "PUB-191"
+   ]
+  },
+  "AQS-480-002": {
+   "reference_landmark": {
+    "name": "Cunningham Middle School",
+    "category": "school",
+    "address": "4321 Prescott Street, Corpus Christi, TX, 78416",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier bfd83ca4-89e9-4ce9-b1e3-973c26762a58"
+   }
+  },
+  "AQS-480-003": {
+   "reference_landmark": {
+    "name": "KCRP Corpus Christi Intl (METAR/TAF station)",
+    "category": "weather_station",
+    "address": null,
+    "source": "NWS Aviation Weather Center API stationinfo",
+    "source_id": "KCRP"
+   }
+  },
+  "AQS-480-006": {
+   "reference_landmark": {
+    "name": "Oak Park Elementary School",
+    "category": "school",
+    "address": "3801 Leopard Street, Corpus Christi, TX, 78408",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier be387f9d-a133-44b1-bfd1-ec73b286ae53"
+   }
+  },
+  "AQS-480-007": {
+   "reference_landmark": {
+    "name": "Tuloso Midway Middle School",
+    "category": "school",
+    "address": "9760 La Branch Drive, Corpus Christi, TX, 78410",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier d2f5c49c-e55f-490a-86ea-d6158c09c2c9"
+   }
+  },
+  "AQS-480-008": {
+   "reference_landmark": {
+    "name": "Calallen Middle School",
+    "category": "school",
+    "address": "4602 Cornett Drive, Corpus Christi, TX, 78520",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier 7056b109-06f1-4470-83f4-8c2492ea537b"
+   }
+  },
+  "AQS-480-009": {
+   "reference_landmark": {
+    "name": "Flour Bluff Junior High School",
+    "category": "school",
+    "address": "207 Hustlin Hornet Drive, Corpus Christi, TX, 78418",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier 9cafb493-1155-46ca-9f28-e85fb9f7271c"
+   }
+  },
+  "AQS-480-010": {
+   "reference_landmark": {
+    "name": "East Cliff Elementary School",
+    "category": "school",
+    "address": "1140 Broadway Boulevard, Portland, TX, 78374",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier 19566dbd-d480-4b62-a1ca-9c704b7883a7"
+   }
+  },
+  "AQS-480-011": {
+   "reference_landmark": {
+    "name": "Ingleside Volunteer Fire Department",
+    "category": "fire_station",
+    "address": "2425 8th Street, Ingleside, TX, 78362",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 51 Fire Stations/EMS Stations)",
+    "source_id": "permanent_identifier e9002096-a58e-4da9-bac1-71587121bb06; GNIS 2334253"
+   }
+  },
+  "AQS-480-012": {
+   "reference_landmark": {
+    "name": "Port Aransas High School",
+    "category": "school",
+    "address": "100 Station Street, Port Aransas, TX, 78373",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier 3b66e947-68f0-412b-91f5-8983c7182710"
+   }
+  },
+  "AQS-480-013": {
+   "reference_landmark": {
+    "name": "West Oso Elementary School",
+    "category": "school",
+    "address": "1526 Cliff Maus Drive, Corpus Christi, TX, 78416",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier 7a2fc68a-9ab5-40a6-a6ca-3c32f2c823d6"
+   }
+  },
+  "AQS-480-014": {
+   "reference_landmark": {
+    "name": "Corpus Christi City Hall",
+    "category": "venue",
+    "address": "1201 Leopard Street, Corpus Christi, TX, 78401",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 39 City/Town Halls)",
+    "source_id": "permanent_identifier 936d3a5e-35bd-4b2b-98cf-071ec8361c68; GNIS 2753465"
+   }
+  },
+  "AQS-480-015": {
+   "reference_landmark": {
+    "name": "Del Mar College (Heritage Campus)",
+    "category": "school",
+    "address": "101 Baldwin Boulevard, Corpus Christi",
+    "source": "USGS National Structures Dataset (structures MapServer layer 56 Colleges/Universities)",
+    "source_id": "name 'Del Mar College'"
+   }
+  },
+  "AQS-480-017": {
+   "reference_landmark": {
+    "name": "Austin Elementary School",
+    "category": "school",
+    "address": "308 North Gregory Avenue, Gregory, TX, 78359",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier 99a8bc1f-aa04-4b57-b4ef-020f70d5cd39"
+   }
+  },
+  "AQS-480-018": {
+   "reference_landmark": {
+    "name": "Seashore Middle Academy",
+    "category": "school",
+    "address": "15437 South Padre Island Drive, Corpus Christi, TX, 78418",
+    "source": "USGS National Structures Dataset (carto.nationalmap.gov structures MapServer, layer 58 Schools)",
+    "source_id": "permanent_identifier bb7f9034-088f-44f3-b3f3-fd3dc0877dee"
+   }
+  },
+  "_air_monitors": {
+   "note": "Rendering rules promise 20 air-quality sensors at 15-minute readings. The four old ids are kept (AQS-480-001..004, AQS-MOB-001) but all were re-sited: three of the old points were not where their names said and the mobile unit's points were in the ship channel. No public source for real monitor positions was reachable, so monitors sit on real public sites (schools, fire stations, airport weather station) or beside real roads."
+  }
+ },
+ "id_migration": [
+  {
+   "old": "WQ-05 (Nueces River at Calallen - upstream gauge)",
+   "new": "GAUGE-12",
+   "old_used_in": "old sensor_registry.json, 05_other_sources/env_sensors and weather, 00_scenario/places.json",
+   "note": "old WQ-05 was a river gauge; the id WQ-05 is now a sonde in the Tule Lake Channel"
+  },
+  {
+   "old": "WQ-06 (NOAA tide gauge 8775296)",
+   "new": "GAUGE-14",
+   "old_used_in": "old sensor_registry.json, 05_other_sources/env_sensors and weather, 00_scenario/places.json",
+   "note": "old WQ-06 was the tide gauge; the id WQ-06 is now a sonde off North Beach"
+  },
+  {
+   "old": "WQ-01..WQ-04",
+   "new": [
+    "WQ-01",
+    "WQ-02",
+    "WQ-03",
+    "WQ-04"
+   ],
+   "old_used_in": "old sensor_registry.json, 05_other_sources/env_sensors and weather, 00_scenario/places.json",
+   "note": "same ids and water bodies; coordinates moved into real water (WQ-01 and WQ-02 were on land)"
+  },
+  {
+   "old": "AQS-480-001..004, AQS-MOB-001",
+   "new": [
+    "AQS-480-001",
+    "AQS-480-002",
+    "AQS-480-003",
+    "AQS-480-004",
+    "AQS-MOB-001"
+   ],
+   "old_used_in": "old sensor_registry.json, 05_other_sources/env_sensors and weather, 00_scenario/places.json",
+   "note": "same ids; re-sited"
+  },
+  {
+   "old": "epa_aqs_stations (list key)",
+   "new": "air_monitors",
+   "old_used_in": "old sensor_registry.json, 05_other_sources/env_sensors and weather, 00_scenario/places.json",
+   "note": "list key renamed"
+  },
+  {
+   "old": "GAUGE-12, GAUGE-14 (00_scenario/places.json)",
+   "new": [
+    "GAUGE-12",
+    "GAUGE-14"
+   ],
+   "old_used_in": "old sensor_registry.json, 05_other_sources/env_sensors and weather, 00_scenario/places.json",
+   "note": "now sensor ids"
+  },
+  {
+   "old": "BUOY42019 (weather stream file name)",
+   "new": "42019",
+   "old_used_in": "old sensor_registry.json, 05_other_sources/env_sensors and weather, 00_scenario/places.json",
+   "note": "NDBC station id"
+  },
+  {
+   "old": "WW-xx (00_scenario/places.json)",
+   "new": [
+    "WW-01",
+    "WW-02",
+    "WW-03",
+    "WW-04",
+    "WW-05"
+   ],
+   "old_used_in": "old sensor_registry.json, 05_other_sources/env_sensors and weather, 00_scenario/places.json",
+   "note": "sampling sites at the five city plants with published positions"
+  }
+ ]
+}

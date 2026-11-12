@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Corpus Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+:root{
+  --bg:#eef1f4;--panel:#ffffff;--panel2:#f6f8fa;--fg:#14202b;--muted:#5d6b78;--line:#d6dde4;
+  --acc:#0b6e74;--acc-fg:#ffffff;--warn:#b7791f;--bad:#c0392b;--ok:#1f8a4c;--chip:#e7ecf0;--sel:#e3f1f2;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Consolas,monospace;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0c1116;--panel:#141b22;--panel2:#1a232c;--fg:#e4eaf0;--muted:#8b9aa8;--line:#26323d;
+  --acc:#3fb8bf;--acc-fg:#06171a;--warn:#e0a63a;--bad:#ff6b5b;--ok:#4cc38a;--chip:#1f2a34;--sel:#16343a;color-scheme:dark}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 var(--sans)}
+a{color:var(--acc)}
+button,select,input{font:inherit;color:inherit}
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;padding-block:12px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));border-bottom:1px solid var(--line);background:var(--panel)}
+.brand{font-weight:700;font-size:16px}.brand .sub{font-weight:400;color:var(--muted);font-size:13px;margin-left:8px}
+.top nav{display:flex;gap:16px;margin-left:auto;flex-wrap:wrap}.top nav a{text-decoration:none;font-weight:500}
+.clock{font:12px var(--mono);color:var(--muted)}
+.wrap{max-width:1600px;margin:0 auto;padding-block:14px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.filters{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:10px}
+.frow{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.lbl{font-size:12px;color:var(--muted)}
+input[type=search],select,input[type=number]{background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:7px 9px;min-width:0}
+input[type=search]{flex:1 1 260px}
+input[type=number]{width:84px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--panel2);border-radius:999px;padding:4px 10px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip.on{background:var(--sel);border-color:var(--acc)}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+.btn{border:1px solid var(--line);background:var(--panel2);border-radius:8px;padding:7px 12px;font-weight:500;cursor:pointer;white-space:nowrap;text-decoration:none;color:inherit;display:inline-block}
+.btn:hover{border-color:var(--acc)}
+.btn.primary{background:var(--acc);color:var(--acc-fg);border-color:var(--acc)}
+.btn[aria-disabled=true],.btn:disabled{opacity:.45;pointer-events:none}
+.tabs{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.tabs button{border:0;background:var(--panel2);padding:7px 14px;cursor:pointer;font-weight:500}
+.tabs button+button{border-left:1px solid var(--line)}
+.tabs button.on{background:var(--acc);color:var(--acc-fg)}
+.count{font:12px var(--mono);color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:14px;margin-top:14px;align-items:start}
+@media (max-width:1000px){.layout{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;min-width:0}
+.results{padding:0;overflow:hidden}
+.scroll{overflow:auto;max-height:calc(100vh - 230px)}
+@media (max-width:1000px){.scroll{max-height:none}}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{position:sticky;top:0;background:var(--panel2);text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap;user-select:none}
+th.sorted::after{content:" ▾"}th.sorted.asc::after{content:" ▴"}
+td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr{cursor:pointer}tr:hover td{background:var(--panel2)}tr.sel td{background:var(--sel)}
+td.m{font:12px var(--mono);white-space:nowrap;color:var(--muted)}
+tr.future td{opacity:.62}
+.type{display:inline-block;font:600 10px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:4px;background:var(--chip);white-space:nowrap}
+.type.breaking{background:var(--bad);color:#fff}
+.dayhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 12px;border-bottom:1px solid var(--line)}
+.daycols{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:10px;padding:12px;overflow-x:auto}
+.col{border:1px solid var(--line);border-radius:8px;background:var(--panel2);min-width:0;border-top:4px solid var(--oc)}
+.col h3{font-size:13px;margin:0;padding:8px 10px;border-bottom:1px solid var(--line)}
+.col .it{padding:8px 10px;border-bottom:1px solid var(--line);cursor:pointer}
+.col .it:hover,.col .it.sel{background:var(--sel)}
+.col .it .t{font:11px var(--mono);color:var(--muted)}
+.col .none{padding:10px;color:var(--muted);font-size:12px}
+.tline{padding:12px 16px}
+.tline .date{font:600 12px var(--mono);color:var(--muted);margin:14px 0 6px;letter-spacing:.04em}
+.tline .ev{display:grid;grid-template-columns:76px 1fr;gap:10px;padding:7px 8px;border-left:3px solid var(--oc);margin-left:4px;cursor:pointer;border-radius:0 6px 6px 0}
+.tline .ev:hover,.tline .ev.sel{background:var(--sel)}
+.tline .ev .t{font:12px var(--mono);color:var(--muted)}
+.tline .ev .o{font-size:12px;color:var(--muted)}
+.reader{position:sticky;top:12px;padding:18px 20px;max-height:calc(100vh - 24px);overflow:auto}
+@media (max-width:1000px){.reader{position:static;max-height:none}}
+.reader h1{font:600 24px/1.2 var(--serif);margin:6px 0 8px;text-wrap:balance}
+.reader .dek{font:italic 17px/1.45 var(--serif);color:var(--muted);margin:0 0 12px}
+.reader .body p{font:17px/1.6 var(--serif);margin:0 0 .9em;max-width:68ch}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-size:12px;margin:10px 0 14px;padding:10px 12px;background:var(--panel2);border-radius:8px}
+.meta dt{color:var(--muted)}.meta dd{margin:0;font-family:var(--mono);word-break:break-word}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 10px}
+.tag{background:var(--chip);border-radius:999px;padding:2px 9px;font-size:12px}
+.rl{list-style:none;padding:0;margin:0 0 12px;display:flex;flex-direction:column;gap:4px}
+.rl a{cursor:pointer;text-decoration:none}
+.rl .t{font:11px var(--mono);color:var(--muted);margin-right:6px}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.vis{font:600 11px var(--mono);padding:2px 7px;border-radius:4px}
+.vis.on{background:color-mix(in srgb,var(--ok) 22%,var(--chip))}.vis.off{background:color-mix(in srgb,var(--warn) 22%,var(--chip))}
+h4{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.empty{color:var(--muted);padding:24px;text-align:center}
+.note{font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">Corpus Explorer<span class="sub">every article, regardless of the clock</span></div>
+  <nav><a href="/control">Control</a><a href="/" target="_blank" rel="noopener">Newsstand</a></nav>
+  <div class="clock" id="clock">loading…</div>
+</header>
+<div class="wrap">
+  <section class="filters" aria-label="Filters">
+    <div class="frow">
+      <input type="search" id="q" placeholder="Search headline, text, people, places, topics…" aria-label="Search">
+      <label class="lbl">Type <select id="type"><option value="">All types</option></select></label>
+      <label class="lbl">Storyline <select id="arc"><option value="">All storylines</option></select></label>
+      <label class="lbl">Status <select id="vis"><option value="all">All</option><option value="pub">Published</option><option value="up">Upcoming</option></select></label>
+      <label class="lbl">Day <input type="number" id="dmin" step="1" aria-label="From day"> to <input type="number" id="dmax" step="1" aria-label="To day"></label>
+    </div>
+    <div class="frow">
+      <div class="chips" id="outlets"></div>
+    </div>
+    <div class="frow">
+      <div class="tabs" id="views"><button data-v="list" class="on">List</button><button data-v="day">Day</button><button data-v="arc">Storyline</button></div>
+      <span class="count" id="count"></span>
+      <span style="flex:1"></span>
+      <button class="btn" id="clear">Clear filters</button>
+      <button class="btn" id="dl">Download filtered JSON</button>
+    </div>
+  </section>
+  <div class="layout">
+    <section class="panel results" aria-label="Results"><div id="results" class="scroll"><div class="empty">Loading the corpus…</div></div></section>
+    <aside class="panel reader" id="reader" aria-label="Reader"><div class="empty">Select a story to read it here.</div></aside>
+  </div>
+</div>
+<script src="/static/explorer.js" defer></script>
+</body>
+</html>

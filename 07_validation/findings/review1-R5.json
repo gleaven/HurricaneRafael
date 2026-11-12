@@ -1,0 +1,186 @@
+{
+  "source": "R5",
+  "scope": "All ARC-COMMUNITY and ARC-RECOVERY stories (127), plus every story in any arc naming recurring residents CHR-040 to CHR-049 (Elizondo, Nguyen, Hargrove, Cortez, Bell, Ramos, Fontenot, Dupree, Ortega, Whitfield), plus first-person columns by Treviño, Whitlock, Navarro and Benavides. Read in day order against 01_characters/canon.json, public_record.json and real Coastal Bend geography.",
+  "stories_read": 188,
+  "findings": [
+    {
+      "id": "R5-001",
+      "severity": "high",
+      "story_id": "NWS-P035-01",
+      "field": "body",
+      "old": "Bring tap water to a rolling boil for one minute before drinking it",
+      "new": "Bring tap water to a rolling boil for two minutes before drinking it",
+      "reason": "Boil-water guidance contradicts the notice (PUB-039: rolling boil for two minutes) and the Ledger's own earlier advice (P004-02, P014-01); readers would see the instruction change mid-notice",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R5-002",
+      "severity": "medium",
+      "story_id": "NWS-M001-06",
+      "field": "body",
+      "old": "\"I've got water. I've got a radio. I've got a ladder.\"",
+      "new": "\"Water, batteries, the radio. And the ladder, same as I told you in August.\"",
+      "reason": "Bell's quote repeats word for word his Harborline quote in NWS-M017-01; recast as an explicit callback",
+      "status": "applied"
+    },
+    {
+      "id": "R5-003",
+      "severity": "medium",
+      "story_id": "NWS-P061-01",
+      "field": "body",
+      "old": "\"Smelled it first. Thought somebody's generator was leaking. Then I walked down and the sand was black at the edge.\"",
+      "new": "\"Nose found it before my eyes did. Came down here and the sand was black right to the waterline.\"",
+      "reason": "Bell's quote recycles NWS-P002-01 almost verbatim ('I thought somebody's generator was leaking... Then I walked down to the water and the sand was black at the edge'), same outlet and reporter",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R5-004",
+      "severity": "medium",
+      "story_id": "NWS-P100-01",
+      "field": "body",
+      "old": "\"I thought the storm was the loudest thing I'd ever hear on this island,\"",
+      "new": "\"I thought Harvey was the loudest thing I'd ever hear on this island,\"",
+      "reason": "Hargrove evacuated and did not hear Rafael (canon; NWS-P001-06, NWS-P015-01 'This one I left for'); he did ride out Harvey on the island",
+      "status": "applied"
+    },
+    {
+      "id": "R5-005",
+      "severity": "medium",
+      "story_id": "NWS-P048-03",
+      "field": "dek",
+      "old": "Five days after the blast at the jetties, the island is quiet.",
+      "new": "Four days after the blast at the jetties, the island is quiet.",
+      "reason": "Blast was about 1 a.m. Thursday, Oct. 28; this story runs Monday, Nov. 1, four days later",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R5-006",
+      "severity": "medium",
+      "story_id": "NWS-M026-01",
+      "field": "body",
+      "old": "said Wednesday morning, tied up at the harbor in Aransas Pass after a night on the bay",
+      "new": "said Wednesday afternoon, tied up at the harbor in Aransas Pass after a day on the bay",
+      "reason": "Night trip contradicts the dawn-out, afternoon-back routine of Aransas Pass bay boats in NWS-M052-01 and NWS-M042-01 (Texas bay shrimping is a daytime fishery)",
+      "status": "applied"
+    },
+    {
+      "id": "R5-007",
+      "severity": "low",
+      "story_id": "NWS-M026-01",
+      "field": "body",
+      "old": "Some nights he stays closer to home. Some nights he gambles.",
+      "new": "Some days he stays closer to home. Some days he gambles.",
+      "reason": "Same issue: Nguyen's bay trips are day trips elsewhere in coverage",
+      "status": "applied"
+    },
+    {
+      "id": "R5-008",
+      "severity": "low",
+      "story_id": "NWS-P002-03",
+      "field": "body",
+      "old": "in the house she rents near the bay",
+      "new": "in the duplex she rents near the bay",
+      "reason": "Elizondo canon: she rents a duplex (CANON-007/008 already aligned other stories)",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R5-009",
+      "severity": "low",
+      "story_id": "NWS-P007-03",
+      "field": "body",
+      "old": "It is fainter than it was the day after the storm, he says",
+      "new": "It is fainter than it was in the first days after the storm, he says",
+      "reason": "Bell first smelled the oil two days after landfall (canon; NWS-P002-01, NWS-P042-02); oil reached North Beach on day 2",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R5-010",
+      "severity": "low",
+      "story_id": "NWS-P074-01",
+      "field": "body",
+      "old": "and the oyster season that normally opens in November has come and gone in the closed waters without a harvest",
+      "new": "and the oyster season, which normally opens Nov. 1, has opened without a harvest in the closed waters",
+      "reason": "Texas public oyster season runs Nov. 1 through April 30; on Nov. 27 it has not 'come and gone'",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R5-011",
+      "severity": "low",
+      "story_id": "NWS-P035-02",
+      "field": "body",
+      "old": "is a hobby astronomer who films the night sky from his street",
+      "new": "is a hobby astronomer who films the night sky from his backyard",
+      "reason": "Ortega canon and every other story (M025-01, P007-01, P022-02): he films from a tripod in his backyard",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R5-012",
+      "severity": "low",
+      "story_id": "NWS-P007-01",
+      "field": "body",
+      "old": "I'm not saying what they are. I'm saying I filmed them, and I'd like somebody to tell us.",
+      "new": "I can't tell you what they are. I can tell you I filmed them, and I'd like somebody to tell us.",
+      "reason": "Opening sentence repeats verbatim Ortega's quote in NWS-P002-06 ('I'm not saying what they are.')",
+      "status": "applied"
+    },
+    {
+      "id": "R5-013",
+      "severity": "low",
+      "story_id": "NWS-P112-02",
+      "field": "body",
+      "old": "Tell me who did it, fine. Tell me when I can fish.",
+      "new": "Tell me who did it, fine. I still want to know when I can fish.",
+      "reason": "Repeats verbatim Nguyen's closing quote in NWS-P065-02 ('Tell me when I can fish'), same outlet and reporter",
+      "status": "applied"
+    },
+    {
+      "id": "R5-014",
+      "severity": "low",
+      "story_id": "NWS-P095-01",
+      "field": "body",
+      "old": "\"If they come, I'll make coffee,\" she said. \"If they come.\"",
+      "new": "\"If they come, Bob and I will be home,\" she said. \"If they come.\"",
+      "reason": "The Ledger quoted Elizondo 'I'll make coffee' about the same teams three days earlier (NWS-P092-01)",
+      "status": "applied"
+    },
+    {
+      "id": "R5-015",
+      "severity": "low",
+      "story_id": "NWS-P069-01",
+      "field": "body",
+      "old": "They did what they were told. They stood in the lines.",
+      "new": "They followed every instruction. They stood in the lines.",
+      "reason": "Near-repeat of Whitfield's line in NWS-P064-02 ('They did everything they were told'), same reporter five days earlier, and NWS-M002-04",
+      "status": "applied"
+    },
+    {
+      "id": "R5-016",
+      "severity": "low",
+      "story_id": "NWS-P081-01",
+      "field": "body",
+      "old": "In September, she organized her neighbors' runs to water distribution sites.",
+      "new": "During the five-week notice, she organized her neighbors' runs to water distribution sites.",
+      "reason": "Ramos canon: she ran her street's water runs for the whole boil-water notice (Sept. 18 to Oct. 23), not only September",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R5-017",
+      "severity": "medium",
+      "story_id": "NWS-P070-01",
+      "field": "story",
+      "old": "",
+      "new": "Re-angle so this does not rerun NWS-P069-01, which the same reporter published the previous morning with the same beats (Elizondo checks her deposit details every morning, application pending on the school letter, ceiling still leaking, Whitfield preparing Thursday's meal for anyone who comes). Refer back to Monday's story in one line and give this piece a distinct focus, for example the volunteers and neighbors working the hall's laptops or what renters on Whitfield's list are hearing from landlords; drop the repeated introductions of Elizondo and the FEMA-breach recap. Keep Elizondo's registration date consistent with P069-01 (Nov. 13, the first day).",
+      "reason": "Two near-identical Thanksgiving-week features on consecutive days by the same reporter read as duplicated copy",
+      "status": "resolved_by_rewrite",
+      "resolution": "Handled by rewrite-W1/W2 (public record corrected and stories rewritten)."
+    }
+  ]
+}

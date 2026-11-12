@@ -1,0 +1,98 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
+ ],
+ "id": "HALYARD-SAR-20270914T002214Z-COAST",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.95,
+     27.35
+    ],
+    [
+     -96.55,
+     27.35
+    ],
+    [
+     -96.55,
+     28.35
+    ],
+    [
+     -97.95,
+     28.35
+    ],
+    [
+     -97.95,
+     27.35
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.95,
+  27.35,
+  -96.55,
+  28.35
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "HALYARD-SAR-20270914T002214Z-COAST.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/HALYARD-SAR-20270914T002214Z-COAST/sigma0_vv.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/HALYARD-SAR-20270914T002214Z-COAST/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-09-14T00:22:00Z",
+  "title": "Radar pass ahead of landfall",
+  "description": "Outer rain bands over the coast; sea surface very rough, which limits small-target detection. The offshore anchorage is empty.",
+  "platform": "Halyard-SAR-1",
+  "instruments": [
+   "X-band SAR"
+  ],
+  "constellation": "Halyard-SAR",
+  "gsd": 10,
+  "view:off_nadir": 14.2,
+  "view:sun_azimuth": 272.8,
+  "view:sun_elevation": 2.3,
+  "proj:epsg": 32614,
+  "sar:instrument_mode": "wide swath",
+  "sar:frequency_band": "X",
+  "sar:polarizations": [
+   "VV",
+   "VH"
+  ],
+  "detections": {
+   "vessels": {
+    "offshore_anchorage": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,3295 @@
+{
+  "batch": "F",
+  "day_range": [
+    48,
+    69
+  ],
+  "stories": [
+    {
+      "story_id": "NWS-P048-01",
+      "day": 48,
+      "time_local": "07:30",
+      "outlet_id": "OUT-04",
+      "section": "Security",
+      "byline": [
+        "CHR-010"
+      ],
+      "headline": "Spoofed vessel identity appeared near the entrance channel at Port Aransas two weeks before jetty blast",
+      "dek": "Public AIS data places the borrowed fishing-vessel identity close to the entrance channel in mid-October. The Coast Guard declined to comment on any connection to the Oct. 28 explosion.",
+      "body": [
+        "Public AIS records reviewed by maritime analysts show that the identity of the fishing vessel FV Pelican Ridge was broadcast near the entrance channel at Port Aransas overnight Oct. 14-15, about two weeks before an explosion beside the harbor tug Corrin Bay closed the Corpus Christi Ship Channel.",
+        "Gulfwater reported the anomaly Oct. 22. On the same night the identity was logged off Port Aransas, the vessel itself reported a position about 600 nautical miles away. Independent analyst Ian McCready, a former Coast Guard watchstander, said then that the pattern was consistent with identity spoofing. A closer review of the public track places the signal near the entrance channel.",
+        "\"The data tells you where a signal was. It does not tell you who sent it or why,\" McCready said Monday. \"Two weeks is a long gap, and I would be careful drawing a straight line. But the location is close to the entrance, and that is worth writing down.\"",
+        "Lt. Cmdr. Elena Ruiz, a spokesperson for Coast Guard Sector Corpus Christi, declined to comment on any link between the AIS observations and the explosion. \"We are not going to discuss matters under investigation,\" Ruiz said. \"Our focus is the safety of the waterway.\"",
+        "The Navy said Saturday that the blast was caused by an explosive device. Navy explosive ordnance disposal and mine countermeasures teams and the Coast Guard are working the channel jointly; the FBI is investigating.",
+        "Port status as of Monday morning: the channel remains closed at the entrance, with no reopening date announced. Crude loadings at the port, which handles about half of U.S. crude exports, have been halted since the closure. Inbound traffic is holding offshore.",
+        "AIS is a cooperative system. A transponder broadcasts whatever identity it is programmed with, and shore and satellite receivers record it. Analysts detect spoofing by finding the same identity in two places at once, as in this case. Gulfwater has not identified the vessel that transmitted the Pelican Ridge identity and makes no assessment of who was aboard."
+      ],
+      "tags": {
+        "story_type": "analysis",
+        "arcs": [
+          "ARC-AIS-ANOMALY",
+          "ARC-CHANNEL-BLAST",
+          "ARC-PORT"
+        ],
+        "public_facts": [
+          "PUB-062",
+          "PUB-076",
+          "PUB-067",
+          "PUB-070",
+          "PUB-073",
+          "PUB-014"
+        ],
+        "characters_quoted": [
+          "CHR-062",
+          "CHR-020"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "ANC-OFF",
+          "PORT-07"
+        ],
+        "topics": [
+          "ais",
+          "identity spoofing",
+          "pelican ridge",
+          "entrance channel",
+          "jetty blast",
+          "coast guard"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0402",
+          "EVT-0411",
+          "EVT-0413",
+          "EVT-0412",
+          "EVT-0414"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P048-02",
+      "day": 48,
+      "time_local": "12:15",
+      "outlet_id": "OUT-06",
+      "section": "Security",
+      "byline": [
+        "CHR-012"
+      ],
+      "headline": "Analysts flag ship-signal anomaly near Texas port weeks before blast; officials decline comment",
+      "dek": "A fishing vessel's identity was broadcast near the Corpus Christi entrance channel two weeks before an explosive device damaged a tug there. Federal officials would not discuss any connection.",
+      "body": [
+        "CORPUS CHRISTI, Texas (Continental Wire) — Maritime analysts said Monday that a fishing vessel's electronic identity was broadcast near the entrance to one of the nation's busiest energy ports about two weeks before an explosion there closed the channel, but federal officials declined to say whether the two are connected.",
+        "The blast happened around 1 a.m. Oct. 28 beside the harbor tug Corrin Bay near the jetties at Port Aransas, damaging the tug and injuring two crew members. On Saturday the Navy attributed the explosion to an explosive device, and its explosive ordnance disposal and mine countermeasures teams have since been sweeping the channel with the Coast Guard. The FBI is investigating.",
+        "Public ship-tracking data shows the identity of the fishing vessel FV Pelican Ridge broadcasting off Port Aransas in mid-October while the same vessel reported a position about 600 nautical miles away. Analysts have described the pattern as consistent with identity spoofing. On Monday they noted the signal appeared near the entrance channel.",
+        "\"It's a data point, not a conclusion,\" said Ian McCready, an independent maritime security analyst and former Coast Guard watchstander. \"Public tracking can show you a mismatch. It can't show you intent.\"",
+        "The Coast Guard declined to comment on any link. The FBI would say only that it is investigating, according to Mark Ellery, a spokesperson for its Houston Division.",
+        "The closure has stopped crude loadings at the Port of Corpus Christi, which handles about half of U.S. crude exports. It has also delayed, for a second time, a Fort Hood aviation brigade's movement of helicopters and equipment through the port for an overseas rotation. The brigade's movement was first postponed on Sept. 11, three days before Hurricane Rafael's landfall.",
+        "Officials have not said who placed the device or why, and the FBI declined further comment."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-AIS-ANOMALY",
+          "ARC-CHANNEL-BLAST",
+          "ARC-PORT"
+        ],
+        "public_facts": [
+          "PUB-076",
+          "PUB-062",
+          "PUB-070",
+          "PUB-068",
+          "PUB-014",
+          "PUB-073",
+          "PUB-067"
+        ],
+        "characters_quoted": [
+          "CHR-062",
+          "CHR-033"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "PORT-07",
+          "FAC-DOD-06"
+        ],
+        "topics": [
+          "ais",
+          "identity spoofing",
+          "port of corpus christi",
+          "explosive device",
+          "fbi"
+        ],
+        "follows_up": "NWS-P048-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0411",
+          "EVT-0402",
+          "EVT-0414",
+          "EVT-0413",
+          "EVT-0412"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P048-03",
+      "day": 48,
+      "time_local": "17:45",
+      "outlet_id": "OUT-02",
+      "section": "Local",
+      "byline": [
+        "CHR-006"
+      ],
+      "headline": "Port Aransas waits it out as Navy teams search the channel",
+      "dek": "Four days after the blast at the jetties, the island is quiet. A bait shop owner who heard it says the waiting is the hard part.",
+      "body": [
+        "The jetties are quiet Monday. No tankers. No tugs. Just gulls, a stiff north wind and a few people standing on the beach road watching Navy and Coast Guard boats work the channel.",
+        "Bill Hargrove has watched that water for most of his 64 years. His shop, Hargrove Bait & Tackle, sits a short walk from the jetties. Rafael gutted it in September, and he is still selling hooks and ice from a folding table while he rebuilds.",
+        "He was asleep at home when the blast came around 1 a.m. Thursday. \"It wasn't thunder. I know thunder,\" Hargrove says. \"It was one big thump, and then every dog on the island started in. I laid there thinking, well, that's not a storm, so what is it?\"",
+        "The Navy says the explosion beside the harbor tug Corrin Bay was caused by an explosive device. Two crew members were hurt. Navy teams trained in explosives and mine clearance are working the channel with the Coast Guard. The FBI is investigating.",
+        "For the island, the closure lands on top of a storm that already took the fall season. \"First the water came in the shop. Then the oil. Now nobody can go in or out of the pass,\" Hargrove says. \"I keep telling people we're open. Open for what, they ask me. Fair question.\"",
+        "He says customers mostly want to talk. \"Everybody's got a theory. I tell them I sell bait, not theories.\"",
+        "What you need to know: The ship channel is closed to all traffic until the Coast Guard says otherwise. No reopening date has been announced. Crude exports from the port remain halted. If you see something unusual on a beach or in the water, keep your distance and call 911."
+      ],
+      "tags": {
+        "story_type": "feature",
+        "arcs": [
+          "ARC-CHANNEL-BLAST",
+          "ARC-COMMUNITY"
+        ],
+        "public_facts": [
+          "PUB-067",
+          "PUB-070",
+          "PUB-023",
+          "PUB-073"
+        ],
+        "characters_quoted": [
+          "CHR-042"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "LF-01",
+          "PORT-07"
+        ],
+        "topics": [
+          "port aransas",
+          "jetties",
+          "bait shop",
+          "channel closure",
+          "island businesses"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0413",
+          "EVT-0412",
+          "EVT-0414",
+          "EVT-0301"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P049-02",
+      "day": 49,
+      "time_local": "12:00",
+      "outlet_id": "OUT-03",
+      "section": "Military & Community",
+      "byline": [
+        "CHR-009"
+      ],
+      "headline": "Why clearing a ship channel takes time, and what it means for a brigade that is still waiting",
+      "dek": "Navy teams are searching the Corpus Christi Ship Channel after last week's blast. Officials won't put a date on reopening, and a Fort Hood brigade's equipment is waiting on it.",
+      "body": [
+        "From the seawall at Port Aransas, the work looks slow. Small boats move back and forth across the mouth of the channel, stop, and move again. That pace is the point.",
+        "Since the Navy said Saturday that an explosive device caused the Oct. 28 blast beside the harbor tug Corrin Bay, Navy explosive ordnance disposal and mine countermeasures teams have been searching the channel with the Coast Guard. The FBI is investigating the explosion itself.",
+        "Cmdr. Lisa Moreau, a Navy public affairs officer, would not describe the methods or equipment in use, citing safety and the ongoing investigation. \"Our teams will search every yard of that channel they need to,\" Moreau said. \"We are not going to rush it, and we are not going to put a date on it. When we say it is clear, we want it to be clear.\"",
+        "Clearing a channel is not the same as finding one object. Teams have to be confident that nothing else is there before the Coast Guard can let deep-draft ships back through. In a channel that carries tankers, cargo ships and military equipment, the cost of being wrong is measured in lives as well as dollars.",
+        "That caution has consequences up the road at Fort Hood. A Fort Hood aviation brigade's helicopters and equipment were supposed to pass through the Port of Corpus Christi in late summer on the way to an overseas rotation. The movement was postponed in September as Hurricane Rafael closed in, and delayed again after last week's blast.",
+        "\"Our soldiers and their equipment are ready to go,\" said Maj. Darnell Price, a Fort Hood public affairs officer. \"We'll move when the port is ready, and not before.\" Price declined to discuss timelines or where the brigade's equipment is staged.",
+        "For military families on the Coastal Bend and at Fort Hood, the delay is another stretch of not knowing. For the port, which has served as a strategic military seaport for decades, it is another week with its gate closed and its cranes idle. Officials say the search will set the schedule, not the other way around."
+      ],
+      "tags": {
+        "story_type": "explainer",
+        "arcs": [
+          "ARC-CHANNEL-BLAST",
+          "ARC-MILITARY"
+        ],
+        "public_facts": [
+          "PUB-070",
+          "PUB-068",
+          "PUB-067",
+          "PUB-007",
+          "PUB-020"
+        ],
+        "characters_quoted": [
+          "CHR-032",
+          "CHR-031"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "PORT-07",
+          "FAC-DOD-06"
+        ],
+        "topics": [
+          "mine countermeasures",
+          "explosive ordnance disposal",
+          "channel clearance",
+          "fort hood brigade",
+          "deployment delay"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0413",
+          "EVT-0412",
+          "EVT-0207",
+          "EVT-0210"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P049-03",
+      "day": 49,
+      "time_local": "15:10",
+      "outlet_id": "OUT-05",
+      "section": "Crude",
+      "byline": [
+        "CHR-011"
+      ],
+      "headline": "Corpus Christi crude loadings stay halted as channel search continues",
+      "dek": "The second export stoppage since Hurricane Rafael has no end date. An analyst says there is no substitute route at the port's scale.",
+      "body": [
+        "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Crude loadings at the Port of Corpus Christi remained halted Tuesday as Navy teams continued searching the ship channel after the Oct. 28 explosion near the Port Aransas jetties, with no reopening date announced.",
+        "The halt is the port's second since Hurricane Rafael. Exports stopped when the Coast Guard closed the channel ahead of the storm in September and resumed only after a partial reopening in mid-October, when a backlog of vessels was still working through the offshore anchorage.",
+        "Analysts estimate the port moves about half of all U.S. crude exports. The Navy said Saturday that the blast beside a harbor tug was caused by an explosive device.",
+        "\"There isn't a second door at this scale,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"Every day the channel stays shut, barrels that would have left Corpus Christi either sit in tanks or wait for a ship that can't get in. You can move some volume elsewhere along the coast, but not all of it, and not quickly.\"",
+        "Holloway said the market's main question had shifted from damage to duration. \"After the storm, people were asking what broke. Now they are asking how long a search takes, and nobody will give them a number. That's the right answer for safety. It's a hard answer for a cargo schedule.\"",
+        "Tankers that would normally queue at the offshore anchorage are holding as they wait for the channel to reopen. Buyers with cargoes booked from the port are weighing whether to wait or seek supply elsewhere, Holloway said.",
+        "The Coast Guard has not given a timeline. Officials have said the channel will reopen when it is safe."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-PORT",
+          "ARC-CHANNEL-BLAST"
+        ],
+        "public_facts": [
+          "PUB-073",
+          "PUB-014",
+          "PUB-070",
+          "PUB-058",
+          "PUB-002"
+        ],
+        "characters_quoted": [
+          "CHR-064"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "ANC-OFF",
+          "ENT-01"
+        ],
+        "topics": [
+          "crude exports",
+          "export halt",
+          "port of corpus christi",
+          "tanker market",
+          "channel closure"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0401",
+          "EVT-0410",
+          "EVT-0104"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P049-01",
+      "day": 49,
+      "time_local": "16:30",
+      "outlet_id": "OUT-01",
+      "section": "Local",
+      "byline": [
+        "CHR-001",
+        "CHR-002"
+      ],
+      "headline": "'One second it was a normal night': Injured deckhand, tug captain describe blast at the jetties",
+      "dek": "Eddie Fontenot, 29, is recovering from a broken arm and a concussion. His captain, Ray Dupree, says his first thought was his crew.",
+      "body": [
+        "Eddie Fontenot does not remember hitting the deck of the tug Corrin Bay. He remembers the sound.",
+        "\"One second it was a normal night,\" said Fontenot, 29, a deckhand for Laguna Towing, speaking by phone Tuesday from a Corpus Christi hospital where he is recovering from a broken arm and a concussion. \"Then it was loud, and then I was looking at the sky. That's what I got.\"",
+        "Fontenot was one of two crew members injured when an explosion went off beside the harbor tug near the Port Aransas jetties around 1 a.m. Oct. 28. The Navy announced Saturday that an explosive device was to blame. Since then, Navy explosive ordnance disposal and mine countermeasures teams have been searching the channel alongside the Coast Guard while the FBI investigates. The Coast Guard closed the channel after the blast, and it remains closed.",
+        "Capt. Ray Dupree, 56, the tug's master, has worked the Corpus Christi Ship Channel for 30 years. He said the blast came off the port bow.",
+        "\"The boat lifted, and the water came up over the rail,\" Dupree said. \"You don't think. You count heads. I had everybody accounted for in under a minute, and then I started worrying about the hull.\" He declined to discuss the condition of the tug, saying that was for the company and investigators.",
+        "Dupree said he has been asked many times what caused the explosion. \"I drive a tugboat,\" he said. \"The people whose job it is to answer that are out there right now. I'm going to let them do it.\"",
+        "Fontenot kept his answers short. Asked what he wanted people to know, he paused. \"That Cap got us home,\" he said. \"And that I'm going back out. Not this week. But I'm going back.\"",
+        "Dupree said he visits Fontenot most days. \"He's tough. He's tougher than me,\" the captain said. \"He keeps asking when he can work. I keep telling him when the doctor says so, and not a day before.\"",
+        "Laguna Towing did not respond to a request for comment Tuesday."
+      ],
+      "tags": {
+        "story_type": "feature",
+        "arcs": [
+          "ARC-CHANNEL-BLAST",
+          "ARC-PORT"
+        ],
+        "public_facts": [
+          "PUB-077",
+          "PUB-067",
+          "PUB-070"
+        ],
+        "characters_quoted": [
+          "CHR-046",
+          "CHR-047"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "PORT-07",
+          "FAC-HOS-xx"
+        ],
+        "topics": [
+          "corrin bay",
+          "tug crew",
+          "injured deckhand",
+          "jetty blast",
+          "laguna towing"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0413",
+          "EVT-0412",
+          "EVT-0414"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P050-01",
+      "day": 50,
+      "time_local": "07:00",
+      "outlet_id": "OUT-01",
+      "section": "Business",
+      "byline": [
+        "CHR-002"
+      ],
+      "headline": "A port on pause: closed channel ripples from crude docks to relief freight",
+      "dek": "The Port of Corpus Christi says it is ready to work around the clock once the channel reopens. A freight forwarder who waited a month for relief cargo says customers keep asking for a date he can't give.",
+      "body": [
+        "For the second time this fall, the Port of Corpus Christi is open for business with no way for ships to reach it.",
+        "The ship channel has been closed at the entrance since an explosion beside a harbor tug near the Port Aransas jetties around 1 a.m. Oct. 28. Navy teams are searching it with the Coast Guard, and no reopening date has been announced. Crude loadings, which account for most of the port's traffic and about half of U.S. crude exports, are halted.",
+        "\"Our docks, our cranes and our people are ready,\" said Javier Salinas, a spokesperson for the port. \"The channel is closed at the entrance, and nothing moves in or out until the Coast Guard says it is safe. The day it opens, we will be working around the clock to clear the line.\"",
+        "The pause reaches beyond oil. Terry Akins, regional manager for Gulf Relief Logistics, a freight forwarder that handled relief containers after Rafael, has been here before. His company's 40 relief containers aboard MV Gulf Provider sat at the offshore anchorage for weeks after the storm and berthed Oct. 17, about a month late.",
+        "\"I learned one lesson from the Gulf Provider, and it's that the cargo can be ready and the water can still say no,\" Akins said. \"I've got customers calling every morning for a date. I tell them the truth. I don't have one, and anybody who gives you one is guessing.\"",
+        "Akins said some shippers are asking about trucking cargo in from other ports, which costs more and takes longer. \"Everything that comes in by water to this town, somebody is waiting on,\" he said.",
+        "Salinas said the port's cargo customers have been understanding. \"Safety sets the schedule,\" he said. \"We would rather open a day late than open wrong.\"",
+        "The FBI is investigating the blast, which the Navy has attributed to an explosive device."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-PORT",
+          "ARC-CHANNEL-BLAST",
+          "ARC-AID"
+        ],
+        "public_facts": [
+          "PUB-073",
+          "PUB-067",
+          "PUB-059",
+          "PUB-014",
+          "PUB-070",
+          "PUB-058"
+        ],
+        "characters_quoted": [
+          "CHR-023",
+          "CHR-074"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "ENT-01",
+          "ANC-OFF"
+        ],
+        "topics": [
+          "port of corpus christi",
+          "channel closure",
+          "relief freight",
+          "gulf provider",
+          "freight forwarders"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0413",
+          "EVT-0412",
+          "EVT-0401",
+          "EVT-0410"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P050-02",
+      "day": 50,
+      "time_local": "17:30",
+      "outlet_id": "OUT-03",
+      "section": "Environment",
+      "byline": [
+        "CHR-008"
+      ],
+      "headline": "Bays closed by oil, pass closed by a blast: an Aransas Pass shrimper runs out of water",
+      "dek": "Huy Nguyen's boat survived Rafael. Seven weeks later, the bays are still closed to fishing and the pass to the Gulf is shut too.",
+      "body": [
+        "Every morning, Huy Nguyen walks the deck of his shrimp boat at the Aransas Pass harbor the way his father did. He checks the lines, the engine, the nets. Then he goes home, because there is nowhere to take the boat.",
+        "\"Bays closed for oil. Pass closed for the bomb,\" said Nguyen, 51. \"Where do I go? You tell me where, I go tomorrow.\"",
+        "Texas Parks and Wildlife closed fishing and the Texas Department of State Health Services closed shellfish harvesting in Nueces and Corpus Christi bays on Sept. 18, days after oil from two tankers moored at an Inner Harbor terminal spread across about 33 square miles of water and shoreline in Rafael's surge. The closure was extended in early October. Cleanup moved to a monitoring phase Oct. 28, but the closure remains in place.",
+        "Hours earlier that day, an explosion beside a harbor tug near the Port Aransas jetties closed the Corpus Christi Ship Channel at the entrance. The Navy has said an explosive device caused the blast, and Navy teams are searching the channel with the Coast Guard. For boats based at Aransas Pass, that entrance is the way out to the Gulf.",
+        "Nguyen started the season with what he called a fair run, squeezed by diesel prices. He keeps a spiral notebook of every trip, catch and fuel bill. The pages since mid-September are mostly blank.",
+        "\"I write the date and I write 'no trip,'\" he said. \"My father would think I am lazy. I am not lazy. The water is closed.\"",
+        "He still owes on the boat and on the fuel dock, and he has a deckhand with two kids. He said he has not looked for other work yet because he does not know how long the closures will last. \"If they tell me three months, I find something. If they tell me next week, I wait. Nobody tells me anything.\"",
+        "The bay shrimp season in Texas runs into late fall, so for families like Nguyen's, each week of closure is a week of the year's income gone. Shrimpers in the area say they want two things: a date, and a way to be made whole for the season they lost.",
+        "\"Oil, I understand. A storm, I understand,\" Nguyen said. \"This other thing, I don't understand. I just want to fish.\""
+      ],
+      "tags": {
+        "story_type": "feature",
+        "arcs": [
+          "ARC-SPILL",
+          "ARC-CHANNEL-BLAST",
+          "ARC-COMMUNITY"
+        ],
+        "public_facts": [
+          "PUB-040",
+          "PUB-057",
+          "PUB-066",
+          "PUB-067",
+          "PUB-005",
+          "PUB-070",
+          "PUB-030"
+        ],
+        "characters_quoted": [
+          "CHR-041"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-002",
+          "ENT-01",
+          "PLC-001"
+        ],
+        "topics": [
+          "shrimpers",
+          "aransas pass",
+          "fishing closure",
+          "channel closure",
+          "bay shrimp season"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0317",
+          "EVT-0410",
+          "EVT-0413",
+          "EVT-0412",
+          "EVT-0414",
+          "EVT-0314"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P051-01",
+      "day": 51,
+      "time_local": "09:00",
+      "outlet_id": "OUT-07",
+      "section": "Base News",
+      "byline": [
+        "CHR-013"
+      ],
+      "headline": "This week: depot back at full production, station power steady, brigade still waiting on the channel",
+      "dek": "Our weekly roundup for families at NAS Corpus Christi, the Army depot and NAS Kingsville, one week after the blast at the jetties.",
+      "body": [
+        "It has been a long fall, and this week brought at least one piece of good news: Corpus Christi Army Depot is back at full production.",
+        "\"Our workforce has been through a hurricane, a damaged hangar and weeks of standing by, and they came back every time,\" said Brenda Kowalczyk, a depot public affairs specialist. \"Parts support from DLA Distribution Corpus Christi has been a big part of getting the lines moving again. We're grateful to our neighbors there and to the families who carried a lot while we got here.\"",
+        "At NAS Corpus Christi, power has been steady since the station's backup generator failed during a power interruption last month. Lt. Marcus Hale, a station public affairs officer, said the cause remains under review. \"Power was restored, and base services are operating,\" Hale said. \"We'll share what we can when the review is complete.\"",
+        "The channel: The Corpus Christi Ship Channel remains closed after the Oct. 28 explosion beside a harbor tug near the Port Aransas jetties. The Navy has said the blast was caused by an explosive device. The Coast Guard is working with Navy explosive ordnance disposal and mine countermeasures teams to search the channel. We will not report on their work beyond what public affairs releases, and we ask readers to do the same on social media.",
+        "The brigade: A Fort Hood aviation brigade's move through the port for an overseas rotation has been delayed again by the closure. Fort Hood has not announced a new date. Families with loved ones in the brigade should rely on their unit's family readiness channels for updates.",
+        "Around the bases: Daylight saving time ends at 2 a.m. Sunday, so set your clocks back an hour. Several readers have asked about a fall community gathering; we will print details when organizers confirm them.",
+        "If the past two months have been heavy for your household, you are not alone. Chaplains and family support staff are available on both installations. Reach out early, and check on your neighbors."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-MILITARY",
+          "ARC-CHANNEL-BLAST"
+        ],
+        "public_facts": [
+          "PUB-075",
+          "PUB-065",
+          "PUB-068",
+          "PUB-070",
+          "PUB-067"
+        ],
+        "characters_quoted": [
+          "CHR-022",
+          "CHR-021"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "FAC-DOD-01",
+          "FAC-DOD-02",
+          "FAC-DOD-05",
+          "FAC-DOD-06",
+          "ENT-01"
+        ],
+        "topics": [
+          "army depot",
+          "full production",
+          "dla distribution",
+          "backup generator",
+          "base services",
+          "fort hood brigade"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0409",
+          "EVT-0407",
+          "EVT-0414",
+          "EVT-0413",
+          "EVT-0412"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P051-02",
+      "day": 51,
+      "time_local": "14:00",
+      "outlet_id": "OUT-01",
+      "section": "Health",
+      "byline": [
+        "CHR-003"
+      ],
+      "headline": "Seven weeks after Rafael, ER visits from bayside neighborhoods are still running high",
+      "dek": "Emergency room traffic has eased across most of Nueces County. In low-income neighborhoods near the bay, health officials say visits remain about 40% above normal.",
+      "body": [
+        "Most of Corpus Christi's emergency rooms have settled back into their usual rhythm since Hurricane Rafael. The exception is the neighborhoods that waited longest for help after the storm.",
+        "Emergency room visits are back near normal countywide except in low-income neighborhoods near the bay, where they remain about 40% above normal, the Corpus Christi-Nueces County Public Health District said last week. Stomach illness tied to the boil-water weeks began easing in late September, and the citywide boil-water notice was lifted Oct. 23.",
+        "\"When one part of the county recovers and another part doesn't, that tells us something, even before we know exactly what,\" said Dr. Anita Shah, an epidemiologist with the health district. \"We're looking at it closely. In the meantime, if you're sick, please don't wait until it becomes an emergency. A clinic visit early is better than an ER visit late.\"",
+        "Residents of those neighborhoods reported waiting days for help after the storm, and church and neighborhood hubs handed out food and water before official distribution reached some blocks.",
+        "Pastor Gloria Whitfield, 59, who runs a relief hub from her church fellowship hall near the bay, said she sees the pattern at her door. \"People put off the doctor because the doctor is two buses away and they have a shift,\" she said. \"Then it's the ER at midnight. I've driven more people to the emergency room this fall than in the last five years.\"",
+        "Whitfield said many families are still living in damp rentals while they wait on landlords and repairs. \"You can't separate the house from the health,\" she said.",
+        "Shah said residents should seek care for symptoms that linger, keep a list of their medications, and call ahead to clinics about same-day appointments. She also urged people cleaning flood-damaged homes to wear gloves and masks and to keep children away from wet drywall and debris.",
+        "\"The storm was seven weeks ago,\" Shah said. \"For some families, the recovery started a lot later than that.\""
+      ],
+      "tags": {
+        "story_type": "feature",
+        "arcs": [
+          "ARC-HEALTH",
+          "ARC-EQUITY"
+        ],
+        "public_facts": [
+          "PUB-069",
+          "PUB-053",
+          "PUB-037",
+          "PUB-063",
+          "PUB-052"
+        ],
+        "characters_quoted": [
+          "CHR-026",
+          "CHR-049"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-010",
+          "PLC-001",
+          "FAC-HOS-xx"
+        ],
+        "topics": [
+          "emergency rooms",
+          "health equity",
+          "low-income neighborhoods",
+          "church hub",
+          "flood cleanup safety"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0408",
+          "EVT-0406"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P052-01",
+      "day": 52,
+      "time_local": "11:20",
+      "outlet_id": "OUT-02",
+      "section": "Breaking",
+      "byline": [
+        "CHR-006"
+      ],
+      "headline": "Navy teams find second explosive device near entrance channel, render it safe",
+      "dek": "No one was hurt. The Corpus Christi Ship Channel stays closed while the search continues.",
+      "body": [
+        "Navy teams have found a second explosive device near the entrance to the Corpus Christi Ship Channel and rendered it safe, the Navy and Coast Guard say Friday.",
+        "No one is hurt. The channel remains closed to all traffic.",
+        "\"Navy teams located a second explosive device near the entrance channel and rendered it safe,\" says Cmdr. Lisa Moreau, a Navy public affairs officer. \"No one was injured. The search of the channel continues, and it will continue until we are confident it is complete.\"",
+        "Moreau would not describe the device or where exactly it was found, citing safety and the ongoing investigation.",
+        "The find comes eight days after an explosion beside the harbor tug Corrin Bay near the Port Aransas jetties around 1 a.m. Oct. 28. Two crew members were hurt in that blast. The Navy has said it was caused by an explosive device, and the FBI is investigating.",
+        "Lt. Cmdr. Elena Ruiz of Coast Guard Sector Corpus Christi says the closure stays in place. \"The channel will reopen when the search is complete and the Captain of the Port is satisfied it is safe,\" Ruiz says. \"We are not giving a date today.\"",
+        "What this means for you: The ship channel is still closed. Crude exports from the port are still halted. There is no change to roads, bridges or beach access announced by officials. If you see something unusual on a beach or in the water, don't touch it. Keep your distance and call 911.",
+        "Harborline 6 will update this story as officials release more."
+      ],
+      "tags": {
+        "story_type": "breaking",
+        "arcs": [
+          "ARC-CHANNEL-BLAST",
+          "ARC-PORT"
+        ],
+        "public_facts": [
+          "PUB-078",
+          "PUB-070",
+          "PUB-067",
+          "PUB-073"
+        ],
+        "characters_quoted": [
+          "CHR-032",
+          "CHR-020"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "PORT-07"
+        ],
+        "topics": [
+          "second device",
+          "explosive device",
+          "navy",
+          "channel closure",
+          "breaking"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0413",
+          "EVT-0412"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P052-02",
+      "day": 52,
+      "time_local": "13:30",
+      "outlet_id": "OUT-06",
+      "section": "National",
+      "byline": [
+        "CHR-012"
+      ],
+      "headline": "Navy finds, disables second explosive device at entrance to major Texas energy port",
+      "dek": "The discovery near Corpus Christi extends a closure that has halted crude exports and delayed an Army brigade's overseas rotation.",
+      "body": [
+        "CORPUS CHRISTI, Texas (Continental Wire) — Navy teams found a second explosive device near the entrance to the Corpus Christi Ship Channel and rendered it safe Friday, officials said, eight days after an explosion beside a harbor tug closed one of the country's most important energy ports.",
+        "\"No one was injured. The search of the channel continues,\" said Cmdr. Lisa Moreau, a Navy public affairs officer. She declined to describe the device, citing safety and the ongoing investigation.",
+        "The first explosion went off around 1 a.m. Oct. 28 near the Port Aransas jetties, injuring two crew members aboard the tug Corrin Bay and damaging the vessel. The Navy later said an explosive device was responsible, and the search by its explosive ordnance disposal and mine countermeasures teams, alongside the Coast Guard, has not let up since.",
+        "The FBI is investigating, its Houston Division spokesperson, Mark Ellery, confirmed. \"We are not going to discuss evidence,\" he said.",
+        "The Port of Corpus Christi handles about half of U.S. crude exports, and loadings have been halted since the blast. The closure has also delayed a Fort Hood aviation brigade's planned movement of helicopters and equipment through the port for an overseas rotation, a movement already postponed once by Hurricane Rafael in September.",
+        "Earlier this week, maritime analysts noted that a fishing vessel's identity had been broadcast near the entrance channel about two weeks before the blast, while the vessel itself reported a position hundreds of miles away. Officials have declined to comment on any link.",
+        "\"A second device changes the confidence level, not the timeline, because there isn't one,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"Markets were hoping for a date. Today they got a reason it isn't coming yet.\"",
+        "Officials have not said when the channel will reopen."
+      ],
+      "tags": {
+        "story_type": "breaking",
+        "arcs": [
+          "ARC-CHANNEL-BLAST",
+          "ARC-PORT",
+          "ARC-MILITARY"
+        ],
+        "public_facts": [
+          "PUB-078",
+          "PUB-070",
+          "PUB-068",
+          "PUB-073",
+          "PUB-014",
+          "PUB-076",
+          "PUB-067"
+        ],
+        "characters_quoted": [
+          "CHR-032",
+          "CHR-033",
+          "CHR-064"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "PORT-07",
+          "FAC-DOD-06"
+        ],
+        "topics": [
+          "second device",
+          "port of corpus christi",
+          "crude exports",
+          "fbi",
+          "fort hood brigade",
+          "national security"
+        ],
+        "follows_up": "NWS-P052-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0411",
+          "EVT-0413",
+          "EVT-0412"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P052-03",
+      "day": 52,
+      "time_local": "16:00",
+      "outlet_id": "OUT-04",
+      "section": "Security",
+      "byline": [
+        "CHR-010"
+      ],
+      "headline": "Second device rendered safe near the Port Aransas jetties; Coast Guard keeps channel closed",
+      "dek": "Navy teams recovered a second explosive device Friday. Port condition unchanged: entrance closed to all traffic, no reopening date.",
+      "body": [
+        "Navy teams located a second explosive device near the entrance channel at Port Aransas Friday and rendered it safe, the Navy and Coast Guard said. No injuries were reported. The Corpus Christi Ship Channel remains closed to all traffic.",
+        "Port condition as of Friday afternoon: the entrance is closed under Coast Guard order. Inbound and outbound deep-draft movements are suspended. Crude loadings at the port are halted. No reopening date has been issued.",
+        "Lt. Cmdr. Elena Ruiz, a spokesperson for Coast Guard Sector Corpus Christi, said the Captain of the Port would not lift the closure until the full search is complete. \"A second find does not shorten the process. It confirms why we follow it,\" Ruiz said. \"When the channel opens, mariners will receive notice through the usual channels.\"",
+        "Cmdr. Lisa Moreau, a Navy public affairs officer, said Navy explosive ordnance disposal and mine countermeasures teams continue to work with the Coast Guard. She declined to describe the device or its position, citing safety and the investigation.",
+        "The first device detonated around 1 a.m. Oct. 28 alongside the harbor tug Corrin Bay near the jetties, injuring two of its crew and damaging the tug. The FBI is investigating that blast.",
+        "As Gulfwater reported Monday, public AIS data shows the identity of the fishing vessel FV Pelican Ridge broadcast near the entrance channel overnight Oct. 14-15, while the vessel reported a position about 600 nautical miles away. Analysts describe that pattern as consistent with spoofing. Asked Friday whether investigators were examining the AIS observations, Ruiz said the Coast Guard would not comment on any link. Gulfwater makes no assessment of a connection.",
+        "Operators with vessels holding offshore should continue to monitor Coast Guard broadcast notices for changes in port condition. After a long closure, a staged restart is typical, with the order of vessel movements set by the Coast Guard and the port."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-CHANNEL-BLAST",
+          "ARC-PORT",
+          "ARC-AIS-ANOMALY"
+        ],
+        "public_facts": [
+          "PUB-078",
+          "PUB-070",
+          "PUB-073",
+          "PUB-076",
+          "PUB-067",
+          "PUB-062"
+        ],
+        "characters_quoted": [
+          "CHR-020",
+          "CHR-032"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "PORT-07",
+          "ANC-OFF"
+        ],
+        "topics": [
+          "second device",
+          "port condition",
+          "coast guard",
+          "captain of the port",
+          "ais",
+          "channel closure"
+        ],
+        "follows_up": "NWS-P048-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0411",
+          "EVT-0413",
+          "EVT-0412",
+          "EVT-0402"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P052-04",
+      "day": 52,
+      "time_local": "18:30",
+      "outlet_id": "OUT-03",
+      "section": "Military & Community",
+      "byline": [
+        "CHR-009"
+      ],
+      "headline": "A second device, a longer wait: what Friday's find means for the Fort Hood brigade",
+      "dek": "The Navy rendered a second explosive device safe near the channel entrance. A brigade's helicopters and equipment, already delayed twice, wait on the full sweep.",
+      "body": [
+        "When the Navy announced Friday that its teams had found a second explosive device near the entrance to the Corpus Christi Ship Channel and rendered it safe, the news landed in two places at once: on the docks at the port, and about 230 miles north at Fort Hood.",
+        "One of the post's aviation brigades had been due to send its helicopters and equipment through the Port of Corpus Christi in late summer, bound for an overseas rotation. Hurricane Rafael pushed the movement back in September, and the Oct. 28 explosion beside a harbor tug near the Port Aransas jetties delayed it again.",
+        "\"We knew the search would take what it takes,\" said Maj. Darnell Price, a Fort Hood public affairs officer. \"Our soldiers and families have been patient through a hurricane and now this. The brigade is ready. When the port is ready, we go.\" He declined to discuss the brigade's schedule, staging or destination beyond describing the mission as an overseas rotation.",
+        "Cmdr. Lisa Moreau, a Navy public affairs officer, said no one was injured Friday and the search continues. She would not describe the device. Navy explosive ordnance disposal and mine countermeasures teams have been working the channel with the Coast Guard since the Navy said Oct. 30 that the Oct. 28 blast was caused by an explosive device.",
+        "Military logisticians plan around tides, cranes and berths. They do not plan around a closed channel with no reopening date. A second find means the Coast Guard is unlikely to reopen until teams are confident they have covered every stretch of water ships will use, and the Navy has said it will not put a date on that.",
+        "Locally, the military picture has been improving. Corpus Christi Army Depot returned to full production last week with parts support from DLA Distribution Corpus Christi. But the depot fixes helicopters; it does not move them overseas. That still depends on the channel.",
+        "For families of soldiers in the brigade, the uncertainty is familiar. Price said the Army would announce the movement through public channels once it begins. \"Nobody's going to hear it from a rumor first if we can help it,\" he said."
+      ],
+      "tags": {
+        "story_type": "analysis",
+        "arcs": [
+          "ARC-CHANNEL-BLAST",
+          "ARC-MILITARY"
+        ],
+        "public_facts": [
+          "PUB-078",
+          "PUB-068",
+          "PUB-070",
+          "PUB-007",
+          "PUB-075"
+        ],
+        "characters_quoted": [
+          "CHR-031",
+          "CHR-032"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "PORT-07",
+          "FAC-DOD-06",
+          "FAC-DOD-02",
+          "FAC-DOD-05"
+        ],
+        "topics": [
+          "fort hood brigade",
+          "deployment delay",
+          "second device",
+          "military families",
+          "army depot"
+        ],
+        "follows_up": "NWS-P049-02"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0409"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P053-01",
+      "day": 53,
+      "time_local": "10:00",
+      "outlet_id": "OUT-01",
+      "section": "Local",
+      "byline": [
+        "CHR-001"
+      ],
+      "headline": "Port Aransas, gutted by Rafael, loses its fall to a closed channel",
+      "dek": "A storm took the island's buildings in September. The blast at the jetties and a second device found Friday have taken the boats, the anglers and the fall visitors.",
+      "body": [
+        "PORT ARANSAS — On a normal first Saturday of November, the jetties would be lined with anglers chasing bull redfish, the charter boats would be booked, and the line at the fish-cleaning station would stretch back to the parking lot.",
+        "This Saturday, the beach road was mostly quiet. A few people walked dogs. Out past the jetties, Navy and Coast Guard boats worked the channel, as they have since an explosion beside a harbor tug around 1 a.m. Oct. 28 closed the Corpus Christi Ship Channel. On Friday, Navy teams found a second explosive device near the entrance and rendered it safe. The channel remains closed, with no reopening date.",
+        "\"In September, the water took the buildings. Now it's taking the customers,\" said Bill Hargrove, 64, who owns Hargrove Bait & Tackle near the jetties. Rafael's surge gutted his shop when the storm came ashore on Mustang Island Sept. 14. He has been selling ice, hooks and live bait from a folding table while he rebuilds.",
+        "\"Summer was good. I'll say that. Summer was real good,\" Hargrove said. \"Then fall showed up with a storm, an oil spill and whatever this is. I've been on this island my whole life. I don't have a word for this year.\"",
+        "Fishing and shellfish harvesting in Nueces and Corpus Christi bays have been closed since Sept. 18 because of the oil spill. Anglers who might have fished the Gulf side instead are kept off the water near the entrance by the closure. A charter captain who asked not to be named because he was negotiating with his lender said he had refunded every November booking. A waitress at a beach-road cafe said Friday night's crowd was \"mostly contractors and reporters.\"",
+        "Hargrove said the second device rattled people more than the first. \"The first one, everybody figured it was a one-time thing. A second one, you start looking at the water different,\" he said. \"But I'll tell you what. The boys on those Navy boats, they're the ones out there. I'm just standing on the beach.\"",
+        "Hargrove said he plans to keep the folding table open on weekends. \"If somebody wants shrimp and ice, I'm here,\" he said. \"Directions are still free.\"",
+        "Clocks fall back an hour at 2 a.m. Sunday, as daylight saving time ends."
+      ],
+      "tags": {
+        "story_type": "feature",
+        "arcs": [
+          "ARC-COMMUNITY",
+          "ARC-CHANNEL-BLAST"
+        ],
+        "public_facts": [
+          "PUB-067",
+          "PUB-070",
+          "PUB-078",
+          "PUB-010",
+          "PUB-023",
+          "PUB-040",
+          "PUB-057"
+        ],
+        "characters_quoted": [
+          "CHR-042"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "LF-01",
+          "ENT-01",
+          "PLC-001"
+        ],
+        "topics": [
+          "port aransas",
+          "island businesses",
+          "charter fishing",
+          "channel closure",
+          "second device",
+          "tourism"
+        ],
+        "follows_up": "NWS-P048-03"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0413",
+          "EVT-0412",
+          "EVT-0414",
+          "EVT-0301",
+          "EVT-0317"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P054-01",
+      "day": 54,
+      "time_local": "08:00",
+      "outlet_id": "OUT-01",
+      "section": "Opinion",
+      "byline": [
+        "CHR-002"
+      ],
+      "headline": "Opinion: The port is a national asset. The people who work it need to be treated like one",
+      "dek": "A column by Bayside Ledger business and port reporter Grant Okafor on the second shutdown of the Corpus Christi Ship Channel this fall.",
+      "body": [
+        "Opinion. This column reflects the views of its author.",
+        "Twice this fall, the Port of Corpus Christi has been open for business with no way for ships to reach it. The first time, the cause was a hurricane we watched coming for days. The second time, it was an explosion beside a tugboat at the jetties in the middle of the night, followed Friday by the discovery of a second explosive device near the entrance channel.",
+        "The Navy and Coast Guard are right not to put a date on reopening. Nobody on the Coastal Bend wants a tanker captain or a tug crew to be the test of whether a sweep was finished. Patience with that work is not optional.",
+        "But patience is easier for some of us than others.",
+        "This port handles about half of U.S. crude exports. It is a strategic military seaport, and a Fort Hood aviation brigade's helicopters and equipment have now been delayed twice on their way to an overseas rotation. When the channel closes, the country notices. Traders notice. Washington notices.",
+        "What the country does not see is the deckhand who has not worked since Oct. 28, the line handler paid by the job, the trucker whose loads stopped, or the freight forwarder who waited a month for 40 relief containers to berth after Rafael and is now explaining a second delay to his customers. It does not see the shrimpers at Aransas Pass, whose bays have been closed to fishing since Sept. 18 because of the oil spill and whose route to the Gulf runs through the closed entrance.",
+        "Those workers absorbed the storm, then the spill, and now this. Most of them do not have a market desk to price in the risk.",
+        "Three things would help. First, regular, scheduled updates from the Coast Guard and the port, even when the update is \"no change,\" so businesses can plan around something other than rumor. Second, a plain-language guide from local and state agencies to what help exists for workers idled by a closure that was nobody's fault on the waterfront. Third, when investigators are able to speak, a full public accounting of what happened at the jetties.",
+        "The channel will reopen. When it does, the ships will move again quickly. The people who keep them moving should not have to wait longer than the cargo."
+      ],
+      "tags": {
+        "story_type": "opinion",
+        "arcs": [
+          "ARC-PORT",
+          "ARC-CHANNEL-BLAST",
+          "ARC-COMMUNITY"
+        ],
+        "public_facts": [
+          "PUB-014",
+          "PUB-073",
+          "PUB-078",
+          "PUB-068",
+          "PUB-059",
+          "PUB-040",
+          "PUB-070",
+          "PUB-058"
+        ],
+        "characters_quoted": [],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "ENT-01",
+          "PLC-002",
+          "FAC-DOD-06"
+        ],
+        "topics": [
+          "opinion",
+          "port workers",
+          "channel closure",
+          "crude exports",
+          "shrimpers",
+          "transparency"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0401",
+          "EVT-0317",
+          "EVT-0410"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P055-01",
+      "day": 55,
+      "time_local": "14:00",
+      "outlet_id": "OUT-05",
+      "section": "Crude",
+      "byline": [
+        "CHR-011"
+      ],
+      "headline": "Corpus Christi export halt reaches 12th day as entrance sweep continues",
+      "dek": "A second explosive device found Friday has pushed back hopes for a quick restart. An analyst says buyers are now planning around the halt rather than waiting it out.",
+      "body": [
+        "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Crude loadings at the Port of Corpus Christi remained halted Monday, the 12th day since an explosion beside a harbor tug near the Port Aransas jetties closed the ship channel.",
+        "Navy teams found a second explosive device near the entrance channel Friday and rendered it safe. The Navy and Coast Guard have said the search will continue until it is complete and have given no reopening date.",
+        "The port handles about half of U.S. crude exports, analysts say, making the closure the most significant disruption to U.S. export flows since Hurricane Rafael shut the channel in September.",
+        "\"Last week, buyers were waiting. This week, they're planning around it,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"The second device told everyone this isn't a matter of days. Nobody knows if it's weeks. When you don't know, you start booking alternatives, and some of that business may not come straight back.\"",
+        "Holloway said storage in the Corpus Christi area was absorbing crude that would normally have shipped, but that the cushion is finite. \"Tanks fill. At some point, the barrels upstream have to slow down too,\" she said.",
+        "Market participants are watching for three signals: a Coast Guard notice changing the port's condition, an announced order for vessel movements once the channel opens, and any statement on how long a full restart would take after two closures in two months.",
+        "The Navy has attributed the Oct. 28 blast to an explosive device, and the FBI is investigating."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-PORT",
+          "ARC-CHANNEL-BLAST"
+        ],
+        "public_facts": [
+          "PUB-073",
+          "PUB-078",
+          "PUB-014",
+          "PUB-070"
+        ],
+        "characters_quoted": [
+          "CHR-064"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "ENT-01"
+        ],
+        "topics": [
+          "crude exports",
+          "export halt",
+          "storage",
+          "tanker market",
+          "second device"
+        ],
+        "follows_up": "NWS-P049-03"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P055-02",
+      "day": 55,
+      "time_local": "17:00",
+      "outlet_id": "OUT-03",
+      "section": "Equity",
+      "byline": [
+        "CHR-008"
+      ],
+      "headline": "Eight weeks after Rafael, Rosa Elizondo is still drying out",
+      "dek": "A home health aide without a car rode out the storm with her three kids near the bay. Her rental still leaks, and she is still waiting for help to reach her block.",
+      "body": [
+        "There is a bucket in Rosa Elizondo's hallway. It has been there since September.",
+        "\"When it rains, it fills. When it doesn't rain, it still drips a little, for fun,\" said Elizondo, 38, laughing in the way people laugh when the other option is crying. \"My landlord says soon. Everybody says soon. Soon is my least favorite word in English. In Spanish too.\"",
+        "Elizondo, a home health aide and a mother of three, rents a duplex a few blocks from the bay in one of the low-income neighborhoods hit hardest by Hurricane Rafael. She has no car. She registered for a county evacuation ride before the storm, but when the time came she and her children rode out Rafael at home. The water stopped a few inches below her door. Homes a block closer to the bay flooded.",
+        "After the storm, people in neighborhoods like hers waited days for help; on some blocks, the first food and water came from church and neighborhood hubs, not official distribution. Elizondo got her first water and rice from the fellowship hall run by Pastor Gloria Whitfield a few blocks away.",
+        "Eight weeks later, the emergency has become a grind. Her back bedroom smells of mildew, and she moved her youngest, who is 6, into her own room. She still rides two buses to reach her clients, older people who need help bathing, eating and taking medicine. Some of them, she said, are in worse shape than she is.",
+        "\"I take care of people for a living. Who takes care of the people who take care of people?\" she said. \"Not a complaint. A question.\"",
+        "Health officials said last month that emergency room visits from low-income neighborhoods near the bay were still running about 40% above normal, long after they settled elsewhere in the county.",
+        "Whitfield said Elizondo's story is the story of half her list. \"Everybody on my street is waiting on something: a landlord, an adjuster, a ride, a phone call back,\" she said. \"People keep asking me about federal aid. I tell them I'll know when you know, and I'll knock on your door the same day.\" The state asked FEMA in October to add aid for households after damage assessments were slowed; no decision has been announced.",
+        "Elizondo said she does not need a lot. \"A roof that stays a roof,\" she said. \"And for somebody to tell me where to sign up before I hear it from my neighbor's cousin.\""
+      ],
+      "tags": {
+        "story_type": "profile",
+        "arcs": [
+          "ARC-EQUITY",
+          "ARC-AID",
+          "ARC-COMMUNITY"
+        ],
+        "public_facts": [
+          "PUB-053",
+          "PUB-037",
+          "PUB-069",
+          "PUB-021",
+          "PUB-008"
+        ],
+        "characters_quoted": [
+          "CHR-040",
+          "CHR-049"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-010",
+          "PLC-001"
+        ],
+        "topics": [
+          "rosa elizondo",
+          "renters",
+          "home health aide",
+          "equity",
+          "church hub",
+          "storm repairs"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0408"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P056-01",
+      "day": 56,
+      "time_local": "08:00",
+      "outlet_id": "OUT-04",
+      "section": "Ports",
+      "byline": [
+        "CHR-010"
+      ],
+      "headline": "Corpus Christi entrance stays closed into second week; no change in port condition",
+      "dek": "Inbound traffic continues to hold offshore while Navy teams sweep the entrance channel at Port Aransas. Inner-channel spill restrictions were lifted before the closure, so the entrance is the only constraint.",
+      "body": [
+        "Port condition, Corpus Christi, as of Tuesday morning: entrance channel closed under Coast Guard order; deep-draft movements suspended in both directions; crude loadings halted. No reopening date issued.",
+        "The closure entered its 13th day Tuesday. It began after an explosion beside the harbor tug Corrin Bay near the Port Aransas jetties around 1 a.m. Oct. 28. Navy explosive ordnance disposal and mine countermeasures teams have been searching the channel with the Coast Guard since, and rendered a second device safe near the entrance Friday.",
+        "\"There is no change in port condition today,\" said Lt. Cmdr. Elena Ruiz, a spokesperson for Coast Guard Sector Corpus Christi. \"The Captain of the Port will reopen the channel when the search is complete. Mariners will receive notice before any change, and we ask operators not to plan on rumor.\"",
+        "One complication from earlier this fall is gone. Restrictions on the inner channel, imposed while vessels were decontaminated after the September oil spill, were lifted Oct. 28 as cleanup moved to monitoring. When the entrance reopens, operators will not face a second set of spill restrictions inside the harbor.",
+        "The backlog will matter. When the channel partly reopened Oct. 14 after Hurricane Rafael, an anchorage backlog delayed relief cargo, including MV Gulf Provider, for several days. The same sequencing problem is building now, with vessels of every kind holding for the same entrance.",
+        "Javier Salinas, a spokesperson for the Port of Corpus Christi, said the port is working with the Coast Guard and pilots on a restart plan. \"We are not going to say when, because that isn't our call,\" Salinas said. \"We can say we will be ready. Berths are clear, terminals are staffed, and the plan for the first days is written.\"",
+        "Gulfwater will report changes in port condition as they are issued."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-PORT",
+          "ARC-CHANNEL-BLAST"
+        ],
+        "public_facts": [
+          "PUB-073",
+          "PUB-078",
+          "PUB-066",
+          "PUB-058",
+          "PUB-070",
+          "PUB-059",
+          "PUB-067"
+        ],
+        "characters_quoted": [
+          "CHR-020",
+          "CHR-023"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "PORT-07",
+          "ANC-OFF"
+        ],
+        "topics": [
+          "port condition",
+          "anchorage",
+          "channel closure",
+          "restart plan",
+          "vessel backlog"
+        ],
+        "follows_up": "NWS-P052-03"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0410",
+          "EVT-0401",
+          "EVT-0413",
+          "EVT-0412"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P057-01",
+      "day": 57,
+      "time_local": "07:00",
+      "outlet_id": "OUT-01",
+      "section": "Local",
+      "byline": [
+        "CHR-005"
+      ],
+      "headline": "Explainer: Who decides the ship channel is safe again, and what happens next",
+      "dek": "The Corpus Christi Ship Channel has been closed since Oct. 28. Here is how a reopening decision gets made, and what to expect when it comes.",
+      "body": [
+        "The Corpus Christi Ship Channel has been closed for nearly two weeks, and the question on every dock and in every bait shop is the same: when? The honest answer is that nobody has said. Here is what is known about how that decision will be made.",
+        "Who closed it? The Coast Guard closed the channel after an explosion beside the harbor tug Corrin Bay near the Port Aransas jetties around 1 a.m. Oct. 28. Two crew members were injured. According to the Navy, an explosive device caused the blast. The FBI is investigating.",
+        "Who is searching? Navy explosive ordnance disposal and mine countermeasures teams, working with the Coast Guard. On Friday, they found a second explosive device near the entrance channel and rendered it safe. No one was hurt.",
+        "Who decides it is safe? The Coast Guard's Captain of the Port for Corpus Christi controls whether vessels may move through the channel. \"The search has to be complete, and the Captain of the Port has to be satisfied the channel is safe. Then it reopens,\" said Lt. Cmdr. Elena Ruiz, a spokesperson for Coast Guard Sector Corpus Christi. \"That decision rests on what the teams in the water tell us.\"",
+        "Why won't anyone give a date? Because the search sets the schedule. \"The search is finished when the teams say it is finished, not when the calendar says so,\" said Cmdr. Lisa Moreau, a Navy public affairs officer. The Navy has declined to describe the devices or its methods, citing safety and the investigation.",
+        "What happens when it reopens? Expect a staged restart, not a flood. When the channel partly reopened Oct. 14 after Hurricane Rafael, a backlog at the offshore anchorage delayed relief cargo for days. This time, inner-channel spill restrictions were lifted Oct. 28, so the entrance is the only bottleneck. Crude loadings, halted since the blast, would resume as tankers come in.",
+        "What about the Army brigade? A Fort Hood aviation brigade's helicopters and equipment are waiting to move through the port for an overseas rotation. Fort Hood has said it will move when the port is ready and has not announced a date.",
+        "What about fishing? The closures of fishing and shellfish harvesting in Nueces and Corpus Christi bays, set by Texas Parks and Wildlife and the Texas Department of State Health Services because of the oil spill, are separate and remain in place. The channel reopening does not change them."
+      ],
+      "tags": {
+        "story_type": "explainer",
+        "arcs": [
+          "ARC-CHANNEL-BLAST",
+          "ARC-PORT"
+        ],
+        "public_facts": [
+          "PUB-070",
+          "PUB-078",
+          "PUB-067",
+          "PUB-073",
+          "PUB-066",
+          "PUB-058",
+          "PUB-068",
+          "PUB-040"
+        ],
+        "characters_quoted": [
+          "CHR-020",
+          "CHR-032"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "PORT-07",
+          "ANC-OFF",
+          "FAC-USCG-01"
+        ],
+        "topics": [
+          "explainer",
+          "captain of the port",
+          "channel reopening",
+          "navy search",
+          "fishing closure"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0413",
+          "EVT-0412",
+          "EVT-0410",
+          "EVT-0401",
+          "EVT-0317"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P057-02",
+      "day": 57,
+      "time_local": "17:30",
+      "outlet_id": "OUT-03",
+      "section": "Equity",
+      "byline": [
+        "CHR-008"
+      ],
+      "headline": "FEMA approves aid for households, eight weeks after Rafael. Here's why it took this long",
+      "dek": "Registration for Individual Assistance opens Saturday in Nueces, San Patricio and Aransas counties. Officials say slowed damage assessments held up the decision.",
+      "body": [
+        "For eight weeks, the answer to the question asked most often in the Coastal Bend's hardest-hit neighborhoods has been the same two words: not yet. On Wednesday, the answer changed.",
+        "FEMA approved Individual Assistance for Nueces, San Patricio and Aransas counties, opening the way for federal help to households damaged by Hurricane Rafael. Registration opens Saturday, Nov. 13.",
+        "\"This is the decision people have been waiting for,\" said Rachel Ostrander, an external affairs officer for FEMA Region 6. \"Households with storm damage or losses can start registering Saturday. Use only FEMA's official website, its helpline or a disaster recovery center.\"",
+        "Why did it take this long? The federal disaster declaration issued four days after landfall covered debris removal and emergency protective measures, the costs local governments carry first. Help for individual households hinged on joint damage assessments by federal, state and local teams. Those dragged as teams ran into restrictions in the oiled zone, roads still under water and the sheer amount of damage. In October, the state formally asked FEMA to add Individual Assistance.",
+        "\"Nobody in our office liked telling people to wait,\" said Dwayne Pruitt, public information officer for the Nueces County Office of Emergency Management. \"But you can't approve help for houses nobody has been able to look at. Now we get to stop saying 'not yet.'\"",
+        "The wait fell hardest on households with the least cushion. Residents of low-income neighborhoods near the bay reported waiting days for help after the storm, church and neighborhood hubs handed out food and water before official distribution reached some blocks, and in late October health officials said emergency room visits from those neighborhoods were still about 40% above normal.",
+        "Ostrander said people can use the next three days to get ready: find a photo ID, insurance papers if they have them and pictures of the damage, and, for renters, something that shows they lived at the address. Pruitt said church and neighborhood hubs are a good place to start for anyone without a computer or a reliable phone.",
+        "Registering is free. Pruitt reminded residents that the city warned in September about phishing emails impersonating a disaster-aid portal, and said no one should register through a link that arrives by text or email.",
+        "Saturday will be the first day. For many families near the bay, it will not be the last thing they wait for."
+      ],
+      "tags": {
+        "story_type": "explainer",
+        "arcs": [
+          "ARC-AID",
+          "ARC-EQUITY"
+        ],
+        "public_facts": [
+          "PUB-105",
+          "PUB-103",
+          "PUB-104",
+          "PUB-053",
+          "PUB-037",
+          "PUB-069",
+          "PUB-041"
+        ],
+        "characters_quoted": [
+          "CHR-027",
+          "CHR-025"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-002",
+          "PLC-003",
+          "PLC-010"
+        ],
+        "topics": [
+          "fema",
+          "individual assistance",
+          "approval",
+          "damage assessments",
+          "registration",
+          "equity"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0408",
+          "EVT-0306"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P058-01",
+      "day": 58,
+      "time_local": "07:40",
+      "outlet_id": "OUT-02",
+      "section": "Breaking",
+      "byline": [
+        "CHR-006"
+      ],
+      "headline": "Corpus Christi Ship Channel reopens after 14-day closure and full sweep",
+      "dek": "The Coast Guard lifts the closure Thursday morning. Exports resume, and ships begin moving through the Port Aransas jetties for the first time since the Oct. 28 blast.",
+      "body": [
+        "The Corpus Christi Ship Channel is open again.",
+        "The Coast Guard reopens the channel Thursday morning after a 14-day closure and a full sweep by Navy teams, ending a shutdown that began with an explosion beside a harbor tug near the Port Aransas jetties around 1 a.m. Oct. 28. Crude exports from the port resume.",
+        "\"The search is complete, and the Captain of the Port has reopened the Corpus Christi Ship Channel to vessel traffic,\" says Lt. Cmdr. Elena Ruiz of Coast Guard Sector Corpus Christi. \"We thank the Navy teams and our port partners for their patience and their work. Mariners should follow all directions from the Coast Guard and pilots as traffic resumes.\"",
+        "Cmdr. Lisa Moreau, a Navy public affairs officer, says Navy explosive ordnance disposal and mine countermeasures teams have finished their search. \"The channel has been cleared,\" Moreau says. \"Our teams covered every stretch of water they needed to, and they are proud to hand it back to the port.\"",
+        "A second explosive device, found near the entrance last Friday, was rendered safe by Navy teams. Two crew members aboard the tug Corrin Bay were injured in the Oct. 28 blast. The FBI is investigating.",
+        "Thursday is Veterans Day, and on the island, people stopped on the beach road to watch the first vessels head for the jetties.",
+        "What you need to know: Ship traffic is moving again in the channel. Expect more vessel activity near the jetties and along the waterfront over the next several days as ships waiting offshore come in. Texas Parks and Wildlife's fishing closure in Nueces and Corpus Christi bays because of the oil spill is separate and stays in place.",
+        "Harborline 6 will have live coverage from Port Aransas tonight at 6."
+      ],
+      "tags": {
+        "story_type": "breaking",
+        "arcs": [
+          "ARC-CHANNEL-BLAST",
+          "ARC-PORT"
+        ],
+        "public_facts": [
+          "PUB-079",
+          "PUB-078",
+          "PUB-070",
+          "PUB-067",
+          "PUB-040"
+        ],
+        "characters_quoted": [
+          "CHR-020",
+          "CHR-032"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "PORT-07"
+        ],
+        "topics": [
+          "channel reopens",
+          "coast guard",
+          "navy",
+          "crude exports resume",
+          "veterans day"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0413",
+          "EVT-0412",
+          "EVT-0317"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P058-02",
+      "day": 58,
+      "time_local": "11:30",
+      "outlet_id": "OUT-01",
+      "section": "Business",
+      "byline": [
+        "CHR-002"
+      ],
+      "headline": "Channel reopens after 14 days; port says exports are moving again",
+      "dek": "The Port of Corpus Christi began working through a backlog of waiting ships Thursday. A relief freight forwarder says this is the first good morning he's had since October.",
+      "body": [
+        "Two weeks to the day after an explosion near the Port Aransas jetties shut the Corpus Christi Ship Channel, ships were moving again Thursday.",
+        "The Coast Guard reopened the channel after a 14-day closure and a full sweep by Navy teams, and crude exports resumed. Navy teams had found and rendered safe a second explosive device near the entrance last Friday.",
+        "\"This is a good day for the Port of Corpus Christi and for everyone who depends on it,\" said Javier Salinas, a spokesperson for the port. \"The channel is open from the jetties to the Inner Harbor. Our terminals are working, and we will be at it around the clock until every ship that waited for us is served.\"",
+        "Salinas would not estimate how long it would take to clear the backlog of vessels that held offshore during the closure. \"We'll go as fast as safety allows,\" he said. \"Faster than that, we don't go.\"",
+        "The closure halted crude loadings at a port that handles about half of U.S. crude exports. It was the second shutdown this fall; the channel was also closed from the day before Hurricane Rafael's landfall in September until a partial reopening in mid-October.",
+        "For Terry Akins, regional manager of Gulf Relief Logistics, Thursday was a relief in more ways than one. His company's 40 relief containers aboard MV Gulf Provider came ashore about a month late after the storm. This time he had customers' cargo waiting again.",
+        "\"First good morning I've had since October,\" Akins said. \"I called three customers before 8 o'clock and told them the word I've been waiting to say, which is 'moving.' I didn't say when it lands. I've learned.\"",
+        "The reopening also clears the way for a Fort Hood aviation brigade whose movement of helicopters and equipment through the port for an overseas rotation was delayed twice, by the hurricane and by the blast. Fort Hood had not announced a new date as of Thursday morning.",
+        "The FBI continues to investigate the Oct. 28 explosion, which injured two crew members on the harbor tug Corrin Bay."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-PORT",
+          "ARC-CHANNEL-BLAST"
+        ],
+        "public_facts": [
+          "PUB-079",
+          "PUB-073",
+          "PUB-014",
+          "PUB-078",
+          "PUB-059",
+          "PUB-068",
+          "PUB-070",
+          "PUB-067",
+          "PUB-058",
+          "PUB-108"
+        ],
+        "characters_quoted": [
+          "CHR-023",
+          "CHR-074"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "ENT-01",
+          "ANC-OFF"
+        ],
+        "topics": [
+          "channel reopens",
+          "port of corpus christi",
+          "backlog",
+          "relief freight",
+          "crude exports"
+        ],
+        "follows_up": "NWS-P058-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0401",
+          "EVT-0413",
+          "EVT-0412",
+          "EVT-0410"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P058-03",
+      "day": 58,
+      "time_local": "14:00",
+      "outlet_id": "OUT-05",
+      "section": "Crude",
+      "byline": [
+        "CHR-011"
+      ],
+      "headline": "Corpus Christi crude loadings resume after 14-day halt",
+      "dek": "The reopening restores the largest U.S. crude export gateway. Analysts say the restart will be measured in days of catch-up, not hours.",
+      "body": [
+        "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Crude exports from the Port of Corpus Christi resumed Thursday after the Coast Guard reopened the ship channel following a 14-day closure and a full sweep by Navy teams.",
+        "Roughly half of U.S. crude exports leave through the port, by analysts' count. Loadings had been halted since an explosion beside a harbor tug near the Port Aransas jetties Oct. 28, and a second explosive device found and rendered safe near the entrance Nov. 5 had extended the search.",
+        "\"The door is open. Now comes the line,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"Tankers that waited offshore come in first, storage onshore starts to drain, and the cargoes that were rebooked elsewhere don't all come back at once. Expect a catch-up period, not a snap back.\"",
+        "Holloway said traders would also watch for any lasting change in how buyers price risk at the port after two closures in two months, one from a hurricane and one from the blast. \"Markets have short memories for weather and longer ones for security,\" she said. \"The fact that the sweep was thorough helps. Buyers want to know the channel was cleared, not just opened.\"",
+        "The Coast Guard said traffic would resume under the direction of the Captain of the Port and pilots. The port said terminals were staffed and working around the clock.",
+        "The FBI is investigating the Oct. 28 explosion. Officials have not discussed a cause beyond the Navy's statement that it was caused by an explosive device."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-PORT",
+          "ARC-CHANNEL-BLAST"
+        ],
+        "public_facts": [
+          "PUB-079",
+          "PUB-073",
+          "PUB-014",
+          "PUB-078",
+          "PUB-070"
+        ],
+        "characters_quoted": [
+          "CHR-064"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "ENT-01",
+          "ANC-OFF"
+        ],
+        "topics": [
+          "crude exports resume",
+          "tanker market",
+          "channel reopens",
+          "export backlog"
+        ],
+        "follows_up": "NWS-P055-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P058-04",
+      "day": 58,
+      "time_local": "16:30",
+      "outlet_id": "OUT-07",
+      "section": "Readiness",
+      "byline": [
+        "CHR-013"
+      ],
+      "headline": "On Veterans Day, a cleared channel and a brigade that is ready to move",
+      "dek": "Our weekly report: the ship channel reopened Thursday after a Navy sweep, clearing the way for a Fort Hood brigade delayed twice this fall.",
+      "body": [
+        "Veterans Day on the Coastal Bend usually means flags along Ocean Drive, a ceremony or two and a quiet salute from the people who know what the day costs. This year, it also brought news many in our community had been waiting two weeks to hear: the Corpus Christi Ship Channel is open.",
+        "The Coast Guard reopened the channel Thursday morning after a 14-day closure and a full sweep. Navy explosive ordnance disposal and mine countermeasures teams carried out the search with the Coast Guard, and found and rendered safe a second explosive device near the entrance last week. No one was hurt in the search.",
+        "Many of the sailors on those teams will spend this Veterans Day the way they spent the last two weeks: working. Our thanks go to them, and to their families.",
+        "The brigade: A Fort Hood aviation brigade has been waiting to move its helicopters and equipment through the port for an overseas rotation since late summer. Hurricane Rafael postponed the movement in September, and the Oct. 28 blast near the jetties delayed it again. Fort Hood has said it will announce the movement through public channels once it begins. We will report what public affairs releases, and nothing more.",
+        "At the station: Lt. Marcus Hale, a NAS Corpus Christi public affairs officer, said base services are operating normally and the review of last month's backup generator failure at the station continues. \"It's been a hard season for this community, and people kept showing up for work and for each other,\" Hale said. \"That's a good thing to remember on Veterans Day.\"",
+        "At the depot: Corpus Christi Army Depot remains at full production with parts support from DLA Distribution Corpus Christi.",
+        "For families: With the channel open, expect more ship and truck traffic around the port and along the waterfront in the coming days. If a family member asks you about the brigade's plans, please don't speculate online. Rumors travel faster than facts."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-MILITARY",
+          "ARC-CHANNEL-BLAST"
+        ],
+        "public_facts": [
+          "PUB-079",
+          "PUB-068",
+          "PUB-075",
+          "PUB-078",
+          "PUB-065",
+          "PUB-070",
+          "PUB-007"
+        ],
+        "characters_quoted": [
+          "CHR-021"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "ENT-01",
+          "PORT-07",
+          "FAC-DOD-01",
+          "FAC-DOD-02",
+          "FAC-DOD-05",
+          "FAC-DOD-06"
+        ],
+        "topics": [
+          "veterans day",
+          "channel reopens",
+          "fort hood brigade",
+          "base services",
+          "military families"
+        ],
+        "follows_up": "NWS-P051-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0409",
+          "EVT-0407"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P059-01",
+      "day": 59,
+      "time_local": "07:30",
+      "outlet_id": "OUT-03",
+      "section": "Military & Community",
+      "byline": [
+        "CHR-009"
+      ],
+      "headline": "After a hurricane and a blast, Fort Hood brigade's helicopters load at Corpus Christi",
+      "dek": "The aviation brigade's equipment is going aboard a sealift ship and will sail over the next five days. The Army describes the destination only as an overseas rotation.",
+      "body": [
+        "Before sunrise Friday, the first of a Fort Hood aviation brigade's helicopters, shrink-wrapped against salt air, rolled down to a berth at the Port of Corpus Christi. By first light, cranes and ramps were moving equipment aboard a sealift ship.",
+        "It was a movement the brigade expected to make in late summer.",
+        "The Army scheduled the brigade to move its helicopters and equipment through Corpus Christi for an overseas rotation. Hurricane Rafael forced a first postponement in September, and the ship channel then stayed shut for weeks after the storm. The channel partly reopened in October, but on Oct. 28 an explosion beside a harbor tug near the Port Aransas jetties closed it again, delaying the movement a second time. The channel reopened Thursday after a 14-day closure and a full sweep.",
+        "\"Loading is under way,\" said Maj. Darnell Price, a Fort Hood public affairs officer. \"Our soldiers have been ready for a long time. They've been patient, and so have their families. Today we get to do the job.\" The brigade's equipment will sail over the next five days, Price said. He described the destination only as an overseas rotation and declined to discuss the ship, the route or the number of aircraft.",
+        "Javier Salinas, a spokesperson for the Port of Corpus Christi, said the outload was moving alongside the commercial restart. \"This port has been a strategic military seaport for a long time, and this is what that means: a day after the channel opens, we are loading a brigade and tankers at the same time,\" Salinas said. \"Our people have been waiting for this as much as anyone.\"",
+        "For military watchers, the significance of the departure is the delay that preceded it. A movement planned for summer has slipped into late fall, first because of weather and then because of a closed channel. Price would not say whether the delay affected the brigade's mission. \"We go when we can go,\" he said. \"We're going now.\"",
+        "For families at Fort Hood, the next week will bring the familiar mix of pride and goodbye. Price said the Army would continue to share updates through public channels. On the Coastal Bend, it means the sight of olive-drab vehicles and helicopters on the docks, and then, once the ship sails, an empty berth."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-MILITARY",
+          "ARC-PORT"
+        ],
+        "public_facts": [
+          "PUB-080",
+          "PUB-079",
+          "PUB-068",
+          "PUB-020",
+          "PUB-007",
+          "PUB-058"
+        ],
+        "characters_quoted": [
+          "CHR-031",
+          "CHR-023"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "FAC-DOD-06",
+          "ENT-01"
+        ],
+        "topics": [
+          "fort hood brigade",
+          "sealift",
+          "outload",
+          "overseas rotation",
+          "port of corpus christi"
+        ],
+        "follows_up": "NWS-P052-04"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0409",
+          "EVT-0414",
+          "EVT-0207",
+          "EVT-0210",
+          "EVT-0401",
+          "EVT-0410"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P059-02",
+      "day": 59,
+      "time_local": "10:45",
+      "outlet_id": "OUT-06",
+      "section": "National",
+      "byline": [
+        "CHR-012"
+      ],
+      "headline": "Army brigade's equipment sails from Texas port after storm, blast delays",
+      "dek": "A Fort Hood aviation brigade's helicopters began loading at Corpus Christi a day after the ship channel reopened from a 14-day closure.",
+      "body": [
+        "CORPUS CHRISTI, Texas (Continental Wire) — A Fort Hood aviation brigade's helicopters and equipment began loading onto a sealift ship at the Port of Corpus Christi on Friday, months behind schedule after a hurricane and an explosion closed the Texas port's ship channel.",
+        "The equipment will sail over the next five days for what the Army described only as an overseas rotation. \"Loading is under way, and our soldiers are ready,\" said Maj. Darnell Price, a Fort Hood public affairs officer. He declined to give further details.",
+        "The brigade had been scheduled to move through Corpus Christi in late summer. Hurricane Rafael, which made landfall near Port Aransas as a Category 3 storm in September, forced the Coast Guard to close the channel. Then on Oct. 28, an explosion beside a harbor tug near the channel entrance injured two crew members and shut the waterway again. The Navy said the blast was caused by an explosive device, and Navy teams later found and rendered safe a second device. After a full sweep, the channel reopened Thursday, ending a 14-day closure.",
+        "The FBI is investigating the explosion. Officials have not publicly identified who was responsible.",
+        "The Port of Corpus Christi, which handles about half of U.S. crude exports, also serves as one of the military's strategic seaports for moving heavy equipment overseas. The two closures this fall halted both functions.",
+        "The Army first announced the rotation in July. Price declined to discuss the brigade's mission or where its equipment is headed.",
+        "Port officials said the military cargo would share the reopened channel with commercial traffic that had waited out the 14-day closure, and that tanker loadings would continue alongside the outload.",
+        "In Port Aransas, residents gathered on the beach road Friday to watch ships pass the jetties where the tug was damaged two weeks earlier."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-MILITARY",
+          "ARC-CHANNEL-BLAST",
+          "ARC-PORT"
+        ],
+        "public_facts": [
+          "PUB-080",
+          "PUB-079",
+          "PUB-068",
+          "PUB-070",
+          "PUB-078",
+          "PUB-014",
+          "PUB-023",
+          "PUB-067",
+          "PUB-007"
+        ],
+        "characters_quoted": [
+          "CHR-031"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "FAC-DOD-06",
+          "ENT-01"
+        ],
+        "topics": [
+          "fort hood brigade",
+          "sealift",
+          "overseas rotation",
+          "national security",
+          "port of corpus christi"
+        ],
+        "follows_up": "NWS-P052-02"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0409",
+          "EVT-0414",
+          "EVT-0301",
+          "EVT-0413",
+          "EVT-0412"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P059-03",
+      "day": 59,
+      "time_local": "13:15",
+      "outlet_id": "OUT-04",
+      "section": "Ports",
+      "byline": [
+        "CHR-010"
+      ],
+      "headline": "First full day after reopening: crude, cargo and military sealift share the Corpus Christi channel",
+      "dek": "Traffic resumed under Coast Guard and pilot direction. Questions about the mid-October AIS anomaly near the entrance remain unanswered.",
+      "body": [
+        "Port condition, Corpus Christi, Friday: channel open to all traffic under Coast Guard order issued Thursday; movements sequenced by the Captain of the Port and pilots; crude loadings resumed.",
+        "The first full day after a 14-day closure saw inbound tankers that had held offshore enter through the Port Aransas jetties alongside general cargo. A sealift ship began loading a Fort Hood aviation brigade's helicopters and equipment, which the Army said will sail over the next five days for an overseas rotation.",
+        "\"Traffic is moving safely and in order,\" said Lt. Cmdr. Elena Ruiz, a spokesperson for Coast Guard Sector Corpus Christi. \"We are asking every operator for patience while the backlog clears. The order of movements is set for safety, not for any one customer.\"",
+        "The reopening followed a full sweep by Navy explosive ordnance disposal and mine countermeasures teams working with the Coast Guard. The search began after an explosion beside the harbor tug Corrin Bay near the jetties Oct. 28, and teams found and rendered safe a second device near the entrance Nov. 5.",
+        "Public AIS displays on Friday showed a dense but orderly pattern at the entrance, with vessels transmitting normally. That contrasts with the night of Oct. 14-15, when the identity of the fishing vessel FV Pelican Ridge was broadcast near the entrance channel while the vessel itself reported a position about 600 nautical miles away. Analysts call that pattern consistent with spoofing.",
+        "\"The traffic today looks like a port getting back to work,\" said Ian McCready, an independent maritime security analyst. \"That doesn't answer anything about mid-October. Those questions are still open, and public data alone isn't going to close them.\"",
+        "Officials have declined to comment on any link between the AIS observations and the blast. The FBI is investigating the explosion. Gulfwater makes no assessment of a connection.",
+        "Operators should continue to monitor Coast Guard notices for the movement schedule as the backlog clears."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-PORT",
+          "ARC-MILITARY",
+          "ARC-AIS-ANOMALY"
+        ],
+        "public_facts": [
+          "PUB-079",
+          "PUB-080",
+          "PUB-076",
+          "PUB-062",
+          "PUB-078",
+          "PUB-067"
+        ],
+        "characters_quoted": [
+          "CHR-020",
+          "CHR-062"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "ENT-01",
+          "ANC-OFF",
+          "FAC-DOD-06"
+        ],
+        "topics": [
+          "port condition",
+          "reopening",
+          "sealift",
+          "ais",
+          "vessel backlog"
+        ],
+        "follows_up": "NWS-P056-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0409",
+          "EVT-0411",
+          "EVT-0402",
+          "EVT-0413",
+          "EVT-0412"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P059-04",
+      "day": 59,
+      "time_local": "17:00",
+      "outlet_id": "OUT-02",
+      "section": "Local",
+      "byline": [
+        "CHR-006"
+      ],
+      "headline": "At the jetties, a tug captain and a bait shop owner watch the ships come back",
+      "dek": "Ray Dupree, whose tug was damaged in the Oct. 28 blast, wanted to see the channel open with his own eyes. Bill Hargrove brought a lawn chair.",
+      "body": [
+        "Ray Dupree stands at the rail on the beach road with his hands in his jacket pockets and watches a tanker slide between the jetties.",
+        "\"I wanted to see it,\" says Dupree, 56, master of the harbor tug Corrin Bay. \"Two weeks ago I was out there counting heads. Today I'm standing here counting ships. That's better.\"",
+        "Dupree's tug was damaged and two of his crew were hurt when an explosion went off beside it near the jetties around 1 a.m. Oct. 28. The Navy says an explosive device caused the blast. The channel reopened Thursday after a 14-day closure and a full sweep, and on Friday ships are moving steadily through the pass.",
+        "His deckhand, Eddie Fontenot, is still recovering. \"He called me this morning to ask if it was open,\" Dupree says. \"I told him it was open, and he's not. Not yet.\"",
+        "A few yards down, Bill Hargrove has set up a lawn chair. The owner of Hargrove Bait & Tackle has been selling from a folding table since Rafael gutted his shop in September. \"Best seat on the island,\" he says. \"Free, too. Don't tell anybody.\"",
+        "Hargrove, 64, says the island needs the traffic back. \"A ship going by doesn't buy bait,\" he says. \"But it means the pass is open, and the pass being open means the people come back. That's how this town works.\"",
+        "At the Port of Corpus Christi, a sealift ship is loading a Fort Hood aviation brigade's helicopters and equipment, which the Army says will sail over the next five days for an overseas rotation.",
+        "Dupree says he will be back on the water when the company has a boat for him. \"I'll watch the water at the jetties like I always have,\" he says. \"Harder, maybe.\"",
+        "What you need to know: Expect heavy ship traffic in the channel through the weekend as vessels that waited offshore come in."
+      ],
+      "tags": {
+        "story_type": "feature",
+        "arcs": [
+          "ARC-CHANNEL-BLAST",
+          "ARC-COMMUNITY",
+          "ARC-PORT"
+        ],
+        "public_facts": [
+          "PUB-079",
+          "PUB-080",
+          "PUB-067",
+          "PUB-077",
+          "PUB-070"
+        ],
+        "characters_quoted": [
+          "CHR-047",
+          "CHR-042"
+        ],
+        "characters_mentioned": [
+          "CHR-046"
+        ],
+        "places": [
+          "ENT-01",
+          "LF-01",
+          "PORT-07"
+        ],
+        "topics": [
+          "port aransas",
+          "jetties",
+          "corrin bay",
+          "reopening",
+          "tug captain",
+          "bait shop"
+        ],
+        "follows_up": "NWS-P053-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0409",
+          "EVT-0413",
+          "EVT-0412"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P060-01",
+      "day": 60,
+      "time_local": "07:00",
+      "outlet_id": "OUT-02",
+      "section": "Local",
+      "byline": [
+        "CHR-007"
+      ],
+      "headline": "FEMA aid registration opens today: what to bring and how to sign up",
+      "dek": "Individual assistance registration opens Saturday for residents of Nueces, San Patricio and Aransas counties. Here's what you need before you get in line.",
+      "body": [
+        "FEMA individual assistance registration opens today for residents of Nueces, San Patricio and Aransas counties who had damage or losses from Hurricane Rafael.",
+        "\"Registration is the first step, and it's the most important one,\" says Rachel Ostrander, an external affairs officer for FEMA Region 6. \"Register even if you're not sure you qualify. If you have insurance, file with your insurance company too. And keep every receipt.\"",
+        "How to register: online through FEMA's official website, by phone through FEMA's helpline, or in person at a disaster recovery center in the three coastal counties. Ostrander says lines at recovery centers may be long on the first days, and phone and online registration are open to everyone.",
+        "What to have ready:",
+        "Photo ID and your Social Security number. The address of the damaged home and a phone number where FEMA can reach you. Your insurance information, if you have it. A short description of the damage and what you lost. Photos help. Your bank's routing number and your account number if you want payments by direct deposit. Renters: something that shows you lived at the address, like a lease or a utility bill.",
+        "Protect yourself: FEMA does not charge to register, and FEMA staff will never ask you for money. Only use FEMA's official website or helpline. \"If someone calls you offering to speed up your application for a fee, hang up,\" Ostrander says.",
+        "After the storm, the city warned residents about phishing emails impersonating a disaster-aid portal, and a researcher later linked viral rumor posts to the same lookalike site. If you get a link by text or email, don't click it. Type the official address yourself.",
+        "Need help? Many church and neighborhood hubs are helping people register by phone. Bring your documents."
+      ],
+      "tags": {
+        "story_type": "explainer",
+        "arcs": [
+          "ARC-AID"
+        ],
+        "public_facts": [
+          "PUB-081",
+          "PUB-041",
+          "PUB-054"
+        ],
+        "characters_quoted": [
+          "CHR-027"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-002",
+          "PLC-003"
+        ],
+        "topics": [
+          "fema",
+          "individual assistance",
+          "registration",
+          "what to bring",
+          "fraud warning"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0501",
+          "EVT-0306",
+          "EVT-0309"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P060-02",
+      "day": 60,
+      "time_local": "15:30",
+      "outlet_id": "OUT-01",
+      "section": "Local",
+      "byline": [
+        "CHR-001"
+      ],
+      "headline": "Hours-long lines as FEMA aid registration opens across the Coastal Bend",
+      "dek": "Rosa Elizondo took two buses and waited most of the morning. A Calallen teacher brought a clipboard and a cooler.",
+      "body": [
+        "Rosa Elizondo was at the bus stop at 6:10 a.m. Saturday, the same time she leaves for work on weekdays. This time she was going to stand in line.",
+        "By the time Elizondo, 38, reached a disaster recovery center after two buses, the line was already wrapped around the building. She registered for federal disaster aid a little after noon.",
+        "\"I brought everything. My ID, my kids' papers, my lease, my bank card, a picture of my ceiling,\" said Elizondo, a home health aide and mother of three who rents near the bay. \"The lady was nice. She said I'll get a call. I said, okay, I'll get a call. I've been getting a call since September.\"",
+        "FEMA opened individual assistance registration Saturday for residents of Nueces, San Patricio and Aransas counties, two months after Hurricane Rafael made landfall. FEMA had approved the aid Wednesday, Nov. 10, after delays in damage assessments. Long lines formed at recovery centers across the three counties.",
+        "\"We know the lines are long, and we know people have waited a long time to get here,\" said Rachel Ostrander, an external affairs officer for FEMA Region 6. \"Nobody loses their place by registering online or by phone instead. If you can't stand in a line, you don't have to.\"",
+        "Not everyone has that choice. Residents of low-income neighborhoods near the bay reported waiting days for help after the storm, and many have no car and spotty internet.",
+        "Leticia Ramos, 45, a Calallen schoolteacher who ran water runs for her street during the boil-water notice, was in line with a clipboard and a cooler of water bottles. She drove three neighbors who do not have cars and kept a list of who still needed to register.",
+        "\"Same list, new column,\" Ramos said, tapping the clipboard. \"During the water notice, it was who needs jugs. Now it's who needs help with the website. I'd love to retire this clipboard someday.\"",
+        "Elizondo said her neighbor watched her children so she could come. She planned to ride the two buses home and make dinner. \"Today I did my part,\" she said. \"Now it's their part.\""
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-AID",
+          "ARC-EQUITY"
+        ],
+        "public_facts": [
+          "PUB-081",
+          "PUB-053",
+          "PUB-063",
+          "PUB-021",
+          "PUB-105"
+        ],
+        "characters_quoted": [
+          "CHR-040",
+          "CHR-027",
+          "CHR-045"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-002",
+          "PLC-003",
+          "PLC-010"
+        ],
+        "topics": [
+          "fema",
+          "individual assistance",
+          "recovery center lines",
+          "rosa elizondo",
+          "renters",
+          "calallen"
+        ],
+        "follows_up": "NWS-P060-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0501",
+          "EVT-0406"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P060-03",
+      "day": 60,
+      "time_local": "18:00",
+      "outlet_id": "OUT-03",
+      "section": "Equity",
+      "byline": [
+        "CHR-008"
+      ],
+      "headline": "Aid registration is open. For some neighborhoods, the hard part is getting to it",
+      "dek": "FEMA says phone and online registration count the same as standing in line. A pastor whose fellowship hall became a relief hub says the gap is phones, rides and time off work.",
+      "body": [
+        "At Pastor Gloria Whitfield's fellowship hall, the folding tables that held water pallets in September held something else Saturday: two borrowed laptops, a phone charger strip and a hand-lettered sign reading \"FEMA help here. Bring your papers.\"",
+        "FEMA opened individual assistance registration Saturday for Nueces, San Patricio and Aransas counties, and lines formed early at recovery centers. For residents of the low-income neighborhoods near the bay, getting registered depends on things many people elsewhere take for granted: a car, a working phone, a data plan and a day off.",
+        "\"Everybody on my list needs to register. Most of them can't get to a center, and plenty of those don't have a phone that will hold a charge through the hold music,\" said Whitfield, 59, who keeps a binder of neighbors' needs and has used it since before the storm. \"So we bring the phones and the patience.\"",
+        "Rachel Ostrander, an external affairs officer for FEMA Region 6, said registration by phone or online counts the same as registration in person. \"There's no advantage to standing in line,\" she said. \"We want every eligible household registered, and we'll keep saying that.\"",
+        "The neighborhoods where Whitfield works were among the slowest to get help after Rafael. Residents reported waiting days for assistance, and church and neighborhood hubs handed out food and water before official distribution reached some blocks. Last month, health officials said emergency room visits from low-income neighborhoods near the bay remained about 40% above normal, after visits elsewhere had settled.",
+        "Long before the storm, transit advocates warned that bus gaps left many households near the bay without a way to evacuate. Those same gaps now shape who can reach a recovery center on a Saturday.",
+        "Whitfield said volunteers helped a steady stream of neighbors register by phone Saturday, writing registration numbers on index cards so no one would lose them. \"This is the first step,\" she said. \"I'm not going to call it a good day until the help actually shows up. But it's a step.\"",
+        "Coastline Public Radio will follow how aid reaches neighborhoods across the Coastal Bend in the coming months."
+      ],
+      "tags": {
+        "story_type": "analysis",
+        "arcs": [
+          "ARC-AID",
+          "ARC-EQUITY"
+        ],
+        "public_facts": [
+          "PUB-081",
+          "PUB-053",
+          "PUB-069",
+          "PUB-008",
+          "PUB-037"
+        ],
+        "characters_quoted": [
+          "CHR-049",
+          "CHR-027"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-010",
+          "PLC-001",
+          "PLC-002",
+          "PLC-003"
+        ],
+        "topics": [
+          "fema",
+          "aid access",
+          "equity",
+          "church hub",
+          "phone registration",
+          "transit gaps"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0501",
+          "EVT-0408"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P061-01",
+      "day": 61,
+      "time_local": "09:00",
+      "outlet_id": "OUT-01",
+      "section": "Local",
+      "byline": [
+        "CHR-005"
+      ],
+      "headline": "Two months after the oil, North Beach still asks who pays",
+      "dek": "Cleanup crews have moved on to monitoring. A retired welder who smelled the oil before he saw it says the beach looks better than his neighbors' finances.",
+      "body": [
+        "Marcus Bell can tell you exactly where the black line was.",
+        "\"Right there, from that post to past the lifeguard stand,\" said Bell, 67, pointing down the sand from the end of his street on North Beach on a gray Sunday morning. \"Smelled it before I ever saw it. Then the whole edge of the sand went black.\"",
+        "That was two days after Hurricane Rafael made landfall in September. Surge and wind carried oil from two tankers moored at an Inner Harbor terminal out of the ship channel and into Nueces and Corpus Christi bays, leaving sheen across about 33 square miles of water and oil on North Beach and Portland shorelines and in the marshes. Responders working under the Coast Guard and the Texas General Land Office have put the release at about 9,000 barrels.",
+        "Now, cleanup has moved to monitoring. The sand in front of Bell's street is pale again, and on Sunday a few people were walking it with coffee.",
+        "\"Looks fine. That's the thing about a beach. It forgets faster than people do,\" said Bell, a retired welder who spent more than 30 years on refinery and fabrication jobs along the ship channel. \"My throat was raw for a week. My neighbor's grandson broke out in a rash. Who paid for those doctor visits? Them.\"",
+        "Health officials advised residents in September to avoid contact with oil after emergency rooms saw respiratory and skin complaints from people near oiled shorelines. Those complaints eased by early October. Texas Parks and Wildlife's fishing closure in the bays remains in place.",
+        "Cole Whitaker, a spokesperson for the Texas General Land Office's oil spill program, said moving to monitoring \"doesn't mean anybody walks away.\" Crews continue to check shorelines and marshes, he said, and a claims center run for the tankers' owners has taken cleanup and property damage claims since September. \"If people see oil, we want to hear about it. Call the hotline.\"",
+        "Bell said he wants something simple from the agencies. \"Tell people what they can claim, where to file, and who signs the check,\" he said. \"Don't make a 67-year-old man with a bad throat figure it out from a rumor at the bait stand.\"",
+        "He said he would be watching the news for that. \"I've welded around fuel my whole life,\" he said. \"I know what it costs when somebody gets it wrong. Somebody ought to pay for it.\""
+      ],
+      "tags": {
+        "story_type": "feature",
+        "arcs": [
+          "ARC-SPILL",
+          "ARC-COMMUNITY"
+        ],
+        "public_facts": [
+          "PUB-030",
+          "PUB-066",
+          "PUB-057",
+          "PUB-038",
+          "PUB-029",
+          "PUB-106",
+          "PUB-040"
+        ],
+        "characters_quoted": [
+          "CHR-044",
+          "CHR-028"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-002",
+          "TERM-01"
+        ],
+        "topics": [
+          "north beach",
+          "oil spill",
+          "shoreline",
+          "spill monitoring",
+          "health costs"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0314",
+          "EVT-0410",
+          "EVT-0317",
+          "EVT-0315"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P061-02",
+      "day": 61,
+      "time_local": "16:00",
+      "outlet_id": "OUT-04",
+      "section": "Ports",
+      "byline": [
+        "CHR-010"
+      ],
+      "headline": "Week in review: Corpus Christi channel reopens, sealift sails, backlog works down",
+      "dek": "A summary of port conditions after the 14-day closure, for operators planning the week ahead.",
+      "body": [
+        "Port condition, Corpus Christi, Sunday: channel open to all traffic; movements sequenced by the Captain of the Port and pilots; crude loadings under way; no Coast Guard restrictions announced beyond normal operations.",
+        "Reopening. The Coast Guard reopened the Corpus Christi Ship Channel on Thursday, Nov. 11, after a 14-day closure and a full sweep by Navy explosive ordnance disposal and mine countermeasures teams working with the Coast Guard. The closure began after an explosion beside the harbor tug Corrin Bay near the Port Aransas jetties Oct. 28. Navy teams rendered a second device safe near the entrance Nov. 5.",
+        "Backlog. Vessels that held offshore during the closure began moving in Thursday under a sequenced plan. Public AIS shows the queue shrinking steadily; no official count has been released. The pattern resembles the October restart after Hurricane Rafael, when an anchorage backlog delayed relief cargo. One difference: inner-channel spill restrictions, which slowed that earlier restart, were lifted in late October.",
+        "Sealift. A sealift ship began loading a Fort Hood aviation brigade's helicopters and equipment Friday. The Army said the equipment would sail over the next five days for an overseas rotation. The Army has released no ship details, and Gulfwater will not report them.",
+        "Exports. Crude loadings resumed Thursday. Market analysts expect a catch-up period as onshore storage drains and rebooked cargoes return. The port handles about half of U.S. crude exports.",
+        "Open questions. The FBI is investigating the Oct. 28 blast. Officials continue to decline comment on any link between the explosion and the mid-October AIS anomaly, in which the identity of the fishing vessel FV Pelican Ridge was broadcast near the entrance channel while the vessel reported a position about 600 nautical miles away. Gulfwater makes no assessment of a connection.",
+        "Outlook. Absent new notices, operators should plan for normal port conditions with residual sequencing delays early in the week. Gulfwater will report changes as the Coast Guard issues them."
+      ],
+      "tags": {
+        "story_type": "analysis",
+        "arcs": [
+          "ARC-PORT",
+          "ARC-MILITARY",
+          "ARC-CHANNEL-BLAST"
+        ],
+        "public_facts": [
+          "PUB-079",
+          "PUB-080",
+          "PUB-078",
+          "PUB-073",
+          "PUB-058",
+          "PUB-076",
+          "PUB-014",
+          "PUB-062",
+          "PUB-067",
+          "PUB-066"
+        ],
+        "characters_quoted": [],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "ENT-01",
+          "ANC-OFF",
+          "FAC-DOD-06"
+        ],
+        "topics": [
+          "week in review",
+          "port condition",
+          "backlog",
+          "sealift",
+          "crude exports"
+        ],
+        "follows_up": "NWS-P059-03"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0409",
+          "EVT-0401",
+          "EVT-0410",
+          "EVT-0411",
+          "EVT-0402",
+          "EVT-0413",
+          "EVT-0412"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P062-01",
+      "day": 62,
+      "time_local": "08:00",
+      "outlet_id": "OUT-01",
+      "section": "Business",
+      "byline": [
+        "CHR-002"
+      ],
+      "headline": "Port works through its backlog as brigade's sealift heads out",
+      "dek": "Four days after the channel reopened, the Port of Corpus Christi says it is catching up. A relief freight forwarder's delayed shipments are landing.",
+      "body": [
+        "The cranes at the Port of Corpus Christi did not stop much over the weekend.",
+        "Four days after the Coast Guard reopened the ship channel following a 14-day closure, the port said Monday it was working through the line of vessels that waited offshore, and that crude loadings had resumed at every terminal ready to receive ships.",
+        "\"We said we'd work around the clock, and we have,\" said Javier Salinas, a spokesperson for the port. \"The line is getting shorter every day. I won't give you a date it's gone, because I've learned not to promise the water anything. But we're close to a normal week.\"",
+        "The port's other big job is also moving. A Fort Hood aviation brigade's helicopters and equipment began loading Friday onto a sealift ship, and the Army said the equipment would sail over a five-day period for an overseas rotation. Salinas declined to discuss the military movement beyond the Army's statement.",
+        "The reopening has also eased pressure on freight forwarders who juggled delays twice this fall. Terry Akins, regional manager of Gulf Relief Logistics, said shipments held during the closure began arriving over the weekend. His firm's 40 relief containers aboard MV Gulf Provider were about a month late after Rafael.",
+        "\"I had a customer who's been waiting on building supplies since October. They came off a ship Saturday,\" Akins said. \"He sent me a picture of the pallets. I don't think I've ever been sent a picture of pallets before. I saved it.\"",
+        "Akins said the fall wore on his customers as much as on him. \"Twice this fall the cargo was ready and the water wasn't,\" he said. \"You can only tell somebody 'it's at anchor' so many times.\"",
+        "At a port that handles about half of U.S. crude exports, the closure stopped crude loadings cold. The FBI continues to investigate the Oct. 28 explosion near the Port Aransas jetties that caused it."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-PORT",
+          "ARC-MILITARY"
+        ],
+        "public_facts": [
+          "PUB-079",
+          "PUB-080",
+          "PUB-073",
+          "PUB-059",
+          "PUB-014"
+        ],
+        "characters_quoted": [
+          "CHR-023",
+          "CHR-074"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "FAC-DOD-06",
+          "ANC-OFF"
+        ],
+        "topics": [
+          "port of corpus christi",
+          "backlog",
+          "sealift",
+          "relief freight",
+          "recovery"
+        ],
+        "follows_up": "NWS-P058-02"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0409",
+          "EVT-0401"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P062-02",
+      "day": 62,
+      "time_local": "17:30",
+      "outlet_id": "OUT-03",
+      "section": "Equity",
+      "byline": [
+        "CHR-008"
+      ],
+      "headline": "Rosa Elizondo registered for FEMA aid. Two days later, her application is stuck on a lease",
+      "dek": "A home health aide who took two buses to register Saturday learned Monday that FEMA needs more proof she lives where she lives. Her landlord doesn't answer the phone.",
+      "body": [
+        "Rosa Elizondo checked her FEMA application on her phone on the bus Monday morning, between clients. The status had changed. It did not say approved or denied. It said FEMA needed more information.",
+        "\"Proof of occupancy,\" Elizondo said, reading it out loud at the fellowship hall that afternoon. \"I occupy. I'm occupying right now. Ask my ceiling.\"",
+        "Elizondo, 38, a home health aide and mother of three, registered for federal individual assistance Saturday, the day registration opened in Nueces, San Patricio and Aransas counties. She took two buses to a recovery center and waited most of the morning. She brought her lease. But the lease, she said, is a one-page form her landlord wrote years ago, with no date on the second line and her name spelled wrong.",
+        "Her landlord has not returned her calls since the storm, she said, except to say repairs to the leaking hallway ceiling are coming \"soon.\"",
+        "Rachel Ostrander, an external affairs officer for FEMA Region 6, said renters who cannot easily prove occupancy have options. \"A utility bill, a pay stub, a letter from a school or an employer with the address, a bank statement, many documents can help show where you lived,\" Ostrander said, speaking generally about the process. \"If FEMA asks for more information, respond as soon as you can, and call the helpline if you're not sure what to send.\"",
+        "At Pastor Gloria Whitfield's fellowship hall, volunteers helped Elizondo find a school letter for her youngest child that showed her address and photographed it with her phone.",
+        "\"This is what it looks like,\" Whitfield said. \"The people with the least paperwork are the people who need the help the most. Rosa did everything right, and the system still says, prove it.\"",
+        "Residents of low-income neighborhoods near the bay waited days for help after Rafael, and church and neighborhood hubs filled gaps before official aid arrived. Whitfield said she expects many renters on her list to hit the same snag.",
+        "Elizondo uploaded the school letter before her next client visit. \"Now I wait again,\" she said. \"I'm very good at waiting. I should get paid for it. Maybe that's what FEMA's for.\""
+      ],
+      "tags": {
+        "story_type": "feature",
+        "arcs": [
+          "ARC-AID",
+          "ARC-EQUITY"
+        ],
+        "public_facts": [
+          "PUB-081",
+          "PUB-053",
+          "PUB-037"
+        ],
+        "characters_quoted": [
+          "CHR-040",
+          "CHR-027",
+          "CHR-049"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-010",
+          "PLC-001"
+        ],
+        "topics": [
+          "fema",
+          "proof of occupancy",
+          "renters",
+          "rosa elizondo",
+          "aid application",
+          "equity"
+        ],
+        "follows_up": "NWS-P060-02"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0501"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P063-01",
+      "day": 63,
+      "time_local": "10:00",
+      "outlet_id": "OUT-01",
+      "section": "Local",
+      "byline": [
+        "CHR-005"
+      ],
+      "headline": "Spill claims center starts taking lost-income claims from fishers and shoreline businesses",
+      "dek": "Two months after oil from two moored tankers spread across the bays, people who lost income can begin filing claims with the tanker owners' claims center. Officials say documentation is everything.",
+      "body": [
+        "Commercial fishers and shoreline businesses that lost income to the oil spill that spread across Nueces and Corpus Christi bays during Hurricane Rafael can now file claims with the claims center run for the tankers' owners, which began taking lost-income claims Tuesday as federal oil spill law requires. Claims that go unpaid for 90 days can be taken to the Coast Guard's National Pollution Funds Center.",
+        "\"If the spill cost you income or damaged your property, file,\" said Cole Whitaker, a spokesperson for the Texas General Land Office's oil spill program. \"Don't wait until you have every piece of paper. Start the claim, then keep adding to it. Receipts, trip logs, tax records, photos. The more you can show, the better.\"",
+        "The Unified Command of the Coast Guard and the Land Office estimated that about 9,000 barrels of crude were released from MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth in the Inner Harbor as Rafael arrived in September. Rafael's surge and wind pushed the oil out of the ship channel, leaving sheen across about 33 square miles of water and oil on North Beach and Portland shorelines and in the marshes.",
+        "Texas Parks and Wildlife closed fishing and the Texas Department of State Health Services closed shellfish harvesting in the two bays on Sept. 18, and the fishing closure was extended in early October. Cleanup moved to monitoring Oct. 28, but the closures remain in place, and no reopening date has been set.",
+        "For shrimpers like Huy Nguyen of Aransas Pass, the claims process is the first concrete step since the closure. Nguyen, 51, keeps a spiral notebook for every trip, with catch, fuel and ice, and fuel receipts clipped to his truck visor.",
+        "\"Finally, somebody wants to see my notebook,\" Nguyen said. \"Years of notebooks. Good years, bad years. Now they can see what a lost year looks like.\"",
+        "He said he planned to file within days. \"Paper doesn't fish,\" he said. \"But paper is what I have.\"",
+        "On North Beach, retired welder Marcus Bell, who saw oil on the sand two days after the storm, said Sunday he wanted agencies to \"tell people what they can claim, where to file, and who signs the check.\" Whitaker said shoreline property owners have been able to file cleanup and property damage claims with the same center since September.",
+        "Whitaker urged people to be wary of anyone who charges a fee to file a claim on their behalf. \"You don't need to pay anybody to start a claim,\" he said."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-SPILL",
+          "ARC-AID"
+        ],
+        "public_facts": [
+          "PUB-082",
+          "PUB-040",
+          "PUB-057",
+          "PUB-029",
+          "PUB-030",
+          "PUB-066",
+          "PUB-106"
+        ],
+        "characters_quoted": [
+          "CHR-028",
+          "CHR-041",
+          "CHR-044"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-002",
+          "TERM-01"
+        ],
+        "topics": [
+          "spill claims",
+          "oil spill",
+          "shrimpers",
+          "shoreline owners",
+          "fishing closure"
+        ],
+        "follows_up": "NWS-P061-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0508",
+          "EVT-0317",
+          "EVT-0315",
+          "EVT-0314",
+          "EVT-0410"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P063-02",
+      "day": 63,
+      "time_local": "17:30",
+      "outlet_id": "OUT-02",
+      "section": "Local",
+      "byline": [
+        "CHR-007"
+      ],
+      "headline": "Filing a spill damage claim? Here's your checklist",
+      "dek": "Fishers and shoreline businesses that lost income to the September oil spill can now file. Here's what to gather and how to protect yourself.",
+      "body": [
+        "The claims center run for the tankers' owners begins taking lost-income claims this week from commercial fishers and shoreline businesses hurt by the oil spill in Nueces and Corpus Christi bays, as federal oil spill law requires. If a claim sits unpaid for 90 days, you can take it to the Coast Guard's National Pollution Funds Center.",
+        "\"Start the claim, then keep adding to it,\" says Cole Whitaker, a spokesperson for the Texas General Land Office's oil spill program. \"Nobody expects you to have it all on day one.\"",
+        "Who can file: Commercial fishers who lost income because of the spill and the fishing closure in the bays, and shoreline businesses that lost income. Oil damage to shoreline property? That part of the center opened in September.",
+        "If you fish for a living, gather: Your fishing licenses and boat registration. Trip logs or trip tickets showing what you caught before the spill. Tax returns or other records showing your income in past seasons. Receipts for fuel, ice, gear and crew. Any notes on days you could not fish.",
+        "If you own shoreline property, gather: Photos of oil on your property, with dates if you have them. Receipts for any cleanup you paid for. Repair estimates. Anything showing what the property looked like before.",
+        "Protect yourself: You do not need to pay anyone to file a claim. Be careful with anyone who calls, texts or knocks offering to file for a fee or promising a bigger payout. Do not give out bank information to anyone you did not contact first through official channels.",
+        "Still seeing oil? Crews are still monitoring shorelines and marshes. If you see oil, call the state's spill hotline instead of cleaning it up yourself.",
+        "Remember: Filing a claim does not reopen the bays. The fishing and shellfish closures stay in effect until Texas Parks and Wildlife and the state health department say otherwise."
+      ],
+      "tags": {
+        "story_type": "explainer",
+        "arcs": [
+          "ARC-SPILL",
+          "ARC-AID"
+        ],
+        "public_facts": [
+          "PUB-082",
+          "PUB-040",
+          "PUB-030",
+          "PUB-106"
+        ],
+        "characters_quoted": [
+          "CHR-028"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-002"
+        ],
+        "topics": [
+          "spill claims",
+          "checklist",
+          "fishers",
+          "shoreline owners",
+          "fraud warning"
+        ],
+        "follows_up": "NWS-P063-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0508",
+          "EVT-0317",
+          "EVT-0314"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P064-01",
+      "day": 64,
+      "time_local": "12:15",
+      "outlet_id": "OUT-02",
+      "section": "Breaking",
+      "byline": [
+        "CHR-007"
+      ],
+      "headline": "Some FEMA applicants say their deposit details were changed without their knowledge",
+      "dek": "Harborline 6 has heard from aid applicants who logged in and found bank information they did not enter. Here's how to check yours right now.",
+      "body": [
+        "Some people who applied for federal disaster aid after Hurricane Rafael say the direct-deposit details on their applications were changed without their knowledge.",
+        "Harborline 6 has heard from several applicants in Nueces County who say they logged in to check on their applications this week and found a bank account number they did not recognize. A Flour Bluff woman who asked not to be named says she registered by phone on the first day, entered her credit union account, and on Tuesday saw a different bank listed. \"I didn't change anything,\" she says. \"I didn't even know you could.\"",
+        "FEMA opened individual assistance registration for Nueces, San Patricio and Aransas counties on Saturday, Nov. 13. Harborline 6 asked FEMA about the reports Wednesday morning. The agency had not responded by midday.",
+        "Harborline 6 has not independently confirmed how the changes happened, and it is not known how many applicants are affected.",
+        "What to do right now:",
+        "Log in to your FEMA account only through FEMA's official website. Type the address yourself. Do not use a link from a text or email.",
+        "Check your direct-deposit information. If it is not your account, call FEMA's helpline right away and say your deposit information was changed without your permission. Write down the date, time and the name of the person you speak with.",
+        "Call your own bank and let them know.",
+        "Change your password, and don't use the same password you use on other sites.",
+        "If you have seen a change you didn't make, Harborline 6 wants to hear from you. We will update this story when FEMA responds."
+      ],
+      "tags": {
+        "story_type": "breaking",
+        "arcs": [
+          "ARC-PORTAL-BREACH",
+          "ARC-AID"
+        ],
+        "public_facts": [
+          "PUB-083",
+          "PUB-081"
+        ],
+        "characters_quoted": [],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-002"
+        ],
+        "topics": [
+          "fema",
+          "direct deposit",
+          "aid accounts",
+          "changed bank details",
+          "what to do"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0502",
+          "EVT-0501"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P064-02",
+      "day": 64,
+      "time_local": "17:45",
+      "outlet_id": "OUT-01",
+      "section": "Local",
+      "byline": [
+        "CHR-001"
+      ],
+      "headline": "At a church relief hub, aid applicants check their accounts and some find bank details they don't recognize",
+      "dek": "Pastor Gloria Whitfield's volunteers spent Wednesday helping neighbors log in. Rosa Elizondo's information was unchanged. Others' was not, they said.",
+      "body": [
+        "The line at Pastor Gloria Whitfield's fellowship hall on Wednesday afternoon was not for water or canned beans. It was for the two borrowed laptops.",
+        "Word had spread through the neighborhood near the bay that some people who applied for federal disaster aid were finding direct-deposit details on their applications that they had not entered. Whitfield's volunteers spent the afternoon helping neighbors log in and look.",
+        "Rosa Elizondo, 38, a home health aide and mother of three who registered for aid Saturday, checked hers three times. Her bank information was still her own.",
+        "\"Mine is fine. Mine is still my little account,\" Elizondo said. \"But I'm going to check every day now, like the weather. Before, I worried the money wouldn't come. Now I worry it comes and goes somewhere else.\"",
+        "Whitfield said a couple of people who came to the hall on Wednesday found account numbers they did not recognize. The Ledger could not independently verify their accounts. Harborline 6 reported earlier Wednesday that several applicants in Nueces County said their deposit details had been changed without their knowledge.",
+        "\"These are people who registered with a phone borrowed from my table, because they don't have a computer,\" Whitfield said. \"They did everything they were told. If somebody is getting into these accounts, the people with the least are going to lose the most, because they're the ones who can't take a day off to sit on hold.\"",
+        "FEMA did not respond to the Ledger's questions about the reports by Wednesday evening. It is not known how the changes were made or how many applicants are affected.",
+        "Volunteers at the hall were telling people to call FEMA's helpline if their information had changed, to tell their bank, and to use a new password that they do not use anywhere else. Whitfield wrote the helpline on the whiteboard where she used to list needs for diapers and batteries.",
+        "Elizondo said her application is still waiting on FEMA to accept the school letter she uploaded Monday to prove she lives at her rental. \"So first they need proof that I live in my house,\" she said. \"Now I need proof that my money lives in my account.\""
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-PORTAL-BREACH",
+          "ARC-AID",
+          "ARC-EQUITY"
+        ],
+        "public_facts": [
+          "PUB-083",
+          "PUB-081",
+          "PUB-037"
+        ],
+        "characters_quoted": [
+          "CHR-040",
+          "CHR-049"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-010",
+          "PLC-001"
+        ],
+        "topics": [
+          "fema",
+          "direct deposit",
+          "aid accounts",
+          "church hub",
+          "rosa elizondo"
+        ],
+        "follows_up": "NWS-P064-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0502",
+          "EVT-0501"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P065-01",
+      "day": 65,
+      "time_local": "09:00",
+      "outlet_id": "OUT-07",
+      "section": "Families",
+      "byline": [
+        "CHR-013"
+      ],
+      "headline": "This week: brigade gear heads overseas, FEMA aid is open to military households, and check your deposit details",
+      "dek": "Our weekly roundup for families at NAS Corpus Christi, the Army depot and NAS Kingsville.",
+      "body": [
+        "The ships are moving, the depot is busy, and for many of our families the next storm chore is paperwork. Here is what you need to know this week.",
+        "The brigade: A Fort Hood aviation brigade's helicopters and equipment began loading at the Port of Corpus Christi on Friday, Nov. 12, the day after the ship channel reopened. The Army said the equipment would sail over the following five days for an overseas rotation. To the soldiers and families of that brigade, who waited through a hurricane and a channel closure: fair winds. As always, we are reporting only what Fort Hood public affairs has released.",
+        "Federal aid: FEMA individual assistance registration opened Nov. 13 for Nueces, San Patricio and Aransas counties. Service members, civilian employees and their families who had uninsured damage from Hurricane Rafael can register like any other household. \"If your home or belongings were damaged, register, even if you're not sure you qualify,\" said Rachel Ostrander, an external affairs officer for FEMA Region 6. Register online through FEMA's official website, by phone through FEMA's helpline, or at a disaster recovery center.",
+        "Check your deposit details: Some aid applicants in the area say the direct-deposit details on their applications were changed without their knowledge. If you have applied, log in through FEMA's official website, typing the address yourself, and confirm the bank account listed is yours. If it isn't, call FEMA's helpline and your bank right away. Use a password you don't use anywhere else.",
+        "At the station: Lt. Marcus Hale, a NAS Corpus Christi public affairs officer, said base services are operating normally. \"Our people have been helping neighbors all season,\" Hale said. \"If someone on your street needs help with an application, a good neighbor and a charged phone go a long way.\"",
+        "At the depot: Corpus Christi Army Depot is still at full production, with DLA Distribution Corpus Christi supplying parts.",
+        "Thanksgiving: Next Thursday is Thanksgiving. Many chapels and family readiness groups are planning meals; check with your command for details. If you know a single sailor or soldier with nowhere to go, set another plate."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-MILITARY",
+          "ARC-AID",
+          "ARC-PORTAL-BREACH"
+        ],
+        "public_facts": [
+          "PUB-080",
+          "PUB-081",
+          "PUB-083",
+          "PUB-079",
+          "PUB-075"
+        ],
+        "characters_quoted": [
+          "CHR-027",
+          "CHR-021"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "FAC-DOD-01",
+          "FAC-DOD-02",
+          "FAC-DOD-05",
+          "FAC-DOD-06",
+          "PLC-001"
+        ],
+        "topics": [
+          "military families",
+          "fema",
+          "direct deposit",
+          "fort hood brigade",
+          "thanksgiving"
+        ],
+        "follows_up": "NWS-P058-04"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0409",
+          "EVT-0501",
+          "EVT-0502",
+          "EVT-0414"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P065-02",
+      "day": 65,
+      "time_local": "14:00",
+      "outlet_id": "OUT-01",
+      "section": "Local",
+      "byline": [
+        "CHR-005"
+      ],
+      "headline": "An Aransas Pass shrimper files his spill claim with a stack of spiral notebooks",
+      "dek": "Huy Nguyen's boat survived Rafael, and the pass is open again. The bays are not. On Thursday he put his lost season on paper.",
+      "body": [
+        "ARANSAS PASS — Huy Nguyen brought his evidence in a grocery bag: eleven spiral notebooks, a rubber-banded stack of fuel receipts from his truck visor, and his boat papers in a plastic sleeve.",
+        "\"My whole life is in here,\" said Nguyen, 51, setting the bag on his kitchen table Thursday before he filed his spill damage claim. \"Every trip. How many pounds. How much diesel. How much ice. My father taught me to write it down. He said someday somebody will ask. Somebody is asking.\"",
+        "Nguyen, a second-generation shrimper, filed two days after the claims center run for the tankers' owners began taking lost-income claims from fishers and shoreline businesses hurt by the oil that spread across Nueces and Corpus Christi bays during Hurricane Rafael in September. Texas Parks and Wildlife closed fishing in the bays on Sept. 18, the same day the state health department closed shellfish harvesting, and extended its closure in early October. It remains in place.",
+        "His boat came through the storm with little more than scraped paint. Then the bays closed. Then, for two weeks, the entrance channel to the Gulf closed too, after the Oct. 28 explosion near the Port Aransas jetties. It reopened Nov. 11.",
+        "\"Now the pass is open and I still can't fish the bay,\" he said. \"One door opens, the other stays shut.\"",
+        "His season had started out fair, he said, though fuel prices ate into it. Since mid-September, his notebook pages read \"no trip.\" He still owes on the boat and the fuel dock, and he has a deckhand with two children who has been picking up day work.",
+        "Cole Whitaker, a spokesperson for the Texas General Land Office's oil spill program, said Tuesday that claimants should start with what they have and add documents as they go. \"The more you can show, the better,\" he said. No date has been set for reopening the bays.",
+        "Nguyen said he does not know how long a claim will take, and he is not counting on it to save the season. \"Paper doesn't fish,\" he said again, sliding the notebooks back into the bag. \"But I'm good at paper. My father made sure.\"",
+        "Asked what he wanted most, he did not mention money. \"Tell me when I can fish,\" he said."
+      ],
+      "tags": {
+        "story_type": "profile",
+        "arcs": [
+          "ARC-SPILL",
+          "ARC-COMMUNITY",
+          "ARC-AID"
+        ],
+        "public_facts": [
+          "PUB-082",
+          "PUB-040",
+          "PUB-057",
+          "PUB-005",
+          "PUB-079",
+          "PUB-106"
+        ],
+        "characters_quoted": [
+          "CHR-041",
+          "CHR-028"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-002",
+          "ENT-01"
+        ],
+        "topics": [
+          "spill claims",
+          "shrimpers",
+          "aransas pass",
+          "fishing closure",
+          "huy nguyen"
+        ],
+        "follows_up": "NWS-P063-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0508",
+          "EVT-0317",
+          "EVT-0414"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P066-01",
+      "day": 66,
+      "time_local": "10:30",
+      "outlet_id": "OUT-02",
+      "section": "Breaking",
+      "byline": [
+        "CHR-007"
+      ],
+      "headline": "FEMA confirms unauthorized access to some aid applicant accounts; check your deposit info now",
+      "dek": "FEMA says some applicant accounts were accessed without authorization and urges every applicant to verify their direct-deposit details.",
+      "body": [
+        "FEMA confirms that some disaster aid applicant accounts were accessed without authorization, and it is urging applicants to verify their direct-deposit information.",
+        "\"We have confirmed unauthorized access to some applicant accounts,\" says Rachel Ostrander, an external affairs officer for FEMA Region 6. \"We are urging every applicant to log in and verify their direct-deposit information today. If anything looks wrong, call our helpline right away. We will help you correct it.\"",
+        "FEMA does not say how many accounts were affected, how they were accessed, or whether any payments went to changed accounts. Ostrander says FEMA will share more when it can.",
+        "The confirmation comes two days after Harborline 6 reported that some applicants in Nueces County said their deposit details had been changed without their knowledge. Registration for individual assistance opened Nov. 13 for Nueces, San Patricio and Aransas counties.",
+        "If you applied, here's the short version:",
+        "Type FEMA's official web address into your browser. A link in a text or email could take you somewhere else.",
+        "Look at the bank account where your aid will be deposited. Not yours? Call FEMA's helpline, and keep a note of when you called and who answered.",
+        "Let your bank know, too.",
+        "Pick a new FEMA password you've never used anywhere else, and switch on extra sign-in protection if the site offers it.",
+        "Watch out for scams. FEMA will never call, text or email asking for your password or a fee. \"If someone contacts you claiming to be from FEMA and asks for money or your login, hang up and call us,\" Ostrander says.",
+        "Harborline 6 will keep following this story."
+      ],
+      "tags": {
+        "story_type": "breaking",
+        "arcs": [
+          "ARC-PORTAL-BREACH",
+          "ARC-AID"
+        ],
+        "public_facts": [
+          "PUB-084",
+          "PUB-083",
+          "PUB-081"
+        ],
+        "characters_quoted": [
+          "CHR-027"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-002",
+          "PLC-003"
+        ],
+        "topics": [
+          "fema",
+          "unauthorized access",
+          "aid accounts",
+          "direct deposit",
+          "what to do"
+        ],
+        "follows_up": "NWS-P064-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0502",
+          "EVT-0501"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P066-02",
+      "day": 66,
+      "time_local": "14:00",
+      "outlet_id": "OUT-01",
+      "section": "Investigations",
+      "byline": [
+        "CHR-004"
+      ],
+      "headline": "FEMA confirms some aid applicant accounts were accessed without authorization",
+      "dek": "The agency urged applicants to verify their direct-deposit details but did not say how many accounts were affected, how they were accessed, or whether payments went astray.",
+      "body": [
+        "FEMA confirmed Friday that some disaster aid applicant accounts were accessed without authorization, two days after applicants in Nueces County reported finding direct-deposit details on their applications that they had not entered.",
+        "In a statement, Rachel Ostrander, an external affairs officer for FEMA Region 6, said the agency had confirmed that some applicant accounts were accessed without authorization. \"Please log in and look at where your payment is set to go,\" she said. \"If it isn't your account, call our helpline right away.\"",
+        "The statement did not say how many accounts were affected, how they were accessed, when the access occurred, or whether any aid payments had been sent to changed accounts. Asked those questions Friday, Ostrander said FEMA would release more information when it could.",
+        "FEMA opened individual assistance registration Nov. 13 for residents of Nueces, San Patricio and Aransas counties. Long lines formed at recovery centers, and church and neighborhood hubs helped many residents register by phone and online.",
+        "In September, days after the storm, the city warned employees and residents about phishing emails impersonating a disaster-aid portal. FEMA did not say whether the unauthorized access was related to any earlier scam, and the Ledger is not suggesting that it was.",
+        "At Pastor Gloria Whitfield's fellowship hall near the bay, where volunteers have helped neighbors check their accounts all week, the confirmation was not a surprise. \"My neighbors told me Wednesday. FEMA told us Friday,\" Whitfield said. \"I'm glad they said it. Now tell people how they get their money if it went to the wrong place.\"",
+        "Rosa Elizondo, a home health aide who registered at a recovery center on the first day, said she had checked her deposit information again Friday morning. It was still correct. \"I'm checking it like my kids check the fridge,\" she said. \"Every hour, for no reason, just in case.\"",
+        "The Ledger has requested records from FEMA on the number of accounts affected and the agency's response. Applicants who believe their information was changed can call FEMA's helpline."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-PORTAL-BREACH",
+          "ARC-AID"
+        ],
+        "public_facts": [
+          "PUB-084",
+          "PUB-083",
+          "PUB-081",
+          "PUB-041"
+        ],
+        "characters_quoted": [
+          "CHR-027",
+          "CHR-049",
+          "CHR-040"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-010"
+        ],
+        "topics": [
+          "fema",
+          "unauthorized access",
+          "aid accounts",
+          "public records",
+          "direct deposit"
+        ],
+        "follows_up": "NWS-P064-02"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0502",
+          "EVT-0501",
+          "EVT-0306"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P066-03",
+      "day": 66,
+      "time_local": "16:30",
+      "outlet_id": "OUT-06",
+      "section": "National",
+      "byline": [
+        "CHR-012"
+      ],
+      "headline": "FEMA says some hurricane aid accounts in Texas were accessed without authorization",
+      "dek": "Applicants for Hurricane Rafael assistance on the Texas coast are being urged to check their direct-deposit details.",
+      "body": [
+        "CORPUS CHRISTI, Texas (Continental Wire) — The Federal Emergency Management Agency said Friday that some accounts belonging to applicants for Hurricane Rafael disaster aid on the Texas coast were accessed without authorization, and it urged applicants to verify their direct-deposit information.",
+        "Rachel Ostrander, an external affairs officer for FEMA Region 6, confirmed unauthorized access to some applicant accounts. \"Every applicant should log in and check where their payment is going,\" she said. \"If the bank details aren't yours, call our helpline.\"",
+        "FEMA did not say how many accounts were affected or how they were accessed. Earlier this week, some applicants in the Corpus Christi area said they had found deposit details on their applications that they had not entered.",
+        "Rafael made landfall on Mustang Island near Port Aransas as a Category 3 hurricane in September, pushing about 11 feet of storm surge into Corpus Christi and Nueces bays. FEMA opened individual assistance registration for Nueces, San Patricio and Aransas counties on Nov. 13, and long lines formed at recovery centers.",
+        "Dana Feld, a threat researcher at Northlight Threat Lab, said applicants should not wait for details before acting. \"Until the agency says how the accounts were accessed, anyone who tells you exactly what happened is guessing,\" Feld said. \"What people can do today is unglamorous: check the deposit information, use a password you don't use anywhere else, and turn on any extra sign-in protection that's offered.\"",
+        "Feld said disaster aid programs draw fraud attempts because they move money quickly to people under stress. \"Speed is the point of disaster aid,\" she said. \"It's also what makes it a target.\"",
+        "FEMA said it would share more information when it could. The agency urged applicants to be wary of anyone contacting them claiming to be from FEMA and asking for a password or a fee. Registration for aid remains open."
+      ],
+      "tags": {
+        "story_type": "update",
+        "arcs": [
+          "ARC-PORTAL-BREACH",
+          "ARC-AID"
+        ],
+        "public_facts": [
+          "PUB-084",
+          "PUB-083",
+          "PUB-081",
+          "PUB-023"
+        ],
+        "characters_quoted": [
+          "CHR-027",
+          "CHR-063"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-002",
+          "PLC-003",
+          "LF-01"
+        ],
+        "topics": [
+          "fema",
+          "unauthorized access",
+          "hurricane rafael",
+          "disaster fraud",
+          "cybersecurity"
+        ],
+        "follows_up": "NWS-P066-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0502",
+          "EVT-0501",
+          "EVT-0301"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P067-01",
+      "day": 67,
+      "time_local": "11:00",
+      "outlet_id": "OUT-03",
+      "section": "Equity",
+      "byline": [
+        "CHR-008"
+      ],
+      "headline": "For families living close to the edge, a changed deposit could mean a missed rent payment",
+      "dek": "FEMA has confirmed unauthorized access to some aid accounts. In neighborhoods that waited longest for help after Rafael, people say the stakes of a wrong bank number are measured in days, not dollars.",
+      "body": [
+        "On Saturday morning, the whiteboard in Pastor Gloria Whitfield's fellowship hall had a new line at the top, written in red marker: \"CHECK YOUR DEPOSIT. EVERY DAY.\"",
+        "On Friday, FEMA confirmed unauthorized access to some disaster aid applicant accounts and asked every applicant to check their direct-deposit information. Earlier in the week, some applicants in Nueces County said they had found bank details on their applications that they had not entered. How many accounts were affected, and how they were accessed, FEMA has not said.",
+        "For a household with savings, a problem like that is a hassle. For many of the families Whitfield serves, in low-income neighborhoods near the bay, it is the difference between paying rent and not.",
+        "\"If your money goes to somebody else's account, you can call and fix it, sure. How long does that take?\" Whitfield said. \"My people don't have a cushion. A week late is a late fee. Two weeks late is a conversation with the landlord nobody wants to have.\"",
+        "Rachel Ostrander, an external affairs officer for FEMA Region 6, said applicants who find a problem should call the helpline right away. \"Verify your information now, even if you checked last week,\" Ostrander said. \"FEMA will never call, text or email you to ask for your password. If someone does, it isn't us.\"",
+        "These are the same neighborhoods where residents reported waiting days for help after the storm, and where emergency room visits were still running about 40% above normal in late October. Many residents registered for aid on borrowed phones and laptops at church and neighborhood hubs because they have no computer at home.",
+        "That creates a practical problem. Checking an account every day, as Whitfield's whiteboard advises, is easy with a smartphone and a data plan. It is harder for a household that shares one phone or relies on the hall's laptops.",
+        "Rosa Elizondo, a home health aide and mother of three who registered on the first day, has been checking hers from her phone on the bus between clients. Her information has not changed. Her application is still pending while FEMA reviews the school letter she sent to prove she lives in her rental.",
+        "\"First I'm waiting for the money. Now I'm guarding money I don't have yet,\" Elizondo said. \"That's a new kind of tired.\"",
+        "Whitfield said the hall would keep its laptops out through Thanksgiving week. \"We'll check it with you,\" she said. \"That's what we're here for.\""
+      ],
+      "tags": {
+        "story_type": "analysis",
+        "arcs": [
+          "ARC-PORTAL-BREACH",
+          "ARC-EQUITY",
+          "ARC-AID"
+        ],
+        "public_facts": [
+          "PUB-084",
+          "PUB-083",
+          "PUB-081",
+          "PUB-053",
+          "PUB-069"
+        ],
+        "characters_quoted": [
+          "CHR-049",
+          "CHR-027",
+          "CHR-040"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-010",
+          "PLC-001"
+        ],
+        "topics": [
+          "fema",
+          "aid accounts",
+          "equity",
+          "rent",
+          "church hub",
+          "direct deposit"
+        ],
+        "follows_up": "NWS-P062-02"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0502",
+          "EVT-0501",
+          "EVT-0408"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P067-02",
+      "day": 67,
+      "time_local": "15:00",
+      "outlet_id": "OUT-02",
+      "section": "Local",
+      "byline": [
+        "CHR-006"
+      ],
+      "headline": "Step by step: how to check and fix your FEMA deposit information",
+      "dek": "FEMA confirmed unauthorized access to some applicant accounts. Here's exactly what to do, and what to do if you don't have a computer.",
+      "body": [
+        "Some disaster aid applicant accounts were accessed without authorization, FEMA says, so every applicant should make sure their direct-deposit information is right. Here's how, step by step.",
+        "Step 1: Get to the real site. Open your phone or computer's web browser and type FEMA's official website address yourself. Don't tap a link in a text, email or social media post, even if it looks official.",
+        "Step 2: Sign in. If you can't remember your password, use the official reset option on the site. Don't ask a stranger to sign in for you.",
+        "Step 3: Find your payment information. Look for the section that shows how you'll be paid. Compare the bank routing and account numbers to a check, a bank statement or your bank's app.",
+        "Step 4: If it's wrong, call. Call FEMA's helpline right away and say your direct-deposit information was changed without your permission. Write down the date, time and name of the person you talk to.",
+        "Step 5: Call your bank. Tell them what happened.",
+        "Step 6: Lock it down. Change your password to one you don't use anywhere else. Turn on extra sign-in protection if it's offered.",
+        "No computer? Call FEMA's helpline, or go to a disaster recovery center and ask staff to help you check. Many church and neighborhood hubs have volunteers helping people log in.",
+        "Red flags: FEMA will never call, text or email asking for your password, and it never charges a fee. \"If it isn't us, hang up and call us,\" says Rachel Ostrander of FEMA Region 6.",
+        "FEMA has not said how many accounts were affected. Harborline 6 will update you when it does."
+      ],
+      "tags": {
+        "story_type": "explainer",
+        "arcs": [
+          "ARC-PORTAL-BREACH",
+          "ARC-AID"
+        ],
+        "public_facts": [
+          "PUB-084",
+          "PUB-083"
+        ],
+        "characters_quoted": [
+          "CHR-027"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001"
+        ],
+        "topics": [
+          "fema",
+          "how to",
+          "direct deposit",
+          "account security",
+          "scam warning"
+        ],
+        "follows_up": "NWS-P066-01"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0502"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P068-01",
+      "day": 68,
+      "time_local": "08:00",
+      "outlet_id": "OUT-01",
+      "section": "Opinion",
+      "byline": [
+        "CHR-001"
+      ],
+      "headline": "Opinion: Aid that lands in the wrong account isn't aid",
+      "dek": "A column by Bayside Ledger city and disaster reporter Marisol Treviño on what FEMA owes the applicants it asked to check their own accounts.",
+      "body": [
+        "Opinion. This column reflects the views of its author.",
+        "Two months after Hurricane Rafael, federal aid registration finally opened on the Coastal Bend. Damage assessments had dragged, and FEMA did not approve individual assistance until Nov. 10. People lined up before dawn. Some took two buses. Others registered on borrowed laptops in church fellowship halls because they don't own a computer.",
+        "Six days later, FEMA confirmed that some applicant accounts had been accessed without authorization. Some applicants had already found bank details on their applications that they never entered. FEMA's advice was sensible: log in, check your direct-deposit information, call the helpline if anything is wrong.",
+        "That advice puts the work on the people with the least time to do it.",
+        "I have spent this fall in the neighborhoods near the bay where residents waited days for help after the storm, where church hubs handed out water before official distribution arrived, and where emergency room visits stayed well above normal long after they settled elsewhere. The people there are not careless. They are tired. Many share a phone. Many work hourly jobs where an afternoon on hold is an afternoon unpaid.",
+        "FEMA owes them three things, and soon.",
+        "First, the facts. How many accounts were affected? How were they accessed? Did any payments go to the wrong place? \"We will share more when we can\" is a start, not an answer. Applicants can't judge their risk without knowing the scale.",
+        "Second, a promise in writing. If an applicant's payment went to an account they did not authorize, will FEMA make them whole, and how quickly? People are budgeting rent around this money.",
+        "Third, help where people are. FEMA staff at the church and neighborhood hubs that have carried this recovery would let residents check their accounts with someone who can actually fix a problem on the spot. Pastors and volunteers have been doing that job for free since September.",
+        "Nobody expects a federal agency to stop every bad actor on the internet. But the measure of a disaster program is whether help reaches the people it was meant for. Until FEMA can say plainly that it has, the people standing in line deserve more than a reminder to check their own accounts."
+      ],
+      "tags": {
+        "story_type": "opinion",
+        "arcs": [
+          "ARC-AID",
+          "ARC-PORTAL-BREACH",
+          "ARC-EQUITY"
+        ],
+        "public_facts": [
+          "PUB-081",
+          "PUB-083",
+          "PUB-084",
+          "PUB-053",
+          "PUB-037",
+          "PUB-069",
+          "PUB-105"
+        ],
+        "characters_quoted": [],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-010"
+        ],
+        "topics": [
+          "opinion",
+          "fema",
+          "aid accounts",
+          "equity",
+          "accountability"
+        ],
+        "follows_up": null
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0501",
+          "EVT-0502",
+          "EVT-0408"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P068-02",
+      "day": 68,
+      "time_local": "13:00",
+      "outlet_id": "OUT-01",
+      "section": "Health",
+      "byline": [
+        "CHR-003"
+      ],
+      "headline": "Still drying out before the holidays? A health checklist for storm-damaged homes",
+      "dek": "Rafael's emergency is over for most of the county. For families still living with leaks and damp walls, a health official and an ER nurse offer practical advice.",
+      "body": [
+        "Thanksgiving is Thursday. For many Coastal Bend households, it will be the first holiday in a home that is still drying out from Hurricane Rafael.",
+        "The health picture has improved since the boil-water weeks. Stomach illness visits began easing in late September, and the boil-water notice was lifted Oct. 23. But emergency room visits from low-income neighborhoods near the bay were still running about 40% above normal in late October, after visits elsewhere had settled, the Corpus Christi-Nueces County Public Health District said.",
+        "\"A home that took on water or has a leaking roof can keep affecting health for months,\" said Dr. Anita Shah, an epidemiologist with the health district. \"The good news is that a few practical steps make a real difference.\"",
+        "Here is what Shah and Alyssa Cortez, 34, an emergency room charge nurse at a Nueces County hospital, recommend:",
+        "Find and fix moisture. Where you see or smell mildew, dry the area and clean hard surfaces with soap and water. Throw out soaked drywall, carpet and padding that can't be dried. Wear gloves and a mask while you clean.",
+        "Protect the most vulnerable. Keep young children, older relatives and anyone with asthma or lung disease out of damp rooms while you clean. If someone's breathing gets worse at home, take it seriously.",
+        "Don't wait for an emergency. \"We still see people who put off care until they couldn't anymore,\" Cortez said. \"A cough that won't quit, a rash that's spreading, a prescription you ran out of in October. Come in before it's midnight and scary.\" She urged patients to bring a list or photos of their medications.",
+        "Mind the stress. Shah said sleep problems, worry and short tempers are common months after a disaster. \"If you're not feeling like yourself, tell your doctor. That's a health issue too,\" she said.",
+        "Wash hands, especially when cooking for a crowd. \"Holiday kitchens are busy,\" Shah said. \"Hand-washing is still the cheapest medicine we have.\"",
+        "Cortez said her emergency room would be open through the holiday, as always. \"We'll be here Thursday,\" she said. \"I'd just rather see you Tuesday at a clinic.\""
+      ],
+      "tags": {
+        "story_type": "explainer",
+        "arcs": [
+          "ARC-HEALTH",
+          "ARC-EQUITY"
+        ],
+        "public_facts": [
+          "PUB-069",
+          "PUB-052",
+          "PUB-063"
+        ],
+        "characters_quoted": [
+          "CHR-026",
+          "CHR-043"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-001",
+          "PLC-010",
+          "FAC-HOS-xx"
+        ],
+        "topics": [
+          "health",
+          "mold",
+          "storm-damaged homes",
+          "thanksgiving",
+          "emergency rooms",
+          "stress"
+        ],
+        "follows_up": "NWS-P051-02"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0408",
+          "EVT-0406",
+          "EVT-0317"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P069-01",
+      "day": 69,
+      "time_local": "07:00",
+      "outlet_id": "OUT-01",
+      "section": "Local",
+      "byline": [
+        "CHR-001"
+      ],
+      "headline": "Thanksgiving week near the bay: a pending application, a daily account check and a fellowship hall turkey",
+      "dek": "Rosa Elizondo's FEMA application is still pending, and she checks her deposit details every morning. Pastor Gloria Whitfield is planning Thursday dinner for whoever shows up.",
+      "body": [
+        "Rosa Elizondo has a new morning routine. Coffee. Kids up. Lunches. Then, on the bus at 6:10, she opens her FEMA account and checks the bank number.",
+        "\"Still mine,\" Elizondo, 38, said Sunday, showing her phone screen to a reporter at the fellowship hall that has become her neighborhood's front door this fall. \"Every morning I say, good morning, little account, you're still here.\"",
+        "Elizondo, a home health aide and mother of three who rents near the bay, registered for federal disaster aid on Nov. 13, the day registration opened. She said FEMA is still reviewing a school letter she submitted as proof that she lives in her rental, so her application remains pending. Her hallway ceiling still leaks into a bucket.",
+        "On Friday, FEMA said some applicant accounts had been accessed without authorization, and it has asked all applicants to double-check their direct-deposit details. Earlier last week, some applicants said they had found deposit details they never entered. FEMA has not said how many accounts were affected.",
+        "At the hall, Pastor Gloria Whitfield was counting folding chairs. She is planning a Thanksgiving dinner Thursday for anyone who comes, with turkeys from church members, tamales from a neighbor and pies from a bakery that called her. The laptops will stay out on a side table, she said, with a volunteer and a sign: \"Check your deposit before dessert.\"",
+        "\"I don't want anybody worrying over their plate,\" Whitfield said. \"But I don't want them finding out in December that their money went somewhere else either. So we'll eat, and we'll check.\"",
+        "Whitfield said the families on her list are more tired than angry. \"They followed every instruction. They stood in the lines. They found the papers. Now they're guarding an account like it's a front porch,\" she said. \"And they still showed up Wednesday to help me sort cans.\"",
+        "Elizondo said her youngest, who is 6, has asked twice whether there will be turkey. There will be. \"At Pastora's, there's always turkey,\" Elizondo said.",
+        "Asked what she was thankful for this year, she thought about it on the walk to the bus. \"My kids are okay. My clients are okay. Mine is still mine,\" she said. \"Next year I want to be thankful for a ceiling.\""
+      ],
+      "tags": {
+        "story_type": "feature",
+        "arcs": [
+          "ARC-AID",
+          "ARC-EQUITY",
+          "ARC-COMMUNITY"
+        ],
+        "public_facts": [
+          "PUB-081",
+          "PUB-084",
+          "PUB-083",
+          "PUB-037"
+        ],
+        "characters_quoted": [
+          "CHR-040",
+          "CHR-049"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PLC-010",
+          "PLC-001"
+        ],
+        "topics": [
+          "thanksgiving",
+          "rosa elizondo",
+          "fema",
+          "church hub",
+          "aid applications",
+          "direct deposit"
+        ],
+        "follows_up": "NWS-P064-02"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0501",
+          "EVT-0502"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    },
+    {
+      "story_id": "NWS-P069-02",
+      "day": 69,
+      "time_local": "15:00",
+      "outlet_id": "OUT-05",
+      "section": "Markets",
+      "byline": [
+        "CHR-011"
+      ],
+      "headline": "Corpus Christi crude flows recover after reopening as catch-up continues",
+      "dek": "Eleven days after the ship channel reopened, loadings are back and the offshore queue has eased. An analyst says the lasting effect may be in how buyers price the port.",
+      "body": [
+        "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Crude loadings at the Port of Corpus Christi have largely recovered in the 11 days since the ship channel reopened after a 14-day closure, with tankers that waited offshore working through the berths and onshore storage drawing down, market participants said Monday.",
+        "The port is the outlet for about half of U.S. crude exports, according to analysts. Exports were halted from the Oct. 28 explosion near the Port Aransas jetties until the Coast Guard reopened the channel Nov. 11 after a full sweep by Navy teams.",
+        "\"The physical side is catching up about as you'd expect: the queue first, then the tanks,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"What takes longer is the paperwork side. Some cargoes were rebooked from other ports during the closure, and those contracts don't all swing back at once.\"",
+        "Holloway said the bigger question for the coming year is how buyers weigh this fall's back-to-back shutdowns. \"Weather risk is priced every season. This fall added something buyers hadn't really priced at this port before,\" she said. \"The sweep and the reopening went cleanly, and that helps. But people will be asking about it in every contract negotiation this winter.\"",
+        "The reopening also allowed a Fort Hood aviation brigade's helicopters and equipment to load onto a sealift ship and sail for an overseas rotation, the Army said, after two delays.",
+        "The FBI is investigating the Oct. 28 explosion. Beyond the Navy's statement that an explosive device caused the blast, officials have said nothing about a cause.",
+        "Holloway said she expects export volumes to be close to normal by early December if no new disruptions occur. \"That's a forecast, not a promise,\" she said. \"This year taught everybody that.\""
+      ],
+      "tags": {
+        "story_type": "analysis",
+        "arcs": [
+          "ARC-PORT"
+        ],
+        "public_facts": [
+          "PUB-079",
+          "PUB-073",
+          "PUB-014",
+          "PUB-080",
+          "PUB-070"
+        ],
+        "characters_quoted": [
+          "CHR-064"
+        ],
+        "characters_mentioned": [],
+        "places": [
+          "PORT-07",
+          "ANC-OFF"
+        ],
+        "topics": [
+          "crude exports",
+          "recovery",
+          "tanker market",
+          "risk pricing",
+          "port of corpus christi"
+        ],
+        "follows_up": "NWS-P058-03"
+      },
+      "internal": {
+        "truth_events": [
+          "EVT-0414",
+          "EVT-0409"
+        ],
+        "batch": "F",
+        "status": "draft"
+      }
+    }
+  ]
+}

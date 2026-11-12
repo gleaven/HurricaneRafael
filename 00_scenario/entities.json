@@ -1,0 +1,617 @@
+[
+  {
+    "id": "VSL-0012",
+    "type_and_keys": "Vessel; MMSI-SYN-0101",
+    "name": "MV Gulf Provider",
+    "role": "Relief cargo ship carrying 40 containers",
+    "lanes": [
+      "C",
+      "D"
+    ],
+    "lanes_raw": "C, D",
+    "registry_ids": [
+      "VSL-0012"
+    ],
+    "threads": [
+      "T1",
+      "T2"
+    ]
+  },
+  {
+    "id": "VSL-0019",
+    "type_and_keys": "Vessel; MMSI-SYN-0119",
+    "name": "Sealift ro-ro ship (synthetic name)",
+    "role": "Carries the Fort Hood aviation brigade outload",
+    "lanes": [
+      "D"
+    ],
+    "lanes_raw": "D",
+    "registry_ids": [
+      "VSL-0019"
+    ],
+    "threads": [
+      "T1",
+      "T7"
+    ]
+  },
+  {
+    "id": "VSL-0031",
+    "type_and_keys": "Vessel; MMSI-SYN-0131, IMO-SYN-9031",
+    "name": "MV Halcyon Drift",
+    "role": "Sanctioned tanker serving STATE-X; spoofs MMSI-SYN-0457",
+    "lanes": [
+      "I",
+      "C",
+      "D"
+    ],
+    "lanes_raw": "I, then C, D",
+    "registry_ids": [
+      "VSL-0031"
+    ],
+    "threads": [
+      "T1",
+      "T2",
+      "T12"
+    ]
+  },
+  {
+    "id": "VSL-0457",
+    "type_and_keys": "Vessel; MMSI-SYN-0457",
+    "name": "FV Pelican Ridge",
+    "role": "Fishing vessel 600 nm away whose identity is spoofed",
+    "lanes": [
+      "I"
+    ],
+    "lanes_raw": "I",
+    "registry_ids": [
+      "VSL-0457"
+    ],
+    "threads": [
+      "T1",
+      "T2",
+      "T12"
+    ]
+  },
+  {
+    "id": "BRG-0044",
+    "type_and_keys": "Barge; MMSI-SYN-0444",
+    "name": "Barge 44",
+    "role": "Receives the transferred fuel",
+    "lanes": [
+      "I",
+      "D"
+    ],
+    "lanes_raw": "I, D",
+    "registry_ids": [
+      "BRG-0044"
+    ],
+    "threads": [
+      "T2",
+      "T3",
+      "T12"
+    ]
+  },
+  {
+    "id": "ACF-0201",
+    "type_and_keys": "Aircraft: C-17; ICAO-SYN-AE0201, callsign SYN41",
+    "name": "Military airlift",
+    "role": "26 relief sorties into NAS Corpus Christi",
+    "lanes": [
+      "D"
+    ],
+    "lanes_raw": "D",
+    "registry_ids": [
+      "ACF-0201"
+    ],
+    "threads": [
+      "T1"
+    ]
+  },
+  {
+    "id": "ACF-0301",
+    "type_and_keys": "Aircraft; ICAO-SYN-A00301",
+    "name": "Civil relief charter",
+    "role": "14 relief flights",
+    "lanes": [
+      "C"
+    ],
+    "lanes_raw": "C",
+    "registry_ids": [
+      "ACF-0301"
+    ],
+    "threads": [
+      "T1"
+    ]
+  },
+  {
+    "id": "EQP-1101 to 1104",
+    "type_and_keys": "Pumps; NSN-SYN-4320-0001",
+    "name": "O.N. Stevens pumps P-1 to P-4 (scenario IDs)",
+    "role": "P-2 fails and P-3 overheats at D0",
+    "lanes": [
+      "C"
+    ],
+    "lanes_raw": "C",
+    "registry_ids": [
+      "EQP-1101",
+      "EQP-1102",
+      "EQP-1103",
+      "EQP-1104"
+    ],
+    "threads": [
+      "T1"
+    ]
+  },
+  {
+    "id": "EQP-2201",
+    "type_and_keys": "Generator; NSN-SYN-6115-0001",
+    "name": "NAS Corpus Christi backup generator",
+    "role": "Fails on contaminated fuel at D+40",
+    "lanes": [
+      "D"
+    ],
+    "lanes_raw": "D",
+    "registry_ids": [
+      "EQP-2201"
+    ],
+    "threads": [
+      "T2"
+    ]
+  },
+  {
+    "id": "SUP-0102",
+    "type_and_keys": "Supplier; UEI-SYN-0102",
+    "name": "Gulf Relief Logistics",
+    "role": "Legitimate freight forwarder",
+    "lanes": [
+      "C"
+    ],
+    "lanes_raw": "C",
+    "registry_ids": [
+      "ORG-1118",
+      "VND-0006"
+    ],
+    "threads": [
+      "T1"
+    ]
+  },
+  {
+    "id": "SUP-0219",
+    "type_and_keys": "Supplier; UEI-SYN-0219",
+    "name": "Delta Pumps & Controls",
+    "role": "Legitimate pump-parts supplier; quoted 9-day lead time, actual 34",
+    "lanes": [
+      "C",
+      "D"
+    ],
+    "lanes_raw": "C, D",
+    "registry_ids": [
+      "ORG-1106"
+    ],
+    "threads": [
+      "T1",
+      "T2",
+      "T3"
+    ]
+  },
+  {
+    "id": "SUP-0388",
+    "type_and_keys": "Supplier; UEI-SYN-0388",
+    "name": "Vantorra Restoration LLC",
+    "role": "Shell company; debris contract PIID-SYN-0071",
+    "lanes": [
+      "C",
+      "I"
+    ],
+    "lanes_raw": "C, I",
+    "registry_ids": [
+      "ORG-1123"
+    ],
+    "threads": [
+      "T3",
+      "T4"
+    ]
+  },
+  {
+    "id": "SUP-0390",
+    "type_and_keys": "Supplier; UEI-SYN-0390",
+    "name": "Quellmar Fuel Partners",
+    "role": "Shell company; NAS fuel contract PIID-SYN-0075",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "lanes_raw": "C, D, I",
+    "registry_ids": [
+      "ORG-1121"
+    ],
+    "threads": [
+      "T2",
+      "T3",
+      "T4"
+    ]
+  },
+  {
+    "id": "ORG-0901",
+    "type_and_keys": "Company",
+    "name": "Brannoch Maritime Holdings",
+    "role": "Operates Halcyon Drift for STATE-X; hidden owner of SUP-0388 and SUP-0390",
+    "lanes": [
+      "I"
+    ],
+    "lanes_raw": "I",
+    "registry_ids": [
+      "ORG-1113"
+    ],
+    "threads": [
+      "T2",
+      "T3",
+      "T4",
+      "T6",
+      "T7",
+      "T19"
+    ]
+  },
+  {
+    "id": "ACT-KES",
+    "type_and_keys": "Threat actor; ASN-SYN-64512",
+    "name": "KESTREL",
+    "role": "STATE-X-linked cyber and influence group",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "lanes_raw": "C, D, I",
+    "registry_ids": [],
+    "threads": [
+      "T4",
+      "T6",
+      "T8",
+      "T15"
+    ]
+  },
+  {
+    "id": "SYN-PER-700001 to 700006",
+    "type_and_keys": "Synthetic identities",
+    "name": "Fraud ring claimants",
+    "role": "Six fake benefit claimants",
+    "lanes": [
+      "C",
+      "I"
+    ],
+    "lanes_raw": "C, I",
+    "registry_ids": [],
+    "threads": [
+      "T3",
+      "T4"
+    ]
+  },
+  {
+    "id": "SOC-ACC-5001 to 5040",
+    "type_and_keys": "Social accounts",
+    "name": "Coordinated network",
+    "role": "40 inauthentic accounts",
+    "lanes": [
+      "C",
+      "I"
+    ],
+    "lanes_raw": "C, I",
+    "registry_ids": [
+      "acct:@CoastTruthTX",
+      "acct:@GulfWatchPatriot",
+      "acct:@TruthAboutRafael",
+      "acct:@TexasCoastAlert",
+      "acct:@CodyKing13",
+      "acct:@NoemiCentralCi",
+      "acct:@TXCoastalWatchdog",
+      "acct:@CampbellKyle_51",
+      "acct:@WhiteAndre_14",
+      "acct:@ClayHillcrest",
+      "acct:@salty_Molina",
+      "acct:@LatoyaSouthBluf",
+      "acct:@ShelbyThomas25",
+      "acct:@Trudy1972",
+      "acct:@TinaSouthside",
+      "acct:@AndreCollins23",
+      "acct:@BrianMorris50",
+      "acct:@TanyaTaylor29",
+      "acct:@KeishaMolina",
+      "acct:@Tomas1985",
+      "acct:@salty_NorthBeac",
+      "acct:@HSmith24",
+      "acct:@ClarkKayla_15",
+      "acct:@ArturoMedinaCC",
+      "acct:@NuecesLocalNews",
+      "acct:@Shelby_Phillips",
+      "acct:@HarrisKaren_79",
+      "acct:@TanyaEdwards97",
+      "acct:@LoriFlourBluf",
+      "acct:@SDavis54",
+      "acct:@storm_FlourBluf",
+      "acct:@Tina2006",
+      "acct:@MJohnson29",
+      "acct:@Marcus1993",
+      "acct:@Concha1990",
+      "acct:@WandaMiller38",
+      "acct:@storm_Westside",
+      "acct:@Nelsonfam12",
+      "acct:@Latoya_Wright",
+      "acct:@Zamorafam48"
+    ],
+    "threads": [
+      "T4",
+      "T15"
+    ]
+  },
+  {
+    "id": "BANK-SYN-71, 72, 73",
+    "type_and_keys": "Bank accounts",
+    "name": "Receiving accounts",
+    "role": "71 and 72 shared with SUP-0388 and SUP-0390",
+    "lanes": [
+      "C",
+      "I"
+    ],
+    "lanes_raw": "C, I",
+    "registry_ids": [
+      "ACCT-40134"
+    ],
+    "threads": [
+      "T2",
+      "T3",
+      "T4",
+      "T6",
+      "T7"
+    ]
+  },
+  {
+    "id": "HOST-PORTAL-01",
+    "type_and_keys": "Network host",
+    "name": "Disaster-aid benefits portal (scenario system)",
+    "role": "Credential-stuffing target",
+    "lanes": [
+      "C"
+    ],
+    "lanes_raw": "C",
+    "registry_ids": [
+      "EXT-AIDPORTAL-01"
+    ],
+    "threads": [
+      "T4"
+    ]
+  },
+  {
+    "id": "HOST-DOD-LOG-02",
+    "type_and_keys": "Network host",
+    "name": "NAS Corpus Christi logistics system (scenario system)",
+    "role": "Phishing target",
+    "lanes": [
+      "D"
+    ],
+    "lanes_raw": "D",
+    "registry_ids": [
+      "EXT-NASLOG-02"
+    ],
+    "threads": [
+      "T4"
+    ]
+  },
+  {
+    "id": "HOST-911-01",
+    "type_and_keys": "Network host",
+    "name": "911 dispatch system (scenario system)",
+    "role": "Phishing target",
+    "lanes": [
+      "C"
+    ],
+    "lanes_raw": "C",
+    "registry_ids": [
+      "EXT-CAD-01"
+    ],
+    "threads": [
+      "T4"
+    ]
+  },
+  {
+    "id": "DOM-SYN-01",
+    "type_and_keys": "Domain; aid-help-portal.example",
+    "name": "Lure domain",
+    "role": "Used in phishing and disinformation links",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "lanes_raw": "C, D, I",
+    "registry_ids": [],
+    "threads": [
+      "T4",
+      "T15"
+    ]
+  },
+  {
+    "id": "VSL-0041",
+    "type_and_keys": "Vessel: crude tanker; MMSI-SYN-0141",
+    "name": "MT Kalvora Star",
+    "role": "Laden tanker moored at TERM-01; cargo valves opened remotely at D0",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "lanes_raw": "C, D, I",
+    "registry_ids": [
+      "VSL-0041"
+    ],
+    "threads": [
+      "T1",
+      "T6",
+      "T12",
+      "T20"
+    ]
+  },
+  {
+    "id": "VSL-0042",
+    "type_and_keys": "Vessel: crude tanker; MMSI-SYN-0142",
+    "name": "MT Ostrel Bay",
+    "role": "Second laden tanker at TERM-01; same attack",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "lanes_raw": "C, D, I",
+    "registry_ids": [
+      "VSL-0042"
+    ],
+    "threads": [
+      "T1",
+      "T6",
+      "T12",
+      "T20"
+    ]
+  },
+  {
+    "id": "SUP-0455",
+    "type_and_keys": "Supplier; UEI-SYN-0455",
+    "name": "Brightwake Marine Systems",
+    "role": "Legitimate remote-maintenance vendor for tanker cargo systems; victim whose credentials are stolen",
+    "lanes": [
+      "C",
+      "I"
+    ],
+    "lanes_raw": "C, I",
+    "registry_ids": [
+      "ORG-1112"
+    ],
+    "threads": [
+      "T6"
+    ]
+  },
+  {
+    "id": "ORG-0950",
+    "type_and_keys": "Company",
+    "name": "Rendal Terminals",
+    "role": "Operator of TERM-01; victim",
+    "lanes": [
+      "C"
+    ],
+    "lanes_raw": "C",
+    "registry_ids": [
+      "ORG-1111"
+    ],
+    "threads": [
+      "T1",
+      "T6",
+      "T11",
+      "T12",
+      "T19",
+      "T20"
+    ]
+  },
+  {
+    "id": "HOST-VSL-01",
+    "type_and_keys": "Network host",
+    "name": "Tanker cargo-control networks (scenario system)",
+    "role": "Reached through the vendor's remote-maintenance access",
+    "lanes": [
+      "C",
+      "I"
+    ],
+    "lanes_raw": "C, I",
+    "registry_ids": [
+      "EXT-KALVORA-CCS",
+      "EXT-OSTREL-CCS",
+      "EXT-BRW-RMT-01"
+    ],
+    "threads": [
+      "T6"
+    ]
+  },
+  {
+    "id": "ACT-SOF",
+    "type_and_keys": "Threat actor",
+    "name": "STATE-X special operations unit",
+    "role": "Runs the drone overflights, device laying and GPS interference",
+    "lanes": [
+      "D",
+      "I"
+    ],
+    "lanes_raw": "D, I",
+    "registry_ids": [],
+    "threads": [
+      "T7",
+      "T19"
+    ]
+  },
+  {
+    "id": "UAS-SYN-01 to 06",
+    "type_and_keys": "Unidentified drones",
+    "name": "Overflight drones",
+    "role": "Scout NAS Corpus Christi and the depot on six nights, D+1 to D+10",
+    "lanes": [
+      "D",
+      "I"
+    ],
+    "lanes_raw": "D, I",
+    "registry_ids": [],
+    "threads": [
+      "T7",
+      "T19"
+    ]
+  },
+  {
+    "id": "DEV-01, DEV-02",
+    "type_and_keys": "Seabed explosive devices",
+    "name": "Channel devices",
+    "role": "Laid from Halcyon Drift at D+31; DEV-01 detonates at D+44, DEV-02 cleared at D+52",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "lanes_raw": "C, D, I",
+    "registry_ids": [],
+    "threads": [
+      "T2",
+      "T7",
+      "T12"
+    ]
+  },
+  {
+    "id": "VSL-0077",
+    "type_and_keys": "Vessel: harbor tug; MMSI-SYN-0177",
+    "name": "Tug Corrin Bay",
+    "role": "Damaged by DEV-01 at the jetties; 2 crew injured",
+    "lanes": [
+      "C",
+      "D"
+    ],
+    "lanes_raw": "C, D",
+    "registry_ids": [
+      "VSL-0077"
+    ],
+    "threads": [
+      "T7"
+    ]
+  },
+  {
+    "id": "JAM-01",
+    "type_and_keys": "Interference source",
+    "name": "GPS interference transmitter",
+    "role": "Operated near TANK-0390 from D+38 to D+43",
+    "lanes": [
+      "D",
+      "I",
+      "C"
+    ],
+    "lanes_raw": "D, I, C",
+    "registry_ids": [],
+    "threads": [
+      "T3",
+      "T7"
+    ]
+  }
+]

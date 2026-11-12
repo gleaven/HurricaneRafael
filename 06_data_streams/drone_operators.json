@@ -1,0 +1,550 @@
+{
+ "metadata": {
+  "dataset": "Small unmanned aircraft operators, Corpus Christi area",
+  "schema_version": "2.0",
+  "generated": "2026-11-09",
+  "generated_by": "scripts/build_registries_maritime_air.py",
+  "description": "Authorised operators of small unmanned aircraft, their airframes and the places they launch from. Company names are fictional; agencies and the university are real organisations.",
+  "joins": "operator_id joins drone_video/*.csv (operator_id); launch_site_ids joins launch_sites[].site_id.",
+  "flight_restriction": "TFR-2027-CC-0441 took effect at 00:01 local on 2027-09-12: no unmanned flights within 30 nm of Corpus Christi International Airport up to 3,000 ft above ground without an emergency authorisation.",
+  "unregistered_aircraft": "Unauthorised or unidentified unmanned aircraft have no record here; reports of them are in the incident and sensor data.",
+  "counts": {
+   "operators": 14,
+   "airframes": 32,
+   "launch_sites": 11
+  }
+ },
+ "authorized_operators": [
+  {
+   "operator_id": "DRN-OP-001",
+   "org_name": "Argus Aerial Systems",
+   "org_type": "Contractor (FEMA damage survey)",
+   "authorization_type": "Part 107 with FEMA mission waiver",
+   "authorized_zones": [
+    "Nueces County",
+    "San Patricio County",
+    "Aransas County"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-001-A01",
+     "model": "Argus Mk-7 fixed-wing survey aircraft",
+     "faa_registration": "FA35581C61",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-001-A02",
+     "model": "Argus Mk-7 fixed-wing survey aircraft",
+     "faa_registration": "FA3988C761",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-001-A03",
+     "model": "Argus Mk-7 fixed-wing survey aircraft",
+     "faa_registration": "FA365435B4",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-001-A04",
+     "model": "Argus Mk-7 fixed-wing survey aircraft",
+     "faa_registration": "FA31FA5104",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-001-A05",
+     "model": "Argus Mk-7 fixed-wing survey aircraft",
+     "faa_registration": "FA31EF12A2",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-001-A06",
+     "model": "Argus Mk-7 fixed-wing survey aircraft",
+     "faa_registration": "FA37A8AC03",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-001-A07",
+     "model": "Argus Mk-7 fixed-wing survey aircraft",
+     "faa_registration": "FA38E52E0E",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-001-A08",
+     "model": "Argus Mk-7 fixed-wing survey aircraft",
+     "faa_registration": "FA3795EA1E",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "GRID01-GRID08",
+   "launch_site_ids": [
+    "UAS-SITE-CRP",
+    "UAS-SITE-CAL",
+    "UAS-SITE-FB"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-002",
+   "org_name": "Texas Department of Transportation, Corpus Christi District",
+   "org_type": "State agency (bridge and road inspection)",
+   "authorization_type": "Public aircraft COA",
+   "authorized_zones": [
+    "State highways and bridges in the district"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-002-A01",
+     "model": "Autel EVO II Pro",
+     "faa_registration": "FA380D350D",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-002-A02",
+     "model": "Autel EVO II Pro",
+     "faa_registration": "FA3A23C89D",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "TXDOT-1, TXDOT-2",
+   "launch_site_ids": [
+    "UAS-SITE-NB",
+    "UAS-SITE-PTL",
+    "UAS-SITE-PA"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-003",
+   "org_name": "Corpus Christi Fire Department, Technical Services",
+   "org_type": "Local government (search and rescue)",
+   "authorization_type": "Public aircraft COA",
+   "authorized_zones": [
+    "City of Corpus Christi"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-003-A01",
+     "model": "DJI Mavic 3 Enterprise",
+     "faa_registration": "FA39EF7B1F",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-003-A02",
+     "model": "DJI Mavic 3 Enterprise",
+     "faa_registration": "FA32FBAD64",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-003-A03",
+     "model": "DJI Mavic 3 Enterprise",
+     "faa_registration": "FA33AFC1E1",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "CCFD-UAS-1 to 3",
+   "launch_site_ids": [
+    "UAS-SITE-DT",
+    "UAS-SITE-FB",
+    "UAS-SITE-NB"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-004",
+   "org_name": "Harborline 6 News",
+   "org_type": "News media",
+   "authorization_type": "Part 107",
+   "authorized_zones": [
+    "Corpus Christi metro area outside flight restrictions"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-004-A01",
+     "model": "DJI Mini 4 Pro",
+     "faa_registration": "FA3BA13BE9",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "HL6-DRONE",
+   "launch_site_ids": [
+    "UAS-SITE-DT"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-005",
+   "org_name": "Meridian Aerial Systems",
+   "org_type": "Contractor (search and rescue thermal imaging)",
+   "authorization_type": "Part 107 with emergency authorisation",
+   "authorized_zones": [
+    "Nueces County"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-005-A01",
+     "model": "FLIR-equipped multirotor",
+     "faa_registration": "FA3FA0CC7E",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-005-A02",
+     "model": "FLIR-equipped multirotor",
+     "faa_registration": "FA3A01B145",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "MAS-1, MAS-2",
+   "launch_site_ids": [
+    "UAS-SITE-CRP",
+    "UAS-SITE-FB"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-006",
+   "org_name": "Coastal Bend Power and Water Authority, Asset Inspection",
+   "org_type": "Utility",
+   "authorization_type": "Part 107",
+   "authorized_zones": [
+    "CBPWA substations, lines and the water treatment plant"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-006-A01",
+     "model": "DJI Matrice 30T",
+     "faa_registration": "FA3CDBBC66",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-006-A02",
+     "model": "DJI Matrice 30T",
+     "faa_registration": "FA369B2CDF",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "CBPWA-UAS-1, CBPWA-UAS-2",
+   "launch_site_ids": [
+    "UAS-SITE-WTP",
+    "UAS-SITE-CAL"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-007",
+   "org_name": "The Bayside Ledger, Visual Journalism",
+   "org_type": "News media",
+   "authorization_type": "Part 107",
+   "authorized_zones": [
+    "Corpus Christi metro area outside flight restrictions"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-007-A01",
+     "model": "DJI Mini 3 Pro",
+     "faa_registration": "FA35AD8148",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "BL-DRONE",
+   "launch_site_ids": [
+    "UAS-SITE-DT"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-008",
+   "org_name": "Port of Corpus Christi Authority Police",
+   "org_type": "Local government (port security)",
+   "authorization_type": "Public aircraft COA",
+   "authorized_zones": [
+    "Inner Harbor, La Quinta and port property"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-008-A01",
+     "model": "Skydio X10",
+     "faa_registration": "FA350A6536",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-008-A02",
+     "model": "Skydio X10",
+     "faa_registration": "FA35197175",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "PORT-UAS-1, PORT-UAS-2",
+   "launch_site_ids": [
+    "UAS-SITE-PD"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-009",
+   "org_name": "Texas Parks and Wildlife Department",
+   "org_type": "State agency (wildlife and shoreline survey)",
+   "authorization_type": "Public aircraft COA",
+   "authorized_zones": [
+    "Nueces Bay, Corpus Christi Bay and Redfish Bay shorelines"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-009-A01",
+     "model": "DJI Matrice 350 RTK",
+     "faa_registration": "FA3483AB0F",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "TPWD-UAS-1",
+   "launch_site_ids": [
+    "UAS-SITE-PTL",
+    "UAS-SITE-ING"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-010",
+   "org_name": "NOAA Office of Response and Restoration",
+   "org_type": "Federal agency (oil spill mapping)",
+   "authorization_type": "Public aircraft COA",
+   "authorized_zones": [
+    "Ship channel and adjacent bay waters"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-010-A01",
+     "model": "WingtraOne Gen II",
+     "faa_registration": "FA368B0E49",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "NOAA-UAS-1",
+   "launch_site_ids": [
+    "UAS-SITE-NB",
+    "UAS-SITE-PTL"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-011",
+   "org_name": "U.S. Coast Guard Sector Corpus Christi",
+   "org_type": "Federal agency (spill response and boom inspection)",
+   "authorization_type": "Public aircraft COA",
+   "authorized_zones": [
+    "Ship channel and coastal waters"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-011-A01",
+     "model": "Skydio X2D",
+     "faa_registration": "FA3E536E55",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-011-A02",
+     "model": "Skydio X2D",
+     "faa_registration": "FA3AF733DA",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "CG-UAS-1, CG-UAS-2",
+   "launch_site_ids": [
+    "UAS-SITE-NB",
+    "UAS-SITE-PA"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-012",
+   "org_name": "Texas A&M University-Corpus Christi, coastal research program",
+   "org_type": "University",
+   "authorization_type": "Part 107",
+   "authorized_zones": [
+    "Nueces Bay, Corpus Christi Bay and Oso Bay marshes"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-012-A01",
+     "model": "DJI Phantom 4 Multispectral",
+     "faa_registration": "FA3C1AE91F",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-012-A02",
+     "model": "DJI Phantom 4 Multispectral",
+     "faa_registration": "FA388C41C1",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "TAMUCC-UAS-1, TAMUCC-UAS-2",
+   "launch_site_ids": [
+    "UAS-SITE-PTL",
+    "UAS-SITE-FB"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-013",
+   "org_name": "Nueces County Sheriff's Office",
+   "org_type": "Local government (search and rescue)",
+   "authorization_type": "Public aircraft COA",
+   "authorized_zones": [
+    "Nueces County outside city limits"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-013-A01",
+     "model": "DJI Mavic 3 Thermal",
+     "faa_registration": "FA33A82E36",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-013-A02",
+     "model": "DJI Mavic 3 Thermal",
+     "faa_registration": "FA32478FA8",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "NCSO-UAS-1, NCSO-UAS-2",
+   "launch_site_ids": [
+    "UAS-SITE-CAL",
+    "UAS-SITE-PA"
+   ]
+  },
+  {
+   "operator_id": "DRN-OP-014",
+   "org_name": "Lone Palm Claims Imaging",
+   "org_type": "Contractor (insurance damage surveys)",
+   "authorization_type": "Part 107",
+   "authorized_zones": [
+    "Residential areas by appointment"
+   ],
+   "airframes": [
+    {
+     "airframe_id": "DRN-OP-014-A01",
+     "model": "DJI Mavic 3 Enterprise",
+     "faa_registration": "FA397F2FD1",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-014-A02",
+     "model": "DJI Mavic 3 Enterprise",
+     "faa_registration": "FA3C53347F",
+     "remote_id": true
+    },
+    {
+     "airframe_id": "DRN-OP-014-A03",
+     "model": "DJI Mavic 3 Enterprise",
+     "faa_registration": "FA36268A92",
+     "remote_id": true
+    }
+   ],
+   "callsigns": "LPCI-1 to 3",
+   "launch_site_ids": [
+    "UAS-SITE-FB",
+    "UAS-SITE-PA",
+    "UAS-SITE-RKP"
+   ]
+  }
+ ],
+ "launch_sites": [
+  {
+   "site_id": "UAS-SITE-CRP",
+   "site_name": "Corpus Christi International Airport, general aviation ramp",
+   "latitude": 27.77137,
+   "longitude": -97.50334,
+   "landmark_category": "airport",
+   "position_basis": "aircraft_registry.json parking position PARK-CRP-A12",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "UAS-SITE-FB",
+   "site_name": "Flour Bluff fire station",
+   "latitude": 27.65717,
+   "longitude": -97.28996,
+   "landmark_category": "fire_station",
+   "position_basis": "real landmark point (99_reference/geo/landmarks.geojson: USGS National Structures Dataset (carto.)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "UAS-SITE-NB",
+   "site_name": "Fire station nearest North Beach",
+   "latitude": 27.80258,
+   "longitude": -97.39629,
+   "landmark_category": "fire_station",
+   "position_basis": "real landmark point (99_reference/geo/landmarks.geojson: USGS National Structures Dataset (carto.)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "UAS-SITE-CAL",
+   "site_name": "Fire station nearest Calallen",
+   "latitude": 27.85621,
+   "longitude": -97.62858,
+   "landmark_category": "fire_station",
+   "position_basis": "real landmark point (99_reference/geo/landmarks.geojson: USGS National Structures Dataset (carto.)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "UAS-SITE-PA",
+   "site_name": "Port Aransas fire station",
+   "latitude": 27.9104,
+   "longitude": -97.14993,
+   "landmark_category": "fire_station",
+   "position_basis": "real landmark point (99_reference/geo/landmarks.geojson: USGS National Structures Dataset (carto.)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "UAS-SITE-DT",
+   "site_name": "Downtown fire station",
+   "latitude": 27.80258,
+   "longitude": -97.39629,
+   "landmark_category": "fire_station",
+   "position_basis": "real landmark point (99_reference/geo/landmarks.geojson: USGS National Structures Dataset (carto.)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "UAS-SITE-PTL",
+   "site_name": "Fire station nearest Portland",
+   "latitude": 27.8739,
+   "longitude": -97.32479,
+   "landmark_category": "fire_station",
+   "position_basis": "real landmark point (99_reference/geo/landmarks.geojson: USGS National Structures Dataset (carto.)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "UAS-SITE-ING",
+   "site_name": "Fire station nearest Ingleside",
+   "latitude": 27.82985,
+   "longitude": -97.22196,
+   "landmark_category": "fire_station",
+   "position_basis": "real landmark point (99_reference/geo/landmarks.geojson: USGS National Structures Dataset (carto.)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "UAS-SITE-RKP",
+   "site_name": "Fire station nearest Rockport",
+   "latitude": 28.02507,
+   "longitude": -97.05626,
+   "landmark_category": "fire_station",
+   "position_basis": "real landmark point (99_reference/geo/landmarks.geojson: USGS National Structures Dataset (carto.)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "UAS-SITE-WTP",
+   "site_name": "O.N. Stevens Water Treatment Plant",
+   "latitude": 27.86056,
+   "longitude": -97.62139,
+   "landmark_category": "water_plant",
+   "position_basis": "real landmark point (99_reference/geo/landmarks.geojson: EPA Facility Registry Service - FRS_INTE)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "site_id": "UAS-SITE-PD",
+   "site_name": "Police station nearest downtown",
+   "latitude": 27.79488,
+   "longitude": -97.40009,
+   "landmark_category": "police",
+   "position_basis": "real landmark point (99_reference/geo/landmarks.geojson: USGS National Structures Dataset (carto.)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ]
+}

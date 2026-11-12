@@ -1,0 +1,115 @@
+{
+  "source": "canon",
+  "findings": [
+    {
+      "id": "CANON-001",
+      "severity": "low",
+      "story_id": "NWS-M051-01",
+      "field": "body",
+      "old": "Inside, in blue ink, are names and street addresses,",
+      "new": "Inside, in pencil, are names and street addresses,",
+      "reason": "Whitfield canon: she keeps her list in pencil ('Pen is for people who think things stay the same,' NWS-M019-01)",
+      "status": "applied"
+    },
+    {
+      "id": "CANON-002",
+      "severity": "medium",
+      "story_id": "NWS-P019-02",
+      "field": "body",
+      "old": "\"Water line was about here,\" Bell, 67, says, tapping a stud. \"Everything under it goes.",
+      "new": "\"Water came up about a foot. You cut a foot above that,\" Bell, 67, says, tapping a stud. \"Everything under the line goes.",
+      "reason": "Bell canon: his house took about a foot of water; as written, the two-foot chalk line reads as the water line",
+      "status": "applied"
+    },
+    {
+      "id": "CANON-003",
+      "severity": "high",
+      "story_id": "NWS-P028-02",
+      "field": "dek",
+      "old": "Bill Hargrove has new walls and plenty of stories",
+      "new": "Bill Hargrove has bare studs and plenty of stories",
+      "reason": "Hargrove canon: walls stripped to the studs in fall (this story's own headline and lede say so); new drywall only goes up in late November and December",
+      "status": "applied"
+    },
+    {
+      "id": "CANON-004",
+      "severity": "medium",
+      "story_id": "NWS-P028-02",
+      "field": "body",
+      "old": "Now he's putting it back, one sheet at a time.",
+      "new": "Now he's planning how it all goes back, one wall at a time.",
+      "reason": "Hargrove canon: on Oct. 12 the walls are bare studs; drywall is not going back up yet (half up around Dec. 14)",
+      "status": "applied"
+    },
+    {
+      "id": "CANON-005",
+      "severity": "low",
+      "story_id": "NWS-P032-02",
+      "field": "dek",
+      "old": "he is hanging shelves and counting ships again.",
+      "new": "he is lining up new shelves and counting ships again.",
+      "reason": "Hargrove canon: in October new shelving leans against bare studs (this story's body); nothing is hung yet",
+      "status": "applied"
+    },
+    {
+      "id": "CANON-006",
+      "severity": "medium",
+      "story_id": "NWS-P053-01",
+      "field": "body",
+      "old": "from a folding table while he tears out drywall.",
+      "new": "from a folding table while he rebuilds.",
+      "reason": "Hargrove canon: the drywall was already out by Oct. 12 (walls stripped to the studs); he is not still tearing it out on Nov. 6",
+      "status": "applied"
+    },
+    {
+      "id": "CANON-007",
+      "severity": "low",
+      "story_id": "NWS-P055-02",
+      "field": "body",
+      "old": "rents a house a few blocks from the bay",
+      "new": "rents a duplex a few blocks from the bay",
+      "reason": "Elizondo canon: home is a rented duplex",
+      "status": "applied"
+    },
+    {
+      "id": "CANON-008",
+      "severity": "low",
+      "story_id": "NWS-P095-01",
+      "field": "body",
+      "old": "She rents a small house in one of the low-income neighborhoods",
+      "new": "She rents a duplex in one of the low-income neighborhoods",
+      "reason": "Elizondo canon: home is a rented duplex",
+      "status": "applied"
+    },
+    {
+      "id": "CANON-009",
+      "severity": "medium",
+      "story_id": "NWS-P112-04",
+      "field": "dek",
+      "old": "Bill Hargrove heard it from his shop.",
+      "new": "Bill Hargrove heard it from home.",
+      "reason": "Hargrove canon: he was asleep at home when the Oct. 28 blast woke him around 1 a.m. (NWS-P048-03)",
+      "status": "applied"
+    },
+    {
+      "id": "CANON-010",
+      "severity": "low",
+      "story_id": "NWS-P112-04",
+      "field": "body",
+      "old": "At Hargrove Bait & Tackle near the jetties, owner Bill Hargrove heard the explosion that night.",
+      "new": "Bill Hargrove, who owns Hargrove Bait & Tackle near the jetties, heard the explosion from home that night.",
+      "reason": "Hargrove canon: he heard the blast from home, not at the shop; current wording places him at the shop",
+      "status": "applied"
+    },
+    {
+      "id": "CANON-011",
+      "severity": "low",
+      "story_id": "NWS-P117-01",
+      "field": "body",
+      "old": "and wait on a ceiling that still drips into a bucket.",
+      "new": "and wait months on a ceiling that dripped into a bucket.",
+      "reason": "Elizondo canon: the Ledger's bucket ceiling (Rosa's 'Bob') was patched the first week of January, before this Jan. 9 column",
+      "status": "applied"
+    }
+  ]
+}

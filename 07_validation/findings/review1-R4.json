@@ -1,0 +1,351 @@
+{
+  "source": "R4",
+  "scope": "All 147 stories tagged ARC-AID, ARC-EQUITY, ARC-PORTAL-BREACH, ARC-CONTRACTS or ARC-RUMORS (days -45 to 119), read in day order against the public record, canon, characters, outlets and the restricted and quantity rules. Focus: relief and FEMA aid, the equity analysis, the account takeovers, emergency contracts, and rumors and fact-checks.",
+  "stories_read": 147,
+  "findings": [
+    {
+      "id": "R4-001",
+      "severity": "medium",
+      "story_id": "NWS-P097-02",
+      "field": "dek",
+      "old": "A debris hauler and a fuel supplier hired after Rafael face a county audit, a Navy suspension and a federal inspector general review. Both dispute the findings against them.",
+      "new": "A debris hauler and a fuel supplier hired after Rafael face a county audit and a Navy suspension in separate matters, as a federal inspector general reviews storm contracts. Both defend their work.",
+      "reason": "No review has made findings (the body says none has); the IG review never named either company; before day 114 the two firms should read as separate matters, not a pair.",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R4-002",
+      "severity": "medium",
+      "story_id": "NWS-P097-02",
+      "field": "body",
+      "old": "two companies that won emergency work in its aftermath are under review by the county, the Navy and a federal inspector general.",
+      "new": "two companies that won emergency work in its aftermath face separate reviews by the county and the Navy, and a federal inspector general is reviewing storm contracts in the region.",
+      "reason": "The lead puts both companies under IG review, but the same story says the IG announcement did not name specific companies (PUB-090). Keep the two cases separate before day 114.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-003",
+      "severity": "low",
+      "story_id": "NWS-P102-01",
+      "field": "body",
+      "old": "and have since come under county, Navy and federal review.",
+      "new": "and have since come under separate county and Navy reviews.",
+      "reason": "The IG review (PUB-090) never named either company, and the story itself later says it is unclear whether the searches connect to it.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-004",
+      "severity": "low",
+      "story_id": "NWS-P102-01",
+      "field": "body",
+      "old": "executed court-authorized search warrants today at two locations in Corpus Christi",
+      "new": "executed court-authorized search warrants today in Corpus Christi",
+      "reason": "PUB-094 says only 'the offices' of the two firms. Ground truth registers both firms at one address, so 'two locations' adds a detail that clashes with the answer key. The FBI spokesman would not volunteer it.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-005",
+      "severity": "medium",
+      "story_id": "NWS-P079-03",
+      "field": "body",
+      "old": "FALSE. The Ledger's report concerns",
+      "new": "NO EVIDENCE. The Ledger's report concerns",
+      "reason": "The reasoning ('the report says nothing about FEMA payments') supports 'no evidence', not 'false'. On Jan. 6 (PUB-098) a federal filing says accounts tied to the contractors received $3.9M in diverted aid, so a FALSE verdict on day 79 would read as debunking what the court record later alleges. The headline already says 'doesn't show'.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-006",
+      "severity": "low",
+      "story_id": "NWS-P114-02",
+      "field": "body",
+      "old": "If your aid payment never showed up, here's what to know.",
+      "new": "The filing does not say how the aid was diverted. If your aid payment never showed up, here's what to know.",
+      "reason": "The headline and body treat the $3.9M as the hijacked deposits, but PUB-098 gives no mechanism. NWS-P114-01 and NWS-P116-01 say how the aid was diverted is not public, so keep the allegation as the record states it.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-007",
+      "severity": "low",
+      "story_id": "NWS-P084-01",
+      "field": "body",
+      "old": "\"We'll cooperate fully with any review,\" said Nadia Kerr, Quellmar's operations manager. \"All product we delivered meets specifications.\"",
+      "new": "\"We'll cooperate fully with any review,\" said Nadia Kerr, Quellmar's operations manager, who repeated that all product the company delivered met specifications.",
+      "reason": "Same quote word for word as NWS-P075-01 and NWS-P079-02. This paraphrases the repeat instead of presenting it as a fresh quote.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-008",
+      "severity": "low",
+      "story_id": "NWS-P078-02",
+      "field": "headline",
+      "old": "bills at 2.3 times county estimates",
+      "new": "billed tonnage at 2.3 times county estimates",
+      "reason": "'Bills at 2.3 times' can be read as dollars, the misreading Harborline itself rates MISLEADING in NWS-P079-03. The record compares tonnage (PUB-088).",
+      "status": "applied"
+    },
+    {
+      "id": "R4-009",
+      "severity": "low",
+      "story_id": "NWS-P080-02",
+      "field": "body",
+      "old": "Survey estimates are not exact counts, and invoices reflect what a contractor says it hauled.",
+      "new": "A survey estimate is not a count, and an invoice is the contractor's own tally of what it hauled.",
+      "reason": "Same sentence word for word as NWS-P078-02 (same outlet, two days earlier). This rewords it.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-010",
+      "severity": "low",
+      "story_id": "NWS-P116-01",
+      "field": "body",
+      "old": "Oct. 25: The station's backup generator fails during a power interruption. Power is restored; the cause is placed under review.",
+      "new": "Oct. 25: The station says its backup generator failed during a power interruption. Power was restored; the cause is under review.",
+      "reason": "Oct. 25 is the day the station disclosed the failure (PUB-065; NWS-P075-01: 'On Oct. 25, the station said...'), not a known failure date.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-011",
+      "severity": "low",
+      "story_id": "NWS-P116-01",
+      "field": "body",
+      "old": "the county's own aerial and satellite surveys",
+      "new": "the county's own drone and satellite surveys",
+      "reason": "PUB-088 and every other story say 'drone and satellite surveys'.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-012",
+      "severity": "medium",
+      "story_id": "NWS-P099-01",
+      "field": "body",
+      "old": "Most came from low-income neighborhoods near the bay.",
+      "new": "Most came from low-lying neighborhoods near the bay.",
+      "reason": "PUB-026 says most 911 calls came from low-lying neighborhoods. Restating it as 'low-income' changes the public fact and moves toward the hidden tract-level split.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-013",
+      "severity": "low",
+      "story_id": "NWS-P117-01",
+      "field": "body",
+      "old": "the figure lands hard in places where families got half their share",
+      "new": "the figure lands hard in neighborhoods that got about half their share",
+      "reason": "PUB-091 is about neighborhoods' aid dollars at about half their share of residents, not about what families got. Keep 'about'.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-014",
+      "severity": "low",
+      "story_id": "NWS-P092-03",
+      "field": "body",
+      "old": "It doesn't answer why help took twice as long to arrive in the first place.",
+      "new": "It doesn't answer why help took more than twice as long to arrive in the first place.",
+      "reason": "The finding is 2.1 times. The researcher who produced it would not round down.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-015",
+      "severity": "low",
+      "story_id": "NWS-P109-01",
+      "field": "body",
+      "old": "and a researcher tied them to a lookalike site",
+      "new": "and a researcher found coordinated rumor posts pointing to the same lookalike site",
+      "reason": "PUB-054: the researcher linked the rumor posts to the lookalike site that the phishing emails already used. The emails were not newly tied to it.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-016",
+      "severity": "low",
+      "story_id": "NWS-P109-01",
+      "field": "body",
+      "old": "register for evacuation assistance with the county well before June",
+      "new": "register for evacuation assistance through 2-1-1 well before June",
+      "reason": "Earlier coverage (NWS-M045-02, NWS-M029-01, NWS-M012-01) sets up the state STEAR registry through 2-1-1, not a county list.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-017",
+      "severity": "medium",
+      "story_id": "NWS-P070-01",
+      "field": "story",
+      "old": "",
+      "new": "Rewrite to a distinct angle or cut. As written, it repeats NWS-P069-01 from the day before: same reporter and outlet, same Thanksgiving-week feature on Rosa's daily deposit check, her pending application and her leak, and Whitfield's Thursday dinner, with no reference back. If kept, make it a true follow-up (for example other renters on Whitfield's list, or what applicants are hearing from the helpline) and say Elizondo registered on the first day, Nov. 13, not 'that first week'.",
+      "reason": "Near-duplicate of the previous day's story by the same reporter in the same outlet.",
+      "status": "resolved_by_rewrite",
+      "resolution": "Handled by rewrite-W1/W2 (public record corrected and stories rewritten)."
+    },
+    {
+      "id": "R4-018",
+      "severity": "medium",
+      "story_id": "NWS-P093-01",
+      "field": "story",
+      "old": "",
+      "new": "Rewrite as a real follow-up or cut. It repeats NWS-P092-02 (Harborline, same producer, the previous afternoon) almost point for point: ask for ID, no fee, no password, check your deposit, call the helpline. The headline is also near-identical. A follow-up could cover what papers to have ready for a door visit, or how people who already applied check their status, and should refer to Wednesday's story. Also fix 'A threat researcher later tied those emails to a lookalike site' (PUB-054 links the rumor posts to the site the emails already used).",
+      "reason": "Near-duplicate service piece from the same outlet on consecutive days.",
+      "status": "resolved_by_rewrite",
+      "resolution": "Handled by rewrite-W1/W2 (public record corrected and stories rewritten)."
+    },
+    {
+      "id": "R4-019",
+      "severity": "low",
+      "story_id": "NWS-P045-05",
+      "field": "dek",
+      "old": "In low-income neighborhoods near the bay, they remain about 40% above.",
+      "new": "Near the bay, in low-income neighborhoods, visits are still running about 40% above normal.",
+      "reason": "Same dek sentence word for word as NWS-P045-01 (Ledger, same day).",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R4-020",
+      "severity": "low",
+      "story_id": "NWS-P045-05",
+      "field": "body",
+      "old": "Health officials have not said what is behind the gap.",
+      "new": "The health district has not yet said what is driving the difference.",
+      "reason": "Same body sentence word for word as NWS-P045-01 (same day).",
+      "status": "applied"
+    },
+    {
+      "id": "R4-021",
+      "severity": "low",
+      "story_id": "NWS-P016-02",
+      "field": "body",
+      "old": "CORPUS CHRISTI, Texas (CW) —",
+      "new": "CORPUS CHRISTI, Texas —",
+      "reason": "Continental Wire credits vary: '(Continental Wire) -', '(CW)', '(CWS)' or none. Most stories use the plain dateline.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-022",
+      "severity": "low",
+      "story_id": "NWS-P066-03",
+      "field": "body",
+      "old": "CORPUS CHRISTI, Texas (CWS) —",
+      "new": "CORPUS CHRISTI, Texas —",
+      "reason": "Same wire-credit inconsistency as above. Use the plain dateline that most Continental stories use.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-023",
+      "severity": "low",
+      "story_id": "NWS-P016-01",
+      "field": "body",
+      "old": "a threat researcher said Thursday.",
+      "new": "a threat researcher says.",
+      "reason": "Harborline style uses present tense in the lead. The rest of this story already uses 'says'.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-024",
+      "severity": "low",
+      "story_id": "NWS-P012-02",
+      "field": "body",
+      "old": "The 11 o'clock service was short.",
+      "new": "The early service was short.",
+      "reason": "The story is stamped 10:30 a.m. Sunday but describes the 11 o'clock service as over. NWS-M009-02 shows the church has more than one service.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-025",
+      "severity": "low",
+      "story_id": "NWS-P026-02",
+      "field": "body",
+      "old": "The service started at 11.",
+      "new": "The early service started at 9.",
+      "reason": "The story is stamped 11:00 a.m. Sunday but describes the service and sermon as finished.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-026",
+      "severity": "low",
+      "story_id": "NWS-P040-01",
+      "field": "body",
+      "old": "stopped by after the morning service.",
+      "new": "stopped by early.",
+      "reason": "The story is stamped 8:00 a.m. Sunday, before any morning service.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-027",
+      "severity": "low",
+      "story_id": "NWS-P064-01",
+      "field": "body",
+      "old": "The agency had not responded by early afternoon.",
+      "new": "The agency had not responded by midday.",
+      "reason": "The story is stamped 12:15 p.m.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-028",
+      "severity": "low",
+      "story_id": "NWS-P072-02",
+      "field": "body",
+      "old": "By noon the hall had run out of rolls",
+      "new": "By late morning the hall had run out of rolls",
+      "reason": "The story is stamped 11:00 a.m. Thursday.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-029",
+      "severity": "low",
+      "story_id": "NWS-P069-01",
+      "field": "body",
+      "old": "said Monday, showing her phone screen",
+      "new": "said Sunday, showing her phone screen",
+      "reason": "The story is stamped 7:00 a.m. Monday, and Elizondo is on the 6:10 bus on weekdays, so a Monday interview at the hall could not come before publication.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-030",
+      "severity": "low",
+      "story_id": "NWS-P079-01",
+      "field": "body",
+      "old": "In an interview Thursday, Derek Sloane",
+      "new": "In an interview Wednesday, Derek Sloane",
+      "reason": "The story is stamped 7:00 a.m. Thursday. Pairs with the next finding (NWS-P080-01); apply both or neither.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-031",
+      "severity": "low",
+      "story_id": "NWS-P080-01",
+      "field": "body",
+      "old": "he told the Ledger Thursday",
+      "new": "he told the Ledger Wednesday",
+      "reason": "Keeps this story consistent with the interview day in NWS-P079-01 (previous finding); apply both or neither.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-032",
+      "severity": "low",
+      "story_id": "NWS-P019-01",
+      "field": "body",
+      "old": "Then the pastora sent a boy on a bicycle with a case of water on the handlebars.",
+      "new": "Then the pastora opened the hall, and later she sent a boy on a bicycle with a case of water on the handlebars.",
+      "reason": "In NWS-P003-04 and NWS-P055-02, Rosa got her first water and rice in person in the hall's line on Sept. 17. As written, the bike delivery reads as her first help.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-033",
+      "severity": "low",
+      "story_id": "NWS-P062-02",
+      "field": "body",
+      "old": "photographed it with a borrowed phone",
+      "new": "photographed it with her phone",
+      "reason": "The same story has her checking her FEMA status on her own phone that morning.",
+      "status": "applied"
+    },
+    {
+      "id": "R4-034",
+      "severity": "low",
+      "story_id": "NWS-P064-01",
+      "field": "body",
+      "old": "A Portland woman who asked not to be named",
+      "new": "A Flour Bluff woman who asked not to be named",
+      "reason": "The story (and NWS-P066-01/02) frame the reports as coming from Nueces County, but Portland is mostly in San Patricio County.",
+      "status": "applied"
+    }
+  ]
+}

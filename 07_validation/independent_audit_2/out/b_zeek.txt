@@ -1,0 +1,36 @@
+conn rows 307420 ts outside own day 0
+ssl rows 55444 uid not in conn 0 tuple/ts/service mismatch 0
+dns rows 107931 uid in conn 0 same 4-tuple in conn 6
+internal IPs not in registry: distinct 0 rows 0 []
+conn states {'SF': 307420}
+service/port:
+   ('tcp', 'ssl', '443') 156147
+   ('udp', 'dns', '53') 61522
+   ('tcp', '-', '5450') 20641
+   ('tcp', '-', '8443') 6225
+   ('tcp', '-', '445') 6209
+   ('tcp', '-', '443') 6142
+   ('tcp', '-', '1433') 6092
+   ('tcp', 'dce_rpc', '135') 2830
+   ('tcp', 'krb', '389') 2797
+   ('tcp', 'smb', '389') 2769
+   ('tcp', 'ldap', '389') 2766
+   ('tcp', 'krb', '88') 2746
+   ('tcp', 'smb', '135') 2736
+   ('tcp', 'ldap', '88') 2730
+   ('tcp', 'ldap', '445') 2725
+   ('tcp', 'smb', '445') 2705
+   ('tcp', 'dce_rpc', '445') 2701
+   ('tcp', 'krb', '135') 2693
+   ('tcp', 'krb', '445') 2666
+   ('tcp', 'dce_rpc', '389') 2665
+   ('tcp', 'smb', '88') 2627
+   ('tcp', 'dce_rpc', '88') 2614
+   ('tcp', 'ldap', '135') 2577
+   ('tcp', '-', 'high') 1086
+   ('tcp', 'rdp', '3389') 3
+   ('tcp', 'dnp3', 'high') 2
+   ('tcp', '-', '4000') 2
+   ('tcp', 'modbus', '502') 2
+notices {'Conn::Content_Gap': 150, 'DNS::External_Name': 142, 'SSL::Certificate_Expires_Soon': 145, 'SSL::Invalid_Server_Cert': 134, 'Scan::Port_Scan': 25}
+cross IT/OT flows total 129615

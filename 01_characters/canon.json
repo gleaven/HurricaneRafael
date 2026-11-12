@@ -1,0 +1,2688 @@
+{
+  "schema_version": "1.0",
+  "characters": [
+    {
+      "id": "CHR-001",
+      "name": "Marisol Treviño",
+      "name_tokens": [
+        "Treviño",
+        "Trevino",
+        "Marisol"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "job",
+          "value": "City government and disaster reporter (and columnist) at The Bayside Ledger for 14 years",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bTrevi(?:ñ|n)o[^.]{0,120}\\bfor\\s+(?!14\\b)\\d{1,2}\\s+years\\b",
+              "why": "14 years at the Ledger"
+            },
+            {
+              "pattern": "\\bTrevi(?:ñ|n)o\\s+(?:covers|is\\s+the\\s+Ledger's)\\s+(?:the\\s+)?(?:port|courts|health|weather|business)\\b",
+              "why": "she covers city government and disasters"
+            }
+          ]
+        },
+        {
+          "key": "hurricanes",
+          "value": "Covered two hurricanes for the Ledger before Rafael; Rafael is her third",
+          "since_day": -60,
+          "forbid": []
+        },
+        {
+          "key": "background",
+          "value": "Corpus Christi native",
+          "since_day": -60,
+          "forbid": []
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-003",
+      "name": "Dana Whitlock",
+      "name_tokens": [
+        "Whitlock"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "job",
+          "value": "Health reporter at The Bayside Ledger; worked in an emergency room (as a scribe) before becoming a reporter",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bWhitlock[^.]{0,80}\\bformer\\s+(?:nurse|paramedic|doctor|physician|EMT)\\b",
+              "why": "she was an ER scribe, not a clinician"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-005",
+      "name": "Ellie Navarro",
+      "name_tokens": [
+        "Navarro",
+        "Ellie"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "job",
+          "value": "Weather and environment reporter (and columnist) at The Bayside Ledger; marine science degree",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bNavarro\\s+(?:covers|is\\s+the\\s+Ledger's)\\s+(?:the\\s+)?(?:city|courts|health|port|business)\\b",
+              "why": "she covers weather and the environment"
+            }
+          ]
+        },
+        {
+          "key": "habits",
+          "value": "Paddles (kayaks) the bays, including Nueces Bay at dawn",
+          "since_day": -60,
+          "forbid": []
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-013",
+      "name": "Carla Benavides",
+      "name_tokens": [
+        "Benavides",
+        "Carla"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "job",
+          "value": "Editor of Anchor & Rotor Weekly, the community weekly for the bases",
+          "since_day": -60,
+          "forbid": []
+        },
+        {
+          "key": "family",
+          "value": "Navy spouse",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bBenavides[^.]{0,80}\\b(?:Army|Air\\s+Force|Marine|Coast\\s+Guard)\\s+spouse\\b",
+              "why": "she is a Navy spouse"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-020",
+      "name": "Lt. Cmdr. Elena Ruiz",
+      "name_tokens": [
+        "Ruiz",
+        "Elena"
+      ],
+      "age": null,
+      "titles": [
+        "Lt. Cmdr."
+      ],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Public affairs officer (spokeswoman) for US Coast Guard Sector Corpus Christi",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bRuiz,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Ruiz works for Coast Guard Sector Corpus Christi, not another agency"
+            },
+            {
+              "pattern": "\\bRuiz\\s+of\\s+(?:the\\s+)?(?:NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Ruiz works for Coast Guard Sector Corpus Christi, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Lt. Cmdr. Elena Ruiz",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "(?<!Lt\\.\\s)\\bCmdr\\.\\s+(?:Elena\\s+)?Ruiz\\b|\\bLt\\.\\s+(?!Cmdr\\.)(?:Elena\\s+)?Ruiz\\b|\\b(?:Capt\\.|Captain|Lieutenant|Commander|Petty\\s+Officer|Ens\\.)\\s+(?:Elena\\s+)?Ruiz\\b",
+              "why": "rank is Lt. Cmdr."
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (spokeswoman, she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bRuiz,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Ruiz\\b",
+              "why": "Ruiz is a woman"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-021",
+      "name": "Lt. Marcus Hale",
+      "name_tokens": [
+        "Hale"
+      ],
+      "age": null,
+      "titles": [
+        "Lt."
+      ],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Public affairs officer for Naval Air Station Corpus Christi",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bHale,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Hale works for Naval Air Station Corpus Christi, not another agency"
+            },
+            {
+              "pattern": "\\bHale\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Hale works for Naval Air Station Corpus Christi, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Lt. Marcus Hale",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bLt\\.\\s+Cmdr\\.\\s+(?:Marcus\\s+)?Hale\\b|\\b(?:Cmdr\\.|Commander|Capt\\.|Captain|Lieutenant\\s+Commander|Maj\\.|Major|Ens\\.)\\s+(?:Marcus\\s+)?Hale\\b",
+              "why": "rank is Lt."
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (spokesman, he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bHale,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Hale\\b",
+              "why": "Hale is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-022",
+      "name": "Brenda Kowalczyk",
+      "name_tokens": [
+        "Kowalczyk",
+        "Brenda"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Civilian public affairs specialist for Corpus Christi Army Depot",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bKowalczyk,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Kowalczyk works for Corpus Christi Army Depot, not another agency"
+            },
+            {
+              "pattern": "\\bKowalczyk\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Kowalczyk works for Corpus Christi Army Depot, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Brenda Kowalczyk has no military rank or honorific in print",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Brenda\\s+)?Kowalczyk\\b",
+              "why": "civilian; no rank"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (spokeswoman, she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bKowalczyk,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Kowalczyk\\b",
+              "why": "Kowalczyk is a woman"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-023",
+      "name": "Javier Salinas",
+      "name_tokens": [
+        "Salinas",
+        "Javier"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Spokesman for the Port of Corpus Christi",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bSalinas,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Salinas works for the Port of Corpus Christi, not another agency"
+            },
+            {
+              "pattern": "\\bSalinas\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Salinas works for the Port of Corpus Christi, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Javier Salinas has no military rank or honorific in print",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Javier\\s+)?Salinas\\b",
+              "why": "civilian; no rank"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (spokesman, he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bSalinas,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Salinas\\b",
+              "why": "Salinas is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-024",
+      "name": "Teresa Gallegos",
+      "name_tokens": [
+        "Gallegos",
+        "Teresa"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Spokeswoman for the City of Corpus Christi water utility (O.N. Stevens Water Treatment Plant)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bGallegos,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Gallegos works for the city water utility, not another agency"
+            },
+            {
+              "pattern": "\\bGallegos\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Gallegos works for the city water utility, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Teresa Gallegos has no military rank or honorific in print",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Teresa\\s+)?Gallegos\\b",
+              "why": "civilian; no rank"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (spokeswoman, she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bGallegos,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Gallegos\\b",
+              "why": "Gallegos is a woman"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-025",
+      "name": "Dwayne Pruitt",
+      "name_tokens": [
+        "Pruitt",
+        "Dwayne"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Public information officer (spokesman) for the Nueces County Office of Emergency Management",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bPruitt,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Pruitt works for the Nueces County Office of Emergency Management, not another agency"
+            },
+            {
+              "pattern": "\\bPruitt\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Pruitt works for the Nueces County Office of Emergency Management, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Dwayne Pruitt has no military rank or honorific in print",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Dwayne\\s+)?Pruitt\\b",
+              "why": "civilian; no rank"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (spokesman, he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bPruitt,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Pruitt\\b",
+              "why": "Pruitt is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-026",
+      "name": "Dr. Anita Shah",
+      "name_tokens": [
+        "Shah",
+        "Anita"
+      ],
+      "age": null,
+      "titles": [
+        "Dr."
+      ],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Epidemiologist with the Corpus Christi-Nueces County Public Health District who runs its wastewater surveillance",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bShah,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Shah works for the Corpus Christi-Nueces County Public Health District, not another agency"
+            },
+            {
+              "pattern": "\\bShah\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Shah works for the Corpus Christi-Nueces County Public Health District, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Dr. Anita Shah",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Ms\\.|Mrs\\.|Nurse|Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Anita\\s+)?Shah\\b",
+              "why": "rank is Dr."
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (spokeswoman, she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bShah,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Shah\\b",
+              "why": "Shah is a woman"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-027",
+      "name": "Rachel Ostrander",
+      "name_tokens": [
+        "Ostrander",
+        "Rachel"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "External affairs officer for FEMA Region 6",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bOstrander,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Ostrander works for FEMA Region 6, not another agency"
+            },
+            {
+              "pattern": "\\bOstrander\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Ostrander works for FEMA Region 6, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Rachel Ostrander has no military rank or honorific in print",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Rachel\\s+)?Ostrander\\b",
+              "why": "civilian; no rank"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (spokeswoman, she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bOstrander,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Ostrander\\b",
+              "why": "Ostrander is a woman"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-028",
+      "name": "Cole Whitaker",
+      "name_tokens": [
+        "Whitaker"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Spokesman for the Texas General Land Office's oil spill program",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bWhitaker,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Whitaker works for the Texas General Land Office, not another agency"
+            },
+            {
+              "pattern": "\\bWhitaker\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Whitaker works for the Texas General Land Office, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Cole Whitaker has no military rank or honorific in print",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Cole\\s+)?Whitaker\\b",
+              "why": "civilian; no rank"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (spokesman, he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bWhitaker,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Whitaker\\b",
+              "why": "Whitaker is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-029",
+      "name": "Ben Arceneaux",
+      "name_tokens": [
+        "Arceneaux"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Meteorologist with the National Weather Service office in Corpus Christi",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bArceneaux,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Arceneaux works for the National Weather Service office in Corpus Christi, not another agency"
+            },
+            {
+              "pattern": "\\bArceneaux\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Arceneaux works for the National Weather Service office in Corpus Christi, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Ben Arceneaux has no military rank or honorific in print",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Ben\\s+)?Arceneaux\\b",
+              "why": "civilian; no rank"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (spokesman, he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bArceneaux,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Arceneaux\\b",
+              "why": "Arceneaux is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-030",
+      "name": "Kim Tran",
+      "name_tokens": [
+        "Tran"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Regional cybersecurity advisor with the Cybersecurity and Infrastructure Security Agency (CISA)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bTran,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Tran works for CISA, not another agency"
+            },
+            {
+              "pattern": "\\bTran\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Tran works for CISA, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Kim Tran has no military rank or honorific in print",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Kim\\s+)?Tran\\b",
+              "why": "civilian; no rank"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (spokeswoman, she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bTran,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Tran\\b",
+              "why": "Tran is a woman"
+            }
+          ]
+        },
+        {
+          "key": "constraint",
+          "value": "Never names the foreign state or the group behind the intrusion",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bKESTREL\\b",
+              "why": "the group is never named in public"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-031",
+      "name": "Maj. Darnell Price",
+      "name_tokens": [
+        "Darnell",
+        "Maj. Price",
+        "Price"
+      ],
+      "age": null,
+      "titles": [
+        "Maj."
+      ],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Public affairs officer at Fort Hood",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bPrice,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Price works for Fort Hood, not another agency"
+            },
+            {
+              "pattern": "\\bPrice\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Navy Region Southeast|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Price works for Fort Hood, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Maj. Darnell Price",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Capt\\.|Captain|Col\\.|Colonel|Lt\\.\\s+Col\\.|Sgt\\.|Sergeant|Gen\\.)\\s+(?:Darnell\\s+)?Price\\b",
+              "why": "rank is Maj."
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (spokesman, he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bPrice,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Price\\b",
+              "why": "Price is a man"
+            }
+          ]
+        },
+        {
+          "key": "installation_name",
+          "value": "Fort Hood (the name used in every story)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bFort\\s+Cavazos\\b",
+              "why": "stories use Fort Hood"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-032",
+      "name": "Cmdr. Lisa Moreau",
+      "name_tokens": [
+        "Moreau",
+        "Lisa"
+      ],
+      "age": null,
+      "titles": [
+        "Cmdr."
+      ],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Public affairs officer (spokeswoman) for Navy Region Southeast",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bMoreau,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Moreau works for Navy Region Southeast, not another agency"
+            },
+            {
+              "pattern": "\\bMoreau\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|FBI|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Moreau works for Navy Region Southeast, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Cmdr. Lisa Moreau",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bLt\\.\\s+Cmdr\\.\\s+(?:Lisa\\s+)?Moreau\\b|(?<!Cmdr\\.\\s)\\b(?:Lt\\.|Capt\\.|Captain|Lieutenant|Ens\\.)\\s+(?:Lisa\\s+)?Moreau\\b",
+              "why": "rank is Cmdr."
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (spokeswoman, she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bMoreau,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Moreau\\b",
+              "why": "Moreau is a woman"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-033",
+      "name": "Mark Ellery",
+      "name_tokens": [
+        "Ellery"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Spokesman for the FBI's Houston Division",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bEllery,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Ellery works for the FBI's Houston Division, not another agency"
+            },
+            {
+              "pattern": "\\bEllery\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FAA|Federal Aviation Administration|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Ellery works for the FBI's Houston Division, not another agency"
+            },
+            {
+              "pattern": "San Antonio (?:Division|field office|office)",
+              "why": "Corpus Christi is covered by the FBI Houston Division (Corpus Christi resident agency)"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Mark Ellery has no military rank or honorific in print",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Mark\\s+)?Ellery\\b|\\b(?:Special\\s+)?Agent\\s+(?:Mark\\s+)?Ellery\\b",
+              "why": "civilian; no rank"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (spokesman, he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bEllery,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Ellery\\b",
+              "why": "Ellery is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-034",
+      "name": "Lynn Carver",
+      "name_tokens": [
+        "Lynn Carver",
+        "Lynn"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Regional spokesperson for the Federal Aviation Administration",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bCarver,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Carver works for the FAA, not another agency"
+            },
+            {
+              "pattern": "\\bCarver\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|US Attorney's Office|U\\.S\\. Attorney's Office)",
+              "why": "Carver works for the FAA, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Lynn Carver has no military rank or honorific in print",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Lynn\\s+)?Carver\\b",
+              "why": "civilian; no rank"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-035",
+      "name": "Alan Reyes",
+      "name_tokens": [
+        "Reyes",
+        "Alan"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Spokesman for the US Attorney's Office for the Southern District of Texas",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bReyes,\\s+(?:(?:a|an|the)\\s+)?(?:(?:(?:[A-Z]\\.){1,3}|[A-Z][a-z]{0,4}\\.|[\\w'&-]+)\\s+){0,5}(?:for|with|at|of)\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration)",
+              "why": "Reyes works for the US Attorney's Office for the Southern District of Texas, not another agency"
+            },
+            {
+              "pattern": "\\bReyes\\s+of\\s+(?:the\\s+)?(?:Coast Guard|Sector Corpus Christi|NAS Corpus Christi|Naval Air Station|the air station|the station|Corpus Christi Army Depot|the depot|Army Depot|Port of Corpus Christi|the port\\b|water utility|the utility\\b|Nueces County Office of Emergency Management|county emergency management|county's emergency management|Public Health District|health district|FEMA|General Land Office|National Weather Service|weather service|Cybersecurity and Infrastructure Security Agency|CISA|Fort Hood|Fort Hood|Navy Region Southeast|FBI|FAA|Federal Aviation Administration)",
+              "why": "Reyes works for the US Attorney's Office for the Southern District of Texas, not another agency"
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "value": "Alan Reyes has no military rank or honorific in print",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Lt\\.|Lieutenant|Cmdr\\.|Commander|Capt\\.|Captain|Maj\\.|Major|Col\\.|Colonel|Sgt\\.|Sergeant|Adm\\.|Admiral|Gen\\.|General)\\s+(?:Alan\\s+)?Reyes\\b",
+              "why": "civilian; no rank"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (spokesman, he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bReyes,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Reyes\\b",
+              "why": "Reyes is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-040",
+      "name": "Rosa Elizondo",
+      "name_tokens": [
+        "Elizondo",
+        "Rosa"
+      ],
+      "age": 38,
+      "titles": [],
+      "facts": [
+        {
+          "key": "age",
+          "value": "38 throughout the scenario",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bElizondo,\\s+(?!38,)\\d{1,3},",
+              "why": "Elizondo is 38"
+            },
+            {
+              "pattern": "\\b(?!38-)\\d{1,3}-year-old\\s+(?:(?!(?:of|with|and|for|to|near|from|beside|next|whose|who)\\b)[\\w-]+\\s+){0,3}?(?:Rosa\\s+)?Elizondo\\b",
+              "why": "Elizondo is 38"
+            },
+            {
+              "pattern": "\\b(?!38-)\\d{1,3}-year-old\\s+(?:home health aide)\\b",
+              "why": "Elizondo is 38"
+            }
+          ]
+        },
+        {
+          "key": "home",
+          "value": "Rents a duplex a few blocks from the bay, in a low-income surge-zone neighborhood a few blocks from Pastor Whitfield's church fellowship hall; landlord is a man who wrote her one-page lease",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:her|Elizondo's|Rosa's|their|the\\s+family's|the)\\s+(?:\\w+\\s+){0,2}apartment\\b|\\brents\\s+an?\\s+(?:\\w+\\s+){0,2}apartment\\b|\\b(?:Elizondo|Rosa|she)\\s+(?:lives|lived)\\s+in\\s+an?\\s+(?:\\w+\\s+){0,2}apartment\\b",
+              "why": "home is a rented duplex"
+            },
+            {
+              "pattern": "\\brents\\s+an?\\s+(?:small\\s+|little\\s+)?(?:house|home|trailer|condo|mobile home)\\b",
+              "why": "home is a rented duplex, not a house"
+            },
+            {
+              "pattern": "\\b(?:owns|bought)\\s+(?:her|a)\\s+(?:house|home|duplex)\\b",
+              "why": "she rents"
+            }
+          ]
+        },
+        {
+          "key": "family",
+          "value": "Mother of three: youngest is 6, oldest is a teenager; the two older children ride the school bus",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Elizondo|Rosa)\\b[^.]{0,60}\\b(?:mother|mom)\\s+of\\s+(?:one|two|four|five|six|[124-9])\\b|\\b(?:mother|mom)\\s+of\\s+(?:one|two|four|five|six|[124-9])\\b[^.]{0,40}\\bElizondo\\b",
+              "why": "she has three children"
+            },
+            {
+              "pattern": "\\b(?:Elizondo's|Rosa's|her)\\s+(?:two|four|five|six)\\s+(?:kids|children)\\b",
+              "why": "she has three children"
+            },
+            {
+              "pattern": "\\byoungest(?:\\s+(?:child|son|daughter))?,?\\s+(?:who\\s+is\\s+|age\\s+)?(?!6\\b)\\d{1,2}\\b",
+              "why": "her youngest is 6"
+            }
+          ]
+        },
+        {
+          "key": "job",
+          "value": "Home health aide who helps older and disabled clients bathe, eat and take medicine in their homes; has helped clients register for evacuation help",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bElizondo,\\s+(?:38,\\s+)?an?\\s+(?:registered\\s+nurse|nurse|CNA|nursing\\s+assistant|teacher|cashier|housekeeper|waitress)\\b",
+              "why": "she is a home health aide"
+            }
+          ]
+        },
+        {
+          "key": "transport",
+          "value": "Does not own a car; rides city buses (6:10 a.m. stop, transfer downtown, second bus) and relies on neighbors' rides",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Elizondo|Rosa)(?:'s)?\\s+(?:car|truck|SUV|minivan|pickup)\\b",
+              "why": "she has no car"
+            },
+            {
+              "pattern": "\\b(?:Elizondo|Rosa)\\s+(?:drove|drives)\\b",
+              "why": "she has no car"
+            }
+          ]
+        },
+        {
+          "key": "storm_damage",
+          "value": "Rafael's water stopped a few inches below her door; damage is a leaking roof (hallway ceiling dripping into a bucket her kids named Bob), a water-stained ceiling, mildew in the back bedroom and a window that has not closed fully since the storm",
+          "since_day": 0,
+          "forbid": [
+            {
+              "pattern": "\\b(?:her|Elizondo's|Rosa's)\\s+(?:house|duplex|home|rental)\\s+(?:flooded|took\\s+on\\s+water)\\b",
+              "why": "water stopped below her door"
+            },
+            {
+              "pattern": "\\bwater\\s+(?:came|got|poured)\\s+(?:in|inside|into)\\s+(?:her|Elizondo's|Rosa's)\\s+(?:house|duplex|home|rental)\\b",
+              "why": "water stopped below her door"
+            },
+            {
+              "pattern": "(?:\\b(?:bucket|pail)\\b[^.]{0,60}\\b(?:named|called|calls\\s+it|call\\s+it)|\\b(?:named|called)\\s+(?:the|her|their)\\s+(?:bucket|pail))\\s+[\\\"“]?(?-i:(?!Bob\\b)[A-Z][a-z]+)",
+              "why": "the kids named the bucket Bob"
+            }
+          ]
+        },
+        {
+          "key": "relationships",
+          "value": "On Pastor Gloria Whitfield's list; calls her 'Pastora'; volunteers two hours sorting donations at the hub on days off; profiled by Marisol Treviño",
+          "since_day": -60,
+          "forbid": []
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": -60,
+          "to_day": -6,
+          "state": "Kept the county fair's evacuation-assistance card but had not registered her family (registered several clients)"
+        },
+        {
+          "from_day": -5,
+          "to_day": -3,
+          "state": "Registered her family by phone through 2-1-1 for a county evacuation ride on Thursday, Sept. 9, the day the forecast cone reached Corpus Christi"
+        },
+        {
+          "from_day": -2,
+          "to_day": -1,
+          "state": "Waited Sunday, Sept. 12, with her three children and four bags for the county evacuation bus; it never reached her street"
+        },
+        {
+          "from_day": 0,
+          "to_day": 0,
+          "state": "Rode out Rafael at home with her children; water stopped a few inches below her door"
+        },
+        {
+          "from_day": 1,
+          "to_day": 14,
+          "state": "No power, low on water, waited days for help; first water and food came from Whitfield's fellowship hall (open Friday, Sept. 17)"
+        },
+        {
+          "from_day": 4,
+          "to_day": 39,
+          "state": "Boiled water in one big pot every morning under the citywide boil-water notice (Sept. 18 to Oct. 23)"
+        },
+        {
+          "from_day": 12,
+          "to_day": 119,
+          "state": "Volunteers sorting donations at the hub on her days off"
+        },
+        {
+          "from_day": 40,
+          "to_day": 40,
+          "state": "Drank tap water again the night the notice lifted (Saturday, Oct. 23)"
+        },
+        {
+          "from_day": 0,
+          "to_day": 115,
+          "state": "Roof leak: hallway ceiling drips into a bucket (named Bob by mid-December); landlord says 'soon', then 'after the holidays'"
+        },
+        {
+          "from_day": 109,
+          "to_day": 115,
+          "state": "Landlord patched the hallway leak the first week of January"
+        },
+        {
+          "from_day": 60,
+          "to_day": 60,
+          "state": "Registered in person for FEMA individual assistance on Saturday, Nov. 13, the first day, after two buses; registered a little after noon"
+        },
+        {
+          "from_day": 62,
+          "to_day": 119,
+          "state": "Application pending: FEMA asked for proof of occupancy Monday, Nov. 15; she uploaded a school letter; still pending in mid-January"
+        },
+        {
+          "from_day": 64,
+          "to_day": 119,
+          "state": "Checks her FEMA deposit details daily; they were never changed"
+        },
+        {
+          "from_day": 83,
+          "to_day": 119,
+          "state": "Window that has not closed fully since the storm; tapes plastic over it at night"
+        }
+      ]
+    },
+    {
+      "id": "CHR-041",
+      "name": "Huy Nguyen",
+      "name_tokens": [
+        "Nguyen",
+        "Huy"
+      ],
+      "age": 51,
+      "titles": [],
+      "facts": [
+        {
+          "key": "age",
+          "value": "51 throughout the scenario",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bNguyen,\\s+(?!51,)\\d{1,3},",
+              "why": "Nguyen is 51"
+            },
+            {
+              "pattern": "\\b(?!51-)\\d{1,3}-year-old\\s+(?:(?!(?:of|with|and|for|to|near|from|beside|next|whose|who)\\b)[\\w-]+\\s+){0,3}?(?:Huy\\s+)?Nguyen\\b",
+              "why": "Nguyen is 51"
+            },
+            {
+              "pattern": "\\b(?!51-)\\d{1,3}-year-old\\s+(?:second-generation\\s+shrimper|Aransas\\s+Pass\\s+shrimper)\\b",
+              "why": "Nguyen is 51"
+            }
+          ]
+        },
+        {
+          "key": "job",
+          "value": "Second-generation bay shrimper who owns one shrimp boat out of the Aransas Pass harbor and works Corpus Christi and Nueces bays; learned the bays on his father's boat; part of the Vietnamese American fishing community",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bNguyen(?:,\\s+51,)?(?:,\\s+|\\s+is\\s+)an?\\s+(?:first|third|fourth)-generation\\b|\\b(?:first|third|fourth)-generation\\s+(?:shrimper|fisherman)\\s+(?:Huy\\s+Nguyen|from\\s+Aransas\\s+Pass)\\b|\\bThe\\s+(?:first|third|fourth)-generation\\s+shrimper\\b",
+              "why": "he is a second-generation shrimper"
+            },
+            {
+              "pattern": "\\b(?:Rockport|Port\\s+Lavaca|Palacios|Ingleside|Port\\s+Aransas|Corpus\\s+Christi)\\s+shrimper\\s+Huy\\s+Nguyen\\b|\\bNguyen,\\s+(?:51,\\s+)?an?\\s+(?:Rockport|Port\\s+Lavaca|Palacios|Ingleside|Port\\s+Aransas|Corpus\\s+Christi)\\s+shrimper\\b|\\bNguyen\\s+of\\s+(?:Rockport|Port\\s+Lavaca|Palacios|Ingleside|Port\\s+Aransas)\\b",
+              "why": "he shrimps out of Aransas Pass"
+            }
+          ]
+        },
+        {
+          "key": "crew",
+          "value": "Fishes with one deckhand, who has two children",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:his|Nguyen's)\\s+(?:two|three|four|2|3|4)\\s+deckhands\\b",
+              "why": "he has one deckhand"
+            },
+            {
+              "pattern": "\\b(?:his|Nguyen's|a)\\s+deckhand\\s+with\\s+(?:one|three|four|five|[13-9])\\s+(?:kids|children)\\b",
+              "why": "his deckhand has two children"
+            }
+          ]
+        },
+        {
+          "key": "records",
+          "value": "Logs every trip (catch, fuel, ice) in pencil in spiral notebooks kept in the wheelhouse; fuel receipts clipped to his truck visor; filed his claim with eleven spiral notebooks in a grocery bag",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:nine|ten|twelve|thirteen|fourteen|fifteen|twenty|a\\s+dozen|\\d+)\\s+spiral\\s+notebooks\\b|\\b(?:his|Nguyen's)\\s+(?:nine|ten|twelve|thirteen|fourteen|fifteen|twenty|\\d+)\\s+notebooks\\b",
+              "why": "he filed with eleven notebooks"
+            }
+          ]
+        },
+        {
+          "key": "debts",
+          "value": "Still owes on the boat (payment due on the first of each month) and at the fuel dock",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:boat\\s+is|boat's)\\s+paid\\s+off\\b|\\bowns\\s+the\\s+boat\\s+outright\\b",
+              "why": "he still owes on the boat"
+            }
+          ]
+        },
+        {
+          "key": "boat_condition",
+          "value": "Boat came through Rafael with little more than scraped paint",
+          "since_day": 0,
+          "forbid": [
+            {
+              "pattern": "\\b(?:his|Nguyen's)\\s+(?:shrimp\\s+)?boat\\s+(?:sank|was\\s+destroyed|was\\s+lost|was\\s+wrecked|took\\s+heavy\\s+damage)\\b",
+              "why": "his boat survived the storm"
+            }
+          ]
+        },
+        {
+          "key": "claim",
+          "value": "Filed his spill damage claim Thursday, Nov. 18, two days after the claims process opened",
+          "since_day": 65,
+          "forbid": [
+            {
+              "pattern": "\\bNguyen\\s+filed\\s+(?:his|a)\\s+(?:spill\\s+)?(?:damage\\s+)?claim\\s+in\\s+(?:September|October|December|January)\\b|\\bfiled\\s+(?:his|my)\\s+(?:spill\\s+)?claim\\s+in\\s+(?:September|October|December|January)\\b",
+              "why": "he filed in November"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": -2,
+          "to_day": -1,
+          "state": "Doubled the lines on his boat in the Aransas Pass harbor; planned to leave once it was secured"
+        },
+        {
+          "from_day": 3,
+          "to_day": 3,
+          "state": "Ran a test drag in Corpus Christi Bay Friday, Sept. 17; net came up streaked with oil"
+        },
+        {
+          "from_day": 4,
+          "to_day": 114,
+          "state": "Bays closed to fishing from Sept. 18; boat tied up in Aransas Pass; zero days fished in the bay; deckhand picking up day work"
+        },
+        {
+          "from_day": 63,
+          "to_day": 64,
+          "state": "Claims process opened Nov. 16; planned to file within days"
+        },
+        {
+          "from_day": 65,
+          "to_day": 119,
+          "state": "Claim filed Nov. 18; still pending in mid-January"
+        },
+        {
+          "from_day": 115,
+          "to_day": 119,
+          "state": "Part of the fishing grounds reopened after testing; wants to look at the water before fishing it"
+        }
+      ]
+    },
+    {
+      "id": "CHR-042",
+      "name": "Bill Hargrove",
+      "name_tokens": [
+        "Hargrove"
+      ],
+      "age": 64,
+      "titles": [],
+      "facts": [
+        {
+          "key": "age",
+          "value": "64 throughout the scenario",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bHargrove,\\s+(?!64,)\\d{1,3},",
+              "why": "Hargrove is 64"
+            },
+            {
+              "pattern": "\\b(?!64-)\\d{1,3}-year-old\\s+(?:(?!(?:of|with|and|for|to|near|from|beside|next|whose|who)\\b)[\\w-]+\\s+){0,3}?(?:Bill\\s+)?Hargrove\\b",
+              "why": "Hargrove is 64"
+            },
+            {
+              "pattern": "\\b(?!64-)\\d{1,3}-year-old\\s+(?:bait(?:\\s+|-)shop\\s+owner)\\b",
+              "why": "Hargrove is 64"
+            }
+          ]
+        },
+        {
+          "key": "business",
+          "value": "Owns Hargrove Bait & Tackle, a short walk from the Port Aransas jetties: live-bait tanks, shell lot, opens by 6 a.m. in season; has sold bait there for decades and fished the jetties since boyhood",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bHargrove(?:'s)?\\s+(?-i:Bait\\s+Shop|Bait\\s+and\\s+Tackle|Tackle\\s+Shop|Marina|Bait\\s+&\\s+Ice)\\b",
+              "why": "the shop is Hargrove Bait & Tackle"
+            },
+            {
+              "pattern": "\\bHargrove(?:,\\s+\\d+,)?\\s+(?:of|from)\\s+(?:Rockport|Aransas\\s+Pass|Ingleside)\\b|\\b(?:Rockport|Aransas\\s+Pass|Ingleside)\\s+bait\\s+shop\\s+owner\\b",
+              "why": "his shop and home are in Port Aransas"
+            }
+          ]
+        },
+        {
+          "key": "storm_history",
+          "value": "Rode out two earlier hurricanes on the island (one was Harvey) and does not recommend it; evacuated for Rafael",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Hargrove|he)\\s+(?:has\\s+|had\\s+)?(?:rode|ridden)\\s+out\\s+(?:three|four|five|several|3|4|5)\\s+(?:hurricanes|storms)\\b",
+              "why": "he rode out two storms"
+            },
+            {
+              "pattern": "\\b(?:Hargrove|he)\\s+(?:rode|had\\s+ridden|was\\s+riding)\\s+out\\s+(?:Rafael|this\\s+one|a\\s+third)\\b",
+              "why": "he evacuated for Rafael"
+            }
+          ]
+        },
+        {
+          "key": "plywood",
+          "value": "Keeps storm plywood cut in May and labeled by window in the back of the shop",
+          "since_day": -60,
+          "forbid": []
+        },
+        {
+          "key": "blast_location",
+          "value": "Was asleep at home on the island when the Oct. 28 jetty blast woke him around 1 a.m.; he did not hear it from the shop",
+          "since_day": 44,
+          "forbid": [
+            {
+              "pattern": "\\bheard\\s+(?:it|the\\s+(?:blast|explosion))(?:\\s+that\\s+night)?\\s+(?:from|at|in)\\s+(?:his|the)\\s+(?:bait\\s+)?shop\\b",
+              "why": "he was asleep at home"
+            },
+            {
+              "pattern": "\\b(?:at|in|from)\\s+(?:his|the)\\s+shop\\s+when\\s+the\\s+(?:blast|explosion)\\b",
+              "why": "he was asleep at home"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": -60,
+          "to_day": -3,
+          "state": "Shop open and busy through a strong summer"
+        },
+        {
+          "from_day": -2,
+          "to_day": -1,
+          "state": "Boarded up the shop with his labeled plywood and left the island under the evacuation order"
+        },
+        {
+          "from_day": 0,
+          "to_day": 0,
+          "state": "Evacuated; did not ride out Rafael"
+        },
+        {
+          "from_day": 1,
+          "to_day": 14,
+          "state": "Shop gutted by surge (waterline above his head); first look Wednesday, Sept. 15; shoveling out"
+        },
+        {
+          "from_day": 15,
+          "to_day": 27,
+          "state": "Tearing out wet drywall with a crowbar; selling ice, hooks and tackle from a folding table under a hand-painted 'OPEN-ISH' sign"
+        },
+        {
+          "from_day": 28,
+          "to_day": 72,
+          "state": "Walls stripped to the studs, with his pencil notes on the bare wood; new shelving leaning against bare walls; selling from a folding table (live bait added by early November)"
+        },
+        {
+          "from_day": 44,
+          "to_day": 44,
+          "state": "Asleep at home when the jetty blast woke him around 1 a.m. Thursday, Oct. 28"
+        },
+        {
+          "from_day": 73,
+          "to_day": 90,
+          "state": "Carpenter working inside; selling bait from coolers on the porch; hopes walls closed in by Christmas"
+        },
+        {
+          "from_day": 91,
+          "to_day": 99,
+          "state": "Drywall about half up (Dec. 14); reopened later in December"
+        },
+        {
+          "from_day": 100,
+          "to_day": 119,
+          "state": "Reopened for the holidays with new drywall, new shelves (half-stocked) and new Christmas lights; open through Christmas Eve, closed Christmas Day; 'stocked again, mostly' by mid-January"
+        }
+      ]
+    },
+    {
+      "id": "CHR-043",
+      "name": "Alyssa Cortez",
+      "name_tokens": [
+        "Cortez",
+        "Alyssa"
+      ],
+      "age": 34,
+      "titles": [],
+      "facts": [
+        {
+          "key": "age",
+          "value": "34 throughout the scenario",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bCortez,\\s+(?!34,)\\d{1,3},",
+              "why": "Cortez is 34"
+            },
+            {
+              "pattern": "\\b(?!34-)\\d{1,3}-year-old\\s+(?:(?!(?:of|with|and|for|to|near|from|beside|next|whose|who)\\b)[\\w-]+\\s+){0,3}?(?:Alyssa\\s+)?Cortez\\b",
+              "why": "Cortez is 34"
+            },
+            {
+              "pattern": "\\b(?!34-)\\d{1,3}-year-old\\s+(?:charge\\s+nurse)\\b",
+              "why": "Cortez is 34"
+            }
+          ]
+        },
+        {
+          "key": "job",
+          "value": "Charge nurse in the emergency department of an unnamed Nueces County hospital; runs the floor; works twelve-hour shifts",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bCortez[^.]{0,60}\\b(?:at|of|with|for)\\s+(?:the\\s+)?(?:Christus|Spohn|Driscoll|Corpus\\s+Christi\\s+Medical\\s+Center|Doctors\\s+Regional|Bay\\s+Area\\s+Hospital)\\b",
+              "why": "her hospital is never named"
+            },
+            {
+              "pattern": "\\bCortez[^.]{0,60}\\b(?:eight|ten|8|10)-hour\\s+shifts\\b|\\bshe\\s+(?:works|worked|has\\s+worked|pulls|pulled)\\s+(?:eight|ten|8|10)-hour\\s+shifts\\b",
+              "why": "she works twelve-hour shifts"
+            },
+            {
+              "pattern": "\\bCortez,\\s+(?:34,\\s+)?an?\\s+(?:ER\\s+)?(?:doctor|physician|paramedic|EMT)\\b",
+              "why": "she is a charge nurse"
+            }
+          ]
+        },
+        {
+          "key": "habits",
+          "value": "Keeps a granola bar in each scrub pocket (one for a teammate); never discusses individual patients",
+          "since_day": -60,
+          "forbid": []
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 0,
+          "to_day": 23,
+          "state": "Twelve-hour shifts since landfall: oil-related breathing and skin complaints, then stomach-illness surge with hallway beds in late September"
+        },
+        {
+          "from_day": 14,
+          "to_day": 45,
+          "state": "Hallway beds emptied by early October"
+        },
+        {
+          "from_day": 86,
+          "to_day": 101,
+          "state": "Volunteered to work Christmas Eve"
+        }
+      ]
+    },
+    {
+      "id": "CHR-044",
+      "name": "Marcus Bell",
+      "name_tokens": [
+        "Marcus Bell",
+        "Bell"
+      ],
+      "age": 67,
+      "titles": [],
+      "facts": [
+        {
+          "key": "age",
+          "value": "67 throughout the scenario",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bBell,\\s+(?!67,)\\d{1,3},",
+              "why": "Bell is 67"
+            },
+            {
+              "pattern": "\\b(?!67-)\\d{1,3}-year-old\\s+(?:(?!(?:of|with|and|for|to|near|from|beside|next|whose|who)\\b)[\\w-]+\\s+){0,3}?(?:Marcus\\s+)?Bell\\b",
+              "why": "Bell is 67"
+            },
+            {
+              "pattern": "\\b(?!67-)\\d{1,3}-year-old\\s+(?:retired\\s+welder)\\b",
+              "why": "Bell is 67"
+            }
+          ]
+        },
+        {
+          "key": "home",
+          "value": "Lives in a house on North Beach a few blocks from the water; watches ships from a lawn chair on his porch; has lived there for decades; keeps a vehicle (full tank)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:his|Bell's)\\s+(?:\\w+\\s+){0,2}apartment\\b|\\brents\\s+an?\\s+(?:\\w+\\s+){0,2}apartment\\b|\\b(?:Bell|he)\\s+(?:lives|lived)\\s+in\\s+an?\\s+(?:\\w+\\s+){0,2}apartment\\b",
+              "why": "he lives in a house on North Beach"
+            }
+          ]
+        },
+        {
+          "key": "work_history",
+          "value": "Retired welder: more than 30 years welding pipe and steel at refineries and fabrication yards along the Corpus Christi Ship Channel",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bBell\\b[^.]{0,60}\\b(?:worked|spent|welded)\\b[^.]{0,60}\\bshipyards?\\b|\\b(?:retired|former)\\s+(?:pipefitter|boilermaker|machinist|longshoreman|dockworker|shipyard\\s+worker)\\b",
+              "why": "he welded at refineries and fabrication yards"
+            },
+            {
+              "pattern": "\\b(?:10|15|20|25|ten|fifteen|twenty|twenty-five)\\s+years\\s+(?:of\\s+)?(?:welding|as\\s+a\\s+welder)\\b",
+              "why": "he welded for more than 30 years"
+            },
+            {
+              "pattern": "\\bwelded (?:on|for) bridges\\b|\\bbridge (?:welder|work(?:er)?)\\b|\\bwelded bridges\\b",
+              "why": "Bell welded at refineries and fabrication yards along the ship channel, not on bridges"
+            }
+          ]
+        },
+        {
+          "key": "storm_stay",
+          "value": "Rode out Rafael at home on North Beach despite the evacuation order",
+          "since_day": -1,
+          "forbid": [
+            {
+              "pattern": "\\bBell\\s+(?:evacuated|left\\s+before\\s+the\\s+storm)\\b|\\bBell,\\s+(?:67,\\s+)?who\\s+evacuated\\b",
+              "why": "he stayed home on North Beach"
+            }
+          ]
+        },
+        {
+          "key": "house_damage",
+          "value": "House took about a foot of water; he did the flood cut himself, two feet up from the floor",
+          "since_day": 0,
+          "forbid": [
+            {
+              "pattern": "\\b(?:his|Bell's)\\s+(?:house|home|place)\\s+(?:took|had|got)\\s+(?:about\\s+|nearly\\s+|almost\\s+)?(?:two|three|four|five|2|3|4|5)(?:-|\\s)(?:feet|foot)\\s+of\\s+(?:water|flooding)\\b|\\b(?:two|three|four|five|2|3|4|5)(?:-|\\s)feet\\s+of\\s+water\\s+(?:in|inside)\\s+(?:his|Bell's)\\s+(?:house|home|place)\\b",
+              "why": "about a foot of water"
+            },
+            {
+              "pattern": "\\bwater(?:\\s+line)?\\s+(?:was|reached|came\\s+up|stood)\\s+(?:about\\s+|nearly\\s+|almost\\s+)?(?:two|three|four|2|3|4)(?:-|\\s)feet\\b",
+              "why": "about a foot of water"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": -1,
+          "to_day": 0,
+          "state": "Stayed home on North Beach through the storm: water, a radio, a neighbor's number"
+        },
+        {
+          "from_day": 0,
+          "to_day": 2,
+          "state": "Cut off from downtown with the Harbor Bridge and Nueces Bay Causeway closed"
+        },
+        {
+          "from_day": 2,
+          "to_day": 2,
+          "state": "Smelled, then saw, oil on North Beach two days after landfall"
+        },
+        {
+          "from_day": 3,
+          "to_day": 3,
+          "state": "Bridges reopened Friday, Sept. 17; first in line for groceries"
+        },
+        {
+          "from_day": 7,
+          "to_day": 20,
+          "state": "Windows shut, mask on; throat raw for about a week"
+        },
+        {
+          "from_day": 19,
+          "to_day": 41,
+          "state": "Tearing out wet drywall two feet up himself; carpet, recliner, two doors and a mattress at the curb"
+        },
+        {
+          "from_day": 21,
+          "to_day": 119,
+          "state": "Oil smell mostly gone; windows open"
+        },
+        {
+          "from_day": 42,
+          "to_day": 119,
+          "state": "Walking the beach again; by December walks the tide line at 7 a.m."
+        }
+      ]
+    },
+    {
+      "id": "CHR-045",
+      "name": "Leticia Ramos",
+      "name_tokens": [
+        "Ramos",
+        "Leticia"
+      ],
+      "age": 45,
+      "titles": [],
+      "facts": [
+        {
+          "key": "age",
+          "value": "45 throughout the scenario",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bRamos,\\s+(?!45,)\\d{1,3},",
+              "why": "Ramos is 45"
+            },
+            {
+              "pattern": "\\b(?!45-)\\d{1,3}-year-old\\s+(?:(?!(?:of|with|and|for|to|near|from|beside|next|whose|who)\\b)[\\w-]+\\s+){0,3}?(?:Leticia\\s+)?Ramos\\b",
+              "why": "Ramos is 45"
+            },
+            {
+              "pattern": "\\b(?!45-)\\d{1,3}-year-old\\s+(?:schoolteacher|Calallen\\s+(?:school)?teacher)\\b",
+              "why": "Ramos is 45"
+            }
+          ]
+        },
+        {
+          "key": "job",
+          "value": "Schoolteacher in Calallen; neighbors joke 'Mrs. Ramos has a list'",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bRamos,\\s+(?:45,\\s+)?an?\\s+(?:nurse|principal|librarian|counselor|retired|retiree)\\b",
+              "why": "she is a schoolteacher"
+            }
+          ]
+        },
+        {
+          "key": "home",
+          "value": "Lives in Calallen, a few minutes from the O.N. Stevens Water Treatment Plant on the Nueces River",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bRamos(?:,\\s+\\d+,)?\\s+(?:of|from)\\s+(?:Flour\\s+Bluff|North\\s+Beach|Portland|Robstown|Port\\s+Aransas)\\b|\\bRamos,\\s+(?:45,\\s+)?an?\\s+(?:Flour\\s+Bluff|North\\s+Beach|Portland|Robstown|Port\\s+Aransas)\\b|\\b(?:Flour\\s+Bluff|North\\s+Beach|Portland|Robstown)\\s+(?:school)?teacher\\b",
+              "why": "she lives in Calallen"
+            }
+          ]
+        },
+        {
+          "key": "vehicle",
+          "value": "Drives an SUV; drives car-less neighbors",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bRamos(?:,\\s+\\d+,)?\\s+(?:doesn't|does\\s+not|didn't|did\\s+not)\\s+(?:own|have|drive)\\s+a\\s+car\\b|\\bRamos,\\s+who\\s+(?:doesn't|does\\s+not)\\s+(?:own|have|drive)\\s+a\\s+car\\b",
+              "why": "she drives an SUV"
+            }
+          ]
+        },
+        {
+          "key": "organizing",
+          "value": "Keeps a clipboard list (later a spreadsheet) of every household on her street; ran the street's water runs for the whole five-week boil-water notice",
+          "since_day": -41,
+          "forbid": []
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": -41,
+          "to_day": -1,
+          "state": "Built a phone tree for her street; group text with Nueces River gauge readings"
+        },
+        {
+          "from_day": 4,
+          "to_day": 39,
+          "state": "Organized her street's water runs (boil-water notice Sept. 18 to Oct. 23)"
+        },
+        {
+          "from_day": 39,
+          "to_day": 39,
+          "state": "Drank tap water the day the notice lifted"
+        },
+        {
+          "from_day": 60,
+          "to_day": 60,
+          "state": "Drove three car-less neighbors to register for FEMA aid"
+        },
+        {
+          "from_day": 81,
+          "to_day": 119,
+          "state": "Still keeps bottled water by the back door; brined her Thanksgiving turkey in tap water"
+        }
+      ]
+    },
+    {
+      "id": "CHR-046",
+      "name": "Eddie Fontenot",
+      "name_tokens": [
+        "Fontenot",
+        "Eddie"
+      ],
+      "age": 29,
+      "titles": [],
+      "facts": [
+        {
+          "key": "age",
+          "value": "29 throughout the scenario",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bFontenot,\\s+(?!29,)\\d{1,3},",
+              "why": "Fontenot is 29"
+            },
+            {
+              "pattern": "\\b(?!29-)\\d{1,3}-year-old\\s+(?:(?!(?:of|with|and|for|to|near|from|beside|next|whose|who)\\b)[\\w-]+\\s+){0,3}?(?:Eddie\\s+)?Fontenot\\b",
+              "why": "Fontenot is 29"
+            }
+          ]
+        },
+        {
+          "key": "job",
+          "value": "Deckhand on the harbor tug Corrin Bay, operated by Laguna Towing; Capt. Ray Dupree is his captain",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bFontenot,\\s+(?:29,\\s+)?an?\\s+(?:engineer|mate|captain|welder|pilot)\\b",
+              "why": "he is a deckhand"
+            },
+            {
+              "pattern": "\\b(?:deckhand|captain|master)\\s+(?:for|with)\\s+(?:Moran|G&H\\s+Towing|Bay-Houston|Seabulk|Gulf\\s+Towing)\\b|\\b(?:operated|owned)\\s+by\\s+(?:Moran|G&H\\s+Towing|Bay-Houston|Seabulk|Gulf\\s+Towing)\\b",
+              "why": "the tug is operated by Laguna Towing"
+            }
+          ]
+        },
+        {
+          "key": "injury",
+          "value": "Broken arm and a concussion in the Oct. 28 jetty blast",
+          "since_day": 44,
+          "forbid": [
+            {
+              "pattern": "\\bFontenot[^.]{0,80}\\b(?:broken|fractured)\\s+(?:leg|legs|ribs?|collarbone|wrist|hand|jaw|back)\\b|\\b(?:he|Fontenot)\\s+(?:broke|fractured)\\s+(?:his\\s+)?(?:leg|ribs?|collarbone|wrist|hand|jaw|back)\\b",
+              "why": "he broke his arm"
+            },
+            {
+              "pattern": "\\bFontenot[^.]{0,80}\\b(?:burns|burned)\\b",
+              "why": "broken arm and concussion only"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 44,
+          "to_day": 49,
+          "state": "In a Corpus Christi hospital; spoke by phone Tuesday, Nov. 2"
+        },
+        {
+          "from_day": 49,
+          "to_day": 81,
+          "state": "Arm in a cast most of November; recovering"
+        },
+        {
+          "from_day": 82,
+          "to_day": 108,
+          "state": "Out of the cast; physical therapy; sleeps with the TV on; hopes to be cleared after the new year"
+        },
+        {
+          "from_day": 109,
+          "to_day": 119,
+          "state": "Cleared to return to work by mid-January"
+        }
+      ]
+    },
+    {
+      "id": "CHR-047",
+      "name": "Capt. Ray Dupree",
+      "name_tokens": [
+        "Dupree"
+      ],
+      "age": 56,
+      "titles": [
+        "Capt."
+      ],
+      "facts": [
+        {
+          "key": "age",
+          "value": "56 throughout the scenario",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bDupree,\\s+(?!56,)\\d{1,3},",
+              "why": "Dupree is 56"
+            },
+            {
+              "pattern": "\\b(?!56-)\\d{1,3}-year-old\\s+(?:(?!(?:of|with|and|for|to|near|from|beside|next|whose|who)\\b)[\\w-]+\\s+){0,3}?(?:Ray\\s+)?Dupree\\b",
+              "why": "Dupree is 56"
+            },
+            {
+              "pattern": "\\b(?!56-)\\d{1,3}-year-old\\s+(?:tug(?:boat)?\\s+(?:captain|master))\\b",
+              "why": "Dupree is 56"
+            }
+          ]
+        },
+        {
+          "key": "job",
+          "value": "Master of the harbor tug Corrin Bay, operated by Laguna Towing; 30 years running tugs in the Corpus Christi Ship Channel",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:tugs?|towed\\s+ships|towing|worked\\s+the\\s+(?:Corpus\\s+Christi\\s+)?(?:Ship\\s+)?Channel)[^.]{0,60}\\bfor\\s+(?!30\\b)\\d{1,2}\\s+years\\b",
+              "why": "30 years in the channel"
+            },
+            {
+              "pattern": "\\b(?:Lt\\.|Cmdr\\.|Mate)\\s+(?:Ray\\s+)?Dupree\\b",
+              "why": "he is Capt. Dupree"
+            },
+            {
+              "pattern": "\\b(?:deckhand|captain|master)\\s+(?:for|with)\\s+(?:Moran|G&H\\s+Towing|Bay-Houston|Seabulk|Gulf\\s+Towing)\\b|\\b(?:operated|owned)\\s+by\\s+(?:Moran|G&H\\s+Towing|Bay-Houston|Seabulk|Gulf\\s+Towing)\\b",
+              "why": "the tug is operated by Laguna Towing"
+            }
+          ]
+        },
+        {
+          "key": "blast",
+          "value": "Was aboard when the blast went off off the tug's port bow around 1 a.m. Oct. 28; counted heads; two of his crew were hurt, including deckhand Eddie Fontenot",
+          "since_day": 44,
+          "forbid": [
+            {
+              "pattern": "\\bstarboard\\s+(?:bow|side|quarter|beam)\\b",
+              "why": "the blast came off the port bow"
+            },
+            {
+              "pattern": "\\b(?:one|three|four)\\s+(?:of\\s+his\\s+)?crew(?:\\s+members)?\\s+(?:were\\s+|was\\s+)?(?:injured|hurt)\\b",
+              "why": "two crew were hurt"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 44,
+          "to_day": 44,
+          "state": "Aboard Corrin Bay when an explosive device went off off the port bow around 1 a.m. Thursday, Oct. 28"
+        },
+        {
+          "from_day": 45,
+          "to_day": 58,
+          "state": "Off the water while Corrin Bay is out of service; visits Fontenot most days"
+        },
+        {
+          "from_day": 59,
+          "to_day": 59,
+          "state": "Watched ships pass the jetties the day after the channel reopened (Nov. 12); will go back when the company has a boat"
+        },
+        {
+          "from_day": 62,
+          "to_day": 119,
+          "state": "Back on the water since mid-November on a company boat"
+        }
+      ]
+    },
+    {
+      "id": "CHR-048",
+      "name": "Jaime Ortega",
+      "name_tokens": [
+        "Ortega",
+        "Jaime"
+      ],
+      "age": 42,
+      "titles": [],
+      "facts": [
+        {
+          "key": "age",
+          "value": "42 throughout the scenario",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bOrtega,\\s+(?!42,)\\d{1,3},",
+              "why": "Ortega is 42"
+            },
+            {
+              "pattern": "\\b(?!42-)\\d{1,3}-year-old\\s+(?:(?!(?:of|with|and|for|to|near|from|beside|next|whose|who)\\b)[\\w-]+\\s+){0,3}?(?:Jaime\\s+)?Ortega\\b",
+              "why": "Ortega is 42"
+            },
+            {
+              "pattern": "\\b(?!42-)\\d{1,3}-year-old\\s+(?:hobby\\s+astronomer|stargazer)\\b",
+              "why": "Ortega is 42"
+            }
+          ]
+        },
+        {
+          "key": "hobby",
+          "value": "Hobby astronomer in Flour Bluff who films the night sky from a tripod in his backyard, logs time and direction, and writes 'unknown' when unsure",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bOrtega,\\s+(?:42,\\s+)?an?\\s+(?:North\\s+Beach|Portland|Calallen|Port\\s+Aransas)\\s+(?:resident|man|stargazer|astronomer|hobby\\s+astronomer)\\b|\\b(?:North\\s+Beach|Portland|Calallen|Port\\s+Aransas)\\s+(?:hobby\\s+)?astronomer\\b|\\bOrtega\\s+of\\s+(?:North\\s+Beach|Portland|Calallen|Port\\s+Aransas)\\b",
+              "why": "he lives in Flour Bluff"
+            },
+            {
+              "pattern": "\\b(?:professional|staff)\\s+astronomer\\b",
+              "why": "he is a hobby astronomer"
+            }
+          ]
+        },
+        {
+          "key": "claims",
+          "value": "Never said what the lights were, only that they were not stars or planes",
+          "since_day": 2,
+          "forbid": [
+            {
+              "pattern": "\\bOrtega[^.]{0,80}\\b(?:said|says)\\s+(?:they|the\\s+lights)\\s+were\\s+(?:drones|aliens|UFOs)\\b",
+              "why": "he never identified the lights"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 1,
+          "to_day": 1,
+          "state": "Filmed lights hovering over NAS Corpus Christi Wednesday night, Sept. 15"
+        },
+        {
+          "from_day": 2,
+          "to_day": 2,
+          "state": "Posted his first clip Thursday, Sept. 16"
+        },
+        {
+          "from_day": 7,
+          "to_day": 7,
+          "state": "Featured by Harborline 6 Tuesday, Sept. 21"
+        },
+        {
+          "from_day": 11,
+          "to_day": 119,
+          "state": "No unusual lights since; kept all original files with time stamps"
+        }
+      ]
+    },
+    {
+      "id": "CHR-049",
+      "name": "Pastor Gloria Whitfield",
+      "name_tokens": [
+        "Whitfield",
+        "Gloria",
+        "Pastora"
+      ],
+      "age": 59,
+      "titles": [
+        "Pastor"
+      ],
+      "facts": [
+        {
+          "key": "age",
+          "value": "59 throughout the scenario",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bWhitfield,\\s+(?!59,)\\d{1,3},",
+              "why": "Whitfield is 59"
+            },
+            {
+              "pattern": "\\b(?!59-)\\d{1,3}-year-old\\s+(?:(?!(?:of|with|and|for|to|near|from|beside|next|whose|who)\\b)[\\w-]+\\s+){0,3}?(?:Gloria\\s+)?Whitfield\\b",
+              "why": "Whitfield is 59"
+            },
+            {
+              "pattern": "\\b(?!59-)\\d{1,3}-year-old\\s+(?:pastor)\\b",
+              "why": "Whitfield is 59"
+            }
+          ]
+        },
+        {
+          "key": "role",
+          "value": "Pastor who runs meals and supplies (a relief hub) from her church's fellowship hall in a low-income neighborhood near the bay; storage closet behind the kitchen; deacons and a youth group help",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Rev\\.|Reverend|Sister|Deacon|Mother|Ms\\.|Mrs\\.)\\s+(?:Gloria\\s+)?Whitfield\\b",
+              "why": "her title is Pastor"
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "value": "Keeps a list of neighbors without cars or working phones, always in pencil: kept for years in a spiral notebook in her purse, copied in summer 2027 into a three-ring binder on the fellowship-hall table",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:list|notebook|binder|names)\\b[^.]{0,60}\\bin\\s+(?:blue\\s+|black\\s+|red\\s+)?ink\\b|\\bin\\s+(?:blue|black|red)\\s+ink\\b[^.]{0,40}\\b(?:names|addresses|list)\\b|\\bkeeps\\s+(?:it|the\\s+list|her\\s+list)\\s+in\\s+(?:pen|ink)\\b",
+              "why": "her list is kept in pencil"
+            }
+          ]
+        },
+        {
+          "key": "vehicle",
+          "value": "Has a car and drives neighbors ('God gave me a car and a loud voice')",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bWhitfield(?:,\\s+\\d+,)?\\s+(?:doesn't|does\\s+not|didn't|did\\s+not)\\s+(?:own|have|drive)\\s+a\\s+car\\b|\\bWhitfield,\\s+who\\s+(?:doesn't|does\\s+not)\\s+(?:own|have|drive)\\s+a\\s+car\\b",
+              "why": "she has a car"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": -60,
+          "to_day": -20,
+          "state": "List kept in a spiral notebook in her purse"
+        },
+        {
+          "from_day": -19,
+          "to_day": 119,
+          "state": "List kept in a penciled three-ring binder in the fellowship hall"
+        },
+        {
+          "from_day": -9,
+          "to_day": -1,
+          "state": "Calling everyone on the list as Rafael formed"
+        },
+        {
+          "from_day": -2,
+          "to_day": -2,
+          "state": "Cut Sunday service to one hymn and one prayer; fellowship hall became a phone-charging and waiting room"
+        },
+        {
+          "from_day": 0,
+          "to_day": 0,
+          "state": "Added heard-from and not-heard-from columns; told deacons nobody goes out in the wind"
+        },
+        {
+          "from_day": 1,
+          "to_day": 2,
+          "state": "Walking the neighborhood with volunteers from Wednesday, Sept. 15"
+        },
+        {
+          "from_day": 3,
+          "to_day": 39,
+          "state": "Hub handing out food and water from Friday, Sept. 17, before official distribution; water for five weeks"
+        },
+        {
+          "from_day": 26,
+          "to_day": 119,
+          "state": "Hub runs on a posted schedule"
+        },
+        {
+          "from_day": 60,
+          "to_day": 72,
+          "state": "FEMA registration and deposit-check help desk with two borrowed laptops"
+        },
+        {
+          "from_day": 72,
+          "to_day": 72,
+          "state": "Thanksgiving meal at the hall"
+        },
+        {
+          "from_day": 89,
+          "to_day": 89,
+          "state": "Toy table on Sunday, Dec. 12"
+        },
+        {
+          "from_day": 101,
+          "to_day": 101,
+          "state": "Christmas Eve tamales, coats and toys"
+        },
+        {
+          "from_day": 102,
+          "to_day": 119,
+          "state": "Hub stays open after the holidays"
+        }
+      ]
+    },
+    {
+      "id": "CHR-060",
+      "name": "Dr. Nathan Brooks",
+      "name_tokens": [
+        "Brooks",
+        "Nathan"
+      ],
+      "age": null,
+      "titles": [
+        "Dr."
+      ],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Coastal oceanographer at Texas A&M University-Corpus Christi who models storm surge and how it moves oil; never speculates about who caused the spill",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bBrooks,\\s+(?:a|an|the)\\s+[^,.;]{0,60}\\b(?:at|of|with)\\s+(?:the\\s+)?(?:University\\s+of\\s+Texas|UT\\s+Marine\\s+Science|Texas\\s+A&M\\s+University-Kingsville|Texas\\s+A&M\\s+University\\s+at\\s+Galveston|Rice\\s+University|UTSA|Del\\s+Mar\\s+College)\\b|\\bBrooks\\s+of\\s+(?:the\\s+)?(?:University\\s+of\\s+Texas|UT\\s+Marine\\s+Science|Texas\\s+A&M\\s+University-Kingsville|Texas\\s+A&M\\s+University\\s+at\\s+Galveston|Rice\\s+University|UTSA|Del\\s+Mar\\s+College)\\b",
+              "why": "he is at Texas A&M University-Corpus Christi"
+            },
+            {
+              "pattern": "\\bBrooks,\\s+(?:a|an|the)\\s+(?:marine\\s+biologist|meteorologist|geologist|ecologist|chemist)\\b",
+              "why": "he is a coastal oceanographer"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bBrooks,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Brooks\\b",
+              "why": "Brooks is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-061",
+      "name": "Dr. Sofia Marquez",
+      "name_tokens": [
+        "Marquez",
+        "Sofia"
+      ],
+      "age": null,
+      "titles": [
+        "Dr."
+      ],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Disaster equity researcher at Texas A&M University-Corpus Christi; with Coastline Public Radio released the aid-equity analysis on Monday, Dec. 13",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bMarquez,\\s+(?:a|an|the)\\s+[^,.;]{0,60}\\b(?:at|of|with)\\s+(?:the\\s+)?(?:University\\s+of\\s+Texas|UT\\s+Marine\\s+Science|Texas\\s+A&M\\s+University-Kingsville|Texas\\s+A&M\\s+University\\s+at\\s+Galveston|Rice\\s+University|UTSA|Del\\s+Mar\\s+College)\\b|\\bMarquez\\s+of\\s+(?:the\\s+)?(?:University\\s+of\\s+Texas|UT\\s+Marine\\s+Science|Texas\\s+A&M\\s+University-Kingsville|Texas\\s+A&M\\s+University\\s+at\\s+Galveston|Rice\\s+University|UTSA|Del\\s+Mar\\s+College)\\b",
+              "why": "she is at Texas A&M University-Corpus Christi"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bMarquez,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Marquez\\b",
+              "why": "Marquez is a woman"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 90,
+          "to_day": 90,
+          "state": "Analysis with Coastline Public Radio released Monday, Dec. 13: aid at about half the share, 911 response 2.1 times longer"
+        }
+      ]
+    },
+    {
+      "id": "CHR-062",
+      "name": "Ian McCready",
+      "name_tokens": [
+        "McCready"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Independent maritime security analyst and former Coast Guard watchstander who reviews public AIS data for anomalies; never names a vessel behind the spoofing",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bMcCready,\\s+(?:an?\\s+)?[^.;]{0,60}?\\b(?:retired|former)\\s+(?:Navy|Coast\\s+Guard\\s+(?:officer|captain|commander|lieutenant))\\b",
+              "why": "he is a former Coast Guard watchstander"
+            },
+            {
+              "pattern": "\\bDr\\.\\s+(?:Ian\\s+)?McCready\\b",
+              "why": "no doctorate in print"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bMcCready,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}McCready\\b",
+              "why": "McCready is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-063",
+      "name": "Dana Feld",
+      "name_tokens": [
+        "Feld"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Threat researcher at Northlight Threat Lab who tracks hacking and influence campaigns; never names the group or the foreign state",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bFeld,\\s+(?:a|an|the)\\s+[^,.;]{0,60}\\b(?:at|of|with)\\s+(?:Mandiant|CrowdStrike|Recorded\\s+Future)\\b|\\bFeld\\s+of\\s+(?:Mandiant|CrowdStrike|Recorded\\s+Future)\\b|\\bNorthlight\\s+(?-i:(?!Threat\\s+Lab)[A-Z]\\w+)",
+              "why": "she is at Northlight Threat Lab"
+            },
+            {
+              "pattern": "\\bDr\\.\\s+(?:Dana\\s+)?Feld\\b",
+              "why": "no doctorate in print"
+            },
+            {
+              "pattern": "\\bKESTREL\\b",
+              "why": "the group is never named in public"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bFeld,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Feld\\b",
+              "why": "Feld is a woman"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-064",
+      "name": "Grace Holloway",
+      "name_tokens": [
+        "Holloway"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Energy market analyst at Lanternfish Energy Analytics who tracks Gulf Coast crude flows",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bLanternfish\\s+(?-i:(?!Energy\\s+Analytics)[A-Z]\\w+)",
+              "why": "her firm is Lanternfish Energy Analytics"
+            },
+            {
+              "pattern": "\\bHolloway,\\s+(?:a|an|the)\\s+(?:economist|trader|meteorologist|professor)\\b",
+              "why": "she is an energy market analyst"
+            },
+            {
+              "pattern": "\\bDr\\.\\s+(?:Grace\\s+)?Holloway\\b",
+              "why": "no doctorate in print"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bHolloway,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Holloway\\b",
+              "why": "Holloway is a woman"
+            }
+          ]
+        }
+      ],
+      "timeline": []
+    },
+    {
+      "id": "CHR-070",
+      "name": "Victor Lang",
+      "name_tokens": [
+        "Lang",
+        "Victor"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Spokesman for Rendal Terminals, which operates the Inner Harbor berth where the two tankers were moored",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bLang,\\s+(?:a|the)\\s+[^.;]{0,60}\\b(?:Quellmar|Vantorra|Brightwake|Port\\s+of\\s+Corpus\\s+Christi)\\b",
+              "why": "he speaks for Rendal Terminals"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bLang,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Lang\\b",
+              "why": "Lang is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 1,
+          "to_day": 119,
+          "state": "Says Rendal is cooperating fully; declines to discuss the investigation"
+        }
+      ]
+    },
+    {
+      "id": "CHR-071",
+      "name": "Owen Pryce",
+      "name_tokens": [
+        "Pryce",
+        "Owen"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Chief executive of Brightwake Marine Systems, a small vendor that maintains cargo-control systems; its remote-maintenance credentials were misused; he does not know who did it",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bPryce,\\s+(?:the\\s+|Brightwake's\\s+|the\\s+company's\\s+)?(?:president|founder|chief\\s+operating\\s+officer|CTO|spokesman|owner)\\b",
+              "why": "he is the chief executive"
+            },
+            {
+              "pattern": "\\bPryce[^.]{0,80}\\b(?:said|says)\\s+(?:he|the\\s+company)\\s+(?:knows|knew)\\s+who\\b",
+              "why": "he does not know who stole the credentials"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bPryce,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Pryce\\b",
+              "why": "Pryce is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 8,
+          "to_day": 119,
+          "state": "All customer remote access revoked since September; rebuilding access before any reconnection"
+        }
+      ]
+    },
+    {
+      "id": "CHR-072",
+      "name": "Derek Sloane",
+      "name_tokens": [
+        "Sloane",
+        "Derek"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Managing partner of Vantorra Restoration LLC, the county's emergency debris contractor; denies overbilling; never mentions Brannoch or Quellmar",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bSloane,\\s+(?:the\\s+company's\\s+|Vantorra's\\s+)?(?:chief\\s+executive|CEO|president|owner|founder|spokesman)\\b",
+              "why": "he is the managing partner"
+            },
+            {
+              "pattern": "\\bSloane\\s+(?:admitted|admits|acknowledged|acknowledges|conceded|concedes)\\s+(?:that\\s+)?(?:the\\s+company\\s+)?(?:overbill|inflat|wrongdoing|padd)\\w*",
+              "why": "he denies overbilling"
+            },
+            {
+              "pattern": "\\bSloane\\s+(?:said|says|told)[^.]{0,80}\\b(?:Brannoch|Quellmar)\\b",
+              "why": "he never mentions Brannoch or Quellmar in public"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bSloane,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Sloane\\b",
+              "why": "Sloane is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 10,
+          "to_day": 77,
+          "state": "Public face of the $14.2 million sole-source debris contract; 'working around the clock'"
+        },
+        {
+          "from_day": 78,
+          "to_day": 101,
+          "state": "Denies overbilling after records show bills at 2.3 times survey estimates; welcomes the audit"
+        },
+        {
+          "from_day": 104,
+          "to_day": 104,
+          "state": "Said 'no comment' and hung up after FBI searches on Monday, Dec. 27"
+        },
+        {
+          "from_day": 114,
+          "to_day": 119,
+          "state": "Says the company did the work and will respond through its attorneys"
+        }
+      ]
+    },
+    {
+      "id": "CHR-073",
+      "name": "Nadia Kerr",
+      "name_tokens": [
+        "Kerr",
+        "Nadia"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Operations manager of Quellmar Fuel Partners, the air station's emergency fuel supplier; says all product met specifications; never mentions a barge or a transfer",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bKerr,\\s+(?:the\\s+company's\\s+|Quellmar's\\s+)?(?:chief\\s+executive|CEO|president|owner|founder|spokeswoman)\\b",
+              "why": "she is the operations manager"
+            },
+            {
+              "pattern": "\\bKerr\\s+(?:said|says|told|confirmed|acknowledged)[^.]{0,80}\\bbarge\\b",
+              "why": "she never mentions a barge in public"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bKerr,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Kerr\\b",
+              "why": "Kerr is a woman"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 20,
+          "to_day": 74,
+          "state": "Quellmar supplying the air station under a $2.1 million emergency contract"
+        },
+        {
+          "from_day": 75,
+          "to_day": 101,
+          "state": "Disputes the Navy suspension; cooperating with reviews"
+        },
+        {
+          "from_day": 104,
+          "to_day": 119,
+          "state": "Written statements only; company will respond in court"
+        }
+      ]
+    },
+    {
+      "id": "CHR-074",
+      "name": "Terry Akins",
+      "name_tokens": [
+        "Akins",
+        "Terry"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Regional manager of Gulf Relief Logistics, a freight forwarder whose 40 relief containers on MV Gulf Provider were booked before the storm and berthed Oct. 17, about a month late; office near the port",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\b(?:his|Akins's|Akins'|the\\s+company's|his\\s+company's|his\\s+firm's)\\s+(?:30|35|45|50|60|thirty|fifty|sixty)\\s+(?:relief\\s+)?(?:containers|boxes)\\b|\\bAkins\\b[^.]{0,60}\\b(?:30|35|45|50|60|thirty|fifty|sixty)\\s+(?:relief\\s+)?(?:containers|boxes)\\b",
+              "why": "40 containers"
+            },
+            {
+              "pattern": "\\bAkins,\\s+(?:the\\s+)?(?:owner|president|chief\\s+executive|CEO|founder)\\b",
+              "why": "he is the regional manager"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Man (he)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bAkins,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokeswoman\\b|\\bspokeswoman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Akins\\b",
+              "why": "Akins is a man"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": -35,
+          "to_day": -6,
+          "state": "Standby relief contracts; planning lanes"
+        },
+        {
+          "from_day": -5,
+          "to_day": 32,
+          "state": "40 containers booked on MV Gulf Provider; ship waits at the offshore anchorage"
+        },
+        {
+          "from_day": 33,
+          "to_day": 33,
+          "state": "Containers berthed and came ashore Oct. 17, about a month late"
+        },
+        {
+          "from_day": 44,
+          "to_day": 58,
+          "state": "Customers' cargo held again by the 14-day channel closure"
+        },
+        {
+          "from_day": 59,
+          "to_day": 119,
+          "state": "Rewriting his hurricane playbook around a plan B that does not depend on one channel"
+        }
+      ]
+    },
+    {
+      "id": "CHR-075",
+      "name": "Sandra Ybarra",
+      "name_tokens": [
+        "Ybarra",
+        "Sandra"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "role",
+          "value": "Sales manager at Delta Pumps & Controls, the utility's pump supplier; her local warehouse flooded in Rafael, so replacement parts shipped from out of state and arrived Oct. 20",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bYbarra,\\s+(?:the\\s+)?(?:owner|president|chief\\s+executive|CEO|spokeswoman)\\b",
+              "why": "she is a sales manager"
+            }
+          ]
+        },
+        {
+          "key": "gender",
+          "value": "Woman (she)",
+          "since_day": -60,
+          "forbid": [
+            {
+              "pattern": "\\bYbarra,\\s+(?:a|an|the)\\s+[^,.;]{0,60}?\\bspokesman\\b|\\bspokesman\\s+(?:(?!(?:and|or|with|to|of|for)\\b)(?:[A-Z][a-z]{0,4}\\.|[\\w'-]+)\\s+){0,3}Ybarra\\b",
+              "why": "Ybarra is a woman"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 21,
+          "to_day": 35,
+          "state": "Parts delayed: local warehouse flooded, parts shipping from out of state"
+        },
+        {
+          "from_day": 36,
+          "to_day": 119,
+          "state": "Parts arrived Oct. 20"
+        }
+      ]
+    },
+    {
+      "id": "CHR-080",
+      "name": "@CoastTruthTX",
+      "name_tokens": [
+        "@CoastTruthTX",
+        "CoastTruthTX"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "persona",
+          "value": "Viral account that presents itself as a local mom and activist; quoted only to debunk; its true operator is never revealed",
+          "since_day": 2,
+          "forbid": [
+            {
+              "pattern": "@?CoastTruthTX\\b[^.]{0,80}\\b(?:is\\s+|was\\s+)?(?:run|operated|controlled|directed|created)\\s+by\\b|\\b(?:run|operated|controlled|directed|created)\\s+by\\s+(?:a\\s+|an\\s+|the\\s+)?(?:foreign|overseas|state-linked|state-backed)\\b[^.]{0,60}@?CoastTruthTX\\b",
+              "why": "the operator is never revealed publicly"
+            },
+            {
+              "pattern": "@CoastTruthTX[^.]{0,80}\\b(?:veteran|retired\\s+soldier|nurse)\\b",
+              "why": "it poses as a local mom and activist"
+            },
+            {
+              "pattern": "\\bKESTREL\\b",
+              "why": "the group is never named"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 2,
+          "to_day": 15,
+          "state": "False home-seizure and aid-only-for-the-wealthy posts after landfall"
+        },
+        {
+          "from_day": 75,
+          "to_day": 79,
+          "state": "Second wave: 'stolen aid' contractor posts"
+        }
+      ]
+    },
+    {
+      "id": "CHR-082",
+      "name": "A foreign state broadcaster",
+      "name_tokens": [
+        "foreign state broadcaster",
+        "state broadcaster",
+        "foreign state media",
+        "state-run outlet"
+      ],
+      "age": null,
+      "titles": [],
+      "facts": [
+        {
+          "key": "identity",
+          "value": "Always 'a foreign state broadcaster' (or a state-run outlet abroad); the outlet and its country are never named or linked",
+          "since_day": 46,
+          "forbid": [
+            {
+              "pattern": "\\b(?:Russia|Russian|China|Chinese|Iran|Iranian|North\\s+Korea|North\\s+Korean|Venezuela|Venezuelan|Cuba|Cuban)(?:'s)?\\s+(?:state\\s+)?(?:broadcaster|media|TV|television|network|outlet)\\b|\\b(?:broadcaster|outlet|network|media)\\s+(?:in|from|of)\\s+(?:Russia|Russian|China|Chinese|Iran|Iranian|North\\s+Korea|North\\s+Korean|Venezuela|Venezuelan|Cuba|Cuban)\\b|\\b(?-i:RT)\\b|\\b(?:Sputnik|CGTN|Xinhua|Press\\s+TV|KCNA|Al\\s+Mayadeen|TeleSUR)\\b",
+              "why": "the country and outlet are never named"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "from_day": 46,
+          "to_day": 48,
+          "state": "Mocked the port closure as a sign of US weakness"
+        }
+      ]
+    }
+  ]
+}

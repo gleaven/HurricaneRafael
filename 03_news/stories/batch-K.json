@@ -1,0 +1,1202 @@
+{
+ "batch": "K",
+ "day_range": [
+  22,
+  45
+ ],
+ "stories": [
+  {
+   "story_id": "NWS-P023-04",
+   "day": 23,
+   "time_local": "11:30",
+   "outlet_id": "OUT-03",
+   "section": "Health",
+   "byline": [
+    "CHR-008"
+   ],
+   "headline": "State health investigators confirm waterborne contamination reached Districts 3 and 4 distribution lines",
+   "dek": "Texas DSHS released preliminary findings Thursday showing 94.3 percent of confirmed gastroenteritis cases cluster inside the boil-water zone — and that the first ER admissions followed a documented pressure drop by exactly three days.",
+   "body": [
+    "Three weeks after Corpus Christi issued a city-wide boil-water notice, state investigators have confirmed what neighborhood clinics and emergency physicians suspected: the pressure failure that swept through Districts 3 and 4 of the city's water distribution system in the days after Hurricane Rafael was not merely a supply inconvenience. It was a pathway for contamination that has made hundreds of people sick — more than 600 had been treated at the two main hospitals by Oct. 2, and the count is still rising.",
+    "The Texas Department of State Health Services released preliminary investigation findings Thursday afternoon. The analysis mapped every confirmed gastroenteritis case reported to Nueces County public health since Sept. 14 and found that 94.3 percent of them geocode to addresses inside the District 3 and District 4 service boundaries — the same geography covered by the boil-water notice. The concentration is what epidemiologists call a point-source distribution: cases spike sharply, then trail off, in a pattern consistent with a single contamination event in a shared infrastructure system rather than person-to-person spread.",
+    "\"The epidemiological analysis shows 94.3 percent of confirmed cases geocode to the boil-water zone, and the temporal curve is consistent with distribution contamination rather than a community-wide respiratory or contact illness,\" the DSHS statement reads in part. The agency described its findings as preliminary, pending laboratory confirmation of additional stool samples and ongoing technical review of pressure records from the O.N. Stevens Water Treatment Plant.",
+    "The three-day lag finding is the most precise detail in the report. DSHS linked the onset of the pressure drop in the two districts — documented in distribution records — to the first wave of emergency room admissions for acute gastroenteritis in Districts 3 and 4. That 72-hour gap falls within the typical incubation window for the most common waterborne pathogens, and investigators said the temporal alignment strengthens their confidence in distribution contamination as the source.",
+    "Dr. Renata Obasi, an infectious disease specialist at a Corpus Christi hospital who reviewed the findings, described the zone concentration as \"striking.\" \"When you map these cases and they stack up inside a geographic boundary that corresponds exactly to a pressure event, you're not looking at coincidence,\" she said. \"You're looking at infrastructure.\" She noted that pressure drops in distribution systems can allow contaminants to enter pipes through cracks and joints that remain sealed under normal operating pressure. The department said it is not in a position to identify the source of contamination pending further analysis and that the investigation into the pressure event itself remains open. The boil-water notice for Districts 3 and 4 — which covers approximately 48,000 residents — remains in effect."
+   ],
+   "tags": {
+    "story_type": "analysis",
+    "arcs": [
+     "ARC-WATER",
+     "ARC-HEALTH",
+     "ARC-HOSP"
+    ],
+    "public_facts": [
+     "PUB-163"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [
+     "CHR-130"
+    ],
+    "places": [],
+    "topics": [
+     "waterborne disease",
+     "gastroenteritis",
+     "boil water",
+     "DSHS",
+     "epidemiology",
+     "distribution contamination"
+    ],
+    "follows_up": null
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0303",
+     "EVT-0401",
+     "EVT-0405"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P023-05",
+   "day": 23,
+   "time_local": "15:45",
+   "outlet_id": "OUT-05",
+   "section": "Regulatory",
+   "byline": [
+    "CHR-011"
+   ],
+   "headline": "CISA issues emergency directive requiring ICS credential audit at all federal facilities within 72 hours",
+   "dek": "Emergency Directive 27-02, issued Thursday, cites a \"confirmed ICS incident at a Texas utility\" and requires federal agency operators of industrial control systems to audit remote-access logs and change credential configurations immediately.",
+   "body": [
+    "CORPUS CHRISTI, Texas (Sabal Energy Wire) — The Cybersecurity and Infrastructure Security Agency issued an emergency directive Thursday requiring all federal agencies that operate industrial control systems to audit remote-access credentials and configuration change logs within 72 hours. The directive, designated ED 27-02, cites a confirmed ICS incident at an unnamed Texas utility as the basis for the accelerated compliance window.",
+    "The directive arrives two days after Coastal Bend Power and Water Authority publicly disclosed that investigators had confirmed unauthorized access to its supervisory control and data acquisition systems. That disclosure, made jointly with CISA and the FBI, identified the incident as the first publicly confirmed cyberattack on a Texas water utility's operational technology infrastructure since federal reporting requirements were expanded under the America's Water Infrastructure Act. The utility cyberattack is now the subject of a federal investigation; no attribution has been made public.",
+    "\"CISA is directing all federal agencies operating industrial control systems to audit remote-access credentials and configuration change logs within 72 hours, following a confirmed ICS incident at a Texas utility,\" the directive states. It further requires agencies to submit a summary of findings to CISA's Federal Emergency Management Group within 96 hours of issuance and to implement any identified credential remediation actions within seven days.",
+    "The directive applies specifically to agencies operating their own ICS environments, not to critical infrastructure owners and operators in the private sector, though CISA issued a companion advisory recommending the same audit steps for all operators of water and wastewater operational technology. The advisory describes the access vector exploited in the Texas incident in general terms — unauthorized remote access to a supervisory control network — without disclosing specific technical details the agency says could assist threat actors targeting similar systems.",
+    "Industry analysts noted that the 72-hour window is among the tightest CISA has imposed under its emergency directive authority, which was expanded following the Colonial Pipeline ransomware incident in 2021. \"This directive reflects genuine urgency,\" said one ICS security consultant, who was not authorized to speak on the record about ongoing federal matters. \"When CISA issues a 72-hour audit window and ties it to a named incident class, they are telling the sector that the threat model has changed.\" CISA has not indicated when ED 27-02 will expire or transition to a standard binding operational directive."
+   ],
+   "tags": {
+    "story_type": "analysis",
+    "arcs": [
+     "ARC-UTILITY-CYBER"
+    ],
+    "public_facts": [
+     "GW-PUB-004"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "CISA",
+     "emergency directive",
+     "ICS",
+     "SCADA",
+     "credential audit",
+     "cybersecurity",
+     "federal"
+    ],
+    "follows_up": null
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0421",
+     "EVT-0422"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P025-04",
+   "day": 25,
+   "time_local": "10:00",
+   "outlet_id": "OUT-01",
+   "section": "Business",
+   "byline": [
+    "CHR-002"
+   ],
+   "headline": "With access roads still flooded and spill zones closed, damage assessments fall weeks behind",
+   "dek": "Insurance adjusters and FEMA inspectors say the scale of Hurricane Rafael damage and ongoing environmental restrictions are creating a backlog that will take months to resolve — and the claims numbers are only beginning to come in.",
+   "body": [
+    "Three and a half weeks after Hurricane Rafael made landfall, the people who must calculate the storm's cost cannot reach some of the places where it did the most damage. Access restrictions around the Inner Harbor oil spill zone, roads still flooded in low-lying sections of Portland and Ingleside, and the sheer number of damaged properties across Nueces and San Patricio counties are combining to slow damage assessments to a pace that insurance industry officials say is without precedent in recent Texas storm recovery.",
+    "FEMA and state teams are carrying out joint damage assessments in Corpus Christi, but officials acknowledged this week that the work has fallen behind the scale of the damage. Households cannot yet apply for federal aid: the disaster declaration so far covers debris removal and emergency work, and the state has now formally asked FEMA to add Individual Assistance. Texas Department of Insurance data shows that claims filings from the Coastal Bend are arriving at a rate consistent with what actuaries are projecting as the second-largest coastal storm insurance event in Texas history since Hurricane Harvey in 2017.",
+    "\"We've had adjuster teams trying to access properties in the Hillcrest and Oak Park neighborhoods for two weeks,\" said one independent adjuster working claims in Nueces County, who asked not to be named because she was not authorized to speak for her firm. \"Some blocks you can reach on foot but not in a vehicle. Some you just cannot reach at all yet because of the environmental closure. It slows everything down.\" The Inner Harbor spill zone remains under access restrictions coordinated by the Unified Command.",
+    "The delay creates compounding problems for homeowners navigating insurance claims while they wait to learn whether federal household aid will be approved. Residents say they are receiving conflicting guidance about which paperwork to gather first, and advocates at the city's recovery assistance hubs say the documentation requirements have overwhelmed elderly residents and those without reliable internet access.",
+    "The Texas Department of Insurance said it has activated its Disaster Response Team and deployed staff to the Corpus Christi area to assist policyholders. The department is also monitoring for claims fraud, which historically spikes after major disasters. Insurance industry estimates for total Rafael losses are still preliminary, but several large carriers have flagged the event in regulatory filings as a potentially significant catastrophe-year event. Full assessments, insurers say, could take until early 2028."
+   ],
+   "tags": {
+    "story_type": "analysis",
+    "arcs": [
+     "ARC-CONTRACTS"
+    ],
+    "public_facts": [
+     "PUB-104"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "insurance",
+     "damage assessment",
+     "FEMA",
+     "flood access",
+     "Harvey comparison",
+     "claims backlog"
+    ],
+    "follows_up": null
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0501",
+     "EVT-0502"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P028-05",
+   "day": 28,
+   "time_local": "18:20",
+   "outlet_id": "OUT-06",
+   "section": "National",
+   "byline": [
+    "CHR-012"
+   ],
+   "headline": "Texas governor extends hurricane declaration to cover utility cyberattack in what officials call a first for state emergency law",
+   "dek": "The amended Rafael disaster declaration, signed Tuesday, formally incorporates a utility cybersecurity incident — a move federal emergency management experts say sets a potential precedent for how states respond when hurricanes and infrastructure attacks overlap.",
+   "body": [
+    "CORPUS CHRISTI, Texas (Continental Wire) — The governor of Texas signed an amendment to the Hurricane Rafael major disaster declaration Tuesday that formally includes the cyberattack on a South Texas public utility, in what emergency management officials described as an unprecedented extension of state disaster authority into the cybersecurity domain.",
+    "The Coastal Bend Power and Water Authority, which operates water and power systems serving Corpus Christi and surrounding communities, disclosed a confirmed unauthorized access to its industrial control systems on Oct. 4. By Tuesday, the governor's office had formally incorporated the incident into the existing Rafael declaration, unlocking federal cost-sharing for cybersecurity response activities and assigning FEMA's cybersecurity rapid response team a formal role alongside state and local responders.",
+    "\"This amendment reflects the operational reality that the cyber incident and the hurricane are not separate events,\" said one federal emergency management official familiar with the declaration, who was not authorized to speak publicly about the matter. \"From a recovery standpoint, you can't address one without addressing the other.\" The official said FEMA has deployed rapid response personnel to assist the utility but declined to characterize the scope of the federal team's engagement.",
+    "The amended declaration notes that CBPWA has isolated its operational technology systems as a precautionary measure and that utility crews are managing operations manually. The authority has not restored automated control to its systems; that process is under federal oversight. A federal investigation into the unauthorized access is ongoing, with no public attribution made.",
+    "The declaration is being watched by infrastructure security analysts as a potential model. Hurricanes have historically provided cover for attacks on stressed infrastructure, and the question of when a cyber incident becomes part of a disaster declaration — and thus subject to federal cost-sharing and coordination authority — has not been definitively answered in federal or state law. Texas appears to have answered it, at least in the Rafael case, by extending the declaration rather than treating the two events as separate. The White House National Security Council had no comment Tuesday."
+   ],
+   "tags": {
+    "story_type": "analysis",
+    "arcs": [
+     "ARC-UTILITY-CYBER"
+    ],
+    "public_facts": [
+     "GW-PUB-005"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "governor",
+     "disaster declaration",
+     "cyber",
+     "FEMA",
+     "national security",
+     "infrastructure",
+     "precedent"
+    ],
+    "follows_up": "NWS-P023-05"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0423",
+     "EVT-0424"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P028-04",
+   "day": 28,
+   "time_local": "18:30",
+   "outlet_id": "OUT-01",
+   "section": "Local",
+   "byline": [
+    "CHR-001"
+   ],
+   "headline": "Governor amends Hurricane Rafael disaster declaration to include cyber emergency, deploys federal response team",
+   "dek": "In a significant escalation, the governor signed an amendment Tuesday officially recognizing a cyberattack component in the Rafael disaster — the first time a Texas gubernatorial disaster declaration has been formally extended to cover a utility cybersecurity incident.",
+   "body": [
+    "Gov. Dana Whitfield signed an amendment to the Hurricane Rafael major disaster declaration Tuesday afternoon that formally expands the state's emergency authorization to cover the cyberattack on Coastal Bend Power and Water Authority's utility control systems — the first time a Texas governor has formally incorporated a utility cybersecurity incident into a hurricane disaster declaration.",
+    "The amended declaration acknowledges that FEMA has deployed a cybersecurity rapid response team to assist CBPWA and that the utility has isolated its control systems as a precautionary measure. Field crews are managing utility operations manually as a result. The declaration states that water supply in the affected service territory remains safe for boiled use and that electric service restoration continues on manual protocols.",
+    "\"FEMA has deployed a cybersecurity rapid response team to work alongside state and local responders at CBPWA,\" a spokesperson for the governor's office said in a statement. \"The affected utility has isolated its control systems as a precautionary measure; field crews are managing operations manually during this period. The water supply remains safe for boiled use in affected zones.\" The governor's office did not answer questions about the timeline of the cyber incident or its relationship to the extended power outages that have affected portions of Districts 3 and 4.",
+    "The amendment is significant in several respects. It unlocks federal cost-sharing authority for cybersecurity response activities that might otherwise fall outside the standard hurricane disaster framework. It also formally assigns FEMA a coordinating role in the utility cyber response — a relatively new federal posture under the Infrastructure Investment and Jobs Act, which expanded FEMA's authority to include cybersecurity components of infrastructure disasters. The city's boil-water notice for Districts 3 and 4 remains in effect for approximately 48,000 residents.",
+    "Local officials offered little additional detail Tuesday. CBPWA, the authority that operates Corpus Christi's water and power distribution systems, did not hold a press briefing. A representative told the Ledger that the authority's current focus was on maintaining manual operations while the federal team completed its work. City Councilmember Denny Ramirez, whose district includes portions of the affected neighborhoods, said he was briefed by the city manager's office Tuesday morning. \"I expect a full public accounting,\" he said. \"The community has been patient. That patience has a limit.\""
+   ],
+   "tags": {
+    "story_type": "breaking",
+    "arcs": [
+     "ARC-UTILITY-CYBER",
+     "ARC-WATER"
+    ],
+    "public_facts": [
+     "GW-PUB-005"
+    ],
+    "characters_quoted": [
+     "CHR-131"
+    ],
+    "characters_mentioned": [
+     "CHR-148"
+    ],
+    "places": [],
+    "topics": [
+     "governor",
+     "disaster declaration",
+     "cyber",
+     "FEMA",
+     "CBPWA",
+     "utility",
+     "amendment"
+    ],
+    "follows_up": "NWS-P023-05"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0423",
+     "EVT-0424"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P029-04",
+   "day": 29,
+   "time_local": "13:00",
+   "outlet_id": "OUT-01",
+   "section": "Local",
+   "byline": [
+    "CHR-001"
+   ],
+   "headline": "Emergency call center returns to normal volume after 29-day surge; 23 false reports from early recovery referred to FBI",
+   "dek": "The Coastal Bend Emergency Communications Center said Wednesday that Hurricane Rafael call volume has returned to baseline — and confirmed for the first time that more than two dozen calls made in the week after landfall have been referred to federal law enforcement as potentially coordinated false reports.",
+   "body": [
+    "The Coastal Bend Emergency Communications Center announced Wednesday that Hurricane Rafael emergency call volume has returned to near-normal levels — 380 calls on Tuesday against a pre-storm baseline of approximately 310 a day — ending a four-week surge that at its peak reached nearly 2,900 calls daily — almost ten times normal. The center, which serves as the region's 911 hub, said the sustained elevation is the longest it has experienced in its operational history.",
+    "In the same announcement, CBECC confirmed that 23 calls received between September 21 and September 24 — days seven through ten after Rafael's landfall — have been referred to federal law enforcement as potentially coordinated false reports. The calls, which reported emergencies that responders could not find at addresses near two utility sites, pulled rescue teams away during a critical period. CBECC director Patricia Escamilla-Voss said the referrals were made to the FBI's Corpus Christi resident agency after a pattern review identified the calls as likely coordinated.",
+    "\"The Coastal Bend Emergency Communications Center today reported that Hurricane Rafael emergency call volume has returned to near-normal levels,\" Escamilla-Voss said in a written statement. \"The agency also confirmed that 23 calls received September 21 through 24 were referred to federal law enforcement as potentially coordinated false reports.\" She said the center is cooperating with the federal investigation and would not provide additional detail.",
+    "The public disclosure that false emergency calls may have been coordinated comes as federal and state investigators are separately examining online disinformation activity targeting Rafael recovery. Texas TDEM and federal partners have been tracking social media accounts that amplified false shelter locations before landfall and blamed the outages on grid negligence afterward. The overlap in tactics and timing is under review, though Escamilla-Voss declined to comment on any potential connection between the calls and the online activity.",
+    "Escamilla-Voss said the center plans a comprehensive after-action review of its surge protocols and will assess staffing levels, call authentication procedures, and coordination with law enforcement for future major events. She said the review would be completed within 90 days and that findings would be shared with Nueces County Commissioners Court. For families still managing recovery, she reminded residents that the 211 Texas Help Line remains available for non-emergency assistance."
+   ],
+   "tags": {
+    "story_type": "update",
+    "arcs": [
+     "ARC-RUMORS",
+     "ARC-DISPATCH"
+    ],
+    "public_facts": [
+     "PUB-133"
+    ],
+    "characters_quoted": [
+     "CHR-108"
+    ],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "911",
+     "CBECC",
+     "false reports",
+     "FBI referral",
+     "emergency communications",
+     "call surge",
+     "coordination"
+    ],
+    "follows_up": null
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0601",
+     "EVT-0602"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P029-05",
+   "day": 29,
+   "time_local": "15:30",
+   "outlet_id": "OUT-05",
+   "section": "Utilities",
+   "byline": [
+    "CHR-011"
+   ],
+   "headline": "CBPWA isolates operational technology network under CISA guidance; crews shift to fully manual operations",
+   "dek": "Coastal Bend Power and Water Authority confirmed Wednesday that it has taken precautionary steps to isolate portions of its operational technology network, placing all utility control functions under manual field management as federal cybersecurity experts assess the systems.",
+   "body": [
+    "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Coastal Bend Power and Water Authority confirmed Wednesday that it has isolated portions of its operational technology network as a precautionary measure, acting under guidance from the Cybersecurity and Infrastructure Security Agency. The isolation means all control functions for the authority's water treatment, distribution and electrical systems are now managed by field crews without automated assistance from the utility's SCADA infrastructure.",
+    "\"CBPWA has taken precautionary steps to isolate portions of its operational technology network under guidance from CISA,\" the authority said in a statement released Wednesday afternoon. \"Field crews are managing operations manually during this period. Restoration of electric service continues on manual protocols. The water supply remains safe for boiled use in Districts 3 and 4.\" The authority did not indicate when it expected to restore automated operations.",
+    "Manual operations represent a significant burden on field crews, who must make and execute control decisions that would ordinarily be handled or assisted by automated systems. Sources familiar with utility operations said manual management of a water and power system serving roughly 500,000 people requires substantial additional staffing and extends the time needed for routine tasks including load balancing, pressure adjustments, and switching. The authority has not addressed publicly whether it has contracted additional crews for the manual operations period.",
+    "The network isolation was first indicated in the governor's amended disaster declaration signed Tuesday, which noted that the utility had isolated its control systems as a precautionary measure. Wednesday's statement from CBPWA is the authority's first direct public confirmation. A FEMA-deployed cybersecurity rapid response team is on-site working alongside state and federal investigators. The underlying federal investigation into the unauthorized SCADA access remains ongoing.",
+    "For utility industry observers, the combination of network isolation, manual operations and federal team deployment marks a significant response posture. CISA has not publicly described the scope of the OT isolation or what assessment activities are underway. The authority said it would provide updates as the situation developed and that its first priority remained maintaining safe and adequate utility service to all customers."
+   ],
+   "tags": {
+    "story_type": "update",
+    "arcs": [
+     "ARC-UTILITY-CYBER",
+     "ARC-WATER"
+    ],
+    "public_facts": [
+     "GW-PUB-102"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "CBPWA",
+     "OT network",
+     "SCADA",
+     "CISA",
+     "manual operations",
+     "isolation",
+     "utility"
+    ],
+    "follows_up": "NWS-P028-04"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0425",
+     "EVT-0426"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P030-06",
+   "day": 30,
+   "time_local": "11:00",
+   "outlet_id": "OUT-01",
+   "section": "Local",
+   "byline": [
+    "CHR-003"
+   ],
+   "headline": "A month in, both boil-water notices stay; city's weekly update goes out in English and Spanish together",
+   "dek": "Replacement pump parts for the O.N. Stevens plant still have not arrived. For the first time since the storm, the city's notice went out in both languages at once.",
+   "body": [
+    "CORPUS CHRISTI — Thirty days after Hurricane Rafael, tap water across Corpus Christi still has to be boiled, the city said Thursday in a weekly update that broke with past practice in one respect: it went out in English and Spanish at the same time.",
+    "The citywide boil-water notice issued Sept. 18 and the separate notice issued Sept. 26 for Water Districts 3 and 4 both remain in effect, the Public Works Department said. Replacement pump parts for the O.N. Stevens Water Treatment Plant have not arrived, and neither notice can be lifted until repairs are finished and testing meets state and federal standards.",
+    "\"We know a month is a long time to boil water, and we are sorry,\" said Teresa Gallegos, spokeswoman for the city water utility. \"The parts are coming from out of state. When they are in and the tests come back clean, we will say so the same day.\"",
+    "The supplier's local warehouse flooded in the storm, the utility has said, and the parts are being shipped from elsewhere. Temporary pumps are limiting how much water the plant can move.",
+    "Residents should bring water to a rolling boil for two minutes before drinking it, cooking with it, making ice or brushing teeth.",
+    "The simultaneous release follows weeks of criticism. When the Districts 3 and 4 notice was issued the evening of Sept. 26, the Spanish version did not reach KNCB Coastal Bend Radio until 6:03 the next morning, more than 12 hours later, as the Ledger reported at the time.",
+    "Dr. Anita Shah, epidemiologist with the Corpus Christi-Nueces County Public Health District, said the notices work only if people keep following them. \"Stomach illness is down from where it was. That is not a reason to stop boiling,\" Shah said. \"Wash your hands, and boil the water.\"",
+    "In Calallen, schoolteacher Leticia Ramos, 45, said she read Thursday's update twice looking for a date. \"There isn't one,\" she said. \"I have the two-minute boil memorized. What I want is a calendar.\"",
+    "The city said it will keep issuing updates weekly, in both languages."
+   ],
+   "tags": {
+    "story_type": "update",
+    "arcs": [
+     "ARC-WATER",
+     "ARC-BILINGUAL"
+    ],
+    "public_facts": [
+     "PUB-145",
+     "PUB-039",
+     "PUB-143",
+     "PUB-144",
+     "PUB-050",
+     "PUB-055",
+     "PUB-052"
+    ],
+    "characters_quoted": [
+     "CHR-024",
+     "CHR-026",
+     "CHR-045"
+    ],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "boil water",
+     "weekly update",
+     "districts 3 and 4",
+     "pump parts",
+     "o.n. stevens",
+     "bilingual alert"
+    ],
+    "follows_up": "NWS-P023-04"
+   },
+   "internal": {
+    "truth_events": [],
+    "batch": "K",
+    "status": "draft",
+    "revised": "canon-2026-11-09"
+   }
+  },
+  {
+   "story_id": "NWS-P030-07",
+   "day": 30,
+   "time_local": "14:00",
+   "outlet_id": "OUT-06",
+   "section": "Business",
+   "byline": [
+    "CHR-012"
+   ],
+   "headline": "Hurricane Rafael insurance claims hit $2.1 billion as Texas flags coordinated fraud activity",
+   "dek": "The Texas Department of Insurance and industry partners reported Thursday that Rafael has generated 187,000 claims totaling an estimated $2.1 billion in losses — and that automated fraud systems have flagged an unusual pattern of duplicate and inflated claim submissions in several ZIP codes.",
+   "body": [
+    "CORPUS CHRISTI, Texas (Continental Wire) — The Texas Department of Insurance and the Insurance Council of Texas reported Thursday that Hurricane Rafael has generated 187,000 insurance claims totaling an estimated $2.1 billion in losses, making the storm the second-largest Texas coastal insurance event since Hurricane Harvey in 2017. TDI Commissioner Rosa Vásquez said automated detection systems have flagged \"an unusual concentration\" of potentially fraudulent claim submissions, primarily in ZIP codes covering the Inner Harbor's commercial district and several industrial corridors.",
+    "\"Hurricane Rafael has generated 187,000 insurance claims totaling an estimated $2.1 billion in losses,\" the joint statement from TDI and the Insurance Council reads. \"Fraudulent claim submissions flagged by automated systems include duplicate submissions, inflated repair estimates provided by unlicensed contractors, and claims filed for addresses with no recorded policyholder relationship.\" The flagged submissions represent a small fraction of total claims but have already been referred to TDI's fraud enforcement division.",
+    "The $2.1 billion figure is an early estimate subject to revision upward. Industry actuaries noted that the damage assessment process is weeks behind schedule due to access restrictions around the Inner Harbor oil spill zone and persistent flooding in some Nueces County neighborhoods. Adjusters have not yet fully assessed damage to the port's industrial infrastructure, and business-interruption claims tied to the 30-day port closure are expected to add substantially to the total once calculated.",
+    "Harvey, which struck the Texas coast in 2017, resulted in more than $125 billion in total damage including uninsured losses; insured losses alone exceeded $30 billion. Rafael's projected insured losses are smaller in absolute terms but are concentrated in a narrower geographic footprint, creating intensity that some actuaries say rivals Harvey in specific ZIP codes along the Inner Harbor and in the low-lying bay neighborhoods that bore the worst of the storm surge.",
+    "Major carriers operating in the South Texas market have already flagged Rafael as a potential earnings-year event in SEC filings. TDI said it expects the final claims figure to stabilize by early 2028 and urged policyholders who have not yet filed to do so through licensed contractors and to contact the department's consumer help line if they believe they have been approached by a fraudulent contractor."
+   ],
+   "tags": {
+    "story_type": "analysis",
+    "arcs": [
+     "ARC-CONTRACTS",
+     "ARC-FRAUD"
+    ],
+    "public_facts": [
+     "PUB-211"
+    ],
+    "characters_quoted": [
+     "CHR-132"
+    ],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "insurance",
+     "claims",
+     "fraud",
+     "Harvey comparison",
+     "TDI",
+     "economic loss"
+    ],
+    "follows_up": "NWS-P025-04"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0501",
+     "EVT-0503"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P030-05",
+   "day": 30,
+   "time_local": "14:45",
+   "outlet_id": "OUT-04",
+   "section": "Ports",
+   "byline": [
+    "CHR-010"
+   ],
+   "headline": "Port authority: ships to move by priority as channel partly reopens; no date for the inner channel",
+   "dek": "The port's afternoon statement fills in the morning's Coast Guard notice: outer and bay reaches cleared after surveys, the offshore queue to be worked by priority, relief cargo delayed, and six security cameras along the Inner Harbor still offline.",
+   "body": [
+    "The Port of Corpus Christi Authority on Thursday afternoon confirmed the partial reopening of the ship channel, 30 days after Hurricane Rafael closed it, and set out how the first traffic will be handled.",
+    "What is open. The Coast Guard cleared the outer and bay reaches of the channel after surveys of channel depth and aids to navigation, the port said.",
+    "What is not. The inner channel remains restricted while vessels and berths affected by the Inner Harbor oil spill are decontaminated. No date has been set for lifting that restriction.",
+    "The queue. Ships waiting at the offshore anchorage will be brought in by priority. The port said the backlog will delay some cargo, including relief shipments. Gulfwater reported Thursday morning that the delayed cargo includes the 40 relief containers aboard MV Gulf Provider.",
+    "Security systems. Six port security cameras along the Inner Harbor remain offline pending replacement parts, the statement said.",
+    "Investigation. The Coast Guard investigation into the tanker oil release remains open.",
+    "\"The outer and bay reaches are open, the inner channel is restricted, and the line offshore gets worked in order of priority,\" said Javier Salinas, spokesman for the Port of Corpus Christi. \"It is a partial reopening. We are not calling it anything else.\"",
+    "Operator notes. For crude shippers the distinction matters. Rendal Terminals and the other Inner Harbor docks sit behind the restricted reach, so Thursday's change first helps vessels bound for berths outside it. Charterers with ships at the anchorage should confirm berth status with their agents before assuming a slot. Vessels that do transit the inner channel remain subject to the Unified Command's decontamination requirements, the Coast Guard said earlier Thursday.",
+    "Gulfwater will report the order of the first arrivals as the port releases it."
+   ],
+   "tags": {
+    "story_type": "update",
+    "arcs": [
+     "ARC-PORT",
+     "ARC-SPILL"
+    ],
+    "public_facts": [
+     "PUB-123",
+     "PUB-058"
+    ],
+    "characters_quoted": [
+     "CHR-023"
+    ],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "partial reopening",
+     "ship channel",
+     "inner channel",
+     "decontamination",
+     "anchorage backlog",
+     "port of corpus christi"
+    ],
+    "follows_up": "NWS-P030-01"
+   },
+   "internal": {
+    "truth_events": [],
+    "batch": "K",
+    "status": "draft",
+    "revised": "canon-2026-11-09"
+   }
+  },
+  {
+   "story_id": "NWS-P030-08",
+   "day": 30,
+   "time_local": "17:30",
+   "outlet_id": "OUT-01",
+   "section": "Business",
+   "byline": [
+    "CHR-002"
+   ],
+   "headline": "Texas insurance commissioner launches Rafael fraud task force, coordinates with FBI and DPS",
+   "dek": "Texas Department of Insurance Commissioner Rosa Vásquez activated the Insurance Fraud Task Force Thursday, citing coordinated claim fraud patterns that state and federal investigators are examining together.",
+   "body": [
+    "Texas Department of Insurance Commissioner Rosa Vásquez activated the agency's Insurance Fraud Task Force for Hurricane Rafael on Thursday afternoon, citing evidence of coordinated fraudulent claim activity that the FBI and Texas Department of Public Safety are jointly investigating.",
+    "The task force activation follows Thursday morning's report of 187,000 Rafael claims totaling an estimated $2.1 billion in losses, which included disclosure that automated systems have flagged an unusual pattern of inflated and duplicate submissions. The fraud task force brings together TDI investigators with representatives from the FBI and Texas DPS, who have authority to pursue criminal charges against organized fraud rings.",
+    "\"The Texas Department of Insurance Commissioner activates the Insurance Fraud Task Force for Hurricane Rafael, coordinating with FBI and Texas DPS on a coordinated fraud scheme investigation,\" the commissioner's office said in a brief afternoon statement. The agency did not describe the scope of the investigation or how many suspects or entities are under review. TDI urged property owners to verify that all repair firms hold a valid state license before signing work agreements and to report suspicious contact to the department's fraud tip line.",
+    "Rafael-related fraud complaints have risen sharply since landfall, with the state's insurance fraud hotline reporting a 340 percent increase in calls compared with the same period after Hurricane Harvey. Industry advocates said Rafael presents similar vulnerability because the scale of damage means many property owners are dealing with unfamiliar insurance processes under financial pressure. \"The window right after a major storm is when fraud is most effective, because people are desperate and the system is overwhelmed,\" said one insurance defense attorney familiar with Rafael-related filings. \"That's exactly when you need law enforcement engaged.\" The FBI and DPS did not comment Thursday."
+   ],
+   "tags": {
+    "story_type": "brief",
+    "arcs": [
+     "ARC-CONTRACTS",
+     "ARC-FRAUD"
+    ],
+    "public_facts": [
+     "PUB-214"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [
+     "CHR-132"
+    ],
+    "places": [],
+    "topics": [
+     "insurance fraud",
+     "task force",
+     "Operation Sandbar",
+     "FBI",
+     "TDI",
+     "DPS"
+    ],
+    "follows_up": "NWS-P030-07"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0503",
+     "EVT-0504"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P032-05",
+   "day": 32,
+   "time_local": "13:30",
+   "outlet_id": "OUT-07",
+   "section": "Aviation",
+   "byline": [
+    "CHR-013"
+   ],
+   "headline": "Port of Corpus Christi and CBPWA announce joint counter-UAS program after unauthorized drone activity identified pre-storm",
+   "dek": "The Port of Corpus Christi Authority and Coastal Bend Power and Water Authority announced a joint counter-drone detection program Saturday, acting on the federal finding, made public two weeks ago, of unauthorized drone activity in the area before Hurricane Rafael's landfall.",
+   "body": [
+    "The Port of Corpus Christi Authority and Coastal Bend Power and Water Authority jointly announced Saturday the deployment of a counter-uncrewed aerial systems monitoring program covering critical infrastructure at the port and utility facilities, following the federal finding, made public Sept. 29, of unauthorized drone activity in the area before the storm. It is the first step either agency has announced in response.",
+    "\"Port of Corpus Christi Authority and CBPWA today announced a joint counter-UAS monitoring program for critical infrastructure, following retroactive identification of unauthorized drone activity in the pre-storm period,\" the joint statement reads. The agencies did not specify the dates on which the drone activity was identified, the type or number of aircraft involved, or the specific facilities overflown. They said the program will deploy a radio-frequency detection and direction-finding network at sites across the port and utility corridor, supplied by Sentinel Airspace Inc. and expected to be operational within 90 days.",
+    "Counter-UAS authority for civilian infrastructure is tightly restricted under federal law, which currently limits most countermeasures to federal law enforcement and the Department of Defense. The joint program is limited to detection: it can locate a drone and its operator but cannot bring an aircraft down. The agencies said the network will be operated in coordination with the FAA and CBP Air and Marine Operations.",
+    "The disclosure that drone activity was retroactively identified above critical infrastructure in the pre-storm period is significant in the context of the confirmed cyberattack on CBPWA's industrial control systems and the broader federal investigation. Law enforcement officials have not publicly discussed the drone activity or its potential relationship to the cyberattack; the FBI declined to comment Saturday. Aviation security specialists noted that pre-attack drone reconnaissance of industrial facilities has been documented in other infrastructure incident investigations.",
+    "Port spokesperson Javier Salinas and CBPWA did not answer specific questions about the drone findings at Saturday's briefing. \"Our focus is on protecting the facilities going forward,\" Salinas said. \"We identified a gap. We are closing it.\" The FAA's temporary flight restriction over the area in September was the hurricane restriction and is unrelated to the new program."
+   ],
+   "tags": {
+    "story_type": "analysis",
+    "arcs": [
+     "ARC-SPILL-CYBER",
+     "ARC-CUAS"
+    ],
+    "public_facts": [
+     "PUB-182"
+    ],
+    "characters_quoted": [
+     "CHR-023"
+    ],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "counter-UAS",
+     "drone",
+     "port security",
+     "CBPWA",
+     "critical infrastructure",
+     "pre-storm surveillance"
+    ],
+    "follows_up": null
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0427",
+     "EVT-0428"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P032-04",
+   "day": 32,
+   "time_local": "14:30",
+   "outlet_id": "OUT-06",
+   "section": "National",
+   "byline": [
+    "CHR-012"
+   ],
+   "headline": "Federal investigators refer 847 social media accounts for removal after Rafael disinformation campaign traced to coordinated network",
+   "dek": "Texas TDEM and federal partners have identified 847 accounts across multiple platforms that amplified false shelter locations as the storm approached, later pivoted to blaming ERCOT for prolonged outages, and are now promoting what investigators characterize as a \"coverup\" narrative about the utility cyberattack.",
+   "body": [
+    "CORPUS CHRISTI, Texas (Continental Wire) — Texas Division of Emergency Management and federal partners have identified 847 social media accounts engaged in what investigators describe as a coordinated information operation targeting Hurricane Rafael response and recovery, and have referred them to major platforms for removal. CISA published an advisory Saturday characterizing the activity as a coordinated influence behavior campaign that exploited the storm's emergency information environment across three distinct phases.",
+    "According to the CISA advisory, the accounts amplified false emergency shelter locations in the five days before Rafael's landfall. Separately, 23 false emergency calls made to Corpus Christi's 911 center a week after landfall have been referred to the FBI. In a second phase, the same network promoted a narrative attributing the extended power outages in Corpus Christi's bay neighborhoods to failures by the Electric Reliability Council of Texas, the state's power grid operator, rather than to hurricane damage. ERCOT has no operational role in CBPWA's distribution system.",
+    "Following the Oct. 5 public disclosure of the utility cyberattack, the accounts shifted again, now promoting what CISA characterized as a \"this is a coverup\" narrative — claiming that federal investigators are concealing information about the attack's perpetrators or scope. The advisory warns that the coverup narrative is \"designed to undermine public confidence in the ongoing federal investigation and in official communications from the utility and emergency management agencies.\"",
+    "\"Texas TDEM and federal partners have identified and referred 847 social media accounts to platforms for removal,\" the CISA advisory states. \"These accounts amplified false shelter locations, promoted an ERCOT-blame narrative, and are now promoting a coverup theory regarding the utility cyberattack. The coordinated nature of the account activity is consistent with an influence operation rather than organic public concern.\" CISA did not attribute the operation to any specific actor or state in the advisory; that assessment, if made, has not been made public.",
+    "Platform companies have not confirmed they received or acted on the referrals as of Saturday. Media researchers who study coordinated inauthentic behavior said the three-phase structure described in the advisory is consistent with operations designed to cause sustained disruption across the full arc of a disaster response. \"Phase one is operational disruption during the emergency itself. Phase two is political attribution to maximize blame. Phase three is epistemic — you undermine the public's ability to trust any official account,\" said one disinformation researcher who reviewed the advisory. \"If this characterization is accurate, it's a relatively sophisticated playbook.\""
+   ],
+   "tags": {
+    "story_type": "analysis",
+    "arcs": [
+     "ARC-RUMORS",
+     "ARC-SPILL-CYBER",
+     "ARC-DISINFO"
+    ],
+    "public_facts": [
+     "PUB-151"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "disinformation",
+     "social media",
+     "CIB",
+     "CISA",
+     "TDEM",
+     "coverup narrative",
+     "ERCOT blame",
+     "platform referral"
+    ],
+    "follows_up": "NWS-P029-04"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0601",
+     "EVT-0602",
+     "EVT-0603"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P035-04",
+   "day": 35,
+   "time_local": "15:30",
+   "outlet_id": "OUT-05",
+   "section": "Utilities",
+   "byline": [
+    "CHR-011"
+   ],
+   "headline": "CBPWA restores power to final 3,200 customers, completing 35-day recovery from Rafael damage",
+   "dek": "Field crews completed manual power restoration procedures overnight Tuesday, bringing all Corpus Christi load zones above 99 percent restored — but the milestone comes after relay inspection and hardening work that exposed infrastructure vulnerabilities beyond what hurricane damage alone would explain.",
+   "body": [
+    "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Coastal Bend Power and Water Authority field crews completed manual power restoration procedures overnight Monday into Tuesday, restoring service to the final 3,200 customers who have been without power since Hurricane Rafael made landfall 35 days ago. All Corpus Christi load zones are now above 99 percent restoration, the authority said in a statement Tuesday afternoon, citing the milestone as completion of the Rafael power restoration effort.",
+    "\"Following relay inspection and hardening work at two facilities, field crews completed manual restoration procedures overnight,\" the CBPWA statement reads. \"All Corpus Christi load zones are now above 99 percent restoration following Hurricane Rafael.\" The authority noted that the final phase of restoration required manual protocols because its operational technology systems remain isolated under guidance from CISA and federal investigators. No date has been given for reconnecting automated control systems.",
+    "The 35-day restoration timeline is significantly longer than typical post-hurricane power recovery for a storm of Rafael's intensity, and the relay inspection work mentioned in Tuesday's statement has drawn attention from the utility industry and from regulators. Industry engineers familiar with the recovery noted that relay hardening is not standard hurricane restoration work. Protective relays are normally factory-configured and require modification only under specific technical circumstances; a relay configuration issue is what the federal investigation has identified as connected to the unauthorized SCADA access disclosed Oct. 5.",
+    "CBPWA did not answer questions about the specific nature of the relay findings or their relationship to the federal investigation. The authority said the two facilities where hardening work was required have been restored to service and that all relay configurations have been reviewed and verified. The authority declined to name the facilities.",
+    "For the 3,200 customers who endured the final stretch of the outage — many of them in the Hillcrest and Oak Park neighborhoods where utility infrastructure sustained damage during and after the storm surge — Tuesday marked the end of a period that in some cases included extended stays at family homes, shelters, or hotels. The CBPWA statement thanked those customers for their patience and noted that all utility bills would reflect applicable outage credits per state PUC guidelines."
+   ],
+   "tags": {
+    "story_type": "update",
+    "arcs": [
+     "ARC-UTILITY-CYBER"
+    ],
+    "public_facts": [
+     "GW-PUB-006"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "power restoration",
+     "CBPWA",
+     "relay hardening",
+     "manual operations",
+     "final customers",
+     "35 days"
+    ],
+    "follows_up": null
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0431",
+     "EVT-0432"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P036-04",
+   "day": 36,
+   "time_local": "16:00",
+   "outlet_id": "OUT-05",
+   "section": "Utilities",
+   "byline": [
+    "CHR-011"
+   ],
+   "headline": "CBPWA and CISA declare utility's OT systems clean and secure; enhanced monitoring now active",
+   "dek": "A joint statement Wednesday confirmed that Coastal Bend Power and Water Authority's operational technology network has been cleaned, rebuilt, and reconnected after a comprehensive security audit — marking the formal close of the period of full manual operations that began when systems were isolated.",
+   "body": [
+    "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Coastal Bend Power and Water Authority and the Cybersecurity and Infrastructure Security Agency issued a joint statement Wednesday confirming that the utility's operational technology systems have been cleaned, rebuilt, and reconnected to operational use following a comprehensive security audit. The announcement ends the period of fully manual utility operations that began when the authority isolated its OT network under federal guidance in the days after the Oct. 5 disclosure of the utility cyberattack.",
+    "\"CBPWA and CISA have confirmed that the utility's operational technology systems have been cleaned, rebuilt and reconnected,\" the joint statement reads. \"A comprehensive security audit is complete. The utility has implemented enhanced monitoring and access controls.\" The statement does not describe the specific nature of the modifications found or made during the audit, citing the ongoing federal investigation.",
+    "The reconnection marks a significant operational milestone for the authority's field crews, who have been managing all water treatment, distribution, and electrical switching functions manually for more than a week. Manual operations in a system of CBPWA's scale — serving more than 300,000 residents across Corpus Christi and the surrounding county — requires substantially larger crews and extends the time required for routine tasks. Industry sources said the authority brought in contracted crews during the manual period to maintain service standards.",
+    "The enhanced monitoring referenced in the statement reflects new ICS security architecture that CISA and the authority declined to detail publicly, citing security sensitivity. Industry experts familiar with post-incident OT recovery said that rebuilt systems typically include enhanced logging, network segmentation, and privileged access management controls that did not exist in the original configuration. CISA's ED 27-02, issued Oct. 7, required all federal ICS operators to audit remote-access credentials; Wednesday's statement suggests CBPWA's own audit and remediation work has concluded.",
+    "The authority said the boil-water notice for Districts 3 and 4 remains in effect separately from the OT systems status and is awaiting full pressure normalization and sampling clearance across the two districts. The boil-water notice and the OT reconnection are distinct milestones, the authority said, and the water advisory will not be lifted until the water system independently meets state and federal testing standards."
+   ],
+   "tags": {
+    "story_type": "update",
+    "arcs": [
+     "ARC-UTILITY-CYBER"
+    ],
+    "public_facts": [
+     "GW-PUB-103"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "CBPWA",
+     "CISA",
+     "OT systems",
+     "security audit",
+     "clean rebuild",
+     "enhanced monitoring",
+     "reconnection"
+    ],
+    "follows_up": "NWS-P029-05"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0433",
+     "EVT-0434"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P038-04",
+   "day": 38,
+   "time_local": "14:00",
+   "outlet_id": "OUT-06",
+   "section": "National",
+   "byline": [
+    "CHR-012"
+   ],
+   "headline": "Two social media platforms remove 847 accounts tied to coordinated Rafael disinformation campaign",
+   "dek": "Platform companies announced Friday the removal of 847 accounts engaged in what they described as coordinated inauthentic behavior targeting Hurricane Rafael response — accounts that progressed through three phases of harmful narratives as the disaster unfolded.",
+   "body": [
+    "CORPUS CHRISTI, Texas (Continental Wire) — Two major social media platforms announced Friday the removal of 847 accounts that federal investigators and platform trust-and-safety teams determined were engaged in coordinated inauthentic behavior targeting Hurricane Rafael response and recovery in South Texas. The removals confirm the referrals made by Texas TDEM and federal partners six days earlier, which had not been publicly acknowledged by the platforms until Friday.",
+    "\"Two major social media platforms announced the removal of 847 accounts engaged in coordinated inauthentic behavior targeting Hurricane Rafael response,\" said one company's trust and safety team in a statement. The platforms — which are not named here pending confirmation of their identities — described the accounts as operating in a coordinated manner inconsistent with organic user behavior, sharing content in synchronized bursts and using inauthentic amplification techniques. Both companies said they are sharing threat intelligence with federal law enforcement under applicable legal frameworks.",
+    "According to the platforms' disclosures, the removed accounts operated in three identifiable phases. During the first phase, in the five days before Rafael's landfall, accounts amplified false emergency shelter locations that directed displaced residents to non-existent or closed sites. The second phase, running through mid-October, promoted a narrative attributing the prolonged power outages in Corpus Christi's bay neighborhoods to Electric Reliability Council of Texas failures, despite ERCOT having no operational role in the affected utility's distribution system. After the Oct. 5 public disclosure of the confirmed utility cyberattack, accounts shifted to what the platforms characterized as a \"coverup\" narrative claiming that official accounts of the attack were incomplete or deliberately misleading.",
+    "The coordinated nature of the false-shelter phase is under joint review by the FBI and Texas law enforcement, who are separately investigating 23 false emergency calls made to Corpus Christi's 911 center a week after landfall. Law enforcement has not publicly stated whether the calls and the online accounts are linked.",
+    "Security researchers who study coordinated inauthentic behavior said the three-phase structure is consistent with well-resourced operations that pre-plan content around anticipated disaster events. \"You don't improvise this kind of pivot between phases,\" one researcher said. \"The coverup phase was ready to go as soon as there was something to cover up.\" Neither platform attributed the operation to a specific actor or country, and neither CISA nor the FBI has made a public attribution."
+   ],
+   "tags": {
+    "story_type": "update",
+    "arcs": [
+     "ARC-RUMORS",
+     "ARC-DISINFO"
+    ],
+    "public_facts": [
+     "PUB-152"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "social media",
+     "platform removal",
+     "coordinated inauthentic behavior",
+     "disinformation",
+     "CIB",
+     "accounts removed"
+    ],
+    "follows_up": "NWS-P032-04"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0601",
+     "EVT-0603",
+     "EVT-0604"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P040-04",
+   "day": 40,
+   "time_local": "10:00",
+   "outlet_id": "OUT-01",
+   "section": "Local",
+   "byline": [
+    "CHR-001"
+   ],
+   "headline": "Texas AG warns of ongoing disinformation campaign targeting Rafael victims; urges residents to verify before sharing",
+   "dek": "The Office of the Texas Attorney General issued a consumer advisory Sunday warning Coastal Bend residents about misinformation targeting Rafael recovery, specifically flagging accounts and websites claiming to have exclusive inside information about the utility cyberattack.",
+   "body": [
+    "The Office of the Texas Attorney General issued a consumer advisory Sunday warning Corpus Christi-area residents to be cautious about misinformation campaigns targeting Hurricane Rafael recovery efforts, and specifically alerting them to social media accounts and websites claiming to hold exclusive, undisclosed information about the utility cyberattack. The advisory does not name specific accounts or websites, but it describes a pattern of claims that the AG's office says could harm residents' decision-making during recovery.",
+    "\"The Office of Texas Attorney General issues this advisory warning Texans about misinformation campaigns targeting Rafael recovery,\" the advisory reads. \"Residents should be wary of third-party sources claiming to have exclusive information about the utility attack, including claims about the attack's origin, scope, or what officials are allegedly concealing. No private individual or unofficial account has access to sealed federal investigative records.\" The advisory directs residents to official CBPWA, CISA, and city government communications for accurate information about the utility investigation.",
+    "The advisory comes as federal investigators and social media platforms have documented a coordinated campaign that has shifted in recent weeks from false shelter locations and power grid blame to a \"coverup\" narrative targeting the official account of the utility cyberattack. CISA advisory materials have characterized these claims as a phase of a broader influence operation; the AG advisory marks the first time a Texas law enforcement agency has issued a public consumer warning directed at that specific narrative.",
+    "The advisory also warns about contractor fraud still active in the Corpus Christi area, noting that the joint fraud investigation by the FBI, the Department of Public Safety and the Texas Department of Insurance announced Oct. 14 is ongoing. Residents are advised to verify contractor licensing through the Texas Department of Licensing and Regulation before signing any repair or remediation contracts. The AG's consumer protection division said it has received more than 400 Rafael-related complaints, most involving contractor disputes or insurance claim assistance fraud.",
+    "For families in Districts 3 and 4, the AG's advisory arrived on the 28th day of their separate boil-water notice, a day after the citywide notice was lifted. City officials offered no updated timeline Sunday for lifting it, saying only that testing and pressure normalization in the two districts is continuing. The attorney general's office said it would update the advisory as new information becomes available."
+   ],
+   "tags": {
+    "story_type": "brief",
+    "arcs": [
+     "ARC-RUMORS",
+     "ARC-DISINFO"
+    ],
+    "public_facts": [
+     "PUB-153"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "attorney general",
+     "misinformation",
+     "consumer advisory",
+     "disinformation",
+     "cyberattack coverup narrative",
+     "contractor fraud"
+    ],
+    "follows_up": "NWS-P038-04"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0603",
+     "EVT-0604"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P042-04",
+   "day": 42,
+   "time_local": "11:30",
+   "outlet_id": "OUT-01",
+   "section": "Local",
+   "byline": [
+    "CHR-003"
+   ],
+   "headline": "Boil-water notice lifted for Districts 3 and 4 after 30 days; officials cannot fully explain all pressure events",
+   "dek": "The city officially ended the boil-water advisory for the 48,000 residents of Districts 3 and 4 on Tuesday, Oct. 26 — but the announcement came with an unusual caveat: the department cannot yet account for all of the pressure anomalies that caused the notice in the first place.",
+   "body": [
+    "CORPUS CHRISTI — The City of Corpus Christi Water Department lifted its boil-water notice for Districts 3 and 4 on Tuesday morning, ending a 30-day advisory that forced 48,000 residents to boil all water used for drinking, cooking, and brushing their teeth. The lift, announced in English and Spanish simultaneously at 11 a.m., follows confirmation that water pressure at all test points in the two districts has been confirmed above 40 psi and that O.N. Stevens Water Treatment Plant is operating at full capacity.",
+    "\"BOIL WATER NOTICE LIFTED — Districts 3 and 4 — October 26, 2027,\" the city's bilingual notice reads. \"Water pressure at all test points in the two districts has been confirmed above 40 psi. O.N. Stevens Water Treatment Plant is operating at full capacity. All required bacteriological samples have passed testing.\" Officials added at a briefing that their own review of the pressure drops that led to the notice is not finished.",
+    "The caveat is unusual at the lifting of a boil-water notice, which typically signals a clean administrative close. City water officials said Tuesday that they are lifting the notice because current water quality and pressure meet all state and federal standards for safe use — but that some of the pressure readings recorded in late September are not fully explained by the storm damage found so far, and that the review of those records continues. They declined to say more.",
+    "In the neighborhoods that have lived under the advisory since Sept. 26, the news arrived with relief and exhaustion in equal measure. At a community hub in the Oak Park neighborhood, volunteers who have distributed bottled water since late September were beginning to pack down shelving as the morning unfolded. \"Thirty days. That's not a boil-water notice. That's a way of life,\" said Carlos Medrano, 58, a retired city worker who lives two blocks from the hub. \"I'll believe it when I turn the tap on and drink it straight.\" Others were more subdued, noting that the notice's unusual language about unexplained pressure events left them uncertain.",
+    "Public Health District Director Dr. Priscilla Reyes said at a morning briefing that the district's water has been safe to drink since testing standards were met and that residents do not need to run taps or take other precautionary steps beyond what is normal. She urged anyone experiencing continuing gastrointestinal symptoms to contact a health care provider. The confirmed gastroenteritis outbreak in Districts 3 and 4 — which Texas DSHS linked in a Oct. 7 preliminary report to the pressure failure event — sent hundreds of people to hospital. Dr. Reyes said new cases have stopped and that the outbreak is considered resolved; a final count has not been published."
+   ],
+   "tags": {
+    "story_type": "update",
+    "arcs": [
+     "ARC-WATER",
+     "ARC-HEALTH",
+     "ARC-EAS"
+    ],
+    "public_facts": [
+     "PUB-206",
+     "GW-PUB-007"
+    ],
+    "characters_quoted": [
+     "CHR-126",
+     "CHR-133"
+    ],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "boil water lifted",
+     "Districts 3 and 4",
+     "water safety",
+     "O.N. Stevens",
+     "investigation ongoing",
+     "30 days"
+    ],
+    "follows_up": "NWS-P030-06"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0303",
+     "EVT-0310",
+     "EVT-0315"
+    ],
+    "batch": "K",
+    "status": "draft",
+    "revised": "canon-2026-11-09"
+   }
+  },
+  {
+   "story_id": "NWS-P042-05",
+   "day": 42,
+   "time_local": "12:00",
+   "outlet_id": "OUT-08",
+   "section": "Local",
+   "byline": [
+    "CHR-013"
+   ],
+   "headline": "Se levanta aviso de hervir agua en Distritos 3 y 4 — esta vez la notificación llega en español al mismo tiempo",
+   "dek": "La Ciudad de Corpus Christi levantó el aviso de hervir agua para los Distritos 3 y 4 el martes por la mañana, terminando 30 días de incertidumbre para 48,000 residentes — muchos de ellos hispanohablantes que esperaron horas en recibir la notificación en español cuando comenzó el aviso.",
+   "body": [
+    "La ciudad de Corpus Christi levantó el aviso de hervir agua para los Distritos 3 y 4 el martes por la mañana, poniendo fin a 30 días durante los cuales aproximadamente 48,000 residentes — muchos de habla española — debieron hervir toda el agua utilizada para beber, cocinar y la higiene personal. El aviso bilingüe fue publicado a las 11 de la mañana en inglés y en español, un proceso que las organizaciones comunitarias dijeron fue más simultáneo que cuando comenzó el aviso original hace 30 días.",
+    "\"AVISO DE AGUA A HERVIR LEVANTADO — Distritos 3 y 4 — 26 de octubre de 2027,\" dice el aviso de la ciudad. \"La presión del agua en todos los puntos de prueba de los dos distritos ha sido confirmada por encima de 40 psi. La Planta de Tratamiento de Agua O.N. Stevens opera a plena capacidad. Todas las muestras bacteriológicas requeridas han pasado las pruebas.\" Funcionarios dijeron que continúa la revisión de las caídas de presión que llevaron al aviso original.",
+    "Para muchos residentes hispanohablantes de los Distritos 3 y 4, la noticia del levantamiento llegó con alivio pero también con un recuerdo difícil: cuando el aviso original fue emitido el 26 de septiembre, pasaron más de 12 horas antes de que una notificación formal en español llegara a los hogares de muchos residentes en estas colonias. Esa demora fue documentada por KNCB Coastal Bend Radio y por organizaciones comunitarias que dijeron que sus vecinos se enteraron de boca en boca antes de recibir comunicación oficial.",
+    "\"Hoy lo anunciaron en español al mismo tiempo. Eso es un avance,\" dijo Beatriz Soria, coordinadora de un centro comunitario en la colonia Oak Park. \"Pero necesitamos que eso sea la norma, no la excepción. La próxima vez que haya una emergencia, 12 horas de diferencia puede costar vidas.\" La directora de noticias de KNCB, Marisol Fuentes-Vega, dijo en un comunicado que la estación continuará documentando los efectos desiguales de las alertas de emergencia en las comunidades de habla española y está preparando un testimonio formal ante el Tribunal de Comisionados del Condado de Nueces.",
+    "Los residentes que todavía experimentan síntomas gastrointestinales deben comunicarse con su médico. El brote de gastroenteritis documentado en los Distritos 3 y 4 envió a cientos de personas al hospital; el informe preliminar del Departamento de Salud del Estado de Texas del 7 de octubre confirmó que la causa fue agua contaminada. Todavía no se ha publicado una cifra final. La ciudad dijo que el aviso de levantamiento no requiere que los residentes tomen medidas adicionales — el agua de la llave es ahora segura para beber directamente."
+   ],
+   "tags": {
+    "story_type": "update",
+    "arcs": [
+     "ARC-WATER",
+     "ARC-HOSP",
+     "ARC-EAS"
+    ],
+    "public_facts": [
+     "PUB-206",
+     "PUB-163"
+    ],
+    "characters_quoted": [
+     "CHR-101",
+     "CHR-134"
+    ],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "boil water lifted",
+     "Spanish language",
+     "bilingual notification",
+     "Districts 3 and 4",
+     "equity",
+     "KNCB",
+     "30 days"
+    ],
+    "follows_up": "NWS-P042-04"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0303",
+     "EVT-0310"
+    ],
+    "batch": "K",
+    "status": "draft",
+    "revised": "canon-2026-11-09"
+   }
+  },
+  {
+   "story_id": "NWS-P045-08",
+   "day": 45,
+   "time_local": "11:30",
+   "outlet_id": "OUT-01",
+   "section": "Local",
+   "byline": [
+    "CHR-001"
+   ],
+   "headline": "Coastal Bend 911 center formally closes Rafael surge response, plans after-action review",
+   "dek": "The Coastal Bend Emergency Communications Center formally ended its Hurricane Rafael surge staffing protocols Friday, 45 days after the storm, citing a return to baseline call volume and confirmation that the FBI has taken up the investigation into 23 false calls made during the first week of recovery.",
+   "body": [
+    "The Coastal Bend Emergency Communications Center formally closed its Hurricane Rafael elevated operations protocols Friday, the director announced, bringing to an end 45 days of surge staffing that at its peak required around-the-clock additional dispatch personnel to manage call volumes running nearly ten times the daily baseline of 310 calls. Director Patricia Escamilla-Voss said the formal closure marks the transition from active disaster response to after-action review and planning.",
+    "\"The agency formally closes Hurricane Rafael surge response protocols today,\" Escamilla-Voss said in a brief statement to staff and media. \"Twenty-nine days of elevated operations have concluded. The agency refers the false call investigation to the FBI and plans a comprehensive after-action review to be completed within 90 days.\" The center returned to baseline call volume on Oct. 13 and has remained there since.",
+    "The referral of the false call investigation to the FBI — formally announced in the Oct. 13 public update and reiterated Friday — covers 23 calls received between Sept. 21 and Sept. 24 that sent responders to emergencies that did not exist near two utility sites. Escamilla-Voss said the center has provided all call logs, metadata, and technical records to federal investigators and considers the investigation fully in federal hands. No arrests or charges have been announced.",
+    "Friday's formal closure triggers the beginning of the after-action review process, which the director said will assess call authentication procedures, coordination with partner agencies including the City of Corpus Christi emergency management office and Nueces County OEM, and the center's protocols for distinguishing potentially coordinated false calls from genuine surge volume in real time. The review will also examine how 29 days of surge staffing affected dispatcher wellbeing.",
+    "Escamilla-Voss said she expects to present preliminary findings to the Nueces County Commissioners Court in January 2028 and will recommend several protocol changes, including enhanced real-time coordination with CISA and law enforcement during declared disasters. \"We handled the surge,\" she said Friday. \"The question is how we handle the next one better.\""
+   ],
+   "tags": {
+    "story_type": "brief",
+    "arcs": [
+     "ARC-RUMORS",
+     "ARC-DISPATCH"
+    ],
+    "public_facts": [
+     "PUB-134",
+     "PUB-133"
+    ],
+    "characters_quoted": [
+     "CHR-108"
+    ],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "CBECC",
+     "911",
+     "surge close",
+     "FBI",
+     "after-action review",
+     "false calls"
+    ],
+    "follows_up": "NWS-P029-04"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0601",
+     "EVT-0602"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P045-09",
+   "day": 45,
+   "time_local": "16:30",
+   "outlet_id": "OUT-03",
+   "section": "Community",
+   "byline": [
+    "CHR-008"
+   ],
+   "headline": "KNCB news director tells county commissioners that Spanish-language boil-water delay put lives at risk",
+   "dek": "Marisol Fuentes-Vega, news director of KNCB Coastal Bend Radio, testified before the Nueces County Commissioners Court Friday that a 12-hour gap between the English and Spanish versions of the Sept. 26 boil-water notice represented a systemic failure in emergency communications equity — and called on the county to mandate simultaneous multilingual alerts.",
+   "body": [
+    "The news director of KNCB Coastal Bend Radio testified before the Nueces County Commissioners Court on Friday that the 12-hour delay between the English-language and Spanish-language versions of the Sept. 26 boil-water notice for Corpus Christi's Districts 3 and 4 constituted a systemic failure in the county's emergency communications system — one she said put the health of tens of thousands of Spanish-speaking residents at risk during the most critical period of the water contamination event.",
+    "Marisol Fuentes-Vega, who has led KNCB's bilingual newsroom since 2019, told commissioners that her station began receiving calls from confused Spanish-speaking listeners within hours of the English boil-water notice being issued. The official Spanish-language notice did not reach the station until 6:03 the next morning, she testified, 12 hours and 33 minutes after the English alert, and KNCB could not put an official notice on the air that it had not been sent. \"For twelve hours our hosts were telling callers we had nothing official in Spanish,\" Fuentes-Vega told the court. \"The question for this commission is: why were we in that position at all?\"",
+    "The testimony drew on data KNCB compiled during the 30-day boil-water period, including call logs documenting listener confusion during the first day, interviews with community health workers in the Oak Park and Hillcrest neighborhoods, and an analysis of social media activity showing that Spanish-language shares of the boil-water notice lagged English-language shares by more than ten hours. Fuentes-Vega noted that the Texas DSHS preliminary investigation found 94.3 percent of gastroenteritis cases geocoding to the boil-water zone — neighborhoods where, she said, a large proportion of residents are Spanish-speaking.",
+    "Commissioners heard testimony from the Nueces County Office of Emergency Management, which said the delay was attributable to reduced staffing at its translation contractor and acknowledged it would evaluate its procedures. Commissioner Isabel Noriega, whose precinct includes portions of Districts 3 and 4, called the delay \"unacceptable\" and introduced a motion directing the Office of Emergency Management to issue a new request for proposals for language access services that requires every life-safety alert to be released in other languages within 30 minutes of the English text. The motion passed 4–1.",
+    "Fuentes-Vega said after the hearing that the vote was a beginning, not a resolution. \"We need a protocol with teeth — one that says the Spanish alert goes out the same minute as the English one, every time, with no exceptions,\" she said. \"The storm is gone. The gap in our system is not.\" She said KNCB plans to continue covering the equity dimensions of Rafael's aftermath and would monitor the county's implementation of the new protocol."
+   ],
+   "tags": {
+    "story_type": "feature",
+    "arcs": [
+     "ARC-WATER",
+     "ARC-HEALTH",
+     "ARC-BILINGUAL",
+     "ARC-HOSP"
+    ],
+    "public_facts": [
+     "PUB-146",
+     "PUB-163"
+    ],
+    "characters_quoted": [
+     "CHR-101"
+    ],
+    "characters_mentioned": [
+     "CHR-135"
+    ],
+    "places": [],
+    "topics": [
+     "KNCB",
+     "bilingual alert",
+     "Spanish language",
+     "equity",
+     "boil water",
+     "notification gap",
+     "Nueces County Commissioners",
+     "multilingual"
+    ],
+    "follows_up": "NWS-P042-05"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0303",
+     "EVT-0310"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P045-07",
+   "day": 45,
+   "time_local": "14:30",
+   "outlet_id": "OUT-01",
+   "section": "Local",
+   "byline": [
+    "CHR-001"
+   ],
+   "headline": "FEMA closes out aerial damage survey of Corpus Christi metro after 6.2 million image tiles",
+   "dek": "FEMA Region 6 announced Friday that its aerial assessment program for Hurricane Rafael has concluded, with 183 square kilometers of the Corpus Christi metropolitan area photographed and catalogued — and part of the imagery now open to the public.",
+   "body": [
+    "FEMA Region 6 announced Friday the completion of the Hurricane Rafael Aerial Assessment Program, which generated more than 6.2 million georeferenced image tiles covering 183 square kilometers of the Corpus Christi metropolitan area. The program, which ran from a pre-storm baseline on Sept. 12 through Oct. 29, generated imagery of the city including storm surge zones, the Inner Harbor oil spill corridor, and neighborhoods in Districts 3 and 4 where infrastructure damage intersected with the utility cyberattack response.",
+    "\"This imagery archive is a resource that will support not just today's recovery, but future preparedness for the entire Texas Gulf Coast,\" FEMA Federal Coordinating Officer Dennis Park said in a statement. FEMA said downsampled imagery from the first two survey phases is available from Friday through its OpenData portal for researchers, local governments and community organizations, and that requests for full-resolution imagery go through its regional geospatial office.",
+    "The program's archive is expected to be particularly valuable for the ongoing damage assessment process, which has been slowed by access restrictions and flooding in parts of the city. Insurance adjusters and local building inspectors told the Ledger they expect the FEMA aerial archive to accelerate property assessments in areas where physical access remains difficult, particularly along the Inner Harbor and in the surge-damaged sections of Portland and Ingleside.",
+    "The decision to keep and publish the archive is an indication that federal planners view Rafael as a data-rich event with long-term research value, particularly in relation to the intersection of hurricane damage and utility infrastructure compromise. Post-storm aerial datasets of this resolution have historically informed storm-surge modeling, infrastructure hardening standards, and urban resilience planning at the national level.",
+    "FEMA declined to say how many individual flight hours or aircraft were used in the program or what the total cost was. A spokeswoman said the program used federal, state and contracted aircraft, both manned and uncrewed. For local government officials managing Rafael's long recovery, the program's close represents one of the final federal emergency-phase activities to reach a formal endpoint."
+   ],
+   "tags": {
+    "story_type": "update",
+    "arcs": [
+     "ARC-COMMUNITY",
+     "ARC-AIRDMG"
+    ],
+    "public_facts": [
+     "PUB-113"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "FEMA",
+     "aerial assessment",
+     "NGA",
+     "imagery archive",
+     "damage survey",
+     "infrastructure resilience"
+    ],
+    "follows_up": null
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0505",
+     "EVT-0506"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  },
+  {
+   "story_id": "NWS-P045-10",
+   "day": 45,
+   "time_local": "18:00",
+   "outlet_id": "OUT-05",
+   "section": "Utilities",
+   "byline": [
+    "CHR-011"
+   ],
+   "headline": "EXCLUSIVE: Documents show Corpus Christi utility outages caused in part by deliberate control system manipulation predating the storm",
+   "dek": "Documents obtained by Sabal Energy Wire confirm that the prolonged power outages affecting portions of Corpus Christi were caused not solely by hurricane damage but by deliberate manipulation of utility control systems — with relay configuration files bearing modification timestamps predating Hurricane Rafael's landfall by as much as 72 hours.",
+   "body": [
+    "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Documents obtained by Sabal Energy Wire confirm that the extended power outages that left thousands of Corpus Christi residents without electricity for as long as 35 days following Hurricane Rafael were caused not solely by hurricane damage but by deliberate manipulation of the utility's control systems — and that evidence of that manipulation was present in configuration files dating back as far as 72 hours before the storm made landfall.",
+    "The documents, which Sabal Energy Wire is not reproducing in full given the sensitivity of the ongoing federal investigation, include internal configuration records from Coastal Bend Power and Water Authority's electrical protection and relay systems. Those records show modification timestamps predating Hurricane Rafael's Sept. 14 landfall by approximately 72 hours. The nature of the modifications, as reflected in the documents, affected the operational parameters of protective relay equipment responsible for automatic switching and load management in the utility's distribution system. Industry engineers who reviewed the documents with Sabal Energy Wire said the modifications would have caused or worsened switching failures that the utility publicly attributed to storm damage during the initial days of the outage.",
+    "\"These documents confirm that the prolonged power outages affecting portions of Corpus Christi were caused by deliberate manipulation of utility control systems, not solely by hurricane damage,\" one source familiar with the investigation said, speaking on condition of anonymity because the federal investigation is ongoing. \"Relay configuration files show modification timestamps predating the storm.\" The source did not characterize who made the modifications or at whose direction, citing the investigation. Sabal Energy Wire was unable to independently verify the modification history through a second set of documents, and the account relies on the described documents and the source's characterization of them.",
+    "CBPWA declined to comment on the documents when contacted Friday. The authority has consistently said it cannot discuss details of the federal investigation. CISA, the FBI, and the U.S. Attorney's Office for the Southern District of Texas all declined to comment. The governor's amended disaster declaration, signed Oct. 12, referenced the utility's operational technology systems being isolated as a precautionary measure; CBPWA and CISA confirmed on Oct. 20 that the utility's systems had been cleaned, rebuilt, and reconnected following a comprehensive security audit.",
+    "If the documents' content is confirmed through the federal process, what it would add to the record is timing. Federal officials and CBPWA said on Oct. 5 that the outages were prolonged by deliberate interference with control systems; the documents indicate the changes were in place before the storm arrived, which would mean the interference was planned ahead of the hurricane rather than improvised after it. The relay issues that caused the final 3,200 customers to remain without power until Oct. 19 were attributed by CBPWA to relay inspection and hardening work, without reference to external manipulation. Sabal Energy Wire will continue to report on this investigation as new information becomes available."
+   ],
+   "tags": {
+    "story_type": "feature",
+    "arcs": [
+     "ARC-UTILITY-CYBER"
+    ],
+    "public_facts": [
+     "GW-PUB-104"
+    ],
+    "characters_quoted": [],
+    "characters_mentioned": [],
+    "places": [],
+    "topics": [
+     "CBPWA",
+     "cyberattack",
+     "relay manipulation",
+     "pre-storm",
+     "configuration files",
+     "deliberate",
+     "exclusive",
+     "investigative"
+    ],
+    "follows_up": "NWS-P036-04"
+   },
+   "internal": {
+    "truth_events": [
+     "EVT-0431",
+     "EVT-0432",
+     "EVT-0435"
+    ],
+    "batch": "K",
+    "status": "draft"
+   }
+  }
+ ]
+}

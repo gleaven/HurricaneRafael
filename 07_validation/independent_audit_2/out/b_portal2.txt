@@ -1,0 +1,19 @@
+64512 by month/event [(('2027-08', 'login_failed'), 810), (('2027-08', 'page_view'), 1910), (('2027-11', 'account_created'), 6), (('2027-11', 'application_submitted'), 6), (('2027-11', 'login_failed'), 220000), (('2027-11', 'login_success'), 410), (('2027-11', 'profile_updated: direct deposit'), 410)]
+Aug probing span 2027-08-10T05:00:08Z 2027-08-13T04:59:27Z 2720 [(('/account/register', '200', 'page_view'), 285), (('/owa', '404', 'page_view'), 285), (('/account/recover', '200', 'page_view'), 281), (('/admin', '404', 'page_view'), 280), (('/api/v1/session', '401', 'login_failed'), 276), (('/login', '401', 'login_failed'), 274), (('/.well-known/security.txt', '200', 'page_view'), 269), (('/status', '200', 'page_view'), 267), (('/login.aspx', '401', 'login_failed'), 260), (('/help/contact', '200', 'page_view'), 243)]
+Aug by day [('2027-08-10', 695), ('2027-08-11', 920), ('2027-08-12', 912), ('2027-08-13', 193)]
+Aug ips 64 ua [('python-requests', 1813), ('curl', 907)] account_ref nonempty 810
+64512 rows Sep..Nov12: 0 []
+Nov+ span 2027-11-14T12:25:28Z 2027-11-24T00:15:38Z
+failed 220000 success 410 distinct success accounts 410 other events Counter({'profile_updated: direct deposit': 410, 'account_created': 6, 'application_submitted': 6})
+failed by day [('2027-11-15', 20236), ('2027-11-16', 17625), ('2027-11-17', 24194), ('2027-11-18', 48138), ('2027-11-19', 38828), ('2027-11-20', 9398), ('2027-11-21', 13677), ('2027-11-22', 19494), ('2027-11-23', 27946), ('2027-11-24', 464)]
+success by day [('2027-11-15', 38), ('2027-11-16', 19), ('2027-11-17', 19), ('2027-11-18', 74), ('2027-11-19', 59), ('2027-11-20', 75), ('2027-11-22', 36), ('2027-11-23', 90)]
+failed in window 11-15T06..11-24T06 220000
+hours with failures 114 max/h 7201 median/h 1593 top hours [('2027-11-22T22', 7201), ('2027-11-15T23', 6141), ('2027-11-19T07', 5593), ('2027-11-19T06', 5561), ('2027-11-17T12', 5151)]
+minutes 5189 max/min 213 distinct per-minute counts 164 [(23, 184), (24, 168), (22, 162), (26, 156), (27, 156), (21, 151)]
+fail ips 64 top [('203.0.113.54', 3557), ('203.0.113.52', 3549), ('203.0.113.80', 3542), ('203.0.113.73', 3540)] ua [('python-requests', 220000)]
+fail account_ref nonempty 220000 distinct 218311 {'time_utc': '2027-11-15T09:46:48Z', 'system': 'EXT-AIDPORTAL-01', 'client_ip': '203.0.113.32', 'client_network': 'ASN 64512', 'method': 'POST', 'path': '/login', 'status': '401', 'event': 'login_failed', 'account_ref': 'ACC-65F5442B90', 'user_agent_family': 'python-requests', 'bytes': '512'}
+fail bytes distinct 1 [('512', 220000)]
+aid ATO (account,login_utc,ip) in portal successes: 410 of 410 portal successes not in aid ATO 0
+64512 direct deposit updates in portal 410 match aid changed_utc 410
+successful accounts with prior failed attempts: 0
+{'time_utc': '2027-11-15T19:37:18Z', 'system': 'EXT-AIDPORTAL-01', 'client_ip': '203.0.113.22', 'client_network': 'ASN 64512', 'method': 'POST', 'path': '/login', 'status': '200', 'event': 'login_success', 'account_ref': 'ACC-2D376DE4C0', 'user_agent_family': 'python-requests', 'bytes': '9169'}

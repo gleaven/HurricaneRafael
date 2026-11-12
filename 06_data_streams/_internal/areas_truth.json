@@ -1,0 +1,126 @@
+{
+ "generated": "2026-11-09",
+ "not_for_participants": true,
+ "registry": "areas.json",
+ "truth": {
+  "AREA-NBH-HILLCREST": {
+   "role": "Hillcrest and Oak Park hold many of the last 3,200 customers restored on D+35; adjusters could not reach properties for two weeks.",
+   "sources": [
+    "NWS-P035-04",
+    "NWS-P025-04"
+   ]
+  },
+  "AREA-NBH-NORTHBEACH": {
+   "role": "Cut off D0 to D+3 by the bridge and causeway closure; oiled shoreline from D+2.",
+   "sources": [
+    "PUB-027",
+    "PUB-030"
+   ]
+  },
+  "AREA-NBH-MOLINA": {
+   "role": "Searches reach Greenwood and Molina on D+2 with water still two to three feet deep.",
+   "sources": [
+    "NWS-P002-12"
+   ]
+  },
+  "AREA-WD-3-4": {
+   "role": "Boil-water notice D+12 17:30 local (English), Spanish reaches KNCB 06:03 D+13; lifted D+42 11:00. 94.3% of the 1,820 Cryptosporidium/Giardia cases. District 3 = ZIPs 78405, 78416 (+78417); District 4 = 78407, 78408 (+78401).",
+   "sources": [
+    "PUB-143",
+    "PUB-204",
+    "PUB-144",
+    "EVT-1606",
+    "PUB-163",
+    "PUB-206"
+   ]
+  },
+  "_districts": {
+   "note": "PUB-203 says 'Districts 1 through 6' and NWS-P012-06 says the unaffected districts are 1, 2 and 5; five water districts are defined. Stories also say Districts 3 and 4 include 'portions of Calallen, Violet' although the notice's ZIP list does not; the ZIP list governs."
+  },
+  "PLC-010": {
+   "name": "Low-income surge-zone tracts",
+   "members": [
+    "AREA-TRACT-480101",
+    "AREA-TRACT-480201",
+    "AREA-TRACT-480301",
+    "AREA-TRACT-480401",
+    "AREA-TRACT-480501",
+    "AREA-TRACT-480901",
+    "AREA-TRACT-481201",
+    "AREA-TRACT-481301"
+   ],
+   "definition": "bottom income quartile and evacuation zone A or B",
+   "role": "61% of 911 calls at peak; aid dollars at about half their share; ER visits +40% at D+45.",
+   "sources": [
+    "PUB-026",
+    "PUB-091",
+    "PUB-069"
+   ]
+  },
+  "PLC-011": {
+   "name": "High-income tracts",
+   "members": [
+    "AREA-TRACT-480701",
+    "AREA-TRACT-482301",
+    "AREA-TRACT-482401",
+    "AREA-TRACT-482501",
+    "AREA-TRACT-483201",
+    "AREA-TRACT-483301",
+    "AREA-TRACT-483401",
+    "AREA-TRACT-483501",
+    "AREA-TRACT-483701",
+    "AREA-TRACT-483801",
+    "AREA-TRACT-483901",
+    "AREA-TRACT-484001",
+    "AREA-TRACT-484101",
+    "AREA-TRACT-485501"
+   ],
+   "definition": "top income quartile in the tract table"
+  },
+  "AREA-EVAC-A": {
+   "role": "Mandatory evacuation: surge zones from D-2 (PUB-021); Zones A, B and C by county order at 07:00 local D-1 (PUB-201). Zones C to E told to shelter in place if still home at 13:00 local D-1 (EVT-1403).",
+   "sources": [
+    "PUB-021",
+    "PUB-201",
+    "EVT-1403"
+   ],
+   "open_item": "PUB-140 still carries a D-3 order for Zones A and B (see canon_timeline open_items)."
+  }
+ },
+ "id_migration": [
+  {
+   "old": "PLC-010 / PLC-011 (00_scenario/places.json)",
+   "new": "members listed in _internal/areas_truth.json",
+   "old_used_in": "00_scenario, 05_other_sources/census, 911, public_health",
+   "note": "derived from the tract table: income quartile and evacuation zone"
+  },
+  {
+   "old": "beat ids B01..B12 (911 stream)",
+   "new": "AREA-BEAT-B01..B12",
+   "old_used_in": "00_scenario, 05_other_sources/census, 911, public_health",
+   "note": "same ids"
+  },
+  {
+   "old": "EVAC_ZONE / PREF_EVAC_ZONE A-D (census files)",
+   "new": "AREA-EVAC-A..D",
+   "old_used_in": "00_scenario, 05_other_sources/census, 911, public_health",
+   "note": "Zone E exists in canon (EVT-1403) but no tract is assigned to it"
+  },
+  {
+   "old": "Water Zone 1/2/3 (old eas_broadcasts.csv)",
+   "new": null,
+   "old_used_in": "00_scenario, 05_other_sources/census, 911, public_health",
+   "note": "removed from canon; notices are citywide or Districts 3 and 4"
+  },
+  {
+   "old": "District 3 / District 4 / Zone 4",
+   "new": [
+    "AREA-WD-3",
+    "AREA-WD-4",
+    "AREA-PZ-4"
+   ],
+   "old_used_in": "00_scenario, 05_other_sources/census, 911, public_health",
+   "note": ""
+  }
+ ]
+}

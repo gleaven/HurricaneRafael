@@ -1,0 +1,55 @@
+{
+ "source": "avl",
+ "folder": "data/avl/",
+ "format": "CSV, one file per local month and agency (avl_YYYY-MM_<AGENCY>.csv), sorted by time",
+ "standard": "AVL modem log",
+ "fields": [
+  {
+   "name": "time_utc",
+   "notes": "ISO 8601 UTC"
+  },
+  {
+   "name": "unit_id",
+   "notes": "cad_units.json units[].unit_id (units with avl_equipped true)"
+  },
+  {
+   "name": "agency",
+   "notes": ""
+  },
+  {
+   "name": "latitude",
+   "notes": "WGS84, on a road centreline of the reference network"
+  },
+  {
+   "name": "longitude",
+   "notes": ""
+  },
+  {
+   "name": "speed_kmh",
+   "notes": ""
+  },
+  {
+   "name": "heading_deg",
+   "notes": ""
+  },
+  {
+   "name": "status",
+   "notes": "ENR en route, ONS on scene, TRN transporting, HSP at hospital, RTQ returning to quarters, AIQ available in quarters, LOAD/UNLD bus loading and unloading, STG staged"
+  },
+  {
+   "name": "incident_number",
+   "notes": "911 incident, evacuation route id (EVAC-*) or convoy id; empty when returning or in quarters"
+  }
+ ],
+ "cadence": "fire and EMS units every 15 s responding to a priority 1 call and 30 s otherwise; patrol units every 30 or 60 s; 60 s transporting; 180 s returning; two fixes while parked; a heartbeat every 6 h in quarters. Long, slow legs report by distance (at most 22 fixes per leg).",
+ "joins": [
+  {
+   "field": "unit_id",
+   "to": "cad_units.json units[].unit_id"
+  },
+  {
+   "field": "incident_number",
+   "to": "911/cad_incidents_*.csv incident_number"
+  }
+ ]
+}

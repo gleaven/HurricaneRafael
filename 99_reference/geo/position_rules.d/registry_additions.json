@@ -1,0 +1,48 @@
+{
+ "sources": [
+  {
+   "name": "Registry: port radar buoys",
+   "glob": "06_data_streams/sensor_registry.json",
+   "items": "port_surveillance_sensors",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "water_fixed",
+   "id": "sensor_id",
+   "where": [
+    "sensor_type",
+    "radar buoy"
+   ]
+  },
+  {
+   "name": "Registry: port cameras and VTS",
+   "glob": "06_data_streams/sensor_registry.json",
+   "items": "port_surveillance_sensors",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "land_fixed",
+   "id": "sensor_id",
+   "allow_missing": true,
+   "where": [
+    "sensor_type",
+    [
+     "fixed camera",
+     "vessel traffic log"
+    ]
+   ]
+  },
+  {
+   "name": "Registry: drone-detection radar buoys",
+   "glob": "06_data_streams/sensor_registry.json",
+   "items": "drone_detection_sensors",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "water_fixed",
+   "id": "sensor_id",
+   "allow_missing": true,
+   "where": [
+    "sensor_type",
+    "X-band surface-search radar, raw plot archive"
+   ]
+  }
+ ]
+}

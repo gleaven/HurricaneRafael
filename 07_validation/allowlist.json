@@ -1,0 +1,113 @@
+{
+  "note": "Reviewed false positives. Each entry: check, story_id, match (exact matched text), reason.",
+  "entries": [
+    {
+      "check": "facts",
+      "story_id": "NWS-P071-03",
+      "match": "1 percent",
+      "reason": "Arithmetic: 410 of about 220,000 attempts is about two-tenths of 1 percent."
+    },
+    {
+      "check": "facts",
+      "story_id": "NWS-P075-02",
+      "match": "$140 million",
+      "reason": "False rumor figure quoted in a fact-check and labeled FALSE."
+    },
+    {
+      "check": "facts",
+      "story_id": "NWS-P076-03",
+      "match": "$140 million",
+      "reason": "False rumor figure quoted while debunking it."
+    },
+    {
+      "check": "facts",
+      "story_id": "NWS-P077-03",
+      "match": "$140 million",
+      "reason": "False rumor figure quoted while debunking it."
+    },
+    {
+      "check": "pair",
+      "story_id": "NWS-P091-01",
+      "match": "account takeover|taken over|hijacked|credential",
+      "reason": "Three-month roundup: account takeovers (Aid section) and contractors (Contracts section) are reported in separate sections with no link."
+    },
+    {
+      "check": "pair",
+      "story_id": "NWS-P107-01",
+      "match": "account takeover|taken over|hijacked|credential",
+      "reason": "Year-in-review month list; takeovers (November) and contractor items (December) are separate entries with no link."
+    },
+    {
+      "check": "pair",
+      "story_id": "NWS-P116-01",
+      "match": "Brannoch|Marrick",
+      "reason": "'drone' refers to the county's drone debris surveys, not drones over the air station."
+    },
+    {
+      "check": "integrity",
+      "story_id": "NWS-M037-01",
+      "match": "PUB-001",
+      "reason": "Weak-citation heuristic reviewed: fact present in other words. Mentions tourists and summer on the island"
+    },
+    {
+      "check": "integrity",
+      "story_id": "NWS-P025-02",
+      "match": "PUB-037",
+      "reason": "Weak-citation heuristic reviewed: fact present in other words. Church hub at Whitfield fellowship hall"
+    },
+    {
+      "check": "integrity",
+      "story_id": "NWS-P034-01",
+      "match": "PUB-033",
+      "reason": "Weak-citation heuristic reviewed: fact present in other words. Mentions false rumors circulating"
+    },
+    {
+      "check": "integrity",
+      "story_id": "NWS-P037-02",
+      "match": "PUB-033",
+      "reason": "Weak-citation heuristic reviewed: fact present in other words. Mentions false rumors"
+    },
+    {
+      "check": "integrity",
+      "story_id": "NWS-P064-02",
+      "match": "PUB-081",
+      "reason": "Weak-citation heuristic reviewed: fact present in other words. Rosa registered for FEMA aid"
+    },
+    {
+      "check": "facts",
+      "story_id": "NWS-P012-05",
+      "match": "311 Calls",
+      "reason": "311 is the NuecesInfoLine non-emergency number, not a count of 911 calls; pattern false positive."
+    },
+    {
+      "check": "facts",
+      "story_id": "NWS-P018-02",
+      "match": "three times",
+      "reason": "Context: clinics seeing 'three times' their normal daily patient load — an order-of-magnitude description, traceable to PUB-162 gastroenteritis surge data."
+    },
+    {
+      "check": "facts",
+      "story_id": "NWS-P030-05",
+      "match": "$340 million",
+      "reason": "Port Authority estimated $340M in economic losses from 30-day closure; traceable to PUB-123."
+    },
+    {
+      "check": "facts",
+      "story_id": "NWS-P057-04",
+      "match": "80 percent",
+      "reason": "FEMA estimated 80% of eligible households had registered for Individual Assistance by D+57; traceable to PUB-105."
+    },
+    {
+      "check": "facts",
+      "story_id": "NWS-P060-05",
+      "match": "64 percent",
+      "reason": "TCEQ report: 218 of 340 oiled birds released = 64%; traceable to PUB-195."
+    },
+    {
+      "check": "facts",
+      "story_id": "NWS-P090-05",
+      "match": "300 fraudulent claims",
+      "reason": "Rounded estimate of fraud ring's claim submissions; traceable to PUB-210 (Operation Sandbar: 94 FEMA + 187 insurance = ~281 total, rounded to ~300)."
+    }
+  ]
+}

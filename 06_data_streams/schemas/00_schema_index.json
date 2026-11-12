@@ -1,0 +1,310 @@
+{
+ "description": "Schema templates for all 16 Rafael scenario data streams. Each file defines exact real-world field names, types, examples, and scenario-specific notes. Build data generation against these schemas — do not deviate from field names.",
+ "research_status": "Stream schemas follow real-world formats; the four schemas for telemetry, social media, network logs and payments were revised on 2026-11-09 to match the rebuilt registries",
+ "schemas": [
+  {
+   "file": "01_ais_schema.json",
+   "source": "ais",
+   "standard": "USCG NAIS / MarineCadastre",
+   "entity_catalog": "vessels.json",
+   "verified": true
+  },
+  {
+   "file": "02_911_cad_schema.json",
+   "source": "911",
+   "standard": "Tyler New World CAD",
+   "entity_catalog": "cad_units.json",
+   "verified": true
+  },
+  {
+   "file": "03_scada_telemetry_schema.json",
+   "source": "telemetry",
+   "standard": "Process historian export (tag, time, value, quality)",
+   "entity_catalog": "scada_tags.json (331 tags, 62 alarm points)",
+   "verified": true
+  },
+  {
+   "file": "04_social_media_schema.json",
+   "source": "social_media",
+   "standard": "Twitter v1.1 Tweet object",
+   "entity_catalog": "personas.json (309 accounts in detail, 1700 in the compact list)",
+   "verified": true
+  },
+  {
+   "file": "05_weather_schema.json",
+   "source": "weather",
+   "standard": "NOAA LCD / ASOS CSV",
+   "entity_catalog": "3 stations (KCRP/KNGP/42019)",
+   "verified": true
+  },
+  {
+   "file": "06_adsb_schema.json",
+   "source": "adsb",
+   "standard": "OpenSky Network StateVector CSV",
+   "entity_catalog": "aircraft_registry.json",
+   "verified": true
+  },
+  {
+   "file": "07_env_sensors_schema.json",
+   "source": "env_sensors",
+   "standard": "EPA AQS hourly data CSV",
+   "entity_catalog": "sensor_registry.json",
+   "verified": true
+  },
+  {
+   "file": "08_satellite_schema.json",
+   "source": "satellite",
+   "standard": "STAC v1.0.0 Item JSON",
+   "entity_catalog": "AOI bbox only (no catalog needed)",
+   "verified": true
+  },
+  {
+   "file": "09_drone_video_schema.json",
+   "source": "drone_video",
+   "standard": "DJI SRT normalized to CSV",
+   "entity_catalog": "drone_operators.json",
+   "verified": true
+  },
+  {
+   "file": "10_network_logs_schema.json",
+   "source": "network_logs",
+   "standard": "Zeek conn.log TSV + OT companion logs",
+   "entity_catalog": "gw_host_registry.json (329 hosts, 177 users, 22 service accounts)",
+   "verified": true
+  },
+  {
+   "file": "11_maintenance_schema.json",
+   "source": "maintenance",
+   "standard": "IBM Maximo WORKORDER export CSV",
+   "entity_catalog": "scada_tags.json and gw_host_registry.json (equipment ids); infrastructure_assets.json (see file)",
+   "verified": true
+  },
+  {
+   "file": "12_supply_chain_schema.json",
+   "source": "supply",
+   "standard": "USCG eNOAD / CBP ACE normalized",
+   "entity_catalog": "vessels.json + terminal_registry.json",
+   "verified": true
+  },
+  {
+   "file": "13_payments_schema.json",
+   "source": "payments",
+   "standard": "ACORD claims + ACH transaction log",
+   "entity_catalog": "entity_registry.json (96 vendors, 1904 policies, 104 accounts) + organizations.json (156 organisations)",
+   "verified": true
+  },
+  {
+   "file": "14_infrastructure_schema.json",
+   "source": "infrastructure",
+   "standard": "FEMA GDA ArcGIS FeatureServer",
+   "entity_catalog": "infrastructure_assets.json",
+   "verified": true
+  },
+  {
+   "file": "15_census_schema.json",
+   "source": "census",
+   "standard": "ACS 5-Year Estimates CSV",
+   "entity_catalog": "Public data",
+   "verified": true
+  },
+  {
+   "file": "16_public_health_schema.json",
+   "source": "public_health",
+   "standard": "CDC NSSP BioSense + HHS Protect",
+   "entity_catalog": "facility_registry.json",
+   "verified": true
+  },
+  {
+   "file": "17_drone_detections_schema.json",
+   "source": "drone_detections",
+   "standard": "Counter-UAS sensor export (radar plots, RF contacts), FAA LAANC-style authorisation list, logged sighting reports",
+   "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  },
+  {
+   "file": "avl_schema.json",
+   "source": "avl",
+   "standard": "AVL modem log",
+   "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  },
+  {
+   "file": "broadcast_logs_schema.json",
+   "source": "broadcast_logs",
+   "standard": "CSV",
+   "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  },
+  {
+   "file": "eas_alerts_schema.json",
+   "source": "eas_alerts",
+   "standard": "IPAWS CAP alert log",
+   "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  },
+  {
+   "file": "fuel_deliveries_schema.json",
+   "source": "fuel_deliveries",
+   "standard": "Fuel delivery tickets and tank dip readings collected from receiving facilities",
+   "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  },
+  {
+   "file": "outage_map_schema.json",
+   "source": "outage_map",
+   "standard": "Outage management system export: customers out by feeder",
+   "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  },
+  {
+   "file": "port_surveillance_schema.json",
+   "source": "port_surveillance",
+   "standard": "Radar track table and operator logs as exported by a port vessel traffic service (no single public standard; column names are plain)",
+   "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  },
+  {
+   "file": "public_record_schema.json",
+   "source": "public_record",
+   "standard": "JSON Lines, one file per local month (statements_YYYY-MM.jsonl)",
+   "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  },
+  {
+   "file": "sar_missions_schema.json",
+   "source": "sar_missions",
+   "standard": "CSV",
+   "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  },
+  {
+   "file": "shelters_schema.json",
+   "source": "shelters",
+   "standard": "CSV",
+   "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  },
+  {
+   "file": "vessel_ot_logs_schema.json",
+   "source": "vessel_ot_logs",
+   "standard": "see file",
+   "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  }
+ ],
+ "entity_catalog_folder": "06_data_streams/",
+ "entity_catalogs_built": [
+  {
+   "catalog": "gw_host_registry.json",
+   "count": {
+    "hosts": 329,
+    "users": 177,
+    "service_accounts": 22,
+    "equipment": 72,
+    "network_zones": 25,
+    "external_systems": 10
+   },
+   "built": "2026-11-09",
+   "note": "Utility IT and OT hosts, zones, equipment, users and service accounts"
+  },
+  {
+   "catalog": "scada_tags.json",
+   "count": {
+    "tags": 331,
+    "alarm_points": 62
+   },
+   "built": "2026-11-09",
+   "note": "Historian tags and alarm points"
+  },
+  {
+   "catalog": "personas.json",
+   "count": {
+    "personas": 309,
+    "accounts_compact": 1700
+   },
+   "built": "2026-11-09",
+   "note": "Social accounts"
+  },
+  {
+   "catalog": "organizations.json",
+   "count": 156,
+   "built": "2026-11-09",
+   "note": "Organisations named in news, public record and streams"
+  },
+  {
+   "catalog": "entity_registry.json",
+   "count": {
+    "insurers": 7,
+    "brokers": 7,
+    "appraisers": 6,
+    "adjusting_firms": 6,
+    "adjusters": 40,
+    "vendors": 96,
+    "contracts": 32,
+    "financial_institutions": 13,
+    "accounts": 104,
+    "policyholders": 1159,
+    "policies": 1904,
+    "prepaid_card_merchants": 14,
+    "crypto_endpoints": 4
+   },
+   "built": "2026-11-09",
+   "note": "Insurers, vendors, contracts, banks, accounts, policyholders, policies"
+  },
+  {
+   "catalog": "vessels.json",
+   "count": "see file",
+   "built": "see file",
+   "note": "see file"
+  },
+  {
+   "catalog": "terminal_registry.json",
+   "count": "see file",
+   "built": "see file",
+   "note": "see file"
+  },
+  {
+   "catalog": "aircraft_registry.json",
+   "count": "see file",
+   "built": "see file",
+   "note": "see file"
+  },
+  {
+   "catalog": "drone_operators.json",
+   "count": "see file",
+   "built": "see file",
+   "note": "see file"
+  },
+  {
+   "catalog": "facility_registry.json",
+   "count": "see file",
+   "built": "see file",
+   "note": "see file"
+  },
+  {
+   "catalog": "infrastructure_assets.json",
+   "count": "see file",
+   "built": "see file",
+   "note": "see file"
+  },
+  {
+   "catalog": "sensor_registry.json",
+   "count": "see file",
+   "built": "see file",
+   "note": "see file"
+  },
+  {
+   "catalog": "cad_units.json",
+   "count": "see file",
+   "built": "see file",
+   "note": "see file"
+  },
+  {
+   "catalog": "areas.json",
+   "count": "see file",
+   "built": "see file",
+   "note": "see file"
+  }
+ ],
+ "internal_files": "06_data_streams/_internal/ holds internal notes and id migration maps. It is never delivered to participants."
+}

@@ -1,0 +1,42 @@
+=== M11 devices laid / dark vessel 2027-10-15T04:20Z
+  * AIS Pelican/Halcyon 10-14..16 6
+       ('2027-10-14T12:01:38', '248934326', 'HALCYON AEGIS', '27.82687', '-96.90162', '0.0', '1')
+       ('2027-10-14T12:05:04', '511836259', 'HALCYON DRIFT', '27.80945', '-96.90042', '0.1', '1')
+       ('2027-10-14T12:07:43', '248934326', 'HALCYON AEGIS', '27.82684', '-96.90165', '0.0', '1')
+       ('2027-10-16T11:53:00', '511836259', 'HALCYON DRIFT', '27.80940', '-96.90057', '0.0', '1')
+       ('2027-10-16T11:55:39', '248934326', 'HALCYON AEGIS', '27.82759', '-96.90059', '0.2', '1')
+       ('2027-10-16T11:58:40', '511836259', 'HALCYON DRIFT', '27.80939', '-96.90061', '0.2', '1')
+      names Counter({('248934326', 'HALCYON AEGIS'): 480, ('511836259', 'HALCYON DRIFT'): 341, ('338724891', 'PELICAN RIDGE'): 176})
+  * radar uncorrelated tracks 10-15 1
+       ('NE-001301', '2027-10-15T02:04:59Z', '2027-10-15T15:58:59Z', 377, '180', '27.80930', '-96.90107')
+      at 04:20 [('NE-001301', '2027-10-15T04:20:59Z', '27.77790', '-96.92915', '0.6'), ('NE-001301', '2027-10-15T04:22:59Z', '27.77797', '-96.92924', '0.7')]
+      at 09:30 [('NE-001301', '2027-10-15T09:30:59Z', '27.80866', '-96.90162', '0.1'), ('NE-001301', '2027-10-15T09:32:59Z', '27.80872', '-96.90147', '0.0')]
+  * camera events 10-15 00-16Z w/o mmsi 0
+  * vessel_traffic_log 10-15 02-16Z 10
+       ('2027-10-15T04:47:23Z', 'HARBOR BRIDGE', 'OUTBOUND', 'BARGE 44', 'barge')
+       ('2027-10-15T04:47:35Z', 'HARBOR BRIDGE', 'OUTBOUND', 'MATAGORDA STAR', 'tug')
+       ('2027-10-15T05:45:23Z', 'JETTIES', 'OUTBOUND', 'NUECES BAY SUPPLY', 'offshore_supply')
+       ('2027-10-15T07:48:05Z', 'JETTIES', 'OUTBOUND', 'BARGE 44', 'barge')
+       ('2027-10-15T07:48:17Z', 'JETTIES', 'OUTBOUND', 'MATAGORDA STAR', 'tug')
+       ('2027-10-15T11:44:49Z', 'JETTIES', 'OUTBOUND', 'GULF WIND II', 'fishing')
+       ('2027-10-15T12:00:26Z', 'JETTIES', 'OUTBOUND', 'LADY CAROLYN', 'fishing')
+       ('2027-10-15T14:12:54Z', 'JETTIES', 'INBOUND', 'BARGE 44', 'barge')
+=== M12 GPS interference 2027-10-22..27
+    ADS-B mean NIC by UTC day [('10-18', 7.99, 8769), ('10-19', 7.95, 9330), ('10-20', 7.95, 8803), ('10-21', 7.96, 8166), ('10-22', 5.75, 8786), ('10-23', 5.35, 5775), ('10-24', 5.77, 2791), ('10-25', 5.35, 9137), ('10-26', 5.02, 7751), ('10-27', 5.21, 8315), ('10-28', 7.8, 7581), ('10-29', 8.0, 8701), ('10-30', 7.84, 4772), ('10-31', 7.96, 3717)]
+    AIS KALVORA STAR max position deviation m by day [('10-18', 2.5), ('10-19', 3.1), ('10-20', 2.9), ('10-21', 2.3), ('10-22', 2.6), ('10-23', 4.5), ('10-24', 2.3), ('10-25', 1.8), ('10-26', 4.0), ('10-27', 2.2), ('10-28', 2.8), ('10-29', 2.6), ('10-30', 3.2)]
+    drone flights 10-20..29 Counter({'2027-10-20': 9, '2027-10-27': 8, '2027-10-22': 4, '2027-10-23': 4, '2027-10-28': 4, '2027-10-21': 3, '2027-10-26': 3, '2027-10-25': 1, '2027-10-29': 1})
+  * posts gps 74
+       ('2027-10-23T16:00:25Z', 'CCIntlAirport', 'Pilots have reported GPS interference within about 40 miles of Corpus Christi and the FAA has issued a notice. Flights continue using backup navigatio')
+       ('2027-10-23T16:15:17Z', 'Harborline6News', 'NEW: Pilots report GPS interference within about 40 miles of Corpus Christi; FAA issues a notice; relief flights continue using backup navigation.')
+       ('2027-10-23T16:16:33Z', 'TDEM_Region', 'RT @CCIntlAirport: Pilots have reported GPS interference within about 40 miles of Corpus Christi and the FAA has issued a notice. Flights continue usi')
+       ('2027-10-23T16:16:39Z', 'TxTaskForce1', 'RT @CCIntlAirport: Pilots have reported GPS interference within about 40 miles of Corpus Christi and the FAA has issued a notice. Flights continue usi')
+       ('2027-10-23T16:19:24Z', 'JourdanWattsNRG', 'RT @Harborline6News: NEW: Pilots report GPS interference within about 40 miles of Corpus Christi; FAA issues a notice; relief flights continue using b')
+  * port_conditions mentioning GPS 0
+  * 911 narratives GPS 0
+=== M13 NAS generator failure 2027-10-24
+Traceback (most recent call last):
+  File "./07_validation/independent_audit_2/c2_c.py", line 61, in <module>
+    show('base_status 10-22..27 NAS',[(r['report_date'],r['readiness_pct'],r['backup_power_status'],r['generator_test_result'],r['remarks'][:90]) for r in rows('maintenance/base_status_reports.csv') if r['facility_id']=='FAC-DOD-01' and '2027-10-22'<=r['report_date']<='2027-10-27'])
+  File "./07_validation/independent_audit_2/c2_c.py", line 61, in <listcomp>
+    show('base_status 10-22..27 NAS',[(r['report_date'],r['readiness_pct'],r['backup_power_status'],r['generator_test_result'],r['remarks'][:90]) for r in rows('maintenance/base_status_reports.csv') if r['facility_id']=='FAC-DOD-01' and '2027-10-22'<=r['report_date']<='2027-10-27'])
+KeyError: 'facility_id'

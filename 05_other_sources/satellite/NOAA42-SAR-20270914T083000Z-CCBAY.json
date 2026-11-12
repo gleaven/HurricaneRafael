@@ -1,0 +1,108 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
+ ],
+ "id": "NOAA42-SAR-20270914T083000Z-CCBAY",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.62,
+     27.6
+    ],
+    [
+     -97.1,
+     27.6
+    ],
+    [
+     -97.1,
+     27.95
+    ],
+    [
+     -97.62,
+     27.95
+    ],
+    [
+     -97.62,
+     27.6
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.62,
+  27.6,
+  -97.1,
+  27.95
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "NOAA42-SAR-20270914T083000Z-CCBAY.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/NOAA42-SAR-20270914T083000Z-CCBAY/sigma0_vv.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/NOAA42-SAR-20270914T083000Z-CCBAY/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-09-14T08:30:00Z",
+  "title": "Airborne radar pass over Corpus Christi Bay and the ship channel after landfall",
+  "description": "Airborne radar pass NOAA42-20270914-0830Z, about 2,400 square km centred on Corpus Christi Bay at 5 m resolution, two and a half hours after landfall. Two large hulls alongside at the crude oil berth on the north bank of the Main Turning Basin in the Inner Harbor; no vessel under way anywhere in the ship channel. Storm-surge inundation of 2.1 to 3.4 m across the coastal industrial zone. Low-backscatter (oil-on-water) signature in the Inner Harbor around the berth, trailing east toward the bay.",
+  "platform": "NOAA42 airborne SAR",
+  "instruments": [
+   "side-looking airborne radar (WP-3D)"
+  ],
+  "constellation": "NOAA42 airborne SAR",
+  "gsd": 5,
+  "view:off_nadir": 18.0,
+  "view:sun_azimuth": 48.9,
+  "view:sun_elevation": -46.7,
+  "proj:epsg": 32614,
+  "sar:instrument_mode": "stripmap",
+  "sar:frequency_band": "C",
+  "sar:polarizations": [
+   "VV",
+   "VH"
+  ],
+  "detections": {
+   "vessels": {
+    "main_turning_basin_crude_berth": 2,
+    "ship_channel_under_way": 0,
+    "offshore_anchorage": 0
+   },
+   "inundation_depth_m": [
+    2.1,
+    3.4
+   ],
+   "oil_on_water": {
+    "present": true,
+    "where": "Inner Harbor around the Main Turning Basin crude oil berth, trailing east"
+   }
+  }
+ }
+}

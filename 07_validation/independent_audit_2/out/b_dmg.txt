@@ -1,0 +1,40 @@
+structures 12000 rows per structure Counter({1: 5206, 2: 4867, 3: 1767, 4: 160})
+type x level
+  AI 12000 {'DST': 390, 'MAJ': 2100, 'AFF': 4401, 'MIN': 3528, 'NVD': 1581} dates 2027-09-17 07:00 2027-09-19 17:47
+     by day [('2027-09-17', 3511), ('2027-09-18', 4862), ('2027-09-19', 3627)] ... hours [(0, 425), (1, 371), (2, 418), (3, 431), (4, 407), (5, 454), (6, 395), (7, 584), (8, 577), (9, 599), (10, 629), (11, 598), (12, 590), (13, 632), (14, 606), (15, 648), (16, 618), (17, 615), (18, 371), (19, 395), (20, 397), (21, 395), (22, 400), (23, 445)]
+  RS 986 {'MIN': 651, 'NVD': 76, 'MAJ': 259} dates 2027-09-14 13:02 2027-09-16 22:35
+     by day [('2027-09-14', 179), ('2027-09-15', 415), ('2027-09-16', 392)] ... hours [(0, 47), (1, 35), (2, 26), (3, 40), (4, 39), (5, 31), (6, 38), (7, 34), (8, 32), (9, 40), (10, 41), (11, 32), (12, 30), (13, 48), (14, 52), (15, 42), (16, 49), (17, 55), (18, 58), (19, 45), (20, 52), (21, 45), (22, 49), (23, 26)]
+  FV 5181 {'MIN': 1498, 'MAJ': 1891, 'AFF': 1094, 'NVD': 487, 'DST': 211} dates 2027-09-20 08:03 2027-10-25 06:14
+     by day [('2027-09-20', 135), ('2027-09-21', 205), ('2027-09-22', 226), ('2027-09-23', 184), ('2027-09-24', 232), ('2027-09-25', 222), ('2027-09-26', 224), ('2027-09-27', 188)] ... hours [(0, 245), (1, 202), (2, 224), (3, 222), (4, 238), (5, 245), (6, 211), (7, 223), (8, 202), (9, 230), (10, 206), (11, 236), (12, 209), (13, 219), (14, 211), (15, 234), (16, 167), (17, 191), (18, 223), (19, 199), (20, 216), (21, 221), (22, 206), (23, 201)]
+  HI 2714 {'DST': 148, 'MIN': 1340, 'MAJ': 1226} dates 2027-11-14 08:20 2028-01-11 17:29
+     by day [('2027-11-14', 28), ('2027-11-15', 35), ('2027-11-16', 43), ('2027-11-17', 60), ('2027-11-18', 36), ('2027-11-19', 34), ('2027-11-20', 35), ('2027-11-21', 56)] ... hours [(0, 92), (1, 103), (2, 125), (3, 116), (4, 120), (5, 108), (6, 104), (7, 121), (8, 95), (9, 116), (10, 121), (11, 125), (12, 120), (13, 105), (14, 128), (15, 83), (16, 120), (17, 119), (18, 105), (19, 131), (20, 109), (21, 99), (22, 125), (23, 124)]
+structures not on land 1 ['CC-111025']
+road distance m: median 18 p95 29 max 32 | street name != nearest road 1462 of 1500 [('20910 State Hwy 361, Port Aransas TX 78373', 'secondary', 17), ('121 W Ave J, Robstown TX 78380', 'secondary', 27), ('811 Molina Dr, Corpus Christi TX 78416', 'local', 19), ('3302 State Hwy 357, Corpus Christi TX 78414', 'secondary', 17), ('696 Us Hwy 181, Corpus Christi TX 78401', 'local', 1), ('210 Pr 22 N, Corpus Christi TX 78418', 'local', 19)]
+structures with varying coords 0 varying address 0 varying year/sqft 0
+addresses shared by >1 structure 303 [('2343 State Hwy 357, Corpus Christi TX 78414', 3), ('323 Ayers St, Corpus Christi TX 78415', 3), ('613 Columbia St, Corpus Christi TX 78416', 3)]
+coords shared by >1 structure 0 [(('27.787350', '-97.398331'), 1), (('27.673493', '-97.291960'), 1)]
+AI mean flood depth / roof pct by level {'NVD': (0.0, 0), 'AFF': (1.5, 11), 'MIN': (2.9, 30), 'MAJ': (5.2, 56), 'DST': (6.6, 73)}
+FV mean flood depth / roof pct by level {'NVD': (0.0, 0), 'AFF': (1.5, 11), 'MIN': (2.7, 27), 'MAJ': (4.3, 46), 'DST': (6.6, 74)}
+flood>=5 ft, non-elevated, level<=MIN: 1266 of 3139 {'structure_id': 'CC-100959', 'structure_type': 'Residential', 'address': '535 S Tancahua St, Corpus Christi TX 78401', 'city': 'Corpus Christi', 'zip': '78401', 'census_tract': '480301', 'LATITUDE': '27.787350', 'LONGITUDE': '-97.398331', 'DMG_LEVEL': 'MIN', 'ASMT_TYPE': 'RS', 'ASMT_DATE': '2027-09-14 13:02', 'ASSESSOR': 'Corpus Christi Fire Department', 'OCCUPANCY': 'RES-SFD', 'YEAR_BUILT': '1989', 'SQ_FT': '2278', 'STORIES': '2', 'FOUNDATION': 'Slab', 'FLOOD_DEPTH_FT': '6.3', 'ROOF_DAMAGE_PCT': '20', 'ACCESS_NOTE': 'windshield survey', 'INCIDENT_NUMBER': 'DR-4821-TX'}
+no flood, roof<10% but MAJ/DST: 0
+flood depth varies between assessments of same structure 0 roof varies 0
+FV level minus AI level [(0, 4209), (1, 972)]
+78418 Corpus Christi 2092 MAJ+DST share 0.32 mean flood 3.4 mean roof 28
+78410 Corpus Christi 1423 MAJ+DST share 0.2 mean flood 2.0 mean roof 21
+78405 Corpus Christi 938 MAJ+DST share 0.3 mean flood 2.3 mean roof 28
+78404 Corpus Christi 801 MAJ+DST share 0.3 mean flood 2.3 mean roof 27
+78415 Corpus Christi 744 MAJ+DST share 0.22 mean flood 1.4 mean roof 22
+78380 Robstown 721 MAJ+DST share 0.13 mean flood 0.3 mean roof 16
+78414 Corpus Christi 707 MAJ+DST share 0.22 mean flood 1.9 mean roof 23
+78416 Corpus Christi 696 MAJ+DST share 0.21 mean flood 1.6 mean roof 23
+78407 Corpus Christi 667 MAJ+DST share 0.33 mean flood 3.4 mean roof 30
+78402 Corpus Christi 631 MAJ+DST share 0.45 mean flood 6.1 mean roof 35
+78408 Corpus Christi 605 MAJ+DST share 0.33 mean flood 3.7 mean roof 28
+78412 Corpus Christi 500 MAJ+DST share 0.13 mean flood 0.3 mean roof 16
+78401 Corpus Christi 452 MAJ+DST share 0.43 mean flood 6.0 mean roof 35
+78411 Corpus Christi 418 MAJ+DST share 0.28 mean flood 2.2 mean roof 25
+78413 Corpus Christi 259 MAJ+DST share 0.13 mean flood 0.3 mean roof 17
+78409 Corpus Christi 206 MAJ+DST share 0.1 mean flood 0.2 mean roof 14
+78373 Port Aransas 140 MAJ+DST share 0.34 mean flood 4.5 mean roof 29
+MH stories 2: 593 MH sqft>2000 1350 of 2567 year>2027 0
+spill-zone access notes zips [('78407', 318), ('78402', 306), ('78408', 122)] dates 2027-10-04 09:18 2027-10-25 06:14

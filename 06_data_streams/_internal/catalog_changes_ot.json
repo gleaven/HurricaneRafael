@@ -1,0 +1,87 @@
+{
+  "family": "utility / OT (scada_historian, outage_map, work_orders, base_status_reports, fuel_deliveries, vessel_ot_logs)",
+  "changes": [
+    {
+      "stream_id": "scada_historian",
+      "field": "cadence",
+      "now": "compressed archive: row on change beyond deadband, at least hourly (15 min for key pressures and voltages); events at the exact second",
+      "was": "1-5 min by tag",
+      "why": "331 tags over 150 days at 1-5 min is 0.8-4 GB; the compressed archive is 60 MB and keeps every event"
+    },
+    {
+      "stream_id": "scada_historian",
+      "field": "key_columns",
+      "now": {
+        "time": "Timestamp (UTC)",
+        "entity_ids": [
+          "Tagname"
+        ]
+      },
+      "was": {
+        "time": "timestamp (UTC)",
+        "entity_ids": [
+          "tag",
+          "asset"
+        ]
+      },
+      "why": "export format in scada_tags.json is Tagname,Timestamp,Value,Quality; asset comes from the tag catalogue"
+    },
+    {
+      "stream_id": "outage_map",
+      "field": "cadence",
+      "now": "15 min",
+      "was": "hourly"
+    },
+    {
+      "stream_id": "outage_map",
+      "field": "format",
+      "now": "adds cause, crews_assigned, est_restoration_utc; span 2027-09-10T05:00Z to 2027-10-27T05:00Z"
+    },
+    {
+      "stream_id": "work_orders",
+      "field": "key_columns",
+      "now": {
+        "time": "reported_date, status_date, actual_finish, status_history",
+        "entity_ids": [
+          "wonum",
+          "asset_id",
+          "vendor_id"
+        ]
+      }
+    },
+    {
+      "stream_id": "work_orders",
+      "field": "ids_from_registry",
+      "now": [
+        "infrastructure_assets.json",
+        "scada_tags.json (equipment_id)",
+        "gw_host_registry.json (equipment, users)",
+        "entity_registry.json (vendors)"
+      ]
+    },
+    {
+      "stream_id": "base_status_reports",
+      "field": "ids_from_registry",
+      "now": [
+        "facility_registry.json (facilities and out_of_area)",
+        "infrastructure_assets.json (EQP-2201)"
+      ]
+    },
+    {
+      "stream_id": "fuel_deliveries",
+      "field": "format",
+      "now": "record_type DELIVERY or TANK_DIP; ids also from organizations.json, infrastructure_assets.json, terminal_registry.json, vessels.json"
+    },
+    {
+      "stream_id": "vessel_ot_logs",
+      "field": "path_glob",
+      "now": "05_other_sources/telemetry/vessel_cargo_control_*.csv (kalvora_star, ostrel_bay, remote_sessions)",
+      "was": "same glob"
+    },
+    {
+      "stream_id": "*",
+      "field": "schemas",
+      "now": "06_data_streams/schemas/03_scada_telemetry_schema.json, 11_maintenance_schema.json, outage_map_schema.json, fuel_deliveries_schema.json, vessel_ot_logs_schema.json"
+    }
+  ]
+}

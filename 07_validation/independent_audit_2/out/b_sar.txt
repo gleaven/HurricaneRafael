@@ -1,0 +1,54 @@
+cumulative by 2027-09-15T20:00:00Z 486 canon 486 by recovery 486
+cumulative by 2027-09-16T23:00:00Z 702 canon 702 by recovery 702
+cumulative by 2027-09-19T22:00:00Z 1427 canon 1427 by recovery 1427
+cumulative by 2027-09-22T00:00:00Z 1427 canon 1427 by recovery 1427
+by air at D+1 15:00 341 hoists 180
+totals: helicopter 341 surface 1041 ambulatory 45 Counter({'swiftwater_team': 370, 'helicopter': 341, 'rescue_boat': 303, 'civilian_boat': 232, 'high_water_vehicle': 136, 'welfare_check_team': 45})
+first 2027-09-14T06:51:00Z last rescue 2027-09-19T21:38:56Z last row 2027-09-24T14:56:47Z
+rescues by local D-day [(0, 62), (1, 480), (2, 367), (3, 230), (4, 170), (5, 118)]
+  D 0 {'helicopter': 50, 'high_water_vehicle': 12}
+  D 1 {'helicopter': 291, 'swiftwater_team': 100, 'high_water_vehicle': 18, 'rescue_boat': 75}
+  D 2 {'swiftwater_team': 200, 'rescue_boat': 110, 'high_water_vehicle': 53}
+  D 3 {'civilian_boat': 106, 'high_water_vehicle': 29, 'swiftwater_team': 40, 'rescue_boat': 55}
+  D 4 {'welfare_check_team': 20, 'civilian_boat': 80, 'swiftwater_team': 20, 'high_water_vehicle': 10, 'rescue_boat': 40}
+  D 5 {'welfare_check_team': 25, 'rescue_boat': 23, 'civilian_boat': 46, 'high_water_vehicle': 14, 'swiftwater_team': 10}
+  D 7 {'welfare_check_team': 5}
+  D 8 {'welfare_check_team': 3}
+  D 9 {'welfare_check_team': 2}
+  D 10 {'welfare_check_team': 1}
+CG-6033 D 0 sorties 5 rescues 28
+CG-6033 D 1 sorties 7 rescues 126
+CG-6033 D 2 sorties 0 rescues 0
+CG-6033 D 3 sorties 0 rescues 0
+CG-6041 D 0 sorties 4 rescues 22
+CG-6041 D 1 sorties 6 rescues 108
+CG-6041 D 2 sorties 0 rescues 0
+CG-6041 D 3 sorties 0 rescues 0
+helicopter assets Counter({'CG-6033': 154, 'CG-6041': 130, 'N110TX': 36, 'N3941A': 21})
+TF1 deployments D+2 (missions): 22 D+1 15 TF1 rescued D+1+D+2 300 all rescued D+1+D+2 847
+civilian boats 87 first 2027-09-17T11:40:24Z
+helicopter rescues after 2027-09-17T08:00Z 0 surface before 568
+positions not on land 0 []
+road dist sample max 28 p95 26
+time order violations 0
+mission dur h q [0.5, 1.1, 1.6, 2.3, 2.8]
+helicopter missions 29 rescues/mission max 18 counts [(18, 13), (7, 6), (9, 4), (6, 3)]
+high_water_vehicle missions 45 rescues/mission max 6 counts [(3, 17), (4, 12), (2, 8), (1, 5)]
+swiftwater_team missions 50 rescues/mission max 16 counts [(7, 8), (6, 7), (5, 7), (4, 7)]
+rescue_boat missions 65 rescues/mission max 9 counts [(5, 23), (4, 12), (6, 8), (3, 7)]
+civilian_boat missions 87 rescues/mission max 6 counts [(2, 29), (3, 22), (4, 15), (1, 15)]
+welfare_check_team missions 33 rescues/mission max 4 counts [(1, 19), (2, 7), (3, 5), (4, 2)]
+SAR-27-01428 SARM-27-0299 WC-5  2027-09-21T19:28:21Z 2027-09-21T19:31:27Z 27.772901 -97.414624 2344 CROSSTOWN FWY 19-2027-009510
+SAR-27-01429 SARM-27-0300 WC-2  2027-09-21T19:50:11Z 2027-09-21T19:54:02Z 27.803320 -97.451159 5687 I- 37 19-2027-009521
+SAR-27-01430 SARM-27-0301 WC-2  2027-09-21T21:11:43Z 2027-09-21T21:14:54Z 27.803469 -97.450840 2420 N PADRE ISLAND DR 19-2027-009573
+SAR-27-01431 SARM-27-0302 WC-5  2027-09-21T21:43:06Z 2027-09-21T21:47:52Z 27.768262 -97.417546 2840 CROSSTOWN FWY 19-2027-009586
+SAR-27-01432 SARM-27-0303 WC-5  2027-09-21T22:54:54Z 2027-09-21T22:59:01Z 27.769825 -97.416607 2712 CROSSTOWN FWY 19-2027-009634
+SAR-27-01433 SARM-27-0304 WC-2  2027-09-22T13:14:41Z 2027-09-22T13:16:59Z 27.802002 -97.453276 525 NAVIGATION BLVD 19-2027-009926
+SAR-27-01434 SARM-27-0305 WC-2  2027-09-22T17:33:19Z 2027-09-22T17:35:48Z 27.801992 -97.453279 521 NAVIGATION BLVD 19-2027-010056
+SAR-27-01435 SARM-27-0306 WC-5  2027-09-22T19:19:54Z 2027-09-22T19:23:13Z 27.773205 -97.413958 2249 CROSSTOWN FWY 19-2027-010094
+SAR-27-01436 SARM-27-0307 WC-2  2027-09-23T13:38:00Z 2027-09-23T13:39:57Z 27.801771 -97.453193 551 NAVIGATION BLVD 19-2027-010518
+SAR-27-01437 SARM-27-0308 WC-5  2027-09-23T20:12:56Z 2027-09-23T20:16:46Z 27.770269 -97.416016 3365 CROSSTOWN FWY 19-2027-010685
+SAR-27-01438 SARM-27-0309 WC-5  2027-09-24T14:56:47Z 2027-09-24T14:59:57Z 27.772071 -97.414442 3554 CROSSTOWN FWY 19-2027-011147
+incident numbers not in CAD 0 []
+CAD position offset max m 0 CAD rows with sar_case_number 1438 example (0, '2027-09-14 01:08:00', 'WATERRESC', 'FAMILY ON ROOF WATER RISING // AIR ASSET TASKED VIA SAR BRANCH // CG-6033 HOIST 1', 'Y', '27.671895', '-97.298424', '19-2027-001460', '', 'ASSIST', '361-356-6881', 'WPH2', 'SAR-27-00001')
+on scene before call received 0

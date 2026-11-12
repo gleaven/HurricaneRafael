@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "note": "All outlets are fictional. Feed URLs use the reserved .example domain.",
+  "outlets": [
+    {
+      "outlet_id": "OUT-01",
+      "name": "The Bayside Ledger",
+      "type": "Local daily newspaper (print and web), Corpus Christi",
+      "feed_url": "https://bayside-ledger.example/rss",
+      "site_url": "https://bayside-ledger.example",
+      "cadence": "2-5 stories a day; more on major days",
+      "sections": ["Local", "Weather", "Business", "Health", "Military", "Investigations", "Opinion"],
+      "staff": ["CHR-001", "CHR-002", "CHR-003", "CHR-004", "CHR-005"],
+      "style": "AP style; inverted pyramid; 300-450 words; names and ages of residents; attributes every number; cautious on cause and blame until officials confirm.",
+      "audience": "Coastal Bend residents"
+    },
+    {
+      "outlet_id": "OUT-02",
+      "name": "Harborline 6 News",
+      "type": "Local TV station website",
+      "feed_url": "https://harborline6.example/rss",
+      "site_url": "https://harborline6.example",
+      "cadence": "1-3 a day; heavy breaking coverage during the storm",
+      "sections": ["Breaking", "Weather", "Local", "Traffic"],
+      "staff": ["CHR-006", "CHR-007"],
+      "style": "Short, urgent, 250-320 words; present tense in the lead; practical service details (shelters, closures, hotlines); 'Harborline 6 has learned'.",
+      "audience": "General local audience, mobile readers"
+    },
+    {
+      "outlet_id": "OUT-03",
+      "name": "Coastline Public Radio",
+      "type": "Regional public radio newsroom (web stories)",
+      "feed_url": "https://coastline-radio.example/rss",
+      "site_url": "https://coastline-radio.example",
+      "cadence": "1-2 a day; explanatory and follow-up pieces",
+      "sections": ["Environment", "Equity", "Military & Community", "Health"],
+      "staff": ["CHR-008", "CHR-009"],
+      "style": "Explanatory, people-first, 350-450 words; scene-setting opening; data and context; equity and environmental angles.",
+      "audience": "Engaged listeners across the Coastal Bend"
+    },
+    {
+      "outlet_id": "OUT-04",
+      "name": "Gulfwater Maritime Report",
+      "type": "Maritime trade publication",
+      "feed_url": "https://gulfwater-maritime.example/rss",
+      "site_url": "https://gulfwater-maritime.example",
+      "cadence": "Several a week; port and shipping focus",
+      "sections": ["Ports", "Tankers", "Security", "Regulation"],
+      "staff": ["CHR-010"],
+      "style": "Technical and terse, 280-400 words; vessel counts, channel status, Coast Guard port conditions; reports public AIS observations but never speculates on attribution.",
+      "audience": "Shipping, port and energy professionals"
+    },
+    {
+      "outlet_id": "OUT-05",
+      "name": "Sabal Energy Wire",
+      "type": "Energy and markets wire",
+      "feed_url": "https://sabal-energy.example/rss",
+      "site_url": "https://sabal-energy.example",
+      "cadence": "Several a week; daily during port disruptions",
+      "sections": ["Crude", "Refining", "Markets"],
+      "staff": ["CHR-011"],
+      "style": "Market-wire style, 250-350 words; export volumes, freight, prices, analyst quotes; numbers are scenario values.",
+      "audience": "Traders and energy industry"
+    },
+    {
+      "outlet_id": "OUT-06",
+      "name": "Continental Wire Service",
+      "type": "National news wire",
+      "feed_url": "https://continental-wire.example/rss",
+      "site_url": "https://continental-wire.example",
+      "cadence": "Only on nationally significant days",
+      "sections": ["National", "Security", "World"],
+      "staff": ["CHR-012"],
+      "style": "National wire, 300-400 words; dateline CORPUS CHRISTI, Texas; broad context for national readers; quotes officials and analysts; overseas crisis never names a country.",
+      "audience": "National readers"
+    },
+    {
+      "outlet_id": "OUT-07",
+      "name": "Anchor & Rotor Weekly",
+      "type": "Military community weekly (NAS Corpus Christi, Army depot, NAS Kingsville)",
+      "feed_url": "https://anchor-rotor.example/rss",
+      "site_url": "https://anchor-rotor.example",
+      "cadence": "Weekly, plus specials during the storm and after the channel blast",
+      "sections": ["Base News", "Readiness", "Families"],
+      "staff": ["CHR-013"],
+      "style": "Community-friendly, 280-400 words; families, readiness, base services; relies on public affairs statements; never reports operational security details.",
+      "audience": "Service members, civilians and families"
+    },
+    {
+      "outlet_id": "OUT-08",
+      "name": "KNCB Coastal Bend Radio",
+      "type": "Spanish-language AM radio station (1480 AM), Corpus Christi",
+      "feed_url": "https://kncb1480.example/rss",
+      "site_url": "https://kncb1480.example",
+      "cadence": "1-3 a day; 24-hour emergency format during Rafael",
+      "sections": ["Emergencias", "Local", "Comunidad", "Salud"],
+      "staff": ["CHR-013"],
+      "style": "Bilingual (Spanish primary, English secondary); 250-380 words; community-first; practical emergency information; identifies language-access gaps; dateline CORPUS CHRISTI, Texas.",
+      "audience": "Spanish-speaking Coastal Bend residents"
+    }
+  ]
+}

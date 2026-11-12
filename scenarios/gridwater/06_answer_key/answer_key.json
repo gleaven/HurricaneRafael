@@ -1,0 +1,104 @@
+{
+  "scenario": "gridwater",
+  "classification": "EXERCISE CONTROLLER ONLY — not released to teams",
+  "purpose": "Each path below is an independent chain of artifacts that, when followed, leads a team from an observable anomaly to the hidden truth of that thread. Teams may find one, two or all three paths. The T10 path is the meta-path that connects the utility attack back to the STATE-X/KESTREL network documented in the Rafael base world.",
+  "paths": [
+    {
+      "thread": "T8",
+      "name": "Grid intrusion",
+      "join_path": [
+        {
+          "step": 1,
+          "artifact": "ERCOT EMS outage-footprint overlay",
+          "observation": "32,000 customers in northwest and central Corpus Christi experienced outages lasting 21+ days. The affected areas had measured peak gusts of 50–65 mph during Rafael — a band that produced <36-hour outages in comparable areas during hurricanes Harvey and Harvey-analog scenarios in ERCOT historical records.",
+          "significance": "Mismatch between storm severity and restoration duration is the initial anomaly that flags possible non-storm cause."
+        },
+        {
+          "step": 2,
+          "artifact": "GW-SYS-RTU-01 relay configuration dump vs. D-30 commissioning test report",
+          "observation": "Current relay 27-UV threshold = 0.94 pu. Commissioning report (D-30) = 0.88 pu. No change order exists for the modification. The modification timestamp in the RTU config file = D-3 17:04Z.",
+          "significance": "Proves the relay was deliberately set to a hair-trigger threshold before the storm, not damaged by it. D-3 timestamp predates any storm-related work."
+        },
+        {
+          "step": 3,
+          "artifact": "GW-SYS-SCADA-01 operator-command log, D+7 and D+10",
+          "observation": "Breaker-OPEN commands were sent to GW-FAC-SUB-02 CB-7 (D+7 14:28Z) and GW-FAC-SUB-03 CB-12 (D+10 19:43Z) from workstation GW-WS-OPS-02. No operator was logged in to that workstation at either time (confirmed by physical access badge log and SCADA console session table).",
+          "significance": "Commands were sent remotely via the jump host, not by any CBPWA operator. Proves active adversary presence during the restoration phase."
+        },
+        {
+          "step": 4,
+          "artifact": "GW-SYS-JMP-01 session logs",
+          "observation": "14 authenticated sessions from IP blocks outside Texas, all using credential GW-ENG-VELA, spanning D-7 to D+16. Session at D+7 14:27–14:33Z and D+10 19:40–19:50Z coincide exactly with the unauthorized SCADA commands.",
+          "significance": "Ties the remote actor (via stolen credential GW-ENG-VELA) to both the relay pre-staging and the active D+7/D+10 trips. Confirms external actor, not insider."
+        }
+      ],
+      "answer": "STATE-X/KESTREL used a stolen CBPWA engineer credential to pre-modify relay trip thresholds before the hurricane (causing premature trip at D0) and to issue remote breaker-open commands at D+7 and D+10 during the restoration effort, extending power outages for 32,000 customers by approximately 3 weeks beyond the storm-only baseline."
+    },
+    {
+      "thread": "T9",
+      "name": "Water SCADA manipulation",
+      "join_path": [
+        {
+          "step": 1,
+          "artifact": "City boil water notice + field report GW-FR-0912",
+          "observation": "Boil water notice for Districts 3–4 issued D+12. Field report logs Zone 4 pressure at 16–18 psi at D+12 15:44Z. The 20 psi regulatory threshold had been breached for at least 3 days before detection.",
+          "significance": "Establishes the effect and that it went undetected for days — suggesting a monitoring failure, not just storm damage."
+        },
+        {
+          "step": 2,
+          "artifact": "GW-SYS-SCADA-01 alarm console + suppression file",
+          "observation": "ZONE4-LOW-PRES alarm is listed as suppressed since D-3 17:09Z. No work order authorized this suppression. The suppression was added in the same SCADA session that modified the relay settings.",
+          "significance": "Explains why the pressure drop went unalarmed for 3 days. The suppression was an adversary action, not a maintenance configuration. The same session authoring both the relay change and the alarm suppression is a critical cross-thread tie."
+        },
+        {
+          "step": 3,
+          "artifact": "Meridian historian: FAC-UTL-01-P3-SET-PSI tag and motor amperage log",
+          "observation": "P3-SET-PSI drops from 85 to 68 at D+9 02:04Z under user 'GW-ENG-VELA'. Motor amperage drops 11 A at the same time — consistent with reduced load, inconsistent with any storm or pipe damage (pipe damage would cause flow, not setpoint, change).",
+          "significance": "Proves the pressure drop was caused by a deliberate setpoint change, not hurricane-damaged infrastructure. The GW-ENG-VELA credential links this to the grid-intrusion sessions."
+        },
+        {
+          "step": 4,
+          "artifact": "GW-FAC-WTR-03 (Colorado River Booster) historian",
+          "observation": "GW-FAC-WTR-03-BSTR-SET-PSI changed from 72 to 54 psi at D+9 02:08Z — 4 minutes after the FAC-UTL-01 setpoint change. Same user, same session. This reduced upstream pipeline flow, compounding the shortage at FAC-UTL-01.",
+          "significance": "Shows the adversary modified both the treatment plant and the upstream source pipeline in the same session — a coordinated water-supply reduction, not a single-point failure."
+        }
+      ],
+      "answer": "Using stolen CBPWA credentials, STATE-X/KESTREL pre-suppressed the Zone 4 low-pressure alarm (D-3) and then simultaneously lowered treatment plant pump P-3 and upstream booster station setpoints on D+9, reducing Zone 4 water pressure to 14 psi. The alarm suppression masked the problem for 3 days, triggering a 30-day boil water notice for 48,000 residents."
+    },
+    {
+      "thread": "T10",
+      "name": "Hiding in the storm",
+      "join_path": [
+        {
+          "step": 1,
+          "artifact": "Outage-duration map vs. storm-track wind-field contours",
+          "observation": "GIS overlay of ERCOT outage-duration map against NOAA/NWS H*Wind modeled peak gust contours shows that the two longest-outage clusters (northwest and central Corpus Christi) fall in the 50–65 mph gust band. Historical restoration data for ERCOT shows this gust band produces <36-hour outages. The affected clusters were still out at D+21.",
+          "significance": "Storm footprint cannot explain the outage duration. Something else is holding up restoration."
+        },
+        {
+          "step": 2,
+          "artifact": "SCADA change-management system: timestamp analysis",
+          "observation": "The relay threshold modifications and alarm suppression were written at D-3 17:04–17:09Z, during the storm-preparation change freeze. The storm made landfall at D0 06:00Z. The adversary staged more than 3 days before first impact — the modifications could not have been caused by the storm.",
+          "significance": "Temporal impossibility rules out storm as a cause of the relay and alarm changes. This is the strongest single artifact for proving deliberate action."
+        },
+        {
+          "step": 3,
+          "artifact": "GW-SYS-JMP-01 session log + KESTREL IOC set (TLP:RED, shared with TCC)",
+          "observation": "Two of the 14 VPN session source IPs (45.141.x.x and 185.220.x.x) appear in a classified indicator set for the KESTREL threat cluster shared with the Texas Cyber Command under TLP:RED. The same IP blocks were observed in the Rafael T6 tanker-valve cyber thread and T7 covert port attack communications.",
+          "significance": "Links the utility intrusion to the STATE-X/KESTREL network that orchestrated the tanker-valve attack (T6) and the covert military action at the port (T7). All three operations — hurricane exploitation, grid/water attack, and port disruption — share adversary infrastructure, pointing to a coordinated multi-vector STATE-X campaign timed to Hurricane Rafael."
+        }
+      ],
+      "answer": "STATE-X deliberately timed the utility intrusion to Hurricane Rafael to use the storm as camouflage. The relay modifications predate the storm (D-3), the breaker-open commands mimicked storm switching, and the pressure drop was masked by pre-staged alarm suppression. The mismatch between storm intensity and outage duration, the pre-storm modification timestamps, and KESTREL infrastructure reuse — shared with the Rafael T6/T7 covert operations — collectively prove this was a coordinated multi-thread STATE-X campaign, not a cascade of storm effects."
+    }
+  ],
+  "meta_join": {
+    "description": "The highest-level finding — connecting all three gridwater threads to the Rafael base world",
+    "observation": "Three separate detection paths (grid outage footprint, water alarm suppression, and VPN session attribution) all converge on the same credential (GW-ENG-VELA) and the same jump host (GW-SYS-JMP-01). The jump-host session source IPs link to KESTREL, which is the same adversary cluster documented in Rafael threads T6 and T7. This means the utility cyberattack was not an opportunistic exploitation of hurricane chaos — it was a pre-planned component of STATE-X's multi-vector campaign against the Texas Coastal Bend, designed to compound civilian harm, disrupt port recovery operations, and confuse attribution.",
+    "artifacts_required": [
+      "GW-SYS-JMP-01 session log (all 14 sessions)",
+      "KESTREL IOC set (TLP:RED, TCC sharing)",
+      "Rafael T6 ground-truth event EVT-0601 (tanker valve SCADA session) — same C2 IP block",
+      "Rafael T7 ground-truth event EVT-0701 (covert port attack comms) — same infrastructure"
+    ]
+  }
+}

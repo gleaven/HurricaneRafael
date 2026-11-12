@@ -1,0 +1,316 @@
+{
+ "problems": [],
+ "threads": [
+  {
+   "thread": "T1",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "adsb",
+    "ais",
+    "base_status_reports",
+    "cad_911",
+    "cargo_manifests",
+    "census",
+    "ed_visits",
+    "port_arrivals",
+    "scada_historian",
+    "storm_advisories",
+    "tide_river_gauges",
+    "weather",
+    "work_orders"
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "thread": "T2",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "ais",
+    "base_status_reports",
+    "fuel_deliveries",
+    "insurance_claims",
+    "port_arrivals",
+    "port_conditions",
+    "port_surveillance",
+    "satellite"
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "thread": "T3",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "adsb",
+    "aid_applications",
+    "ais",
+    "contracts",
+    "drone_detections",
+    "drone_telemetry",
+    "financial_transactions",
+    "fuel_deliveries",
+    "satellite"
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "thread": "T4",
+   "steps": 8,
+   "verified": 8,
+   "streams": [
+    "aid_applications",
+    "financial_transactions",
+    "host_audit_logs",
+    "portal_access_logs",
+    "social_media"
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "thread": "T5",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "aid_applications",
+    "avl",
+    "cad_911",
+    "drone_telemetry",
+    "ed_visits",
+    "sar_missions",
+    "shelters",
+    "social_media"
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "thread": "T6",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "ais",
+    "drone_detections",
+    "host_audit_logs",
+    "port_arrivals",
+    "port_conditions",
+    "port_surveillance",
+    "vessel_ot_logs",
+    "water_quality"
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "thread": "T7",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "adsb",
+    "ais",
+    "base_status_reports",
+    "cad_911",
+    "drone_detections",
+    "port_arrivals",
+    "port_conditions",
+    "port_surveillance",
+    "satellite",
+    "social_media"
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "thread": "T8",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "drone_detections",
+    "host_audit_logs",
+    "scada_historian",
+    "siem_alerts",
+    "zeek_logs"
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "thread": "T9",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "broadcast_logs",
+    "cad_911",
+    "census",
+    "eas_alerts",
+    "ed_visits",
+    "host_audit_logs",
+    "sar_missions",
+    "scada_historian",
+    "siem_alerts",
+    "syndromic",
+    "work_orders"
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "thread": "T10",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "host_audit_logs",
+    "outage_map",
+    "scada_historian",
+    "siem_alerts",
+    "work_orders",
+    "zeek_logs"
+   ],
+   "difficulty": "expert"
+  },
+  {
+   "thread": "T11",
+   "steps": 14,
+   "verified": 14,
+   "streams": [
+    "adsb",
+    "damage_assessment",
+    "drone_telemetry",
+    "outage_map",
+    "satellite"
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "thread": "T12",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "ais",
+    "port_conditions",
+    "port_surveillance",
+    "satellite",
+    "vessel_ot_logs"
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "thread": "T13",
+   "steps": 14,
+   "verified": 14,
+   "streams": [
+    "avl",
+    "cad_911",
+    "eas_alerts",
+    "sar_missions"
+   ],
+   "difficulty": "easy"
+  },
+  {
+   "thread": "T14",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "broadcast_logs",
+    "census",
+    "eas_alerts",
+    "ed_visits",
+    "shelters",
+    "syndromic"
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "thread": "T15",
+   "steps": 9,
+   "verified": 9,
+   "streams": [
+    "shelters",
+    "social_media"
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "thread": "T16",
+   "steps": 16,
+   "verified": 16,
+   "streams": [
+    "ed_visits",
+    "fuel_deliveries",
+    "hospital_capacity",
+    "outage_map",
+    "scada_historian",
+    "syndromic"
+   ],
+   "difficulty": "medium"
+  },
+  {
+   "thread": "T17",
+   "steps": 14,
+   "verified": 14,
+   "streams": [
+    "adsb",
+    "avl",
+    "cad_911",
+    "drone_telemetry",
+    "sar_missions"
+   ],
+   "difficulty": "easy"
+  },
+  {
+   "thread": "T18",
+   "steps": 14,
+   "verified": 14,
+   "streams": [
+    "host_audit_logs",
+    "siem_alerts",
+    "work_orders",
+    "zeek_logs"
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "thread": "T19",
+   "steps": 8,
+   "verified": 8,
+   "streams": [
+    "ais",
+    "drone_detections"
+   ],
+   "difficulty": "hard"
+  },
+  {
+   "thread": "T20",
+   "steps": 10,
+   "verified": 10,
+   "streams": [
+    "adsb",
+    "air_quality",
+    "scada_historian",
+    "syndromic",
+    "vessel_ot_logs",
+    "water_quality"
+   ],
+   "difficulty": "easy"
+  },
+  {
+   "thread": "T21",
+   "steps": 13,
+   "verified": 13,
+   "streams": [
+    "broadcast_logs",
+    "eas_alerts"
+   ],
+   "difficulty": "easy"
+  },
+  {
+   "thread": "T22",
+   "steps": 4,
+   "verified": 4,
+   "streams": [
+    "aid_applications",
+    "broadcast_logs",
+    "insurance_claims"
+   ],
+   "difficulty": "hard"
+  }
+ ],
+ "steps_verified": 300,
+ "steps": 300
+}

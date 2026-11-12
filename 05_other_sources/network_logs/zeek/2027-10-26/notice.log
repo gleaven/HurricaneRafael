@@ -1,0 +1,13 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	notice
+#open	2027-10-26-00-00-00
+#fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
+#types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
+1824510644.313860	-	10.14.22.35	205.12.151.203	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+1824522910.551430	-	10.14.30.64	216.95.107.194	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1824530953.892094	-	10.14.21.34	23.37.114.204	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1824541394.234025	-	10.14.22.29	205.206.104.197	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+#close	2027-10-27-00-00-00

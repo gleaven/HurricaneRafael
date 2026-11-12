@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+
+# Rebuildable caches (geometry rasters, road graph, simulation and map build caches)
+_cache/
+_build_cache/
+_test/
+_preview/
+
+# Local history archives made by scripts/snapshot.py (git replaces them)
+_versions/
+
+# Newsroom run state: saved clock and the session-signing secret. Never commit.
+10_news_sites/newsroom/state/
+
+# Participant package copies and scratch output
+_delivery/
+_scratch/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+.vscode/
+.idea/

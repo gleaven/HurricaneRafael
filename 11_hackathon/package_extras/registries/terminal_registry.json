@@ -1,0 +1,3306 @@
+{
+ "metadata": {
+  "dataset": "Port and harbour registry, Corpus Christi area",
+  "schema_version": "2.0",
+  "geography": "Positions are derived from real geometry in 99_reference/geo (USACE National Channel Framework reaches, NOAA ENC land areas and anchorages, USACE Master Docks points). Terminal and operator names are fictional names placed on real dock sites; the Port of Corpus Christi Authority and government agencies are real.",
+  "routing": "Deep-draft ships reach their berths along the channel centerlines. Small craft leave a slip with geo.water.route using a land clearance no larger than the slip's water_route_clearance_m.",
+  "joins": "berth_id and slip_id are used by vessels.json (home_berth_id, usual_berths) and by supply/vessel_arrivals.csv (terminal_id, berth_id).",
+  "counts": {
+   "terminals": 25,
+   "berths": 45,
+   "harbours": 9,
+   "slips": 77,
+   "anchorage_positions": 30,
+   "sea_gates": 12
+  }
+ },
+ "port_overview": {
+  "port_name": "Port of Corpus Christi",
+  "channel": "Corpus Christi Ship Channel (USACE project CESWG_CC), sea bar to Viola Turning Basin, 36.4 statute miles",
+  "maintained_depth_ft": {
+   "sea_bar_and_jetty": "54-56",
+   "bay_reaches_and_inner_harbor": 54,
+   "la_quinta_channel": 47,
+   "intracoastal_waterway": "12-14",
+   "aransas_channel_and_conn_brown_harbor": 16
+  },
+  "harbor_bridge": {
+   "latitude": 27.81194,
+   "longitude": -97.39565,
+   "note": "US 181 crossing at the entrance to the Inner Harbor (National Bridge Inventory point)"
+  },
+  "captain_of_the_port": "U.S. Coast Guard Sector Corpus Christi",
+  "pilots": "Aransas Pass Bar Pilots (fictional name)"
+ },
+ "terminals": [
+  {
+   "terminal_id": "TERM-01",
+   "terminal_name": "Rendal Terminals",
+   "operator": "Rendal Terminals LLC",
+   "terminal_type": "Crude oil export",
+   "waterway": "Inner Harbor, Main Turning Basin (north bank)",
+   "berth_ids": [
+    "TERM-01-B07",
+    "TERM-01-B08"
+   ],
+   "latitude": 27.8148,
+   "longitude": -97.40238,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-02",
+   "terminal_name": "Chemical Basin Fuel Dock",
+   "operator": "Port of Corpus Christi",
+   "terminal_type": "Fuel storage and barge dock",
+   "waterway": "Inner Harbor, Chemical Turning Basin (south bank)",
+   "berth_ids": [
+    "TERM-02-B01"
+   ],
+   "latitude": 27.82258,
+   "longitude": -97.43537,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-04",
+   "terminal_name": "Tule Lake Crude Terminal",
+   "operator": "Sandhollow Midstream Partners",
+   "terminal_type": "Crude oil export",
+   "waterway": "Inner Harbor, Tule Lake Turning Basin",
+   "berth_ids": [
+    "TERM-04-B01",
+    "TERM-04-B02"
+   ],
+   "latitude": 27.82775,
+   "longitude": -97.49309,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-05",
+   "terminal_name": "Viola Liquids Hub",
+   "operator": "Caracara Terminal Services",
+   "terminal_type": "Crude oil and condensate export",
+   "waterway": "Inner Harbor, Viola Channel and Turning Basin",
+   "berth_ids": [
+    "TERM-05-B01",
+    "TERM-05-B02",
+    "TERM-05-B03"
+   ],
+   "latitude": 27.83925,
+   "longitude": -97.51488,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-06",
+   "terminal_name": "Avery Point Products Terminal",
+   "operator": "Marlowe Petroleum Logistics",
+   "terminal_type": "Refined products",
+   "waterway": "Inner Harbor, Avery Point Turning Basin",
+   "berth_ids": [
+    "TERM-06-B01",
+    "TERM-06-B02"
+   ],
+   "latitude": 27.82109,
+   "longitude": -97.43263,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-07",
+   "terminal_name": "Port of Corpus Christi Public Cargo Docks",
+   "operator": "Port of Corpus Christi Authority",
+   "terminal_type": "General cargo, project cargo, military outload",
+   "waterway": "Inner Harbor, Main Turning Basin",
+   "berth_ids": [
+    "TERM-07-B01",
+    "TERM-07-B02",
+    "TERM-07-B03",
+    "TERM-07-B04"
+   ],
+   "latitude": 27.81329,
+   "longitude": -97.40115,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-11",
+   "terminal_name": "Port of Corpus Christi Bulk Terminal",
+   "operator": "Port of Corpus Christi Authority",
+   "terminal_type": "Dry bulk",
+   "waterway": "Inner Harbor, Tule Lake Channel",
+   "berth_ids": [
+    "TERM-11-B01",
+    "TERM-11-B02"
+   ],
+   "latitude": 27.81775,
+   "longitude": -97.46282,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-12",
+   "terminal_name": "Nueces Grain Elevator",
+   "operator": "Coastal Plains Grain Cooperative",
+   "terminal_type": "Grain export",
+   "waterway": "Inner Harbor, Industrial Canal",
+   "berth_ids": [
+    "TERM-12-B01"
+   ],
+   "latitude": 27.81762,
+   "longitude": -97.42276,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-13",
+   "terminal_name": "Harbor Point Refining East Docks",
+   "operator": "Harbor Point Refining Company",
+   "terminal_type": "Refinery crude intake and products",
+   "waterway": "Inner Harbor, Industrial Canal and Main Turning Basin (south bank)",
+   "berth_ids": [
+    "TERM-13-B01",
+    "TERM-13-B02"
+   ],
+   "latitude": 27.81356,
+   "longitude": -97.41607,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-14",
+   "terminal_name": "Cabeza Creek Refining Tule Lake Docks",
+   "operator": "Cabeza Creek Refining LP",
+   "terminal_type": "Refinery crude intake, products and LPG",
+   "waterway": "Inner Harbor, Tule Lake Channel",
+   "berth_ids": [
+    "TERM-14-B01",
+    "TERM-14-B02"
+   ],
+   "latitude": 27.82143,
+   "longitude": -97.48425,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-15",
+   "terminal_name": "Tres Bahias Refining Industrial Canal Docks",
+   "operator": "Tres Bahias Refining and Chemicals",
+   "terminal_type": "Refinery crude intake and products",
+   "waterway": "Inner Harbor, Industrial Canal",
+   "berth_ids": [
+    "TERM-15-B01",
+    "TERM-15-B02"
+   ],
+   "latitude": 27.81389,
+   "longitude": -97.41699,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-16",
+   "terminal_name": "Viola Chemical Dock",
+   "operator": "Calallen Polymers LLC",
+   "terminal_type": "Chemicals",
+   "waterway": "Inner Harbor, Viola Channel",
+   "berth_ids": [
+    "TERM-16-B01"
+   ],
+   "latitude": 27.84081,
+   "longitude": -97.51386,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-17",
+   "terminal_name": "Inner Harbor Crude Export Terminal",
+   "operator": "Padre Midstream Export LLC",
+   "terminal_type": "Crude oil export",
+   "waterway": "Inner Harbor, Main Turning Basin",
+   "berth_ids": [
+    "TERM-17-B01",
+    "TERM-17-B02",
+    "TERM-17-B03"
+   ],
+   "latitude": 27.81367,
+   "longitude": -97.40584,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-18",
+   "terminal_name": "Tule Lake Export Docks",
+   "operator": "Llano Crude Logistics",
+   "terminal_type": "Crude oil export",
+   "waterway": "Inner Harbor, Tule Lake Channel",
+   "berth_ids": [
+    "TERM-18-B01",
+    "TERM-18-B02",
+    "TERM-18-B03",
+    "TERM-18-B04"
+   ],
+   "latitude": 27.81659,
+   "longitude": -97.46228,
+   "position_note": "mean of berth positions (in the water alongside the docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "terminal_id": "TERM-19",
+   "terminal_name": "Chemical Basin Barge Fleet",
+   "operator": "Brasada Inland Marine",
+   "terminal_type": "Barge dock and fleeting",
+   "waterway": "Inner Harbor, Chemical Turning Basin (north bank)",
+   "berth_ids": [
+    "TERM-19-B01",
+    "TERM-19-B02"
+   ],
+   "latitude": 27.82437,
+   "longitude": -97.44102,
+   "position_note": "mean of berth positions (in the water alongside the docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "terminal_id": "TERM-20",
+   "terminal_name": "Nueces Bay Shipyard and Drydock",
+   "operator": "Nueces Bay Shipyard and Drydock Inc.",
+   "terminal_type": "Ship repair",
+   "waterway": "Inner Harbor, Chemical Turning Basin (north bank)",
+   "berth_ids": [
+    "TERM-20-B01"
+   ],
+   "latitude": 27.82479,
+   "longitude": -97.43828,
+   "position_note": "mean of berth positions (in the water alongside the docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "terminal_id": "TERM-21",
+   "terminal_name": "Laguna Towing Tug Base",
+   "operator": "Laguna Towing and Salvage Inc.",
+   "terminal_type": "Harbor tug moorings",
+   "waterway": "Inner Harbor, Main Turning Basin (north bank)",
+   "berth_ids": [
+    "TERM-21-B01",
+    "TERM-21-B02"
+   ],
+   "latitude": 27.8147,
+   "longitude": -97.41067,
+   "position_note": "mean of berth positions (in the water alongside the docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "terminal_id": "TERM-22",
+   "terminal_name": "Coast Guard Cutter Moorings, Corpus Christi",
+   "operator": "U.S. Coast Guard",
+   "terminal_type": "Government moorings",
+   "waterway": "Inner Harbor, Main Turning Basin (north bank)",
+   "berth_ids": [
+    "TERM-22-B01"
+   ],
+   "latitude": 27.81469,
+   "longitude": -97.41199,
+   "position_note": "mean of berth positions (in the water alongside the docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "terminal_id": "TERM-24",
+   "terminal_name": "Gulf Shield Response Base",
+   "operator": "Gulf Shield Response LLC",
+   "terminal_type": "Oil spill response base",
+   "waterway": "Inner Harbor, Tule Lake Channel (south bank)",
+   "berth_ids": [
+    "TERM-24-B01"
+   ],
+   "latitude": 27.81652,
+   "longitude": -97.45581,
+   "position_note": "mean of berth positions (in the water alongside the docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "terminal_id": "TERM-25",
+   "terminal_name": "Coastal Bend Harbor Services Tug Base",
+   "operator": "Coastal Bend Harbor Services",
+   "terminal_type": "Harbor tug moorings",
+   "waterway": "Inner Harbor, Tule Lake Turning Basin",
+   "berth_ids": [
+    "TERM-25-B01"
+   ],
+   "latitude": 27.82578,
+   "longitude": -97.49477,
+   "position_note": "mean of berth positions (in the water alongside the docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "terminal_id": "TERM-03",
+   "terminal_name": "La Quinta LNG Terminal",
+   "operator": "Baypoint LNG Partners",
+   "terminal_type": "LNG export",
+   "waterway": "La Quinta Channel extension",
+   "berth_ids": [
+    "TERM-03-B01"
+   ],
+   "latitude": 27.88025,
+   "longitude": -97.27011,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-09",
+   "terminal_name": "La Quinta Bulk Liquids Terminal",
+   "operator": "Gregory Point Terminals",
+   "terminal_type": "Chemicals and bulk liquids",
+   "waterway": "La Quinta Channel extension",
+   "berth_ids": [
+    "TERM-09-B01"
+   ],
+   "latitude": 27.87847,
+   "longitude": -97.28532,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-10",
+   "terminal_name": "La Quinta Dry Bulk Dock",
+   "operator": "Portland Reduction Works",
+   "terminal_type": "Dry bulk (iron ore, briquettes)",
+   "waterway": "La Quinta Channel extension",
+   "berth_ids": [
+    "TERM-10-B01"
+   ],
+   "latitude": 27.88023,
+   "longitude": -97.27599,
+   "position_note": "mean of berth positions (in the water alongside the docks)"
+  },
+  {
+   "terminal_id": "TERM-23",
+   "terminal_name": "Harbor Island Marine Base",
+   "operator": "Harbor Island Marine Services",
+   "terminal_type": "Offshore supply base",
+   "waterway": "Aransas Channel at Harbor Island (16 ft)",
+   "berth_ids": [
+    "TERM-23-B01",
+    "TERM-23-B02"
+   ],
+   "latitude": 27.84962,
+   "longitude": -97.06342,
+   "position_note": "mean of berth positions (in the water alongside the docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "terminal_id": "TERM-26",
+   "terminal_name": "Redfish Bay Barge Fleeting",
+   "operator": "Brasada Inland Marine",
+   "terminal_type": "Barge fleeting on the Intracoastal Waterway",
+   "waterway": "Gulf Intracoastal Waterway, Redfish Bay",
+   "berth_ids": [
+    "TERM-26-B01"
+   ],
+   "latitude": 27.87192,
+   "longitude": -97.1597,
+   "position_note": "mean of berth positions (in the water alongside the docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ],
+ "berths": [
+  {
+   "berth_id": "TERM-01-B07",
+   "terminal_id": "TERM-01",
+   "berth_name": "Berth 7",
+   "berth_type": "berth",
+   "latitude": 27.81447,
+   "longitude": -97.40133,
+   "heading_deg": 89.0,
+   "max_loa_m": 260,
+   "max_draft_m": 15.2,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 0,
+   "distance_to_40ft_channel_m": 0,
+   "reference_dock": "LOC_DOCK 60770-174",
+   "position_basis": "alongside the real dock point, 103 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-01-B08",
+   "terminal_id": "TERM-01",
+   "berth_name": "Berth 8",
+   "berth_type": "berth",
+   "latitude": 27.81512,
+   "longitude": -97.40342,
+   "heading_deg": 89.0,
+   "max_loa_m": 260,
+   "max_draft_m": 15.2,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 74,
+   "distance_to_40ft_channel_m": 74,
+   "reference_dock": "LOC_DOCK 60770-175",
+   "position_basis": "alongside the real dock point, 50 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-02-B01",
+   "terminal_id": "TERM-02",
+   "berth_name": "Barge Dock 1",
+   "berth_type": "berth",
+   "latitude": 27.82258,
+   "longitude": -97.43537,
+   "heading_deg": 105.0,
+   "max_loa_m": 120,
+   "max_draft_m": 4.0,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "diesel",
+    "jet fuel",
+    "gasoline"
+   ],
+   "reach_id": "CESWG_CC_11_CTB_11",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 13,
+   "distance_to_40ft_channel_m": 13,
+   "reference_dock": "LOC_DOCK 60770-792",
+   "position_basis": "alongside the real dock point, 88 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-04-B01",
+   "terminal_id": "TERM-04",
+   "berth_name": "Dock 1",
+   "berth_type": "berth",
+   "latitude": 27.83037,
+   "longitude": -97.49419,
+   "heading_deg": 116.0,
+   "max_loa_m": 280,
+   "max_draft_m": 15.8,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_13_TTB_13",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 46,
+   "distance_to_40ft_channel_m": 46,
+   "reference_dock": "LOC_DOCK 60770-266",
+   "position_basis": "alongside the real dock point, 38 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-04-B02",
+   "terminal_id": "TERM-04",
+   "berth_name": "Dock 2",
+   "berth_type": "berth",
+   "latitude": 27.82513,
+   "longitude": -97.49198,
+   "heading_deg": 102.0,
+   "max_loa_m": 260,
+   "max_draft_m": 15.2,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_13_TTB_13",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 46,
+   "distance_to_40ft_channel_m": 46,
+   "reference_dock": "LOC_DOCK 60770-720",
+   "position_basis": "alongside the real dock point, 131 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-05-B01",
+   "terminal_id": "TERM-05",
+   "berth_name": "Dock 1",
+   "berth_type": "berth",
+   "latitude": 27.83218,
+   "longitude": -97.5004,
+   "heading_deg": 127.0,
+   "max_loa_m": 260,
+   "max_draft_m": 15.2,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil",
+    "condensate"
+   ],
+   "reach_id": "CESWG_CC_14_VCH_14",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 49,
+   "distance_to_40ft_channel_m": 49,
+   "reference_dock": "LOC_DOCK 60770-710",
+   "position_basis": "alongside the real dock point, 55 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-05-B02",
+   "terminal_id": "TERM-05",
+   "berth_name": "Dock 2",
+   "berth_type": "berth",
+   "latitude": 27.84261,
+   "longitude": -97.5213,
+   "heading_deg": 103.0,
+   "max_loa_m": 250,
+   "max_draft_m": 14.9,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_15_VTB_15",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 0,
+   "distance_to_40ft_channel_m": 0,
+   "reference_dock": "LOC_DOCK 60770-704",
+   "position_basis": "alongside the real dock point, 44 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-05-B03",
+   "terminal_id": "TERM-05",
+   "berth_name": "Dock 3",
+   "berth_type": "berth",
+   "latitude": 27.84296,
+   "longitude": -97.52294,
+   "heading_deg": 13.0,
+   "max_loa_m": 250,
+   "max_draft_m": 14.9,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_15_VTB_15",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 0,
+   "distance_to_40ft_channel_m": 0,
+   "reference_dock": "LOC_DOCK 60770-705",
+   "position_basis": "alongside the real dock point, 46 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-06-B01",
+   "terminal_id": "TERM-06",
+   "berth_name": "Dock 1",
+   "berth_type": "berth",
+   "latitude": 27.82035,
+   "longitude": -97.43227,
+   "heading_deg": 23.0,
+   "max_loa_m": 200,
+   "max_draft_m": 12.2,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "gasoline",
+    "diesel",
+    "jet fuel"
+   ],
+   "reach_id": "CESWG_CC_10_ATB_10",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 31,
+   "distance_to_40ft_channel_m": 31,
+   "reference_dock": "LOC_DOCK 60770-794",
+   "position_basis": "alongside the real dock point, 83 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-06-B02",
+   "terminal_id": "TERM-06",
+   "berth_name": "Dock 2",
+   "berth_type": "berth",
+   "latitude": 27.82183,
+   "longitude": -97.43298,
+   "heading_deg": 114.0,
+   "max_loa_m": 200,
+   "max_draft_m": 12.2,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "gasoline",
+    "diesel"
+   ],
+   "reach_id": "CESWG_CC_11_CTB_11",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 11,
+   "distance_to_40ft_channel_m": 11,
+   "reference_dock": "LOC_DOCK 60770-793",
+   "position_basis": "alongside the real dock point, 89 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-07-B01",
+   "terminal_id": "TERM-07",
+   "berth_name": "Cargo Dock A",
+   "berth_type": "berth",
+   "latitude": 27.81224,
+   "longitude": -97.40367,
+   "heading_deg": 89.0,
+   "max_loa_m": 230,
+   "max_draft_m": 11.5,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "general cargo",
+    "ro-ro",
+    "military cargo"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 0,
+   "distance_to_40ft_channel_m": 0,
+   "reference_dock": "LOC_DOCK 60770-821",
+   "position_basis": "alongside the real dock point, 73 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-07-B02",
+   "terminal_id": "TERM-07",
+   "berth_name": "Cargo Dock B",
+   "berth_type": "berth",
+   "latitude": 27.81422,
+   "longitude": -97.39652,
+   "heading_deg": 143.0,
+   "max_loa_m": 200,
+   "max_draft_m": 11.0,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "general cargo",
+    "containers"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 0,
+   "distance_to_40ft_channel_m": 0,
+   "reference_dock": "LOC_DOCK 60770-168",
+   "position_basis": "alongside the real dock point, 57 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-07-B03",
+   "terminal_id": "TERM-07",
+   "berth_name": "Cargo Dock C",
+   "berth_type": "berth",
+   "latitude": 27.81451,
+   "longitude": -97.39817,
+   "heading_deg": 89.0,
+   "max_loa_m": 200,
+   "max_draft_m": 11.0,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "general cargo",
+    "steel"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 0,
+   "distance_to_40ft_channel_m": 0,
+   "reference_dock": "LOC_DOCK 60770-169",
+   "position_basis": "alongside the real dock point, 74 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-07-B04",
+   "terminal_id": "TERM-07",
+   "berth_name": "Cargo Dock D",
+   "berth_type": "berth",
+   "latitude": 27.81221,
+   "longitude": -97.40624,
+   "heading_deg": 89.0,
+   "max_loa_m": 230,
+   "max_draft_m": 11.5,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "general cargo",
+    "wind components"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 0,
+   "distance_to_40ft_channel_m": 0,
+   "reference_dock": "LOC_DOCK 60770-820",
+   "position_basis": "alongside the real dock point, 84 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-11-B01",
+   "terminal_id": "TERM-11",
+   "berth_name": "Bulk Dock 1",
+   "berth_type": "berth",
+   "latitude": 27.81757,
+   "longitude": -97.46073,
+   "heading_deg": 86.0,
+   "max_loa_m": 230,
+   "max_draft_m": 12.8,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "petroleum coke",
+    "ores",
+    "aggregates"
+   ],
+   "reach_id": "CESWG_CC_12_TLC_12",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 85,
+   "distance_to_40ft_channel_m": 85,
+   "reference_dock": "LOC_DOCK 60770-233",
+   "position_basis": "alongside the real dock point, 100 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-11-B02",
+   "terminal_id": "TERM-11",
+   "berth_name": "Bulk Dock 2",
+   "berth_type": "berth",
+   "latitude": 27.81792,
+   "longitude": -97.46491,
+   "heading_deg": 103.0,
+   "max_loa_m": 230,
+   "max_draft_m": 12.8,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "petroleum coke",
+    "barite"
+   ],
+   "reach_id": "CESWG_CC_12_TLC_12",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 74,
+   "distance_to_40ft_channel_m": 74,
+   "reference_dock": "LOC_DOCK 60770-235",
+   "position_basis": "alongside the real dock point, 60 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-12-B01",
+   "terminal_id": "TERM-12",
+   "berth_name": "Elevator Wharf",
+   "berth_type": "berth",
+   "latitude": 27.81762,
+   "longitude": -97.42276,
+   "heading_deg": 114.0,
+   "max_loa_m": 230,
+   "max_draft_m": 12.5,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "sorghum",
+    "wheat",
+    "corn"
+   ],
+   "reach_id": "CESWG_CC_09_INC_9",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 23,
+   "distance_to_40ft_channel_m": 23,
+   "reference_dock": "LOC_DOCK 60770-195",
+   "position_basis": "alongside the real dock point, 93 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-13-B01",
+   "terminal_id": "TERM-13",
+   "berth_name": "Tanker Dock 1",
+   "berth_type": "berth",
+   "latitude": 27.81409,
+   "longitude": -97.41743,
+   "heading_deg": 114.0,
+   "max_loa_m": 250,
+   "max_draft_m": 14.9,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil",
+    "gasoline"
+   ],
+   "reach_id": "CESWG_CC_09_INC_9",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 0,
+   "distance_to_40ft_channel_m": 0,
+   "reference_dock": "LOC_DOCK 60770-811",
+   "position_basis": "alongside the real dock point, 89 m toward the channel",
+   "lay_berth": true,
+   "lay_berth_note": "also used as a lay berth for vessels held in port"
+  },
+  {
+   "berth_id": "TERM-13-B02",
+   "terminal_id": "TERM-13",
+   "berth_name": "Tanker Dock 2",
+   "berth_type": "berth",
+   "latitude": 27.81302,
+   "longitude": -97.4147,
+   "heading_deg": 114.0,
+   "max_loa_m": 250,
+   "max_draft_m": 14.9,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil",
+    "diesel"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 0,
+   "distance_to_40ft_channel_m": 0,
+   "reference_dock": "LOC_DOCK 60770-807",
+   "position_basis": "alongside the real dock point, 51 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-14-B01",
+   "terminal_id": "TERM-14",
+   "berth_name": "Dock 2",
+   "berth_type": "berth",
+   "latitude": 27.82089,
+   "longitude": -97.48258,
+   "heading_deg": 117.0,
+   "max_loa_m": 250,
+   "max_draft_m": 14.9,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil",
+    "gasoline",
+    "diesel"
+   ],
+   "reach_id": "CESWG_CC_12_TLC_12",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 61,
+   "distance_to_40ft_channel_m": 61,
+   "reference_dock": "LOC_DOCK 60770-738",
+   "position_basis": "alongside the real dock point, 171 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-14-B02",
+   "terminal_id": "TERM-14",
+   "berth_name": "LPG Dock",
+   "berth_type": "berth",
+   "latitude": 27.82197,
+   "longitude": -97.48591,
+   "heading_deg": 117.0,
+   "max_loa_m": 190,
+   "max_draft_m": 11.0,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "LPG",
+    "propane"
+   ],
+   "reach_id": "CESWG_CC_12_TLC_12",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 101,
+   "distance_to_40ft_channel_m": 101,
+   "reference_dock": "LOC_DOCK 60770-733",
+   "position_basis": "alongside the real dock point, 73 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-15-B01",
+   "terminal_id": "TERM-15",
+   "berth_name": "Dock 1",
+   "berth_type": "berth",
+   "latitude": 27.81591,
+   "longitude": -97.42327,
+   "heading_deg": 114.0,
+   "max_loa_m": 250,
+   "max_draft_m": 14.9,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_09_INC_9",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 48,
+   "distance_to_40ft_channel_m": 48,
+   "reference_dock": "LOC_DOCK 60770-803",
+   "position_basis": "alongside the real dock point, 80 m toward the channel",
+   "lay_berth": true,
+   "lay_berth_note": "also used as a lay berth for vessels held in port"
+  },
+  {
+   "berth_id": "TERM-15-B02",
+   "terminal_id": "TERM-15",
+   "berth_name": "Dock 8",
+   "berth_type": "berth",
+   "latitude": 27.81188,
+   "longitude": -97.41071,
+   "heading_deg": 89.0,
+   "max_loa_m": 200,
+   "max_draft_m": 12.2,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "gasoline",
+    "diesel",
+    "asphalt"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 30,
+   "distance_to_40ft_channel_m": 30,
+   "reference_dock": "LOC_DOCK 60770-815",
+   "position_basis": "alongside the real dock point, 103 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-16-B01",
+   "terminal_id": "TERM-16",
+   "berth_name": "Chemical Dock",
+   "berth_type": "berth",
+   "latitude": 27.84081,
+   "longitude": -97.51386,
+   "heading_deg": 119.0,
+   "max_loa_m": 190,
+   "max_draft_m": 11.3,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "ethylene glycol",
+    "caustic soda",
+    "styrene"
+   ],
+   "reach_id": "CESWG_CC_14_VCH_14",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 41,
+   "distance_to_40ft_channel_m": 41,
+   "reference_dock": "LOC_DOCK 60770-702",
+   "position_basis": "alongside the real dock point, 63 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-17-B01",
+   "terminal_id": "TERM-17",
+   "berth_name": "Dock 15",
+   "berth_type": "berth",
+   "latitude": 27.81452,
+   "longitude": -97.39752,
+   "heading_deg": 89.0,
+   "max_loa_m": 280,
+   "max_draft_m": 15.8,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 0,
+   "distance_to_40ft_channel_m": 0,
+   "reference_dock": "LOC_DOCK 60770-182",
+   "position_basis": "alongside the real dock point, 40 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-17-B02",
+   "terminal_id": "TERM-17",
+   "berth_name": "Dock 16",
+   "berth_type": "berth",
+   "latitude": 27.81442,
+   "longitude": -97.40758,
+   "heading_deg": 89.0,
+   "max_loa_m": 280,
+   "max_draft_m": 15.8,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 3,
+   "distance_to_40ft_channel_m": 3,
+   "reference_dock": "LOC_DOCK 60770-172",
+   "position_basis": "alongside the real dock point, 55 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-17-B03",
+   "terminal_id": "TERM-17",
+   "berth_name": "Dock 12",
+   "berth_type": "berth",
+   "latitude": 27.81208,
+   "longitude": -97.41243,
+   "heading_deg": 114.0,
+   "max_loa_m": 260,
+   "max_draft_m": 15.2,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 5,
+   "distance_to_40ft_channel_m": 5,
+   "reference_dock": "LOC_DOCK 60770-814",
+   "position_basis": "alongside the real dock point, 123 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-18-B01",
+   "terminal_id": "TERM-18",
+   "berth_name": "Dock 1",
+   "berth_type": "berth",
+   "latitude": 27.81548,
+   "longitude": -97.46296,
+   "heading_deg": 103.0,
+   "max_loa_m": 260,
+   "max_draft_m": 15.2,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_12_TLC_12",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 55,
+   "distance_to_40ft_channel_m": 55,
+   "reference_dock": "LOC_DOCK 60770-764",
+   "position_basis": "alongside the real dock point, 65 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-18-B02",
+   "terminal_id": "TERM-18",
+   "berth_name": "Dock 2",
+   "berth_type": "berth",
+   "latitude": 27.81692,
+   "longitude": -97.47057,
+   "heading_deg": 103.0,
+   "max_loa_m": 260,
+   "max_draft_m": 15.2,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_12_TLC_12",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 66,
+   "distance_to_40ft_channel_m": 66,
+   "reference_dock": "LOC_DOCK 60770-755",
+   "position_basis": "alongside the real dock point, 53 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-18-B03",
+   "terminal_id": "TERM-18",
+   "berth_name": "Dock 6",
+   "berth_type": "berth",
+   "latitude": 27.81566,
+   "longitude": -97.45931,
+   "heading_deg": 79.0,
+   "max_loa_m": 250,
+   "max_draft_m": 14.9,
+   "min_channel_depth_ft": 45,
+   "cargo_types": [
+    "crude oil"
+   ],
+   "reach_id": "CESWG_CC_12_TLC_12",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 23,
+   "distance_to_40ft_channel_m": 23,
+   "reference_dock": "LOC_DOCK 60770-766",
+   "position_basis": "alongside the real dock point, 68 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-18-B04",
+   "terminal_id": "TERM-18",
+   "berth_name": "Liquid Bulk Dock 3",
+   "berth_type": "berth",
+   "latitude": 27.81832,
+   "longitude": -97.45627,
+   "heading_deg": 64.0,
+   "max_loa_m": 200,
+   "max_draft_m": 12.2,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "condensate",
+    "naphtha"
+   ],
+   "reach_id": "CESWG_CC_12_TLC_12",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 23,
+   "distance_to_40ft_channel_m": 23,
+   "reference_dock": "LOC_DOCK 60770-231",
+   "position_basis": "alongside the real dock point, 93 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-19-B01",
+   "terminal_id": "TERM-19",
+   "berth_name": "Barge Dock",
+   "berth_type": "barge_berth",
+   "latitude": 27.82436,
+   "longitude": -97.43542,
+   "heading_deg": 106.0,
+   "max_loa_m": 90,
+   "max_draft_m": 3.6,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "tank barges"
+   ],
+   "reach_id": "CESWG_CC_11_CTB_11",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 50,
+   "distance_to_40ft_channel_m": 50,
+   "reference_dock": "LOC_DOCK 60770-205",
+   "position_basis": "alongside the real dock point, 40 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-19-B02",
+   "terminal_id": "TERM-19",
+   "berth_name": "Fleeting Area",
+   "berth_type": "barge_berth",
+   "latitude": 27.82439,
+   "longitude": -97.44663,
+   "heading_deg": 64.0,
+   "max_loa_m": 90,
+   "max_draft_m": 3.6,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "tank barges"
+   ],
+   "reach_id": "CESWG_CC_11_CTB_11",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 3,
+   "distance_to_40ft_channel_m": 3,
+   "reference_dock": "LOC_DOCK 60770-227",
+   "position_basis": "alongside the real dock point, 35 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-20-B01",
+   "terminal_id": "TERM-20",
+   "berth_name": "Repair Berth",
+   "berth_type": "repair_berth",
+   "latitude": 27.82479,
+   "longitude": -97.43828,
+   "heading_deg": 92.0,
+   "max_loa_m": 110,
+   "max_draft_m": 5.5,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "repair"
+   ],
+   "reach_id": "CESWG_CC_11_CTB_11",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 63,
+   "distance_to_40ft_channel_m": 63,
+   "reference_dock": "LOC_DOCK 60770-214",
+   "position_basis": "alongside the real dock point, 60 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-21-B01",
+   "terminal_id": "TERM-21",
+   "berth_name": "Tug Mooring 1",
+   "berth_type": "lay_berth",
+   "latitude": 27.8147,
+   "longitude": -97.40859,
+   "heading_deg": 89.0,
+   "max_loa_m": 45,
+   "max_draft_m": 5.5,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "tug mooring"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 36,
+   "distance_to_40ft_channel_m": 36,
+   "reference_dock": "LOC_DOCK 60770-180",
+   "position_basis": "alongside the real dock point, 61 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-21-B02",
+   "terminal_id": "TERM-21",
+   "berth_name": "Tug Mooring 2",
+   "berth_type": "lay_berth",
+   "latitude": 27.81469,
+   "longitude": -97.41276,
+   "heading_deg": 89.0,
+   "max_loa_m": 45,
+   "max_draft_m": 5.5,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "tug mooring"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 40,
+   "distance_to_40ft_channel_m": 40,
+   "reference_dock": "LOC_DOCK 60770-736",
+   "position_basis": "alongside the real dock point, 25 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-22-B01",
+   "terminal_id": "TERM-22",
+   "berth_name": "Cutter Mooring",
+   "berth_type": "lay_berth",
+   "latitude": 27.81469,
+   "longitude": -97.41199,
+   "heading_deg": 89.0,
+   "max_loa_m": 85,
+   "max_draft_m": 4.5,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "government vessel"
+   ],
+   "reach_id": "CESWG_CC_08_MTB_8",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 39,
+   "distance_to_40ft_channel_m": 39,
+   "reference_dock": "LOC_DOCK 60770-186",
+   "position_basis": "alongside the real dock point, 57 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-24-B01",
+   "terminal_id": "TERM-24",
+   "berth_name": "Response Dock",
+   "berth_type": "lay_berth",
+   "latitude": 27.81652,
+   "longitude": -97.45581,
+   "heading_deg": 64.0,
+   "max_loa_m": 70,
+   "max_draft_m": 4.5,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "response vessel"
+   ],
+   "reach_id": "CESWG_CC_12_TLC_12",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 55,
+   "distance_to_40ft_channel_m": 55,
+   "reference_dock": "LOC_DOCK 60770-771",
+   "position_basis": "alongside the real dock point, 53 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-25-B01",
+   "terminal_id": "TERM-25",
+   "berth_name": "Tug Mooring",
+   "berth_type": "lay_berth",
+   "latitude": 27.82578,
+   "longitude": -97.49477,
+   "heading_deg": 127.0,
+   "max_loa_m": 45,
+   "max_draft_m": 5.5,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "tug mooring"
+   ],
+   "reach_id": "CESWG_CC_13_TTB_13",
+   "reach_depth_ft": 54,
+   "distance_to_reach_m": 60,
+   "distance_to_40ft_channel_m": 60,
+   "reference_dock": "LOC_DOCK 60770-267",
+   "position_basis": "alongside the real dock point, 85 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "berth_id": "TERM-03-B01",
+   "terminal_id": "TERM-03",
+   "berth_name": "LNG Jetty 1",
+   "berth_type": "berth",
+   "latitude": 27.88025,
+   "longitude": -97.27011,
+   "heading_deg": 103.0,
+   "max_loa_m": 300,
+   "max_draft_m": 12.5,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "LNG"
+   ],
+   "reach_id": "CESWG_LA_03_LEX_3",
+   "reach_depth_ft": 47,
+   "distance_to_reach_m": 140,
+   "distance_to_40ft_channel_m": 140,
+   "reference_dock": "LOC_DOCK 60770-087",
+   "position_basis": "alongside the real dock point, 96 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-09-B01",
+   "terminal_id": "TERM-09",
+   "berth_name": "Dock 1",
+   "berth_type": "berth",
+   "latitude": 27.87847,
+   "longitude": -97.28532,
+   "heading_deg": 79.0,
+   "max_loa_m": 200,
+   "max_draft_m": 12.0,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "monoethylene glycol",
+    "methanol"
+   ],
+   "reach_id": "CESWG_LA_03_LEX_3",
+   "reach_depth_ft": 47,
+   "distance_to_reach_m": 19,
+   "distance_to_40ft_channel_m": 19,
+   "reference_dock": "LOC_DOCK 60770-092",
+   "position_basis": "alongside the real dock point, 60 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-10-B01",
+   "terminal_id": "TERM-10",
+   "berth_name": "Bulk Dock",
+   "berth_type": "berth",
+   "latitude": 27.88023,
+   "longitude": -97.27599,
+   "heading_deg": 90.0,
+   "max_loa_m": 230,
+   "max_draft_m": 12.8,
+   "min_channel_depth_ft": 40,
+   "cargo_types": [
+    "iron ore pellets",
+    "hot briquetted iron"
+   ],
+   "reach_id": "CESWG_LA_03_LEX_3",
+   "reach_depth_ft": 47,
+   "distance_to_reach_m": 46,
+   "distance_to_40ft_channel_m": 46,
+   "reference_dock": "LOC_DOCK 60770-088",
+   "position_basis": "alongside the real dock point, 88 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-23-B01",
+   "terminal_id": "TERM-23",
+   "berth_name": "Supply Dock 1",
+   "berth_type": "lay_berth",
+   "latitude": 27.84816,
+   "longitude": -97.06184,
+   "heading_deg": 134.0,
+   "max_loa_m": 80,
+   "max_draft_m": 4.6,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "offshore supply"
+   ],
+   "reach_id": "CESWG_AP_01_CHN_1",
+   "reach_depth_ft": 16,
+   "distance_to_reach_m": 35,
+   "distance_to_40ft_channel_m": 228,
+   "reference_dock": "LOC_DOCK 60750-992",
+   "position_basis": "alongside the real dock point, 15 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-23-B02",
+   "terminal_id": "TERM-23",
+   "berth_name": "Supply Dock 2",
+   "berth_type": "lay_berth",
+   "latitude": 27.85108,
+   "longitude": -97.065,
+   "heading_deg": 134.0,
+   "max_loa_m": 80,
+   "max_draft_m": 4.6,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "offshore supply"
+   ],
+   "reach_id": "CESWG_AP_01_CHN_1",
+   "reach_depth_ft": 16,
+   "distance_to_reach_m": 18,
+   "distance_to_40ft_channel_m": 668,
+   "reference_dock": "LOC_DOCK 60750-987",
+   "position_basis": "alongside the real dock point, 30 m toward the channel"
+  },
+  {
+   "berth_id": "TERM-26-B01",
+   "terminal_id": "TERM-26",
+   "berth_name": "Fleet",
+   "berth_type": "barge_berth",
+   "latitude": 27.87192,
+   "longitude": -97.1597,
+   "heading_deg": 47.0,
+   "max_loa_m": 90,
+   "max_draft_m": 3.6,
+   "min_channel_depth_ft": 12,
+   "cargo_types": [
+    "tank barges",
+    "hopper barges"
+   ],
+   "reach_id": "CESWG_GI_21_ACC_21",
+   "reach_depth_ft": 14,
+   "distance_to_reach_m": 140,
+   "distance_to_40ft_channel_m": 4988,
+   "reference_dock": "LOC_DOCK 66535-103",
+   "position_basis": "alongside the real dock point, 226 m toward the channel",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ],
+ "harbours": [
+  {
+   "harbour_id": "HBR-CBH",
+   "harbour_name": "Conn Brown Harbor",
+   "place": "Aransas Pass",
+   "slip_ids": [
+    "SLIP-CBH-01",
+    "SLIP-CBH-02",
+    "SLIP-CBH-03",
+    "SLIP-CBH-04",
+    "SLIP-CBH-05",
+    "SLIP-CBH-06",
+    "SLIP-CBH-07",
+    "SLIP-CBH-08",
+    "SLIP-CBH-09",
+    "SLIP-CBH-10",
+    "SLIP-CBH-11",
+    "SLIP-CBH-12",
+    "SLIP-CBH-13",
+    "SLIP-CBH-14",
+    "SLIP-CBH-15",
+    "SLIP-CBH-16"
+   ],
+   "water_route_clearance_m": 150.0,
+   "latitude": 27.90636,
+   "longitude": -97.13427,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "harbour_id": "HBR-PAH",
+   "harbour_name": "Port Aransas Municipal Harbor",
+   "place": "Port Aransas",
+   "slip_ids": [
+    "SLIP-PAH-01",
+    "SLIP-PAH-02",
+    "SLIP-PAH-03",
+    "SLIP-PAH-04",
+    "SLIP-PAH-05",
+    "SLIP-PAH-06",
+    "SLIP-PAH-07",
+    "SLIP-PAH-08",
+    "SLIP-PAH-09",
+    "SLIP-PAH-10",
+    "SLIP-PAH-11",
+    "SLIP-PAH-12",
+    "SLIP-PAH-13",
+    "SLIP-PAH-14"
+   ],
+   "water_route_clearance_m": 150.0,
+   "latitude": 27.84021,
+   "longitude": -97.06156,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "harbour_id": "HBR-CGS",
+   "harbour_name": "Coast Guard Station Port Aransas",
+   "place": "Port Aransas",
+   "slip_ids": [
+    "SLIP-CGS-01",
+    "SLIP-CGS-02",
+    "SLIP-CGS-03",
+    "SLIP-CGS-04",
+    "SLIP-CGS-05",
+    "SLIP-CGS-06"
+   ],
+   "water_route_clearance_m": 150.0,
+   "latitude": 27.8394,
+   "longitude": -97.06066,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "harbour_id": "HBR-PIL",
+   "harbour_name": "Aransas Pass Bar Pilots Station",
+   "place": "Port Aransas",
+   "slip_ids": [
+    "SLIP-PIL-01",
+    "SLIP-PIL-02",
+    "SLIP-PIL-03"
+   ],
+   "water_route_clearance_m": 150.0,
+   "latitude": 27.83857,
+   "longitude": -97.05215,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "harbour_id": "HBR-UTM",
+   "harbour_name": "Marine Science Institute Boat Basin",
+   "place": "Port Aransas",
+   "slip_ids": [
+    "SLIP-UTM-01",
+    "SLIP-UTM-02"
+   ],
+   "water_route_clearance_m": 150.0,
+   "latitude": 27.83782,
+   "longitude": -97.05338,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "harbour_id": "HBR-FRY",
+   "harbour_name": "Port Aransas Ferry Landings",
+   "place": "Port Aransas / Harbor Island",
+   "slip_ids": [
+    "SLIP-FRY-01",
+    "SLIP-FRY-02",
+    "SLIP-FRY-03",
+    "SLIP-FRY-04",
+    "SLIP-FRY-05",
+    "SLIP-FRY-06",
+    "SLIP-FRY-07",
+    "SLIP-FRY-08"
+   ],
+   "water_route_clearance_m": 150.0,
+   "latitude": 27.84196,
+   "longitude": -97.06928,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "harbour_id": "HBR-RKP",
+   "harbour_name": "Rockport Harbor",
+   "place": "Rockport",
+   "slip_ids": [
+    "SLIP-RKP-01",
+    "SLIP-RKP-02",
+    "SLIP-RKP-03",
+    "SLIP-RKP-04",
+    "SLIP-RKP-05",
+    "SLIP-RKP-06",
+    "SLIP-RKP-07",
+    "SLIP-RKP-08"
+   ],
+   "water_route_clearance_m": 60.0,
+   "latitude": 28.02521,
+   "longitude": -97.04884,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "harbour_id": "HBR-ING",
+   "harbour_name": "Ingleside Marina",
+   "place": "Ingleside (Jewel Fulton Canal)",
+   "slip_ids": [
+    "SLIP-ING-01",
+    "SLIP-ING-02",
+    "SLIP-ING-03",
+    "SLIP-ING-04",
+    "SLIP-ING-05",
+    "SLIP-ING-06",
+    "SLIP-ING-07",
+    "SLIP-ING-08",
+    "SLIP-ING-09",
+    "SLIP-ING-10"
+   ],
+   "water_route_clearance_m": 150.0,
+   "latitude": 27.84566,
+   "longitude": -97.2262,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "harbour_id": "HBR-CCM",
+   "harbour_name": "Corpus Christi Municipal Marina",
+   "place": "Corpus Christi bayfront",
+   "slip_ids": [
+    "SLIP-CCM-01",
+    "SLIP-CCM-02",
+    "SLIP-CCM-03",
+    "SLIP-CCM-04",
+    "SLIP-CCM-05",
+    "SLIP-CCM-06",
+    "SLIP-CCM-07",
+    "SLIP-CCM-08",
+    "SLIP-CCM-09",
+    "SLIP-CCM-10"
+   ],
+   "water_route_clearance_m": 40.0,
+   "latitude": 27.7928,
+   "longitude": -97.38913,
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ],
+ "slips": [
+  {
+   "slip_id": "SLIP-CBH-01",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 1",
+   "slip_type": "slip",
+   "latitude": 27.90001,
+   "longitude": -97.13703,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-02",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 2",
+   "slip_type": "slip",
+   "latitude": 27.90384,
+   "longitude": -97.135,
+   "land_clearance_m": 35,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-03",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 3",
+   "slip_type": "slip",
+   "latitude": 27.90474,
+   "longitude": -97.13475,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-04",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 4",
+   "slip_type": "slip",
+   "latitude": 27.90677,
+   "longitude": -97.1345,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-05",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 5",
+   "slip_type": "slip",
+   "latitude": 27.91128,
+   "longitude": -97.13246,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-06",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 6",
+   "slip_type": "slip",
+   "latitude": 27.9124,
+   "longitude": -97.13323,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-07",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 7",
+   "slip_type": "slip",
+   "latitude": 27.91038,
+   "longitude": -97.13373,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-08",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 8",
+   "slip_type": "slip",
+   "latitude": 27.90272,
+   "longitude": -97.13703,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-09",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 9",
+   "slip_type": "slip",
+   "latitude": 27.90024,
+   "longitude": -97.13856,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-10",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 10",
+   "slip_type": "slip",
+   "latitude": 27.90767,
+   "longitude": -97.13069,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-11",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 11",
+   "slip_type": "slip",
+   "latitude": 27.91331,
+   "longitude": -97.13043,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-12",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 12",
+   "slip_type": "slip",
+   "latitude": 27.91263,
+   "longitude": -97.12967,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-13",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 13",
+   "slip_type": "slip",
+   "latitude": 27.90024,
+   "longitude": -97.13703,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-14",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 14",
+   "slip_type": "slip",
+   "latitude": 27.90407,
+   "longitude": -97.13475,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-15",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 15",
+   "slip_type": "slip",
+   "latitude": 27.90497,
+   "longitude": -97.13475,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CBH-16",
+   "harbour_id": "HBR-CBH",
+   "slip_name": "Conn Brown Harbor slip 16",
+   "slip_type": "slip",
+   "latitude": 27.90655,
+   "longitude": -97.13475,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to a real Conn Brown Harbor dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-01",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 1",
+   "slip_type": "slip",
+   "latitude": 27.8403,
+   "longitude": -97.06064,
+   "land_clearance_m": 80,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-02",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 2",
+   "slip_type": "slip",
+   "latitude": 27.8406,
+   "longitude": -97.06064,
+   "land_clearance_m": 55,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-03",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 3",
+   "slip_type": "slip",
+   "latitude": 27.8409,
+   "longitude": -97.06064,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-04",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 4",
+   "slip_type": "slip",
+   "latitude": 27.8412,
+   "longitude": -97.06064,
+   "land_clearance_m": 35,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-05",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 5",
+   "slip_type": "slip",
+   "latitude": 27.8415,
+   "longitude": -97.06029,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-06",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 6",
+   "slip_type": "slip",
+   "latitude": 27.83926,
+   "longitude": -97.06246,
+   "land_clearance_m": 35,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-07",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 7",
+   "slip_type": "slip",
+   "latitude": 27.83956,
+   "longitude": -97.06281,
+   "land_clearance_m": 55,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-08",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 8",
+   "slip_type": "slip",
+   "latitude": 27.83956,
+   "longitude": -97.06211,
+   "land_clearance_m": 75,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-09",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 9",
+   "slip_type": "slip",
+   "latitude": 27.83986,
+   "longitude": -97.06281,
+   "land_clearance_m": 35,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-10",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 10",
+   "slip_type": "slip",
+   "latitude": 27.83986,
+   "longitude": -97.06211,
+   "land_clearance_m": 100,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-11",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 11",
+   "slip_type": "slip",
+   "latitude": 27.83986,
+   "longitude": -97.06141,
+   "land_clearance_m": 100,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-12",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 12",
+   "slip_type": "slip",
+   "latitude": 27.84016,
+   "longitude": -97.06246,
+   "land_clearance_m": 70,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-13",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 13",
+   "slip_type": "slip",
+   "latitude": 27.84016,
+   "longitude": -97.06176,
+   "land_clearance_m": 100,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PAH-14",
+   "harbour_id": "HBR-PAH",
+   "slip_name": "Port Aransas Municipal Harbor slip 14",
+   "slip_type": "slip",
+   "latitude": 27.84016,
+   "longitude": -97.06106,
+   "land_clearance_m": 90,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "inside the USACE Port Aransas harbour basin polygon",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CGS-01",
+   "harbour_id": "HBR-CGS",
+   "slip_name": "Coast Guard Station Port Aransas slip 1",
+   "slip_type": "government_mooring",
+   "latitude": 27.8394,
+   "longitude": -97.06062,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the charted Coast Guard station point (NOAA ENC)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CGS-02",
+   "harbour_id": "HBR-CGS",
+   "slip_name": "Coast Guard Station Port Aransas slip 2",
+   "slip_type": "government_mooring",
+   "latitude": 27.83895,
+   "longitude": -97.06087,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the charted Coast Guard station point (NOAA ENC)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CGS-03",
+   "harbour_id": "HBR-CGS",
+   "slip_name": "Coast Guard Station Port Aransas slip 3",
+   "slip_type": "government_mooring",
+   "latitude": 27.83917,
+   "longitude": -97.06087,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the charted Coast Guard station point (NOAA ENC)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CGS-04",
+   "harbour_id": "HBR-CGS",
+   "slip_name": "Coast Guard Station Port Aransas slip 4",
+   "slip_type": "government_mooring",
+   "latitude": 27.83962,
+   "longitude": -97.06062,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the charted Coast Guard station point (NOAA ENC)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CGS-05",
+   "harbour_id": "HBR-CGS",
+   "slip_name": "Coast Guard Station Port Aransas slip 5",
+   "slip_type": "government_mooring",
+   "latitude": 27.8394,
+   "longitude": -97.06087,
+   "land_clearance_m": 35,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the charted Coast Guard station point (NOAA ENC)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CGS-06",
+   "harbour_id": "HBR-CGS",
+   "slip_name": "Coast Guard Station Port Aransas slip 6",
+   "slip_type": "government_mooring",
+   "latitude": 27.83985,
+   "longitude": -97.06011,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the charted Coast Guard station point (NOAA ENC)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PIL-01",
+   "harbour_id": "HBR-PIL",
+   "slip_name": "Aransas Pass Bar Pilots Station slip 1",
+   "slip_type": "pilot_boat_berth",
+   "latitude": 27.83827,
+   "longitude": -97.05224,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real pilot station dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PIL-02",
+   "harbour_id": "HBR-PIL",
+   "slip_name": "Aransas Pass Bar Pilots Station slip 2",
+   "slip_type": "pilot_boat_berth",
+   "latitude": 27.83872,
+   "longitude": -97.05224,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real pilot station dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-PIL-03",
+   "harbour_id": "HBR-PIL",
+   "slip_name": "Aransas Pass Bar Pilots Station slip 3",
+   "slip_type": "pilot_boat_berth",
+   "latitude": 27.83872,
+   "longitude": -97.05198,
+   "land_clearance_m": 35,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real pilot station dock point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-UTM-01",
+   "harbour_id": "HBR-UTM",
+   "slip_name": "Marine Science Institute Boat Basin slip 1",
+   "slip_type": "research_berth",
+   "latitude": 27.83782,
+   "longitude": -97.05351,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real boat-basin point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-UTM-02",
+   "harbour_id": "HBR-UTM",
+   "slip_name": "Marine Science Institute Boat Basin slip 2",
+   "slip_type": "research_berth",
+   "latitude": 27.83782,
+   "longitude": -97.05325,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real boat-basin point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-FRY-01",
+   "harbour_id": "HBR-FRY",
+   "slip_name": "Mustang Island landing, slip 1",
+   "slip_type": "ferry_slip",
+   "latitude": 27.83985,
+   "longitude": -97.06823,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real ferry landing points (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-FRY-02",
+   "harbour_id": "HBR-FRY",
+   "slip_name": "Mustang Island landing, slip 2",
+   "slip_type": "ferry_slip",
+   "latitude": 27.84007,
+   "longitude": -97.06874,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real ferry landing points (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-FRY-03",
+   "harbour_id": "HBR-FRY",
+   "slip_name": "Mustang Island landing, slip 3",
+   "slip_type": "ferry_slip",
+   "latitude": 27.84007,
+   "longitude": -97.06849,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real ferry landing points (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-FRY-04",
+   "harbour_id": "HBR-FRY",
+   "slip_name": "Mustang Island landing, slip 4",
+   "slip_type": "ferry_slip",
+   "latitude": 27.84007,
+   "longitude": -97.06899,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real ferry landing points (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-FRY-05",
+   "harbour_id": "HBR-FRY",
+   "slip_name": "Harbor Island landing, slip 1",
+   "slip_type": "ferry_slip",
+   "latitude": 27.84368,
+   "longitude": -97.07026,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real ferry landing points (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-FRY-06",
+   "harbour_id": "HBR-FRY",
+   "slip_name": "Harbor Island landing, slip 2",
+   "slip_type": "ferry_slip",
+   "latitude": 27.84368,
+   "longitude": -97.07001,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real ferry landing points (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-FRY-07",
+   "harbour_id": "HBR-FRY",
+   "slip_name": "Harbor Island landing, slip 3",
+   "slip_type": "ferry_slip",
+   "latitude": 27.84436,
+   "longitude": -97.06976,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real ferry landing points (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-FRY-08",
+   "harbour_id": "HBR-FRY",
+   "slip_name": "Harbor Island landing, slip 4",
+   "slip_type": "ferry_slip",
+   "latitude": 27.8439,
+   "longitude": -97.06976,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real ferry landing points (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-RKP-01",
+   "harbour_id": "HBR-RKP",
+   "slip_name": "Rockport Harbor slip 1",
+   "slip_type": "slip",
+   "latitude": 28.02529,
+   "longitude": -97.0489,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real Rockport Harbor moorings point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-RKP-02",
+   "harbour_id": "HBR-RKP",
+   "slip_name": "Rockport Harbor slip 2",
+   "slip_type": "slip",
+   "latitude": 28.02507,
+   "longitude": -97.04894,
+   "land_clearance_m": 35,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real Rockport Harbor moorings point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-RKP-03",
+   "harbour_id": "HBR-RKP",
+   "slip_name": "Rockport Harbor slip 3",
+   "slip_type": "slip",
+   "latitude": 28.02552,
+   "longitude": -97.04894,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real Rockport Harbor moorings point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-RKP-04",
+   "harbour_id": "HBR-RKP",
+   "slip_name": "Rockport Harbor slip 4",
+   "slip_type": "slip",
+   "latitude": 28.02507,
+   "longitude": -97.04868,
+   "land_clearance_m": 55,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real Rockport Harbor moorings point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-RKP-05",
+   "harbour_id": "HBR-RKP",
+   "slip_name": "Rockport Harbor slip 5",
+   "slip_type": "slip",
+   "latitude": 28.02552,
+   "longitude": -97.04868,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real Rockport Harbor moorings point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-RKP-06",
+   "harbour_id": "HBR-RKP",
+   "slip_name": "Rockport Harbor slip 6",
+   "slip_type": "slip",
+   "latitude": 28.02507,
+   "longitude": -97.04919,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real Rockport Harbor moorings point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-RKP-07",
+   "harbour_id": "HBR-RKP",
+   "slip_name": "Rockport Harbor slip 7",
+   "slip_type": "slip",
+   "latitude": 28.02529,
+   "longitude": -97.04843,
+   "land_clearance_m": 55,
+   "water_route_clearance_m": 60.0,
+   "position_basis": "nearest water to the real Rockport Harbor moorings point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-RKP-08",
+   "harbour_id": "HBR-RKP",
+   "slip_name": "Rockport Harbor slip 8",
+   "slip_type": "slip",
+   "latitude": 28.02484,
+   "longitude": -97.04894,
+   "land_clearance_m": 50,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "nearest water to the real Rockport Harbor moorings point (USACE Master Docks)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-ING-01",
+   "harbour_id": "HBR-ING",
+   "slip_name": "Ingleside Marina Berth 1",
+   "slip_type": "slip",
+   "latitude": 27.84548,
+   "longitude": -97.22615,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water beside the Jewel Fulton Canal (USACE reach JF_01), nearest to a real dock point at its head",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-ING-02",
+   "harbour_id": "HBR-ING",
+   "slip_name": "Ingleside Marina Berth 2",
+   "slip_type": "slip",
+   "latitude": 27.84571,
+   "longitude": -97.22589,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water beside the Jewel Fulton Canal (USACE reach JF_01), nearest to a real dock point at its head",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-ING-03",
+   "harbour_id": "HBR-ING",
+   "slip_name": "Ingleside Marina Berth 3",
+   "slip_type": "slip",
+   "latitude": 27.84571,
+   "longitude": -97.22615,
+   "land_clearance_m": 35,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water beside the Jewel Fulton Canal (USACE reach JF_01), nearest to a real dock point at its head",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-ING-04",
+   "harbour_id": "HBR-ING",
+   "slip_name": "Ingleside Marina Berth 4",
+   "slip_type": "slip",
+   "latitude": 27.84548,
+   "longitude": -97.2264,
+   "land_clearance_m": 35,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water beside the Jewel Fulton Canal (USACE reach JF_01), nearest to a real dock point at its head",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-ING-05",
+   "harbour_id": "HBR-ING",
+   "slip_name": "Ingleside Marina Berth 5",
+   "slip_type": "slip",
+   "latitude": 27.84593,
+   "longitude": -97.22589,
+   "land_clearance_m": 35,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water beside the Jewel Fulton Canal (USACE reach JF_01), nearest to a real dock point at its head",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-ING-06",
+   "harbour_id": "HBR-ING",
+   "slip_name": "Ingleside Marina Berth 6",
+   "slip_type": "slip",
+   "latitude": 27.84571,
+   "longitude": -97.2264,
+   "land_clearance_m": 55,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water beside the Jewel Fulton Canal (USACE reach JF_01), nearest to a real dock point at its head",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-ING-07",
+   "harbour_id": "HBR-ING",
+   "slip_name": "Ingleside Marina Berth 7",
+   "slip_type": "slip",
+   "latitude": 27.84593,
+   "longitude": -97.22564,
+   "land_clearance_m": 25,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water beside the Jewel Fulton Canal (USACE reach JF_01), nearest to a real dock point at its head",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-ING-08",
+   "harbour_id": "HBR-ING",
+   "slip_name": "Ingleside Marina Berth 8",
+   "slip_type": "slip",
+   "latitude": 27.84593,
+   "longitude": -97.22615,
+   "land_clearance_m": 50,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water beside the Jewel Fulton Canal (USACE reach JF_01), nearest to a real dock point at its head",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-ING-09",
+   "harbour_id": "HBR-ING",
+   "slip_name": "Ingleside Marina Berth 9",
+   "slip_type": "slip",
+   "latitude": 27.84526,
+   "longitude": -97.22665,
+   "land_clearance_m": 35,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water beside the Jewel Fulton Canal (USACE reach JF_01), nearest to a real dock point at its head",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-ING-10",
+   "harbour_id": "HBR-ING",
+   "slip_name": "Ingleside Marina Berth 10",
+   "slip_type": "slip",
+   "latitude": 27.84548,
+   "longitude": -97.22665,
+   "land_clearance_m": 55,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water beside the Jewel Fulton Canal (USACE reach JF_01), nearest to a real dock point at its head",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CCM-01",
+   "harbour_id": "HBR-CCM",
+   "slip_name": "Corpus Christi Municipal Marina slip 1",
+   "slip_type": "slip",
+   "latitude": 27.792,
+   "longitude": -97.3905,
+   "land_clearance_m": 90,
+   "water_route_clearance_m": 40.0,
+   "position_basis": "water 50-90 m from the T-head piers shown in the NOAA land data; no published dock point",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CCM-02",
+   "harbour_id": "HBR-CCM",
+   "slip_name": "Corpus Christi Municipal Marina slip 2",
+   "slip_type": "slip",
+   "latitude": 27.792,
+   "longitude": -97.3898,
+   "land_clearance_m": 55,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water 50-90 m from the T-head piers shown in the NOAA land data; no published dock point",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CCM-03",
+   "harbour_id": "HBR-CCM",
+   "slip_name": "Corpus Christi Municipal Marina slip 3",
+   "slip_type": "slip",
+   "latitude": 27.79235,
+   "longitude": -97.39015,
+   "land_clearance_m": 80,
+   "water_route_clearance_m": 60.0,
+   "position_basis": "water 50-90 m from the T-head piers shown in the NOAA land data; no published dock point",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CCM-04",
+   "harbour_id": "HBR-CCM",
+   "slip_name": "Corpus Christi Municipal Marina slip 4",
+   "slip_type": "slip",
+   "latitude": 27.79235,
+   "longitude": -97.3877,
+   "land_clearance_m": 70,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water 50-90 m from the T-head piers shown in the NOAA land data; no published dock point",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CCM-05",
+   "harbour_id": "HBR-CCM",
+   "slip_name": "Corpus Christi Municipal Marina slip 5",
+   "slip_type": "slip",
+   "latitude": 27.7927,
+   "longitude": -97.39015,
+   "land_clearance_m": 75,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water 50-90 m from the T-head piers shown in the NOAA land data; no published dock point",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CCM-06",
+   "harbour_id": "HBR-CCM",
+   "slip_name": "Corpus Christi Municipal Marina slip 6",
+   "slip_type": "slip",
+   "latitude": 27.7927,
+   "longitude": -97.38735,
+   "land_clearance_m": 75,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water 50-90 m from the T-head piers shown in the NOAA land data; no published dock point",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CCM-07",
+   "harbour_id": "HBR-CCM",
+   "slip_name": "Corpus Christi Municipal Marina slip 7",
+   "slip_type": "slip",
+   "latitude": 27.79305,
+   "longitude": -97.39015,
+   "land_clearance_m": 75,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water 50-90 m from the T-head piers shown in the NOAA land data; no published dock point",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CCM-08",
+   "harbour_id": "HBR-CCM",
+   "slip_name": "Corpus Christi Municipal Marina slip 8",
+   "slip_type": "slip",
+   "latitude": 27.79305,
+   "longitude": -97.3877,
+   "land_clearance_m": 50,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water 50-90 m from the T-head piers shown in the NOAA land data; no published dock point",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CCM-09",
+   "harbour_id": "HBR-CCM",
+   "slip_name": "Corpus Christi Municipal Marina slip 9",
+   "slip_type": "slip",
+   "latitude": 27.7934,
+   "longitude": -97.38735,
+   "land_clearance_m": 50,
+   "water_route_clearance_m": 150.0,
+   "position_basis": "water 50-90 m from the T-head piers shown in the NOAA land data; no published dock point",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "slip_id": "SLIP-CCM-10",
+   "harbour_id": "HBR-CCM",
+   "slip_name": "Corpus Christi Municipal Marina slip 10",
+   "slip_type": "slip",
+   "latitude": 27.79445,
+   "longitude": -97.3905,
+   "land_clearance_m": 55,
+   "water_route_clearance_m": 40.0,
+   "position_basis": "water 50-90 m from the T-head piers shown in the NOAA land data; no published dock point",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ],
+ "anchorage_areas": [
+  {
+   "area_id": "TERM-08",
+   "name": "Aransas Pass offshore anchorage",
+   "authority": "33 CFR 166.200 fairway anchorages",
+   "geometry_source": "reference/geo/anchorages_fairways_noaa.geojson (NOAA ENC Direct)",
+   "position_ids": [
+    "ANCH-01",
+    "ANCH-02",
+    "ANCH-03",
+    "ANCH-04",
+    "ANCH-05",
+    "ANCH-06",
+    "ANCH-07",
+    "ANCH-08",
+    "ANCH-09",
+    "ANCH-10",
+    "ANCH-11",
+    "ANCH-12",
+    "ANCH-13",
+    "ANCH-14",
+    "ANCH-15",
+    "ANCH-16",
+    "ANCH-17",
+    "ANCH-18",
+    "ANCH-19",
+    "ANCH-20",
+    "ANCH-21",
+    "ANCH-22",
+    "ANCH-23",
+    "ANCH-24",
+    "ANCH-25",
+    "ANCH-26",
+    "ANCH-27",
+    "ANCH-28",
+    "ANCH-29",
+    "ANCH-30"
+   ]
+  }
+ ],
+ "anchorage_positions": [
+  {
+   "position_id": "ANCH-01",
+   "name": "Aransas Pass anchorage, position 1",
+   "latitude": 27.808,
+   "longitude": -96.94,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 1.5,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-02",
+   "name": "Aransas Pass anchorage, position 2",
+   "latitude": 27.826,
+   "longitude": -96.96,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 2.0,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-03",
+   "name": "Aransas Pass anchorage, position 3",
+   "latitude": 27.826,
+   "longitude": -96.94,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 2.3,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-04",
+   "name": "Aransas Pass anchorage, position 4",
+   "latitude": 27.808,
+   "longitude": -96.92,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 2.5,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-05",
+   "name": "Aransas Pass anchorage, position 5",
+   "latitude": 27.826,
+   "longitude": -96.92,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 3.0,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-06",
+   "name": "Aransas Pass anchorage, position 6",
+   "latitude": 27.844,
+   "longitude": -96.96,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 3.1,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-07",
+   "name": "Aransas Pass anchorage, position 7",
+   "latitude": 27.844,
+   "longitude": -96.98,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 3.2,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-08",
+   "name": "Aransas Pass anchorage, position 8",
+   "latitude": 27.844,
+   "longitude": -96.94,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 3.3,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-09",
+   "name": "Aransas Pass anchorage, position 9",
+   "latitude": 27.79,
+   "longitude": -96.9,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 3.4,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-10",
+   "name": "Aransas Pass anchorage, position 10",
+   "latitude": 27.808,
+   "longitude": -96.9,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 3.5,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "position_id": "ANCH-11",
+   "name": "Aransas Pass anchorage, position 11",
+   "latitude": 27.844,
+   "longitude": -96.92,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 3.8,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-12",
+   "name": "Aransas Pass anchorage, position 12",
+   "latitude": 27.826,
+   "longitude": -96.9,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 3.9,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-13",
+   "name": "Aransas Pass anchorage, position 13",
+   "latitude": 27.862,
+   "longitude": -96.96,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 4.1,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-14",
+   "name": "Aransas Pass anchorage, position 14",
+   "latitude": 27.862,
+   "longitude": -96.94,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 4.3,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-15",
+   "name": "Aransas Pass anchorage, position 15",
+   "latitude": 27.79,
+   "longitude": -96.88,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 4.4,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-16",
+   "name": "Aransas Pass anchorage, position 16",
+   "latitude": 27.808,
+   "longitude": -96.88,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 4.5,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "position_id": "ANCH-17",
+   "name": "Aransas Pass anchorage, position 17",
+   "latitude": 27.844,
+   "longitude": -96.9,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 4.5,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-18",
+   "name": "Aransas Pass anchorage, position 18",
+   "latitude": 27.862,
+   "longitude": -96.92,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 4.7,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-19",
+   "name": "Aransas Pass anchorage, position 19",
+   "latitude": 27.826,
+   "longitude": -96.88,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 4.8,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-20",
+   "name": "Aransas Pass anchorage, position 20",
+   "latitude": 27.862,
+   "longitude": -96.9,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 5.3,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-21",
+   "name": "Aransas Pass anchorage, position 21",
+   "latitude": 27.88,
+   "longitude": -96.94,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 5.4,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-22",
+   "name": "Aransas Pass anchorage, position 22",
+   "latitude": 27.844,
+   "longitude": -96.88,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 5.4,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-23",
+   "name": "Aransas Pass anchorage, position 23",
+   "latitude": 27.79,
+   "longitude": -96.86,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 5.5,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-24",
+   "name": "Aransas Pass anchorage, position 24",
+   "latitude": 27.808,
+   "longitude": -96.86,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 5.6,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-25",
+   "name": "Aransas Pass anchorage, position 25",
+   "latitude": 27.772,
+   "longitude": -96.86,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 5.6,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-26",
+   "name": "Aransas Pass anchorage, position 26",
+   "latitude": 27.88,
+   "longitude": -96.92,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 5.7,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "position_id": "ANCH-27",
+   "name": "Aransas Pass anchorage, position 27",
+   "latitude": 27.826,
+   "longitude": -96.86,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 5.8,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways"
+  },
+  {
+   "position_id": "ANCH-28",
+   "name": "Aransas Pass anchorage, position 28",
+   "latitude": 27.862,
+   "longitude": -96.88,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 6.1,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "position_id": "ANCH-29",
+   "name": "Aransas Pass anchorage, position 29",
+   "latitude": 27.88,
+   "longitude": -96.9,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 6.2,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "position_id": "ANCH-30",
+   "name": "Aransas Pass anchorage, position 30",
+   "latitude": 27.844,
+   "longitude": -96.86,
+   "swing_radius_m": 450,
+   "distance_to_sea_buoy_nm": 6.3,
+   "anchorage_area": "Aransas Pass Anchorage Area",
+   "position_basis": "grid point inside the NOAA ENC anchorage polygon, outside the charted fairways",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ],
+ "pilot_boarding": {
+  "position_id": "PILOT-BOARDING",
+  "name": "Aransas Pass pilot boarding area",
+  "latitude": 27.77575,
+  "longitude": -96.93124,
+  "radius_nm": 1.0,
+  "inside_noaa_fairway": true,
+  "position_basis": "2.0 nm seaward of the seaward end of the USACE sea bar channel centerline, on the channel axis; no pilot boarding place is published in the NOAA ENC layers that were fetched"
+ },
+ "sea_buoy": {
+  "position_id": "SEA-BUOY",
+  "name": "Aransas Pass sea buoy (seaward end of the sea bar channel)",
+  "latitude": 27.79312,
+  "longitude": -96.96336,
+  "channel_axis_deg": 121.4,
+  "position_basis": "seaward end of the USACE Corpus Christi sea bar channel centerline"
+ },
+ "sea_gates": [
+  {
+   "gate_id": "GATE-OFFING",
+   "name": "Aransas Pass offing, 25 nm seaward on the channel axis",
+   "latitude": 27.576,
+   "longitude": -96.56185,
+   "ports_beyond": [],
+   "distance_from_sea_buoy_nm": 25,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "gate_id": "GATE-GALVESTON",
+   "name": "Off Galveston Bay entrance",
+   "latitude": 29.1,
+   "longitude": -94.4,
+   "ports_beyond": [
+    "Houston",
+    "Texas City",
+    "Galveston",
+    "Freeport"
+   ],
+   "distance_from_sea_buoy_nm": 156,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING",
+    "GATE-GALVESTON"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "gate_id": "GATE-SABINE",
+   "name": "Off Sabine Pass",
+   "latitude": 29.4,
+   "longitude": -93.75,
+   "ports_beyond": [
+    "Port Arthur",
+    "Beaumont",
+    "Lake Charles"
+   ],
+   "distance_from_sea_buoy_nm": 195,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING",
+    "GATE-SABINE"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "gate_id": "GATE-SWPASS",
+   "name": "Off Southwest Pass, Mississippi River",
+   "latitude": 28.75,
+   "longitude": -89.6,
+   "ports_beyond": [
+    "New Orleans",
+    "Baton Rouge",
+    "Mobile"
+   ],
+   "distance_from_sea_buoy_nm": 394,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING",
+    "GATE-SWPASS"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "gate_id": "GATE-CAPE-SAN-BLAS",
+   "name": "Northeast Gulf, off Cape San Blas",
+   "latitude": 29.4,
+   "longitude": -85.7,
+   "ports_beyond": [
+    "Panama City",
+    "Port St. Joe"
+   ],
+   "distance_from_sea_buoy_nm": 601,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING",
+    "GATE-CAPE-SAN-BLAS"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "gate_id": "GATE-TAMPA",
+   "name": "Off Tampa Bay entrance",
+   "latitude": 27.55,
+   "longitude": -83.2,
+   "ports_beyond": [
+    "Tampa"
+   ],
+   "distance_from_sea_buoy_nm": 732,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING",
+    "GATE-TAMPA"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "gate_id": "GATE-FLORIDA-STRAITS",
+   "name": "Straits of Florida, west entrance",
+   "latitude": 24.0,
+   "longitude": -82.9,
+   "ports_beyond": [
+    "Rotterdam",
+    "Milford Haven",
+    "Algeciras",
+    "US East Coast"
+   ],
+   "distance_from_sea_buoy_nm": 792,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING",
+    "GATE-FLORIDA-STRAITS"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "gate_id": "GATE-YUCATAN",
+   "name": "Yucatan Channel",
+   "latitude": 21.8,
+   "longitude": -85.8,
+   "ports_beyond": [
+    "Panama Canal",
+    "Ulsan",
+    "Ningbo",
+    "Sikka",
+    "Santos",
+    "Cartagena"
+   ],
+   "distance_from_sea_buoy_nm": 706,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING",
+    "GATE-YUCATAN"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "gate_id": "GATE-TAMPICO",
+   "name": "Off Tampico and Altamira",
+   "latitude": 22.3,
+   "longitude": -97.45,
+   "ports_beyond": [
+    "Tampico",
+    "Altamira"
+   ],
+   "distance_from_sea_buoy_nm": 331,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING",
+    "GATE-TAMPICO"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "gate_id": "GATE-VERACRUZ",
+   "name": "Off Veracruz and Tuxpan",
+   "latitude": 19.4,
+   "longitude": -95.85,
+   "ports_beyond": [
+    "Veracruz",
+    "Tuxpan"
+   ],
+   "distance_from_sea_buoy_nm": 508,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING",
+    "GATE-VERACRUZ"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "gate_id": "GATE-COATZACOALCOS",
+   "name": "Off Coatzacoalcos and Pajaritos",
+   "latitude": 18.4,
+   "longitude": -94.4,
+   "ports_beyond": [
+    "Coatzacoalcos",
+    "Pajaritos",
+    "Dos Bocas"
+   ],
+   "distance_from_sea_buoy_nm": 581,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING",
+    "GATE-COATZACOALCOS"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "gate_id": "GATE-BROWNSVILLE",
+   "name": "Off Brazos Santiago Pass",
+   "latitude": 26.07,
+   "longitude": -96.95,
+   "ports_beyond": [
+    "Brownsville",
+    "Port Isabel"
+   ],
+   "distance_from_sea_buoy_nm": 103,
+   "route_from_port": [
+    "SEA-BUOY",
+    "PILOT-BOARDING",
+    "GATE-OFFING",
+    "GATE-BROWNSVILLE"
+   ],
+   "position_basis": "open-water waypoint, not a charted feature; the straight leg from GATE-OFFING was checked clear of land against the geography reference (coarse Gulf coastline, about 1.6 km)",
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ],
+ "ferry_route": {
+  "name": "Port Aransas ferry (State Highway 361)",
+  "operator": "Texas Department of Transportation",
+  "landings": [
+   "Mustang Island landing",
+   "Harbor Island landing"
+  ],
+  "slip_ids": [
+   "SLIP-FRY-01",
+   "SLIP-FRY-02",
+   "SLIP-FRY-03",
+   "SLIP-FRY-04",
+   "SLIP-FRY-05",
+   "SLIP-FRY-06",
+   "SLIP-FRY-07",
+   "SLIP-FRY-08"
+  ],
+  "crossing_m": 536
+ },
+ "channel_segments": [
+  {
+   "segment_id": "SEG-ANCH",
+   "segment_name": "Aransas Pass offshore anchorage",
+   "usace_reach_ids": [],
+   "geometry": "reference/geo/anchorages_fairways_noaa.geojson"
+  },
+  {
+   "segment_id": "SEG-BAY",
+   "segment_name": "Bay reaches (Harbor Island to Harbor Bridge)",
+   "usace_reach_ids": [
+    "CESWG_CC_05_HLQ_5",
+    "CESWG_CC_06_LQB_6",
+    "CESWG_CC_07_BTB_7"
+   ],
+   "geometry": "reference/geo/channels_usace.geojson"
+  },
+  {
+   "segment_id": "SEG-ENT",
+   "segment_name": "Sea bar and jetty channels (sea buoy to Harbor Island)",
+   "usace_reach_ids": [
+    "CESWG_CC_01_SBC_1",
+    "CESWG_CC_02_JEC_2",
+    "CESWG_CC_03_IMC_3",
+    "CESWG_CC_04_IHI_4"
+   ],
+   "geometry": "reference/geo/channels_usace.geojson"
+  },
+  {
+   "segment_id": "SEG-GIWW",
+   "segment_name": "Gulf Intracoastal Waterway in the Captain of the Port zone",
+   "usace_reach_ids": [
+    "CESWG_GI_1A_ABL_21",
+    "CESWG_GI_1B_LCC_21",
+    "CESWG_GI_21_ACC_21",
+    "CESWG_GI_22_CCM_22"
+   ],
+   "geometry": "reference/geo/channels_usace.geojson"
+  },
+  {
+   "segment_id": "SEG-INNER-E",
+   "segment_name": "Inner Harbor: Harbor Bridge to the west limit of the Main Turning Basin",
+   "usace_reach_ids": [
+    "CESWG_CC_08_MTB_8"
+   ],
+   "geometry": "reference/geo/channels_usace.geojson"
+  },
+  {
+   "segment_id": "SEG-INNER-W",
+   "segment_name": "Inner Harbor: Industrial Canal to Viola Turning Basin",
+   "usace_reach_ids": [
+    "CESWG_CC_09_INC_9",
+    "CESWG_CC_10_ATB_10",
+    "CESWG_CC_11_CTB_11",
+    "CESWG_CC_12_TLC_12",
+    "CESWG_CC_13_TTB_13",
+    "CESWG_CC_14_VCH_14",
+    "CESWG_CC_15_VTB_15"
+   ],
+   "geometry": "reference/geo/channels_usace.geojson"
+  },
+  {
+   "segment_id": "SEG-LAQ",
+   "segment_name": "La Quinta Channel",
+   "usace_reach_ids": [
+    "CESWG_LA_01_CLQ_1",
+    "CESWG_LA_02_LTB_2",
+    "CESWG_LA_03_LEX_3"
+   ],
+   "geometry": "reference/geo/channels_usace.geojson"
+  }
+ ]
+}

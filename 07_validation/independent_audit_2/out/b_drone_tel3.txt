@@ -1,0 +1,31 @@
+laanc cols ['authorization_id', 'authorization_type', 'operator_id', 'airframe_id', 'issued_utc', 'start_utc', 'end_utc', 'center_latitude', 'center_longitude', 'radius_m', 'max_altitude_ft_agl', 'status'] 444
+launch not on land: 0 []
+landing >200 m from launch: 0 []
+landing in water 3 [('FLT-DRN-OP-005-20270917-03', (27.680607, -97.314206)), ('FLT-DRN-OP-014-20271015-01', (27.843922, -97.070511)), ('FLT-DRN-OP-006-20271019-01', (27.81793, -97.453143))]
+DJI Mini 3 Pro n 29 maxalt 81 median maxalt 70.5 maxv m/s 9.4 max vz 4.0 max dur min 11 max range km 1.6 max track km 4.9 gaps 0 minalt 0.0
+DJI Matrice 350 RTK n 18 maxalt 76 median maxalt 75.4 maxv m/s 13.3 max vz 5.0 max dur min 14 max range km 4.5 max track km 9.4 gaps 0 minalt -0.1
+Skydio X10 n 34 maxalt 41 median maxalt 40.4 maxv m/s 12.3 max vz 5.1 max dur min 5 max range km 1.3 max track km 2.9 gaps 0 minalt -0.1
+Autel EVO II Pro n 10 maxalt 56 median maxalt 55.4 maxv m/s 13.1 max vz 3.9 max dur min 15 max range km 5.1 max track km 10.5 gaps 0 minalt 0.0
+DJI Matrice 30T n 46 maxalt 46 median maxalt 45.4 maxv m/s 12.4 max vz 5.4 max dur min 8 max range km 1.8 max track km 4.9 gaps 0 minalt 0.0
+DJI Phantom 4 Multispectral n 18 maxalt 61 median maxalt 60.4 maxv m/s 9.6 max vz 3.9 max dur min 15 max range km 3.0 max track km 7.1 gaps 0 minalt 0.1
+DJI Mavic 3 Thermal n 52 maxalt 61 median maxalt 60.4 maxv m/s 11.7 max vz 4.5 max dur min 9 max range km 1.5 max track km 5.2 gaps 0 minalt -0.0
+DJI Mavic 3 Enterprise n 84 maxalt 56 median maxalt 45.4 maxv m/s 11.4 max vz 4.8 max dur min 12 max range km 2.1 max track km 6.7 gaps 0 minalt -0.1
+DJI Mini 4 Pro n 29 maxalt 90 median maxalt 90.4 maxv m/s 9.4 max vz 3.8 max dur min 12 max range km 1.8 max track km 5.1 gaps 0 minalt 0.1
+FLIR-equipped multirotor n 43 maxalt 71 median maxalt 70.4 maxv m/s 10.4 max vz 3.8 max dur min 14 max range km 1.2 max track km 7.1 gaps 0 minalt -0.1
+WingtraOne Gen II n 14 maxalt 111 median maxalt 110.5 maxv m/s 17.4 max vz 4.8 max dur min 11 max range km 4.3 max track km 9.2 gaps 0 minalt -0.1
+Skydio X2D n 27 maxalt 60 median maxalt 55.5 maxv m/s 10.3 max vz 3.9 max dur min 18 max range km 4.5 max track km 9.4 gaps 0 minalt 0.1
+Argus Mk-7 fixed-wing survey aircraft n 40 maxalt 123 median maxalt 122.5 maxv m/s 29.5 max vz 5.0 max dur min 110 max range km 34.0 max track km 180.8 gaps 0 minalt -0.0
+log vs telemetry mismatches {'launch': 40} 
+auth prefixes Counter({'SGI': 187, 'COA': 131, 'LAANC': 126, '': 1})
+laanc rows not in flight log 0
+{'authorization_id': 'LAANC-270815-00001', 'authorization_type': 'LAANC', 'operator_id': 'DRN-OP-007', 'airframe_id': 'DRN-OP-007-A01', 'issued_utc': '2027-08-15T04:19:42Z', 'start_utc': '2027-08-15T13:35:00Z', 'end_utc': '2027-08-15T13:55:47Z', 'center_latitude': '27.79565', 'center_longitude': '-97.39858', 'radius_m': '410', 'max_altitude_ft_agl': '250', 'status': 'approved'}
+night launches 5 [('FLT-DRN-OP-005-20270915-08', '2027-09-16T01:41:43Z', 'MERIDIAN-TIR-SAR-NORTH-BEACH-08'), ('FLT-DRN-OP-005-20270915-09', '2027-09-16T03:34:00Z', 'MERIDIAN-TIR-SAR-CALALLEN-09'), ('FLT-DRN-OP-001-20270922-01', '2027-09-22T10:03:37Z', 'FEMA-UAV-0922-UTL-01'), ('FLT-DRN-OP-001-20270922-02', '2027-09-22T10:29:48Z', 'FEMA-UAV-0922-UTL-02'), ('FLT-DRN-OP-001-20270922-03', '2027-09-22T10:56:17Z', 'FEMA-UAV-0922-UTL-03')]
+launch local hour hist [(5, 3), (6, 12), (7, 54), (8, 70), (9, 136), (10, 44), (11, 34), (12, 10), (13, 32), (14, 10), (15, 23), (16, 3), (17, 11), (20, 1), (22, 1)]
+launch second==00 18 minute%5==0 96
+GRID D+3 flights 8 total km 1433 [('2027-09-17T12:02:00Z', 180), ('2027-09-17T12:02:20Z', 181), ('2027-09-17T12:02:40Z', 179), ('2027-09-17T12:03:00Z', 181), ('2027-09-17T12:03:20Z', 176), ('2027-09-17T12:03:40Z', 180), ('2027-09-17T12:04:00Z', 177), ('2027-09-17T12:04:20Z', 180)]
+('FLT-DRN-OP-001-20270922-01', 'FEMA-UAV-0922-UTL-01', '2027-09-22T10:03:37Z', '2027-09-22T10:26:18Z', (27.771566, -97.503115))
+('FLT-DRN-OP-001-20270922-02', 'FEMA-UAV-0922-UTL-02', '2027-09-22T10:29:48Z', '2027-09-22T10:54:52Z', (27.771536, -97.503086))
+('FLT-DRN-OP-001-20270922-03', 'FEMA-UAV-0922-UTL-03', '2027-09-22T10:56:17Z', '2027-09-22T11:23:16Z', (27.771362, -97.503023))
+('FLT-DRN-OP-001-20270922-04', 'FEMA-UAV-0922-UTL-04', '2027-09-22T11:20:19Z', '2027-09-22T11:45:10Z', (27.771258, -97.50305))
+('FLT-DRN-OP-001-20270922-05', 'FEMA-UAV-0922-UTL-05', '2027-09-22T11:45:31Z', '2027-09-22T12:08:40Z', (27.657366, -97.290184))
+('FLT-DRN-OP-001-20270922-06', 'FEMA-UAV-0922-UTL-06', '2027-09-22T11:08:52Z', '2027-09-22T11:32:52Z', (27.856446, -97.628415))

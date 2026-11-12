@@ -1,0 +1,97 @@
+{
+  "source": "T2",
+  "scope": "Second-pass review, scenario days 0-29: all hardening-changed stories (63) and unchanged sample (6) in that range, plus each changed story's prev/next arc neighbors (42 more, days -2 to 110), 111 stories read in full, diffed against the pre-hardening snapshot.",
+  "stories_read": 111,
+  "findings": [
+    {
+      "id": "T2-001",
+      "severity": "medium",
+      "story_id": "NWS-P000-05",
+      "field": "dek",
+      "old": "The Category 3 storm came ashore near Port Aransas, knocking out power, crippling Corpus Christi's water plant and leaving oil in the water at an Inner Harbor terminal.",
+      "new": "The Category 3 storm came ashore near Port Aransas, knocking out power and crippling Corpus Christi's water plant. Oil was reported spilling from two moored tankers at an Inner Harbor terminal as the storm arrived.",
+      "reason": "Residual cause leak: the dek lists the oil in the water as something the storm did ('leaving oil in the water'), the same implication R1-016/R1-017 removed from this story's headline and lede. PUB-024 says cause under investigation; ground truth is not the storm. Use the public wording 'as the storm arrived'.",
+      "status": "applied"
+    },
+    {
+      "id": "T2-002",
+      "severity": "low",
+      "story_id": "NWS-P000-04",
+      "field": "body",
+      "old": "adding a pollution emergency to the storm's toll on the city.",
+      "new": "adding a pollution emergency to a city already battered by the storm.",
+      "reason": "'The storm's toll' counts the spill as storm damage, a soft causal implication on landfall day (PUB-024: cause under investigation). Keeps the spill separate from the storm.",
+      "status": "applied"
+    },
+    {
+      "id": "T2-003",
+      "severity": "medium",
+      "story_id": "NWS-P026-02",
+      "field": "body",
+      "old": "The sermon was short. The water line was long.",
+      "new": "The sermon was short. The sign-up sheet was long.",
+      "reason": "Internal contradiction: the story opens with the hub's posted schedule ('Water: Mon/Wed/Fri') and is set on Sunday, yet closes on a long Sunday water line. The dek's sign-up sheet keeps the closing beat.",
+      "status": "applied"
+    },
+    {
+      "id": "T2-004",
+      "severity": "low",
+      "story_id": "NWS-P026-01",
+      "field": "body",
+      "old": "The cause of the spill is still under investigation, and the question of who pays for the damage will come later. Fishing families shouldn't have to wait for that answer",
+      "new": "The cause of the spill is still under investigation, and the claims center run for the tankers' owners is so far taking only cleanup and property claims. Fishing families shouldn't have to wait for their turn there",
+      "reason": "Continuity with PUB-106 / NWS-P012-03: the owners' claims center has been open since Sept. 26, so 'who pays will come later' reads oddly; what is still pending for fishers is lost-income claims (PUB-082, day 63).",
+      "status": "applied"
+    },
+    {
+      "id": "T2-005",
+      "severity": "low",
+      "story_id": "NWS-P010-03",
+      "field": "body",
+      "old": "The FBI's Houston division confirmed Thursday that it is investigating",
+      "new": "The FBI's Houston division confirmed this week that it is investigating",
+      "reason": "Splice artifact from W3-050: 'confirmed Thursday ... said Thursday' in consecutive sentences. Keep 'Thursday' once, on the quote.",
+      "status": "applied"
+    },
+    {
+      "id": "T2-006",
+      "severity": "low",
+      "story_id": "NWS-P022-02",
+      "field": "body",
+      "old": "\"Nothing has changed on our end. We're still working",
+      "new": "\"Our position hasn't changed. We're still working",
+      "reason": "The W3-057 rewrite made Hale's quote a near copy of Maj. Darnell Price's 'Nothing's changed on our end' (NWS-M001-04). Different speaker, same line.",
+      "status": "applied"
+    },
+    {
+      "id": "T2-007",
+      "severity": "low",
+      "story_id": "NWS-P020-01",
+      "field": "body",
+      "old": "Kerr did not say when deliveries began,",
+      "new": "Kerr did not say when deliveries to the air station began,",
+      "reason": "Removing the 'meets specifications' line (R3-008) left the story at 297 words, under the Ledger's 300-word floor in outlets.json. Adds four neutral words.",
+      "status": "applied"
+    },
+    {
+      "id": "T2-008",
+      "severity": "low",
+      "story_id": "NWS-P025-02",
+      "field": "body",
+      "old": "She is a home health aide and a mother of three. She rents a duplex near the bay.",
+      "new": "A home health aide and mother of three, she rents a duplex near the bay.",
+      "reason": "New hardening story runs 323 words, over Harborline 6's 250-320 range in outlets.json. Trims four words without losing a fact.",
+      "status": "applied"
+    },
+    {
+      "id": "T2-009",
+      "severity": "low",
+      "story_id": "NWS-P013-02",
+      "field": "body",
+      "old": "The closure is meant to protect people from eating seafood that could be contaminated, and neither agency has said when it will be lifted.",
+      "new": "The closures are meant to protect people from eating seafood that could be contaminated, and neither agency has said when they will be lifted.",
+      "reason": "Agreement after the agency split: 'neither agency' refers to two closures (TPWD fishing, DSHS shellfish) but the sentence still says 'the closure ... it'.",
+      "status": "applied"
+    }
+  ]
+}

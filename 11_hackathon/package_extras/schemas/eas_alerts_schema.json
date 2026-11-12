@@ -1,0 +1,95 @@
+{
+ "source": "eas_alerts",
+ "folder": "data/public_health/",
+ "format": "CSV",
+ "standard": "IPAWS CAP alert log",
+ "fields": [
+  {
+   "name": "AlertID",
+   "notes": ""
+  },
+  {
+   "name": "CAPmsgID",
+   "notes": ""
+  },
+  {
+   "name": "EventCode",
+   "notes": "EAS event code; RWT and RMT are required tests"
+  },
+  {
+   "name": "AlertType",
+   "notes": ""
+  },
+  {
+   "name": "IssuedAt_UTC",
+   "notes": ""
+  },
+  {
+   "name": "ReleasedAt_EN",
+   "notes": "when the alert reached the public in English (UTC)"
+  },
+  {
+   "name": "ReleasedAt_ES",
+   "notes": "when it reached the public in Spanish (UTC); empty if no Spanish release is recorded"
+  },
+  {
+   "name": "ExpiresAt_UTC",
+   "notes": ""
+  },
+  {
+   "name": "BroadcastChannel",
+   "notes": ""
+  },
+  {
+   "name": "WEA_Sent",
+   "notes": ""
+  },
+  {
+   "name": "WEA_Sent_EN",
+   "notes": "wireless emergency alert submission time, English"
+  },
+  {
+   "name": "WEA_Sent_ES",
+   "notes": "same, Spanish"
+  },
+  {
+   "name": "GeographicArea",
+   "notes": ""
+  },
+  {
+   "name": "AreaIDs",
+   "notes": "semicolon-separated areas.json area_id"
+  },
+  {
+   "name": "Headline_EN",
+   "notes": ""
+  },
+  {
+   "name": "Headline_ES",
+   "notes": ""
+  },
+  {
+   "name": "AlertSource",
+   "notes": ""
+  },
+  {
+   "name": "Priority",
+   "notes": ""
+  },
+  {
+   "name": "CharCount_EN",
+   "notes": "length of the English alert text as sent"
+  }
+ ],
+ "joins": [
+  {
+   "field": "AlertID",
+   "to": "broadcast/*.csv alert_id"
+  },
+  {
+   "field": "AreaIDs",
+   "to": "areas.json area_id"
+  }
+ ],
+ "file": "data/public_health/eas_broadcasts.csv"
+}

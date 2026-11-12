@@ -1,0 +1,797 @@
+{
+  "thread_id": "T18",
+  "name": "Utility SOC / SIEM telemetry",
+  "color": "#1e5f8c",
+  "scenario": "gridwater",
+  "lanes": [
+    "C",
+    "D",
+    "I"
+  ],
+  "truth": "Beginning D-14 (August 31, 2027), CBPWA's Sentinel Edge 3.1 SIEM began logging the earliest observable indicators of Operation DRIFTGLASS — a spearphish payload executed on workstation GW-WS-IT-04, generating an outbound C2 beacon to a Vantage-flagged threat actor IP (104.21.88.43) at 03:17Z. Over the following six weeks, the CBPWA Security Operations Center received 23 adversary-correlated alerts across four categories: C2 beaconing (8), after-hours historian access (7), relay config file writes (5), and alarm suppression list changes (3). None of the 23 were escalated to incident status before D+18. The reason: a confluence of analyst fatigue and an engineered false-positive avalanche. Baseline SIEM volume was approximately 2,400 alerts per day. During the storm window (D-2 through D+3), volume surged to a peak of 18,340 alerts on D0 — generator failovers, comms drops, sensor timeouts, and cascading OT reconnect storms — pushing the false positive rate to 94.2%. The two SOC analysts on duty during D0 manually suppressed or mass-acknowledged 94% of incoming alerts using a 'storm mode' bulk-dismiss rule, inadvertently mass-dismissing three adversary-correlated alerts including a relay config write (GW-EVT-103) and an alarm suppression list change (GW-EVT-104). The KESTREL intrusion exploited the storm-window false-positive surge as deliberate operational cover. The critical turning point was D+18, when a historian access session from source ASN AS-209144 (a KESTREL-associated VPN exit node) queried relay configuration tags for all five CBPWA substations — a query pattern that an ML anomaly detection model trained on the historian access baseline identified as 3.8 sigma above baseline. This alert (GW-EVT-111) was the first adversary alert escalated to the CBPWA CISO, Dr. Fatima Al-Rasheed-Obinna, who initiated a formal security investigation that ultimately led to SCADA isolation at D+28.",
+  "phase_onset": 4,
+  "phase_peak": 4,
+  "msel_events": [
+    {
+      "event_id": "GW-EVT-101",
+      "time_label": "D-14",
+      "day": -14,
+      "day_end": null,
+      "time_utc": "03:17Z",
+      "threads": [
+        "T18",
+        "T8",
+        "T10"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "Initial implant beacon: workstation GW-WS-IT-04 (IT network, CBPWA admin wing, assigned to fictitious contractor account 'svc_fieldops_ext') executes a payload dropped via a targeted spearphish email (the DRIFTGLASS initial access vector, documented in T8). At 03:17Z the implant makes its first C2 beacon: an HTTPS POST to 104.21.88.43 (port 443) with a 318-byte payload body matching a known KESTREL beacon format. Sentinel Edge 3.1 logs the event as rule SE3-NET-9941 (Outbound connection to flagged IP). Alert priority: LOW. The alert sits in the SOC queue for 11 hours before an analyst reviews and closes it as 'false positive — cloud CDN traffic.' This closure is logged with analyst ID SOC-AN-02.",
+      "observed_in": [
+        {
+          "stream": "siem_alerts",
+          "what": "Sentinel Edge 3.1 alert SE3-NET-9941-20270831T0317Z: src=10.14.22.47 (GW-WS-IT-04), dst=104.21.88.43:443, bytes_out=318, rule=FLAGGED_IP_OUTBOUND, priority=LOW | SOC queue closure record: analyst SOC-AN-02, closure_time=2027-08-31T14:22Z, disposition=FALSE_POSITIVE, notes='Cloud CDN, whitelisted vendor range'",
+          "when": {
+            "start_utc": "2027-08-31T03:17Z",
+            "end_utc": "2027-08-31T05:17Z"
+          }
+        },
+        {
+          "stream": "zeek_logs",
+          "what": "Netflow record: session duration 4.2s, 318 bytes out, 212 bytes in, protocol TLS 1.3, SNI field: update-cdn.vantagesec-telemetry.net (typosquat of legitimate Vantage Security Systems telemetry domain)",
+          "when": {
+            "start_utc": "2027-08-31T03:17Z",
+            "end_utc": "2027-08-31T05:17Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Sentinel Edge 3.1 alert SE3-NET-9941-20270831T0317Z: src=10.14.22.47 (GW-WS-IT-04), dst=104.21.88.43:443, bytes_out=318, rule=FLAGGED_IP_OUTBOUND, priority=LOW",
+        "SOC queue closure record: analyst SOC-AN-02, closure_time=2027-08-31T14:22Z, disposition=FALSE_POSITIVE, notes='Cloud CDN, whitelisted vendor range'",
+        "Netflow record: session duration 4.2s, 318 bytes out, 212 bytes in, protocol TLS 1.3, SNI field: update-cdn.vantagesec-telemetry.net (typosquat of legitimate Vantage Security Systems telemetry domain)"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "sentinel_edge_siem_logs",
+        "gw_ws_it04_netflow",
+        "cbpwa_soc_queue_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "GW-EVT-102",
+      "time_label": "D-7",
+      "day": -7,
+      "day_end": null,
+      "time_utc": "02:44Z",
+      "threads": [
+        "T18",
+        "T8"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "After-hours historian access, first session: at 02:44Z (21:44 CDT previous day), a process running under the GW-SYS-JMP-01 service account (the ClearPath VPN jump host, already compromised) initiates a historian query session against the CBPWA PI Historian server (GW-SRV-HIST-01). The session queries 847 tag values across all five substation relay groups (GW-FAC-SUB-01 through 05), with particular concentration on protection relay settings tags and transformer tap position tags. Session duration: 14 minutes 22 seconds. This is session 1 of 14 after-hours historian access sessions that will occur between D-7 and D+16. Sentinel Edge logs the access as rule SE3-OT-1104 (Historian access outside business hours), priority LOW. The alert is auto-acknowledged by a scheduled maintenance exception rule that covers the jump host service account for the 00:00-04:00Z window — an exception inserted into the SIEM ruleset 19 days earlier by an unknown change with no associated change ticket.",
+      "observed_in": [
+        {
+          "stream": "siem_alerts",
+          "what": "Sentinel Edge 3.1 alert SE3-OT-1104-20270907T0244Z: src=GW-SYS-JMP-01, dst=GW-SRV-HIST-01, session_duration=862s, tags_queried=847, priority=LOW, disposition=AUTO_ACK (exception rule MAINT-EXCEPT-0892) | MAINT-EXCEPT-0892 change log: rule created 2027-08-19T11:34Z, changed_by=svc_fieldops_ext, no_change_ticket_ref — this is the KESTREL suppression pre-positioning",
+          "when": {
+            "start_utc": "2027-09-07T02:44Z",
+            "end_utc": "2027-09-07T04:44Z"
+          }
+        },
+        {
+          "stream": "host_audit_logs",
+          "what": "PI Historian access log: session ID HIST-20270907-00441, account=GW-SYS-JMP-01\\svc_fieldops_ext, 847 tags, all relay and tap-position groups, duration 14:22",
+          "when": {
+            "start_utc": "2027-09-07T02:44Z",
+            "end_utc": "2027-09-07T04:44Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Sentinel Edge 3.1 alert SE3-OT-1104-20270907T0244Z: src=GW-SYS-JMP-01, dst=GW-SRV-HIST-01, session_duration=862s, tags_queried=847, priority=LOW, disposition=AUTO_ACK (exception rule MAINT-EXCEPT-0892)",
+        "MAINT-EXCEPT-0892 change log: rule created 2027-08-19T11:34Z, changed_by=svc_fieldops_ext, no_change_ticket_ref — this is the KESTREL suppression pre-positioning",
+        "PI Historian access log: session ID HIST-20270907-00441, account=GW-SYS-JMP-01\\svc_fieldops_ext, 847 tags, all relay and tap-position groups, duration 14:22"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "sentinel_edge_siem_logs",
+        "gw_srv_hist01_access_log",
+        "cbpwa_siem_exception_rules"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "GW-EVT-103",
+      "time_label": "D-3",
+      "day": -3,
+      "day_end": null,
+      "time_utc": "22:11Z",
+      "threads": [
+        "T18",
+        "T8"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "Relay config file write: at 22:11Z (17:11 CDT), the compromised jump host account writes a modified relay configuration file to the CBPWA relay config management share (\\\\gw-srv-ot-01\\relayconfigs\\sub02\\rtu_config_draft.xml). The file contains altered overcurrent trip thresholds for three protective relays at GW-FAC-SUB-02 (Harbor View). The write generates Sentinel Edge alert SE3-OT-2201 (Unauthorized write to protected OT config path), priority MEDIUM. The SOC duty analyst (SOC-AN-01) is in the middle of a storm preparation briefing and reviews the alert 47 minutes later. The analyst marks it as 'authorized maintenance — storm prep' and closes it without opening a ticket, based on a note from the CBPWA ops supervisor that relay settings 'may be adjusted ahead of storm.' This closure is the most consequential single error in the SOC timeline. The relay config change is what enables the extended power manipulation documented in T8.",
+      "observed_in": [
+        {
+          "stream": "siem_alerts",
+          "what": "Sentinel Edge 3.1 alert SE3-OT-2201-20270911T2211Z: src=GW-SYS-JMP-01, action=FILE_WRITE, path=\\\\gw-srv-ot-01\\relayconfigs\\sub02\\rtu_config_draft.xml, priority=MEDIUM | SOC closure record: analyst SOC-AN-01, closure_time=2027-09-11T22:58Z, disposition=AUTHORIZED_MAINTENANCE, notes='Storm prep relay adjustment per ops supervisor note'",
+          "when": {
+            "start_utc": "2027-09-11T22:11Z",
+            "end_utc": "2027-09-12T00:11Z"
+          }
+        },
+        {
+          "stream": "host_audit_logs",
+          "what": "File audit log: file hash sha256=a3f8c2d1e9b04517 (modified), previous hash sha256=d7e1a0f3c2b18429 (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C",
+          "when": {
+            "start_utc": "2027-09-11T22:11Z",
+            "end_utc": "2027-09-12T00:11Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Sentinel Edge 3.1 alert SE3-OT-2201-20270911T2211Z: src=GW-SYS-JMP-01, action=FILE_WRITE, path=\\\\gw-srv-ot-01\\relayconfigs\\sub02\\rtu_config_draft.xml, priority=MEDIUM",
+        "SOC closure record: analyst SOC-AN-01, closure_time=2027-09-11T22:58Z, disposition=AUTHORIZED_MAINTENANCE, notes='Storm prep relay adjustment per ops supervisor note'",
+        "File audit log: file hash sha256=a3f8c2d1e9b04517 (modified), previous hash sha256=d7e1a0f3c2b18429 (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "sentinel_edge_siem_logs",
+        "gw_srv_ot01_file_audit_log",
+        "cbpwa_soc_queue_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "GW-EVT-104",
+      "time_label": "D-2 to D+3",
+      "day": -2,
+      "day_end": 3,
+      "time_utc": "00:00Z",
+      "threads": [
+        "T18",
+        "T8",
+        "T10"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "STORM-WINDOW SIEM FLOOD: Hurricane Rafael makes landfall D0 06:00Z. Over the six UTC days D-2 through D+3 (2027-09-12 to 2027-09-17), Sentinel Edge 3.1 receives 73,785 alerts (4,812 / 7,341 / 18,340 / 16,207 / 14,884 / 12,201 by day) — about five and a half times the usual volume of roughly 2,200 a day. Most come from device-availability rules: network links down (about 14,400), endpoint agents offline (about 13,400), field-device communications loss (about 9,500), silent log sources (about 5,400) and UPS on battery (about 3,900). Mixed in: 3 adversary-correlated alerts (1 historian session, 1 relay config write, 1 alarm suppression change) that account for approximately 0.004% of storm-window volume. The two on-duty SOC analysts activate 'storm mode' (bulk-dismiss rule SE3-BULK-STORM-01) at D0 06:14Z. Storm mode auto-dismisses all LOW and MEDIUM alerts from a whitelist of 44 known-noisy sources. Three adversary-correlated alerts fall within the whitelist scope and are mass-dismissed. False positive rate peaks at 94.2% on D0. SOC analyst fatigue index (internal metric) reaches 87/100 by D+1 midshift.",
+      "observed_in": [
+        {
+          "stream": "siem_alerts",
+          "what": "Sentinel Edge daily alert volume: D-2: 4,812, D-1: 7,341, D0: 18,340 (peak), D+1: 16,207, D+2: 14,884, D+3: 12,201, D+4: 6,633 (returning toward baseline) | Mass-dismissed adversary alert IDs: SE3-OT-1104-20270914T0831Z (historian session), SE3-NET-9941-20270915T0117Z (C2 beacon), SE3-OT-3301-20270915T0944Z (alarm suppression change) | Storm mode activation log: SE3-BULK-STORM-01 activated D0 06:14Z by SOC-AN-01, 44 source-whitelist entries,...",
+          "when": {
+            "start_utc": "2027-09-12T00:00Z",
+            "end_utc": "2027-09-18T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Sentinel Edge daily alert volume: D-2: 4,812, D-1: 7,341, D0: 18,340 (peak), D+1: 16,207, D+2: 14,884, D+3: 12,201, D+4: 6,633 (returning toward baseline)",
+        "Storm mode activation log: SE3-BULK-STORM-01 activated D0 06:14Z by SOC-AN-01, 44 source-whitelist entries, auto-dismissed 68,912 alerts in storm window",
+        "Mass-dismissed adversary alert IDs: SE3-OT-1104-20270914T0831Z (historian session), SE3-NET-9941-20270915T0117Z (C2 beacon), SE3-OT-3301-20270915T0944Z (alarm suppression change)",
+        "SOC shift log D0: 'Storm mode activated, managing volume. 18K alerts in first 12 hrs. All hands on generator failover response.'"
+      ],
+      "public_fact": null,
+      "place_ids": [],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "sentinel_edge_siem_logs",
+        "cbpwa_soc_storm_mode_log",
+        "cbpwa_siem_bulk_dismiss_audit"
+      ],
+      "observable": true
+    },
+    {
+      "event_id": "GW-EVT-105",
+      "time_label": "D+9",
+      "day": 9,
+      "day_end": null,
+      "time_utc": "04:00Z",
+      "threads": [
+        "T18",
+        "T8",
+        "T9"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "Suppressed alarm count peaks: Sentinel Edge reports that the CBPWA DCS alarm suppression list (which controls what alarms appear on the operator HMI at FAC-UTL-01 and GW-FAC-SUB-01 through 05) has been modified 7 times since D-5. Total suppressed alarms: 94 (baseline: 12). The SCADA historian shows the suppression list changes were made via the GW-SYS-JMP-01 jump host account. The effect: operators at FAC-UTL-01 cannot see pump flow anomalies that began at D+9 02:00Z (the water system SCADA manipulation documented in T9). Sentinel Edge logs the cumulative suppression change as alert SE3-OT-3301 (Alarm suppression list bulk modification), priority HIGH — the first HIGH priority adversary-correlated alert in the entire intrusion timeline. However, it is reviewed by an analyst who attributes it to 'storm recovery HMI cleanup' and closes without escalation, noting that suppression list changes are common during storm recovery when operators manually silence storm-noise alarms.",
+      "observed_in": [
+        {
+          "stream": "siem_alerts",
+          "what": "Sentinel Edge alert SE3-OT-3301-20270923T0400Z: suppressed_alarm_count=94 (threshold=30), change_count_since_D-5=7, source=GW-SYS-JMP-01, priority=HIGH",
+          "when": {
+            "start_utc": "2027-09-23T04:00Z",
+            "end_utc": "2027-09-23T06:00Z"
+          }
+        },
+        {
+          "stream": "host_audit_logs",
+          "what": "DCS alarm suppression list diff: 82 alarms added since D-5, clusters in pump flow, water quality sensor, and substation relay alarm categories",
+          "when": {
+            "start_utc": "2027-09-23T04:00Z",
+            "end_utc": "2027-09-23T06:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Sentinel Edge alert SE3-OT-3301-20270923T0400Z: suppressed_alarm_count=94 (threshold=30), change_count_since_D-5=7, source=GW-SYS-JMP-01, priority=HIGH",
+        "DCS alarm suppression list diff: 82 alarms added since D-5, clusters in pump flow, water quality sensor, and substation relay alarm categories",
+        "SOC closure record: SOC-AN-03, closure_time=2027-09-23T09:17Z, disposition=KNOWN_BEHAVIOR, notes='Storm recovery HMI cleanup, ops team managing sensor noise'"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-UTL-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "sentinel_edge_siem_logs",
+        "cbpwa_dcs_alarm_suppression_log",
+        "gw_srv_scada01_config_audit"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "GW-EVT-106",
+      "time_label": "D+18",
+      "day": 18,
+      "day_end": null,
+      "time_utc": "14:33Z",
+      "threads": [
+        "T18",
+        "T8"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "VPN anomaly discovery — the SOC connects the dots: Sentinel Edge ML anomaly module (Vantage Behavioral Analytics 2.1) flags historian access session 14 (of 14) as a 3.8-sigma outlier at 14:33Z. The session queried all five substation relay configuration tag groups simultaneously — a query pattern never seen in 180 days of historian baseline. The alert (SE3-ML-0044) is tagged ANOMALY_HIGH and routed to the CBPWA CISO Dr. Fatima Al-Rasheed-Obinna directly per the high-priority ML alert policy. Dr. Al-Rasheed-Obinna reviews the full 14-session historian access cluster (D-7 to D+18) and identifies source ASN AS-209144 as the common origin — a Latvian VPN exit node. She correlates this with the D-3 relay config write (GW-EVT-103, now re-escalated) and opens Security Incident SI-2027-CC-001. This is the moment the SOC first connects the historian access, the relay config writes, and the VPN origin into a coherent threat picture.",
+      "observed_in": [
+        {
+          "stream": "siem_alerts",
+          "what": "Sentinel Edge ML alert SE3-ML-0044-20271002T1433Z: session_id=HIST-20271002-00917, src_asn=AS-209144, tags_queried=1,241 (all relay config groups, all 5 substations), anomaly_score=3.84 sigma, priority=ANOMALY_HIGH | 14-session historian access log cluster: session IDs HIST-20270907-00441 through HIST-20271002-00917, all from GW-SYS-JMP-01 or AS-209144 VPN exits, aggregate 11,847 tags queried",
+          "when": {
+            "start_utc": "2027-10-02T14:33Z",
+            "end_utc": "2027-10-02T16:33Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Sentinel Edge ML alert SE3-ML-0044-20271002T1433Z: session_id=HIST-20271002-00917, src_asn=AS-209144, tags_queried=1,241 (all relay config groups, all 5 substations), anomaly_score=3.84 sigma, priority=ANOMALY_HIGH",
+        "CISO incident intake SI-2027-CC-001: opened 2027-10-02T15:11Z by Dr. Fatima Al-Rasheed-Obinna, initial scope: historian access cluster 14 sessions D-7 to D+18, source ASN AS-209144",
+        "14-session historian access log cluster: session IDs HIST-20270907-00441 through HIST-20271002-00917, all from GW-SYS-JMP-01 or AS-209144 VPN exits, aggregate 11,847 tags queried"
+      ],
+      "public_fact": "GW-PUB-101",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "sentinel_edge_siem_logs",
+        "cbpwa_ciso_incident_log",
+        "vantage_behavioral_analytics_log"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "cbpwa_ciso_incident_log",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "GW-EVT-107",
+      "time_label": "D+28",
+      "day": 28,
+      "day_end": null,
+      "time_utc": "08:00Z",
+      "threads": [
+        "T18",
+        "T8"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "SCADA isolation: following 10 days of investigation under SI-2027-CC-001, CBPWA's incident response team (supplemented by Vantage Security Systems senior support engineer Marcus Teitelbaum-Park) confirms that GW-SYS-JMP-01 is compromised and that the ClearPath VPN jump host has been used as the pivot point for all OT-network historian and relay config access. At 08:00Z D+28, with ERCOT and TCEQ emergency coordination, CBPWA executes a controlled SCADA isolation: GW-SYS-JMP-01 is taken offline, the ClearPath VPN service is suspended, and the historian server GW-SRV-HIST-01 is isolated from the external-facing IT network. All 94 suppressed alarms in the DCS suppression list are restored. The relay config changes at SUB-02 are identified and reverification of all five substation relay settings begins. Sentinel Edge alert volume returns toward baseline; the C2 beacon from GW-WS-IT-04 goes silent within 2 hours (host isolated).",
+      "observed_in": [
+        {
+          "stream": "work_orders",
+          "what": "SCADA isolation work order WO-2027-OT-0881 opened 08:00Z on D+28: jump host offline, external connectivity cut.",
+          "when": {
+            "start_utc": "2027-10-12T05:00Z",
+            "end_utc": "2027-10-13T05:00Z"
+          }
+        },
+        {
+          "stream": "siem_alerts",
+          "what": "Alert volume falls about 90 percent after 08:00Z on D+28; the outbound beacon alert SE3-NET-9941 is last seen at 10:04Z.",
+          "when": {
+            "start_utc": "2027-10-12T05:00Z",
+            "end_utc": "2027-10-14T05:00Z"
+          }
+        },
+        {
+          "stream": "zeek_logs",
+          "what": "Outbound connections from the compromised workstation to the command address stop after 10:04Z on D+28.",
+          "when": {
+            "start_utc": "2027-10-12T05:00Z",
+            "end_utc": "2027-10-14T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CBPWA SCADA isolation work order WO-2027-OT-0881: initiated 08:00Z D+28, authorized by Dr. Al-Rasheed-Obinna and CBPWA Operations Director, scope: JMP-01 offline, ClearPath VPN suspended, HIST-01 isolated",
+        "Post-isolation Sentinel Edge alert volume: D+28 post-08:00Z = 1,847 alerts (90% drop from D+27), C2 beacon SE3-NET-9941 last seen D+28 10:04Z",
+        "Relay config re-verification report: SUB-02 relays R-02A/B/C found with anomalous overcurrent thresholds (2400A vs baseline 1200A); SUB-03 relay R-03A also modified"
+      ],
+      "public_fact": "GW-PUB-102",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cbpwa_ciso_incident_log",
+        "cbpwa_scada_isolation_work_order",
+        "sentinel_edge_siem_logs"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "GW-EVT-108",
+      "time_label": "D+35",
+      "day": 35,
+      "day_end": null,
+      "time_utc": "00:00Z",
+      "threads": [
+        "T18"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "Clean SIEM baseline restored: after 7 days of remediation (new SCADA jump host infrastructure deployed, all service accounts rotated, historian access whitelist rebuilt), Sentinel Edge 3.1 returns to a clean operational baseline. The exception rule MAINT-EXCEPT-0892 (the KESTREL-inserted suppression that auto-acknowledged historian access alerts) is identified during the ruleset audit and removed. Daily alert volume: 2,312 (within 4% of pre-intrusion baseline). False positive rate: 11.3% (normal for OT SIEM). The gw_siem_false_positive_rate variable returns to baseline range. CBPWA SOC staffing is increased from 2 to 4 analysts per shift. Dr. Al-Rasheed-Obinna submits a preliminary incident report to CISA (ICS-CERT notification filed).",
+      "observed_in": [
+        {
+          "stream": "siem_alerts",
+          "what": "Sentinel Edge daily volume D+35: 2,312 alerts, false_positive_rate=11.3%, no open ML anomaly alerts | Exception rule audit report: MAINT-EXCEPT-0892 identified as anomalous (no change ticket, created by svc_fieldops_ext, 19 days before first historian session), removed D+34",
+          "when": {
+            "start_utc": "2027-10-19T00:00Z",
+            "end_utc": "2027-10-19T02:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Sentinel Edge daily volume D+35: 2,312 alerts, false_positive_rate=11.3%, no open ML anomaly alerts",
+        "Exception rule audit report: MAINT-EXCEPT-0892 identified as anomalous (no change ticket, created by svc_fieldops_ext, 19 days before first historian session), removed D+34",
+        "CISA ICS-CERT notification: filed D+35, ticket ICS-2027-CC-00441, scope: OT historian access, relay config modification, alarm suppression list manipulation"
+      ],
+      "public_fact": "GW-PUB-103",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "sentinel_edge_siem_logs",
+        "cbpwa_ciso_incident_log",
+        "cbpwa_soc_staffing_log"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "cbpwa_ciso_incident_log",
+          "stream": "investigative_files"
+        },
+        {
+          "label": "cbpwa_soc_staffing_log",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "GW-PUB-101",
+      "day": 20,
+      "time_local": "14:00",
+      "type": "official_advisory",
+      "source": "CBPWA Corporate Communications",
+      "statement": "Coastal Bend Power and Water Authority has confirmed that it is investigating anomalous access to internal network systems that may have occurred during the Hurricane Rafael response period. CBPWA's Security Operations Center identified unusual access patterns in network logs and has opened a formal security review in coordination with Vantage Security Systems, our SIEM and security technology partner. At this time there is no indication that customer data has been affected. CBPWA is working closely with relevant federal and state agencies. Additional information will be provided as the investigation progresses. CBPWA CISO Dr. Fatima Al-Rasheed-Obinna is leading the investigation.",
+      "arcs": [],
+      "events": [
+        "GW-EVT-106"
+      ],
+      "places": [
+        "CBPWA Security Operations Center"
+      ],
+      "sources": []
+    },
+    {
+      "id": "GW-PUB-102",
+      "day": 29,
+      "time_local": "12:00",
+      "type": "official_advisory",
+      "source": "CBPWA Corporate Communications",
+      "statement": "Coastal Bend Power and Water Authority has taken precautionary steps to isolate portions of its operational technology network following the identification of unauthorized access to network systems. These measures are being taken as part of an ongoing security investigation. The isolation is expected to cause no disruption to power or water service for CBPWA customers. CBPWA is cooperating with the Cybersecurity and Infrastructure Security Agency (CISA) and other relevant authorities. CBPWA emphasizes that the investigation is ongoing and no conclusions should be drawn about the nature or origin of the access at this time.",
+      "arcs": [],
+      "events": [
+        "GW-EVT-107"
+      ],
+      "places": [
+        "CBPWA",
+        "Corpus Christi"
+      ],
+      "sources": []
+    },
+    {
+      "id": "GW-PUB-103",
+      "day": 36,
+      "time_local": "09:00",
+      "type": "official_advisory",
+      "source": "CBPWA Corporate Communications / CISA",
+      "statement": "Coastal Bend Power and Water Authority and the Cybersecurity and Infrastructure Security Agency have notified the public that CBPWA has completed an initial phase of remediation following a confirmed security incident affecting CBPWA's industrial control system network. CBPWA's security monitoring systems have returned to normal operational status. No customer data was exfiltrated. CISA has issued an ICS advisory (ICS-CERT-2027-CC-00441) to the broader critical infrastructure community regarding the attack techniques observed. CBPWA is conducting a comprehensive post-incident review and will implement additional security hardening measures identified during the investigation.",
+      "arcs": [],
+      "events": [
+        "GW-EVT-108"
+      ],
+      "places": [
+        "CBPWA",
+        "Corpus Christi"
+      ],
+      "sources": []
+    },
+    {
+      "id": "GW-PUB-104",
+      "day": 45,
+      "time_local": "10:00",
+      "type": "media_report",
+      "source": "OUT-05 Sabal Energy Wire",
+      "statement": "Sabal Energy Wire has obtained documents confirming that the prolonged power outages affecting portions of Corpus Christi following Hurricane Rafael were partly attributable to unauthorized modifications to protective relay settings at two CBPWA substations. The modifications, discovered during a security investigation that began October 2nd, caused affected relay groups to tolerate fault currents above their designed trip thresholds, extending grid restoration timelines by an estimated 11 to 18 days. CBPWA CISO Dr. Fatima Al-Rasheed-Obinna declined to comment on specific findings, citing an ongoing investigation. CISA confirmed that ICS-CERT advisory ICS-2027-CC-00441 covers incidents of this type.",
+      "arcs": [],
+      "events": [
+        "GW-EVT-107",
+        "GW-EVT-108"
+      ],
+      "places": [
+        "CBPWA",
+        "Corpus Christi",
+        "Harbor View",
+        "Crosstown"
+      ],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "gw_siem_alert_volume_per_hour",
+      "label": "SIEM alert volume per hour",
+      "kind": "number",
+      "group": "Cyber & information",
+      "unit": "alerts/hour",
+      "thread": "T18",
+      "description": "Hourly rate of Sentinel Edge 3.1 alerts across all rule categories. Baseline approximately 100/hr; surges to 764/hr at D0 peak. This variable is the primary time-series anomaly detection target.",
+      "keyframes": [
+        {
+          "day": -14,
+          "value": 102
+        },
+        {
+          "day": -7,
+          "value": 98
+        },
+        {
+          "day": -3,
+          "value": 118
+        },
+        {
+          "day": -2,
+          "value": 201
+        },
+        {
+          "day": -1,
+          "value": 306
+        },
+        {
+          "day": 0,
+          "value": 764
+        },
+        {
+          "day": 1,
+          "value": 676
+        },
+        {
+          "day": 2,
+          "value": 620
+        },
+        {
+          "day": 3,
+          "value": 509
+        },
+        {
+          "day": 4,
+          "value": 277
+        },
+        {
+          "day": 7,
+          "value": 142
+        },
+        {
+          "day": 14,
+          "value": 108
+        },
+        {
+          "day": 18,
+          "value": 105
+        },
+        {
+          "day": 28,
+          "value": 77
+        },
+        {
+          "day": 35,
+          "value": 96
+        }
+      ]
+    },
+    {
+      "id": "gw_adversary_alerts_surfaced",
+      "label": "Adversary-correlated alerts surfaced (cumulative)",
+      "kind": "number",
+      "group": "Hidden threads",
+      "unit": "alerts",
+      "thread": "T18",
+      "description": "Cumulative count of the 23 adversary-correlated alerts that have been reviewed and NOT dismissed as false positives. Starts at 0; grows slowly as detection improves post-D+18. The delta between 23 total generated and gw_adversary_alerts_surfaced is the buried adversary signal. This variable is hidden-thread only.",
+      "keyframes": [
+        {
+          "day": -14,
+          "value": 0
+        },
+        {
+          "day": -7,
+          "value": 0
+        },
+        {
+          "day": -3,
+          "value": 0
+        },
+        {
+          "day": 0,
+          "value": 0
+        },
+        {
+          "day": 9,
+          "value": 0
+        },
+        {
+          "day": 18,
+          "value": 1
+        },
+        {
+          "day": 20,
+          "value": 4
+        },
+        {
+          "day": 25,
+          "value": 11
+        },
+        {
+          "day": 28,
+          "value": 18
+        },
+        {
+          "day": 35,
+          "value": 23
+        }
+      ]
+    },
+    {
+      "id": "gw_soc_analyst_fatigue_index",
+      "label": "SOC analyst fatigue index",
+      "kind": "number",
+      "group": "Cyber & information",
+      "unit": "index (0-100)",
+      "thread": "T18",
+      "description": "Internal CBPWA SOC metric (0=rested, 100=critically fatigued) derived from shift hours, alert review rate, and missed-escalation frequency. Spikes during storm window D0-D+3 as 2 analysts manage 18K+ alerts. Directly correlates with adversary alert dismissal rate.",
+      "keyframes": [
+        {
+          "day": -14,
+          "value": 22
+        },
+        {
+          "day": -3,
+          "value": 31
+        },
+        {
+          "day": -1,
+          "value": 48
+        },
+        {
+          "day": 0,
+          "value": 79
+        },
+        {
+          "day": 1,
+          "value": 87
+        },
+        {
+          "day": 2,
+          "value": 83
+        },
+        {
+          "day": 3,
+          "value": 71
+        },
+        {
+          "day": 7,
+          "value": 55
+        },
+        {
+          "day": 14,
+          "value": 38
+        },
+        {
+          "day": 18,
+          "value": 41
+        },
+        {
+          "day": 28,
+          "value": 29
+        },
+        {
+          "day": 35,
+          "value": 24
+        }
+      ]
+    },
+    {
+      "id": "gw_siem_false_positive_rate",
+      "label": "SIEM false positive rate",
+      "kind": "number",
+      "group": "Cyber & information",
+      "unit": "percent",
+      "thread": "T18",
+      "description": "Percentage of all Sentinel Edge alerts that do not correspond to actionable security events. Baseline approximately 68% (normal for OT SIEM). Spikes to 94.2% during storm window, creating operational cover for adversary alerts. Returns to baseline after D+35 remediation.",
+      "keyframes": [
+        {
+          "day": -14,
+          "value": 68.1
+        },
+        {
+          "day": -7,
+          "value": 67.4
+        },
+        {
+          "day": -3,
+          "value": 71.2
+        },
+        {
+          "day": -2,
+          "value": 79.8
+        },
+        {
+          "day": -1,
+          "value": 86.3
+        },
+        {
+          "day": 0,
+          "value": 94.2
+        },
+        {
+          "day": 1,
+          "value": 93.1
+        },
+        {
+          "day": 2,
+          "value": 91.7
+        },
+        {
+          "day": 3,
+          "value": 88.4
+        },
+        {
+          "day": 7,
+          "value": 76.3
+        },
+        {
+          "day": 14,
+          "value": 70.1
+        },
+        {
+          "day": 28,
+          "value": 68.9
+        },
+        {
+          "day": 35,
+          "value": 11.3
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "GW-ENT-CISO-01",
+      "name": "Dr. Fatima Al-Rasheed-Obinna",
+      "type": "person",
+      "role": "CBPWA Chief Information Security Officer",
+      "note": "Fictional CBPWA CISO. Receives the first escalated ML anomaly alert at D+18. Opens security incident SI-2027-CC-001. Authorizes SCADA isolation at D+28. Files CISA ICS-CERT notification at D+35. Primary named character in T18. PhD in electrical engineering with cybersecurity specialization."
+    },
+    {
+      "id": "GW-ENT-SOC-01",
+      "name": "Marcus Teitelbaum-Park",
+      "type": "person",
+      "role": "Vantage Security Systems Senior Support Engineer",
+      "note": "Fictional Vantage Security Systems support engineer. Deployed on-site at CBPWA SOC D+20 to assist with the SI-2027-CC-001 investigation. Identifies MAINT-EXCEPT-0892 as the anomalous suppression rule during ruleset audit. Authors the 14-session historian access cluster analysis that becomes the core technical evidence."
+    },
+    {
+      "id": "GW-ENT-SOC-02",
+      "name": "SOC-AN-01",
+      "type": "person",
+      "role": "CBPWA SOC Senior Analyst",
+      "note": "Fictional SOC analyst. Makes the consequential closure of GW-EVT-103 (relay config write) at D-3 as 'authorized maintenance.' On-duty during storm window D0. Closes three adversary-correlated alerts under storm mode without escalation. Identity known internally but not publicly disclosed."
+    },
+    {
+      "id": "GW-ENT-SIEM-01",
+      "name": "Sentinel Edge 3.1",
+      "type": "system",
+      "role": "CBPWA SIEM platform",
+      "note": "Fictional SIEM product by Vantage Security Systems. Installed at CBPWA approximately 18 months before D0. Behavioral analytics module (Vantage Behavioral Analytics 2.1) contains the ML anomaly detection capability that ultimately identifies the historian access cluster. Rule SE3-BULK-STORM-01 (storm mode bulk dismiss) is the operational tool that buries adversary alerts during the storm window."
+    }
+  ],
+  "answer_key_path": "The 23 adversary-correlated alerts generated by Sentinel Edge 3.1 across D-14 to D+28 are individually plausible as false positives and severally insufficient for incident declaration. The detection chain requires: (1) ML anomaly detection on the 14-session historian access cluster (D-7 to D+18) — the 3.8-sigma outlier score on session 14 (GW-EVT-106) is what finally surfaces the signal; (2) correlation of the common source ASN AS-209144 across all 14 sessions; (3) timeline correlation between the relay config write (GW-EVT-103, D-3) and the historian access sessions showing the same jump host account; (4) recognition that exception rule MAINT-EXCEPT-0892 (created by the compromised svc_fieldops_ext account 19 days before the first historian session) was specifically inserted to suppress the historian access alerts. An ML model trained on historian access baselines can identify the 14-session cluster without any of the individually-dismissed alerts having been escalated — this is the AI use case that is not achievable by rule-based detection. The storm-window false positive surge (94.2% at D0) demonstrates that adversary timing was deliberate operational cover, linking T18 to T10 (KESTREL network link hiding in the storm).",
+  "data_assets_described": [
+    {
+      "asset_id": "DA-T18-001",
+      "name": "Sentinel Edge 3.1 synthetic SIEM log dataset",
+      "description": "42-day synthetic SIEM alert stream (D-14 to D+28), approximately 110,000 total alerts. Each alert record includes: alert_id, timestamp, rule_id, priority, src_ip, dst_ip, action, disposition, analyst_id, closure_notes. 23 records tagged adversary_correlated=true (hidden label for ML training). Baseline: ~2,400/day; storm window: 14,000-18,340/day. Format: JSON Lines.",
+      "ai_use_case": "Time-series anomaly detection, alert triage RL, false positive reduction during crisis events, alert correlation NLP (closure notes)"
+    },
+    {
+      "asset_id": "DA-T18-002",
+      "name": "PI Historian access log cluster",
+      "description": "14 historian access sessions from D-7 to D+18, each with: session_id, timestamp, src_account, src_asn, tags_queried (list), duration_seconds, query_pattern_vector. Baseline historian access logs (business hours, authorized users) also included for ML baseline training. 180-day baseline for anomaly detection model training.",
+      "ai_use_case": "Threat hunting over historian query logs, ML anomaly detection, source ASN clustering, query pattern analysis"
+    }
+  ],
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

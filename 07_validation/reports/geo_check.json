@@ -1,0 +1,1077 @@
+{
+ "complete": true,
+ "total_violations": 0,
+ "rows_checked": 4792551,
+ "sources": [
+  {
+   "name": "AIS vessel positions :: ais_2027-08.csv",
+   "rule": "vessel",
+   "rows": 174320,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "AIS vessel positions"
+  },
+  {
+   "name": "AIS vessel positions :: ais_2027-09.csv",
+   "rule": "vessel",
+   "rows": 259840,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "AIS vessel positions"
+  },
+  {
+   "name": "AIS vessel positions :: ais_2027-10.csv",
+   "rule": "vessel",
+   "rows": 292803,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "AIS vessel positions"
+  },
+  {
+   "name": "AIS vessel positions :: ais_2027-11.csv",
+   "rule": "vessel",
+   "rows": 250327,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "AIS vessel positions"
+  },
+  {
+   "name": "AIS vessel positions :: ais_2027-12.csv",
+   "rule": "vessel",
+   "rows": 249432,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "AIS vessel positions"
+  },
+  {
+   "name": "AIS vessel positions :: ais_2028-01.csv",
+   "rule": "vessel",
+   "rows": 86334,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "AIS vessel positions"
+  },
+  {
+   "name": "ADS-B ground positions :: adsb_2027-08.csv",
+   "rule": "aircraft_ground",
+   "rows": 130279,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "ADS-B ground positions"
+  },
+  {
+   "name": "ADS-B ground positions :: adsb_2027-09.csv",
+   "rule": "aircraft_ground",
+   "rows": 168095,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "ADS-B ground positions"
+  },
+  {
+   "name": "ADS-B ground positions :: adsb_2027-10.csv",
+   "rule": "aircraft_ground",
+   "rows": 211668,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "ADS-B ground positions"
+  },
+  {
+   "name": "ADS-B ground positions :: adsb_2027-11.csv",
+   "rule": "aircraft_ground",
+   "rows": 205224,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "ADS-B ground positions"
+  },
+  {
+   "name": "ADS-B ground positions :: adsb_2027-12.csv",
+   "rule": "aircraft_ground",
+   "rows": 182034,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "ADS-B ground positions"
+  },
+  {
+   "name": "ADS-B ground positions :: adsb_2028-01.csv",
+   "rule": "aircraft_ground",
+   "rows": 78715,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "ADS-B ground positions"
+  },
+  {
+   "name": "911 incident locations :: cad_incidents_2027-08.csv",
+   "rule": "incident",
+   "rows": 5218,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "911 incident locations"
+  },
+  {
+   "name": "911 incident locations :: cad_incidents_2027-09.csv",
+   "rule": "incident",
+   "rows": 32312,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "911 incident locations"
+  },
+  {
+   "name": "911 incident locations :: cad_incidents_2027-10.csv",
+   "rule": "incident",
+   "rows": 13993,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "911 incident locations"
+  },
+  {
+   "name": "911 incident locations :: cad_incidents_2027-11.csv",
+   "rule": "incident",
+   "rows": 9108,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "911 incident locations"
+  },
+  {
+   "name": "911 incident locations :: cad_incidents_2027-12.csv",
+   "rule": "incident",
+   "rows": 9578,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "911 incident locations"
+  },
+  {
+   "name": "911 incident locations :: cad_incidents_2028-01.csv",
+   "rule": "incident",
+   "rows": 3438,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "911 incident locations"
+  },
+  {
+   "name": "Damage assessment structures",
+   "rule": "land_fixed",
+   "rows": 22089,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Damage assessment structures"
+  },
+  {
+   "name": "Air monitors",
+   "rule": "land_fixed",
+   "rows": 69888,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Air monitors"
+  },
+  {
+   "name": "Water-quality sondes",
+   "rule": "water_fixed",
+   "rows": 85743,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Water-quality sondes"
+  },
+  {
+   "name": "Weather stations",
+   "rule": "land_fixed",
+   "rows": 25056,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Weather stations"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-08_CCEMS.csv",
+   "rule": "vehicle",
+   "rows": 54003,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-08_CCFD.csv",
+   "rule": "vehicle",
+   "rows": 18078,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-08_CCPD.csv",
+   "rule": "vehicle",
+   "rows": 24985,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-08_NCSO.csv",
+   "rule": "vehicle",
+   "rows": 8682,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-08_PAPD.csv",
+   "rule": "vehicle",
+   "rows": 1124,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-09_CCEMS.csv",
+   "rule": "vehicle",
+   "rows": 226258,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-09_CCFD.csv",
+   "rule": "vehicle",
+   "rows": 158040,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-09_CCPD.csv",
+   "rule": "vehicle",
+   "rows": 73430,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-09_NCOEM.csv",
+   "rule": "vehicle",
+   "rows": 9995,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-09_NCSO.csv",
+   "rule": "vehicle",
+   "rows": 13761,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-09_PAPD.csv",
+   "rule": "vehicle",
+   "rows": 5202,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-09_TF1.csv",
+   "rule": "vehicle",
+   "rows": 1777,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-10_CCEMS.csv",
+   "rule": "vehicle",
+   "rows": 118736,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-10_CCFD.csv",
+   "rule": "vehicle",
+   "rows": 51265,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-10_CCPD.csv",
+   "rule": "vehicle",
+   "rows": 50622,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-10_NCSO.csv",
+   "rule": "vehicle",
+   "rows": 9902,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-10_PAPD.csv",
+   "rule": "vehicle",
+   "rows": 2146,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-11_CCEMS.csv",
+   "rule": "vehicle",
+   "rows": 91738,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-11_CCFD.csv",
+   "rule": "vehicle",
+   "rows": 32864,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-11_CCPD.csv",
+   "rule": "vehicle",
+   "rows": 43063,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-11_NCSO.csv",
+   "rule": "vehicle",
+   "rows": 12034,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-11_PAPD.csv",
+   "rule": "vehicle",
+   "rows": 2438,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-12_CCEMS.csv",
+   "rule": "vehicle",
+   "rows": 95467,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-12_CCFD.csv",
+   "rule": "vehicle",
+   "rows": 33760,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-12_CCPD.csv",
+   "rule": "vehicle",
+   "rows": 46226,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-12_NCSO.csv",
+   "rule": "vehicle",
+   "rows": 15204,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2027-12_PAPD.csv",
+   "rule": "vehicle",
+   "rows": 2714,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2028-01_CCEMS.csv",
+   "rule": "vehicle",
+   "rows": 34897,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2028-01_CCFD.csv",
+   "rule": "vehicle",
+   "rows": 12919,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2028-01_CCPD.csv",
+   "rule": "vehicle",
+   "rows": 16167,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2028-01_NCSO.csv",
+   "rule": "vehicle",
+   "rows": 6176,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Vehicle locations (AVL) :: avl_2028-01_PAPD.csv",
+   "rule": "vehicle",
+   "rows": 765,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Vehicle locations (AVL)"
+  },
+  {
+   "name": "Registry: facilities",
+   "rule": "land_fixed",
+   "rows": 45,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: facilities"
+  },
+  {
+   "name": "Registry: infrastructure",
+   "rule": "land_fixed",
+   "rows": 54,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: infrastructure"
+  },
+  {
+   "name": "Registry: air monitors",
+   "rule": "land_fixed",
+   "rows": 20,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: air monitors"
+  },
+  {
+   "name": "Registry: weather stations",
+   "rule": "land_fixed",
+   "rows": 7,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: weather stations"
+  },
+  {
+   "name": "Registry: tide gauges",
+   "rule": "water_fixed",
+   "rows": 6,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: tide gauges"
+  },
+  {
+   "name": "Registry: sondes",
+   "rule": "water_fixed",
+   "rows": 6,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: sondes"
+  },
+  {
+   "name": "Registry: buoys",
+   "rule": "water_fixed",
+   "rows": 2,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: buoys"
+  },
+  {
+   "name": "Registry: berths",
+   "rule": "berth",
+   "rows": 45,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: berths"
+  },
+  {
+   "name": "Registry: anchorage points",
+   "rule": "water_fixed",
+   "rows": 30,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: anchorage points"
+  },
+  {
+   "name": "Registry: aircraft home pads",
+   "rule": "airfield_fixed",
+   "rows": 89,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: aircraft home pads"
+  },
+  {
+   "name": "Registry: unit stations",
+   "rule": "station",
+   "rows": 32,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: unit stations"
+  },
+  {
+   "name": "Registry: stream gauges",
+   "rule": "vehicle",
+   "rows": 2,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: stream gauges"
+  },
+  {
+   "name": "Registry: bridge wind sensors",
+   "rule": "vehicle",
+   "rows": 3,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: bridge wind sensors"
+  },
+  {
+   "name": "Registry: wastewater sampling sites",
+   "rule": "land_fixed",
+   "rows": 5,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: wastewater sampling sites"
+  },
+  {
+   "name": "Registry: small-craft slips",
+   "rule": "water_fixed",
+   "rows": 77,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: small-craft slips"
+  },
+  {
+   "name": "Registry: sea gates",
+   "rule": "water_fixed",
+   "rows": 12,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: sea gates"
+  },
+  {
+   "name": "Registry: drone launch sites",
+   "rule": "land_fixed",
+   "rows": 11,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: drone launch sites"
+  },
+  {
+   "name": "Drone telemetry launch and flight positions :: drone_telemetry_2027-08.csv",
+   "rule": "on_land_or_air",
+   "rows": 8189,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Drone telemetry launch and flight positions"
+  },
+  {
+   "name": "Drone telemetry launch and flight positions :: drone_telemetry_2027-09.csv",
+   "rule": "on_land_or_air",
+   "rows": 78009,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Drone telemetry launch and flight positions"
+  },
+  {
+   "name": "Drone telemetry launch and flight positions :: drone_telemetry_2027-09_argus.csv",
+   "rule": "on_land_or_air",
+   "rows": 114843,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Drone telemetry launch and flight positions"
+  },
+  {
+   "name": "Drone telemetry launch and flight positions :: drone_telemetry_2027-10.csv",
+   "rule": "on_land_or_air",
+   "rows": 47312,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Drone telemetry launch and flight positions"
+  },
+  {
+   "name": "Drone telemetry launch and flight positions :: drone_telemetry_2027-10_argus.csv",
+   "rule": "on_land_or_air",
+   "rows": 43462,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Drone telemetry launch and flight positions"
+  },
+  {
+   "name": "Drone telemetry launch and flight positions :: drone_telemetry_2027-11.csv",
+   "rule": "on_land_or_air",
+   "rows": 24667,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Drone telemetry launch and flight positions"
+  },
+  {
+   "name": "Drone telemetry launch and flight positions :: drone_telemetry_2027-12.csv",
+   "rule": "on_land_or_air",
+   "rows": 12823,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Drone telemetry launch and flight positions"
+  },
+  {
+   "name": "Drone telemetry launch and flight positions :: drone_telemetry_2028-01.csv",
+   "rule": "on_land_or_air",
+   "rows": 4139,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Drone telemetry launch and flight positions"
+  },
+  {
+   "name": "Drone detection sensor sites (land)",
+   "rule": "land_fixed",
+   "rows": 12,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Drone detection sensor sites (land)"
+  },
+  {
+   "name": "Drone detection radar buoys (water)",
+   "rule": "water_fixed",
+   "rows": 3,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Drone detection radar buoys (water)"
+  },
+  {
+   "name": "Drone sighting observers",
+   "rule": "land_fixed",
+   "rows": 68,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Drone sighting observers"
+  },
+  {
+   "name": "Tide gauge records :: gauge_TG-8774770.csv",
+   "rule": "water_fixed",
+   "rows": 35912,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Tide gauge records"
+  },
+  {
+   "name": "Tide gauge records :: gauge_TG-8775237.csv",
+   "rule": "water_fixed",
+   "rows": 36021,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Tide gauge records"
+  },
+  {
+   "name": "Tide gauge records :: gauge_TG-8775241.csv",
+   "rule": "water_fixed",
+   "rows": 33780,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Tide gauge records"
+  },
+  {
+   "name": "Tide gauge records :: gauge_TG-8775792.csv",
+   "rule": "water_fixed",
+   "rows": 36026,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Tide gauge records"
+  },
+  {
+   "name": "Tide gauge records :: gauge_TG-8775870.csv",
+   "rule": "water_fixed",
+   "rows": 33062,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Tide gauge records"
+  },
+  {
+   "name": "Bay tide gauge record",
+   "rule": "water_fixed",
+   "rows": 34710,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Bay tide gauge record"
+  },
+  {
+   "name": "Stream gauge records",
+   "rule": "vehicle",
+   "rows": 28668,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Stream gauge records"
+  },
+  {
+   "name": "Buoy records",
+   "rule": "water_fixed",
+   "rows": 7212,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Buoy records"
+  },
+  {
+   "name": "SAR rescue positions",
+   "rule": "incident",
+   "rows": 1438,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "SAR rescue positions"
+  },
+  {
+   "name": "SAR flood depth soundings",
+   "rule": "vehicle",
+   "rows": 23,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "SAR flood depth soundings"
+  },
+  {
+   "name": "Damage structures near a street",
+   "rule": "incident",
+   "rows": 22054,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Damage structures near a street"
+  },
+  {
+   "name": "AIS satellite feed",
+   "rule": "vessel",
+   "rows": 47743,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "AIS satellite feed"
+  },
+  {
+   "name": "Port radar contacts :: radar_tracks_2027-08.csv",
+   "rule": "vessel",
+   "rows": 42299,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Port radar contacts"
+  },
+  {
+   "name": "Port radar contacts :: radar_tracks_2027-09.csv",
+   "rule": "vessel",
+   "rows": 46537,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Port radar contacts"
+  },
+  {
+   "name": "Port radar contacts :: radar_tracks_2027-10.csv",
+   "rule": "vessel",
+   "rows": 57296,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Port radar contacts"
+  },
+  {
+   "name": "Port radar contacts :: radar_tracks_2027-11.csv",
+   "rule": "vessel",
+   "rows": 67138,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Port radar contacts"
+  },
+  {
+   "name": "Port radar contacts :: radar_tracks_2027-12.csv",
+   "rule": "vessel",
+   "rows": 64197,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Port radar contacts"
+  },
+  {
+   "name": "Port radar contacts :: radar_tracks_2028-01.csv",
+   "rule": "vessel",
+   "rows": 21959,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Port radar contacts"
+  },
+  {
+   "name": "Port cameras (land)",
+   "rule": "land_fixed",
+   "rows": 14,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Port cameras (land)"
+  },
+  {
+   "name": "Port radar buoys (water)",
+   "rule": "water_fixed",
+   "rows": 2,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Port radar buoys (water)"
+  },
+  {
+   "name": "Registry: port radar buoys",
+   "rule": "water_fixed",
+   "rows": 2,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: port radar buoys"
+  },
+  {
+   "name": "Registry: port cameras and VTS",
+   "rule": "land_fixed",
+   "rows": 14,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: port cameras and VTS"
+  },
+  {
+   "name": "Registry: drone-detection radar buoys",
+   "rule": "water_fixed",
+   "rows": 3,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Registry: drone-detection radar buoys"
+  },
+  {
+   "name": "Social posts with coordinates",
+   "rule": "land_fixed",
+   "rows": 1122,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Social posts with coordinates"
+  },
+  {
+   "name": "Insurance claim properties",
+   "rule": "incident",
+   "rows": 1414,
+   "violations": 0,
+   "by_kind": {},
+   "examples": [],
+   "bad_coordinates": 0,
+   "group": "Insurance claim properties"
+  }
+ ]
+}

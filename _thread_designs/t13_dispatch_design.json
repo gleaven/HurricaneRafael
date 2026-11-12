@@ -1,0 +1,888 @@
+{
+  "thread_id": "T13",
+  "name": "911 dispatch corpus",
+  "color": "#cc4400",
+  "scenario": "rafael",
+  "lanes": [
+    "C",
+    "D"
+  ],
+  "truth": "Coastal Bend Emergency Communications Center (CBECC) — the fictional Nueces County 911 dispatch hub — processes an authentic record of the community's experience with Hurricane Rafael: a dramatic call volume spike at landfall (about 1,840 calls on D0), a peak of about 2,900 calls on D+1, a record 2,109 rescue requests on D+2, and a sustained elevated plateau from the boil water notice, extended power outages, and ongoing recovery through D+28. Within this authentic corpus, the STATE-X influence operation (T5) injects 23 false emergency calls between D+7 and D+10. The false calls describe flooding, gas leaks, and structure fires at locations geographically clustered within 400m of GW-FAC-SUB-02 (Harbor View substation) and GW-FAC-SUB-03 (Crosstown substation). The calls are made from prepaid/unregistered mobile phones on three carrier networks. Voice analysis reveals that all 23 calls share identical syntactic sentence structure in both English and Spanish variants, a cadence pattern inconsistent with genuine distress calls, and a uniform average words-per-sentence ratio of 11.3 (authentic distress calls in the corpus average 6.8). The false calls successfully divert 4 Texas Task Force 1 SAR teams on D+7 and 2 on D+8, delaying real rescue operations in Districts 3 and 4 by an estimated 4–6 hours during the period of maximum rescue demand. CBECC's CAD system logs and cross-agency radio dispatch traffic — combined with the call audio corpus in English and Spanish — provide AI training data for STT, intent classification, false-call detection, and volume forecasting.",
+  "phase_onset": 3,
+  "phase_peak": 3,
+  "msel_events": [
+    {
+      "event_id": "EVT-1301",
+      "time_label": "D0",
+      "day": 0,
+      "day_end": null,
+      "time_utc": "06:00Z",
+      "threads": [
+        "T13",
+        "T1"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Hurricane Rafael makes landfall at 06:00Z (1:00 a.m. CDT). CBECC call volume begins spiking from baseline (310 calls/day, approximately 13 calls/hour) as the storm surge and wind damage generate simultaneous emergency demand across the city. By 09:00Z (4:00 a.m. CDT), CBECC is receiving 94 calls/hour — a 7.2x hourly baseline. Director Patricia Escamilla-Voss activates the CBECC surge protocol, calling in all off-shift dispatchers and requesting mutual aid from San Patricio County 911 and Bee County 911. The CAD system queue reaches 180 pending calls at peak at 10:30Z.",
+      "observed_in": [
+        {
+          "stream": "cad_911",
+          "what": "CBECC CAD volume log D0: hourly call counts — 00:00Z: 14 calls/hr; 04:00Z: 31 calls/hr; 06:00Z: 48 calls/hr; 07:00Z: 67 calls/hr; 09:00Z: 94 calls/hr; 10:30Z: peak queue depth 180 pending; 12:00Z: 76 calls/hr; daily total D0: 1,841 calls. | CBECC shift log entry 06:15Z (Director Escamilla-Voss): 'Activating surge protocol. Calling in Delta shift. Requesting mutual aid San Patricio and Bee County.' | Call type breakdown D0: 38% medical (cardiac, trauma,...",
+          "when": {
+            "start_utc": "2027-09-14T06:00Z",
+            "end_utc": "2027-09-14T08:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CBECC CAD volume log D0: hourly call counts — 00:00Z: 14 calls/hr; 04:00Z: 31 calls/hr; 06:00Z: 48 calls/hr; 07:00Z: 67 calls/hr; 09:00Z: 94 calls/hr; 10:30Z: peak queue depth 180 pending; 12:00Z: 76 calls/hr; daily total D0: 1,841 calls.",
+        "CBECC shift log entry 06:15Z (Director Escamilla-Voss): 'Activating surge protocol. Calling in Delta shift. Requesting mutual aid San Patricio and Bee County.'",
+        "Call type breakdown D0: 38% medical (cardiac, trauma, water rescue); 27% water rescue/flooding; 19% structure fire or gas leak; 9% traffic/power line down; 7% other. Language mix: 64% English, 34% Spanish, 2% other."
+      ],
+      "public_fact": "PUB-130",
+      "place_ids": [
+        "PSAP-01",
+        "PLC-002"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cbecc_cad_volume_log",
+        "cbecc_shift_log",
+        "mutual_aid_request_records"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "cbecc_shift_log",
+          "stream": "investigative_files"
+        },
+        {
+          "label": "mutual_aid_request_records",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1302",
+      "time_label": "D+1 to D+2",
+      "day": 1,
+      "day_end": 2,
+      "time_utc": "00:00Z",
+      "threads": [
+        "T13",
+        "T1"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Call volume peaks on D+1 at about 2,900 calls — the busiest day in CBECC history, nearly ten times baseline (EVT-0303) — as daylight and restored phone service let residents trapped by flooding reach 911. On D+2 total volume eases to about 2,600, but 2,109 of those calls are rescue requests, the most rescue calls the center has ever taken in one day. The majority are water rescue requests from Districts 3 and 4. CBECC dispatches are coordinated with Texas Task Force 1 (TxTF1) swift water rescue teams and Coast Guard helicopter crews. Radio dispatch traffic between CBECC and field units is recorded and time-stamped in the CAD system.",
+      "observed_in": [
+        {
+          "stream": "cad_911",
+          "what": "About 2,900 incidents on D+1, the record for total calls; about 2,600 on D+2, of which 2,109 are rescue requests.",
+          "when": {
+            "start_utc": "2027-09-15T05:00Z",
+            "end_utc": "2027-09-17T05:00Z"
+          }
+        },
+        {
+          "stream": "sar_missions",
+          "what": "Texas Task Force 1: 22 swift-water team deployments on D+2; 847 persons rescued across D+1 and D+2.",
+          "when": {
+            "start_utc": "2027-09-15T05:00Z",
+            "end_utc": "2027-09-17T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CBECC CAD volume log D+1: about 2,900 calls (all-time record for total calls); D+2: about 2,600 calls, of which 2,109 are rescue requests (all-time record for rescue calls). Peak hourly rate: 168 calls/hour at 15:00Z D+1.",
+        "Geographic heat map of D+2 call origins (from ANI/ALI data): 61% of water rescue calls originate in zip codes 78404 and 78405 (Districts 3 and 4).",
+        "TxTF1 dispatch log D+2: 22 swift water rescue team deployments; 847 persons rescued D+1–D+2 combined."
+      ],
+      "public_fact": "PUB-131",
+      "place_ids": [
+        "PSAP-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cbecc_cad_volume_log",
+        "txtf1_dispatch_records",
+        "uscg_helo_dispatch_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1303",
+      "time_label": "D+7",
+      "day": 7,
+      "day_end": null,
+      "time_utc": "19:00Z",
+      "threads": [
+        "T13",
+        "T5",
+        "T8"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "STATE-X influence operation (T5) initiates the false 911 call campaign at 14:00 CDT (19:00Z) on D+7. Over a 4-hour window on D+7, CBECC receives 9 false emergency calls. The calls describe a gas leak and structure collapse at four addresses within 300m of GW-FAC-SUB-02 (Harbor View), and a reported flooding emergency at three addresses within 400m of GW-FAC-SUB-03 (Crosstown). Calls come from 9 distinct prepaid/unregistered mobile phone numbers on Sprint, T-Mobile, and AT&T prepaid networks. All 9 calls are routed to separate dispatchers, none of whom flag them as suspicious. CBECC dispatches 4 TxTF1 SAR teams to the false addresses; none finds any emergency on arrival.",
+      "observed_in": [
+        {
+          "stream": "cad_911",
+          "what": "CAD incident records D+7 19:00–23:00Z: 9 incidents logged at addresses within 400m of GW-FAC-SUB-02 (5 incidents) and GW-FAC-SUB-03 (4 incidents). Incident types: gas leak (4), structure collapse (3), flooding entrapment (2). All 9 incidents closed as 'unfounded — no emergency found' by field units. | ANI/ALI phone number records for D+7 false calls: 9 distinct MSISDN numbers, all prepaid SIM cards activated within 72 hours of D+7. Carriers: 4 Sprint...",
+          "when": {
+            "start_utc": "2027-09-21T14:00Z",
+            "end_utc": "2027-09-21T16:00Z"
+          }
+        },
+        {
+          "stream": "sar_missions",
+          "what": "TxTF1 dispatch log D+7: 4 teams (Team Alpha-7, Bravo-3, Charlie-2, Delta-5) diverted to false addresses 19:30–23:45Z. Teams found no emergencies. During this period, 6 genuine rescue requests in District 4 were queued without available TxTF1 resources for an average of 4.3 hours.",
+          "when": {
+            "start_utc": "2027-09-21T14:00Z",
+            "end_utc": "2027-09-21T16:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CAD incident records D+7 19:00–23:00Z: 9 incidents logged at addresses within 400m of GW-FAC-SUB-02 (5 incidents) and GW-FAC-SUB-03 (4 incidents). Incident types: gas leak (4), structure collapse (3), flooding entrapment (2). All 9 incidents closed as 'unfounded — no emergency found' by field units.",
+        "ANI/ALI phone number records for D+7 false calls: 9 distinct MSISDN numbers, all prepaid SIM cards activated within 72 hours of D+7. Carriers: 4 Sprint prepaid, 3 T-Mobile prepaid, 2 AT&T prepaid. No subscriber registration data available.",
+        "Call audio analysis (conducted post-event at D+21 by CBECC-FBI joint review): average words-per-sentence: 11.4 (D+7 false call batch). Authentic distress call WPS average in D0–D+6 corpus: 6.8. Syntactic pattern: all 9 false calls follow subject-verb-object-location-urgency structure with no hesitation markers (authentic calls average 3.2 hesitation markers per call).",
+        "TxTF1 dispatch log D+7: 4 teams (Team Alpha-7, Bravo-3, Charlie-2, Delta-5) diverted to false addresses 19:30–23:45Z. Teams found no emergencies. During this period, 6 genuine rescue requests in District 4 were queued without available TxTF1 resources for an average of 4.3 hours."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PSAP-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cbecc_cad_incident_records",
+        "cbecc_call_audio_archive",
+        "txtf1_dispatch_records",
+        "ani_ali_phone_records"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1304",
+      "time_label": "D+8 to D+10",
+      "day": 8,
+      "day_end": 10,
+      "time_utc": "08:00Z",
+      "threads": [
+        "T13",
+        "T5"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "The false call campaign continues over D+8 through D+10, adding 14 more false calls for a total of 23. The D+8 and D+9 false calls follow the same geographic and syntactic pattern as D+7. On D+10, the false calls stop. The 23 calls span four days (D+7 to D+10) and 23 distinct prepaid numbers; no prepaid number is reused. The cumulative effect: 2 additional TxTF1 teams diverted on D+8, 0 diversions on D+9 (teams are unavailable), and the queue of genuine calls in Districts 3 and 4 extends through D+10. Total estimated rescue delay across all 23 false calls: 4–6 hours of TxTF1 team-hours at peak need.",
+      "observed_in": [
+        {
+          "stream": "cad_911",
+          "what": "Fourteen more false calls on D+8 to D+10 for a total of 23: every address within 400 m of SUB-02 or SUB-03, 23 distinct prepaid numbers activated within 72 hours of D+7, similar scripts; none after D+10.",
+          "when": {
+            "start_utc": "2027-09-22T05:00Z",
+            "end_utc": "2027-09-25T05:00Z"
+          }
+        },
+        {
+          "stream": "sar_missions",
+          "what": "Teams sent to the false addresses find nothing; four to six team-hours lost.",
+          "when": {
+            "start_utc": "2027-09-22T05:00Z",
+            "end_utc": "2027-09-25T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Full false call batch (D+7–D+10, 23 calls): coordinate cluster analysis shows 100% of call addresses fall within 400m of GW-FAC-SUB-02 (13 calls) or GW-FAC-SUB-03 (10 calls). Geographic centroid of false call addresses: 27.802°N 97.396°W (Harbor View) and 27.789°N 97.378°W (Crosstown) — both within 150m of substation perimeter fence.",
+        "Phone metadata summary (all 23 calls): 23 distinct prepaid MSISDN numbers; activation dates all within 72 hours of D+7; carrier distribution: Sprint 9, T-Mobile 8, AT&T 6; zero subscriber registration data across all 23 numbers.",
+        "Voice pattern analysis (conducted D+21 joint review): all 23 calls show identical average call duration (38–44 seconds), zero background noise signatures consistent with an outdoor emergency scene (authentic distress calls in the corpus: 73% have identifiable background noise), and English/Spanish variant calls both use the identical syntactic template with vocabulary substituted.",
+        "Post-event CBECC incident audit: all 23 calls closed as 'unfounded.' 6 dispatchers handled the 23 calls; none flagged them as suspicious in real time."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cbecc_cad_incident_records",
+        "cbecc_call_audio_archive",
+        "txtf1_dispatch_records",
+        "ani_ali_phone_records"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1305",
+      "time_label": "D+12",
+      "day": 12,
+      "day_end": null,
+      "time_utc": "23:30Z",
+      "threads": [
+        "T13",
+        "T9"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "CBECC receives a surge of calls after the boil water notice for Districts 3 and 4 is issued at 17:30 local (22:30Z) on D+12 (T9: pump setpoint interference causing low pressure and contamination risk). Residents call 311 (city services) and 911 interchangeably, flooding CBECC with health and water safety questions rather than emergencies. CBECC establishes a dedicated non-emergency information line (NuecesInfoLine) to redirect calls. Volume on D+12 reaches 1,620 calls despite no active life-safety crisis, representing a new type of call category the CAD system initially misclassifies.",
+      "observed_in": [
+        {
+          "stream": "cad_911",
+          "what": "1,623 incidents on D+12; a new 'water safety inquiry' call type appears at 23:05Z and takes about a quarter of the volume.",
+          "when": {
+            "start_utc": "2027-09-26T05:00Z",
+            "end_utc": "2027-09-28T05:00Z"
+          }
+        },
+        {
+          "stream": "eas_alerts",
+          "what": "Districts 3 and 4 boil-water notice issued at 17:30 local on D+12.",
+          "when": {
+            "start_utc": "2027-09-26T22:30Z",
+            "end_utc": "2027-09-26T23:30Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CBECC CAD volume log D+12: 1,623 calls total. Call type breakdown: 29% medical; 24% water safety inquiry (new CAD category created D+12 at 23:05Z); 18% power/utilities; 11% welfare check; 9% water rescue/flooding (residual); 9% other.",
+        "CAD category 'WATER-SAFETY-INQUIRY' created at 23:05Z D+12 after 140 calls in the first 35 minutes after the notice were miscoded as 'FLOODING.' Category appears first in CAD data at this timestamp.",
+        "NuecesInfoLine activated D+13 00:00Z (19:00 local D+12). First 2 hours: 847 calls answered, diverting call pressure from 911."
+      ],
+      "public_fact": "PUB-132",
+      "place_ids": [
+        "PSAP-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cbecc_cad_volume_log",
+        "nueces_infoline_activation_record",
+        "txdem_water_notice_distribution"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1306",
+      "time_label": "D+21",
+      "day": 21,
+      "day_end": null,
+      "time_utc": "14:00Z",
+      "threads": [
+        "T13",
+        "T5",
+        "T8"
+      ],
+      "lanes": [
+        "D"
+      ],
+      "description": "CBECC Director Escamilla-Voss presents findings of an internal audit of D+7–D+10 false calls to the Nueces County Emergency Management Coordinator and a joint FBI-CISA field team. The audit identifies all 23 false calls, documents the geographic cluster, the syntactic pattern, and the TxTF1 diversion impact. The FBI field team takes custody of the ANI/ALI records and call audio for the false call batch. CISA notes that the geographic cluster corresponds directly to GW-FAC-SUB-02 and GW-FAC-SUB-03 — the same substations flagged in the FEMA aerial imagery anomaly (T11, EVT-1106). This is the first explicit cross-thread connection between T5 (influence operation), T8 (grid intrusion), and T13 (dispatch corpus) in the official record.",
+      "observed_in": [],
+      "detection_artifacts": [
+        "CBECC Internal Audit Report CAU-2027-0005 (FOR OFFICIAL USE ONLY): 23 false calls identified, D+7–D+10. Full list of CAD incident numbers, phone numbers, addresses, and call audio timestamps included as Appendix A.",
+        "CISA Field Assessment Note CC-CISA-2027-09: 'Geographic cluster of false 911 calls (D+7–D+10) corresponds to 400m radius of GW-FAC-SUB-02 and GW-FAC-SUB-03. These substations are the same sites flagged in FEMA Phase 2 aerial survey (see FEMA-MAT-2027-0929-CC, Section 4.3) for anomalous equipment states. Recommend joint analysis with T8 investigation.'",
+        "FBI field team custody receipt: 23 call audio files (.wav, 8kHz, mono), 23 ANI/ALI records, CBECC CAD export for D+7–D+10 (all 2,847 incidents)."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PSAP-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cbecc_internal_audit_report",
+        "fbi_field_team_custody_log",
+        "cisa_field_assessment_note"
+      ],
+      "observable": false,
+      "not_observable_reason": "An internal audit and briefing. The 23 false calls it lists are in cad_911 (EVT-1303, EVT-1304, EVT-1707); the referral becomes public on D+29.",
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1307",
+      "time_label": "D+28",
+      "day": 28,
+      "day_end": null,
+      "time_utc": "00:00Z",
+      "threads": [
+        "T13",
+        "T1"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "CBECC call volume returns to near-normal levels on D+28. Volume is 380 calls/day — slightly above pre-storm baseline (310/day) due to ongoing recovery activity. Director Escamilla-Voss issues an after-action summary noting that CBECC handled 44,291 calls on all lines (911 and ten-digit) over D0 through D+28, compared with a normal 28-day volume of approximately 8,680 calls — a 5.1x total volume increase. The boil water notice ends on D+42, the power restoration completes D+35, and by D+45 call volume returns to pre-storm baseline.",
+      "observed_in": [
+        {
+          "stream": "cad_911",
+          "what": "CBECC after-action summary: 'CBECC dispatchers handled the highest sustained call volume in agency history. Mutual aid from San Patricio and Bee County provided 2,140 dispatcher-hours of support. Thirteen dispatchers required EAP counseling referrals for occupational stress.' | CBECC D0–D+28 volume summary: total 44,291 calls on all lines (911 and ten-digit). Daily volume profile: D0: 1,841; D+1: about 2,900 (peak); D+2: about 2,600 (2,109 rescue requests); D+3–D+6: averaging...",
+          "when": {
+            "start_utc": "2027-10-12T00:00Z",
+            "end_utc": "2027-10-12T02:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CBECC D0–D+28 volume summary: total 44,291 calls on all lines (911 and ten-digit). Daily volume profile: D0: 1,841; D+1: about 2,900 (peak); D+2: about 2,600 (2,109 rescue requests); D+3–D+6: averaging 1,620/day; D+7: 1,580; D+8: 1,490; D+9–D+11: averaging 1,420/day; D+12: 1,623 (boil water spike); D+13–D+27: declining from 1,400 to 390; D+28: 380.",
+        "CBECC after-action summary: 'CBECC dispatchers handled the highest sustained call volume in agency history. Mutual aid from San Patricio and Bee County provided 2,140 dispatcher-hours of support. Thirteen dispatchers required EAP counseling referrals for occupational stress.'",
+        "Volume time-series anomalies identifiable by AI: (1) D+1 peak above the D0 spike, and a record share of rescue requests on D+2 — attributable to daylight + storm surge rescue window; (2) D+7 sub-spike in unfounded incident rate; (3) D+12 spike with new call category composition (T9 boil water); (4) overall decay pattern interrupted at D+12."
+      ],
+      "public_fact": "PUB-133",
+      "place_ids": [
+        "PSAP-01"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cbecc_monthly_volume_report",
+        "cbecc_after_action_summary"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "cbecc_after_action_summary",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1308",
+      "time_label": "D+45",
+      "day": 45,
+      "day_end": null,
+      "time_utc": "00:00Z",
+      "threads": [
+        "T13"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "CBECC formally closes the Hurricane Rafael surge response posture and returns to standard staffing. Director Escamilla-Voss announces a partnership with Nueces County Information Technology to retain the D0–D+45 call corpus (audio and CAD records) for training and after-action purposes. The corpus contains 56,000+ calls across 45 days, with 65% English and 34% Spanish audio, and represents the most complete 911 corpus ever assembled for a Gulf Coast hurricane response. The FBI retains custody of the 23 false call audio files as evidence. CBECC publicly announces a new false-report tip line (1-800-NUECES-9) for residents to report suspected 911 abuse.",
+      "observed_in": [
+        {
+          "stream": "cad_911",
+          "what": "FBI evidence log: 23 call audio files and ANI/ALI records entered as evidence in federal investigation file CC-FBI-2027-INV-0112 (cross-reference T5 influence operation). | CBECC D0–D+45 corpus summary: 56,793 total calls on all lines (911 and ten-digit); English 64.8%, Spanish 34.1%, other 1.1%; call type distribution: medical 31%, water rescue 18%, power/utilities 14%, water safety inquiry 11%, structure damage 9%, other 15%. | CBECC D+45 daily volume: 311 calls — below pre-storm...",
+          "when": {
+            "start_utc": "2027-10-29T00:00Z",
+            "end_utc": "2027-10-29T02:00Z"
+          }
+        },
+        {
+          "stream": "public_record",
+          "what": "CBECC publicly announces a new false-report tip line (1-800-NUECES-9) for residents to report suspected 911 abuse.",
+          "when": {
+            "start_utc": "2027-10-29T00:00Z",
+            "end_utc": "2027-10-29T02:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CBECC D0–D+45 corpus summary: 56,793 total calls on all lines (911 and ten-digit); English 64.8%, Spanish 34.1%, other 1.1%; call type distribution: medical 31%, water rescue 18%, power/utilities 14%, water safety inquiry 11%, structure damage 9%, other 15%.",
+        "FBI evidence log: 23 call audio files and ANI/ALI records entered as evidence in federal investigation file CC-FBI-2027-INV-0112 (cross-reference T5 influence operation).",
+        "CBECC D+45 daily volume: 311 calls — below pre-storm baseline, reflecting population displacement."
+      ],
+      "public_fact": "PUB-134",
+      "place_ids": [
+        "PSAP-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cbecc_monthly_volume_report",
+        "cbecc_after_action_summary",
+        "cbecc_press_release"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "cbecc_after_action_summary",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "PUB-130",
+      "day": 0,
+      "time_local": "08:00",
+      "type": "press_release",
+      "source": "Nueces County Office of Emergency Management / Coastal Bend Emergency Communications Center",
+      "statement": "The Coastal Bend Emergency Communications Center (CBECC), Nueces County's 911 dispatch hub, is operating at maximum surge capacity as Hurricane Rafael makes landfall. CBECC Director Patricia Escamilla-Voss confirmed that the center is receiving approximately seven times its normal call volume and has activated mutual aid with San Patricio and Bee County dispatch centers. 'Our dispatchers are working alongside mutual aid partners to answer every call as quickly as possible,' Director Escamilla-Voss said. 'Please call 911 only for immediate life-safety emergencies — we need to keep the lines open for people in immediate danger.' Residents with non-emergency needs should wait until the storm has passed and check the City of Corpus Christi website and social media for updates on road closures, shelters, and power outages. CBECC urges the public to shelter in place if safe to do so and to avoid calling 911 for flooding updates that do not involve a person in immediate danger.",
+      "arcs": [
+        "ARC-COMMUNITY",
+        "ARC-AID"
+      ],
+      "events": [
+        "EVT-1301"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Nueces County"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-131",
+      "day": 3,
+      "time_local": "10:00",
+      "type": "press_release",
+      "source": "Nueces County Office of Emergency Management",
+      "statement": "Nueces County Emergency Management Coordinator Lt. Col. Raymond Okafor-Williams announced today that the Coastal Bend Emergency Communications Center handled about 2,900 emergency calls on Wednesday, September 15 — the busiest day in CBECC history and nearly ten times a normal day — and processed a record 2,109 rescue requests on Thursday, September 16, the most rescue calls the center has taken in a single day. The rescue surge was driven primarily by residents trapped by floodwater in Districts 3 and 4. 'Our dispatchers and the swift water rescue teams from Texas Task Force 1 worked through the night and into the next day to reach everyone who called,' said Okafor-Williams. 'We are proud of the professionalism shown by every member of the CBECC team.' On landfall day, Tuesday, September 14, the center took about 1,840 calls, about 1,100 of them rescue-related. Over the first three days of the storm response, CBECC handled more than 7,300 calls, compared to fewer than 1,000 calls during a normal three-day period. The center has sustained mutual aid staffing from San Patricio and Bee County, and anticipates call volume to remain elevated for several weeks as recovery operations continue.",
+      "arcs": [
+        "ARC-AID",
+        "ARC-COMMUNITY"
+      ],
+      "events": [
+        "EVT-1302"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Nueces County",
+        "Districts 3 and 4"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-132",
+      "day": 12,
+      "time_local": "19:00",
+      "type": "official_statement",
+      "source": "Nueces County Office of Emergency Management / City of Corpus Christi",
+      "statement": "The Coastal Bend Emergency Communications Center is experiencing a significant increase in calls related to today's boil water notice for Districts 3 and 4. CBECC Director Patricia Escamilla-Voss urges residents with water safety questions to call the newly established NuecesInfoLine at 361-826-INFO rather than 911. '911 is for life-threatening emergencies only,' Director Escamilla-Voss said. 'The NuecesInfoLine has operators available to answer your questions about the boil water notice, water distribution sites, and when water service is expected to be restored — please use that number and keep 911 available for people whose lives are in danger.' The NuecesInfoLine is staffed 24 hours a day, 7 days a week. Information is also available in Spanish by pressing 2. Water distribution sites are open at the Tuloso-Midway High School gym, the Woodlawn Community Center, and Cefe Valenzuela Park; hours and addresses are listed at the City of Corpus Christi emergency management website.",
+      "arcs": [
+        "ARC-WATER",
+        "ARC-HEALTH"
+      ],
+      "events": [
+        "EVT-1305"
+      ],
+      "places": [
+        "Districts 3 and 4",
+        "Corpus Christi"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-133",
+      "day": 29,
+      "time_local": "11:00",
+      "type": "press_release",
+      "source": "Coastal Bend Emergency Communications Center",
+      "statement": "The Coastal Bend Emergency Communications Center today reported that Hurricane Rafael emergency call volume has returned to near-normal levels, with 380 calls received yesterday — approaching the pre-storm daily baseline of 310 calls. CBECC Director Patricia Escamilla-Voss said the center is beginning a transition back to normal staffing over the next two weeks. 'Our dispatchers have shown extraordinary dedication over the past four weeks. The scale and duration of this response was unprecedented for our center, and I am incredibly proud of every person who answered calls, coordinated rescues, and kept working through the most demanding conditions I have seen in my career.' Director Escamilla-Voss noted that CBECC handled more than 44,200 calls in the four weeks after landfall, about five times the normal volume. The center is retaining all call records and audio as part of its standard after-action review process. Mutual aid units from San Patricio and Bee County will begin scaling back their support beginning October 14.",
+      "arcs": [
+        "ARC-AID"
+      ],
+      "events": [
+        "EVT-1307"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Nueces County"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-134",
+      "day": 45,
+      "time_local": "10:00",
+      "type": "press_release",
+      "source": "Coastal Bend Emergency Communications Center",
+      "statement": "The Coastal Bend Emergency Communications Center today formally closed its Hurricane Rafael surge response posture and returned to standard staffing levels. Director Patricia Escamilla-Voss announced that CBECC has established a partnership with Nueces County Information Technology to preserve the call record archive from landfall through October 29 for training and after-action analysis purposes. The archive covers more than 56,000 calls in English and Spanish and represents the most complete 911 call record ever retained for a Gulf Coast storm response. Director Escamilla-Voss also announced a new 911 abuse reporting tip line, 1-800-NUECES-9, for residents to report suspected false emergency reports. 'During any major emergency, bad actors sometimes attempt to abuse the emergency communications system to divert rescuers,' said Escamilla-Voss. 'We take this seriously, and we ask the public to help us protect the integrity of 911 by reporting suspected abuse.' The NuecesInfoLine, opened during the boil-water notices, will close on Friday, November 5. CBECC thanks the residents of Districts 3 and 4 for their patience during the extended water notices.",
+      "arcs": [],
+      "events": [
+        "EVT-1308"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Nueces County"
+      ],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "cbecc_call_volume_per_hour",
+      "label": "CBECC 911 call volume (calls/hour)",
+      "kind": "number",
+      "group": "Health & emergency",
+      "unit": "calls/hour",
+      "thread": "T13",
+      "description": "Hourly call volume at the Coastal Bend Emergency Communications Center (CBECC). Baseline is approximately 13 calls/hour (310/day). Peaks at storm landfall and storm surge rescue window.",
+      "keyframes": [
+        {
+          "day": -7,
+          "value": 13
+        },
+        {
+          "day": -1,
+          "value": 14
+        },
+        {
+          "day": 0,
+          "value": 94
+        },
+        {
+          "day": 1,
+          "value": 90
+        },
+        {
+          "day": 2,
+          "value": 112
+        },
+        {
+          "day": 3,
+          "value": 71
+        },
+        {
+          "day": 5,
+          "value": 62
+        },
+        {
+          "day": 7,
+          "value": 66
+        },
+        {
+          "day": 8,
+          "value": 62
+        },
+        {
+          "day": 10,
+          "value": 59
+        },
+        {
+          "day": 12,
+          "value": 68
+        },
+        {
+          "day": 15,
+          "value": 55
+        },
+        {
+          "day": 21,
+          "value": 42
+        },
+        {
+          "day": 28,
+          "value": 16
+        },
+        {
+          "day": 35,
+          "value": 14
+        },
+        {
+          "day": 45,
+          "value": 13
+        }
+      ]
+    },
+    {
+      "id": "false_report_campaign_active",
+      "label": "STATE-X false 911 report campaign active",
+      "kind": "state",
+      "group": "Hidden threads",
+      "thread": "T13",
+      "description": "Operational status of the STATE-X false 911 call campaign (T5 influence operation component targeting emergency dispatch).",
+      "states": [
+        {
+          "value": "inactive",
+          "color": "#6b7280",
+          "label": "Inactive"
+        },
+        {
+          "value": "active",
+          "color": "#dc2626",
+          "label": "Active — false calls ongoing"
+        },
+        {
+          "value": "complete",
+          "color": "#f97316",
+          "label": "Campaign complete — calls stopped"
+        },
+        {
+          "value": "detected",
+          "color": "#fbbf24",
+          "label": "Detected by CBECC audit"
+        },
+        {
+          "value": "in_investigation",
+          "color": "#1a7a4a",
+          "label": "Under FBI/CISA investigation"
+        }
+      ],
+      "keyframes": [
+        {
+          "day": -7,
+          "value": "inactive"
+        },
+        {
+          "day": 7,
+          "value": "active"
+        },
+        {
+          "day": 10,
+          "value": "complete"
+        },
+        {
+          "day": 11,
+          "value": "complete"
+        },
+        {
+          "day": 21,
+          "value": "detected"
+        },
+        {
+          "day": 22,
+          "value": "in_investigation"
+        }
+      ]
+    },
+    {
+      "id": "dispatch_queue_depth",
+      "label": "CBECC pending call queue depth",
+      "kind": "number",
+      "group": "Health & emergency",
+      "unit": "calls pending",
+      "thread": "T13",
+      "description": "Number of calls waiting in the CBECC CAD queue without an assigned dispatcher at any given time. Baseline: 0–2 calls pending. Surge conditions push this to 180+ at peak.",
+      "keyframes": [
+        {
+          "day": -1,
+          "value": 1
+        },
+        {
+          "day": 0,
+          "value": 180
+        },
+        {
+          "day": 1,
+          "value": 160
+        },
+        {
+          "day": 2,
+          "value": 195
+        },
+        {
+          "day": 3,
+          "value": 110
+        },
+        {
+          "day": 5,
+          "value": 72
+        },
+        {
+          "day": 7,
+          "value": 85
+        },
+        {
+          "day": 8,
+          "value": 68
+        },
+        {
+          "day": 10,
+          "value": 54
+        },
+        {
+          "day": 12,
+          "value": 90
+        },
+        {
+          "day": 15,
+          "value": 40
+        },
+        {
+          "day": 21,
+          "value": 18
+        },
+        {
+          "day": 28,
+          "value": 3
+        },
+        {
+          "day": 45,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "cbecc_mutual_aid_active",
+      "label": "CBECC mutual aid dispatchers active",
+      "kind": "number",
+      "group": "Health & emergency",
+      "unit": "dispatchers",
+      "thread": "T13",
+      "description": "Number of mutual aid dispatchers from San Patricio and Bee County working in the CBECC center alongside regular CBECC staff.",
+      "keyframes": [
+        {
+          "day": -1,
+          "value": 0
+        },
+        {
+          "day": 0,
+          "value": 12
+        },
+        {
+          "day": 1,
+          "value": 18
+        },
+        {
+          "day": 2,
+          "value": 18
+        },
+        {
+          "day": 3,
+          "value": 14
+        },
+        {
+          "day": 7,
+          "value": 10
+        },
+        {
+          "day": 12,
+          "value": 10
+        },
+        {
+          "day": 15,
+          "value": 8
+        },
+        {
+          "day": 21,
+          "value": 6
+        },
+        {
+          "day": 28,
+          "value": 4
+        },
+        {
+          "day": 35,
+          "value": 2
+        },
+        {
+          "day": 44,
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "news_arcs": [
+    {
+      "arc_id": "ARC-DISPATCH-SURGE",
+      "name": "The longest shift",
+      "description": "Human-interest and operational coverage of CBECC and its dispatchers through the storm surge. Tracks the record call volume, the mutual aid operation, the boil water spike, and the gradual return to normal. Emphasizes the Spanish-language dimension of the response.",
+      "thread": "T13",
+      "story_hooks": [
+        {
+          "day": 0,
+          "outlet": "OUT-02",
+          "character_note": "CBECC Director Patricia Escamilla-Voss (fictional), CBECC dispatcher Juana Morales-Trejo (fictional)",
+          "summary": "Harborline 6 live hurricane coverage segment: CBECC Director Escamilla-Voss does a 90-second phone interview from the dispatch floor urging residents to call 911 only for life-threatening emergencies. Dispatcher Juana Morales-Trejo is briefly heard in the background taking a call in Spanish. Report notes the volume is seven times normal.",
+          "public_facts_used": [
+            "PUB-130"
+          ]
+        },
+        {
+          "day": 3,
+          "outlet": "OUT-03",
+          "character_note": "CBECC dispatcher Efren Castellanos-Reyes (fictional), mutual aid dispatcher from San Patricio County (fictional: Maria Lindquist-Peña)",
+          "summary": "Coastline Public Radio feature: Dispatchers describe what D+2 was like — 112 calls/hour at peak, hearing people calling from rooftops, coordinating with TxTF1 teams by radio while simultaneously taking new calls. Reporter highlights that one-third of calls were in Spanish. San Patricio dispatcher Maria Lindquist-Peña describes driving to Corpus Christi at 2 a.m. to help.",
+          "public_facts_used": [
+            "PUB-131"
+          ]
+        },
+        {
+          "day": 13,
+          "outlet": "OUT-01",
+          "character_note": "CBECC Director Escamilla-Voss (fictional), city water utility spokesperson (cross-reference T9)",
+          "summary": "Bayside Ledger: CBECC launches the NuecesInfoLine after the 911 center is flooded with boil water questions. Story tracks the confusion between 311 and 911 and how CBECC had to create a new call category mid-surge to track water safety inquiry calls. Director Escamilla-Voss is diplomatically frustrated.",
+          "public_facts_used": [
+            "PUB-132"
+          ]
+        },
+        {
+          "day": 29,
+          "outlet": "OUT-01",
+          "character_note": "CBECC Director Escamilla-Voss (fictional), Nueces County Judge-Executive (fictional: Hon. Beatrice Soto-Galvez)",
+          "summary": "Bayside Ledger: CBECC returns to normal. County Judge Soto-Galvez praises the dispatcher team and announces the county will request a state grant to expand CBECC staffing capacity ahead of future storms. Escamilla-Voss mentions the new false report tip line without elaborating on why it was needed.",
+          "public_facts_used": [
+            "PUB-133"
+          ]
+        }
+      ]
+    },
+    {
+      "arc_id": "ARC-DISPATCH-FALSEFIRE",
+      "name": "The calls that weren't there",
+      "description": "An investigative arc that emerges when the CBECC/FBI joint investigation becomes partially public. Journalists try to understand what the 'false report tip line' announcement was really about and begin connecting CBECC anomalies to the broader utility infrastructure investigation. Cross-links to T5 (influence operation) and T8 (grid intrusion).",
+      "thread": "T13",
+      "story_hooks": [
+        {
+          "day": 29,
+          "outlet": "OUT-01",
+          "character_note": "Anonymous CBECC source",
+          "summary": "Bayside Ledger: Reporter notices the new 1-800-NUECES-9 tip line announced in the CBECC press release. An anonymous CBECC source tells the reporter that there were 'some calls early in the response that turned out to be nothing, every time, in the same neighborhood.' No further detail.",
+          "public_facts_used": [
+            "PUB-134"
+          ]
+        },
+        {
+          "day": 32,
+          "outlet": "OUT-02",
+          "character_note": "CBECC Director Escamilla-Voss (declining to confirm specifics), TxTF1 spokesperson (fictional: Capt. Marcus Webb-Nguyen)",
+          "summary": "Harborline 6 investigative report: Reporter puts together the anonymous tip from D+29, the new tip line, and a source at TxTF1 who says teams were 'sent to places that had nothing going on' in the first week. TxTF1 spokesperson Webb-Nguyen declines to discuss specific incidents. CBECC director will only say 'the matter is under review by appropriate federal authorities.'",
+          "public_facts_used": [
+            "PUB-134"
+          ]
+        },
+        {
+          "day": 38,
+          "outlet": "OUT-06",
+          "character_note": "FBI spokesperson (fictional: Special Agent in Charge Darlene Kimura-Walsh, Houston Field Office), CISA spokesperson (fictional)",
+          "summary": "Continental Wire Service national pick-up: 'FBI investigating false 911 calls in Corpus Christi after hurricane.' FBI SAC Kimura-Walsh confirms an active federal investigation into 'suspected deliberate misuse of emergency communications during the Hurricane Rafael response' but provides no further detail. The story goes national; it is the first public indication that the emergency response was targeted. CISA declines to characterize whether the calls are linked to the grid investigation.",
+          "public_facts_used": [
+            "PUB-134"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "GW-ENT-17",
+      "name": "Coastal Bend Emergency Communications Center (CBECC)",
+      "type": "government_unit",
+      "note": "Fictional Nueces County 911 primary public safety answering point (PSAP). Located in central Corpus Christi. Baseline staffing: 24 dispatchers across 3 shifts. Director: Patricia Escamilla-Voss (fictional). Handles all 911 calls for Nueces County, including Spanish-language primary calls (34% of volume)."
+    },
+    {
+      "id": "GW-ENT-18",
+      "name": "CBECC Dispatcher Juana Morales-Trejo",
+      "type": "character",
+      "note": "Fictional CBECC dispatcher. Senior Spanish-language primary dispatcher with 11 years at CBECC. Featured in Harborline 6 coverage on D0. Handles the highest proportion of Spanish-language calls on D+2 rescue peak."
+    },
+    {
+      "id": "GW-ENT-19",
+      "name": "CBECC Dispatcher Efren Castellanos-Reyes",
+      "type": "character",
+      "note": "Fictional CBECC dispatcher. One of the dispatchers who unknowingly processed false calls on D+7. Featured in Coastline Public Radio feature on D+3. Available as a character for dispatching narrative scenes and for news quotes on the experience of handling mass-casualty call volume."
+    }
+  ],
+  "answer_key_path": "The detection chain begins with the CBECC CAD incident records for D+7 through D+10, which contain 23 incidents closed as 'unfounded — no emergency found.' A metadata analyst filtering the CAD export for all unfounded incidents in this 4-day window (a low base rate — 0.3% of calls in the pre-storm corpus) will identify 23 unfounded incidents against a statistical expectation of 3–4, flagging an anomaly. Geographic mapping of the 23 incident addresses reveals a bimodal cluster around 27.802°N 97.396°W and 27.789°N 97.378°W — coordinates that fall within 400m of GW-FAC-SUB-02 and GW-FAC-SUB-03 respectively. ANI/ALI phone metadata analysis identifies all 23 originating numbers as prepaid SIMs activated within 72 hours of D+7 across three carriers — a pattern that is essentially impossible to arise from genuine resident behavior. Voice analysis of the 23 call audio files (available in the CBECC corpus) reveals average words-per-sentence of 11.3 versus 6.8 for the authentic distress call corpus, zero background noise signatures, and syntactically identical templates across English and Spanish variants — consistent with machine-generated or scripted calls. Cross-referencing the two substation coordinates with the FEMA Phase 2 aerial survey report (EVT-1106, EVT-1107) and the T8 SCADA manipulation timeline confirms that the false calls were geographically targeted at the two substations where adversary action was underway, corroborating that the disinformation and dispatch disruption were coordinated components of the same operational plan (T10).",
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

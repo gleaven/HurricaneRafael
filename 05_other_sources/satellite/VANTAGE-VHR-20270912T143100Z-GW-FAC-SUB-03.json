@@ -1,0 +1,97 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+ ],
+ "id": "VANTAGE-VHR-20270912T143100Z-GW-FAC-SUB-03",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.4254,
+     27.7625
+    ],
+    [
+     -97.4071,
+     27.7625
+    ],
+    [
+     -97.4071,
+     27.7787
+    ],
+    [
+     -97.4254,
+     27.7787
+    ],
+    [
+     -97.4254,
+     27.7625
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.4254,
+  27.7625,
+  -97.4071,
+  27.7787
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "VANTAGE-VHR-20270912T143100Z-GW-FAC-SUB-03.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20270912T143100Z-GW-FAC-SUB-03/visual.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20270912T143100Z-GW-FAC-SUB-03/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-09-12T14:31:00Z",
+  "title": "Pre-storm baseline, Crosstown Substation",
+  "description": "Pre-storm baseline image of Crosstown Substation for the regional pre-event package (archive entry NAS-BL-20270912-UTL). Yard dry, no visible damage. All three main feeder breakers are in the closed position.",
+  "platform": "Vantage-VHR-3",
+  "instruments": [
+   "panchromatic and multispectral imager"
+  ],
+  "constellation": "Vantage-VHR",
+  "gsd": 0.15,
+  "view:off_nadir": 24.5,
+  "view:sun_azimuth": 101.8,
+  "view:sun_elevation": 29.4,
+  "proj:epsg": 32614,
+  "eo:cloud_cover": 19,
+  "observations": [
+   {
+    "asset_id": "GW-FAC-SUB-03",
+    "feature": "main feeder breakers B3-A, B3-B, B3-C",
+    "state": "closed"
+   }
+  ],
+  "processing:level": "orthorectified, HD-resampled to 15 cm",
+  "archive_entry": "NAS-BL-20270912-UTL"
+ }
+}

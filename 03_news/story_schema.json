@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "file_layout": "03_news/stories/batch-<X>.json holds {\"batch\": \"X\", \"day_range\": [start, end], \"stories\": [ ... ]}. Character memory updates go to 03_news/character_updates/batch-<X>.json as {\"batch\": \"X\", \"updates\": [{\"character_id\", \"day\", \"story_id\", \"note\"}]}.",
+  "story_id_format": "NWS-M045-01 for day -45, NWS-P000-03 for day 0, NWS-P112-02 for day 112 (M = minus, P = plus or zero; three-digit day; two-digit sequence within the day).",
+  "story": {
+    "story_id": "string, see format",
+    "day": "integer scenario day",
+    "time_local": "HH:MM 24-hour local Corpus Christi time",
+    "outlet_id": "OUT-## from 01_characters/outlets.json",
+    "section": "one of the outlet's sections",
+    "byline": ["CHR-### journalists from that outlet's staff"],
+    "headline": "string; no internal ids",
+    "dek": "1-2 sentence summary",
+    "body": ["paragraph strings; 250-450 words total; quotes use straight double quotes"],
+    "tags": {
+      "story_type": "breaking | update | feature | explainer | profile | analysis | fact-check | brief | opinion",
+      "arcs": ["1-4 ARC ids from 03_news/arcs.json"],
+      "public_facts": ["PUB ids this story relies on; each must have day <= story day"],
+      "characters_quoted": ["CHR ids quoted in the body; must be public_facing"],
+      "characters_mentioned": ["CHR ids named but not quoted"],
+      "places": ["place ids from 00_scenario/places.json"],
+      "topics": ["free-text keywords for search, lower case"],
+      "follows_up": "story_id of an earlier story this one directly follows (same batch only), or null"
+    },
+    "internal": {
+      "truth_events": ["EVT ids from the PUB facts used; never shown publicly"],
+      "batch": "batch letter",
+      "status": "draft"
+    }
+  }
+}

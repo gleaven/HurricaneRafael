@@ -1,0 +1,15 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	notice
+#open	2027-11-18-00-00-00
+#fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
+#types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
+1826514824.691723	-	10.14.20.31	96.143.242.82	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1826518500.000000	-	10.14.12.21	-	-	Scan::Port_Scan	internal scanner swept 10.14.20.0/24 (scheduled)	10.14.12.21	-	-	Notice::ACTION_LOG
+1826534366.087025	-	10.14.21.21	23.113.237.56	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+1826547359.747197	-	10.14.22.19	23.113.237.56	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1826568358.494253	-	10.14.20.21	104.211.179.45	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1826576763.006609	-	10.14.30.64	157.104.4.238	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+#close	2027-11-19-00-00-00

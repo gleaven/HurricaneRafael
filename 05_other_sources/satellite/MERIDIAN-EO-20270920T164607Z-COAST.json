@@ -1,0 +1,95 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+ ],
+ "id": "MERIDIAN-EO-20270920T164607Z-COAST",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.75,
+     27.5
+    ],
+    [
+     -96.85,
+     27.5
+    ],
+    [
+     -96.85,
+     28.15
+    ],
+    [
+     -97.75,
+     28.15
+    ],
+    [
+     -97.75,
+     27.5
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.75,
+  27.5,
+  -96.85,
+  28.15
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "MERIDIAN-EO-20270920T164607Z-COAST.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/MERIDIAN-EO-20270920T164607Z-COAST/visual.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/MERIDIAN-EO-20270920T164607Z-COAST/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-09-20T16:46:07Z",
+  "title": "Routine optical acquisition",
+  "description": "Routine multispectral acquisition. Vessel detections (hulls of 40 m or more): 15 at the offshore anchorage, 9 alongside in the Inner Harbor, 0 under way in the ship channel. Sheen visible in Nueces Bay and along the western shore of Corpus Christi Bay; boom lines visible at the harbour entrance. Blue roof tarps and debris piles visible across the coastal neighbourhoods.",
+  "platform": "Meridian-EO-1",
+  "instruments": [
+   "multispectral imager"
+  ],
+  "constellation": "Meridian-EO",
+  "gsd": 3,
+  "view:off_nadir": 8.7,
+  "view:sun_azimuth": 135.1,
+  "view:sun_elevation": 54.6,
+  "proj:epsg": 32614,
+  "eo:cloud_cover": 37,
+  "detections": {
+   "vessels": {
+    "offshore_anchorage": 15,
+    "inner_harbor_alongside": 9,
+    "ship_channel_under_way": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,362 @@
+{
+  "source": "T3",
+  "scope": "Second-pass review, scenario days 30-69: all 74 stories in that range changed in hardening, the 6 unchanged-sample stories in range, and the 31 prev/next arc neighbours of the changed stories (days -39 to 98), 111 stories read in full; NWS-P026-01 and NWS-M040-01 were also read to check callbacks. Diffed every changed story against the before_hardening_pass snapshot. Grep checks across all 103 stories in days 30-69 for FEMA IA timing, claims-center timing, FBI field office, crisis-abroad adjacency and first-blast wording. Simulated in /tmp/sim_T3: 22 applied, 1 needs_rewrite; validate, check_canon and check_facts all report 0 errors/violations; rebuilt story_index shows the ARC-OVERSEAS chain ends at NWS-P046-06.",
+  "stories_read": 113,
+  "findings": [
+    {
+      "id": "T3-001",
+      "severity": "high",
+      "story_id": "NWS-P046-05",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P046-05",
+        "day": 46,
+        "time_local": "18:30",
+        "outlet_id": "OUT-02",
+        "section": "Local",
+        "byline": [
+          "CHR-007"
+        ],
+        "headline": "Fact-check: A foreign state broadcaster mocks the port closure. Here's what officials actually say.",
+        "dek": "A state-run outlet abroad is calling the Corpus Christi channel closure a sign of U.S. weakness. What's confirmed: an explosive device, an active Navy and Coast Guard search, and an FBI investigation.",
+        "body": [
+          "THE CLAIM: A foreign state broadcaster is airing segments that mock the closure of the Corpus Christi Ship Channel as a sign of American weakness. One segment called it \"a harbor America cannot even keep open.\"",
+          "WHAT'S CONFIRMED: The channel is closed. The Navy said Saturday that Thursday's blast beside the harbor tug Corrin Bay near the Port Aransas jetties was caused by an explosive device. Navy explosive ordnance disposal and mine countermeasures teams are searching the channel with the Coast Guard. The FBI is investigating. Two tug crew members were injured.",
+          "WHAT THE BROADCAST LEAVES OUT: Closing a channel after an explosion is a safety decision, and the Coast Guard made it within hours. \"Closing the channel is how you keep people safe while you find out what happened,\" said Lt. Cmdr. Elena Ruiz, a public affairs officer for Coast Guard Sector Corpus Christi. \"That's the system working.\"",
+          "WHY IT MATTERS: Misleading posts spread fast after a disaster. Since Hurricane Rafael, false claims about the military seizing homes have circulated locally, and county and base officials have debunked them. Whatever the source, mocking or misleading messages work the same way: they want you angry, and they want you to share.",
+          "WHAT TO DO: Don't share clips from foreign state media, even to argue with them; sharing spreads them. Get updates from the Coast Guard, the Navy and local news. Harborline 6 is not naming or linking the outlet. If a clip reaches you, check who made it and when before you react."
+        ],
+        "tags": {
+          "story_type": "fact-check",
+          "arcs": [
+            "ARC-RUMORS",
+            "ARC-CHANNEL-BLAST"
+          ],
+          "public_facts": [
+            "PUB-072",
+            "PUB-070",
+            "PUB-067",
+            "PUB-054",
+            "PUB-033"
+          ],
+          "characters_quoted": [
+            "CHR-082",
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "ENT-01",
+            "PORT-07"
+          ],
+          "topics": [
+            "fact-check",
+            "foreign state media",
+            "port closure",
+            "misinformation",
+            "explosive device",
+            "media literacy"
+          ],
+          "follows_up": "NWS-P044-07"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0309",
+            "EVT-0412",
+            "EVT-0413",
+            "EVT-0414"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Tags-only change (headline, dek and body identical to current text): drop ARC-OVERSEAS ('Crisis abroad') from this fact-check about the channel blast. It is the only blast story left in that arc, so story_index and the public graph chain NWS-P046-06 (crisis abroad begins) -> NEXT_IN_ARC -> NWS-P046-05 (blast closure), placing the day-46 crisis directly next to the blast. Keep ARC-RUMORS and ARC-CHANNEL-BLAST. If another fix to this story is applied first, apply only this arcs change.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-002",
+      "severity": "high",
+      "story_id": "NWS-P046-04",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P046-04",
+        "day": 46,
+        "time_local": "14:00",
+        "outlet_id": "OUT-06",
+        "section": "Security",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Navy: explosive device caused Texas port blast",
+        "dek": "The blast that closed the Corpus Christi Ship Channel was caused by an explosive device, the Navy said Saturday. Officials have not said who placed it.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — The explosion that damaged a harbor tug and closed one of the nation's most important energy ports was caused by an explosive device, the Navy said Saturday, as Navy explosive ordnance disposal and mine countermeasures teams searched the Corpus Christi Ship Channel alongside the Coast Guard.",
+          "An explosive device caused the blast near the jetties, said Cmdr. Lisa Moreau, a public affairs officer for Navy Region Southeast. \"Our teams are searching the channel with the Coast Guard, and safety comes first,\" she said. The FBI said it is investigating.",
+          "Officials have not said who placed the device, when or why.",
+          "Loadings at the port, the source of about half of U.S. crude exports, are halted again, and traders are watching for a prolonged closure. No reopening date has been announced.",
+          "The Defense Department counts the Port of Corpus Christi among its designated strategic seaports. A Fort Hood aviation brigade had been scheduled to move its helicopters and equipment through the port for what the Army has described only as an overseas rotation. The movement was postponed before Hurricane Rafael and, the Army said Friday, has been delayed again by the channel closure. \"The brigade will be ready to go as soon as the channel is,\" said Maj. Darnell Price, a Fort Hood public affairs officer.",
+          "The blast, around 1 a.m. Thursday near the jetties at Port Aransas, damaged the tug Corrin Bay and injured two crew members. The channel had partly reopened only two weeks earlier, after a month-long closure caused by the hurricane."
+        ],
+        "tags": {
+          "story_type": "analysis",
+          "arcs": [
+            "ARC-CHANNEL-BLAST",
+            "ARC-MILITARY"
+          ],
+          "public_facts": [
+            "PUB-070",
+            "PUB-068",
+            "PUB-007",
+            "PUB-067",
+            "PUB-073",
+            "PUB-014",
+            "PUB-058"
+          ],
+          "characters_quoted": [
+            "CHR-032",
+            "CHR-031"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "ENT-01",
+            "PORT-07",
+            "FAC-DOD-06"
+          ],
+          "topics": [
+            "explosive device",
+            "navy",
+            "strategic seaport",
+            "national security",
+            "fbi",
+            "fort hood brigade"
+          ],
+          "follows_up": "NWS-P044-05"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0414",
+            "EVT-0415",
+            "EVT-0413",
+            "EVT-0412",
+            "EVT-0401",
+            "EVT-0410"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Tags-only change (headline, dek and body identical to current text): the hardening edit cut the crisis-abroad and broadcaster passages but left topics 'crisis abroad' and 'foreign broadcaster' on this blast-and-brigade story. Topics ship as a public graph property, so the only story carrying topic 'crisis abroad' is the Navy blast/brigade analysis, implying the forbidden link. Replace with topics the body actually covers. If another fix to this story is applied first, apply only this topics change.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-003",
+      "severity": "medium",
+      "story_id": "NWS-P046-06",
+      "field": "body",
+      "old": "The exercises, announced in late July,",
+      "new": "The exercises, announced in early August,",
+      "reason": "PUB-009 is day -40 (Thu. Aug. 5, 2027); the wire's own announcement story NWS-M040-01 and the explainer NWS-M039-01 are dated Aug. 5-6. 'Late July' contradicts them.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-004",
+      "severity": "medium",
+      "story_id": "NWS-P065-01",
+      "field": "body",
+      "old": "Over five days, the equipment will sail for an overseas rotation, the Army said.",
+      "new": "The Army said the equipment would sail over the following five days for an overseas rotation.",
+      "reason": "Hardening rewrite turned reported speech into future tense. This weekly is dated Thu. Nov. 18; loading began Nov. 12 and the five-day sailing window (PUB-080) has already run, so 'will sail' is stale.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-005",
+      "severity": "low",
+      "story_id": "NWS-P060-02",
+      "field": "body",
+      "old": "two months after Hurricane Rafael made landfall; delayed damage assessments had held off FEMA's approval of individual assistance until Nov. 10.",
+      "new": "two months after Hurricane Rafael made landfall. FEMA had approved the aid Wednesday, Nov. 10, after delays in damage assessments.",
+      "reason": "Spliced-on clause makes a run-on sentence that says 'individual assistance' twice. Split it; facts unchanged (PUB-105, day 57 = Wed. Nov. 10).",
+      "status": "applied"
+    },
+    {
+      "id": "T3-006",
+      "severity": "low",
+      "story_id": "NWS-P068-01",
+      "field": "body",
+      "old": "finally opened on the Coastal Bend, once FEMA, slowed by delayed damage assessments, approved individual assistance Nov. 10.",
+      "new": "finally opened on the Coastal Bend. Damage assessments had dragged, and FEMA did not approve individual assistance until Nov. 10.",
+      "reason": "Inserted clause ('once FEMA, slowed by ..., approved') is a garbled splice. Same facts, readable (PUB-104/105).",
+      "status": "applied"
+    },
+    {
+      "id": "T3-007",
+      "severity": "low",
+      "story_id": "NWS-P061-01",
+      "field": "body",
+      "old": "Smelled it two days after the storm, before I ever saw it.",
+      "new": "Smelled it before I ever saw it.",
+      "reason": "Edit put 'two days after the storm' into Bell's quote, and the very next paragraph opens 'That was two days after Hurricane Rafael made landfall'. Drop the repeat from the quote; canon (smelled, then saw, oil on day 2) still holds.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-008",
+      "severity": "low",
+      "story_id": "NWS-P045-05",
+      "field": "body",
+      "old": "The health district has not yet said what is driving the difference.",
+      "new": "The health district has not yet offered an explanation.",
+      "reason": "Edited sentence repeats Shah's quote just before it ('what's driving the difference') almost word for word.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-009",
+      "severity": "low",
+      "story_id": "NWS-P042-01",
+      "field": "dek",
+      "old": "The cleanup has a playbook. Their recovery doesn't.",
+      "new": "The cleanup runs on a system. Their recovery doesn't.",
+      "reason": "New headline ('The cleanup has a playbook...') now duplicates the dek's line verbatim. Reword the dek; matches paragraph 2 ('it is a system').",
+      "status": "applied"
+    },
+    {
+      "id": "T3-010",
+      "severity": "low",
+      "story_id": "NWS-P039-01",
+      "field": "body",
+      "old": "The parts had been held up because the supplier's local warehouse flooded.",
+      "new": "Replacement pump parts had been held up because the supplier's local warehouse flooded.",
+      "reason": "After the edit, 'The parts' has no antecedent; the story never introduced the parts before this line.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-011",
+      "severity": "low",
+      "story_id": "NWS-P048-01",
+      "field": "body",
+      "old": "A closer review of the public track places the signal near the entrance channel, about two weeks before the Oct. 28 blast.",
+      "new": "A closer review of the public track places the signal near the entrance channel.",
+      "reason": "Edit repeats 'about two weeks before' the blast from paragraph 0 two sentences later. Trim the repeat; PUB-076 wording ('near the entrance channel') kept.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-012",
+      "severity": "low",
+      "story_id": "NWS-P031-02",
+      "field": "body",
+      "old": "Neither agency has said when the bays will reopen to fishing.",
+      "new": "Neither Parks and Wildlife nor the state health department has said when the bays will reopen.",
+      "reason": "'Neither agency' has no nearby antecedent (the closest bodies named are the Unified Command and investigators); name the two closing agencies.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-013",
+      "severity": "low",
+      "story_id": "NWS-P047-05",
+      "field": "body",
+      "old": "Each of these is its own story, with its own investigators, and each deserves to be judged on its own facts.",
+      "new": "Each of these is its own story, and each deserves to be judged on its own facts.",
+      "reason": "The list includes the boil-water notice lifting and the airlift ending, which have no investigators; the inserted phrase reads oddly.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-014",
+      "severity": "low",
+      "story_id": "NWS-P059-02",
+      "field": "body",
+      "old": "The Army first announced the rotation in July and has described it only as an overseas rotation.",
+      "new": "The Army first announced the rotation in July.",
+      "reason": "Edit repeats paragraph 1 ('what the Army described only as an overseas rotation'), and both paragraphs then say Price declined. Trim the repeat.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-015",
+      "severity": "low",
+      "story_id": "NWS-P065-01",
+      "field": "body",
+      "old": "At the depot: Still at full production at Corpus Christi Army Depot, with DLA Distribution Corpus Christi supplying parts.",
+      "new": "At the depot: Corpus Christi Army Depot is still at full production, with DLA Distribution Corpus Christi supplying parts.",
+      "reason": "Rewrite left a subjectless fragment ('At the depot: Still at full production at ... Depot'). Wording stays distinct from NWS-P058-04.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-016",
+      "severity": "low",
+      "story_id": "NWS-P046-05",
+      "field": "body",
+      "old": "and county and base officials have called them false.",
+      "new": "and county and base officials have debunked them.",
+      "reason": "Rewritten line says 'false claims ... officials have called them false'; tautology.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-017",
+      "severity": "low",
+      "story_id": "NWS-P047-02",
+      "field": "body",
+      "old": "And the FBI said Sunday it traced the GPS interference",
+      "new": "Separately, the FBI said Sunday it traced the GPS interference",
+      "reason": "Roundup runs the blast, the brigade and the GPS transmitter near a fuel terminal together; add the guide's 'separately' so the list does not read as one thread.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-018",
+      "severity": "low",
+      "story_id": "NWS-P047-05",
+      "field": "dek",
+      "old": "a hidden transmitter",
+      "new": "a transmitter in a parked car",
+      "reason": "PUB-074 says only that the transmitter was found in a parked vehicle; 'hidden' adds an unconfirmed detail and makes the trio of jolts sound more connected than the column says.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-019",
+      "severity": "low",
+      "story_id": "NWS-P046-06",
+      "field": "body",
+      "old": "a familiar pattern: weeks of rising rhetoric, then exercises, then a sudden shift from drills to action.",
+      "new": "a familiar pattern: publicized exercises first, then a sudden shift from drills to action.",
+      "reason": "'Weeks of rising rhetoric' is not in the public record (PUB-009/071 cover only the exercises and the operations).",
+      "status": "applied"
+    },
+    {
+      "id": "T3-020",
+      "severity": "low",
+      "story_id": "NWS-P052-02",
+      "field": "body",
+      "old": "about two weeks before the first blast,",
+      "new": "about two weeks before the blast,",
+      "reason": "Only one device exploded; 'first blast' implies a second explosion.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-021",
+      "severity": "low",
+      "story_id": "NWS-P052-04",
+      "field": "body",
+      "old": "that the first blast was caused by an explosive device.",
+      "new": "that the Oct. 28 blast was caused by an explosive device.",
+      "reason": "Only one device exploded; 'first blast' implies a second explosion.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-022",
+      "severity": "low",
+      "story_id": "NWS-P058-01",
+      "field": "body",
+      "old": "were injured in the first blast.",
+      "new": "were injured in the Oct. 28 blast.",
+      "reason": "Only one device exploded; 'first blast' implies a second explosion.",
+      "status": "applied"
+    },
+    {
+      "id": "T3-023",
+      "severity": "low",
+      "story_id": "NWS-P049-01",
+      "field": "story",
+      "old": "",
+      "new": "Move time_local from 06:00 to the afternoon (for example 16:30). The story says Fontenot spoke 'by phone Tuesday' (canon: Tue. Nov. 2) and Laguna Towing 'did not respond ... Tuesday', which cannot both have happened before a 6 a.m. Tuesday publication. Text needs no change.",
+      "reason": "Publication time contradicts the reporting day stated in the body.",
+      "status": "applied",
+      "resolution": "Applied by script (metadata/time_local), 2026-11-08."
+    }
+  ]
+}

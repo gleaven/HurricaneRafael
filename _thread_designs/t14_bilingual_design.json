@@ -1,0 +1,915 @@
+{
+  "thread_id": "T14",
+  "name": "Bilingual Emergency Communications",
+  "color": "#8b6914",
+  "scenario": "rafael",
+  "lanes": [
+    "C",
+    "D"
+  ],
+  "truth": "Corpus Christi's emergency alert infrastructure operates on an English-first workflow in which Spanish-language translations are routed through a secondary contractor (Nueces County Language Access Services) before distribution to KNCB and Spanish-language digital channels. Under normal conditions this lag is 2–4 hours; under surge conditions during Hurricane Rafael it stretched to 8–14 hours across every alert category. The most consequential gap occurred on D+12: the boil-water notice for Districts 3–4 (GW-PUB-001) was issued in English at 17:30 CDT but the Spanish version did not reach KNCB Coastal Bend Radio until 06:03 CDT on D+13 — a 12-hour-33-minute window during which approximately 22,000 Spanish-dominant residents in the affected zones had no official notification. Teams that plot English vs. Spanish alert timestamps across all four emergency categories (evacuation, shelter, water, power) will find a systematic 8–14 hour lag pattern that is not random noise but the structural fingerprint of a single-language-first workflow. The gastroenteritis cluster in Districts 3–4 (Thread T16) that began D+15 reflects, in part, this notification delay: Spanish-dominant households had less time to begin boiling water before the pathogen load in the system caused illness. The pattern also exposes a gap in FEMA's disaster information line, which was English-only from D0 through D+7, leaving non-English speakers without federal information for 8 days after landfall (household aid itself was not approved until D+57).",
+  "phase_onset": 3,
+  "phase_peak": 4,
+  "msel_events": [
+    {
+      "event_id": "EVT-1401",
+      "time_label": "D-5",
+      "day": -5,
+      "day_end": null,
+      "time_utc": "14:00Z",
+      "threads": [
+        "T14"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "Nueces County OEM activates its Emergency Language Access Protocol (ELAP). The county's contract with Nueces County Language Access Services (NCLAS) is put on standby for 24-hour translation coverage. KNCB Coastal Bend Radio news director Marisol Fuentes-Vega is briefed by county emergency management coordinator and agrees to serve as primary Spanish-language broadcast node. The briefing documents show NCLAS has a 4-hour SLA for routine alerts and a 2-hour SLA for life-safety alerts — both are slower than a mass-notification standard of under 30 minutes.",
+      "observed_in": [
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB programme log 09:00 CDT D-5: emergency coordination call with Nueces County OEM. Translation job log: the contractor NCLAS is placed on 24-hour standby with a two-hour turnaround for life-safety alerts and no provision for simultaneous release.",
+          "when": {
+            "start_utc": "2027-09-09T14:00Z",
+            "end_utc": "2027-09-09T16:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "NCLAS contract SLA document: 'Life-safety alerts: 2-hour turnaround from English source text.' Routine alerts: 4-hour turnaround. No provision for simultaneous multi-language release.",
+        "KNCB programming schedule log entry at 09:00 CDT D-5: 'Emergency coordination call with Nueces OEM, Director Fuentes-Vega attending. Normal programming maintained pending Cat 3 track confirmation.'"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "nueces_county_oem_activation_logs",
+        "nclas_contract_standby_notice",
+        "kncb_editorial_calendar_D-5"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1402",
+      "time_label": "D-3 to D-2",
+      "day": -3,
+      "day_end": -2,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T14"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "KNCB Coastal Bend Radio (OUT-08) switches to 24-hour emergency broadcast format at 07:00 CDT on D-3. Normal programming (music, sports, telenovela updates) is suspended. Marisol Fuentes-Vega opens the broadcast with a declaration that the station is now 'en modo de emergencia permanente' (in permanent emergency mode) and says it will carry every official notice in Spanish; no evacuation order exists yet. The station begins airing NOAA weather radio audio (English) with live simultaneous Spanish interpretation by on-air talent. On D-2 the county orders the mandatory evacuation of Zone A at 06:00 CDT in English. The NCLAS-translated Spanish text reaches KNCB at 08:25 CDT, a 2 hour 25 minute lag, and the station reads the order on air at 08:47 CDT.",
+      "observed_in": [
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB programme log: emergency format from 07:00 CDT on D-3 (12:00Z), no evacuation order read that day. Translation job for the Zone A evacuation order: English source received 06:00 CDT D-2, Spanish delivered 08:25 CDT, read on air 08:47 CDT.",
+          "when": {
+            "start_utc": "2027-09-11T05:00Z",
+            "end_utc": "2027-09-13T05:00Z"
+          }
+        },
+        {
+          "stream": "eas_alerts",
+          "what": "Zone A mandatory evacuation order: English release 06:00 CDT on D-2 (11:00Z); Spanish release 08:47 CDT, a lag of 2 h 47 min.",
+          "when": {
+            "start_utc": "2027-09-12T11:00Z",
+            "end_utc": "2027-09-12T14:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "KNCB programming log: emergency format starts 07:00 CDT D-3 (12:00Z). No evacuation order is read on D-3.",
+        "NCLAS translation delivery receipt: Zone A evacuation order English source received 06:00 CDT D-2 (11:00Z); Spanish text delivered to KNCB 08:25 CDT. Delta: 2h 25m.",
+        "English Zone A evacuation order timestamp: 06:00 CDT D-2 (county OEM system). Spanish KNCB air time: 08:47 CDT D-2 (13:47Z). Total public access lag: 2h 47m."
+      ],
+      "public_fact": "PUB-140",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "kncb_broadcast_logs_D-3",
+        "nclas_translation_delivery_timestamps",
+        "nueces_oem_evacuation_order_issuance_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1403",
+      "time_label": "D-1",
+      "day": -1,
+      "day_end": null,
+      "time_utc": "18:00Z",
+      "threads": [
+        "T14"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "City of Corpus Christi issues shelter-in-place guidance for residents of Zones D and E and for anyone in Zones A to C who has not been able to leave. The English alert goes through WEA (Wireless Emergency Alert) and the city's mass notification system at 13:00 CDT. The Spanish WEA message is submitted to the wireless carriers at 13:10 CDT but the NCLAS-translated text is not ready until 20:45 CDT; the Spanish WEA is transmitted at 20:52 CDT — a 7 hour 52 minute gap. During this window, KNCB improvises a Spanish shelter-in-place advisory using an on-air reporter's paraphrase of the English guidance, which contains two factual errors: the reporter states that Zone D residents should shelter at Collier Elementary (incorrect — the correct Zone D shelter is Richard King High School).",
+      "observed_in": [
+        {
+          "stream": "eas_alerts",
+          "what": "WEA carrier submission log: English shelter-in-place WEA submitted 13:00 CDT; Spanish WEA submitted 20:52 CDT. Delta: 7h 52m.",
+          "when": {
+            "start_utc": "2027-09-13T18:00Z",
+            "end_utc": "2027-09-13T20:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB broadcast transcript excerpt (paraphrase, 13:45 CDT): 'Los residentes de la Zona D deben ir al Colegio Collier en Leopard Street' — incorrect. Official shelter for Zone D is Richard King High School, 5225 Gollihar Rd.",
+          "when": {
+            "start_utc": "2027-09-13T18:00Z",
+            "end_utc": "2027-09-13T20:00Z"
+          }
+        },
+        {
+          "stream": "shelters",
+          "what": "Nueces County 211 call log: 14 calls between 14:00 and 20:00 CDT from Zone D callers asking for shelter location clarification after hearing incorrect KNCB report.",
+          "when": {
+            "start_utc": "2027-09-13T18:00Z",
+            "end_utc": "2027-09-13T20:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "WEA carrier submission log: English shelter-in-place WEA submitted 13:00 CDT; Spanish WEA submitted 20:52 CDT. Delta: 7h 52m.",
+        "KNCB broadcast transcript excerpt (paraphrase, 13:45 CDT): 'Los residentes de la Zona D deben ir al Colegio Collier en Leopard Street' — incorrect. Official shelter for Zone D is Richard King High School, 5225 Gollihar Rd.",
+        "Nueces County 211 call log: 14 calls between 14:00 and 20:00 CDT from Zone D callers asking for shelter location clarification after hearing incorrect KNCB report."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "wea_transmission_logs",
+        "nclas_translation_delivery_timestamps",
+        "kncb_broadcast_logs_D-1",
+        "cc_oem_shelter_location_registry"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1404",
+      "time_label": "D0",
+      "day": 0,
+      "day_end": null,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T14"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "FEMA's Hurricane Rafael information line, 1-800-621-FEMA, activates at 07:00 CDT. No federal aid for households exists yet (Individual Assistance is not approved until D+57), so the line gives shelter, supply and damage-documentation information only. The line is English-only at activation — the Spanish-language queue (staffed by bilingual operators) is not live. FEMA's press release at 08:30 CDT is English only. Nueces County League of United Latin American Citizens (LULAC) chapter president Esperanza Orihuela-Martínez calls FEMA Region 6 Public Affairs to flag the gap; she is told the Spanish queue requires 'staffing coordination' and will be active 'within days.' KNCB broadcasts the FEMA number but airs a station-produced advisory noting 'en este momento solo está disponible en inglés' (at this time only available in English).",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "FEMA information line for Hurricane Rafael activated at 07:00 CDT on D0, English only; no household aid programme exists yet.",
+          "when": {
+            "start_utc": "2027-09-14T12:00Z",
+            "end_utc": "2027-09-14T14:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB programme log 10:00 CDT D0: advisory aired in Spanish that the FEMA line is English-only.",
+          "when": {
+            "start_utc": "2027-09-14T12:00Z",
+            "end_utc": "2027-09-14T14:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FEMA information line activation memo: 'Spanish queue staffing: TBD. Target activation: D+5 to D+7.' Actual English-only operation: D0 through D+7 (8 days).",
+        "LULAC contact log: Call from E. Orihuela-Martínez to FEMA R6 Public Affairs at 10:15 CDT D0. Ticket number RG6-2027-09141-0047. Response: 'noted, escalating.'",
+        "KNCB log D0 10:00 CDT: Advisory aired in Spanish noting FEMA line is English-only. Estimated reach: 34,000 listeners."
+      ],
+      "public_fact": "PUB-141",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fema_ia_hotline_activation_records",
+        "fema_press_release_D0",
+        "lulac_advocacy_correspondence",
+        "kncb_broadcast_logs_D0"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1405",
+      "time_label": "D+2",
+      "day": 2,
+      "day_end": null,
+      "time_utc": "16:00Z",
+      "threads": [
+        "T14"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "KNCB conducts its first on-air call-in segment post-landfall. 47 callers make it to air over a 3-hour window. Code-switching (Spanish–English mixing) occurs in 31 of 47 calls. Callers switch to English when referencing official agency names, street addresses, and FEMA documentation requirements, then revert to Spanish for personal narrative. One caller, identified on air only as 'Rodrigo from the Southside,' describes trying to reach FEMA and being unable to navigate the English IVR. The raw call recordings contain NER training opportunities: mixed-language address strings (e.g., 'estoy en el cuatro-mil-cien de South Padre Island Drive cerca de la H-E-B'), agency names in English mid-Spanish sentence, and emotional code-switching markers.",
+      "observed_in": [
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB call recording corpus D+2: 47 calls, avg 2.3 minutes. Code-switching detected in 31/47 calls (65.9%). English insertions cluster around: agency names (FEMA, TDEM, OEM), street addresses, official document references.",
+          "when": {
+            "start_utc": "2027-09-16T16:00Z",
+            "end_utc": "2027-09-16T18:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "KNCB call recording corpus D+2: 47 calls, avg 2.3 minutes. Code-switching detected in 31/47 calls (65.9%). English insertions cluster around: agency names (FEMA, TDEM, OEM), street addresses, official document references.",
+        "Linguistic annotation sample: 'Mi esposo fue a FEMA registration yesterday pero la señora le dijo que necesitaba el lease agreement y él no tiene — we don't have the original anymore, todo se fue en el storm.'"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "kncb_call_in_recordings_D+2",
+        "kncb_broadcast_logs_D+2"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1406",
+      "time_label": "D+8",
+      "day": 8,
+      "day_end": null,
+      "time_utc": "15:00Z",
+      "threads": [
+        "T14"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "FEMA Region 6 external affairs officer Rachel Ostrander announces activation of the Spanish-language queue on the FEMA information line at 10:00 CDT. LULAC and advocacy groups hold a brief press conference at Richard King High School shelter. KNCB breaks regular programming to air the announcement live. The Spanish line activation is 8 days after English-only activation (D0 to D+8). FEMA documents show that 1,847 callers in the first 8 days hung up before reaching an operator; of those, 643 (34.8%) came from zip codes where Spanish is the primary household language for more than 50% of residents. KNCB news director Fuentes-Vega is interviewed for Bayside Ledger article calling the delay 'a failure that left families without help at the worst moment.'",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "FEMA announces the Spanish-language queue on its information line at 10:00 CDT on D+8, eight days after landfall.",
+          "when": {
+            "start_utc": "2027-09-22T15:00Z",
+            "end_utc": "2027-09-22T17:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB breaks regular programming to air the announcement live.",
+          "when": {
+            "start_utc": "2027-09-22T15:00Z",
+            "end_utc": "2027-09-22T17:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FEMA information line call volume data D0–D+8: Total calls: 11,204. Completed calls: 9,357. Hang-ups before an operator answered: 1,847. Zip code analysis of hang-ups: 643 from Spanish-majority zip codes (78405, 78407, 78408, 78416). Completion rate in Spanish-majority zips: 65.2% vs 86.1% in English-majority zips.",
+        "Spanish queue activation: D+8 10:00 CDT. English queue activation: D0 07:00 CDT. Lag: 8 days."
+      ],
+      "public_fact": "PUB-142",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fema_ia_hotline_operational_logs",
+        "fema_press_release_D+8",
+        "kncb_broadcast_logs_D+8",
+        "lulac_press_conference_transcript"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1407",
+      "time_label": "D+12",
+      "day": 12,
+      "day_end": null,
+      "time_utc": "22:30Z",
+      "threads": [
+        "T14",
+        "T9"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "O.N. Stevens Water Treatment Plant issues Boil Water Notice GW-PUB-001 at 17:30 CDT for Districts 3 and 4 (48,000 residents). The notice is transmitted via the city's Everbridge mass notification system in English only. NCLAS receives the English source text at 17:35 CDT. Under the 2-hour life-safety SLA, Spanish delivery is due by 19:35 CDT. However, NCLAS is operating at reduced capacity (3 of 7 translators are unavailable due to storm displacement), and the Spanish text is not completed until 23:45 CDT. CBPWA/OEM does not transmit the Spanish Everbridge alert or forward to KNCB until the following morning. KNCB receives the boil-water notice text from OEM at 06:03 CDT D+13 and airs it at once. The gap is 12 hours 33 minutes from English public notification to Spanish air time.",
+      "observed_in": [
+        {
+          "stream": "eas_alerts",
+          "what": "Districts 3 and 4 boil-water notice: English release 17:30 CDT on D+12 to registered devices; Spanish release reaches KNCB at 06:03 CDT on D+13, a lag of 12 h 33 min.",
+          "when": {
+            "start_utc": "2027-09-26T22:30Z",
+            "end_utc": "2027-09-27T11:30Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "Translation job 2027-09-26-BWN-001: source received 17:35 CDT D+12, delivered 23:45 CDT, outside the two-hour service level; KNCB first airs the notice at 06:03 CDT D+13.",
+          "when": {
+            "start_utc": "2027-09-26T22:30Z",
+            "end_utc": "2027-09-27T12:30Z"
+          }
+        },
+        {
+          "stream": "census",
+          "what": "Districts 3 and 4 tracts: about 46.7 percent of residents speak English less than very well.",
+          "when": {
+            "start_utc": "2027-09-26T22:30Z",
+            "end_utc": "2027-09-27T00:30Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Everbridge system log: GW-PUB-001 English alert transmitted 17:30 CDT D+12 to 48,000 registered devices in Districts 3–4.",
+        "NCLAS job log entry 2027-09-26-BWN-001: Source received 17:35 CDT. Translation assigned to available staff. Delivery timestamp: 23:45 CDT D+12. SLA breach: 4h 10m past 2-hour life-safety SLA.",
+        "OEM internal email trail: Spanish text received from NCLAS at 23:47 CDT D+12. Next action item (Everbridge Spanish blast and KNCB notification) assigned to morning shift. Email forwarded to KNCB at 05:58 CDT D+13.",
+        "KNCB broadcast log: GW-PUB-001 Spanish boil-water advisory aired 06:03 CDT D+13. Total English-to-Spanish public gap: 12h 33m.",
+        "Census ACS data for Districts 3–4: estimated 22,400 residents (46.7%) who speak English 'less than very well,' classified as Spanish-dominant for notification purposes."
+      ],
+      "public_fact": "PUB-143",
+      "place_ids": [
+        "FAC-UTL-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cbpwa_boil_water_notice_issuance_log",
+        "nclas_translation_job_log_D+12",
+        "everbridge_transmission_records",
+        "kncb_broadcast_logs_D+13"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1408",
+      "time_label": "D+13",
+      "day": 13,
+      "day_end": null,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T14"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "KNCB news director Marisol Fuentes-Vega goes on air at 07:15 CDT to address listener calls about the boil-water notice delay. She reads GW-PUB-001 in full Spanish, provides clarifying instructions on boiling procedure, and discloses on air that the station received the official notice 'this morning' — implicitly revealing the 12-hour gap without naming it. The Bayside Ledger (OUT-01) calls Nueces County OEM for comment; spokesperson Cassandra Trejo-Morales confirms the Spanish alert was delayed and attributes it to NCLAS capacity issues. By 12:00 CDT, Harborline 6 News (OUT-02) has a reporter live at Richard King High School shelter asking evacuated District 3 residents when they first heard about the boil-water order.",
+      "observed_in": [
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB broadcast transcript 07:15 CDT D+13: 'Recibimos el aviso oficial esta mañana temprano de la ciudad. Sé que muchos de ustedes están preguntando — ¿por qué no lo supimos antes? Es una pregunta que también tenemos nosotros.' (We received the official notice early this morning from the city. I know many of you are asking — why didn't we know sooner? It is a question we also have.) | Harborline 6 field interview log: 7 of 9 District 3 evacuees at...",
+          "when": {
+            "start_utc": "2027-09-27T12:00Z",
+            "end_utc": "2027-09-27T14:00Z"
+          }
+        },
+        {
+          "stream": "news",
+          "what": "The Bayside Ledger (OUT-01) calls Nueces County OEM for comment; spokesperson Cassandra Trejo-Morales confirms the Spanish alert was delayed and attributes it to NCLAS capacity issues.",
+          "when": {
+            "start_utc": "2027-09-27T12:00Z",
+            "end_utc": "2027-09-27T14:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "KNCB broadcast transcript 07:15 CDT D+13: 'Recibimos el aviso oficial esta mañana temprano de la ciudad. Sé que muchos de ustedes están preguntando — ¿por qué no lo supimos antes? Es una pregunta que también tenemos nosotros.' (We received the official notice early this morning from the city. I know many of you are asking — why didn't we know sooner? It is a question we also have.)",
+        "Harborline 6 field interview log: 7 of 9 District 3 evacuees at Richard King shelter stated they first heard about boil-water notice from KNCB on morning of D+13. 2 of 9 stated they heard from a neighbor. 0 of 9 stated they received an Everbridge alert in Spanish."
+      ],
+      "public_fact": "PUB-144",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "kncb_broadcast_logs_D+13",
+        "bayside_ledger_article_D+13",
+        "harborline6_field_notes_D+13"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1409",
+      "time_label": "D+21",
+      "day": 21,
+      "day_end": null,
+      "time_utc": "19:00Z",
+      "threads": [
+        "T14"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "Texas Division of Emergency Management (TDEM) releases its first after-action snapshot on public communications. The report notes 'observed delays in Spanish-language alert distribution' but does not quantify them or recommend corrective action. LULAC files a formal complaint with the Texas Governor's Division of Emergency Management citing violations of the state's Limited English Proficiency plan requirements and the Title VI Civil Rights Act. KNCB airs the LULAC complaint text in full. Fuentes-Vega's interview with Coastline Public Radio (OUT-03) becomes the definitive public account of the alert system's structural failure.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "TDEM interim report language: 'Communication timelines in Spanish showed variation from English baseline. Recommend review of NCLAS contract performance.' No specific timestamps or gap measurements provided. | LULAC complaint filing number: TX-DEM-2027-LEP-0012. Alleged violations: Texas LEP Plan Section 4.2 (simultaneous multi-language release for life-safety alerts); Title VI, 42 U.S.C. § 2000d.",
+          "when": {
+            "start_utc": "2027-10-05T19:00Z",
+            "end_utc": "2027-10-05T21:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB airs the LULAC complaint text in full.",
+          "when": {
+            "start_utc": "2027-10-05T19:00Z",
+            "end_utc": "2027-10-05T21:00Z"
+          }
+        },
+        {
+          "stream": "news",
+          "what": "Fuentes-Vega's interview with Coastline Public Radio (OUT-03) becomes the definitive public account of the alert system's structural failure.",
+          "when": {
+            "start_utc": "2027-10-05T19:00Z",
+            "end_utc": "2027-10-05T21:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "TDEM interim report language: 'Communication timelines in Spanish showed variation from English baseline. Recommend review of NCLAS contract performance.' No specific timestamps or gap measurements provided.",
+        "LULAC complaint filing number: TX-DEM-2027-LEP-0012. Alleged violations: Texas LEP Plan Section 4.2 (simultaneous multi-language release for life-safety alerts); Title VI, 42 U.S.C. § 2000d."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "tdem_interim_report_D+21",
+        "lulac_formal_complaint_D+21",
+        "kncb_broadcast_logs_D+21",
+        "coastline_public_radio_transcript_D+21"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "lulac_formal_complaint_D+21",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1410",
+      "time_label": "D+30",
+      "day": 30,
+      "day_end": null,
+      "time_utc": "14:00Z",
+      "threads": [
+        "T14"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "The city's weekly boil-water update at 09:00 CDT D+30 is issued simultaneously in English and Spanish — the first simultaneous bilingual public alert in the entire Rafael response sequence, following an internal directive issued D+22 after the LULAC complaint. Both notices stay in force: the citywide notice until pump repairs and testing are finished (lifted D+39) and the Districts 3 and 4 notice (lifted D+42). KNCB airs the update in real time. OEM announces a systematic review of the NCLAS contract and commits to simultaneous release for all future life-safety alerts. KNCB's 24-hour emergency format scales back to 18 hours beginning D+30, with normal music programming restored overnight.",
+      "observed_in": [
+        {
+          "stream": "eas_alerts",
+          "what": "City boil-water status update: English and Spanish issued simultaneously at 09:00 CDT D+30. First public alert in the Rafael response with zero gap between language versions; the lift notices on D+39 and D+42 follow the same rule. | OEM internal directive (issued D+22): 'Effective immediately, all life-safety public alerts will be released in English and Spanish simultaneously or the alert will be held until both are ready.' First application: D+30...",
+          "when": {
+            "start_utc": "2027-10-14T14:00Z",
+            "end_utc": "2027-10-14T16:00Z"
+          }
+        },
+        {
+          "stream": "public_record",
+          "what": "OEM announces a systematic review of the NCLAS contract and commits to simultaneous release for all future life-safety alerts.",
+          "when": {
+            "start_utc": "2027-10-14T14:00Z",
+            "end_utc": "2027-10-14T16:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB's 24-hour emergency format scales back to 18 hours beginning D+30, with normal music programming restored overnight.",
+          "when": {
+            "start_utc": "2027-10-14T14:00Z",
+            "end_utc": "2027-10-14T16:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "City boil-water status update: English and Spanish issued simultaneously at 09:00 CDT D+30. First public alert in the Rafael response with zero gap between language versions; the lift notices on D+39 and D+42 follow the same rule.",
+        "OEM internal directive (issued D+22): 'Effective immediately, all life-safety public alerts will be released in English and Spanish simultaneously or the alert will be held until both are ready.' First application: D+30 boil-water update."
+      ],
+      "public_fact": "PUB-145",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "city_boil_water_status_update",
+        "oem_contract_review_announcement",
+        "kncb_programming_log_D+30"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1411",
+      "time_label": "D+45",
+      "day": 45,
+      "day_end": null,
+      "time_utc": "17:00Z",
+      "threads": [
+        "T14"
+      ],
+      "lanes": [
+        "D"
+      ],
+      "description": "KNCB news director Marisol Fuentes-Vega testifies before the Nueces County Commissioners Court on the communications gap. She presents a timeline she compiled from broadcast logs showing English-first delays across all four alert categories: evacuation orders (avg 2h 47m lag), shelter-in-place (7h 52m lag), boil-water notice (12h 33m lag), power restoration estimates (avg 9h 11m lag). She calls the pattern 'not an accident but an architecture' and argues that the NCLAS contract's sequential workflow — translate after English release — must be replaced with parallel-language authoring. KNCB returns to normal programming format at D+45.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "Fuentes-Vega testimony exhibit: Alert lag table (all four categories): Evacuation D-2: 2h 47m; Shelter-in-place D-1: 7h 52m; Boil-water D+12: 12h 33m; Power restoration estimates avg D+1–D+8: 9h 11m. Mean lag: 8h 06m.",
+          "when": {
+            "start_utc": "2027-10-29T17:00Z",
+            "end_utc": "2027-10-29T19:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB programming log: return to normal format at 06:00 CDT D+45. Total emergency format duration: 48 days.",
+          "when": {
+            "start_utc": "2027-10-29T17:00Z",
+            "end_utc": "2027-10-29T19:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Fuentes-Vega testimony exhibit: Alert lag table (all four categories): Evacuation D-2: 2h 47m; Shelter-in-place D-1: 7h 52m; Boil-water D+12: 12h 33m; Power restoration estimates avg D+1–D+8: 9h 11m. Mean lag: 8h 06m.",
+        "KNCB programming log: return to normal format at 06:00 CDT D+45. Total emergency format duration: 48 days."
+      ],
+      "public_fact": "PUB-146",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "nueces_county_commissioners_testimony_transcript_D+45",
+        "kncb_internal_alert_lag_analysis",
+        "kncb_programming_log_D+45"
+      ],
+      "observable": true,
+      "places_inferred": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "PUB-140",
+      "day": -3,
+      "time_local": "07:00",
+      "type": "broadcast_announcement",
+      "source": "KNCB Coastal Bend Radio (OUT-08)",
+      "statement": "KNCB Coastal Bend Radio, 1480 AM, está ahora en modo de emergencia permanente a partir de las 7 de la mañana de hoy, sábado 11 de septiembre de 2027. Suspendemos nuestra programación regular para mantenerlos informados durante el Huracán Rafael. Transmitiremos en español toda la información oficial: los avisos del Servicio Nacional de Meteorología, las órdenes de evacuación cuando se emitan, los albergues y las rutas. Llame al 2-1-1 para transporte si no tiene vehículo. Escúchenos: seguiremos aquí las 24 horas del día, los 7 días de la semana, hasta que pase la emergencia.",
+      "arcs": [
+        "ARC-COMMUNITY"
+      ],
+      "events": [
+        "EVT-1402"
+      ],
+      "places": [
+        "KNCB Coastal Bend Radio"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-141",
+      "day": 0,
+      "time_local": "08:30",
+      "type": "press_release",
+      "source": "FEMA Region 6",
+      "statement": "FEMA Region 6 has opened a Hurricane Rafael information line for residents of Nueces, San Patricio and Aransas counties. Callers to 1-800-621-3362 can get information on shelters, emergency supplies and how to document storm damage. The line is staffed daily from 7 a.m. to 11 p.m. local time. No federal aid program for individual households has been approved; FEMA will announce any assistance programs, and how to register for them, if they are approved. Residents should photograph damage, keep receipts and contact their insurance companies first. FEMA staff are deploying to the area to support state and local emergency managers.",
+      "arcs": [
+        "ARC-AID"
+      ],
+      "events": [
+        "EVT-1404"
+      ],
+      "places": [
+        "Nueces County",
+        "San Patricio County",
+        "Aransas County"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-142",
+      "day": 8,
+      "time_local": "10:00",
+      "type": "press_release",
+      "source": "FEMA Region 6",
+      "statement": "FEMA's Hurricane Rafael information line is now available in Spanish. Beginning today, callers to 1-800-621-3362 may press 2 for Spanish-language assistance. Bilingual operators are staffed daily from 7 a.m. to 11 p.m. Spanish-language disaster information has also been posted online. The information line does not register households for aid: Individual Assistance has not been approved for Hurricane Rafael, and FEMA will announce it, and how to register, if that changes. For residents who need in-person help, FEMA and county staff are available at Richard King High School and Del Mar College East Campus.",
+      "arcs": [
+        "ARC-AID"
+      ],
+      "events": [
+        "EVT-1406"
+      ],
+      "places": [
+        "Richard King High School",
+        "Del Mar College East Campus"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-143",
+      "day": 12,
+      "time_local": "17:30",
+      "type": "emergency_alert",
+      "source": "Corpus Christi Water Department / Coastal Bend Power and Water Authority",
+      "statement": "BOIL WATER NOTICE — Districts 3 and 4. Effective immediately, all residents and businesses served by the City of Corpus Christi water system in Water Districts 3 and 4 (ZIP codes 78401, 78405, 78407, 78408, 78416 and 78417) are advised to boil all water used for drinking, cooking, and making ice. This notice is issued due to low system pressure in these districts following Hurricane Rafael damage to distribution infrastructure. To make water safe: bring water to a rolling boil for two minutes before use. This notice affects approximately 48,000 residents. Updates will be issued through the City's emergency notification system, local television and local radio. For more information call 361-826-1600.",
+      "arcs": [
+        "ARC-WATER"
+      ],
+      "events": [
+        "EVT-1407"
+      ],
+      "places": [
+        "Districts 3 and 4",
+        "O.N. Stevens Water Treatment Plant"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-144",
+      "day": 13,
+      "time_local": "09:30",
+      "type": "news_article",
+      "source": "Bayside Ledger (OUT-01)",
+      "statement": "Spanish-speaking residents of Districts 3 and 4 did not receive the city's boil-water notice until more than 12 hours after English-language alerts went out Sunday evening, the Bayside Ledger has confirmed. The notice, issued at 5:30 p.m. Sunday, reached KNCB Coastal Bend Radio — the primary news source for an estimated 34,000 Spanish-speaking listeners in Corpus Christi — only at 6:03 Monday morning. 'We received the official notice from the city this morning,' KNCB news director Marisol Fuentes-Vega said Monday. 'By then many of our listeners had already been using untreated water overnight.' Nueces County Office of Emergency Management spokesperson Cassandra Trejo-Morales confirmed the delay, attributing it to reduced staffing at the county's translation contractor, Nueces County Language Access Services. 'We are reviewing what happened and what can be done differently,' Trejo-Morales said. The boil-water notice covers approximately 48,000 residents and remained in effect as of press time.",
+      "arcs": [
+        "ARC-WATER"
+      ],
+      "events": [
+        "EVT-1407",
+        "EVT-1408"
+      ],
+      "places": [
+        "Districts 3 and 4",
+        "KNCB Coastal Bend Radio"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-145",
+      "day": 30,
+      "time_local": "09:00",
+      "type": "emergency_alert",
+      "source": "Corpus Christi Water Department / Coastal Bend Power and Water Authority",
+      "statement": "BOIL WATER NOTICES REMAIN IN EFFECT — weekly update. / LOS AVISOS DE HERVIR AGUA SIGUEN VIGENTES — actualización semanal. The Corpus Christi Water Department announces that the citywide boil water notice issued September 18, 2027 and the Boil Water Notice issued September 26, 2027 for Water Districts 3 and 4 both remain in effect as of 9:00 a.m. today, October 14, 2027. Replacement pump parts for the O.N. Stevens Water Treatment Plant have not yet arrived, and neither notice can be lifted until repairs are complete and water quality testing meets all state and federal standards. Continue to bring water to a rolling boil before drinking, cooking, making ice or brushing teeth. This update is being released in English and Spanish at the same time. / La Ciudad de Corpus Christi anuncia que el aviso de hervir agua para toda la ciudad, emitido el 18 de septiembre de 2027, y el aviso emitido el 26 de septiembre de 2027 para los Distritos de Agua 3 y 4 siguen vigentes a las 9:00 a.m. de hoy, 14 de octubre de 2027. Las piezas de repuesto para las bombas de la planta O.N. Stevens aún no han llegado. Siga hirviendo el agua antes de beberla, cocinar, hacer hielo o cepillarse los dientes. Este aviso se publica en inglés y en español al mismo tiempo.",
+      "arcs": [
+        "ARC-WATER"
+      ],
+      "events": [
+        "EVT-1410"
+      ],
+      "places": [
+        "Districts 3 and 4"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-146",
+      "day": 45,
+      "time_local": "14:00",
+      "type": "testimony_summary",
+      "source": "Nueces County Commissioners Court",
+      "statement": "KNCB Coastal Bend Radio news director Marisol Fuentes-Vega testified before the Nueces County Commissioners Court today regarding gaps in bilingual emergency communications during Hurricane Rafael. Fuentes-Vega presented broadcast logs documenting delays between English and Spanish public alerts across four alert categories during the Rafael response: mandatory evacuation orders (2 hours 47 minutes), shelter-in-place guidance (7 hours 52 minutes), boil-water notice for Districts 3 and 4 (12 hours 33 minutes), and power restoration status announcements (average 9 hours 11 minutes). The average delay across all categories was 8 hours 6 minutes. Commissioners voted 4–1 to direct the county's Office of Emergency Management to issue a new Request for Proposals for language access services requiring simultaneous multi-language alert release within 30 minutes for all life-safety notifications.",
+      "arcs": [
+        "ARC-WATER"
+      ],
+      "events": [
+        "EVT-1411"
+      ],
+      "places": [
+        "Nueces County Commissioners Court"
+      ],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "kncb_emergency_format",
+      "label": "KNCB emergency broadcast status",
+      "kind": "state",
+      "group": "Public knowledge",
+      "unit": "status",
+      "thread": "T14",
+      "description": "Operational mode of KNCB Coastal Bend Radio (OUT-08). 'emergency' means 24-hour news/alert programming with normal programming suspended. 'recovery' means 18-hour news format with limited overnight music block. 'normal' means standard programming restored.",
+      "states": {
+        "normal": "#3f8f6b",
+        "emergency": "#c8402f",
+        "recovery": "#e07a1f"
+      },
+      "keyframes": [
+        {
+          "day": -5,
+          "state": "normal"
+        },
+        {
+          "day": -3,
+          "state": "emergency"
+        },
+        {
+          "day": 30,
+          "state": "recovery"
+        },
+        {
+          "day": 45,
+          "state": "normal"
+        }
+      ]
+    },
+    {
+      "id": "bilingual_alert_coverage_pct",
+      "label": "Bilingual alert coverage (% of English alerts also in Spanish)",
+      "kind": "number",
+      "group": "Public knowledge",
+      "unit": "percent",
+      "thread": "T14",
+      "description": "Rolling percentage of official life-safety alerts for which a Spanish-language version has been publicly released within 30 minutes of the English version. 100% = full simultaneous coverage. Values below 100% reflect structural lag in the NCLAS sequential translation workflow.",
+      "range": [
+        0,
+        100
+      ],
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 72
+        },
+        {
+          "day": -5,
+          "value": 72
+        },
+        {
+          "day": -3,
+          "value": 38
+        },
+        {
+          "day": 0,
+          "value": 12
+        },
+        {
+          "day": 8,
+          "value": 18
+        },
+        {
+          "day": 12,
+          "value": 5
+        },
+        {
+          "day": 22,
+          "value": 55
+        },
+        {
+          "day": 30,
+          "value": 100
+        },
+        {
+          "day": 60,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "spanish_fema_line_active",
+      "label": "FEMA IA Spanish hotline status",
+      "kind": "state",
+      "group": "Aid & money",
+      "unit": "status",
+      "thread": "T14",
+      "description": "Whether the FEMA Individual Assistance registration hotline has an active Spanish-language queue staffed with bilingual operators.",
+      "states": {
+        "inactive": "#c8402f",
+        "active": "#3f8f6b"
+      },
+      "keyframes": [
+        {
+          "day": 0,
+          "state": "inactive"
+        },
+        {
+          "day": 8,
+          "state": "active"
+        }
+      ]
+    }
+  ],
+  "news_arcs": [
+    {
+      "arc_id": "ARC-BILINGUAL",
+      "name": "Two languages, one crisis",
+      "description": "Coverage of systematic delays in Spanish-language alert delivery throughout the Rafael response, centered on KNCB Coastal Bend Radio as the primary Spanish-language information node and the structural failure of the NCLAS sequential translation workflow.",
+      "thread": "T14",
+      "story_hooks": [
+        {
+          "day": -3,
+          "outlet": "OUT-08",
+          "character_note": "Marisol Fuentes-Vega opens emergency format",
+          "summary": "KNCB launches 24-hour emergency format; news director announces emergency format on D-3; on D-2 it reads the Zone A evacuation order in Spanish 2h47m after the English release. Station begins simultaneous Spanish interpretation of NOAA radio.",
+          "public_facts_used": [
+            "PUB-140"
+          ]
+        },
+        {
+          "day": 8,
+          "outlet": "OUT-08",
+          "character_note": "KNCB breaks for FEMA Spanish line announcement; Fuentes-Vega editorializes on 8-day delay",
+          "summary": "FEMA announces Spanish hotline activation. KNCB reports it live and notes that 643 potential registrants from Spanish-majority zip codes did not complete registration during the English-only period.",
+          "public_facts_used": [
+            "PUB-142"
+          ]
+        },
+        {
+          "day": 13,
+          "outlet": "OUT-01",
+          "character_note": "Bayside Ledger breaking news; Fuentes-Vega as primary source",
+          "summary": "Bayside Ledger reports the 12-hour gap in boil-water notice delivery to Spanish-speaking residents. OEM spokesperson confirms NCLAS capacity failure. Becomes the defining story of the bilingual communication thread.",
+          "public_facts_used": [
+            "PUB-143",
+            "PUB-144"
+          ]
+        },
+        {
+          "day": 13,
+          "outlet": "OUT-03",
+          "character_note": "Coastline Public Radio feature; Fuentes-Vega and LULAC president Orihuela-Martínez",
+          "summary": "In-depth 20-minute radio segment on the structural causes of bilingual alert failures: the NCLAS sequential workflow, the city's English-first alert system architecture, and what simultaneous release would require.",
+          "public_facts_used": [
+            "PUB-144"
+          ]
+        },
+        {
+          "day": 45,
+          "outlet": "OUT-01",
+          "character_note": "Commissioners Court hearing recap",
+          "summary": "Nueces County orders new RFP for language access services with simultaneous 30-minute multi-language release requirement. Fuentes-Vega testimony recognized as the catalyst.",
+          "public_facts_used": [
+            "PUB-146"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity_id": "ENT-1401",
+      "name": "Marisol Fuentes-Vega",
+      "role": "News Director, KNCB Coastal Bend Radio",
+      "type": "character",
+      "thread": "T14",
+      "affiliation": "OUT-08",
+      "language": "Spanish-dominant bilingual",
+      "description": "Fictional. 44-year-old Corpus Christi native, 18 years at KNCB. Manages a staff of 4. Becomes the de facto public voice of the Spanish-speaking community's experience of Rafael. Known for direct on-air commentary. Testifies before Nueces County Commissioners Court at D+45."
+    },
+    {
+      "entity_id": "ENT-1402",
+      "name": "Darlene Whitfield-Okafor",
+      "role": "Public Affairs Spokesperson, FEMA Region 6",
+      "type": "character",
+      "thread": "T14",
+      "affiliation": "FEMA Region 6",
+      "language": "English",
+      "description": "Fictional. FEMA Region 6 spokesperson based in Denton, TX. Handles press inquiries for the Rafael IA activation. Delivers the D+8 Spanish hotline announcement. Does not engage substantively on the 8-day delay timeline in public statements."
+    },
+    {
+      "entity_id": "ENT-1403",
+      "name": "Cassandra Trejo-Morales",
+      "role": "Spokesperson, Nueces County Office of Emergency Management",
+      "type": "character",
+      "thread": "T14",
+      "affiliation": "Nueces County OEM",
+      "language": "Bilingual",
+      "description": "Fictional. Handles media inquiries for Nueces County OEM throughout the Rafael response. First official to publicly confirm the boil-water notice Spanish delay, attributing it to NCLAS reduced capacity. Used in multiple news hooks."
+    }
+  ],
+  "answer_key_path": "Teams establish the detection path as follows: (1) Collect all official life-safety alert timestamps from city/county/FEMA records and pair each with the corresponding Spanish-language release timestamp from KNCB logs and Everbridge records. (2) Build a delta table showing English-to-Spanish release lags across all 4 alert categories — the resulting pattern (2h47m, 7h52m, 12h33m, 9h11m avg) is too systematic to be random, pointing to a structural workflow cause. (3) Obtain the NCLAS contract (EVT-1401 artifacts) showing the sequential-translation SLA model — this is the structural cause. (4) Cross-reference with Census ACS data showing ~22,400 Spanish-dominant residents in Districts 3–4 were exposed to the longest gap (12h33m boil-water notice). (5) Cross-reference with T16 gastroenteritis cluster onset (D+15, 3 days after English notice, 2 days after Spanish notice) — Spanish-dominant households had 2 days vs English-dominant households' 3 days to begin protective behavior. (6) Hidden truth: the lag is not failure of individuals but of the architecture — a single-language-first alert workflow that treats Spanish as a downstream translation product rather than a co-primary output.",
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

@@ -1,0 +1,165 @@
+{
+ "_about": "Drone-detection sensors used by 05_other_sources/drone_detections. Proposed for sensor_registry.json as key 'drone_detection_sensors'.",
+ "drone_detection_sensors": [
+  {
+   "sensor_id": "USCG-RDR-R14",
+   "name": "Coast Guard radar buoy R-14, ship channel east of the Harbor Bridge",
+   "sensor_type": "X-band surface-search radar, raw plot archive",
+   "owner": "U.S. Coast Guard Sector Corpus Christi",
+   "latitude": 27.812,
+   "longitude": -97.384,
+   "nominal_range_m": 2500,
+   "reporting_since_utc": "2024-03-11T00:00:00Z"
+  },
+  {
+   "sensor_id": "USCG-RDR-R18",
+   "name": "Coast Guard radar buoy R-18, Tule Lake Channel",
+   "sensor_type": "X-band surface-search radar, raw plot archive",
+   "owner": "U.S. Coast Guard Sector Corpus Christi",
+   "latitude": 27.8165,
+   "longitude": -97.4592,
+   "nominal_range_m": 2500,
+   "reporting_since_utc": "2024-03-12T00:00:00Z"
+  },
+  {
+   "sensor_id": "USCG-RDR-R22",
+   "name": "Coast Guard radar buoy R-22, Main Turning Basin",
+   "sensor_type": "X-band surface-search radar, raw plot archive",
+   "owner": "U.S. Coast Guard Sector Corpus Christi",
+   "latitude": 27.8132,
+   "longitude": -97.404,
+   "nominal_range_m": 2500,
+   "reporting_since_utc": "2024-03-12T00:00:00Z"
+  },
+  {
+   "sensor_id": "ESM-CAMCC04",
+   "name": "Electronic support measures receiver aboard CBP aircraft CAMCC-04 (position is the aircraft's)",
+   "sensor_type": "airborne RF intercept and direction finding",
+   "owner": "U.S. Customs and Border Protection, Air and Marine Operations",
+   "latitude": null,
+   "longitude": null,
+   "nominal_range_m": 60000,
+   "reporting_since_utc": "2026-01-15T00:00:00Z"
+  },
+  {
+   "sensor_id": "NASCC-PS-01",
+   "name": "NAS Corpus Christi perimeter sensor, north perimeter",
+   "sensor_type": "RF direction finder and short-range radar",
+   "owner": "Naval Air Station Corpus Christi security department",
+   "latitude": 27.7052,
+   "longitude": -97.285,
+   "nominal_range_m": 1800,
+   "reporting_since_utc": "2025-06-02T00:00:00Z"
+  },
+  {
+   "sensor_id": "NASCC-PS-02",
+   "name": "NAS Corpus Christi perimeter sensor, west gate",
+   "sensor_type": "RF direction finder and short-range radar",
+   "owner": "Naval Air Station Corpus Christi security department",
+   "latitude": 27.69032,
+   "longitude": -97.29858,
+   "nominal_range_m": 1800,
+   "reporting_since_utc": "2025-06-02T00:00:00Z"
+  },
+  {
+   "sensor_id": "NASCC-PS-03",
+   "name": "NAS Corpus Christi perimeter sensor, south perimeter",
+   "sensor_type": "RF direction finder and short-range radar",
+   "owner": "Naval Air Station Corpus Christi security department",
+   "latitude": 27.683,
+   "longitude": -97.276,
+   "nominal_range_m": 1800,
+   "reporting_since_utc": "2025-06-02T00:00:00Z"
+  },
+  {
+   "sensor_id": "NASCC-PS-04",
+   "name": "NAS Corpus Christi perimeter sensor, Army depot hangar line",
+   "sensor_type": "RF direction finder and short-range radar",
+   "owner": "Naval Air Station Corpus Christi security department",
+   "latitude": 27.699,
+   "longitude": -97.2775,
+   "nominal_range_m": 1800,
+   "reporting_since_utc": "2025-06-02T00:00:00Z"
+  },
+  {
+   "sensor_id": "NASCC-PS-05",
+   "name": "NAS Corpus Christi portable RF detector, flight line",
+   "sensor_type": "portable RF detector (bearing only)",
+   "owner": "Naval Air Station Corpus Christi security department",
+   "latitude": 27.6935,
+   "longitude": -97.283,
+   "nominal_range_m": 2500,
+   "reporting_since_utc": "2027-09-21T22:00:00Z"
+  },
+  {
+   "sensor_id": "SENT-RF-01",
+   "name": "Counter-UAS RF node, Port of Corpus Christi, Main Turning Basin north shore",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8166,
+   "longitude": -97.401,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-16T15:00:00Z"
+  },
+  {
+   "sensor_id": "SENT-RF-02",
+   "name": "Counter-UAS RF node, Port of Corpus Christi, cargo docks",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8118,
+   "longitude": -97.4075,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-16T18:30:00Z"
+  },
+  {
+   "sensor_id": "SENT-RF-03",
+   "name": "Counter-UAS RF node, Port of Corpus Christi, Avery Point",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8205,
+   "longitude": -97.435,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-18T16:00:00Z"
+  },
+  {
+   "sensor_id": "SENT-RF-04",
+   "name": "Counter-UAS RF node, Port of Corpus Christi, Tule Lake",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8235,
+   "longitude": -97.483,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-19T20:15:00Z"
+  },
+  {
+   "sensor_id": "SENT-RF-05",
+   "name": "Counter-UAS RF node, CBPWA Riverside Switching Station",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8098,
+   "longitude": -97.4553,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-20T15:40:00Z"
+  },
+  {
+   "sensor_id": "SENT-RF-06",
+   "name": "Counter-UAS RF node, CBPWA Harbor View Substation",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.8025,
+   "longitude": -97.4525,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-22T17:05:00Z"
+  },
+  {
+   "sensor_id": "SENT-RF-07",
+   "name": "Counter-UAS RF node, Harbor Bridge south approach",
+   "sensor_type": "RF sensing and direction finding node",
+   "owner": "Port of Corpus Christi Authority / Coastal Bend Power and Water Authority (Sentinel Airspace Inc. network)",
+   "latitude": 27.81375,
+   "longitude": -97.39195,
+   "nominal_range_m": 3000,
+   "reporting_since_utc": "2027-10-23T19:20:00Z"
+  }
+ ]
+}

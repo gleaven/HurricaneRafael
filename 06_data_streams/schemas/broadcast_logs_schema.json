@@ -1,0 +1,20 @@
+{
+ "source": "broadcast_logs",
+ "folder": "05_other_sources/broadcast/",
+ "format": "CSV",
+ "files": {
+  "station_program_log.csv": "air_time_utc, station_id, station_name, platform, item, language, alert_id, duration_sec, description",
+  "station_status_log.csv": "air_time_utc, station_id, station_name, status, note",
+  "alert_relay_log.csv": "alert_id, station_id, station_name, received_utc, relay_lag_sec, result",
+  "translation_jobs.csv": "job_id, alert_id, translator, source_received_utc, translation_delivered_utc, first_aired_utc, service_level_hours, status, note",
+  "call_in_log.csv": "air_time_utc, station_id, call_id, duration_sec, primary_language, code_switching, english_insertions, topic"
+ },
+ "notes": "station_id is an outlet id from 01_characters/outlets.json; WKCB-AM is the market's EAS relay station. Times are UTC.",
+ "joins": [
+  {
+   "field": "alert_id",
+   "to": "public_health/eas_broadcasts.csv AlertID"
+  }
+ ],
+ "generator_reference": "What the data must show, and when, is in 00_scenario/canon_timeline.json (internal). This schema describes format and joins only. Generators: scripts/streams/gen_ground.py and gen_ground_public.py; checks: scripts/check_streams.py, scripts/check_geo.py."
+}

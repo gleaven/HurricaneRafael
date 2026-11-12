@@ -1,0 +1,93 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
+ ],
+ "id": "HALYARD-SAR-20270912T121423Z-SANPATRICIO",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.8,
+     27.82
+    ],
+    [
+     -97.05,
+     27.82
+    ],
+    [
+     -97.05,
+     28.2
+    ],
+    [
+     -97.8,
+     28.2
+    ],
+    [
+     -97.8,
+     27.82
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.8,
+  27.82,
+  -97.05,
+  28.2
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "HALYARD-SAR-20270912T121423Z-SANPATRICIO.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/HALYARD-SAR-20270912T121423Z-SANPATRICIO/sigma0_vv.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/HALYARD-SAR-20270912T121423Z-SANPATRICIO/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-09-12T12:14:09Z",
+  "title": "Pre-storm radar reference, San Patricio County",
+  "description": "Pre-storm radar reference scene, San Patricio County. Calm-water reference for later flood and change mapping.",
+  "platform": "Halyard-SAR-2",
+  "instruments": [
+   "X-band SAR"
+  ],
+  "constellation": "Halyard-SAR",
+  "gsd": 10,
+  "view:off_nadir": 5.5,
+  "view:sun_azimuth": 84.9,
+  "view:sun_elevation": -0.7,
+  "proj:epsg": 32614,
+  "sar:instrument_mode": "wide swath",
+  "sar:frequency_band": "X",
+  "sar:polarizations": [
+   "VV",
+   "VH"
+  ]
+ }
+}

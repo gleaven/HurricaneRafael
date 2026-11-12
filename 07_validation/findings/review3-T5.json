@@ -1,0 +1,97 @@
+{
+  "source": "T5",
+  "scope": "Round-3 changed stories (61, from 07_validation/reports/changed_in_round3.json) plus the previous and next story in each of their arcs (83 neighbours): 144 stories, days -5 to 117, read in full in day order. Focus: port-condition timeline (X-Ray Sat. Sept. 11, Yankee Sun. Sept. 12, Zulu Mon. Sept. 13, return to anchorage Sept. 17, partial reopening Oct. 14), FBI searches moved to Mon. Dec. 27, days 102-103, dates/weekdays/durations, canon, continuity, word counts, grammar, Coast Guard realism, hidden links. Dataset-wide greps for Saturday/Sept. 11 closures, ships riding out the storm at anchor and search mentions on days 100-103.",
+  "stories_read": 144,
+  "findings": [
+    {
+      "id": "T5-001",
+      "severity": "medium",
+      "story_id": "NWS-M003-01",
+      "field": "body",
+      "old": "X-Ray is the first of the storm port conditions.",
+      "new": "X-Ray is one step in a graduated series of storm port conditions.",
+      "reason": "Real-world error: Coast Guard hurricane port conditions begin with Whiskey (gale-force winds within 72 hours); X-Ray (48 hours) is the second. Rewording avoids implying a Whiskey setting that is not in the public record.",
+      "status": "applied"
+    },
+    {
+      "id": "T5-002",
+      "severity": "low",
+      "story_id": "NWS-M003-03",
+      "field": "dek",
+      "old": "Here is what the Coast Guard's first storm condition means",
+      "new": "Here is what the Coast Guard's storm condition means",
+      "reason": "Same port-condition realism point as M003-01: X-Ray is not the first condition in the Coast Guard's sequence (Whiskey precedes it).",
+      "status": "applied"
+    },
+    {
+      "id": "T5-003",
+      "severity": "medium",
+      "story_id": "NWS-P103-01",
+      "field": "body",
+      "old": "By Zulu, every vessel should already be where it intends to ride out the weather.",
+      "new": "By Zulu, the channel is shut, and anything still at anchor should be heading for sea room.",
+      "reason": "Ruiz quote contradicts the story's own Sept. 13 entry and PUB-108: ships at the offshore anchorage put to sea under Zulu, so they were not already where they would ride out the storm.",
+      "status": "applied"
+    },
+    {
+      "id": "T5-004",
+      "severity": "low",
+      "story_id": "NWS-P048-02",
+      "field": "body",
+      "old": "first postponed in September, days before Hurricane Rafael's landfall.",
+      "new": "first postponed on Sept. 11, three days before Hurricane Rafael's landfall.",
+      "reason": "Body is 298 words, below Continental Wire's 300-400 range; the exact postponement date (PUB-020, Sat. Sept. 11) adds two words and precision.",
+      "status": "applied"
+    },
+    {
+      "id": "T5-005",
+      "severity": "low",
+      "story_id": "NWS-P086-01",
+      "field": "body",
+      "old": "14 vessels had queued offshore when the channel first closed.",
+      "new": "14 vessels had queued offshore when the port closed to inbound traffic.",
+      "reason": "Imprecise: the 14 vessels were at the anchorage at the Sept. 12 inbound closure (PUB-107); when the channel closed to all traffic Sept. 13 they put to sea (PUB-108).",
+      "status": "applied"
+    },
+    {
+      "id": "T5-006",
+      "severity": "low",
+      "story_id": "NWS-P033-02",
+      "field": "body",
+      "old": "\"Every week we move more of the queue,\"",
+      "new": "\"Every day we move more of the queue,\"",
+      "reason": "The partial reopening was only three days earlier (Thursday, Oct. 14); 'every week' does not fit.",
+      "status": "applied"
+    },
+    {
+      "id": "T5-007",
+      "severity": "low",
+      "story_id": "NWS-P058-02",
+      "field": "body",
+      "old": "aboard MV Gulf Provider berthed about a month late",
+      "new": "aboard MV Gulf Provider came ashore about a month late",
+      "reason": "Containers do not berth; the ship berthed and the containers came ashore (PUB-059).",
+      "status": "applied"
+    },
+    {
+      "id": "T5-008",
+      "severity": "low",
+      "story_id": "NWS-M003-04",
+      "field": "dek",
+      "old": "through the port this late summer.",
+      "new": "through the port in late summer.",
+      "reason": "Awkward phrasing ('this late summer'); matches PUB-007 wording.",
+      "status": "applied"
+    },
+    {
+      "id": "T5-009",
+      "severity": "low",
+      "story_id": "NWS-P046-03",
+      "field": "body",
+      "old": "\"Corpus Christi had a month to recover from one shock,\" she said. \"It got two weeks.\"",
+      "new": "\"Corpus Christi spent a month shut by one shock,\" she said. \"It got two weeks of traffic before the next.\"",
+      "reason": "Quote logic is muddled: the port was closed about a month after Rafael, then had two weeks of partial traffic before the blast; as written it says it 'had a month to recover' and then 'got two weeks'.",
+      "status": "applied"
+    }
+  ]
+}

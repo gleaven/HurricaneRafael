@@ -1,0 +1,146 @@
+--- nine reference points of SOURCES_land.md
+PASS CC Bay centre                                                   27.77000  -97.25000 expect water | v1 water v2 water v3 water raster water
+PASS Gulf 10 km off Port Aransas                                     27.80000  -96.93000 expect water | v1 water v2 water v3 water raster water
+PASS CC Intl Airport                                                 27.77000  -97.50100 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS Downtown CC                                                     27.79500  -97.39800 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS Mid Mustang Island                                              27.70000  -97.16000 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS Port Aransas town                                               27.83400  -97.06600 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS Aransas Pass between the jetties                                27.83600  -97.04600 expect water | v1 water v2 water v3 water raster water
+PASS Nueces Bay centre                                               27.85000  -97.42000 expect water | v1 water v2 water v3 water raster water
+PASS Rockport                                                        28.02000  -97.05500 expect land  | v1 land  v2 land  v3 land  raster land 
+    9/9 pass
+--- extra points of the 2026-11-09 verification
+PASS Oso Bay (v1 extra)                                              27.70000  -97.32000 expect water | v1 water v2 water v3 water raster water
+PASS Harbor Island (v1 extra)                                        27.84800  -97.07500 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS Ship channel mid-bay (v1 extra)                                 27.81500  -97.30000 expect water | v1 water v2 water v3 water raster water
+PASS Inner Harbor at Harbor Bridge (v1 extra)                        27.81250  -97.39600 expect water | v1 water v2 water v3 water raster water
+PASS Ingleside (v1 extra)                                            27.87500  -97.21000 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS Portland (v1 extra)                                             27.88000  -97.32500 expect land  | v1 land  v2 land  v3 land  raster land 
+    6/6 pass
+--- landmarks of land categories in window: 449 | land v1 447, v2 447, v3 447 | flipped by overrides v2 0, v3 0
+    NOT LAND: Shell Ridge [community] 27.99725,-97.06028  (v1 water; inside a land polygon: False; metres to nearest land 0)
+    NOT LAND: USS Lexington Museum on the Bay (USS Lexington CV-16) [venue] 27.81500,-97.38861  (v1 water; inside a land polygon: False; metres to nearest land 80)
+    by category (in window, all categories): airport 12/12 land, bridge 4/7 land, coast_guard 1/1 land, community 103/104 land, ems 8/8 land, ferry 2/2 land, fire_station 37/37 land, helipad 12/12 land, hospital 14/14 land, marina 5/7 land, military 3/3 land, police 15/15 land, port_dock 94/113 land, refinery 7/7 land, runway_end 38/38 land, school 157/157 land, tide_gauge 1/6 land, venue 17/18 land, wastewater 16/16 land, water_plant 1/1 land, weather_station 6/6 land
+    (no water run found on Ocean Dr for Oso Bay inlet at the Ocean Dr bridge)
+--- additional check points (GNIS names, NBI bridges, CO-OPS gauges, USACE centreline, road crossings)
+PASS GNIS Sunset Lake [Lake]                                         27.86457  -97.33918 expect water | v1 land  v2 water v3 water raster water  <- changed by overrides
+PASS GNIS Oso Bay [Bay]                                              27.68198  -97.31028 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Fresh Water Lake [Lake]                                    27.96005  -97.17929 expect water | v1 land  v2 water v3 water raster water  <- changed by overrides
+PASS GNIS Spears Lake [Lake]                                         27.97252  -97.19944 expect water | v1 land  v2 water v3 water raster water  <- changed by overrides
+PASS GNIS Swan Lake [Lake]                                           28.05169  -97.17222 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Salt Lake [Lake]                                           28.07196  -97.09166 expect water | v1 land  v2 water v3 water raster water  <- changed by overrides
+FAIL GNIS Egery Flats [Lake]                                         28.06225  -97.21570 expect water | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Rincon Bayou [Lake]                                        27.89103  -97.56350 expect water | v1 land  v2 water v3 water raster water  <- changed by overrides
+PASS GNIS Tule Lake Turning Basin [Channel]                          27.82697  -97.49278 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Avery Point Turning Basin [Channel]                        27.82031  -97.42917 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Chemical Turning Basin [Channel]                           27.82253  -97.44500 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Main Turning Basin [Channel]                               27.81336  -97.40361 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Tule Lake Channel [Channel]                                27.81725  -97.46750 expect water | v1 water v2 water v3 water raster water
+PASS GNIS La Quinta Channel [Channel]                                27.84559  -97.23528 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Aransas Pass [Channel]                                     27.83559  -97.04138 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Little Bay (Rockport) [Bay]                                28.03808  -97.03583 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Ingleside Cove [Bay]                                       27.83864  -97.23028 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Emerald Cove [Bay]                                         27.77864  -97.39167 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Redfish Cove [Bay]                                         27.83142  -97.18111 expect water | v1 water v2 water v3 water raster water
+PASS GNIS South Bay [Bay]                                            27.89364  -97.09555 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Estes Cove [Bay]                                           27.97002  -97.08139 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Dead Man Hole [Basin]                                      27.67587  -97.20861 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Boat Hole [Basin]                                          27.68282  -97.25000 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Kates Hole [Basin]                                         27.65976  -97.20361 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Croaker Hole [Bay]                                         27.73393  -97.16194 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Pink Shack Cove [Bay]                                      27.75781  -97.15000 expect water | v1 water v2 water v3 water raster water
+FAIL GNIS Little Shamrock Cove [Bay]                                 27.75531  -97.17055 expect water | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Wilsons Cut [Channel]                                      27.74115  -97.14722 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Natural Channel (Laguna Madre) [Channel]                   27.59199  -97.29194 expect water | v1 water v2 water v3 water raster water
+PASS GNIS New Humble Channel (Laguna Madre) [Channel]                27.59615  -97.27527 expect water | v1 water v2 water v3 water raster water
+PASS GNIS Oso Municipal Golf Course Lake [Reservoir]                 27.71242  -97.35159 expect water | v1 land  v2 water v3 water raster water  <- changed by overrides
+FAIL GNIS Calallen Reservoir (Nueces River pool) [Reservoir]         27.88364  -97.62528 expect water | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Ward Island (TAMU-CC campus) [Island]                      27.71281  -97.32333 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Encinal Peninsula (Flour Bluff) [Cape]                     27.66754  -97.29139 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Fourmile Hill (Padre Island) [Summit]                      27.57961  -97.22215 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Live Oak Ridge (Aransas Pass) [Ridge]                      27.90776  -97.17008 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Mustang Island (first GNIS point) [Island]                 27.73948  -97.13166 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Harbor Island (first GNIS point) [Island]                  27.86725  -97.07916 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Key Allegro [Island]                                       28.03947  -97.02777 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Live Oak Peninsula (first GNIS point) [Cape]               28.03308  -97.08028 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Padre Island (GNIS point 27.58643N) [Island]               27.58643  -97.23444 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Padre Island (GNIS point 27.63643N) [Island]               27.63643  -97.19666 expect land  | v1 land  v2 land  v3 land  raster land 
+PASS GNIS Pita Island [Island]                                       27.60282  -97.28666 expect land  | v1 land  v2 land  v3 land  raster land 
+FAIL GNIS Shamrock Island [Island]                                   27.76615  -97.16305 expect land  | v1 water v2 water v3 water raster water
+INFO GNIS Fish Pass (closed water-exchange pass) [Channel]           27.68365  -97.17527 expect info  | v1 land  v2 land  v3 land  raster land 
+INFO GNIS Corpus Christi Pass (historic washover pass) [Channel]     27.65060  -97.19444 expect info  | v1 water v2 water v3 water raster water
+INFO GNIS Newport Pass (historic washover pass) [Channel]            27.63337  -97.20416 expect info  | v1 water v2 water v3 water raster water
+INFO GNIS Reynolds Metals Company Lake [Reservoir]                   28.03739  -97.18794 expect info  | v1 land  v2 land  v3 land  raster land 
+INFO GNIS Tule Lake (north edge of window) [Lake]                    28.12098  -97.33697 expect info  | v1 land  v2 water v3 water raster water  <- changed by overrides
+INFO GNIS Canoe Lake [Lake]                                          28.04947  -97.03500 expect info  | v1 water v2 water v3 water raster water
+INFO GNIS North Beach (beach point) [Beach]                          27.82225  -97.38694 expect info  | v1 land  v2 land  v3 land  raster land 
+INFO GNIS Indian Point (cape tip) [Cape]                             27.85114  -97.35472 expect info  | v1 land  v2 land  v3 land  raster land 
+PASS landmark Harbor Bridge                                          27.81194  -97.39565 expect water | v1 water v2 water v3 water raster land 
+PASS landmark Nueces Bay Causeway (US 181 southbound)                27.85039  -97.36159 expect water | v1 water v2 water v3 water raster water
+FAIL landmark Nueces Bay Causeway (US 181 northbound)                27.85239  -97.35868 expect water | v1 land  v2 land  v3 land  raster land 
+PASS landmark JFK Causeway                                           27.63466  -97.23984 expect water | v1 water v2 water v3 water raster water
+INFO landmark I-37 Nueces River bridge                               27.89986  -97.63082 expect info  | v1 land  v2 land  v3 land  raster land 
+FAIL landmark NOAA CO-OPS 8775792 Packery Channel                    27.63330  -97.23670 expect water | v1 land  v2 land  v3 land  raster land 
+PASS landmark NOAA CO-OPS 8775870 Bob Hall Pier                      27.58000  -97.21670 expect water | v1 water v2 water v3 water raster water
+PASS landmark NOAA CO-OPS 8775296 USS Lexington                      27.81490  -97.38920 expect water | v1 water v2 water v3 water raster water
+INFO landmark UNIV OF TEXAS AT AUSTIN, MARINE SCIENCE INSTITUTE, BO  27.83739  -97.05349 expect info  | v1 land  v2 land  v3 land  raster land 
+INFO landmark Aransas County Navigation District No. 1, Rockport Ha  28.02607  -97.04850 expect info  | v1 land  v2 land  v3 land  raster land 
+INFO landmark Small craft facility (ENC), Packery Channel area       27.62365  -97.22576 expect info  | v1 land  v2 land  v3 land  raster land 
+PASS USACE GIWW centreline vertex, Laguna Madre near 27.650N         27.64217  -97.23643 expect water | v1 water v2 water v3 water raster water
+PASS Nueces River at the I-37 bridge [mid-point of a 15 m water run  27.89539  -97.62888 expect water | v1 land  v2 water v3 water raster water  <- changed by overrides
+PASS Oso Bay at the SH 358 (SPID) bridge [mid-point of a 400 m wate  27.67963  -97.31180 expect water | v1 water v2 water v3 water raster water
+PASS Cayo del Oso at the Yorktown Blvd bridge [mid-point of a 130 m  27.64066  -97.34376 expect water | v1 water v2 water v3 water raster water
+PASS Oso Creek at the S Staples St bridge [mid-point of a 60 m wate  27.65700  -97.40171 expect water | v1 land  v2 water v3 water raster water  <- changed by overrides
+PASS Copano Bay at the SH 35 causeway [mid-point of a 1515 m water   28.11920  -97.02066 expect water | v1 water v2 water v3 water raster water
+PASS Fish Pass / SH 361 bridge, Mustang Island [mid-point of a 20 m  27.67987  -97.17184 expect water | v1 land  v2 water v3 water raster water  <- changed by overrides
+    52/58 pass
+--- road centrelines in window (roads_major + roads_arterial + roads_local_all, 5 m samples): 8351.3 km
+    v1              in water 53.42 km = 0.640 %   (of which no land polygon at all, i.e. charted open water: 52.47 km; land turned to water by overrides: 0.95 km)
+    v2 interrupted  in water 55.72 km = 0.667 %   (of which no land polygon at all, i.e. charted open water: 52.47 km; land turned to water by overrides: 3.25 km)
+    v3              in water 55.62 km = 0.666 %   (of which no land polygon at all, i.e. charted open water: 52.47 km; land turned to water by overrides: 3.15 km)
+    water runs >= 100 m: 105 (52.7 km of 55.6 km)
+    longest stretches (road, carriageways/segments summed per ~3 km cell): length, where, share caused by an override
+         4868 m  State Hwy 35                 2 run(s), longest  2438 m at 27.8437,-97.3706  override share   0 %
+         4868 m  US Hwy 181                   2 run(s), longest  2438 m at 27.8437,-97.3706  override share   0 %
+         4867 m  Nueces Bay Cswy              2 run(s), longest  2434 m at 27.8438,-97.3705  override share   0 %
+         2597 m  Egery Island Rd              1 run(s), longest  2597 m at 28.0705,-97.2067  override share   0 %
+         2597 m  Jeff Davis Hwy               1 run(s), longest  2597 m at 28.0705,-97.2067  override share   0 %
+         1515 m  State Hwy 35                 1 run(s), longest  1515 m at 28.1192,-97.0206  override share   0 %
+         1420 m  Rattlesnake Point Rd         1 run(s), longest  1420 m at 28.0606,-97.1192  override share   0 %
+         1365 m  Copano Ridge Rd              1 run(s), longest  1365 m at 28.0783,-97.0939  override share   0 %
+         1350 m  State Park Road 22           6 run(s), longest   446 m at 27.6542,-97.2563  override share   0 %
+         1337 m  FM 1781                      1 run(s), longest  1337 m at 28.0832,-97.0702  override share   0 %
+         1325 m  (unnamed)                    1 run(s), longest  1325 m at 28.0617,-97.1870  override share   0 %
+         1282 m  (unnamed)                    2 run(s), longest  1016 m at 27.9873,-97.1825  override share   0 %
+         1282 m  J F Kennedy Cswy             6 run(s), longest   411 m at 27.6541,-97.2562  override share   0 %
+         1196 m  State Hwy 35                 4 run(s), longest   430 m at 27.8133,-97.3996  override share   0 %
+         1196 m  US Hwy 181                   4 run(s), longest   430 m at 27.8133,-97.3996  override share   0 %
+         1092 m  (unnamed)                    2 run(s), longest   713 m at 27.7307,-97.1651  override share   0 %
+          903 m  FM 136                       2 run(s), longest   698 m at 28.0716,-97.2196  override share  21 %
+          853 m  (unnamed)                    1 run(s), longest   853 m at 28.0461,-97.1642  override share   0 %
+          851 m  New Harbor Brg               2 run(s), longest   426 m at 27.8133,-97.3993  override share   0 %
+          850 m  Crosstown Expy               2 run(s), longest   425 m at 27.8133,-97.3996  override share   0 %
+          683 m  Ridge Harbor Dr              1 run(s), longest   683 m at 28.0773,-97.0998  override share   0 %
+          649 m  (unnamed)                    7 run(s), longest   212 m at 27.8695,-97.4665  override share   0 %
+    road length inside each override polygon (v3), > 60 m:
+        816 m  Oso Bay              1613878  [np.str_('Padre Island Dr Brg'), np.str_('State Hwy 358')]
+        675 m  None                 82911  [np.str_('(unnamed)')]
+        235 m  Oso Crk              213476  [np.str_('Co Rd 24'), np.str_('FM 2444'), np.str_('S Staples St'), np.str_('Yorktown Blvd')]
+        185 m  None                 483919504001057  [np.str_('FM 136')]
+        165 m  None                 483550054061065  [np.str_('(unnamed)'), np.str_('Chapman Ranch Rd'), np.str_('State Hwy 286')]
+        135 m  None                 483550054172038  [np.str_('Co Rd 24'), np.str_('Yorktown Blvd')]
+        105 m  None                 483550054062021  [np.str_('FM 43')]
+         95 m  None                 483550054061066  [np.str_('(unnamed)'), np.str_('Chapman Ranch Rd'), np.str_('State Hwy 286')]
+         80 m  Nueces Riv           282441  [np.str_('I- 37'), np.str_('US Hwy 77')]
+         80 m  None                 483550054063012  [np.str_('FM 2444'), np.str_('S Staples St')]
+         70 m  None                 483550054161022  [np.str_('FM 2444')]
+         70 m  Laguna Madre         226599  [np.str_('(unnamed)'), np.str_('Rex Ln'), np.str_('Riverdale Dr')]
+         65 m  None                 483550054072009  [np.str_('FM 43')]
+         65 m  None                 483550054041018  [np.str_('Yorktown Blvd')]
+         65 m  Oso Bay              1094128  [np.str_('Yorktown Blvd')]
+--- water_overrides_local.geojson: 393 features, 11890 vertices, unclosed/short rings 0, interior rings 0, required properties on every feature: True
+    land_local.geojson geometry identical to v1: True
+    200k random points: geo.py raster agrees with exact test on 99.44 %; land fraction v1 0.5532, v2 0.5438, v3 0.5446
+TOTAL: reference 9/9, v1 extras 6/6, additional 52/58, failures 6
+plot written: ./99_reference/geo/_parts/land_upgrade_check.png
+cache land_*.npz removed: True

@@ -1,0 +1,29 @@
+{
+ "family": "ground",
+ "changes": [
+  {
+   "stream": "cad_911",
+   "note": "Incident files are 05_other_sources/911/cad_incidents_YYYY-MM.csv (matches the glob). PSAP reports and ALI subscriber records are in 05_other_sources/911/reports/*.csv, outside the glob so the geo rule for 911 positions is not applied to tables without coordinates. Suggested extra glob: 05_other_sources/911/reports/*.csv."
+  },
+  {
+   "stream": "damage_assessment",
+   "note": "Aerial collection index is in 05_other_sources/infrastructure/aerial_survey/collection_index.csv (no coordinates, so kept out of the infrastructure/*.csv geo rule). utility_site_survey.csv is in the main folder with LATITUDE/LONGITUDE of the asset."
+  },
+  {
+   "stream": "shelters",
+   "note": "Folder also holds shelter_211_calls.csv and evacuation_bus_trips.csv."
+  },
+  {
+   "stream": "sar_missions",
+   "note": "Folder also holds sar_asset_log.csv, flood_depth_soundings.csv, flood_extent_snapshots.csv. Key time column of sar_missions.csv is launch_utc; one row per rescue case, mission_id groups a sortie."
+  },
+  {
+   "stream": "public_record",
+   "note": "ids_from_registry in the catalogue names entity_registry.json; the export's ids are the public-record fact ids plus three NOTICE-* records."
+  },
+  {
+   "stream": "avl",
+   "note": "Cadence differs from the catalogue text (see schemas/avl_schema.json) to keep the stream under the size limit."
+  }
+ ]
+}

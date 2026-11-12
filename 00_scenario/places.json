@@ -1,0 +1,190 @@
+[
+  {
+    "place_id": "PLC-001",
+    "name": "Nueces County (FIPS 48355)",
+    "type": "County",
+    "role": "Corpus Christi; main impact area"
+  },
+  {
+    "place_id": "PLC-002",
+    "name": "San Patricio County (FIPS 48409)",
+    "type": "County",
+    "role": "Portland, Ingleside, Aransas Pass"
+  },
+  {
+    "place_id": "PLC-003",
+    "name": "Aransas County (FIPS 48007)",
+    "type": "County",
+    "role": "Rockport; heavy surge"
+  },
+  {
+    "place_id": "PLC-004",
+    "name": "Kleberg County (FIPS 48273)",
+    "type": "County",
+    "role": "Kingsville"
+  },
+  {
+    "place_id": "PLC-010",
+    "name": "Low-income surge-zone tracts",
+    "type": "Census tracts",
+    "role": "Bottom income quartile inside the surge or flood zone, highest share of households without a vehicle (ACS, selected at generation)"
+  },
+  {
+    "place_id": "PLC-011",
+    "name": "High-income tracts",
+    "type": "Census tracts",
+    "role": "Top income quartile in Nueces County (ACS, selected at generation)"
+  },
+  {
+    "place_id": "LF-01",
+    "name": "Mustang Island near Port Aransas",
+    "type": "Landfall point",
+    "role": "Eye crosses Corpus Christi Bay"
+  },
+  {
+    "place_id": "PORT-07",
+    "name": "Port of Corpus Christi",
+    "type": "Deep-water port",
+    "role": "Largest US crude export gateway; strategic military seaport since 1997"
+  },
+  {
+    "place_id": "ANC-OFF",
+    "name": "Offshore anchorage east of Port Aransas",
+    "type": "Anchorage",
+    "role": "Vessel queue while the ship channel is closed"
+  },
+  {
+    "place_id": "FAC-DOD-01",
+    "name": "Naval Air Station Corpus Christi",
+    "type": "Navy installation",
+    "role": "Hosts the Army depot; backup generator EQP-2201"
+  },
+  {
+    "place_id": "FAC-DOD-02",
+    "name": "Corpus Christi Army Depot",
+    "type": "Army depot on NAS Corpus Christi",
+    "role": "Primary DoD rotary-wing depot maintenance"
+  },
+  {
+    "place_id": "FAC-DOD-03",
+    "name": "Naval Air Station Kingsville",
+    "type": "Navy installation",
+    "role": "Jet training; aircraft evacuate"
+  },
+  {
+    "place_id": "FAC-DOD-04",
+    "name": "NAS Joint Reserve Base Fort Worth",
+    "type": "Navy installation",
+    "role": "Evacuation destination for aircraft"
+  },
+  {
+    "place_id": "FAC-DOD-05",
+    "name": "DLA Distribution Corpus Christi",
+    "type": "Defense Logistics Agency site",
+    "role": "Parts warehouse supporting the depot"
+  },
+  {
+    "place_id": "FAC-DOD-06",
+    "name": "Fort Hood",
+    "type": "Army installation",
+    "role": "Aviation brigade scheduled to deploy through PORT-07"
+  },
+  {
+    "place_id": "FAC-UTL-01",
+    "name": "O.N. Stevens Water Treatment Plant (Calallen)",
+    "type": "Water utility",
+    "role": "City's sole treatment plant; pumps P-1 to P-4 are scenario IDs"
+  },
+  {
+    "place_id": "FAC-UTL-02",
+    "name": "Transmission lines feeding O.N. Stevens",
+    "type": "Power",
+    "role": "Primary and backup feeds; both fail at D0"
+  },
+  {
+    "place_id": "FAC-INF-01",
+    "name": "US 181 Harbor Bridge and Nueces Bay Causeway",
+    "type": "Bridges",
+    "role": "Close in high winds; cut Portland and North Beach off from downtown"
+  },
+  {
+    "place_id": "FAC-HOS-xx",
+    "name": "Nueces County hospital emergency departments",
+    "type": "Hospitals",
+    "role": "Real facilities chosen at generation; operators not named"
+  },
+  {
+    "place_id": "WW-xx",
+    "name": "Corpus Christi wastewater treatment plants",
+    "type": "Health sampling",
+    "role": "Sampling sites chosen at generation"
+  },
+  {
+    "place_id": "GAUGE-12",
+    "name": "Nueces River gauge at Calallen",
+    "type": "Environmental sensor",
+    "role": "Upstream river level",
+    "registry_ids": [
+      "GAUGE-12"
+    ]
+  },
+  {
+    "place_id": "GAUGE-14",
+    "name": "NOAA tide gauge on Corpus Christi Bay",
+    "type": "Environmental sensor",
+    "role": "Surge level; station chosen at generation",
+    "registry_ids": [
+      "GAUGE-14"
+    ]
+  },
+  {
+    "place_id": "PSAP-01",
+    "name": "Corpus Christi–Nueces County 911 center",
+    "type": "Emergency communications",
+    "role": "Dispatch system HOST-911-01"
+  },
+  {
+    "place_id": "TANK-0390",
+    "name": "Quellmar fuel terminal",
+    "type": "Private fuel storage (fictional company)",
+    "role": "Inner Harbor industrial area"
+  },
+  {
+    "place_id": "STATE-X",
+    "name": "Unnamed foreign state",
+    "type": "Sponsor",
+    "role": "Behind the hidden network; never named"
+  },
+  {
+    "place_id": "TERM-01",
+    "name": "Crude terminal on the Inner Harbor ship channel",
+    "type": "Oil terminal (fictional operator, Rendal Terminals)",
+    "role": "Where the two attacked tankers stay moored through the storm"
+  },
+  {
+    "place_id": "FAC-USCG-01",
+    "name": "US Coast Guard Sector Corpus Christi",
+    "type": "Coast Guard unit",
+    "role": "Leads the federal spill response in a Unified Command with the Texas General Land Office"
+  },
+  {
+    "place_id": "WQ-01 to WQ-06",
+    "name": "Water-quality sondes in the ship channel, Nueces Bay and Corpus Christi Bay",
+    "type": "Environmental sensors (scenario IDs)",
+    "role": "Hydrocarbon and dissolved-oxygen readings",
+    "registry_ids": [
+      "WQ-01",
+      "WQ-02",
+      "WQ-03",
+      "WQ-04",
+      "WQ-05",
+      "WQ-06"
+    ]
+  },
+  {
+    "place_id": "ENT-01",
+    "name": "Aransas Pass entrance channel and jetties at Port Aransas",
+    "type": "Channel entrance",
+    "role": "Gulf entrance to the Corpus Christi Ship Channel; mined at D+31"
+  }
+]

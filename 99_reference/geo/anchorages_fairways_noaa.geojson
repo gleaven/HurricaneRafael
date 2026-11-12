@@ -1,0 +1,980 @@
+{
+ "type": "FeatureCollection",
+ "name": "anchorages_fairways_noaa",
+ "crs_note": "WGS84 lon/lat, 5 decimals, server-simplified with maxAllowableOffset=0.0005 deg (~50 m). Harbour-band features are clipped at ENC cell edges by the source. Not for navigation.",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "anchorage",
+    "name": "Aransas Pass Anchorage Area",
+    "source_layer": "enc_coastal/MapServer/132 Coastal.Anchorage_Area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 58491,
+    "enc_cell": "US3TX1CB.000",
+    "simplified_deg": 0.0005,
+    "inform": "33 CFR 166.200: Navigation regulations are published in Chapter 2 of the U.S. Coast Pilot for this geographic area. Refer to regulation section numbers.",
+    "sorind": "US,US,graph,Chart 11300",
+    "sordat": "200304"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.94515,
+       27.80313
+      ],
+      [
+       -96.85336,
+       27.75391
+      ],
+      [
+       -96.66739,
+       27.86128
+      ],
+      [
+       -96.94099,
+       27.89183
+      ],
+      [
+       -96.99672,
+       27.83085
+      ],
+      [
+       -96.94515,
+       27.80313
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": "East-West Gulf of America Fairway",
+    "source_layer": "enc_coastal/MapServer/150 Coastal.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 60974,
+    "enc_cell": "US3TX1BB.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.94879,
+       26.4
+      ],
+      [
+       -96.93559,
+       27.02759
+      ],
+      [
+       -96.92531,
+       27.6
+      ],
+      [
+       -96.96213,
+       27.6
+      ],
+      [
+       -96.9846,
+       26.4
+      ],
+      [
+       -96.94879,
+       26.4
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": null,
+    "source_layer": "enc_coastal/MapServer/150 Coastal.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 60980,
+    "enc_cell": "US3TX1CB.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.4929,
+       27.6
+      ],
+      [
+       -96.75862,
+       27.72639
+      ],
+      [
+       -96.78092,
+       27.69824
+      ],
+      [
+       -96.5728,
+       27.6
+      ],
+      [
+       -96.4929,
+       27.6
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": null,
+    "source_layer": "enc_coastal/MapServer/150 Coastal.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 60972,
+    "enc_cell": "US3TX1BB.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.53062,
+       27.58009
+      ],
+      [
+       -96.15641,
+       27.40124
+      ],
+      [
+       -96.13431,
+       27.42891
+      ],
+      [
+       -96.40131,
+       27.55573
+      ],
+      [
+       -96.4929,
+       27.6
+      ],
+      [
+       -96.5728,
+       27.6
+      ],
+      [
+       -96.53062,
+       27.58009
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": "Aransas Pass Channel",
+    "source_layer": "enc_coastal/MapServer/150 Coastal.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 60976,
+    "enc_cell": "US3TX1CB.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.99838,
+       27.81018
+      ],
+      [
+       -96.99654,
+       27.81356
+      ],
+      [
+       -97.01983,
+       27.82573
+      ],
+      [
+       -97.02933,
+       27.83027
+      ],
+      [
+       -97.03175,
+       27.82755
+      ],
+      [
+       -96.99838,
+       27.81018
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": "East-West Gulf of America Fairway",
+    "source_layer": "enc_coastal/MapServer/150 Coastal.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 60977,
+    "enc_cell": "US3TX1CB.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.13457,
+       28.2665
+      ],
+      [
+       -96.23221,
+       28.35837
+      ],
+      [
+       -96.29699,
+       28.41071
+      ],
+      [
+       -96.32343,
+       28.42901
+      ],
+      [
+       -96.32864,
+       28.42515
+      ],
+      [
+       -96.32925,
+       28.42387
+      ],
+      [
+       -96.33471,
+       28.42159
+      ],
+      [
+       -96.30108,
+       28.37583
+      ],
+      [
+       -96.10269,
+       28.18731
+      ],
+      [
+       -96.85336,
+       27.75391
+      ],
+      [
+       -96.99672,
+       27.83085
+      ],
+      [
+       -97.02024,
+       27.83607
+      ],
+      [
+       -97.03371,
+       27.83536
+      ],
+      [
+       -97.03432,
+       27.83441
+      ],
+      [
+       -97.04521,
+       27.83925
+      ],
+      [
+       -97.04518,
+       27.83547
+      ],
+      [
+       -97.03712,
+       27.82613
+      ],
+      [
+       -97.01877,
+       27.80212
+      ],
+      [
+       -96.95946,
+       27.77189
+      ],
+      [
+       -96.96213,
+       27.6
+      ],
+      [
+       -96.92531,
+       27.6
+      ],
+      [
+       -96.92397,
+       27.67429
+      ],
+      [
+       -96.86102,
+       27.71029
+      ],
+      [
+       -96.80666,
+       27.6542
+      ],
+      [
+       -96.78092,
+       27.69824
+      ],
+      [
+       -96.75862,
+       27.72639
+      ],
+      [
+       -96.80826,
+       27.7408
+      ],
+      [
+       -96.07893,
+       28.1644
+      ],
+      [
+       -96.0,
+       27.99875
+      ],
+      [
+       -96.0,
+       28.09146
+      ],
+      [
+       -96.04345,
+       28.18484
+      ],
+      [
+       -96.0,
+       28.20989
+      ],
+      [
+       -96.0,
+       28.24555
+      ],
+      [
+       -96.06972,
+       28.20548
+      ],
+      [
+       -96.13457,
+       28.2665
+      ]
+     ],
+     [
+      [
+       -96.92338,
+       27.71405
+      ],
+      [
+       -96.92302,
+       27.75218
+      ],
+      [
+       -96.88834,
+       27.73475
+      ],
+      [
+       -96.92338,
+       27.71405
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": null,
+    "source_layer": "enc_coastal/MapServer/150 Coastal.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 60971,
+    "enc_cell": "US3TX1BB.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.67776,
+       27.59261
+      ],
+      [
+       -96.19381,
+       27.36136
+      ],
+      [
+       -96.16951,
+       27.38843
+      ],
+      [
+       -96.61369,
+       27.6
+      ],
+      [
+       -96.69323,
+       27.6
+      ],
+      [
+       -96.67776,
+       27.59261
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": null,
+    "source_layer": "enc_coastal/MapServer/150 Coastal.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 60981,
+    "enc_cell": "US3TX1CB.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.61369,
+       27.6
+      ],
+      [
+       -96.78984,
+       27.68357
+      ],
+      [
+       -96.80666,
+       27.6542
+      ],
+      [
+       -96.69323,
+       27.6
+      ],
+      [
+       -96.61369,
+       27.6
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": null,
+    "source_layer": "enc_coastal/MapServer/150 Coastal.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 60970,
+    "enc_cell": "US3TX1BB.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.50593,
+       27.54812
+      ],
+      [
+       -96.4711,
+       27.55136
+      ],
+      [
+       -96.53062,
+       27.58009
+      ],
+      [
+       -96.56553,
+       27.57715
+      ],
+      [
+       -96.50593,
+       27.54812
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "anchorage",
+    "name": null,
+    "source_layer": "enc_harbour/MapServer/186 Harbor.Anchorage_Area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 11659,
+    "enc_cell": "US5CRPBI.000",
+    "simplified_deg": 0.0005,
+    "inform": "Fairway anchorage, 33 CFR 166.200"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.97034,
+       27.81656
+      ],
+      [
+       -96.9,
+       27.7797
+      ],
+      [
+       -96.9,
+       27.825
+      ],
+      [
+       -96.975,
+       27.825
+      ],
+      [
+       -96.975,
+       27.81912
+      ],
+      [
+       -96.97034,
+       27.81656
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "anchorage",
+    "name": null,
+    "source_layer": "enc_harbour/MapServer/186 Harbor.Anchorage_Area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 11658,
+    "enc_cell": "US5CRPBH.000",
+    "simplified_deg": 0.0005,
+    "inform": "Fairway anchorage, 33 CFR 166.200"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.98473,
+       27.82437
+      ],
+      [
+       -96.975,
+       27.81912
+      ],
+      [
+       -96.975,
+       27.825
+      ],
+      [
+       -96.98593,
+       27.825
+      ],
+      [
+       -96.98473,
+       27.82437
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "anchorage",
+    "name": null,
+    "source_layer": "enc_harbour/MapServer/186 Harbor.Anchorage_Area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 11661,
+    "enc_cell": "US5CRPCH.000",
+    "simplified_deg": 0.0005,
+    "inform": "Fairway anchorage, 33 CFR 166.200"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.975,
+       27.825
+      ],
+      [
+       -96.975,
+       27.85834
+      ],
+      [
+       -96.99938,
+       27.83206
+      ],
+      [
+       -96.98593,
+       27.825
+      ],
+      [
+       -96.975,
+       27.825
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "anchorage",
+    "name": null,
+    "source_layer": "enc_harbour/MapServer/186 Harbor.Anchorage_Area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 11660,
+    "enc_cell": "US5CRPBI.000",
+    "simplified_deg": 0.0005,
+    "inform": "Fairway anchorage, 33 CFR 166.200"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.91681,
+       27.75
+      ],
+      [
+       -96.92487,
+       27.75433
+      ],
+      [
+       -96.9249,
+       27.75
+      ],
+      [
+       -96.91681,
+       27.75
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": "Corpus Christi Channel",
+    "source_layer": "enc_harbour/MapServer/208 Harbor.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 40804,
+    "enc_cell": "US5CRPBH.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.975,
+       27.79996
+      ],
+      [
+       -97.02046,
+       27.825
+      ],
+      [
+       -97.02464,
+       27.825
+      ],
+      [
+       -96.975,
+       27.79827
+      ],
+      [
+       -96.975,
+       27.79996
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": null,
+    "source_layer": "enc_harbour/MapServer/208 Harbor.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 40843,
+    "enc_cell": "US5CRPCH.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -97.00833,
+       27.825
+      ],
+      [
+       -96.98593,
+       27.825
+      ],
+      [
+       -96.99938,
+       27.83206
+      ],
+      [
+       -97.02553,
+       27.83805
+      ],
+      [
+       -97.03446,
+       27.825
+      ],
+      [
+       -97.00833,
+       27.825
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": "Corpus Christi Channel",
+    "source_layer": "enc_harbour/MapServer/208 Harbor.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 40841,
+    "enc_cell": "US5CRPCH.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -97.02046,
+       27.825
+      ],
+      [
+       -97.05,
+       27.84105
+      ],
+      [
+       -97.05,
+       27.8388
+      ],
+      [
+       -97.03205,
+       27.82899
+      ],
+      [
+       -97.02464,
+       27.825
+      ],
+      [
+       -97.02046,
+       27.825
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": "Corpus Christi Channel",
+    "source_layer": "enc_harbour/MapServer/208 Harbor.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 40806,
+    "enc_cell": "US5CRPBI.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.96392,
+       27.7923
+      ],
+      [
+       -96.9628,
+       27.79395
+      ],
+      [
+       -96.975,
+       27.80052
+      ],
+      [
+       -96.975,
+       27.79827
+      ],
+      [
+       -96.96392,
+       27.7923
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": null,
+    "source_layer": "enc_harbour/MapServer/208 Harbor.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 40803,
+    "enc_cell": "US5CRPBH.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.975,
+       27.80052
+      ],
+      [
+       -96.975,
+       27.81912
+      ],
+      [
+       -96.98593,
+       27.825
+      ],
+      [
+       -97.03446,
+       27.825
+      ],
+      [
+       -97.03581,
+       27.82304
+      ],
+      [
+       -97.0185,
+       27.80362
+      ],
+      [
+       -96.975,
+       27.78097
+      ],
+      [
+       -96.975,
+       27.80052
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": null,
+    "source_layer": "enc_harbour/MapServer/208 Harbor.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 40807,
+    "enc_cell": "US5CRPBI.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.9249,
+       27.75
+      ],
+      [
+       -96.92487,
+       27.75433
+      ],
+      [
+       -96.96188,
+       27.77442
+      ],
+      [
+       -96.9623,
+       27.75
+      ],
+      [
+       -96.9249,
+       27.75
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "kind": "fairway",
+    "name": null,
+    "source_layer": "enc_harbour/MapServer/208 Harbor.Fairway_area",
+    "source": "NOAA ENC Direct to GIS",
+    "source_objectid": 40805,
+    "enc_cell": "US5CRPBI.000",
+    "simplified_deg": 0.0005
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -96.9,
+       27.75
+      ],
+      [
+       -96.9,
+       27.7797
+      ],
+      [
+       -96.975,
+       27.81912
+      ],
+      [
+       -96.975,
+       27.78097
+      ],
+      [
+       -96.91681,
+       27.75
+      ],
+      [
+       -96.9,
+       27.75
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

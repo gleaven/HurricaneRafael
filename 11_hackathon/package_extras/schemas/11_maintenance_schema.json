@@ -1,0 +1,134 @@
+{
+ "source": "maintenance",
+ "folder": "data/maintenance/",
+ "files": {
+  "work_orders.csv": {
+   "stream_id": "work_orders",
+   "standard": "Computerised maintenance management export (work-order table flattened, one row per order), three organisations: CBPWA (utility), CCAD (Army depot), NASCC (air station public works)",
+   "span": "orders reported 2027-08-15 to 2028-01-11, plus one order reported 2027-07-21 that is still open when the record starts",
+   "fields": [
+    {
+     "name": "wonum",
+     "notes": "WO-2027-NNNNN (utility), CCAD-27-NNNN, NASCC-PW-27-NNNN; purchase requests PR-2027-NNNN / NASCC-PR-27-NNNN; field report GW-FR-NNNN"
+    },
+    {
+     "name": "org_id / site_id",
+     "notes": "CBPWA / CBPWA-CC, CCAD / CCAD, NASCC / NASCC"
+    },
+    {
+     "name": "description",
+     "notes": "prefix PM (preventive), CM (corrective), EM (emergency), CAP (capital), 'Purchase request', 'Field report'"
+    },
+    {
+     "name": "work_type",
+     "notes": "PM, CM, EM, CAP, PR, FR"
+    },
+    {
+     "name": "status / status_date",
+     "notes": "status when the table was exported (after the end of the span) and when it was set"
+    },
+    {
+     "name": "status_history",
+     "notes": "every status with its time, 'STATUS@ISO time' separated by ';' (WAPPR, APPR, INPRG, WMATL, HOLD, DEFERRED, ORDERED, RECEIVED, COMP, CLOSE, CAN). Use this to see an order as it stood on a given day."
+    },
+    {
+     "name": "reported_date, sched_start, sched_finish, actual_start, actual_finish",
+     "type": "ISO 8601 UTC"
+    },
+    {
+     "name": "asset_id",
+     "notes": "infrastructure_assets.json asset_id, or an equipment_id from scada_tags.json / gw_host_registry.json"
+    },
+    {
+     "name": "location",
+     "notes": "plant/location code for the utility; facility_id (FAC-DOD-01, FAC-DOD-02) for the installations"
+    },
+    {
+     "name": "priority",
+     "notes": "1 emergency .. 4 routine"
+    },
+    {
+     "name": "labor_hours",
+     "notes": "total crew hours"
+    },
+    {
+     "name": "reported_by, lead",
+     "notes": "utility orders: usernames from gw_host_registry.json users; installations: office codes"
+    },
+    {
+     "name": "crew"
+    },
+    {
+     "name": "failure_code"
+    },
+    {
+     "name": "vendor_id",
+     "notes": "entity_registry.json vendors[].vendor_id"
+    },
+    {
+     "name": "pr_number / parent_wonum",
+     "notes": "links purchase requests and child orders"
+    },
+    {
+     "name": "work_log",
+     "notes": "dated notes written by the crew or planner"
+    }
+   ]
+  },
+  "base_status_reports.csv": {
+   "stream_id": "base_status_reports",
+   "standard": "Daily installation status report, one row per installation per day, filed 17:00 local",
+   "span": "2027-08-15 to 2028-01-11 (local dates)",
+   "fields": [
+    {
+     "name": "report_date",
+     "notes": "local calendar date"
+    },
+    {
+     "name": "reported_utc",
+     "type": "ISO 8601 UTC"
+    },
+    {
+     "name": "installation_id / installation_name",
+     "notes": "facility_registry.json: FAC-DOD-01 NAS Corpus Christi, FAC-DOD-02 Corpus Christi Army Depot, FAC-DOD-03 NAS Kingsville, FAC-DOD-05 DLA Distribution Corpus Christi"
+    },
+    {
+     "name": "readiness_pct",
+     "notes": "air stations: readiness; depot and distribution site: production capacity available"
+    },
+    {
+     "name": "aircraft_on_station",
+     "notes": "air stations only"
+    },
+    {
+     "name": "flight_ops_status"
+    },
+    {
+     "name": "backup_power_status"
+    },
+    {
+     "name": "equipment_id",
+     "notes": "backup generator asset (EQP-2201 at NAS Corpus Christi)"
+    },
+    {
+     "name": "generator_last_test_date / generator_test_result"
+    },
+    {
+     "name": "perimeter_sensor_status"
+    },
+    {
+     "name": "production_status",
+     "notes": "depot and distribution site"
+    },
+    {
+     "name": "facility_status"
+    },
+    {
+     "name": "remarks"
+    }
+   ]
+  }
+ },
+ "joins": "asset_id / equipment_id -> infrastructure_assets.json and scada_tags.json; vendor_id -> entity_registry.json; control-house door tags (GW.SUBn.YARD.DOOR.STS) in the historian open while a substation crew order is in progress; EQP-2201 fuel lots -> data/supply/fuel_deliveries.csv",
+ "notes": "All times UTC. Nothing in either file labels a record; what crews wrote in work_log is what they knew at the time."
+}

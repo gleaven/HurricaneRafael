@@ -1,0 +1,3064 @@
+{
+ "catalog_meta": {
+  "description": "Organisations that appear in the news, public record and data streams: agencies, the utility, vendors, companies, outlets, community groups.",
+  "note": "Hospitals, terminals, vessels, aircraft and facilities have their own registries; ids here are used wherever a record names an organisation.",
+  "count": 254
+ },
+ "organizations": [
+  {
+   "org_id": "ORG-1001",
+   "name": "Department of Homeland Security",
+   "type": "federal department",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Parent of FEMA, CISA and the Coast Guard",
+   "abbr": "DHS",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1002",
+   "name": "Federal Emergency Management Agency",
+   "type": "federal agency",
+   "parent": "ORG-1001",
+   "jurisdiction": "United States",
+   "public_role": "Federal disaster response and aid",
+   "abbr": "FEMA",
+   "aliases": [
+    "Emergency Management Agency",
+    "Federal Emergency Management Agency (contract aircraft)"
+   ],
+   "parent_name": "Department of Homeland Security"
+  },
+  {
+   "org_id": "ORG-1003",
+   "name": "FEMA Region 6",
+   "type": "federal office",
+   "parent": "ORG-1002",
+   "jurisdiction": "Denton, TX",
+   "public_role": "Regional office for Texas",
+   "aliases": [
+    "FEMA Region"
+   ],
+   "parent_name": "Federal Emergency Management Agency",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1004",
+   "name": "FEMA Joint Field Office, DR-4821-TX",
+   "type": "federal office",
+   "parent": "ORG-1003",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Coordinates federal response to Hurricane Rafael",
+   "aliases": [
+    "Joint Field Office",
+    "JFO"
+   ],
+   "parent_name": "FEMA Region 6",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1005",
+   "name": "FEMA Individual Assistance",
+   "type": "programme",
+   "parent": "ORG-1002",
+   "jurisdiction": "United States",
+   "public_role": "Aid to households; registration opened Nov. 13, 2027",
+   "aliases": [
+    "FEMA IA",
+    "FEMA's Individual Assistance"
+   ],
+   "parent_name": "Federal Emergency Management Agency",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1006",
+   "name": "FEMA Mitigation Assessment Team",
+   "type": "federal office",
+   "parent": "ORG-1002",
+   "jurisdiction": "United States",
+   "public_role": "Aerial and engineering damage assessment",
+   "aliases": [
+    "FEMA's Mitigation Assessment Team",
+    "Hurricane Rafael Aerial Assessment Program"
+   ],
+   "parent_name": "Federal Emergency Management Agency",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1007",
+   "name": "Cybersecurity and Infrastructure Security Agency",
+   "type": "federal agency",
+   "parent": "ORG-1001",
+   "jurisdiction": "United States",
+   "public_role": "Cyber advisories and incident response support",
+   "abbr": "CISA",
+   "parent_name": "Department of Homeland Security",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1008",
+   "name": "U.S. Coast Guard",
+   "type": "federal agency",
+   "parent": "ORG-1001",
+   "jurisdiction": "United States",
+   "public_role": "Port safety, search and rescue, pollution response",
+   "abbr": "USCG",
+   "aliases": [
+    "Coast Guard",
+    "US Coast Guard",
+    "United States Coast Guard"
+   ],
+   "parent_name": "Department of Homeland Security",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1009",
+   "name": "Coast Guard District 8",
+   "type": "federal office",
+   "parent": "ORG-1008",
+   "jurisdiction": "New Orleans, LA",
+   "public_role": "Gulf Coast district command",
+   "aliases": [
+    "Coast Guard District"
+   ],
+   "parent_name": "U.S. Coast Guard",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1010",
+   "name": "Coast Guard Sector Corpus Christi",
+   "type": "federal office",
+   "parent": "ORG-1009",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Captain of the Port; sets port conditions; Federal On-Scene Coordinator for the spill",
+   "aliases": [
+    "U.S. Coast Guard Sector Corpus Christi",
+    "Marine Safety Unit Corpus Christi",
+    "Coast Guard FOSC",
+    "Coast Guard Federal On-Scene Coordinator"
+   ],
+   "parent_name": "Coast Guard District 8",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1011",
+   "name": "Coast Guard Air Station Corpus Christi",
+   "type": "federal office",
+   "parent": "ORG-1010",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Helicopter and fixed-wing search and rescue",
+   "aliases": [
+    "Air Station Corpus Christi",
+    "U.S. Coast Guard Air Station Corpus Christi"
+   ],
+   "parent_name": "Coast Guard Sector Corpus Christi",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1012",
+   "name": "Coast Guard Station Port Aransas",
+   "type": "federal office",
+   "parent": "ORG-1010",
+   "jurisdiction": "Port Aransas, TX",
+   "public_role": "Small-boat station at the jetties",
+   "parent_name": "Coast Guard Sector Corpus Christi",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1013",
+   "name": "Vessel Traffic Service Corpus Christi",
+   "type": "federal office",
+   "parent": "ORG-1010",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Vessel traffic management in the ship channel",
+   "parent_name": "Coast Guard Sector Corpus Christi",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1014",
+   "name": "Coast Guard National Pollution Funds Center",
+   "type": "federal office",
+   "parent": "ORG-1008",
+   "jurisdiction": "United States",
+   "public_role": "Pays spill claims the responsible party does not; administers the Oil Spill Liability Trust Fund",
+   "aliases": [
+    "National Pollution Funds Center",
+    "Oil Spill Liability Trust Fund"
+   ],
+   "parent_name": "U.S. Coast Guard",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1015",
+   "name": "National Response Center",
+   "type": "federal office",
+   "parent": "ORG-1008",
+   "jurisdiction": "United States",
+   "public_role": "Takes reports of oil and chemical releases",
+   "parent_name": "U.S. Coast Guard",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1016",
+   "name": "Unified Command, Inner Harbor spill",
+   "type": "incident command",
+   "parent": "ORG-1010",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Coast Guard and Texas General Land Office joint command for the tanker spill",
+   "aliases": [
+    "Unified Command",
+    "Unified Command of the Coast Guard"
+   ],
+   "parent_name": "Coast Guard Sector Corpus Christi",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1017",
+   "name": "National Oceanic and Atmospheric Administration",
+   "type": "federal agency",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Weather, tides, charts",
+   "abbr": "NOAA",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1018",
+   "name": "National Weather Service",
+   "type": "federal agency",
+   "parent": "ORG-1017",
+   "jurisdiction": "United States",
+   "public_role": "Forecasts and warnings",
+   "abbr": "NWS",
+   "parent_name": "National Oceanic and Atmospheric Administration",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1019",
+   "name": "National Weather Service Corpus Christi",
+   "type": "federal office",
+   "parent": "ORG-1018",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Local forecast office",
+   "aliases": [
+    "NWS Corpus Christi"
+   ],
+   "parent_name": "National Weather Service",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1020",
+   "name": "National Hurricane Center",
+   "type": "federal office",
+   "parent": "ORG-1018",
+   "jurisdiction": "Miami, FL",
+   "public_role": "Hurricane advisories",
+   "abbr": "NHC",
+   "parent_name": "National Weather Service",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1021",
+   "name": "NOAA Aircraft Operations Center",
+   "type": "federal office",
+   "parent": "ORG-1017",
+   "jurisdiction": "Lakeland, FL",
+   "public_role": "Hurricane Hunter reconnaissance flights",
+   "aliases": [
+    "NOAA Hurricane Hunter",
+    "NOAA Hurricane Hunters"
+   ],
+   "parent_name": "National Oceanic and Atmospheric Administration",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1022",
+   "name": "Federal Bureau of Investigation",
+   "type": "federal agency",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Criminal and counterintelligence investigations",
+   "abbr": "FBI",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1023",
+   "name": "FBI Houston Division",
+   "type": "federal office",
+   "parent": "ORG-1022",
+   "jurisdiction": "Houston, TX",
+   "public_role": "Field office covering the Coastal Bend",
+   "aliases": [
+    "FBI's Houston Division",
+    "FBI Houston"
+   ],
+   "parent_name": "Federal Bureau of Investigation",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1024",
+   "name": "FBI Corpus Christi Resident Agency",
+   "type": "federal office",
+   "parent": "ORG-1023",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Local FBI office",
+   "parent_name": "FBI Houston Division",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1025",
+   "name": "Operation Sandbar",
+   "type": "programme",
+   "parent": "ORG-1024",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Disaster-fraud investigation announced Dec. 13, 2027",
+   "parent_name": "FBI Corpus Christi Resident Agency",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1026",
+   "name": "U.S. Attorney's Office for the Southern District of Texas",
+   "type": "federal office",
+   "parent": null,
+   "jurisdiction": "Houston, TX",
+   "public_role": "Federal prosecutions and forfeiture filings",
+   "aliases": [
+    "US Attorney's Office, Southern District of Texas"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1027",
+   "name": "National Center for Disaster Fraud",
+   "type": "federal office",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Takes disaster-fraud complaints",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1028",
+   "name": "DHS Office of Inspector General",
+   "type": "federal office",
+   "parent": "ORG-1001",
+   "jurisdiction": "United States",
+   "public_role": "Reviews emergency contracts",
+   "aliases": [
+    "federal inspector general"
+   ],
+   "parent_name": "Department of Homeland Security",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1029",
+   "name": "Department of Defense",
+   "type": "federal department",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Military departments",
+   "aliases": [
+    "Defense Department"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1030",
+   "name": "U.S. Navy",
+   "type": "military service",
+   "parent": "ORG-1029",
+   "jurisdiction": "United States",
+   "public_role": "",
+   "aliases": [
+    "US Navy"
+   ],
+   "parent_name": "Department of Defense",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1031",
+   "name": "Navy Region Southeast",
+   "type": "military unit",
+   "parent": "ORG-1030",
+   "jurisdiction": "Jacksonville, FL",
+   "public_role": "Regional command for Navy installations in Texas",
+   "parent_name": "U.S. Navy",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1032",
+   "name": "Naval Air Station Corpus Christi",
+   "type": "military unit",
+   "parent": "ORG-1031",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Navy flight training base",
+   "abbr": "NAS Corpus Christi",
+   "parent_name": "Navy Region Southeast"
+  },
+  {
+   "org_id": "ORG-1033",
+   "name": "Naval Air Station Kingsville",
+   "type": "military unit",
+   "parent": "ORG-1031",
+   "jurisdiction": "Kingsville, TX",
+   "public_role": "Navy jet training base",
+   "parent_name": "Navy Region Southeast",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1034",
+   "name": "Naval Air Station Joint Reserve Base Fort Worth",
+   "type": "military unit",
+   "parent": "ORG-1031",
+   "jurisdiction": "Fort Worth, TX",
+   "public_role": "Evacuation base for training aircraft",
+   "parent_name": "Navy Region Southeast",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1035",
+   "name": "Navy explosive ordnance disposal and mine countermeasures teams",
+   "type": "military unit",
+   "parent": "ORG-1030",
+   "jurisdiction": "United States",
+   "public_role": "Searched and cleared the ship channel",
+   "parent_name": "U.S. Navy",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1036",
+   "name": "Navy Family Accountability and Assessment System",
+   "type": "programme",
+   "parent": "ORG-1030",
+   "jurisdiction": "United States",
+   "public_role": "Family check-in system after disasters",
+   "parent_name": "U.S. Navy",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1037",
+   "name": "U.S. Army",
+   "type": "military service",
+   "parent": "ORG-1029",
+   "jurisdiction": "United States",
+   "public_role": "",
+   "parent_name": "Department of Defense",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1038",
+   "name": "Corpus Christi Army Depot",
+   "type": "military unit",
+   "parent": "ORG-1037",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Helicopter repair depot on NAS Corpus Christi",
+   "abbr": "CCAD",
+   "parent_name": "U.S. Army",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1039",
+   "name": "Fort Hood",
+   "type": "military unit",
+   "parent": "ORG-1037",
+   "jurisdiction": "Killeen, TX",
+   "public_role": "Home of the aviation brigade shipping through the port",
+   "parent_name": "U.S. Army",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1040",
+   "name": "Defense Logistics Agency",
+   "type": "federal agency",
+   "parent": "ORG-1029",
+   "jurisdiction": "United States",
+   "public_role": "Military supply",
+   "parent_name": "Department of Defense"
+  },
+  {
+   "org_id": "ORG-1041",
+   "name": "DLA Distribution Corpus Christi",
+   "type": "federal office",
+   "parent": "ORG-1040",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Parts support for the depot",
+   "parent_name": "Defense Logistics Agency",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1042",
+   "name": "U.S. Air Force Air Mobility Command",
+   "type": "military unit",
+   "parent": "ORG-1029",
+   "jurisdiction": "United States",
+   "public_role": "Relief airlift",
+   "aliases": [
+    "Air Force",
+    "U.S. Air Force, Air Mobility Command"
+   ],
+   "parent_name": "Department of Defense",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1043",
+   "name": "Texas Army National Guard",
+   "type": "military unit",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Helicopter and high-water rescue support",
+   "aliases": [
+    "National Guard",
+    "Texas National Guard"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1044",
+   "name": "Federal Aviation Administration",
+   "type": "federal agency",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Airspace restrictions, GPS notices",
+   "abbr": "FAA",
+   "aliases": [
+    "Aviation Administration"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1045",
+   "name": "CBP Air and Marine Operations",
+   "type": "federal office",
+   "parent": "ORG-1001",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Maritime patrol aircraft",
+   "parent_name": "Department of Homeland Security",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1046",
+   "name": "Environmental Protection Agency Region 6",
+   "type": "federal office",
+   "parent": null,
+   "jurisdiction": "Dallas, TX",
+   "public_role": "Environmental response and assessment",
+   "aliases": [
+    "EPA Region 6",
+    "EPA Region"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1047",
+   "name": "U.S. Army Corps of Engineers, Galveston District",
+   "type": "federal office",
+   "parent": "ORG-1037",
+   "jurisdiction": "Galveston, TX",
+   "public_role": "Channel surveys and debris missions",
+   "abbr": "USACE Galveston",
+   "parent_name": "U.S. Army",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1048",
+   "name": "Small Business Administration Disaster Loan Program",
+   "type": "programme",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Disaster loans",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1049",
+   "name": "National Flood Insurance Program",
+   "type": "programme",
+   "parent": "ORG-1002",
+   "jurisdiction": "United States",
+   "public_role": "Federal flood insurance",
+   "abbr": "NFIP",
+   "parent_name": "Federal Emergency Management Agency",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1050",
+   "name": "Office of the Governor of Texas",
+   "type": "state office",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Disaster declarations",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1051",
+   "name": "Texas Division of Emergency Management",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "State emergency management",
+   "abbr": "TDEM",
+   "aliases": [
+    "Texas TDEM"
+   ],
+   "parent_name": null
+  },
+  {
+   "org_id": "ORG-1052",
+   "name": "Texas General Land Office",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Oil spill programme; Unified Command partner",
+   "abbr": "GLO",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1053",
+   "name": "Texas Commission on Environmental Quality",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Air and water quality regulation",
+   "abbr": "TCEQ",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1054",
+   "name": "Texas Department of State Health Services",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Shellfish closures, outbreak investigation",
+   "abbr": "DSHS",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1055",
+   "name": "Texas Parks and Wildlife Department",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Fishing closures",
+   "abbr": "TPWD",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1056",
+   "name": "Texas Department of Transportation",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Bridges, causeway, ferry",
+   "abbr": "TxDOT",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1057",
+   "name": "Texas Department of Public Safety",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Consumer and contractor fraud warnings",
+   "abbr": "DPS",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1058",
+   "name": "Office of the Texas Attorney General",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Consumer protection advisories",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1059",
+   "name": "Texas Department of Insurance",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Claims oversight; fraud task force",
+   "abbr": "TDI",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1060",
+   "name": "Texas Department of Licensing and Regulation",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Contractor licensing",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1061",
+   "name": "Public Utility Commission of Texas",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Utility regulation",
+   "abbr": "PUC",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1062",
+   "name": "Electric Reliability Council of Texas",
+   "type": "grid operator",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Operates the Texas grid",
+   "abbr": "ERCOT",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1063",
+   "name": "Texas Cyber Command",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "State cyber incident response",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1064",
+   "name": "Texas A&M Task Force 1",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Urban search and rescue",
+   "aliases": [
+    "Texas Task Force 1",
+    "Texas Task Force"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1065",
+   "name": "Texas A&M Engineering Extension Service",
+   "type": "state agency",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Parent of Task Force 1",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1066",
+   "name": "Texas Windstorm Insurance Association",
+   "type": "insurer of last resort",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Wind and hail coverage on the coast",
+   "abbr": "TWIA",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1067",
+   "name": "Insurance Council of Texas",
+   "type": "association",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Insurance trade group",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1068",
+   "name": "City of Corpus Christi",
+   "type": "local government",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "City government",
+   "parent_name": null
+  },
+  {
+   "org_id": "ORG-1069",
+   "name": "City of Corpus Christi Water Department",
+   "type": "local agency",
+   "parent": "ORG-1068",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "City water utility; issues boil-water notices with CBPWA",
+   "aliases": [
+    "City of Corpus Christi water utility",
+    "City of Corpus Christi Water Services",
+    "Corpus Christi Water Districts",
+    "Water Districts"
+   ],
+   "parent_name": "City of Corpus Christi",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1070",
+   "name": "Corpus Christi Fire Department",
+   "type": "local agency",
+   "parent": "ORG-1068",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Fire, EMS, rescue",
+   "abbr": "CCFD",
+   "parent_name": "City of Corpus Christi",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1071",
+   "name": "Corpus Christi Police Department",
+   "type": "local agency",
+   "parent": "ORG-1068",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Police",
+   "abbr": "CCPD",
+   "parent_name": "City of Corpus Christi",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1072",
+   "name": "City of Corpus Christi Emergency Management",
+   "type": "local agency",
+   "parent": "ORG-1068",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "City emergency operations",
+   "parent_name": "City of Corpus Christi",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1073",
+   "name": "Corpus Christi International Airport",
+   "type": "local agency",
+   "parent": "ORG-1068",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Commercial airport",
+   "parent_name": "City of Corpus Christi",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1074",
+   "name": "Nueces County",
+   "type": "local government",
+   "parent": null,
+   "jurisdiction": "Nueces County, TX",
+   "public_role": "County government",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1075",
+   "name": "Nueces County Office of Emergency Management",
+   "type": "local agency",
+   "parent": "ORG-1074",
+   "jurisdiction": "Nueces County, TX",
+   "public_role": "County emergency management; shelters and evacuation",
+   "aliases": [
+    "Nueces County Emergency Management Coordinator"
+   ],
+   "parent_name": "Nueces County",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1076",
+   "name": "Nueces County Commissioners Court",
+   "type": "local government",
+   "parent": "ORG-1074",
+   "jurisdiction": "Nueces County, TX",
+   "public_role": "County governing body; awarded the debris contract",
+   "parent_name": "Nueces County"
+  },
+  {
+   "org_id": "ORG-1077",
+   "name": "Nueces County Sheriff's Office",
+   "type": "local agency",
+   "parent": "ORG-1074",
+   "jurisdiction": "Nueces County, TX",
+   "public_role": "County law enforcement",
+   "parent_name": "Nueces County",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1078",
+   "name": "Nueces County Medical Examiner",
+   "type": "local agency",
+   "parent": "ORG-1074",
+   "jurisdiction": "Nueces County, TX",
+   "public_role": "Storm fatality counts",
+   "parent_name": "Nueces County",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1079",
+   "name": "Nueces County Appraisal District",
+   "type": "local agency",
+   "parent": null,
+   "jurisdiction": "Nueces County, TX",
+   "public_role": "Property valuations",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1080",
+   "name": "Nueces County Language Access Services",
+   "type": "local agency",
+   "parent": "ORG-1074",
+   "jurisdiction": "Nueces County, TX",
+   "public_role": "Translation of emergency notices",
+   "abbr": "NCLAS",
+   "parent_name": "Nueces County",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1081",
+   "name": "NuecesInfoLine",
+   "type": "programme",
+   "parent": "ORG-1074",
+   "jurisdiction": "Nueces County, TX",
+   "public_role": "Non-emergency information line opened Sept. 26, 2027",
+   "parent_name": "Nueces County",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1082",
+   "name": "Corpus Christi-Nueces County Public Health District",
+   "type": "local agency",
+   "parent": null,
+   "jurisdiction": "Nueces County, TX",
+   "public_role": "Public health surveillance and advisories",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1083",
+   "name": "Coastal Bend Emergency Communications Center",
+   "type": "local agency",
+   "parent": null,
+   "jurisdiction": "Nueces County, TX",
+   "public_role": "911 centre for Corpus Christi and Nueces County",
+   "abbr": "CBECC",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1084",
+   "name": "Coastal Bend Regional Transit",
+   "type": "local agency",
+   "parent": null,
+   "jurisdiction": "Nueces County, TX",
+   "public_role": "Buses; evacuation pickups",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1085",
+   "name": "Corpus Christi Independent School District",
+   "type": "school district",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Schools; shelter sites",
+   "abbr": "CCISD",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1086",
+   "name": "Richard King High School",
+   "type": "school",
+   "parent": "ORG-1085",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Shelter site",
+   "parent_name": "Corpus Christi Independent School District",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1087",
+   "name": "Del Mar College",
+   "type": "college",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Shelter site at the East campus",
+   "aliases": [
+    "Del Mar College East"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1088",
+   "name": "Texas A&M University-Corpus Christi",
+   "type": "university",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Research on equity, surge and spill",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1089",
+   "name": "San Patricio County",
+   "type": "local government",
+   "parent": null,
+   "jurisdiction": "San Patricio County, TX",
+   "public_role": "County government",
+   "parent_name": null
+  },
+  {
+   "org_id": "ORG-1090",
+   "name": "Aransas County",
+   "type": "local government",
+   "parent": null,
+   "jurisdiction": "Aransas County, TX",
+   "public_role": "County government",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1091",
+   "name": "Kleberg County",
+   "type": "local government",
+   "parent": null,
+   "jurisdiction": "Kleberg County, TX",
+   "public_role": "County government",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1092",
+   "name": "City of Port Aransas",
+   "type": "local government",
+   "parent": null,
+   "jurisdiction": "Port Aransas, TX",
+   "public_role": "City government",
+   "parent_name": null
+  },
+  {
+   "org_id": "ORG-1093",
+   "name": "City of Portland",
+   "type": "local government",
+   "parent": null,
+   "jurisdiction": "Portland, TX",
+   "public_role": "City government",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1094",
+   "name": "City of Ingleside",
+   "type": "local government",
+   "parent": null,
+   "jurisdiction": "Ingleside, TX",
+   "public_role": "City government",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1095",
+   "name": "City of Aransas Pass",
+   "type": "local government",
+   "parent": null,
+   "jurisdiction": "Aransas Pass, TX",
+   "public_role": "City government",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1096",
+   "name": "City of Rockport",
+   "type": "local government",
+   "parent": null,
+   "jurisdiction": "Rockport, TX",
+   "public_role": "City government",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1097",
+   "name": "Corpus Christi City Council",
+   "type": "local government",
+   "parent": "ORG-1068",
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "City governing body",
+   "parent_name": "City of Corpus Christi",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1098",
+   "name": "Oak Park community center",
+   "type": "community centre",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Neighbourhood centre in Oak Park",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1099",
+   "name": "Port of Corpus Christi",
+   "type": "port authority",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Deep-water port; ship channel",
+   "aliases": [
+    "Port of Corpus Christi Authority"
+   ],
+   "parent_name": null
+  },
+  {
+   "org_id": "ORG-1100",
+   "name": "Coastal Bend Power and Water Authority",
+   "type": "utility",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Electric and water utility for the Corpus Christi area",
+   "abbr": "CBPWA",
+   "aliases": [
+    "Coastal Bend Power & Water Authority",
+    "Coastal Bend Power",
+    "Water Authority"
+   ],
+   "parent_name": null
+  },
+  {
+   "org_id": "ORG-1101",
+   "name": "Meridian Controls Corp",
+   "type": "vendor",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "SCADA and historian supplier to the utility",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1102",
+   "name": "ClearPath Network Solutions",
+   "type": "vendor",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Remote-access gateway supplier to the utility",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1103",
+   "name": "Vantage Security Systems",
+   "type": "vendor",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Security monitoring supplier to the utility",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1104",
+   "name": "Bastille Networks",
+   "type": "vendor",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Firewall supplier to the utility",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1105",
+   "name": "Halden Protection",
+   "type": "vendor",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Protective relay supplier to the utility",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1106",
+   "name": "Delta Pumps & Controls",
+   "type": "vendor",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Pump parts supplier",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1107",
+   "name": "Coastal Bend Aerial Services",
+   "type": "contractor",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Aerial thermal survey contractor",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1108",
+   "name": "Meridian Transit Hosting",
+   "type": "company",
+   "parent": null,
+   "jurisdiction": "Netherlands",
+   "public_role": "Hosting provider",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1109",
+   "name": "Shoreline Regional Medical Center",
+   "type": "hospital",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Level II trauma centre",
+   "abbr": "SRMC",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1110",
+   "name": "Bay City Medical Center",
+   "type": "hospital",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Community hospital",
+   "abbr": "BCMC",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1111",
+   "name": "Rendal Terminals",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Crude terminal on the Inner Harbor",
+   "aliases": [
+    "Rendal Terminals LLC"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1112",
+   "name": "Brightwake Marine Systems",
+   "type": "vendor",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Maintains tanker cargo-control systems",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1113",
+   "name": "Brannoch Maritime Holdings",
+   "type": "company",
+   "parent": null,
+   "jurisdiction": "offshore registry",
+   "public_role": "Holding company named in a January 2028 federal filing",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1114",
+   "name": "Kalvora Maritime Holdings Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "Marshall Islands",
+   "public_role": "Owner of MT Kalvora Star",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1115",
+   "name": "Ostrel Tankers S.A.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "Panama",
+   "public_role": "Owner of MT Ostrel Bay",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1116",
+   "name": "Tanker owners' spill claims centre",
+   "type": "programme",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Takes cleanup, property and lost-income claims from the spill",
+   "aliases": [
+    "claims center"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1117",
+   "name": "Laguna Towing",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "Port Aransas, TX",
+   "public_role": "Harbor tug operator",
+   "aliases": [
+    "Laguna Towing and Salvage Inc."
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1118",
+   "name": "Gulf Relief Logistics",
+   "type": "freight forwarder",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Relief cargo forwarder",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1119",
+   "name": "Coastal Bend Bar Pilots Association",
+   "type": "association",
+   "parent": null,
+   "jurisdiction": "Port Aransas, TX",
+   "public_role": "Ship channel pilots",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1120",
+   "name": "Gulf Coast Marine Agency",
+   "type": "ship agent",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Ship agency",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1121",
+   "name": "Quellmar Fuel Partners",
+   "type": "fuel supplier",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Emergency fuel supplier to NAS Corpus Christi",
+   "aliases": [
+    "Quellmar Fuel Partners LLC"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1122",
+   "name": "Bayline Petroleum Supply",
+   "type": "fuel supplier",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Regular fuel supplier to NAS Corpus Christi; terminal flooded in the storm",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1123",
+   "name": "Vantorra Restoration LLC",
+   "type": "contractor",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Debris removal contractor to Nueces County",
+   "aliases": [
+    "Vantorra Restoration"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1124",
+   "name": "FastDry Coastal LLC",
+   "type": "contractor",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Storm restoration contractor",
+   "aliases": [
+    "FastDry Coastal"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1125",
+   "name": "Landmark Pacific Holdings LLC",
+   "type": "property company",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Property holding company",
+   "abbr": "LPH",
+   "parent_name": null
+  },
+  {
+   "org_id": "ORG-1126",
+   "name": "Duvall & Sons Property Consultants",
+   "type": "appraiser",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Property appraisals",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1127",
+   "name": "Coastal Meridian Insurance Group",
+   "type": "insurance broker",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Insurance brokerage",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1128",
+   "name": "CCC Coastal Insurance Group",
+   "type": "insurer",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Property insurer",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1129",
+   "name": "Gulf Shield Mutual Insurance",
+   "type": "insurer",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Property insurer",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1130",
+   "name": "Bayfront Property & Casualty",
+   "type": "insurer",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Property insurer",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1131",
+   "name": "Sabine National Insurance",
+   "type": "insurer",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Property insurer",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1132",
+   "name": "Palmetto Reef Insurance Co.",
+   "type": "insurer",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Property insurer",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1133",
+   "name": "FastTrack Claims Services LLC",
+   "type": "adjusting firm",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Independent claims adjusting",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1134",
+   "name": "The Bayside Ledger",
+   "type": "media outlet",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "News outlet",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1135",
+   "name": "Harborline 6 News",
+   "type": "media outlet",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "News outlet",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1136",
+   "name": "Coastline Public Radio",
+   "type": "media outlet",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "News outlet",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1137",
+   "name": "Gulfwater Maritime Report",
+   "type": "media outlet",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "News outlet",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1138",
+   "name": "Sabal Energy Wire",
+   "type": "media outlet",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "News outlet",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1139",
+   "name": "Continental Wire Service",
+   "type": "media outlet",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "News outlet",
+   "aliases": [
+    "Continental Wire"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1140",
+   "name": "Anchor & Rotor Weekly",
+   "type": "media outlet",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "News outlet",
+   "aliases": [
+    "Anchor and Rotor Weekly"
+   ],
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1141",
+   "name": "KNCB Coastal Bend Radio",
+   "type": "media outlet",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "News outlet",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1142",
+   "name": "Northlight Threat Lab",
+   "type": "research firm",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Threat research firm; published an analysis of storm rumour posts",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1143",
+   "name": "Lanternfish Energy Analytics",
+   "type": "research firm",
+   "parent": null,
+   "jurisdiction": "Houston, TX",
+   "public_role": "Energy market analysis",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1144",
+   "name": "Coastal Alert",
+   "type": "programme",
+   "parent": "ORG-1051",
+   "jurisdiction": "Texas",
+   "public_role": "Social media monitoring tool used by the state",
+   "parent_name": "Texas Division of Emergency Management",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1145",
+   "name": "Hargrove Bait & Tackle",
+   "type": "business",
+   "parent": null,
+   "jurisdiction": "Port Aransas, TX",
+   "public_role": "Bait shop near the jetties",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1146",
+   "name": "St. Jude Fellowship Hall Relief Hub",
+   "type": "church",
+   "parent": null,
+   "jurisdiction": "Corpus Christi, TX",
+   "public_role": "Neighbourhood church relief hub",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1147",
+   "name": "National Security Council",
+   "type": "federal office",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "White House national security staff",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1148",
+   "name": "Coastal Bend Colonia Alliance",
+   "type": "ngo",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Community or advocacy group",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1149",
+   "name": "Coastal Bend Legal Aid",
+   "type": "ngo",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Community or advocacy group",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1150",
+   "name": "Texas Coastal Alliance",
+   "type": "ngo",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Community or advocacy group",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1151",
+   "name": "Gulf Environmental Watch",
+   "type": "ngo",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Community or advocacy group",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1152",
+   "name": "Coastal Defenders Alliance",
+   "type": "ngo",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Community or advocacy group",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1153",
+   "name": "CC Hope Volunteer Coalition",
+   "type": "ngo",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Community or advocacy group",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1154",
+   "name": "Gulf Coast Relief Network",
+   "type": "ngo",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Community or advocacy group",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1155",
+   "name": "Aransas Pass Shrimp Co-op",
+   "type": "association",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Community or advocacy group",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1156",
+   "name": "Coastal Bend Vietnamese Fishermen",
+   "type": "association",
+   "parent": null,
+   "jurisdiction": "Texas",
+   "public_role": "Community or advocacy group",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1157",
+   "name": "Adriatic Carrier Lines Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1158",
+   "name": "Aegis Marine Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1159",
+   "name": "Aldebaran Shipmanagement Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1160",
+   "name": "Aransas Pass Bar Pilots",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1161",
+   "name": "Aransas Shipping Corp.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1162",
+   "name": "Aurora LNG Carriers AS",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1163",
+   "name": "Bayou Spirit Shipping Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1164",
+   "name": "Bendline Gas Carriers Pte. Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1165",
+   "name": "Bluewater Jones Act Carriers LLC",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1166",
+   "name": "Brasada Inland Marine",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1167",
+   "name": "Brazoria Dredging Company",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1168",
+   "name": "Brazos Tanker Corp.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1169",
+   "name": "Capehorn Bulk Carriers Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1170",
+   "name": "Cayo Largo Shipping Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1171",
+   "name": "Chinook Spirit Shipping LLC",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1172",
+   "name": "Coast Pioneer Tankers Inc.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1173",
+   "name": "Coastal Bend Bunkering LLC",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1174",
+   "name": "Coastal Bend Harbor Services",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1175",
+   "name": "Coastal Express Lines Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1176",
+   "name": "Copano Mist Tankers LLC",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1177",
+   "name": "Corpus Grain Shipping Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1178",
+   "name": "Diamond Bulk Maritime Inc.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1179",
+   "name": "Endeavor Coastal Shipping Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1180",
+   "name": "Gulf Bulk Navigation Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1181",
+   "name": "Gulf Chemical Carriers S.A.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1182",
+   "name": "Gulf Shield Response LLC",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1183",
+   "name": "Harbor Bay Shipping (HK) Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1184",
+   "name": "Harbor Island Marine Services",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1185",
+   "name": "Ingleside Star LNG Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1186",
+   "name": "Islandway Car Carriers Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1187",
+   "name": "Kyklades Tankers S.A.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1188",
+   "name": "Laguna Verde Shipping Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1189",
+   "name": "Lone Star Tankers LLC",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1190",
+   "name": "Maverick Bay Navigation S.A.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1191",
+   "name": "Meltemi Tankers Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1192",
+   "name": "Nereid Maritime Holdings LLC",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Registered owner of a motor yacht in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1193",
+   "name": "Nordic Pioneer Tankers AS",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1194",
+   "name": "Nueces Bulk Carriers S.A.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1195",
+   "name": "Orinda Maritime S.A.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1196",
+   "name": "Pacific Gas Transport Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1197",
+   "name": "Pacific Trader Shipping (HK) Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1198",
+   "name": "Pelican Ridge Fisheries LLC",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1199",
+   "name": "Permian Sun Shipping Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1200",
+   "name": "Port Aransas Excursions LLC",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1201",
+   "name": "Port Royal Container Line Inc.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1202",
+   "name": "Port of Corpus Christi Authority Police",
+   "type": "government unit",
+   "parent": "ORG-1099",
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": "Port of Corpus Christi",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1203",
+   "name": "Prince Maritime Holdings Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1204",
+   "name": "Quinta Express Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1205",
+   "name": "Redfish Maritime Inc.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1206",
+   "name": "Refugio Bay Tankers Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1207",
+   "name": "Rio Hondo Navegacion S.A.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1208",
+   "name": "Rockport Trader Shipping LLC",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1209",
+   "name": "Sable Bulk Shipping Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1210",
+   "name": "San Antonio Bay Shipping Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1211",
+   "name": "Santos Provider S.A.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1212",
+   "name": "Sennar Petroleum Carriers S.A.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1213",
+   "name": "Seren Ocean Navigation Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1214",
+   "name": "Star Gas Maritime Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1215",
+   "name": "Straits Titan Pte. Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1216",
+   "name": "Sunrise Tanker Holdings S.A.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1217",
+   "name": "Tarpon Reach Pte. Ltd.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1218",
+   "name": "U.S. Maritime Administration (operated under contract)",
+   "type": "government unit",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1219",
+   "name": "University Marine Science Institute, Port Aransas",
+   "type": "government unit",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1220",
+   "name": "Valdris Shipping Corp.",
+   "type": "shipping company",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in vessels.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1221",
+   "name": "Baypoint LNG Partners",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1222",
+   "name": "Cabeza Creek Refining LP",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1223",
+   "name": "Calallen Polymers LLC",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1224",
+   "name": "Caracara Terminal Services",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1225",
+   "name": "Coastal Plains Grain Cooperative",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1226",
+   "name": "Gregory Point Terminals",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1227",
+   "name": "Harbor Point Refining Company",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1228",
+   "name": "Llano Crude Logistics",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1229",
+   "name": "Marlowe Petroleum Logistics",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1230",
+   "name": "Nueces Bay Shipyard and Drydock Inc.",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1231",
+   "name": "Padre Midstream Export LLC",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1232",
+   "name": "Portland Reduction Works",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1233",
+   "name": "Sandhollow Midstream Partners",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1234",
+   "name": "Tres Bahias Refining and Chemicals",
+   "type": "terminal operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in terminal_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1235",
+   "name": "Bayfront AirMed",
+   "type": "aircraft operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1236",
+   "name": "Bayfront Flying Club",
+   "type": "aircraft operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1237",
+   "name": "Brazos Air Cargo",
+   "type": "aircraft operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1238",
+   "name": "Civil Air Patrol, Texas Wing",
+   "type": "government unit",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1239",
+   "name": "Coastal Plains Airways",
+   "type": "aircraft operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1240",
+   "name": "Gulf Charter Express",
+   "type": "aircraft operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1241",
+   "name": "Kleberg Ranch Aviation LLC",
+   "type": "aircraft operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1242",
+   "name": "Lone Mesa Air",
+   "type": "aircraft operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1243",
+   "name": "South Texas Aerial Surveys",
+   "type": "aircraft operator",
+   "parent": null,
+   "jurisdiction": "",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1244",
+   "name": "Texas Army National Guard, 1-149th Aviation Battalion",
+   "type": "government unit",
+   "parent": "ORG-1043",
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": "Texas Army National Guard",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1245",
+   "name": "Texas Department of Public Safety, Aircraft Operations Division",
+   "type": "government unit",
+   "parent": "ORG-1057",
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": "Texas Department of Public Safety",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1246",
+   "name": "U.S. Army, combat aviation brigade (Fort Hood)",
+   "type": "government unit",
+   "parent": "ORG-1037",
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": "U.S. Army",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1247",
+   "name": "U.S. Customs and Border Protection, Air and Marine Operations Corpus Christi",
+   "type": "government unit",
+   "parent": "ORG-1001",
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": "Department of Homeland Security",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1248",
+   "name": "U.S. Navy, Training Air Wing Four",
+   "type": "government unit",
+   "parent": "ORG-1030",
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": "U.S. Navy",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1249",
+   "name": "U.S. Navy, Training Air Wing Two",
+   "type": "government unit",
+   "parent": "ORG-1030",
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": "U.S. Navy",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1250",
+   "name": "U.S. Navy, helicopter sea combat squadron detachment",
+   "type": "government unit",
+   "parent": "ORG-1030",
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in aircraft_registry.json",
+   "parent_name": "U.S. Navy",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1251",
+   "name": "NOAA National Data Buoy Center",
+   "type": "government unit",
+   "parent": "ORG-1017",
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in sensor_registry.json",
+   "parent_name": "National Oceanic and Atmospheric Administration",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1252",
+   "name": "NOAA National Ocean Service",
+   "type": "government unit",
+   "parent": "ORG-1017",
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in sensor_registry.json",
+   "parent_name": "National Oceanic and Atmospheric Administration",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1253",
+   "name": "TCEQ mobile monitoring",
+   "type": "government unit",
+   "parent": "ORG-1053",
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in sensor_registry.json",
+   "parent_name": "Texas Commission on Environmental Quality",
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1254",
+   "name": "USGS",
+   "type": "government unit",
+   "parent": null,
+   "jurisdiction": "United States",
+   "public_role": "Named as operator or owner in sensor_registry.json",
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1255",
+   "name": "Lone Star Vessel Agency",
+   "type": "ship agent",
+   "parent": null,
+   "jurisdiction": "Coastal Bend",
+   "public_role": "Files notices of arrival and arranges pilots, tugs and berths for calling ships",
+   "abbr": null,
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1256",
+   "name": "Coastal Bend Ship Agency",
+   "type": "ship agent",
+   "parent": null,
+   "jurisdiction": "Coastal Bend",
+   "public_role": "Files notices of arrival and arranges pilots, tugs and berths for calling ships",
+   "abbr": null,
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1257",
+   "name": "Aransas Maritime Agents",
+   "type": "ship agent",
+   "parent": null,
+   "jurisdiction": "Coastal Bend",
+   "public_role": "Files notices of arrival and arranges pilots, tugs and berths for calling ships",
+   "abbr": null,
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  },
+  {
+   "org_id": "ORG-1258",
+   "name": "Tidewater Bulk Fuels",
+   "type": "fuel supplier",
+   "parent": null,
+   "jurisdiction": "Coastal Bend",
+   "public_role": "Regular bulk fuel supplier to Naval Air Station Corpus Christi; its depot flooded in the storm",
+   "abbr": null,
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named as background (the supplier that flooded); makes no deliveries in the data"
+  },
+  {
+   "org_id": "ORG-1259",
+   "name": "WKCB-AM",
+   "type": "broadcast relay station",
+   "parent": null,
+   "jurisdiction": "Coastal Bend",
+   "public_role": "Emergency Alert System relay station for the Corpus Christi market",
+   "abbr": null,
+   "parent_name": null,
+   "reference_only": true,
+   "reference_reason": "named in registries or stories; has no record of its own in the data streams"
+  }
+ ],
+ "broadcast_stations": [
+  {
+   "station_id": "OUT-01",
+   "name": "The Bayside Ledger",
+   "kind": "Local daily newspaper (print and web), Corpus Christi",
+   "org_id": "ORG-1134"
+  },
+  {
+   "station_id": "OUT-02",
+   "name": "Harborline 6 News",
+   "kind": "Local TV station website",
+   "org_id": "ORG-1135"
+  },
+  {
+   "station_id": "OUT-03",
+   "name": "Coastline Public Radio",
+   "kind": "Regional public radio newsroom (web stories)",
+   "org_id": "ORG-1136"
+  },
+  {
+   "station_id": "OUT-04",
+   "name": "Gulfwater Maritime Report",
+   "kind": "Maritime trade publication",
+   "org_id": "ORG-1137"
+  },
+  {
+   "station_id": "OUT-05",
+   "name": "Sabal Energy Wire",
+   "kind": "Energy and markets wire",
+   "org_id": "ORG-1138"
+  },
+  {
+   "station_id": "OUT-06",
+   "name": "Continental Wire Service",
+   "kind": "National news wire",
+   "org_id": "ORG-1139"
+  },
+  {
+   "station_id": "OUT-07",
+   "name": "Anchor & Rotor Weekly",
+   "kind": "Military community weekly (NAS Corpus Christi, Army depot, NAS Kingsville)",
+   "org_id": "ORG-1140"
+  },
+  {
+   "station_id": "OUT-08",
+   "name": "KNCB Coastal Bend Radio",
+   "kind": "Spanish-language AM radio station (1480 AM), Corpus Christi",
+   "org_id": "ORG-1141"
+  },
+  {
+   "station_id": "WKCB-AM",
+   "name": "WKCB-AM relay station",
+   "kind": "Emergency Alert System relay station",
+   "org_id": "ORG-1259"
+  }
+ ]
+}

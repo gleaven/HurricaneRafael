@@ -1,0 +1,851 @@
+{
+  "storm": "Hurricane Rafael AL092027",
+  "season": 2027,
+  "basin": "Atlantic",
+  "note": "Synthetic NHC-format advisories for hackathon scenario. Advisory content follows NHC text advisory structure.",
+  "count": 18,
+  "advisories": [
+    {
+      "advisory_number": 1,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-03T12:00:00Z",
+      "issued_cdt": "0700 AM CDT FRI SEP 03 2027",
+      "headline": "Tropical Storm Rafael forms in the Caribbean",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 16.34,
+        "lon": -81.48,
+        "dist_mi_from_corpus_christi": 1288,
+        "max_sustained_winds_kt": 34,
+        "max_sustained_winds_mph": 39,
+        "min_central_pressure_mb": 1005,
+        "movement": "WNW AT 4 KT",
+        "atcf_status": "TS"
+      },
+      "hours_to_landfall": 258,
+      "forecast": {
+        "12h": {
+          "lat": 16.78,
+          "lon": -82.16,
+          "wind_kt": 38
+        },
+        "24h": {
+          "lat": 17.33,
+          "lon": -83.17,
+          "wind_kt": 43
+        },
+        "48h": {
+          "lat": 18.65,
+          "lon": -85.5,
+          "wind_kt": 55
+        },
+        "72h": {
+          "lat": 19.63,
+          "lon": -87.17,
+          "wind_kt": 55
+        }
+      },
+      "discussion_key_points": [
+        "A well-defined tropical wave associated with a broad low-pressure area over the central Caribbean has organized into Tropical Storm Rafael.",
+        "Environmental conditions are favorable with warm sea-surface temperatures and low vertical wind shear."
+      ]
+    },
+    {
+      "advisory_number": 5,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-05T00:00:00Z",
+      "issued_cdt": "0700 PM CDT SAT SEP 04 2027",
+      "headline": "Rafael strengthens, expected to enter Gulf of Mexico",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 18.0,
+        "lon": -84.5,
+        "dist_mi_from_corpus_christi": 1063,
+        "max_sustained_winds_kt": 50,
+        "max_sustained_winds_mph": 58,
+        "min_central_pressure_mb": 996,
+        "movement": "WNW AT 7 KT",
+        "atcf_status": "TS"
+      },
+      "hours_to_landfall": 222,
+      "forecast": {
+        "12h": {
+          "lat": 18.65,
+          "lon": -85.5,
+          "wind_kt": 55
+        },
+        "24h": {
+          "lat": 19.3,
+          "lon": -86.5,
+          "wind_kt": 60
+        },
+        "48h": {
+          "lat": 19.97,
+          "lon": -87.83,
+          "wind_kt": 50
+        },
+        "72h": {
+          "lat": 20.8,
+          "lon": -89.75,
+          "wind_kt": 58
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is tracking west-northwest and is expected to pass over or near the Yucatan Peninsula within 24-48 hours.",
+        "Land interaction may cause temporary weakening before the storm enters the Bay of Campeche/Gulf of Mexico."
+      ]
+    },
+    {
+      "advisory_number": 9,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-06T00:00:00Z",
+      "issued_cdt": "0700 PM CDT SUN SEP 05 2027",
+      "headline": "Rafael crosses Yucatan, temporarily weakens",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 19.3,
+        "lon": -86.5,
+        "dist_mi_from_corpus_christi": 906,
+        "max_sustained_winds_kt": 60,
+        "max_sustained_winds_mph": 69,
+        "min_central_pressure_mb": 988,
+        "movement": "WNW AT 6 KT",
+        "atcf_status": "TS"
+      },
+      "hours_to_landfall": 198,
+      "forecast": {
+        "12h": {
+          "lat": 19.63,
+          "lon": -87.17,
+          "wind_kt": 55
+        },
+        "24h": {
+          "lat": 19.97,
+          "lon": -87.83,
+          "wind_kt": 50
+        },
+        "48h": {
+          "lat": 20.8,
+          "lon": -89.75,
+          "wind_kt": 58
+        },
+        "72h": {
+          "lat": 22.0,
+          "lon": -92.3,
+          "wind_kt": 75
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is tracking west-northwest and is expected to pass over or near the Yucatan Peninsula within 24-48 hours.",
+        "Land interaction may cause temporary weakening before the storm enters the Bay of Campeche/Gulf of Mexico."
+      ]
+    },
+    {
+      "advisory_number": 13,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-07T00:00:00Z",
+      "issued_cdt": "0700 PM CDT MON SEP 06 2027",
+      "headline": "Rafael enters Gulf of Mexico, reorganizing",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 19.97,
+        "lon": -87.83,
+        "dist_mi_from_corpus_christi": 811,
+        "max_sustained_winds_kt": 50,
+        "max_sustained_winds_mph": 58,
+        "min_central_pressure_mb": 996,
+        "movement": "WNW AT 4 KT",
+        "atcf_status": "TS"
+      },
+      "hours_to_landfall": 174,
+      "forecast": {
+        "12h": {
+          "lat": 20.3,
+          "lon": -88.5,
+          "wind_kt": 45
+        },
+        "24h": {
+          "lat": 20.8,
+          "lon": -89.75,
+          "wind_kt": 58
+        },
+        "48h": {
+          "lat": 22.0,
+          "lon": -92.3,
+          "wind_kt": 75
+        },
+        "72h": {
+          "lat": 23.2,
+          "lon": -93.6,
+          "wind_kt": 85
+        }
+      },
+      "discussion_key_points": []
+    },
+    {
+      "advisory_number": 17,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-07T18:00:00Z",
+      "issued_cdt": "0100 PM CDT TUE SEP 07 2027",
+      "headline": "Rafael strengthening rapidly over warm Gulf waters",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 20.55,
+        "lon": -89.12,
+        "dist_mi_from_corpus_christi": 723,
+        "max_sustained_winds_kt": 51,
+        "max_sustained_winds_mph": 59,
+        "min_central_pressure_mb": 995,
+        "movement": "WNW AT 6 KT",
+        "atcf_status": "TS"
+      },
+      "hours_to_landfall": 156,
+      "forecast": {
+        "12h": {
+          "lat": 21.05,
+          "lon": -90.38,
+          "wind_kt": 64
+        },
+        "24h": {
+          "lat": 21.65,
+          "lon": -91.65,
+          "wind_kt": 72
+        },
+        "48h": {
+          "lat": 22.9,
+          "lon": -93.27,
+          "wind_kt": 82
+        },
+        "72h": {
+          "lat": 24.02,
+          "lon": -94.5,
+          "wind_kt": 89
+        }
+      },
+      "discussion_key_points": [
+        "Rafael has entered the Gulf of Mexico and is encountering exceptionally warm sea-surface temperatures (29-31 C).",
+        "A deepening mid-level ridge is steering Rafael northwestward toward the Texas coast."
+      ]
+    },
+    {
+      "advisory_number": 19,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-08T06:00:00Z",
+      "issued_cdt": "0100 AM CDT WED SEP 08 2027",
+      "headline": "Rafael becomes a hurricane",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 21.05,
+        "lon": -90.38,
+        "dist_mi_from_corpus_christi": 642,
+        "max_sustained_winds_kt": 64,
+        "max_sustained_winds_mph": 74,
+        "min_central_pressure_mb": 985,
+        "movement": "WNW AT 6 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 144,
+      "forecast": {
+        "12h": {
+          "lat": 21.65,
+          "lon": -91.65,
+          "wind_kt": 72
+        },
+        "24h": {
+          "lat": 22.3,
+          "lon": -92.62,
+          "wind_kt": 78
+        },
+        "48h": {
+          "lat": 23.48,
+          "lon": -93.9,
+          "wind_kt": 86
+        },
+        "72h": {
+          "lat": 24.57,
+          "lon": -95.03,
+          "wind_kt": 91
+        }
+      },
+      "discussion_key_points": [
+        "Rafael has entered the Gulf of Mexico and is encountering exceptionally warm sea-surface temperatures (29-31 C).",
+        "A deepening mid-level ridge is steering Rafael northwestward toward the Texas coast."
+      ]
+    },
+    {
+      "advisory_number": 25,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-10T00:00:00Z",
+      "issued_cdt": "0700 PM CDT THU SEP 09 2027",
+      "headline": "Rafael intensifies to Category 2 \u2014 Texas landfall watch issued",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 23.2,
+        "lon": -93.6,
+        "dist_mi_from_corpus_christi": 396,
+        "max_sustained_winds_kt": 85,
+        "max_sustained_winds_mph": 98,
+        "min_central_pressure_mb": 968,
+        "movement": "NW AT 4 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 102,
+      "forecast": {
+        "12h": {
+          "lat": 23.75,
+          "lon": -94.2,
+          "wind_kt": 88
+        },
+        "24h": {
+          "lat": 24.3,
+          "lon": -94.8,
+          "wind_kt": 90
+        },
+        "48h": {
+          "lat": 25.4,
+          "lon": -95.7,
+          "wind_kt": 95
+        },
+        "72h": {
+          "lat": 26.4,
+          "lon": -96.4,
+          "wind_kt": 100
+        }
+      },
+      "discussion_key_points": [
+        "Rafael has entered the Gulf of Mexico and is encountering exceptionally warm sea-surface temperatures (29-31 C).",
+        "A deepening mid-level ridge is steering Rafael northwestward toward the Texas coast.",
+        "Rapid intensification (RI) is occurring. Rafael has intensified more than 35 knots in 24 hours.",
+        "Rafael is forecast to continue strengthening to Category 3 intensity before landfall.",
+        "A Hurricane Watch has been issued for portions of the Texas Coastal Bend.",
+        "Preparation time is running out \u2014 residents in Zones A and B should evacuate immediately."
+      ]
+    },
+    {
+      "advisory_number": 29,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-11T00:00:00Z",
+      "issued_cdt": "0700 PM CDT FRI SEP 10 2027",
+      "headline": "HURRICANE WATCH issued for Coastal Bend \u2014 Rafael approaching",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 24.3,
+        "lon": -94.8,
+        "dist_mi_from_corpus_christi": 291,
+        "max_sustained_winds_kt": 90,
+        "max_sustained_winds_mph": 104,
+        "min_central_pressure_mb": 963,
+        "movement": "NW AT 4 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 78,
+      "forecast": {
+        "12h": {
+          "lat": 24.85,
+          "lon": -95.25,
+          "wind_kt": 92
+        },
+        "24h": {
+          "lat": 25.4,
+          "lon": -95.7,
+          "wind_kt": 95
+        },
+        "48h": {
+          "lat": 26.4,
+          "lon": -96.4,
+          "wind_kt": 100
+        },
+        "72h": {
+          "lat": 27.5,
+          "lon": -97.0,
+          "wind_kt": 108
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is forecast to continue strengthening to Category 3 intensity before landfall.",
+        "A Hurricane Watch has been issued for portions of the Texas Coastal Bend.",
+        "Preparation time is running out \u2014 residents in Zones A and B should evacuate immediately."
+      ]
+    },
+    {
+      "advisory_number": 33,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-12T00:00:00Z",
+      "issued_cdt": "0700 PM CDT SAT SEP 11 2027",
+      "headline": "HURRICANE WARNING issued for Coastal Bend \u2014 dangerous Cat 2",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 25.4,
+        "lon": -95.7,
+        "dist_mi_from_corpus_christi": 196,
+        "max_sustained_winds_kt": 95,
+        "max_sustained_winds_mph": 109,
+        "min_central_pressure_mb": 958,
+        "movement": "NW AT 3 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 54,
+      "forecast": {
+        "12h": {
+          "lat": 25.9,
+          "lon": -96.05,
+          "wind_kt": 98
+        },
+        "24h": {
+          "lat": 26.4,
+          "lon": -96.4,
+          "wind_kt": 100
+        },
+        "48h": {
+          "lat": 27.5,
+          "lon": -97.0,
+          "wind_kt": 108
+        },
+        "72h": {
+          "lat": 28.5,
+          "lon": -98.3,
+          "wind_kt": 45
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is forecast to make landfall along the Texas Coastal Bend within 54 hours.",
+        "Life-threatening storm surge of 9-13 feet above normal tide levels is expected from Port Aransas to Rockport.",
+        "Rainfall of 10-20 inches (locally 25 inches) will cause catastrophic flooding."
+      ]
+    },
+    {
+      "advisory_number": 35,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-12T06:00:00Z",
+      "issued_cdt": "0100 AM CDT SUN SEP 12 2027",
+      "headline": "Rafael strengthens to Category 3 \u2014 life-threatening storm surge expected",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 25.65,
+        "lon": -95.88,
+        "dist_mi_from_corpus_christi": 176,
+        "max_sustained_winds_kt": 96,
+        "max_sustained_winds_mph": 110,
+        "min_central_pressure_mb": 957,
+        "movement": "NW AT 3 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 48,
+      "forecast": {
+        "12h": {
+          "lat": 26.15,
+          "lon": -96.23,
+          "wind_kt": 99
+        },
+        "24h": {
+          "lat": 26.7,
+          "lon": -96.58,
+          "wind_kt": 102
+        },
+        "48h": {
+          "lat": 27.75,
+          "lon": -97.13,
+          "wind_kt": 110
+        },
+        "72h": {
+          "lat": 28.8,
+          "lon": -98.7,
+          "wind_kt": 30
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is forecast to make landfall along the Texas Coastal Bend within 48 hours.",
+        "Life-threatening storm surge of 9-13 feet above normal tide levels is expected from Port Aransas to Rockport.",
+        "Rainfall of 10-20 inches (locally 25 inches) will cause catastrophic flooding."
+      ]
+    },
+    {
+      "advisory_number": 37,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-12T12:00:00Z",
+      "issued_cdt": "0700 AM CDT SUN SEP 12 2027",
+      "headline": "Category 3 Rafael on track for Corpus Christi area",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 25.9,
+        "lon": -96.05,
+        "dist_mi_from_corpus_christi": 155,
+        "max_sustained_winds_kt": 98,
+        "max_sustained_winds_mph": 113,
+        "min_central_pressure_mb": 955,
+        "movement": "NW AT 3 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 42,
+      "forecast": {
+        "12h": {
+          "lat": 26.4,
+          "lon": -96.4,
+          "wind_kt": 100
+        },
+        "24h": {
+          "lat": 27.0,
+          "lon": -96.75,
+          "wind_kt": 105
+        },
+        "48h": {
+          "lat": 27.98,
+          "lon": -97.52,
+          "wind_kt": 85
+        },
+        "72h": {
+          "lat": 29.15,
+          "lon": -99.05,
+          "wind_kt": 25
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is forecast to make landfall along the Texas Coastal Bend within 42 hours.",
+        "Life-threatening storm surge of 9-13 feet above normal tide levels is expected from Port Aransas to Rockport.",
+        "Rainfall of 10-20 inches (locally 25 inches) will cause catastrophic flooding."
+      ]
+    },
+    {
+      "advisory_number": 41,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-13T00:00:00Z",
+      "issued_cdt": "0700 PM CDT SUN SEP 12 2027",
+      "headline": "URGENT: Rafael Cat 3 \u2014 mandatory evacuation Zones A&B in effect",
+      "watches_warnings": "HURRICANE WARNING IN EFFECT FROM BAFFIN BAY TO HIGH ISLAND",
+      "position": {
+        "lat": 26.4,
+        "lon": -96.4,
+        "dist_mi_from_corpus_christi": 115,
+        "max_sustained_winds_kt": 100,
+        "max_sustained_winds_mph": 115,
+        "min_central_pressure_mb": 952,
+        "movement": "NW AT 3 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 30,
+      "forecast": {
+        "12h": {
+          "lat": 27.0,
+          "lon": -96.75,
+          "wind_kt": 105
+        },
+        "24h": {
+          "lat": 27.5,
+          "lon": -97.0,
+          "wind_kt": 108
+        },
+        "48h": {
+          "lat": 28.5,
+          "lon": -98.3,
+          "wind_kt": 45
+        },
+        "72h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is forecast to make landfall along the Texas Coastal Bend within 30 hours.",
+        "Life-threatening storm surge of 9-13 feet above normal tide levels is expected from Port Aransas to Rockport.",
+        "Rainfall of 10-20 inches (locally 25 inches) will cause catastrophic flooding.",
+        "Dangerous Category 3 winds will cause major structural damage to well-built homes and widespread power outages."
+      ]
+    },
+    {
+      "advisory_number": 43,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-13T06:00:00Z",
+      "issued_cdt": "0100 AM CDT MON SEP 13 2027",
+      "headline": "Outer rainbands impacting Corpus Christi area",
+      "watches_warnings": "",
+      "position": {
+        "lat": 26.7,
+        "lon": -96.58,
+        "dist_mi_from_corpus_christi": 91,
+        "max_sustained_winds_kt": 102,
+        "max_sustained_winds_mph": 117,
+        "min_central_pressure_mb": 950,
+        "movement": "NNW AT 3 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 24,
+      "forecast": {
+        "12h": {
+          "lat": 27.25,
+          "lon": -96.88,
+          "wind_kt": 107
+        },
+        "24h": {
+          "lat": 27.75,
+          "lon": -97.13,
+          "wind_kt": 110
+        },
+        "48h": {
+          "lat": 28.8,
+          "lon": -98.7,
+          "wind_kt": 30
+        },
+        "72h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is forecast to make landfall along the Texas Coastal Bend within 24 hours.",
+        "Life-threatening storm surge of 9-13 feet above normal tide levels is expected from Port Aransas to Rockport.",
+        "Rainfall of 10-20 inches (locally 25 inches) will cause catastrophic flooding.",
+        "Dangerous Category 3 winds will cause major structural damage to well-built homes and widespread power outages."
+      ]
+    },
+    {
+      "advisory_number": 45,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-13T12:00:00Z",
+      "issued_cdt": "0700 AM CDT MON SEP 13 2027",
+      "headline": "Rafael approaching coast, life-threatening conditions imminent",
+      "watches_warnings": "",
+      "position": {
+        "lat": 27.0,
+        "lon": -96.75,
+        "dist_mi_from_corpus_christi": 68,
+        "max_sustained_winds_kt": 105,
+        "max_sustained_winds_mph": 121,
+        "min_central_pressure_mb": 948,
+        "movement": "NNW AT 3 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 18,
+      "forecast": {
+        "12h": {
+          "lat": 27.5,
+          "lon": -97.0,
+          "wind_kt": 108
+        },
+        "24h": {
+          "lat": 27.98,
+          "lon": -97.52,
+          "wind_kt": 85
+        },
+        "48h": {
+          "lat": 29.15,
+          "lon": -99.05,
+          "wind_kt": 25
+        },
+        "72h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is forecast to make landfall along the Texas Coastal Bend within 18 hours.",
+        "Life-threatening storm surge of 9-13 feet above normal tide levels is expected from Port Aransas to Rockport.",
+        "Rainfall of 10-20 inches (locally 25 inches) will cause catastrophic flooding.",
+        "Dangerous Category 3 winds will cause major structural damage to well-built homes and widespread power outages."
+      ]
+    },
+    {
+      "advisory_number": 47,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-13T18:00:00Z",
+      "issued_cdt": "0100 PM CDT MON SEP 13 2027",
+      "headline": "Rafael makes landfall imminent \u2014 STAY OFF ROADS",
+      "watches_warnings": "",
+      "position": {
+        "lat": 27.25,
+        "lon": -96.88,
+        "dist_mi_from_corpus_christi": 50,
+        "max_sustained_winds_kt": 107,
+        "max_sustained_winds_mph": 123,
+        "min_central_pressure_mb": 946,
+        "movement": "NNW AT 3 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 12,
+      "forecast": {
+        "12h": {
+          "lat": 27.75,
+          "lon": -97.13,
+          "wind_kt": 110
+        },
+        "24h": {
+          "lat": 28.2,
+          "lon": -97.9,
+          "wind_kt": 60
+        },
+        "48h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        },
+        "72h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is forecast to make landfall along the Texas Coastal Bend within 12 hours.",
+        "Life-threatening storm surge of 9-13 feet above normal tide levels is expected from Port Aransas to Rockport.",
+        "Rainfall of 10-20 inches (locally 25 inches) will cause catastrophic flooding.",
+        "Dangerous Category 3 winds will cause major structural damage to well-built homes and widespread power outages."
+      ]
+    },
+    {
+      "advisory_number": 49,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-14T06:00:00Z",
+      "issued_cdt": "0100 AM CDT TUE SEP 14 2027",
+      "headline": "Rafael makes landfall near Port Aransas as Cat 3",
+      "watches_warnings": "HURRICANE WARNING REMAINS IN EFFECT FOR PORTIONS OF THE TEXAS COASTAL BEND",
+      "position": {
+        "lat": 27.75,
+        "lon": -97.13,
+        "dist_mi_from_corpus_christi": 17,
+        "max_sustained_winds_kt": 110,
+        "max_sustained_winds_mph": 127,
+        "min_central_pressure_mb": 943,
+        "movement": "NNW AT 3 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 0,
+      "forecast": {
+        "12h": {
+          "lat": 28.2,
+          "lon": -97.9,
+          "wind_kt": 60
+        },
+        "24h": {
+          "lat": 28.8,
+          "lon": -98.7,
+          "wind_kt": 30
+        },
+        "48h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        },
+        "72h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        }
+      },
+      "discussion_key_points": [
+        "RAFAEL HAS MADE LANDFALL NEAR PORT ARANSAS TEXAS AS A CATEGORY 3 HURRICANE.",
+        "Dangerous storm surge is inundating coastal areas from Baffin Bay to Matagorda Bay.",
+        "Power outages are widespread across Nueces, San Patricio, and Aransas Counties."
+      ]
+    },
+    {
+      "advisory_number": 51,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-14T12:00:00Z",
+      "issued_cdt": "0700 AM CDT TUE SEP 14 2027",
+      "headline": "Rafael weakening rapidly over South Texas",
+      "watches_warnings": "HURRICANE WARNING REMAINS IN EFFECT FOR PORTIONS OF THE TEXAS COASTAL BEND",
+      "position": {
+        "lat": 27.98,
+        "lon": -97.52,
+        "dist_mi_from_corpus_christi": 14,
+        "max_sustained_winds_kt": 85,
+        "max_sustained_winds_mph": 98,
+        "min_central_pressure_mb": 968,
+        "movement": "WNW AT 4 KT",
+        "atcf_status": "HU"
+      },
+      "hours_to_landfall": 0,
+      "forecast": {
+        "12h": {
+          "lat": 28.5,
+          "lon": -98.3,
+          "wind_kt": 45
+        },
+        "24h": {
+          "lat": 29.15,
+          "lon": -99.05,
+          "wind_kt": 25
+        },
+        "48h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        },
+        "72h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is weakening as it moves inland over South Texas.",
+        "Rainfall flooding remains the primary threat across a wide area inland."
+      ]
+    },
+    {
+      "advisory_number": 53,
+      "atcf_id": "AL092027",
+      "storm_name": "RAFAEL",
+      "issued_utc": "2027-09-14T18:00:00Z",
+      "issued_cdt": "0100 PM CDT TUE SEP 14 2027",
+      "headline": "Rafael becomes post-tropical over South Texas",
+      "watches_warnings": "HURRICANE WARNING REMAINS IN EFFECT FOR PORTIONS OF THE TEXAS COASTAL BEND",
+      "position": {
+        "lat": 28.2,
+        "lon": -97.9,
+        "dist_mi_from_corpus_christi": 41,
+        "max_sustained_winds_kt": 60,
+        "max_sustained_winds_mph": 69,
+        "min_central_pressure_mb": 988,
+        "movement": "WNW AT 4 KT",
+        "atcf_status": "TS"
+      },
+      "hours_to_landfall": 0,
+      "forecast": {
+        "12h": {
+          "lat": 28.8,
+          "lon": -98.7,
+          "wind_kt": 30
+        },
+        "24h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        },
+        "48h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        },
+        "72h": {
+          "lat": 29.5,
+          "lon": -99.4,
+          "wind_kt": 20
+        }
+      },
+      "discussion_key_points": [
+        "Rafael is weakening as it moves inland over South Texas.",
+        "Rainfall flooding remains the primary threat across a wide area inland."
+      ]
+    }
+  ]
+}

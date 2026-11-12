@@ -1,0 +1,232 @@
+{
+ "note": "Every source of positions in the corpus and the geographic rule it must satisfy. scripts/check_geo.py reads this. Add an entry whenever a stream with coordinates is added.",
+ "sources": [
+  {
+   "name": "AIS vessel positions",
+   "glob": "05_other_sources/ais/*.csv",
+   "lat": "LAT",
+   "lon": "LON",
+   "rule": "vessel",
+   "id": "MMSI",
+   "time": "BaseDateTime",
+   "draft_m": "Draft"
+  },
+  {
+   "name": "ADS-B ground positions",
+   "glob": "05_other_sources/adsb/*.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "aircraft_ground",
+   "id": "callsign",
+   "ground": "on_ground"
+  },
+  {
+   "name": "911 incident locations",
+   "glob": "05_other_sources/911/*.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "incident",
+   "id": "incident_number"
+  },
+  {
+   "name": "Damage assessment structures",
+   "glob": "05_other_sources/infrastructure/*.csv",
+   "lat": "LATITUDE",
+   "lon": "LONGITUDE",
+   "rule": "land_fixed",
+   "id": "structure_id"
+  },
+  {
+   "name": "Air monitors",
+   "glob": "05_other_sources/env_sensors/aqs_*.csv",
+   "lat": "Latitude",
+   "lon": "Longitude",
+   "rule": "land_fixed",
+   "id": "AQS_Site_ID",
+   "allow_missing": true
+  },
+  {
+   "name": "Water-quality sondes",
+   "glob": "05_other_sources/env_sensors/water_quality_*.csv",
+   "lat": "Latitude",
+   "lon": "Longitude",
+   "rule": "water_fixed",
+   "id": "SensorID",
+   "shore_ok": true
+  },
+  {
+   "name": "Weather stations",
+   "glob": "05_other_sources/weather/*ASOS*.csv",
+   "lat": "StnLat",
+   "lon": "StnLon",
+   "rule": "land_fixed",
+   "id": "StationName"
+  },
+  {
+   "name": "Vehicle locations (AVL)",
+   "glob": "05_other_sources/avl/*.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "vehicle",
+   "id": "unit_id",
+   "optional": true
+  },
+  {
+   "name": "Registry: facilities",
+   "glob": "06_data_streams/facility_registry.json",
+   "items": "facilities",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "land_fixed",
+   "id": "facility_id"
+  },
+  {
+   "name": "Registry: infrastructure",
+   "glob": "06_data_streams/infrastructure_assets.json",
+   "items": "assets",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "land_fixed",
+   "id": "asset_id"
+  },
+  {
+   "name": "Registry: air monitors",
+   "glob": "06_data_streams/sensor_registry.json",
+   "items": "air_monitors",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "land_fixed",
+   "id": "sensor_id"
+  },
+  {
+   "name": "Registry: weather stations",
+   "glob": "06_data_streams/sensor_registry.json",
+   "items": "weather_stations",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "land_fixed",
+   "id": "sensor_id"
+  },
+  {
+   "name": "Registry: tide gauges",
+   "glob": "06_data_streams/sensor_registry.json",
+   "items": "tide_gauges",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "water_fixed",
+   "id": "sensor_id",
+   "shore_ok": true
+  },
+  {
+   "name": "Registry: sondes",
+   "glob": "06_data_streams/sensor_registry.json",
+   "items": "water_quality_sondes",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "water_fixed",
+   "id": "sensor_id"
+  },
+  {
+   "name": "Registry: buoys",
+   "glob": "06_data_streams/sensor_registry.json",
+   "items": "buoys",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "water_fixed",
+   "id": "sensor_id"
+  },
+  {
+   "name": "Registry: berths",
+   "glob": "06_data_streams/terminal_registry.json",
+   "items": "berths",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "berth",
+   "id": "berth_id",
+   "min_depth_field": "min_channel_depth_ft"
+  },
+  {
+   "name": "Registry: anchorage points",
+   "glob": "06_data_streams/terminal_registry.json",
+   "items": "anchorage_positions",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "water_fixed",
+   "id": "position_id"
+  },
+  {
+   "name": "Registry: aircraft home pads",
+   "glob": "06_data_streams/aircraft_registry.json",
+   "items": "parking_positions",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "airfield_fixed",
+   "id": "position_id"
+  },
+  {
+   "name": "Registry: unit stations",
+   "glob": "06_data_streams/cad_units.json",
+   "items": "stations",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "station",
+   "id": "station_id"
+  },
+  {
+   "name": "Registry: stream gauges",
+   "glob": "06_data_streams/sensor_registry.json",
+   "items": "stream_gauges",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "vehicle",
+   "tolerance_m": 40,
+   "id": "sensor_id"
+  },
+  {
+   "name": "Registry: bridge wind sensors",
+   "glob": "06_data_streams/sensor_registry.json",
+   "items": "bridge_wind_sensors",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "vehicle",
+   "tolerance_m": 40,
+   "id": "sensor_id"
+  },
+  {
+   "name": "Registry: wastewater sampling sites",
+   "glob": "06_data_streams/sensor_registry.json",
+   "items": "wastewater_sampling_sites",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "land_fixed",
+   "id": "sensor_id"
+  },
+  {
+   "name": "Registry: small-craft slips",
+   "glob": "06_data_streams/terminal_registry.json",
+   "items": "slips",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "water_fixed",
+   "id": "slip_id"
+  },
+  {
+   "name": "Registry: sea gates",
+   "glob": "06_data_streams/terminal_registry.json",
+   "items": "sea_gates",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "water_fixed",
+   "id": "gate_id"
+  },
+  {
+   "name": "Registry: drone launch sites",
+   "glob": "06_data_streams/drone_operators.json",
+   "items": "launch_sites",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "land_fixed",
+   "id": "site_id"
+  }
+ ]
+}

@@ -1,0 +1,159 @@
+{
+  "source": "public_health",
+  "folder": "05_other_sources/public_health/",
+  "format": "CSV",
+  "standard": "CDC NSSP-style emergency department line list; HHS Protect-style daily hospital capacity with power and fuel status; daily syndromic counts; CDC NWSS-style wastewater surveillance",
+  "reference": "https://www.cdc.gov/nssp/php/onboarding-resources/element-prioritization.html",
+  "verified": true,
+  "notes": "Seven emergency departments under their facility_registry.json ids. Visit_Date and Report_Date are local calendar dates (US Central); Arrive_Date_Time is UTC. Chief complaints are free triage text; CC_Category is the keyword category a syndromic system assigns. syndrome_summary.csv is an exact daily count of the line list. eas_broadcasts.csv in the same folder belongs to the eas_alerts stream.",
+  "entity_catalog": "06_data_streams/facility_registry.json (facilities[] with facility_type_code HOSP-ED), 06_data_streams/areas.json (ZIP and census-tract areas), 06_data_streams/infrastructure_assets.json (WW-01 to WW-05)",
+  "files": [
+    {
+      "file": "ed_visits_<Facility_ID>.csv",
+      "stream": "ed_visits",
+      "fields": [
+        "Visit_ID",
+        "Facility_ID",
+        "Facility_Name",
+        "Patient_Class",
+        "Visit_Date",
+        "Arrive_Date_Time",
+        "Arrival_Mode",
+        "Triage_Acuity_ESI",
+        "Chief_Complaint_Text",
+        "CC_Category",
+        "Age",
+        "Age_Group",
+        "Sex",
+        "Race_Ethnicity",
+        "Preferred_Language",
+        "Patient_ZIP",
+        "Patient_Tract",
+        "Onset_Date",
+        "Disposition",
+        "Discharge_Diagnosis_ICD10",
+        "Facility_County"
+      ],
+      "field_notes": {
+        "Visit_ID": "<hospital>-<yymmdd>-<sequence>",
+        "Arrival_Mode": "EMS or Walk-in",
+        "Triage_Acuity_ESI": "Emergency Severity Index 1 (most urgent) to 5",
+        "CC_Category": "GI, RESP, SKIN, IRRITANT, INJURY, CO, HEAT, RENAL, CARD, NEURO, ABD, MSK, FEVER, MH, GU, OB, ENT, MEDS, OTHER",
+        "Patient_ZIP": "home ZIP; areas.json AREA-ZIP-<zip>",
+        "Patient_Tract": "home census tract code (areas.json AREA-TRACT-<code>); blank for patients from outside Nueces County",
+        "Onset_Date": "symptom onset reported at triage",
+        "Disposition": "Discharged, Admitted, Transferred, Left without being seen",
+        "Discharge_Diagnosis_ICD10": "first-listed discharge diagnosis"
+      }
+    },
+    {
+      "file": "hospital_capacity.csv",
+      "stream": "hospital_capacity",
+      "fields": [
+        "Report_Date",
+        "Facility_ID",
+        "Facility_Name",
+        "Census_Time_Local",
+        "Licensed_Beds",
+        "Staffed_Beds_Available",
+        "Inpatient_Census",
+        "Pct_Licensed_Occupancy",
+        "Census_Target",
+        "ICU_Beds",
+        "ICU_Occupied",
+        "ED_Beds",
+        "ED_Visits_24h",
+        "ED_Boarding",
+        "Hallway_Patients",
+        "Triage_Tent_Patients",
+        "Elective_Procedures_Postponed",
+        "Ventilators_Total",
+        "Ventilators_In_Use",
+        "Diversion_Status",
+        "Staffing_Level",
+        "Mutual_Aid",
+        "Power_Source",
+        "Commercial_Power_Lost_UTC",
+        "Generator_Start_UTC",
+        "Commercial_Power_Restored_UTC",
+        "Generator_Hours_Cumulative",
+        "Generator_Test",
+        "Diesel_Tank_A_gal",
+        "Diesel_Tank_B_gal",
+        "Diesel_On_Hand_gal",
+        "Burn_Rate_gph",
+        "Fuel_Hours_Remaining",
+        "Est_Runtime_Days_At_Storm_Load",
+        "Fuel_Delivered_gal"
+      ],
+      "field_notes": {
+        "Inpatient_Census": "patients in house at Census_Time_Local",
+        "Staffed_Beds_Available": "staffed beds the hospital can operate that day",
+        "Census_Target": "pre-storm discharge target, when one was set",
+        "ED_Visits_24h": "emergency department arrivals on that local date (equals the line list)",
+        "Power_Source": "at 12:00 local",
+        "Generator_Hours_Cumulative": "generator run-hours meter",
+        "Diesel_*": "at 12:00 local, gallons",
+        "Fuel_Hours_Remaining": "on-hand diesel divided by the current burn rate",
+        "Fuel_Delivered_gal": "delivered since the previous report"
+      }
+    },
+    {
+      "file": "syndrome_summary.csv",
+      "stream": "syndromic",
+      "fields": [
+        "Report_Date",
+        "Facility_ID",
+        "Area_ID",
+        "CC_Category",
+        "Visit_Count",
+        "Admitted_Count"
+      ],
+      "field_notes": {
+        "Area_ID": "areas.json AREA-ZIP-<zip> of the patient's home"
+      }
+    },
+    {
+      "file": "wastewater_surveillance.csv",
+      "stream": "wastewater",
+      "fields": [
+        "sample_id",
+        "sample_date",
+        "sewershed_id",
+        "site_name",
+        "sample_type",
+        "target",
+        "concentration_gc_per_L",
+        "pmmov_gc_per_L",
+        "normalized_ratio",
+        "flow_MGD",
+        "lab_qc",
+        "report_date"
+      ],
+      "field_notes": {
+        "sewershed_id": "infrastructure_assets.json treatment plant (WW-01 to WW-05)",
+        "concentration_gc_per_L": "gene copies per litre of the target",
+        "pmmov_gc_per_L": "pepper mild mottle virus, the faecal-strength normaliser",
+        "normalized_ratio": "target / PMMoV",
+        "report_date": "date the laboratory result was reported"
+      }
+    }
+  ],
+  "joins": {
+    "Facility_ID": "facility_registry.json",
+    "Patient_ZIP / Patient_Tract / Area_ID": "areas.json; water districts are ZIP groups there",
+    "census": "05_other_sources/census by tract"
+  },
+  "coverage": {
+    "required_span": {
+      "start_utc": "2027-08-15T00:00Z",
+      "end_utc": "2028-01-12T06:00Z",
+      "days": [
+        -30,
+        119
+      ]
+    },
+    "cadence": "per visit; daily; daily; two to three samples a week per plant (sampling suspended while plants were flooded or without power)"
+  },
+  "generator_reference": "scripts/streams/gen_health.py"
+}

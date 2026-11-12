@@ -1,0 +1,138 @@
+{
+  "source": "env_sensors",
+  "folder": "05_other_sources/env_sensors/",
+  "format": "CSV",
+  "standard": "EPA AQS hourly (wide); TCEQ continuous sonde table; NOAA CO-OPS 6-minute water level; USGS 15-minute stage and discharge",
+  "reference": "https://aqs.epa.gov/aqsweb/airdata/download_files.html",
+  "verified": true,
+  "notes": "Fixed environmental sensors at the positions in sensor_registry.json. All times UTC. Sensors drop out in the hurricane and return at different times; missing rows are gaps. No derived or explanatory columns: readings only.",
+  "entity_catalog": "06_data_streams/sensor_registry.json (air_monitors[], water_quality_sondes[], tide_gauges[], stream_gauges[])",
+  "joins": {
+    "SensorID": "sensor_registry.json",
+    "time": "UTC"
+  },
+  "coverage": {
+    "required_span": {
+      "start_utc": "2027-08-15T00:00Z",
+      "end_utc": "2028-01-12T06:00Z",
+      "days": [
+        -30,
+        119
+      ]
+    },
+    "cadence": "air hourly; sondes 15 min; tide gauges 6 min; stream gauges 15 min"
+  },
+  "generator_reference": "scripts/streams/gen_environment.py (gauges, water, air) using scripts/streams/envmodel.py",
+  "files": [
+    {
+      "file": "aqs_air_quality_<SensorID>.csv",
+      "stream": "air_quality",
+      "one_per": "air monitor (20)",
+      "fields": [
+        "SensorID",
+        "State_Code",
+        "County_Code",
+        "Site_Name",
+        "Site_Type",
+        "Latitude",
+        "Longitude",
+        "Date_GMT",
+        "Time_GMT",
+        "PM25_ugm3",
+        "Ozone_ppb",
+        "SO2_ppb",
+        "H2S_ppb",
+        "Benzene_ppb",
+        "TNMHC_ppbC",
+        "WindSpeed_mps",
+        "WindDir_deg",
+        "Temp_C",
+        "QC"
+      ],
+      "field_notes": {
+        "Date_GMT / Time_GMT": "start of the hour, UTC",
+        "Benzene_ppb": "hourly mean; health reference used locally is 3 ppb",
+        "TNMHC_ppbC": "total non-methane hydrocarbons, ppb carbon (1 ppm = 1000 ppb)",
+        "blank value": "the monitor does not measure that parameter",
+        "QC": "V valid"
+      }
+    },
+    {
+      "file": "water_quality_<SensorID>.csv",
+      "stream": "water_quality",
+      "one_per": "sonde (WQ-01 to WQ-06)",
+      "fields": [
+        "SensorID",
+        "SensorName",
+        "Latitude",
+        "Longitude",
+        "ObsDateTime",
+        "WaterTemp_C",
+        "SpecificConductance_uScm",
+        "Salinity_psu",
+        "DissolvedOxygen_mgL",
+        "pH",
+        "Turbidity_NTU",
+        "TotalHydrocarbons_ppb",
+        "Depth_m",
+        "Battery_V",
+        "QC"
+      ],
+      "field_notes": {
+        "TotalHydrocarbons_ppb": "total petroleum hydrocarbons, micrograms per litre (1000 ppb = 1 mg/L; agency alert level 0.10 mg/L = 100 ppb; surface-water standard 0.05 mg/L)",
+        "Depth_m": "water depth over the sensor; piling-mounted sondes follow tide and surge, moored buoys stay near 1 m",
+        "QC": "A accepted, S suspect (very high sediment load)"
+      }
+    },
+    {
+      "file": "gauge_<SensorID>.csv (tide: TG-*, GAUGE-14)",
+      "stream": "tide_river_gauges",
+      "fields": [
+        "SensorID",
+        "StationNumber",
+        "SensorName",
+        "Latitude",
+        "Longitude",
+        "ObsDateTime",
+        "WaterLevel_ft_MLLW",
+        "Predicted_ft_MLLW",
+        "Residual_ft",
+        "AirTemp_C",
+        "WaterTemp_C",
+        "WindSpeed_kt",
+        "WindGust_kt",
+        "BaroPressure_mb",
+        "Sigma_ft",
+        "Quality"
+      ],
+      "field_notes": {
+        "WaterLevel_ft_MLLW": "observed, feet above mean lower low water (1 m = 3.28084 ft)",
+        "Predicted_ft_MLLW": "astronomical tide",
+        "Residual_ft": "observed minus predicted (surge and weather)",
+        "Sigma_ft": "standard deviation of the 6-minute sample",
+        "Quality": "p preliminary"
+      }
+    },
+    {
+      "file": "gauge_<SensorID>.csv (stream: GAUGE-12, GAUGE-13)",
+      "stream": "tide_river_gauges",
+      "fields": [
+        "SensorID",
+        "SensorName",
+        "Latitude",
+        "Longitude",
+        "ObsDateTime",
+        "Stage_ft",
+        "Discharge_cfs",
+        "WaterTemp_C",
+        "SpecificConductance_uScm",
+        "Quality"
+      ],
+      "field_notes": {
+        "Stage_ft": "gauge height",
+        "Discharge_cfs": "from the rating curve",
+        "Quality": "A approved, P provisional"
+      }
+    }
+  ]
+}

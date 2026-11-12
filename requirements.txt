@@ -1,0 +1,6 @@
+# Python 3.9 or newer.
+# The newsroom server, the narrative pipeline and most checks use the standard library only.
+# These are needed by scripts/geo.py, the stream generators, check_geo.py and the map builders.
+numpy>=1.24
+matplotlib>=3.7
+opencv-python-headless>=4.8

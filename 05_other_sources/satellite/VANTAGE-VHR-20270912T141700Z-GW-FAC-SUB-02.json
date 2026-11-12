@@ -1,0 +1,97 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+ ],
+ "id": "VANTAGE-VHR-20270912T141700Z-GW-FAC-SUB-02",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.462,
+     27.794
+    ],
+    [
+     -97.4437,
+     27.794
+    ],
+    [
+     -97.4437,
+     27.8102
+    ],
+    [
+     -97.462,
+     27.8102
+    ],
+    [
+     -97.462,
+     27.794
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.462,
+  27.794,
+  -97.4437,
+  27.8102
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "VANTAGE-VHR-20270912T141700Z-GW-FAC-SUB-02.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20270912T141700Z-GW-FAC-SUB-02/visual.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20270912T141700Z-GW-FAC-SUB-02/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-09-12T14:17:00Z",
+  "title": "Pre-storm baseline, Harbor View Substation",
+  "description": "Pre-storm baseline image of Harbor View Substation for the regional pre-event package (archive entry NAS-BL-20270912-UTL). Yard dry, no visible damage. All three main feeder breakers are in the closed position. Look angle 32 degrees from north.",
+  "platform": "Vantage-VHR-3",
+  "instruments": [
+   "panchromatic and multispectral imager"
+  ],
+  "constellation": "Vantage-VHR",
+  "gsd": 0.15,
+  "view:off_nadir": 32.0,
+  "view:sun_azimuth": 99.8,
+  "view:sun_elevation": 26.4,
+  "proj:epsg": 32614,
+  "eo:cloud_cover": 21,
+  "observations": [
+   {
+    "asset_id": "GW-FAC-SUB-02",
+    "feature": "main feeder breakers B2-A, B2-B, B2-C",
+    "state": "closed"
+   }
+  ],
+  "processing:level": "orthorectified, HD-resampled to 15 cm",
+  "archive_entry": "NAS-BL-20270912-UTL"
+ }
+}

@@ -1,0 +1,681 @@
+{
+  "source": "W5",
+  "scope": "Rewrite pass, days 100-119 plus new stories on days 104-105: FBI search date moved to Monday, Dec. 27 (PUB-094, day 104) and port-closure timeline (X-Ray Sat. Sept. 11, Yankee Sun. Sept. 12, Zulu Mon. Sept. 13; ships put to sea and returned). Read every story on days 100-119 in full; searched them by script for Christmas/Saturday/Dec. 25 search references and Saturday/Sept. 11/anchorage closure wording.",
+  "stories_read": 33,
+  "findings": [
+    {
+      "id": "W5-001",
+      "severity": "high",
+      "story_id": "NWS-P104-02",
+      "field": "new_story",
+      "replacement": {
+        "story_id": "NWS-P104-02",
+        "day": 104,
+        "time_local": "13:15",
+        "outlet_id": "OUT-01",
+        "section": "Investigations",
+        "byline": [
+          "CHR-004"
+        ],
+        "headline": "FBI agents search offices of Vantorra Restoration and Quellmar Fuel Partners",
+        "dek": "Agents executed search warrants Monday at the two companies, which hold emergency debris and fuel contracts after Hurricane Rafael. The FBI would not say what investigators were seeking.",
+        "body": [
+          "FBI agents executed search warrants Monday at the offices of Vantorra Restoration and Quellmar Fuel Partners, two companies that won emergency contracts after Hurricane Rafael and have since come under separate county and Navy reviews.",
+          "The searches came Monday, Dec. 27, the first business day after the holiday weekend.",
+          "\"We can confirm FBI agents executed court-authorized search warrants today in Corpus Christi. Because this is an ongoing investigation, we have no further comment,\" said Mark Ellery, a spokesman for the FBI's Houston Division.",
+          "Alan Reyes, a spokesman for the US Attorney's Office for the Southern District of Texas, said the investigation is ongoing. \"A search warrant is an investigative step. It is not a charge, and it should not be read as one,\" Reyes said.",
+          "Vantorra received a $14.2 million sole-source debris contract from the county Sept. 24. Records reported by the Ledger this month show the company billed for about 2.3 times the debris tonnage the county's own drone and satellite surveys estimated. The company denies overbilling, and the county has paused payments pending an audit.",
+          "Quellmar holds a $2.1 million emergency fuel contract for Naval Air Station Corpus Christi. The Navy suspended the company Nov. 28 pending a fuel quality review linked to the station's backup generator failure in October. Quellmar says its fuel meets specifications.",
+          "Separately, a federal inspector general has been reviewing the region's emergency debris and fuel contracts since Dec. 7. It is not clear whether Monday's searches are connected to that review.",
+          "Derek Sloane, Vantorra's managing partner, said \"no comment\" when reached by phone Monday afternoon and hung up.",
+          "In a brief written statement, Nadia Kerr, Quellmar's operations manager, said, \"All product Quellmar delivered met specifications. We will respond to any questions through the proper channels.\"",
+          "The FBI did not say what agents were looking for, and neither company has been charged with a crime."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-CONTRACTS"
+          ],
+          "public_facts": [
+            "PUB-049",
+            "PUB-056",
+            "PUB-065",
+            "PUB-087",
+            "PUB-088",
+            "PUB-089",
+            "PUB-090",
+            "PUB-094"
+          ],
+          "characters_quoted": [
+            "CHR-033",
+            "CHR-035",
+            "CHR-072",
+            "CHR-073"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001",
+            "TANK-0390"
+          ],
+          "topics": [
+            "fbi search warrants",
+            "vantorra restoration",
+            "quellmar fuel partners",
+            "emergency contracts",
+            "investigation"
+          ],
+          "follows_up": "NWS-P097-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0311",
+            "EVT-0312",
+            "EVT-0407",
+            "EVT-0505",
+            "EVT-0506"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "PUB-094 now dates the FBI searches Monday, Dec. 27 (day 104). Breaking Ledger story moved here from NWS-P102-01 (same outlet, byline, sources and facts); Christmas Day framing removed; 'Saturday' changed to Monday.",
+      "status": "applied"
+    },
+    {
+      "id": "W5-002",
+      "severity": "high",
+      "story_id": "NWS-P104-03",
+      "field": "new_story",
+      "replacement": {
+        "story_id": "NWS-P104-03",
+        "day": 104,
+        "time_local": "15:30",
+        "outlet_id": "OUT-02",
+        "section": "Breaking",
+        "byline": [
+          "CHR-006"
+        ],
+        "headline": "FBI searches offices of two storm contractors",
+        "dek": "Agents execute warrants Monday at Vantorra Restoration and Quellmar Fuel Partners. Here's what we know.",
+        "body": [
+          "FBI agents execute search warrants Monday at the offices of two companies hired after Hurricane Rafael: debris hauler Vantorra Restoration and fuel supplier Quellmar Fuel Partners.",
+          "The FBI confirms the searches but isn't saying what agents are looking for.",
+          "\"I can confirm the investigation, and that's all I can say today,\" says Mark Ellery, a spokesman for the FBI's Houston Division.",
+          "What we know about the two companies:",
+          "Vantorra holds a $14.2 million sole-source county debris contract awarded ten days after landfall. Records show it billed for about 2.3 times the debris tonnage the county's own surveys estimated. The company denies overbilling. The county has paused payments to Vantorra pending an audit.",
+          "Quellmar's emergency fuel contract with NAS Corpus Christi is worth $2.1 million. The Navy suspended the company in November pending a fuel quality review tied to the station's backup generator failure. The company says its fuel meets specifications.",
+          "What a search warrant means: A judge has to sign off on it. It lets agents look for evidence. It is not a criminal charge, and neither company has been charged.",
+          "Emergency debris and fuel contracts in the Coastal Bend are also under review by a federal inspector general. Officials have not said whether today's searches are connected to that review.",
+          "Harborline 6 has asked both companies for comment and will add their responses when we get them.",
+          "What's next: The county audit of Vantorra's billing and the Navy's fuel quality review were both under way before today. Harborline 6 will update this story as we learn more. Have a tip? Send it to our newsroom."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-CONTRACTS"
+          ],
+          "public_facts": [
+            "PUB-049",
+            "PUB-056",
+            "PUB-087",
+            "PUB-088",
+            "PUB-089",
+            "PUB-090",
+            "PUB-094"
+          ],
+          "characters_quoted": [
+            "CHR-033"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001",
+            "TANK-0390"
+          ],
+          "topics": [
+            "fbi search warrants",
+            "vantorra restoration",
+            "quellmar fuel partners",
+            "emergency contracts"
+          ],
+          "follows_up": "NWS-P104-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0311",
+            "EVT-0312",
+            "EVT-0505",
+            "EVT-0506"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "Harborline 6 update moved here from NWS-P102-02 for the Monday, Dec. 27 searches (PUB-094, day 104); 'Christmas Day' headline/lead and the quiet-holiday paragraph removed; follows NWS-P104-02.",
+      "status": "applied"
+    },
+    {
+      "id": "W5-003",
+      "severity": "high",
+      "story_id": "NWS-P105-03",
+      "field": "new_story",
+      "replacement": {
+        "story_id": "NWS-P105-03",
+        "day": 105,
+        "time_local": "16:30",
+        "outlet_id": "OUT-01",
+        "section": "Investigations",
+        "byline": [
+          "CHR-004"
+        ],
+        "headline": "After Monday's searches: what a federal warrant means, and what comes next",
+        "dek": "Monday's FBI searches at two storm contractors are a step in an investigation, not a finding. Here is how the process works and which other reviews are under way.",
+        "body": [
+          "FBI agents executed search warrants Monday at the offices of Vantorra Restoration and Quellmar Fuel Partners, two companies hired on emergency terms after Hurricane Rafael. Readers have asked what that means. Here is what the records and the process can tell us.",
+          "What a warrant is. A federal search warrant is signed by a judge, who must find probable cause that evidence of a crime will be found at the place to be searched. It allows agents to collect documents, devices and other material. It does not charge anyone with a crime, and it does not mean a judge has found anyone did anything wrong.",
+          "\"A warrant is part of an investigation. Charges, if any are ever filed, are allegations until they are proven in court,\" said Alan Reyes, spokesman for the US Attorney's Office for the Southern District of Texas. He declined to discuss the investigation further.",
+          "What else is under way. Three other reviews predate the searches. The county paused payments to Vantorra on Dec. 3 pending an audit of its debris billing. The Navy suspended Quellmar on Nov. 28 pending a fuel quality review linked to the backup generator failure at Naval Air Station Corpus Christi. And a federal inspector general's review of emergency debris and fuel contracts across the Coastal Bend has been under way since Dec. 7.",
+          "What the companies say. Vantorra denies overbilling. Quellmar says its fuel meets specifications.",
+          "Why these contracts. Emergency rules let governments hire quickly without full competition. Vantorra's $14.2 million debris contract was sole-source, awarded ten days after landfall. Quellmar's $2.1 million fuel contract was awarded after the air station's regular supplier flooded. Records reported by the Ledger this month show Vantorra billed for about 2.3 times the debris tonnage the county's own surveys estimated.",
+          "What to watch. Investigations that involve search warrants can take months, and the public often learns little until something is filed in court. Court filings are public records, and the Ledger checks federal dockets for new filings involving companies that hold storm contracts.",
+          "We will report what the records show, and we will tell you when they show nothing new."
+        ],
+        "tags": {
+          "story_type": "explainer",
+          "arcs": [
+            "ARC-CONTRACTS"
+          ],
+          "public_facts": [
+            "PUB-049",
+            "PUB-056",
+            "PUB-087",
+            "PUB-088",
+            "PUB-089",
+            "PUB-090",
+            "PUB-094"
+          ],
+          "characters_quoted": [
+            "CHR-035"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001"
+          ],
+          "topics": [
+            "search warrants explained",
+            "federal investigation",
+            "emergency contracts",
+            "county audit",
+            "inspector general"
+          ],
+          "follows_up": "NWS-P104-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0311",
+            "EVT-0312",
+            "EVT-0505",
+            "EVT-0506"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "Explainer moved here from NWS-P103-01 so it follows the Monday, Dec. 27 searches (PUB-094, day 104); now refers to 'Monday's searches'; follows NWS-P104-02.",
+      "status": "applied"
+    },
+    {
+      "id": "W5-004",
+      "severity": "high",
+      "story_id": "NWS-P102-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P102-01",
+        "day": 102,
+        "time_local": "11:00",
+        "outlet_id": "OUT-01",
+        "section": "Health",
+        "byline": [
+          "CHR-003"
+        ],
+        "headline": "After a Christmas Eve shift in the ER, a charge nurse heads home for Christmas",
+        "dek": "Alyssa Cortez volunteered to work Christmas Eve. She walked out Saturday morning with one granola bar left and some advice for anyone heating a storm-damaged home this winter.",
+        "body": [
+          "Alyssa Cortez walked out of the emergency department a little after 7 a.m. on Christmas morning, twelve hours after she walked in. One scrub pocket still held a granola bar. The other was empty.",
+          "\"The one I keep for a teammate found a teammate around 3 a.m.,\" said Cortez, 34, a charge nurse at a Nueces County emergency department. \"That's how you know it was a real shift.\"",
+          "Cortez volunteered weeks ago to work Christmas Eve. As always, she would not discuss individual patients. She would describe the room: a paper garland taped along the nurses' station, a plate of pan dulce a church dropped off before dark, and a waiting room that never looked like the ones she worked this fall.",
+          "The fall came at her department in waves. In the first days after Hurricane Rafael, people from neighborhoods near the oiled shorelines arrived with burning throats, watery eyes and rashes. During the boil-water notice, stomach-illness visits climbed to about 180% above normal, health officials reported at the time, and patients waited on stretchers in the hallway. By late October, officials said, visits had settled back near normal everywhere except the low-income neighborhoods near the bay, where they still ran about 40% above normal.",
+          "\"A regular night. That's what I wanted for Christmas, and that's what we got,\" Cortez said. \"After this year, regular is a present.\"",
+          "Her worry for the weeks ahead is the cold. Many families near the bay are still living with storm damage, roofs that leak and windows that won't close, and when the temperature drops, she said, people improvise.",
+          "\"Creative heating is how I meet people at 2 in the morning,\" she said. \"Don't heat the house with the oven. Don't bring the grill inside. Don't run a generator in the garage with the door cracked. Get a heater made for indoors, keep it away from the blankets, and turn it off when you sleep.\"",
+          "What readers should know: Carbon monoxide has no smell. Headaches, dizziness or nausea that ease when you step outside are a warning sign; get everyone out of the house and call 911. And if something is wrong over the holiday weekend, don't wait until Monday to call a doctor.",
+          "Cortez planned to sleep into the afternoon and then join her family for Christmas dinner. She did not sign up for New Year's Eve.",
+          "\"Somebody else gets to find the eye wash,\" she said."
+        ],
+        "tags": {
+          "story_type": "feature",
+          "arcs": [
+            "ARC-HEALTH",
+            "ARC-COMMUNITY",
+            "ARC-RECOVERY"
+          ],
+          "public_facts": [
+            "PUB-038",
+            "PUB-039",
+            "PUB-046",
+            "PUB-069"
+          ],
+          "characters_quoted": [
+            "CHR-043"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "FAC-HOS-xx",
+            "PLC-001",
+            "PLC-010"
+          ],
+          "topics": [
+            "christmas",
+            "er nurse",
+            "alyssa cortez",
+            "holidays",
+            "space heater safety",
+            "carbon monoxide"
+          ],
+          "follows_up": "NWS-P098-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0317",
+            "EVT-0310",
+            "EVT-0408"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "The original (FBI searches on Christmas Day) contradicts PUB-094, now Monday, Dec. 27 (day 104); its text moves to new NWS-P104-02. Same id and day now carry a Christmas Day feature: ER charge nurse Alyssa Cortez (canon: volunteered for Christmas Eve, twelve-hour shifts, granola bar for a teammate, never discusses patients) comes off her shift. Uses only facts public by day 102; no searches.",
+      "status": "applied"
+    },
+    {
+      "id": "W5-005",
+      "severity": "high",
+      "story_id": "NWS-P102-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P102-02",
+        "day": 102,
+        "time_local": "14:00",
+        "outlet_id": "OUT-02",
+        "section": "Local",
+        "byline": [
+          "CHR-006"
+        ],
+        "headline": "Christmas on the coast: a closed bait shop, a full church and presents that rode the bus",
+        "dek": "Bill Hargrove takes the day off at his rebuilt Port Aransas shop. Near the bay, Pastor Gloria Whitfield's church holds its Christmas service, and Rosa Elizondo's kids show off their gifts.",
+        "body": [
+          "The Christmas lights are off at Hargrove Bait & Tackle in Port Aransas this morning. A sign taped to the new door reads: CLOSED CHRISTMAS DAY. GO SEE YOUR FAMILY.",
+          "Bill Hargrove, 64, drives by anyway, coffee in hand, just to look at the place.",
+          "\"In September this was four walls and a smell. Now it's a store,\" he says. \"I'm allowed to come admire it on Christmas. I'm not allowed to sell anything. Shop rules, and I wrote them.\"",
+          "When Rafael came ashore in September, its surge left a waterline above his head inside the shop near the jetties. He reopened it this month.",
+          "Across the bay in Corpus Christi, Pastor Gloria Whitfield's church holds its Christmas service this morning, steps from the fellowship hall it has run as a relief hub since the days after the storm, when church and neighborhood hubs handed out food and water before official help reached some neighborhoods.",
+          "\"Yesterday we fed people. Today we sing,\" says Whitfield, 59. \"After today, the doors open again. That's the whole plan.\"",
+          "Rosa Elizondo, 38, comes to the service with her three kids. They opened their presents at home before church. Two came from the hub's toy table this month. The third rode home with her on the bus. Elizondo doesn't have a car.",
+          "\"Nobody asked how Santa got here,\" she says. \"Good. I didn't want to explain the transfer downtown.\"",
+          "At home, the bucket her kids named Bob still sits in the hallway under a roof leak. Her landlord says repairs will come after the holidays.",
+          "Need help this holiday weekend? Call 2-1-1 to reach local services. Know a neighbor spending today alone? Knock on the door."
+        ],
+        "tags": {
+          "story_type": "feature",
+          "arcs": [
+            "ARC-COMMUNITY",
+            "ARC-RECOVERY",
+            "ARC-EQUITY"
+          ],
+          "public_facts": [
+            "PUB-023",
+            "PUB-037",
+            "PUB-008"
+          ],
+          "characters_quoted": [
+            "CHR-042",
+            "CHR-049",
+            "CHR-040"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "LF-01",
+            "PLC-001",
+            "PLC-010"
+          ],
+          "topics": [
+            "christmas day",
+            "port aransas",
+            "bill hargrove",
+            "church relief hub",
+            "rosa elizondo",
+            "holidays"
+          ],
+          "follows_up": "NWS-P100-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0301"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "The original ('FBI searches two storm contractors on Christmas Day') contradicts PUB-094 (Monday, Dec. 27, day 104); its text moves to new NWS-P104-03. Same id and day now carry a Harborline 6 Christmas Day roundup consistent with canon and context logs: Hargrove's shop closed Christmas Day after opening through Christmas Eve; Whitfield's hub stays open after the holidays; Elizondo's toy-table gifts, the bucket Bob and the landlord's 'after the holidays'. No searches.",
+      "status": "applied"
+    },
+    {
+      "id": "W5-006",
+      "severity": "high",
+      "story_id": "NWS-P103-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P103-01",
+        "day": 103,
+        "time_local": "10:00",
+        "outlet_id": "OUT-04",
+        "section": "Ports",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Rafael by port condition: the three-day sequence that closed Corpus Christi, and the ships that went to sea",
+        "dek": "A year-end reference for operators updating heavy-weather plans: the Coast Guard set X-Ray on Saturday, Sept. 11, closed the port to inbound traffic Sunday and to all traffic Monday. Ships at the anchorage put to sea and came back after landfall.",
+        "body": [
+          "Status, Corpus Christi Ship Channel, Sunday: open to all traffic. With one hurricane season over and the next about five months out, Gulfwater sets down the sequence that closed the port ahead of Hurricane Rafael, for operators updating heavy-weather plans for 2028.",
+          "Saturday, Sept. 11: Port Condition X-Ray, meaning gale-force winds possible within 48 hours. The port stayed open. Ocean-going ships had to plan to leave or obtain approval to stay, and terminals began winding down crude loading.",
+          "Sunday, Sept. 12: Port Condition Yankee. The Coast Guard closed the port to inbound traffic. Ocean-going ships headed out, 14 inbound vessels held at the offshore anchorage, and crude exports halted.",
+          "Monday, Sept. 13: Port Condition Zulu. The ship channel closed to all traffic. Ships at the offshore anchorage put to sea to ride out the storm. Two laden tankers stayed at their Inner Harbor berth, with Coast Guard approval.",
+          "Tuesday, Sept. 14: Rafael made landfall on Mustang Island near Port Aransas around 1 a.m. as a Category 3 hurricane. Oil was reported spilling at the Inner Harbor terminal as the storm arrived; Unified Command later estimated about 9,000 barrels released from MT Kalvora Star and MT Ostrel Bay.",
+          "Friday, Sept. 17: Ships that rode out the storm at sea returned to the offshore anchorage to wait. The channel stayed closed while it was surveyed and the spill was contained.",
+          "Thursday, Oct. 14: Partial reopening. Spill decontamination kept the inner channel restricted, and the anchorage backlog delayed relief cargo.",
+          "\"Port conditions follow the forecast, not the calendar,\" said Lt. Cmdr. Elena Ruiz, public affairs officer for Coast Guard Sector Corpus Christi. \"X-Ray is the time to plan. Yankee is the time to move. By Zulu, every vessel should already be where it intends to ride out the weather.\"",
+          "Operator notes. Build departure timelines from X-Ray, not Yankee. Confirm sea room and anchorage plans before inbound traffic stops. Expect the restart to depend on channel surveys and, as in 2027, on any spill response inside the port.",
+          "Not covered here: the separate closure after the Oct. 28 blast near the Port Aransas jetties, which ended when the channel reopened Nov. 11 after a full sweep."
+        ],
+        "tags": {
+          "story_type": "explainer",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-STORM",
+            "ARC-RECOVERY"
+          ],
+          "public_facts": [
+            "PUB-020",
+            "PUB-107",
+            "PUB-108",
+            "PUB-109",
+            "PUB-023",
+            "PUB-024",
+            "PUB-029",
+            "PUB-058",
+            "PUB-067",
+            "PUB-079"
+          ],
+          "characters_quoted": [
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01",
+            "LF-01",
+            "FAC-USCG-01"
+          ],
+          "topics": [
+            "port conditions",
+            "x-ray yankee zulu",
+            "offshore anchorage",
+            "hurricane planning",
+            "ship channel",
+            "year-end"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0401",
+            "EVT-0301",
+            "EVT-0313",
+            "EVT-0315",
+            "EVT-0410",
+            "EVT-0413",
+            "EVT-0412",
+            "EVT-0414"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "The original explainer refers to 'Saturday's FBI searches' and cites PUB-094 two days before it is public; its text moves to new NWS-P105-03. Same id and day now carry a Sunday port year-end reference (Gulfwater) built on the corrected closure timeline: X-Ray Sat., Sept. 11 (port open), Yankee Sun., Sept. 12 (inbound closed), Zulu Mon., Sept. 13 (all traffic), ships put to sea and returned Sept. 17. Cites PUB-107/108/109, which no story reported (integrity errors).",
+      "status": "applied"
+    },
+    {
+      "id": "W5-007",
+      "severity": "high",
+      "story_id": "NWS-P114-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P114-01",
+        "day": 114,
+        "time_local": "11:00",
+        "outlet_id": "OUT-01",
+        "section": "Investigations",
+        "byline": [
+          "CHR-004"
+        ],
+        "headline": "Federal filing: storm debris and fuel contractors share offshore owner; accounts got $3.9 million in diverted aid",
+        "dek": "A civil forfeiture filing says Vantorra Restoration and Quellmar Fuel Partners are both owned by Brannoch Maritime Holdings, an offshore company, and that bank accounts tied to the firms received about $3.9 million in diverted disaster aid.",
+        "body": [
+          "Two companies hired on emergency terms after Hurricane Rafael share an owner, an offshore company called Brannoch Maritime Holdings, and bank accounts tied to the firms received about $3.9 million in diverted disaster aid, according to a federal civil forfeiture filing made public Thursday.",
+          "The filing names debris hauler Vantorra Restoration LLC and fuel supplier Quellmar Fuel Partners. It lists Brannoch's director as L. Marrick.",
+          "A civil forfeiture case is brought against money or property, not against a person, and it is not a criminal charge. The filing's claims are allegations that have not been proven in court.",
+          "\"The filing speaks for itself. Its claims are allegations, and the owners of the property will have the opportunity to respond in court,\" said Alan Reyes, spokesman for the US Attorney's Office for the Southern District of Texas. He declined to comment on anything not described in the filing.",
+          "Both firms have been under scrutiny for months. The county awarded Vantorra a $14.2 million sole-source debris contract on Sept. 24. Records reported by the Ledger in December show it billed for about 2.3 times the debris tonnage the county's own surveys estimated, which the company denies; the county paused payments pending an audit. Quellmar was awarded a $2.1 million contract to supply emergency fuel to Naval Air Station Corpus Christi. The Navy suspended it in November pending a fuel quality review, and the company says its fuel meets specifications. A federal inspector general opened a review of emergency debris and fuel contracts Dec. 7, and FBI agents searched both companies' offices on Dec. 27.",
+          "The filing describes the $3.9 million as diverted disaster aid but does not say how it was diverted, and Reyes would not elaborate. Separately, in November, FEMA said 410 applicant accounts had been taken over after about 220,000 automated login attempts and their deposit details changed, and that affected applicants would be repaid.",
+          "Derek Sloane, Vantorra's managing partner, said Thursday that the company \"did the work we were hired to do\" and would respond through its attorneys. He did not answer questions about the company's ownership.",
+          "Nadia Kerr, Quellmar's operations manager, said in a statement that \"all product Quellmar delivered met specifications\" and that the company would respond in court."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-CONTRACTS",
+            "ARC-PORTAL-BREACH"
+          ],
+          "public_facts": [
+            "PUB-049",
+            "PUB-056",
+            "PUB-085",
+            "PUB-087",
+            "PUB-088",
+            "PUB-089",
+            "PUB-090",
+            "PUB-094",
+            "PUB-098"
+          ],
+          "characters_quoted": [
+            "CHR-035",
+            "CHR-072",
+            "CHR-073"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001",
+            "TANK-0390"
+          ],
+          "topics": [
+            "civil forfeiture",
+            "brannoch maritime holdings",
+            "vantorra restoration",
+            "quellmar fuel partners",
+            "diverted disaster aid"
+          ],
+          "follows_up": "NWS-P104-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0311",
+            "EVT-0312",
+            "EVT-0502",
+            "EVT-0503",
+            "EVT-0505",
+            "EVT-0506"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "Body dated the FBI searches to Christmas Day; PUB-094 now says Monday, Dec. 27. Also repoints tags.follows_up from NWS-P102-01 (now a Christmas health feature) to the new search story NWS-P104-02. Only those two changes.",
+      "status": "applied"
+    },
+    {
+      "id": "W5-008",
+      "severity": "high",
+      "story_id": "NWS-P107-01",
+      "field": "body",
+      "old": "and on Christmas Day FBI agents searched the offices of two storm contractors.",
+      "new": "and on Dec. 27 FBI agents searched the offices of two storm contractors.",
+      "reason": "Year-in-review dated the FBI searches to Christmas Day; PUB-094 now says Monday, Dec. 27.",
+      "status": "applied"
+    },
+    {
+      "id": "W5-009",
+      "severity": "high",
+      "story_id": "NWS-P115-02",
+      "field": "body",
+      "old": "FBI agents searched Quellmar's offices on Christmas Day.",
+      "new": "FBI agents searched Quellmar's offices on Dec. 27.",
+      "reason": "Dated the FBI search to Christmas Day; PUB-094 now says Monday, Dec. 27.",
+      "status": "applied"
+    },
+    {
+      "id": "W5-010",
+      "severity": "high",
+      "story_id": "NWS-P116-01",
+      "field": "body",
+      "old": "Dec. 25: FBI agents execute search warrants at both companies' offices.",
+      "new": "Dec. 27: FBI agents execute search warrants at both companies' offices.",
+      "reason": "Timeline entry dated the searches Dec. 25; PUB-094 now says Monday, Dec. 27.",
+      "status": "applied"
+    }
+  ],
+  "notes_for_lead": {
+    "outside_findings": [
+      "After applying, rebuild derived files (merge_character_updates, link_stories, build_graph, build_rss, build_release, or scripts/build_all.py); otherwise check_integrity reports RSS/release/graph count mismatches (401 stories).",
+      "03_news/character_updates/batch-H.json: remove the stale day-102/103 search entries (CHR-004, CHR-033, CHR-035, CHR-072, CHR-073 on NWS-P102-01; CHR-033 on NWS-P102-02; CHR-035 on NWS-P103-01) and add the entries in proposed_character_updates.",
+      "01_characters/canon.json CHR-072 timeline: entry {from_day 102, to_day 102, 'Said no comment and hung up after FBI searches on Saturday, Dec. 25'} should become day 104, 'Monday, Dec. 27'; the preceding entry's to_day 101 becomes 103. CHR-073: to_day 101 becomes 103; 'Written statements only' from_day 102 becomes 104. (check_canon does not test timeline text, so no violation shows.)",
+      "README.md line 96 still says the FBI searches fall on Christmas Day (day 102).",
+      "Out of scope (days -60 to 99, other agent): check_facts flags 8 '14 vessels' mentions in NWS-M003-01..05 (public only from day -2); NWS-P077-02 ('Sept. 11: Coast Guard closes the channel') and NWS-P086-01 ('closed the channel Sept. 11') still date the closure to Sept. 11."
+    ],
+    "proposed_character_updates": [
+      {
+        "character_id": "CHR-003",
+        "day": 102,
+        "story_id": "NWS-P102-01",
+        "note": "Christmas-morning follow-up with ER charge nurse Alyssa Cortez after her Christmas Eve shift; cold-weather heating and carbon monoxide guidance."
+      },
+      {
+        "character_id": "CHR-043",
+        "day": 102,
+        "story_id": "NWS-P102-01",
+        "note": "Came off her volunteered twelve-hour Christmas Eve shift a little after 7 a.m. Christmas morning; gave her spare granola bar to a teammate around 3 a.m.; 'After this year, regular is a present'; warned against heating with ovens, grills or generators indoors; not working New Year's Eve ('Somebody else gets to find the eye wash'). No patient details."
+      },
+      {
+        "character_id": "CHR-006",
+        "day": 102,
+        "story_id": "NWS-P102-02",
+        "note": "Christmas Day roundup: Port Aransas bait shop closed, church service near the bay, Elizondo family."
+      },
+      {
+        "character_id": "CHR-042",
+        "day": 102,
+        "story_id": "NWS-P102-02",
+        "note": "Shop closed Christmas Day (sign: 'CLOSED CHRISTMAS DAY. GO SEE YOUR FAMILY.'); drove by with coffee to look at it; 'In September this was four walls and a smell. Now it's a store'; 'Shop rules, and I wrote them.'"
+      },
+      {
+        "character_id": "CHR-049",
+        "day": 102,
+        "story_id": "NWS-P102-02",
+        "note": "Christmas morning service at her church beside the fellowship hall; 'Yesterday we fed people. Today we sing'; hub reopens after Christmas."
+      },
+      {
+        "character_id": "CHR-040",
+        "day": 102,
+        "story_id": "NWS-P102-02",
+        "note": "At Whitfield's Christmas service with her three kids; two gifts came from the hub toy table, the third rode home with her on the bus; glad not to explain 'the transfer downtown'; bucket Bob still under the hallway leak; landlord says repairs after the holidays."
+      },
+      {
+        "character_id": "CHR-010",
+        "day": 103,
+        "story_id": "NWS-P103-01",
+        "note": "Year-end port-conditions reference: X-Ray Sat., Sept. 11 (port open), Yankee Sun., Sept. 12 (inbound closed, 14 inbound vessels at anchorage), Zulu Mon., Sept. 13 (all traffic; anchorage ships put to sea), ships back at the anchorage Fri., Sept. 17."
+      },
+      {
+        "character_id": "CHR-020",
+        "day": 103,
+        "story_id": "NWS-P103-01",
+        "note": "'Port conditions follow the forecast, not the calendar'; X-Ray is the time to plan, Yankee the time to move; by Zulu every vessel should already be where it rides out the weather."
+      },
+      {
+        "character_id": "CHR-004",
+        "day": 104,
+        "story_id": "NWS-P104-02",
+        "note": "Day-104 beat: reported FBI search warrants executed Monday, Dec. 27, at the Vantorra and Quellmar offices."
+      },
+      {
+        "character_id": "CHR-033",
+        "day": 104,
+        "story_id": "NWS-P104-02",
+        "note": "Confirmed court-authorized search warrants executed in Corpus Christi; no further comment."
+      },
+      {
+        "character_id": "CHR-035",
+        "day": 104,
+        "story_id": "NWS-P104-02",
+        "note": "Said a search warrant is an investigative step, not a charge."
+      },
+      {
+        "character_id": "CHR-072",
+        "day": 104,
+        "story_id": "NWS-P104-02",
+        "note": "Said 'no comment' by phone Monday afternoon after the search and hung up."
+      },
+      {
+        "character_id": "CHR-073",
+        "day": 104,
+        "story_id": "NWS-P104-02",
+        "note": "Brief written statement after the search: all product met specifications; will respond through proper channels."
+      },
+      {
+        "character_id": "CHR-006",
+        "day": 104,
+        "story_id": "NWS-P104-03",
+        "note": "TV update on the Monday searches; asked both companies for comment."
+      },
+      {
+        "character_id": "CHR-033",
+        "day": 104,
+        "story_id": "NWS-P104-03",
+        "note": "Told Harborline 6: 'I can confirm the investigation, and that's all I can say today.'"
+      },
+      {
+        "character_id": "CHR-004",
+        "day": 105,
+        "story_id": "NWS-P105-03",
+        "note": "Explainer on what a federal search warrant means after Monday's searches."
+      },
+      {
+        "character_id": "CHR-035",
+        "day": 105,
+        "story_id": "NWS-P105-03",
+        "note": "Explainer quote: charges, if any are filed, are allegations until proven; declined to discuss the investigation."
+      }
+    ]
+  }
+}

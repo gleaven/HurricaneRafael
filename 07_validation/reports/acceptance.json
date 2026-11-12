@@ -1,0 +1,80 @@
+{
+  "overall_pass": true,
+  "criteria": {
+    "1_validator_zero_errors": {
+      "pass": true,
+      "detail": {
+        "files": [
+          "batch-A.json",
+          "batch-B.json",
+          "batch-C.json",
+          "batch-D.json",
+          "batch-E.json",
+          "batch-F.json",
+          "batch-G.json",
+          "batch-H.json",
+          "batch-I.json",
+          "batch-J.json",
+          "batch-K.json",
+          "batch-L.json",
+          "batch-M.json",
+          "batch-N.json",
+          "batch-O.json",
+          "batch-P.json",
+          "batch-Q.json"
+        ],
+        "stories": 681,
+        "words": 227529,
+        "errors": 0,
+        "warnings": 68
+      }
+    },
+    "2_canon_zero_violations": {
+      "pass": true,
+      "detail": "canon check: 0 violations across 681 stories, 43 characters"
+    },
+    "3_numbers_dates_traced": {
+      "pass": true,
+      "detail": "facts check: 0 quantity violations, 0 weekday/date errors, 10 future-date mentions to review"
+    },
+    "4_no_open_high_findings": {
+      "pass": true,
+      "detail": {
+        "findings_total": 698,
+        "open_high": []
+      }
+    },
+    "5_second_review_no_high": {
+      "pass": true,
+      "detail": {
+        "files": [
+          "review2-T1.json",
+          "review2-T2.json",
+          "review2-T3.json",
+          "review2-T4.json"
+        ],
+        "open_high": []
+      }
+    },
+    "6_public_outputs_leak_free": {
+      "pass": true,
+      "detail": {}
+    },
+    "8_integrity": {
+      "pass": true,
+      "detail": "integrity: 0 errors, 108 items for review (5 weak citations, 0 late first reports, 103 id gaps)"
+    },
+    "9_world_state": {
+      "pass": true,
+      "detail": "world state: 155 checks, 0 failed"
+    },
+    "10_scenarios": {
+      "pass": true,
+      "detail": "scenarios: 2 registered, 695 checks, 0 failed"
+    },
+    "7_locked_files_unchanged": {
+      "pass": true,
+      "detail": "{\n \"changed\": [],\n \"missing\": [],\n \"added\": []\n}"
+    }
+  }
+}

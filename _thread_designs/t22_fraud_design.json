@@ -1,0 +1,692 @@
+{
+  "thread_id": "T22",
+  "name": "Insurance and disaster fraud",
+  "color": "#6b3fa0",
+  "scenario": "rafael",
+  "lanes": [
+    "C",
+    "I"
+  ],
+  "truth": "The T2 fraud ring, operating through Corpus Christi-based Landmark Pacific Holdings LLC (fictional property management company), had already inflated replacement values on 230 properties before the storm using a network of complicit appraisers and insurance brokers. Post-storm, the ring pivots immediately to claims fraud. Within 72 hours of landfall, ring director Renaldo Carver-Mossbach (fictional) activates 23 claim runners who sign up storm-damaged property owners as clients, skimming a portion of legitimate IA payments and filing separate fraudulent claims on their behalf. The ring also files 94 fraudulent FEMA Individual Assistance applications — all submitted from a single Landmark Pacific Holdings office at 4411 Leopard Street, Corpus Christi (fictional address) — using reused property damage photos matched to multiple different addresses. A secondary fraud enterprise, FastDry Coastal LLC (fictional), operates a water damage restoration scam in Districts 3-4, charging 400% above market rates and billing for work never completed. The FBI Corpus Christi Resident Agency opens Operation Sandbar at D+30 when the volume of suspicious claims triggers an automated fraud detection flag in FEMA's Enterprise Coordination and Information Management System (ECIMS). By D+60, investigators identify the IP clustering pattern: 94 IA applications from 12 addresses all share the IP address 198.51.100.44 (a Landmark Pacific Holdings office). By D+90, 14 arrests are made including Carver-Mossbach and two FastDry Coastal principals. The operation is announced publicly at D+90 in a press conference by the FBI and Texas DPS.",
+  "phase_onset": 4,
+  "phase_peak": 5,
+  "msel_events": [
+    {
+      "event_id": "EVT-2201",
+      "time_label": "D-30 to D-5",
+      "day": -30,
+      "day_end": -5,
+      "time_utc": null,
+      "threads": [
+        "T22",
+        "T2"
+      ],
+      "lanes": [
+        "I"
+      ],
+      "description": "Ground truth (hidden): Landmark Pacific Holdings (LPH) completes pre-storm insurance inflation campaign on 230 properties in Corpus Christi. Working with complicit appraiser Duvall & Sons Property Consultants (fictional) and broker Coastal Meridian Insurance Group (fictional), LPH has inflated declared replacement values by an average of 340% above actual market value. Total inflated insured value across 230 properties: $187 million vs actual value of approximately $55 million. The inflation allows the ring to file total-loss claims post-storm claiming values that far exceed actual storm damage. All 230 properties are located in Districts 3, 4, and 5 — areas expected to receive the worst storm surge.",
+      "observed_in": [
+        {
+          "stream": "insurance_claims",
+          "what": "Duvall and Sons appraisal order log (seized D+90): 230 appraisal orders from LPH between Aug 1 and Sept 9, 2027; all marked RUSH; appraiser initials RM (Roland Muñoz-Estrada, co-conspirator) | Coastal Meridian Insurance Group policy file (seized D+90): 230 policies bound between Aug 5 and Sept 7, 2027; all carry Replacement Cost Value endorsements at LPH-submitted appraisal values | LPH property database (seized D+90): 230 properties with appraisal...",
+          "when": {
+            "start_utc": "2027-08-15T05:00Z",
+            "end_utc": "2027-09-10T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "LPH property database (seized D+90): 230 properties with appraisal dates between D-45 and D-5; average appraised value $813,000 vs Nueces County Appraisal District assessed value average $239,000; inflation ratio 3.4x",
+        "Duvall and Sons appraisal order log (seized D+90): 230 appraisal orders from LPH between Aug 1 and Sept 9, 2027; all marked RUSH; appraiser initials RM (Roland Muñoz-Estrada, co-conspirator)",
+        "Coastal Meridian Insurance Group policy file (seized D+90): 230 policies bound between Aug 5 and Sept 7, 2027; all carry Replacement Cost Value endorsements at LPH-submitted appraisal values"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "lph_internal_property_records",
+        "duvall_sons_appraisal_files",
+        "coastal_meridian_insurance_group_policy_database"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2202",
+      "time_label": "D+3",
+      "day": 3,
+      "day_end": null,
+      "time_utc": null,
+      "threads": [
+        "T22",
+        "T2"
+      ],
+      "lanes": [
+        "I"
+      ],
+      "description": "Ground truth (hidden): Three days after landfall, LPH ring director Renaldo Carver-Mossbach activates 23 claim runners by encrypted messaging. Runners are instructed to canvas Districts 3, 4, and 5 posing as FEMA-registered disaster assistance contractors and signed-up property owners as clients, skimming 15-25% of their IA disbursements in return for 'processing services.' Runners use a fraudulent FEMA-lookalike website (fema-disasterhelp.cc — fictional domain) to collect victim information. Separately, Carver-Mossbach begins the fraudulent IA application campaign: 94 applications submitted over D+60 through D+62 from the LPH office at 4411 Leopard Street.",
+      "observed_in": [
+        {
+          "stream": "insurance_claims",
+          "what": "From D+3, claims arrive on the ring's 230 policies whose values were raised in the five weeks before landfall, many with the same contractor estimates and reused damage photographs.",
+          "when": {
+            "start_utc": "2027-09-17T05:00Z",
+            "end_utc": "2027-10-15T05:00Z"
+          }
+        },
+        {
+          "stream": "public_record",
+          "what": "State and federal disaster-fraud warnings from D+3.",
+          "when": {
+            "start_utc": "2027-09-17T05:00Z",
+            "end_utc": "2027-09-30T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Encrypted messaging platform (Signal) communications (obtained via warrant D+65): Carver-Mossbach to 23 runners D+3 09:14 AM: 'Teams activate. Priority zones 3 and 4. Use the contractor vest and badge. Website is live. 20 percent standard split. No exceptions.'",
+        "FEMA ECIMS suspicious activity flag SA-2027-TX-4471 (auto-generated D+32): 94 IA applications from ZIP 78407 (District 4) with identical IP address 198.51.100.44; flag routed to FBI Corpus Christi RA D+33"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fbi_operation_sandbar_case_file",
+        "fema_ecims_suspicious_activity_flags"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2203",
+      "time_label": "D+15",
+      "day": 15,
+      "day_end": null,
+      "time_utc": null,
+      "threads": [
+        "T22"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "Texas Department of Public Safety issues a consumer protection warning about contractor fraud following a surge in complaints from Districts 3-4. DPS received 312 complaints in 10 days about fraudulent contractors demanding upfront cash, performing no work, or charging for services never rendered. FastDry Coastal LLC is not yet named publicly but accounts for an estimated 40% of complaints. DPS warning advises residents to verify contractor licensing, demand written contracts, and not pay upfront. Warning issued in English and Spanish.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "DPS complaint log D+5 to D+15: 312 contractor fraud complaints; 128 complaints reference company name variations of 'FastDry', 'Fast Dry', or 'Coastal Dry'; address given as 2817 McArdle Road Corpus Christi (FastDry Coastal registered address)",
+          "when": {
+            "start_utc": "2027-09-29T05:00Z",
+            "end_utc": "2027-09-30T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "DPS complaint log D+5 to D+15: 312 contractor fraud complaints; 128 complaints reference company name variations of 'FastDry', 'Fast Dry', or 'Coastal Dry'; address given as 2817 McArdle Road Corpus Christi (FastDry Coastal registered address)"
+      ],
+      "public_fact": "PUB-213",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "texas_dps_consumer_protection_bulletin_2027-0929",
+        "nueces_county_oem_complaint_log"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "nueces_county_oem_complaint_log",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2204",
+      "time_label": "D+30",
+      "day": 30,
+      "day_end": null,
+      "time_utc": null,
+      "threads": [
+        "T22"
+      ],
+      "lanes": [
+        "I"
+      ],
+      "description": "Ground truth (hidden): FBI Corpus Christi Resident Agency opens Operation Sandbar following receipt of FEMA ECIMS suspicious activity flag SA-2027-TX-4471 (auto-routed D+33 but reviewed D+30 due to a parallel referral from Sabine National Insurance's Special Investigations Unit which flagged 47 LPH-related commercial claims with identical damage narratives). FBI case agent Special Agent Darnell Okafor-Reyes (fictional) is assigned as case lead. Texas DPS Criminal Investigations is brought in as co-investigator. The operation name is classified; it will not be made public until D+90.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "The state insurance department activates its claims fraud task force on D+30; the federal case is public only on D+90.",
+          "when": {
+            "start_utc": "2027-10-14T05:00Z",
+            "end_utc": "2027-10-15T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FBI case opening EC 27-CC-7741 dated D+30: subject Landmark Pacific Holdings LLC; predicate: mail fraud, wire fraud, disaster relief fraud (18 USC 1001, 1341, 1343); co-conspirators listed TBD; case agent SA Darnell Okafor-Reyes",
+        "Sabine National Insurance SIU referral 2027-10-14: 47 commercial property claims submitted by Landmark Pacific Holdings; 47 claims share identical 3-paragraph damage narrative with property address swapped; image metadata analysis shows 12 unique photos reused across 47 claims"
+      ],
+      "public_fact": "PUB-214",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fbi_cc_ra_case_file_27-CC-7741",
+        "fema_ecims_flag_SA-2027-TX-4471",
+        "state_farm_siu_referral_2027-10-14"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2205",
+      "time_label": "D+57",
+      "day": 57,
+      "day_end": null,
+      "time_utc": null,
+      "threads": [
+        "T22"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "FEMA Individual Assistance approved for Nueces County (existing canon: PUB-103 to PUB-105 reference). Registration begins D+60. The ring's fraudulent IA applications are ready to submit the moment registration opens.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "FEMA disaster declaration DR-4821-TX: IA approved Nueces County; registration opens D+60 06:00Z (midnight local)",
+          "when": {
+            "start_utc": "2027-11-10T06:00Z",
+            "end_utc": "2027-11-11T06:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FEMA disaster declaration DR-4821-TX: IA approved Nueces County; registration opens D+60 06:00Z (midnight local)",
+        "LPH internal document (seized D+90): spreadsheet titled 'IA Applications Ready' dated D+57; 94 rows with victim names, addresses, SSN last 4, fabricated damage descriptions, and assigned damage photo set IDs"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fema_disaster_declaration_DR-4821-TX",
+        "fema_ia_registration_announcement"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2206",
+      "time_label": "D+60",
+      "day": 60,
+      "day_end": 62,
+      "time_utc": "06:01Z",
+      "threads": [
+        "T22"
+      ],
+      "lanes": [
+        "I"
+      ],
+      "description": "Ground truth (hidden): Beginning 06:01Z D+60 (a minute after FEMA IA registration opens at midnight local), the LPH ring submits 94 fraudulent FEMA IA applications through the DisasterAssistance.gov portal. All 94 applications are submitted from IP address 198.51.100.44 (LPH office at 4411 Leopard Street). Submissions are clustered in three bursts: 31 applications D+60 06:01Z-09:17Z, 29 applications D+61 01:00Z-04:45Z, 34 applications D+62 23:00Z-23:59Z. Each application uses a different victim name and property address but submits from the same IP. Damage photos are drawn from a pool of 23 unique images; each image appears in an average of 4 different applications with different addresses. FEMA ECIMS auto-detects the IP clustering and generates flag SA-2027-TX-4471 at D+60 09:00Z, which is routed to FBI D+33 (note: flag already open from earlier referral).",
+      "observed_in": [
+        {
+          "stream": "aid_applications",
+          "what": "FEMA DisasterAssistance.gov server log: 94 application submissions from IP 198.51.100.44 between D+60 06:01Z and D+62 23:59Z; submission cluster timestamps: burst 1 D+60 06:01-09:17Z (31 apps), burst 2 D+61 01:00-04:45Z (29 apps), burst 3 D+62 23:00-23:59Z (34 apps) | FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash CC-DAM-0014.jpg appears in 7...",
+          "when": {
+            "start_utc": "2027-11-13T06:01Z",
+            "end_utc": "2027-11-16T06:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FEMA DisasterAssistance.gov server log: 94 application submissions from IP 198.51.100.44 between D+60 06:01Z and D+62 23:59Z; submission cluster timestamps: burst 1 D+60 06:01-09:17Z (31 apps), burst 2 D+61 01:00-04:45Z (29 apps), burst 3 D+62 23:00-23:59Z (34 apps)",
+        "FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash CC-DAM-0014.jpg appears in 7 applications with 7 different property addresses",
+        "IP geolocation record: 198.51.100.44 registered to Landmark Pacific Holdings LLC, 4411 Leopard Street, Corpus Christi TX 78408; ISP: Spectrum Business"
+      ],
+      "public_fact": null,
+      "place_ids": [],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fema_ia_application_database",
+        "fema_ecims_case_SA-2027-TX-4471",
+        "fbi_operation_sandbar_case_file"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "fema_ecims_case_SA-2027-TX-4471",
+          "stream": "investigative_files"
+        },
+        {
+          "label": "fbi_operation_sandbar_case_file",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true
+    },
+    {
+      "event_id": "EVT-2207",
+      "time_label": "D+90",
+      "day": 90,
+      "day_end": null,
+      "time_utc": "19:00Z",
+      "threads": [
+        "T22",
+        "T2"
+      ],
+      "lanes": [
+        "C",
+        "I"
+      ],
+      "description": "Operation Sandbar culminates with 14 arrests including Landmark Pacific Holdings director Renaldo Carver-Mossbach, appraiser Roland Munoz-Estrada, two FastDry Coastal principals (Marcus Whitfield-Yuen and Dora Cantu-Espinoza, fictional), and 10 of the 23 claim runners. FBI and Texas DPS hold joint press conference. Total alleged fraud: $23.4 million across 187 insurance claims and 94 FEMA IA applications. Charges include wire fraud, mail fraud, disaster relief fraud (18 USC 1001), and conspiracy. The press conference is broadcast live by OUT-02 and OUT-03; OUT-06 Continental Wire Service distributes nationally.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "FBI Operation Sandbar press release: 'The defendants exploited a natural disaster to defraud federal disaster assistance programs and private insurers of an estimated $23 million. The ring inflated property values before the storm and filed hundreds of fraudulent claims after it. This is exactly the kind of disaster fraud that Operation Sandbar was designed to detect and prosecute.' | FEMA press release simultaneous with FBI: 'FEMA has suspended 94...",
+          "when": {
+            "start_utc": "2027-12-13T19:00Z",
+            "end_utc": "2027-12-13T21:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "The press conference is broadcast live by OUT-02 and OUT-03; OUT-06 Continental Wire Service distributes nationally.",
+          "when": {
+            "start_utc": "2027-12-13T19:00Z",
+            "end_utc": "2027-12-13T21:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "DOJ criminal complaint 27-CC-7741: 14 defendants; charges include 18 USC 1341 (mail fraud), 18 USC 1343 (wire fraud), 18 USC 1001 (false statements to FEMA); forfeiture allegation $23.4 million",
+        "FBI Operation Sandbar press release: 'The defendants exploited a natural disaster to defraud federal disaster assistance programs and private insurers of an estimated $23 million. The ring inflated property values before the storm and filed hundreds of fraudulent claims after it. This is exactly the kind of disaster fraud that Operation Sandbar was designed to detect and prosecute.'",
+        "FEMA press release simultaneous with FBI: 'FEMA has suspended 94 Individual Assistance awards totaling $2.1 million pending investigation; legitimate applicants whose applications were filed by LPH runners have been contacted and offered re-registration assistance'"
+      ],
+      "public_fact": "PUB-210",
+      "place_ids": [],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fbi_operation_sandbar_press_release_d90",
+        "doj_criminal_complaint_27-CC-7741",
+        "out02_broadcast_archive_d90"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "doj_criminal_complaint_27-CC-7741",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "PUB-210",
+      "day": 90,
+      "time_local": "14:00",
+      "type": "press_release",
+      "source": "FBI Houston Division / Texas Department of Public Safety",
+      "statement": "OPERATION SANDBAR — 14 ARRESTED IN HURRICANE RAFAEL DISASTER FRAUD SCHEME — December 13, 2027: The Federal Bureau of Investigation Houston Division, FBI Corpus Christi Resident Agency, and the Texas Department of Public Safety Criminal Investigations Division today announced 14 arrests in connection with a large-scale disaster fraud scheme that targeted federal disaster assistance programs and private insurers following Hurricane Rafael. The defendants, led by Corpus Christi resident Renaldo Carver-Mossbach, 44, are accused of fraudulently inflating insurance values on 230 properties before the storm and subsequently filing 187 fraudulent insurance claims and 94 fraudulent FEMA Individual Assistance applications claiming damage that did not occur or was dramatically overstated. Total alleged fraud losses exceed $23 million. Property management company Landmark Pacific Holdings LLC, water damage restoration firm FastDry Coastal LLC, and appraisal firm Duvall and Sons Property Consultants are named in the complaint. The defendants face federal charges of wire fraud, mail fraud, false statements to a federal agency, and conspiracy, carrying maximum penalties of 20 to 30 years in federal prison. FEMA has suspended 94 Individual Assistance awards pending investigation and is contacting affected applicants whose claims were filed without their knowledge. Texas DPS urges any resident who engaged with FastDry Coastal LLC or Landmark Pacific Holdings representatives after the storm to contact the Operation Sandbar tip line at (361) 555-0199.",
+      "arcs": [
+        "ARC-CONTRACTS",
+        "ARC-RECOVERY"
+      ],
+      "events": [
+        "EVT-2207"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Districts 3 and 4"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-211",
+      "day": 30,
+      "time_local": "10:00",
+      "type": "industry_report",
+      "source": "Texas Department of Insurance / Insurance Council of Texas",
+      "statement": "DISASTER CLAIMS SURGE UPDATE — October 14, 2027: The Texas Department of Insurance and the Insurance Council of Texas report that Hurricane Rafael has generated approximately 187,000 property insurance claims across Nueces, San Patricio and Aransas counties as of October 14, representing an estimated $2.1 billion in insured losses. This ranks as the second-largest coastal insured loss event in Texas since Hurricane Harvey in 2017. Claims volume in the Corpus Christi metropolitan area exceeds industry catastrophe response models by approximately 23 percent. TDI has activated its Disaster Response Team and deployed 12 field claim examiners. The department notes an elevated pattern of large commercial property claims in Districts 3-5 that is under review. Adjusters are reporting difficulty verifying pre-storm property values in certain commercial portfolios. Homeowners and commercial property owners are reminded that Texas law requires insurers to acknowledge claims within 15 days and pay or deny within 15 business days of receiving all claim documentation. Residents experiencing claim delays should contact TDI at (800) 252-3439. TDI is tracking contractor fraud complaints and coordinating with the Texas DPS.",
+      "arcs": [
+        "ARC-CONTRACTS",
+        "ARC-RECOVERY"
+      ],
+      "events": [
+        "EVT-2204"
+      ],
+      "places": [
+        "Nueces County",
+        "Corpus Christi",
+        "Districts 3-5"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-212",
+      "day": 3,
+      "time_local": "08:00",
+      "type": "consumer_warning",
+      "source": "Texas Office of the Attorney General / FEMA",
+      "statement": "DISASTER FRAUD WARNING — September 17, 2027: The Texas Office of the Attorney General and FEMA are warning Corpus Christi area residents about price gouging and contractor fraud following Hurricane Rafael. Reports are already emerging of contractors demanding large upfront cash payments and then failing to perform work. Texas law prohibits price gouging during a declared disaster. Warning signs of contractor fraud include: demanding full payment upfront; no written contract; no Texas contractor license; using high-pressure tactics; claiming to be FEMA-affiliated (FEMA does NOT endorse private contractors). Legitimate FEMA Individual Assistance programs do not charge application fees. FEMA IA registration is NOT yet open for Nueces County — anyone charging fees to register for FEMA assistance is committing fraud. Report fraud to the OAG Consumer Protection Hotline at (800) 621-0508 or the FEMA Disaster Fraud Hotline at 1-866-720-5721. Texas OAG has opened a price gouging investigation in Nueces County.",
+      "arcs": [
+        "ARC-CONTRACTS"
+      ],
+      "events": [
+        "EVT-2202"
+      ],
+      "places": [
+        "Nueces County",
+        "Corpus Christi"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-213",
+      "day": 15,
+      "time_local": "11:00",
+      "type": "consumer_warning",
+      "source": "Texas Department of Public Safety",
+      "statement": "CONTRACTOR FRAUD ALERT — September 29, 2027: The Texas Department of Public Safety is issuing an urgent consumer alert following more than 300 complaints about fraudulent water damage contractors in the Corpus Christi area since Hurricane Rafael. Residents in Districts 3 and 4, particularly those affected by flooding and water damage from the storm, are most at risk. Specific complaints include contractors charging for water extraction, mold remediation, and drywall repair at prices 3 to 5 times above normal market rates; charging for services never performed; using forged insurance adjuster documentation; and requesting victims sign over assignment-of-benefits rights to allow direct billing to insurance carriers without homeowner review. DPS urges residents to: verify contractor license at license.state.tx.us; get minimum three written estimates; never sign assignment-of-benefits without reading the full document; pay only after work is completed and inspected. Any resident who believes they have been victimized should contact Texas DPS at (512) 424-2000 or local law enforcement. This warning applies to all contractors, including those offering emergency water damage restoration services.",
+      "arcs": [
+        "ARC-CONTRACTS"
+      ],
+      "events": [
+        "EVT-2203"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Districts 3 and 4"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-214",
+      "day": 30,
+      "time_local": "09:00",
+      "type": "press_release",
+      "source": "Texas Department of Insurance",
+      "statement": "TDI ACTIVATES CLAIMS FRAUD TASK FORCE — October 14, 2027: Texas Department of Insurance Commissioner announces the activation of a Disaster Claims Fraud Task Force for Nueces County following Hurricane Rafael. The task force, operating in coordination with the FBI and Texas DPS, will focus on detecting and preventing fraudulent insurance claims arising from the storm. TDI has identified patterns of concern including clusters of large commercial property claims with similar damage narratives, inflated pre-storm appraisals, and claims for total losses on properties that sustained only partial damage. TDI emphasizes that filing a fraudulent insurance claim is a third-degree felony in Texas, punishable by 2 to 10 years in prison and fines up to $10,000. Insurers are reminded of their obligation to refer suspected fraud to TDI's Fraud Unit. TDI is working with the Insurance Council of Texas to establish a Nueces County claims database to identify duplicate and suspicious claims across carriers. Legitimate policyholders are encouraged to cooperate with claim investigations and to report any third party who pressured them into filing inflated claims.",
+      "arcs": [
+        "ARC-CONTRACTS"
+      ],
+      "events": [
+        "EVT-2204"
+      ],
+      "places": [
+        "Nueces County",
+        "Corpus Christi"
+      ],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "ia_applications_filed",
+      "label": "FEMA IA applications filed (cumulative, Nueces County)",
+      "kind": "number",
+      "group": "Aid & money",
+      "unit": "applications",
+      "thread": "T22",
+      "description": "Cumulative total of FEMA Individual Assistance applications filed for Nueces County. Includes both legitimate and fraudulent applications. Registration does not open until D+60; applications spike immediately upon opening. The 94 fraudulent LPH applications are embedded within the first-day surge of approximately 8,400 applications.",
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 0
+        },
+        {
+          "day": 57,
+          "value": 0
+        },
+        {
+          "day": 60,
+          "value": 8400
+        },
+        {
+          "day": 62,
+          "value": 21300
+        },
+        {
+          "day": 70,
+          "value": 38700
+        },
+        {
+          "day": 90,
+          "value": 51200
+        },
+        {
+          "day": 119,
+          "value": 54800
+        }
+      ]
+    },
+    {
+      "id": "fraud_suspect_claims_flagged",
+      "label": "Fraud-suspect claims flagged (cumulative)",
+      "kind": "number",
+      "group": "Hidden threads",
+      "unit": "claims",
+      "thread": "T22",
+      "description": "Cumulative count of insurance and IA claims flagged as potentially fraudulent by FEMA ECIMS, insurer SIU units, TDI fraud unit, or Operation Sandbar investigators. Counts only claims formally flagged, not the total fraud universe. Visible only to investigators and controllers.",
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 0
+        },
+        {
+          "day": 15,
+          "value": 12
+        },
+        {
+          "day": 30,
+          "value": 71
+        },
+        {
+          "day": 60,
+          "value": 142
+        },
+        {
+          "day": 65,
+          "value": 281
+        },
+        {
+          "day": 80,
+          "value": 319
+        },
+        {
+          "day": 90,
+          "value": 341
+        }
+      ]
+    },
+    {
+      "id": "operation_sandbar_status",
+      "label": "Operation Sandbar status",
+      "kind": "state",
+      "group": "Hidden threads",
+      "unit": null,
+      "thread": "T22",
+      "description": "Operational status of Operation Sandbar (FBI/DPS disaster fraud investigation). Values: pre-investigation, active-investigation, warrants-served, arrests-made, public-announced. Transitions are hidden from public knowledge until D+90.",
+      "keyframes": [
+        {
+          "day": -60,
+          "value": "pre-investigation"
+        },
+        {
+          "day": 30,
+          "value": "active-investigation"
+        },
+        {
+          "day": 60,
+          "value": "active-investigation"
+        },
+        {
+          "day": 85,
+          "value": "warrants-served"
+        },
+        {
+          "day": 90,
+          "value": "arrests-made"
+        },
+        {
+          "day": 90,
+          "value": "public-announced"
+        }
+      ]
+    },
+    {
+      "id": "landmark_pacific_exposure_usd",
+      "label": "Landmark Pacific Holdings total fraud exposure (USD)",
+      "kind": "number",
+      "group": "Hidden threads",
+      "unit": "USD",
+      "thread": "T22",
+      "description": "Investigator running total of estimated fraud exposure attributable to the Landmark Pacific Holdings ring (insurance inflation + fraudulent claims + IA fraud). Builds as Operation Sandbar uncovers the full scope. Hidden variable; only visible in investigator case files.",
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 0
+        },
+        {
+          "day": 30,
+          "value": 4200000
+        },
+        {
+          "day": 60,
+          "value": 11800000
+        },
+        {
+          "day": 80,
+          "value": 21600000
+        },
+        {
+          "day": 90,
+          "value": 23400000
+        }
+      ]
+    }
+  ],
+  "news_arcs": [
+    {
+      "arc_id": "ARC-FRAUD",
+      "name": "The claim that wasn't",
+      "description": "Coverage of disaster fraud in Corpus Christi following Hurricane Rafael. Begins as generic consumer-protection warnings at D+3-15, escalates to named entity coverage after Operation Sandbar arrests at D+90. Generates 300+ synthetic document pairs (legitimate vs fraudulent insurance claim, adjuster report, FEMA IA application, contractor invoice).",
+      "thread": "T22",
+      "story_hooks": [
+        {
+          "day": 3,
+          "outlet": "OUT-01",
+          "character_note": "Bayside Ledger breaking news; consumer protection beat reporter; sources: Texas OAG spokesperson, anonymous adjuster",
+          "summary": "Bayside Ledger: first post-storm fraud warnings; 'FEMA imposters' operating in Districts 3 and 4 posing as assistance workers; OAG price gouging investigation announced; reporter describes fema-disasterhelp.cc lookalike website (URL in story but no attribution to LPH yet)",
+          "public_facts_used": [
+            "PUB-212"
+          ]
+        },
+        {
+          "day": 15,
+          "outlet": "OUT-01",
+          "character_note": "Investigative follow-up; sources: DPS spokesperson, 3 anonymous District 4 residents victimized by FastDry Coastal",
+          "summary": "Bayside Ledger: FastDry Coastal named in 128 complaints; reporter interviews 3 District 4 homeowners who paid upfront for water extraction that was never performed; billed amounts ranged from $4,800 to $22,000; contractor using unlicensed subcontractors; DPS complaint hotline overwhelmed",
+          "public_facts_used": [
+            "PUB-213"
+          ]
+        },
+        {
+          "day": 30,
+          "outlet": "OUT-05",
+          "character_note": "Sabal Energy Wire/insurance industry angle; sources: TDI spokesperson, Insurance Council of Texas analyst, anonymous SIU investigator",
+          "summary": "Sabal Energy Wire: industry surge report shows about 187,000 claims filed, $2.1 billion in insured losses; report notes suspicious clustering of large commercial property claims in Districts 3-5 with similar damage narratives; industry SIU referral rate 400% above normal for comparable events; TDI fraud task force activated",
+          "public_facts_used": [
+            "PUB-211",
+            "PUB-214"
+          ]
+        },
+        {
+          "day": 60,
+          "outlet": "OUT-01",
+          "character_note": "Investigative deep-dive triggered by FEMA IA opening; reporter notices unusual application volume on day 1; sources: FEMA spokesperson (no confirmation of fraud investigation), housing rights advocate in District 4",
+          "summary": "Bayside Ledger: 'FEMA registration chaos on Day 1' story; reporter notes 8,400 applications filed in first few hours; housing advocate in District 4 says several clients were 'helped' by LPH-affiliated runners who took their personal information; story does not name LPH but describes runner activity in detail; first public reporting that connects the runner network to formal IA applications",
+          "public_facts_used": []
+        },
+        {
+          "day": 90,
+          "outlet": "OUT-02",
+          "character_note": "Live press conference coverage; Harborline 6 anchor; FBI SAC Houston and DPS Director as primary voices; SA Okafor-Reyes in background at podium",
+          "summary": "Harborline 6 News live: Operation Sandbar press conference; 14 arrests; Renaldo Carver-Mossbach perp walk footage; FBI SAC outlines the pre-storm insurance inflation scheme and the IA application IP clustering detection; total fraud $23.4M named on-air; FEMA announces 94 IA awards suspended; reporter asks about victims who unknowingly participated via runners",
+          "public_facts_used": [
+            "PUB-210"
+          ]
+        },
+        {
+          "day": 90,
+          "outlet": "OUT-01",
+          "character_note": "Investigative reaction piece; Bayside Ledger; sources: SA Okafor-Reyes (brief attributed quote), housing advocate, anonymous insurance adjuster who suspected fraud weeks ago",
+          "summary": "Bayside Ledger: 'How the storm chasers moved in before Rafael hit' — explains the pre-storm appraisal inflation scheme; traces the timeline from D-30 inflated appraisals through D+3 runner activation to D+60 IA application cluster; adjuster source says they flagged inflated LPH commercial claims on D+10 but the volume of legitimate storm damage claims made follow-up slow; connects FastDry Coastal to LPH through shared Leopard Street address",
+          "public_facts_used": [
+            "PUB-210"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity_id": "ENT-T22-01",
+      "name": "Renaldo Carver-Mossbach",
+      "role": "Director, Landmark Pacific Holdings LLC (fraud ring leader)",
+      "thread": "T22",
+      "description": "Fictional CEO of Landmark Pacific Holdings LLC, the Corpus Christi-based property management company that serves as the operational hub for the T2/T22 fraud ring. 51 years old. Former licensed real estate broker (license suspended 2019 for undisclosed violations in a prior case). Arrested D+90 as part of Operation Sandbar. Primary defendant in DOJ criminal complaint 27-CC-7741."
+    },
+    {
+      "entity_id": "ENT-T22-02",
+      "name": "FastDry Coastal LLC",
+      "role": "Fraudulent water damage restoration company",
+      "thread": "T22",
+      "description": "Fictional Corpus Christi-based contractor operating as a water damage restoration scam post-Rafael. Charges 400% above market rate and bills for services not performed. Registered address 2817 McArdle Road, Corpus Christi (fictional). Principals Marcus Whitfield-Yuen and Dora Cantu-Espinoza arrested D+90. Responsible for approximately 128 of the 312 contractor fraud complaints filed with Texas DPS by D+15."
+    },
+    {
+      "entity_id": "ENT-T22-03",
+      "name": "Special Agent Darnell Okafor-Reyes",
+      "role": "Case Agent, Operation Sandbar — FBI Corpus Christi Resident Agency",
+      "thread": "T22",
+      "description": "Fictional FBI special agent assigned as lead case agent for Operation Sandbar (FBI case 27-CC-7741). 9 years with the FBI, 3 years in white collar crime unit. Leads the investigation from D+30 through D+90 arrests. Present at the D+90 press conference but delivers no on-camera remarks; one attributed quote in Bayside Ledger post-arrest piece."
+    },
+    {
+      "entity_id": "ENT-T22-04",
+      "name": "Claim Runner: Tonya Brisset-Galvan",
+      "role": "Claim runner (T22 fraud ring)",
+      "thread": "T22",
+      "description": "Fictional claim runner recruited by LPH ring D+3. Operates in Districts 3 and 4 posing as a FEMA assistance navigator. Signs up 14 legitimate storm victims as clients, skimming 20% of their IA disbursements. Also files 7 fully fraudulent IA applications on behalf of fictitious applicants. Arrested D+90. Cooperating witness in exchange for reduced charges."
+    },
+    {
+      "entity_id": "ENT-T22-05",
+      "name": "Claim Runner: Hector Limas-Obregon",
+      "role": "Claim runner (T22 fraud ring)",
+      "thread": "T22",
+      "description": "Fictional claim runner recruited by LPH ring D+3. Operates primarily in District 3. Signs up 11 legitimate storm victims. Files 9 fraudulent IA applications. Arrested D+90. Does not cooperate with investigators."
+    }
+  ],
+  "cross_links": [
+    {
+      "thread": "T2",
+      "description": "Landmark Pacific Holdings is the same organization as the T2 pre-storm insurance inflation ring. T22 is the post-storm pivot of T2 operations. The same 230 properties, the same principals, the same complicit appraiser and broker network."
+    },
+    {
+      "thread": "T8",
+      "description": "The extended power outages (T8 grid intrusion) make property damage verification harder for adjusters. Without power, adjusters cannot access electronic property records, compare pre-storm imagery, or confirm appliance and equipment values. The outage provides cover for inflated claims."
+    },
+    {
+      "thread": "T9",
+      "description": "The boil-water notice for Districts 3-4 (T9 water SCADA manipulation) generates real property damage from water exposure in the same districts where LPH concentrates its fraudulent IA applications. Legitimate water damage claims provide camouflage for FastDry Coastal's fraudulent billing."
+    }
+  ],
+  "answer_key_path": "The key detection artifact for T22 is the FEMA ECIMS IP clustering flag (SA-2027-TX-4471): 94 IA applications submitted from IP 198.51.100.44 (Landmark Pacific Holdings, 4411 Leopard Street) in three time-clustered bursts across D+60 through D+62. Secondary detection: image hash deduplication across the 94 applications reveals 23 unique photos reused across multiple property addresses; photo CC-DAM-0014.jpg appears in 7 applications. Tertiary detection: Sabine National Insurance SIU referral showing 47 commercial claims with identical damage narrative text (address-swap pattern), which predates and partially drives the FBI case opening at D+30. The connection between T22 and T8/T9 is structural cover: legitimate utility damage in Districts 3-4 creates a high-volume, high-noise claims environment that slows adjuster follow-up on suspicious commercial claims. Operation Sandbar is public knowledge after D+90; before D+90 it is entirely hidden, and the public-facing signals are only the generic DPS consumer fraud warnings and TDI fraud task force announcement.",
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

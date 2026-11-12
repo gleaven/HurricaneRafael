@@ -1,0 +1,781 @@
+{
+  "checks": 155,
+  "failed": [],
+  "results": [
+    {
+      "check": "segments contiguous: storm_stage",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: nws_advisory",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: port_condition",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: channel_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: crude_exports",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: relief_ship_gulf_provider",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: brigade_outload",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: onstevens_power_feeds",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: boil_water_notice",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: water_pressure",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: bridges",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: spill_response",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: fishing_closure",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: shellfish_closure",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: spill_claims_process",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: nas_cc_aircraft",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: army_depot",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: base_generator",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: drone_overflights",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: perimeter_sensors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: gps_interference",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: halcyon_drift",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: spoofed_identity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: kestrel_activity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: spill_cause_public",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: blast_cause_public",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: drones_public",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: gps_public",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: ais_anomaly_public",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: fema_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: debris_contract_vantorra",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: fuel_contract_quellmar",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: phase",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: gw_sub01_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: gw_sub02_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: gw_sub03_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: gw_sub04_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: gw_pump_p3_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "segments contiguous: gw_scada_isolated",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: storm_max_wind_kt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: storm_distance_km",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: bay_water_level_ft",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: rain_rate_in_hr",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: nueces_river_stage_ft",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: vessels_at_anchorage",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: export_activity_pct",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: water_capacity_pct",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: pump_p2_vibration_mm_s",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: power_outage_pct",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: oil_released_bbl",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: oil_slick_km2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: water_hydrocarbon_index",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: spill_claims_cumulative",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: calls_911_per_day",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: er_stomach_illness_x",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: er_respiratory_x",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: er_low_income_tracts_x",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: wastewater_norovirus_x",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: shelters_open",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: relief_flights",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: nas_readiness_pct",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: devices_in_channel",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: contaminated_fuel_m3",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: rumor_posts_per_day",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: accounts_taken_over",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: aid_registrations_cumulative",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: diverted_aid_musd",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: gw_grid_outage_customers",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: gw_zone4_pressure_psi",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "series length: gw_alarm_suppressed_count",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "state colors defined: storm_stage",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: nws_advisory",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: port_condition",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: channel_status",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: crude_exports",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: relief_ship_gulf_provider",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: brigade_outload",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: onstevens_power_feeds",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: boil_water_notice",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: water_pressure",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: bridges",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: spill_response",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: fishing_closure",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: shellfish_closure",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: spill_claims_process",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: nas_cc_aircraft",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: army_depot",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: base_generator",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: drone_overflights",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: perimeter_sensors",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: gps_interference",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: halcyon_drift",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: spoofed_identity",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: kestrel_activity",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: spill_cause_public",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: blast_cause_public",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: drones_public",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: gps_public",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: ais_anomaly_public",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: fema_status",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: debris_contract_vantorra",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: fuel_contract_quellmar",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: phase",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: gw_sub01_status",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: gw_sub02_status",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: gw_sub03_status",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: gw_sub04_status",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: gw_pump_p3_status",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "state colors defined: gw_scada_isolated",
+      "pass": true,
+      "detail": "set()"
+    },
+    {
+      "check": "landfall at Mustang Island 06:00Z D0",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Category 3 at landfall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "storm forms D-10 in NW Caribbean",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "hurricane after crossing Yucatan (D-6)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no watch before D-3; watch D-3; warning D-2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "surge peak about 11 ft at landfall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "X-Ray D-3 with port open",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Yankee D-2: closed to inbound, 14 vessels, exports halted",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Zulu D-1: closed to all, ships to sea",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "ships back at anchorage from D+3",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "partial reopening D+30 to D+44",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "blast closure D+44 to D+58, open after",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "brigade sails D+59 to D+64",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "boil notice exactly D+4 to D+39",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "O.N. Stevens feeds fail D0 09:00Z",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "pump P-2 restored D+38",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "9,000 barrels by 05:30Z D0, none before 04:00Z",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "slick about 85 km2 on D+2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "closures from D+4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "911 about 2,900 on landfall day, about 310 baseline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "stomach illness +180% around D+8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "low-income tracts +40% on D+45",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "spill claims about 4,200 by D+115",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "40 relief flights D+34 to D+43",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "generator fails D+40; readiness 61",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "readiness 92 baseline, 85 by D+110",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "six drone nights D+1 to D+10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "GPS interference D+38 to D+43",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "AIS dark window D+31 02-16Z",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "devices: 2 from D+31, 1 after blast, 0 after D+52",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "accounts taken over 410 by D+70",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "diverted aid $3.9M by D+80",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "FEMA: declaration D+4, request D+25, approval D+57, registration D+60",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "48,000 registrations by D+89",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "searches D+104 (not Christmas)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "public lane spill_cause_public 'Possible unauthorized remote access' not before PUB-042",
+      "pass": true,
+      "detail": "starts day 6.7, fact day 6"
+    },
+    {
+      "check": "public lane spill_cause_public 'Attributed to a foreign government' not before PUB-097",
+      "pass": true,
+      "detail": "starts day 112.6, fact day 112"
+    },
+    {
+      "check": "public lane blast_cause_public 'Explosive device confirmed' not before PUB-070",
+      "pass": true,
+      "detail": "starts day 46.6, fact day 46"
+    },
+    {
+      "check": "public lane blast_cause_public 'Second device found' not before PUB-078",
+      "pass": true,
+      "detail": "starts day 52.7, fact day 52"
+    },
+    {
+      "check": "public lane drones_public 'Residents' videos' not before PUB-032",
+      "pass": true,
+      "detail": "starts day 2.6, fact day 2"
+    },
+    {
+      "check": "public lane gps_public 'FAA notice: interference' not before PUB-064",
+      "pass": true,
+      "detail": "starts day 39.6, fact day 39"
+    },
+    {
+      "check": "public lane gps_public 'Transmitter found (parked vehicle)' not before PUB-074",
+      "pass": true,
+      "detail": "starts day 47.6, fact day 47"
+    },
+    {
+      "check": "public lane ais_anomaly_public 'Identity in two places reported' not before PUB-062",
+      "pass": true,
+      "detail": "starts day 38.6, fact day 38"
+    },
+    {
+      "check": "public lane ais_anomaly_public 'Analysts note timing vs blast' not before PUB-076",
+      "pass": true,
+      "detail": "starts day 48.6, fact day 48"
+    },
+    {
+      "check": "every MSEL event has a timed marker",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "every public fact has a timed marker",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

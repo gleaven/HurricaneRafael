@@ -1,0 +1,175 @@
+{
+  "source": "weather",
+  "folder": "05_other_sources/weather/",
+  "format": "CSV",
+  "standard": "NOAA LCD (Local Climatological Data) / ASOS",
+  "reference": "https://www.ncei.noaa.gov/data/local-climatological-data/",
+  "verified": true,
+  "notes": "Hourly surface observations (ASOS / LCD style, routine reports at :53 past the hour, extra reports every 20 minutes while the hurricane is close) for every weather station in sensor_registry.json, standard meteorological records for the two NDBC buoys, and the hurricane advisory series with best track. All times UTC. Stations stop reporting when they lose power or instruments and resume later; missing rows are real gaps, not zeros.",
+  "entity_catalog": "06_data_streams/sensor_registry.json (weather_stations[], buoys[])",
+  "stations": [
+    {
+      "id": "KCRP",
+      "name": "KCRP Corpus Christi Intl",
+      "lat": 27.77335,
+      "lon": -97.51298,
+      "type": "asos",
+      "position_basis": "real site: KCRP Corpus Christi Intl (METAR/TAF station) [NWS Aviation Weather Center API stationinfo]"
+    },
+    {
+      "id": "KNGP",
+      "name": "KNGP Corpus Christi/Truax Field NAS",
+      "lat": 27.688,
+      "lon": -97.292,
+      "type": "asos",
+      "position_basis": "real site: KNGP Corpus Christi/Truax Field NAS (METAR/TAF station) [NWS Aviation Weather Center API stationinfo]"
+    },
+    {
+      "id": "KNGW",
+      "name": "KNGW Corpus Christi/Cabaniss Field",
+      "lat": 27.702,
+      "lon": -97.442,
+      "type": "asos",
+      "position_basis": "real site: KNGW Corpus Christi/Cabaniss Field (station record) [NWS Aviation Weather Center API stationinfo]"
+    },
+    {
+      "id": "KRAS",
+      "name": "KRAS Port Aransas/Mustang Beach Airport",
+      "lat": 27.80835,
+      "lon": -97.08532,
+      "type": "asos",
+      "position_basis": "real site: KRAS Port Aransas/Mustang Beach Airport (METAR station) [NWS Aviation Weather Center API stationinfo]"
+    },
+    {
+      "id": "KRKP",
+      "name": "KRKP Rockport/Aransas County Airport",
+      "lat": 28.08366,
+      "lon": -97.04669,
+      "type": "asos",
+      "position_basis": "real site: KRKP Rockport/Aransas County Airport (METAR station) [NWS Aviation Weather Center API stationinfo]"
+    },
+    {
+      "id": "KTFP",
+      "name": "KTFP Ingleside Regional / McCampbell-Porter",
+      "lat": 27.91318,
+      "lon": -97.21321,
+      "type": "asos",
+      "position_basis": "real site: KTFP Ingleside Regional / McCampbell-Porter (METAR station) [NWS Aviation Weather Center API stationinfo]"
+    },
+    {
+      "id": "KNQI",
+      "name": "KNQI Kingsville NAS",
+      "lat": 27.507,
+      "lon": -97.81,
+      "type": "asos",
+      "position_basis": "real site: KNQI Kingsville NAS (METAR/TAF station) [NWS Aviation Weather Center API stationinfo]"
+    },
+    {
+      "id": "42020",
+      "name": "NDBC buoy 42020 Corpus Christi, TX",
+      "lat": 26.97,
+      "lon": -96.679,
+      "type": "buoy",
+      "position_basis": "real site: NDBC buoy 42020 Corpus Christi, TX [NOAA NDBC station table]"
+    },
+    {
+      "id": "42019",
+      "name": "NDBC buoy 42019 Freeport, TX",
+      "lat": 27.908,
+      "lon": -95.343,
+      "type": "buoy",
+      "position_basis": "real site: NDBC buoy 42019 Freeport, TX [NOAA NDBC station table]"
+    }
+  ],
+  "joins": {
+    "StationID": "sensor_registry.json weather_stations[].sensor_id / buoys[].sensor_id",
+    "time": "join to any other stream on UTC time"
+  },
+  "coverage": {
+    "required_span": {
+      "start_utc": "2027-08-15T00:00Z",
+      "end_utc": "2028-01-12T06:00Z",
+      "days": [
+        -30,
+        119
+      ]
+    },
+    "cadence": "hourly; 20-minute specials 2027-09-13T18:00Z to 2027-09-14T18:00Z; advisories every 6 hours, every 3 hours while watches or warnings are in effect"
+  },
+  "generator_reference": "scripts/streams/gen_environment.py (weather, advisories) using scripts/streams/envmodel.py",
+  "files": [
+    {
+      "file": "<StationID>_ASOS_observations.csv",
+      "one_per": "weather station (KCRP, KNGP, KNGW, KRAS, KRKP, KTFP, KNQI)",
+      "fields": [
+        "USAF",
+        "WBAN",
+        "StationID",
+        "StationName",
+        "StnLat",
+        "StnLon",
+        "StnElev_m",
+        "ObsDateTime",
+        "ReportType",
+        "SkyCondition",
+        "CloudBaseAGL_ft",
+        "Visibility_m",
+        "PresentWx",
+        "DryBulbTemp_C",
+        "DewPoint_C",
+        "RelativeHumidity_pct",
+        "WindDir_deg",
+        "WindSpeed_mps",
+        "WindGust_mps",
+        "StationPressure_mb",
+        "SeaLevelPressure_mb",
+        "Precip1hr_mm",
+        "Remarks"
+      ],
+      "field_notes": {
+        "ObsDateTime": "UTC, ISO 8601 without zone suffix",
+        "ReportType": "FM-15 routine hourly, FM-16 special",
+        "WindDir_deg": "direction the wind blows from, nearest 10 degrees; 0 with speed 0 is calm",
+        "WindSpeed_mps": "2-minute mean, m/s (1 kt = 0.5144 m/s)",
+        "WindGust_mps": "blank when no gust reported",
+        "Precip1hr_mm": "accumulation since the last routine report",
+        "Visibility_m": "16093 = 10 statute miles or more",
+        "Remarks": "PK WND dddfff = peak wind direction and speed in knots"
+      }
+    },
+    {
+      "file": "BUOY<id>_observations.csv",
+      "one_per": "buoy (42019, 42020)",
+      "fields": [
+        "StationID",
+        "StationName",
+        "StnLat",
+        "StnLon",
+        "ObsDateTime",
+        "WDIR_degT",
+        "WSPD_mps",
+        "GST_mps",
+        "WVHT_m",
+        "DPD_s",
+        "APD_s",
+        "MWD_degT",
+        "PRES_mb",
+        "ATMP_C",
+        "WTMP_C",
+        "DEWP_C"
+      ],
+      "field_notes": {
+        "WVHT_m": "significant wave height",
+        "DPD_s": "dominant wave period",
+        "APD_s": "average wave period",
+        "MWD_degT": "direction the dominant waves come from",
+        "WSPD_mps": "8-minute mean wind speed",
+        "PRES_mb": "sea-level pressure"
+      }
+    },
+    {
+      "file": "nhc_advisories.json",
+      "content": "advisories[] (advisory_number, advisory_type, issued_utc, issued_local, classification, saffir_simpson_category, center, max_sustained_winds_kt, min_central_pressure_mb, movement, headline, watches_and_warnings[], forecast[] with cone_radius_nm, corpus_christi_in_forecast_cone, landfall) and best_track[] (6-hourly position, wind, pressure, status)"
+    }
+  ]
+}

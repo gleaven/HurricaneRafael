@@ -1,0 +1,5254 @@
+{
+ "schema_version": "2.0",
+ "jurisdiction": "Corpus Christi, Nueces County, TX",
+ "cad_system": "Tyler New World CAD",
+ "event": {
+  "name": "Hurricane Rafael",
+  "location": "Corpus Christi, TX"
+ },
+ "note": "Stations sit on real station sites or beside real roads (see position_basis); station numbers and unit ids are fictional. Units flagged avl_equipped report vehicle locations.",
+ "agencies": {
+  "CCPD": {
+   "name": "Corpus Christi Police Department",
+   "radio_system": "Harris P25 Trunked",
+   "dispatch_channel": "CCPD-DISP-1",
+   "beats": [
+    {
+     "beat_id": "B01",
+     "name": "Downtown / North Beach",
+     "description": "Downtown core, North Beach waterfront, Harbor Bridge area, Cargo terminal district",
+     "neighborhoods": [
+      "Downtown",
+      "North Beach",
+      "Port of Corpus Christi",
+      "Harbor Bridge"
+     ],
+     "supervisor_unit": "1S1"
+    },
+    {
+     "beat_id": "B02",
+     "name": "Leopard Street Corridor",
+     "description": "Leopard Street commercial/industrial corridor, north of downtown, Up River Road area",
+     "neighborhoods": [
+      "Leopard Street",
+      "Hillcrest",
+      "Up River Road",
+      "Nueces River bottoms"
+     ],
+     "supervisor_unit": "2S1"
+    },
+    {
+     "beat_id": "B03",
+     "name": "Central / Morgan Ave",
+     "description": "Central Corpus Christi, Morgan Avenue corridor, Del Mar College area, TAMUCC vicinity",
+     "neighborhoods": [
+      "Central",
+      "Morgan Ave",
+      "Del Mar",
+      "South Bluff",
+      "Lamar Park"
+     ],
+     "supervisor_unit": "3S1"
+    },
+    {
+     "beat_id": "B04",
+     "name": "Southside / South Staples",
+     "description": "South Staples Street corridor, Saratoga area, La Palmera Mall, South residential",
+     "neighborhoods": [
+      "Southside",
+      "South Staples",
+      "Saratoga",
+      "Airline at Saratoga",
+      "Whitecap"
+     ],
+     "supervisor_unit": "4S1"
+    },
+    {
+     "beat_id": "B05",
+     "name": "Westside",
+     "description": "West Corpus Christi, Agnes Street, Highway 44 corridor, west residential areas",
+     "neighborhoods": [
+      "Westside",
+      "Agnes Street",
+      "Highway 44",
+      "Clarkwood",
+      "Violet"
+     ],
+     "supervisor_unit": "5S1"
+    },
+    {
+     "beat_id": "B06",
+     "name": "Flour Bluff",
+     "description": "Flour Bluff community, Waldron Road, Ennis Joslin corridor, back island access",
+     "neighborhoods": [
+      "Flour Bluff",
+      "Waldron Road",
+      "Ennis Joslin",
+      "Flour Bluff ISD area"
+     ],
+     "supervisor_unit": "6S1"
+    },
+    {
+     "beat_id": "B07",
+     "name": "Padre Island / SPID",
+     "description": "North Padre Island, South Padre Island Drive eastern end, JFK Causeway area",
+     "neighborhoods": [
+      "North Padre Island",
+      "Padre Island National Seashore area",
+      "JFK Causeway",
+      "Gulf of Mexico shoreline"
+     ],
+     "supervisor_unit": "7S1"
+    },
+    {
+     "beat_id": "B08",
+     "name": "Calallen / Northwest",
+     "description": "Calallen community, Northwest Corpus Christi, IH-37 corridor north of city, Violet area",
+     "neighborhoods": [
+      "Calallen",
+      "Northwest",
+      "IH-37 North",
+      "Annaville",
+      "Calallen ISD area"
+     ],
+     "supervisor_unit": "8S1"
+    },
+    {
+     "beat_id": "B09",
+     "name": "NAS / Oso Creek",
+     "description": "NAS Corpus Christi perimeter, Oso Creek corridor, South Alameda, Holly Road area",
+     "neighborhoods": [
+      "NAS Corpus Christi",
+      "Oso Creek",
+      "South Alameda",
+      "Holly Road",
+      "Oso Bay vicinity"
+     ],
+     "supervisor_unit": "9S1"
+    },
+    {
+     "beat_id": "B10",
+     "name": "Southeast",
+     "description": "Southeast Corpus Christi, Greenwood Drive, Gollihar Road area, South Park",
+     "neighborhoods": [
+      "Southeast",
+      "Greenwood",
+      "Gollihar",
+      "South Park",
+      "Airport Road"
+     ],
+     "supervisor_unit": "10S1"
+    },
+    {
+     "beat_id": "B11",
+     "name": "North / Airline-SPID",
+     "description": "North Corpus Christi, Airline Road corridor, SPID western end, Corpus Christi International Airport area",
+     "neighborhoods": [
+      "North",
+      "Airline Road",
+      "SPID West",
+      "Corpus Christi Airport",
+      "Mustang Road"
+     ],
+     "supervisor_unit": "11S1"
+    },
+    {
+     "beat_id": "B12",
+     "name": "Harbor / Industrial",
+     "description": "Port industrial zone, Rincon Point, ship channel, Refinery Row, La Quinta Channel",
+     "neighborhoods": [
+      "La Quinta",
+      "Rincon",
+      "Ship Channel",
+      "Refinery Row",
+      "Industrial District"
+     ],
+     "supervisor_unit": "12S1"
+    }
+   ],
+   "unit_count": 61
+  },
+  "CCFD": {
+   "name": "Corpus Christi Fire Department",
+   "radio_system": "Harris P25 Trunked",
+   "dispatch_channel": "CCFD-DISP-1",
+   "unit_count": 70
+  },
+  "CCEMS": {
+   "name": "Corpus Christi Emergency Medical Services",
+   "radio_system": "Harris P25 Trunked",
+   "dispatch_channel": "CCEMS-DISP-1",
+   "note": "Medic units are housed in fire stations.",
+   "unit_count": 22
+  },
+  "NCSO": {
+   "name": "Nueces County Sheriff's Office",
+   "radio_system": "Harris P25 Trunked",
+   "dispatch_channel": "NCSO-DISP-1",
+   "jurisdiction_note": "Unincorporated Nueces County; mutual aid within Corpus Christi city limits during declared disasters",
+   "unit_count": 15
+  },
+  "PAPD": {
+   "name": "Port Aransas Public Safety",
+   "dispatch_channel": "PAPD-DISP-1",
+   "unit_count": 2
+  },
+  "MA_FIRE": {
+   "name": "Mutual aid - fire (neighbouring departments)",
+   "dispatch_channel": "MA-FIRE-1",
+   "unit_count": 11
+  },
+  "MA_EMS": {
+   "name": "Mutual aid - EMS (neighbouring services)",
+   "dispatch_channel": "MA-EMS-1",
+   "unit_count": 7
+  },
+  "TF1": {
+   "name": "Texas Task Force 1",
+   "dispatch_channel": "NuecesNet SAR",
+   "unit_count": 3
+  },
+  "TXARNG": {
+   "name": "Texas Army National Guard",
+   "dispatch_channel": "NuecesNet SAR",
+   "unit_count": 4
+  },
+  "FEMA": {
+   "name": "Federal Emergency Management Agency",
+   "dispatch_channel": "NuecesNet",
+   "unit_count": 1
+  },
+  "NCOEM": {
+   "name": "Nueces County Office of Emergency Management",
+   "dispatch_channel": "NuecesNet",
+   "unit_count": 16
+  },
+  "CIVBOAT": {
+   "name": "Credentialed civilian boat pool (Corpus Christi Boating Association)",
+   "dispatch_channel": "NuecesNet SAR",
+   "unit_count": 87
+  },
+  "USCG": {
+   "name": "U.S. Coast Guard Sector / Air Station Corpus Christi",
+   "dispatch_channel": "NuecesNet interop",
+   "unit_count": 0,
+   "partner_agency": true
+  },
+  "TXDPS": {
+   "name": "Texas Department of Public Safety, Aircraft Operations",
+   "dispatch_channel": "NuecesNet interop",
+   "unit_count": 0,
+   "partner_agency": true
+  },
+  "CBP": {
+   "name": "U.S. Customs and Border Protection, Air and Marine Operations",
+   "dispatch_channel": "NuecesNet interop",
+   "unit_count": 0,
+   "partner_agency": true
+  },
+  "CBPWA": {
+   "name": "Coastal Bend Power and Water Authority field crews",
+   "dispatch_channel": "NuecesNet interop",
+   "unit_count": 8,
+   "partner_agency": true
+  },
+  "NCPW": {
+   "name": "Nueces County Public Works and debris contractors",
+   "dispatch_channel": "NuecesNet interop",
+   "unit_count": 8,
+   "partner_agency": true
+  }
+ },
+ "stations": [
+  {
+   "station_id": "STA-1",
+   "agency": "CCFD",
+   "name": "Station 1 - Downtown",
+   "address": "514 Belden Street, Corpus Christi, TX 78401",
+   "latitude": 27.80258,
+   "longitude": -97.39629,
+   "position_basis": "real site: fire station at 514 Belden Street [USGS National Structures Dataset]",
+   "station_number": 1,
+   "battalion": "BC-1",
+   "beat": "B01",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-1",
+    "T-1",
+    "R-1",
+    "BC-1",
+    "FC-1",
+    "CC-SAR-007",
+    "CC-SAR-015",
+    "CC-SAR-023",
+    "HWV-4",
+    "M-1",
+    "M-13",
+    "M-19",
+    "MCI-1"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-2",
+   "agency": "CCFD",
+   "name": "Station 2 - South Side / Kostoryz",
+   "address": "4645 Kostoryz Road, Corpus Christi, TX 78415",
+   "latitude": 27.73581,
+   "longitude": -97.40903,
+   "position_basis": "real site: fire station at 4645 Kostoryz Road [USGS National Structures Dataset]",
+   "station_number": 2,
+   "battalion": "BC-2",
+   "beat": "B10",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-2",
+    "WC-4",
+    "M-2",
+    "M-14"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-3",
+   "agency": "CCFD",
+   "name": "Station 3 - Calallen",
+   "address": "13421 Leopard Street, Corpus Christi, TX 78410",
+   "latitude": 27.85621,
+   "longitude": -97.62858,
+   "position_basis": "real site: fire station at 13421 Leopard Street [USGS National Structures Dataset]",
+   "station_number": 3,
+   "battalion": "BC-1",
+   "beat": "B08",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-3",
+    "T-3",
+    "WTR-1",
+    "CC-SAR-004",
+    "CC-SAR-012",
+    "CC-SAR-020",
+    "HWV-3",
+    "M-3",
+    "M-16"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-4",
+   "agency": "CCFD",
+   "name": "Station 4 - Morgan / Six Points",
+   "address": "1401 Morgan Avenue, Corpus Christi, TX 78404",
+   "latitude": 27.77816,
+   "longitude": -97.4052,
+   "position_basis": "real site: fire station at 1401 Morgan Avenue [USGS National Structures Dataset]",
+   "station_number": 4,
+   "battalion": "BC-1",
+   "beat": "B03",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-4",
+    "WC-5"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-5",
+   "agency": "CCFD",
+   "name": "Station 5 - Rodd Field / Flour Bluff approach",
+   "address": "2338 Rodd Field Road, Corpus Christi, TX 78414",
+   "latitude": 27.67984,
+   "longitude": -97.34939,
+   "position_basis": "real site: fire station at 2338 Rodd Field Road [USGS National Structures Dataset]",
+   "station_number": 5,
+   "battalion": "BC-3",
+   "beat": "B09",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-5",
+    "T-5",
+    "R-5",
+    "BC-3",
+    "WTR-5",
+    "BOAT-2",
+    "CC-SAR-001",
+    "CC-SAR-009",
+    "CC-SAR-017",
+    "HWV-1",
+    "M-5",
+    "M-15"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-6",
+   "agency": "CCFD",
+   "name": "Station 6 - North Beach",
+   "address": "Timon Boulevard, Corpus Christi, TX 78402",
+   "latitude": 27.82656,
+   "longitude": -97.38661,
+   "position_basis": "placed beside Timon Blvd (no published point in the reference set)",
+   "station_number": 6,
+   "battalion": "BC-1",
+   "beat": "B01",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-6",
+    "BOAT-1",
+    "CC-SAR-003",
+    "CC-SAR-011",
+    "CC-SAR-019",
+    "M-6"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-7",
+   "agency": "CCFD",
+   "name": "Station 7 - South Staples",
+   "address": "5901 South Staples Street, Corpus Christi, TX 78413",
+   "latitude": 27.69487,
+   "longitude": -97.37873,
+   "position_basis": "real site: fire station at 5901 South Staples Street [USGS National Structures Dataset]",
+   "station_number": 7,
+   "battalion": "BC-2",
+   "beat": "B04",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-7",
+    "L-7",
+    "BC-2",
+    "M-4",
+    "M-12",
+    "M-20",
+    "MCI-2"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-8",
+   "agency": "CCFD",
+   "name": "Station 8 - Westside / Leopard",
+   "address": "3105 Leopard Street, Corpus Christi, TX 78408",
+   "latitude": 27.79645,
+   "longitude": -97.42472,
+   "position_basis": "real site: fire station at 3105 Leopard Street [USGS National Structures Dataset]",
+   "station_number": 8,
+   "battalion": "BC-1",
+   "beat": "B02",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-8",
+    "HM-1",
+    "WC-1",
+    "M-7",
+    "M-18"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-9",
+   "agency": "CCFD",
+   "name": "Station 9 - Staples / Lamar Park",
+   "address": "3722 South Staples Street, Corpus Christi, TX 78411",
+   "latitude": 27.74094,
+   "longitude": -97.38826,
+   "position_basis": "real site: fire station at 3722 South Staples Street [USGS National Structures Dataset]",
+   "station_number": 9,
+   "battalion": "BC-2",
+   "beat": "B03",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-9",
+    "WC-6"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-10",
+   "agency": "CCFD",
+   "name": "Station 10 - Padre Island",
+   "address": "14202 Commodores Drive, Corpus Christi, TX 78418",
+   "latitude": 27.61879,
+   "longitude": -97.22572,
+   "position_basis": "real site: fire station at 14202 Commodores Drive [USGS National Structures Dataset]",
+   "station_number": 10,
+   "battalion": "BC-3",
+   "beat": "B07",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-10",
+    "L-10",
+    "CC-SAR-005",
+    "CC-SAR-013",
+    "CC-SAR-021",
+    "M-8",
+    "M-17"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-11",
+   "agency": "CCFD",
+   "name": "Station 11 - Weber / Oso",
+   "address": "6713 Weber Road, Corpus Christi, TX 78413",
+   "latitude": 27.69678,
+   "longitude": -97.41464,
+   "position_basis": "real site: fire station at 6713 Weber Road [USGS National Structures Dataset]",
+   "station_number": 11,
+   "battalion": "BC-2",
+   "beat": "B04",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-11",
+    "M-9"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-12",
+   "agency": "CCFD",
+   "name": "Station 12 - Airline",
+   "address": "910 Airline Road, Corpus Christi, TX 78412",
+   "latitude": 27.71602,
+   "longitude": -97.36177,
+   "position_basis": "real site: fire station at 910 Airline Road [USGS National Structures Dataset]",
+   "station_number": 12,
+   "battalion": "BC-2",
+   "beat": "B11",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-12",
+    "WC-7",
+    "M-10"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-13",
+   "agency": "CCFD",
+   "name": "Station 13 - Navigation / Refinery Row",
+   "address": "501 North Navigation Boulevard, Corpus Christi, TX 78408",
+   "latitude": 27.79466,
+   "longitude": -97.45342,
+   "position_basis": "real site: fire station at 501 North Navigation Boulevard [USGS National Structures Dataset]",
+   "station_number": 13,
+   "battalion": "BC-1",
+   "beat": "B12",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-13",
+    "WC-2"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-14",
+   "agency": "CCFD",
+   "name": "Station 14 - Westside / Horne",
+   "address": "1550 Horne Road, Corpus Christi, TX 78416",
+   "latitude": 27.75906,
+   "longitude": -97.43187,
+   "position_basis": "real site: fire station at 1550 Horne Road [USGS National Structures Dataset]",
+   "station_number": 14,
+   "battalion": "BC-1",
+   "beat": "B05",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-14",
+    "FU-1",
+    "CC-SAR-008",
+    "CC-SAR-016",
+    "WC-3",
+    "M-11"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-15",
+   "agency": "CCFD",
+   "name": "Station 15 - Annaville / Tuloso",
+   "address": "11551 Leopard Street, Corpus Christi, TX 78410",
+   "latitude": 27.8495,
+   "longitude": -97.59356,
+   "position_basis": "real site: fire station at 11551 Leopard Street [USGS National Structures Dataset]",
+   "station_number": 15,
+   "battalion": "BC-1",
+   "beat": "B08",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-15",
+    "WC-8"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-16",
+   "agency": "CCFD",
+   "name": "Station 16 - Mustang Island",
+   "address": "8185 State Highway 361, Port Aransas, TX 78373",
+   "latitude": 27.70003,
+   "longitude": -97.15783,
+   "position_basis": "real site: fire station at 8185 State Highway 361 [USGS National Structures Dataset]",
+   "station_number": 16,
+   "battalion": "BC-3",
+   "beat": "B07",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-16",
+    "CC-SAR-006",
+    "CC-SAR-014",
+    "CC-SAR-022"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-17",
+   "agency": "CCFD",
+   "name": "Station 17 - Yorktown / Southside",
+   "address": "6869 Yorktown Boulevard, Corpus Christi, TX 78414",
+   "latitude": 27.65486,
+   "longitude": -97.37383,
+   "position_basis": "real site: fire station at 6869 Yorktown Boulevard [USGS National Structures Dataset]",
+   "station_number": 17,
+   "battalion": "BC-2",
+   "beat": "B04",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-17"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STA-18",
+   "agency": "CCFD",
+   "name": "Station 18 - Waldron Road / Flour Bluff",
+   "address": "1802 Waldron Road, Corpus Christi, TX 78418",
+   "latitude": 27.65717,
+   "longitude": -97.28996,
+   "position_basis": "real site: fire station at 1802 Waldron Road [USGS National Structures Dataset]",
+   "station_number": 18,
+   "battalion": "BC-3",
+   "beat": "B06",
+   "houses": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "units": [
+    "E-18",
+    "CC-SAR-002",
+    "CC-SAR-010",
+    "CC-SAR-018",
+    "HWV-2"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "PD-HQ",
+   "agency": "CCPD",
+   "name": "Corpus Christi Police Department Headquarters",
+   "address": "321 John Sartain Street, Corpus Christi, TX 78401",
+   "latitude": 27.79305,
+   "longitude": -97.39472,
+   "position_basis": "real site: Corpus Christi Police Department [USGS National Structures Dataset]",
+   "units": [
+    "1B1",
+    "1B2",
+    "1B3",
+    "1S1",
+    "2B1",
+    "2B2",
+    "2B3",
+    "2S1",
+    "3B1",
+    "3B2",
+    "3B3",
+    "3S1",
+    "4B1",
+    "4B2",
+    "4B3",
+    "4B4",
+    "4S1",
+    "5B1",
+    "5B2",
+    "5B3",
+    "5S1",
+    "6B1",
+    "6B2",
+    "6B3",
+    "6S1",
+    "7B1",
+    "7B2",
+    "7B3",
+    "7S1",
+    "8B1",
+    "8B2",
+    "8B3",
+    "8S1",
+    "9B1",
+    "9B2",
+    "9S1",
+    "10B1",
+    "10B2",
+    "10S1",
+    "11B1",
+    "11B2",
+    "11B3",
+    "11S1",
+    "12B1",
+    "12B2",
+    "12S1",
+    "TRF-1",
+    "TRF-2",
+    "TRF-3",
+    "DET-1",
+    "DET-2",
+    "DET-3",
+    "SWAT-1",
+    "SWAT-2",
+    "K9-1",
+    "K9-2",
+    "LT-1",
+    "LT-2",
+    "CAPT-1",
+    "PIO-1",
+    "ECC-1"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "SO-ANNEX",
+   "agency": "NCSO",
+   "name": "Nueces County Sheriff's Office - Padre Island Drive annex",
+   "address": "745 North Padre Island Drive, Corpus Christi, TX 78406",
+   "latitude": 27.77736,
+   "longitude": -97.47113,
+   "position_basis": "real site: Nueces County Sheriff's Office [USGS National Structures Dataset]",
+   "units": [
+    "NCSO-101",
+    "NCSO-102",
+    "NCSO-103",
+    "NCSO-104",
+    "NCSO-105",
+    "NCSO-106",
+    "NCSO-201",
+    "NCSO-202",
+    "NCSO-MRU1",
+    "NCSO-MRU2"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "SO-MAIN",
+   "agency": "NCSO",
+   "name": "Nueces County Sheriff's Office",
+   "address": "901 Leopard Street, Corpus Christi, TX 78401",
+   "latitude": 27.79488,
+   "longitude": -97.40009,
+   "position_basis": "real site: Nueces County Sheriff's Office [USGS National Structures Dataset]",
+   "units": [
+    "NCSO-S1",
+    "NCSO-S2",
+    "NCSO-LT1",
+    "NCSO-EV1",
+    "NCSO-CHEM1"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "PA-PS",
+   "agency": "PAPD",
+   "name": "Port Aransas Public Safety (police and EMS)",
+   "address": "705 West Avenue A, Port Aransas, TX 78373",
+   "latitude": 27.83545,
+   "longitude": -97.06856,
+   "position_basis": "real site: Port Aransas Police Department [USGS National Structures Dataset]",
+   "units": [
+    "PA-M1",
+    "PA-1"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "MA-STA-ROBS",
+   "agency": "MA_FIRE",
+   "name": "Robstown Fire Department",
+   "address": "516 East Avenue B, Robstown, TX 78380",
+   "latitude": 27.79004,
+   "longitude": -97.66286,
+   "position_basis": "real site: fire station at 516 East Avenue B [USGS National Structures Dataset]",
+   "units": [
+    "MA-ROBS-E1",
+    "MA-ROBS-T1",
+    "MA-ROBS-M1"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "MA-STA-PORT",
+   "agency": "MA_FIRE",
+   "name": "Portland Fire Department",
+   "address": "506 Moore Avenue, Portland, TX 78374",
+   "latitude": 27.8739,
+   "longitude": -97.32479,
+   "position_basis": "real site: fire station at 506 Moore Avenue [USGS National Structures Dataset]",
+   "units": [
+    "MA-SANPAT-E1"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "MA-STA-APAS",
+   "agency": "MA_FIRE",
+   "name": "Aransas Pass Fire Department",
+   "address": "600 West Cleveland Boulevard, Aransas Pass, TX 78336",
+   "latitude": 27.9104,
+   "longitude": -97.14993,
+   "position_basis": "real site: fire station at 600 West Cleveland Boulevard [USGS National Structures Dataset]",
+   "units": [
+    "MA-SANPAT-M2"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "MA-STA-INGL",
+   "agency": "MA_FIRE",
+   "name": "Ingleside Volunteer Fire Department",
+   "address": "2425 8th Street, Ingleside, TX 78362",
+   "latitude": 27.86801,
+   "longitude": -97.21505,
+   "position_basis": "real site: fire station at 2425 8th Street [USGS National Structures Dataset]",
+   "units": [
+    "MA-SANPAT-WT1"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "MA-STA-SINT",
+   "agency": "MA_FIRE",
+   "name": "Sinton Volunteer Fire Department",
+   "address": "317 East Market Street, Sinton, TX 78387",
+   "latitude": 28.03807,
+   "longitude": -97.50724,
+   "position_basis": "real site: fire station at 317 East Market Street [USGS National Structures Dataset]",
+   "units": [
+    "MA-SINTON-E1"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "MA-STA-ANNA",
+   "agency": "MA_FIRE",
+   "name": "Annaville Fire Department",
+   "address": "5241 County Road 73, Robstown, TX 78380",
+   "latitude": 27.86071,
+   "longitude": -97.675,
+   "position_basis": "real site: fire station at 5241 County Road 73 [USGS National Structures Dataset]",
+   "units": [
+    "MA-ANNA-E1"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "MA-STA-FBFD",
+   "agency": "MA_FIRE",
+   "name": "Nueces County ESD Flour Bluff Fire Department",
+   "address": "337 Yorktown Boulevard, Corpus Christi, TX 78418",
+   "latitude": 27.61955,
+   "longitude": -97.30208,
+   "position_basis": "real site: fire station at 337 Yorktown Boulevard [USGS National Structures Dataset]",
+   "units": [
+    "MA-FBFD-E1",
+    "MA-FBFD-B1"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "MA-STA-SANPAT",
+   "agency": "MA_FIRE",
+   "name": "San Patricio County Emergency Services (Sinton)",
+   "address": "300 North Rachal Avenue, Sinton, TX 78387",
+   "latitude": 28.0397,
+   "longitude": -97.50999,
+   "position_basis": "real site: San Patricio County Sheriff's Office [USGS National Structures Dataset]",
+   "units": [
+    "MA-SANPAT-M1"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "STG-FAIR",
+   "agency": "NCOEM",
+   "name": "Staging area - Richard M. Borchard Regional Fairgrounds",
+   "address": "Robstown, TX 78380",
+   "latitude": 27.80524,
+   "longitude": -97.66676,
+   "position_basis": "placed beside FM 1889 (no published point in the reference set)",
+   "facility_id": "FAC-SHLT-007",
+   "units": [
+    "MA-ALICE-E1",
+    "MA-ALICE-E2",
+    "MA-ALICE-M1",
+    "MA-ALICE-M2",
+    "MA-BISHOP-E1",
+    "MA-VICTORIA-M1",
+    "MA-BEEVILLE-M1",
+    "USAR-TX-1",
+    "TF1-ALPHA",
+    "TF1-BRAVO",
+    "TXARNG-HWV-1",
+    "TXARNG-HWV-2",
+    "TXARNG-HWV-3",
+    "TXARNG-HWV-4",
+    "MTF-9",
+    "CIV-BOAT-001",
+    "CIV-BOAT-002",
+    "CIV-BOAT-003",
+    "CIV-BOAT-004",
+    "CIV-BOAT-005",
+    "CIV-BOAT-006",
+    "CIV-BOAT-007",
+    "CIV-BOAT-008",
+    "CIV-BOAT-009",
+    "CIV-BOAT-010",
+    "CIV-BOAT-011",
+    "CIV-BOAT-012",
+    "CIV-BOAT-013",
+    "CIV-BOAT-014",
+    "CIV-BOAT-015",
+    "CIV-BOAT-016",
+    "CIV-BOAT-017",
+    "CIV-BOAT-018",
+    "CIV-BOAT-019",
+    "CIV-BOAT-020",
+    "CIV-BOAT-021",
+    "CIV-BOAT-022",
+    "CIV-BOAT-023",
+    "CIV-BOAT-024",
+    "CIV-BOAT-025",
+    "CIV-BOAT-026",
+    "CIV-BOAT-027",
+    "CIV-BOAT-028",
+    "CIV-BOAT-029",
+    "CIV-BOAT-030",
+    "CIV-BOAT-031",
+    "CIV-BOAT-032",
+    "CIV-BOAT-033",
+    "CIV-BOAT-034",
+    "CIV-BOAT-035",
+    "CIV-BOAT-036",
+    "CIV-BOAT-037",
+    "CIV-BOAT-038",
+    "CIV-BOAT-039",
+    "CIV-BOAT-040",
+    "CIV-BOAT-041",
+    "CIV-BOAT-042",
+    "CIV-BOAT-043",
+    "CIV-BOAT-044",
+    "CIV-BOAT-045",
+    "CIV-BOAT-046",
+    "CIV-BOAT-047",
+    "CIV-BOAT-048",
+    "CIV-BOAT-049",
+    "CIV-BOAT-050",
+    "CIV-BOAT-051",
+    "CIV-BOAT-052",
+    "CIV-BOAT-053",
+    "CIV-BOAT-054",
+    "CIV-BOAT-055",
+    "CIV-BOAT-056",
+    "CIV-BOAT-057",
+    "CIV-BOAT-058",
+    "CIV-BOAT-059",
+    "CIV-BOAT-060",
+    "CIV-BOAT-061",
+    "CIV-BOAT-062",
+    "CIV-BOAT-063",
+    "CIV-BOAT-064",
+    "CIV-BOAT-065",
+    "CIV-BOAT-066",
+    "CIV-BOAT-067",
+    "CIV-BOAT-068",
+    "CIV-BOAT-069",
+    "CIV-BOAT-070",
+    "CIV-BOAT-071",
+    "CIV-BOAT-072",
+    "CIV-BOAT-073",
+    "CIV-BOAT-074",
+    "CIV-BOAT-075",
+    "CIV-BOAT-076",
+    "CIV-BOAT-077",
+    "CIV-BOAT-078",
+    "CIV-BOAT-079",
+    "CIV-BOAT-080",
+    "CIV-BOAT-081",
+    "CIV-BOAT-082",
+    "CIV-BOAT-083",
+    "CIV-BOAT-084",
+    "CIV-BOAT-085",
+    "CIV-BOAT-086",
+    "CIV-BOAT-087"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "station_id": "BUS-DEPOT",
+   "agency": "NCOEM",
+   "name": "County and transit bus yard",
+   "address": "Bear Lane, Corpus Christi, TX 78405",
+   "latitude": 27.76373,
+   "longitude": -97.46397,
+   "position_basis": "placed beside Bear Ln (no published point in the reference set)",
+   "units": [
+    "NC-BUS-01",
+    "NC-BUS-02",
+    "NC-BUS-03",
+    "NC-BUS-04",
+    "NC-BUS-05",
+    "NC-BUS-06",
+    "NC-BUS-07",
+    "NC-BUS-08",
+    "NC-BUS-09",
+    "NC-BUS-10"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  }
+ ],
+ "units": [
+  {
+   "unit_id": "E-1",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-1",
+   "description": "Engine 1 - Downtown",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-2",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-2",
+   "description": "Engine 2 - South Side / Kostoryz",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-3",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-3",
+   "description": "Engine 3 - Calallen",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-4",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-4",
+   "description": "Engine 4 - Morgan / Six Points",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-5",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-5",
+   "description": "Engine 5 - Rodd Field / Flour Bluff approach",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-6",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-6",
+   "description": "Engine 6 - North Beach",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-7",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-7",
+   "description": "Engine 7 - South Staples",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-8",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-8",
+   "description": "Engine 8 - Westside / Leopard",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-9",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-9",
+   "description": "Engine 9 - Staples / Lamar Park",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-10",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-10",
+   "description": "Engine 10 - Padre Island",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-11",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-11",
+   "description": "Engine 11 - Weber / Oso",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-12",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-12",
+   "description": "Engine 12 - Airline",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-13",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-13",
+   "description": "Engine 13 - Navigation / Refinery Row",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-14",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-14",
+   "description": "Engine 14 - Westside / Horne",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-15",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-15",
+   "description": "Engine 15 - Annaville / Tuloso",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-16",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-16",
+   "description": "Engine 16 - Mustang Island",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-17",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-17",
+   "description": "Engine 17 - Yorktown / Southside",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "E-18",
+   "agency": "CCFD",
+   "type": "engine",
+   "home_station": "STA-18",
+   "description": "Engine 18 - Waldron Road / Flour Bluff",
+   "vehicle": "Pumper",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "T-1",
+   "agency": "CCFD",
+   "type": "truck",
+   "home_station": "STA-1",
+   "description": "Truck 1 - Downtown",
+   "vehicle": "Aerial ladder truck",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "T-3",
+   "agency": "CCFD",
+   "type": "truck",
+   "home_station": "STA-3",
+   "description": "Truck 3 - Calallen",
+   "vehicle": "Aerial ladder truck",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "T-5",
+   "agency": "CCFD",
+   "type": "truck",
+   "home_station": "STA-5",
+   "description": "Truck 5 - Rodd Field",
+   "vehicle": "Aerial ladder truck",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "L-7",
+   "agency": "CCFD",
+   "type": "ladder",
+   "home_station": "STA-7",
+   "description": "Ladder 7 - South Staples",
+   "vehicle": "Aerial ladder truck",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "L-10",
+   "agency": "CCFD",
+   "type": "ladder",
+   "home_station": "STA-10",
+   "description": "Ladder 10 - Padre Island",
+   "vehicle": "Aerial ladder truck",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "R-1",
+   "agency": "CCFD",
+   "type": "rescue",
+   "home_station": "STA-1",
+   "description": "Rescue 1 - Downtown heavy rescue",
+   "vehicle": "Heavy rescue",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "R-5",
+   "agency": "CCFD",
+   "type": "rescue",
+   "home_station": "STA-5",
+   "description": "Rescue 5 - water rescue",
+   "vehicle": "Heavy rescue",
+   "staffing": 4,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "BC-1",
+   "agency": "CCFD",
+   "type": "battalion_chief",
+   "home_station": "STA-1",
+   "description": "Battalion Chief 1",
+   "vehicle": "Command SUV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "BC-2",
+   "agency": "CCFD",
+   "type": "battalion_chief",
+   "home_station": "STA-7",
+   "description": "Battalion Chief 2",
+   "vehicle": "Command SUV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "BC-3",
+   "agency": "CCFD",
+   "type": "battalion_chief",
+   "home_station": "STA-5",
+   "description": "Battalion Chief 3",
+   "vehicle": "Command SUV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "HM-1",
+   "agency": "CCFD",
+   "type": "hazmat",
+   "home_station": "STA-8",
+   "description": "Hazmat 1",
+   "vehicle": "Hazardous materials unit",
+   "staffing": 4,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "FU-1",
+   "agency": "CCFD",
+   "type": "foam",
+   "home_station": "STA-14",
+   "description": "Foam Unit 1",
+   "vehicle": "Industrial foam unit",
+   "staffing": 3,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "WTR-1",
+   "agency": "CCFD",
+   "type": "water_tender",
+   "home_station": "STA-3",
+   "description": "Water Tender 1",
+   "vehicle": "Water tender",
+   "staffing": 2,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "WTR-5",
+   "agency": "CCFD",
+   "type": "water_tender",
+   "home_station": "STA-5",
+   "description": "Water Tender 5",
+   "vehicle": "Water tender",
+   "staffing": 2,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "FC-1",
+   "agency": "CCFD",
+   "type": "fire_command",
+   "home_station": "STA-1",
+   "description": "Fire Command 1",
+   "vehicle": "Command vehicle",
+   "staffing": 2,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "BOAT-1",
+   "agency": "CCFD",
+   "type": "fireboat",
+   "home_station": "STA-6",
+   "description": "Fireboat 1 - North Beach",
+   "vehicle": "Fireboat",
+   "staffing": 3,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "BOAT-2",
+   "agency": "CCFD",
+   "type": "swiftwater",
+   "home_station": "STA-5",
+   "description": "Swift-water boat 2",
+   "vehicle": "Inflatable rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "CC-SAR-001",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-5",
+   "description": "Rescue boat, hull CC-SAR-001",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-002",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-18",
+   "description": "Rescue boat, hull CC-SAR-002",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-003",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-6",
+   "description": "Rescue boat, hull CC-SAR-003",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-004",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-3",
+   "description": "Rescue boat, hull CC-SAR-004",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-005",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-10",
+   "description": "Rescue boat, hull CC-SAR-005",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-006",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-16",
+   "description": "Rescue boat, hull CC-SAR-006",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-007",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-1",
+   "description": "Rescue boat, hull CC-SAR-007",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-008",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-14",
+   "description": "Rescue boat, hull CC-SAR-008",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-009",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-5",
+   "description": "Rescue boat, hull CC-SAR-009",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-010",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-18",
+   "description": "Rescue boat, hull CC-SAR-010",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-011",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-6",
+   "description": "Rescue boat, hull CC-SAR-011",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-012",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-3",
+   "description": "Rescue boat, hull CC-SAR-012",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-013",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-10",
+   "description": "Rescue boat, hull CC-SAR-013",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-014",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-16",
+   "description": "Rescue boat, hull CC-SAR-014",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-015",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-1",
+   "description": "Rescue boat, hull CC-SAR-015",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-016",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-14",
+   "description": "Rescue boat, hull CC-SAR-016",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-017",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-5",
+   "description": "Rescue boat, hull CC-SAR-017",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-018",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-18",
+   "description": "Rescue boat, hull CC-SAR-018",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-019",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-6",
+   "description": "Rescue boat, hull CC-SAR-019",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-020",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-3",
+   "description": "Rescue boat, hull CC-SAR-020",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-021",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-10",
+   "description": "Rescue boat, hull CC-SAR-021",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-022",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-16",
+   "description": "Rescue boat, hull CC-SAR-022",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CC-SAR-023",
+   "agency": "CCFD",
+   "type": "rescue_boat",
+   "home_station": "STA-1",
+   "description": "Rescue boat, hull CC-SAR-023",
+   "vehicle": "Flat-bottom rescue boat on trailer",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "HWV-1",
+   "agency": "CCFD",
+   "type": "high_water_vehicle",
+   "home_station": "STA-5",
+   "description": "High-clearance vehicle 1",
+   "vehicle": "High-clearance truck",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "HWV-2",
+   "agency": "CCFD",
+   "type": "high_water_vehicle",
+   "home_station": "STA-18",
+   "description": "High-clearance vehicle 2",
+   "vehicle": "High-clearance truck",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "HWV-3",
+   "agency": "CCFD",
+   "type": "high_water_vehicle",
+   "home_station": "STA-3",
+   "description": "High-clearance vehicle 3",
+   "vehicle": "High-clearance truck",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "HWV-4",
+   "agency": "CCFD",
+   "type": "high_water_vehicle",
+   "home_station": "STA-1",
+   "description": "High-clearance vehicle 4",
+   "vehicle": "High-clearance truck",
+   "staffing": 3,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "WC-1",
+   "agency": "CCFD",
+   "type": "welfare_check_team",
+   "home_station": "STA-8",
+   "description": "Welfare-check team 1 (two-person)",
+   "vehicle": "Brush truck",
+   "staffing": 2,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "WC-2",
+   "agency": "CCFD",
+   "type": "welfare_check_team",
+   "home_station": "STA-13",
+   "description": "Welfare-check team 2 (two-person)",
+   "vehicle": "Brush truck",
+   "staffing": 2,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "WC-3",
+   "agency": "CCFD",
+   "type": "welfare_check_team",
+   "home_station": "STA-14",
+   "description": "Welfare-check team 3 (two-person)",
+   "vehicle": "Brush truck",
+   "staffing": 2,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "WC-4",
+   "agency": "CCFD",
+   "type": "welfare_check_team",
+   "home_station": "STA-2",
+   "description": "Welfare-check team 4 (two-person)",
+   "vehicle": "Brush truck",
+   "staffing": 2,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "WC-5",
+   "agency": "CCFD",
+   "type": "welfare_check_team",
+   "home_station": "STA-4",
+   "description": "Welfare-check team 5 (two-person)",
+   "vehicle": "Brush truck",
+   "staffing": 2,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "WC-6",
+   "agency": "CCFD",
+   "type": "welfare_check_team",
+   "home_station": "STA-9",
+   "description": "Welfare-check team 6 (two-person)",
+   "vehicle": "Brush truck",
+   "staffing": 2,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "WC-7",
+   "agency": "CCFD",
+   "type": "welfare_check_team",
+   "home_station": "STA-12",
+   "description": "Welfare-check team 7 (two-person)",
+   "vehicle": "Brush truck",
+   "staffing": 2,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "WC-8",
+   "agency": "CCFD",
+   "type": "welfare_check_team",
+   "home_station": "STA-15",
+   "description": "Welfare-check team 8 (two-person)",
+   "vehicle": "Brush truck",
+   "staffing": 2,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "M-1",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-1",
+   "description": "Medic 1",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-2",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-2",
+   "description": "Medic 2",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-3",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-3",
+   "description": "Medic 3",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-4",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-7",
+   "description": "Medic 4",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-5",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-5",
+   "description": "Medic 5",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-6",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-6",
+   "description": "Medic 6",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-7",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-8",
+   "description": "Medic 7",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-8",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-10",
+   "description": "Medic 8",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-9",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-11",
+   "description": "Medic 9",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-10",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-12",
+   "description": "Medic 10",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-11",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-14",
+   "description": "Medic 11",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-12",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-7",
+   "description": "Medic 12",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-13",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-1",
+   "description": "Medic 13",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-14",
+   "agency": "CCEMS",
+   "type": "als_ambulance",
+   "home_station": "STA-2",
+   "description": "Medic 14",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "M-15",
+   "agency": "CCEMS",
+   "type": "bls_ambulance",
+   "home_station": "STA-5",
+   "description": "Medic 15",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "BLS"
+  },
+  {
+   "unit_id": "M-16",
+   "agency": "CCEMS",
+   "type": "bls_ambulance",
+   "home_station": "STA-3",
+   "description": "Medic 16",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "BLS"
+  },
+  {
+   "unit_id": "M-17",
+   "agency": "CCEMS",
+   "type": "bls_ambulance",
+   "home_station": "STA-10",
+   "description": "Medic 17",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "BLS"
+  },
+  {
+   "unit_id": "M-18",
+   "agency": "CCEMS",
+   "type": "bls_ambulance",
+   "home_station": "STA-8",
+   "description": "Medic 18",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "BLS"
+  },
+  {
+   "unit_id": "M-19",
+   "agency": "CCEMS",
+   "type": "supervisor",
+   "home_station": "STA-1",
+   "description": "EMS supervisor 1",
+   "staffing": 2,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "M-20",
+   "agency": "CCEMS",
+   "type": "supervisor",
+   "home_station": "STA-7",
+   "description": "EMS supervisor 2",
+   "staffing": 2,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "MCI-1",
+   "agency": "CCEMS",
+   "type": "mci_unit",
+   "home_station": "STA-1",
+   "description": "Mass-casualty unit",
+   "staffing": 2,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "MCI-2",
+   "agency": "CCEMS",
+   "type": "mci_support",
+   "home_station": "STA-7",
+   "description": "Mass-casualty support trailer",
+   "staffing": 2,
+   "avl_equipped": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "1B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 1 Patrol Unit 1",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B01"
+  },
+  {
+   "unit_id": "1B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 1 Patrol Unit 2",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B01"
+  },
+  {
+   "unit_id": "1B3",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 1 Patrol Unit 3",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B01"
+  },
+  {
+   "unit_id": "1S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 1 Sergeant",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B01",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "2B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 2 Patrol Unit 1",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B02"
+  },
+  {
+   "unit_id": "2B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 2 Patrol Unit 2",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B02"
+  },
+  {
+   "unit_id": "2B3",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 2 Patrol Unit 3",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B02"
+  },
+  {
+   "unit_id": "2S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 2 Sergeant",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B02",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "3B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 3 Patrol Unit 1",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B03"
+  },
+  {
+   "unit_id": "3B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 3 Patrol Unit 2",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B03"
+  },
+  {
+   "unit_id": "3B3",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 3 Patrol Unit 3",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B03"
+  },
+  {
+   "unit_id": "3S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 3 Sergeant",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B03",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "4B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 4 Patrol Unit 1",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B04"
+  },
+  {
+   "unit_id": "4B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 4 Patrol Unit 2",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B04"
+  },
+  {
+   "unit_id": "4B3",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 4 Patrol Unit 3",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B04"
+  },
+  {
+   "unit_id": "4B4",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 4 Patrol Unit 4",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B04"
+  },
+  {
+   "unit_id": "4S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 4 Sergeant",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B04",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "5B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 5 Patrol Unit 1",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B05"
+  },
+  {
+   "unit_id": "5B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 5 Patrol Unit 2",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B05"
+  },
+  {
+   "unit_id": "5B3",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 5 Patrol Unit 3",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B05"
+  },
+  {
+   "unit_id": "5S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 5 Sergeant",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B05",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "6B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 6 Patrol Unit 1 - Flour Bluff",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B06"
+  },
+  {
+   "unit_id": "6B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 6 Patrol Unit 2 - Flour Bluff",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B06"
+  },
+  {
+   "unit_id": "6B3",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 6 Patrol Unit 3 - Flour Bluff",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B06"
+  },
+  {
+   "unit_id": "6S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 6 Sergeant - Flour Bluff",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B06",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "7B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 7 Patrol Unit 1 - Padre Island",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B07"
+  },
+  {
+   "unit_id": "7B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 7 Patrol Unit 2 - Padre Island",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B07"
+  },
+  {
+   "unit_id": "7B3",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 7 Patrol Unit 3 - Padre Island",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B07"
+  },
+  {
+   "unit_id": "7S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 7 Sergeant - Padre Island",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B07",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "8B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 8 Patrol Unit 1 - Calallen",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B08"
+  },
+  {
+   "unit_id": "8B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 8 Patrol Unit 2 - Calallen",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B08"
+  },
+  {
+   "unit_id": "8B3",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 8 Patrol Unit 3 - Calallen",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B08"
+  },
+  {
+   "unit_id": "8S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 8 Sergeant - Calallen",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B08",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "9B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 9 Patrol Unit 1 - NAS/Oso",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B09"
+  },
+  {
+   "unit_id": "9B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 9 Patrol Unit 2 - NAS/Oso",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B09"
+  },
+  {
+   "unit_id": "9S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 9 Sergeant - NAS/Oso",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B09",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "10B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 10 Patrol Unit 1 - Southeast",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B10"
+  },
+  {
+   "unit_id": "10B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 10 Patrol Unit 2 - Southeast",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B10"
+  },
+  {
+   "unit_id": "10S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 10 Sergeant - Southeast",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B10",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "11B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 11 Patrol Unit 1 - North",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B11"
+  },
+  {
+   "unit_id": "11B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 11 Patrol Unit 2 - North",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B11"
+  },
+  {
+   "unit_id": "11B3",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 11 Patrol Unit 3 - North",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B11"
+  },
+  {
+   "unit_id": "11S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 11 Sergeant - North",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B11",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "12B1",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 12 Patrol Unit 1 - Harbor/Industrial",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B12"
+  },
+  {
+   "unit_id": "12B2",
+   "agency": "CCPD",
+   "type": "patrol",
+   "home_station": "PD-HQ",
+   "description": "Beat 12 Patrol Unit 2 - Harbor/Industrial",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B12"
+  },
+  {
+   "unit_id": "12S1",
+   "agency": "CCPD",
+   "type": "supervisor",
+   "home_station": "PD-HQ",
+   "description": "Beat 12 Sergeant - Harbor/Industrial",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "B12",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "TRF-1",
+   "agency": "CCPD",
+   "type": "traffic",
+   "home_station": "PD-HQ",
+   "description": "Traffic Unit 1 - Major Accident Investigation",
+   "vehicle": "Ford Police Interceptor Motorcycle",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide"
+  },
+  {
+   "unit_id": "TRF-2",
+   "agency": "CCPD",
+   "type": "traffic",
+   "home_station": "PD-HQ",
+   "description": "Traffic Unit 2 - Major Accident Investigation",
+   "vehicle": "Ford Police Interceptor Motorcycle",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide"
+  },
+  {
+   "unit_id": "TRF-3",
+   "agency": "CCPD",
+   "type": "traffic",
+   "home_station": "PD-HQ",
+   "description": "Traffic Supervision",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide"
+  },
+  {
+   "unit_id": "DET-1",
+   "agency": "CCPD",
+   "type": "detective",
+   "home_station": "PD-HQ",
+   "description": "CID Detective - Major Crimes",
+   "vehicle": "Unmarked Sedan",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "DET-2",
+   "agency": "CCPD",
+   "type": "detective",
+   "home_station": "PD-HQ",
+   "description": "CID Detective - Property Crimes",
+   "vehicle": "Unmarked Sedan",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "DET-3",
+   "agency": "CCPD",
+   "type": "detective",
+   "home_station": "PD-HQ",
+   "description": "CID Detective - Narcotics",
+   "vehicle": "Unmarked SUV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "SWAT-1",
+   "agency": "CCPD",
+   "type": "swat",
+   "home_station": "PD-HQ",
+   "description": "SWAT Team Leader",
+   "vehicle": "Armored BearCat",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "SWAT-2",
+   "agency": "CCPD",
+   "type": "swat",
+   "home_station": "PD-HQ",
+   "description": "SWAT Tactical Unit",
+   "vehicle": "SWAT Van",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "K9-1",
+   "agency": "CCPD",
+   "type": "k9",
+   "home_station": "PD-HQ",
+   "description": "K9 Unit 1 - Patrol/Tracking",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "K9-2",
+   "agency": "CCPD",
+   "type": "k9",
+   "home_station": "PD-HQ",
+   "description": "K9 Unit 2 - Narcotics Detection",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "LT-1",
+   "agency": "CCPD",
+   "type": "supervisor_lt",
+   "home_station": "PD-HQ",
+   "description": "Patrol Lieutenant - North Division",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "LT-2",
+   "agency": "CCPD",
+   "type": "supervisor_lt",
+   "home_station": "PD-HQ",
+   "description": "Patrol Lieutenant - South Division",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "CAPT-1",
+   "agency": "CCPD",
+   "type": "supervisor_capt",
+   "home_station": "PD-HQ",
+   "description": "Patrol Captain / Watch Commander",
+   "vehicle": "Chevy Tahoe PPV",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "PIO-1",
+   "agency": "CCPD",
+   "type": "public_info",
+   "home_station": "PD-HQ",
+   "description": "Public Information Officer",
+   "vehicle": "Chevy Suburban",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "ECC-1",
+   "agency": "CCPD",
+   "type": "command",
+   "home_station": "PD-HQ",
+   "description": "Emergency Command Center Unit",
+   "vehicle": "Mobile Command Post",
+   "staffing": 1,
+   "avl_equipped": true,
+   "beat": "citywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "NCSO-101",
+   "agency": "NCSO",
+   "type": "patrol",
+   "home_station": "SO-ANNEX",
+   "description": "NCSO Patrol Unit 101 - Calallen/Violet area",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "District 1 - Northwest Unincorporated"
+  },
+  {
+   "unit_id": "NCSO-102",
+   "agency": "NCSO",
+   "type": "patrol",
+   "home_station": "SO-ANNEX",
+   "description": "NCSO Patrol Unit 102 - Clarkwood area",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "District 1 - Northwest Unincorporated"
+  },
+  {
+   "unit_id": "NCSO-103",
+   "agency": "NCSO",
+   "type": "patrol",
+   "home_station": "SO-ANNEX",
+   "description": "NCSO Patrol Unit 103 - Flour Bluff/Mustang Island approach",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "District 2 - South Unincorporated"
+  },
+  {
+   "unit_id": "NCSO-104",
+   "agency": "NCSO",
+   "type": "patrol",
+   "home_station": "SO-ANNEX",
+   "description": "NCSO Patrol Unit 104 - South county rural",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "District 2 - South Unincorporated"
+  },
+  {
+   "unit_id": "NCSO-105",
+   "agency": "NCSO",
+   "type": "patrol",
+   "home_station": "SO-ANNEX",
+   "description": "NCSO Patrol Unit 105 - Mustang Island/Port Aransas area",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "District 3 - East / Port Aransas approach"
+  },
+  {
+   "unit_id": "NCSO-106",
+   "agency": "NCSO",
+   "type": "patrol",
+   "home_station": "SO-ANNEX",
+   "description": "NCSO Patrol Unit 106 - Highway 361 corridor",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "District 3 - East / Port Aransas approach"
+  },
+  {
+   "unit_id": "NCSO-S1",
+   "agency": "NCSO",
+   "type": "supervisor",
+   "home_station": "SO-MAIN",
+   "description": "NCSO Sergeant 1 - Patrol Supervisor",
+   "vehicle": "Chevy Tahoe",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "Countywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "NCSO-S2",
+   "agency": "NCSO",
+   "type": "supervisor",
+   "home_station": "SO-MAIN",
+   "description": "NCSO Sergeant 2 - Patrol Supervisor South",
+   "vehicle": "Chevy Tahoe",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "Countywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "NCSO-LT1",
+   "agency": "NCSO",
+   "type": "lieutenant",
+   "home_station": "SO-MAIN",
+   "description": "NCSO Lieutenant - Shift Commander",
+   "vehicle": "Chevy Tahoe",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "Countywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "NCSO-201",
+   "agency": "NCSO",
+   "type": "patrol",
+   "home_station": "SO-ANNEX",
+   "description": "NCSO Unit 201 - Mutual Aid to CCPD Beat 8",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "Countywide / Mutual Aid"
+  },
+  {
+   "unit_id": "NCSO-202",
+   "agency": "NCSO",
+   "type": "patrol",
+   "home_station": "SO-ANNEX",
+   "description": "NCSO Unit 202 - Mutual Aid to CCPD Beat 2",
+   "vehicle": "Ford Police Interceptor",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "Countywide / Mutual Aid"
+  },
+  {
+   "unit_id": "NCSO-MRU1",
+   "agency": "NCSO",
+   "type": "marine",
+   "home_station": "SO-ANNEX",
+   "description": "NCSO Marine Unit 1 - 24ft Patrol Vessel",
+   "vehicle": "Marine Patrol Boat 24ft",
+   "staffing": 2,
+   "avl_equipped": true,
+   "district": "Coastal Waters",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "NCSO-MRU2",
+   "agency": "NCSO",
+   "type": "marine",
+   "home_station": "SO-ANNEX",
+   "description": "NCSO Marine Unit 2 - 18ft Patrol Jon Boat",
+   "vehicle": "Jon Boat 18ft",
+   "staffing": 2,
+   "avl_equipped": true,
+   "district": "Coastal Waters",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "NCSO-EV1",
+   "agency": "NCSO",
+   "type": "evacuation",
+   "home_station": "SO-MAIN",
+   "description": "NCSO Evacuation Coordination Unit",
+   "vehicle": "Chevy Suburban Command",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "Countywide",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "NCSO-CHEM1",
+   "agency": "NCSO",
+   "type": "command",
+   "home_station": "SO-MAIN",
+   "description": "NCSO EOC Liaison / Emergency Management",
+   "vehicle": "Chevy Suburban",
+   "staffing": 1,
+   "avl_equipped": true,
+   "district": "EOC Liaison",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "MA-ROBS-E1",
+   "agency": "MA_FIRE",
+   "type": "mutual_aid_engine",
+   "home_station": "MA-STA-ROBS",
+   "description": "Robstown engine",
+   "staffing": 4,
+   "avl_equipped": false,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "MA-ROBS-T1",
+   "agency": "MA_FIRE",
+   "type": "mutual_aid_truck",
+   "home_station": "MA-STA-ROBS",
+   "description": "Robstown truck",
+   "staffing": 4,
+   "avl_equipped": false,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "MA-ROBS-M1",
+   "agency": "MA_EMS",
+   "type": "mutual_aid_als",
+   "home_station": "MA-STA-ROBS",
+   "description": "Robstown ambulance",
+   "staffing": 2,
+   "avl_equipped": false,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "MA-SANPAT-E1",
+   "agency": "MA_FIRE",
+   "type": "mutual_aid_engine",
+   "home_station": "MA-STA-PORT",
+   "description": "San Patricio County engine (Portland)",
+   "staffing": 4,
+   "avl_equipped": false,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "MA-SANPAT-WT1",
+   "agency": "MA_FIRE",
+   "type": "mutual_aid_tender",
+   "home_station": "MA-STA-INGL",
+   "description": "San Patricio County water tender (Ingleside)",
+   "staffing": 2,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "MA-SANPAT-M1",
+   "agency": "MA_EMS",
+   "type": "mutual_aid_als",
+   "home_station": "MA-STA-SANPAT",
+   "description": "San Patricio County ambulance 1",
+   "staffing": 2,
+   "avl_equipped": false,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "MA-SANPAT-M2",
+   "agency": "MA_EMS",
+   "type": "mutual_aid_als",
+   "home_station": "MA-STA-APAS",
+   "description": "San Patricio County ambulance 2 (Aransas Pass)",
+   "staffing": 2,
+   "avl_equipped": false,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "MA-SINTON-E1",
+   "agency": "MA_FIRE",
+   "type": "mutual_aid_engine",
+   "home_station": "MA-STA-SINT",
+   "description": "Sinton engine",
+   "staffing": 4,
+   "avl_equipped": false,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "MA-ANNA-E1",
+   "agency": "MA_FIRE",
+   "type": "mutual_aid_engine",
+   "home_station": "MA-STA-ANNA",
+   "description": "Annaville engine",
+   "staffing": 4,
+   "avl_equipped": false,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "MA-FBFD-E1",
+   "agency": "MA_FIRE",
+   "type": "mutual_aid_engine",
+   "home_station": "MA-STA-FBFD",
+   "description": "Flour Bluff (county ESD) engine",
+   "staffing": 4,
+   "avl_equipped": false,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "MA-FBFD-B1",
+   "agency": "MA_FIRE",
+   "type": "rescue_boat",
+   "home_station": "MA-STA-FBFD",
+   "description": "Flour Bluff (county ESD) rescue boat",
+   "staffing": 2,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "MA-ALICE-E1",
+   "agency": "MA_FIRE",
+   "type": "mutual_aid_engine",
+   "home_station": "STG-FAIR",
+   "description": "Alice engine 1",
+   "staffing": 4,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "Alice, TX"
+  },
+  {
+   "unit_id": "MA-ALICE-E2",
+   "agency": "MA_FIRE",
+   "type": "mutual_aid_engine",
+   "home_station": "STG-FAIR",
+   "description": "Alice engine 2",
+   "staffing": 4,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "Alice, TX"
+  },
+  {
+   "unit_id": "MA-ALICE-M1",
+   "agency": "MA_EMS",
+   "type": "mutual_aid_als",
+   "home_station": "STG-FAIR",
+   "description": "Alice ambulance 1",
+   "staffing": 2,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "Alice, TX"
+  },
+  {
+   "unit_id": "MA-ALICE-M2",
+   "agency": "MA_EMS",
+   "type": "mutual_aid_als",
+   "home_station": "STG-FAIR",
+   "description": "Alice ambulance 2",
+   "staffing": 2,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "Alice, TX"
+  },
+  {
+   "unit_id": "MA-BISHOP-E1",
+   "agency": "MA_FIRE",
+   "type": "mutual_aid_engine",
+   "home_station": "STG-FAIR",
+   "description": "Bishop engine",
+   "staffing": 4,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "Bishop, TX"
+  },
+  {
+   "unit_id": "MA-VICTORIA-M1",
+   "agency": "MA_EMS",
+   "type": "mutual_aid_als",
+   "home_station": "STG-FAIR",
+   "description": "Victoria ambulance",
+   "staffing": 2,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "Victoria, TX"
+  },
+  {
+   "unit_id": "MA-BEEVILLE-M1",
+   "agency": "MA_EMS",
+   "type": "mutual_aid_als",
+   "home_station": "STG-FAIR",
+   "description": "Bee County ambulance",
+   "staffing": 2,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "Beeville, TX"
+  },
+  {
+   "unit_id": "USAR-TX-1",
+   "agency": "TF1",
+   "type": "usar",
+   "home_station": "STG-FAIR",
+   "description": "Texas Task Force 1 urban search and rescue element",
+   "staffing": 30,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "College Station, TX",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "TF1-ALPHA",
+   "agency": "TF1",
+   "type": "swiftwater_team",
+   "home_station": "STG-FAIR",
+   "description": "Texas Task Force 1 swift-water team Alpha",
+   "vehicle": "Convoy with boats",
+   "staffing": 14,
+   "avl_equipped": true,
+   "mutual_aid": true,
+   "home_base": "San Antonio, TX"
+  },
+  {
+   "unit_id": "TF1-BRAVO",
+   "agency": "TF1",
+   "type": "swiftwater_team",
+   "home_station": "STG-FAIR",
+   "description": "Texas Task Force 1 swift-water team Bravo",
+   "vehicle": "Convoy with boats",
+   "staffing": 14,
+   "avl_equipped": true,
+   "mutual_aid": true,
+   "home_base": "San Antonio, TX"
+  },
+  {
+   "unit_id": "TXARNG-HWV-1",
+   "agency": "TXARNG",
+   "type": "high_water_vehicle",
+   "home_station": "STG-FAIR",
+   "description": "Texas Army National Guard high-water vehicle 1",
+   "vehicle": "Light medium tactical vehicle",
+   "staffing": 3,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "Texas Army National Guard"
+  },
+  {
+   "unit_id": "TXARNG-HWV-2",
+   "agency": "TXARNG",
+   "type": "high_water_vehicle",
+   "home_station": "STG-FAIR",
+   "description": "Texas Army National Guard high-water vehicle 2",
+   "vehicle": "Light medium tactical vehicle",
+   "staffing": 3,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "Texas Army National Guard"
+  },
+  {
+   "unit_id": "TXARNG-HWV-3",
+   "agency": "TXARNG",
+   "type": "high_water_vehicle",
+   "home_station": "STG-FAIR",
+   "description": "Texas Army National Guard high-water vehicle 3",
+   "vehicle": "Light medium tactical vehicle",
+   "staffing": 3,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "Texas Army National Guard"
+  },
+  {
+   "unit_id": "TXARNG-HWV-4",
+   "agency": "TXARNG",
+   "type": "high_water_vehicle",
+   "home_station": "STG-FAIR",
+   "description": "Texas Army National Guard high-water vehicle 4",
+   "vehicle": "Light medium tactical vehicle",
+   "staffing": 3,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "Texas Army National Guard"
+  },
+  {
+   "unit_id": "MTF-9",
+   "agency": "FEMA",
+   "type": "medical_task_force",
+   "home_station": "STG-FAIR",
+   "description": "FEMA Medical Task Force 9",
+   "vehicle": "Medical convoy",
+   "staffing": 35,
+   "avl_equipped": false,
+   "mutual_aid": true,
+   "home_base": "San Antonio, TX",
+   "reference_only": true,
+   "reference_reason": "not AVL-equipped or not dispatched in the data window"
+  },
+  {
+   "unit_id": "NC-BUS-01",
+   "agency": "NCOEM",
+   "type": "evacuation_bus",
+   "home_station": "BUS-DEPOT",
+   "description": "County evacuation bus 1",
+   "vehicle": "Transit bus",
+   "staffing": 1,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "NC-BUS-02",
+   "agency": "NCOEM",
+   "type": "evacuation_bus",
+   "home_station": "BUS-DEPOT",
+   "description": "County evacuation bus 2",
+   "vehicle": "Transit bus",
+   "staffing": 1,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "NC-BUS-03",
+   "agency": "NCOEM",
+   "type": "evacuation_bus",
+   "home_station": "BUS-DEPOT",
+   "description": "County evacuation bus 3",
+   "vehicle": "Transit bus",
+   "staffing": 1,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "NC-BUS-04",
+   "agency": "NCOEM",
+   "type": "evacuation_bus",
+   "home_station": "BUS-DEPOT",
+   "description": "County evacuation bus 4",
+   "vehicle": "Transit bus",
+   "staffing": 1,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "NC-BUS-05",
+   "agency": "NCOEM",
+   "type": "evacuation_bus",
+   "home_station": "BUS-DEPOT",
+   "description": "County evacuation bus 5",
+   "vehicle": "Transit bus",
+   "staffing": 1,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "NC-BUS-06",
+   "agency": "NCOEM",
+   "type": "evacuation_bus",
+   "home_station": "BUS-DEPOT",
+   "description": "County evacuation bus 6",
+   "vehicle": "Transit bus",
+   "staffing": 1,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "NC-BUS-07",
+   "agency": "NCOEM",
+   "type": "evacuation_bus",
+   "home_station": "BUS-DEPOT",
+   "description": "County evacuation bus 7",
+   "vehicle": "Transit bus",
+   "staffing": 1,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "NC-BUS-08",
+   "agency": "NCOEM",
+   "type": "evacuation_bus",
+   "home_station": "BUS-DEPOT",
+   "description": "County evacuation bus 8",
+   "vehicle": "Transit bus",
+   "staffing": 1,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "NC-BUS-09",
+   "agency": "NCOEM",
+   "type": "evacuation_bus",
+   "home_station": "BUS-DEPOT",
+   "description": "County evacuation bus 9",
+   "vehicle": "Transit bus",
+   "staffing": 1,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "NC-BUS-10",
+   "agency": "NCOEM",
+   "type": "evacuation_bus",
+   "home_station": "BUS-DEPOT",
+   "description": "County evacuation bus 10",
+   "vehicle": "Transit bus",
+   "staffing": 1,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "CIV-BOAT-001",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 1 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-002",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 2 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-003",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 3 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-004",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 4 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-005",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 5 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-006",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 6 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-007",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 7 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-008",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 8 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-009",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 9 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-010",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 10 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-011",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 11 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-012",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 12 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-013",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 13 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-014",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 14 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-015",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 15 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-016",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 16 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-017",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 17 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-018",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 18 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-019",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 19 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-020",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 20 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-021",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 21 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-022",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 22 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-023",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 23 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-024",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 24 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-025",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 25 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-026",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 26 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-027",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 27 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-028",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 28 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-029",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 29 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-030",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 30 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-031",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 31 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-032",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 32 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-033",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 33 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-034",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 34 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-035",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 35 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-036",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 36 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-037",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 37 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-038",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 38 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-039",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 39 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-040",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 40 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-041",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 41 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-042",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 42 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-043",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 43 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-044",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 44 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-045",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 45 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-046",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 46 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-047",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 47 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-048",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 48 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-049",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 49 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-050",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 50 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-051",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 51 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-052",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 52 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-053",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 53 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-054",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 54 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-055",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 55 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-056",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 56 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-057",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 57 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-058",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 58 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-059",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 59 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-060",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 60 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-061",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 61 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-062",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 62 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-063",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 63 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-064",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 64 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-065",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 65 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-066",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 66 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-067",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 67 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-068",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 68 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-069",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 69 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-070",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 70 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-071",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 71 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-072",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 72 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-073",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 73 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-074",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 74 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-075",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 75 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-076",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 76 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-077",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 77 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-078",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 78 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-079",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 79 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-080",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 80 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-081",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 81 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-082",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 82 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-083",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 83 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-084",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 84 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-085",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 85 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-086",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 86 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "CIV-BOAT-087",
+   "agency": "CIVBOAT",
+   "type": "civilian_boat",
+   "home_station": "STG-FAIR",
+   "description": "Credentialed civilian boat 87 (Corpus Christi Boating Association)",
+   "vehicle": "Private boat",
+   "staffing": 2,
+   "avl_equipped": true,
+   "mutual_aid": true
+  },
+  {
+   "unit_id": "PA-M1",
+   "agency": "PAPD",
+   "type": "als_ambulance",
+   "home_station": "PA-PS",
+   "description": "Port Aransas ambulance",
+   "vehicle": "Type I ambulance",
+   "staffing": 2,
+   "avl_equipped": true,
+   "service_level": "ALS"
+  },
+  {
+   "unit_id": "PA-1",
+   "agency": "PAPD",
+   "type": "patrol",
+   "home_station": "PA-PS",
+   "description": "Port Aransas patrol unit",
+   "vehicle": "Patrol SUV",
+   "staffing": 1,
+   "avl_equipped": true
+  },
+  {
+   "unit_id": "RLF-1",
+   "agency": "NCOEM",
+   "type": "relief truck",
+   "home_station": "STG-FAIR",
+   "description": "Relief supply truck 1 (water and ice distribution)",
+   "vehicle": "Box truck",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "RLF-2",
+   "agency": "NCOEM",
+   "type": "relief truck",
+   "home_station": "STG-FAIR",
+   "description": "Relief supply truck 2 (water and ice distribution)",
+   "vehicle": "Box truck",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "RLF-3",
+   "agency": "NCOEM",
+   "type": "relief truck",
+   "home_station": "STG-FAIR",
+   "description": "Relief supply truck 3 (water and ice distribution)",
+   "vehicle": "Box truck",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "RLF-4",
+   "agency": "NCOEM",
+   "type": "relief truck",
+   "home_station": "STG-FAIR",
+   "description": "Relief supply truck 4 (water and ice distribution)",
+   "vehicle": "Box truck",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "RLF-5",
+   "agency": "NCOEM",
+   "type": "relief truck",
+   "home_station": "STG-FAIR",
+   "description": "Relief supply truck 5 (water and ice distribution)",
+   "vehicle": "Box truck",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "RLF-6",
+   "agency": "NCOEM",
+   "type": "relief truck",
+   "home_station": "STG-FAIR",
+   "description": "Relief supply truck 6 (water and ice distribution)",
+   "vehicle": "Box truck",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "DBR-1",
+   "agency": "NCPW",
+   "type": "debris hauler",
+   "home_station": "STG-FAIR",
+   "description": "Debris haul truck 1 (county debris contract)",
+   "vehicle": "Knuckle-boom loader",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "DBR-2",
+   "agency": "NCPW",
+   "type": "debris hauler",
+   "home_station": "STG-FAIR",
+   "description": "Debris haul truck 2 (county debris contract)",
+   "vehicle": "Knuckle-boom loader",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "DBR-3",
+   "agency": "NCPW",
+   "type": "debris hauler",
+   "home_station": "STG-FAIR",
+   "description": "Debris haul truck 3 (county debris contract)",
+   "vehicle": "Knuckle-boom loader",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "DBR-4",
+   "agency": "NCPW",
+   "type": "debris hauler",
+   "home_station": "STG-FAIR",
+   "description": "Debris haul truck 4 (county debris contract)",
+   "vehicle": "Knuckle-boom loader",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "DBR-5",
+   "agency": "NCPW",
+   "type": "debris hauler",
+   "home_station": "STG-FAIR",
+   "description": "Debris haul truck 5 (county debris contract)",
+   "vehicle": "Knuckle-boom loader",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "DBR-6",
+   "agency": "NCPW",
+   "type": "debris hauler",
+   "home_station": "STG-FAIR",
+   "description": "Debris haul truck 6 (county debris contract)",
+   "vehicle": "Knuckle-boom loader",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "DBR-7",
+   "agency": "NCPW",
+   "type": "debris hauler",
+   "home_station": "STG-FAIR",
+   "description": "Debris haul truck 7 (county debris contract)",
+   "vehicle": "Knuckle-boom loader",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "DBR-8",
+   "agency": "NCPW",
+   "type": "debris hauler",
+   "home_station": "STG-FAIR",
+   "description": "Debris haul truck 8 (county debris contract)",
+   "vehicle": "Knuckle-boom loader",
+   "staffing": 2,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "UTL-1",
+   "agency": "CBPWA",
+   "type": "utility crew",
+   "home_station": "STG-FAIR",
+   "description": "Line and water crew 1",
+   "vehicle": "Bucket truck",
+   "staffing": 3,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "UTL-2",
+   "agency": "CBPWA",
+   "type": "utility crew",
+   "home_station": "STG-FAIR",
+   "description": "Line and water crew 2",
+   "vehicle": "Bucket truck",
+   "staffing": 3,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "UTL-3",
+   "agency": "CBPWA",
+   "type": "utility crew",
+   "home_station": "STG-FAIR",
+   "description": "Line and water crew 3",
+   "vehicle": "Bucket truck",
+   "staffing": 3,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "UTL-4",
+   "agency": "CBPWA",
+   "type": "utility crew",
+   "home_station": "STG-FAIR",
+   "description": "Line and water crew 4",
+   "vehicle": "Bucket truck",
+   "staffing": 3,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "UTL-5",
+   "agency": "CBPWA",
+   "type": "utility crew",
+   "home_station": "STG-FAIR",
+   "description": "Line and water crew 5",
+   "vehicle": "Bucket truck",
+   "staffing": 3,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "UTL-6",
+   "agency": "CBPWA",
+   "type": "utility crew",
+   "home_station": "STG-FAIR",
+   "description": "Line and water crew 6",
+   "vehicle": "Service truck",
+   "staffing": 3,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "UTL-7",
+   "agency": "CBPWA",
+   "type": "utility crew",
+   "home_station": "STG-FAIR",
+   "description": "Line and water crew 7",
+   "vehicle": "Service truck",
+   "staffing": 3,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  },
+  {
+   "unit_id": "UTL-8",
+   "agency": "CBPWA",
+   "type": "utility crew",
+   "home_station": "STG-FAIR",
+   "description": "Line and water crew 8",
+   "vehicle": "Service truck",
+   "staffing": 3,
+   "avl_equipped": false,
+   "reference_only": true,
+   "reference_reason": "no vehicle-location feed for this fleet; appears in work orders and stories as crews, not as tracked units"
+  }
+ ],
+ "nature_codes": [
+  {
+   "code": "WELFCHK",
+   "description": "WELFARE CHECK",
+   "default_priority": "P3",
+   "agency": [
+    "CCPD",
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "MEDEMER",
+   "description": "MEDICAL EMERGENCY",
+   "default_priority": "P1",
+   "agency": [
+    "CCEMS",
+    "CCFD"
+   ]
+  },
+  {
+   "code": "CARDIACAR",
+   "description": "CARDIAC ARREST",
+   "default_priority": "P1",
+   "agency": [
+    "CCEMS",
+    "CCFD"
+   ]
+  },
+  {
+   "code": "STROKECVA",
+   "description": "STROKE / CVA",
+   "default_priority": "P1",
+   "agency": [
+    "CCEMS",
+    "CCFD"
+   ]
+  },
+  {
+   "code": "TRAUMAALS",
+   "description": "TRAUMA / INJURY - ALS",
+   "default_priority": "P1",
+   "agency": [
+    "CCEMS",
+    "CCFD"
+   ]
+  },
+  {
+   "code": "TRAUMABLS",
+   "description": "TRAUMA / INJURY - BLS",
+   "default_priority": "P2",
+   "agency": [
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "STRUCTFIRE",
+   "description": "STRUCTURE FIRE",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "STRUCTFIRE2",
+   "description": "STRUCTURE FIRE - 2ND ALARM",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS",
+    "CCPD"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "code": "GRASSFIRE",
+   "description": "GRASS / BRUSH FIRE",
+   "default_priority": "P2",
+   "agency": [
+    "CCFD"
+   ]
+  },
+  {
+   "code": "FIREINVEST",
+   "description": "FIRE INVESTIGATION",
+   "default_priority": "P3",
+   "agency": [
+    "CCFD"
+   ]
+  },
+  {
+   "code": "FLOODING",
+   "description": "FLOODING / WATER RESCUE",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS",
+    "CCPD"
+   ]
+  },
+  {
+   "code": "WATERRESC",
+   "description": "WATER RESCUE - ACTIVE",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS",
+    "CCPD",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "SURFRESC",
+   "description": "SURF / OCEAN RESCUE",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS",
+    "NCSO"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "code": "SAROPER",
+   "description": "SEARCH AND RESCUE - MISSING",
+   "default_priority": "P1",
+   "agency": [
+    "CCPD",
+    "CCFD",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "URBANSAR",
+   "description": "URBAN SEARCH AND RESCUE",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCPD"
+   ]
+  },
+  {
+   "code": "LOOTING",
+   "description": "LOOTING / BURGLARY IN PROGRESS",
+   "default_priority": "P1",
+   "agency": [
+    "CCPD"
+   ]
+  },
+  {
+   "code": "CURFEWVIO",
+   "description": "CURFEW VIOLATION",
+   "default_priority": "P3",
+   "agency": [
+    "CCPD",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "EVACENFOR",
+   "description": "EVACUATION ORDER ENFORCEMENT",
+   "default_priority": "P2",
+   "agency": [
+    "CCPD",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "UTILEMER",
+   "description": "UTILITY EMERGENCY",
+   "default_priority": "P2",
+   "agency": [
+    "CCFD",
+    "CCPD"
+   ]
+  },
+  {
+   "code": "GENERHAZ",
+   "description": "GENERATOR HAZARD / CO RISK",
+   "default_priority": "P2",
+   "agency": [
+    "CCFD",
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "GENERCOP",
+   "description": "GENERATOR CO POISONING",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "EXPLOSION",
+   "description": "EXPLOSION",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS",
+    "CCPD"
+   ]
+  },
+  {
+   "code": "SHOTSFIRE",
+   "description": "SHOTS FIRED",
+   "default_priority": "P1",
+   "agency": [
+    "CCPD"
+   ]
+  },
+  {
+   "code": "ASSAULT",
+   "description": "ASSAULT IN PROGRESS",
+   "default_priority": "P1",
+   "agency": [
+    "CCPD",
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "MISSINGPER",
+   "description": "MISSING PERSON",
+   "default_priority": "P2",
+   "agency": [
+    "CCPD",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "MISSINGPER-EVAC",
+   "description": "MISSING PERSON - POST-EVACUATION",
+   "default_priority": "P1",
+   "agency": [
+    "CCPD",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "TRAFFICACC",
+   "description": "TRAFFIC ACCIDENT - INJURY",
+   "default_priority": "P2",
+   "agency": [
+    "CCPD",
+    "CCEMS",
+    "CCFD"
+   ]
+  },
+  {
+   "code": "TRAFFICPD",
+   "description": "TRAFFIC ACCIDENT - PROPERTY DAMAGE",
+   "default_priority": "P3",
+   "agency": [
+    "CCPD"
+   ]
+  },
+  {
+   "code": "DWNPWRLINE",
+   "description": "DOWNED POWER LINE",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCPD"
+   ]
+  },
+  {
+   "code": "GASLEAK",
+   "description": "GAS LEAK / ODOR",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD"
+   ]
+  },
+  {
+   "code": "CHEMSPILL",
+   "description": "CHEMICAL SPILL / HAZMAT",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS",
+    "CCPD"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "code": "HAZMATLVL1",
+   "description": "HAZMAT INCIDENT - LEVEL 1",
+   "default_priority": "P2",
+   "agency": [
+    "CCFD"
+   ]
+  },
+  {
+   "code": "HAZMATLVL2",
+   "description": "HAZMAT INCIDENT - LEVEL 2",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS",
+    "CCPD"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "code": "DEBRISREQ",
+   "description": "DEBRIS REMOVAL REQUEST",
+   "default_priority": "P4",
+   "agency": [
+    "CCPD"
+   ]
+  },
+  {
+   "code": "TRAPPEDVEH",
+   "description": "TRAPPED IN VEHICLE / STRUCTURE",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "ANIMALCALL",
+   "description": "ANIMAL CALL",
+   "default_priority": "P4",
+   "agency": [
+    "CCPD"
+   ]
+  },
+  {
+   "code": "ALARMBLDG",
+   "description": "BUILDING ALARM - FIRE",
+   "default_priority": "P2",
+   "agency": [
+    "CCFD"
+   ]
+  },
+  {
+   "code": "ALARMSEC",
+   "description": "SECURITY / INTRUSION ALARM",
+   "default_priority": "P3",
+   "agency": [
+    "CCPD"
+   ]
+  },
+  {
+   "code": "MEDTRANSPT",
+   "description": "MEDICAL TRANSPORT - ROUTINE",
+   "default_priority": "P4",
+   "agency": [
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "TREEFALLER",
+   "description": "TREE ON STRUCTURE / VEHICLE",
+   "default_priority": "P2",
+   "agency": [
+    "CCFD",
+    "CCPD"
+   ]
+  },
+  {
+   "code": "ROOFCOLLAP",
+   "description": "ROOF COLLAPSE",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "STORMDAMAG",
+   "description": "STORM DAMAGE REPORT",
+   "default_priority": "P3",
+   "agency": [
+    "CCPD"
+   ]
+  },
+  {
+   "code": "RESCUECONF",
+   "description": "CONFINED SPACE RESCUE",
+   "default_priority": "P1",
+   "agency": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "code": "FUELSPILL",
+   "description": "FUEL SPILL / PETROLEUM RELEASE",
+   "default_priority": "P2",
+   "agency": [
+    "CCFD"
+   ]
+  },
+  {
+   "code": "OVERTURNED",
+   "description": "OVERTURNED VEHICLE / CARGO",
+   "default_priority": "P2",
+   "agency": [
+    "CCFD",
+    "CCPD",
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "WELLNESSMH",
+   "description": "MENTAL HEALTH CRISIS",
+   "default_priority": "P2",
+   "agency": [
+    "CCPD",
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "SUICIDETHRT",
+   "description": "SUICIDE THREAT / ATTEMPT",
+   "default_priority": "P1",
+   "agency": [
+    "CCPD",
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "SHELTERREQ",
+   "description": "SHELTER REQUEST / ASSISTANCE",
+   "default_priority": "P3",
+   "agency": [
+    "CCPD"
+   ]
+  },
+  {
+   "code": "GENASSIST",
+   "description": "GENERAL ASSISTANCE",
+   "default_priority": "P4",
+   "agency": [
+    "CCPD"
+   ]
+  },
+  {
+   "code": "MUTUALAID",
+   "description": "MUTUAL AID REQUEST",
+   "default_priority": "P2",
+   "agency": [
+    "CCPD",
+    "CCFD",
+    "CCEMS",
+    "NCSO"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "code": "WATERSAFE",
+   "description": "WATER SAFETY INQUIRY",
+   "default_priority": "P4",
+   "agency": [
+    "CCPD"
+   ]
+  }
+ ],
+ "disposition_codes": [
+  {
+   "code": "CLR",
+   "description": "CLEAR - No Action Required",
+   "applies_to": [
+    "CCPD",
+    "CCFD",
+    "CCEMS",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "ARR",
+   "description": "ARREST - Subject Taken Into Custody",
+   "applies_to": [
+    "CCPD",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "RPT",
+   "description": "REPORT TAKEN",
+   "applies_to": [
+    "CCPD",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "NOACT",
+   "description": "NO ACTION REQUIRED - Situation Resolved",
+   "applies_to": [
+    "CCPD",
+    "CCFD",
+    "CCEMS",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "UNFND",
+   "description": "UNFOUNDED - Caller Error or No Evidence",
+   "applies_to": [
+    "CCPD",
+    "CCFD",
+    "CCEMS",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "ASSIST",
+   "description": "ASSIST RENDERED",
+   "applies_to": [
+    "CCPD",
+    "CCFD",
+    "CCEMS",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "REFER",
+   "description": "REFERRED TO OTHER AGENCY",
+   "applies_to": [
+    "CCPD",
+    "CCFD",
+    "CCEMS",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "FALALRM",
+   "description": "FALSE ALARM",
+   "applies_to": [
+    "CCPD",
+    "CCFD"
+   ]
+  },
+  {
+   "code": "DUP",
+   "description": "DUPLICATE CALL - Already Dispatched",
+   "applies_to": [
+    "CCPD",
+    "CCFD",
+    "CCEMS",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "CANCEL",
+   "description": "CANCELLED - By Caller or Supervisor",
+   "applies_to": [
+    "CCPD",
+    "CCFD",
+    "CCEMS",
+    "NCSO"
+   ]
+  },
+  {
+   "code": "MAOUT",
+   "description": "MUTUAL AID PROVIDED - Units Dispatched",
+   "applies_to": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "code": "MAIN",
+   "description": "MUTUAL AID RECEIVED - Requesting Aid",
+   "applies_to": [
+    "CCFD",
+    "CCEMS"
+   ],
+   "reference_only": true,
+   "reference_reason": "reference entry; no record in the delivered streams"
+  },
+  {
+   "code": "TRNSPT",
+   "description": "PATIENT TRANSPORTED",
+   "applies_to": [
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "TREATED",
+   "description": "PATIENT TREATED ON SCENE / REFUSED",
+   "applies_to": [
+    "CCEMS"
+   ]
+  },
+  {
+   "code": "DOA",
+   "description": "DECEASED ON ARRIVAL",
+   "applies_to": [
+    "CCEMS",
+    "CCFD"
+   ]
+  }
+ ],
+ "priority_levels": [
+  {
+   "code": "P1",
+   "name": "IMMEDIATE",
+   "description": "Life-threatening emergency requiring immediate response. Lights and sirens authorized.",
+   "target_response_time_min": 4,
+   "examples": [
+    "Cardiac Arrest",
+    "Structure Fire",
+    "Active Shooting",
+    "Water Rescue",
+    "Trapped Victim",
+    "CO Poisoning"
+   ]
+  },
+  {
+   "code": "P2",
+   "name": "URGENT",
+   "description": "Urgent situation with potential to become life-threatening. Expedited response, lights and sirens at officer discretion.",
+   "target_response_time_min": 8,
+   "examples": [
+    "Injury Accident",
+    "Gas Leak",
+    "Downed Power Line",
+    "Missing Person",
+    "Assault Reported"
+   ]
+  },
+  {
+   "code": "P3",
+   "name": "ROUTINE",
+   "description": "Routine call; situation is stable and not immediately threatening. No lights and sirens unless updated.",
+   "target_response_time_min": 15,
+   "examples": [
+    "Theft Report",
+    "Welfare Check",
+    "Storm Damage Report",
+    "Curfew Violation",
+    "Animal Call"
+   ]
+  },
+  {
+   "code": "P4",
+   "name": "NON-EMERGENCY / SCHEDULED",
+   "description": "Non-emergency or scheduled response. Can be queued and handled as units become available.",
+   "target_response_time_min": 60,
+   "examples": [
+    "Routine Medical Transport",
+    "Debris Removal Request",
+    "General Assistance",
+    "Administrative Run"
+   ]
+  }
+ ]
+}

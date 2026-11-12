@@ -1,0 +1,381 @@
+{
+  "source": "R1",
+  "scope": "All stories tagged ARC-STORM, ARC-WATER or ARC-HEALTH (112 stories, days -55 to 110), read in day order as the hurricane, water-crisis and public-health storylines; key timing facts (landfall, category, surge, bridge closure/reopening, outages, boil-water notice and instructions, parts delay/arrival, notice lifted, hardening plan) also grep-checked across all 393 stories.",
+  "stories_read": 112,
+  "findings": [
+    {
+      "id": "R1-001",
+      "severity": "high",
+      "story_id": "NWS-P035-01",
+      "field": "body",
+      "old": "Bring tap water to a rolling boil for one minute before drinking it",
+      "new": "Bring tap water to a rolling boil for two minutes before drinking it",
+      "reason": "Boil instruction contradicts the notice (PUB-039: rolling boil for two minutes) and every other story, including this reporter's own Sept. 18 explainer (P004-02).",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R1-002",
+      "severity": "high",
+      "story_id": "NWS-P036-02",
+      "field": "body",
+      "old": "Bring it to a rolling boil for one minute and let it cool.",
+      "new": "Bring it to a rolling boil for two minutes and let it cool.",
+      "reason": "Boil instruction contradicts PUB-039 (two minutes) and Harborline's own notice story (P004-01) and checklists (P008-03, P010-02, P032-01).",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R1-003",
+      "severity": "medium",
+      "story_id": "NWS-P004-01",
+      "field": "body",
+      "old": "Washing your hands with soap and tap water is OK for everyday hand-washing.",
+      "new": "For hand-washing, use soap and boiled or bottled water when you can.",
+      "reason": "Only story telling readers tap water is fine for hand-washing; every later story (P006-01, P008-01, Harborline's own P008-03, P010-04 \"Shah's advice hasn't changed\", P014-01, P020-02, P028-01, P029-01) says soap and boiled or bottled water.",
+      "status": "applied"
+    },
+    {
+      "id": "R1-004",
+      "severity": "medium",
+      "story_id": "NWS-P036-01",
+      "field": "body",
+      "old": "The utility said last month that the shipment was coming from out of state.",
+      "new": "The utility said earlier this month that the shipment was coming from out of state.",
+      "reason": "Date error: the delay was announced Mon., Oct. 4 (PUB-055, day 20; P020-02); this story runs Wed., Oct. 20, the same month.",
+      "status": "applied"
+    },
+    {
+      "id": "R1-005",
+      "severity": "medium",
+      "story_id": "NWS-P036-01",
+      "field": "headline",
+      "old": ", weeks behind schedule",
+      "new": " after weeks of delay",
+      "reason": "No arrival date or schedule was ever made public (utility and supplier repeatedly declined to give one: P020-02, P021-02); \"behind schedule\" implies the non-public quoted lead time.",
+      "status": "applied"
+    },
+    {
+      "id": "R1-006",
+      "severity": "low",
+      "story_id": "NWS-P036-01",
+      "field": "body",
+      "old": "The parts Corpus Christi has waited on for more than a month",
+      "new": "The parts Corpus Christi has waited on since September",
+      "reason": "The need for parts was first made public Sept. 24 (PUB-050), 26 days before arrival; the order date is not public, so \"more than a month\" overstates the public wait.",
+      "status": "applied"
+    },
+    {
+      "id": "R1-007",
+      "severity": "low",
+      "story_id": "NWS-P081-01",
+      "field": "body",
+      "old": "In September, she organized her neighbors' runs to water distribution sites.",
+      "new": "This fall, she organized her neighbors' runs to water distribution sites.",
+      "reason": "Ramos ran her street's water runs for the whole notice, Sept. 18 to Oct. 23 (canon; P037-01, P039-01), not only in September.",
+      "status": "applied"
+    },
+    {
+      "id": "R1-008",
+      "severity": "low",
+      "story_id": "NWS-P024-01",
+      "field": "body",
+      "old": "More than three weeks of boiling, hauling and cleaning take a toll on everyone.",
+      "new": "Three weeks of boiling, hauling and cleaning take a toll on everyone.",
+      "reason": "Notice issued Sept. 18; on Oct. 8 that is 20 days. Same-day Ledger story P024-02 says residents are \"nearing three weeks of boiling water.\"",
+      "status": "applied"
+    },
+    {
+      "id": "R1-009",
+      "severity": "low",
+      "story_id": "NWS-P007-02",
+      "field": "body",
+      "old": "Leticia Ramos keeps the list on a clipboard by her front door: house numbers, how many people live in each, who has a car, who has a baby, who can't lift a case of water.",
+      "new": "By Leticia Ramos' front door hangs a clipboard, and on it is her whole street: house numbers, household sizes, who drives, who has a newborn, who needs help lifting.",
+      "reason": "Lede nearly copies Coastline's Ramos lede two days earlier (P005-02: \"...how many people live in each house, who has a baby, who can't lift a case of water\"). New wording matches the \"has car\"/\"needs help lifting\" columns in P024-02.",
+      "status": "applied"
+    },
+    {
+      "id": "R1-010",
+      "severity": "medium",
+      "story_id": "NWS-P098-02",
+      "field": "headline",
+      "old": "Hallway beds and hand sanitizer:",
+      "new": "What the hallway beds taught:",
+      "reason": "Health officials repeatedly said hand sanitizer does not work well against norovirus (P006-01, P008-01, P014-01, P028-01); the body never mentions sanitizer. Also the third Whitlock headline built on \"Hallway beds and...\" (P023-02).",
+      "status": "applied"
+    },
+    {
+      "id": "R1-011",
+      "severity": "low",
+      "story_id": "NWS-P098-02",
+      "field": "body",
+      "old": "Alyssa Cortez can tell you exactly when she knew the boil-water weeks were going to be bad.",
+      "new": "Alyssa Cortez remembers the moment she knew the boil-water weeks were going to be bad.",
+      "reason": "Lede repeats the construction of the same reporter's Cortez profile 12 days earlier (P086-03: \"Alyssa Cortez can tell you which week of the fall was the worst...\").",
+      "status": "applied"
+    },
+    {
+      "id": "R1-012",
+      "severity": "low",
+      "story_id": "NWS-P098-02",
+      "field": "body",
+      "old": "\"Wash your hands, stay home when you're sick, and if you're still feeling bad after a few days, don't wait it out. Call your doctor,\" she said.",
+      "new": "\"Soap, a sick day at home and an early call to your doctor if you're not getting better. That list hasn't changed,\" she said.",
+      "reason": "Shah quote nearly duplicates her quote in P086-03 (\"Wash your hands, stay home when you're sick, and get your flu shot...\").",
+      "status": "applied"
+    },
+    {
+      "id": "R1-013",
+      "severity": "low",
+      "story_id": "NWS-P035-01",
+      "field": "headline",
+      "old": "Stomach illness has eased, but health officials say keep boiling until the notice lifts",
+      "new": "With ER hallways clear again, health officials say keep boiling until the notice lifts",
+      "reason": "Near-duplicate of the same reporter's headline a week earlier (P028-01: \"Stomach illness has eased, but the boil-water notice still matters\").",
+      "status": "applied"
+    },
+    {
+      "id": "R1-014",
+      "severity": "low",
+      "story_id": "NWS-P045-01",
+      "field": "dek",
+      "old": "they remain about 40% above.",
+      "new": "they remain about 40% above normal.",
+      "reason": "Figure is clipped; PUB-069 and the body say \"about 40% above normal.\"",
+      "status": "applied"
+    },
+    {
+      "id": "R1-015",
+      "severity": "low",
+      "story_id": "NWS-P045-05",
+      "field": "dek",
+      "old": "Countywide, emergency visits are back near normal. In low-income neighborhoods near the bay, they remain about 40% above.",
+      "new": "Countywide, emergency visits are back near normal, but low-income neighborhoods near the bay are running about 40% above normal.",
+      "reason": "Second sentence is identical to the same-day Ledger dek (P045-01) and drops \"normal.\"",
+      "status": "applied"
+    },
+    {
+      "id": "R1-016",
+      "severity": "medium",
+      "story_id": "NWS-P000-05",
+      "field": "headline",
+      "old": "flooding bays and setting off a tanker spill",
+      "new": "flooding bays as oil spills from moored tankers",
+      "reason": "Headline says the storm caused the spill; PUB-024 and this story's own body say the cause is under investigation. Coverage must stay neutral on cause.",
+      "status": "applied"
+    },
+    {
+      "id": "R1-017",
+      "severity": "medium",
+      "story_id": "NWS-P000-05",
+      "field": "body",
+      "old": "and setting off an oil spill at a terminal in the city's industrial Inner Harbor",
+      "new": "as oil spilled at a terminal in the city's industrial Inner Harbor",
+      "reason": "Lede says the storm set off the spill, contradicting \"the cause was under investigation\" two sentences later (PUB-024).",
+      "status": "applied"
+    },
+    {
+      "id": "R1-018",
+      "severity": "medium",
+      "story_id": "NWS-P110-01",
+      "field": "body",
+      "old": "The Harbor Bridge and Nueces Bay Causeway were closed after the storm, cutting Portland and North Beach off from downtown until inspections finished.",
+      "new": "The Harbor Bridge and Nueces Bay Causeway closed as Rafael's winds rose and stayed shut until inspections finished, cutting Portland and North Beach off from downtown.",
+      "reason": "The story is about a wind-closure review, which only makes sense if the bridges closed in the wind; \"closed after the storm\" conflicts with the companion story P110-02 (\"The bridges closed as Rafael hit\").",
+      "status": "applied"
+    },
+    {
+      "id": "R1-019",
+      "severity": "low",
+      "story_id": "NWS-P007-03",
+      "field": "body",
+      "old": "It is fainter than it was the day after the storm, he says",
+      "new": "It is fainter than it was in the first days after the storm, he says",
+      "reason": "Bell canon and P042-02: the oil smell reached North Beach two days after landfall, not the day after.",
+      "status": "applied"
+    },
+    {
+      "id": "R1-020",
+      "severity": "low",
+      "story_id": "NWS-P002-03",
+      "field": "body",
+      "old": "in the house she rents near the bay",
+      "new": "in the duplex she rents near the bay",
+      "reason": "Elizondo canon: she rents a duplex (P019-01, CANON-007).",
+      "status": "applied"
+    },
+    {
+      "id": "R1-021",
+      "severity": "low",
+      "story_id": "NWS-M004-04",
+      "field": "headline",
+      "old": "jets overhead",
+      "new": "planes overhead",
+      "reason": "NAS Corpus Christi's training aircraft are turboprops; other stories say \"training aircraft.\"",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R1-022",
+      "severity": "low",
+      "story_id": "NWS-M004-04",
+      "field": "body",
+      "old": "The jets keep climbing out over Flour Bluff as the sun goes down.",
+      "new": "The training planes keep climbing out over Flour Bluff as the sun goes down.",
+      "reason": "Same as headline: the aircraft leaving NAS Corpus Christi are turboprop trainers, not jets.",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R1-023",
+      "severity": "low",
+      "story_id": "NWS-P001-04",
+      "field": "headline",
+      "old": "Texas officials put Rafael tanker spill at 9,000 barrels",
+      "new": "Officials put Rafael tanker spill at 9,000 barrels",
+      "reason": "The estimate is from the Unified Command (Coast Guard and the General Land Office); the body says \"federal and state officials said.\"",
+      "status": "applied"
+    },
+    {
+      "id": "R1-024",
+      "severity": "low",
+      "story_id": "NWS-P107-01",
+      "field": "body",
+      "old": "had been taken over and their deposit details changed.",
+      "new": "had been taken over using passwords stolen elsewhere.",
+      "reason": "PUB-085 says 410 accounts were taken over with passwords stolen elsewhere; deposit changes were reported by some applicants (PUB-083), not stated by FEMA for all 410.",
+      "status": "applied"
+    },
+    {
+      "id": "R1-025",
+      "severity": "low",
+      "story_id": "NWS-M003-05",
+      "field": "body",
+      "old": "\"Our soldiers are ready to deploy when the port is ready,\" said Maj. Darnell Price, a Fort Hood public affairs officer.",
+      "new": "Maj. Darnell Price, a Fort Hood public affairs officer, said the brigade's soldiers would be ready to deploy as soon as the port is.",
+      "reason": "Identical quote appears in same-day story NWS-M003-04; paraphrase so the two do not read as copy-pasted.",
+      "status": "applied"
+    },
+    {
+      "id": "R1-026",
+      "severity": "low",
+      "story_id": "NWS-P000-05",
+      "field": "body",
+      "old": "\"Conditions do not allow responders on the water at this time,\" said Lt. Cmdr. Elena Ruiz, a Coast Guard spokesperson.",
+      "new": "\"Responders will deploy as soon as conditions on the water allow,\" said Lt. Cmdr. Elena Ruiz, a Coast Guard spokesperson.",
+      "reason": "Identical quote appears in same-day story NWS-P000-06.",
+      "status": "applied"
+    },
+    {
+      "id": "R1-027",
+      "severity": "low",
+      "story_id": "NWS-M003-05",
+      "field": "body",
+      "old": "CORPUS CHRISTI, Texas (Continental Wire) -",
+      "new": "CORPUS CHRISTI, Texas —",
+      "reason": "Continental datelines vary (\"(Continental Wire) -\", \"(CW) —\", \"(CWS) —\", \"—\"); normalize to the most common form, \"CORPUS CHRISTI, Texas —\".",
+      "status": "applied"
+    },
+    {
+      "id": "R1-028",
+      "severity": "low",
+      "story_id": "NWS-M001-03",
+      "field": "body",
+      "old": "CORPUS CHRISTI, Texas (Continental Wire) -",
+      "new": "CORPUS CHRISTI, Texas —",
+      "reason": "Continental datelines vary (\"(Continental Wire) -\", \"(CW) —\", \"(CWS) —\", \"—\"); normalize to the most common form, \"CORPUS CHRISTI, Texas —\".",
+      "status": "applied"
+    },
+    {
+      "id": "R1-029",
+      "severity": "low",
+      "story_id": "NWS-P006-03",
+      "field": "body",
+      "old": "CORPUS CHRISTI, Texas (CW) —",
+      "new": "CORPUS CHRISTI, Texas —",
+      "reason": "Continental datelines vary (\"(Continental Wire) -\", \"(CW) —\", \"(CWS) —\", \"—\"); normalize to the most common form, \"CORPUS CHRISTI, Texas —\".",
+      "status": "applied"
+    },
+    {
+      "id": "R1-030",
+      "severity": "low",
+      "story_id": "NWS-M051-01",
+      "field": "body",
+      "old": "said Rosa Elizondo, a home health aide and mother of three who relies on buses.",
+      "new": "said Rosa Elizondo, 38, a home health aide and mother of three who relies on buses.",
+      "reason": "Ledger style gives names and ages of residents; this quoted resident appears without an age anywhere in the story (canon age).",
+      "status": "applied"
+    },
+    {
+      "id": "R1-031",
+      "severity": "low",
+      "story_id": "NWS-P002-03",
+      "field": "body",
+      "old": "Pastor Gloria Whitfield, who coordinates relief at a church fellowship hall nearby,",
+      "new": "Pastor Gloria Whitfield, 59, who coordinates relief at a church fellowship hall nearby,",
+      "reason": "Ledger style gives names and ages of residents; this quoted resident appears without an age anywhere in the story (canon age).",
+      "status": "applied"
+    },
+    {
+      "id": "R1-032",
+      "severity": "low",
+      "story_id": "NWS-P005-03",
+      "field": "body",
+      "old": "charge nurse Alyssa Cortez said the complaints",
+      "new": "charge nurse Alyssa Cortez, 34, said the complaints",
+      "reason": "Ledger style gives names and ages of residents; this quoted resident appears without an age anywhere in the story (canon age).",
+      "status": "applied"
+    },
+    {
+      "id": "R1-033",
+      "severity": "low",
+      "story_id": "NWS-P019-01",
+      "field": "body",
+      "old": "Whitfield laughed when she heard the story retold.",
+      "new": "Whitfield, 59, laughed when she heard the story retold.",
+      "reason": "Ledger style gives names and ages of residents; this quoted resident appears without an age anywhere in the story (canon age).",
+      "status": "applied"
+    },
+    {
+      "id": "R1-034",
+      "severity": "low",
+      "story_id": "NWS-P035-01",
+      "field": "body",
+      "old": "Alyssa Cortez, a charge nurse in a Nueces County emergency department, said the change",
+      "new": "Alyssa Cortez, 34, a charge nurse in a Nueces County emergency department, said the change",
+      "reason": "Ledger style gives names and ages of residents; this quoted resident appears without an age anywhere in the story (canon age).",
+      "status": "applied"
+    },
+    {
+      "id": "R1-035",
+      "severity": "low",
+      "story_id": "NWS-P045-01",
+      "field": "body",
+      "old": "Alyssa Cortez, a charge nurse in a Nueces County emergency department, said the hallway",
+      "new": "Alyssa Cortez, 34, a charge nurse in a Nueces County emergency department, said the hallway",
+      "reason": "Ledger style gives names and ages of residents; this quoted resident appears without an age anywhere in the story (canon age).",
+      "status": "applied"
+    },
+    {
+      "id": "R1-036",
+      "severity": "low",
+      "story_id": "NWS-P051-02",
+      "field": "body",
+      "old": "Pastor Gloria Whitfield, who runs a relief hub from her church fellowship hall near the bay,",
+      "new": "Pastor Gloria Whitfield, 59, who runs a relief hub from her church fellowship hall near the bay,",
+      "reason": "Ledger style gives names and ages of residents; this quoted resident appears without an age anywhere in the story (canon age).",
+      "status": "applied"
+    },
+    {
+      "id": "R1-037",
+      "severity": "low",
+      "story_id": "NWS-P068-02",
+      "field": "body",
+      "old": "Alyssa Cortez, an emergency room charge nurse at a Nueces County hospital",
+      "new": "Alyssa Cortez, 34, an emergency room charge nurse at a Nueces County hospital",
+      "reason": "Ledger style gives names and ages of residents; this quoted resident appears without an age anywhere in the story (canon age).",
+      "status": "applied"
+    }
+  ]
+}

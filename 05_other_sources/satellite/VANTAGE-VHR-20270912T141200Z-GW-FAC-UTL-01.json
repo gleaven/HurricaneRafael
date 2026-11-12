@@ -1,0 +1,91 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+ ],
+ "id": "VANTAGE-VHR-20270912T141200Z-GW-FAC-UTL-01",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.6305,
+     27.8524
+    ],
+    [
+     -97.6122,
+     27.8524
+    ],
+    [
+     -97.6122,
+     27.8687
+    ],
+    [
+     -97.6305,
+     27.8687
+    ],
+    [
+     -97.6305,
+     27.8524
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.6305,
+  27.8524,
+  -97.6122,
+  27.8687
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "VANTAGE-VHR-20270912T141200Z-GW-FAC-UTL-01.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20270912T141200Z-GW-FAC-UTL-01/visual.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20270912T141200Z-GW-FAC-UTL-01/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-09-12T14:12:00Z",
+  "title": "Pre-storm baseline, O.N. Stevens Water Treatment Plant",
+  "description": "Pre-storm baseline image of O.N. Stevens Water Treatment Plant for the regional pre-event package (archive entry NAS-BL-20270912-UTL). Yard dry, no visible damage.",
+  "platform": "Vantage-VHR-3",
+  "instruments": [
+   "panchromatic and multispectral imager"
+  ],
+  "constellation": "Vantage-VHR",
+  "gsd": 0.15,
+  "view:off_nadir": 28.3,
+  "view:sun_azimuth": 99.1,
+  "view:sun_elevation": 25.1,
+  "proj:epsg": 32614,
+  "eo:cloud_cover": 37,
+  "observations": [],
+  "processing:level": "orthorectified, HD-resampled to 15 cm",
+  "archive_entry": "NAS-BL-20270912-UTL"
+ }
+}

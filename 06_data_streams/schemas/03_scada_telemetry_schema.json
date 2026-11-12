@@ -1,0 +1,51 @@
+{
+ "source": "telemetry",
+ "stream_id": "scada_historian",
+ "folder": "05_other_sources/telemetry/",
+ "files": "historian_<GROUP>_<YYYYMM>.csv; GROUP is SUB01..SUB05 (substation and its RTU), DSS01, GEN01, WTP, BOOSTERS, TANKS, DIST, SYSTEM; one file per group and calendar month (UTC)",
+ "format": "CSV, sorted by tag then time",
+ "standard": "Process historian archive export, four columns (tag, time, value, quality)",
+ "verified": true,
+ "generator": "scripts/streams/gen_ot_scada.py (model: scripts/streams/ot_model.py)",
+ "span": "2027-08-15T00:00Z to 2028-01-12T06:00Z, every tag in 06_data_streams/scada_tags.json",
+ "fields": [
+  {
+   "name": "Tagname",
+   "type": "string",
+   "example": "GW.UTL1.PUMP3.PRESS.SP",
+   "notes": "tagname in scada_tags.json; equipment_id and site_id there join to infrastructure_assets.json and gw_host_registry.json"
+  },
+  {
+   "name": "Timestamp",
+   "type": "ISO 8601 UTC, seconds",
+   "example": "2027-09-23T02:04:01Z"
+  },
+  {
+   "name": "Value",
+   "type": "number, integer state or hex string",
+   "notes": "engineering units and value_map are in scada_tags.json; empty when Quality is 0"
+  },
+  {
+   "name": "Quality",
+   "type": "integer",
+   "notes": "192 good; 0 no data (first row of a telemetry gap); 64 uncertain (first scan after a gap); 216 manually entered"
+  }
+ ],
+ "archive_behaviour": {
+  "analog points": "a row when the value moves by more than the point's compression deadband, and at least hourly (every 15 minutes for zone pressures, header pressure and bus voltages). Scans sit on a 5-minute grid with a fixed per-site offset of a few seconds.",
+  "status points": "a row at the exact second of every change, plus an hourly heartbeat",
+  "setpoints": "a row at the exact second of every write, plus a heartbeat",
+  "command points (*.CMD.SP)": "a row only when a command is written (0 open, 1 close); the first row of the file is the last command before the export window",
+  "configuration CRC points": "hex string; a row on change plus a heartbeat every 6 hours",
+  "telemetry gaps": "when a site stops reporting, each of its tags gets one row with empty Value and Quality 0 and then nothing until it reports again; RTU health tags (GW.RTUn.COMMS.STS, SCAN_AGE) are computed by the master station and continue"
+ },
+ "time_rule": "All timestamps are UTC to the second. Records in different systems that describe the same action (a write in the device log, the value change in the historian, the session in the remote-access log) agree to within a few seconds; a status change that follows a command is stamped 1-3 s after the command.",
+ "join_keys": {
+  "Tagname": "scada_tags.json tags[].tagname",
+  "equipment": "scada_tags.json tags[].equipment_id -> infrastructure_assets.json / gw_host_registry.json equipment",
+  "outage_map": "feeder_id = equipment_id of the feeder breaker tags (GW.SUBn.CBx.*)",
+  "work_orders": "asset_id",
+  "fuel_deliveries": "GW.UTL1.GEN.FUEL.PV is the level of tank EQP-1140"
+ },
+ "notes": "No column or value labels any record. Row counts: about 1.17 million rows, 60 MB."
+}

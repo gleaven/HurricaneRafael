@@ -1,0 +1,95 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+ ],
+ "id": "VANTAGE-VHR-20270912T144400Z-PORT-DOCKS",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.455,
+     27.806
+    ],
+    [
+     -97.392,
+     27.806
+    ],
+    [
+     -97.392,
+     27.828
+    ],
+    [
+     -97.455,
+     27.828
+    ],
+    [
+     -97.455,
+     27.806
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.455,
+  27.806,
+  -97.392,
+  27.828
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "VANTAGE-VHR-20270912T144400Z-PORT-DOCKS.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20270912T144400Z-PORT-DOCKS/visual.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20270912T144400Z-PORT-DOCKS/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-09-12T14:44:00Z",
+  "title": "Pre-storm baseline, Port of Corpus Christi Inner Harbor docks",
+  "description": "Pre-storm baseline image of the Inner Harbor docks for the regional pre-event package (archive entry NAS-BL-20270912-UTL). Two tankers alongside at the crude oil berth on the north bank of the Main Turning Basin.",
+  "platform": "Vantage-VHR-3",
+  "instruments": [
+   "panchromatic and multispectral imager"
+  ],
+  "constellation": "Vantage-VHR",
+  "gsd": 0.15,
+  "view:off_nadir": 24.5,
+  "view:sun_azimuth": 103.7,
+  "view:sun_elevation": 32.2,
+  "proj:epsg": 32614,
+  "eo:cloud_cover": 31,
+  "processing:level": "orthorectified, HD-resampled to 15 cm",
+  "archive_entry": "NAS-BL-20270912-UTL",
+  "detections": {
+   "vessels": {
+    "main_turning_basin_crude_berth": 2
+   }
+  }
+ }
+}

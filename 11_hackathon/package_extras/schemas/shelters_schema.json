@@ -1,0 +1,27 @@
+{
+ "source": "shelters",
+ "folder": "data/shelters/",
+ "format": "CSV",
+ "files": {
+  "shelter_registry.csv": "facility_id, facility_name, address, capacity, opened_local, closed_local, evacuation_zones_served, pets, medical_station, operator",
+  "shelter_daily_census.csv": "end-of-day count per shelter: date_local, facility_id, facility_name, capacity, occupancy, new_arrivals, departures, spanish_speaking_pct, english_speaking_pct, staff_on_duty, bilingual_staff_on_duty, status",
+  "shelter_211_calls.csv": "2-1-1 shelter calls: date_local, call_time_local, call_id, caller_evacuation_zone, topic, language, referred_facility_id, note",
+  "evacuation_bus_trips.csv": "county evacuation bus trips: pickup_local, unit_id, pickup_area, facility_id, arrival_local, passengers",
+  "shelter_intake_log.csv": "front-desk arrivals: arrival_local, facility_id, facility_name, persons, arrival_mode (EVACUATION BUS, PRIVATE VEHICLE, WALK-IN, RESCUE BOAT, HIGH-WATER VEHICLE, ESCORTED ON FOOT, BUS FROM NAS CORPUS CHRISTI), reference (bus unit id or rescue mission id). new_arrivals in the census is the day's sum of persons."
+ },
+ "notes": "Occupancy and staffing figures are scenario values. Times are local.",
+ "joins": [
+  {
+   "field": "facility_id",
+   "to": "facility_registry.json facility_id"
+  },
+  {
+   "field": "unit_id",
+   "to": "cad_units.json units[].unit_id and avl/*.csv"
+  },
+  {
+   "field": "reference",
+   "to": "sar/sar_missions.csv mission_id, or cad_units.json unit_id for buses"
+  }
+ ]
+}

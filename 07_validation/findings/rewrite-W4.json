@@ -1,0 +1,3614 @@
+{
+  "source": "W4",
+  "scope": "Port-condition timeline rewrite, days -60 to 99, after PUB-020 was corrected to Port Condition X-Ray (day -3) and PUB-107 (Yankee, day -2), PUB-108 (Zulu, day -1) and PUB-109 (ships back at the anchorage, day 3) were added. All stories on days -60 to 99 were searched by script for closure dates, anchorage/vessel wording, tanker approval, brigade-postponement sequence and PUB-020 citations; all stories on days -3 to -1 and every affected story were read in full. Days 100-119 excluded (W5).",
+  "stories_read": 60,
+  "findings": [
+    {
+      "id": "W4-001",
+      "severity": "high",
+      "story_id": "NWS-M003-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-M003-01",
+        "day": -3,
+        "time_local": "08:00",
+        "outlet_id": "OUT-04",
+        "section": "Ports",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Coast Guard sets Port Condition X-Ray for Corpus Christi; ocean-going ships told to plan departures",
+        "dek": "The port stays open, but gale-force winds from Hurricane Rafael are possible within 48 hours. Terminals are winding down crude loading, and ships must leave or get Coast Guard approval to stay.",
+        "body": [
+          "Coast Guard Sector Corpus Christi set Port Condition X-Ray for the Port of Corpus Christi on Saturday ahead of Hurricane Rafael, meaning gale-force winds are possible within 48 hours. The port remains open. Ocean-going vessels must plan to depart or obtain Coast Guard approval to remain, and crude terminals have begun winding down loading.",
+          "\"The Port of Corpus Christi remains open under Port Condition X-Ray, and ocean-going vessels should finalize departure plans now or request approval to remain,\" said Lt. Cmdr. Elena Ruiz, a public affairs officer for Coast Guard Sector Corpus Christi. \"Mariners should monitor Coast Guard broadcast notices and port channels for any change in port status.\"",
+          "X-Ray is the first of the storm port conditions. Tighter conditions can follow as the storm nears, and vessels at the offshore anchorage remain subject to Coast Guard direction.",
+          "Requests to remain in port go to the Captain of the Port, Ruiz said. She did not say whether any vessel had applied. \"Vessels remaining in port do so with Coast Guard approval and under conditions set for that approval,\" Ruiz said. She declined to describe those conditions.",
+          "The storm is also affecting military cargo. A Fort Hood aviation brigade's port movement through Corpus Christi has been postponed, Army officials said. The port is a designated strategic seaport, and the brigade had been scheduled to move its helicopters and equipment through the port in late summer.",
+          "Rafael's forecast cone has covered Corpus Christi since Thursday. Relief cargo booked ahead of the storm, including 40 containers on MV Gulf Provider, could be caught by any closure.",
+          "Ruiz would not speculate on whether the port will close. Reopening after any storm closure generally depends on conditions easing, on surveys of the channel for shoaling and obstructions, and on the status of aids to navigation and port facilities.",
+          "\"We set port conditions on the forecast and on what is safe,\" she said.",
+          "Gulfwater will report the anchorage count and any change in port status as the Coast Guard announces them."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-STORM",
+            "ARC-MILITARY"
+          ],
+          "public_facts": [
+            "PUB-020",
+            "PUB-018"
+          ],
+          "characters_quoted": [
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01",
+            "FAC-USCG-01"
+          ],
+          "topics": [
+            "port condition x-ray",
+            "coast guard",
+            "port open",
+            "departure plans",
+            "crude loading",
+            "port status"
+          ],
+          "follows_up": "NWS-M008-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0204"
+          ],
+          "batch": "B",
+          "status": "draft"
+        }
+      },
+      "reason": "Day -3 is Port Condition X-Ray (PUB-020): port open, ships plan to leave or get approval, terminals wind down loading. Removed the Saturday closure, the 14-vessel queue (public day -2), the export halt (day -2) and the two tankers approved to stay (day -1). Topics retagged.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-002",
+      "severity": "high",
+      "story_id": "NWS-M003-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-M003-02",
+        "day": -3,
+        "time_local": "09:30",
+        "outlet_id": "OUT-05",
+        "section": "Crude",
+        "byline": [
+          "CHR-011"
+        ],
+        "headline": "Corpus Christi crude loadings wind down as Coast Guard sets storm condition ahead of Rafael",
+        "dek": "The port stays open under Port Condition X-Ray, but terminals are slowing loadings. Analysts say a closure would pause the gateway for about half of US crude exports.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Crude terminals at the Port of Corpus Christi began winding down loading Saturday after the Coast Guard set Port Condition X-Ray ahead of Hurricane Rafael, warning that gale-force winds are possible within 48 hours. The port remains open, but ocean-going ships must plan to leave or get Coast Guard approval to stay.",
+          "The slowdown hits the largest US crude export gateway, which handles about half of the country's crude exports and hit a monthly high in August, according to analysts.",
+          "\"The first few days of a closure are a scheduling problem. After that, it's a market problem,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"Everybody's question is whether the channel closes and how long it stays shut after the storm passes, and nobody can answer that until the surveys are done.\"",
+          "Holloway said cargoes scheduled to load at Corpus Christi in the coming days were effectively on hold. \"Every cargo that was scheduled to load next week just moved to 'to be determined,'\" she said.",
+          "Any ocean-going ship that wants to ride out the storm in port needs Coast Guard approval. The Coast Guard did not say Saturday whether any had asked to stay.",
+          "Holloway said buyers would look first to cargoes already at sea and to other Gulf Coast ports, but that no other single port could absorb the volume that normally moves through Corpus Christi. \"You can shift some barrels around the edges,\" she said. \"You can't move half the country's export trade to another dock on short notice.\"",
+          "Sabal Energy Wire will report on the anchorage, port status and market reaction through the storm."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-STORM"
+          ],
+          "public_facts": [
+            "PUB-020",
+            "PUB-014"
+          ],
+          "characters_quoted": [
+            "CHR-064"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01"
+          ],
+          "topics": [
+            "crude loading",
+            "port condition x-ray",
+            "corpus christi",
+            "terminals winding down",
+            "market impact"
+          ],
+          "follows_up": "NWS-M010-03"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210"
+          ],
+          "batch": "B",
+          "status": "draft"
+        }
+      },
+      "reason": "Day -3 is X-Ray: terminals wind down loading but exports do not halt until Yankee (PUB-107, day -2); 14-vessel queue (day -2) and approved tankers (day -1) removed. Topics retagged.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-003",
+      "severity": "high",
+      "story_id": "NWS-M003-03",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-M003-03",
+        "day": -3,
+        "time_local": "12:00",
+        "outlet_id": "OUT-01",
+        "section": "Business",
+        "byline": [
+          "CHR-002"
+        ],
+        "headline": "Port stays open under storm condition, but ships are told to plan their exits",
+        "dek": "The Port of Corpus Christi's lifeline is still open, for now. Here is what the Coast Guard's first storm condition means for the port, its workers and the relief cargo waiting to come in.",
+        "body": [
+          "As of Saturday, the channel that carries about half of the nation's crude exports is still open, but the clock is running.",
+          "With Hurricane Rafael approaching, the Coast Guard has set Port Condition X-Ray for the Port of Corpus Christi, meaning gale-force winds are possible within 48 hours. Ships in port have been told to make departure plans or ask the Coast Guard for permission to stay, and the crude docks are slowing their loading. A Fort Hood aviation brigade's port movement has been postponed.",
+          "\"Safety comes first, and we'll follow the Coast Guard's lead on the channel,\" said Javier Salinas, a spokesperson for the Port of Corpus Christi. \"This port has come back from storms before, and it will again. Our job right now is to secure the docks and be ready for the day after.\"",
+          "The slowdown strains the chain the Ledger described last month: pipeline to tank farm, tank farm to tanker, tanker to anchorage, anchorage to the Gulf. Tankers that would have loaded this week are waiting, and should the channel close, the queue offshore will be the first thing to clear when it reopens.",
+          "It also puts relief cargo at risk. Forty relief containers booked on the cargo ship MV Gulf Provider, as the Ledger reported Thursday, have not reached port, and a closure would leave them waiting like every other ship.",
+          "\"If the channel closes, nothing moves through it, relief or crude,\" said Terry Akins, regional manager for Gulf Relief Logistics, the freight forwarder handling the booking. \"We'll be ready when it opens. The trucks are lined up on paper. They just need a ship at a dock.\"",
+          "For dock workers, line handlers, pilots and tug crews, a storm slowdown means idle time and storm preparation instead of paid shifts. For businesses that depend on port traffic, it means a pause of unknown length.",
+          "Salinas would not say whether the port expects to close; port conditions are set by the Coast Guard. Reopening after a storm closure typically follows inspection of the channel and port facilities. The Ledger will report the port's status as it changes."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-STORM",
+            "ARC-AID"
+          ],
+          "public_facts": [
+            "PUB-020",
+            "PUB-018",
+            "PUB-014"
+          ],
+          "characters_quoted": [
+            "CHR-023",
+            "CHR-074"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01"
+          ],
+          "topics": [
+            "port condition x-ray",
+            "crude exports",
+            "port workers",
+            "relief cargo",
+            "storm preparation",
+            "port of corpus christi"
+          ],
+          "follows_up": "NWS-M005-03"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0204"
+          ],
+          "batch": "B",
+          "status": "draft"
+        }
+      },
+      "reason": "Day -3 is X-Ray: channel still open, ships told to plan exits, loading winding down. Removed closure, 14-vessel queue, export stop and approved tankers (public days -2/-1). Topics retagged.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-004",
+      "severity": "high",
+      "story_id": "NWS-M003-04",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-M003-04",
+        "day": -3,
+        "time_local": "14:30",
+        "outlet_id": "OUT-03",
+        "section": "Military & Community",
+        "byline": [
+          "CHR-009"
+        ],
+        "headline": "Fort Hood brigade's move through Corpus Christi postponed as Coast Guard sets storm condition",
+        "dek": "The Army aviation brigade had been scheduled to ship its helicopters and equipment through the port this late summer. A Fort Hood spokesman says the unit will be ready when the port is.",
+        "body": [
+          "On a gray Saturday afternoon, the cargo docks at the Port of Corpus Christi were quiet. The ship channel beyond them was nearly empty. And a move that the Army had planned for months was on hold.",
+          "A Fort Hood aviation brigade's port movement through Corpus Christi has been postponed as Hurricane Rafael approaches, officials said Saturday, the day the Coast Guard set Port Condition X-Ray, warning that gale-force winds are possible within 48 hours. The brigade had been scheduled to move its helicopters and equipment through the port in late summer for an overseas rotation.",
+          "\"Our soldiers are ready to deploy when the port is ready,\" said Maj. Darnell Price, a public affairs officer at Fort Hood. \"The safety of the port, this community and our people comes first. We'll adjust the timeline and keep moving.\"",
+          "Price declined to give a new timeline or to describe where the brigade's equipment is now, consistent with the Army's practice of not detailing unit movements in advance. He described the destination only as an overseas rotation.",
+          "As Coastline explained last month, a brigade's port movement is a chain: equipment travels from the home post toward the seaport, is staged and prepared on the docks, and is loaded onto a sealift ship. A postponement means re-sequencing that chain, including ship schedules, staging space and the timing of soldiers' travel. None of that can be finalized until the storm passes and the port is ready to receive the ship.",
+          "The Port of Corpus Christi is a designated strategic seaport, sharing its channel between military cargo and one of the busiest crude export operations in the country. The port itself stayed open Saturday, though ocean-going ships had to arrange to leave or win Coast Guard approval to stay, and crude loading was tapering off.",
+          "The postponement comes a day after NAS Corpus Christi and NAS Kingsville flew their training aircraft to Naval Air Station Joint Reserve Base Fort Worth and Corpus Christi Army Depot halted work to secure helicopters in its hangars. Together, the moves amount to a pause in much of the region's military aviation activity until the storm passes.",
+          "For military families, the immediate question is the storm, not the deployment. Price said Fort Hood would share updates on the brigade's movement when it could. Coastline Public Radio will report them when they are released."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-MILITARY",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-020",
+            "PUB-007",
+            "PUB-019"
+          ],
+          "characters_quoted": [
+            "CHR-031"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "FAC-DOD-06",
+            "FAC-DOD-01",
+            "FAC-DOD-03"
+          ],
+          "topics": [
+            "fort hood",
+            "aviation brigade",
+            "port movement postponed",
+            "strategic seaport",
+            "port condition x-ray"
+          ],
+          "follows_up": "NWS-M024-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0205",
+            "EVT-0206"
+          ],
+          "batch": "B",
+          "status": "draft"
+        }
+      },
+      "reason": "Brigade postponement is correct for day -3 (PUB-020), but the channel did not close Saturday and the 14-vessel queue and export halt are day -2 facts. Now tied to Port Condition X-Ray. Topic 'ship channel closed' retagged.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-005",
+      "severity": "high",
+      "story_id": "NWS-M003-05",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-M003-05",
+        "day": -3,
+        "time_local": "17:00",
+        "outlet_id": "OUT-06",
+        "section": "National",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Hurricane Rafael threatens the nation's top crude export port and delays an Army brigade's move",
+        "dek": "The Coast Guard put the Corpus Christi port on storm footing and terminals began winding down crude loading, after Navy air stations flew aircraft inland and before an Army brigade could move its equipment through the port. Forecasters put the Coastal Bend under a hurricane watch Saturday.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — Hurricane Rafael on Saturday began slowing the busiest crude oil export gateway in the United States, as the Coast Guard set a storm condition for the Port of Corpus Christi and its terminals began winding down loading.",
+          "The Port of Corpus Christi handles about half of US crude exports, according to energy analysts, and its exports hit a monthly high in August. Under Port Condition X-Ray, set when gale-force winds are possible within 48 hours, the port stays open, but large commercial ships need either a departure plan or Coast Guard permission to remain.",
+          "\"This is the single most important crude export channel in the country right now,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"If it closes, the whole Atlantic basin trade notices.\"",
+          "The storm is also disrupting military operations on the Texas coast. NAS Corpus Christi and NAS Kingsville flew their training aircraft to Naval Air Station Joint Reserve Base Fort Worth on Friday, and Corpus Christi Army Depot, the Army's primary helicopter maintenance depot, halted work and secured helicopters in its hangars, officials said.",
+          "A Fort Hood aviation brigade's planned movement of helicopters and equipment through the port, which is designated as a strategic seaport for military deployments, was postponed. The brigade had been scheduled to ship out for an overseas rotation.",
+          "Maj. Darnell Price, a Fort Hood public affairs officer, said the brigade's soldiers would be ready to deploy as soon as the port is. He declined to give a new timeline.",
+          "Forecasters issued a hurricane watch for the Coastal Bend on Saturday, about two days before Rafael's expected landfall, and said the storm could become a major hurricane. Rafael strengthened into a hurricane over warm Gulf water earlier in the week, and forecasters have cautioned that it could intensify quickly.",
+          "Ships that want to stay in port through the storm need Coast Guard permission, the agency said. \"Any ocean-going vessel that remains will be there with our approval,\" said Lt. Cmdr. Elena Ruiz, a public affairs officer for Coast Guard Sector Corpus Christi.",
+          "Relief shipments have been booked ahead of the storm, including 40 containers on a cargo ship that has not yet reached the port.",
+          "No closure had been announced as of Saturday afternoon. Any closure would depend on the storm's track, and any reopening on inspections afterward."
+        ],
+        "tags": {
+          "story_type": "analysis",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-MILITARY",
+            "ARC-STORM"
+          ],
+          "public_facts": [
+            "PUB-020",
+            "PUB-019",
+            "PUB-018",
+            "PUB-014",
+            "PUB-017",
+            "PUB-101"
+          ],
+          "characters_quoted": [
+            "CHR-031",
+            "CHR-064",
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "FAC-DOD-01",
+            "FAC-DOD-03",
+            "FAC-DOD-04",
+            "FAC-DOD-06",
+            "TERM-01"
+          ],
+          "topics": [
+            "hurricane rafael",
+            "crude exports",
+            "national energy",
+            "strategic seaport",
+            "army deployment",
+            "navy air stations"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0205",
+            "EVT-0206",
+            "EVT-0204"
+          ],
+          "batch": "B",
+          "status": "draft"
+        }
+      },
+      "reason": "Day -3 wire analysis said the port shut Saturday with 14 vessels waiting and two tankers approved to stay; under PUB-020 it is X-Ray (port open, loading winding down). Closure facts move to days -2/-1. ANC-OFF place dropped.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-006",
+      "severity": "medium",
+      "story_id": "NWS-M002-03",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-M002-03",
+        "day": -2,
+        "time_local": "13:00",
+        "outlet_id": "OUT-02",
+        "section": "Local",
+        "byline": [
+          "CHR-006"
+        ],
+        "headline": "Plywood goes up on Mustang Island, and shrimp boats get extra lines in Aransas Pass",
+        "dek": "Under a mandatory evacuation for surge zones, island business owners board up and harbor crews tie down.",
+        "body": [
+          "The drill whines. The plywood goes up. Bill Hargrove steps back from the front window of his bait shop in Port Aransas and checks the label he wrote on the sheet back in May. Front left. Right where it belongs.",
+          "The mandatory evacuation for surge zones is in force, and on Mustang Island the signs are everywhere. Shops along the main drag are boarded. The beach is empty. The ship channel past the jetties is now closed to inbound ships.",
+          "\"You cut it in May so you don't have to think in September,\" says Hargrove, 64. He has ridden out two hurricanes on the island. Asked whether he will make it three, he squints at the sky. \"Ask me tomorrow.\"",
+          "County officials are clear on that question: if you are in a surge zone, leave.",
+          "Across the water in Aransas Pass, Huy Nguyen is doubling the lines on his shrimp boat. Extra fenders. Chafe gear where the lines cross the dock. He checks every knot twice.",
+          "\"Boat I can fix,\" says Nguyen, 51. \"Me, not so easy.\" He says he will leave once the boat is secure.",
+          "Up and down the harbor, crews do the same. Lines get doubled. Gear comes off decks. Engines get one last look.",
+          "Shelters are open inland. County buses are picking up residents who do not have cars. If you are on the islands or near the bays and have not left, now is the time.",
+          "Harborline 6 will be on the coast through the storm, from a safe location."
+        ],
+        "tags": {
+          "story_type": "feature",
+          "arcs": [
+            "ARC-STORM",
+            "ARC-COMMUNITY"
+          ],
+          "public_facts": [
+            "PUB-021",
+            "PUB-010",
+            "PUB-107"
+          ],
+          "characters_quoted": [
+            "CHR-042",
+            "CHR-041"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "LF-01",
+            "PLC-002"
+          ],
+          "topics": [
+            "port aransas",
+            "aransas pass",
+            "boarding up",
+            "shrimp boats",
+            "mandatory evacuation",
+            "island businesses"
+          ],
+          "follows_up": "NWS-M009-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210"
+          ],
+          "batch": "B",
+          "status": "draft"
+        }
+      },
+      "reason": "Channel was not closed 'since Saturday'; on Sunday the port closed to inbound ships (Yankee). Cites PUB-107 instead of PUB-020.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-007",
+      "severity": "high",
+      "story_id": "NWS-M002-06",
+      "field": "new_story",
+      "replacement": {
+        "story_id": "NWS-M002-06",
+        "day": -2,
+        "time_local": "19:15",
+        "outlet_id": "OUT-04",
+        "section": "Ports",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Port Condition Yankee: Corpus Christi closed to inbound traffic; 14 vessels hold at offshore anchorage",
+        "dek": "Crude exports halt and ocean-going ships head out as Hurricane Rafael nears. The Coast Guard has not said when the port will reopen.",
+        "body": [
+          "Coast Guard Sector Corpus Christi set Port Condition Yankee for the Port of Corpus Christi on Sunday, closing the port to inbound traffic ahead of Hurricane Rafael. Ocean-going ships in port are heading out. Fourteen inbound vessels are holding at the offshore anchorage east of Port Aransas, and crude exports have halted.",
+          "\"The port is closed to inbound vessel traffic,\" said Lt. Cmdr. Elena Ruiz, a sector spokeswoman. \"Departing vessels should coordinate their transits with the Captain of the Port and the pilots. We will announce any further change in port condition through broadcast notices.\"",
+          "Yankee tightens Saturday's Port Condition X-Ray, under which the port stayed open while ships made departure plans and terminals wound down crude loading. Port conditions step up as the forecast arrival of gale-force winds draws closer.",
+          "Status, Sunday evening: Inbound transits suspended. Outbound departures of ocean-going ships under way. Crude loadings halted. Anchorage count: 14 inbound vessels.",
+          "Vessels at the anchorage remain under Coast Guard direction. In heavy weather, ships at anchor commonly put to sea, where they have room to maneuver; Ruiz would not say what the sector expects of them as the storm nears.",
+          "\"Our terminals have stopped loading, and crews are securing the docks,\" said Javier Salinas, a spokesperson for the Port of Corpus Christi. \"Everything we do today is about getting through the storm and being ready to restart after it.\"",
+          "Corpus Christi handles about half of US crude exports, by analysts' estimates, so the halt reaches well beyond the Coastal Bend. The 40 relief containers booked on MV Gulf Provider are also on hold.",
+          "Forecasters issued a hurricane warning for the Coastal Bend on Sunday afternoon and expect Rafael to come ashore near Port Aransas as a Category 3 storm.",
+          "Gulfwater will track the anchorage and the next port condition change."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-STORM"
+          ],
+          "public_facts": [
+            "PUB-107",
+            "PUB-020",
+            "PUB-014",
+            "PUB-018",
+            "PUB-102"
+          ],
+          "characters_quoted": [
+            "CHR-020",
+            "CHR-023"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "FAC-USCG-01",
+            "LF-01"
+          ],
+          "topics": [
+            "port condition yankee",
+            "closed to inbound traffic",
+            "offshore anchorage",
+            "14 vessels",
+            "crude exports halted",
+            "port status"
+          ],
+          "follows_up": "NWS-M003-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0204"
+          ],
+          "batch": "B",
+          "status": "draft"
+        }
+      },
+      "reason": "Moves Port Condition Yankee to day -2 (PUB-107): port closed to inbound traffic Sunday, ocean-going ships head out, 14 inbound vessels at the offshore anchorage, crude exports halt. Day -2 had no port story; coverage goes to 6 (max 6).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-008",
+      "severity": "high",
+      "story_id": "NWS-M001-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-M001-01",
+        "day": -1,
+        "time_local": "06:00",
+        "outlet_id": "OUT-01",
+        "section": "Weather",
+        "byline": [
+          "CHR-005"
+        ],
+        "headline": "Under hurricane warning, Rafael forecast to make landfall near Port Aransas as a Category 3 with 9 to 12 feet of surge",
+        "dek": "Forecasters call the storm surge life-threatening. Anyone in a surge zone who has not left should leave now.",
+        "body": [
+          "A hurricane warning issued Sunday remains in effect for the Coastal Bend. Hurricane Rafael is forecast to make landfall near Port Aransas as a Category 3 storm, pushing 9 to 12 feet of storm surge, the National Weather Service said Monday.",
+          "\"Nine to 12 feet of water is not a flood you wade through. In a lot of homes near the bays, that's water over your head, and in some, over the roofline,\" said Ben Arceneaux, a meteorologist with the weather service office in Corpus Christi. \"If you've been told to leave, leave now. Not after lunch. Now.\"",
+          "A warning means hurricane conditions are expected. Tropical-storm-force winds typically arrive hours before a hurricane's center, and once they do, driving becomes dangerous and emergency crews may not be able to reach people. That shortens the window to evacuate more than many people expect.",
+          "Storm surge is the greatest threat. Surge is seawater pushed ashore by a storm's winds, and on the Coastal Bend the bays shape where it goes. Water driven through the passes and into Corpus Christi Bay and Nueces Bay piles up against shorelines that have nowhere to send it. When surge arrives on top of the tide, it reaches higher still.",
+          "The region is already wet. Tropical moisture that streamed ahead of Rafael saturated soils last week and pushed the Nueces River up at Calallen. More heavy rain will run off fast.",
+          "A mandatory evacuation for surge zones has been in effect since Sunday. Shelters are open inland, and county buses are picking up residents without cars. The Port of Corpus Christi has been closed to inbound ships since Sunday, and the region's Navy air stations flew their training aircraft to Fort Worth on Friday.",
+          "If you live outside a surge zone and are staying, forecasters recommend sheltering in a sturdy building, in an interior room away from windows on the lowest floor that is not at risk of flooding. Fill bathtubs and containers with water for washing. Charge everything. Keep a battery radio on.",
+          "\"People think the danger is the wind they can hear,\" Arceneaux said. \"The danger is the water they can't see coming in the dark.\"",
+          "The Ledger will update this story throughout the day and night."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-STORM"
+          ],
+          "public_facts": [
+            "PUB-022",
+            "PUB-021",
+            "PUB-019",
+            "PUB-107",
+            "PUB-102"
+          ],
+          "characters_quoted": [
+            "CHR-029"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "LF-01",
+            "PLC-001",
+            "PLC-002",
+            "PLC-003"
+          ],
+          "topics": [
+            "hurricane warning",
+            "category 3",
+            "storm surge",
+            "port aransas",
+            "landfall forecast",
+            "evacuation"
+          ],
+          "follows_up": "NWS-M005-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0205",
+            "EVT-0206",
+            "EVT-0207",
+            "EVT-0210"
+          ],
+          "batch": "B",
+          "status": "draft"
+        }
+      },
+      "reason": "'Closed since Saturday' contradicts the corrected timeline; as of Monday 6 a.m. the port is closed to inbound ships since Sunday (PUB-107). PUB-020 was cited only for the closure.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-009",
+      "severity": "high",
+      "story_id": "NWS-M001-03",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-M001-03",
+        "day": -1,
+        "time_local": "11:30",
+        "outlet_id": "OUT-06",
+        "section": "National",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Hurricane Rafael bears down on Texas Coastal Bend, home to key oil and military hubs",
+        "dek": "Forecasters warn Rafael will come ashore near Port Aransas as a Category 3 with 9 to 12 feet of surge. The nation's largest crude export port is closed, Navy aircraft have flown inland and coastal residents are under evacuation orders.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — Hurricane Rafael churned toward the Texas Coastal Bend on Monday, with forecasters warning it would make landfall near Port Aransas as a Category 3 storm carrying 9 to 12 feet of storm surge.",
+          "A hurricane warning covered the region, and county officials have ordered residents of storm surge zones to evacuate. Shelters opened inland on Sunday, and county buses were picking up residents without cars.",
+          "\"This surge is life-threatening,\" said Ben Arceneaux, a meteorologist with the National Weather Service office in Corpus Christi. \"Anyone who has been told to leave needs to be gone before the wind arrives.\"",
+          "The storm threatens a stretch of coast with national significance. The Port of Corpus Christi, which handles about half of US crude exports, closed to inbound traffic Sunday, halting loadings while 14 vessels waited at an offshore anchorage. On Monday the Coast Guard closed the ship channel to all traffic, and ships at the anchorage put to sea to ride out the storm. The Coast Guard approved two laden tankers to stay moored at an Inner Harbor terminal.",
+          "Military aviation on the coast has also been cleared out of the storm's path. The Navy moved training aircraft from NAS Corpus Christi and NAS Kingsville to Naval Air Station Joint Reserve Base Fort Worth on Friday, while Corpus Christi Army Depot, the Army's primary helicopter maintenance depot, stopped work and put its helicopters indoors. A Fort Hood aviation brigade's movement of helicopters and equipment through the port, a designated strategic seaport, was postponed Saturday as the storm approached.",
+          "Local officials said Monday morning was the last good window to leave. \"There comes a point where we can't safely send a bus out, and we are getting close to it,\" said Dwayne Pruitt, public information officer for the Nueces County Office of Emergency Management.",
+          "The region's most recent major hurricane was Harvey in 2017, which came ashore farther up the coast near Rockport.",
+          "Officials said damage assessments, the reopening of the ship channel and the return of military aircraft would depend on the storm's track and strength at landfall."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-STORM",
+            "ARC-PORT",
+            "ARC-MILITARY"
+          ],
+          "public_facts": [
+            "PUB-022",
+            "PUB-021",
+            "PUB-020",
+            "PUB-107",
+            "PUB-108",
+            "PUB-019",
+            "PUB-014",
+            "PUB-102"
+          ],
+          "characters_quoted": [
+            "CHR-029",
+            "CHR-025"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "LF-01",
+            "PLC-001",
+            "PORT-07",
+            "ANC-OFF",
+            "FAC-DOD-01",
+            "FAC-DOD-03",
+            "FAC-DOD-04",
+            "FAC-DOD-06",
+            "TERM-01"
+          ],
+          "topics": [
+            "hurricane rafael",
+            "hurricane warning",
+            "texas coast",
+            "category 3",
+            "crude exports",
+            "navy air stations",
+            "evacuation",
+            "port condition zulu",
+            "ship channel closed"
+          ],
+          "follows_up": "NWS-M003-05"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0205",
+            "EVT-0206"
+          ],
+          "batch": "B",
+          "status": "draft"
+        }
+      },
+      "reason": "Day -1 Zulu report (PUB-108): inbound closure Sunday with 14 vessels and exports halted (PUB-107); channel closed to all traffic Monday, anchorage ships put to sea, two laden tankers approved to stay. Brigade postponed Saturday (PUB-020), not by the closure.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-010",
+      "severity": "medium",
+      "story_id": "NWS-M001-04",
+      "field": "body",
+      "old": "was postponed Saturday when the Coast Guard closed the ship channel.",
+      "new": "was postponed Saturday, as the Coast Guard put the port on storm footing.",
+      "reason": "Channel did not close Saturday; the brigade was postponed under Port Condition X-Ray (PUB-020).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-011",
+      "severity": "high",
+      "story_id": "NWS-P000-04",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P000-04",
+        "day": 0,
+        "time_local": "09:30",
+        "outlet_id": "OUT-01",
+        "section": "Business",
+        "byline": [
+          "CHR-002"
+        ],
+        "headline": "Oil spills at Inner Harbor terminal as Rafael arrives; amount and cause unknown",
+        "dek": "The Coast Guard says oil was reported discharging from two tankers moored at a terminal on the Inner Harbor as Rafael closed in. Responders cannot get on the water yet.",
+        "body": [
+          "Oil was reported spilling at a crude terminal on Corpus Christi's Inner Harbor as Hurricane Rafael arrived, the Coast Guard said, adding a pollution emergency to a city already battered by the storm.",
+          "Two tankers moored at the terminal are involved, according to Coast Guard Sector Corpus Christi. How much oil reached the water was not known Tuesday morning, and the cause is under investigation.",
+          "\"The Coast Guard received a report of oil discharging from two vessels moored at an Inner Harbor terminal as the storm arrived,\" said Lt. Cmdr. Elena Ruiz, a public affairs officer for the sector. \"Conditions do not allow responders on the water at this time. We will not estimate a volume or speculate on a cause until we have facts.\"",
+          "The two loaded tankers had stayed at the terminal through the storm with Coast Guard approval after the agency closed the ship channel to all traffic Monday. Ships that had been waiting at the offshore anchorage east of Port Aransas put to sea before the storm.",
+          "Whether to keep a laden ship at a protected berth or send it to sea ahead of a hurricane is a judgment that port operators and the Coast Guard make storm by storm, weighing the danger of sailing into heavy weather against the risk of riding it out beside a dock.",
+          "The Coast Guard said the terminal's operator, which it did not identify Tuesday, had reported a discharge from two vessels at its berth and was working with authorities.",
+          "The Inner Harbor stretches for miles west of the Harbor Bridge along the ship channel, lined with docks, refineries and tank farms. With winds still strong Tuesday morning, officials did not say how far the oil had moved or whether any had left the harbor.",
+          "Rafael made landfall on Mustang Island around 1 a.m. as a Category 3 storm, pushing about 11 feet of surge into Corpus Christi and Nueces bays.",
+          "Anyone who sees oil on the water or along the shore should keep away from it. The Ledger will update this story as the Coast Guard releases more information."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-SPILL",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-108",
+            "PUB-023",
+            "PUB-024"
+          ],
+          "characters_quoted": [
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "TERM-01",
+            "PORT-07",
+            "FAC-USCG-01",
+            "ANC-OFF"
+          ],
+          "topics": [
+            "oil spill",
+            "inner harbor",
+            "tankers",
+            "coast guard",
+            "ship channel"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0301",
+            "EVT-0313"
+          ],
+          "batch": "C",
+          "status": "draft"
+        }
+      },
+      "reason": "Closure was not Saturday; tankers were approved to stay when the channel closed to all traffic Monday (PUB-108). On day 0 the anchorage ships are at sea, not at the anchorage.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-012",
+      "severity": "high",
+      "story_id": "NWS-P000-05",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P000-05",
+        "day": 0,
+        "time_local": "11:00",
+        "outlet_id": "OUT-06",
+        "section": "National",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Hurricane Rafael hits Texas crude hub, flooding bays; oil spills from moored tankers",
+        "dek": "The Category 3 storm came ashore near Port Aransas, knocking out power and crippling Corpus Christi's water plant. Oil was reported spilling from two moored tankers at an Inner Harbor terminal as the storm arrived.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — Hurricane Rafael slammed into the Texas coast near Port Aransas early Tuesday as a Category 3 storm, driving about 11 feet of surge into the bays around Corpus Christi, the nation's busiest crude oil export hub, where oil was reported spilling at a terminal in the city's industrial Inner Harbor as the storm closed in.",
+          "The storm made landfall on Mustang Island around 1 a.m. local time, according to the National Weather Service. Power was out across much of the Coastal Bend by daybreak, and the city's only water treatment plant lost both of its power feeds, leaving water pressure low across Corpus Christi.",
+          "The Coast Guard said oil was reported discharging from two tankers moored at an Inner Harbor terminal as the hurricane arrived. Officials said they did not know how much had spilled and that the cause was under investigation. \"Responders will deploy as soon as conditions on the water allow,\" said Lt. Cmdr. Elena Ruiz, a Coast Guard spokesperson.",
+          "The Port of Corpus Christi handles about half of U.S. crude exports, by analysts' estimates. The Coast Guard closed the port to inbound ships Sunday, halting exports, and shut the ship channel to all traffic Monday as vessels that had waited at an offshore anchorage put to sea to ride out the storm.",
+          "The storm had already postponed the movement of a Fort Hood aviation brigade's helicopters and equipment through the port, a strategic military seaport, for an overseas rotation. The Navy flew training aircraft from Naval Air Stations Corpus Christi and Kingsville to Fort Worth last week, and Corpus Christi Army Depot, the military's main helicopter repair center, halted work and secured helicopters in hangars.",
+          "\"This was a dangerous storm, and it did what we warned it would do,\" said Ben Arceneaux, a meteorologist at the weather service office in Corpus Christi. \"Today the water is the story.\"",
+          "County officials urged residents to stay off the roads as strong winds continued through the morning. It was not immediately clear how many homes had flooded."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-STORM",
+            "ARC-SPILL",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-007",
+            "PUB-014",
+            "PUB-019",
+            "PUB-020",
+            "PUB-107",
+            "PUB-108",
+            "PUB-023",
+            "PUB-024",
+            "PUB-025"
+          ],
+          "characters_quoted": [
+            "CHR-020",
+            "CHR-029"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "LF-01",
+            "TERM-01",
+            "PORT-07",
+            "FAC-UTL-01",
+            "FAC-DOD-01",
+            "FAC-DOD-02",
+            "FAC-DOD-03",
+            "FAC-DOD-06"
+          ],
+          "topics": [
+            "hurricane rafael",
+            "crude exports",
+            "oil spill",
+            "water plant",
+            "fort hood brigade"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0205",
+            "EVT-0206",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0301",
+            "EVT-0302",
+            "EVT-0313"
+          ],
+          "batch": "C",
+          "status": "draft"
+        }
+      },
+      "reason": "Saturday closure with 14 vessels left at anchor contradicts PUB-107/108 (inbound closure Sunday, full closure Monday, ships to sea). Brigade postponement predates the closure (PUB-020 kept).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-013",
+      "severity": "high",
+      "story_id": "NWS-P000-06",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P000-06",
+        "day": 0,
+        "time_local": "13:30",
+        "outlet_id": "OUT-04",
+        "section": "Ports",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Corpus Christi port stays shut after Rafael landfall; discharge reported at Inner Harbor crude berth",
+        "dek": "The ship channel remains closed, and ships from the offshore anchorage are still at sea. The Coast Guard reports a discharge from two laden tankers that stayed alongside through the storm.",
+        "body": [
+          "The Port of Corpus Christi remained closed to vessel traffic Tuesday after Hurricane Rafael made landfall on Mustang Island at about 0100 local as a Category 3 storm. Coast Guard Sector Corpus Christi closed the port to inbound traffic Sunday, with 14 vessels holding at the offshore anchorage east of Port Aransas, and closed the channel to all traffic Monday, when those ships put to sea.",
+          "The sector reported a discharge from two laden tankers moored at a crude terminal on the Inner Harbor. Both had remained alongside through the storm with Coast Guard approval after the channel closed. Keeping laden tonnage at a protected berth rather than sailing it ahead of a storm is decided case by case with the Captain of the Port. The sector did not identify the vessels or the terminal operator.",
+          "Volume is unknown. Cause is under investigation. \"We cannot put responders on the water in these conditions,\" said Lt. Cmdr. Elena Ruiz, the sector's public affairs officer.",
+          "The National Weather Service estimates surge of about 11 feet entered Corpus Christi and Nueces bays at landfall. Winds remained strong at midday. Containment boom is of limited use in high winds and steep chop, and on-water spill operations generally wait until conditions ease.",
+          "Reopening a channel after a storm of this strength typically requires hydrographic surveys for shoaling and obstructions, checks of aids to navigation and an assessment of terminal and dock damage before the Captain of the Port lifts restrictions. The sector has given no timeline.",
+          "Crude exports, about half of the U.S. total by analysts' estimates, have been halted since Sunday. A Fort Hood aviation brigade's movement through the port, a strategic military seaport, was postponed Saturday.",
+          "Gulfwater will report channel status, anchorage counts and spill response details, including vessel identities, as the sector releases them."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-SPILL"
+          ],
+          "public_facts": [
+            "PUB-014",
+            "PUB-020",
+            "PUB-107",
+            "PUB-108",
+            "PUB-023",
+            "PUB-024"
+          ],
+          "characters_quoted": [
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01",
+            "FAC-USCG-01",
+            "LF-01"
+          ],
+          "topics": [
+            "port closure",
+            "anchorage",
+            "oil discharge",
+            "channel survey",
+            "captain of the port"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0301",
+            "EVT-0313"
+          ],
+          "batch": "C",
+          "status": "draft"
+        }
+      },
+      "reason": "Dek and lead put 14 vessels waiting offshore through landfall and date the closure Saturday; per PUB-107/108 the port closed to inbound Sunday and to all traffic Monday, when anchorage ships put to sea. Brigade postponed Saturday (PUB-020 kept).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-014",
+      "severity": "high",
+      "story_id": "NWS-P000-07",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P000-07",
+        "day": 0,
+        "time_local": "15:00",
+        "outlet_id": "OUT-05",
+        "section": "Crude",
+        "byline": [
+          "CHR-011"
+        ],
+        "headline": "Corpus Christi crude exports stay shut as Rafael lands; terminal spill adds uncertainty",
+        "dek": "The top U.S. crude export port was already closed for the storm. A discharge at an Inner Harbor berth raises new questions about how soon loadings can restart.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Crude exports from Corpus Christi remained halted Tuesday after Hurricane Rafael made landfall near Port Aransas as a Category 3 storm, and a reported oil discharge at an Inner Harbor terminal added a new unknown to the restart timeline.",
+          "The port accounts for about half of U.S. crude exports, according to analyst estimates. Loadings had been running at a near-record pace this summer and hit a monthly high in August. They stopped Sunday, when the Coast Guard closed the port to inbound traffic with 14 vessels at the offshore anchorage; those ships put to sea Monday as the channel closed to all traffic.",
+          "The Coast Guard said two laden tankers moored at the terminal were involved in the discharge. The volume and cause were not known Tuesday, and the agency did not identify the vessels or the terminal.",
+          "\"The storm closure was a pause the market could plan around. A spill inside the harbor is a different animal,\" said Grace Holloway, an analyst at Lanternfish Energy Analytics. \"Until people know how much oil is in the water and where it goes, nobody can put a date on the first cargo out.\"",
+          "Holloway said buyers would watch three things in the coming days: the condition of the channel after roughly 11 feet of surge, damage to docks and tank farms, and any limits responders place on Inner Harbor traffic while they deal with the spill.",
+          "Power was out across much of the Coastal Bend on Tuesday, and damage at port facilities could not yet be assessed. The Coast Guard has not said when the channel could reopen.",
+          "\"Corpus is the swing barrel for a lot of export books,\" Holloway said. \"When it goes dark, everyone feels it.\""
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-SPILL"
+          ],
+          "public_facts": [
+            "PUB-002",
+            "PUB-014",
+            "PUB-107",
+            "PUB-108",
+            "PUB-023",
+            "PUB-024"
+          ],
+          "characters_quoted": [
+            "CHR-064"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01"
+          ],
+          "topics": [
+            "crude exports",
+            "port closure",
+            "oil spill",
+            "market outlook"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0104",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0301",
+            "EVT-0313"
+          ],
+          "batch": "C",
+          "status": "draft"
+        }
+      },
+      "reason": "Exports stopped Sunday at the inbound closure (PUB-107), not Saturday; anchorage ships put to sea Monday (PUB-108).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-015",
+      "severity": "high",
+      "story_id": "NWS-P001-03",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P001-03",
+        "day": 1,
+        "time_local": "10:15",
+        "outlet_id": "OUT-01",
+        "section": "Business",
+        "byline": [
+          "CHR-002",
+          "CHR-005"
+        ],
+        "headline": "Unified Command: About 9,000 barrels of crude spilled from two tankers at Inner Harbor berth",
+        "dek": "The Coast Guard and the Texas General Land Office named the tankers, MT Kalvora Star and MT Ostrel Bay, and the terminal, Rendal Terminals. Response boats are waiting for the wind to drop.",
+        "body": [
+          "About 9,000 barrels of crude oil spilled from two tankers moored in Corpus Christi's Inner Harbor as Hurricane Rafael arrived, the Coast Guard and the Texas General Land Office said Wednesday as they formed a Unified Command to lead the response.",
+          "The tankers are the MT Kalvora Star and the MT Ostrel Bay, which were tied up at the Rendal Terminals berth on the Inner Harbor, according to the Unified Command. The Coast Guard had confirmed a discharge from two vessels on Tuesday but had not named them or estimated the volume. A barrel holds 42 gallons.",
+          "\"Our priorities are the safety of the public and our responders, and protecting the most sensitive shoreline,\" said Lt. Cmdr. Elena Ruiz, a Coast Guard spokesperson. \"We will put crews on the water as soon as the winds allow it. We are not there yet.\" The cause of the release remains under investigation, she said.",
+          "The Unified Command has requested Navy salvage equipment to support the response, Ruiz said. She did not say what equipment had been requested or when it would arrive.",
+          "Cole Whitaker, a spokesperson for the General Land Office's oil spill program, said the agency would focus first on keeping oil out of marshes and other sensitive areas once boats and boom can go out. \"Shoreline is where a spill gets slow and expensive,\" Whitaker said. \"The sooner we get boom in the water, the more shoreline we save.\"",
+          "Rendal Terminals said it was cooperating fully with the Unified Command. \"Our first concern is the safety of everyone at our facility and in the surrounding community,\" said Victor Lang, a company spokesperson. \"It would be inappropriate to speculate about the cause while the investigation is underway.\"",
+          "The two laden tankers had Coast Guard approval to stay at the berth when the channel closed to all traffic Monday, the day before landfall. The channel remains closed, and crude exports, which analysts estimate make up about half of the U.S. total, remain halted.",
+          "Officials have not said where the oil has traveled since the storm. Rafael's surge of about 11 feet flooded Corpus Christi and Nueces bays after landfall on Mustang Island early Tuesday, and winds remained too strong Wednesday for crews to survey the bays by boat."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-SPILL",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-014",
+            "PUB-107",
+            "PUB-108",
+            "PUB-023",
+            "PUB-024",
+            "PUB-029"
+          ],
+          "characters_quoted": [
+            "CHR-020",
+            "CHR-028",
+            "CHR-070"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "TERM-01",
+            "FAC-USCG-01",
+            "PORT-07"
+          ],
+          "topics": [
+            "unified command",
+            "oil spill",
+            "kalvora star",
+            "ostrel bay",
+            "rendal terminals",
+            "navy salvage"
+          ],
+          "follows_up": "NWS-P000-04"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0301",
+            "EVT-0313",
+            "EVT-0315"
+          ],
+          "batch": "C",
+          "status": "draft"
+        }
+      },
+      "reason": "Tankers' approval came with the full closure Monday (PUB-108), not a Saturday closure; exports halted per PUB-107.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-016",
+      "severity": "high",
+      "story_id": "NWS-P001-04",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P001-04",
+        "day": 1,
+        "time_local": "12:00",
+        "outlet_id": "OUT-06",
+        "section": "National",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Officials put Rafael tanker spill at 9,000 barrels as flooding covers 43 square miles",
+        "dek": "A Unified Command named the two tankers at the center of the Corpus Christi spill, where 911 calls ran at nearly ten times normal after the hurricane.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — About 9,000 barrels of crude spilled from two tankers moored in Corpus Christi's Inner Harbor as Hurricane Rafael closed in, federal and state officials said Wednesday, as satellite imagery showed about 43 square miles of flooding across three coastal counties.",
+          "The Coast Guard and the Texas General Land Office formed a Unified Command to manage the spill from the MT Kalvora Star and the MT Ostrel Bay, which were moored at a Rendal Terminals berth when the Category 3 storm made landfall on Mustang Island early Tuesday. Officials said the cause is under investigation.",
+          "Response boats were still waiting Wednesday for the winds to drop, and the Unified Command has requested Navy salvage equipment. \"The weather is still setting the pace,\" said Lt. Cmdr. Elena Ruiz, a Coast Guard spokesperson. \"We will be on the water as soon as it is safe.\"",
+          "Rafael pushed about 11 feet of surge into Corpus Christi and Nueces bays at landfall, the National Weather Service said. Widespread power outages persisted across the region Wednesday.",
+          "On land, the toll was still coming into focus. Emergency officials said 911 calls peaked at a rate of about 2,900 a day, nearly ten times normal, most of them from low-lying neighborhoods near the bay. The Harbor Bridge and the Nueces Bay Causeway, which link downtown to North Beach and to Portland across the bay, were closed pending inspections.",
+          "The city's only water treatment plant lost both of its power feeds during the storm, leaving water pressure low across Corpus Christi, and residents were asked to conserve.",
+          "\"We are still in rescue-and-assess mode,\" said Dwayne Pruitt, a spokesperson for the Nueces County Office of Emergency Management. \"Nobody should be out sightseeing.\"",
+          "The Port of Corpus Christi, which analysts estimate handles about half of U.S. crude exports, has been closed to inbound ships since Sunday and to all traffic since Monday. Rafael had also put off the movement of a Fort Hood aviation brigade's helicopters and equipment through the port for an overseas rotation; no new date has been announced."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-STORM",
+            "ARC-SPILL"
+          ],
+          "public_facts": [
+            "PUB-014",
+            "PUB-020",
+            "PUB-107",
+            "PUB-108",
+            "PUB-023",
+            "PUB-025",
+            "PUB-026",
+            "PUB-027",
+            "PUB-028",
+            "PUB-029"
+          ],
+          "characters_quoted": [
+            "CHR-020",
+            "CHR-025"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "TERM-01",
+            "PSAP-01",
+            "FAC-INF-01",
+            "PORT-07",
+            "PLC-001",
+            "PLC-002",
+            "PLC-003"
+          ],
+          "topics": [
+            "oil spill",
+            "flood extent",
+            "911 calls",
+            "unified command",
+            "crude exports"
+          ],
+          "follows_up": "NWS-P000-05"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0301",
+            "EVT-0302",
+            "EVT-0303",
+            "EVT-0304",
+            "EVT-0305",
+            "EVT-0315"
+          ],
+          "batch": "C",
+          "status": "draft"
+        }
+      },
+      "reason": "'Closed since Saturday' corrected to inbound closure Sunday and full closure Monday (PUB-107/108); the brigade postponement came with the storm, not the closure (PUB-020 kept).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-017",
+      "severity": "high",
+      "story_id": "NWS-P002-05",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P002-05",
+        "day": 2,
+        "time_local": "16:00",
+        "outlet_id": "OUT-04",
+        "section": "Tankers",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Rafael surge carried Inner Harbor crude into Nueces and Corpus Christi bays; boom deployed as winds ease",
+        "dek": "The Unified Command reports sheen over about 33 square miles after the release from MT Kalvora Star and MT Ostrel Bay. Navy salvage equipment has been requested. The port remains closed.",
+        "body": [
+          "Crude released from two laden tankers at the Rendal Terminals berth on Corpus Christi's Inner Harbor has moved out of the ship channel and into Nueces and Corpus Christi bays, carried by Hurricane Rafael's surge and wind, the Unified Command said Thursday. Sheen covers about 33 square miles.",
+          "The Unified Command, formed Wednesday by Coast Guard Sector Corpus Christi and the Texas General Land Office, estimates the release from MT Kalvora Star and MT Ostrel Bay at about 9,000 barrels. Oil has reached shorelines at North Beach and Portland and marshes in Nueces Bay.",
+          "Responders began deploying containment boom Thursday as winds dropped. On-water operations had been held since the storm because of conditions. The Unified Command has requested Navy salvage equipment; type and arrival time were not specified.",
+          "Boom placement in the first days of a spill typically prioritizes sensitive habitat and water intakes over open water, and shallow bay depths limit where larger response vessels can operate.",
+          "\"Our crews are on the water now that conditions allow it,\" said Lt. Cmdr. Elena Ruiz, the sector's public affairs officer. \"Shoreline protection is the priority. The cause of the release remains under investigation, and we will not speculate on it.\"",
+          "The Coast Guard had approved both tankers staying alongside through the storm when it closed the channel to all traffic Monday. The Unified Command has not released details on the vessels' owners, flags or cargo grades.",
+          "The port remains closed to traffic. The 14 vessels that held at the offshore anchorage east of Port Aransas before the storm put to sea Monday to ride it out. No reopening timeline has been issued. Spill response will shape when and how vessels can transit oiled water in the inner channel, on top of the post-storm surveys a reopening normally requires.",
+          "Gulfwater will report Unified Command operational updates, channel status and anchorage counts as they are released."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-SPILL",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-107",
+            "PUB-108",
+            "PUB-024",
+            "PUB-029",
+            "PUB-030",
+            "PUB-031"
+          ],
+          "characters_quoted": [
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "TERM-01",
+            "PORT-07",
+            "FAC-USCG-01",
+            "ANC-OFF"
+          ],
+          "topics": [
+            "oil spill",
+            "unified command",
+            "boom deployment",
+            "navy salvage",
+            "port closure"
+          ],
+          "follows_up": "NWS-P000-06"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0313",
+            "EVT-0314",
+            "EVT-0315"
+          ],
+          "batch": "C",
+          "status": "draft"
+        }
+      },
+      "reason": "Saturday closure corrected; on day 2 the anchorage ships are at sea (PUB-108), not holding at the anchorage.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-018",
+      "severity": "high",
+      "story_id": "NWS-P004-04",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P004-04",
+        "day": 4,
+        "time_local": "14:00",
+        "outlet_id": "OUT-05",
+        "section": "Crude",
+        "byline": [
+          "CHR-011"
+        ],
+        "headline": "Corpus Christi crude exports stay halted as spill response spreads across the bays",
+        "dek": "The port has been shut for nearly a week. Oil in Nueces and Corpus Christi bays and a new fishing closure point to a slower restart, an analyst says.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Crude exports from Corpus Christi remained halted Saturday, six days after the Coast Guard closed the port to inbound traffic ahead of Hurricane Rafael, as a spill response that began in the Inner Harbor stretched across Nueces and Corpus Christi bays.",
+          "The port handles about half of U.S. crude exports, according to analyst estimates, and loadings hit a monthly high in August. Fourteen vessels were holding at the offshore anchorage when the port closed to inbound ships; those that put to sea for the storm have since returned to wait for the channel to reopen.",
+          "The Unified Command estimates about 9,000 barrels spilled from the laden tankers MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth. Sheen covers about 33 square miles, and on Saturday Texas Parks and Wildlife closed fishing and the Texas Department of State Health Services closed shellfish harvesting in both bays. Navy salvage equipment has been requested. The cause is under investigation.",
+          "\"Last week the question was how fast the channel could be surveyed. Now it's how responders want to manage traffic through oiled water,\" said Grace Holloway, an analyst at Lanternfish Energy Analytics. \"That's a slower conversation, and buyers are already planning around it.\"",
+          "Holloway said cargoes normally lifted at Corpus Christi would have to be replaced from other Gulf Coast terminals for as long as the closure lasts, though those terminals cannot absorb all of the port's volume. She said traders would read the first Unified Command guidance on vessel movements closely for clues about timing.",
+          "\"Nobody is going to rush tankers through a spill zone to save a few days,\" she said. \"The market knows that. It just doesn't know how many days.\"",
+          "No reopening date has been announced."
+        ],
+        "tags": {
+          "story_type": "analysis",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-SPILL"
+          ],
+          "public_facts": [
+            "PUB-014",
+            "PUB-107",
+            "PUB-109",
+            "PUB-029",
+            "PUB-030",
+            "PUB-040"
+          ],
+          "characters_quoted": [
+            "CHR-064"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01"
+          ],
+          "topics": [
+            "crude exports",
+            "port closure",
+            "oil spill",
+            "market outlook",
+            "gulf coast terminals"
+          ],
+          "follows_up": "NWS-P000-07"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0314",
+            "EVT-0315",
+            "EVT-0317"
+          ],
+          "batch": "C",
+          "status": "draft"
+        }
+      },
+      "reason": "'A week after' the closure dates it to Saturday Sept. 11; inbound closure was Sunday Sept. 12 (six days earlier). Ships returned to the anchorage day 3 (PUB-109).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-019",
+      "severity": "high",
+      "story_id": "NWS-P004-05",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P004-05",
+        "day": 4,
+        "time_local": "16:30",
+        "outlet_id": "OUT-04",
+        "section": "Ports",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Relief cargo waits on closed Corpus Christi channel as spill response continues",
+        "dek": "Forty relief containers booked on MV Gulf Provider before Rafael can't move until the port reopens. The anchorage queue remains held.",
+        "body": [
+          "Forty containers of relief supplies booked on the cargo ship MV Gulf Provider before Hurricane Rafael remain undelivered with the Port of Corpus Christi still closed to traffic, five days after Coast Guard Sector Corpus Christi shut the ship channel to all traffic.",
+          "\"The boxes are booked, the paperwork's clean, and none of it matters until I've got water to bring a ship through,\" said Terry Akins, regional manager for Gulf Relief Logistics, the freight forwarder handling the shipment. \"Every day the channel's shut is a day those supplies aren't on a truck to somebody who needs them.\"",
+          "Relief agencies stocked warehouses ahead of peak season and forwarders signed standby relief contracts over the summer, Akins noted, but the booked containers were meant to restock those shelves after a storm.",
+          "Anchorage: Ships that rode out the storm at sea have been returning since Friday to the anchorage east of Port Aransas to wait for the channel. Count at the Sept. 12 inbound closure: 14 vessels. No reopening timeline has been issued.",
+          "\"Reopening the channel is a safety decision,\" said Lt. Cmdr. Elena Ruiz, the sector's public affairs officer. \"It will happen when the waterway is safe for traffic and for the response, and not before.\"",
+          "Inside the port, the Unified Command led by the Coast Guard and the Texas General Land Office continues to respond to the release of about 9,000 barrels of crude from MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth on the Inner Harbor. Oil carried by surge and wind covers about 33 square miles of Nueces and Corpus Christi bays. Boom deployment began Thursday, and the Texas Department of State Health Services and Texas Parks and Wildlife shut shellfish harvesting and fishing in both bays Saturday. Navy salvage equipment has been requested. Cause is under investigation.",
+          "Akins said his company was looking at whether any supplies could move overland in the meantime. \"In this business you always have a plan B,\" he said. \"Plan B for forty boxes on a ship is a lot of trucks I don't have.\"",
+          "Gulfwater will report channel status and anchorage changes as the sector releases them."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-AID",
+            "ARC-SPILL"
+          ],
+          "public_facts": [
+            "PUB-011",
+            "PUB-018",
+            "PUB-107",
+            "PUB-108",
+            "PUB-109",
+            "PUB-029",
+            "PUB-030",
+            "PUB-031",
+            "PUB-040"
+          ],
+          "characters_quoted": [
+            "CHR-074",
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01",
+            "FAC-USCG-01"
+          ],
+          "topics": [
+            "relief cargo",
+            "gulf provider",
+            "port closure",
+            "anchorage",
+            "spill response"
+          ],
+          "follows_up": "NWS-P002-05"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0204",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0314",
+            "EVT-0315",
+            "EVT-0317"
+          ],
+          "batch": "C",
+          "status": "draft"
+        }
+      },
+      "reason": "'A week after' the channel shut dates the closure to Sept. 11; full closure was Monday Sept. 13. Anchorage line now reflects ships returning from sea (PUB-109).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-020",
+      "severity": "medium",
+      "story_id": "NWS-P004-06",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P004-06",
+        "day": 4,
+        "time_local": "18:30",
+        "outlet_id": "OUT-06",
+        "section": "National",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Federal disaster declaration for Texas coast covers cleanup; aid to households awaits damage counts",
+        "dek": "FEMA says help for individual households after Hurricane Rafael depends on joint damage assessments now under way in Nueces, San Patricio and Aransas counties.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — A federal major disaster declaration for three Texas counties battered by Hurricane Rafael will help pay for debris removal and emergency protective measures, but aid to individual households will have to wait for damage assessments now under way, the Federal Emergency Management Agency said Saturday.",
+          "The declaration covers Nueces, San Patricio and Aransas counties, where Rafael came ashore on Mustang Island near Port Aransas early Tuesday as a Category 3 hurricane, pushing about 11 feet of storm surge into Corpus Christi and Nueces bays. Satellite imagery showed about 43 square miles flooded across the three counties.",
+          "\"This declaration lets the federal government start sharing the cost of the work that has to happen right now: clearing roads, hauling debris, protecting lives and property,\" said Rachel Ostrander, an external affairs officer for FEMA Region 6. \"Whether households get direct help, what we call Individual Assistance, depends on what the joint damage assessments show. Those teams are out now.\"",
+          "Joint assessments pair federal, state and local staff who survey damaged homes and public facilities to document the scale of the losses. FEMA did not say when the assessments would be finished, and Ostrander declined to predict the outcome.",
+          "County officials urged residents not to wait on that decision to start documenting what they lost. \"Take pictures before you tear anything out, and keep every receipt,\" said Dwayne Pruitt, public information officer for the Nueces County Office of Emergency Management. \"If household aid comes, you'll be glad you did. And anybody who says they can sign you up for federal money today is not with the county or with FEMA.\"",
+          "The storm left more than flooded homes. Two moored tankers at an Inner Harbor terminal released an estimated 9,000 barrels of crude, and on Saturday the Texas Department of State Health Services closed shellfish harvesting and Texas Parks and Wildlife closed fishing in Nueces and Corpus Christi bays. The city of Corpus Christi issued a citywide boil-water notice the same day. The port, which handles about half of U.S. crude exports, remains closed.",
+          "Ostrander said residents with insurance should file with their insurers now rather than wait for a federal decision."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-AID",
+            "ARC-STORM"
+          ],
+          "public_facts": [
+            "PUB-103",
+            "PUB-023",
+            "PUB-028",
+            "PUB-029",
+            "PUB-040",
+            "PUB-039",
+            "PUB-014",
+            "PUB-109"
+          ],
+          "characters_quoted": [
+            "CHR-027",
+            "CHR-025"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001",
+            "PLC-002",
+            "PLC-003"
+          ],
+          "topics": [
+            "fema",
+            "disaster declaration",
+            "individual assistance",
+            "damage assessments",
+            "debris removal",
+            "national"
+          ],
+          "follows_up": "NWS-P001-04"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0301",
+            "EVT-0305",
+            "EVT-0315",
+            "EVT-0317",
+            "EVT-0310",
+            "EVT-0207",
+            "EVT-0210"
+          ],
+          "batch": "C",
+          "status": "draft"
+        }
+      },
+      "reason": "PUB-020 was cited only for 'the port remains closed'; that now rests on PUB-109 (channel stays closed while surveyed).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-021",
+      "severity": "high",
+      "story_id": "NWS-P006-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P006-02",
+        "day": 6,
+        "time_local": "11:40",
+        "outlet_id": "OUT-04",
+        "section": "Security",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Coast Guard examining possible unauthorized remote access to spill tankers' cargo systems",
+        "dek": "Investigators are looking at the cargo-control systems of MT Kalvora Star and MT Ostrel Bay, the two laden tankers at the center of the Inner Harbor spill. Federal cyber teams are assisting.",
+        "body": [
+          "Investigators are examining possible unauthorized remote access to the cargo-control systems of the two crude tankers involved in the Inner Harbor spill, Coast Guard Sector Corpus Christi said Monday. Federal cyber teams are assisting.",
+          "MT Kalvora Star and MT Ostrel Bay were moored laden at the Rendal Terminals berth with Coast Guard approval when Hurricane Rafael came ashore on Mustang Island early Sept. 14. Oil was reported spilling at the berth as the storm arrived. The Unified Command of the Coast Guard and the Texas General Land Office estimates the release at about 9,000 barrels of crude.",
+          "\"Investigators are examining the possibility of unauthorized remote access to the vessels' cargo-control systems, and federal cyber teams are supporting that work,\" said Lt. Cmdr. Elena Ruiz, a Sector Corpus Christi public affairs officer. \"We will not characterize the cause of the discharge until the investigation supports a conclusion.\"",
+          "Until Monday the cause had been described only as under investigation. Ruiz did not say which onboard systems were being examined, what type of access was involved or whether any other vessels were affected.",
+          "Cargo-control systems on modern tankers monitor and manage cargo handling, including tank levels and pumps during loading and discharge. Many operators allow approved technicians to connect to those systems from shore for maintenance and software support.",
+          "Rendal Terminals, which operates the berth, said it is cooperating. \"Rendal Terminals is cooperating fully with the Unified Command and with federal investigators,\" spokesman Victor Lang said. \"We will not comment on the substance of an active investigation.\"",
+          "Port conditions: The port has been closed to inbound traffic since Sept. 12, when crude exports halted, and the ship channel to all traffic since Sept. 13. Vessels that put to sea for the storm are back at the offshore anchorage east of Port Aransas. The Coast Guard has not announced a reopening date. The Unified Command requested Navy salvage equipment early in the response, and crews began deploying boom once winds dropped."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-SPILL-CYBER",
+            "ARC-SPILL",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-042",
+            "PUB-029",
+            "PUB-024",
+            "PUB-107",
+            "PUB-108",
+            "PUB-109",
+            "PUB-031"
+          ],
+          "characters_quoted": [
+            "CHR-020",
+            "CHR-070"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "TERM-01",
+            "FAC-USCG-01",
+            "PORT-07",
+            "ANC-OFF"
+          ],
+          "topics": [
+            "tanker spill",
+            "cargo-control systems",
+            "remote access",
+            "coast guard",
+            "investigation",
+            "rendal terminals",
+            "port conditions"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0316",
+            "EVT-0315",
+            "EVT-0313",
+            "EVT-0207",
+            "EVT-0210"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "'Closed since Sept. 11' corrected to inbound Sept. 12 / all traffic Sept. 13; ships are back at the anchorage after the storm (PUB-109). Tankers' approval is PUB-108.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-022",
+      "severity": "high",
+      "story_id": "NWS-P006-03",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P006-03",
+        "day": 6,
+        "time_local": "15:10",
+        "outlet_id": "OUT-06",
+        "section": "National",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Investigators examine possible remote access to tankers in Texas hurricane oil spill",
+        "dek": "The Coast Guard says federal cyber teams are helping examine the cargo-control systems of two tankers that released about 9,000 barrels of crude as Hurricane Rafael closed in on Corpus Christi.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — Federal investigators are examining whether someone gained unauthorized remote access to the cargo-control systems of two crude tankers that spilled oil into Corpus Christi's harbor as Hurricane Rafael arrived last week, the Coast Guard said Monday.",
+          "Rafael came ashore on Mustang Island near Port Aransas around 1 a.m. on Sept. 14 as a Category 3 hurricane, pushing about 11 feet of surge into Corpus Christi and Nueces bays. As the storm arrived, oil began spilling from the MT Kalvora Star and the MT Ostrel Bay, two laden tankers moored at an Inner Harbor terminal. The Coast Guard and the Texas General Land Office, which lead a Unified Command on the spill, put the release at about 9,000 barrels.",
+          "The surge and wind then carried the oil out of the ship channel. Sheen has covered about 33 square miles of the two bays, and oil has reached shorelines on North Beach and in Portland as well as coastal marshes.",
+          "Investigators are looking into possible unauthorized remote access to the vessels' cargo-control systems, with federal cyber teams helping, said Lt. Cmdr. Elena Ruiz, a spokeswoman for Coast Guard Sector Corpus Christi. \"We are not going to get ahead of the investigation,\" she said.",
+          "Kim Tran, a regional cybersecurity advisor with the Cybersecurity and Infrastructure Security Agency, said the agency is supporting the Coast Guard. \"Our job right now is to help investigators and the companies involved understand whether and how those systems were reached,\" Tran said. \"It is too early to talk about findings.\"",
+          "Officials did not say who, if anyone, may have accessed the systems, or when.",
+          "The stakes reach beyond the Texas coast. The Port of Corpus Christi handles about half of the nation's crude oil exports, by analysts' estimates, and those exports have been halted since the Coast Guard closed the port to inbound traffic on Sept. 12, two days before landfall.",
+          "The spill is one of several crises still unfolding along the Coastal Bend nearly a week after the storm, as residents contend with flooded homes, a damaged water system and a citywide order to boil tap water."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-SPILL-CYBER",
+            "ARC-SPILL",
+            "ARC-STORM"
+          ],
+          "public_facts": [
+            "PUB-042",
+            "PUB-029",
+            "PUB-030",
+            "PUB-023",
+            "PUB-014",
+            "PUB-107",
+            "PUB-039"
+          ],
+          "characters_quoted": [
+            "CHR-020",
+            "CHR-030"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "TERM-01",
+            "PORT-07",
+            "LF-01",
+            "PLC-001",
+            "PLC-002"
+          ],
+          "topics": [
+            "tanker spill",
+            "remote access",
+            "cargo-control systems",
+            "cisa",
+            "coast guard",
+            "crude exports",
+            "hurricane rafael"
+          ],
+          "follows_up": "NWS-P006-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0316",
+            "EVT-0315",
+            "EVT-0314",
+            "EVT-0301",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0310"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "Exports halted at the inbound closure on Sept. 12, two days before landfall (PUB-107), not Sept. 11.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-023",
+      "severity": "high",
+      "story_id": "NWS-P007-04",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P007-04",
+        "day": 7,
+        "time_local": "15:30",
+        "outlet_id": "OUT-05",
+        "section": "Crude",
+        "byline": [
+          "CHR-011"
+        ],
+        "headline": "Corpus Christi crude exports stay halted as spill probe turns to cargo systems",
+        "dek": "The ship channel has been shut since Sept. 13. An analyst says the Coast Guard's look at possible remote access to two tankers' cargo systems adds a new question for terminal operators.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Crude exports from the Port of Corpus Christi remained halted Tuesday, eight days after the Coast Guard closed the Corpus Christi Ship Channel to all traffic ahead of Hurricane Rafael.",
+          "The port handles about half of U.S. crude exports, analysts estimate, and its export terminals have been idle since Sept. 12, when the port closed to inbound ships with 14 vessels at the offshore anchorage east of Port Aransas. The Coast Guard has not announced a reopening date.",
+          "The outlook picked up a new variable Monday. Coast Guard Sector Corpus Christi said investigators are examining possible unauthorized remote access to the cargo-control systems of MT Kalvora Star and MT Ostrel Bay, the two laden tankers whose release of about 9,000 barrels of crude at the Rendal Terminals berth was spread across the bays by the storm. Federal cyber teams are assisting.",
+          "\"The market knows how to price a hurricane. It has a rough idea how long a Gulf channel stays shut after a storm,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"What it can't price yet is an open question about how two tankers' cargo systems behaved. Until that's answered, every terminal operator on the coast is going to look hard at who can reach its systems.\"",
+          "Holloway said the reopening timeline will depend on Coast Guard port conditions and the spill response in the Inner Harbor, and that buyers who rely on Corpus Christi barrels are watching closely.",
+          "\"Corpus Christi isn't a side door for U.S. crude. It's the front door,\" she said. \"Every day it's closed, someone has to wait or find barrels elsewhere.\"",
+          "The Coast Guard has said it will not characterize the cause of the spill until the investigation supports a conclusion."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-SPILL-CYBER"
+          ],
+          "public_facts": [
+            "PUB-107",
+            "PUB-108",
+            "PUB-014",
+            "PUB-042",
+            "PUB-029"
+          ],
+          "characters_quoted": [
+            "CHR-064"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01"
+          ],
+          "topics": [
+            "crude exports",
+            "channel closure",
+            "corpus christi port",
+            "remote access probe",
+            "terminal operators",
+            "market outlook"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0316",
+            "EVT-0315"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "'Since Sept. 11' and 'ten days after' date the closure to Saturday; channel closed to all traffic Sept. 13 (eight days before this Tuesday), exports idle since Sept. 12.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-024",
+      "severity": "high",
+      "story_id": "NWS-P008-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P008-02",
+        "day": 8,
+        "time_local": "10:30",
+        "outlet_id": "OUT-01",
+        "section": "Business",
+        "byline": [
+          "CHR-002"
+        ],
+        "headline": "Cargo-systems vendor says its remote-maintenance credentials were misused",
+        "dek": "Brightwake Marine Systems says it has revoked all remote access and is cooperating with investigators. The statement came two days after the Coast Guard said it was examining possible unauthorized remote access to the spill tankers' cargo systems.",
+        "body": [
+          "A company that maintains cargo-control systems for tankers said Wednesday that its remote-maintenance credentials were misused, and that it has revoked all remote access to the systems it supports.",
+          "\"Our remote-maintenance credentials were misused. That should not have been possible, and we own that,\" said Owen Pryce, chief executive of Brightwake Marine Systems. \"We have revoked all remote access, for every customer, and we are cooperating fully with investigators. No connection will be restored until we can show our customers it is safe.\"",
+          "The statement came two days after Coast Guard Sector Corpus Christi said investigators are examining possible unauthorized remote access to the cargo-control systems of MT Kalvora Star and MT Ostrel Bay. The two laden tankers were moored at the Rendal Terminals berth on the Inner Harbor when Hurricane Rafael came ashore Sept. 14, and the Unified Command estimates about 9,000 barrels of crude spilled there. Federal cyber teams are assisting the investigation.",
+          "Brightwake's statement did not name any vessel or say when the credentials were misused.",
+          "Asked about the statement, the Coast Guard said its investigation continues. \"We are aware of the company's statement,\" said Lt. Cmdr. Elena Ruiz, a Sector Corpus Christi public affairs officer. \"We will not characterize any party's role while the investigation is ongoing.\"",
+          "How remote maintenance works: Cargo-control systems are the software and hardware crews use to monitor and manage oil in a tanker's cargo tanks. Like many shipboard systems, they need updates, troubleshooting and repairs. Instead of flying a technician to a ship for every fix, vendors often connect from shore over an approved link using login credentials.",
+          "That saves time and money, but it also means the credentials work like keys. Whoever holds them can reach the system.",
+          "Pryce said the company's first job is helping customers and investigators. \"We're a small company. Our customers trust us with critical systems,\" he said. \"Right now the fix is simple and blunt: nobody gets in remotely. We'll earn the rest back.\"",
+          "The port's ship channel remains closed, and crude exports have been halted since Sept. 12."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-SPILL-CYBER",
+            "ARC-SPILL"
+          ],
+          "public_facts": [
+            "PUB-047",
+            "PUB-042",
+            "PUB-029",
+            "PUB-107"
+          ],
+          "characters_quoted": [
+            "CHR-071",
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "TERM-01",
+            "PORT-07"
+          ],
+          "topics": [
+            "brightwake marine systems",
+            "remote maintenance",
+            "credentials misused",
+            "cargo-control systems",
+            "tanker spill",
+            "investigation"
+          ],
+          "follows_up": "NWS-P006-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0316",
+            "EVT-0315",
+            "EVT-0207",
+            "EVT-0210"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "Exports halted Sept. 12 (PUB-107), not Sept. 11.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-025",
+      "severity": "high",
+      "story_id": "NWS-P009-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P009-02",
+        "day": 9,
+        "time_local": "10:45",
+        "outlet_id": "OUT-04",
+        "section": "Security",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Brightwake chief: remote access stays off until customers can trust it",
+        "dek": "The cargo-systems maintenance vendor says it does not know who misused its credentials and will not discuss specific vessels while the investigation is open.",
+        "body": [
+          "Brightwake Marine Systems, the vendor that said Wednesday its remote-maintenance credentials had been misused, will keep all remote access to customer systems switched off until it can show customers a safer way to connect, its chief executive said Thursday.",
+          "\"I don't know who did this, and I'm not going to guess,\" Owen Pryce told Gulfwater Maritime Report. \"I want to know as badly as anyone. Right now my job is to make sure it can't happen again through us.\"",
+          "Brightwake supports cargo-control systems aboard tankers, the shipboard software and hardware crews use to monitor and manage cargo. Like most marine system vendors, it has provided remote support, connecting from shore to diagnose faults and install updates rather than sending a technician aboard for every job.",
+          "Pryce said the company revoked all remote access across its customer base. He described changes Brightwake intends to make before restoring any connection: sessions scheduled in advance, approved by the crew on board, watched in real time from the vessel and closed when the work is done. \"No standing access, and every session approved by someone on board,\" he said. \"That's where we're going.\"",
+          "He declined to say which vessels or operators use Brightwake systems. \"I won't discuss specific vessels while the investigation is open,\" he said.",
+          "Status: Coast Guard Sector Corpus Christi said Monday that investigators are examining possible unauthorized remote access to the cargo-control systems of MT Kalvora Star and MT Ostrel Bay, the two laden tankers at the Rendal Terminals berth involved in the release of about 9,000 barrels of crude during Hurricane Rafael. Federal cyber teams are assisting. The Coast Guard has not publicly linked any company to the investigation. Asked about Brightwake's statement, Lt. Cmdr. Elena Ruiz said the investigation continues and the Coast Guard would not characterize any party's role.",
+          "Port conditions: Corpus Christi Ship Channel closed to all traffic since Sept. 13. Crude exports halted. No reopening date announced."
+        ],
+        "tags": {
+          "story_type": "analysis",
+          "arcs": [
+            "ARC-SPILL-CYBER"
+          ],
+          "public_facts": [
+            "PUB-047",
+            "PUB-042",
+            "PUB-029",
+            "PUB-107",
+            "PUB-108"
+          ],
+          "characters_quoted": [
+            "CHR-071",
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "TERM-01",
+            "PORT-07"
+          ],
+          "topics": [
+            "brightwake marine systems",
+            "remote maintenance",
+            "vendor access",
+            "cargo-control systems",
+            "tanker spill"
+          ],
+          "follows_up": "NWS-P008-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0316",
+            "EVT-0315",
+            "EVT-0207",
+            "EVT-0210"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "Channel closed to all traffic Sept. 13 (PUB-108), not Sept. 11; export halt is PUB-107.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-026",
+      "severity": "high",
+      "story_id": "NWS-P013-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P013-01",
+        "day": 13,
+        "time_local": "09:00",
+        "outlet_id": "OUT-04",
+        "section": "Ports",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Corpus Christi channel closure enters third week as spill response works the Inner Harbor",
+        "dek": "The Coast Guard has not set a reopening date. The investigation into possible unauthorized remote access to two tankers' cargo systems continues.",
+        "body": [
+          "Port status, Sept. 27: Corpus Christi Ship Channel closed to traffic. Crude exports halted. No reopening date announced.",
+          "The port has been closed to inbound traffic since Sept. 12, when 14 vessels were holding at the offshore anchorage east of Port Aransas, and the channel to all traffic since Sept. 13. Ships that put to sea for Hurricane Rafael have been back at the anchorage since Sept. 17. The closure is now in its third week. The port is estimated to handle about half of U.S. crude exports.",
+          "\"The channel will reopen when it is safe for vessel traffic,\" said Lt. Cmdr. Elena Ruiz, a public affairs officer for Coast Guard Sector Corpus Christi. \"That determination depends on conditions in the waterway, including the ongoing spill response. We will announce changes to port conditions as they are made.\"",
+          "Spill response: The Unified Command of the Coast Guard and the Texas General Land Office estimates about 9,000 barrels of crude were released from MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth in the Inner Harbor as the storm arrived. Surge and wind carried oil into Nueces and Corpus Christi bays, with sheen over about 33 square miles. Boom deployment began as winds dropped. The Unified Command requested Navy salvage equipment early in the response.",
+          "Investigation: The Coast Guard said Sept. 20 that investigators are examining possible unauthorized remote access to the two tankers' cargo-control systems, with federal cyber teams assisting. On Sept. 22, Brightwake Marine Systems, a cargo-systems maintenance vendor, said its remote-maintenance credentials had been misused and that it had revoked all remote access. Ruiz said there was nothing new to report. \"When there is information we can release, we will release it,\" she said.",
+          "Watch items: Ruiz did not comment on vessel counts at the anchorage or on the order in which vessels will be allowed in once the channel reopens. Gulfwater will track port condition changes as they are announced."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-SPILL",
+            "ARC-SPILL-CYBER"
+          ],
+          "public_facts": [
+            "PUB-107",
+            "PUB-108",
+            "PUB-109",
+            "PUB-014",
+            "PUB-029",
+            "PUB-030",
+            "PUB-031",
+            "PUB-042",
+            "PUB-047"
+          ],
+          "characters_quoted": [
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01",
+            "FAC-USCG-01"
+          ],
+          "topics": [
+            "channel closure",
+            "port conditions",
+            "crude exports",
+            "spill response",
+            "anchorage",
+            "remote access investigation"
+          ],
+          "follows_up": "NWS-P006-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0315",
+            "EVT-0314",
+            "EVT-0316"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "Closure dated Sept. 11 with ships moving to the anchorage; corrected to inbound Sept. 12 (14 vessels), all traffic Sept. 13, ships back at anchorage since Sept. 17 (PUB-107/108/109).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-027",
+      "severity": "medium",
+      "story_id": "NWS-P016-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P016-02",
+        "day": 16,
+        "time_local": "13:40",
+        "outlet_id": "OUT-06",
+        "section": "National",
+        "byline": [
+          "CHR-012"
+        ],
+        "headline": "Coordinated accounts pushed false rumors after Texas hurricane, researcher says",
+        "dek": "A private threat researcher says about 40 accounts coordinated rumor posts after Hurricane Rafael and pointed users to a lookalike aid site also used in phishing emails.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Continental Wire) — False rumors that spread on social media after Hurricane Rafael struck the Texas coast were coordinated across about 40 accounts and linked to a lookalike disaster-aid website also used in phishing emails, a private threat researcher said Thursday.",
+          "Dana Feld of Northlight Threat Lab said the posts, which spread in the days after Rafael made landfall near Port Aransas as a Category 3 hurricane on Sept. 14, repeatedly directed users to aid-help-portal.example, a site made to resemble a legitimate aid portal.",
+          "\"The pattern is the point,\" Feld said in an interview. \"You have dozens of accounts acting in step, hitting the same emotional notes, and all roads lead to the same fake site. That isn't organic outrage. It's organized.\"",
+          "Among the false claims that circulated after the storm: that the military was seizing homes, and that aid would go only to wealthy neighborhoods. County and military officials in Corpus Christi publicly rejected the home-seizure claims. Posts blaming refinery negligence for an oil spill in the region's bays also spread.",
+          "The City of Corpus Christi warned employees and residents on Sept. 19 about phishing emails impersonating a disaster-aid portal. Feld said her research connects the rumor posts to that same lure.",
+          "Feld declined to say who may be behind the accounts. \"Governments attribute. Researchers describe,\" she said. \"I can tell you how it works. I'm not going to tell you who until someone with the evidence and the authority says so.\"",
+          "Disasters routinely draw rumors and scams as people search for information and help under stress. Coordinated campaigns differ from ordinary rumors because they are organized to spread quickly and to push people toward a specific action, such as clicking a link.",
+          "The Coastal Bend is still recovering from Rafael, which flooded about 43 square miles across three coastal counties, triggered a citywide boil-water notice in Corpus Christi and halted crude exports from a port that handles about half of the nation's crude oil exports."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-RUMORS"
+          ],
+          "public_facts": [
+            "PUB-054",
+            "PUB-041",
+            "PUB-033",
+            "PUB-034",
+            "PUB-023",
+            "PUB-028",
+            "PUB-039",
+            "PUB-107",
+            "PUB-014"
+          ],
+          "characters_quoted": [
+            "CHR-063"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001"
+          ],
+          "topics": [
+            "disinformation",
+            "coordinated accounts",
+            "lookalike aid site",
+            "phishing",
+            "hurricane rafael",
+            "northlight threat lab"
+          ],
+          "follows_up": "NWS-P016-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0309",
+            "EVT-0306",
+            "EVT-0301",
+            "EVT-0305",
+            "EVT-0310",
+            "EVT-0207",
+            "EVT-0210"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "PUB-020 cited only for the export halt, which is now PUB-107.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-028",
+      "severity": "high",
+      "story_id": "NWS-P023-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P023-01",
+        "day": 23,
+        "time_local": "10:00",
+        "outlet_id": "OUT-04",
+        "section": "Security",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Tanker cargo-systems probe continues with few public details",
+        "dek": "More than two weeks after the Coast Guard said it was examining possible unauthorized remote access, investigators have released no findings. The vendor's remote access remains off.",
+        "body": [
+          "Status, Oct. 7: Investigation into possible unauthorized remote access to the cargo-control systems of MT Kalvora Star and MT Ostrel Bay ongoing. No findings released. Corpus Christi Ship Channel remains closed.",
+          "Coast Guard Sector Corpus Christi said Sept. 20 that investigators were examining possible unauthorized remote access to the two tankers' cargo-control systems, with federal cyber teams assisting. The laden tankers were moored at the Rendal Terminals berth on the Inner Harbor when Hurricane Rafael came ashore Sept. 14. The Unified Command estimates about 9,000 barrels of crude were released.",
+          "On Sept. 22, Brightwake Marine Systems, a vendor that supports tanker cargo-control systems, said its remote-maintenance credentials had been misused, that it had revoked all remote access and that it was cooperating with investigators.",
+          "Neither the Coast Guard nor federal cyber officials have released findings since.",
+          "\"The investigation is active and thorough, and we will not release partial information,\" said Lt. Cmdr. Elena Ruiz, a Sector Corpus Christi public affairs officer. \"When we can share findings responsibly, we will.\"",
+          "The Cybersecurity and Infrastructure Security Agency is still supporting the Coast Guard, said Kim Tran, a regional cybersecurity advisor with the agency. She declined to discuss the investigation but offered general advice for any operator of connected industrial systems. \"Know what's connected to your systems. Keep it patched. Know who can get in from outside, and turn off what you don't need,\" Tran said. \"None of that is new advice. It's just advice that's easy to put off.\"",
+          "Technical note: Investigations involving shipboard control systems typically require forensic review of system logs, network equipment and vendor records, and can take weeks or months. Findings may be shared with operators and regulators before any public release.",
+          "Port conditions: Channel closed to all traffic since Sept. 13. Crude exports halted. The Coast Guard has not announced a reopening date. Spill response continues in the Inner Harbor and the bays."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-SPILL-CYBER",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-042",
+            "PUB-047",
+            "PUB-029",
+            "PUB-107",
+            "PUB-108"
+          ],
+          "characters_quoted": [
+            "CHR-020",
+            "CHR-030"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "TERM-01",
+            "PORT-07",
+            "FAC-USCG-01"
+          ],
+          "topics": [
+            "remote access investigation",
+            "cargo-control systems",
+            "brightwake marine systems",
+            "cisa",
+            "coast guard",
+            "port conditions"
+          ],
+          "follows_up": "NWS-P009-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0316",
+            "EVT-0315",
+            "EVT-0207",
+            "EVT-0210"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "Channel closed to all traffic Sept. 13 (PUB-108), not Sept. 11; export halt is PUB-107.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-029",
+      "severity": "high",
+      "story_id": "NWS-P027-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P027-01",
+        "day": 27,
+        "time_local": "09:30",
+        "outlet_id": "OUT-01",
+        "section": "Business",
+        "byline": [
+          "CHR-002"
+        ],
+        "headline": "Analysis: What Rafael has cost the Coastal Bend so far, by the numbers that are public",
+        "dek": "Four weeks after landfall, there is no official dollar estimate of the storm's damage. But the public figures already show where the region's economy is hurting, and for how long.",
+        "body": [
+          "There is no official price tag yet on Hurricane Rafael, and there won't be for months. But four weeks after the storm came ashore on Mustang Island, the public numbers already show where the Coastal Bend economy is hurting, and for how long.",
+          "The port. The Corpus Christi Ship Channel has been closed to all traffic since Sept. 13, the day before landfall, and crude exports have been halted since the port shut to inbound ships a day earlier. The port handles about half of U.S. crude exports, by analysts' estimates. That means a month of the region's biggest export business on hold, along with the pilots, tug crews, terminal workers and truckers who depend on it.",
+          "\"Every week the channel is closed is a week of revenue that doesn't come back,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"Buyers find other barrels. Some of that business returns when the channel opens, but the lost weeks are lost.\"",
+          "The bays. Fishing and shellfish harvesting have been closed in Nueces and Corpus Christi bays since Sept. 18, after oil from the Inner Harbor spill, an estimated 9,000 barrels, spread across about 33 square miles of water. Texas Parks and Wildlife extended its fishing closure Oct. 5, and the state health department's shellfish closure stands. Shrimpers, guides and bait shops are absorbing the loss with no reopening date.",
+          "The water. The citywide boil-water notice has been in effect since Sept. 18, and replacement parts for the water plant's damaged pumps are delayed. Restaurants, coffee shops, child care centers and any business that runs on tap water are paying for workarounds: bottled water, ice and extra labor.",
+          "The cleanup. Two emergency contracts have entered the public record: Nueces County's $14.2 million sole-source debris removal contract with Vantorra Restoration LLC, and a $2.1 million federal emergency fuel contract for NAS Corpus Christi with Quellmar Fuel Partners. Those are costs to taxpayers, and they also put crews and trucks to work.",
+          "The land. About 43 square miles across Nueces, San Patricio and Aransas counties flooded, according to satellite imagery. Every flooded home is a repair bill, and for many families, a gap between what insurance pays and what rebuilding costs.",
+          "The strain. At the peak, 911 calls hit about 2,900 a day, nearly ten times normal, and emergency room visits for stomach illness ran about 180% above normal. Those numbers carry no dollar sign, but they show up later as overtime, missed work and medical bills.",
+          "What's missing: estimates of insured and uninsured losses, a count of businesses closed and timelines for the channel and the bays. Those will define the recovery more than any number above."
+        ],
+        "tags": {
+          "story_type": "analysis",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-COMMUNITY",
+            "ARC-CONTRACTS"
+          ],
+          "public_facts": [
+            "PUB-028",
+            "PUB-107",
+            "PUB-108",
+            "PUB-014",
+            "PUB-040",
+            "PUB-057",
+            "PUB-039",
+            "PUB-055",
+            "PUB-049",
+            "PUB-056",
+            "PUB-029",
+            "PUB-030",
+            "PUB-026",
+            "PUB-046"
+          ],
+          "characters_quoted": [
+            "CHR-064"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001",
+            "PLC-002",
+            "PLC-003",
+            "PORT-07"
+          ],
+          "topics": [
+            "economic impact",
+            "analysis",
+            "crude exports",
+            "fishing closure",
+            "boil-water notice",
+            "emergency contracts",
+            "recovery costs"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0305",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0317",
+            "EVT-0310",
+            "EVT-0308",
+            "EVT-0311",
+            "EVT-0312",
+            "EVT-0315",
+            "EVT-0314",
+            "EVT-0303"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "'Closed since Sept. 11, three days before landfall' corrected: all traffic Sept. 13 (PUB-108), exports halted at the Sept. 12 inbound closure (PUB-107).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-030",
+      "severity": "high",
+      "story_id": "NWS-P029-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P029-01",
+        "day": 29,
+        "time_local": "09:00",
+        "outlet_id": "OUT-02",
+        "section": "Local",
+        "byline": [
+          "CHR-007"
+        ],
+        "headline": "Recovery checklist: what's still closed and what's changed, a month after Rafael",
+        "dek": "The boil-water notice, the bay fishing closure and the ship channel closure are still in place. Here's where things stand and what to do.",
+        "body": [
+          "It's been almost a month since Hurricane Rafael came ashore on Mustang Island on Sept. 14. Here's where things stand as of Wednesday.",
+          "Water: STILL BOIL. The Sept. 18 citywide boil-water notice has not been lifted. Replacement parts for the O.N. Stevens plant's damaged pumps are delayed because the supplier's local warehouse flooded, and they're shipping from out of state. No date has been set to lift the notice.",
+          "Stomach illness: EASING. ER visits eased in late September after a surge. Keep up the handwashing, with soap and boiled or bottled water.",
+          "Bay fishing: CLOSED. Texas Parks and Wildlife extended its fishing closure in Nueces and Corpus Christi bays on Oct. 5, and the state health department's shellfish closure stays in place. Don't fish or harvest there, and avoid any oil on shorelines.",
+          "Ship channel: CLOSED. The Corpus Christi Ship Channel has been closed since Sept. 13, and crude exports are halted. No reopening date has been announced.",
+          "Spill investigation: ONGOING. The Coast Guard says investigators are examining possible unauthorized remote access to the cargo systems of the two tankers involved in the spill. A maintenance vendor says its remote-maintenance credentials were misused and that it revoked all remote access.",
+          "Debris: CONTRACT AWARDED. Nueces County awarded a $14.2 million emergency debris contract. Sort piles at the curb, out of the street, and check county channels for routes.",
+          "Scams: WATCH OUT. A researcher tied post-storm rumor posts to a lookalike aid site, aid-help-portal.example, also used in phishing emails. Don't click it.",
+          "Lights over the air station: QUIET. No new drone sightings since late September. The FBI's investigation continues.",
+          "Share this list with a neighbor who isn't online."
+        ],
+        "tags": {
+          "story_type": "explainer",
+          "arcs": [
+            "ARC-WATER",
+            "ARC-SPILL",
+            "ARC-RUMORS"
+          ],
+          "public_facts": [
+            "PUB-039",
+            "PUB-055",
+            "PUB-052",
+            "PUB-057",
+            "PUB-107",
+            "PUB-108",
+            "PUB-049",
+            "PUB-054",
+            "PUB-051",
+            "PUB-048",
+            "PUB-042",
+            "PUB-047",
+            "PUB-040"
+          ],
+          "characters_quoted": [],
+          "characters_mentioned": [],
+          "places": [
+            "PLC-001",
+            "FAC-UTL-01",
+            "PORT-07",
+            "PLC-002"
+          ],
+          "topics": [
+            "recovery checklist",
+            "boil-water notice",
+            "fishing closure",
+            "ship channel",
+            "debris",
+            "scams",
+            "drone reports",
+            "spill investigation"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0310",
+            "EVT-0308",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0311",
+            "EVT-0309",
+            "EVT-0316"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "Channel closed Sept. 13 (PUB-108), not Sept. 11; export halt is PUB-107.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-031",
+      "severity": "high",
+      "story_id": "NWS-P029-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P029-02",
+        "day": 29,
+        "time_local": "15:00",
+        "outlet_id": "OUT-05",
+        "section": "Markets",
+        "byline": [
+          "CHR-011"
+        ],
+        "headline": "Corpus Christi channel closure passes one month; port says it is ready when the Coast Guard is",
+        "dek": "Crude exports from the nation's largest crude export port have been halted since Sept. 12. Port officials say berths and terminals will move as soon as the Coast Guard clears the channel.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Sabal Energy Wire) — A month after the Coast Guard shut the Corpus Christi Ship Channel ahead of Hurricane Rafael, crude exports from the Port of Corpus Christi were still halted Wednesday.",
+          "The port, which handles about half of U.S. crude exports according to analysts' estimates, has had no export traffic through the channel since Sept. 12. At the anchorage east of Port Aransas, 14 vessels were waiting when the port closed to inbound ships that day.",
+          "\"We are ready when the Coast Guard is,\" port spokesperson Javier Salinas said. \"Our job is to have berths, pilots and terminals lined up so the minute the channel opens, ships move. That work is happening now.\"",
+          "Salinas declined to give a reopening date, noting that port conditions are set by the Coast Guard, which has said the channel will reopen when it is safe for traffic. Spill response continues in the Inner Harbor and the bays, where about 9,000 barrels released by two moored tankers spread across about 33 square miles after the storm.",
+          "Grace Holloway, an energy market analyst at Lanternfish Energy Analytics, said traders are focused on what comes after the reopening as much as on the reopening itself. \"The first day isn't the story. The story is how fast the backlog clears,\" she said. \"You've got ships that have been waiting offshore and buyers who have been sourcing elsewhere for a month. It will take time to get back to rhythm.\"",
+          "Holloway said the Coast Guard's investigation into possible unauthorized remote access to the cargo systems of the two tankers is also on traders' minds. \"Nobody's pricing it in yet,\" she said. \"But everyone's asking their own terminals what's connected to what.\"",
+          "The Coast Guard has not announced when the channel will reopen."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-107",
+            "PUB-108",
+            "PUB-014",
+            "PUB-029",
+            "PUB-030",
+            "PUB-042"
+          ],
+          "characters_quoted": [
+            "CHR-023",
+            "CHR-064"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF"
+          ],
+          "topics": [
+            "channel closure",
+            "crude exports",
+            "port of corpus christi",
+            "reopening",
+            "backlog",
+            "market outlook"
+          ],
+          "follows_up": "NWS-P007-04"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0315",
+            "EVT-0314",
+            "EVT-0316"
+          ],
+          "batch": "D",
+          "status": "draft"
+        }
+      },
+      "reason": "Exports halted Sept. 12 (PUB-107), not Sept. 11; 14 vessels were waiting at the inbound closure, not when the channel shut to all traffic (ships then put to sea). 'More than a month' recounted from Sept. 13.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-032",
+      "severity": "high",
+      "story_id": "NWS-P030-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P030-01",
+        "day": 30,
+        "time_local": "07:15",
+        "outlet_id": "OUT-04",
+        "section": "Ports",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Corpus Christi channel partly reopens; inner reaches stay restricted for decontamination",
+        "dek": "The Coast Guard eased the storm closure Thursday, 30 days after Hurricane Rafael's landfall. Vessels bound for inner berths face decontamination requirements, and the offshore queue remains.",
+        "body": [
+          "The Coast Guard partly reopened the Corpus Christi Ship Channel on Thursday, 30 days after Hurricane Rafael made landfall on Mustang Island. The inner channel remains restricted while vessels are decontaminated following the Inner Harbor oil spill, Coast Guard Sector Corpus Christi said.",
+          "\"Traffic will move in a controlled sequence,\" said Lt. Cmdr. Elena Ruiz, a sector public affairs officer. \"Vessels transiting the inner channel remain subject to decontamination requirements set by the Unified Command. Mariners should monitor broadcast notices for current conditions before getting under way.\"",
+          "The port shut to inbound traffic two days before landfall, with 14 vessels at the offshore anchorage east of Port Aransas and crude exports stopped; the channel closed to all traffic a day later. Two laden tankers, MT Kalvora Star and MT Ostrel Bay, remained moored at the Rendal Terminals berth in the Inner Harbor with Coast Guard approval.",
+          "The Unified Command of the Coast Guard and the Texas General Land Office has estimated that about 9,000 barrels of crude were released from the two tankers as the storm arrived. Surge and wind carried the oil out of the ship channel into Nueces and Corpus Christi bays, with sheen covering roughly 33 square miles at its extent.",
+          "Thursday's change does not clear the anchorage. The port said the backlog is delaying relief cargo, including MV Gulf Provider, which carries 40 relief containers booked before the storm.",
+          "Neither the Coast Guard nor the port gave a date for lifting the inner-channel restriction. Ruiz said conditions would be reviewed as decontamination continues and that changes would be announced through broadcast notices to mariners.",
+          "The port accounts for about half of U.S. crude exports, so the rate at which tankers can move between inner berths and open water will be watched closely by shippers and charterers. Gulfwater will update channel status as notices are issued."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-SPILL"
+          ],
+          "public_facts": [
+            "PUB-058",
+            "PUB-107",
+            "PUB-108",
+            "PUB-023",
+            "PUB-024",
+            "PUB-029",
+            "PUB-030",
+            "PUB-018",
+            "PUB-014"
+          ],
+          "characters_quoted": [
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "FAC-USCG-01",
+            "TERM-01",
+            "LF-01"
+          ],
+          "topics": [
+            "ship channel",
+            "partial reopening",
+            "decontamination",
+            "anchorage backlog",
+            "port conditions",
+            "crude exports"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0204",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0301",
+            "EVT-0313",
+            "EVT-0314",
+            "EVT-0315",
+            "EVT-0401",
+            "EVT-0410"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "'Closed three days before landfall' dates the closure to Sept. 11; inbound closure two days before (PUB-107), all traffic the next day (PUB-108).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-033",
+      "severity": "high",
+      "story_id": "NWS-P030-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P030-02",
+        "day": 30,
+        "time_local": "11:30",
+        "outlet_id": "OUT-01",
+        "section": "Business",
+        "byline": [
+          "CHR-002"
+        ],
+        "headline": "Ship channel partly reopens, but relief cargo still waits offshore",
+        "dek": "Port officials call Thursday's partial reopening a turning point. The freight forwarder with 40 relief containers aboard MV Gulf Provider says the ship is still stuck in the anchorage line.",
+        "body": [
+          "For a month, the Corpus Christi Ship Channel has been closed to the traffic that keeps the Port of Corpus Christi running. On Thursday, the Coast Guard partly reopened it.",
+          "The reopening comes with limits. Spill decontamination keeps the inner channel restricted, and a backlog of ships at the offshore anchorage means vessels will move one transit at a time rather than all at once.",
+          "\"This is a turning point for the port and for the region,\" said Javier Salinas, a spokesperson for the Port of Corpus Christi. \"Every ship that moves is one fewer waiting offshore. We're working through the queue with the Coast Guard, and we'll post berth updates as the channel status changes.\"",
+          "Among the ships still waiting is MV Gulf Provider, a cargo ship carrying 40 relief containers that Gulf Relief Logistics booked five days before Hurricane Rafael made landfall.",
+          "\"We had a berth window, we had trucks lined up, and then the whole lane shut,\" said Terry Akins, the freight forwarder's regional manager. \"Now we're in the anchorage line like everybody else. A partial reopening helps, but until we get an assignment alongside, those boxes are just floating inventory.\"",
+          "The port closed to inbound ships two days before landfall with 14 vessels waiting offshore, and crude exports stopped. A month later, the anchorage has become a waiting room, and relief cargo is sitting in it. The port handles about half of U.S. crude exports, so the order in which ships move matters well beyond the region.",
+          "Salinas did not give a date for lifting the inner-channel restriction, saying that decision rests with the Coast Guard and the Unified Command overseeing the spill response.",
+          "Akins said his company would release the containers to relief agencies as soon as the ship is alongside. \"Nobody's sitting on this cargo once it hits the dock,\" he said. \"We just need the dock.\""
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-AID"
+          ],
+          "public_facts": [
+            "PUB-058",
+            "PUB-018",
+            "PUB-107",
+            "PUB-014"
+          ],
+          "characters_quoted": [
+            "CHR-023",
+            "CHR-074"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF"
+          ],
+          "topics": [
+            "ship channel",
+            "partial reopening",
+            "relief cargo",
+            "gulf provider",
+            "anchorage backlog",
+            "freight"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0204",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0401",
+            "EVT-0410"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Inbound closure with 14 vessels came two days before landfall (PUB-107), not three.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-034",
+      "severity": "high",
+      "story_id": "NWS-P030-03",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P030-03",
+        "day": 30,
+        "time_local": "15:40",
+        "outlet_id": "OUT-05",
+        "section": "Crude",
+        "byline": [
+          "CHR-011"
+        ],
+        "headline": "Corpus Christi partial reopening leaves crude market watching inner-channel limits",
+        "dek": "The Coast Guard eased the storm closure at the largest U.S. crude export gateway, but spill decontamination still restricts the inner channel and an anchorage backlog sets the pace.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Sabal Energy Wire) — The Coast Guard partly reopened the Corpus Christi Ship Channel on Thursday, a month after Hurricane Rafael shut the port that handles about half of U.S. crude exports.",
+          "The reopening is partial. Spill decontamination keeps the inner channel restricted, according to the Coast Guard, and vessels are queued at the offshore anchorage. Exports halted when the port closed to inbound traffic two days before the Sept. 14 landfall, with 14 vessels waiting offshore at the time.",
+          "\"Partial is the operative word,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"The market cares less about the headline than about how many transits the inner channel can handle under decontamination rules. Until that's clear, nobody should model a quick return to pre-storm volumes.\"",
+          "Before Rafael, the port was loading crude tankers at a near-record pace, with tankers routinely waiting their turn at the offshore anchorage, and exports hit a monthly high two weeks before the storm.",
+          "Holloway said buyers who had been counting on Corpus Christi barrels over the past month have had to adjust, and that the anchorage queue will need to clear before loadings settle into a rhythm. \"You don't flip a switch on a port this size,\" she said. \"You work the queue.\"",
+          "Port officials have not given a date for lifting the inner-channel restriction. The port said the backlog is also delaying relief cargo, including the cargo ship MV Gulf Provider.",
+          "Market participants will be watching Coast Guard notices for any change to the restriction in the days ahead, Holloway said, along with the pace at which the anchorage line shortens."
+        ],
+        "tags": {
+          "story_type": "analysis",
+          "arcs": [
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-058",
+            "PUB-014",
+            "PUB-107",
+            "PUB-002",
+            "PUB-023"
+          ],
+          "characters_quoted": [
+            "CHR-064"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF"
+          ],
+          "topics": [
+            "crude exports",
+            "ship channel",
+            "partial reopening",
+            "decontamination",
+            "energy markets"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0104",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0301",
+            "EVT-0401",
+            "EVT-0410"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Exports halted at the inbound closure two days before landfall (PUB-107), not three.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-035",
+      "severity": "high",
+      "story_id": "NWS-P033-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P033-01",
+        "day": 33,
+        "time_local": "10:45",
+        "outlet_id": "OUT-02",
+        "section": "Breaking",
+        "byline": [
+          "CHR-006"
+        ],
+        "headline": "Relief ship Gulf Provider finally docks with 40 containers",
+        "dek": "The cargo ship waited weeks in the offshore backlog. Its relief containers are coming off at the Port of Corpus Christi this morning.",
+        "body": [
+          "MV Gulf Provider is alongside. After weeks in the offshore anchorage line, the relief cargo ship is at a berth at the Port of Corpus Christi this morning. Its 40 relief containers are coming off.",
+          "Cranes swing. Trucks idle in a line along the dock road. A worker in a hard hat waves them forward, one at a time.",
+          "The containers were booked five days before Hurricane Rafael made landfall. Then the Coast Guard closed the ship channel ahead of the storm, and the ship ended up in the queue offshore. For a cargo ship, that is a long time to sit within sight of the coast. The channel partly reopened Thursday, but the anchorage backlog kept Gulf Provider waiting until now.",
+          "\"It's about a month later than anybody wanted,\" says Javier Salinas, spokesperson for the Port of Corpus Christi. \"But it's here, it's moving, and the channel is doing what it's supposed to do. We're glad to see these boxes on the dock.\"",
+          "What's inside? The port describes the cargo as relief supplies. Harborline 6 is asking relief agencies where it will be distributed and will update this story.",
+          "The wait was part of a bigger backlog. Two days before landfall, when the port closed to inbound traffic, 14 vessels were left holding at the offshore anchorage, and crude exports stopped with them.",
+          "Waiting on help? Check with your neighborhood hub or relief agency for updated distribution hours this week.",
+          "The inner ship channel is still restricted for spill decontamination. The citywide boil-water notice remains in effect."
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-AID",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-059",
+            "PUB-018",
+            "PUB-107",
+            "PUB-058",
+            "PUB-039"
+          ],
+          "characters_quoted": [
+            "CHR-023"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF"
+          ],
+          "topics": [
+            "relief cargo",
+            "gulf provider",
+            "containers",
+            "port",
+            "anchorage backlog"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0204",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0310",
+            "EVT-0401",
+            "EVT-0410"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Inbound closure with 14 vessels came two days before landfall (PUB-107), not three.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-036",
+      "severity": "high",
+      "story_id": "NWS-P033-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P033-02",
+        "day": 33,
+        "time_local": "17:20",
+        "outlet_id": "OUT-01",
+        "section": "Business",
+        "byline": [
+          "CHR-002"
+        ],
+        "headline": "A month late, Gulf Provider's 40 relief containers come ashore",
+        "dek": "The relief cargo booked before Hurricane Rafael spent weeks in the anchorage backlog. The freight forwarder says the delay shows how much a single closed channel can hold up.",
+        "body": [
+          "The 40 relief containers aboard MV Gulf Provider were booked five days before Hurricane Rafael made landfall. On Sunday, about a month late, they came ashore at the Port of Corpus Christi.",
+          "The cargo ship berthed and began unloading after weeks in the backlog at the offshore anchorage, where ships have waited since returning from sea after the storm. The channel partly reopened Thursday, as the Ledger reported, but spill decontamination still restricts the inner channel and ships are moving in sequence.",
+          "\"Forty boxes, one month, one channel,\" said Terry Akins, regional manager for Gulf Relief Logistics, the freight forwarder handling the shipment. \"That's the whole supply chain lesson right there. You can have the cargo, the ship, the trucks and the customer, and if the channel's shut, you've got a very expensive parking lot offshore.\"",
+          "Akins said the containers would be released to relief agencies as they clear the dock. He would not estimate when all 40 would reach their destinations, saying that depends on trucking and on how quickly receiving sites can take deliveries.",
+          "Javier Salinas, a spokesperson for the Port of Corpus Christi, said the berthing showed the partial reopening was doing its job. \"Every week we move more of the queue,\" he said. \"We know how much this particular cargo matters to people here.\"",
+          "The numbers behind the delay are stark. At closure, 14 vessels were waiting offshore. The port, which handles about half of U.S. crude exports, spent the month after landfall with no way in or out for the ships that keep it running, until Thursday's partial reopening.",
+          "For relief shippers, Akins said, the lesson is to treat the channel as a single point of failure. \"I had one lane, and the lane closed,\" he said. \"That's on me to fix before next season.\"",
+          "Gulf Provider's cargo arrives as residents across the city are still boiling water under the citywide notice issued four days after landfall."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-AID",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-059",
+            "PUB-018",
+            "PUB-107",
+            "PUB-109",
+            "PUB-058",
+            "PUB-014",
+            "PUB-039"
+          ],
+          "characters_quoted": [
+            "CHR-074",
+            "CHR-023"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF"
+          ],
+          "topics": [
+            "relief cargo",
+            "gulf provider",
+            "containers",
+            "supply chain",
+            "anchorage backlog",
+            "freight forwarder"
+          ],
+          "follows_up": "NWS-P030-02"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0204",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0310",
+            "EVT-0401",
+            "EVT-0410"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Said vessels waited at the anchorage continuously since a closure three days before landfall; ships put to sea for the storm and returned after it (PUB-108/109).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-037",
+      "severity": "high",
+      "story_id": "NWS-P038-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P038-01",
+        "day": 38,
+        "time_local": "07:00",
+        "outlet_id": "OUT-04",
+        "section": "Security",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Fishing vessel's identity broadcast off Port Aransas while it reported a position 600 nm away",
+        "dek": "Public AIS data show FV Pelican Ridge's identity transmitting off Port Aransas on the night of Oct. 14-15 while the vessel reported a position about 600 nautical miles away. An analyst calls it consistent with identity spoofing.",
+        "body": [
+          "Public Automatic Identification System data show the identity of the fishing vessel FV Pelican Ridge broadcasting off Port Aransas on the night of Oct. 14-15, while the same vessel reported a position about 600 nautical miles away, according to an analysis by independent maritime security analyst Ian McCready.",
+          "McCready, a former Coast Guard watchstander who reviews public AIS feeds for anomalies, said both tracks cannot belong to one hull. \"A vessel can't be in two places 600 nautical miles apart at the same time,\" he said. \"When one identity shows up in both, the pattern is consistent with identity spoofing. Something off Port Aransas was transmitting an identity that wasn't its own.\"",
+          "AIS transponders broadcast a vessel's identity, position, course and speed over VHF radio. Shore stations and satellites collect the messages, and traffic services, port operators and other ships use them to build a picture of who is where. The system reports what the transmitter tells it. \"AIS is a self-report,\" McCready said. \"It's very good at telling you what a ship says about itself. On its own, it can't tell you whether that's true.\"",
+          "McCready cautioned against conclusions beyond the data. \"I can tell you the tracks are inconsistent and that the inconsistency fits spoofing,\" he said. \"I can't tell you what vessel was transmitting or why. I'd want radar or imagery before I said anything more.\"",
+          "Gulfwater has not independently identified the vessel that was transmitting.",
+          "Context: The anchorage off Port Aransas, where tankers routinely wait for berths, has held a queue since ships that put to sea for Hurricane Rafael returned three days after its Sept. 14 landfall; 14 vessels were waiting there when the port closed to inbound traffic two days before the storm. The channel partly reopened Oct. 14, with the inner channel still restricted for spill decontamination.",
+          "False identities degrade the traffic picture that mariners and port operators rely on for collision avoidance and vessel management, particularly in a crowded anchorage. Gulfwater will report any official response."
+        ],
+        "tags": {
+          "story_type": "analysis",
+          "arcs": [
+            "ARC-AIS-ANOMALY",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-062",
+            "PUB-002",
+            "PUB-107",
+            "PUB-109",
+            "PUB-058",
+            "PUB-023"
+          ],
+          "characters_quoted": [
+            "CHR-062"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "ANC-OFF",
+            "PORT-07"
+          ],
+          "topics": [
+            "ais",
+            "identity spoofing",
+            "pelican ridge",
+            "vessel tracking",
+            "anchorage",
+            "maritime security"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0104",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0301",
+            "EVT-0401",
+            "EVT-0402",
+            "EVT-0410"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Anchorage did not hold a queue through the storm; ships put to sea and returned three days after landfall (PUB-109). Inbound closure with 14 vessels was two days before landfall (PUB-107).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-038",
+      "severity": "high",
+      "story_id": "NWS-P038-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P038-02",
+        "day": 38,
+        "time_local": "16:00",
+        "outlet_id": "OUT-01",
+        "section": "Business",
+        "byline": [
+          "CHR-002"
+        ],
+        "headline": "A boat in two places: what an analyst found in ship-tracking data off Port Aransas",
+        "dek": "The identity of a fishing vessel showed up off Port Aransas while the boat itself reported a position some 600 nautical miles away. Here's what that means, and what it doesn't.",
+        "body": [
+          "On the night of Oct. 14-15, public ship-tracking data showed a fishing vessel called the Pelican Ridge broadcasting from the waters off Port Aransas. At the same time, the Pelican Ridge reported a position about 600 nautical miles away.",
+          "Both can't be true. Independent maritime security analyst Ian McCready, whose finding was first reported earlier Friday by Henrik Aalto of the Gulfwater Maritime Report, says the pattern is consistent with identity spoofing: a transmitter off Port Aransas using an identity that belonged to a different vessel.",
+          "What is the tracking system? It's called AIS, the Automatic Identification System. Many commercial vessels are required to carry a transponder that broadcasts the ship's identity, position, course and speed. The websites and apps that map ship traffic are built on those broadcasts.",
+          "How can it be spoofed? \"The network trusts the radio,\" McCready said. \"It shows what a transmitter reports. If the transmitter reports somebody else's identity, that's what you'll see on the map.\" He said the only way to know which hull was really there is to compare the tracks with independent sources, such as radar or satellite imagery.",
+          "Why does it matter here? The anchorage off Port Aransas is where tankers routinely wait for berths, and it has been busy since ships came back from sea after Hurricane Rafael; 14 vessels were already waiting offshore when the port closed to inbound traffic before the storm. The channel partly reopened Oct. 14. Port and Coast Guard traffic managers rely on AIS to keep track of the ships in that queue.",
+          "What doesn't it tell us? Who, or why. \"People want a story,\" McCready said. \"The data only gives you the anomaly. Anything past that is a guess, and I don't guess in public.\"",
+          "No agency has commented publicly on the finding. The Ledger will report any official response."
+        ],
+        "tags": {
+          "story_type": "explainer",
+          "arcs": [
+            "ARC-AIS-ANOMALY",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-062",
+            "PUB-002",
+            "PUB-107",
+            "PUB-109",
+            "PUB-058"
+          ],
+          "characters_quoted": [
+            "CHR-062"
+          ],
+          "characters_mentioned": [
+            "CHR-010"
+          ],
+          "places": [
+            "ANC-OFF",
+            "PORT-07"
+          ],
+          "topics": [
+            "ais",
+            "ship tracking",
+            "identity spoofing",
+            "pelican ridge",
+            "anchorage",
+            "explainer"
+          ],
+          "follows_up": "NWS-P038-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0104",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0401",
+            "EVT-0402",
+            "EVT-0410"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Anchorage was empty during the storm (ships at sea) and busy again after ships returned (PUB-109). Closure was not three days before landfall.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-039",
+      "severity": "high",
+      "story_id": "NWS-P044-03",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P044-03",
+        "day": 44,
+        "time_local": "09:40",
+        "outlet_id": "OUT-04",
+        "section": "Ports",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Corpus Christi Ship Channel closed after explosion beside tug at entrance jetties",
+        "dek": "Coast Guard closes the channel to all traffic. Tug Corrin Bay damaged, two crew injured, cause unknown. Unified Command lifts inner-channel spill restrictions the same day.",
+        "body": [
+          "The Coast Guard closed the Corpus Christi Ship Channel to all vessel traffic early Thursday after an explosion beside the harbor tug Corrin Bay near the Port Aransas jetties at about 0100 local time. The tug was damaged and two crew members were injured. The cause is unknown.",
+          "Status as of Thursday morning, per Coast Guard Sector Corpus Christi and the Unified Command:",
+          "Channel: Closed to all vessel traffic until further notice.",
+          "Inner channel: Spill decontamination restrictions lifted Thursday as the Unified Command moved cleanup to a monitoring phase. The change has no practical effect while the channel is closed.",
+          "Anchorage: Vessels holding offshore east of Port Aransas. Reopening: No estimate.",
+          "\"The channel will remain closed until the Coast Guard determines it is safe for navigation,\" said Lt. Cmdr. Elena Ruiz, a sector public affairs officer. \"Updates will be issued through broadcast notices to mariners. We will not speculate on the cause.\"",
+          "The closure ends a two-week partial reopening. The channel closed to inbound traffic two days before Hurricane Rafael's Sept. 14 landfall, with 14 vessels holding offshore, closed to all traffic the next day and partly reopened Oct. 14, with the inner channel restricted for decontamination after an estimated 9,000 barrels of crude were released from two tankers moored at the Rendal Terminals berth.",
+          "Before the blast, the inner-channel restriction and the anchorage backlog had been the main constraints on traffic since Oct. 14; the backlog held the relief cargo ship MV Gulf Provider offshore until Oct. 17.",
+          "Gulfwater has not confirmed what the tug was doing at the time of the explosion, and the Coast Guard has not described the extent of the damage.",
+          "About half of U.S. crude exports load at this port. An extended closure would hold tankers at inner berths and at the anchorage. Gulfwater will report changes to channel status as notices are issued."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-CHANNEL-BLAST",
+            "ARC-PORT",
+            "ARC-SPILL"
+          ],
+          "public_facts": [
+            "PUB-067",
+            "PUB-066",
+            "PUB-058",
+            "PUB-059",
+            "PUB-029",
+            "PUB-107",
+            "PUB-108",
+            "PUB-014",
+            "PUB-023"
+          ],
+          "characters_quoted": [
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "ENT-01",
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01",
+            "FAC-USCG-01"
+          ],
+          "topics": [
+            "channel closure",
+            "port conditions",
+            "tug",
+            "corrin bay",
+            "explosion",
+            "decontamination lifted",
+            "anchorage"
+          ],
+          "follows_up": "NWS-P030-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0301",
+            "EVT-0315",
+            "EVT-0401",
+            "EVT-0410",
+            "EVT-0412",
+            "EVT-0413"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Closure dated three days before landfall; corrected to inbound two days before (PUB-107) and all traffic the next day (PUB-108).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-040",
+      "severity": "high",
+      "story_id": "NWS-P044-04",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P044-04",
+        "day": 44,
+        "time_local": "11:15",
+        "outlet_id": "OUT-05",
+        "section": "Crude",
+        "byline": [
+          "CHR-011"
+        ],
+        "headline": "Corpus Christi crude exports stall again as Coast Guard shuts channel after blast",
+        "dek": "Tanker traffic at the top U.S. crude export port stopped two weeks after a partial reopening. Analysts say duration is the key unknown.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Tanker traffic at the Port of Corpus Christi stopped again Thursday after the Coast Guard closed the ship channel following an overnight explosion beside a harbor tug near the Port Aransas jetties.",
+          "The closure comes two weeks after the channel partly reopened from Hurricane Rafael, which shut the port for a month. Exports first halted when the port closed to inbound ships two days before the Sept. 14 landfall. Before the storm, the port was loading crude tankers at a near-record pace, and it handles about half of U.S. crude exports.",
+          "\"Two weeks ago, the question was how fast the inner channel could clear decontamination. Today the question is whether anything moves at all,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"Duration is everything. A closure of days is a scheduling problem. A closure of weeks is a supply problem for buyers who were already short.\"",
+          "The Coast Guard said the tug, the Corrin Bay, was damaged and two crew members were injured. Officials said the cause is unknown and gave no estimate for reopening.",
+          "In a twist of timing, the Unified Command overseeing the Inner Harbor spill said Thursday that cleanup was moving to monitoring and lifted the inner-channel restrictions that had constrained traffic since the partial reopening. \"That would have been the good-news headline,\" Holloway said. \"Instead, it's a footnote.\"",
+          "Holloway said market participants will be watching Coast Guard notices closely in the coming days. \"Nobody's pricing a reopening until the Coast Guard says what happened,\" she said. \"Until then, every cargo scheduled out of Corpus Christi is a question mark.\""
+        ],
+        "tags": {
+          "story_type": "breaking",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-CHANNEL-BLAST"
+          ],
+          "public_facts": [
+            "PUB-067",
+            "PUB-066",
+            "PUB-058",
+            "PUB-014",
+            "PUB-107",
+            "PUB-002"
+          ],
+          "characters_quoted": [
+            "CHR-064"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ENT-01"
+          ],
+          "topics": [
+            "crude exports",
+            "channel closure",
+            "tanker traffic",
+            "explosion",
+            "energy markets"
+          ],
+          "follows_up": "NWS-P030-03"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0104",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0401",
+            "EVT-0410",
+            "EVT-0412",
+            "EVT-0413"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Exports first halted at the inbound closure two days before landfall (PUB-107), not three.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-041",
+      "severity": "medium",
+      "story_id": "NWS-P044-05",
+      "field": "body",
+      "old": "that movement was postponed when the channel closed ahead of the hurricane.",
+      "new": "that movement was postponed as the hurricane approached.",
+      "reason": "Brigade movement was postponed under Port Condition X-Ray on Sept. 11 (PUB-020), before the channel closed.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-042",
+      "severity": "medium",
+      "story_id": "NWS-P045-02",
+      "field": "body",
+      "old": "That movement was postponed when the channel closed ahead of Hurricane Rafael.",
+      "new": "That movement was postponed in September as Hurricane Rafael approached.",
+      "reason": "Brigade postponement (PUB-020, day -3) preceded the closure.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-043",
+      "severity": "medium",
+      "story_id": "NWS-P045-03",
+      "field": "body",
+      "old": "That movement was postponed when the Coast Guard closed the channel ahead of Hurricane Rafael.",
+      "new": "That movement was postponed in September, when the Coast Guard put the port on storm footing ahead of Hurricane Rafael.",
+      "reason": "Brigade postponement came with Port Condition X-Ray (PUB-020), before the closure.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-044",
+      "severity": "low",
+      "story_id": "NWS-P045-03",
+      "field": "body",
+      "old": "that port is Corpus Christi, and the ship channel has now stopped the move twice.",
+      "new": "that port is Corpus Christi, and the move has now been stopped twice.",
+      "reason": "The first stop came from the storm (Port Condition X-Ray), not a channel closure; keeps the paragraph consistent with the corrected postponement sentence.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-045",
+      "severity": "high",
+      "story_id": "NWS-P046-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P046-02",
+        "day": 46,
+        "time_local": "10:30",
+        "outlet_id": "OUT-04",
+        "section": "Security",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Navy EOD and mine countermeasures teams join Coast Guard search of Corpus Christi channel",
+        "dek": "Navy confirms an explosive device caused Thursday's blast beside tug Corrin Bay. Channel remains closed to all traffic; crude exports halted; no reopening estimate.",
+        "body": [
+          "Navy explosive ordnance disposal and mine countermeasures teams are searching the Corpus Christi Ship Channel with the Coast Guard after the Navy confirmed Saturday that an explosive device caused Thursday's blast beside the harbor tug Corrin Bay near the Port Aransas jetties.",
+          "Status as of Saturday:",
+          "Channel: Closed to all vessel traffic. Search: Navy EOD and mine countermeasures teams with the Coast Guard; no timeline given.",
+          "Exports: Crude exports halted again. Investigation: FBI investigating. Reopening: No estimate.",
+          "\"Our teams will search methodically,\" said Cmdr. Lisa Moreau, a public affairs officer for Navy Region Southeast. \"That takes the time it takes. We will not discuss the device.\"",
+          "Lt. Cmdr. Elena Ruiz of Coast Guard Sector Corpus Christi said mariners should follow broadcast notices. \"Vessels at the anchorage should remain clear of the entrance channel and monitor notices for changes,\" she said.",
+          "The Unified Command lifted inner-channel spill decontamination restrictions Thursday, the same day as the blast, but the closure has kept all traffic stopped. The channel had partly reopened Oct. 14 after closing for Hurricane Rafael. A Fort Hood aviation brigade's port movement, postponed by the hurricane, has been delayed again.",
+          "Background: The port closed to inbound traffic two days before Hurricane Rafael's Sept. 14 landfall, with 14 vessels holding offshore; the channel closed to all traffic the next day. The partial reopening on Oct. 14 restored traffic after a month, and the relief cargo ship MV Gulf Provider berthed Oct. 17 after weeks in the anchorage backlog. The port accounts for about half of U.S. crude exports.",
+          "Two crew members were hurt and the tug damaged. Officials have not said who placed the device or how long it had been in the channel. Gulfwater will report search results and channel status as they are released."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-CHANNEL-BLAST",
+            "ARC-PORT"
+          ],
+          "public_facts": [
+            "PUB-070",
+            "PUB-067",
+            "PUB-066",
+            "PUB-073",
+            "PUB-068",
+            "PUB-058",
+            "PUB-020",
+            "PUB-107",
+            "PUB-108",
+            "PUB-059",
+            "PUB-014"
+          ],
+          "characters_quoted": [
+            "CHR-032",
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "ENT-01",
+            "PORT-07",
+            "ANC-OFF"
+          ],
+          "topics": [
+            "navy eod",
+            "mine countermeasures",
+            "channel search",
+            "port conditions",
+            "explosive device",
+            "crude exports"
+          ],
+          "follows_up": "NWS-P044-03"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0401",
+            "EVT-0410",
+            "EVT-0412",
+            "EVT-0413",
+            "EVT-0414"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "Closure dated three days before landfall; corrected to inbound two days before and all traffic the day before (PUB-107/108). PUB-020 kept for the brigade postponement.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-046",
+      "severity": "high",
+      "story_id": "NWS-P046-03",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P046-03",
+        "day": 46,
+        "time_local": "12:15",
+        "outlet_id": "OUT-05",
+        "section": "Crude",
+        "byline": [
+          "CHR-011"
+        ],
+        "headline": "Corpus Christi crude exports halted again; traders brace for a long closure",
+        "dek": "The Navy's confirmation of an explosive device and an active channel search leave the timeline open. Traders are watching for a prolonged closure.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Crude exports from the Port of Corpus Christi are halted again after the Navy said Saturday that an explosive device caused Thursday's blast beside a harbor tug near the Port Aransas jetties. Navy teams are searching the ship channel with the Coast Guard.",
+          "It is the second halt in two months at the port, which handles about half of U.S. crude exports. The first began when the Coast Guard closed the port to inbound ships two days before Hurricane Rafael's Sept. 14 landfall; the channel partly reopened Oct. 14.",
+          "\"Once you hear 'explosive device' and 'search,' you stop modeling days,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"A search has to finish before anyone signs off on the channel, and nobody is going to rush that. I'd tell buyers to plan around weeks.\"",
+          "Traders are watching for a prolonged closure. Neither the Coast Guard nor the Navy has given a timeline for reopening, and the FBI is investigating the blast.",
+          "Holloway said the timing compounds the storm's disruption, with cargoes that had only begun moving again after Rafael back on hold. \"Corpus Christi had a month to recover from one shock,\" she said. \"It got two weeks.\"",
+          "Before Rafael, the port had been loading crude tankers at a near-record pace, with exports reaching a monthly high two weeks before the storm. \"Whatever ground the partial reopening won back is gone for now,\" Holloway said.",
+          "Sabal Energy Wire will track Coast Guard and Navy statements for any change in the channel's status."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-CHANNEL-BLAST"
+          ],
+          "public_facts": [
+            "PUB-073",
+            "PUB-070",
+            "PUB-067",
+            "PUB-014",
+            "PUB-107",
+            "PUB-058",
+            "PUB-002"
+          ],
+          "characters_quoted": [
+            "CHR-064"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ENT-01"
+          ],
+          "topics": [
+            "crude exports",
+            "export halt",
+            "channel search",
+            "energy markets",
+            "explosive device"
+          ],
+          "follows_up": "NWS-P044-04"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0104",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0401",
+            "EVT-0410",
+            "EVT-0412",
+            "EVT-0413",
+            "EVT-0414"
+          ],
+          "batch": "E",
+          "status": "draft"
+        }
+      },
+      "reason": "First halt began at the inbound closure two days before landfall (PUB-107), not three.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-047",
+      "severity": "medium",
+      "story_id": "NWS-P048-02",
+      "field": "body",
+      "old": "The brigade's movement was first postponed when the channel closed ahead of Hurricane Rafael in September.",
+      "new": "The brigade's movement was first postponed in September, days before Hurricane Rafael's landfall.",
+      "reason": "Brigade postponement (PUB-020, Sept. 11) preceded the channel closure.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-048",
+      "severity": "medium",
+      "story_id": "NWS-P049-02",
+      "field": "body",
+      "old": "The movement was postponed when the Coast Guard closed the channel ahead of Hurricane Rafael in September,",
+      "new": "The movement was postponed in September as Hurricane Rafael closed in,",
+      "reason": "Brigade postponement (PUB-020) preceded the channel closure.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-049",
+      "severity": "high",
+      "story_id": "NWS-P058-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P058-02",
+        "day": 58,
+        "time_local": "11:30",
+        "outlet_id": "OUT-01",
+        "section": "Business",
+        "byline": [
+          "CHR-002"
+        ],
+        "headline": "Channel reopens after 14 days; port says exports are moving again",
+        "dek": "The Port of Corpus Christi began working through a backlog of waiting ships Thursday. A relief freight forwarder says this is the first good morning he's had since October.",
+        "body": [
+          "Two weeks to the day after an explosion near the Port Aransas jetties shut the Corpus Christi Ship Channel, ships were moving again Thursday.",
+          "The Coast Guard reopened the channel after a 14-day closure and a full sweep by Navy teams, and crude exports resumed. Navy teams had found and rendered safe a second explosive device near the entrance last Friday.",
+          "\"This is a good day for the Port of Corpus Christi and for everyone who depends on it,\" said Javier Salinas, a spokesperson for the port. \"The channel is open from the jetties to the Inner Harbor. Our terminals are working, and we will be at it around the clock until every ship that waited for us is served.\"",
+          "Salinas would not estimate how long it would take to clear the backlog of vessels that held offshore during the closure. \"We'll go as fast as safety allows,\" he said. \"Faster than that, we don't go.\"",
+          "The closure halted crude loadings at a port that handles about half of US crude exports. It was the second shutdown this fall; the channel was also closed from the day before Hurricane Rafael's landfall in September until a partial reopening in mid-October.",
+          "For Terry Akins, regional manager of Gulf Relief Logistics, Thursday was a relief in more ways than one. His company's 40 relief containers aboard MV Gulf Provider berthed about a month late after the storm. This time he had customers' cargo waiting again.",
+          "\"First good morning I've had since October,\" Akins said. \"I called three customers before 8 o'clock and told them the word I've been waiting to say, which is 'moving.' I didn't say when it lands. I've learned.\"",
+          "The reopening also clears the way for a Fort Hood aviation brigade whose movement of helicopters and equipment through the port for an overseas rotation was delayed twice, by the hurricane and by the blast. Fort Hood had not announced a new date as of Thursday morning.",
+          "The FBI continues to investigate the Oct. 28 explosion, which injured two crew members on the harbor tug Corrin Bay."
+        ],
+        "tags": {
+          "story_type": "update",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-CHANNEL-BLAST"
+          ],
+          "public_facts": [
+            "PUB-079",
+            "PUB-073",
+            "PUB-014",
+            "PUB-078",
+            "PUB-059",
+            "PUB-068",
+            "PUB-070",
+            "PUB-067",
+            "PUB-058",
+            "PUB-108"
+          ],
+          "characters_quoted": [
+            "CHR-023",
+            "CHR-074"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ENT-01",
+            "ANC-OFF"
+          ],
+          "topics": [
+            "channel reopens",
+            "port of corpus christi",
+            "backlog",
+            "relief freight",
+            "crude exports"
+          ],
+          "follows_up": "NWS-P058-01"
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0414",
+            "EVT-0401",
+            "EVT-0413",
+            "EVT-0412",
+            "EVT-0410"
+          ],
+          "batch": "F",
+          "status": "draft"
+        }
+      },
+      "reason": "Hurricane closure dated three days before landfall; the channel closed to all traffic the day before (PUB-108).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-050",
+      "severity": "medium",
+      "story_id": "NWS-P059-01",
+      "field": "body",
+      "old": "The Coast Guard closed the ship channel ahead of Hurricane Rafael in September, postponing the move.",
+      "new": "Hurricane Rafael forced a first postponement in September, and the ship channel then stayed shut for weeks after the storm.",
+      "reason": "The closure did not cause the postponement; the brigade was postponed under X-Ray (PUB-020) before the channel closed.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-051",
+      "severity": "high",
+      "story_id": "NWS-P073-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P073-01",
+        "day": 73,
+        "time_local": "08:30",
+        "outlet_id": "OUT-01",
+        "section": "Business",
+        "byline": [
+          "CHR-002"
+        ],
+        "headline": "On Black Friday, a gutted Port Aransas bait shop sells from coolers and waits for winter",
+        "dek": "Ten weeks after Rafael's landfall, Coastal Bend small businesses head into the holiday season with damaged storefronts, closed bays and customers stretched thin.",
+        "body": [
+          "Bill Hargrove's Black Friday sale is written in grease pencil on a sheet of plywood: \"LIVE SHRIMP. CHEAP ADVICE. NO REFUNDS ON EITHER.\"",
+          "Hargrove, 64, has sold bait and tackle near the Port Aransas jetties for years. Hurricane Rafael's surge gutted his shop when the storm made landfall on Mustang Island on Sept. 14. Ten weeks later, he is selling out of coolers on the porch while a carpenter works inside.",
+          "\"Black Friday on the island used to mean the Winter Texans rolling in and buying a rod they didn't need,\" Hargrove said. \"This year it's me, two coolers and whoever's brave enough to drive out.\"",
+          "Rafael hit at the end of a strong summer. Port Aransas businesses reported busy bait shops and charters in August. Then the storm pushed about 11 feet of surge into Corpus Christi and Nueces bays and flooded about 43 square miles across the three coastal counties.",
+          "For businesses that depend on the water, the fall brought one closure after another. The ship channel closed Sept. 13 ahead of the storm and only partly reopened Oct. 14. An explosion near the Port Aransas jetties on Oct. 28 closed it again for 14 days, until Nov. 11. And because of the oil spill, fishing and shellfish harvesting in Nueces and Corpus Christi bays have stayed closed since Sept. 18.",
+          "The reopened channel matters for the port, where crude exports resumed in mid-November. For a bait shop, Hargrove said, it matters less than people think.",
+          "\"Big ships don't buy bait,\" he said. \"Fishermen buy bait. And the bays are closed.\"",
+          "Back in Corpus Christi, shoppers lined up before dawn outside big-box stores on South Padre Island Drive. Plenty of carts held more plywood, box fans and extension cords than televisions.",
+          "Hargrove said he hopes to have the shop's walls closed in by Christmas, depending on the drywall crew.",
+          "\"They're on island time, too,\" he said. \"I can't complain. I invented island time.\""
+        ],
+        "tags": {
+          "story_type": "feature",
+          "arcs": [
+            "ARC-COMMUNITY",
+            "ARC-RECOVERY"
+          ],
+          "public_facts": [
+            "PUB-010",
+            "PUB-023",
+            "PUB-028",
+            "PUB-108",
+            "PUB-058",
+            "PUB-067",
+            "PUB-079",
+            "PUB-040"
+          ],
+          "characters_quoted": [
+            "CHR-042"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "LF-01",
+            "PLC-001",
+            "PORT-07"
+          ],
+          "topics": [
+            "black friday",
+            "small business",
+            "port aransas",
+            "bait shop",
+            "winter texans",
+            "holiday shopping"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0301",
+            "EVT-0305",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0401",
+            "EVT-0410",
+            "EVT-0413",
+            "EVT-0412",
+            "EVT-0414",
+            "EVT-0317"
+          ],
+          "batch": "G",
+          "status": "draft"
+        }
+      },
+      "reason": "Channel closed Sept. 13 (PUB-108), not Sept. 11.",
+      "status": "applied"
+    },
+    {
+      "id": "W4-052",
+      "severity": "high",
+      "story_id": "NWS-P077-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P077-02",
+        "day": 77,
+        "time_local": "10:00",
+        "outlet_id": "OUT-04",
+        "section": "Ports",
+        "byline": [
+          "CHR-010"
+        ],
+        "headline": "Season-end log: Corpus Christi channel lost weeks to Rafael, spill restrictions and the jetty blast",
+        "dek": "The ship channel closed Sept. 13, partly reopened Oct. 14 and closed again for 14 days after the Oct. 28 explosion at the entrance. It has been open since Nov. 11.",
+        "body": [
+          "The Atlantic hurricane season ends today with the Corpus Christi Ship Channel open, after a fall in which the port lost weeks of normal operations to Hurricane Rafael, an Inner Harbor oil spill and an explosion at the entrance channel.",
+          "Sept. 11: Coast Guard sets Port Condition X-Ray ahead of Rafael. The port stays open; terminals wind down crude loading.",
+          "Sept. 12: Port Condition Yankee closes the port to inbound traffic. Fourteen vessels hold at the offshore anchorage. Crude exports halt.",
+          "Sept. 13: Port Condition Zulu closes the channel to all traffic; anchorage ships put to sea. Two laden tankers remain moored at an Inner Harbor terminal with Coast Guard approval.",
+          "Sept. 14 to 15: Rafael makes landfall near Port Aransas. Unified Command estimates about 9,000 barrels of crude released from MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth.",
+          "Sept. 17: Ships return from sea to the anchorage. The channel stays closed for surveys.",
+          "Oct. 14: Channel partly reopens. Inner channel stays restricted for spill decontamination. Anchorage backlog delays relief cargo; MV Gulf Provider berths Oct. 17 with 40 relief containers, about a month late.",
+          "Oct. 28: Around 1 a.m., an explosion beside the harbor tug Corrin Bay near the Port Aransas jetties damages the tug and injures two crew. Coast Guard closes the channel. Separately, spill-related inner channel restrictions are lifted as cleanup moves to monitoring.",
+          "Oct. 30: Navy says an explosive device caused the blast; a joint Navy-Coast Guard search of the channel is under way.",
+          "Nov. 5: Navy teams find a second device near the entrance channel and render it safe.",
+          "Nov. 11: Channel reopens after a 14-day closure and full sweep. Exports resume. The next day, a Fort Hood aviation brigade's equipment begins loading onto a sealift ship.",
+          "\"The channel is open, and we intend to keep it that way,\" said Javier Salinas, spokesperson for the Port of Corpus Christi. \"The people who work this port had a hard fall. They've earned a quiet winter.\"",
+          "Open items: Investigators are examining possible unauthorized remote access to the two tankers' cargo-control systems; the maintenance vendor Brightwake Marine Systems has said its remote credentials were misused. The FBI is investigating the blast.",
+          "Lt. Cmdr. Elena Ruiz, a spokesperson for Coast Guard Sector Corpus Christi, said the service does not comment on open investigations. \"Our focus is safe navigation, and the channel is open,\" she said."
+        ],
+        "tags": {
+          "story_type": "analysis",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-CHANNEL-BLAST",
+            "ARC-SPILL-CYBER"
+          ],
+          "public_facts": [
+            "PUB-020",
+            "PUB-107",
+            "PUB-108",
+            "PUB-109",
+            "PUB-023",
+            "PUB-029",
+            "PUB-058",
+            "PUB-059",
+            "PUB-066",
+            "PUB-067",
+            "PUB-070",
+            "PUB-078",
+            "PUB-079",
+            "PUB-080",
+            "PUB-042",
+            "PUB-047"
+          ],
+          "characters_quoted": [
+            "CHR-023",
+            "CHR-020"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "TERM-01",
+            "ENT-01"
+          ],
+          "topics": [
+            "ship channel",
+            "port closures",
+            "season review",
+            "anchorage",
+            "jetty blast",
+            "timeline"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0301",
+            "EVT-0315",
+            "EVT-0401",
+            "EVT-0410",
+            "EVT-0413",
+            "EVT-0412",
+            "EVT-0414",
+            "EVT-0409",
+            "EVT-0316"
+          ],
+          "batch": "G",
+          "status": "draft"
+        }
+      },
+      "reason": "Season log listed a Sept. 11 closure with 14 vessels and the tankers' approval; split into X-Ray Sept. 11 (PUB-020), Yankee Sept. 12 (PUB-107), Zulu Sept. 13 (PUB-108) and ships back at the anchorage Sept. 17 (PUB-109).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-053",
+      "severity": "high",
+      "story_id": "NWS-P086-01",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P086-01",
+        "day": 86,
+        "time_local": "07:30",
+        "outlet_id": "OUT-05",
+        "section": "Crude",
+        "byline": [
+          "CHR-011"
+        ],
+        "headline": "Corpus Christi crude heads into year-end after two fall shutdowns",
+        "dek": "Exports from the largest U.S. crude gateway resumed when the ship channel reopened Nov. 11. The bigger question for next year is confidence, not capacity, an analyst says.",
+        "body": [
+          "CORPUS CHRISTI, Texas (Sabal Energy Wire) — Crude exports from Corpus Christi head into the final weeks of the year with the ship channel open, after a fall in which shipments halted twice: first when the Coast Guard closed the port to inbound traffic Sept. 12 ahead of Hurricane Rafael, and again after an Oct. 28 explosion at the Port Aransas jetties shut it for 14 days.",
+          "The port handles an outsized share of U.S. crude exports, about half by analysts' estimates. Before the storm it was loading tankers at near-record pace, and exports hit a monthly high at the end of August.",
+          "\"Two closures in one quarter, from two completely different causes. That's what buyers will remember,\" said Grace Holloway, an energy market analyst at Lanternfish Energy Analytics. \"Exports resumed when the channel reopened. The question now is confidence, not capacity.\"",
+          "The first shutdown outlasted the storm. The channel partly reopened Oct. 14, but spill decontamination kept the inner channel restricted until Oct. 28, and an anchorage backlog delayed cargoes; 14 vessels had queued offshore when the channel first closed. The second halt came Oct. 28, the same day the inner-channel restrictions were lifted, when a blast beside a harbor tug closed the channel again. Navy teams found and rendered safe a second device Nov. 5, and the channel reopened Nov. 11 after a full sweep.",
+          "\"The channel is open, and we're moving barrels,\" said Javier Salinas, a spokesperson for the Port of Corpus Christi.",
+          "Holloway said the open investigation keeps some uncertainty in the market. The FBI is investigating the blast, and officials have not said who was responsible.",
+          "\"Markets can price a hurricane. There's a century of data on hurricanes,\" she said. \"An open question is harder to price.\""
+        ],
+        "tags": {
+          "story_type": "analysis",
+          "arcs": [
+            "ARC-PORT",
+            "ARC-CHANNEL-BLAST"
+          ],
+          "public_facts": [
+            "PUB-002",
+            "PUB-014",
+            "PUB-107",
+            "PUB-058",
+            "PUB-066",
+            "PUB-067",
+            "PUB-070",
+            "PUB-073",
+            "PUB-078",
+            "PUB-079"
+          ],
+          "characters_quoted": [
+            "CHR-064",
+            "CHR-023"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "ENT-01"
+          ],
+          "topics": [
+            "crude exports",
+            "year-end",
+            "market confidence",
+            "ship channel",
+            "closures"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0104",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0401",
+            "EVT-0410",
+            "EVT-0413",
+            "EVT-0412",
+            "EVT-0414"
+          ],
+          "batch": "G",
+          "status": "draft"
+        }
+      },
+      "reason": "First halt dated Sept. 11; exports halted at the inbound closure Sept. 12 (PUB-107).",
+      "status": "applied"
+    },
+    {
+      "id": "W4-054",
+      "severity": "medium",
+      "story_id": "NWS-P099-02",
+      "field": "story",
+      "replacement": {
+        "story_id": "NWS-P099-02",
+        "day": 99,
+        "time_local": "14:00",
+        "outlet_id": "OUT-01",
+        "section": "Business",
+        "byline": [
+          "CHR-002"
+        ],
+        "headline": "Relief forwarder's lesson from Rafael: the cargo was ready, the channel wasn't",
+        "dek": "Gulf Relief Logistics booked 40 relief containers before the storm. They landed about a month late. Its regional manager says next season's plan starts at the anchorage.",
+        "body": [
+          "Terry Akins keeps a printout of the MV Gulf Provider's last position taped to the wall of his office near the port. He doesn't need it anymore. He keeps it anyway.",
+          "Akins, regional manager for Gulf Relief Logistics, booked 40 relief containers on the cargo ship five days before Hurricane Rafael made landfall. In August, relief agencies had stocked warehouses ahead of peak season, and forwarders like his had signed standby relief contracts. On paper, the Coastal Bend was ready.",
+          "Then the Coast Guard closed the port to inbound ships ahead of the storm, with 14 vessels waiting at the offshore anchorage. When the channel partly reopened Oct. 14, the anchorage backlog delayed relief cargo, including Gulf Provider. The ship finally berthed and unloaded its 40 containers Oct. 17, about a month late.",
+          "\"We had the boxes stuffed, the bookings confirmed, the drayage lined up on the other end. Everything we control, we controlled,\" Akins said. \"What you don't control is the queue at the sea buoy. Fourteen ships ahead of you and a channel that's half open, you're just a line on somebody's lineup.\"",
+          "Relief also came by air. Beginning Oct. 18, 26 military C-17 flights and 14 civilian charters landed at NAS Corpus Christi over ten days.",
+          "Akins said the holiday lull is when forwarders rewrite their hurricane playbooks, and his rewrite starts with the lesson that a ready cargo is only as fast as the channel.",
+          "\"Next season I want a plan B that doesn't depend on one channel. Some of it pre-positioned inland before the cone even points at us, some of it ready to move by truck,\" he said. \"Ships are cheap per box. They get real expensive when they're sitting at anchor.\"",
+          "He said he would also push for relief cargo to get clearer priority in any post-storm reopening, though he acknowledged that decision belongs to others. \"I'm not the Coast Guard. I just know what a month late looks like to a family waiting on water,\" he said.",
+          "\"June comes fast,\" Akins said. \"It always does.\""
+        ],
+        "tags": {
+          "story_type": "feature",
+          "arcs": [
+            "ARC-AID",
+            "ARC-PORT",
+            "ARC-RECOVERY"
+          ],
+          "public_facts": [
+            "PUB-011",
+            "PUB-018",
+            "PUB-107",
+            "PUB-058",
+            "PUB-059",
+            "PUB-060"
+          ],
+          "characters_quoted": [
+            "CHR-074"
+          ],
+          "characters_mentioned": [],
+          "places": [
+            "PORT-07",
+            "ANC-OFF",
+            "FAC-DOD-01"
+          ],
+          "topics": [
+            "relief cargo",
+            "gulf relief logistics",
+            "mv gulf provider",
+            "anchorage backlog",
+            "hurricane planning"
+          ],
+          "follows_up": null
+        },
+        "internal": {
+          "truth_events": [
+            "EVT-0204",
+            "EVT-0207",
+            "EVT-0210",
+            "EVT-0401",
+            "EVT-0405",
+            "EVT-0410"
+          ],
+          "batch": "H",
+          "status": "draft"
+        }
+      },
+      "reason": "The 14 vessels waited at the anchorage when the port closed to inbound ships (PUB-107); PUB-020 was cited only for that closure.",
+      "status": "applied"
+    }
+  ]
+}

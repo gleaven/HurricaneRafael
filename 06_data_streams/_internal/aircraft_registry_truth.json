@@ -1,0 +1,173 @@
+{
+ "_about": "Internal. Scenario roles of aircraft and the map from every old identifier. Never give this file to participants.",
+ "truth": {
+  "ACF-USCG-001": {
+   "role": "CG-6033: pre-positioned at NAS Corpus Christi 19:15Z D-1; launches 06:22Z D0, first hoist 06:51Z at Flour Bluff; returns to routine tasking D+3.",
+   "events": [
+    "EVT-1701",
+    "EVT-1702",
+    "EVT-1703",
+    "EVT-1705"
+   ],
+   "threads": [
+    "T17"
+   ]
+  },
+  "ACF-USCG-002": {
+   "role": "CG-6041: pre-positioned with CG-6033; on standby from D+3.",
+   "events": [
+    "EVT-1701",
+    "EVT-1703",
+    "EVT-1705"
+   ],
+   "threads": [
+    "T17"
+   ]
+  },
+  "ACF-CBP-001": {
+   "role": "CAMCC-04: electronic support measures detect the drone data link during sortie 2 at 06:47Z on D-9 (bearing toward Ingleside Marina).",
+   "events": [
+    "EVT-1902",
+    "EVT-1906"
+   ],
+   "threads": [
+    "T19"
+   ]
+  },
+  "ACF-NOAA-001": {
+   "role": "NOAA42: synthetic aperture radar pass at 08:30Z D0, first image of the slick; the only manned non-rescue flight inside the TFR window.",
+   "events": [
+    "EVT-1102"
+   ],
+   "threads": [
+    "T11",
+    "T20"
+   ]
+  },
+  "ACF-TXNG-001..003": {
+   "role": "Three UH-60 reconnaissance sorties from Austin-Bergstrom at 16:00Z D+1; sortie S02 films GW-FAC-SUB-02.",
+   "events": [
+    "EVT-1103"
+   ],
+   "threads": [
+    "T11"
+   ]
+  },
+  "ACF-SURVEY-001": {
+   "role": "Coastal Bend Aerial Services Cessna 208B: thermal pass over the substation corridor at dawn on D+11.",
+   "events": [
+    "EVT-1106"
+   ],
+   "threads": [
+    "T11"
+   ]
+  },
+  "ACF-0201..0205": {
+   "role": "26 C-17 relief sorties into NAS Corpus Christi D+34 to D+43 (entity ACF-0201); GPS interference from JAM-01 lowers their NIC/NACp values D+38 to D+43.",
+   "events": [
+    "EVT-0405",
+    "EVT-0412"
+   ],
+   "threads": [
+    "T1",
+    "T7"
+   ]
+  },
+  "ACF-0301..0303": {
+   "role": "14 civil charter relief flights into NAS Corpus Christi D+34 to D+43 (entity ACF-0301).",
+   "events": [
+    "EVT-0405"
+   ]
+  },
+  "ACF-NAVY-001..018": {
+   "role": "Training aircraft fly to NAS JRB Fort Worth (NFW) on D-4 and begin returning D+6.",
+   "events": [
+    "EVT-0205"
+   ],
+   "public_from_day": -4
+  },
+  "ACF-NAVY-019": {
+   "role": "Mine countermeasures helicopter for the channel search D+46 to D+58 (added in the registry pass; canon says only 'mine countermeasures teams')."
+  },
+  "airspace": {
+   "rule": "TFR from 05:01Z D-2. No manned flight in the local area from then until after landfall except NOAA42 (08:30Z D0) and Coast Guard rescue helicopters from 06:22Z D0. Covert drones never appear in ADS-B."
+  }
+ },
+ "id_migration": {
+  "by_old_icao24": {
+   "ae0a01": "ACF-USCG-001",
+   "ae0a02": "ACF-USCG-002",
+   "ae0a03": "ACF-USCG-005",
+   "ae1b01": "ACF-TXNG-001",
+   "ae1b02": "ACF-TXNG-002",
+   "a4d001": "ACF-FEMA-001",
+   "ae0201": "ACF-0201",
+   "ae0202": "ACF-0202",
+   "ae0203": "ACF-0203",
+   "a00301": "ACF-0301",
+   "a00302": "ACF-0303",
+   "a3c001": "ACF-NEWS-001",
+   "a3c002": null,
+   "a66001": "ACF-NEWS-001",
+   "7c1234": null,
+   "ae2a01": null,
+   "ae2a02": "ACF-NAVY-013",
+   "ae3c01": "ACF-ARMY-002",
+   "ae3c02": null,
+   "ae4d01": "ACF-ARMY-001",
+   "a44001": "ACF-DPS-001",
+   "a44002": null,
+   "a55001": "ACF-MED-001",
+   "a55002": "ACF-MED-002",
+   "a77001": "ACF-SURVEY-002",
+   "a88001": null
+  },
+  "by_old_callsign": {
+   "CGNR6540": "ACF-USCG-001",
+   "CGNR6541": "ACF-USCG-002",
+   "CGAS2306": "ACF-USCG-005",
+   "GUNSMOKE01": "ACF-TXNG-001",
+   "GNSMOKE1": "ACF-TXNG-001",
+   "GUNSMOKE02": "ACF-TXNG-002",
+   "GNSMOKE2": "ACF-TXNG-002",
+   "FEMA01": "ACF-FEMA-001",
+   "SYN41": "ACF-0201",
+   "RCH441": "ACF-0202",
+   "RCH801": "ACF-0203",
+   "CLIPPER01": "ACF-0301",
+   "SKW7730": "ACF-0303",
+   "KIII1": "ACF-NEWS-001",
+   "KIII7": "ACF-NEWS-001",
+   "KRIS1": null,
+   "NAV851": null,
+   "NAV097": "ACF-NAVY-013",
+   "CCAD31": "ACF-ARMY-002",
+   "WARLORD01": null,
+   "RIDGELINE01": "ACF-ARMY-001",
+   "TXDPS44": "ACF-DPS-001",
+   "TXDPS302": null,
+   "LIFESTAR1": "ACF-MED-001",
+   "LIFESTAR2": "ACF-MED-002",
+   "EAGLE424": "ACF-SURVEY-002",
+   "AERO221": null
+  },
+  "by_scenario_entity": {
+   "ACF-0201": {
+    "new": "ACF-0201",
+    "icao24_placeholder": "ICAO-SYN-AE0201",
+    "note": "use the icao24 in aircraft_registry.json; callsign SYN41 kept"
+   },
+   "ACF-0301": {
+    "new": "ACF-0301",
+    "icao24_placeholder": "ICAO-SYN-A00301"
+   }
+  },
+  "notes": [
+   "CG-6540/CG-6541 were the old Jayhawk tails; canon names CG-6033 and CG-6041 (EVT-1701).",
+   "GUNSMOKE01/02 were mislabelled 'DoD ISR' in the map viewer; they are Texas Army National Guard UH-60s from Austin-Bergstrom (EVT-1103).",
+   "The two real TV station helicopters (KIII, KRIS) are replaced by one Harborline 6 News helicopter.",
+   "7c1234 was a hostile drone with an ICAO address; hostile drones have no address and are not in this registry.",
+   "Real operator names removed: SkyWest, LifeStar. Airframes with no successor map to null."
+  ]
+ }
+}

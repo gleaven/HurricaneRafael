@@ -1,0 +1,307 @@
+[
+ {
+  "event_id": "EVT-0101",
+  "threads": [
+   "T1"
+  ],
+  "day": -60,
+  "stream": "ed_visits",
+  "what": "Baseline of about 520 emergency department visits a day across reporting hospitals.",
+  "start_utc": "2027-08-15T05:00Z",
+  "end_utc": "2027-09-10T05:00Z",
+  "place_ids": [
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-2007",
+  "threads": [
+   "T20",
+   "T6"
+  ],
+  "day": 7,
+  "stream": "news",
+  "what": "Trade and local coverage of the designation and the claims process.",
+  "start_utc": "2027-09-21T05:00Z",
+  "end_utc": "2027-09-23T05:00Z",
+  "place_ids": [
+   "TERM-01",
+   "PORT-07"
+  ]
+ },
+ {
+  "event_id": "EVT-2202",
+  "threads": [
+   "T22",
+   "T2"
+  ],
+  "day": 3,
+  "stream": "insurance_claims",
+  "what": "From D+3, claims arrive on the ring's 230 policies whose values were raised in the five weeks before landfall, many with the same contractor estimates and reused damage photographs.",
+  "start_utc": "2027-09-17T05:00Z",
+  "end_utc": "2027-10-15T05:00Z",
+  "place_ids": [
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-1105",
+  "threads": [
+   "T11",
+   "T8"
+  ],
+  "day": 8,
+  "stream": "outage_map",
+  "what": "SUB-02 circuits are still listed as storm outages on D+8 (SUB-03 circuits from D+10).",
+  "start_utc": "2027-09-21T05:00Z",
+  "end_utc": "2027-09-24T05:00Z",
+  "place_ids": [
+   "FAC-UTL-01",
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-2006",
+  "threads": [
+   "T20",
+   "T6"
+  ],
+  "day": 4,
+  "stream": "water_quality",
+  "what": "Nueces Bay station: total petroleum hydrocarbons 2.1 mg/L at 16:30Z on D+4, the heaviest shoreline oiling.",
+  "start_utc": "2027-09-18T05:00Z",
+  "end_utc": "2027-09-19T05:00Z",
+  "place_ids": [
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-1208",
+  "threads": [
+   "T12",
+   "T2",
+   "T1"
+  ],
+  "day": 30,
+  "stream": "port_conditions",
+  "what": "Partial reopening: outer and bay reaches cleared for deep-draft traffic; inner channel restricted until D+44.",
+  "start_utc": "2027-10-14T16:00Z",
+  "end_utc": "2027-10-14T18:00Z",
+  "place_ids": [
+   "ENT-01",
+   "PORT-07"
+  ]
+ },
+ {
+  "event_id": "EVT-1102",
+  "threads": [
+   "T11",
+   "T1"
+  ],
+  "day": 0,
+  "stream": "satellite",
+  "what": "Radar pass at 08:30Z on D0 over Corpus Christi Bay and the ship channel at 5 m resolution: two large hulls at the Inner Harbor berth, surge inundation of 2.1 to 3.4 m across the coastal industrial zone, and the first oil-on-water signature near TERM-01.",
+  "start_utc": "2027-09-14T08:30Z",
+  "end_utc": "2027-09-14T10:30Z",
+  "place_ids": [
+   "TERM-01",
+   "PORT-07",
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-2004",
+  "threads": [
+   "T20"
+  ],
+  "day": 2,
+  "stream": "air_quality",
+  "what": "Station CC-AQ-02 (Hillcrest): benzene rises from a 0.3 ppb baseline to 4.8 ppb at 14:00Z on D+2, peaks at 7.2 ppb at 02:00Z on D+3 and is back below 3 ppb by 18:00Z on D+5.",
+  "start_utc": "2027-09-16T05:00Z",
+  "end_utc": "2027-09-20T05:00Z",
+  "place_ids": [
+   "PORT-07"
+  ]
+ },
+ {
+  "event_id": "EVT-0316",
+  "threads": [
+   "T6"
+  ],
+  "day": 2,
+  "stream": "vessel_ot_logs",
+  "what": "Investigators' exports show the valve commands arrived through the vendor remote session rather than the crew consoles; the vendor's credentials are disabled and no remote session follows.",
+  "start_utc": "2027-09-16T05:00Z",
+  "end_utc": "2027-09-23T05:00Z",
+  "place_ids": [
+   "HOST-VSL-01"
+  ]
+ },
+ {
+  "event_id": "GW-EVT-105",
+  "threads": [
+   "T18",
+   "T8",
+   "T9"
+  ],
+  "day": 9,
+  "stream": "host_audit_logs",
+  "what": "DCS alarm suppression list diff: 82 alarms added since D-5, clusters in pump flow, water quality sensor, and substation relay alarm categories",
+  "start_utc": "2027-09-23T04:00Z",
+  "end_utc": "2027-09-23T06:00Z",
+  "place_ids": [
+   "FAC-UTL-01",
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-1602",
+  "threads": [
+   "T16"
+  ],
+  "day": 0,
+  "stream": "hospital_capacity",
+  "what": "SRMC generator activation log: Commercial power loss 06:17:03Z. Generator start 06:17:26Z. Activation lag: 23 seconds. All critical systems online by 06:17:50Z.",
+  "start_utc": "2027-09-14T08:00Z",
+  "end_utc": "2027-09-14T10:00Z",
+  "place_ids": [
+   "FAC-HOS-xx",
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-2106",
+  "threads": [
+   "T21"
+  ],
+  "day": 12,
+  "stream": "eas_alerts",
+  "what": "IPAWS alert ID BWW-2027-0926-001: event code BWW (Boil Water Warning); issued 2027-09-26 22:30Z; Districts 3 and 4 Nueces County; English only in IPAWS; character count 287 | Nueces County After-Action Report 2028-03-15: Section 4.3 identifies the 12-hour Spanish notification gap for the boil-water notice as a critical equity failure; recommends pre-translated EAS template library",
+  "start_utc": "2027-09-26T22:30Z",
+  "end_utc": "2027-09-27T00:30Z",
+  "place_ids": [
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-1407",
+  "threads": [
+   "T14",
+   "T9"
+  ],
+  "day": 12,
+  "stream": "census",
+  "what": "Districts 3 and 4 tracts: about 46.7 percent of residents speak English less than very well.",
+  "start_utc": "2027-09-26T22:30Z",
+  "end_utc": "2027-09-27T00:30Z",
+  "place_ids": [
+   "FAC-UTL-01",
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-1707",
+  "threads": [
+   "T17",
+   "T13"
+  ],
+  "day": 7,
+  "stream": "avl",
+  "what": "The responding units' routes end in a tight cluster near Harbor View (SUB-02) and Crosstown (SUB-03).",
+  "start_utc": "2027-09-21T05:00Z",
+  "end_utc": "2027-09-25T05:00Z",
+  "place_ids": [
+   "PSAP-01",
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-0202",
+  "threads": [
+   "T1"
+  ],
+  "day": -10,
+  "stream": "storm_advisories",
+  "what": "Tropical Storm Rafael forms in the northwestern Caribbean, crosses the Yucatan into the Gulf; the forecast cone covers the Coastal Bend by D-5.",
+  "start_utc": "2027-09-04T05:00Z",
+  "end_utc": "2027-09-10T05:00Z",
+  "place_ids": []
+ },
+ {
+  "event_id": "EVT-0301",
+  "threads": [
+   "T1"
+  ],
+  "day": 0,
+  "stream": "weather",
+  "what": "KNGP, KCRP and Port Aransas: pressure minimum, peak sustained wind and gusts around 06:00Z, wind shift with the eye; stations drop out for hours.",
+  "start_utc": "2027-09-14T02:00Z",
+  "end_utc": "2027-09-14T12:00Z",
+  "place_ids": [
+   "LF-01"
+  ]
+ },
+ {
+  "event_id": "GW-EVT-001",
+  "threads": [
+   "T8",
+   "T10"
+  ],
+  "day": -15,
+  "stream": "zeek_logs",
+  "what": "DNS query log: GW-WS-IT-04 resolves update-cdn.meridiancontrols[.]net (lookalike domain, not the real vendor) at 08:23 CDT on 2027-08-30 (13:23Z)",
+  "start_utc": "2027-08-30T05:00Z",
+  "end_utc": "2027-08-31T05:00Z",
+  "place_ids": [
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-1702",
+  "threads": [
+   "T17",
+   "T1"
+  ],
+  "day": 0,
+  "stream": "adsb",
+  "what": "CG-6033 departs NAS Corpus Christi at 06:22Z, arrives over Flour Bluff 06:44Z and hovers.",
+  "start_utc": "2027-09-14T06:15Z",
+  "end_utc": "2027-09-14T08:00Z",
+  "place_ids": [
+   "FAC-DOD-01",
+   "PLC-001"
+  ]
+ },
+ {
+  "event_id": "EVT-0503",
+  "threads": [
+   "T3",
+   "T4"
+  ],
+  "day": 64,
+  "stream": "aid_applications",
+  "what": "Six applications (SYN-PER-700001 to 700006) share devices, addresses or deposit accounts with each other and with the hijacked accounts.",
+  "start_utc": "2027-11-13T06:00Z",
+  "end_utc": "2027-12-04T06:00Z",
+  "place_ids": [
+   "BANK-SYN-71",
+   "BANK-SYN-72",
+   "BANK-SYN-73"
+  ]
+ },
+ {
+  "event_id": "EVT-0402",
+  "threads": [
+   "T2",
+   "T12"
+  ],
+  "day": 31,
+  "stream": "port_surveillance",
+  "what": "A radar contact with no AIS correlation persists at Halcyon Drift's last reported position.",
+  "start_utc": "2027-10-15T02:00Z",
+  "end_utc": "2027-10-15T16:00Z",
+  "place_ids": [
+   "ANC-OFF"
+  ]
+ }
+]

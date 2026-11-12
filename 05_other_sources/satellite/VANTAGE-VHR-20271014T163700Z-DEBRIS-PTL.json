@@ -1,0 +1,89 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+ ],
+ "id": "VANTAGE-VHR-20271014T163700Z-DEBRIS-PTL",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.3204,
+     27.8819
+    ],
+    [
+     -97.3041,
+     27.8819
+    ],
+    [
+     -97.3041,
+     27.8964
+    ],
+    [
+     -97.3204,
+     27.8964
+    ],
+    [
+     -97.3204,
+     27.8819
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.3204,
+  27.8819,
+  -97.3041,
+  27.8964
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "VANTAGE-VHR-20271014T163700Z-DEBRIS-PTL.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20271014T163700Z-DEBRIS-PTL/visual.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/VANTAGE-VHR-20271014T163700Z-DEBRIS-PTL/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-10-14T16:37:00Z",
+  "title": "Debris staging site PTL",
+  "description": "Debris staging site beside US Hwy 181 Frontage. Pile outlines and haul-truck queue are resolved; suitable for pile-footprint and volume measurement.",
+  "platform": "Vantage-VHR-2",
+  "instruments": [
+   "panchromatic and multispectral imager"
+  ],
+  "constellation": "Vantage-VHR",
+  "gsd": 0.3,
+  "view:off_nadir": 16.2,
+  "view:sun_azimuth": 143.1,
+  "view:sun_elevation": 46.8,
+  "proj:epsg": 32614,
+  "eo:cloud_cover": 2,
+  "tasking": "county debris monitoring"
+ }
+}

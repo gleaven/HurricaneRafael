@@ -1,0 +1,366 @@
+{
+  "schema_version": "1.0",
+  "note": "Material quantities news may state, with the day each value becomes public. Patterns capture the number in group 1. Add a value here only when the public record supports it.",
+  "rules": [
+    {
+      "name": "barrels spilled",
+      "pattern": "\\b([\\d,]+(?:\\.\\d+)?)\\s+barrels\\b",
+      "allowed": [
+        {
+          "value": 9000,
+          "from_day": 1
+        }
+      ]
+    },
+    {
+      "name": "surge height (feet)",
+      "pattern": "\\b(\\d+(?:\\.\\d+)?)\\s*(?:to\\s*\\d+\\s*)?(?:feet|foot|ft)\\b(?=[^.]{0,30}\\bsurge)",
+      "allowed": [
+        {
+          "value": 9,
+          "from_day": -2
+        },
+        {
+          "value": 11,
+          "from_day": 0
+        }
+      ]
+    },
+    {
+      "name": "surge height (feet), range end",
+      "pattern": "\\b\\d+\\s*to\\s*(\\d+)\\s*(?:feet|foot|ft)\\b(?=[^.]{0,30}\\bsurge)",
+      "allowed": [
+        {
+          "value": 12,
+          "from_day": -2
+        }
+      ]
+    },
+    {
+      "name": "area (square miles)",
+      "pattern": "\\b(\\d+(?:\\.\\d+)?)\\s+square\\s+miles\\b",
+      "allowed": [
+        {
+          "value": 43,
+          "from_day": 1
+        },
+        {
+          "value": 33,
+          "from_day": 2
+        }
+      ]
+    },
+    {
+      "name": "911 calls",
+      "pattern": "\\b(?!911\\b)([\\d,]{3,})\\s+(?:911\\s+)?calls\\b",
+      "allowed": [
+        {
+          "value": 2900,
+          "from_day": 1
+        },
+        {
+          "value": 1840,
+          "from_day": 3
+        },
+        {
+          "value": 1100,
+          "from_day": 3
+        },
+        {
+          "value": 310,
+          "from_day": 29
+        },
+        {
+          "value": 311,
+          "from_day": 12
+        },
+        {
+          "value": 7300,
+          "from_day": 3
+        },
+        {
+          "value": 1000,
+          "from_day": 3
+        },
+        {
+          "value": 380,
+          "from_day": 29
+        },
+        {
+          "value": 44200,
+          "from_day": 29
+        },
+        {
+          "value": 56000,
+          "from_day": 45
+        }
+      ]
+    },
+    {
+      "name": "vessels waiting",
+      "pattern": "\\b(\\d+|fourteen)\\s+(?:vessels|ships)\\b",
+      "allowed": [
+        {
+          "value": 14,
+          "from_day": -2
+        }
+      ]
+    },
+    {
+      "name": "relief containers",
+      "pattern": "\\b(\\d+|forty)\\s+(?:relief\\s+)?containers\\b",
+      "allowed": [
+        {
+          "value": 40,
+          "from_day": -5
+        }
+      ]
+    },
+    {
+      "name": "relief flights",
+      "pattern": "(?<!C-)\\b(\\d+)\\s+(?:military\\s+|civilian\\s+|civil\\s+|relief\\s+|C-17\\s+)*(?:flights|sorties|charters)\\b",
+      "allowed": [
+        {
+          "value": 26,
+          "from_day": 34
+        },
+        {
+          "value": 14,
+          "from_day": 34
+        },
+        {
+          "value": 40,
+          "from_day": 34
+        }
+      ]
+    },
+    {
+      "name": "accounts",
+      "pattern": "\\b([\\d,]+)\\s+(?:applicant\\s+|aid\\s+|FEMA\\s+|online\\s+|social\\s+media\\s+)?accounts\\b",
+      "allowed": [
+        {
+          "value": 410,
+          "from_day": 71
+        },
+        {
+          "value": 40,
+          "from_day": 16
+        },
+        {
+          "value": 847,
+          "from_day": 32
+        }
+      ]
+    },
+    {
+      "name": "login attempts",
+      "pattern": "\\b([\\d,]+)\\s+(?:automated\\s+)?(?:login|log-in|sign-in)\\s+attempts\\b",
+      "allowed": [
+        {
+          "value": 220000,
+          "from_day": 71
+        }
+      ]
+    },
+    {
+      "name": "claims",
+      "pattern": "\\b([\\d,]{3,})\\s+(?:\\w+\\s+){0,3}claims\\b",
+      "allowed": [
+        {
+          "value": 4200,
+          "from_day": 115
+        },
+        {
+          "value": 187000,
+          "from_day": 30
+        },
+        {
+          "value": 300,
+          "from_day": 90
+        },
+        {
+          "value": 187,
+          "from_day": 90
+        }
+      ]
+    },
+    {
+      "name": "dollars (millions)",
+      "pattern": "\\$\\s?(\\d+(?:\\.\\d+)?)\\s*million\\b",
+      "allowed": [
+        {
+          "value": 14.2,
+          "from_day": 10
+        },
+        {
+          "value": 2.1,
+          "from_day": 20
+        },
+        {
+          "value": 3.9,
+          "from_day": 114
+        },
+        {
+          "value": 4.2,
+          "from_day": 7
+        },
+        {
+          "value": 23,
+          "from_day": 90
+        },
+        {
+          "value": 4.7,
+          "from_day": 119
+        },
+        {
+          "value": 340,
+          "from_day": 30
+        }
+      ]
+    },
+    {
+      "name": "percent",
+      "pattern": "\\b(\\d+(?:\\.\\d+)?)\\s?(?:%|percent)",
+      "allowed": [
+        {
+          "value": 180,
+          "from_day": 8
+        },
+        {
+          "value": 40,
+          "from_day": 8
+        },
+        {
+          "value": 140,
+          "from_day": 2
+        },
+        {
+          "value": 94.3,
+          "from_day": 23
+        },
+        {
+          "value": 99,
+          "from_day": 35
+        },
+        {
+          "value": 100,
+          "from_day": 45
+        },
+        {
+          "value": 50,
+          "from_day": 30
+        },
+        {
+          "value": 13,
+          "from_day": 20
+        },
+        {
+          "value": 10,
+          "from_day": 3
+        },
+        {
+          "value": 57,
+          "from_day": 60
+        },
+        {
+          "value": 64,
+          "from_day": 60
+        },
+        {
+          "value": 80,
+          "from_day": 57
+        },
+        {
+          "value": 340,
+          "from_day": 30
+        },
+        {
+          "value": 36,
+          "from_day": 60
+        },
+        {
+          "value": 97,
+          "from_day": 119
+        },
+        {
+          "value": 89,
+          "from_day": 119
+        }
+      ]
+    },
+    {
+      "name": "times multiple",
+      "pattern": "\\b(\\d+(?:\\.\\d+)?|ten|two|three)\\s+times\\b(?=\\s+(?:the|that|normal|what|as|higher|more|longer))",
+      "allowed": [
+        {
+          "value": 10,
+          "from_day": 1
+        },
+        {
+          "value": 2.3,
+          "from_day": 78
+        },
+        {
+          "value": 2.1,
+          "from_day": 90
+        }
+      ]
+    },
+    {
+      "name": "nautical miles",
+      "pattern": "\\b(\\d+)\\s+nautical\\s+miles\\b",
+      "allowed": [
+        {
+          "value": 600,
+          "from_day": 38
+        },
+        {
+          "value": 100,
+          "from_day": -1
+        },
+        {
+          "value": 30,
+          "from_day": -2
+        }
+      ]
+    },
+    {
+      "name": "storm category",
+      "pattern": "\\bCategory\\s+(\\d)\\b",
+      "allowed": [
+        {
+          "value": 3,
+          "from_day": -3
+        },
+        {
+          "value": 2,
+          "from_day": -3
+        }
+      ]
+    },
+    {
+      "name": "closure length (days)",
+      "pattern": "\\b(\\d+|fourteen)[- ]day\\s+(?:closure|shutdown)\\b",
+      "allowed": [
+        {
+          "value": 14,
+          "from_day": 58
+        },
+        {
+          "value": 30,
+          "from_day": 30
+        }
+      ]
+    },
+    {
+      "name": "explosive devices",
+      "pattern": "\\b(two|second)\\s+(?:explosive\\s+)?devices?\\b",
+      "allowed": [
+        {
+          "value": 2,
+          "from_day": 52
+        }
+      ]
+    }
+  ]
+}

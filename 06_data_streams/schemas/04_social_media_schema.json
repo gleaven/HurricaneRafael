@@ -1,0 +1,189 @@
+{
+ "source": "social_media",
+ "folder": "05_other_sources/social_media/",
+ "format": "JSON (JSONL, one object per line)",
+ "standard": "Twitter API v1.1 Tweet object",
+ "reference": "https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/object-model/tweet",
+ "verified": true,
+ "notes": "Twitter v1.1-style Tweet objects, one JSON object per line. created_at uses the Twitter date string in UTC. id_str is the canonical id. Text is in full_text. Retweets carry retweeted_status (id, time and author of the original) and 'RT @author: text'; quotes carry quoted_status_id_str and a link; replies carry in_reply_to_* fields. entities.urls[].expanded_url holds the real destination of each t.co link.",
+ "entity_catalog": "06_data_streams/personas.json (personas[] and accounts_compact)",
+ "fields": {
+  "tweet_object": [
+   {
+    "name": "created_at",
+    "type": "string",
+    "example": "Tue Sep 14 09:14:00 +0000 2027",
+    "notes": "UTC"
+   },
+   {
+    "name": "id / id_str",
+    "type": "int / string",
+    "notes": "snowflake-style, time-ordered"
+   },
+   {
+    "name": "full_text",
+    "type": "string",
+    "notes": "up to 280 characters"
+   },
+   {
+    "name": "lang",
+    "type": "string",
+    "notes": "en or es"
+   },
+   {
+    "name": "source",
+    "type": "string",
+    "notes": "posting client, as an HTML anchor"
+   },
+   {
+    "name": "entities",
+    "type": "object",
+    "notes": "hashtags, user_mentions (screen_name, id_str), urls (url, expanded_url, display_url)"
+   },
+   {
+    "name": "in_reply_to_status_id_str / in_reply_to_user_id_str / in_reply_to_screen_name",
+    "type": "string or null",
+    "notes": "replies"
+   },
+   {
+    "name": "is_quote_status / quoted_status_id_str / quoted_status_permalink",
+    "type": "mixed",
+    "notes": "quotes"
+   },
+   {
+    "name": "retweeted_status",
+    "type": "object",
+    "notes": "id_str, created_at and user of the original"
+   },
+   {
+    "name": "retweet_count / favorite_count",
+    "type": "integer",
+    "notes": "platform-wide counts at collection; larger than the retweets present in this collection"
+   },
+   {
+    "name": "coordinates / place",
+    "type": "object or null",
+    "notes": "GeoJSON point (longitude, latitude) on about one post in a hundred; always on land"
+   }
+  ],
+  "user_object": [
+   {
+    "name": "id / id_str",
+    "type": "int / string"
+   },
+   {
+    "name": "screen_name",
+    "type": "string",
+    "notes": "personas.json handle without the @"
+   },
+   {
+    "name": "name / location / description",
+    "type": "string"
+   },
+   {
+    "name": "created_at",
+    "type": "string",
+    "notes": "account creation time, UTC"
+   },
+   {
+    "name": "followers_count / friends_count / statuses_count",
+    "type": "integer",
+    "notes": "at the time of the post; they drift"
+   },
+   {
+    "name": "verified",
+    "type": "boolean"
+   }
+  ],
+  "entities_object": [
+   {
+    "name": "hashtags",
+    "type": "array",
+    "example": [
+     {
+      "text": "HurricaneRafael",
+      "indices": [
+       42,
+       58
+      ]
+     }
+    ],
+    "notes": "text excludes #; indices are char positions in text"
+   },
+   {
+    "name": "user_mentions",
+    "type": "array",
+    "example": [
+     {
+      "screen_name": "NWSCorpusChristi",
+      "name": "NWS Corpus Christi",
+      "id_str": "111222333",
+      "indices": [
+       0,
+       17
+      ]
+     }
+    ],
+    "notes": ""
+   },
+   {
+    "name": "urls",
+    "type": "array",
+    "example": [
+     {
+      "url": "https://t.co/abc123",
+      "expanded_url": "https://www.weather.gov/",
+      "display_url": "weather.gov",
+      "indices": [
+       60,
+       83
+      ]
+     }
+    ],
+    "notes": "t.co wrapped URLs"
+   },
+   {
+    "name": "media",
+    "type": "array|undefined",
+    "example": [
+     {
+      "id_str": "...",
+      "media_url_https": "https://pbs.twimg.com/media/xxx.jpg",
+      "type": "photo"
+     }
+    ],
+    "notes": "Only present if tweet has media"
+   }
+  ]
+ },
+ "join_keys": {
+  "user.screen_name": "personas.json personas[].handle without the @ (or accounts_compact rows)",
+  "user.created_at": "personas[].account_created (date)",
+  "entities.urls.expanded_url": "outlet story links follow https://<outlet site>/<YYYY>/<MM>/<DD>/<slug>, the same pattern as the news feeds",
+  "home area": "personas[].home_area_id -> areas.json"
+ },
+ "coverage": {
+  "start_utc": "2027-07-16T05:00Z",
+  "end_utc": "2028-01-12T06:00Z",
+  "accounts": {
+   "personas": 309,
+   "accounts_compact": 1700
+  },
+  "notes": "Automated relay accounts start with their sensor archives on 2027-08-15 and are silent when the sensor is. Local accounts post far less from landfall until power and cell service return."
+ },
+ "naming": "The utility appears as Coastal Bend Power and Water Authority or CBPWA (@CBPWA_Alerts). Outlets post as @BaysideLedger, @Harborline6News, @CoastlinePublicRadio, @GulfwaterMaritime, @SabalEnergyWire, @ContinentalWire, @AnchorRotorWeekly, @KNCB1480.",
+ "files": {
+  "<handle>.jsonl": "every post by one account listed under personas in personas.json (309 files)",
+  "community_<YYYY-MM>.jsonl": "posts by the accounts listed under accounts_compact, grouped by month of posting (UTC)",
+  "_account_lookup.jsonl": "users/lookup snapshot taken at the end of the collection (2028-01-12): the user object, or error code 63 'User has been suspended.'",
+  "_platform_records_return.jsonl": "account access records returned by the platforms on 2027-10-14 under a law-enforcement referral: post-creation events with source address and autonomous system",
+  "_geotagged_index.csv": "index of geo-tagged posts for convenience: id_str, screen_name, created_utc, latitude, longitude"
+ },
+ "generator": "scripts/streams/gen_social.py with social_text.py and social_script.py (deterministic); probes in scripts/streams/probes_social_finance.py",
+ "additional_fields": {
+  "truncated": "always false; full_text carries the whole post",
+  "place.place_type": "place object type when a post is geo-tagged (city, neighborhood, poi)",
+  "place.full_name": "display name of the tagged place",
+  "place.country_code": "US"
+ }
+}

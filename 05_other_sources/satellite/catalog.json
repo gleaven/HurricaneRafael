@@ -1,0 +1,884 @@
+{
+ "type": "Collection",
+ "stac_version": "1.0.0",
+ "id": "coastal-bend-scenes",
+ "description": "Satellite and airborne scene metadata over the Corpus Christi area, with detection summaries. Imagery is not included.",
+ "license": "proprietary",
+ "extent": {
+  "spatial": {
+   "bbox": [
+    [
+     -97.95,
+     27.35,
+     -96.55,
+     28.35
+    ]
+   ]
+  },
+  "temporal": {
+   "interval": [
+    [
+     "2027-08-15T12:14:00Z",
+     "2028-01-11T16:46:00Z"
+    ]
+   ]
+  }
+ },
+ "links": [
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270815T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270815T164028Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20270818T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270818T164443Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270820T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270821T164541Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270823T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20270824T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270824T164719Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270827T164256Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270828T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20270830T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270830T164711Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270831T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270902T164606Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270905T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20270905T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270905T164755Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270908T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270908T164335Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20270911T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270911T164733Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270912T121414Z-NUECES.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270912T121423Z-SANPATRICIO.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270912T121432Z-ARANSAS.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270912T121441Z-KLEBERG.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270912T140900Z-GW-FAC-SUB-01.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270912T141200Z-GW-FAC-UTL-01.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270912T141700Z-GW-FAC-SUB-02.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270912T143100Z-GW-FAC-SUB-03.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270912T143600Z-GW-FAC-SUB-04.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270912T144000Z-GW-FAC-SUB-05.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270912T144400Z-PORT-DOCKS.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270914T002214Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "NOAA42-SAR-20270914T083000Z-CCBAY.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270914T121630Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270914T164800Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270915T121400Z-FLOOD.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270915T164500Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270916T002000Z-BAYS.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270916T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270916T164800Z-BAYS.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20270917T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270917T165027Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20270919T043100Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270920T164607Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270921T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20270922T091200Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20270923T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270923T165026Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270924T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270926T164618Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20270927T040700Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20270929T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20270929T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20270929T164846Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270930T163100Z-DEBRIS-CAL.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270930T163400Z-DEBRIS-FB.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270930T163700Z-DEBRIS-PTL.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270930T164000Z-DEBRIS-RKP.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20270930T164300Z-DEBRIS-WEST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271002T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271002T164907Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271005T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271005T164413Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271007T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271008T164144Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271010T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271011T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271011T165053Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271013T042600Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271014T094100Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271014T163100Z-DEBRIS-CAL.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271014T163400Z-DEBRIS-FB.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271014T163700Z-DEBRIS-PTL.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271014T164000Z-DEBRIS-RKP.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271014T164300Z-DEBRIS-WEST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271014T164543Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271015T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271015T042000Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271015T093000Z-ANCHORAGE.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271016T041300Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271017T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271017T164839Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271018T092200Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271018T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271020T164014Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271023T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271023T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271023T164126Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271026T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271026T164826Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271028T093600Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271028T163100Z-DEBRIS-CAL.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271028T163400Z-DEBRIS-FB.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271028T163700Z-DEBRIS-PTL.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271028T164000Z-DEBRIS-RKP.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271028T164300Z-DEBRIS-WEST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271029T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271029T042400Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271029T164738Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "ARCHIVE-RECEIPT-NGA-2027-10-29-FEMA-CC.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271031T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271031T091800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271101T164042Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271103T043500Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271103T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271104T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271104T164757Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271107T164947Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271108T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271110T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271110T092700Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271110T165024Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271111T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271111T163100Z-DEBRIS-CAL.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271111T163400Z-DEBRIS-FB.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271111T163700Z-DEBRIS-PTL.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271111T164000Z-DEBRIS-RKP.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271111T164300Z-DEBRIS-WEST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271113T164058Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271116T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271116T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271116T164105Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271119T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271119T164303Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271122T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271122T163100Z-DEBRIS-CAL.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271122T163400Z-DEBRIS-FB.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271122T163700Z-DEBRIS-PTL.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271122T164000Z-DEBRIS-RKP.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271122T164051Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "VANTAGE-VHR-20271122T164300Z-DEBRIS-WEST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271124T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271125T164908Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271127T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271128T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271128T164202Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271201T164500Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271202T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271204T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271204T164531Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271205T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271207T164932Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271210T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271210T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271210T164955Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271213T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271213T164824Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271216T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271216T165003Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271218T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271219T164924Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271221T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271222T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271222T164829Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271225T164222Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271226T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20271228T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271228T164134Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20271229T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20271231T164853Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20280103T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20280103T092900Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20280103T164358Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20280106T121400Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20280106T164627Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "CORVUS-SAR-20280109T041800Z-APPROACH.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20280109T165020Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "HALYARD-SAR-20280111T002000Z-COAST.json",
+   "type": "application/geo+json"
+  },
+  {
+   "rel": "item",
+   "href": "MERIDIAN-EO-20280111T164600Z-COAST.json",
+   "type": "application/geo+json"
+  }
+ ]
+}

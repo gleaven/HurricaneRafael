@@ -1,0 +1,1026 @@
+{
+ "streams": [
+  {
+   "files": "ais/ais_*.csv",
+   "column": "MMSI",
+   "distinct": 128,
+   "unknown": 0
+  },
+  {
+   "files": "ais/satellite/sais_*.csv",
+   "column": "MMSI",
+   "distinct": 58,
+   "unknown": 0
+  },
+  {
+   "files": "adsb/adsb_*.csv",
+   "column": "icao24",
+   "distinct": 64,
+   "unknown": 0
+  },
+  {
+   "files": "avl/avl_*.csv",
+   "column": "unit_id",
+   "distinct": 114,
+   "unknown": 0
+  },
+  {
+   "files": "avl/avl_*.csv",
+   "column": "agency",
+   "distinct": 7,
+   "unknown": 0
+  },
+  {
+   "files": "911/cad_incidents_*.csv",
+   "column": "agency",
+   "distinct": 7,
+   "unknown": 0
+  },
+  {
+   "files": "911/cad_incidents_*.csv",
+   "column": "nature_code",
+   "distinct": 46,
+   "unknown": 0
+  },
+  {
+   "files": "911/cad_incidents_*.csv",
+   "column": "unit_id",
+   "distinct": 233,
+   "unknown": 0
+  },
+  {
+   "files": "911/cad_incidents_*.csv",
+   "column": "additional_units",
+   "distinct": 289,
+   "unknown": 0
+  },
+  {
+   "files": "911/cad_incidents_*.csv",
+   "column": "disposition_code",
+   "distinct": 13,
+   "unknown": 0
+  },
+  {
+   "files": "911/cad_incidents_*.csv",
+   "column": "census_tract",
+   "distinct": 55,
+   "unknown": 0
+  },
+  {
+   "files": "sar/sar_missions.csv",
+   "column": "asset_id",
+   "distinct": 131,
+   "unknown": 0
+  },
+  {
+   "files": "sar/sar_missions.csv",
+   "column": "agency",
+   "distinct": 7,
+   "unknown": 0
+  },
+  {
+   "files": "sar/sar_asset_log.csv",
+   "column": "asset_id",
+   "distinct": 132,
+   "unknown": 0
+  },
+  {
+   "files": "sar/flood_depth_soundings.csv",
+   "column": "unit_id",
+   "distinct": 4,
+   "unknown": 0
+  },
+  {
+   "files": "shelters/shelter_daily_census.csv",
+   "column": "facility_id",
+   "distinct": 6,
+   "unknown": 0
+  },
+  {
+   "files": "shelters/shelter_registry.csv",
+   "column": "facility_id",
+   "distinct": 6,
+   "unknown": 0
+  },
+  {
+   "files": "shelters/evacuation_bus_trips.csv",
+   "column": "unit_id",
+   "distinct": 10,
+   "unknown": 0
+  },
+  {
+   "files": "shelters/evacuation_bus_trips.csv",
+   "column": "facility_id",
+   "distinct": 5,
+   "unknown": 0
+  },
+  {
+   "files": "shelters/shelter_211_calls.csv",
+   "column": "referred_facility_id",
+   "distinct": 5,
+   "unknown": 0
+  },
+  {
+   "files": "public_health/ed_visits_*.csv",
+   "column": "Facility_ID",
+   "distinct": 7,
+   "unknown": 0
+  },
+  {
+   "files": "public_health/hospital_capacity.csv",
+   "column": "Facility_ID",
+   "distinct": 7,
+   "unknown": 0
+  },
+  {
+   "files": "public_health/syndrome_summary.csv",
+   "column": "Facility_ID",
+   "distinct": 7,
+   "unknown": 0
+  },
+  {
+   "files": "public_health/syndrome_summary.csv",
+   "column": "Area_ID",
+   "distinct": 24,
+   "unknown": 0
+  },
+  {
+   "files": "public_health/wastewater_surveillance.csv",
+   "column": "sewershed_id",
+   "distinct": 5,
+   "unknown": 0
+  },
+  {
+   "files": "public_health/eas_broadcasts.csv",
+   "column": "AreaIDs",
+   "distinct": 11,
+   "unknown": 0
+  },
+  {
+   "files": "env_sensors/*.csv",
+   "column": "SensorID",
+   "distinct": 34,
+   "unknown": 0
+  },
+  {
+   "files": "weather/*_observations.csv",
+   "column": "StationID",
+   "distinct": 9,
+   "unknown": 0
+  },
+  {
+   "files": "drone_detections/detections_*.csv",
+   "column": "sensor_id",
+   "distinct": 16,
+   "unknown": 0
+  },
+  {
+   "files": "drone_detections/sensor_status_*.csv",
+   "column": "sensor_id",
+   "distinct": 15,
+   "unknown": 0
+  },
+  {
+   "files": "drone_detections/sensor_sites.csv",
+   "column": "sensor_id",
+   "distinct": 16,
+   "unknown": 0
+  },
+  {
+   "files": "drone_detections/laanc_authorizations.csv",
+   "column": "operator_id",
+   "distinct": 14,
+   "unknown": 0
+  },
+  {
+   "files": "drone_video/logs/flight_log.csv",
+   "column": "operator_id",
+   "distinct": 15,
+   "unknown": 0
+  },
+  {
+   "files": "drone_video/drone_telemetry_*.csv",
+   "column": "operator_id",
+   "distinct": 14,
+   "unknown": 0
+  },
+  {
+   "files": "drone_video/logs/thermal_survey_readings.csv",
+   "column": "asset_id",
+   "distinct": 6,
+   "unknown": 0
+  },
+  {
+   "files": "port_surveillance/radar_tracks_*.csv",
+   "column": "sensor_id",
+   "distinct": 2,
+   "unknown": 0
+  },
+  {
+   "files": "port_surveillance/radar_tracks_*.csv",
+   "column": "correlated_mmsi",
+   "distinct": 118,
+   "unknown": 0
+  },
+  {
+   "files": "port_surveillance/camera_events.csv",
+   "column": "sensor_id",
+   "distinct": 14,
+   "unknown": 0
+  },
+  {
+   "files": "port_surveillance/camera_events.csv",
+   "column": "mmsi",
+   "distinct": 108,
+   "unknown": 0
+  },
+  {
+   "files": "port_surveillance/camera_events.csv",
+   "column": "berth_id",
+   "distinct": 33,
+   "unknown": 0
+  },
+  {
+   "files": "port_surveillance/sensor_status.csv",
+   "column": "sensor_id",
+   "distinct": 17,
+   "unknown": 0
+  },
+  {
+   "files": "port_surveillance/sensors.csv",
+   "column": "sensor_id",
+   "distinct": 17,
+   "unknown": 0
+  },
+  {
+   "files": "port_surveillance/vessel_traffic_log.csv",
+   "column": "mmsi",
+   "distinct": 84,
+   "unknown": 0
+  },
+  {
+   "files": "supply/vessel_arrivals.csv",
+   "column": "mmsi",
+   "distinct": 54,
+   "unknown": 0
+  },
+  {
+   "files": "supply/vessel_arrivals.csv",
+   "column": "terminal_id",
+   "distinct": 16,
+   "unknown": 0
+  },
+  {
+   "files": "supply/vessel_arrivals.csv",
+   "column": "berth_id",
+   "distinct": 26,
+   "unknown": 0
+  },
+  {
+   "files": "supply/vessel_arrivals.csv",
+   "column": "anchorage_position_id",
+   "distinct": 25,
+   "unknown": 0
+  },
+  {
+   "files": "supply/cargo_manifest.csv",
+   "column": "mmsi",
+   "distinct": 55,
+   "unknown": 0
+  },
+  {
+   "files": "supply/cargo_manifest.csv",
+   "column": "supplier_id",
+   "distinct": 2,
+   "unknown": 0
+  },
+  {
+   "files": "supply/cargo_manifest.csv",
+   "column": "consignee_id",
+   "distinct": 2,
+   "unknown": 0
+  },
+  {
+   "files": "supply/fuel_deliveries.csv",
+   "column": "supplier_id",
+   "distinct": 5,
+   "unknown": 0
+  },
+  {
+   "files": "supply/fuel_deliveries.csv",
+   "column": "facility_id",
+   "distinct": 16,
+   "unknown": 0
+  },
+  {
+   "files": "supply/fuel_deliveries.csv",
+   "column": "receiving_asset_id",
+   "distinct": 7,
+   "unknown": 0
+  },
+  {
+   "files": "supply/port_conditions.csv",
+   "column": "vessel_mmsi",
+   "distinct": 3,
+   "unknown": 0
+  },
+  {
+   "files": "supply/port_conditions.csv",
+   "column": "terminal_id",
+   "distinct": 4,
+   "unknown": 0
+  },
+  {
+   "files": "supply/port_conditions.csv",
+   "column": "segment_id",
+   "distinct": 8,
+   "unknown": 0
+  },
+  {
+   "files": "telemetry/historian_*.csv",
+   "column": "Tagname",
+   "distinct": 331,
+   "unknown": 0
+  },
+  {
+   "files": "telemetry/outage_map.csv",
+   "column": "area_id",
+   "distinct": 17,
+   "unknown": 0
+  },
+  {
+   "files": "telemetry/outage_map.csv",
+   "column": "substation_id",
+   "distinct": 6,
+   "unknown": 0
+  },
+  {
+   "files": "telemetry/vessel_cargo_control_*.csv",
+   "column": "mmsi",
+   "distinct": 2,
+   "unknown": 0
+  },
+  {
+   "files": "telemetry/vessel_cargo_control_remote_sessions.csv",
+   "column": "vessel_mmsi",
+   "distinct": 15,
+   "unknown": 0
+  },
+  {
+   "files": "maintenance/work_orders.csv",
+   "column": "asset_id",
+   "distinct": 72,
+   "unknown": 0
+  },
+  {
+   "files": "maintenance/work_orders.csv",
+   "column": "vendor_id",
+   "distinct": 6,
+   "unknown": 0
+  },
+  {
+   "files": "maintenance/work_orders.csv",
+   "column": "site_id",
+   "distinct": 3,
+   "unknown": 0
+  },
+  {
+   "files": "maintenance/base_status_reports.csv",
+   "column": "installation_id",
+   "distinct": 4,
+   "unknown": 0
+  },
+  {
+   "files": "maintenance/base_status_reports.csv",
+   "column": "equipment_id",
+   "distinct": 2,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/siem/siem_alerts_*.csv",
+   "column": "src_host",
+   "distinct": 234,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/siem/siem_alerts_*.csv",
+   "column": "dst_host",
+   "distinct": 4,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/audit/remote_access_sessions.csv",
+   "column": "gateway",
+   "distinct": 1,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/audit/remote_access_sessions.csv",
+   "column": "account",
+   "distinct": 47,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/audit/historian_access.csv",
+   "column": "server",
+   "distinct": 1,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/audit/endpoint_protection.csv",
+   "column": "host",
+   "distinct": 167,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/audit/ot_config_changes.csv",
+   "column": "device",
+   "distinct": 10,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/audit/file_integrity.csv",
+   "column": "host",
+   "distinct": 1,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/audit/scada_command_log.csv",
+   "column": "scada_server",
+   "distinct": 1,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/audit/scada_command_log.csv",
+   "column": "device",
+   "distinct": 15,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/portal/*.csv",
+   "column": "system",
+   "distinct": 2,
+   "unknown": 0
+  },
+  {
+   "files": "payments/contracts_awards.csv",
+   "column": "supplier_id",
+   "distinct": 28,
+   "unknown": 0
+  },
+  {
+   "files": "payments/contracts_awards.csv",
+   "column": "awarding_org_id",
+   "distinct": 9,
+   "unknown": 0
+  },
+  {
+   "files": "payments/contracts_invoices.csv",
+   "column": "supplier_id",
+   "distinct": 94,
+   "unknown": 0
+  },
+  {
+   "files": "payments/contracts_invoices.csv",
+   "column": "remit_bank_account_id",
+   "distinct": 94,
+   "unknown": 0
+  },
+  {
+   "files": "payments/contracts_invoices.csv",
+   "column": "work_area_id",
+   "distinct": 11,
+   "unknown": 0
+  },
+  {
+   "files": "payments/contracts_vendor_registry.csv",
+   "column": "supplier_id",
+   "distinct": 96,
+   "unknown": 0
+  },
+  {
+   "files": "payments/contracts_vendor_registry.csv",
+   "column": "bank_account_id",
+   "distinct": 95,
+   "unknown": 0
+  },
+  {
+   "files": "payments/contracts_debris_monitoring.csv",
+   "column": "area_id",
+   "distinct": 10,
+   "unknown": 0
+  },
+  {
+   "files": "payments/financial_transactions.csv",
+   "column": "account_id",
+   "distinct": 104,
+   "unknown": 0
+  },
+  {
+   "files": "payments/financial_transactions.csv",
+   "column": "institution_id",
+   "distinct": 12,
+   "unknown": 0
+  },
+  {
+   "files": "payments/financial_transactions.csv",
+   "column": "counterparty_id",
+   "distinct": 32,
+   "unknown": 0
+  },
+  {
+   "files": "payments/insurance_claims.csv",
+   "column": "insurer_id",
+   "distinct": 8,
+   "unknown": 0
+  },
+  {
+   "files": "payments/insurance_claims.csv",
+   "column": "policy_id",
+   "distinct": 1671,
+   "unknown": 0
+  },
+  {
+   "files": "payments/insurance_claims.csv",
+   "column": "holder_id",
+   "distinct": 1060,
+   "unknown": 0
+  },
+  {
+   "files": "payments/insurance_claims.csv",
+   "column": "area_id",
+   "distinct": 10,
+   "unknown": 0
+  },
+  {
+   "files": "payments/aid_applications.csv",
+   "column": "area_id",
+   "distinct": 64,
+   "unknown": 0
+  },
+  {
+   "files": "infrastructure/utility_site_survey.csv",
+   "column": "asset_id",
+   "distinct": 21,
+   "unknown": 0
+  },
+  {
+   "files": "infrastructure/damage_assessment.csv",
+   "column": "census_tract",
+   "distinct": 54,
+   "unknown": 0
+  },
+  {
+   "files": "broadcast/station_status_log.csv",
+   "column": "station_id",
+   "distinct": 6,
+   "unknown": 0
+  },
+  {
+   "files": "broadcast/station_program_log.csv",
+   "column": "station_id",
+   "distinct": 4,
+   "unknown": 0
+  },
+  {
+   "files": "broadcast/alert_relay_log.csv",
+   "column": "station_id",
+   "distinct": 8,
+   "unknown": 0
+  },
+  {
+   "files": "social_media/_geotagged_index.csv",
+   "column": "screen_name",
+   "distinct": 371,
+   "unknown": 0
+  },
+  {
+   "files": "social_media/*.jsonl",
+   "column": "user.screen_name",
+   "distinct": 1947,
+   "unknown": 0
+  }
+ ],
+ "registry": {
+  "vessels.vessels": {
+   "records": 130,
+   "used_in_streams": 128,
+   "reference_only": 2,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "aircraft_registry.aircraft": {
+   "records": 64,
+   "used_in_streams": 64,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "aircraft_registry.airfields": {
+   "records": 25,
+   "used_in_streams": 0,
+   "reference_only": 25,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "aircraft_registry.parking_positions": {
+   "records": 89,
+   "used_in_streams": 0,
+   "reference_only": 89,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "areas.areas": {
+   "records": 148,
+   "used_in_streams": 118,
+   "reference_only": 30,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "cad_units.stations": {
+   "records": 32,
+   "used_in_streams": 0,
+   "reference_only": 32,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "cad_units.units": {
+   "records": 315,
+   "used_in_streams": 244,
+   "reference_only": 71,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "cad_units.nature_codes": {
+   "records": 51,
+   "used_in_streams": 46,
+   "reference_only": 5,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "cad_units.disposition_codes": {
+   "records": 15,
+   "used_in_streams": 13,
+   "reference_only": 2,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "drone_operators.authorized_operators": {
+   "records": 14,
+   "used_in_streams": 14,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "drone_operators.launch_sites": {
+   "records": 11,
+   "used_in_streams": 0,
+   "reference_only": 11,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.insurers": {
+   "records": 7,
+   "used_in_streams": 7,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.brokers": {
+   "records": 7,
+   "used_in_streams": 0,
+   "reference_only": 7,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.appraisers": {
+   "records": 6,
+   "used_in_streams": 0,
+   "reference_only": 6,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.adjusting_firms": {
+   "records": 6,
+   "used_in_streams": 0,
+   "reference_only": 6,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.adjusters": {
+   "records": 40,
+   "used_in_streams": 0,
+   "reference_only": 40,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.vendors": {
+   "records": 96,
+   "used_in_streams": 96,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.contracts": {
+   "records": 32,
+   "used_in_streams": 0,
+   "reference_only": 32,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.financial_institutions": {
+   "records": 13,
+   "used_in_streams": 12,
+   "reference_only": 1,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.accounts": {
+   "records": 104,
+   "used_in_streams": 104,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.policyholders": {
+   "records": 1159,
+   "used_in_streams": 1059,
+   "reference_only": 100,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.policies": {
+   "records": 1904,
+   "used_in_streams": 1670,
+   "reference_only": 234,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.prepaid_card_merchants": {
+   "records": 14,
+   "used_in_streams": 14,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "entity_registry.crypto_endpoints": {
+   "records": 4,
+   "used_in_streams": 4,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "facility_registry.facilities": {
+   "records": 45,
+   "used_in_streams": 16,
+   "reference_only": 29,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "facility_registry.out_of_area": {
+   "records": 7,
+   "used_in_streams": 1,
+   "reference_only": 6,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "gw_host_registry.sites": {
+   "records": 16,
+   "used_in_streams": 2,
+   "reference_only": 14,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "gw_host_registry.hosts": {
+   "records": 329,
+   "used_in_streams": 245,
+   "reference_only": 84,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "gw_host_registry.equipment": {
+   "records": 74,
+   "used_in_streams": 47,
+   "reference_only": 27,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "gw_host_registry.users": {
+   "records": 177,
+   "used_in_streams": 44,
+   "reference_only": 133,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "gw_host_registry.service_accounts": {
+   "records": 22,
+   "used_in_streams": 3,
+   "reference_only": 19,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "gw_host_registry.external_systems": {
+   "records": 10,
+   "used_in_streams": 2,
+   "reference_only": 8,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "infrastructure_assets.assets": {
+   "records": 54,
+   "used_in_streams": 43,
+   "reference_only": 11,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "infrastructure_assets.remote_assets": {
+   "records": 3,
+   "used_in_streams": 0,
+   "reference_only": 3,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "infrastructure_assets.maintenance_sites": {
+   "records": 3,
+   "used_in_streams": 3,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "organizations.organizations": {
+   "records": 259,
+   "used_in_streams": 11,
+   "reference_only": 248,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "personas.personas": {
+   "records": 309,
+   "used_in_streams": 309,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "personas.accounts_compact": {
+   "records": 1700,
+   "used_in_streams": 1638,
+   "reference_only": 0,
+   "unmarked_unused": 62,
+   "examples": [
+    "@EOlivarez10",
+    "@ErnestoinTX",
+    "@MKowalski33",
+    "@TinaEdwardsCC",
+    "@ShelbyKingCC",
+    "@Lupe_Longoria",
+    "@bay_TX",
+    "@Nacho2008",
+    "@TanyaTX",
+    "@BrendaCarterCC"
+   ]
+  },
+  "scada_tags.tags": {
+   "records": 331,
+   "used_in_streams": 331,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "scada_tags.alarm_points": {
+   "records": 62,
+   "used_in_streams": 0,
+   "reference_only": 62,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "sensor_registry.water_quality_sondes": {
+   "records": 6,
+   "used_in_streams": 6,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "sensor_registry.air_monitors": {
+   "records": 20,
+   "used_in_streams": 20,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "sensor_registry.tide_gauges": {
+   "records": 6,
+   "used_in_streams": 6,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "sensor_registry.stream_gauges": {
+   "records": 2,
+   "used_in_streams": 2,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "sensor_registry.weather_stations": {
+   "records": 7,
+   "used_in_streams": 7,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "sensor_registry.buoys": {
+   "records": 2,
+   "used_in_streams": 2,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "sensor_registry.bridge_wind_sensors": {
+   "records": 3,
+   "used_in_streams": 0,
+   "reference_only": 3,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "sensor_registry.wastewater_sampling_sites": {
+   "records": 5,
+   "used_in_streams": 0,
+   "reference_only": 5,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "sensor_registry.port_surveillance_sensors": {
+   "records": 17,
+   "used_in_streams": 17,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "sensor_registry.drone_detection_sensors": {
+   "records": 16,
+   "used_in_streams": 16,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "terminal_registry.terminals": {
+   "records": 25,
+   "used_in_streams": 19,
+   "reference_only": 6,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "terminal_registry.berths": {
+   "records": 45,
+   "used_in_streams": 32,
+   "reference_only": 13,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "terminal_registry.slips": {
+   "records": 77,
+   "used_in_streams": 0,
+   "reference_only": 77,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "terminal_registry.harbours": {
+   "records": 9,
+   "used_in_streams": 0,
+   "reference_only": 9,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "terminal_registry.anchorage_positions": {
+   "records": 30,
+   "used_in_streams": 24,
+   "reference_only": 6,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "terminal_registry.sea_gates": {
+   "records": 12,
+   "used_in_streams": 0,
+   "reference_only": 12,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "terminal_registry.channel_segments": {
+   "records": 7,
+   "used_in_streams": 7,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  },
+  "organizations.broadcast_stations": {
+   "records": 9,
+   "used_in_streams": 9,
+   "reference_only": 0,
+   "unmarked_unused": 0,
+   "examples": []
+  }
+ },
+ "text_scan_files": 1567,
+ "text_scan_complete": true,
+ "problems": []
+}

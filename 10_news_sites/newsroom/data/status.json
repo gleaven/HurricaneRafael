@@ -1,0 +1,152 @@
+{
+ "port": [
+  {
+   "ts": 1815714000,
+   "code": "OPEN",
+   "label": "Open",
+   "detail": "Normal operations. All terminals working."
+  },
+  {
+   "ts": 1820667600,
+   "code": "X-RAY",
+   "label": "Port Condition X-Ray",
+   "detail": "Gale-force winds possible within 48 hours. Ocean-going vessels must plan departure or request approval to stay."
+  },
+  {
+   "ts": 1820754000,
+   "code": "YANKEE",
+   "label": "Port Condition Yankee",
+   "detail": "Port closed to inbound traffic. Ocean-going vessels departing; inbound ships holding at the offshore anchorage."
+  },
+  {
+   "ts": 1820854800,
+   "code": "ZULU",
+   "label": "Port Condition Zulu",
+   "detail": "Ship channel closed to all traffic. Vessels at the anchorage putting to sea."
+  },
+  {
+   "ts": 1820901600,
+   "code": "CLOSED",
+   "label": "Closed",
+   "detail": "Channel closed after Hurricane Rafael. Damage surveys and oil spill response under way."
+  },
+  {
+   "ts": 1823518800,
+   "code": "RESTRICTED",
+   "label": "Partially open",
+   "detail": "Channel partly reopened. Inner channel restricted for spill decontamination; anchorage backlog."
+  },
+  {
+   "ts": 1824703200,
+   "code": "CLOSED",
+   "label": "Closed",
+   "detail": "Channel closed after an explosion near the Port Aransas jetties. Security sweep under way."
+  },
+  {
+   "ts": 1825941600,
+   "code": "OPEN",
+   "label": "Open",
+   "detail": "Channel open to all traffic after a full sweep. Exports resuming."
+  }
+ ],
+ "alerts": [
+  {
+   "id": "hurricane-watch",
+   "level": "watch",
+   "en": "Hurricane watch in effect for the Coastal Bend. Rafael could approach the coast within 48 hours.",
+   "es": "Aviso de huracán en efecto para el Coastal Bend. Rafael podría acercarse a la costa en 48 horas.",
+   "start_en": 1820674800,
+   "start_es": 1820675100,
+   "end": 1820768400
+  },
+  {
+   "id": "hurricane-warning",
+   "level": "warning",
+   "en": "Hurricane warning: Rafael expected to make landfall near Port Aransas. Finish preparations now.",
+   "es": "Advertencia de huracán: se espera que Rafael toque tierra cerca de Port Aransas. Termine sus preparativos ahora.",
+   "start_en": 1820768400,
+   "start_es": 1820768880,
+   "end": 1820941200
+  },
+  {
+   "id": "evacuation-zone-a",
+   "level": "emergency",
+   "en": "Mandatory evacuation ordered for Zone A: the barrier islands and low-lying surge areas. Shelters are open inland.",
+   "es": "Evacuación obligatoria para la Zona A: las islas de barrera y las áreas bajas de marejada. Los albergues están abiertos tierra adentro.",
+   "start_en": 1820746800,
+   "start_es": 1820756820,
+   "end": 1820836800
+  },
+  {
+   "id": "evacuation",
+   "level": "emergency",
+   "en": "Mandatory evacuation extended to Zones B and C; Zones A, B and C must leave. Shelters are open inland.",
+   "es": "Evacuación obligatoria para las zonas de marejada A, B y C. Los albergues están abiertos tierra adentro.",
+   "start_en": 1820836800,
+   "start_es": 1820837700,
+   "end": 1820900700
+  },
+  {
+   "id": "shelter-in-place",
+   "level": "emergency",
+   "en": "Shelter in place. Hurricane Rafael is making landfall. Do not go outside.",
+   "es": "Refúgiese donde está. El huracán Rafael está tocando tierra. No salga.",
+   "start_en": 1820900700,
+   "start_es": 1820901000,
+   "end": 1820930400
+  },
+  {
+   "id": "boil-citywide",
+   "level": "advisory",
+   "en": "Citywide boil-water notice: bring water to a rolling boil for two minutes before drinking or cooking.",
+   "es": "Aviso de hervir agua en toda la ciudad: hierva el agua durante dos minutos antes de beberla o cocinar.",
+   "start_en": 1821268800,
+   "start_es": 1821269700,
+   "end": 1824300000
+  },
+  {
+   "id": "boil-d3-d4",
+   "level": "advisory",
+   "en": "Boil-water notice for Districts 3 and 4. Do not drink tap water without boiling it first.",
+   "es": "Aviso de hervir agua para los Distritos 3 y 4. No beba agua de la llave sin hervirla primero.",
+   "start_en": 1821997800,
+   "start_es": 1822042980,
+   "end": 1824566400
+  },
+  {
+   "id": "fishing-closure",
+   "level": "advisory",
+   "en": "Fishing and shellfish harvesting closed in Nueces and Corpus Christi bays because of the oil spill.",
+   "es": "Pesca y recolección de mariscos cerradas en las bahías de Nueces y Corpus Christi por el derrame de petróleo.",
+   "start_en": 1821286800,
+   "start_es": 1821286800,
+   "end": 1830880800
+  }
+ ],
+ "broadcast": {
+  "harborline6": [
+   {
+    "start": 1820901600,
+    "end": 1821016320,
+    "status": "off-air",
+    "note": "Transmitter off the air. Web updates continue."
+   }
+  ],
+  "coastline": [
+   {
+    "start": 1820898000,
+    "end": 1820930400,
+    "status": "generator",
+    "note": "On the air on generator power."
+   }
+  ],
+  "kncb": [
+   {
+    "start": 1820910660,
+    "end": 1820991600,
+    "status": "off-air",
+    "note": "Transmisor fuera del aire. Las noticias en la web continúan."
+   }
+  ]
+ }
+}

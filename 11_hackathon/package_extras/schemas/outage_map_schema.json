@@ -1,0 +1,48 @@
+{
+ "source": "telemetry",
+ "stream_id": "outage_map",
+ "folder": "data/telemetry/",
+ "files": "outage_map.csv",
+ "standard": "Outage management system export: customers out by feeder",
+ "span": "2027-09-10T05:00Z to 2027-10-27T05:00Z",
+ "cadence": "every 15 minutes for each of 17 feeders, plus a row at the minute of a few sudden changes",
+ "fields": [
+  {
+   "name": "timestamp_utc",
+   "type": "ISO 8601 UTC"
+  },
+  {
+   "name": "area_id",
+   "notes": "main area the feeder serves (areas.json)"
+  },
+  {
+   "name": "feeder_id",
+   "notes": "equipment_id of the feeder breaker (scada_tags.json), e.g. GW-SUB02-CB-6"
+  },
+  {
+   "name": "substation_id",
+   "notes": "infrastructure_assets.json asset_id"
+  },
+  {
+   "name": "customers_served",
+   "type": "integer"
+  },
+  {
+   "name": "customers_out",
+   "type": "integer"
+  },
+  {
+   "name": "cause",
+   "notes": "cause code as entered by the outage desk: STORM, EQUIPMENT, TREE, VEHICLE, ANIMAL, PLANNED, UNKNOWN; empty when nobody is out"
+  },
+  {
+   "name": "crews_assigned",
+   "type": "integer"
+  },
+  {
+   "name": "est_restoration_utc",
+   "notes": "estimate at that time; empty while damage is being assessed"
+  }
+ ],
+ "joins": "customers_out / customers_served scales the feeder current tags GW.SUBn.CBx.CURR.PV in the historian; totals by time give customers without power system-wide"
+}

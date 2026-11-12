@@ -1,0 +1,49 @@
+{
+ "family": "maritime",
+ "generator": "scripts/streams/gen_maritime.py (stages: sim, ais per month, radar, cameras, tables, docs; resumable with --budget)",
+ "changes": [
+  {
+   "stream_id": "ais",
+   "path_glob": "05_other_sources/ais/*.csv",
+   "note": "Unchanged glob: six monthly shore-station files ais_YYYY-MM.csv. A second product, the satellite-received feed, is in 05_other_sources/ais/satellite/sais_YYYY-MM.csv, deliberately outside the glob: it is a different receiver, and merging the two would put one MMSI in two places hundreds of miles apart in a single file. Consider a catalogue entry 'ais_satellite' (same columns, same span, cadence 30-60 min). Extra column Destination (the transponder's free-text field) after TransceiverClass. Cadence at anchor is 6 min (canon EVT-1201 needs an anchored ship with no gap longer than a few minutes; applied to every anchored ship so none stands out), on station 15 min, moored 60 min."
+  },
+  {
+   "stream_id": "port_surveillance",
+   "path_glob": "05_other_sources/port_surveillance/*.csv",
+   "note": "Five tables with different columns: sensors.csv, radar_tracks_YYYY-MM.csv, camera_events.csv, vessel_traffic_log.csv, sensor_status.csv. key_columns in the catalogue describe the radar table. ids_from_registry lists sensor_registry.json, which has no port radar or camera entries: the sensors are defined in sensors.csv in the stream folder (proposed registry records are the rows of that file). New schema file 06_data_streams/schemas/port_surveillance_schema.json (add to 00_schema_index.json)."
+  },
+  {
+   "stream_id": "port_conditions",
+   "path_glob": "05_other_sources/supply/port_conditions.csv",
+   "note": "segment_id values are SEG-ENT, SEG-BAY, SEG-LAQ, SEG-INNER-E, SEG-INNER-W, SEG-GIWW, SEG-ANCH; they are defined by this stream (terminal_registry.json has no channel segments). The inner-channel restriction line is the west limit of the Main Turning Basin."
+  },
+  {
+   "stream_id": "port_arrivals",
+   "path_glob": "05_other_sources/supply/vessel_arrivals.csv",
+   "note": "port_of_arrival is USCRP (the UN/LOCODE for Corpus Christi), not TXCPT as the old schema said. Columns added: next_port, noa_submitted_datetime, eta_revised_datetime, ata_anchorage_datetime, hold_log, shift_berth_id, shift_datetime; last_port_country dropped."
+  },
+  {
+   "stream_id": "cargo_manifests",
+   "path_glob": "05_other_sources/supply/cargo_manifest.csv",
+   "note": "Sea and air consignments in one table (mode SEA / AIR). Columns added: manifest_id, mode, direction, vessel_name, carrier, supplier_id, consignee_id, port_of_lading, port_of_discharge, booking_date, planned_arrival_date, arrival_date, release_date; in_bond_type dropped."
+  }
+ ],
+ "geo_rules": "99_reference/geo/position_rules.d/maritime.json (satellite AIS, radar plots, cameras on land, radar buoys in water)",
+ "geo_check": "python3 scripts/check_geo.py --only=AIS needs most of an hour on the full feed; scripts/streams/run_check_geo_maritime.py runs the same Checker over the same rows in resumable pieces.",
+ "row_counts": {
+  "n_shore": 1313056,
+  "n_sat": 47743,
+  "n_sensors": 17,
+  "n_radar": 299426,
+  "n_cam": 23628,
+  "n_vts": 2775,
+  "n_status": 57731,
+  "n_port_conditions": 79,
+  "n_arrivals": 211,
+  "n_manifests": 223
+ },
+ "run_order": [
+  "gen_maritime.py",
+  "then anything that reads AIS on disk (gen_satellite.py)"
+ ]
+}

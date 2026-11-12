@@ -1,0 +1,155 @@
+{
+ "source": "drone_detections",
+ "folder": "data/drone_detections/",
+ "format": "CSV",
+ "standard": "Counter-UAS sensor export (radar plots, RF contacts), FAA LAANC-style authorisation list, logged sighting reports",
+ "files": {
+  "sensor_sites.csv": "the sensors: id, type, owner, position, nominal range, when they started reporting",
+  "sensor_status_YYYY-MM.csv": "hourly health row per fixed sensor",
+  "detections_YYYY-MM.csv": "radar plots (one row per plot, about every 4 seconds while a target is held) and RF contacts (one row per contact)",
+  "laanc_authorizations.csv": "every authorisation issued to an operator, with time window and area",
+  "sighting_reports.csv": "visual reports logged by security desks, police and the FAA"
+ },
+ "fields": {
+  "detections": [
+   {
+    "name": "time_utc",
+    "notes": "ISO 8601 UTC"
+   },
+   {
+    "name": "sensor_id",
+    "notes": "joins sensor_sites.csv"
+   },
+   {
+    "name": "detection_type",
+    "notes": "radar_plot or rf_contact"
+   },
+   {
+    "name": "track_id",
+    "notes": "the sensor's own track number; a new id starts when a target is lost for more than 40 seconds"
+   },
+   {
+    "name": "latitude / longitude / altitude_m",
+    "notes": "radar plots: target position and height. RF contacts from the airborne receiver: the aircraft's own position. Blank for bearing-only ground sensors."
+   },
+   {
+    "name": "speed_mps / course_deg",
+    "notes": "radar plots only"
+   },
+   {
+    "name": "rcs_m2",
+    "notes": "radar cross-section estimate"
+   },
+   {
+    "name": "bearing_deg_true / range_m",
+    "notes": "from the sensor to the target (bearing only for RF contacts)"
+   },
+   {
+    "name": "rf_center_mhz / rf_signature / duration_s",
+    "notes": "RF contacts only"
+   },
+   {
+    "name": "remote_id",
+    "notes": "Remote ID or registration decoded or correlated for the target, when there is one"
+   },
+   {
+    "name": "authorization_id",
+    "notes": "authorisation the system matched to the target, when there is one; joins laanc_authorizations.csv"
+   },
+   {
+    "name": "classification / confidence",
+    "notes": "the sensor's automatic classification (bird, clutter, aircraft, uas, unknown, emitter type) and its confidence 0 to 1"
+   },
+   {
+    "name": "alert",
+    "notes": "true if the sensor raised an operator alert (radar: RCS at or above the sensor's alert threshold in sensor_sites.csv)"
+   }
+  ],
+  "sensor_status": [
+   {
+    "name": "time_utc"
+   },
+   {
+    "name": "sensor_id"
+   },
+   {
+    "name": "status",
+    "notes": "online, degraded or offline"
+   },
+   {
+    "name": "detections_last_hour"
+   },
+   {
+    "name": "self_test",
+    "notes": "pass or warn"
+   },
+   {
+    "name": "note"
+   }
+  ],
+  "laanc_authorizations": [
+   {
+    "name": "authorization_id"
+   },
+   {
+    "name": "authorization_type",
+    "notes": "LAANC, Certificate of Authorization, or Special Governmental Interest waiver (used while the hurricane flight restriction was in force)"
+   },
+   {
+    "name": "operator_id / airframe_id",
+    "notes": "join drone_operators.json"
+   },
+   {
+    "name": "issued_utc / start_utc / end_utc"
+   },
+   {
+    "name": "center_latitude / center_longitude / radius_m / max_altitude_ft_agl"
+   },
+   {
+    "name": "status"
+   }
+  ],
+  "sighting_reports": [
+   {
+    "name": "report_id"
+   },
+   {
+    "name": "time_utc"
+   },
+   {
+    "name": "received_by"
+   },
+   {
+    "name": "reporter_type"
+   },
+   {
+    "name": "observer_latitude / observer_longitude / observer_street",
+    "notes": "where the witness was"
+   },
+   {
+    "name": "direction_deg",
+    "notes": "direction the witness was looking, degrees true, as estimated when logged"
+   },
+   {
+    "name": "objects_seen / duration_min"
+   },
+   {
+    "name": "description"
+   },
+   {
+    "name": "disposition"
+   }
+  ]
+ },
+ "sensor_sites_columns": {
+  "sensor_id": "sensor id used in detections and status files",
+  "name": "site name",
+  "sensor_type": "radar, RF direction finder, acoustic or camera",
+  "owner": "operating organisation",
+  "latitude": "WGS84",
+  "longitude": "WGS84",
+  "nominal_range_m": "nominal detection range",
+  "reporting_since_utc": "first day the sensor reports",
+  "alert_rcs_threshold_m2": "radar cross-section above which the site raises an alert (radars only)"
+ }
+}

@@ -1,0 +1,912 @@
+{
+ "about": "Data streams in this package. Times are UTC unless a column name says local; local time is US Central (UTC-5 until 2027-11-07 07:00Z, UTC-6 after). Paths are relative to the package root.",
+ "streams": [
+  {
+   "stream_id": "ais",
+   "name": "AIS vessel positions",
+   "path": "data/ais/*.csv",
+   "more_files": [
+    "data/ais/satellite/sais_*.csv"
+   ],
+   "format": "USCG NAIS / MarineCadastre CSV",
+   "key_columns": {
+    "time": "BaseDateTime (UTC)",
+    "entity_ids": [
+     "MMSI",
+     "IMO",
+     "VesselName"
+    ],
+    "location": [
+     "LAT",
+     "LON"
+    ]
+   },
+   "ids_join_to": [
+    "vessels.json"
+   ],
+   "cadence": "about 1 min in channels and harbours, 5 min in open bay and approaches, 6 min at anchor, 15 min on station, 30 min offshore, 60 min moored"
+  },
+  {
+   "stream_id": "port_surveillance",
+   "name": "Port radar and camera contact log",
+   "path": "data/port_surveillance/*.csv",
+   "more_files": [],
+   "format": "Radar track table (sensor id, track id, time, position, speed, course, AIS-correlated flag, correlated MMSI) and camera event log",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "sensor_id",
+     "track_id",
+     "correlated_mmsi"
+    ],
+    "location": [
+     "latitude",
+     "longitude"
+    ]
+   },
+   "ids_join_to": [
+    "sensor_registry.json",
+    "vessels.json",
+    "terminal_registry.json"
+   ],
+   "cadence": "radar tracks every 1-2 min while a contact is held; camera events as they occur; sensor status rows hourly"
+  },
+  {
+   "stream_id": "port_conditions",
+   "name": "Coast Guard port conditions and channel status",
+   "path": "data/supply/port_conditions.csv",
+   "more_files": [],
+   "format": "Captain of the Port order log (MSIB style): effective time, condition, channel segment, status, restrictions",
+   "key_columns": {
+    "time": "effective_utc",
+    "entity_ids": [
+     "order_id",
+     "segment_id"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "terminal_registry.json"
+   ],
+   "cadence": "one row per change"
+  },
+  {
+   "stream_id": "port_arrivals",
+   "name": "Vessel arrivals and departures",
+   "path": "data/supply/vessel_arrivals.csv",
+   "more_files": [],
+   "format": "USCG eNOAD / CBP ACE normalized",
+   "key_columns": {
+    "time": "eta_datetime, ata_datetime, atd_datetime (UTC)",
+    "entity_ids": [
+     "mmsi",
+     "imo_number",
+     "terminal_id",
+     "berth_id"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "vessels.json",
+    "terminal_registry.json"
+   ],
+   "cadence": "one row per port call"
+  },
+  {
+   "stream_id": "cargo_manifests",
+   "name": "Cargo manifests (sea and air relief cargo)",
+   "path": "data/supply/cargo_manifest.csv",
+   "more_files": [],
+   "format": "CBP ACE manifest normalized",
+   "key_columns": {
+    "time": "arrival_date, release_date",
+    "entity_ids": [
+     "manifest_id",
+     "vessel mmsi or flight",
+     "consignee_id",
+     "supplier_id"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "vessels.json",
+    "entity_registry.json"
+   ],
+   "cadence": "one row per consignment"
+  },
+  {
+   "stream_id": "fuel_deliveries",
+   "name": "Fuel deliveries and lots",
+   "path": "data/supply/fuel_deliveries.csv",
+   "more_files": [],
+   "format": "Delivery ticket log: time, supplier, receiving facility, product, volume, lot id, carrier (truck or barge)",
+   "key_columns": {
+    "time": "delivered_utc",
+    "entity_ids": [
+     "supplier_id",
+     "facility_id",
+     "lot_id",
+     "contract_id"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "entity_registry.json",
+    "facility_registry.json",
+    "organizations.json",
+    "infrastructure_assets.json",
+    "terminal_registry.json",
+    "vessels.json"
+   ],
+   "cadence": "one row per delivery"
+  },
+  {
+   "stream_id": "adsb",
+   "name": "ADS-B aircraft positions",
+   "path": "data/adsb/adsb_*.csv",
+   "more_files": [],
+   "format": "OpenSky StateVector CSV plus nic and nac_p integrity columns",
+   "key_columns": {
+    "time": "time_position (epoch UTC)",
+    "entity_ids": [
+     "icao24",
+     "callsign"
+    ],
+    "location": [
+     "latitude",
+     "longitude",
+     "baro_altitude",
+     "on_ground"
+    ]
+   },
+   "ids_join_to": [
+    "aircraft_registry.json"
+   ],
+   "cadence": "10 s near airfields and in hovers, 30 s low level, 60 s en route"
+  },
+  {
+   "stream_id": "drone_detections",
+   "name": "Drone detections and authorizations",
+   "path": "data/drone_detections/*.csv",
+   "more_files": [],
+   "format": "Radar/RF detection tracks (sensor, track, time, position, altitude, RCS, RF signature), LAANC authorization list, sighting reports",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "sensor_id",
+     "track_id",
+     "authorization_id",
+     "operator_id"
+    ],
+    "location": [
+     "latitude",
+     "longitude",
+     "altitude_m"
+    ]
+   },
+   "ids_join_to": [
+    "sensor_registry.json",
+    "drone_operators.json"
+   ],
+   "cadence": "1-5 s while tracked; sensor status rows hourly"
+  },
+  {
+   "stream_id": "drone_telemetry",
+   "name": "Authorized drone flight telemetry",
+   "path": "data/drone_video/drone_telemetry_*.csv",
+   "more_files": [
+    "data/drone_video/logs/*.csv"
+   ],
+   "format": "DJI SRT normalized to CSV",
+   "key_columns": {
+    "time": "timestamp_utc",
+    "entity_ids": [
+     "flight_id",
+     "operator_id"
+    ],
+    "location": [
+     "latitude",
+     "longitude",
+     "rel_alt_m"
+    ]
+   },
+   "ids_join_to": [
+    "drone_operators.json",
+    "aircraft_registry.json"
+   ],
+   "cadence": "1 Hz per flight"
+  },
+  {
+   "stream_id": "satellite",
+   "name": "Satellite scene catalogue",
+   "path": "data/satellite/*.json",
+   "more_files": [],
+   "format": "STAC v1.0.0 Item JSON with detection summaries",
+   "key_columns": {
+    "time": "properties.datetime",
+    "entity_ids": [
+     "id"
+    ],
+    "location": [
+     "bbox",
+     "geometry"
+    ]
+   },
+   "ids_join_to": [],
+   "cadence": "one item per scene"
+  },
+  {
+   "stream_id": "damage_assessment",
+   "name": "Structure damage assessments and flood/debris extents",
+   "path": "data/infrastructure/*.csv",
+   "more_files": [
+    "data/infrastructure/aerial_survey/*.csv"
+   ],
+   "format": "FEMA GDA feature table",
+   "key_columns": {
+    "time": "ASMT_DATE",
+    "entity_ids": [
+     "structure_id"
+    ],
+    "location": [
+     "LATITUDE",
+     "LONGITUDE"
+    ]
+   },
+   "ids_join_to": [
+    "areas.json"
+   ],
+   "cadence": "per assessment"
+  },
+  {
+   "stream_id": "avl",
+   "name": "Response vehicle locations",
+   "path": "data/avl/*.csv",
+   "more_files": [],
+   "format": "AVL log: time, unit, position, speed, heading, status, incident",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "unit_id",
+     "incident_number"
+    ],
+    "location": [
+     "latitude",
+     "longitude"
+    ]
+   },
+   "ids_join_to": [
+    "cad_units.json"
+   ],
+   "cadence": "see schemas/avl_schema.json (denser while moving, sparse when parked)"
+  },
+  {
+   "stream_id": "cad_911",
+   "name": "911 computer-aided dispatch records",
+   "path": "data/911/*.csv",
+   "more_files": [
+    "data/911/reports/*.csv"
+   ],
+   "format": "Tyler New World CAD export with ANI/ALI class and call metadata",
+   "key_columns": {
+    "time": "call_received_dttm (local)",
+    "entity_ids": [
+     "incident_number",
+     "unit_id",
+     "sar_case_number"
+    ],
+    "location": [
+     "latitude",
+     "longitude",
+     "address"
+    ]
+   },
+   "ids_join_to": [
+    "cad_units.json",
+    "areas.json"
+   ],
+   "cadence": "one row per incident"
+  },
+  {
+   "stream_id": "sar_missions",
+   "name": "Search and rescue mission log",
+   "path": "data/sar/*.csv",
+   "more_files": [],
+   "format": "Mission log: agency, asset, launch and recovery times, location, persons rescued, method",
+   "key_columns": {
+    "time": "launch_utc",
+    "entity_ids": [
+     "case_number",
+     "mission_id",
+     "asset_id",
+     "incident_number"
+    ],
+    "location": [
+     "latitude",
+     "longitude"
+    ]
+   },
+   "ids_join_to": [
+    "cad_units.json",
+    "aircraft_registry.json",
+    "vessels.json"
+   ],
+   "cadence": "one row per mission"
+  },
+  {
+   "stream_id": "shelters",
+   "name": "Shelter registry and daily census",
+   "path": "data/shelters/*.csv",
+   "more_files": [],
+   "format": "Registry (facility, open and close times) and daily occupancy",
+   "key_columns": {
+    "time": "date_local",
+    "entity_ids": [
+     "facility_id"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "facility_registry.json"
+   ],
+   "cadence": "daily"
+  },
+  {
+   "stream_id": "eas_alerts",
+   "name": "Public alerts (EAS, WEA, city and county notices)",
+   "path": "data/public_health/eas_broadcasts.csv",
+   "more_files": [],
+   "format": "IPAWS CAP alert log with separate English and Spanish release times",
+   "key_columns": {
+    "time": "IssuedAt_UTC, ReleasedAt_EN, ReleasedAt_ES",
+    "entity_ids": [
+     "AlertID",
+     "CAPmsgID"
+    ],
+    "location": [
+     "GeographicArea"
+    ]
+   },
+   "ids_join_to": [
+    "areas.json"
+   ],
+   "cadence": "one row per alert"
+  },
+  {
+   "stream_id": "broadcast_logs",
+   "name": "Broadcast and translation logs",
+   "path": "data/broadcast/*.csv",
+   "more_files": [],
+   "format": "Station programme log (time, station, item, language, alert id) and translation job log (source received, translation delivered)",
+   "key_columns": {
+    "time": "air_time_utc",
+    "entity_ids": [
+     "station_id",
+     "alert_id",
+     "job_id"
+    ],
+    "location": []
+   },
+   "ids_join_to": [],
+   "cadence": "one row per aired item or job"
+  },
+  {
+   "stream_id": "social_media",
+   "name": "Social media posts",
+   "path": "data/social_media/*.jsonl",
+   "more_files": [
+    "data/social_media/_geotagged_index.csv"
+   ],
+   "format": "Twitter v1.1 Tweet objects",
+   "key_columns": {
+    "time": "created_at",
+    "entity_ids": [
+     "user.screen_name",
+     "id_str"
+    ],
+    "location": [
+     "coordinates",
+     "place"
+    ]
+   },
+   "ids_join_to": [
+    "personas.json"
+   ],
+   "cadence": "per post"
+  },
+  {
+   "stream_id": "public_record",
+   "name": "Official statements and notices",
+   "path": "data/press_releases/*.jsonl",
+   "more_files": [],
+   "format": "Public fields of the public record: date, time, issuer, type, text",
+   "key_columns": {
+    "time": "issued_local",
+    "entity_ids": [
+     "id"
+    ],
+    "location": [
+     "places"
+    ]
+   },
+   "ids_join_to": [],
+   "cadence": "per statement"
+  },
+  {
+   "stream_id": "weather",
+   "name": "Surface weather and buoy observations",
+   "path": "data/weather/*_observations.csv",
+   "more_files": [],
+   "format": "NOAA LCD / ASOS CSV; NDBC standard meteorological",
+   "key_columns": {
+    "time": "ObsDateTime (UTC)",
+    "entity_ids": [
+     "StationName",
+     "WBAN"
+    ],
+    "location": [
+     "StnLat",
+     "StnLon"
+    ]
+   },
+   "ids_join_to": [
+    "sensor_registry.json"
+   ],
+   "cadence": "hourly, with outages around landfall"
+  },
+  {
+   "stream_id": "storm_advisories",
+   "name": "Hurricane advisories and best track",
+   "path": "data/weather/nhc_advisories.json",
+   "more_files": [],
+   "format": "NHC advisory list and HURDAT2 best track",
+   "key_columns": {
+    "time": "issued_utc",
+    "entity_ids": [
+     "advisory_number"
+    ],
+    "location": [
+     "center lat/lon"
+    ]
+   },
+   "ids_join_to": [],
+   "cadence": "6-hourly advisories, 3-hourly near landfall"
+  },
+  {
+   "stream_id": "tide_river_gauges",
+   "name": "Tide and river gauges",
+   "path": "data/env_sensors/gauge_*.csv",
+   "more_files": [],
+   "format": "NOAA CO-OPS water level; USGS stage and discharge",
+   "key_columns": {
+    "time": "ObsDateTime (UTC)",
+    "entity_ids": [
+     "SensorID"
+    ],
+    "location": [
+     "Latitude",
+     "Longitude"
+    ]
+   },
+   "ids_join_to": [
+    "sensor_registry.json"
+   ],
+   "cadence": null
+  },
+  {
+   "stream_id": "water_quality",
+   "name": "Water-quality sondes",
+   "path": "data/env_sensors/water_quality_*.csv",
+   "more_files": [],
+   "format": "TCEQ sonde table",
+   "key_columns": {
+    "time": "ObsDateTime (UTC)",
+    "entity_ids": [
+     "SensorID"
+    ],
+    "location": [
+     "Latitude",
+     "Longitude"
+    ]
+   },
+   "ids_join_to": [
+    "sensor_registry.json"
+   ],
+   "cadence": "15 min"
+  },
+  {
+   "stream_id": "air_quality",
+   "name": "Air-quality monitors",
+   "path": "data/env_sensors/aqs_*.csv",
+   "more_files": [],
+   "format": "EPA AQS hourly",
+   "key_columns": {
+    "time": "Date_GMT, Time_GMT",
+    "entity_ids": [
+     "SensorID"
+    ],
+    "location": [
+     "Latitude",
+     "Longitude"
+    ]
+   },
+   "ids_join_to": [
+    "sensor_registry.json"
+   ],
+   "cadence": "hourly"
+  },
+  {
+   "stream_id": "wastewater",
+   "name": "Wastewater pathogen surveillance",
+   "path": "data/public_health/wastewater_surveillance.csv",
+   "more_files": [],
+   "format": "CDC NWSS style: sample date, sewershed, target, concentration",
+   "key_columns": {
+    "time": "sample_date",
+    "entity_ids": [
+     "sewershed_id"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "infrastructure_assets.json"
+   ],
+   "cadence": "2-3 samples a week"
+  },
+  {
+   "stream_id": "ed_visits",
+   "name": "Emergency department visits",
+   "path": "data/public_health/ed_visits_*.csv",
+   "more_files": [],
+   "format": "CDC NSSP BioSense line list",
+   "key_columns": {
+    "time": "Arrive_Date_Time (local)",
+    "entity_ids": [
+     "Visit_ID",
+     "Facility_ID",
+     "Patient_ZIP",
+     "Patient_Tract"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "facility_registry.json"
+   ],
+   "cadence": "per visit"
+  },
+  {
+   "stream_id": "hospital_capacity",
+   "name": "Hospital capacity and utilities status",
+   "path": "data/public_health/hospital_capacity.csv",
+   "more_files": [],
+   "format": "HHS Protect daily capacity plus power source, generator fuel and diversion status",
+   "key_columns": {
+    "time": "Report_Date",
+    "entity_ids": [
+     "Facility_ID"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "facility_registry.json"
+   ],
+   "cadence": "daily"
+  },
+  {
+   "stream_id": "syndromic",
+   "name": "Syndromic surveillance summary",
+   "path": "data/public_health/syndrome_summary.csv",
+   "more_files": [],
+   "format": "Daily counts by syndrome, facility and area",
+   "key_columns": {
+    "time": "Report_Date",
+    "entity_ids": [
+     "Facility_ID",
+     "CC_Category"
+    ],
+    "location": [
+     "Area_ID"
+    ]
+   },
+   "ids_join_to": [
+    "facility_registry.json",
+    "areas.json"
+   ],
+   "cadence": "daily"
+  },
+  {
+   "stream_id": "scada_historian",
+   "name": "Utility SCADA historian",
+   "path": "data/telemetry/historian_*.csv",
+   "more_files": [],
+   "format": "AVEVA PI style tag history",
+   "key_columns": {
+    "time": "Timestamp (UTC)",
+    "entity_ids": [
+     "Tagname"
+    ]
+   },
+   "ids_join_to": [
+    "scada_tags.json",
+    "infrastructure_assets.json"
+   ],
+   "cadence": "compressed archive: a row on change beyond deadband, at least hourly (15 min for key pressures and voltages); events at the exact second"
+  },
+  {
+   "stream_id": "outage_map",
+   "name": "Customer outages by area",
+   "path": "data/telemetry/outage_map.csv",
+   "more_files": [],
+   "format": "Outage management export: time, area or feeder, customers served, customers out",
+   "key_columns": {
+    "time": "timestamp_utc",
+    "entity_ids": [
+     "area_id",
+     "feeder_id",
+     "substation_id"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "areas.json",
+    "infrastructure_assets.json"
+   ],
+   "cadence": "15 min"
+  },
+  {
+   "stream_id": "work_orders",
+   "name": "Maintenance work orders and purchase requests",
+   "path": "data/maintenance/work_orders.csv",
+   "more_files": [],
+   "format": "IBM Maximo WORKORDER export, several organisations",
+   "key_columns": {
+    "time": "reported_date, status_date, actual_finish, status_history",
+    "entity_ids": [
+     "wonum",
+     "asset_id",
+     "vendor_id"
+    ]
+   },
+   "ids_join_to": [
+    "infrastructure_assets.json",
+    "scada_tags.json",
+    "gw_host_registry.json",
+    "entity_registry.json"
+   ],
+   "cadence": "per order"
+  },
+  {
+   "stream_id": "base_status_reports",
+   "name": "Military installation status reports",
+   "path": "data/maintenance/base_status_reports.csv",
+   "more_files": [],
+   "format": "Daily status: installation, readiness percent, aircraft on station, backup power status, perimeter sensor status",
+   "key_columns": {
+    "time": "report_date",
+    "entity_ids": [
+     "installation_id",
+     "equipment_id"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "facility_registry.json",
+    "infrastructure_assets.json"
+   ],
+   "cadence": "daily"
+  },
+  {
+   "stream_id": "siem_alerts",
+   "name": "Utility security alerts",
+   "path": "data/network_logs/siem/*.csv",
+   "more_files": [],
+   "format": "SIEM alert queue export with analyst disposition",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "alert_id",
+     "rule_id",
+     "src_host",
+     "dst_host",
+     "user"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "gw_host_registry.json"
+   ],
+   "cadence": "per alert"
+  },
+  {
+   "stream_id": "zeek_logs",
+   "name": "Network connection logs",
+   "path": "data/network_logs/zeek/*/*.log",
+   "more_files": [],
+   "format": "Zeek conn, dns and notice TSV with OT protocol notices",
+   "key_columns": {
+    "time": "ts (epoch seconds, UTC)",
+    "entity_ids": [
+     "uid"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "gw_host_registry.json"
+   ],
+   "cadence": "one folder per UTC day: conn, dns, ssl, notice"
+  },
+  {
+   "stream_id": "host_audit_logs",
+   "name": "Host, access and mail audit logs",
+   "path": "data/network_logs/audit/*.csv",
+   "more_files": [],
+   "format": "VPN sessions, historian access, file and configuration audit, change tickets, mail gateway, endpoint detections, by organisation",
+   "key_columns": {
+    "time": "time_utc (login_utc / start_utc in the session tables)",
+    "entity_ids": [
+     "host",
+     "account",
+     "src_ip",
+     "device"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "gw_host_registry.json",
+    "scada_tags.json"
+   ],
+   "cadence": "per record"
+  },
+  {
+   "stream_id": "portal_access_logs",
+   "name": "Aid portal and logistics system access logs",
+   "path": "data/network_logs/portal/*.csv",
+   "more_files": [],
+   "format": "Web authentication log: time, system, account hash, source address and ASN, result",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "system",
+     "account_ref",
+     "client_ip",
+     "client_network"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "gw_host_registry.json",
+    "entity_registry.json"
+   ],
+   "cadence": "per attempt (aggregated per minute during floods)"
+  },
+  {
+   "stream_id": "vessel_ot_logs",
+   "name": "Tanker cargo-control and vendor remote-access logs",
+   "path": "data/telemetry/vessel_cargo_control_*.csv",
+   "more_files": [],
+   "format": "Cargo-control event log (valves, alarms, tank levels) and vendor remote-session log",
+   "key_columns": {
+    "time": "timestamp_utc (login_utc in the remote-session table)",
+    "entity_ids": [
+     "vessel mmsi",
+     "session_id",
+     "src_asn",
+     "tag"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "vessels.json",
+    "entity_registry.json"
+   ],
+   "cadence": "events as they occur; tank levels every 5 min"
+  },
+  {
+   "stream_id": "contracts",
+   "name": "Vendor registry, contracts and invoices",
+   "path": "data/payments/contracts*.csv",
+   "more_files": [],
+   "format": "Vendor registry, award records (PIID), invoices",
+   "key_columns": {
+    "time": "registration_date, award_date, invoice_date",
+    "entity_ids": [
+     "supplier_id",
+     "piid",
+     "bank_account_id"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "entity_registry.json",
+    "organizations.json",
+    "areas.json"
+   ],
+   "cadence": "per record"
+  },
+  {
+   "stream_id": "financial_transactions",
+   "name": "Financial transactions",
+   "path": "data/payments/financial_transactions.csv",
+   "more_files": [],
+   "format": "ACH and card transaction log",
+   "key_columns": {
+    "time": "timestamp",
+    "entity_ids": [
+     "account_id",
+     "counterparty_id"
+    ],
+    "location": [
+     "merchant location"
+    ]
+   },
+   "ids_join_to": [
+    "entity_registry.json"
+   ],
+   "cadence": "per transaction"
+  },
+  {
+   "stream_id": "aid_applications",
+   "name": "Disaster aid applications and account changes",
+   "path": "data/payments/aid_applications.csv",
+   "more_files": [],
+   "format": "Application records and account-change audit (deposit detail changes)",
+   "key_columns": {
+    "time": "submitted_utc, changed_utc",
+    "entity_ids": [
+     "application_id",
+     "account_id",
+     "tract"
+    ],
+    "location": []
+   },
+   "ids_join_to": [
+    "areas.json"
+   ],
+   "cadence": "per application or change"
+  },
+  {
+   "stream_id": "insurance_claims",
+   "name": "Insurance and spill damage claims",
+   "path": "data/payments/insurance_claims.csv",
+   "more_files": [],
+   "format": "ACORD claim records",
+   "key_columns": {
+    "time": "loss_date, filed_date",
+    "entity_ids": [
+     "claim_id",
+     "policy_id",
+     "insurer_id",
+     "adjuster_id"
+    ],
+    "location": [
+     "property address"
+    ]
+   },
+   "ids_join_to": [
+    "entity_registry.json"
+   ],
+   "cadence": "per claim"
+  },
+  {
+   "stream_id": "census",
+   "name": "Census tract table",
+   "path": "data/census/*.csv",
+   "more_files": [],
+   "format": "ACS 5-year estimates",
+   "key_columns": {
+    "time": null,
+    "entity_ids": [
+     "GEOID",
+     "AREA_ID"
+    ],
+    "location": [
+     "AREA_ID"
+    ]
+   },
+   "ids_join_to": [
+    "areas.json"
+   ],
+   "cadence": "static"
+  }
+ ]
+}

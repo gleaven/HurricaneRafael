@@ -1,0 +1,232 @@
+{
+ "source": "911",
+ "folder": "data/911/",
+ "format": "CSV",
+ "standard": "Tyler Technologies New World CAD",
+ "reference": "https://www.tylertech.com/products/new-world",
+ "notes": "Tyler New World is the dominant CAD system in Texas municipalities. No national standard exists. Fields match Tyler export format used by CCPD/CCFD/CCEMS.",
+ "entity_catalog": {
+  "units_and_stations": "registries/cad_units.json (agencies; stations[].station_id with real coordinates; units[].unit_id with home_station and avl_equipped; nature_codes; disposition_codes; priority_levels)",
+  "beats_and_areas": "registries/areas.json (area_type patrol_beat: AREA-BEAT-B01..B12 share the beat ids; zip, census_tract, water_district, evacuation_zone for geocoding)",
+  "destinations": "registries/facility_registry.json (hospitals and shelters a unit transports to)"
+ },
+ "fields": [
+  {
+   "name": "incident_number",
+   "notes": "Agency prefix-year-sequence. Prefix by handling agency: CCPD 27, CCFD 19, CCEMS 12, NCSO 31, PAPD 41, mutual-aid fire 52, mutual-aid EMS 53"
+  },
+  {
+   "name": "agency",
+   "notes": "Agency that handled or owns the call type"
+  },
+  {
+   "name": "call_received_dttm",
+   "notes": "Local time (US Central: CDT until 2027-11-07 02:00, then CST), YYYY-MM-DD HH:MM:SS. The repeated hour on 2027-11-07 is ambiguous, as in any local-time export"
+  },
+  {
+   "name": "call_answered_dttm",
+   "notes": "Local time the call taker answered"
+  },
+  {
+   "name": "dispatch_dttm",
+   "notes": "Local time the first unit was sent; empty if no unit was sent"
+  },
+  {
+   "name": "first_arrival_dttm",
+   "notes": "Local time the first unit arrived"
+  },
+  {
+   "name": "cleared_dttm",
+   "notes": "Local time the first unit cleared (for transports: when it left the hospital)"
+  },
+  {
+   "name": "priority",
+   "notes": "P1 to P4, see cad_units.json priority_levels"
+  },
+  {
+   "name": "nature_code",
+   "notes": "cad_units.json nature_codes[].code; WATERSAFE (WATER-SAFETY-INQUIRY) is a code the centre created during the response and is not in the registry table"
+  },
+  {
+   "name": "nature_description",
+   "notes": ""
+  },
+  {
+   "name": "address",
+   "notes": "Block number and street, upper case; the street is the reference-network road the point sits on"
+  },
+  {
+   "name": "city",
+   "notes": ""
+  },
+  {
+   "name": "state",
+   "notes": ""
+  },
+  {
+   "name": "zip",
+   "notes": "ZIP of the census tract (areas.json AREA-ZIP-*)"
+  },
+  {
+   "name": "beat",
+   "notes": "CCPD patrol beat id (areas.json AREA-BEAT-*)"
+  },
+  {
+   "name": "census_tract",
+   "notes": "Six-digit tract code (areas.json area_type census_tract 'tract'; census/acs_nueces_tracts.csv TRACT); empty outside Nueces County"
+  },
+  {
+   "name": "latitude",
+   "notes": "WGS84; on land, set back from the street"
+  },
+  {
+   "name": "longitude",
+   "notes": ""
+  },
+  {
+   "name": "unit_id",
+   "notes": "First unit sent (cad_units.json units[].unit_id); empty when no unit was sent or an aircraft was tasked through the SAR branch"
+  },
+  {
+   "name": "additional_units",
+   "notes": "Semicolon-separated unit ids"
+  },
+  {
+   "name": "disposition_code",
+   "notes": "cad_units.json disposition_codes[].code"
+  },
+  {
+   "name": "disposition_desc",
+   "notes": ""
+  },
+  {
+   "name": "narrative",
+   "notes": "Call taker's summary, upper case; text after ' // ' is the closing remark"
+  },
+  {
+   "name": "mutual_aid",
+   "notes": "true when a mutual-aid or deployed out-of-area unit handled it"
+  },
+  {
+   "name": "sar_priority",
+   "notes": "Y when the call was tagged as a rescue request"
+  },
+  {
+   "name": "sar_case_number",
+   "notes": "SAR case opened from this call (sar/sar_missions.csv case_number)"
+  },
+  {
+   "name": "transport_destination",
+   "notes": "facility_registry.json facility_id of the receiving hospital"
+  },
+  {
+   "name": "call_source",
+   "notes": "911 or TEXT"
+  },
+  {
+   "name": "ali_class_of_service",
+   "notes": "ALI class: WPH2, WPH1, RESD, BUSN, VOIP"
+  },
+  {
+   "name": "ali_carrier",
+   "notes": "Carrier named in the ALI record (fictional carriers)"
+  },
+  {
+   "name": "callback_number",
+   "notes": "ANI callback number (synthetic); joins to 911/reports/ali_subscriber_records.csv"
+  },
+  {
+   "name": "caller_language",
+   "notes": "EN, ES or OT"
+  },
+  {
+   "name": "call_duration_sec",
+   "notes": ""
+  },
+  {
+   "name": "call_taker_position",
+   "notes": "Console id; SP-CT and BEE-CT are mutual-aid call takers"
+  }
+ ],
+ "joins": [
+  {
+   "field": "unit_id / additional_units",
+   "to": "cad_units.json units[].unit_id"
+  },
+  {
+   "field": "agency",
+   "to": "cad_units.json agencies (CCPD, CCFD, CCEMS, NCSO, PAPD, MA_FIRE, MA_EMS, TF1, TXARNG, NCOEM, CIVBOAT)"
+  },
+  {
+   "field": "beat",
+   "to": "areas.json AREA-BEAT-<beat>"
+  },
+  {
+   "field": "nature_code",
+   "to": "cad_units.json nature_codes[].code"
+  },
+  {
+   "field": "disposition_code",
+   "to": "cad_units.json disposition_codes[].code"
+  },
+  {
+   "field": "census_tract",
+   "to": "areas.json census_tract 'tract' and census/acs_nueces_tracts.csv"
+  },
+  {
+   "field": "callback_number",
+   "to": "911/reports/ali_subscriber_records.csv callback_number"
+  },
+  {
+   "field": "sar_case_number",
+   "to": "sar/sar_missions.csv case_number"
+  },
+  {
+   "field": "incident_number",
+   "to": "avl/*.csv incident_number"
+  },
+  {
+   "field": "transport_destination",
+   "to": "facility_registry.json facility_id"
+  }
+ ],
+ "coverage": "at least 2027-08-15T00:00Z to 2028-01-12T06:00Z",
+ "baseline": "about 310 calls a day before the storm",
+ "files": {
+  "data/911/cad_incidents_YYYY-MM.csv": "one row per call for service, by local month of call_received_dttm",
+  "data/911/reports/cbecc_daily_call_volume.csv": "PSAP daily telephone statistics: 911 calls (equals CAD rows), ten-digit line calls, total, answer times, mutual-aid dispatcher hours",
+  "data/911/reports/cbecc_queue_depth.csv": "pending calls and unassigned incidents every 15 minutes through the first three days",
+  "data/911/reports/cbecc_shift_log.csv": "supervisor and director log entries (UTC)",
+  "data/911/reports/ali_subscriber_records.csv": "carrier subscriber record for every callback number: class of service, carrier, plan, activation date, whether a subscriber is registered"
+ },
+ "report_tables": {
+  "reports/cbecc_daily_call_volume.csv": {
+   "date_local": "local calendar date",
+   "calls_911": "911 calls answered that day (equals the CAD rows received that local day)",
+   "calls_ten_digit_lines": "calls on the centre's ten-digit lines",
+   "calls_all_lines": "calls_911 + calls_ten_digit_lines",
+   "incidents_with_unit": "CAD incidents that had a unit assigned",
+   "median_answer_sec": "median time to answer, seconds",
+   "p90_answer_sec": "90th percentile time to answer, seconds",
+   "mutual_aid_dispatcher_hours": "hours worked by dispatchers on loan from other centres",
+   "positions_staffed": "console positions staffed at the daily peak"
+  },
+  "reports/cbecc_queue_depth.csv": {
+   "time_utc": "15-minute sample time, UTC",
+   "pending_calls_and_unassigned_incidents": "calls waiting plus incidents with no unit assigned at that time"
+  },
+  "reports/cbecc_shift_log.csv": {
+   "time_utc": "entry time, UTC",
+   "author": "role of the person writing (shift supervisor, director)",
+   "entry": "free-text log entry"
+  },
+  "reports/ali_subscriber_records.csv": {
+   "callback_number": "caller's number as recorded by the 911 system",
+   "class_of_service": "ANI/ALI class (wireless, VoIP, residential, business, prepaid wireless)",
+   "carrier": "telephone carrier",
+   "service_plan": "carrier plan type",
+   "activation_date": "date the number was activated",
+   "subscriber_registered": "Y if the carrier holds a registered subscriber name"
+  }
+ }
+}

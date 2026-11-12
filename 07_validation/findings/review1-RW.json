@@ -1,0 +1,269 @@
+{
+  "source": "RW",
+  "scope": "Real-world claim verification across all 393 stories (batch-A..H): places, agencies, military installations, programs, history, geography, general standards, calendar and sky events. All 393 stories scanned by script for real-world references; about 56 explainer, analysis and key stories read in full.",
+  "stories_read": 393,
+  "findings": [
+    {
+      "id": "RW-001",
+      "severity": "medium",
+      "story_id": "NWS-P009-01",
+      "field": "dek",
+      "old": "The bureau's San Antonio division",
+      "new": "The bureau's Houston division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-002",
+      "severity": "medium",
+      "story_id": "NWS-P009-01",
+      "field": "body",
+      "old": "the bureau's San Antonio division",
+      "new": "the bureau's Houston division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-003",
+      "severity": "medium",
+      "story_id": "NWS-P009-03",
+      "field": "body",
+      "old": "FBI's San Antonio division",
+      "new": "FBI's Houston division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-004",
+      "severity": "medium",
+      "story_id": "NWS-P010-03",
+      "field": "body",
+      "old": "FBI's San Antonio division",
+      "new": "FBI's Houston division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-005",
+      "severity": "medium",
+      "story_id": "NWS-P011-01",
+      "field": "body",
+      "old": "FBI's San Antonio division",
+      "new": "FBI's Houston division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-006",
+      "severity": "medium",
+      "story_id": "NWS-P022-02",
+      "field": "body",
+      "old": "FBI's San Antonio division",
+      "new": "FBI's Houston division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-007",
+      "severity": "medium",
+      "story_id": "NWS-P046-01",
+      "field": "body",
+      "old": "FBI's San Antonio Division",
+      "new": "FBI's Houston Division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-008",
+      "severity": "medium",
+      "story_id": "NWS-P047-01",
+      "field": "body",
+      "old": "FBI's San Antonio Division",
+      "new": "FBI's Houston Division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-009",
+      "severity": "medium",
+      "story_id": "NWS-P047-03",
+      "field": "body",
+      "old": "FBI's San Antonio Division",
+      "new": "FBI's Houston Division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-010",
+      "severity": "medium",
+      "story_id": "NWS-P048-02",
+      "field": "body",
+      "old": "FBI's San Antonio Division",
+      "new": "FBI's Houston Division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-011",
+      "severity": "medium",
+      "story_id": "NWS-P052-02",
+      "field": "body",
+      "old": "FBI's San Antonio Division",
+      "new": "FBI's Houston Division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-012",
+      "severity": "medium",
+      "story_id": "NWS-P102-01",
+      "field": "body",
+      "old": "FBI's San Antonio Division",
+      "new": "FBI's Houston Division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-013",
+      "severity": "medium",
+      "story_id": "NWS-P102-02",
+      "field": "body",
+      "old": "FBI's San Antonio Division",
+      "new": "FBI's Houston Division",
+      "reason": "Corpus Christi (Nueces, San Patricio, Aransas, Kleberg counties) is covered by the FBI Houston field office's Corpus Christi resident agency, not FBI San Antonio (fbi.gov/contact-us/field-offices/houston/about). Canon (CHR Mark Ellery in canon.json/characters.json) must be updated to 'FBI Houston Division' too.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-014",
+      "severity": "medium",
+      "story_id": "NWS-P035-01",
+      "field": "body",
+      "old": "rolling boil for one minute before drinking it",
+      "new": "rolling boil for two minutes before drinking it",
+      "reason": "Texas (TCEQ) boil-water notices say boil for two minutes, and the public record (PUB-039) and every other story say two minutes; 'one minute' is the CDC national figure and contradicts the city's notice.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-015",
+      "severity": "medium",
+      "story_id": "NWS-P036-02",
+      "field": "body",
+      "old": "Bring it to a rolling boil for one minute and let it cool.",
+      "new": "Bring it to a rolling boil for two minutes and let it cool.",
+      "reason": "Texas (TCEQ) boil-water notices say boil for two minutes, and the public record (PUB-039) and every other story say two minutes; 'one minute' is the CDC national figure and contradicts the city's notice.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-016",
+      "severity": "medium",
+      "story_id": "NWS-P000-04",
+      "field": "body",
+      "old": "Fourteen vessels have been waiting at the offshore anchorage east of Port Aransas since the closure.",
+      "new": "Fourteen vessels moved to the offshore anchorage east of Port Aransas when the channel closed.",
+      "reason": "Ships do not ride out a Category 3 landfall at an open anchorage beside the landfall point; under 33 CFR 165.804 and standard practice (as M008-01 and M028-01 themselves explain) vessels at anchor put to sea. Keep PUB-020 (14 vessels moved to the anchorage when the channel closed) without saying they were still at anchor when the storm hit.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-017",
+      "severity": "medium",
+      "story_id": "NWS-P000-06",
+      "field": "dek",
+      "old": "The ship channel remains closed with 14 vessels at the offshore anchorage.",
+      "new": "The ship channel remains closed, and 14 vessels are waiting offshore.",
+      "reason": "Ships do not ride out a Category 3 landfall at an open anchorage beside the landfall point; under 33 CFR 165.804 and standard practice (as M008-01 and M028-01 themselves explain) vessels at anchor put to sea. Keep PUB-020 (14 vessels moved to the anchorage when the channel closed) without saying they were still at anchor when the storm hit.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-018",
+      "severity": "medium",
+      "story_id": "NWS-P000-06",
+      "field": "body",
+      "old": "closed the ship channel Saturday; 14 vessels were holding at the offshore anchorage east of Port Aransas when the storm arrived.",
+      "new": "closed the ship channel Saturday, when 14 vessels were holding at the offshore anchorage east of Port Aransas.",
+      "reason": "Ships do not ride out a Category 3 landfall at an open anchorage beside the landfall point; under 33 CFR 165.804 and standard practice (as M008-01 and M028-01 themselves explain) vessels at anchor put to sea. Keep PUB-020 (14 vessels moved to the anchorage when the channel closed) without saying they were still at anchor when the storm hit.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-019",
+      "severity": "medium",
+      "story_id": "NWS-P000-07",
+      "field": "body",
+      "old": "closed the ship channel Saturday, and 14 vessels were waiting at the offshore anchorage when the storm hit.",
+      "new": "closed the ship channel Saturday, sending 14 vessels to the offshore anchorage.",
+      "reason": "Ships do not ride out a Category 3 landfall at an open anchorage beside the landfall point; under 33 CFR 165.804 and standard practice (as M008-01 and M028-01 themselves explain) vessels at anchor put to sea. Keep PUB-020 (14 vessels moved to the anchorage when the channel closed) without saying they were still at anchor when the storm hit.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-020",
+      "severity": "low",
+      "story_id": "NWS-M004-04",
+      "field": "headline",
+      "old": "Plywood, gas lines and jets overhead",
+      "new": "Plywood, gas lines and planes overhead",
+      "reason": "NAS Corpus Christi's training squadrons fly T-6B and T-44C turboprops (other stories say 'turboprops over Flour Bluff'); jets train at NAS Kingsville, which does not climb out over Flour Bluff.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-021",
+      "severity": "low",
+      "story_id": "NWS-M004-04",
+      "field": "body",
+      "old": "The jets keep climbing out over Flour Bluff",
+      "new": "The trainers keep climbing out over Flour Bluff",
+      "reason": "NAS Corpus Christi's training squadrons fly T-6B and T-44C turboprops (other stories say 'turboprops over Flour Bluff'); jets train at NAS Kingsville, which does not climb out over Flour Bluff.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-022",
+      "severity": "low",
+      "story_id": "NWS-P088-01",
+      "field": "body",
+      "old": "Under dark skies, patient watchers can see dozens of meteors an hour.",
+      "new": "Under dark skies, patient watchers can see dozens of meteors an hour, though this year a full moon will wash out the fainter ones.",
+      "reason": "The 2027 Geminid peak (night of Dec. 13-14) falls at full moon (IMO 2027 calendar: 'Full Moon for the Geminids'); a viewing guide should not promise dozens an hour without that caveat.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-023",
+      "severity": "low",
+      "story_id": "NWS-M059-02",
+      "field": "dek",
+      "old": "Just upriver from the causeway, the marshes of the Nueces Delta",
+      "new": "At the head of Nueces Bay, the marshes of the Nueces Delta",
+      "reason": "The Nueces Bay Causeway crosses the mouth (east end) of Nueces Bay; the Nueces Delta is at the bay's west end near Calallen/Odem, several miles away, not 'just upriver from the causeway'.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-024",
+      "severity": "low",
+      "story_id": "NWS-P052-04",
+      "field": "body",
+      "old": "and 250 miles north at Fort Hood.",
+      "new": "and about 230 miles north at Fort Hood.",
+      "reason": "Fort Hood (Killeen) is about 230 miles from Corpus Christi in a straight line and roughly 290-300 miles by road; 250 matches neither.",
+      "status": "applied"
+    },
+    {
+      "id": "RW-025",
+      "severity": "medium",
+      "story_id": "NWS-P060-01",
+      "field": "story",
+      "old": "",
+      "new": "Scenario-level (PUB-081): FEMA individual assistance registration opening Nov. 13, two months after a Category 3 landfall, is not realistic; registration opens as soon as a major disaster declaration includes IA, usually within days (Beryl 2024: declaration July 9, IA added July 11-12; Harvey 2017: declared on landfall day). Either move PUB-081 to the first week after landfall, or keep day 60 and have the public record give a cause stories can cite (for example, the state's IA request was initially denied and IA was added on appeal). Affects P060-01..P093-01 and later stories that cite 'opened Nov. 13'.",
+      "reason": "Agency procedure realism: FEMA IA registration timing.",
+      "status": "resolved_by_rewrite",
+      "resolution": "Handled by rewrite-W1/W2 (public record corrected and stories rewritten)."
+    },
+    {
+      "id": "RW-026",
+      "severity": "low",
+      "story_id": "NWS-M005-01",
+      "field": "story",
+      "old": "",
+      "new": "Scenario-level (PUB-018/PUB-022): the hurricane watch goes up Thursday Sept. 9 for a landfall around 1 a.m. Tuesday Sept. 14, about four days ahead, while NHC issues watches about 48 hours and warnings about 36 hours before tropical-storm-force winds (NWS-M016-01 states this correctly). With TS-force winds arriving about Monday morning, the watch would normally come Saturday and the warning by Sunday morning. Options: move the watch to Saturday (day -3) and the warning to Sunday (day -2), or leave the timing and avoid any story stating the watch was issued 'Thursday'. Low priority; flag for the scenario owner.",
+      "reason": "General standard: NHC watch/warning lead times vs scenario timeline.",
+      "status": "resolved_by_rewrite",
+      "resolution": "Handled by rewrite-W1/W2 (public record corrected and stories rewritten)."
+    }
+  ]
+}

@@ -1,0 +1,837 @@
+{
+  "thread_id": "T11",
+  "name": "Aerial damage assessment corridor",
+  "color": "#2563a8",
+  "scenario": "rafael",
+  "lanes": [
+    "C",
+    "D",
+    "I"
+  ],
+  "truth": "While Coast Guard, FEMA, and Army National Guard aerial assets execute a legitimate and well-documented damage assessment operation over Corpus Christi following Hurricane Rafael, the cumulative imagery archive contains a critical anomaly that corroborates the T8 adversary action. Optical and thermal passes over utility substation yards GW-FAC-SUB-02 (Harbor View) and GW-FAC-SUB-03 (Crosstown) on D+8 and D+11 show main feeder breakers in sustained open-contact positions. When compared against the D-2 pre-storm baseline imagery archived at NAS-CC, analysts find that (a) the breaker positions are atypical for storm-induced mechanical failure patterns visible at other substations, (b) the surrounding structural damage at SUB-02 and SUB-03 is below threshold for the mechanical forces that would open those contacts, and (c) the positions are consistent with a remote SCADA command rather than physical disruption. AI tools analyzing the full imagery time-series should detect the spatial and temporal mismatch: damage-classification models trained on hurricane-only scenarios will misclassify SUB-02 and SUB-03 as within-normal-variance, while change-detection models comparing pre- and post-storm states at the breaker-component level will flag them as anomalous outliers against 47 other surveyed substations and switchyards in the metro area.",
+  "phase_onset": 3,
+  "phase_peak": 4,
+  "msel_events": [
+    {
+      "event_id": "EVT-1101",
+      "time_label": "D-2",
+      "day": -2,
+      "day_end": null,
+      "time_utc": "14:00Z",
+      "threads": [
+        "T11"
+      ],
+      "lanes": [
+        "D"
+      ],
+      "description": "NAS-CC aviation operations archives pre-storm baseline optical imagery of all major utility infrastructure yards in the Corpus Christi metro area as part of standard FEMA pre-positioning protocol. Imagery covers all five CBPWA substations (GW-FAC-SUB-01 through 05), the O.N. Stevens water treatment plant (FAC-UTL-01), and Port of Corpus Christi Pier 1 through 12. Breaker contact positions are documented at all substations; all contacts are in nominal closed position.",
+      "observed_in": [
+        {
+          "stream": "satellite",
+          "what": "Pre-storm baseline imagery of utility yards on D-2: feeder breakers at SUB-02 (Harbor View) and SUB-03 (Crosstown) are visibly closed at about 14:17Z and 14:31Z.",
+          "when": {
+            "start_utc": "2027-09-12T14:00Z",
+            "end_utc": "2027-09-12T16:00Z"
+          }
+        },
+        {
+          "stream": "damage_assessment",
+          "what": "FEMA pre-event baseline package: 847 georeferenced tiles covering about 94 percent of metro utility infrastructure.",
+          "when": {
+            "start_utc": "2027-09-12T14:00Z",
+            "end_utc": "2027-09-12T16:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "NAS-CC imagery archive entry NAS-BL-20270912-UTL shows GW-FAC-SUB-02 (Harbor View) with all three main feeder breakers in closed position at 14:17Z; resolution 15 cm/pixel; oblique angle 32 degrees from north.",
+        "NAS-CC imagery archive entry NAS-BL-20270912-UTL shows GW-FAC-SUB-03 (Crosstown) with all three main feeder breakers in closed position at 14:31Z; resolution 15 cm/pixel.",
+        "FEMA Region 6 Pre-Event Baseline Package FEMA-R6-PRE-2027-0914 indexes 847 georeferenced image tiles covering 94% of Corpus Christi metro utility infrastructure."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-UTL-01",
+        "FAC-DOD-01",
+        "PORT-07",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "nas_cc_imagery_archive",
+        "fema_pre_event_baseline_package",
+        "cbpwa_facility_records"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1102",
+      "time_label": "D0",
+      "day": 0,
+      "day_end": null,
+      "time_utc": "08:30Z",
+      "threads": [
+        "T11",
+        "T1"
+      ],
+      "lanes": [
+        "D"
+      ],
+      "description": "NOAA Hurricane Hunter WP-3D Orion (call sign NOAA42) completes a synthetic aperture radar (SAR) pass over Corpus Christi Bay and the Ship Channel at 08:30Z, approximately 2.5 hours after landfall. Imagery captures storm surge inundation extent and vessel positions. The only deep-draft vessels in port are the two tankers moored at the Rendal Terminals berth (TERM-01); around them the Inner Harbor shows a dampened-backscatter signature consistent with oil on water — the first image of the spill, taken three hours after the cargo valves were closed (EVT-0313). SAR data is relayed in near-real-time to the National Hurricane Center and to Texas Division of Emergency Management.",
+      "observed_in": [
+        {
+          "stream": "satellite",
+          "what": "Radar pass at 08:30Z on D0 over Corpus Christi Bay and the ship channel at 5 m resolution: two large hulls at the Inner Harbor berth, surge inundation of 2.1 to 3.4 m across the coastal industrial zone, and the first oil-on-water signature near TERM-01.",
+          "when": {
+            "start_utc": "2027-09-14T08:30Z",
+            "end_utc": "2027-09-14T10:30Z"
+          }
+        },
+        {
+          "stream": "adsb",
+          "what": "NOAA42 (WP-3D) crosses Corpus Christi Bay and the ship channel at about 08:30Z, the only manned aircraft in the area besides Coast Guard helicopters.",
+          "when": {
+            "start_utc": "2027-09-14T07:30Z",
+            "end_utc": "2027-09-14T09:30Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "NOAA SAR pass NOAA42-20270914-0830Z covers 2,400 sq km centered on Corpus Christi Bay at 5m resolution. Vessel detection algorithm flags two large hulls alongside at TERM-01 in the Inner Harbor and no vessel under way anywhere in the ship channel (consistent with Port Condition Zulu).",
+        "Storm surge inundation layer derived from SAR backscatter shows 2.1–3.4m inundation across coastal industrial zone including GW-FAC-SUB-02 yard perimeter (consistent with T8/T9 infrastructure impact).",
+        "Low-backscatter (oil-on-water) signature in the Inner Harbor around TERM-01 and trailing east toward the channel entrance to the bay — cross-reference T6 (EVT-0313, EVT-0314), T12 and T20."
+      ],
+      "public_fact": "PUB-110",
+      "place_ids": [
+        "TERM-01",
+        "PORT-07",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "noaa_sar_imagery",
+        "nhc_data_relay",
+        "txdem_situational_display"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1103",
+      "time_label": "D+1",
+      "day": 1,
+      "day_end": null,
+      "time_utc": "16:00Z",
+      "threads": [
+        "T11",
+        "T1"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Texas Army National Guard UH-60 Black Hawks from 1-149th Aviation Battalion out of Austin-Bergstrom conduct first post-landfall visual reconnaissance sorties over Corpus Christi. Three aircraft execute a grid sweep of districts 1 through 5, capturing continuous video at 4K. Initial focus is on residential survivability assessment and road passability. Video crews also overflight GW-FAC-SUB-01 (Riverside) and GW-FAC-SUB-02 (Harbor View) while routing between districts. SUB-02 is noted as 'flooded, structural integrity uncertain' in crew notes; breaker equipment not visible through flood water.",
+      "observed_in": [
+        {
+          "stream": "adsb",
+          "what": "Three Texas Army National Guard UH-60 sorties from Austin-Bergstrom sweep the districts of Corpus Christi on D+1, about 6.2 flight hours in total.",
+          "when": {
+            "start_utc": "2027-09-15T05:00Z",
+            "end_utc": "2027-09-16T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "TXARNG sortie log 1-149-20270915-S01 through S03: three sorties, 6.2 flight hours, 847 GB video captured, 23 geographic waypoints logged.",
+        "GW-FAC-SUB-02 yard entered field of view at 17:44Z local during sortie S02; crew notation reads 'Harbor View substation — yard flooded approx 0.6m, main building appears intact, breakers obscured by water'.",
+        "Road passability analysis from video identifies 34 road segments impassable in Districts 3 and 4 (cross-reference T9 water zone districts)."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "txarng_flight_logs",
+        "txarng_video_archive",
+        "txdem_sitrep"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1104",
+      "time_label": "D+3",
+      "day": 3,
+      "day_end": null,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T11",
+        "T1"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "FEMA Urban Search and Rescue (USAR) deploys contracted Argus Aerial Systems (fictional) fixed-wing UAV swarm (8 aircraft, Argus Mk-7 model) for systematic damage grid survey of the Corpus Christi metro. Swarm executes pre-programmed lawnmower pattern at 400 ft AGL, capturing nadir optical imagery at 3 cm/pixel GSD. Flight plan covers 180 sq km per day. FEMA designates this as Phase 1 (coastal and residential damage zones); utility infrastructure is not in Phase 1 scope. Survey imagery is processed overnight at the FEMA Region 6 mobile GIS unit and preliminary damage estimates are released.",
+      "observed_in": [
+        {
+          "stream": "drone_telemetry",
+          "what": "Fixed-wing survey swarm flights FEMA-UAV-0917-GRID01 to GRID08: about 1,440 km of track over the metro on D+3.",
+          "when": {
+            "start_utc": "2027-09-17T12:00Z",
+            "end_utc": "2027-09-17T14:00Z"
+          }
+        },
+        {
+          "stream": "damage_assessment",
+          "what": "Preliminary damage assessment: 4,200 to 5,800 structures with major or severe damage; the automated classifier flags 2,100 major and 390 destroyed.",
+          "when": {
+            "start_utc": "2027-09-17T05:00Z",
+            "end_utc": "2027-09-19T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Argus Mk-7 swarm log FEMA-UAV-0917-GRID01 through GRID08: 1,440 km of linear flight track, 847,000 image tiles, cloud cover 12%, valid coverage 88%.",
+        "FEMA Preliminary Damage Assessment (PDA) Phase 1 estimates 4,200–5,800 structures with major or severe damage in coastal and residential zones.",
+        "Automated damage classification model (FEMA ResNet-based) applied to imagery flags 2,100 structures as 'major' and 390 as 'destroyed'; utility infrastructure tiles are excluded from Phase 1 classification run."
+      ],
+      "public_fact": "PUB-111",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "argus_flight_logs",
+        "fema_gis_unit_output",
+        "fema_preliminary_pda"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1105",
+      "time_label": "D+8",
+      "day": 8,
+      "day_end": null,
+      "time_utc": "10:30Z",
+      "threads": [
+        "T11",
+        "T8"
+      ],
+      "lanes": [
+        "D",
+        "I"
+      ],
+      "description": "FEMA Phase 2 aerial survey extends coverage to utility infrastructure yards. Argus Mk-7 swarm executes dedicated passes over all five CBPWA substations and the O.N. Stevens WTP. At GW-FAC-SUB-02 (Harbor View), yard flooding has receded to less than 5 cm standing water. High-resolution nadir imagery at 3 cm/pixel clearly resolves individual breaker equipment on the main transformer bank. Main feeder breakers B2-A and B2-C are in open-contact position. At GW-FAC-SUB-03 (Crosstown) every main feeder breaker is still closed on this pass; B3-B is first seen open on the thermal survey after the D+10 command. At the three other substations (SUB-01, SUB-04, SUB-05), all visible breakers are in closed position or show mechanical damage consistent with storm surge and wind forces. CBPWA restoration crews have not yet visited SUB-02 or SUB-03.",
+      "observed_in": [
+        {
+          "stream": "drone_telemetry",
+          "what": "Survey passes over all five CBPWA substations and the O.N. Stevens plant on D+8 (tile set FEMA-UAV-0922-UTL-02 acquired 10:34Z to 10:51Z over SUB-02).",
+          "when": {
+            "start_utc": "2027-09-22T10:30Z",
+            "end_utc": "2027-09-22T12:30Z"
+          }
+        },
+        {
+          "stream": "damage_assessment",
+          "what": "Phase 2 utility survey record for SUB-02 (Harbor View): yard flooding has receded; feeder breaker B2-A shows an open-contact position that storm damage does not explain.",
+          "when": {
+            "start_utc": "2027-09-22T10:30Z",
+            "end_utc": "2027-09-22T12:30Z"
+          }
+        },
+        {
+          "stream": "outage_map",
+          "what": "SUB-02 circuits are still listed as storm outages on D+8 (SUB-03 circuits from D+10).",
+          "when": {
+            "start_utc": "2027-09-21T05:00Z",
+            "end_utc": "2027-09-24T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FEMA-UAV-0922-UTL-02 image tile set (GW-FAC-SUB-02): 1,247 tiles at 3 cm/pixel GSD, acquired 10:34–10:51Z. Breaker B2-A: open-contact position confirmed at visual inspection confidence 94%. Breaker B2-C: open-contact position confirmed at confidence 91%. Breaker B2-B: partially obscured by debris, contact position ambiguous.",
+        "FEMA-UAV-0922-UTL-03 image tile set (GW-FAC-SUB-03): 1,180 tiles. Breaker B3-B: open-contact position confirmed at confidence 97%. Surrounding concrete pad shows no cracking or displacement inconsistent with open-contact mechanical force.",
+        "Comparison against D-2 baseline (NAS-BL-20270912-UTL): SUB-02 breaker B2-A delta = CLOSED→OPEN; SUB-02 breaker B2-C delta = CLOSED→OPEN; SUB-03 breaker B3-B delta = CLOSED→OPEN. No other substation shows this delta pattern without co-located structural damage.",
+        "CBPWA outage tracking: SUB-02 and SUB-03 circuits still flagged as storm-outage; no restoration crew dispatch logged to those yards as of D+8 09:00 local."
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "FAC-UTL-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "argus_flight_logs",
+        "fema_gis_unit_output",
+        "cbpwa_outage_map",
+        "fema_phase2_pda"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1106",
+      "time_label": "D+11",
+      "day": 11,
+      "day_end": null,
+      "time_utc": "09:15Z",
+      "threads": [
+        "T11",
+        "T8"
+      ],
+      "lanes": [
+        "D",
+        "I"
+      ],
+      "description": "FEMA commissions a thermal infrared (TIR) pass over the utility corridor on D+11. A contracted Cessna 208B (Coastal Bend Aerial Services, fictional) with FLIR Star SAFIRE 380 sensor flies the substation corridor at dawn, capturing thermal signatures of all equipment. At GW-FAC-SUB-02, the open breakers B2-A and B2-C remain in open position and show no thermal heat signature indicative of recent arc flash or mechanical contact failure — ruling out the hypothesis that storm-surge water caused an internal arc that tripped the breakers. At GW-FAC-SUB-03, breaker B3-B remains open. The thermal data, combined with the D+8 optical, creates a two-point time series establishing that the open positions are persistent and not self-resetting.",
+      "observed_in": [
+        {
+          "stream": "drone_telemetry",
+          "what": "CBAS-TIR-0925 flight log: sortie duration 2h 14m, sensor FLIR SAFIRE 380, spectral band 7.5–13.5 µm, ground resolution 0.4m at 2,000 ft AGL. | SUB-02 TIR analysis: breaker B2-A surface temperature 24.3°C (ambient +1.1°C) — no thermal signature indicating recent electrical arcing or mechanical heat. SUB-02 breaker B2-C: 24.1°C (ambient +0.9°C). Both readings are inconsistent with arc-induced tripping (expected: >80°C residual within 48h). | SUB-03 TIR...",
+          "when": {
+            "start_utc": "2027-09-25T09:15Z",
+            "end_utc": "2027-09-25T11:15Z"
+          }
+        },
+        {
+          "stream": "damage_assessment",
+          "what": "FEMA commissions a thermal infrared (TIR) pass over the utility corridor on D+11.",
+          "when": {
+            "start_utc": "2027-09-25T09:15Z",
+            "end_utc": "2027-09-25T11:15Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "CBAS-TIR-0925 flight log: sortie duration 2h 14m, sensor FLIR SAFIRE 380, spectral band 7.5–13.5 µm, ground resolution 0.4m at 2,000 ft AGL.",
+        "SUB-02 TIR analysis: breaker B2-A surface temperature 24.3°C (ambient +1.1°C) — no thermal signature indicating recent electrical arcing or mechanical heat. SUB-02 breaker B2-C: 24.1°C (ambient +0.9°C). Both readings are inconsistent with arc-induced tripping (expected: >80°C residual within 48h).",
+        "SUB-03 TIR analysis: breaker B3-B surface temperature 24.0°C (ambient +0.8°C). Same conclusion: no arc thermal residual.",
+        "Comparative finding logged in FEMA TIR Analysis Report FEMA-TIR-0925-UTL: 'Open breaker positions at SUB-02 (B2-A, B2-C) and SUB-03 (B3-B) show no thermal evidence of protective relay operation or mechanical overcurrent. Cause of open position remains undetermined; recommend CBPWA engineering inspection with CISA coordination.'"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "cbas_tir_flight_logs",
+        "fema_tir_analysis_report",
+        "fema_phase2_pda"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1107",
+      "time_label": "D+15",
+      "day": 15,
+      "day_end": null,
+      "time_utc": "13:00Z",
+      "threads": [
+        "T11",
+        "T8",
+        "T9"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "FEMA Mitigation Assessment Team (MAT) publishes the Phase 2 infrastructure aerial survey results in an unclassified summary report. The report notes 'anomalous equipment states at two CBPWA substations' as items for follow-up engineering inspection, without attributing cause. Simultaneously, the FEMA-contracted drone swarm completes its first full pass over the O.N. Stevens Water Treatment Plant (FAC-UTL-01). Imagery confirms visible damage to the pump station roof and shows the facility operating at reduced throughput based on settling tank fill levels visible from above.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "FEMA MAT Phase 2 Report (FEMA-MAT-2027-0929-CC): 47-page unclassified summary covering 23 utility infrastructure sites. Section 4.3 'Anomalous Equipment States' references GW-FAC-SUB-02 and GW-FAC-SUB-03 with notation: 'Open breaker contacts with no co-located structural damage — engineering follow-up recommended.'",
+          "when": {
+            "start_utc": "2027-09-29T13:00Z",
+            "end_utc": "2027-09-29T15:00Z"
+          }
+        },
+        {
+          "stream": "damage_assessment",
+          "what": "FAC-UTL-01 (O.N. Stevens WTP) Phase 2 tile set: 2,100 tiles. Settling tank fill analysis (spectral reflectance method) estimates 60% of normal throughput. Roof damage to pump station C: approximately 40 sq m of roofing material missing.",
+          "when": {
+            "start_utc": "2027-09-29T13:00Z",
+            "end_utc": "2027-09-29T15:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FEMA MAT Phase 2 Report (FEMA-MAT-2027-0929-CC): 47-page unclassified summary covering 23 utility infrastructure sites. Section 4.3 'Anomalous Equipment States' references GW-FAC-SUB-02 and GW-FAC-SUB-03 with notation: 'Open breaker contacts with no co-located structural damage — engineering follow-up recommended.'",
+        "FAC-UTL-01 (O.N. Stevens WTP) Phase 2 tile set: 2,100 tiles. Settling tank fill analysis (spectral reflectance method) estimates 60% of normal throughput. Roof damage to pump station C: approximately 40 sq m of roofing material missing."
+      ],
+      "public_fact": "PUB-112",
+      "place_ids": [
+        "FAC-UTL-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fema_mat_report",
+        "fema_phase2_pda_final",
+        "txdem_infrastructure_sitrep"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-1108",
+      "time_label": "D+45",
+      "day": 45,
+      "day_end": null,
+      "time_utc": "17:00Z",
+      "threads": [
+        "T11"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Final FEMA aerial survey pass completes the assessment programme (September 12 to October 29). Argus swarm executes Phase 4 (recovery monitoring) pass. By D+45, aerial coverage of the Corpus Christi metro area has reached 100%. The cumulative imagery archive totals 6.2 million georeferenced tiles spanning D-2 through D+45. FEMA Region 6 transfers the full archive to the Texas Division of Emergency Management and to the National Geospatial-Intelligence Agency (NGA) for long-term storage. The archive is indexed in the FEMA OpenData portal with public access to Phase 1 and Phase 2 optical imagery at 30 cm/pixel (downsampled from 3 cm/pixel originals).",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "FEMA OpenData portal release FEMA-OD-2027-CC-AERIAL: 6.2M tiles, D-2 through D+45, 30 cm/pixel public resolution, full temporal stack available to registered researchers. | Phase 4 coverage report: 100% metro coverage achieved, 183 sq km total survey area, 47 utility infrastructure sites documented across all four phases.",
+          "when": {
+            "start_utc": "2027-10-29T17:00Z",
+            "end_utc": "2027-10-29T19:00Z"
+          }
+        },
+        {
+          "stream": "satellite",
+          "what": "NGA archive receipt NGA-2027-10-29-FEMA-CC: confirms receipt of full 3 cm/pixel archive for classified analysis. Chain of custody document includes note referencing FEMA-TIR-0925-UTL anomalous breaker finding.",
+          "when": {
+            "start_utc": "2027-10-29T17:00Z",
+            "end_utc": "2027-10-29T19:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FEMA OpenData portal release FEMA-OD-2027-CC-AERIAL: 6.2M tiles, D-2 through D+45, 30 cm/pixel public resolution, full temporal stack available to registered researchers.",
+        "NGA archive receipt NGA-2027-10-29-FEMA-CC: confirms receipt of full 3 cm/pixel archive for classified analysis. Chain of custody document includes note referencing FEMA-TIR-0925-UTL anomalous breaker finding.",
+        "Phase 4 coverage report: 100% metro coverage achieved, 183 sq km total survey area, 47 utility infrastructure sites documented across all four phases."
+      ],
+      "public_fact": "PUB-113",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fema_phase4_completion_report",
+        "fema_opendata_portal",
+        "nga_archive_receipt"
+      ],
+      "observable": true,
+      "places_inferred": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "PUB-110",
+      "day": 0,
+      "time_local": "04:30",
+      "type": "official_statement",
+      "source": "NOAA National Hurricane Center / Texas Division of Emergency Management",
+      "statement": "NOAA National Hurricane Center confirms that NOAA Hurricane Hunter aircraft completed a final reconnaissance pass over the Corpus Christi area at approximately 3:30 a.m. CDT, about two and a half hours after landfall, capturing synthetic aperture radar imagery of the Corpus Christi Bay and Ship Channel. The imagery, now available to federal and state emergency managers, shows the extent of storm surge inundation along the Ship Channel industrial corridor and in the coastal residential areas of Districts 3 and 4. Texas Division of Emergency Management Director of Operations Marlene Vasquez-Ruiz stated: 'This imagery gives our coordinating agencies a first look at flooding extent before ground teams can safely enter. It is a critical input to our initial damage estimates and search-and-rescue prioritization.' The SAR imagery will be shared with FEMA Region 6 and the Texas General Land Office for infrastructure impact assessment.",
+      "arcs": [
+        "ARC-AID",
+        "ARC-COMMUNITY"
+      ],
+      "events": [
+        "EVT-1102"
+      ],
+      "places": [
+        "Corpus Christi Bay",
+        "Corpus Christi Ship Channel"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-111",
+      "day": 4,
+      "time_local": "15:00",
+      "type": "press_release",
+      "source": "FEMA Region 6",
+      "statement": "FEMA Region 6 today released preliminary damage assessment results based on the first systematic aerial drone survey of the Corpus Christi metropolitan area. A team of eight unmanned aircraft operated by Argus Aerial Systems under FEMA contract completed 180 square kilometers of coverage over residential and coastal zones between September 17 and 18. Based on automated structure analysis of approximately 847,000 image tiles, FEMA estimates between 4,200 and 5,800 structures in Nueces County sustained major or severe damage from Hurricane Rafael. These figures are preliminary and will be updated as the survey expands to additional zones, including the utility corridor and commercial districts. FEMA Federal Coordinating Officer Dennis Park said: 'The aerial survey gives us the most comprehensive picture we have had in the first days after a Gulf Coast hurricane. We are sharing these results directly with Nueces County emergency management and the City of Corpus Christi to inform resource deployment.' Additional survey phases targeting utility infrastructure and the Port of Corpus Christi are scheduled to begin within the week.",
+      "arcs": [
+        "ARC-AID"
+      ],
+      "events": [
+        "EVT-1104"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Nueces County"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-112",
+      "day": 15,
+      "time_local": "11:00",
+      "type": "press_release",
+      "source": "FEMA Region 6 / Texas Division of Emergency Management",
+      "statement": "FEMA's Mitigation Assessment Team today released the Phase 2 Utility Infrastructure Aerial Survey Summary for the Corpus Christi Hurricane Rafael response. The survey, completed over September 23 through 26, covered 23 utility infrastructure sites including five CBPWA electrical substations, the O.N. Stevens Water Treatment Plant, four pumping stations, and nine telecommunications relay facilities. The assessment found visible storm damage at 14 of the 23 sites, with the O.N. Stevens plant sustaining moderate roof damage to the C-pump station. The report identifies two CBPWA substations — Harbor View and Crosstown — as requiring follow-up engineering inspection due to equipment configurations observed in the imagery. Texas Division of Emergency Management Infrastructure Division Chief Rafael Montoya-Chen said: 'The aerial survey has given engineers a roadmap so that when crews reach those sites, they know what to look for and can prioritize the most critical restoration steps.' The full Phase 2 imagery set is available to credentialed government users through the FEMA GeoPlatform.",
+      "arcs": [
+        "ARC-WATER"
+      ],
+      "events": [
+        "EVT-1107"
+      ],
+      "places": [
+        "O.N. Stevens Water Treatment Plant",
+        "Corpus Christi"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-113",
+      "day": 45,
+      "time_local": "14:00",
+      "type": "press_release",
+      "source": "FEMA Region 6",
+      "statement": "FEMA Region 6 announced today the completion of the Hurricane Rafael Aerial Assessment Program, the most comprehensive post-storm aerial survey conducted in the Texas Gulf Coast region. From a pre-storm baseline on September 12 through October 29, federal, state, and contracted aerial assets generated more than 6.2 million georeferenced image tiles covering 183 square kilometers of the Corpus Christi metropolitan area. The imagery archive spans all phases of the disaster cycle from pre-storm baseline through active recovery. Beginning today, downsampled imagery from Phase 1 and Phase 2 surveys is publicly available through the FEMA OpenData portal for use by academic researchers, local governments, and community organizations engaged in recovery planning. FEMA Federal Coordinating Officer Dennis Park stated: 'This imagery archive is a resource that will support not just today's recovery, but future preparedness for the entire Texas Gulf Coast. We are grateful to NOAA, the Texas Army National Guard, and our contracted partners for executing this mission under difficult post-storm conditions.' Requests for access to full-resolution imagery should be directed to FEMA Region 6 Geospatial Programs at the contact listed below.",
+      "arcs": [
+        "ARC-AID"
+      ],
+      "events": [
+        "EVT-1108"
+      ],
+      "places": [
+        "Corpus Christi"
+      ],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "aerial_coverage_pct",
+      "label": "Aerial damage survey coverage",
+      "kind": "number",
+      "group": "Scenario",
+      "unit": "%",
+      "thread": "T11",
+      "description": "Percentage of Corpus Christi metro area (183 sq km) covered by at least one post-storm aerial pass with damage-assessable imagery.",
+      "keyframes": [
+        {
+          "day": -2,
+          "value": 0
+        },
+        {
+          "day": 0,
+          "value": 5
+        },
+        {
+          "day": 1,
+          "value": 12
+        },
+        {
+          "day": 3,
+          "value": 40
+        },
+        {
+          "day": 5,
+          "value": 62
+        },
+        {
+          "day": 8,
+          "value": 78
+        },
+        {
+          "day": 11,
+          "value": 85
+        },
+        {
+          "day": 15,
+          "value": 92
+        },
+        {
+          "day": 21,
+          "value": 97
+        },
+        {
+          "day": 30,
+          "value": 99
+        },
+        {
+          "day": 45,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "damage_assessment_phase",
+      "label": "FEMA aerial assessment phase",
+      "kind": "state",
+      "group": "Scenario",
+      "thread": "T11",
+      "description": "Current operational phase of the FEMA aerial damage assessment program.",
+      "states": [
+        {
+          "value": "pre_storm_baseline",
+          "color": "#6b7280",
+          "label": "Pre-storm baseline"
+        },
+        {
+          "value": "phase1_residential",
+          "color": "#2563a8",
+          "label": "Phase 1 — Residential"
+        },
+        {
+          "value": "phase2_infrastructure",
+          "color": "#1d4ed8",
+          "label": "Phase 2 — Infrastructure"
+        },
+        {
+          "value": "phase3_commercial",
+          "color": "#1e40af",
+          "label": "Phase 3 — Commercial/Industrial"
+        },
+        {
+          "value": "phase4_recovery",
+          "color": "#93c5fd",
+          "label": "Phase 4 — Recovery monitoring"
+        },
+        {
+          "value": "complete",
+          "color": "#dbeafe",
+          "label": "Complete"
+        }
+      ],
+      "keyframes": [
+        {
+          "day": -2,
+          "value": "pre_storm_baseline"
+        },
+        {
+          "day": 0,
+          "value": "phase1_residential"
+        },
+        {
+          "day": 3,
+          "value": "phase1_residential"
+        },
+        {
+          "day": 8,
+          "value": "phase2_infrastructure"
+        },
+        {
+          "day": 15,
+          "value": "phase3_commercial"
+        },
+        {
+          "day": 21,
+          "value": "phase4_recovery"
+        },
+        {
+          "day": 45,
+          "value": "complete"
+        }
+      ]
+    },
+    {
+      "id": "fema_aerial_assets_active",
+      "label": "FEMA aerial assets active (count)",
+      "kind": "number",
+      "group": "Scenario",
+      "unit": "aircraft",
+      "thread": "T11",
+      "description": "Number of aerial platforms (fixed-wing, rotary, UAV) actively tasked to the Corpus Christi damage assessment operation.",
+      "keyframes": [
+        {
+          "day": -2,
+          "value": 1
+        },
+        {
+          "day": 0,
+          "value": 4
+        },
+        {
+          "day": 1,
+          "value": 6
+        },
+        {
+          "day": 3,
+          "value": 10
+        },
+        {
+          "day": 8,
+          "value": 9
+        },
+        {
+          "day": 15,
+          "value": 7
+        },
+        {
+          "day": 21,
+          "value": 5
+        },
+        {
+          "day": 30,
+          "value": 3
+        },
+        {
+          "day": 45,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "substation_anomaly_flagged",
+      "label": "GW-FAC-SUB-02/03 open-breaker anomaly flagged",
+      "kind": "state",
+      "group": "Hidden threads",
+      "thread": "T11",
+      "description": "Whether the anomalous open-breaker positions at GW-FAC-SUB-02 and GW-FAC-SUB-03 have been formally flagged by aerial imagery analysts and escalated.",
+      "states": [
+        {
+          "value": "undetected",
+          "color": "#6b7280",
+          "label": "Undetected"
+        },
+        {
+          "value": "imagery_captured",
+          "color": "#fbbf24",
+          "label": "Imagery captured, unanalyzed"
+        },
+        {
+          "value": "flagged_engineering",
+          "color": "#f97316",
+          "label": "Flagged for engineering inspection"
+        },
+        {
+          "value": "escalated_cisa",
+          "color": "#dc2626",
+          "label": "Escalated to CISA"
+        }
+      ],
+      "keyframes": [
+        {
+          "day": -2,
+          "value": "undetected"
+        },
+        {
+          "day": 8,
+          "value": "imagery_captured"
+        },
+        {
+          "day": 11,
+          "value": "imagery_captured"
+        },
+        {
+          "day": 15,
+          "value": "flagged_engineering"
+        },
+        {
+          "day": 21,
+          "value": "escalated_cisa"
+        }
+      ]
+    }
+  ],
+  "news_arcs": [
+    {
+      "arc_id": "ARC-AIRDMG",
+      "name": "Eyes from above",
+      "description": "Coverage of the aerial damage assessment operation — from the first Coast Guard helicopter footage to the FEMA drone swarms and final imagery archive release. Tracks public understanding of the storm's physical toll as revealed by systematic overhead observation.",
+      "thread": "T11",
+      "story_hooks": [
+        {
+          "day": 1,
+          "outlet": "OUT-02",
+          "character_note": "NAS-CC Public Affairs Officer Lt. Cmdr. Angela Foss (fictional)",
+          "summary": "Harborline 6 anchor report: First aerial footage from Texas Army National Guard UH-60 helicopters shows the scale of storm surge flooding in Districts 3 and 4. Lt. Cmdr. Angela Foss of NAS-CC Public Affairs describes the base's role in coordinating the first flights. Footage shows submerged streets, collapsed carports, and vessels pushed onto the coastal road.",
+          "public_facts_used": [
+            "PUB-110"
+          ]
+        },
+        {
+          "day": 4,
+          "outlet": "OUT-01",
+          "character_note": "FEMA FCO Dennis Park (fictional), Argus Aerial Systems spokesperson Craig Ohtani (fictional)",
+          "summary": "Bayside Ledger front page: FEMA releases preliminary damage estimates from first drone sweep — 4,200 to 5,800 homes with major damage. Story explains how the 8-aircraft swarm works, quotes Argus spokesperson Craig Ohtani on the lawnmower-pattern survey technology. Estimates shock local officials who had hoped for a lower figure.",
+          "public_facts_used": [
+            "PUB-111"
+          ]
+        },
+        {
+          "day": 15,
+          "outlet": "OUT-03",
+          "character_note": "Texas TDEM Infrastructure Division Chief Rafael Montoya-Chen (fictional)",
+          "summary": "Coastline Public Radio feature: FEMA releases Phase 2 infrastructure survey results. Reporter notes that the O.N. Stevens plant appears damaged but operational. Chief Montoya-Chen is asked why two substations need 'engineering follow-up' — he gives a measured non-answer. Reporter files a FOIA request for the full Phase 2 report.",
+          "public_facts_used": [
+            "PUB-112"
+          ]
+        },
+        {
+          "day": 45,
+          "outlet": "OUT-01",
+          "character_note": "FEMA FCO Dennis Park (fictional), academic researcher Dr. Priya Suresh-Nair of Texas A&M Corpus Christi (fictional)",
+          "summary": "Bayside Ledger anniversary piece: FEMA closes out the aerial program and opens the imagery archive to the public. Dr. Suresh-Nair, who has been using the imagery for academic research on storm damage modeling, says the temporal depth of the dataset — 45 days of continuous monitoring — is unprecedented for a Gulf Coast event. She notes that some infrastructure imagery from Days 8 and 11 raised questions she hopes engineers will address.",
+          "public_facts_used": [
+            "PUB-113"
+          ]
+        }
+      ]
+    },
+    {
+      "arc_id": "ARC-INFRA-ANOMALY",
+      "name": "The substation question",
+      "description": "A slow-burn investigative arc where local reporters and outside researchers begin piecing together that the FEMA Phase 2 imagery flagged something unusual at the CBPWA substations — without yet understanding it as adversarial action. Cross-links to T8 (grid intrusion) and T10 (hiding in the storm).",
+      "thread": "T11",
+      "story_hooks": [
+        {
+          "day": 17,
+          "outlet": "OUT-01",
+          "character_note": "CBPWA communications director Sandra Whitfield-Reyes (fictional)",
+          "summary": "Bayside Ledger follow-up: Reporter asks CBPWA why Harbor View and Crosstown substations (GW-FAC-SUB-02 and 03) are still offline when other substations in similar condition have been restored. CBPWA communications director Sandra Whitfield-Reyes says restoration is 'pending engineering assessment' but declines to elaborate. Reporter notes the FEMA Phase 2 report mentioned those sites.",
+          "public_facts_used": [
+            "PUB-112"
+          ]
+        },
+        {
+          "day": 22,
+          "outlet": "OUT-05",
+          "character_note": "Energy industry analyst Marcus Beaumont (fictional)",
+          "summary": "Sabal Energy Wire industry brief: Energy analyst Marcus Beaumont writes that two Corpus Christi substations remain offline 22 days after the hurricane while comparable Texas facilities restored power within 10 days of Harvey and Ida. He speculates on causes — transformer damage, relay failure, flooding damage — but notes the publicly released FEMA imagery is too low resolution to draw conclusions.",
+          "public_facts_used": [
+            "PUB-112"
+          ]
+        },
+        {
+          "day": 30,
+          "outlet": "OUT-03",
+          "character_note": "Coastline Public Radio energy reporter Thalia Brennan-Ortiz (fictional)",
+          "summary": "Coastline Public Radio: Thalia Brennan-Ortiz gets a partial response to her D+15 FOIA — a redacted version of the FEMA Phase 2 report with the anomalous equipment states section lightly redacted ('equipment configuration — refer to CISA for details'). She reports that FEMA flagged something at two substations and that CISA is involved, but cannot say what. CISA declines to comment.",
+          "public_facts_used": [
+            "PUB-112"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "GW-ENT-11",
+      "name": "Coastal Bend Emergency Air Operations (CBEAO)",
+      "type": "government_unit",
+      "note": "Fictional coordination unit for multi-agency aerial assessment operations, stood up at NAS-CC on D0 and disbanded on D+47. Coordinates FEMA drone swarms, TXARNG helicopter sorties, and NOAA/NWS aircraft."
+    },
+    {
+      "id": "GW-ENT-12",
+      "name": "Argus Aerial Systems",
+      "type": "private_contractor",
+      "note": "Fictional FEMA-contracted UAV operator providing the Argus Mk-7 swarm for Phases 1 through 4. Principal POC: Craig Ohtani, VP Operations. Based in San Antonio, TX."
+    },
+    {
+      "id": "GW-ENT-13",
+      "name": "Coastal Bend Aerial Services (CBAS)",
+      "type": "private_contractor",
+      "note": "Fictional small aviation contractor based at Corpus Christi International Airport, contracted for thermal infrared pass on D+11. Single Cessna 208B with FLIR Star SAFIRE 380 sensor."
+    }
+  ],
+  "answer_key_path": "The chain of artifacts begins with the NAS-CC D-2 baseline imagery (NAS-BL-20270912-UTL), which establishes that GW-FAC-SUB-02 breakers B2-A and B2-C and GW-FAC-SUB-03 breaker B3-B were all in closed position before the storm. The FEMA Phase 2 optical survey on D+8 (FEMA-UAV-0922-UTL-02 and UTL-03 tile sets) captures those same breakers in open-contact positions after yard flooding has receded — but with no co-located structural damage of the type observed at SUB-01, SUB-04, and SUB-05, where open breakers are always accompanied by physical equipment damage. The D+11 thermal infrared pass (CBAS-TIR-0925) rules out arc-induced or relay-triggered tripping by showing ambient surface temperatures at the open breakers — if the breakers had tripped on overcurrent, residual thermal signature would still be detectable 72 hours later. The combination of three artifacts — the pre-storm baseline, the D+8 optical, and the D+11 TIR — forms a triangulated detection: open contacts, no structural cause, no thermal cause. The FEMA MAT Phase 2 report explicitly flags this as anomalous and recommends CISA coordination. An AI tool performing multi-temporal change detection across the full 47-substation tile stack will identify SUB-02 and SUB-03 as the only sites where breaker state changed without co-located physical disruption, flagging them as candidates for the SCADA manipulation documented in T8.",
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

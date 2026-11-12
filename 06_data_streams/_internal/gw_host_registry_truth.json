@@ -1,0 +1,257 @@
+{
+ "_about": "Internal. Never delivered. What each host and account does in the scenario, the intruder's infrastructure, and how every older identifier maps onto gw_host_registry.json.",
+ "hosts": {
+  "GW-SRV-SIEM-01": "Sentinel Edge 3.1 SIEM; alert ids SE3-*; storm-mode bulk dismissal and exception rule MAINT-EXCEPT-0892 live here.",
+  "GW-GW-MAIL-01": "Email gateway that logged delivery of the D-14 lure attachment (GW-EVT-001).",
+  "GW-SYS-JMP-01": "Pivot for every OT session in T8/T9/T10: 14 sessions under GW-ENG-VELA from outside Texas (D-7 to D+16), historian sessions, breaker-open commands relayed through GW-WS-OPS-02. Taken offline D+28 12:30Z.",
+  "GW-NET-MON-01": "Zeek sensor producing conn/dns/notice logs for the IT/OT boundary.",
+  "GW-SYS-SCADA-01": "Command log records the SUB-02 CB-7 (D+7 14:28Z) and SUB-03 CB-12 (D+10 19:43Z) breaker-open commands and the alarm-suppression list changes.",
+  "GW-SRV-HIST-01": "Historian queried in the 14 after-hours sessions (HIST-20270907-00441 to HIST-20271002-00917).",
+  "GW-SRV-OT-01": "Share \\\\gw-srv-ot-01\\relayconfigs: modified SUB-02 relay configuration written D-3 22:11Z (GW-EVT-103).",
+  "GW-WS-OPS-02": "Workstation named in the SCADA command log for both breaker-open commands; no operator logged in at the time (GW-EVT-005, GW-EVT-007).",
+  "GW-SYS-RTU-01": "27-UV threshold written 0.88 to 0.94 pu at D-3 17:04Z by session user GW-ENG-VELA (GW-EVT-003); trip D0 07:12Z.",
+  "GW-SYS-RTU-02": "Relay file write D-3 22:11Z; breaker CB-7 opened D+7 14:28Z.",
+  "GW-SYS-RTU-03": "Breaker CB-12 opened D+10 19:43Z.",
+  "GW-SYS-RTU-04": "Config file last_modified 2027-09-11T17:11 (local), no work order (GW-EVT-010).",
+  "GW-SYS-RTU-05": "Untouched comparison site.",
+  "GW-SYS-RTU-DSS1": "Feeder substation for Shoreline Regional Medical Center: storm outage from D0 06:17Z, restored D+8 09:14 local. Not one of the five transmission substations.",
+  "GW-SYS-RTU-UTL1": "Carries the P-3 discharge setpoint write 85 to 68 psi at D+9 02:04Z (GW-EVT-006); restored D+28 12:14Z.",
+  "GW-SYS-RTU-WTR3": "Booster setpoint 72 to 54 psi at D+9 02:08Z in the same session as the P-3 change (GW-EVT-013).",
+  "GW-WS-IT-04": "Initial access: implant from the D-14 lure; first beacon 2027-08-31T03:17Z from 10.14.22.47 to 104.21.88.43:443; receives 1.9 GB from the historian over TCP 445 at D-6."
+ },
+ "accounts": {
+  "podom": "CHR-104, CBPWA communications director.",
+  "falrasheedobinna": "CISO who opens SI-2027-CC-001 (GW-EVT-106) and authorises isolation (GW-EVT-107).",
+  "rvela": "Owner of credential GW-ENG-VELA. On approved leave, out of state, 2027-09-07 to 2027-09-21 (HR record). Credential stolen by phish; cooperating witness.",
+  "svc_fieldops_ext": "Contractor account used by the intruder: created exception rule MAINT-EXCEPT-0892 (2027-08-19T11:34Z); historian sessions run as GW-SYS-JMP-01\\svc_fieldops_ext."
+ },
+ "restricted_identifiers": {
+  "note": "Appear only in raw logs, never in public-voice text.",
+  "ids": [
+   "GW-ENG-VELA",
+   "GW-SYS-JMP-01",
+   "GW-WS-IT-04",
+   "ClearPath SecureReach"
+  ]
+ },
+ "soc_analysts": {
+  "SOC-AN-01": "jperez",
+  "SOC-AN-02": "tperez",
+  "SOC-AN-03": "imorales"
+ },
+ "adversary_infrastructure": {
+  "c2_first_beacon": {
+   "dst_ip": "104.21.88.43",
+   "dst_port": 443,
+   "sni": "update-cdn.vantagesec-telemetry.net",
+   "first_seen_utc": "2027-08-31T03:17Z",
+   "last_seen_utc": "2027-10-12T10:04Z",
+   "alert_family": "SE3-NET-9941"
+  },
+  "lookalike_domains": [
+   "cbpwa-vendor-support.com (lure sender)",
+   "update-cdn.meridiancontrols.net",
+   "update-cdn.vantagesec-telemetry.net"
+  ],
+  "lure_attachment": "FEMA-PREP-GUIDANCE-2027.pdf.exe",
+  "vpn_exit_blocks": {
+   "tor_exit": "185.220.101.0/24 (sessions D-7 to D-4 and D-3)",
+   "nl_vps": "45.141.152.0/24 (D+7 14:27-14:33Z and later)",
+   "hosting_asn_198765": [
+    "198.51.47.0/24",
+    "198.51.48.0/24"
+   ],
+   "asn_labels": [
+    "AS-209144 (SIEM enrichment label)",
+    "ASN 198765 Meridian Transit Hosting, NL (CISA annex)"
+   ]
+  },
+  "session_count": 14,
+  "session_window": "D-7 to D+18 (2027-09-07 to 2027-10-02)",
+  "historian_session_ids": [
+   "HIST-20270907-00441",
+   "HIST-20271002-00917"
+  ],
+  "exception_rule": {
+   "id": "MAINT-EXCEPT-0892",
+   "created_utc": "2027-08-19T11:34Z",
+   "created_by": "svc_fieldops_ext",
+   "removed": "D+34"
+  },
+  "relay_file": "\\\\gw-srv-ot-01\\relayconfigs\\sub02\\rtu_config_draft.xml"
+ },
+ "id_migration": {
+  "old_registry_host_ids": {
+   "GW-HIST-01": "GW-SRV-HIST-01",
+   "GW-HIST-02": "GW-SRV-HIST-02",
+   "GW-ENG-01": "user:GW-ENG-VELA (the old registry made the credential a workstation)",
+   "GW-HMI-01": "GW-WTP-HMI-01",
+   "GW-HMI-02": "GW-WS-OPS-02",
+   "GW-HMI-03": "none (wastewater is run by the City of Corpus Christi, outside this estate)",
+   "GW-RTU-WTP-01": "GW-SYS-RTU-UTL1",
+   "GW-RTU-PWR-01": "GW-SYS-RTAC-UTL1-A",
+   "GW-RTU-PWR-02": "GW-SYS-RTAC-UTL1-B",
+   "GW-DMZ-01": "GW-SYS-JMP-01",
+   "GW-IT-04": "GW-WS-IT-04",
+   "GW-IT-EDR": "GW-SRV-EDR-01",
+   "GW-IT-AD": "GW-SRV-DC-01",
+   "GW-IT-EMAIL": "GW-SRV-MAIL-01",
+   "GW-IT-FW": "GW-FW-EDGE-01",
+   "GW-OT-FW": "GW-OT-FW-01",
+   "GW-NET-MON": "GW-NET-MON-01",
+   "GW-SCADA-SRV": "GW-SYS-SCADA-01",
+   "GW-DCS-WTP": "GW-WTP-DCS-01",
+   "GW-RTU-WW-01": "none (city wastewater)",
+   "GW-BACKUP-PWR": "GW-WTP-GEN-CTRL",
+   "GW-PSTN-01": "GW-SRV-COMMS-01",
+   "GW-MAXIMO": "GW-SRV-MAXIMO-01",
+   "HOST-911-01": "EXT-CAD-01",
+   "HOST-PORTAL-01": "EXT-AIDPORTAL-01",
+   "HOST-DOD-LOG-02": "EXT-NASLOG-02",
+   "HOST-VSL-01": "EXT-KALVORA-CCS + EXT-OSTREL-CCS"
+  },
+  "old_registry_hostnames": {
+   "GW-ENG-VELA.gwcc.local": "user account GW-ENG-VELA (Ricardo Vela); no workstation of that name",
+   "GW-SYS-JMP-01.gwcc.local": "GW-SYS-JMP-01",
+   "GW-WS-IT-04.gwcc.local": "GW-WS-IT-04",
+   "GW-EDR-SERVER.gwcc.local": "GW-SRV-EDR-01",
+   "GW-AD-DC01.gwcc.local": "GW-SRV-DC-01",
+   "GW-MAIL.gwcc.local": "GW-SRV-MAIL-01",
+   "GW-FW-EDGE.gwcc.local": "GW-FW-EDGE-01",
+   "GW-SCADA-SRV-01.gwcc.local": "GW-SYS-SCADA-01",
+   "*.gwcc.local": "*.corp.cbpwa.example / *.ot.cbpwa.example"
+  },
+  "siem_alerts_HostName": {
+   "FW-EDGE-01": "GW-FW-EDGE-01",
+   "VPN-GW-01": "GW-SYS-JMP-01",
+   "GW-WS-IT-44": "GW-WS-IT-04",
+   "GW-SRV-DC-01": "GW-SRV-DC-01",
+   "GW-SRV-FILE-01": "GW-SRV-FILE-01",
+   "GW-SRV-PRINT-01": "GW-SRV-PRINT-01",
+   "HIST-SRV-01": "GW-SRV-HIST-01",
+   "SCADA-SRV-01": "GW-SYS-SCADA-01",
+   "RTU-PWR": "GW-SYS-RTAC-UTL1-A",
+   "RTU-BKP": "GW-SYS-RTAC-UTL1-B",
+   "RTU-PUMP": "GW-SYS-RTU-UTL1",
+   "SUB-02": "GW-SYS-RTU-02",
+   "FAC-UTL-01-P3": "GW-WTP-PLC-P3",
+   "GW-WS-IT-10": "GW-WS-IT-10",
+   "GW-WS-IT-11": "GW-WS-IT-11",
+   "GW-WS-IT-12": "GW-WS-IT-12",
+   "GW-WS-IT-14": "GW-WS-IT-14",
+   "GW-WS-IT-15": "GW-WS-IT-15",
+   "GW-WS-IT-20": "GW-WS-IT-20",
+   "GW-WS-IT-30": "GW-WS-IT-30",
+   "GW-WS-IT-50": "GW-WS-IT-50"
+  },
+  "gridwater_assets_systems": {
+   "GW-SYS-SCADA-01": "GW-SYS-SCADA-01",
+   "GW-SYS-HST-01": "GW-SRV-HIST-01",
+   "GW-SYS-JMP-01": "GW-SYS-JMP-01",
+   "GW-SYS-RTU-01": "GW-SYS-RTU-01",
+   "GW-SYS-RTU-02": "GW-SYS-RTU-02",
+   "GW-SYS-RTU-03": "GW-SYS-RTU-03",
+   "GW-SYS-RTU-04": "GW-SYS-RTU-04",
+   "GW-SYS-RTU-05": "GW-SYS-RTU-05"
+  },
+  "msel_names": {
+   "GW-SRV-HIST-01": "GW-SRV-HIST-01",
+   "gw-srv-ot-01": "GW-SRV-OT-01",
+   "GW-WS-OPS-02": "GW-WS-OPS-02",
+   "GW-WS-IT-04": "GW-WS-IT-04 (10.14.22.47)"
+  },
+  "old_ip_addresses": {
+   "note": "The old registry, SIEM file and Zeek logs used three unrelated address plans. New records use the plan in gw_host_registry.json; these are the nearest equivalents.",
+   "old_registry": {
+    "10.72.1.10": "10.72.1.10",
+    "10.72.1.11": "10.72.1.11",
+    "10.72.1.22": "n/a (GW-ENG-VELA is an account)",
+    "10.72.1.30": "10.72.1.30",
+    "10.72.2.10": "10.72.30.41",
+    "10.72.2.11": "10.72.2.12",
+    "10.72.2.12": "n/a (city wastewater)",
+    "10.72.2.50": "10.72.30.35",
+    "10.72.3.10": "10.72.30.10",
+    "10.72.3.11": "10.72.30.31",
+    "10.72.3.12": "10.72.30.32",
+    "10.72.3.20": "10.72.30.20",
+    "10.72.3.30": "n/a (city wastewater)",
+    "10.72.4.1": "10.72.4.1",
+    "10.72.4.50": "10.72.4.50",
+    "10.72.4.88": "10.72.4.88",
+    "192.168.100.1": "10.14.1.1",
+    "192.168.100.5": "10.14.10.5",
+    "192.168.100.10": "10.14.12.20",
+    "192.168.100.20": "10.14.10.30",
+    "192.168.100.44": "10.14.22.47",
+    "192.168.100.80": "10.14.10.53",
+    "192.168.100.90": "10.14.10.49",
+    "198.51.100.42": "192.0.2.70 (Brightwake remote-maintenance gateway)"
+   },
+   "siem_alerts": {
+    "10.72.1.0/24 sources (workstation-like)": "corporate user ranges 10.14.20.0/22",
+    "10.72.2.1, 10.72.2.3, 10.72.2.5": "corporate workstations",
+    "10.72.3.x": "substation and plant devices 10.72.11-15.x, 10.72.30.x",
+    "198.51.100.88, 198.51.100.7, 198.51.100.111, 203.0.113.42, 192.0.2.14, 45.33.32.156": "generic internet noise; choose from documentation ranges but never 198.51.100.44 (reserved for a canon fraud address)",
+    "91.108.56.33, 185.220.101.47": "intruder exits: use adversary_infrastructure blocks"
+   },
+   "zeek_conn_log": {
+    "10.72.3.1": "10.72.1.35 (DNP3 master)",
+    "10.72.3.20-22": "substation RTUs 10.72.11.10, 10.72.12.10, 10.72.13.10",
+    "10.72.3.5-7": "water site RTUs",
+    "10.72.2.10": "10.72.2.11",
+    "10.72.2.5": "10.72.2.12",
+    "10.72.1.5": "10.72.1.5",
+    "10.72.1.20": "10.72.1.20",
+    "10.72.1.15": "10.72.1.10",
+    "10.72.1.51-60": "engineering and operator workstations",
+    "10.72.1.1/10.72.1.2": "10.72.4.1",
+    "91.108.56.33, 45.77.218.95, 185.220.101.47, 212.129.33.11": "intruder exits: use adversary_infrastructure blocks"
+   }
+  },
+  "maximo_assetnum": {
+   "GW-PP1-PUMP1": "EQP-1101",
+   "GW-PP1-PUMP2": "EQP-1102",
+   "GW-PP1-PUMP3": "EQP-1103",
+   "GW-PP1-PUMP4": "EQP-1104",
+   "GW-PP1-CHEM-FEED": "EQP-1130",
+   "GW-PP1-RTU": "GW-SYS-RTU-UTL1",
+   "GW-PWR-RTU": "GW-SYS-RTAC-UTL1-A",
+   "GW-BKP-RTU": "GW-SYS-RTAC-UTL1-B",
+   "GW-GEN-01": "EQP-1140",
+   "GW-SUB01-BKR-MAIN": "same (CB-1)",
+   "GW-SUB02-BKR-MAIN": "same (CB-7)",
+   "GW-SUB03-BKR-MAIN": "same (CB-12)"
+  },
+  "names": {
+   "GridWater / GridWater CC / gwcc": "Coastal Bend Power and Water Authority (CBPWA)",
+   "ClearPath SecureReach EDR Server (old registry)": "GW-SRV-EDR-01; ClearPath is the OT remote-access vendor only",
+   "Dragos OT Firewall (real vendor name in old registry)": "Bastille Networks industrial firewall (fictional)",
+   "AVEVA PI / Yokogawa / Schneider / SEL / GE / Fortinet / Cummins (real vendor names in old files)": "Meridian Controls Corp, Halden Protection, Bastille Networks (fictional)"
+  }
+ },
+ "breaker_yard_designations": {
+  "GW-FAC-SUB-02": {
+   "CB-7": "B2-A (opened by command D+7 14:28Z)",
+   "CB-8": "B2-C (opens by transfer trip with CB-7)"
+  },
+  "GW-FAC-SUB-03": {
+   "CB-12": "B3-B (opened by command D+10 19:43Z)"
+  }
+ },
+ "ids_shared_with_other_registries": {
+  "sites and equipment": "infrastructure_assets.json (GW-FAC-*, EQP-11xx, FAC-UTL-02-A/B, GW-SUB0n-BKR-MAIN, GW-SUB0n-REL-27, GW-FAC-DSS-01)",
+  "pressure zones": "areas.json AREA-PZ-1..5",
+  "added here": [
+   "GW-SUB0n-CB-<m>",
+   "GW-SUB0n-REL-R0nX",
+   "GW-SUB0n-T1",
+   "GW-SUB0n-BUS",
+   "GW-DSS01-*",
+   "GW-FAC-WTR-0n-BPk",
+   "GW-FAC-UTL-01-CLEARWELL",
+   "GW-FAC-UTL-01-TP1/TP2",
+   "GW-FAC-GEN-01-U1"
+  ]
+ }
+}

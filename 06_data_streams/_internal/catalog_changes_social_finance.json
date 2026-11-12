@@ -1,0 +1,35 @@
+{
+ "family": "social_finance",
+ "changes": [
+  {
+   "stream": "social_media",
+   "note": "The folder also holds three non-post files that match or sit beside the glob: _account_lookup.jsonl, _platform_records_return.jsonl (the EVT-1508 observation lives here, not in post objects) and _geotagged_index.csv. Readers of posts should skip names starting with an underscore."
+  },
+  {
+   "stream": "contracts",
+   "note": "Six files match contracts*.csv: vendor_registry, business_filings, awards, invoices, actions, debris_monitoring. ids_from_registry should also list organizations.json (awarding_org_id, buyer_org_id) and areas.json (work_area_id, area_id)."
+  },
+  {
+   "stream": "financial_transactions",
+   "note": "counterparty_id can be an ORG-* id from organizations.json as well as an entity_registry id. key column 'merchant location' is merchant_city (text)."
+  },
+  {
+   "stream": "aid_applications",
+   "note": "First records are 2027-11-13T00:01Z (the three-burst observation starts then), six hours before the catalogue's required start. key columns are submitted_utc, changed_utc and event_utc. Entity ids: application_id, account_id, area_id, tract."
+  },
+  {
+   "stream": "insurance_claims",
+   "note": "Column policy_id holds the registry's policy_number. The file has two record types (policy_transaction, claim); spill claims have claim_program 'oil spill claims centre (Oil Pollution Act)' and no policy."
+  },
+  {
+   "stream": "census",
+   "note": "New columns B08201_001E, B08201_002E, S1601_C01_001E, S1601_C05_001E; the index gains AREA_ID, EVAC_ZONE_AREA_ID, WATER_DISTRICT_AREA_ID and reference coordinates."
+  }
+ ],
+ "assumptions_for_other_families": [
+  "Aid-portal takeover logins come from 203.0.113.17-80 with source_asn 64512; application account ids are 'ACC-' plus ten hex characters. The portal access log family should use the same addresses for the 410 successes (changed_utc 2027-11-15T19:53Z to 2027-11-23T21:20Z).",
+  "Lights over the air station are posted on the nights of D+1, 2, 4, 6, 8 and 10 (same as the 911 calls).",
+  "The outage counter account follows the canon restoration curve; the ferry-wait account shows service suspended D-2 evening to D+7 morning and D+44 01:00 to D+45 midday.",
+  "Automated accounts relay KCRP, buoy 42020, GAUGE-12 and GAUGE-14 readings from the files on disk; regenerate the social stream if those files change."
+ ]
+}

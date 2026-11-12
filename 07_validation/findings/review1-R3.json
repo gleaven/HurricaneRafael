@@ -1,0 +1,306 @@
+{
+  "source": "R3",
+  "scope": "All stories tagged ARC-MILITARY, ARC-DRONES, ARC-GPS, ARC-CHANNEL-BLAST or ARC-OVERSEAS (days -58 to 119), read in day order: bases and deployment, drone sightings, GPS interference, jetty blast and devices, crisis abroad and attribution.",
+  "stories_read": 129,
+  "findings": [
+    {
+      "id": "R3-001",
+      "severity": "high",
+      "story_id": "NWS-P113-01",
+      "field": "story",
+      "old": "",
+      "new": "Rewrite as a port-and-brigade timeline only. Remove the 'Overseas, the timeline ran in parallel' paragraph that sets the August naval and special-operations exercises and the Oct. 30 start of operations abroad beside the attribution, and the closing line that the closure delayed a deploying unit 'while that crisis was unfolding'. Drop 'a crisis abroad' from the headline (e.g. 'A port, a brigade and a long fall: putting Tuesday's attribution in context') and from the dek. At most one sentence may note that officials attributed only the tanker intrusion and the channel devices and did not link them to any other events. Keep Price's quote, the July announcement, the two delays and the Nov. 12 loading; keep 350-450 words.",
+      "reason": "Builds the hidden thesis (same foreign government that ran the exercises struck the port to delay the brigade amid its own operations). PUB-097 attributes only the intrusion and devices as 'attempts to exploit the hurricane'; no deployment motive and no tie to the overseas power are public.",
+      "status": "resolved_by_rewrite",
+      "resolution": "Handled by rewrite-W1/W2 (public record corrected and stories rewritten)."
+    },
+    {
+      "id": "R3-002",
+      "severity": "medium",
+      "story_id": "NWS-P046-04",
+      "field": "dek",
+      "old": "The confirmation came as an overseas power began military operations abroad.",
+      "new": "Officials have not said who placed it.",
+      "reason": "Dek ties the blast confirmation to the overseas power's operations before day 112; the crisis can stay in the body as separate news.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-003",
+      "severity": "medium",
+      "story_id": "NWS-P046-04",
+      "field": "body",
+      "old": "Analysts noted that the moment puts a spotlight on U.S. forces' deployment timelines, including how quickly units can move heavy equipment through ports like Corpus Christi.",
+      "new": "Analysts noted that the moment puts a spotlight on U.S. forces' deployment timelines.",
+      "reason": "The added clause ties the overseas crisis directly to the Corpus Christi port closure; PUB-071 says only that analysts note deployment timelines.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-004",
+      "severity": "medium",
+      "story_id": "NWS-P048-02",
+      "field": "body",
+      "old": "Defense analysts have been watching US deployment timelines since an overseas power began military operations abroad last week. A foreign state broadcaster has mocked the port closure as a sign of US weakness. No official has publicly connected the blast to events overseas.",
+      "new": "Officials have not said who placed the device or when. The Navy and Coast Guard search continues, and no reopening date has been announced.",
+      "reason": "Story chains the spoofed vessel, the blast, the brigade delay, the overseas power and the foreign broadcaster in one piece, implying a foreign-state link before day 112; the AIS item may only carry 'declined to comment on any link'.",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R3-005",
+      "severity": "medium",
+      "story_id": "NWS-P059-02",
+      "field": "body",
+      "old": "The departure comes as a crisis escalates abroad, where an overseas power began military operations late last month. Defense analysts have noted that the timing of US deployments draws attention during such crises. The Army did not link the brigade's rotation to events abroad, and Price declined to discuss its mission.",
+      "new": "The Army first announced the rotation in July and has described it only as an overseas rotation. Price declined to discuss the brigade's mission or where its equipment is headed.",
+      "reason": "Setting the sailing beside the crisis abroad implies the brigade's destination (opsec: no troop destinations). If applied, drop PUB-071 from this story's tags.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-006",
+      "severity": "medium",
+      "story_id": "NWS-P046-05",
+      "field": "body",
+      "old": "The Coastal Bend has been here before. Since Hurricane Rafael, coordinated rumor posts have pushed false claims about the military seizing homes, and a threat researcher found they linked to the same lookalike aid site used in phishing emails. Not every misleading message comes from the same place, but they work the same way: they want you angry, and they want you to share.",
+      "new": "Misleading posts spread fast after a disaster. Since Hurricane Rafael, false claims about the military seizing homes have circulated locally, and county and base officials have called them false. Whatever the source, mocking or misleading messages work the same way: they want you angry, and they want you to share.",
+      "reason": "'Been here before' sets the foreign state broadcaster beside the coordinated rumor network and phishing site, hinting at a common foreign source; the rumor network's sponsor is never public.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-007",
+      "severity": "medium",
+      "story_id": "NWS-P047-05",
+      "field": "body",
+      "old": "A backup generator at Naval Air Station Corpus Christi failed during a power interruption; the cause is under review.",
+      "new": "The last relief flights landed at Naval Air Station Corpus Christi, ending a ten-day airlift.",
+      "reason": "Only pre-day-75 story that puts the station generator failure in the same list as the transmitter 'near an Inner Harbor fuel terminal'; that fuel/terminal/generator pairing is the hidden Quellmar link.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-008",
+      "severity": "medium",
+      "story_id": "NWS-P020-01",
+      "field": "body",
+      "old": "Our product meets specifications, and we're committed to keeping the station supplied for as long as we're needed.",
+      "new": "We're committed to keeping the station supplied for as long as we're needed.",
+      "reason": "Unprompted 'meets specifications' denial on day 20, before any quality question exists, foreshadows the day-75 fuel review (PUB-087).",
+      "status": "applied"
+    },
+    {
+      "id": "R3-009",
+      "severity": "medium",
+      "story_id": "NWS-P097-02",
+      "field": "dek",
+      "old": "Both dispute the findings against them.",
+      "new": "Both deny wrongdoing.",
+      "reason": "Contradicts the body ('None of the reviews has announced findings'); Quellmar faces no findings yet.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-010",
+      "severity": "low",
+      "story_id": "NWS-P112-01",
+      "field": "body",
+      "old": "During the closure, a crisis abroad escalated as an overseas power began military operations. Tuesday's attribution did not mention that crisis.",
+      "new": "The Army has described that deployment only as an overseas rotation.",
+      "reason": "Raising the crisis in the attribution story invites readers to equate the unnamed government with the overseas power; only the intrusion and devices are attributed.",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R3-011",
+      "severity": "low",
+      "story_id": "NWS-P047-05",
+      "field": "body",
+      "old": "It is tempting to draw lines between these things. Please don't, at least not yet. No official has, and nothing that has been made public does.",
+      "new": "Each of these is its own story, with its own investigators, and each deserves to be judged on its own facts. Guessing does not help.",
+      "reason": "'Tempting to draw lines ... not yet' plants the idea that the blast, transmitter and foreign broadcaster are connected.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-012",
+      "severity": "low",
+      "story_id": "NWS-P113-02",
+      "field": "body",
+      "old": "who's watching the channel while it's closed",
+      "new": "who's watching the channel while everyone's watching the storm",
+      "reason": "Implies the devices were placed while the channel was closed; when they were placed is not public.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-013",
+      "severity": "low",
+      "story_id": "NWS-P059-01",
+      "field": "body",
+      "old": "By midmorning, cranes and ramps were moving equipment aboard a sealift ship.",
+      "new": "By first light, cranes and ramps were moving equipment aboard a sealift ship.",
+      "reason": "Story is timestamped 07:30 but reports what happened 'by midmorning'.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-014",
+      "severity": "low",
+      "story_id": "NWS-P059-01",
+      "field": "body",
+      "old": "and then, one ship at a time, an empty berth",
+      "new": "and then, once the ship sails, an empty berth",
+      "reason": "PUB-080 and every other story describe a single sealift ship.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-015",
+      "severity": "low",
+      "story_id": "NWS-P035-02",
+      "field": "body",
+      "old": "who films the night sky from his street",
+      "new": "who films the night sky from his backyard",
+      "reason": "Canon: Ortega films from a tripod in his backyard.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-016",
+      "severity": "low",
+      "story_id": "NWS-P048-03",
+      "field": "dek",
+      "old": "Five days after the blast at the jetties",
+      "new": "Four days after the blast at the jetties",
+      "reason": "Blast was 1 a.m. Thu Oct. 28; story is Mon Nov. 1.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-017",
+      "severity": "low",
+      "story_id": "NWS-P062-01",
+      "field": "dek",
+      "old": "Five days after the channel reopened",
+      "new": "Four days after the channel reopened",
+      "reason": "Reopened Thu Nov. 11; story is Mon Nov. 15.",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R3-018",
+      "severity": "low",
+      "story_id": "NWS-P062-01",
+      "field": "body",
+      "old": "Five days after the Coast Guard reopened",
+      "new": "Four days after the Coast Guard reopened",
+      "reason": "Reopened Thu Nov. 11; story is Mon Nov. 15.",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R3-019",
+      "severity": "low",
+      "story_id": "NWS-M004-04",
+      "field": "body",
+      "old": "The jets keep climbing out over Flour Bluff",
+      "new": "The training planes keep climbing out over Flour Bluff",
+      "reason": "NAS Corpus Christi trainers are turboprops (other stories: 'the sound of turboprops over Flour Bluff'); Kingsville's jets do not depart over Flour Bluff.",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R3-020",
+      "severity": "low",
+      "story_id": "NWS-M004-04",
+      "field": "headline",
+      "old": "jets overhead",
+      "new": "planes overhead",
+      "reason": "Same turboprop/jet mismatch as the body.",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R3-021",
+      "severity": "low",
+      "story_id": "NWS-M004-02",
+      "field": "body",
+      "old": "a few days ahead of our usual Wednesday",
+      "new": "ahead of our usual weekly edition",
+      "reason": "Most Anchor & Rotor weekly editions run Thursday or Friday, so 'usual Wednesday' conflicts with the feed.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-022",
+      "severity": "low",
+      "story_id": "NWS-M013-01",
+      "field": "body",
+      "old": "We will be back next Wednesday",
+      "new": "We will be back next week",
+      "reason": "Same weekday conflict: next regular edition in the feed is not a fixed Wednesday.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-023",
+      "severity": "low",
+      "story_id": "NWS-P048-02",
+      "field": "body",
+      "old": "CORPUS CHRISTI, Texas (CWS) —",
+      "new": "CORPUS CHRISTI, Texas (Continental Wire) —",
+      "reason": "Continental Wire credit line varies (Continental Wire / CW / CWS / none); standardize.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-024",
+      "severity": "low",
+      "story_id": "NWS-P052-02",
+      "field": "body",
+      "old": "CORPUS CHRISTI, Texas (CWS) —",
+      "new": "CORPUS CHRISTI, Texas (Continental Wire) —",
+      "reason": "Continental Wire credit line varies (Continental Wire / CW / CWS / none); standardize.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-025",
+      "severity": "low",
+      "story_id": "NWS-P059-02",
+      "field": "body",
+      "old": "CORPUS CHRISTI, Texas (CWS) —",
+      "new": "CORPUS CHRISTI, Texas (Continental Wire) —",
+      "reason": "Continental Wire credit line varies (Continental Wire / CW / CWS / none); standardize.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-026",
+      "severity": "low",
+      "story_id": "NWS-M003-05",
+      "field": "body",
+      "old": "(Continental Wire) - ",
+      "new": "(Continental Wire) — ",
+      "reason": "Hyphen in dateline; other wire stories use an em dash.",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R3-027",
+      "severity": "low",
+      "story_id": "NWS-M001-03",
+      "field": "body",
+      "old": "(Continental Wire) - ",
+      "new": "(Continental Wire) — ",
+      "reason": "Hyphen in dateline; other wire stories use an em dash.",
+      "status": "superseded",
+      "resolution": "Verified resolved by another reviewer's fix (checked 2026-11-08)."
+    },
+    {
+      "id": "R3-028",
+      "severity": "low",
+      "story_id": "NWS-P048-03",
+      "field": "body",
+      "old": "Navy explosive ordnance disposal and mine countermeasures teams are searching the channel with the Coast Guard, and the FBI is investigating.",
+      "new": "Navy teams trained in explosives and mine clearance are working the channel with the Coast Guard. The FBI is investigating.",
+      "reason": "Identical sentence in P048-01, P048-02, P048-03 and P049-01 (four outlets, two days); vary wording.",
+      "status": "applied"
+    },
+    {
+      "id": "R3-029",
+      "severity": "low",
+      "story_id": "NWS-P049-01",
+      "field": "body",
+      "old": "Navy explosive ordnance disposal and mine countermeasures teams are searching the channel with the Coast Guard, and the FBI is investigating.",
+      "new": "Since then, Navy explosive ordnance disposal and mine countermeasures teams have been searching the channel alongside the Coast Guard while the FBI investigates.",
+      "reason": "Same copy-paste sentence as P048-01/02/03.",
+      "status": "applied"
+    }
+  ]
+}

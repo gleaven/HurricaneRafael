@@ -1,0 +1,52 @@
+== FAC-DOD-01 Naval Air Station Corpus Christi 150 2027-08-15 2028-01-11
+   readiness_pct runs 65 distinct 33 [('92', '08-15'), ('93', '08-17'), ('92', '08-18'), ('91', '08-21'), ('93', '08-22'), ('92', '08-23'), ('91', '09-02'), ('92', '09-03'), ('88', '09-10'), ('87', '09-11'), ('86', '09-13'), ('68', '09-14'), ('70', '09-15'), ('71', '09-16'), ('73', '09-17'), ('76', '09-18'), ('78', '09-19'), ('80', '09-20'), ('81', '09-21'), ('82', '09-22'), ('84', '09-23'), ('85', '09-24'), ('86', '09-25'), ('87', '09-27'), ('88', '09-28'), ('89', '10-03'), ('88', '10-04'), ('89', '10-05'), ('88', '10-06'), ('89', '10-08'), ('88', '10-09'), ('89', '10-12'), ('88', '10-13'), ('89', '10-14'), ('88', '10-16'), ('89', '10-18'), ('90', '10-19'), ('88', '10-20'), ('89', '10-21'), ('61', '10-24')]
+   aircraft_on_station runs 129 distinct 27 [('85', '08-15'), ('97', '08-16'), ('92', '08-18'), ('93', '08-21'), ('90', '08-22'), ('95', '08-23'), ('91', '08-24'), ('99', '08-25'), ('97', '08-26'), ('99', '08-27'), ('87', '08-28'), ('91', '08-29'), ('96', '08-30'), ('93', '08-31'), ('92', '09-01'), ('96', '09-02'), ('92', '09-03'), ('85', '09-04'), ('86', '09-05'), ('96', '09-06'), ('98', '09-07'), ('96', '09-08'), ('98', '09-09'), ('0', '09-10'), ('18', '09-20'), ('41', '09-21'), ('63', '09-22'), ('80', '09-23'), ('90', '09-24'), ('94', '09-25'), ('86', '09-26'), ('96', '09-27'), ('93', '09-29'), ('96', '09-30'), ('94', '10-01'), ('86', '10-02'), ('84', '10-03'), ('93', '10-04'), ('96', '10-06'), ('93', '10-07')]
+   flight_ops_status [('normal training operations', '08-15', '09-09'), ('aircraft evacuated', '09-10', '09-13'), ('aircraft evacuated; airfield closed', '09-14', '09-15'), ('aircraft evacuated', '09-16', '09-19'), ('aircraft returning; limited operations', '09-20', '09-25'), ('normal training operations', '09-26', '10-17'), ('normal training operations; relief airlift operations', '10-18', '10-27'), ('normal training operations', '10-28', '01-11')]
+   backup_power_status [('operational', '08-15', '09-13'), ('carrying load (commercial power out)', '09-14', '09-16'), ('operational', '09-17', '10-23'), ('FAILED during commercial power interruption; out of service', '10-24', '10-27'), ('out of service; rental unit on critical loads', '10-28', '12-19'), ('operational (overhauled)', '12-20', '01-11')]
+   generator_test_result [('', '08-15', '08-18'), ('30 min under load: normal', '08-19', '10-23'), ('failed under load 2027-10-24', '10-24', '12-19'), ('4 h load test passed', '12-20', '01-11')]
+   perimeter_sensor_status [('operational', '08-15', '09-14'), ('degraded: storm damage', '09-15', '09-24'), ('operational', '09-25', '01-11')]
+   production_status [('', '08-15', '01-11')]
+   facility_status [('normal', '08-15', '09-10'), ('storm condition set', '09-11', '09-13'), ('damage assessment', '09-14', '09-17'), ('repairs under way', '09-18', '10-14'), ('normal', '10-15', '01-11')]
+   remarks 4
+      2027-09-10 Training aircraft flown to NAS JRB Fort Worth ahead of Hurricane Rafael.
+      2027-09-20 Training aircraft begin returning.
+      2027-10-24 Backup generator EQP-2201 failed to carry load during a commercial power interruption. Cause under review.
+      2027-11-28 Emergency fuel supplier suspended pending fuel quality review.
+   gen test dates ['2027-08-12', '2027-08-19', '2027-08-26', '2027-09-02', '2027-09-09', '2027-09-23', '2027-09-30', '2027-10-07', '2027-10-14', '2027-10-21', '2027-10-24', '2027-12-17']
+== FAC-DOD-02 Corpus Christi Army Depot 150 2027-08-15 2028-01-11
+   readiness_pct runs 44 distinct 43 [('100', '08-15'), ('0', '09-10'), ('25', '09-20'), ('27', '09-21'), ('29', '09-22'), ('31', '09-23'), ('34', '09-24'), ('36', '09-25'), ('38', '09-26'), ('40', '09-27'), ('42', '09-28'), ('44', '09-29'), ('46', '09-30'), ('49', '10-01'), ('51', '10-02'), ('53', '10-03'), ('55', '10-04'), ('57', '10-05'), ('58', '10-06'), ('60', '10-07'), ('62', '10-08'), ('63', '10-09'), ('65', '10-10'), ('67', '10-11'), ('68', '10-12'), ('70', '10-13'), ('72', '10-14'), ('73', '10-15'), ('75', '10-16'), ('77', '10-17'), ('78', '10-18'), ('80', '10-19'), ('81', '10-20'), ('82', '10-21'), ('83', '10-22'), ('84', '10-23'), ('85', '10-24'), ('87', '10-25'), ('88', '10-26'), ('89', '10-27')]
+   aircraft_on_station [('', '08-15', '01-11')]
+   flight_ops_status [('', '08-15', '01-11')]
+   backup_power_status [('operational', '08-15', '01-11')]
+   generator_test_result [('', '08-15', '01-11')]
+   perimeter_sensor_status [('operational', '08-15', '09-14'), ('degraded: storm damage', '09-15', '09-24'), ('operational', '09-25', '01-11')]
+   production_status [('normal production', '08-15', '09-09'), ('work halted, assets secured', '09-10', '09-15'), ('work halted: hangar roof damage and water intrusion; workers standing by', '09-16', '09-19'), ('limited production', '09-20', '10-30'), ('full production', '10-31', '01-11')]
+   facility_status [('normal', '08-15', '09-15'), ('hangar roof repairs under way', '09-16', '10-30'), ('normal', '10-31', '01-11')]
+   remarks 1
+      2027-10-31 Parts support from DLA Distribution Corpus Christi.
+   gen test dates ['']
+== FAC-DOD-03 Naval Air Station Kingsville 150 2027-08-15 2028-01-11
+   readiness_pct runs 17 distinct 12 [('91', '08-15'), ('87', '09-10'), ('85', '09-11'), ('84', '09-12'), ('82', '09-13'), ('80', '09-14'), ('81', '09-15'), ('82', '09-16'), ('83', '09-17'), ('84', '09-18'), ('85', '09-19'), ('86', '09-20'), ('87', '09-21'), ('88', '09-22'), ('89', '09-24'), ('90', '09-25'), ('91', '09-26')]
+   aircraft_on_station runs 126 distinct 27 [('68', '08-15'), ('69', '08-16'), ('67', '08-17'), ('69', '08-18'), ('71', '08-19'), ('75', '08-20'), ('61', '08-21'), ('63', '08-22'), ('75', '08-23'), ('73', '08-24'), ('69', '08-26'), ('71', '08-27'), ('66', '08-28'), ('59', '08-29'), ('72', '08-30'), ('78', '08-31'), ('73', '09-01'), ('69', '09-02'), ('65', '09-04'), ('64', '09-05'), ('71', '09-06'), ('74', '09-07'), ('65', '09-09'), ('0', '09-10'), ('15', '09-20'), ('33', '09-21'), ('48', '09-22'), ('60', '09-23'), ('66', '09-24'), ('70', '09-25'), ('65', '09-26'), ('68', '09-27'), ('70', '09-28'), ('67', '09-30'), ('80', '10-01'), ('69', '10-02'), ('62', '10-03'), ('70', '10-04'), ('76', '10-06'), ('74', '10-07')]
+   flight_ops_status [('normal training operations', '08-15', '09-09'), ('aircraft evacuated', '09-10', '09-19'), ('aircraft returning; limited operations', '09-20', '09-25'), ('normal training operations', '09-26', '01-11')]
+   backup_power_status [('operational', '08-15', '01-11')]
+   generator_test_result [('', '08-15', '01-11')]
+   perimeter_sensor_status [('operational', '08-15', '01-11')]
+   production_status [('', '08-15', '01-11')]
+   facility_status [('normal', '08-15', '09-10'), ('storm condition set', '09-11', '09-13'), ('normal', '09-14', '01-11')]
+   remarks 0
+   gen test dates ['']
+== FAC-DOD-05 DLA Distribution Corpus Christi 150 2027-08-15 2028-01-11
+   readiness_pct [('100', '08-15', '09-12'), ('0', '09-13', '09-17'), ('60', '09-18', '09-26'), ('100', '09-27', '01-11')]
+   aircraft_on_station [('', '08-15', '01-11')]
+   flight_ops_status [('', '08-15', '01-11')]
+   backup_power_status [('operational', '08-15', '01-11')]
+   generator_test_result [('', '08-15', '01-11')]
+   perimeter_sensor_status [('operational', '08-15', '01-11')]
+   production_status [('normal operations', '08-15', '09-12'), ('closed for storm', '09-13', '09-17'), ('limited receiving', '09-18', '09-26'), ('normal operations', '09-27', '01-11')]
+   facility_status [('normal', '08-15', '09-13'), ('storm recovery', '09-14', '09-26'), ('normal', '09-27', '01-11')]
+   remarks 3
+      2027-10-20 Priority issue of parts to the Army depot.
+      2027-10-24 Priority issue of parts to the Army depot.
+      2027-10-28 Priority issue of parts to the Army depot.
+   gen test dates ['']

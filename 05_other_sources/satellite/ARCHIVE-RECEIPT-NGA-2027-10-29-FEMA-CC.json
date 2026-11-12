@@ -1,0 +1,95 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+ ],
+ "id": "ARCHIVE-RECEIPT-NGA-2027-10-29-FEMA-CC",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.75,
+     27.5
+    ],
+    [
+     -96.85,
+     27.5
+    ],
+    [
+     -96.85,
+     28.15
+    ],
+    [
+     -97.75,
+     28.15
+    ],
+    [
+     -97.75,
+     27.5
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.75,
+  27.5,
+  -96.85,
+  28.15
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "ARCHIVE-RECEIPT-NGA-2027-10-29-FEMA-CC.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/ARCHIVE-RECEIPT-NGA-2027-10-29-FEMA-CC/visual.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/ARCHIVE-RECEIPT-NGA-2027-10-29-FEMA-CC/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-10-29T18:00:00Z",
+  "title": "Archive receipt NGA-2027-10-29-FEMA-CC",
+  "description": "Receipt for the full-resolution (3 cm per pixel) aerial survey archive of the Corpus Christi area, 12 September to 29 October 2027, transferred by FEMA Region 6 for long-term storage; 6.2 million georeferenced tiles. Public release FEMA-OD-2027-CC-AERIAL carries the Phase 1 and Phase 2 optical imagery at 30 cm per pixel. Chain-of-custody note: includes thermal tile set FEMA-TIR-0925-UTL and the accompanying analysis report (breaker finding at two substations, flagged for engineering follow-up).",
+  "platform": "aerial survey archive",
+  "instruments": [
+   "archive transfer record"
+  ],
+  "constellation": "aerial survey archive",
+  "gsd": 0.03,
+  "proj:epsg": 32614,
+  "eo:cloud_cover": 0,
+  "archive": {
+   "receipt_id": "NGA-2027-10-29-FEMA-CC",
+   "tiles": 6200000,
+   "native_gsd_m": 0.03,
+   "public_gsd_m": 0.3,
+   "public_release": "FEMA-OD-2027-CC-AERIAL",
+   "referenced_reports": [
+    "FEMA-TIR-0925-UTL"
+   ]
+  }
+ }
+}

@@ -1,0 +1,67 @@
+{
+  "source": "supply",
+  "stream_id": "fuel_deliveries",
+  "folder": "05_other_sources/supply/",
+  "files": "fuel_deliveries.csv",
+  "standard": "Fuel delivery tickets and tank dip readings collected from receiving facilities",
+  "verified": true,
+  "generator": "scripts/streams/gen_ot_records.py",
+  "span": "2027-08-15 to 2028-01-11",
+  "fields": [
+    {
+      "name": "record_type",
+      "notes": "DELIVERY (a ticket) or TANK_DIP (a level reading)"
+    },
+    {
+      "name": "ticket_id",
+      "notes": "deliveries only"
+    },
+    {
+      "name": "delivered_utc",
+      "type": "ISO 8601 UTC",
+      "notes": "delivery time, or reading time for a dip"
+    },
+    {
+      "name": "supplier_id / supplier_name",
+      "notes": "entity_registry.json vendors[].vendor_id, or organizations.json org_id for government emergency fuel; empty for a fuel terminal's own wholesale purchases"
+    },
+    {
+      "name": "facility_id",
+      "notes": "facility_registry.json facility_id, infrastructure_assets.json asset_id (utility sites) or terminal_registry.json terminal_id"
+    },
+    {
+      "name": "receiving_asset_id",
+      "notes": "tank or generator in infrastructure_assets.json where one is registered"
+    },
+    {
+      "name": "product"
+    },
+    {
+      "name": "volume_gal",
+      "type": "integer"
+    },
+    {
+      "name": "lot_id",
+      "notes": "supplier's lot or batch"
+    },
+    {
+      "name": "carrier_type / carrier_id",
+      "notes": "truck or barge; carrier_id is a vessels.json vessel_id for barge deliveries"
+    },
+    {
+      "name": "contract_id",
+      "notes": "entity_registry.json contracts[].contract_id where the delivery is under a registered contract"
+    },
+    {
+      "name": "tank_level_before_pct / tank_level_after_pct",
+      "notes": "for dips both hold the reading"
+    },
+    {
+      "name": "received_by"
+    },
+    {
+      "name": "remarks"
+    }
+  ],
+  "joins": "EQP-1140 dips equal historian tag GW.UTL1.GEN.FUEL.PV; lot_id appears in work_orders.csv work_log where a crew cites it; carrier_id joins AIS through vessels.json"
+}

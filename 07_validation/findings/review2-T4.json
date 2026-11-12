@@ -1,0 +1,177 @@
+{
+  "source": "T4",
+  "scope": "Review pass 2, scenario days 70-119: all 72 stories changed in hardening in that range, the 4 unchanged-sample stories in that range, and the previous/next story in each arc of every changed story (26 more, including 9 outside the range), 102 stories in total, read in full and compared with the pre-hardening snapshot.",
+  "stories_read": 102,
+  "findings": [
+    {
+      "id": "T4-001",
+      "severity": "medium",
+      "story_id": "NWS-P094-01",
+      "field": "body",
+      "old": "as federal oil spill law requires.If the owners' center",
+      "new": "as federal oil spill law requires. If the owners' center",
+      "reason": "Splice artifact from the rewrite: missing space between sentences ('requires.If').",
+      "status": "applied"
+    },
+    {
+      "id": "T4-002",
+      "severity": "medium",
+      "story_id": "NWS-P114-01",
+      "field": "body",
+      "old": "The filing puts a dollar figure on diverted disaster aid for the first time. In November, FEMA said 410 applicant accounts had been taken over after about 220,000 automated login attempts and their deposit details changed, and that affected applicants would be repaid. The filing describes the $3.9 million as diverted disaster aid; Reyes would not elaborate on how it was diverted.",
+      "new": "The filing describes the $3.9 million as diverted disaster aid but does not say how it was diverted, and Reyes would not elaborate. Separately, in November, FEMA said 410 applicant accounts had been taken over after about 220,000 automated login attempts and their deposit details changed, and that affected applicants would be repaid.",
+      "reason": "'Puts a dollar figure on diverted disaster aid for the first time' followed by the account-takeover recap presents the $3.9M as the takeover losses, i.e. says how the aid was diverted. Corrected PUB-098 ties the $3.9M only to the firms' accounts, with no method.",
+      "status": "applied"
+    },
+    {
+      "id": "T4-003",
+      "severity": "medium",
+      "story_id": "NWS-P114-02",
+      "field": "headline",
+      "old": "what to do if your FEMA deposit was hijacked",
+      "new": "what FEMA applicants should check now",
+      "reason": "Headline equates the filing's diverted aid with hijacked FEMA deposits; the filing (PUB-098) does not say how the aid was diverted, as the body itself now states.",
+      "status": "applied"
+    },
+    {
+      "id": "T4-004",
+      "severity": "low",
+      "story_id": "NWS-P114-02",
+      "field": "dek",
+      "old": "FEMA says affected applicants will be repaid.",
+      "new": "FEMA says applicants whose accounts were taken over will be repaid.",
+      "reason": "Right after the $3.9M sentence, 'affected applicants' reads as victims of the diversion; FEMA's repayment pledge (PUB-085) is about the account takeovers.",
+      "status": "applied"
+    },
+    {
+      "id": "T4-005",
+      "severity": "low",
+      "story_id": "NWS-P114-02",
+      "field": "body",
+      "old": "If your aid payment never showed up, here's what to know.",
+      "new": "If you applied for FEMA aid, here's what to know.",
+      "reason": "Lede ties missing payments to the filing's diverted aid, contradicting the sentence just before it ('The filing does not say how the aid was diverted').",
+      "status": "applied"
+    },
+    {
+      "id": "T4-006",
+      "severity": "low",
+      "story_id": "NWS-P116-01",
+      "field": "body",
+      "old": "Nov. 17 to Nov. 24: Aid applicants report",
+      "new": "Nov. 17 to Nov. 24: In a separate FEMA matter, aid applicants report",
+      "reason": "Placing the account takeovers inside 'the paper trail on two storm contractors' implies they are how the aid was diverted; the story itself says the record does not show how.",
+      "status": "applied"
+    },
+    {
+      "id": "T4-007",
+      "severity": "low",
+      "story_id": "NWS-P114-03",
+      "field": "body",
+      "old": "FEMA said in November that 410 applicant accounts had been taken over",
+      "new": "Separately, FEMA said in November that 410 applicant accounts had been taken over",
+      "reason": "Free-standing sentence right after the diverted-aid discussion reads as the explanation for the diversion; flag it as a separate matter.",
+      "status": "applied"
+    },
+    {
+      "id": "T4-008",
+      "severity": "low",
+      "story_id": "NWS-P071-01",
+      "field": "body",
+      "old": "Without internet access, the FEMA helpline or a recovery center can help you check your information.",
+      "new": "No internet access? The FEMA helpline or a recovery center can help you check your information.",
+      "reason": "Dangling modifier introduced by the edit (the helpline is 'without internet access'); matches the list's question style.",
+      "status": "applied"
+    },
+    {
+      "id": "T4-009",
+      "severity": "low",
+      "story_id": "NWS-P077-01",
+      "field": "body",
+      "old": "crossed the Yucatan and became a hurricane in the southern Gulf four days later and made landfall",
+      "new": "crossed the Yucatan, became a hurricane in the southern Gulf four days later and made landfall",
+      "reason": "Splice left a run-on series ('...and became... and made landfall').",
+      "status": "applied"
+    },
+    {
+      "id": "T4-010",
+      "severity": "low",
+      "story_id": "NWS-P077-02",
+      "field": "body",
+      "old": "Later that day, inner channel restrictions are lifted.",
+      "new": "Separately, spill-related inner channel restrictions are lifted as cleanup moves to monitoring.",
+      "reason": "Reordered log now says restrictions were lifted 'later that day' right after the Coast Guard closed the channel, which reads as a contradiction; PUB-066 gives no order. Clarify these are the spill restrictions.",
+      "status": "applied"
+    },
+    {
+      "id": "T4-011",
+      "severity": "low",
+      "story_id": "NWS-P079-03",
+      "field": "body",
+      "old": "It says nothing about FEMA payments to individual households, and the Ledger did not report that it does.",
+      "new": "It says nothing about FEMA payments to individual households, and the posts offer no evidence for that claim.",
+      "reason": "Circular sentence ('the report says nothing..., and the Ledger did not report that it does'); after the verdict changed to NO EVIDENCE, the explanation should say the posts offer none.",
+      "status": "applied"
+    },
+    {
+      "id": "T4-012",
+      "severity": "low",
+      "story_id": "NWS-P091-01",
+      "field": "body",
+      "old": "which supplies emergency fuel to the air station",
+      "new": "which had supplied emergency fuel to the air station",
+      "reason": "Edit put a suspended supplier in the present tense; other stories say 'supplied'.",
+      "status": "applied"
+    },
+    {
+      "id": "T4-013",
+      "severity": "low",
+      "story_id": "NWS-P109-01",
+      "field": "body",
+      "old": "pointing to the same lookalike site.",
+      "new": "pointing to the same lookalike site the emails used.",
+      "reason": "After the edit 'the same lookalike site' has no antecedent (no site is mentioned before it).",
+      "status": "applied"
+    },
+    {
+      "id": "T4-014",
+      "severity": "low",
+      "story_id": "NWS-P112-01",
+      "field": "body",
+      "old": "The closure halted crude exports from the nation's largest crude export gateway, and traders braced",
+      "new": "The closure halted crude exports, and traders braced",
+      "reason": "Inserted sentence repeats the previous paragraph's 'gateway for about half of US crude exports'.",
+      "status": "applied"
+    },
+    {
+      "id": "T4-015",
+      "severity": "low",
+      "story_id": "NWS-P112-02",
+      "field": "body",
+      "old": "the explosive devices found in the channel after the Oct. 28 blast beside a harbor tug",
+      "new": "the explosive devices in the channel, including the one behind the Oct. 28 blast beside a harbor tug",
+      "reason": "Only the second device was found after the blast; the first caused it (PUB-070, PUB-078).",
+      "status": "applied"
+    },
+    {
+      "id": "T4-016",
+      "severity": "low",
+      "story_id": "NWS-P113-03",
+      "field": "dek",
+      "old": "Federal officials now say a foreign government exploited Rafael.",
+      "new": "Federal officials now say a foreign government tried to exploit Rafael.",
+      "reason": "PUB-097 calls the incidents 'attempts to exploit the hurricane'; the dek overstates it (the body says it correctly).",
+      "status": "applied"
+    },
+    {
+      "id": "T4-017",
+      "severity": "low",
+      "story_id": "NWS-P116-01",
+      "field": "body",
+      "old": "Power was restored; the cause is under review.",
+      "new": "Power is restored, and the cause goes under review.",
+      "reason": "Edit mixed past tense into a present-tense timeline ('fails... Power was restored').",
+      "status": "applied"
+    }
+  ]
+}

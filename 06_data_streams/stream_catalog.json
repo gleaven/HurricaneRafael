@@ -1,0 +1,1827 @@
+{
+ "schema_version": "1.0",
+ "updated": "2026-11-11",
+ "purpose": "The controlled list of data streams. MSEL observed_in entries, stream generators, validators and the knowledge graph use these stream_id values and no others.",
+ "clock": {
+  "d0_epoch_utc_midnight": 1820880000,
+  "d0_local_date": "2027-09-14",
+  "timezone": "America/Chicago"
+ },
+ "rules": [
+  "A delivered stream covers at least its required_span and carries the truth from the moment it happens, with no column or note that explains it.",
+  "Entity ids in a stream come from the registries listed in ids_from_registry.",
+  "Streams with coordinates must pass scripts/check_geo.py (see 99_reference/geo/position_rules.json).",
+  "What each event should look like in each stream is in 00_scenario/canon_timeline.json under expected_observations."
+ ],
+ "streams": [
+  {
+   "stream_id": "ais",
+   "name": "AIS vessel positions",
+   "delivered": true,
+   "path_glob": "05_other_sources/ais/*.csv",
+   "format": "USCG NAIS / MarineCadastre CSV",
+   "key_columns": {
+    "time": "BaseDateTime (UTC)",
+    "entity_ids": [
+     "MMSI",
+     "IMO",
+     "VesselName"
+    ],
+    "location": [
+     "LAT",
+     "LON"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/vessels.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "about 1 min in channels and harbours, 5 min in open bay and approaches, 6 min at anchor, 15 min on station, 30 min offshore, 60 min moored",
+   "threads": [
+    "T1",
+    "T2",
+    "T3",
+    "T6",
+    "T7",
+    "T12",
+    "T19"
+   ],
+   "notes": "Positions must pass scripts/check_geo.py. Static fields carry real identifiers; no explanatory columns. Extra column Destination (the transponder's free-text field).",
+   "expected_observation_count": 14,
+   "additional_files": [
+    {
+     "path_glob": "05_other_sources/ais/satellite/sais_*.csv",
+     "what": "satellite-received AIS (same columns, 30-60 min cadence); kept apart because it is a different receiver"
+    }
+   ]
+  },
+  {
+   "stream_id": "port_surveillance",
+   "name": "Port radar and camera contact log",
+   "delivered": true,
+   "path_glob": "05_other_sources/port_surveillance/*.csv",
+   "format": "Radar track table (sensor id, track id, time, position, speed, course, AIS-correlated flag, correlated MMSI) and camera event log",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "sensor_id",
+     "track_id",
+     "correlated_mmsi"
+    ],
+    "location": [
+     "latitude",
+     "longitude"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/sensor_registry.json",
+    "06_data_streams/vessels.json",
+    "06_data_streams/terminal_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "radar tracks every 1-2 min while a contact is held; camera events as they occur; sensor status rows hourly",
+   "threads": [
+    "T1",
+    "T2",
+    "T6",
+    "T7",
+    "T12"
+   ],
+   "notes": "Carries hulls that AIS does not: the dark vessel during its AIS gap, the unidentified hull off the entrance channel, the tankers alongside the berth. Sensors go offline in the storm and return on the dates in the canon timeline. Five tables: sensors, radar_tracks_*, camera_events, vessel_traffic_log, sensor_status. Sensors are in sensor_registry.json (port_surveillance_sensors).",
+   "expected_observation_count": 11
+  },
+  {
+   "stream_id": "port_conditions",
+   "name": "Coast Guard port conditions and channel status",
+   "delivered": true,
+   "path_glob": "05_other_sources/supply/port_conditions.csv",
+   "format": "Captain of the Port order log (MSIB style): effective time, condition, channel segment, status, restrictions",
+   "key_columns": {
+    "time": "effective_utc",
+    "entity_ids": [
+     "order_id",
+     "segment_id"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/terminal_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "one row per change",
+   "threads": [
+    "T1",
+    "T2",
+    "T6",
+    "T7",
+    "T12"
+   ],
+   "expected_observation_count": 9,
+   "notes": "segment_id values are defined in terminal_registry.json (channel_segments)."
+  },
+  {
+   "stream_id": "port_arrivals",
+   "name": "Vessel arrivals and departures",
+   "delivered": true,
+   "path_glob": "05_other_sources/supply/vessel_arrivals.csv",
+   "format": "USCG eNOAD / CBP ACE normalized",
+   "key_columns": {
+    "time": "eta_datetime, ata_datetime, atd_datetime (UTC)",
+    "entity_ids": [
+     "mmsi",
+     "imo_number",
+     "terminal_id",
+     "berth_id"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/vessels.json",
+    "06_data_streams/terminal_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "one row per port call",
+   "threads": [
+    "T1",
+    "T2",
+    "T6",
+    "T7"
+   ],
+   "expected_observation_count": 7,
+   "notes": "port_of_arrival is USCRP. Columns include next_port, noa_submitted_datetime, eta_revised_datetime, ata_anchorage_datetime, hold_log, shift_berth_id, shift_datetime; agents are in organizations.json (type 'ship agent')."
+  },
+  {
+   "stream_id": "cargo_manifests",
+   "name": "Cargo manifests (sea and air relief cargo)",
+   "delivered": true,
+   "path_glob": "05_other_sources/supply/cargo_manifest.csv",
+   "format": "CBP ACE manifest normalized",
+   "key_columns": {
+    "time": "arrival_date, release_date",
+    "entity_ids": [
+     "manifest_id",
+     "vessel mmsi or flight",
+     "consignee_id",
+     "supplier_id"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/vessels.json",
+    "06_data_streams/entity_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "one row per consignment",
+   "threads": [
+    "T1",
+    "T7"
+   ],
+   "expected_observation_count": 5,
+   "notes": "Sea and air consignments in one table (mode SEA / AIR)."
+  },
+  {
+   "stream_id": "fuel_deliveries",
+   "name": "Fuel deliveries and lots",
+   "delivered": true,
+   "path_glob": "05_other_sources/supply/fuel_deliveries.csv",
+   "format": "Delivery ticket log: time, supplier, receiving facility, product, volume, lot id, carrier (truck or barge)",
+   "key_columns": {
+    "time": "delivered_utc",
+    "entity_ids": [
+     "supplier_id",
+     "facility_id",
+     "lot_id",
+     "contract_id"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/entity_registry.json",
+    "06_data_streams/facility_registry.json",
+    "06_data_streams/organizations.json",
+    "06_data_streams/infrastructure_assets.json",
+    "06_data_streams/terminal_registry.json",
+    "06_data_streams/vessels.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "one row per delivery",
+   "threads": [
+    "T2",
+    "T3",
+    "T8",
+    "T16"
+   ],
+   "notes": "One ledger of delivery tickets and tank dips for generator and fleet fuel (record_type DELIVERY or TANK_DIP); contract_id and ticket ids agree with payments/contracts_invoices.csv.",
+   "expected_observation_count": 5
+  },
+  {
+   "stream_id": "adsb",
+   "name": "ADS-B aircraft positions",
+   "delivered": true,
+   "path_glob": "05_other_sources/adsb/adsb_*.csv",
+   "format": "OpenSky StateVector CSV plus nic and nac_p integrity columns",
+   "key_columns": {
+    "time": "time_position (epoch UTC)",
+    "entity_ids": [
+     "icao24",
+     "callsign"
+    ],
+    "location": [
+     "latitude",
+     "longitude",
+     "baro_altitude",
+     "on_ground"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/aircraft_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "10 s near airfields and in hovers, 30 s low level, 60 s en route",
+   "threads": [
+    "T1",
+    "T3",
+    "T6",
+    "T7",
+    "T11",
+    "T17",
+    "T20"
+   ],
+   "notes": "No covert drone ever appears here. GPS interference shows as degraded nic/nac_p values and position jumps. nic and nac_p integrity fields are reported; call signs carry at most eight characters (join on icao24).",
+   "expected_observation_count": 8
+  },
+  {
+   "stream_id": "drone_detections",
+   "name": "Drone detections and authorizations",
+   "delivered": true,
+   "path_glob": "05_other_sources/drone_detections/*.csv",
+   "format": "Radar/RF detection tracks (sensor, track, time, position, altitude, RCS, RF signature), LAANC authorization list, sighting reports",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "sensor_id",
+     "track_id",
+     "authorization_id",
+     "operator_id"
+    ],
+    "location": [
+     "latitude",
+     "longitude",
+     "altitude_m"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/sensor_registry.json",
+    "06_data_streams/drone_operators.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "1-5 s while tracked; sensor status rows hourly",
+   "threads": [
+    "T3",
+    "T6",
+    "T7",
+    "T8",
+    "T19"
+   ],
+   "notes": "Hostile drones are seen only here (and in social posts and 911 calls), never with an authorization. Five tables: sensor_sites, sensor_status_*, detections_*, laanc_authorizations, sighting_reports. Sensors are in sensor_registry.json (drone_detection_sensors).",
+   "expected_observation_count": 8
+  },
+  {
+   "stream_id": "drone_telemetry",
+   "name": "Authorized drone flight telemetry",
+   "delivered": true,
+   "path_glob": "05_other_sources/drone_video/drone_telemetry_*.csv",
+   "format": "DJI SRT normalized to CSV",
+   "key_columns": {
+    "time": "timestamp_utc",
+    "entity_ids": [
+     "flight_id",
+     "operator_id"
+    ],
+    "location": [
+     "latitude",
+     "longitude",
+     "rel_alt_m"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/drone_operators.json",
+    "06_data_streams/aircraft_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "1 Hz per flight",
+   "threads": [
+    "T1",
+    "T3",
+    "T5",
+    "T6",
+    "T8",
+    "T11",
+    "T17"
+   ],
+   "expected_observation_count": 9,
+   "additional_files": [
+    {
+     "path_glob": "05_other_sources/drone_video/logs/*.csv",
+     "what": "flight log and thermal survey readings (different columns)"
+    }
+   ]
+  },
+  {
+   "stream_id": "satellite",
+   "name": "Satellite scene catalogue",
+   "delivered": true,
+   "path_glob": "05_other_sources/satellite/*.json",
+   "format": "STAC v1.0.0 Item JSON with detection summaries",
+   "key_columns": {
+    "time": "properties.datetime",
+    "entity_ids": [
+     "id"
+    ],
+    "location": [
+     "bbox",
+     "geometry"
+    ]
+   },
+   "ids_from_registry": [],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "one item per scene",
+   "threads": [
+    "T1",
+    "T2",
+    "T3",
+    "T6",
+    "T7",
+    "T11",
+    "T12"
+   ],
+   "expected_observation_count": 13,
+   "notes": "Includes catalog.json (STAC collection). Vessel counts in scene descriptions come from the AIS files: re-run gen_satellite.py after AIS is regenerated."
+  },
+  {
+   "stream_id": "damage_assessment",
+   "name": "Structure damage assessments and flood/debris extents",
+   "delivered": true,
+   "path_glob": "05_other_sources/infrastructure/*.csv",
+   "format": "FEMA GDA feature table",
+   "key_columns": {
+    "time": "ASMT_DATE",
+    "entity_ids": [
+     "structure_id"
+    ],
+    "location": [
+     "LATITUDE",
+     "LONGITUDE"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/areas.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-09-14T06:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     0,
+     119
+    ]
+   },
+   "cadence": "per assessment",
+   "threads": [
+    "T1",
+    "T8",
+    "T9",
+    "T11"
+   ],
+   "expected_observation_count": 5,
+   "additional_files": [
+    {
+     "path_glob": "05_other_sources/infrastructure/aerial_survey/*.csv",
+     "what": "aerial collection index"
+    }
+   ]
+  },
+  {
+   "stream_id": "avl",
+   "name": "Response vehicle locations",
+   "delivered": true,
+   "path_glob": "05_other_sources/avl/*.csv",
+   "format": "AVL log: time, unit, position, speed, heading, status, incident",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "unit_id",
+     "incident_number"
+    ],
+    "location": [
+     "latitude",
+     "longitude"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/cad_units.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "see 06_data_streams/schemas/avl_schema.json (denser while moving, sparse when parked)",
+   "threads": [
+    "T1",
+    "T5",
+    "T13",
+    "T17"
+   ],
+   "notes": "Vehicles drive door to door on the street network (every Census local road in the area); parked units sit off the centreline. check_geo vehicle rule: moving fixes within 30 m of a street.",
+   "expected_observation_count": 2
+  },
+  {
+   "stream_id": "cad_911",
+   "name": "911 computer-aided dispatch records",
+   "delivered": true,
+   "path_glob": "05_other_sources/911/*.csv",
+   "format": "Tyler New World CAD export with ANI/ALI class and call metadata",
+   "key_columns": {
+    "time": "call_received_dttm (local)",
+    "entity_ids": [
+     "incident_number",
+     "unit_id",
+     "sar_case_number"
+    ],
+    "location": [
+     "latitude",
+     "longitude",
+     "address"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/cad_units.json",
+    "06_data_streams/areas.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "one row per incident",
+   "threads": [
+    "T1",
+    "T5",
+    "T7",
+    "T8",
+    "T9",
+    "T13",
+    "T17"
+   ],
+   "expected_observation_count": 15,
+   "additional_files": [
+    {
+     "path_glob": "05_other_sources/911/reports/*.csv",
+     "what": "call-centre daily volume, queue depth, shift log, subscriber records (no coordinates)"
+    }
+   ]
+  },
+  {
+   "stream_id": "sar_missions",
+   "name": "Search and rescue mission log",
+   "delivered": true,
+   "path_glob": "05_other_sources/sar/*.csv",
+   "format": "Mission log: agency, asset, launch and recovery times, location, persons rescued, method",
+   "key_columns": {
+    "time": "launch_utc",
+    "entity_ids": [
+     "case_number",
+     "mission_id",
+     "asset_id",
+     "incident_number"
+    ],
+    "location": [
+     "latitude",
+     "longitude"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/cad_units.json",
+    "06_data_streams/aircraft_registry.json",
+    "06_data_streams/vessels.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-09-11T05:00Z",
+    "end_utc": "2027-09-28T05:00Z",
+    "days": [
+     -3,
+     13
+    ]
+   },
+   "cadence": "one row per mission",
+   "threads": [
+    "T1",
+    "T5",
+    "T8",
+    "T9",
+    "T13",
+    "T17"
+   ],
+   "expected_observation_count": 11,
+   "notes": "One row per rescue case; mission_id groups a sortie. Helicopter sorties are the same flights that appear in adsb (join asset_id to aircraft_registry.json registration). delivered_to / delivered_utc name the shelter, hospital pad or airfield where survivors were handed over (see shelters/shelter_intake_log.csv). Folder also holds sar_asset_log.csv, flood_depth_soundings.csv and flood_extent_snapshots.csv."
+  },
+  {
+   "stream_id": "shelters",
+   "name": "Shelter registry and daily census",
+   "delivered": true,
+   "path_glob": "05_other_sources/shelters/*.csv",
+   "format": "Registry (facility, open and close times) and daily occupancy",
+   "key_columns": {
+    "time": "date_local",
+    "entity_ids": [
+     "facility_id"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/facility_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-09-11T05:00Z",
+    "end_utc": "2027-11-15T06:00Z",
+    "days": [
+     -3,
+     62
+    ]
+   },
+   "cadence": "daily",
+   "threads": [
+    "T5",
+    "T14",
+    "T15"
+   ],
+   "expected_observation_count": 2,
+   "notes": "shelter_daily_census.csv (one row per shelter per day) plus shelter_registry.csv, shelter_intake_log.csv (arrivals by mode, including search-and-rescue deliveries; daily sums equal new_arrivals), shelter_211_calls.csv and evacuation_bus_trips.csv."
+  },
+  {
+   "stream_id": "eas_alerts",
+   "name": "Public alerts (EAS, WEA, city and county notices)",
+   "delivered": true,
+   "path_glob": "05_other_sources/public_health/eas_broadcasts.csv",
+   "format": "IPAWS CAP alert log with separate English and Spanish release times",
+   "key_columns": {
+    "time": "IssuedAt_UTC, ReleasedAt_EN, ReleasedAt_ES",
+    "entity_ids": [
+     "AlertID",
+     "CAPmsgID"
+    ],
+    "location": [
+     "GeographicArea"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/areas.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "one row per alert",
+   "threads": [
+    "T1",
+    "T9",
+    "T13",
+    "T14",
+    "T21"
+   ],
+   "expected_observation_count": 14
+  },
+  {
+   "stream_id": "broadcast_logs",
+   "name": "Broadcast and translation logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/broadcast/*.csv",
+   "format": "Station programme log (time, station, item, language, alert id) and translation job log (source received, translation delivered)",
+   "key_columns": {
+    "time": "air_time_utc",
+    "entity_ids": [
+     "station_id",
+     "alert_id",
+     "job_id"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "01_characters/outlets.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-09-09T05:00Z",
+    "end_utc": "2027-10-30T05:00Z",
+    "days": [
+     -5,
+     45
+    ]
+   },
+   "cadence": "one row per aired item or job",
+   "threads": [
+    "T2",
+    "T9",
+    "T14",
+    "T21",
+    "T22"
+   ],
+   "expected_observation_count": 19
+  },
+  {
+   "stream_id": "social_media",
+   "name": "Social media posts",
+   "delivered": true,
+   "path_glob": "05_other_sources/social_media/*.jsonl",
+   "format": "Twitter v1.1 Tweet objects",
+   "key_columns": {
+    "time": "created_at",
+    "entity_ids": [
+     "user.screen_name",
+     "id_str"
+    ],
+    "location": [
+     "coordinates",
+     "place"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/personas.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per post",
+   "threads": [
+    "T4",
+    "T5",
+    "T7",
+    "T8",
+    "T10",
+    "T15"
+   ],
+   "expected_observation_count": 12,
+   "notes": "Files whose names start with an underscore are not posts: _account_lookup.jsonl, _platform_records_return.jsonl, _geotagged_index.csv.",
+   "additional_files": [
+    {
+     "path_glob": "05_other_sources/social_media/_geotagged_index.csv",
+     "what": "index of geo-tagged posts (id_str, screen_name, created_utc, latitude, longitude)"
+    }
+   ]
+  },
+  {
+   "stream_id": "news",
+   "name": "News stories",
+   "delivered": true,
+   "path_glob": "08_release/news_stories_public.json",
+   "format": "Story objects (also served by the newsroom feeds)",
+   "key_columns": {
+    "time": "published",
+    "entity_ids": [
+     "id",
+     "outlet"
+    ],
+    "location": [
+     "places"
+    ]
+   },
+   "ids_from_registry": [
+    "01_characters/outlets.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per story",
+   "threads": [
+    "T1",
+    "T4",
+    "T6",
+    "T7",
+    "T14",
+    "T15",
+    "T19",
+    "T20"
+   ],
+   "expected_observation_count": 18
+  },
+  {
+   "stream_id": "public_record",
+   "name": "Official statements and notices",
+   "delivered": true,
+   "path_glob": "05_other_sources/press_releases/*.jsonl",
+   "format": "Public fields of the public record: date, time, issuer, type, text",
+   "key_columns": {
+    "time": "issued_local",
+    "entity_ids": [
+     "id"
+    ],
+    "location": [
+     "places"
+    ]
+   },
+   "ids_from_registry": [
+    "02_public_record/public_record.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per statement",
+   "threads": [
+    "T1",
+    "T2",
+    "T3",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T9",
+    "T10",
+    "T11",
+    "T12",
+    "T13",
+    "T14",
+    "T15",
+    "T16",
+    "T17",
+    "T19",
+    "T20",
+    "T21",
+    "T22"
+   ],
+   "notes": "Export of 02_public_record without event or thread links. Record ids are public-record fact ids plus three NOTICE-* records for events with no fact of their own.",
+   "expected_observation_count": 41
+  },
+  {
+   "stream_id": "weather",
+   "name": "Surface weather and buoy observations",
+   "delivered": true,
+   "path_glob": "05_other_sources/weather/*_observations.csv",
+   "format": "NOAA LCD / ASOS CSV; NDBC standard meteorological",
+   "key_columns": {
+    "time": "ObsDateTime (UTC)",
+    "entity_ids": [
+     "StationName",
+     "WBAN"
+    ],
+    "location": [
+     "StnLat",
+     "StnLon"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/sensor_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "hourly, with outages around landfall",
+   "threads": [
+    "T1"
+   ],
+   "expected_observation_count": 3
+  },
+  {
+   "stream_id": "storm_advisories",
+   "name": "Hurricane advisories and best track",
+   "delivered": true,
+   "path_glob": "05_other_sources/weather/nhc_advisories.json",
+   "format": "NHC advisory list and HURDAT2 best track",
+   "key_columns": {
+    "time": "issued_utc",
+    "entity_ids": [
+     "advisory_number"
+    ],
+    "location": [
+     "center lat/lon"
+    ]
+   },
+   "ids_from_registry": [],
+   "required_span": {
+    "start_utc": "2027-09-04T00:00Z",
+    "end_utc": "2027-09-16T00:00Z",
+    "days": [
+     -10,
+     2
+    ]
+   },
+   "cadence": "6-hourly advisories, 3-hourly near landfall",
+   "threads": [
+    "T1"
+   ],
+   "expected_observation_count": 2
+  },
+  {
+   "stream_id": "tide_river_gauges",
+   "name": "Tide and river gauges",
+   "delivered": true,
+   "path_glob": "05_other_sources/env_sensors/gauge_*.csv",
+   "format": "NOAA CO-OPS water level; USGS stage and discharge",
+   "key_columns": {
+    "time": "ObsDateTime (UTC)",
+    "entity_ids": [
+     "SensorID"
+    ],
+    "location": [
+     "Latitude",
+     "Longitude"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/sensor_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "6 min tide, 15 min river; the bay gauge is offline D0 to D+5",
+   "threads": [
+    "T1"
+   ],
+   "expected_observation_count": 2
+  },
+  {
+   "stream_id": "water_quality",
+   "name": "Water-quality sondes",
+   "delivered": true,
+   "path_glob": "05_other_sources/env_sensors/water_quality_*.csv",
+   "format": "TCEQ sonde table",
+   "key_columns": {
+    "time": "ObsDateTime (UTC)",
+    "entity_ids": [
+     "SensorID"
+    ],
+    "location": [
+     "Latitude",
+     "Longitude"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/sensor_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "15 min",
+   "threads": [
+    "T6",
+    "T20"
+   ],
+   "expected_observation_count": 7
+  },
+  {
+   "stream_id": "air_quality",
+   "name": "Air-quality monitors",
+   "delivered": true,
+   "path_glob": "05_other_sources/env_sensors/aqs_*.csv",
+   "format": "EPA AQS hourly",
+   "key_columns": {
+    "time": "Date_GMT, Time_GMT",
+    "entity_ids": [
+     "SensorID"
+    ],
+    "location": [
+     "Latitude",
+     "Longitude"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/sensor_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "hourly",
+   "threads": [
+    "T6",
+    "T20"
+   ],
+   "expected_observation_count": 2
+  },
+  {
+   "stream_id": "wastewater",
+   "name": "Wastewater pathogen surveillance",
+   "delivered": true,
+   "path_glob": "05_other_sources/public_health/wastewater_surveillance.csv",
+   "format": "CDC NWSS style: sample date, sewershed, target, concentration",
+   "key_columns": {
+    "time": "sample_date",
+    "entity_ids": [
+     "sewershed_id"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/infrastructure_assets.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "2-3 samples a week",
+   "threads": [
+    "T1"
+   ],
+   "expected_observation_count": 1
+  },
+  {
+   "stream_id": "ed_visits",
+   "name": "Emergency department visits",
+   "delivered": true,
+   "path_glob": "05_other_sources/public_health/ed_visits_*.csv",
+   "format": "CDC NSSP BioSense line list",
+   "key_columns": {
+    "time": "Arrive_Date_Time (local)",
+    "entity_ids": [
+     "Visit_ID",
+     "Facility_ID",
+     "Patient_ZIP",
+     "Patient_Tract"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/facility_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "per visit",
+   "threads": [
+    "T1",
+    "T5",
+    "T6",
+    "T9",
+    "T14",
+    "T16"
+   ],
+   "expected_observation_count": 8
+  },
+  {
+   "stream_id": "hospital_capacity",
+   "name": "Hospital capacity and utilities status",
+   "delivered": true,
+   "path_glob": "05_other_sources/public_health/hospital_capacity.csv",
+   "format": "HHS Protect daily capacity plus power source, generator fuel and diversion status",
+   "key_columns": {
+    "time": "Report_Date",
+    "entity_ids": [
+     "Facility_ID"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/facility_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "daily",
+   "threads": [
+    "T8",
+    "T9",
+    "T16"
+   ],
+   "expected_observation_count": 6
+  },
+  {
+   "stream_id": "syndromic",
+   "name": "Syndromic surveillance summary",
+   "delivered": true,
+   "path_glob": "05_other_sources/public_health/syndrome_summary.csv",
+   "format": "Daily counts by syndrome, facility and area",
+   "key_columns": {
+    "time": "Report_Date",
+    "entity_ids": [
+     "Facility_ID",
+     "CC_Category"
+    ],
+    "location": [
+     "Area_ID"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/facility_registry.json",
+    "06_data_streams/areas.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "daily",
+   "threads": [
+    "T1",
+    "T6",
+    "T9",
+    "T14",
+    "T16",
+    "T20"
+   ],
+   "expected_observation_count": 5
+  },
+  {
+   "stream_id": "scada_historian",
+   "name": "Utility SCADA historian",
+   "delivered": true,
+   "path_glob": "05_other_sources/telemetry/historian_*.csv",
+   "format": "AVEVA PI style tag history",
+   "key_columns": {
+    "time": "Timestamp (UTC)",
+    "entity_ids": [
+     "Tagname"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/scada_tags.json",
+    "06_data_streams/infrastructure_assets.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "compressed archive: a row on change beyond deadband, at least hourly (15 min for key pressures and voltages); events at the exact second",
+   "threads": [
+    "T1",
+    "T8",
+    "T9",
+    "T10",
+    "T16",
+    "T20"
+   ],
+   "notes": "No attack-labelling columns.",
+   "expected_observation_count": 14
+  },
+  {
+   "stream_id": "outage_map",
+   "name": "Customer outages by area",
+   "delivered": true,
+   "path_glob": "05_other_sources/telemetry/outage_map.csv",
+   "format": "Outage management export: time, area or feeder, customers served, customers out",
+   "key_columns": {
+    "time": "timestamp_utc",
+    "entity_ids": [
+     "area_id",
+     "feeder_id",
+     "substation_id"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/areas.json",
+    "06_data_streams/infrastructure_assets.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-09-10T05:00Z",
+    "end_utc": "2027-10-27T05:00Z",
+    "days": [
+     -2,
+     40
+    ]
+   },
+   "cadence": "15 min",
+   "threads": [
+    "T1",
+    "T8",
+    "T10",
+    "T11",
+    "T16"
+   ],
+   "expected_observation_count": 8,
+   "notes": "Adds cause, crews_assigned, est_restoration_utc."
+  },
+  {
+   "stream_id": "work_orders",
+   "name": "Maintenance work orders and purchase requests",
+   "delivered": true,
+   "path_glob": "05_other_sources/maintenance/work_orders.csv",
+   "format": "IBM Maximo WORKORDER export, several organisations",
+   "key_columns": {
+    "time": "reported_date, status_date, actual_finish, status_history",
+    "entity_ids": [
+     "wonum",
+     "asset_id",
+     "vendor_id"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/infrastructure_assets.json",
+    "06_data_streams/scada_tags.json",
+    "06_data_streams/gw_host_registry.json",
+    "06_data_streams/entity_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "per order",
+   "threads": [
+    "T1",
+    "T2",
+    "T3",
+    "T8",
+    "T9",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 14
+  },
+  {
+   "stream_id": "base_status_reports",
+   "name": "Military installation status reports",
+   "delivered": true,
+   "path_glob": "05_other_sources/maintenance/base_status_reports.csv",
+   "format": "Daily status: installation, readiness percent, aircraft on station, backup power status, perimeter sensor status",
+   "key_columns": {
+    "time": "report_date",
+    "entity_ids": [
+     "installation_id",
+     "equipment_id"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/facility_registry.json",
+    "06_data_streams/infrastructure_assets.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "daily",
+   "threads": [
+    "T1",
+    "T2",
+    "T7"
+   ],
+   "expected_observation_count": 7
+  },
+  {
+   "stream_id": "siem_alerts",
+   "name": "Utility security alerts",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/siem/*.csv",
+   "format": "SIEM alert queue export with analyst disposition",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "alert_id",
+     "rule_id",
+     "src_host",
+     "dst_host",
+     "user"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per alert",
+   "threads": [
+    "T8",
+    "T9",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 8,
+   "notes": "Monthly alert files plus rule_changes.csv and daily_summary.csv. Starts 2027-07-16."
+  },
+  {
+   "stream_id": "zeek_logs",
+   "name": "Network connection logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/zeek/*/*.log",
+   "format": "Zeek conn, dns and notice TSV with OT protocol notices",
+   "key_columns": {
+    "time": "ts (epoch seconds, UTC)",
+    "entity_ids": [
+     "uid"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one folder per UTC day: conn, dns, ssl, notice",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 4,
+   "notes": "Background flows are sampled 1 in 200; flows involving hosts with alerts or remote sessions are complete. dns.log rows share their uid with the UDP/53 row in conn.log. Endpoints are in id.orig_h / id.resp_h. External addresses and names are invented. Starts 2027-07-16."
+  },
+  {
+   "stream_id": "host_audit_logs",
+   "name": "Host, access and mail audit logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/audit/*.csv",
+   "format": "VPN sessions, historian access, file and configuration audit, change tickets, mail gateway, endpoint detections, by organisation",
+   "key_columns": {
+    "time": "time_utc (login_utc / start_utc in the session tables)",
+    "entity_ids": [
+     "host",
+     "account",
+     "src_ip",
+     "device"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json",
+    "06_data_streams/scada_tags.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per record",
+   "threads": [
+    "T4",
+    "T6",
+    "T8",
+    "T9",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 11,
+   "notes": "Sixteen tables: remote-access sessions, historian access, device configuration changes, SCADA command log, alarm-suppression audit, file integrity, change management, settings audits, endpoint protection, mail gateways and follow-on logons."
+  },
+  {
+   "stream_id": "portal_access_logs",
+   "name": "Aid portal and logistics system access logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/portal/*.csv",
+   "format": "Web authentication log: time, system, account hash, source address and ASN, result",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "system",
+     "account_ref",
+     "client_ip",
+     "client_network"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json",
+    "06_data_streams/entity_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per attempt (aggregated per minute during floods)",
+   "threads": [
+    "T4"
+   ],
+   "expected_observation_count": 2,
+   "notes": "aid_portal_access_YYYY-MM.csv and base_logistics_access_YYYY-MM.csv; account_ref is the applications stream's account_id for real accounts. Registration opens 2027-11-13T06:00Z (midnight local); before that the aid portal serves information pages only."
+  },
+  {
+   "stream_id": "vessel_ot_logs",
+   "name": "Tanker cargo-control and vendor remote-access logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/telemetry/vessel_cargo_control_*.csv",
+   "format": "Cargo-control event log (valves, alarms, tank levels) and vendor remote-session log",
+   "key_columns": {
+    "time": "timestamp_utc (login_utc in the remote-session table)",
+    "entity_ids": [
+     "vessel mmsi",
+     "session_id",
+     "src_asn",
+     "tag"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/vessels.json",
+    "06_data_streams/entity_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "events as they occur; tank levels every 5 min",
+   "threads": [
+    "T6",
+    "T12",
+    "T20"
+   ],
+   "expected_observation_count": 6,
+   "notes": "Three files: kalvora_star, ostrel_bay, remote_sessions."
+  },
+  {
+   "stream_id": "contracts",
+   "name": "Vendor registry, contracts and invoices",
+   "delivered": true,
+   "path_glob": "05_other_sources/payments/contracts*.csv",
+   "format": "Vendor registry, award records (PIID), invoices",
+   "key_columns": {
+    "time": "registration_date, award_date, invoice_date",
+    "entity_ids": [
+     "supplier_id",
+     "piid",
+     "bank_account_id"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/entity_registry.json",
+    "06_data_streams/organizations.json",
+    "06_data_streams/areas.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per record",
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "expected_observation_count": 6,
+   "notes": "Six files: vendor_registry, business_filings, awards, invoices, actions, debris_monitoring."
+  },
+  {
+   "stream_id": "financial_transactions",
+   "name": "Financial transactions",
+   "delivered": true,
+   "path_glob": "05_other_sources/payments/financial_transactions.csv",
+   "format": "ACH and card transaction log",
+   "key_columns": {
+    "time": "timestamp",
+    "entity_ids": [
+     "account_id",
+     "counterparty_id"
+    ],
+    "location": [
+     "merchant location"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/entity_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "per transaction",
+   "threads": [
+    "T3",
+    "T4"
+   ],
+   "expected_observation_count": 2,
+   "notes": "counterparty_id may be an organizations.json id as well as an entity_registry id."
+  },
+  {
+   "stream_id": "aid_applications",
+   "name": "Disaster aid applications and account changes",
+   "delivered": true,
+   "path_glob": "05_other_sources/payments/aid_applications.csv",
+   "format": "Application records and account-change audit (deposit detail changes)",
+   "key_columns": {
+    "time": "submitted_utc, changed_utc",
+    "entity_ids": [
+     "application_id",
+     "account_id",
+     "tract"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/areas.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-11-13T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     60,
+     119
+    ]
+   },
+   "cadence": "per application or change",
+   "threads": [
+    "T3",
+    "T4",
+    "T5",
+    "T22"
+   ],
+   "expected_observation_count": 5,
+   "notes": "Time columns submitted_utc, changed_utc, event_utc; ids application_id, account_id, area_id, tract. Registration opens 2027-11-13T06:00Z (midnight local, D+60)."
+  },
+  {
+   "stream_id": "insurance_claims",
+   "name": "Insurance and spill damage claims",
+   "delivered": true,
+   "path_glob": "05_other_sources/payments/insurance_claims.csv",
+   "format": "ACORD claim records",
+   "key_columns": {
+    "time": "loss_date, filed_date",
+    "entity_ids": [
+     "claim_id",
+     "policy_id",
+     "insurer_id",
+     "adjuster_id"
+    ],
+    "location": [
+     "property address"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/entity_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-08-15T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -30,
+     119
+    ]
+   },
+   "cadence": "per claim",
+   "threads": [
+    "T2",
+    "T6",
+    "T22"
+   ],
+   "notes": "Filed dates follow a rising curve from D0; policy changes before the storm are in the same file. policy_id holds the registry's policy_number; two record types (policy_transaction, claim).",
+   "expected_observation_count": 3
+  },
+  {
+   "stream_id": "census",
+   "name": "Census tract table",
+   "delivered": true,
+   "path_glob": "05_other_sources/census/*.csv",
+   "format": "ACS 5-year estimates",
+   "key_columns": {
+    "time": null,
+    "entity_ids": [
+     "GEOID",
+     "AREA_ID"
+    ],
+    "location": [
+     "AREA_ID"
+    ]
+   },
+   "ids_from_registry": [
+    "06_data_streams/areas.json"
+   ],
+   "required_span": {
+    "start_utc": null,
+    "end_utc": null,
+    "days": null,
+    "note": "reference table; rows carry their own dates where relevant"
+   },
+   "cadence": "static",
+   "threads": [
+    "T1",
+    "T5",
+    "T9",
+    "T14"
+   ],
+   "expected_observation_count": 3,
+   "notes": "The tract index carries AREA_ID, EVAC_ZONE_AREA_ID and WATER_DISTRICT_AREA_ID for joins to areas.json."
+  },
+  {
+   "stream_id": "gps_integrity_reports",
+   "name": "GPS interference reports",
+   "delivered": false,
+   "path_glob": null,
+   "format": null,
+   "key_columns": {
+    "time": null,
+    "entity_ids": [],
+    "location": []
+   },
+   "ids_from_registry": [],
+   "required_span": null,
+   "cadence": null,
+   "threads": [],
+   "not_delivered_reason": "Carried by the nic and nac_p columns in adsb and by the FAA notice in public_record; a separate file would only restate them.",
+   "expected_observation_count": 0
+  },
+  {
+   "stream_id": "eod_dive_logs",
+   "name": "Navy ordnance disposal and mine-countermeasures logs",
+   "delivered": false,
+   "path_glob": null,
+   "format": null,
+   "key_columns": {
+    "time": null,
+    "entity_ids": [],
+    "location": []
+   },
+   "ids_from_registry": [],
+   "required_span": null,
+   "cadence": null,
+   "threads": [],
+   "not_delivered_reason": "Operational military records; the search is visible through ais (search-pattern tracks), port_conditions and public_record.",
+   "expected_observation_count": 0
+  },
+  {
+   "stream_id": "calls_311",
+   "name": "311 and information-line calls",
+   "delivered": false,
+   "path_glob": null,
+   "format": null,
+   "key_columns": {
+    "time": null,
+    "entity_ids": [],
+    "location": []
+   },
+   "ids_from_registry": [],
+   "required_span": null,
+   "cadence": null,
+   "threads": [],
+   "not_delivered_reason": "Only daily totals matter and those are reported in public_record and news; no thread joins on call-level data.",
+   "expected_observation_count": 0
+  },
+  {
+   "stream_id": "traffic_counts",
+   "name": "Highway traffic counts",
+   "delivered": false,
+   "path_glob": null,
+   "format": null,
+   "key_columns": {
+    "time": null,
+    "entity_ids": [],
+    "location": []
+   },
+   "ids_from_registry": [],
+   "required_span": null,
+   "cadence": null,
+   "threads": [],
+   "not_delivered_reason": "No canon event depends on it; evacuation load is visible in avl and news.",
+   "expected_observation_count": 0
+  },
+  {
+   "stream_id": "grid_operator_logs",
+   "name": "Grid operator (ERCOT) logs",
+   "delivered": false,
+   "path_glob": null,
+   "format": null,
+   "key_columns": {
+    "time": null,
+    "entity_ids": [],
+    "location": []
+   },
+   "ids_from_registry": [],
+   "required_span": null,
+   "cadence": null,
+   "threads": [],
+   "not_delivered_reason": "Outside the utility's own records; the same load loss is in scada_historian and outage_map.",
+   "expected_observation_count": 0
+  },
+  {
+   "stream_id": "investigative_files",
+   "name": "Case files, after-action reports and internal memoranda",
+   "delivered": false,
+   "path_glob": null,
+   "format": null,
+   "key_columns": {
+    "time": null,
+    "entity_ids": [],
+    "location": []
+   },
+   "ids_from_registry": [],
+   "required_span": null,
+   "cadence": null,
+   "threads": [],
+   "not_delivered_reason": "These are conclusions, not evidence. Their public parts are in public_record and news.",
+   "expected_observation_count": 0
+  },
+  {
+   "stream_id": "threat_intelligence",
+   "name": "Threat-intelligence reporting",
+   "delivered": false,
+   "path_glob": null,
+   "format": null,
+   "key_columns": {
+    "time": null,
+    "entity_ids": [],
+    "location": []
+   },
+   "ids_from_registry": [],
+   "required_span": null,
+   "cadence": null,
+   "threads": [],
+   "not_delivered_reason": "Would hand participants the attribution.",
+   "expected_observation_count": 0
+  },
+  {
+   "stream_id": "hospital_internal_records",
+   "name": "Hospital internal logs (handoffs, lab systems, supply manifests)",
+   "delivered": false,
+   "path_glob": null,
+   "format": null,
+   "key_columns": {
+    "time": null,
+    "entity_ids": [],
+    "location": []
+   },
+   "ids_from_registry": [],
+   "required_span": null,
+   "cadence": null,
+   "threads": [],
+   "not_delivered_reason": "Patient-level internal records beyond the ed_visits line list; the needed signals are in ed_visits, hospital_capacity, syndromic and fuel_deliveries.",
+   "expected_observation_count": 0
+  },
+  {
+   "stream_id": "spill_response_logs",
+   "name": "Spill response field and model logs",
+   "delivered": false,
+   "path_glob": null,
+   "format": null,
+   "key_columns": {
+    "time": null,
+    "entity_ids": [],
+    "location": []
+   },
+   "ids_from_registry": [],
+   "required_span": null,
+   "cadence": null,
+   "threads": [],
+   "not_delivered_reason": "Response-team working files; the spill's movement is observable in water_quality, air_quality, satellite and drone_telemetry.",
+   "expected_observation_count": 0
+  }
+ ],
+ "audience": "Internal (game master). It lists which threads rely on each stream; do not hand this file to participants. Give them the schema files in 06_data_streams/schemas/ instead."
+}

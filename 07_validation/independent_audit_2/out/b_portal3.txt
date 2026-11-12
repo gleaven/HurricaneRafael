@@ -1,0 +1,20 @@
+Aug failed account_refs sample ['guess-3252e3', 'guess-c5bcbe', 'guess-36177c', 'guess-5adb4b', 'guess-88a7ba', 'guess-3dcf30'] in aid accounts 0
+Nov failed: account_ref exists in aid apps 0 of 220000
+failed login for account before that account was created 0
+ATO accounts channel Counter({'web': 410}) ATO login before account created 0
+portal rows by month/event
+   2027-07 {'page_view': 977}
+   2027-08 {'page_view': 3858, 'login_failed': 810}
+   2027-09 {'page_view': 6964}
+   2027-10 {'page_view': 11161}
+   2027-11 {'page_view': 5472, 'account_created': 26564, 'application_submitted': 26559, 'login_success': 941, 'profile_updated': 941, 'login_failed': 220000}
+   2027-12 {'application_submitted': 3264, 'page_view': 1905, 'account_created': 3259, 'login_success': 938, 'profile_updated': 938}
+   2028-01 {'page_view': 688, 'account_created': 235, 'application_submitted': 235, 'login_success': 35, 'profile_updated': 35}
+account_created first days [('2027-11-12', 9), ('2027-11-13', 3684), ('2027-11-14', 4014), ('2027-11-15', 3292), ('2027-11-16', 2694), ('2027-11-17', 2351)]
+aid web apps first days [('2027-11-13', 3631), ('2027-11-14', 4024), ('2027-11-15', 3308), ('2027-11-16', 2698), ('2027-11-17', 2352)]
+web apps 30058 with account_created row 30058 created rows not web apps 0
+time match 0 ip match 30058
+web apps missing from portal log 0 [] ATO victims among them 0
+aid changes with login 1914 legit portal successes 1504 match 1504
+legit UA [('Edge/Windows', 11972), ('Chrome/Windows', 11887), ('Safari/iOS', 11749), ('Safari/macOS', 11697), ('Samsung/Android', 11696), ('Firefox/Windows', 11680), ('Chrome/Android', 11657)]
+ATO victims: had account_created in portal? 410

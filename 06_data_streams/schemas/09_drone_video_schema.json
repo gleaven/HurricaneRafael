@@ -1,0 +1,232 @@
+{
+ "source": "drone_video",
+ "folder": "05_other_sources/drone_video/",
+ "format": "CSV (normalized from DJI SRT sidecar files)",
+ "standard": "DJI SRT telemetry sidecar (normalized to flat CSV)",
+ "reference": "https://github.com/CallMarcus/dji-drone-metadata-embedder/blob/master/docs/SRT_FORMATS.md",
+ "verified": true,
+ "notes": "DJI SRT is the de-facto standard for drone video telemetry. Raw SRT varies by drone model (Mini 3/4 vs Mavic 3 vs Air 2S). We normalize to a flat CSV for the corpus. Each row is one video frame (typically 1-second intervals). operator_id and mission_name are added fields (not in raw SRT) joining to operator registry.",
+ "entity_catalog": "06_data_streams/drone_operators.json (14 operators, 32 airframes, 11 launch sites)",
+ "entity_catalog_needed": false,
+ "entity_catalog_note": "Built. operator_id joins drone_operators.json authorized_operators[].operator_id.",
+ "fields": [
+  {
+   "name": "flight_id",
+   "type": "string",
+   "example": "FLT-DRN-OP-003-20270915-01",
+   "notes": "FLT-<operator_id>-<yyyymmdd local>-<sequence>"
+  },
+  {
+   "name": "frame_number",
+   "type": "integer",
+   "example": 1842,
+   "notes": "Video frame counter; 1-second keyframes for corpus"
+  },
+  {
+   "name": "timestamp_utc",
+   "type": "datetime",
+   "example": "2027-09-15T14:23:42Z",
+   "notes": "UTC ISO 8601"
+  },
+  {
+   "name": "srt_time",
+   "type": "string",
+   "example": "00:30:42,000",
+   "notes": "SRT subtitle timestamp (HH:MM:SS,mmm) relative to video start"
+  },
+  {
+   "name": "latitude",
+   "type": "float",
+   "example": "27.8103",
+   "notes": "WGS-84 decimal degrees"
+  },
+  {
+   "name": "longitude",
+   "type": "float",
+   "example": "-97.4071",
+   "notes": "WGS-84 decimal degrees"
+  },
+  {
+   "name": "rel_alt_m",
+   "type": "float",
+   "example": "91.4",
+   "notes": "Altitude above takeoff point, meters"
+  },
+  {
+   "name": "abs_alt_m",
+   "type": "float",
+   "example": "105.8",
+   "notes": "Altitude above sea level (WGS-84 ellipsoid), meters"
+  },
+  {
+   "name": "iso",
+   "type": "integer",
+   "example": 400,
+   "notes": "Camera ISO sensitivity; blank for thermal-only payloads"
+  },
+  {
+   "name": "shutter",
+   "type": "string",
+   "example": "1/1000",
+   "notes": "Shutter speed fraction"
+  },
+  {
+   "name": "fnum",
+   "type": "float",
+   "example": 2.8,
+   "notes": "Aperture f-number"
+  },
+  {
+   "name": "focal_len_mm",
+   "type": "float",
+   "example": 24.0,
+   "notes": "Focal length in mm; null for fixed-lens models"
+  },
+  {
+   "name": "ev",
+   "type": "float",
+   "example": -0.3,
+   "notes": "Exposure value offset; null for some models"
+  },
+  {
+   "name": "color_temp_k",
+   "type": "integer",
+   "example": 5600,
+   "notes": "Color temperature Kelvin; null for some models"
+  },
+  {
+   "name": "gimbal_pitch_deg",
+   "type": "float",
+   "example": -45.0,
+   "notes": "Gimbal pitch in degrees; negative = nose down"
+  },
+  {
+   "name": "gimbal_yaw_deg",
+   "type": "float",
+   "example": 193.5,
+   "notes": "Gimbal yaw degrees true"
+  },
+  {
+   "name": "gimbal_roll_deg",
+   "type": "float",
+   "example": 0.1,
+   "notes": "Gimbal roll; near 0 when stabilized"
+  },
+  {
+   "name": "course_deg",
+   "type": "float",
+   "example": 215.3,
+   "notes": "Aircraft heading degrees true"
+  },
+  {
+   "name": "operator_id",
+   "type": "string",
+   "example": "DRN-OP-003",
+   "notes": "Joins drone_operators.json authorized_operators[].operator_id. In logs/flight_log.csv the one manned survey sortie carries the aircraft_registry.json aircraft_id instead."
+  },
+  {
+   "name": "drone_model",
+   "type": "string",
+   "example": "DJI Mavic 3 Enterprise",
+   "notes": ""
+  },
+  {
+   "name": "mission_name",
+   "type": "string",
+   "example": "CCFD-SAR-FLOUR-BLUFF-01",
+   "notes": "Mission/task identifier chosen by the operator"
+  },
+  {
+   "name": "video_filename",
+   "type": "string",
+   "example": "DJI_0142.MP4",
+   "notes": "Corresponding video file reference"
+  }
+ ],
+ "scenario_notes": {
+  "coverage": "Flights by the authorised operators in drone_operators.json, 2027-08-15 to 2028-01-12; one telemetry row per second per flight.",
+  "launch": "Crews launch from their registered sites or from a roadside point on land near the place they are surveying; the first and last frames of a flight are at the launch point.",
+  "flight_restriction": "No flights from 05:01Z on 2027-09-12 until operators hold emergency authorisations after the storm.",
+  "who_appears": "Only authorised operators. An aircraft with no operator record has no telemetry here."
+ },
+ "registry": {
+  "operator_id_format": "DRN-OP-nnn",
+  "airframe_id_format": "DRN-OP-nnn-Ann",
+  "launch_site_id_format": "UAS-SITE-<name>",
+  "counts": {
+   "operators": 14,
+   "airframes": 32,
+   "launch_sites": 11
+  }
+ },
+ "files": {
+  "drone_telemetry_YYYY-MM.csv": "frame telemetry, one row per second, by calendar month (UTC)",
+  "drone_telemetry_YYYY-MM_argus.csv": "same columns; the FEMA contractor's fixed-wing survey flights, kept apart because of their size",
+  "logs/flight_log.csv": "one row per flight",
+  "logs/thermal_survey_readings.csv": "surface temperatures measured on the 25 September 2027 thermal survey"
+ },
+ "generator": "scripts/streams/gen_drones.py (deterministic; run after gen_aviation.py)",
+ "flight_log_fields": [
+  {
+   "name": "flight_id",
+   "notes": "joins the telemetry files (the manned thermal sortie has no telemetry here; its track is in ADS-B)"
+  },
+  {
+   "name": "operator_id",
+   "notes": "drone operator id, or aircraft_id for the manned sortie"
+  },
+  {
+   "name": "airframe_id",
+   "notes": "drone_operators.json airframe id, or the aircraft registration"
+  },
+  {
+   "name": "drone_model",
+   "notes": ""
+  },
+  {
+   "name": "mission_name",
+   "notes": ""
+  },
+  {
+   "name": "authorization_id",
+   "notes": "joins 05_other_sources/drone_detections/laanc_authorizations.csv"
+  },
+  {
+   "name": "launch_latitude / launch_longitude",
+   "notes": "take-off point"
+  },
+  {
+   "name": "takeoff_utc / landing_utc / duration_s",
+   "notes": ""
+  },
+  {
+   "name": "track_km",
+   "notes": "length of the flown track"
+  },
+  {
+   "name": "max_alt_m_agl",
+   "notes": "height above the take-off point"
+  },
+  {
+   "name": "sensor / spectral_band / ground_resolution_m",
+   "notes": "payload used"
+  },
+  {
+   "name": "tile_set_id / tiles / acquisition_start_utc / acquisition_end_utc",
+   "notes": "image product delivered from the flight, where one was"
+  },
+  {
+   "name": "notes",
+   "notes": ""
+  }
+ ],
+ "additional_tables": {
+  "logs/thermal_survey_readings.csv": {
+   "asset_id": "infrastructure asset surveyed (infrastructure_assets.json)",
+   "component": "equipment item imaged",
+   "surface_temp_c": "radiometric surface temperature",
+   "ambient_temp_c": "air temperature at the time",
+   "delta_c": "surface minus ambient"
+  }
+ }
+}

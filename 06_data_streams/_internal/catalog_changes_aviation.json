@@ -1,0 +1,30 @@
+{
+ "family": "aviation and remote sensing",
+ "changes": [
+  {
+   "stream_id": "adsb",
+   "path_glob": "05_other_sources/adsb/adsb_*.csv",
+   "note": "one file per month; cadence is 10 s near airfields and in hovers, 30 s low-level, 60 s en route"
+  },
+  {
+   "stream_id": "drone_telemetry",
+   "path_glob": "05_other_sources/drone_video/drone_telemetry_*.csv",
+   "note": "plus logs/flight_log.csv and logs/thermal_survey_readings.csv (different columns, kept in a subfolder so the main glob stays uniform). ids_from_registry should also list aircraft_registry.json: the manned thermal survey CBAS-TIR-D11 (EVT-1106) is logged with its aircraft_id"
+  },
+  {
+   "stream_id": "drone_detections",
+   "path_glob": "05_other_sources/drone_detections/*.csv",
+   "note": "five tables: sensor_sites, sensor_status_*, detections_*, laanc_authorizations, sighting_reports. New schema file 06_data_streams/schemas/17_drone_detections_schema.json (add to 00_schema_index.json). Sensors need a registry entry: proposal in 06_data_streams/_internal/registry_additions_aviation.json"
+  },
+  {
+   "stream_id": "satellite",
+   "path_glob": "05_other_sources/satellite/*.json",
+   "note": "includes catalog.json (STAC collection) and one archive-receipt item (EVT-1108). Vessel counts come from AIS on disk: re-run scripts/streams/gen_satellite.py whenever AIS is regenerated"
+  }
+ ],
+ "run_order": [
+  "gen_aviation.py",
+  "gen_drones.py (reads ADS-B)",
+  "gen_satellite.py (reads AIS)"
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "note": "Position sources of the maritime stream family (scripts/streams/gen_maritime.py). The shore-station AIS feed is covered by the main rules file.",
+ "sources": [
+  {
+   "name": "AIS satellite feed",
+   "glob": "05_other_sources/ais/satellite/*.csv",
+   "lat": "LAT",
+   "lon": "LON",
+   "rule": "vessel",
+   "id": "MMSI",
+   "time": "BaseDateTime",
+   "draft_m": "Draft"
+  },
+  {
+   "name": "Port radar contacts",
+   "glob": "05_other_sources/port_surveillance/radar_tracks_*.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "vessel",
+   "id": "track_id",
+   "time": "time_utc"
+  },
+  {
+   "name": "Port cameras (land)",
+   "glob": "05_other_sources/port_surveillance/sensors.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "land_fixed",
+   "id": "sensor_id",
+   "allow_missing": true,
+   "where": [
+    "sensor_type",
+    "fixed camera"
+   ]
+  },
+  {
+   "name": "Port radar buoys (water)",
+   "glob": "05_other_sources/port_surveillance/sensors.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "water_fixed",
+   "id": "sensor_id",
+   "allow_missing": true,
+   "where": [
+    "sensor_type",
+    "radar buoy"
+   ]
+  }
+ ]
+}

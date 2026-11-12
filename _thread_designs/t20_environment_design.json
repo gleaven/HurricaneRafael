@@ -1,0 +1,2370 @@
+{
+  "thread_id": "T20",
+  "name": "Environmental sensors and spill tracking",
+  "color": "#2d7a3f",
+  "scenario": "rafael",
+  "lanes": [
+    "C",
+    "D",
+    "I"
+  ],
+  "truth": "The T6 attack on the cargo-control systems of MT Kalvora Star and MT Ostrel Bay opens their cargo valves at the Rendal Terminals berth from 04:00Z to 05:30Z on D0 and releases about 9,000 barrels of crude into the Inner Harbor. Surge and wind carry the oil out of the ship channel into Nueces and Corpus Christi bays, about 85 km² by D+2. The release is masked at first by darkness, surge and debris. The water-quality sonde network (WQ-01 to WQ-06) registers it in sequence — the Inner Harbor stations within the hour, the bay stations over D+1 and D+2 — but the automated alerts sit unreviewed until D+2. The O.N. Stevens Water Treatment Plant raw water intake (FAC-UTL-01) detects hydrocarbon trace at D+2 06:00Z (TPH: 0.42 mg/L, threshold 0.10 mg/L). The intake detection is a critical cross-system signal: the same FAC-UTL-01 historian that records the hydrocarbon trace at D+2 also records the pump setpoint manipulations beginning D+9 (T9 thread). An analyst with access to the full historian sees two independent anomalies — hydrocarbon intrusion and pump manipulation — in the same facility, 7 days apart. NOAA runs trajectory models from D+2; fishing and shellfish harvesting close on D+4; the owners of the two tankers are designated responsible parties on D+7; cleanup with booms and skimmers runs from D+5 and the main slick is declared contained on D+20; 340 oiled birds are documented. Cleanup moves to monitoring on D+44, the 60-day assessment finds bay TPH at 0.03 mg/L, and fishing grounds partly reopen on D+115.",
+  "phase_onset": 3,
+  "phase_peak": 3,
+  "msel_events": [
+    {
+      "event_id": "EVT-2001",
+      "time_label": "D0",
+      "day": 0,
+      "day_end": null,
+      "time_utc": "04:00Z",
+      "threads": [
+        "T20",
+        "T6"
+      ],
+      "lanes": [
+        "I"
+      ],
+      "description": "Ground truth (hidden): commands through the vendor's remote-maintenance session open the cargo valves on MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth (TERM-01) at 04:00Z and silence the alarms; the crews close the valves by 05:30Z after about 9,000 barrels (about 378,000 gallons) of crude oil have gone into the Inner Harbor (EVT-0313). Darkness, storm surge and floating debris hide the release; no aerial observation is possible until after landfall.",
+      "observed_in": [
+        {
+          "stream": "vessel_ot_logs",
+          "what": "Cargo-control records aboard MT Kalvora Star and MT Ostrel Bay: manifold valves read open from 04:00Z to about 05:30Z on D0, alarms inhibited, tank levels fall by about 9,000 barrels in total, a vendor remote session active throughout.",
+          "when": {
+            "start_utc": "2027-09-14T03:45Z",
+            "end_utc": "2027-09-14T05:45Z"
+          }
+        },
+        {
+          "stream": "water_quality",
+          "what": "The sonde nearest the berth (WQ-02, Inner Harbor) leaves its hydrocarbon baseline within the hour of 04:00Z.",
+          "when": {
+            "start_utc": "2027-09-14T04:00Z",
+            "end_utc": "2027-09-14T08:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Cargo-control historians aboard both tankers: manifold valve position sensors read OPEN from 04:00Z to about 05:30Z D0; tank level sensors fall over the same period; combined loss about 9,000 barrels",
+        "Water-quality sonde nearest the berth (WQ-02, Inner Harbor): hydrocarbon reading leaves baseline within the hour of 04:00Z D0"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "TERM-01",
+        "PORT-07"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "tanker_cargo_control_historian",
+        "water_quality_sonde_network",
+        "coast_guard_vessel_traffic_service_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2002",
+      "time_label": "D0 to D+2",
+      "day": 0,
+      "day_end": 2,
+      "time_utc": "05:00Z",
+      "threads": [
+        "T20",
+        "T6"
+      ],
+      "lanes": [
+        "D"
+      ],
+      "description": "The water-quality sonde network registers the release in sequence. The Inner Harbor sondes spike within an hour of 04:00Z on D0; as surge and wind push the oil out of the ship channel (EVT-0314), the Nueces Bay and Corpus Christi Bay sondes rise through D+1 and D+2 until all six stations (WQ-01 to WQ-06) read far above baseline. The automated high-hydrocarbon alerts are generated on time, but the TCEQ emergency operations center is operating at reduced capacity for the storm and the alerts are auto-deprioritized; the queue is not reviewed until D+2 06:30Z.",
+      "observed_in": [
+        {
+          "stream": "water_quality",
+          "what": "Sonde telemetry: total petroleum hydrocarbons rise from a baseline near 0.02 mg/L, first at the Inner Harbor stations on D0, then at the bay stations on D+1 and D+2; network peak 3.4 mg/L on D+3; alert threshold 0.10 mg/L | TCEQ EOC alert queue: alert code ENV-TPH-HIGH generated at each station as it crosses threshold, queue priority LOW (auto-deprioritized during declared disaster); backlog 847 items on D+1; hydrocarbon alerts first reviewed D+2 06:32Z",
+          "when": {
+            "start_utc": "2027-09-14T05:00Z",
+            "end_utc": "2027-09-17T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "Sonde telemetry: total petroleum hydrocarbons rise from a baseline near 0.02 mg/L, first at the Inner Harbor stations on D0, then at the bay stations on D+1 and D+2; network peak 3.4 mg/L on D+3; alert threshold 0.10 mg/L",
+        "TCEQ EOC alert queue: alert code ENV-TPH-HIGH generated at each station as it crosses threshold, queue priority LOW (auto-deprioritized during declared disaster); backlog 847 items on D+1; hydrocarbon alerts first reviewed D+2 06:32Z"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PORT-07",
+        "WQ-01 to WQ-06",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "water_quality_sonde_network",
+        "tceq_eoc_alert_queue"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2003",
+      "time_label": "D+2",
+      "day": 2,
+      "day_end": null,
+      "time_utc": "06:00Z",
+      "threads": [
+        "T20",
+        "T9"
+      ],
+      "lanes": [
+        "C",
+        "D",
+        "I"
+      ],
+      "description": "CRITICAL CROSS-SYSTEM DETECTION: FAC-UTL-01 (O.N. Stevens WTP) raw water intake sensor records TPH at 0.42 mg/L, exceeding the 0.10 mg/L alert threshold. The plant's intake monitoring system (Yokogawa Centum VP historian) generates alert FAC-UTL-01-RAW-TPH-HIGH. Plant operator on shift (06:12Z) initiates emergency filtration protocol per TCEQ permit conditions: raw water intake is switched from primary to secondary intake (located 800m upstream), and enhanced activated carbon dosing is engaged. Water supply is maintained without interruption. This is the same historian (FAC-UTL-01) that will record SCADA pump setpoint manipulations beginning D+9 (T9 thread). An analyst reviewing the full FAC-UTL-01 historian sees two distinct anomalies: TPH spike D+2 and pump setpoint changes D+9.",
+      "observed_in": [
+        {
+          "stream": "scada_historian",
+          "what": "FAC-UTL-01 Yokogawa historian tag FAC-UTL-01-RAW-TPH-MGL: 0.02 mg/L (D+1 00:00Z) → 0.42 mg/L (D+2 06:00Z) → 0.38 mg/L (D+2 12:00Z) → 0.19 mg/L (D+4 00:00Z) → 0.08 mg/L (D+8 00:00Z) → 0.03 mg/L (D+14 00:00Z) | FAC-UTL-01 Yokogawa historian tag FAC-UTL-01-PUMP-SP-RPM: baseline 1,420 RPM — manipulated setpoints D+9 through D+42 (T9 thread) — same historian, different anomaly, 7 days apart | TCEQ permit compliance notification FAC-UTL-01-2027-0916:...",
+          "when": {
+            "start_utc": "2027-09-16T06:00Z",
+            "end_utc": "2027-09-16T08:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FAC-UTL-01 Yokogawa historian tag FAC-UTL-01-RAW-TPH-MGL: 0.02 mg/L (D+1 00:00Z) → 0.42 mg/L (D+2 06:00Z) → 0.38 mg/L (D+2 12:00Z) → 0.19 mg/L (D+4 00:00Z) → 0.08 mg/L (D+8 00:00Z) → 0.03 mg/L (D+14 00:00Z)",
+        "FAC-UTL-01 Yokogawa historian tag FAC-UTL-01-PUMP-SP-RPM: baseline 1,420 RPM — manipulated setpoints D+9 through D+42 (T9 thread) — same historian, different anomaly, 7 days apart",
+        "TCEQ permit compliance notification FAC-UTL-01-2027-0916: hydrocarbon exceedance reported to TCEQ Region 11 at 06:45Z D+2"
+      ],
+      "public_fact": "PUB-190",
+      "place_ids": [
+        "FAC-UTL-01"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fac_utl_01_historian_yokogawa",
+        "tceq_permit_compliance_log",
+        "o_n_stevens_operations_log"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "tceq_permit_compliance_log",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2004",
+      "time_label": "D+2",
+      "day": 2,
+      "day_end": 5,
+      "time_utc": "14:00Z",
+      "threads": [
+        "T20"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Air quality monitoring stations downwind of the spill begin recording elevated TVOC and benzene concentrations. Station CC-AQ-02 (Hillcrest neighborhood, beside the Inner Harbor refinery row) records benzene at 4.8 ppb, above the EPA 72-hour reference concentration of 3 ppb. The Texas Commission on Environmental Quality issues an air quality health advisory for neighborhoods within 3 km of the ship channel. Vulnerable populations are advised to remain indoors with windows closed. The advisory covers approximately 11,000 residents.",
+      "observed_in": [
+        {
+          "stream": "air_quality",
+          "what": "Station CC-AQ-02 (Hillcrest): benzene rises from a 0.3 ppb baseline to 4.8 ppb at 14:00Z on D+2, peaks at 7.2 ppb at 02:00Z on D+3 and is back below 3 ppb by 18:00Z on D+5.",
+          "when": {
+            "start_utc": "2027-09-16T05:00Z",
+            "end_utc": "2027-09-20T05:00Z"
+          }
+        },
+        {
+          "stream": "syndromic",
+          "what": "Odour, eye and throat irritation complaints from neighbourhoods downwind of the channel, D+2 to D+5.",
+          "when": {
+            "start_utc": "2027-09-16T05:00Z",
+            "end_utc": "2027-09-20T05:00Z"
+          }
+        },
+        {
+          "stream": "public_record",
+          "what": "Air-quality health advisory issued on D+2.",
+          "when": {
+            "start_utc": "2027-09-16T05:00Z",
+            "end_utc": "2027-09-17T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "TCEQ AQ station CC-AQ-02 (Hillcrest): benzene tag TCEQ-AQ02-BNZ-PPB: 0.3 ppb baseline → 4.8 ppb at D+2 14:00Z, peak 7.2 ppb D+3 02:00Z, returns below 3 ppb D+5 18:00Z",
+        "TCEQ AQ station CC-AQ-04 (Refinery Row buffer): TVOC tag 12.4 ppm at D+2 16:00Z, attributable to storm-dispersed crude volatilization",
+        "Nueces County Health Dept emergency notification log: 847 calls to health line D+2 to D+5 citing odor complaints and eye/throat irritation"
+      ],
+      "public_fact": "PUB-191",
+      "place_ids": [
+        "PORT-07"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "tceq_ambient_air_monitoring_network",
+        "epa_airnow_telemetry",
+        "nueces_county_health_department_records"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2005",
+      "time_label": "D+2",
+      "day": 2,
+      "day_end": null,
+      "time_utc": "08:00Z",
+      "threads": [
+        "T20"
+      ],
+      "lanes": [
+        "D",
+        "I"
+      ],
+      "description": "NOAA Office of Response and Restoration activates the GNOME (General NOAA Operational Modeling Environment) spill trajectory model at the request of the Unified Command. Model inputs: release point at the Rendal Terminals berth in the Inner Harbor, release volume about 9,000 barrels, crude oil, release window 04:00Z to 05:30Z on D0, surge and wind fields from the storm. The first run, complete at 10:30Z, reproduces the surge-driven spread out of the ship channel into Nueces and Corpus Christi bays during D0 and D+1 and projects further shoreline oiling in Nueces Bay through D+4. Model outputs are updated every 6 hours as new wind and current data are ingested.",
+      "observed_in": [],
+      "detection_artifacts": [
+        "NOAA GNOME run ID CCSP-2027-0916-001: hindcast of D0–D+2 matches the mapped sheen (about 85 km²); forecast centerline at D+4 00:00Z reaches the upper Nueces Bay shoreline",
+        "Coast Guard pollution case 2027-CC-0914-OIL: source listed as MT Kalvora Star and MT Ostrel Bay at TERM-01; cause under investigation; NCP notification to EPA Region 6 transmitted D+1"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "TERM-01",
+        "FAC-USCG-01",
+        "PORT-07",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "noaa_orr_gnome_model_output_archive",
+        "uscg_msu_corpus_christi_case_file_2027-CC-0916"
+      ],
+      "observable": false,
+      "not_observable_reason": "A trajectory-modelling product inside the response team. Its projection (heaviest oiling along Nueces Bay) is borne out by water_quality and satellite at D+4 (EVT-2006).",
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2006",
+      "time_label": "D+4",
+      "day": 4,
+      "day_end": null,
+      "time_utc": "16:30Z",
+      "threads": [
+        "T20",
+        "T6"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Heaviest shoreline oiling is documented along Nueces Bay, as the trajectory model projected. A TCEQ station in Nueces Bay records TPH at 2.1 mg/L. Texas Parks and Wildlife biologists observe the first oiled birds (27 brown pelicans, 14 laughing gulls) at the Nueces Bay shoreline, and Coastal Bend Wildlife Rescue deploys a rescue team. Because of the oil, Texas Parks and Wildlife closes fishing and the Texas Department of State Health Services closes shellfish harvesting in Nueces and Corpus Christi bays (EVT-0317, PUB-040). Coast Guard aerial survey maps the sheen at about 85 km² across the two bays.",
+      "observed_in": [
+        {
+          "stream": "water_quality",
+          "what": "Nueces Bay station: total petroleum hydrocarbons 2.1 mg/L at 16:30Z on D+4, the heaviest shoreline oiling.",
+          "when": {
+            "start_utc": "2027-09-18T05:00Z",
+            "end_utc": "2027-09-19T05:00Z"
+          }
+        },
+        {
+          "stream": "adsb",
+          "what": "A Coast Guard survey aircraft flies a mapping pattern over Nueces and Corpus Christi bays at about 16:00Z on D+4.",
+          "when": {
+            "start_utc": "2027-09-18T05:00Z",
+            "end_utc": "2027-09-19T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "TCEQ Nueces Bay station TPH: 2.1 mg/L at D+4 16:30Z",
+        "USCG aerial survey 2027-0918-1600Z: sheen polygon shapefile; estimated surface area about 85 km² across Nueces and Corpus Christi bays; rainbow sheen 60%, silver sheen 30%, brown crude 10%",
+        "CBWR field log D+4: initial response team 4 personnel; first documented oiled birds 41 total (27 pelicans, 14 gulls)"
+      ],
+      "public_fact": "PUB-192",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "tceq_buoy_network_nueces_bay",
+        "uscg_aerial_survey_2027-0918",
+        "cbwr_field_response_log"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2007",
+      "time_label": "D+7",
+      "day": 7,
+      "day_end": null,
+      "time_utc": "14:30Z",
+      "threads": [
+        "T20",
+        "T6"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "By D+7 the Coast Guard, as Federal On-Scene Coordinator, formally designates the owners of MT Kalvora Star and MT Ostrel Bay as responsible parties after oil fingerprinting (GC-MS analysis) matches samples from the Inner Harbor and both bays to the two ships' cargoes. Response contractors deploy containment boom and skimmer vessels. The Oil Spill Liability Trust Fund is opened with an initial ceiling of $4.2 million so that work continues while costs are recovered from the owners.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "The Coast Guard, as Federal On-Scene Coordinator, designates the owners of MT Kalvora Star and MT Ostrel Bay as responsible parties on D+7.",
+          "when": {
+            "start_utc": "2027-09-21T05:00Z",
+            "end_utc": "2027-09-22T05:00Z"
+          }
+        },
+        {
+          "stream": "news",
+          "what": "Trade and local coverage of the designation and the claims process.",
+          "when": {
+            "start_utc": "2027-09-21T05:00Z",
+            "end_utc": "2027-09-23T05:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "GC-MS oil fingerprinting report CC-OFP-2027-001: samples from the Inner Harbor, Corpus Christi Bay and Nueces Bay match the cargoes of MT Kalvora Star and MT Ostrel Bay",
+        "Notices of Federal Interest issued to the owners of both tankers D+7 14:30 local",
+        "Skimmer recovery totals D+5 to D+20: about 142,000 gallons of oil-water mixture recovered"
+      ],
+      "public_fact": "PUB-193",
+      "place_ids": [
+        "TERM-01",
+        "PORT-07"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "unified_command_operational_log",
+        "uscg_pollution_case_file_2027-CC-0916",
+        "epa_region6_on_scene_coordinator_report"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2008",
+      "time_label": "D+20",
+      "day": 20,
+      "day_end": null,
+      "time_utc": "17:00Z",
+      "threads": [
+        "T20"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "Unified Command declares the main slick contained and primary skimming operations complete. TCEQ bay buoy network average TPH has declined to 0.4 mg/L (down from peak 3.4 mg/L on D+3). The FAC-UTL-01 raw water intake TPH sensor reads 0.08 mg/L, below the 0.10 mg/L alert threshold since D+8. Total wildlife impact as of D+20: 340 oiled birds documented by CBWR, 198 successfully rehabilitated and released, 72 in ongoing care, 70 fatalities.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "Unified Command declares the main slick contained and primary skimming operations complete.",
+          "when": {
+            "start_utc": "2027-10-04T17:00Z",
+            "end_utc": "2027-10-04T19:00Z"
+          }
+        },
+        {
+          "stream": "water_quality",
+          "what": "TCEQ Bay buoy network average TPH D+20 17:00Z: 0.40 mg/L (down from peak 3.4 mg/L D+3) | FAC-UTL-01-RAW-TPH-MGL D+20: 0.08 mg/L (below 0.10 mg/L threshold; primary intake restored D+15)",
+          "when": {
+            "start_utc": "2027-10-04T17:00Z",
+            "end_utc": "2027-10-04T19:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "TCEQ Bay buoy network average TPH D+20 17:00Z: 0.40 mg/L (down from peak 3.4 mg/L D+3)",
+        "FAC-UTL-01-RAW-TPH-MGL D+20: 0.08 mg/L (below 0.10 mg/L threshold; primary intake restored D+15)",
+        "CBWR incident tracker D+20: 340 documented oiled birds; 198 released, 72 in care, 70 fatalities (20.6% mortality rate)"
+      ],
+      "public_fact": "PUB-194",
+      "place_ids": [
+        "FAC-UTL-01",
+        "FAC-USCG-01"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "unified_command_sitrep_d20",
+        "tceq_buoy_network_telemetry",
+        "cbwr_incident_summary_d20"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "cbwr_incident_summary_d20",
+          "stream": "spill_response_logs"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2009",
+      "time_label": "D+60",
+      "day": 60,
+      "day_end": null,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T20"
+      ],
+      "lanes": [
+        "C",
+        "D"
+      ],
+      "description": "TCEQ and EPA jointly release the final 60-day remediation assessment. Bay TPH readings have returned to near-background levels (0.03 mg/L average). Nueces Bay shoreline cleanup is 94% complete. The assessment formally closes the emergency response phase and transitions to long-term monitoring. The assessment references the FAC-UTL-01 hydrocarbon exceedance event (D+2) but does not connect it to the pump manipulation events (T9) — the connection is only visible to analysts who access both the environmental response documentation and the CBPWA/TCEQ water utility records.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "Final 60-day remediation assessment released on D+60: bay hydrocarbons near background, shoreline cleanup 94 percent complete.",
+          "when": {
+            "start_utc": "2027-11-13T06:00Z",
+            "end_utc": "2027-11-14T06:00Z"
+          }
+        },
+        {
+          "stream": "water_quality",
+          "what": "Bay sondes average about 0.03 mg/L total petroleum hydrocarbons, below the surface-water standard.",
+          "when": {
+            "start_utc": "2027-11-08T06:00Z",
+            "end_utc": "2027-11-14T06:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "TCEQ/EPA Final Assessment CC-REM-2027-0916: bay TPH 0.03 mg/L (Day 60 average); below TCEQ surface water standard of 0.05 mg/L for Class 2 waters",
+        "FAC-UTL-01 historian D+60: TPH 0.02 mg/L (returned to pre-incident baseline); pump setpoint manipulation events D+9-D+42 noted in separate CBPWA internal report (not cross-referenced in TCEQ remediation assessment)",
+        "Total damage estimate: $14.7 million (cleanup $8.2M, wildlife rehabilitation $0.9M, economic losses to commercial fishing $5.6M)"
+      ],
+      "public_fact": "PUB-195",
+      "place_ids": [
+        "FAC-UTL-01",
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "tceq_epa_final_remediation_assessment_2027-CC-0916",
+        "tceq_buoy_network_telemetry",
+        "epa_region6_closure_documentation"
+      ],
+      "observable": true,
+      "places_inferred": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "PUB-190",
+      "day": 2,
+      "time_local": "11:00",
+      "type": "regulatory_advisory",
+      "source": "Texas Commission on Environmental Quality",
+      "statement": "TCEQ WATER QUALITY NOTICE — September 16, 2027: The Texas Commission on Environmental Quality has confirmed that total petroleum hydrocarbon levels exceeding regulatory alert thresholds have been detected at the raw water intake of the O.N. Stevens Water Treatment Plant. Readings of 0.42 milligrams per liter were recorded at 06:00 UTC on September 16, 2027, against an alert threshold of 0.10 mg/L. Plant operators have activated emergency filtration protocols as required under TCEQ Permit WQ-2019-0074-PWS. The City of Corpus Christi Water Department reports that treated drinking water continues to meet the standards for hydrocarbons; the low system pressure reported since the storm is unrelated to this detection. The hydrocarbon contamination is linked to the oil release in the Inner Harbor of the Corpus Christi Ship Channel, which is under active investigation by the U.S. Coast Guard and TCEQ. TCEQ has opened Incident Case CC-ENV-2027-0916. Additional monitoring data will be released as available. Residents with questions may call TCEQ Region 11 at (512) 239-4300.",
+      "arcs": [
+        "ARC-WATER"
+      ],
+      "events": [
+        "EVT-2003"
+      ],
+      "places": [
+        "O.N. Stevens Water Treatment Plant",
+        "Corpus Christi Ship Channel"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-191",
+      "day": 2,
+      "time_local": "16:30",
+      "type": "health_advisory",
+      "source": "Texas Commission on Environmental Quality / Nueces County Public Health District",
+      "statement": "AIR QUALITY HEALTH ADVISORY — September 16, 2027: The Texas Commission on Environmental Quality and the Nueces County Public Health District are issuing an air quality health advisory for neighborhoods within 3 kilometers of the Corpus Christi Ship Channel. Monitoring station CC-AQ-02 in the Hillcrest neighborhood has recorded benzene concentrations of 4.8 parts per billion, exceeding the EPA 72-hour reference concentration of 3 ppb. Elevated volatile organic compounds consistent with crude oil evaporation have been detected at multiple monitoring locations near the ship channel. This is associated with the Inner Harbor oil release under investigation by the U.S. Coast Guard. Sensitive populations including children, the elderly, and individuals with respiratory conditions should remain indoors with windows and doors closed until further notice. Air conditioning systems should be set to recirculate indoor air rather than draw outside air. Residents experiencing respiratory distress, eye irritation, or dizziness should contact the Corpus Christi-Nueces County Public Health District at (361) 826-7200 or call 911 for emergencies. Monitoring data is updated hourly at airnow.gov.",
+      "arcs": [
+        "ARC-HEALTH"
+      ],
+      "events": [
+        "EVT-2004"
+      ],
+      "places": [
+        "Hillcrest neighborhood",
+        "Corpus Christi Ship Channel"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-192",
+      "day": 4,
+      "time_local": "18:00",
+      "type": "press_release",
+      "source": "Unified Command (U.S. Coast Guard Sector Corpus Christi / Texas General Land Office) / TCEQ",
+      "statement": "UNIFIED COMMAND UPDATE — September 18, 2027: The Unified Command for the Inner Harbor oil spill confirms heavy shoreline oiling along Nueces Bay. Oil released from MT Kalvora Star and MT Ostrel Bay as Hurricane Rafael arrived was carried out of the ship channel by surge and wind; sheen covers about 33 square miles of Nueces and Corpus Christi bays. A TCEQ water quality station in Nueces Bay recorded petroleum hydrocarbon levels of 2.1 mg/L this afternoon. Texas Parks and Wildlife biologists and personnel from the Coastal Bend Wildlife Rescue have documented 41 oiled birds along the Nueces Bay shoreline, including brown pelicans and laughing gulls. Wildlife rescue operations are underway. Because of the oil, Texas Parks and Wildlife has closed fishing and the Texas Department of State Health Services has closed shellfish harvesting in Nueces and Corpus Christi bays, effective immediately and until further notice. Additional containment boom is being placed at the Nueces Bay Causeway channel. The Coast Guard expects to issue its formal responsible-party designation within 72 hours. Contact: Unified Command Joint Information Center (JIC), (361) 555-0147.",
+      "arcs": [
+        "ARC-SPILL"
+      ],
+      "events": [
+        "EVT-2006"
+      ],
+      "places": [
+        "Nueces Bay",
+        "Nueces Bay Causeway",
+        "Corpus Christi Ship Channel"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-193",
+      "day": 7,
+      "time_local": "14:30",
+      "type": "press_release",
+      "source": "U.S. Coast Guard Sector Corpus Christi (Federal On-Scene Coordinator)",
+      "statement": "RESPONSIBLE PARTIES DESIGNATED — September 21, 2027: The U.S. Coast Guard, as Federal On-Scene Coordinator for the September 14 Inner Harbor oil release, has formally designated the owners of the tankers MT Kalvora Star and MT Ostrel Bay as responsible parties under the Oil Pollution Act of 1990. Oil fingerprint analysis by the Coast Guard confirms that oil samples collected in the Inner Harbor, Corpus Christi Bay and Nueces Bay match the crude oil cargoes aboard the two vessels. The owners have been issued Notices of Federal Interest and are required to fund cleanup and to set up a process for damage claims. The estimated discharge remains about 9,000 barrels of crude oil. To keep response contractors working without interruption, the Coast Guard has opened the Oil Spill Liability Trust Fund with an initial ceiling of $4.2 million, to be recovered from the responsible parties. The designation assigns financial responsibility for the response; it is not a finding on the cause of the release, which remains under investigation. Contact: Unified Command Joint Information Center (JIC), (361) 555-0147.",
+      "arcs": [
+        "ARC-SPILL"
+      ],
+      "events": [
+        "EVT-2007"
+      ],
+      "places": [
+        "Corpus Christi Ship Channel",
+        "Corpus Christi Bay",
+        "Nueces Bay"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-194",
+      "day": 20,
+      "time_local": "17:00",
+      "type": "press_release",
+      "source": "Unified Command Joint Information Center",
+      "statement": "CLEANUP MILESTONE — October 4, 2027: Unified Command announces that the main oil slick from the September 14 Inner Harbor discharge is contained. Primary skimming operations have concluded with recovery of approximately 142,000 gallons of oil-water mixture. TCEQ monitoring readings in Corpus Christi Bay have declined to an average of 0.40 milligrams per liter, down from a peak of 3.4 mg/L recorded on September 17. The O.N. Stevens Water Treatment Plant raw water intake has returned to below the 0.10 mg/L alert threshold and is operating normally. Coastal Bend Wildlife Rescue reports 340 oiled birds documented through today; 198 birds have been successfully rehabilitated and released. Shoreline cleanup operations in Nueces Bay are ongoing, with hand crews working approximately 6.4 kilometers of affected shoreline. The response is moving from emergency containment to shoreline cleanup. Fishing and shellfish harvesting closures in Nueces and Corpus Christi bays remain in effect pending state testing. Joint Information Center: (361) 555-0147.",
+      "arcs": [
+        "ARC-SPILL"
+      ],
+      "events": [
+        "EVT-2008"
+      ],
+      "places": [
+        "Corpus Christi Bay",
+        "Nueces Bay",
+        "O.N. Stevens Water Treatment Plant"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-195",
+      "day": 60,
+      "time_local": "12:00",
+      "type": "regulatory_report",
+      "source": "Texas Commission on Environmental Quality / EPA Region 6",
+      "statement": "60-DAY REMEDIATION ASSESSMENT — November 13, 2027: The Texas Commission on Environmental Quality and EPA Region 6 have completed the 60-day remediation assessment for the Inner Harbor oil release (TCEQ Incident Case CC-ENV-2027-0916). Water quality monitoring shows Corpus Christi Bay total petroleum hydrocarbon concentrations have returned to 0.03 mg/L, below the TCEQ Class 2 surface water standard of 0.05 mg/L. Nueces Bay shoreline cleanup is 94 percent complete; minor tar ball accumulation persists on approximately 0.4 kilometers of shoreline near the Nueces Bay Causeway and will be addressed through the 2028 spring shoreline maintenance program. Raw-water intake readings at the O.N. Stevens Water Treatment Plant have remained below the hydrocarbon alert threshold for 52 consecutive days. The emergency response phase is hereby closed. Fishing and shellfish harvesting closures remain in effect until state testing supports reopening. Long-term ecological monitoring of Nueces Bay seagrass beds and oyster reef habitats will continue under a separate TCEQ Natural Resource Damage Assessment agreement with the owners of MT Kalvora Star and MT Ostrel Bay Total documented cleanup cost is $8.2 million. Wildlife rehabilitation costs of $0.9 million and estimated commercial fishing economic losses of $5.6 million are subject to Natural Resource Damage Assessment proceedings. This assessment has been transmitted to NOAA, USFWS, and Texas Parks and Wildlife for NRD purposes.",
+      "arcs": [
+        "ARC-SPILL"
+      ],
+      "events": [
+        "EVT-2009"
+      ],
+      "places": [
+        "Corpus Christi Bay",
+        "Nueces Bay",
+        "O.N. Stevens Water Treatment Plant"
+      ],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "bay_tph_level_mgl",
+      "label": "Corpus Christi Bay TPH concentration",
+      "kind": "number",
+      "group": "Spill & environment",
+      "unit": "mg/L",
+      "thread": "T20",
+      "description": "Total petroleum hydrocarbons measured as the average of TCEQ buoy network readings in Corpus Christi Bay (buoys CC-BAY-01 through CC-BAY-06). Baseline pre-storm is 0.02 mg/L. Spikes sharply following the D+1 release, peaks D+3, declines as the slick moves northeast into Nueces Bay and cleanup operations reduce concentration.",
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 0.02
+        },
+        {
+          "day": 0,
+          "value": 0.02
+        },
+        {
+          "day": 1,
+          "value": 1.8
+        },
+        {
+          "day": 3,
+          "value": 3.4
+        },
+        {
+          "day": 5,
+          "value": 2.6
+        },
+        {
+          "day": 7,
+          "value": 2.1
+        },
+        {
+          "day": 10,
+          "value": 1.4
+        },
+        {
+          "day": 14,
+          "value": 0.9
+        },
+        {
+          "day": 20,
+          "value": 0.4
+        },
+        {
+          "day": 30,
+          "value": 0.1
+        },
+        {
+          "day": 60,
+          "value": 0.03
+        }
+      ]
+    },
+    {
+      "id": "air_quality_index_cc",
+      "label": "Corpus Christi Air Quality Index",
+      "kind": "number",
+      "group": "Spill & environment",
+      "unit": "AQI",
+      "thread": "T20",
+      "description": "EPA AQI composite for Corpus Christi monitoring network. Elevated from D+2 through D+5 due to crude oil volatile organic compound emissions from the ship channel slick. Returns to Good/Moderate range by D+6.",
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 42
+        },
+        {
+          "day": 0,
+          "value": 55
+        },
+        {
+          "day": 2,
+          "value": 118
+        },
+        {
+          "day": 3,
+          "value": 134
+        },
+        {
+          "day": 4,
+          "value": 101
+        },
+        {
+          "day": 5,
+          "value": 88
+        },
+        {
+          "day": 6,
+          "value": 61
+        },
+        {
+          "day": 10,
+          "value": 48
+        },
+        {
+          "day": 30,
+          "value": 44
+        },
+        {
+          "day": 60,
+          "value": 41
+        }
+      ]
+    },
+    {
+      "id": "spill_containment_pct",
+      "label": "Spill containment percentage",
+      "kind": "number",
+      "group": "Spill & environment",
+      "unit": "percent",
+      "thread": "T20",
+      "description": "Unified Command estimate of percentage of released oil either physically recovered, contained by booms, or confirmed evaporated/dispersed per NOAA GNOME model. Reaches 100% at declaration of cleanup completion D+20.",
+      "keyframes": [
+        {
+          "day": 1,
+          "value": 0
+        },
+        {
+          "day": 2,
+          "value": 0
+        },
+        {
+          "day": 5,
+          "value": 15
+        },
+        {
+          "day": 7,
+          "value": 32
+        },
+        {
+          "day": 10,
+          "value": 51
+        },
+        {
+          "day": 14,
+          "value": 68
+        },
+        {
+          "day": 17,
+          "value": 82
+        },
+        {
+          "day": 20,
+          "value": 100
+        },
+        {
+          "day": 60,
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "cbwr_oiled_birds_count",
+      "label": "CBWR oiled birds documented (cumulative)",
+      "kind": "number",
+      "group": "Spill & environment",
+      "unit": "birds",
+      "thread": "T20",
+      "description": "Cumulative count of oiled birds documented by Coastal Bend Wildlife Rescue field teams. Peaks at 340 by D+20 as response teams complete systematic surveys. Species include brown pelican, laughing gull, royal tern, reddish egret, and least tern.",
+      "keyframes": [
+        {
+          "day": 4,
+          "value": 41
+        },
+        {
+          "day": 5,
+          "value": 78
+        },
+        {
+          "day": 7,
+          "value": 142
+        },
+        {
+          "day": 10,
+          "value": 218
+        },
+        {
+          "day": 14,
+          "value": 294
+        },
+        {
+          "day": 17,
+          "value": 328
+        },
+        {
+          "day": 20,
+          "value": 340
+        },
+        {
+          "day": 30,
+          "value": 340
+        }
+      ]
+    }
+  ],
+  "news_arcs": [
+    {
+      "arc_id": "ARC-SPILL",
+      "name": "The slick beneath the surge",
+      "thread": "T20",
+      "description": "Coverage of the spill's environmental impact, cleanup, wildlife rescue and long-term remediation.",
+      "story_hooks": [
+        {
+          "story_id": "NWS-P001-03",
+          "day": 1,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Unified Command: About 9,000 barrels of crude spilled from two tankers at Inner Harbor berth",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P001-04",
+          "day": 1,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Officials put Rafael tanker spill at 9,000 barrels as flooding covers 43 square miles",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P001-05",
+          "day": 1,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "From space, Rafael's flood: About 43 square miles under water across three counties",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P001-40",
+          "day": 1,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Unified Command: about 9,000 barrels released from two tankers at Rendal Terminals berth",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P001-50",
+          "day": 1,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Spill estimate of about 9,000 barrels at Rendal berth clouds Corpus Christi restart",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P002-01",
+          "day": 2,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Oil from Inner Harbor spill reaches North Beach, Portland shoreline and Nueces Bay marshes",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-031"
+          ]
+        },
+        {
+          "story_id": "NWS-P002-02",
+          "day": 2,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Boom goes out as winds drop; wildlife hotline opens for oiled animals",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-031"
+          ]
+        },
+        {
+          "story_id": "NWS-P002-07",
+          "day": 2,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Coast Guard confirms Inner Harbor crude has reached both bays; safety zone set, boom going out as winds drop",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-031"
+          ]
+        },
+        {
+          "story_id": "NWS-P002-05",
+          "day": 2,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Rafael surge carried Inner Harbor crude into Nueces and Corpus Christi bays; boom deployed as winds ease",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-031"
+          ]
+        },
+        {
+          "story_id": "NWS-P002-10",
+          "day": 2,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Petroleum hydrocarbons detected at city water intake; O.N. Stevens plant shifts to emergency filtration",
+          "public_facts_used": [
+            "PUB-190"
+          ]
+        },
+        {
+          "story_id": "NWS-P002-60",
+          "day": 2,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Oil from hurricane-struck Texas tankers spreads across two bays; air advisory issued as hospitals fill",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-031",
+            "PUB-029",
+            "PUB-191"
+          ]
+        },
+        {
+          "story_id": "NWS-P002-61",
+          "day": 2,
+          "outlet": "OUT-08",
+          "outlet_name": "KNCB Coastal Bend Radio",
+          "headline": "Aviso de calidad del aire cerca del canal de navegación; el petróleo ya llegó a las bahías / Air quality advisory near the ship channel; oil has reached the bays",
+          "public_facts_used": [
+            "PUB-191",
+            "PUB-030",
+            "PUB-031",
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P002-11",
+          "day": 2,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Air quality hits unhealthy levels near ship channel; residents within two miles urged to stay indoors",
+          "public_facts_used": [
+            "PUB-191"
+          ]
+        },
+        {
+          "story_id": "NWS-P002-12",
+          "day": 2,
+          "outlet": "OUT-08",
+          "outlet_name": "KNCB Coastal Bend Radio",
+          "headline": "La línea abierta de KNCB: \"El agua se quedó a unas pulgadas de mi puerta\" / KNCB's open line: 'The water stopped a few inches from my door'",
+          "public_facts_used": [
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P003-01",
+          "day": 3,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Harbor Bridge and Nueces Bay Causeway reopen after inspection",
+          "public_facts_used": [
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P003-02",
+          "day": 3,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Fact-check: No, the military is not seizing homes, and no agency has blamed a refinery for the spill",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P003-40",
+          "day": 3,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Storm-riding ships return to Corpus Christi anchorage; channel stays shut for survey and spill work",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-031",
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P003-50",
+          "day": 3,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Tankers return to Corpus Christi anchorage to wait as oil spreads across the bays",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-031"
+          ]
+        },
+        {
+          "story_id": "NWS-P003-05",
+          "day": 3,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "ERs see breathing and skin complaints from residents near oiled shorelines",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P003-06",
+          "day": 3,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Why the timing made Rafael's spill worse: oil on the water, then 11 feet of surge",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-031"
+          ]
+        },
+        {
+          "story_id": "NWS-P004-07",
+          "day": 4,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Who pays for the Inner Harbor spill: how federal oil spill law will sort it out",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P004-10",
+          "day": 4,
+          "outlet": "OUT-08",
+          "outlet_name": "KNCB Coastal Bend Radio",
+          "headline": "Aviso de hervir agua en toda la ciudad / Citywide boil-water notice issued",
+          "public_facts_used": [
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P004-03",
+          "day": 4,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Health and wildlife agencies close fishing and shellfish harvesting in Nueces and Corpus Christi bays; a shrimper finds oil on his nets",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P004-04",
+          "day": 4,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Corpus Christi crude exports stay halted as spill response spreads across the bays",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P004-05",
+          "day": 4,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Relief cargo waits on closed Corpus Christi channel as spill response continues",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-031",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P004-06",
+          "day": 4,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Federal disaster declaration for Texas coast covers cleanup; aid to households awaits damage counts",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P004-09",
+          "day": 4,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Unified Command: heavy oiling on Nueces Bay shoreline; fishing and shellfish harvesting closed in both bays",
+          "public_facts_used": [
+            "PUB-192",
+            "PUB-040",
+            "PUB-029",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P005-03",
+          "day": 5,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Breathing and skin complaints continue near oiled shorelines; health district urges caution",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P005-50",
+          "day": 5,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Week ahead: four conditions for a Corpus Christi restart, and none is met yet",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P005-05",
+          "day": 5,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Week one after Rafael: Boil your water, watch for scam emails, and depot workers keep standing by",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P006-02",
+          "day": 6,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Coast Guard examining possible unauthorized remote access to spill tankers' cargo systems",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-031"
+          ]
+        },
+        {
+          "story_id": "NWS-P006-03",
+          "day": 6,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Investigators examine possible remote access to tankers in Texas hurricane oil spill",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P006-05",
+          "day": 6,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Coast Guard completes inspections aboard Kalvora Star and Ostrel Bay; both tankers held at berth",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-040",
+            "PUB-192"
+          ]
+        },
+        {
+          "story_id": "NWS-P007-03",
+          "day": 7,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "A week after the spill, North Beach lives with the smell, and some with the cough",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-029",
+            "PUB-031",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P007-06",
+          "day": 7,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Coast Guard designates owners of Kalvora Star and Ostrel Bay as responsible parties; trust fund opened at $4.2 million",
+          "public_facts_used": [
+            "PUB-193",
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P007-04",
+          "day": 7,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Corpus Christi crude exports stay halted as spill probe turns to cargo systems",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P008-02",
+          "day": 8,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Cargo-systems vendor says its remote-maintenance credentials were misused",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P008-60",
+          "day": 8,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Vendor says its remote-maintenance credentials were misused as Texas tanker spill probe widens",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P008-50",
+          "day": 8,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Tanker systems vendor says its remote-access credentials were misused; Corpus Christi exports stay halted",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P009-02",
+          "day": 9,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Brightwake chief: remote access stays off until customers can trust it",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P009-04",
+          "day": 9,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "In the bays' marshes, oil cleanup is slow and careful work",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-031",
+            "PUB-029",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P010-40",
+          "day": 10,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Ten days shut: what has to be checked before Corpus Christi's channel can reopen",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P012-04",
+          "day": 12,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Spill claims center opens for the tankers' owners, as federal oil spill law requires",
+          "public_facts_used": [
+            "PUB-193",
+            "PUB-040",
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P012-08",
+          "day": 12,
+          "outlet": "OUT-08",
+          "outlet_name": "KNCB Coastal Bend Radio",
+          "headline": "Abre el centro de reclamos por el derrame de petróleo / Oil spill claims center opens",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P012-50",
+          "day": 12,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Claims center opens for Corpus Christi spill as owners' liability takes shape",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P012-03",
+          "day": 12,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Oil on your property? A claims center for spill cleanup and damage opens today",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-031",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P013-01",
+          "day": 13,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Corpus Christi channel closure enters third week as spill response works the Inner Harbor",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-031"
+          ]
+        },
+        {
+          "story_id": "NWS-P013-02",
+          "day": 13,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "In Aransas Pass, a shrimp boat that rode out the storm sits idle behind a closed bay",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-030",
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P015-01",
+          "day": 15,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "By the jetties, a Port Aransas bait shop owner starts over with a sense of humor",
+          "public_facts_used": [
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P016-03",
+          "day": 16,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Held at the berth: what a Captain of the Port order means for Kalvora Star and Ostrel Bay",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-193"
+          ]
+        },
+        {
+          "story_id": "NWS-P019-02",
+          "day": 19,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "On North Beach, a retired welder tears out wet drywall and waits on the water",
+          "public_facts_used": [
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P020-03",
+          "day": 20,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Main slick contained, Unified Command says; about 142,000 gallons of oil-water mix recovered",
+          "public_facts_used": [
+            "PUB-194",
+            "PUB-029",
+            "PUB-030",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P021-01",
+          "day": 21,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Parks and Wildlife extends fishing closure in Nueces and Corpus Christi bays",
+          "public_facts_used": [
+            "PUB-057",
+            "PUB-040",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P021-03",
+          "day": 21,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "Breathing complaints near oiled shorelines ease, but the bays stay closed",
+          "public_facts_used": [
+            "PUB-057",
+            "PUB-030",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P023-01",
+          "day": 23,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Tanker cargo-systems probe continues with few public details",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P023-60",
+          "day": 23,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "U.S. cyber agency orders federal audit of industrial control access after Texas utility intrusion",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P024-01",
+          "day": 24,
+          "outlet": "OUT-07",
+          "outlet_name": "Anchor & Rotor Weekly",
+          "headline": "Week in review: emergency fuel contract appears in federal records; boil-water notice stretches on",
+          "public_facts_used": [
+            "PUB-057",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P024-50",
+          "day": 24,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Slick containment removes one obstacle to a Corpus Christi restart; the channel decision remains",
+          "public_facts_used": [
+            "PUB-194",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P025-01",
+          "day": 25,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "Oil in the marsh, supper off the table: what scientists will watch as the bays recover",
+          "public_facts_used": [
+            "PUB-057",
+            "PUB-030",
+            "PUB-031",
+            "PUB-040",
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P026-01",
+          "day": 26,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Opinion: The bays will heal on their own clock. Fishing families need one they can read.",
+          "public_facts_used": [
+            "PUB-057",
+            "PUB-040",
+            "PUB-030",
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P026-40",
+          "day": 26,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "When the channel opens, who moves first? Relief cargo, crude and a long line offshore",
+          "public_facts_used": [
+            "PUB-194",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P026-02",
+          "day": 26,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Nearly four weeks in, the church hub settles in for the long haul",
+          "public_facts_used": [
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P026-50",
+          "day": 26,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Week ahead: Corpus Christi begins a fifth week shut, with parts, audits and a survey outstanding",
+          "public_facts_used": [
+            "PUB-194"
+          ]
+        },
+        {
+          "story_id": "NWS-P027-01",
+          "day": 27,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Analysis: What Rafael has cost the Coastal Bend so far, by the numbers that are public",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-057",
+            "PUB-029",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P028-02",
+          "day": 28,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Port Aransas bait shop owner: 'Down to the studs. Customers next.'",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P029-01",
+          "day": 29,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Recovery checklist: what's still closed and what's changed, a month after Rafael",
+          "public_facts_used": [
+            "PUB-057",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P029-02",
+          "day": 29,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Corpus Christi channel closure passes one month; port says it is ready when the Coast Guard is",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P030-01",
+          "day": 30,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Corpus Christi channel partly reopens; inner reaches stay restricted for decontamination",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P031-02",
+          "day": 31,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Shrimpers watch the channel reopen from the dock as the bay closure drags on",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-057",
+            "PUB-029",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P032-02",
+          "day": 32,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "At the edge of the jetties, a Port Aransas bait shop rebuilds as ships return",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P035-01",
+          "day": 35,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "With ER hallways clear again, health officials say keep boiling until the notice lifts",
+          "public_facts_used": [
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P042-01",
+          "day": 42,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Opinion: The cleanup has a playbook. The people who work the bays still don't.",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-031",
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P042-02",
+          "day": 42,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "On North Beach, the oil smell has faded. The questions haven't.",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-057",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P043-02",
+          "day": 43,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Six weeks after the spill, a scientist reads the marsh",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-031",
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P044-08",
+          "day": 44,
+          "outlet": "OUT-08",
+          "outlet_name": "KNCB Coastal Bend Radio",
+          "headline": "Explosión junto a un remolcador cerca de las escolleras de Port Aransas; cierran el canal / Explosion beside a tug near the Port Aransas jetties; channel closed",
+          "public_facts_used": [
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P044-02",
+          "day": 44,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Overnight blast beside tug at Port Aransas jetties injures two; Coast Guard closes ship channel",
+          "public_facts_used": [
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P044-03",
+          "day": 44,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Corpus Christi Ship Channel closed after explosion beside tug at entrance jetties",
+          "public_facts_used": [
+            "PUB-066",
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P044-04",
+          "day": 44,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Corpus Christi crude exports stall again as Coast Guard shuts channel after blast",
+          "public_facts_used": [
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P044-05",
+          "day": 44,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Explosion near Texas jetties shuts nation's top crude export channel",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P044-06",
+          "day": 44,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "Spill cleanup shifts to monitoring as a new emergency closes the channel",
+          "public_facts_used": [
+            "PUB-066",
+            "PUB-029",
+            "PUB-030",
+            "PUB-031",
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P044-07",
+          "day": 44,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Jetty explosion: What we know tonight, and what we don't",
+          "public_facts_used": [
+            "PUB-066",
+            "PUB-031",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P045-01",
+          "day": 45,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "ER visits back near normal, except in the bay neighborhoods hit hardest",
+          "public_facts_used": [
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P045-40",
+          "day": 45,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Day two of the entrance closure: tug master describes blast off the port bow; cause still unknown",
+          "public_facts_used": [
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P046-02",
+          "day": 46,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Navy EOD and mine countermeasures teams join Coast Guard search of Corpus Christi channel",
+          "public_facts_used": [
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P047-04",
+          "day": 47,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "On a quiet Halloween, Port Aransas waits on the channel",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P050-02",
+          "day": 50,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "Bays closed by oil, pass closed by a blast: an Aransas Pass shrimper runs out of water",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-057",
+            "PUB-066",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P053-01",
+          "day": 53,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Port Aransas, gutted by Rafael, loses its fall to a closed channel",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P054-01",
+          "day": 54,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Opinion: The port is a national asset. The people who work it need to be treated like one",
+          "public_facts_used": [
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P056-01",
+          "day": 56,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Corpus Christi entrance stays closed into second week; no change in port condition",
+          "public_facts_used": [
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P056-50",
+          "day": 56,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Corpus Christi export halt hits 13th day; port says restart plan is written and waiting",
+          "public_facts_used": [
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P057-01",
+          "day": 57,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Explainer: Who decides the ship channel is safe again, and what happens next",
+          "public_facts_used": [
+            "PUB-066",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P058-01",
+          "day": 58,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Corpus Christi Ship Channel reopens after 14-day closure and full sweep",
+          "public_facts_used": [
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P058-40",
+          "day": 58,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Corpus Christi Ship Channel reopens after 14-day closure and full sweep",
+          "public_facts_used": [
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P058-60",
+          "day": 58,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Texas ship channel reopens two weeks after blast; crude exports resume",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P060-05",
+          "day": 60,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "60-day assessment: Corpus Christi Bay back below state hydrocarbon standard; emergency phase of spill response closed",
+          "public_facts_used": [
+            "PUB-195",
+            "PUB-029",
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P060-60",
+          "day": 60,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Two months after Hurricane Rafael, Texas households line up for federal aid",
+          "public_facts_used": [
+            "PUB-195"
+          ]
+        },
+        {
+          "story_id": "NWS-P061-01",
+          "day": 61,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Two months after the oil, North Beach still asks who pays",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-066",
+            "PUB-057",
+            "PUB-029",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P061-50",
+          "day": 61,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Regulators close emergency phase of Corpus Christi spill response after 60-day assessment",
+          "public_facts_used": [
+            "PUB-195",
+            "PUB-029",
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P061-02",
+          "day": 61,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Week in review: Corpus Christi channel reopens, sealift sails, backlog works down",
+          "public_facts_used": [
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P062-60",
+          "day": 62,
+          "outlet": "OUT-08",
+          "outlet_name": "KNCB Coastal Bend Radio",
+          "headline": "Evaluación a 60 días del derrame: la bahía de Corpus Christi vuelve a niveles permitidos; termina la fase de emergencia / 60-day spill assessment: Corpus Christi Bay back within limits; emergency phase ends",
+          "public_facts_used": [
+            "PUB-195",
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P063-01",
+          "day": 63,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Spill claims center starts taking lost-income claims from fishers and shoreline businesses",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-057",
+            "PUB-029",
+            "PUB-030",
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P063-60",
+          "day": 63,
+          "outlet": "OUT-08",
+          "outlet_name": "KNCB Coastal Bend Radio",
+          "headline": "Pescadores y negocios de la costa ya pueden reclamar los ingresos que perdieron por el derrame / Fishers and shoreline businesses can now file lost-income claims over the spill",
+          "public_facts_used": [
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P063-02",
+          "day": 63,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "Filing a spill damage claim? Here's your checklist",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P064-40",
+          "day": 64,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Spill claims center begins taking lost-income claims from fishers and shoreline businesses",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P065-02",
+          "day": 65,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "An Aransas Pass shrimper files his spill claim with a stack of spiral notebooks",
+          "public_facts_used": [
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P070-40",
+          "day": 70,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Two months on, Brightwake's remote access to tanker cargo systems remains switched off",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P073-01",
+          "day": 73,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "On Black Friday, a gutted Port Aransas bait shop sells from coolers and waits for winter",
+          "public_facts_used": [
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P074-01",
+          "day": 74,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Bays stay closed as the fall season slips away for Coastal Bend fishers",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-040",
+            "PUB-057",
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P077-01",
+          "day": 77,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Hurricane season ends today. On the Coastal Bend, Rafael's season doesn't.",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-066",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P077-02",
+          "day": 77,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Season-end log: Corpus Christi channel lost weeks to Rafael, spill restrictions and the jetty blast",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P080-40",
+          "day": 80,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Explainer: how a Coast Guard casualty investigation runs, and when the public sees it",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P082-01",
+          "day": 82,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "North Beach in December: quiet sand, pelicans and a neighbor who still checks the tide line",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-031",
+            "PUB-057",
+            "PUB-066",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P085-02",
+          "day": 85,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Federal watchdog reviews hurricane contracts on Texas coast as recovery stretches into winter",
+          "public_facts_used": [
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P086-01",
+          "day": 86,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Corpus Christi crude heads into year-end after two fall shutdowns",
+          "public_facts_used": [
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P087-01",
+          "day": 87,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Inner Harbor spill: shoreline in monitoring, remote-access probe still open",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-066",
+            "PUB-057",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P090-04",
+          "day": 90,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Poorer neighborhoods hit by Hurricane Rafael got about half their share of aid, analysis finds",
+          "public_facts_used": [
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P091-01",
+          "day": 91,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Three months after Rafael: where the Coastal Bend stands",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-066",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P094-01",
+          "day": 94,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Corpus Christi spill claims move to lost income as tanker owners' tab stays open",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P098-01",
+          "day": 98,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Corpus Christi year-end: three maritime security files still open",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P098-02",
+          "day": 98,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "What the hallway beds taught: an ER nurse and an epidemiologist look back on Rafael's health toll",
+          "public_facts_used": [
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P103-01",
+          "day": 103,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Rafael by port condition: the three-day sequence that closed Corpus Christi, and the ships that went to sea",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P104-01",
+          "day": 104,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Winter on the bays: spill cleanup has moved to monitoring, but the fishing closure holds",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-031",
+            "PUB-040",
+            "PUB-057",
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P105-01",
+          "day": 105,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Coast Guard, CISA advisory: review vendor remote access to cargo systems",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P105-60",
+          "day": 105,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Coast Guard, cyber agency urge ship operators to review vendor access after Texas tanker case",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P105-02",
+          "day": 105,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Federal cyber advisory puts vendor access in the spotlight, three months after the Inner Harbor spill",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P106-01",
+          "day": 106,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "What is vendor remote access, and why are federal agencies worried about it?",
+          "public_facts_used": [
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P106-50",
+          "day": 106,
+          "outlet": "OUT-05",
+          "outlet_name": "Sabal Energy Wire",
+          "headline": "Maritime cyber advisory hands charterers a new vetting question for tankers",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P107-01",
+          "day": 107,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "2027: The year Rafael came ashore, and everything that came after",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-040",
+            "PUB-057"
+          ]
+        },
+        {
+          "story_id": "NWS-P110-02",
+          "day": 110,
+          "outlet": "OUT-02",
+          "outlet_name": "Harborline 6 News",
+          "headline": "State reviewing when Harbor Bridge, causeway close in high winds",
+          "public_facts_used": [
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P112-01",
+          "day": 112,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "U.S. attributes Texas tanker intrusion and ship channel explosives to a foreign government",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030"
+          ]
+        },
+        {
+          "story_id": "NWS-P112-02",
+          "day": 112,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "'Somebody did this': Coastal Bend reacts as U.S. blames a foreign government for tanker intrusion, channel devices",
+          "public_facts_used": [
+            "PUB-029",
+            "PUB-030",
+            "PUB-040",
+            "PUB-066"
+          ]
+        },
+        {
+          "story_id": "NWS-P112-03",
+          "day": 112,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Attribution covers tanker intrusion and channel devices; Coast Guard says channel open",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P113-01",
+          "day": 113,
+          "outlet": "OUT-03",
+          "outlet_name": "Coastline Public Radio",
+          "headline": "What Tuesday's attribution says, and what it leaves out",
+          "public_facts_used": [
+            "PUB-029"
+          ]
+        },
+        {
+          "story_id": "NWS-P115-01",
+          "day": 115,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Fishing grounds partly reopen after testing as spill claims reach about 4,200",
+          "public_facts_used": [
+            "PUB-030",
+            "PUB-040",
+            "PUB-057",
+            "PUB-066",
+            "PUB-099"
+          ]
+        },
+        {
+          "story_id": "NWS-P115-03",
+          "day": 115,
+          "outlet": "OUT-08",
+          "outlet_name": "KNCB Coastal Bend Radio",
+          "headline": "Reabren parte de las zonas de pesca; ya hay unos 4,200 reclamos por el derrame / Fishing grounds partly reopen; about 4,200 spill claims filed",
+          "public_facts_used": [
+            "PUB-099",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P116-40",
+          "day": 116,
+          "outlet": "OUT-04",
+          "outlet_name": "Gulfwater Maritime Report",
+          "headline": "Inner Harbor spill: about 4,200 damage claims filed as bay fishing grounds partly reopen",
+          "public_facts_used": [
+            "PUB-099",
+            "PUB-029",
+            "PUB-040"
+          ]
+        },
+        {
+          "story_id": "NWS-P119-01",
+          "day": 119,
+          "outlet": "OUT-01",
+          "outlet_name": "The Bayside Ledger",
+          "headline": "Rafael, four months on: four neighbors, four kinds of waiting",
+          "public_facts_used": [
+            "PUB-099"
+          ]
+        },
+        {
+          "story_id": "NWS-P119-60",
+          "day": 119,
+          "outlet": "OUT-06",
+          "outlet_name": "Continental Wire Service",
+          "headline": "Four months after Rafael, a Texas energy hub rebuilds as investigators sort storm from sabotage",
+          "public_facts_used": [
+            "PUB-099",
+            "PUB-029"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity_id": "ENT-T20-01",
+      "name": "Lorena Vasquez-Ruiz",
+      "role": "TCEQ Region 11 Incident Coordinator",
+      "thread": "T20",
+      "description": "Texas Commission on Environmental Quality Region 11 (Corpus Christi) incident coordinator for Case CC-ENV-2027-0916. Primary TCEQ spokesperson for public environmental updates throughout the spill response. 14 years with TCEQ; previously coordinated the 2019 Ingleside tank farm incident."
+    },
+    {
+      "entity_id": "ENT-T20-02",
+      "name": "Marcus Ahonen",
+      "role": "Executive Director, Coastal Bend Wildlife Rescue",
+      "thread": "T20",
+      "description": "Director of CBWR, the fictional nonprofit wildlife rehabilitation organization serving the Corpus Christi area. Primary spokesperson for wildlife impact documentation and rehabilitation statistics. Regular media presence from D+4 through D+30. Known for stark, direct quotes about ecological damage that drive social media engagement."
+    },
+    {
+      "entity_id": "ENT-T20-03",
+      "name": "Dr. Seth Calloway",
+      "role": "NOAA Office of Response and Restoration, Response Lead",
+      "thread": "T20",
+      "description": "NOAA ORR scientific response lead embedded with USCG Unified Command. Manages the GNOME trajectory modeling effort and provides scientific support for containment strategy decisions. Expert on oil spill fate and transport in shallow coastal embayments."
+    }
+  ],
+  "answer_key_path": "The critical detection chain in T20 runs through FAC-UTL-01: an analyst who pulls the full historian for the O.N. Stevens plant finds the raw-water hydrocarbon tag rising from 0.02 to 0.42 mg/L at D+2 06:00Z (caused by the T6 oil release from MT Kalvora Star and MT Ostrel Bay) and then finds the same historian's pump setpoint tag showing manipulation from D+9 (T9). Two separate adversary-caused events, same historian, 7 days apart. The sonde network gives the release its clock: the Inner Harbor stations leave baseline within the hour of 04:00Z on D0, hours before any public report, and the bay stations follow over D+1 and D+2 — a sequence that points back to the Rendal Terminals berth as the origin and to the valve window as the start. Oil fingerprinting (EVT-2007) confirms the two tankers' cargoes. NOAA trajectory model outputs (EVT-2005) are time-series training data for digital-twin use cases, and the wildlife documentation (340 birds, D+4 through D+20) is a labeled multimodal dataset.",
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

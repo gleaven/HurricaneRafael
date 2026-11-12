@@ -1,0 +1,98 @@
+{
+ "source": "satellite",
+ "folder": "data/satellite/",
+ "format": "JSON (STAC 1.0.0 items, one file per scene, plus catalog.json)",
+ "standard": "SpatioTemporal Asset Catalog (STAC) v1.0.0",
+ "reference": "https://stacspec.org/en/about/stac-spec/",
+ "notes": "STAC v1.0.0 Item per acquisition. Imagery is not included: each item is the scene's metadata and a detection summary. Radar items use the sar extension, optical items the eo extension (eo:cloud_cover). Platform names are fictional.",
+ "entity_catalog": null,
+ "entity_catalog_needed": false,
+ "entity_catalog_note": "No entity catalog. observations[].asset_id joins infrastructure_assets.json.",
+ "aoi_bbox": [
+  -97.95,
+  27.35,
+  -96.55,
+  28.35
+ ],
+ "aoi_description": "Wide-swath radar footprint. Optical scenes cover [-97.75, 27.50, -96.85, 28.15]; night radar passes cover the approaches and anchorage; very-high-resolution scenes cover about 1 to 2 km around their target.",
+ "fields": [
+  {
+   "name": "id",
+   "type": "string",
+   "example": "HALYARD-SAR-20270915T121400Z-FLOOD",
+   "notes": "platform, acquisition time (UTC), area"
+  },
+  {
+   "name": "properties.datetime",
+   "type": "string",
+   "example": "2027-09-15T12:14:00Z",
+   "notes": "UTC acquisition time"
+  },
+  {
+   "name": "properties.platform / instruments / gsd",
+   "type": "mixed",
+   "example": "Halyard-SAR-1 / X-band SAR / 10",
+   "notes": "gsd in meters"
+  },
+  {
+   "name": "properties.eo:cloud_cover",
+   "type": "number",
+   "example": 28,
+   "notes": "optical scenes only, percent"
+  },
+  {
+   "name": "properties.view:sun_elevation / view:sun_azimuth",
+   "type": "number",
+   "example": 48.3,
+   "notes": "degrees; negative elevation means a night (radar) pass"
+  },
+  {
+   "name": "properties.description",
+   "type": "string",
+   "example": "Routine wide-swath radar acquisition. Vessel detections ...",
+   "notes": "what the scene shows, in words"
+  },
+  {
+   "name": "properties.detections.vessels",
+   "type": "object",
+   "example": {
+    "offshore_anchorage": 14,
+    "inner_harbor_alongside": 9,
+    "ship_channel_under_way": 0
+   },
+   "notes": "hulls of 40 m or more detected in the scene, by area; 'uncorrelated' lists detections with no AIS match"
+  },
+  {
+   "name": "properties.detections.oil_on_water / flood_extent_km2 / inundation_depth_m",
+   "type": "mixed",
+   "example": {
+    "present": true,
+    "area_km2": 85
+   },
+   "notes": "present where the scene was analysed for them"
+  },
+  {
+   "name": "properties.observations",
+   "type": "array",
+   "example": [
+    {
+     "asset_id": "GW-FAC-SUB-02",
+     "feature": "main feeder breakers B2-A, B2-B, B2-C",
+     "state": "closed"
+    }
+   ],
+   "notes": "equipment states read from very-high-resolution scenes"
+  },
+  {
+   "name": "bbox / geometry",
+   "type": "array",
+   "example": [
+    -97.75,
+    27.5,
+    -96.85,
+    28.15
+   ],
+   "notes": "[west, south, east, north] and the same footprint as a polygon"
+  }
+ ]
+}

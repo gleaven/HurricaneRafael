@@ -1,0 +1,103 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
+ ],
+ "id": "HALYARD-SAR-20270914T121630Z-COAST",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.95,
+     27.35
+    ],
+    [
+     -96.55,
+     27.35
+    ],
+    [
+     -96.55,
+     28.35
+    ],
+    [
+     -97.95,
+     28.35
+    ],
+    [
+     -97.95,
+     27.35
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.95,
+  27.35,
+  -96.55,
+  28.35
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "HALYARD-SAR-20270914T121630Z-COAST.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/HALYARD-SAR-20270914T121630Z-COAST/sigma0_vv.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/HALYARD-SAR-20270914T121630Z-COAST/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-09-14T12:16:00Z",
+  "title": "Radar pass on landfall day, bays and coast",
+  "description": "Radar pass over the bays six hours after landfall. Widespread standing water on low-lying coastal land (extent mapped from the next pass). Low-backscatter slick in the Inner Harbor and at the harbour entrance. No vessels at the offshore anchorage; two large hulls at the crude oil berth on the north bank of the Main Turning Basin.",
+  "platform": "Halyard-SAR-2",
+  "instruments": [
+   "X-band SAR"
+  ],
+  "constellation": "Halyard-SAR",
+  "gsd": 10,
+  "view:off_nadir": 17.6,
+  "view:sun_azimuth": 86.0,
+  "view:sun_elevation": -0.3,
+  "proj:epsg": 32614,
+  "sar:instrument_mode": "wide swath",
+  "sar:frequency_band": "X",
+  "sar:polarizations": [
+   "VV",
+   "VH"
+  ],
+  "detections": {
+   "vessels": {
+    "main_turning_basin_crude_berth": 2,
+    "offshore_anchorage": 0
+   },
+   "oil_on_water": {
+    "present": true,
+    "where": "Inner Harbor and harbour entrance"
+   }
+  }
+ }
+}

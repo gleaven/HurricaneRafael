@@ -1,0 +1,22 @@
+{
+ "note": "Position sources of the social and financial stream family.",
+ "sources": [
+  {
+   "name": "Social posts with coordinates",
+   "glob": "05_other_sources/social_media/_geotagged_index.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "land_fixed",
+   "id": "id_str"
+  },
+  {
+   "name": "Insurance claim properties",
+   "glob": "05_other_sources/payments/insurance_claims.csv",
+   "lat": "latitude",
+   "lon": "longitude",
+   "rule": "incident",
+   "id": "claim_id",
+   "allow_missing": true
+  }
+ ]
+}

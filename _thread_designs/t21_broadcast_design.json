@@ -1,0 +1,811 @@
+{
+  "thread_id": "T21",
+  "name": "Broadcast and emergency alert corpus",
+  "color": "#b5460f",
+  "scenario": "rafael",
+  "lanes": [
+    "C"
+  ],
+  "truth": "T21 is a meta-thread: it does not introduce hidden adversary actions but generates the audio layer for the entire Hurricane Rafael corpus. Every public event in the scenario — from the first hurricane warning to the boil-water notice to the cyber-investigation announcement — has a corresponding broadcast-format artifact. The 8 fictional outlets (OUT-01 through OUT-08 KNCB) produce distinct audio personas with specific voice parameters, pacing, and format conventions. The Emergency Alert System broadcasts 14 official alerts from D-2 through D+42; FEMA IPAWS sends 7 Wireless Emergency Alerts. Each EAS alert carries English and Spanish text, phonetic markup, and prosody markers. The critical hidden cross-thread signal in T21 is the 12-hour-33-minute delay between the English boil-water EAS alert (D+12 17:30 local) and the Spanish-language KNCB broadcast and community alert (D+13 06:03 local) — this delay is a data point in the equity and communications failure narrative (connects to T14 if that thread examines communications equity). The EAS broadcasts also inadvertently reveal information sequencing: the cyber-investigation announcement broadcast (D+21) is the first time the public learns that the power outages were not entirely storm-caused, and the broadcast timing and outlet selection for that announcement was coordinated by FEMA's Joint Field Office with CBPWA — a detail visible only in the JFO operations log and the broadcast scheduling metadata.",
+  "phase_onset": 1,
+  "phase_peak": 2,
+  "msel_events": [
+    {
+      "event_id": "EVT-2101",
+      "time_label": "D-5",
+      "day": -5,
+      "day_end": null,
+      "time_utc": "14:00Z",
+      "threads": [
+        "T21"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "IPAWS system test broadcast conducted by Nueces County Emergency Management. Test message is transmitted on EAS and WEA channels; all 7 operational outlets in the Corpus Christi DMA carry the test tone. KNCB (OUT-08) carries the Spanish-language version of the test. The test reveals that CC-EAS relay station WKCB-AM has a 4-second synchronization lag, logged but not corrected before the storm — this lag appears in D-2 hurricane warning broadcast timing data.",
+      "observed_in": [
+        {
+          "stream": "eas_alerts",
+          "what": "IPAWS test ID IPAWS-TX-2027-0909-001: transmitted 14:00Z; received by all 7 Corpus Christi DMA outlets; WKCB-AM relay lag measured 4.1 seconds | FCC EAS test log entry: Corpus Christi DMA test 2027-09-09 14:00Z PASS with 1 anomaly (WKCB-AM lag)",
+          "when": {
+            "start_utc": "2027-09-09T14:00Z",
+            "end_utc": "2027-09-09T16:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "IPAWS test ID IPAWS-TX-2027-0909-001: transmitted 14:00Z; received by all 7 Corpus Christi DMA outlets; WKCB-AM relay lag measured 4.1 seconds",
+        "FCC EAS test log entry: Corpus Christi DMA test 2027-09-09 14:00Z PASS with 1 anomaly (WKCB-AM lag)"
+      ],
+      "public_fact": null,
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "nueces_county_oem_test_log_2027-0909",
+        "fcc_eas_test_database"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2102",
+      "time_label": "D-2",
+      "day": -2,
+      "day_end": null,
+      "time_utc": "18:00Z",
+      "threads": [
+        "T21"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "NWS Corpus Christi issues Hurricane Warning for the Corpus Christi area. IPAWS transmits EAS alert HU.W (Hurricane Warning) at 18:00Z. All outlets switch to emergency format. Harborline 6 News (OUT-02) activates continuous coverage with anchor desk. OUT-03 Coastline Public Radio interrupts regular programming. KNCB (OUT-08) begins bilingual continuous coverage. The EAS alert text is transmitted in English; the Spanish translation is provided by KNCB independently, not via IPAWS (IPAWS Spanish translation capacity is not activated until D-1). WEA blast sent to all mobile devices in Nueces County at 18:04Z.",
+      "observed_in": [
+        {
+          "stream": "eas_alerts",
+          "what": "IPAWS alert ID HUW-2027-0912-001: event code HU.W; issued 2027-09-12 18:00Z; expiry 2027-09-14 18:00Z; affected zones TX-355 Nueces County; character count 312 (English) | WEA message HUW-2027-0912-001-WEA: 'HURRICANE WARNING this area. Rafael Cat 3 expected landfall 9/14 06:00 UTC. EVACUATE or shelter NOW. Life-threatening winds/surge. NWS'; 90-char version: 'HURRICANE WARNING Rafael Cat3 landfall 9/14. EVACUATE or shelter. Life-threatening. NWS'",
+          "when": {
+            "start_utc": "2027-09-12T18:00Z",
+            "end_utc": "2027-09-12T20:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "Outlet broadcast log: OUT-02 emergency format activated 18:06Z; OUT-03 programming interrupted 18:03Z; OUT-08 bilingual coverage 18:08Z",
+          "when": {
+            "start_utc": "2027-09-12T18:00Z",
+            "end_utc": "2027-09-12T20:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "IPAWS alert ID HUW-2027-0912-001: event code HU.W; issued 2027-09-12 18:00Z; expiry 2027-09-14 18:00Z; affected zones TX-355 Nueces County; character count 312 (English)",
+        "WEA message HUW-2027-0912-001-WEA: 'HURRICANE WARNING this area. Rafael Cat 3 expected landfall 9/14 06:00 UTC. EVACUATE or shelter NOW. Life-threatening winds/surge. NWS'; 90-char version: 'HURRICANE WARNING Rafael Cat3 landfall 9/14. EVACUATE or shelter. Life-threatening. NWS'",
+        "Outlet broadcast log: OUT-02 emergency format activated 18:06Z; OUT-03 programming interrupted 18:03Z; OUT-08 bilingual coverage 18:08Z"
+      ],
+      "public_fact": "PUB-200",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "nws_corpus_christi_wfo_operations_log",
+        "ipaws_alert_archive_HUW-2027-0912-001",
+        "corpus_christi_dma_broadcast_logs"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2103",
+      "time_label": "D-1",
+      "day": -1,
+      "day_end": null,
+      "time_utc": "12:00Z",
+      "threads": [
+        "T21"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "Nueces County Judge extends the mandatory evacuation, in force for Zone A since 06:00 CDT on D-2, to Zones B and C (all coastal areas, mobile homes, areas below 10 ft elevation). IPAWS transmits EAS mandatory evacuation notice and FEMA sends WEA to all mobile devices in evacuation zones. KNCB runs bilingual evacuation route and shelter information every 15 minutes through landfall. OUT-04 Gulfwater Maritime Report transmits mariners' advisory in VHF-style format for vessels in Corpus Christi Bay. Continental Wire Service (OUT-06) feeds evacuation order text to national outlets.",
+      "observed_in": [
+        {
+          "stream": "eas_alerts",
+          "what": "IPAWS alert ID EVI-2027-0913-001: event code EVI (Evacuation Immediate); issued 2027-09-13 12:00Z; Zones A/B/C Nueces County; English + Spanish bilingual for first time in this event sequence | WEA message EVI-2027-0913-001-WEA: 'EVACUATION ORDER Nueces County Zones A B C. LEAVE NOW. Hurricane Rafael Cat 3 arrives 9/14. Take medications, documents, pets. Emergency.Alert.gov'; 360-char format includes shelter list URL",
+          "when": {
+            "start_utc": "2027-09-13T12:00Z",
+            "end_utc": "2027-09-13T14:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB broadcast log: bilingual evacuation loop activated 12:15Z D-1; broadcast 24 times before landfall",
+          "when": {
+            "start_utc": "2027-09-13T12:00Z",
+            "end_utc": "2027-09-13T14:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "IPAWS alert ID EVI-2027-0913-001: event code EVI (Evacuation Immediate); issued 2027-09-13 12:00Z; Zones A/B/C Nueces County; English + Spanish bilingual for first time in this event sequence",
+        "WEA message EVI-2027-0913-001-WEA: 'EVACUATION ORDER Nueces County Zones A B C. LEAVE NOW. Hurricane Rafael Cat 3 arrives 9/14. Take medications, documents, pets. Emergency.Alert.gov'; 360-char format includes shelter list URL",
+        "KNCB broadcast log: bilingual evacuation loop activated 12:15Z D-1; broadcast 24 times before landfall"
+      ],
+      "public_fact": "PUB-201",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "nueces_county_oem_evacuation_order_2027-0913",
+        "ipaws_alert_archive_EVI-2027-0913-001",
+        "corpus_christi_dma_broadcast_logs"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2104",
+      "time_label": "D0",
+      "day": 0,
+      "day_end": null,
+      "time_utc": "06:00Z",
+      "threads": [
+        "T21"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "Hurricane Rafael makes landfall at 06:00Z (1:00 AM local). EAS shelter-in-place alert transmitted at 05:45Z as the eyewall approaches. Most outlets lose power during the landfall window (06:00Z to 10:00Z); OUT-03 Coastline Public Radio operates on generator and is the only outlet with continuous on-air coverage during landfall. OUT-08 KNCB also maintains generator power and maintains Spanish-language emergency broadcast. The shelter-in-place EAS tone is the last broadcast signal from the Corpus Christi main tower cluster until D+1 14:00Z when backup transmitters come online.",
+      "observed_in": [
+        {
+          "stream": "eas_alerts",
+          "what": "IPAWS alert ID SPW-2027-0914-001: event code SPW (Shelter-in-Place Warning); issued 2027-09-14 05:45Z; Nueces County all zones",
+          "when": {
+            "start_utc": "2027-09-14T06:00Z",
+            "end_utc": "2027-09-14T08:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "OUT-03 Coastline Public Radio: continuous on-air from 05:00Z through 14:00Z landfall period on 2.2 kW generator; only outlet broadcasting during peak eyewall passage 06:30Z-09:00Z | OUT-08 KNCB: Spanish emergency broadcast maintained through 08:30Z; transmitter lost power 08:31Z, resumed 2027-09-15 07:00Z",
+          "when": {
+            "start_utc": "2027-09-14T06:00Z",
+            "end_utc": "2027-09-14T08:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "IPAWS alert ID SPW-2027-0914-001: event code SPW (Shelter-in-Place Warning); issued 2027-09-14 05:45Z; Nueces County all zones",
+        "OUT-03 Coastline Public Radio: continuous on-air from 05:00Z through 14:00Z landfall period on 2.2 kW generator; only outlet broadcasting during peak eyewall passage 06:30Z-09:00Z",
+        "OUT-08 KNCB: Spanish emergency broadcast maintained through 08:30Z; transmitter lost power 08:31Z, resumed 2027-09-15 07:00Z"
+      ],
+      "public_fact": "PUB-202",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "ipaws_alert_archive_SPW-2027-0914-001",
+        "out03_generator_operations_log",
+        "corpus_christi_dma_broadcast_logs"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2105",
+      "time_label": "D+1",
+      "day": 1,
+      "day_end": null,
+      "time_utc": "14:00Z",
+      "threads": [
+        "T21"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "First post-storm broadcast from Harborline 6 News anchor desk, operating from backup studio at the outlet's Irving Boulevard satellite facility. OUT-02 anchor reads first post-storm update covering initial damage assessment, casualty report (12 confirmed fatalities), and shelter locations. OUT-03 Coastline Public Radio had maintained continuous coverage; OUT-02's return marks the resumption of full Corpus Christi DMA broadcast capacity. Continental Wire Service begins feeding post-storm updates nationally. All 7 outlets are operational by D+2 06:00Z.",
+      "observed_in": [
+        {
+          "stream": "broadcast_logs",
+          "what": "OUT-02 broadcast archive: first post-landfall anchor broadcast 2027-09-15 14:00Z; duration 47 minutes; topics: damage, casualties, shelters, curfew; anchor read pace 158 wpm (measured from transcript) | DMA log: OUT-02 transmitter restored D+1 13:52Z; OUT-04 D+1 16:30Z; OUT-05 D+2 04:10Z; OUT-07 D+2 06:00Z; full DMA restored D+2 06:00Z",
+          "when": {
+            "start_utc": "2027-09-15T14:00Z",
+            "end_utc": "2027-09-15T16:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "OUT-02 broadcast archive: first post-landfall anchor broadcast 2027-09-15 14:00Z; duration 47 minutes; topics: damage, casualties, shelters, curfew; anchor read pace 158 wpm (measured from transcript)",
+        "DMA log: OUT-02 transmitter restored D+1 13:52Z; OUT-04 D+1 16:30Z; OUT-05 D+2 04:10Z; OUT-07 D+2 06:00Z; full DMA restored D+2 06:00Z"
+      ],
+      "public_fact": "PUB-203",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "out02_broadcast_archive_2027-0915-1400Z",
+        "corpus_christi_dma_broadcast_logs"
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2106",
+      "time_label": "D+12",
+      "day": 12,
+      "day_end": null,
+      "time_utc": "22:30Z",
+      "threads": [
+        "T21"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "CBPWA and the city issue the boil-water notice for Districts 3 and 4 (48,000 residents). The EAS broadcast and Wireless Emergency Alert go out at 22:30Z D+12 (17:30 local), in English only. The Spanish translation is not delivered to KNCB until 06:03 local the next morning; KNCB airs it at once, at 06:03 local on D+13 — 12 hours 33 minutes after the English alert (EVT-1407). This gap is a critical equity data point: Districts 3 and 4 have an estimated 34% Spanish-dominant household population. The delay is documented in the KNCB broadcast log and later cited in a Nueces County after-action report.",
+      "observed_in": [
+        {
+          "stream": "eas_alerts",
+          "what": "IPAWS alert ID BWW-2027-0926-001: event code BWW (Boil Water Warning); issued 2027-09-26 22:30Z; Districts 3 and 4 Nueces County; English only in IPAWS; character count 287 | Nueces County After-Action Report 2028-03-15: Section 4.3 identifies the 12-hour Spanish notification gap for the boil-water notice as a critical equity failure; recommends pre-translated EAS template library",
+          "when": {
+            "start_utc": "2027-09-26T22:30Z",
+            "end_utc": "2027-09-27T00:30Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB broadcast log: Spanish boil-water notice first aired 2027-09-27 11:03Z (06:03 local); 12-hour 33-minute gap from the English EAS alert; translation received from the county at 06:03 local",
+          "when": {
+            "start_utc": "2027-09-26T22:30Z",
+            "end_utc": "2027-09-27T00:30Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "IPAWS alert ID BWW-2027-0926-001: event code BWW (Boil Water Warning); issued 2027-09-26 22:30Z; Districts 3 and 4 Nueces County; English only in IPAWS; character count 287",
+        "KNCB broadcast log: Spanish boil-water notice first aired 2027-09-27 11:03Z (06:03 local); 12-hour 33-minute gap from the English EAS alert; translation received from the county at 06:03 local",
+        "Nueces County After-Action Report 2028-03-15: Section 4.3 identifies the 12-hour Spanish notification gap for the boil-water notice as a critical equity failure; recommends pre-translated EAS template library"
+      ],
+      "public_fact": "PUB-204",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "ipaws_alert_archive_BWW-2027-0926-001",
+        "cbpwa_boil_water_notice_2027-0926",
+        "kncb_broadcast_log_d12",
+        "nueces_county_after_action_report_2028-03"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "nueces_county_after_action_report_2028-03",
+          "stream": "investigative_files"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2107",
+      "time_label": "D+21",
+      "day": 21,
+      "day_end": null,
+      "time_utc": "19:00Z",
+      "threads": [
+        "T21"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "FEMA Joint Field Office and CBPWA hold coordinated press conference announcing that investigators have determined the extended power outages in Districts 1-5 were not entirely attributable to storm damage. The press conference is broadcast live by OUT-02 and OUT-03; audio distributed by OUT-06. This is the first public acknowledgment that cyber interference may have extended outage duration. The announcement is carefully worded to avoid revealing active investigation details. The coordination between the JFO and CBPWA on the broadcast timing and outlet selection is documented in the JFO Operations Section Log, noting a 2-hour delay while FBI Corpus Christi reviewed the press release language.",
+      "observed_in": [
+        {
+          "stream": "public_record",
+          "what": "FEMA JFO Operations Log D+21 entry 17:00Z: 'CBPWA cyber announcement press release reviewed by FBI Corpus Christi RA; 14 word changes; approved 18:52Z; press conference scheduled 19:00Z' | OUT-06 Continental Wire Service: press conference summary distributed to national affiliates 20:15Z",
+          "when": {
+            "start_utc": "2027-10-05T19:00Z",
+            "end_utc": "2027-10-05T21:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "OUT-02 broadcast archive: live press conference coverage 19:00Z-19:47Z; anchor intro text: 'authorities say the outages that left tens of thousands without power for more than two weeks were prolonged by what officials are calling, quote, deliberate interference with utility systems'",
+          "when": {
+            "start_utc": "2027-10-05T19:00Z",
+            "end_utc": "2027-10-05T21:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "FEMA JFO Operations Log D+21 entry 17:00Z: 'CBPWA cyber announcement press release reviewed by FBI Corpus Christi RA; 14 word changes; approved 18:52Z; press conference scheduled 19:00Z'",
+        "OUT-02 broadcast archive: live press conference coverage 19:00Z-19:47Z; anchor intro text: 'authorities say the outages that left tens of thousands without power for more than two weeks were prolonged by what officials are calling, quote, deliberate interference with utility systems'",
+        "OUT-06 Continental Wire Service: press conference summary distributed to national affiliates 20:15Z"
+      ],
+      "public_fact": "PUB-205",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "fema_jfo_cc_operations_log_d21",
+        "cbpwa_press_conference_transcript_d21",
+        "out02_broadcast_archive_2027-0921"
+      ],
+      "not_delivered_sources": [
+        {
+          "label": "fema_jfo_cc_operations_log_d21",
+          "reason": "unmapped"
+        }
+      ],
+      "observable": true,
+      "places_inferred": true
+    },
+    {
+      "event_id": "EVT-2108",
+      "time_label": "D+42",
+      "day": 42,
+      "day_end": null,
+      "time_utc": "16:00Z",
+      "threads": [
+        "T21"
+      ],
+      "lanes": [
+        "C"
+      ],
+      "description": "CBPWA lifts boil-water notice for Districts 3 and 4. EAS all-clear broadcast transmitted at 16:00Z. KNCB broadcasts Spanish-language all-clear simultaneously with English this time — a deliberate correction following the D+12 delay. Harborline 6 News runs a package contrasting the D+12 boil-water notice Spanish delay with the simultaneous D+42 all-clear, citing the interim equity directive issued by Nueces County Emergency Management.",
+      "observed_in": [
+        {
+          "stream": "eas_alerts",
+          "what": "IPAWS alert ID BWA-2027-1026-001: event code BWA (Boil Water Advisory, lifted); issued 2027-10-26 16:00Z; Districts 3 and 4 Nueces County; English and Spanish simultaneous",
+          "when": {
+            "start_utc": "2027-10-26T16:00Z",
+            "end_utc": "2027-10-26T18:00Z"
+          }
+        },
+        {
+          "stream": "broadcast_logs",
+          "what": "KNCB broadcast log: Spanish all-clear aired simultaneously at 2027-10-26 16:00Z; note in log: 'per NuecesOEM directive 2027-09-30 requiring simultaneous Spanish/English EAS translation' | OUT-02 broadcast archive: 'Boil water ban ends — 30 days later' package; 3 min 42 sec; references D+12 Spanish delay",
+          "when": {
+            "start_utc": "2027-10-26T16:00Z",
+            "end_utc": "2027-10-26T18:00Z"
+          }
+        }
+      ],
+      "detection_artifacts": [
+        "IPAWS alert ID BWA-2027-1026-001: event code BWA (Boil Water Advisory, lifted); issued 2027-10-26 16:00Z; Districts 3 and 4 Nueces County; English and Spanish simultaneous",
+        "KNCB broadcast log: Spanish all-clear aired simultaneously at 2027-10-26 16:00Z; note in log: 'per NuecesOEM directive 2027-09-30 requiring simultaneous Spanish/English EAS translation'",
+        "OUT-02 broadcast archive: 'Boil water ban ends — 30 days later' package; 3 min 42 sec; references D+12 Spanish delay"
+      ],
+      "public_fact": "PUB-206",
+      "place_ids": [
+        "PLC-001"
+      ],
+      "places_raw": [],
+      "observed_in_legacy": [
+        "ipaws_alert_archive_BWA-2027-1026-001",
+        "cbpwa_boil_water_notice_lift_2027-1026",
+        "kncb_broadcast_log_d42"
+      ],
+      "observable": true,
+      "places_inferred": true
+    }
+  ],
+  "public_facts": [
+    {
+      "id": "PUB-200",
+      "day": -2,
+      "time_local": "12:00",
+      "type": "emergency_alert",
+      "source": "IPAWS / NWS Corpus Christi",
+      "statement": "OFFICIAL EMERGENCY ALERT — HURRICANE WARNING — September 12, 2027 12:00 PM CDT: THE NATIONAL WEATHER SERVICE CORPUS CHRISTI HAS ISSUED A HURRICANE WARNING FOR NUECES COUNTY. HURRICANE RAFAEL IS EXPECTED TO MAKE LANDFALL NEAR PORT ARANSAS TEXAS AROUND 1 AM CDT TUESDAY SEPTEMBER 14. MAXIMUM SUSTAINED WINDS OF 115 MPH WITH HIGHER GUSTS ARE EXPECTED. LIFE-THREATENING STORM SURGE OF 9 TO 12 FEET ABOVE NORMAL TIDE LEVELS WILL OCCUR ALONG THE COAST. EVACUATION ZONE A IS UNDER A MANDATORY EVACUATION ORDER. RESIDENTS IN ZONES B AND C SHOULD PREPARE TO EVACUATE. PREPARE NOW. DO NOT WAIT. FOR SHELTER LOCATIONS CALL 211 OR VISIT READYNUECES.ORG. THIS MESSAGE IS AUTHORIZED BY THE NUECES COUNTY OFFICE OF EMERGENCY MANAGEMENT. [WEA 90-char: HURRICANE WARNING Rafael Cat 3 landfall 9/14 1am. Zone A EVACUATE; B-C prepare. Life-threatening. NWS]",
+      "arcs": [
+        "ARC-COMMUNITY"
+      ],
+      "events": [
+        "EVT-2102"
+      ],
+      "places": [
+        "Nueces County",
+        "Corpus Christi"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-201",
+      "day": -1,
+      "time_local": "07:00",
+      "type": "emergency_alert",
+      "source": "IPAWS / Nueces County Office of Emergency Management",
+      "statement": "MANDATORY EVACUATION ORDER — September 13, 2027 7:00 AM CDT: BY ORDER OF THE NUECES COUNTY JUDGE, THE MANDATORY EVACUATION ORDERED SUNDAY FOR ZONE A IS EXTENDED TO ZONES B AND C. ALL RESIDENTS IN EVACUATION ZONES A, B, AND C MUST LEAVE. THIS INCLUDES ALL AREAS BELOW 10 FEET ELEVATION, ALL MOBILE AND MANUFACTURED HOMES COUNTYWIDE, AND ALL COASTAL AREAS. HURRICANE RAFAEL IS FORECAST AS A DANGEROUS CATEGORY 3 HURRICANE MAKING LANDFALL TONIGHT. LEAVE NOW. TAKE MEDICATIONS, IMPORTANT DOCUMENTS, AND PETS. NORTHBOUND ROUTES: US-77 NORTH AND TX-286 NORTH. SHELTERS ARE OPEN AT RICHARD M. BORCHARD REGIONAL FAIRGROUNDS IN ROBSTOWN, CALALLEN ISD FIELDHOUSE, AND ALICE HIGH SCHOOL. ZONA DE EVACUACION OBLIGATORIA: SE ORDENA LA EVACUACION DE TODAS LAS ZONAS A, B, Y C DEL CONDADO DE NUECES. EVACUEE AHORA. LLAME AL 211 PARA INFORMACION EN ESPANOL. [WEA 360-char: EVACUATION ORDER Nueces County Zones A B C. LEAVE NOW. Hurricane Rafael Cat 3 arrives tonight. Take meds, documents, pets. Shelters: Robstown Fairgrounds, Calallen ISD, Alice HS. Info: 211 or ReadyNueces.org]",
+      "arcs": [
+        "ARC-COMMUNITY"
+      ],
+      "events": [
+        "EVT-2103"
+      ],
+      "places": [
+        "Nueces County",
+        "Corpus Christi",
+        "Robstown",
+        "Calallen"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-202",
+      "day": 0,
+      "time_local": "00:45",
+      "type": "emergency_alert",
+      "source": "IPAWS / Nueces County Office of Emergency Management",
+      "statement": "SHELTER IN PLACE — September 14, 2027 12:45 AM CDT: HURRICANE RAFAEL IS APPROACHING. ALL RESIDENTS WHO HAVE NOT EVACUATED MUST SHELTER IN PLACE IMMEDIATELY. DO NOT ATTEMPT TO DRIVE. MAXIMUM WINDS AND STORM SURGE WILL OCCUR IN THE NEXT 2 TO 4 HOURS. GO TO AN INTERIOR ROOM ON THE HIGHEST FLOOR OF YOUR BUILDING. STAY AWAY FROM WINDOWS. IF YOUR SHELTER FLOODS, MOVE TO THE HIGHEST POINT AVAILABLE. DO NOT GO OUTSIDE UNTIL AUTHORITIES DECLARE IT SAFE. COASTLINE PUBLIC RADIO 89.7 FM AND KNCB 1480 AM ARE BROADCASTING CONTINUOUSLY. CALL 911 FOR LIFE-THREATENING EMERGENCIES ONLY. QUEDESE EN SU LUGAR. REFUGIESE EN UN CUARTO INTERIOR. ESCUCHE KNCB 1480 AM EN ESPANOL. [WEA 90-char: SHELTER IN PLACE. Rafael landfall now. Go interior room highest floor. No driving. 911 emergencies only.]",
+      "arcs": [
+        "ARC-COMMUNITY"
+      ],
+      "events": [
+        "EVT-2104"
+      ],
+      "places": [
+        "Nueces County",
+        "Corpus Christi"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-203",
+      "day": 1,
+      "time_local": "09:00",
+      "type": "broadcast_announcement",
+      "source": "Harborline 6 News / OUT-02",
+      "statement": "HARBORLINE 6 NEWS SPECIAL REPORT — September 15, 2027 9:00 AM CDT: Good morning. I am reporting from our backup studio. Hurricane Rafael came ashore near Port Aransas at approximately 1 AM Tuesday as a Category 3 storm with maximum sustained winds of 125 miles per hour. Twelve fatalities have been confirmed by Nueces County Emergency Management as of 9 AM; officials caution this number may rise as search and rescue operations continue. Widespread structural damage is reported across Districts 1 through 5. The Harbor Bridge and the Nueces Bay Causeway are closed until inspections are complete. Power outages affect more than 72,000 customers across Nueces County according to the Coastal Bend Power and Water Authority. Emergency shelters at the Robstown Fairgrounds and Calallen ISD Fieldhouse are open and accepting evacuees. A dusk-to-dawn curfew is in effect for all Corpus Christi city limits. Residents are advised not to return to evacuated areas until the all-clear is issued by Nueces County Emergency Management. We will continue to bring you updates throughout the day.",
+      "arcs": [
+        "ARC-COMMUNITY"
+      ],
+      "events": [
+        "EVT-2105"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Nueces County",
+        "Harbor Bridge",
+        "Robstown",
+        "Calallen"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-204",
+      "day": 12,
+      "time_local": "17:30",
+      "type": "emergency_alert",
+      "source": "IPAWS / Coastal Bend Power and Water Authority",
+      "statement": "BOIL WATER NOTICE — September 26, 2027 5:30 PM CDT: THE COASTAL BEND POWER AND WATER AUTHORITY HAS ISSUED A BOIL WATER NOTICE FOR DISTRICTS 3 AND 4 OF THE CORPUS CHRISTI WATER DISTRIBUTION SYSTEM. THIS NOTICE AFFECTS APPROXIMATELY 48,000 RESIDENTS. DUE TO LOW WATER PRESSURE AND DISTRIBUTION SYSTEM DISRUPTIONS, ALL TAP WATER MUST BE BOILED BEFORE USE FOR DRINKING, COOKING, MAKING ICE, OR BRUSHING TEETH. BRING WATER TO A ROLLING BOIL FOR TWO MINUTES BEFORE USE. BOTTLED WATER DISTRIBUTION SITES ARE OPERATING AT TULOSO-MIDWAY HIGH SCHOOL GYM, WOODLAWN COMMUNITY CENTER, AND CEFE VALENZUELA PARK. DISTRICTS 3 AND 4 INCLUDE THE FOLLOWING ZIP CODES: 78401, 78405, 78407, 78408, 78416, 78417. FOR INFORMATION CALL CBPWA AT (361) 555-0280. AVISO DE AGUA A HERVIR: La version en espanol de este aviso se distribuira por separado. [WEA: BOIL WATER NOTICE Districts 3-4 Corpus Christi. Boil all tap water before use. Bottled water: Tuloso-Midway HS, Woodlawn Ctr, Cefe Valenzuela Park. CBPWA (361)555-0280]",
+      "arcs": [
+        "ARC-COMMUNITY"
+      ],
+      "events": [
+        "EVT-2106"
+      ],
+      "places": [
+        "Districts 3 and 4",
+        "Corpus Christi",
+        "Tuloso-Midway",
+        "Woodlawn",
+        "Cefe Valenzuela Park"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-205",
+      "day": 21,
+      "time_local": "14:00",
+      "type": "press_release",
+      "source": "FEMA Joint Field Office Corpus Christi / Coastal Bend Power and Water Authority",
+      "statement": "JOINT STATEMENT — October 5, 2027: The Federal Emergency Management Agency Joint Field Office and the Coastal Bend Power and Water Authority are issuing this statement regarding the extended power outages affecting Corpus Christi following Hurricane Rafael. While the initial power outages were caused by wind and storm surge damage to the CBPWA transmission and distribution network, investigators from the federal government and CBPWA have determined that the duration of outages in certain districts was extended by deliberate interference with utility control systems beyond what storm damage alone would have caused. This determination was made following a technical review of utility operational data by federal investigators. The investigation is ongoing. CBPWA has implemented enhanced security measures for its control systems and is working with federal partners to prevent future incidents. No decision has been made on whether residents who experienced prolonged outages will be eligible for additional disaster assistance. Power has been restored to most customers; restoration in parts of northwest and central Corpus Christi is continuing while relay inspection and repair are completed. CBPWA urges any customer with information relevant to this investigation to contact the FBI Corpus Christi Resident Agency at (361) 555-0100.",
+      "arcs": [
+        "ARC-COMMUNITY"
+      ],
+      "events": [
+        "EVT-2107"
+      ],
+      "places": [
+        "Corpus Christi",
+        "Districts 1-5"
+      ],
+      "sources": []
+    },
+    {
+      "id": "PUB-206",
+      "day": 42,
+      "time_local": "11:00",
+      "type": "emergency_alert",
+      "source": "IPAWS / Coastal Bend Power and Water Authority",
+      "statement": "BOIL WATER NOTICE LIFTED — October 26, 2027 11:00 AM CDT / AVISO DE AGUA A HERVIR LEVANTADO — 26 de octubre de 2027 11:00 AM CDT: THE COASTAL BEND POWER AND WATER AUTHORITY ANNOUNCES THE LIFTING OF THE BOIL WATER NOTICE FOR DISTRICTS 3 AND 4, EFFECTIVE 11:00 AM TODAY, OCTOBER 26, 2027. WATER QUALITY TESTING HAS CONFIRMED THAT TAP WATER IN DISTRICTS 3 AND 4 MEETS ALL STATE AND FEDERAL DRINKING WATER STANDARDS. RESIDENTS MAY RESUME NORMAL WATER USE. FOR QUESTIONS CONTACT CBPWA AT (361) 555-0280. LA AUTORIDAD DE ENERGIA Y AGUA DEL COASTAL BEND ANUNCIA LA ELIMINACION DEL AVISO DE AGUA A HERVIR PARA LOS DISTRITOS 3 Y 4, A PARTIR DE LAS 11 AM DE HOY. EL AGUA DEL GRIFO EN LOS DISTRITOS 3 Y 4 CUMPLE CON TODOS LOS ESTANDARES DE CALIDAD DEL AGUA POTABLE. LOS RESIDENTES PUEDEN REANUDAR EL USO NORMAL DEL AGUA. [WEA: BOIL WATER NOTICE LIFTED Districts 3-4 Corpus Christi. Tap water is safe. Resume normal use. CBPWA (361)555-0280 / AVISO LEVANTADO Distritos 3-4. Agua de grifo es segura.]",
+      "arcs": [
+        "ARC-COMMUNITY"
+      ],
+      "events": [
+        "EVT-2108"
+      ],
+      "places": [
+        "Districts 3 and 4",
+        "Corpus Christi"
+      ],
+      "sources": []
+    }
+  ],
+  "state_variables": [
+    {
+      "id": "eas_active_alert_count",
+      "label": "EAS active alert count",
+      "kind": "number",
+      "group": "Public knowledge",
+      "unit": "alerts",
+      "thread": "T21",
+      "description": "Number of currently active IPAWS/EAS alerts in effect for Nueces County. Peaks at 3 simultaneous active alerts during D-1 through D+2 (hurricane warning, storm surge warning, mandatory evacuation). Returns to 0 between D+3 and D+12. Spikes again at D+12 (boil-water), clears at D+42.",
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 0
+        },
+        {
+          "day": -2,
+          "value": 1
+        },
+        {
+          "day": -1,
+          "value": 3
+        },
+        {
+          "day": 0,
+          "value": 3
+        },
+        {
+          "day": 1,
+          "value": 1
+        },
+        {
+          "day": 3,
+          "value": 0
+        },
+        {
+          "day": 12,
+          "value": 1
+        },
+        {
+          "day": 42,
+          "value": 0
+        },
+        {
+          "day": 60,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "broadcast_emergency_format_outlets",
+      "label": "Outlets in emergency broadcast format",
+      "kind": "number",
+      "group": "Public knowledge",
+      "unit": "outlets",
+      "thread": "T21",
+      "description": "Count of the 8 fictional outlets (OUT-01 through OUT-08) currently broadcasting in emergency/continuous-coverage format rather than regular programming. OUT-01 Bayside Ledger (print) always counts as 0. Maximum 7 at D-1 through D+1.",
+      "keyframes": [
+        {
+          "day": -60,
+          "value": 0
+        },
+        {
+          "day": -2,
+          "value": 5
+        },
+        {
+          "day": -1,
+          "value": 7
+        },
+        {
+          "day": 0,
+          "value": 2
+        },
+        {
+          "day": 1,
+          "value": 4
+        },
+        {
+          "day": 2,
+          "value": 6
+        },
+        {
+          "day": 3,
+          "value": 3
+        },
+        {
+          "day": 7,
+          "value": 1
+        },
+        {
+          "day": 14,
+          "value": 0
+        },
+        {
+          "day": 60,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "last_wea_sent_day",
+      "label": "Day of most recent WEA transmission",
+      "kind": "number",
+      "group": "Public knowledge",
+      "unit": "day",
+      "thread": "T21",
+      "description": "Scenario day on which the most recent Wireless Emergency Alert was transmitted to Nueces County mobile devices. Tracks the cadence of IPAWS WEA usage across the scenario.",
+      "keyframes": [
+        {
+          "day": -60,
+          "value": -999
+        },
+        {
+          "day": -2,
+          "value": -2
+        },
+        {
+          "day": -1,
+          "value": -1
+        },
+        {
+          "day": 0,
+          "value": 0
+        },
+        {
+          "day": 12,
+          "value": 12
+        },
+        {
+          "day": 42,
+          "value": 42
+        },
+        {
+          "day": 60,
+          "value": 42
+        }
+      ]
+    }
+  ],
+  "news_arcs": [
+    {
+      "arc_id": "ARC-EAS",
+      "name": "The alert system speaks",
+      "description": "The EAS broadcast corpus: 14 official alerts from D-2 through D+42. Tracks the cadence, format, and content of official emergency messaging. Key tension: the Spanish-language gap at D+12. Training data for EAS robot voice TTS, prosody markup, and multilingual alert NLP.",
+      "thread": "T21",
+      "story_hooks": [
+        {
+          "day": -2,
+          "outlet": "OUT-02",
+          "character_note": "[Anchor: MEDIUM-URGENT PACE, 162 wpm, pitch MEDIUM-HIGH, style: live emergency desk] Opens with EAS tone, then anchor reads hurricane warning details with pre-recorded NWS audio insert",
+          "summary": "Harborline 6 News activates emergency desk coverage at 12:00 PM CDT; anchor reads hurricane warning and evacuation preparation checklist; NWS Corpus Christi meteorologist call-in at 12:35 PM; storm track graphics described for radio simulcast audience",
+          "public_facts_used": [
+            "PUB-200"
+          ]
+        },
+        {
+          "day": -1,
+          "outlet": "OUT-08",
+          "character_note": "[Anchor KNCB Marisela Cordova-Ibarra: URGENT, 155 wpm Spanish, pitch HIGH, style: bilingual emergency; alternates Spanish primary/English secondary every 3rd segment]",
+          "summary": "KNCB runs mandatory evacuation order in continuous bilingual loop; Marisela Cordova-Ibarra reads evacuation routes, shelter addresses, and phone numbers in Spanish with English inserts; call-in from Nueces County Emergency Management Spanish-language outreach coordinator; listener calls about pets and medications handled live",
+          "public_facts_used": [
+            "PUB-201"
+          ]
+        },
+        {
+          "day": 0,
+          "outlet": "OUT-03",
+          "character_note": "[Host: CALM MEASURED, 148 wpm, pitch LOW-MEDIUM, style: public radio emergency; deliberate pauses for comprehension]",
+          "summary": "Coastline Public Radio sole outlet broadcasting during eyewall passage; host narrates wind sounds audible on mic during 06:30-09:00Z; reads shelter-in-place instructions every 15 minutes; callers share locations and conditions; broadcast serves as de facto situational awareness source for first responders monitoring off-grid",
+          "public_facts_used": [
+            "PUB-202"
+          ]
+        },
+        {
+          "day": 12,
+          "outlet": "OUT-08",
+          "character_note": "[Anchor Marisela Cordova-Ibarra: GRAVE TONE, 142 wpm Spanish, style: community information; note 12-hour gap documented in broadcast log]",
+          "summary": "KNCB broadcasts Spanish boil-water notice at 9 PM local, 12 hours after English EAS. Cordova-Ibarra acknowledges the delay on-air and provides bottled water distribution locations in Spanish with street-level directions; listener call volume overwhelms phone line; station switches to text-only call-in",
+          "public_facts_used": [
+            "PUB-204"
+          ]
+        }
+      ]
+    },
+    {
+      "arc_id": "ARC-BROADCAST",
+      "name": "The newsroom through the storm",
+      "description": "Meta-arc covering the broadcast outlets as actors in the story — their infrastructure losses, recovery, and role in public information. Generates story-hooks showing how each outlet's voice persona sounds across the full scenario arc.",
+      "thread": "T21",
+      "story_hooks": [
+        {
+          "day": 1,
+          "outlet": "OUT-02",
+          "character_note": "[Anchor: STEADY, AUTHORITATIVE, 158 wpm, pitch MEDIUM, style: post-disaster anchor; controlled urgency without panic]",
+          "summary": "First post-storm Harborline 6 News broadcast from backup studio; anchor names 12 confirmed fatalities; reports Harbor Bridge closure; lists shelter locations; notes that cell service is spotty and encourages residents to monitor broadcast radio; broadcast crew worked through the storm in-place",
+          "public_facts_used": [
+            "PUB-203"
+          ]
+        },
+        {
+          "day": 21,
+          "outlet": "OUT-03",
+          "character_note": "[Host: MEASURED, 145 wpm, style: public radio investigative; allows pauses; provides context on what 'deliberate interference' means]",
+          "summary": "Coastline Public Radio live coverage of CBPWA/FEMA cyber announcement press conference; host provides real-time context between speakers; post-conference analysis segment explains that investigators have not confirmed who is responsible; listener questions about whether water system is also affected (plant declines to comment)",
+          "public_facts_used": [
+            "PUB-205"
+          ]
+        },
+        {
+          "day": 90,
+          "outlet": "OUT-02",
+          "character_note": "[Anchor: REFLECTIVE, 155 wpm, style: 90-day retrospective package; uses archive audio clips from D-2, D0, D+1, D+12]",
+          "summary": "Harborline 6 News 90-day retrospective package: 'Rafael at 90 days'; montage of EAS tones and anchor reads from D-2 through D+42; statistics on the boil-water notice duration (30 days); note on the 12-hour Spanish alert gap and subsequent OEM directive; interview with CBWR director on wildlife rehabilitation outcomes",
+          "public_facts_used": []
+        }
+      ]
+    },
+    {
+      "arc_id": "ARC-AIRWAVE",
+      "name": "La voz de KNCB",
+      "description": "Spanish-language emergency coverage arc. KNCB 1070 AM (OUT-08) provides the primary Spanish-language emergency information channel for Corpus Christi's estimated 48% Hispanic/Latino population. Documents the equity dimensions of emergency broadcasting, including the D+12 boil-water delay.",
+      "thread": "T21",
+      "story_hooks": [
+        {
+          "day": -2,
+          "outlet": "OUT-08",
+          "character_note": "[Anchor Marisela Cordova-Ibarra: CLEAR AND DELIBERATE, 148 wpm Spanish, pitch MEDIUM, style: community radio emergency; uses simple vocabulary for accessibility]",
+          "summary": "KNCB first Spanish hurricane warning broadcast; Cordova-Ibarra reads evacuation zones using neighborhood names (Molina, Hillcrest, Flour Bluff) alongside zone designations A-C; phone number for 211 repeated every segment; emphasis on those without vehicles",
+          "public_facts_used": [
+            "PUB-200"
+          ]
+        },
+        {
+          "day": 42,
+          "outlet": "OUT-08",
+          "character_note": "[Anchor Marisela Cordova-Ibarra: RELIEVED BUT MEASURED, 150 wpm Spanish/English bilingual, style: community information with follow-up guidance]",
+          "summary": "KNCB simultaneous (no delay) Spanish all-clear broadcast for boil-water notice; Cordova-Ibarra notes on-air that this time the Spanish and English alerts are going out at the same time; provides guidance on flushing lines and water heaters; announces continuation of bottled water distribution for 72 more hours for residents who need it",
+          "public_facts_used": [
+            "PUB-206"
+          ]
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity_id": "ENT-T21-01",
+      "name": "Marisela Cordova-Ibarra",
+      "role": "Lead Anchor and Emergency Broadcast Director, KNCB 1070 AM (OUT-08)",
+      "thread": "T21",
+      "description": "KNCB's bilingual anchor and the face of Spanish-language emergency coverage during Hurricane Rafael. 11 years at KNCB. Known for calm, clear delivery at accessible vocabulary level. Vocal about the 12-hour Spanish boil-water notice delay on-air (Day +12). Voice persona: female, mid-alto register, 142-155 wpm Spanish, slight Corpus Christi regional accent. TTS persona ID: KNCB-ANCHOR-01."
+    },
+    {
+      "entity_id": "ENT-T21-02",
+      "name": "Derek Willoughby-Parks",
+      "role": "EAS Relay Coordinator, Nueces County Office of Emergency Management",
+      "thread": "T21",
+      "description": "Nueces County OEM staff member responsible for IPAWS activation and EAS relay coordination for Nueces County. Manages the 14 EAS broadcasts across the scenario. Documents the WKCB-AM 4-second relay lag at D-5. Authors the internal memo recommending the pre-translated Spanish EAS template library following the D+12 delay."
+    },
+    {
+      "entity_id": "ENT-T21-03",
+      "name": "Harborline 6 News anchor (unnamed in corpus)",
+      "role": "Lead Anchor, Harborline 6 News (OUT-02)",
+      "thread": "T21",
+      "description": "The primary OUT-02 on-air anchor for hurricane coverage and the 90-day retrospective. Character exists in the broader corpus; described only by voice persona for TTS purposes. Voice persona: male, baritone, 155-165 wpm, authoritative broadcast style, standard American accent. TTS persona ID: OUT02-ANCHOR-01."
+    }
+  ],
+  "answer_key_path": "T21 is primarily a training data generation thread rather than a hidden adversary thread. The key cross-thread signals visible through the broadcast corpus are: (1) the D+21 cyber announcement broadcast timing — the 2-hour FBI language review delay is visible in the JFO operations log and creates a gap between when CBPWA internally confirmed the grid intrusion and when the public learned of it; (2) the 12-hour Spanish boil-water notice delay at D+12 connects to equity and communications failure analysis; (3) the EAS tone sequence (D-2 hurricane warning through D+42 all-clear) provides a 54-day audio timeline that, when aligned with the scenario event sequence, allows analysts to map which events generated public acknowledgment and which remained hidden. The absence of an EAS broadcast about the oil spill (T20) despite the TCEQ water quality advisory is a notable gap — no emergency alert was issued for the air quality event, only a health advisory.",
+  "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
+}

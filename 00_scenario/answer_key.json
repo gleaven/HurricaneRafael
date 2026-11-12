@@ -1,0 +1,47 @@
+{
+  "paths": [
+    {
+      "thread_id": "T1",
+      "name": "Storm cascade",
+      "join_path": "Weather: storm track at D0 → environmental sensors: GAUGE-12, GAUGE-14 → satellite: flood extent by H3 cell → maps: FAC-UTL-02 power feeds → telemetry and maintenance: EQP-1102, EQP-1103 by serial → supply: SUP-0219 order → public health: WW-xx and FAC-HOS-xx by place and time",
+      "evidence": "Pumps fail 3 h after the power feeds; GI ER visits spike a day after the wastewater rise; parts arrive 25 days late"
+    },
+    {
+      "thread_id": "T2",
+      "name": "Dark vessel",
+      "join_path": "Ship tracks: VSL-0031 gap at ANC-OFF at D+31, MMSI-SYN-0457 at the anchorage while VSL-0457 is 600 nm away → satellite: unmatched hull in the same H3 cell at D+31 09:30Z → ship tracks: BRG-0044 up the ship channel to TANK-0390 → supply: 380 m³ receipt under UEI-SYN-0390 → payments: PIID-SYN-0075 invoices → maintenance: EQP-2201 note with fuel lot ID",
+      "evidence": "Same place and time window across AIS and radar; the fuel lot in NAS maintenance matches the SUP-0390 receipt"
+    },
+    {
+      "thread_id": "T3",
+      "name": "Fraud ring",
+      "join_path": "Vendor registry: UEI-SYN-0388 and 0390 share an address and BANK-SYN-71 → payments: PIID-SYN-0071 and 0075 → drone and satellite: debris estimate vs invoiced tonnage → payments: benefit deposits to BANK-SYN-71 and 72 → ownership: ORG-0901",
+      "evidence": "Same bank accounts receive vendor payments and diverted benefits; billing at 2.3× the imaged debris"
+    },
+    {
+      "thread_id": "T4",
+      "name": "KESTREL",
+      "join_path": "Network logs: ASN-SYN-64512 scans at D-35 → phishing through aid-help-portal.example at D+1 to D+3 → social media: SOC-ACC-5001 to 5040 posts linking the same domain → network logs: credential stuffing from the same ASN at D+62 to D+70 → payments: changed deposit details to BANK-SYN-71, 72, 73",
+      "evidence": "One ASN and one domain appear in NAS logs, city logs and social posts"
+    },
+    {
+      "thread_id": "T5",
+      "name": "Equity gap",
+      "join_path": "Census: PLC-010 vs PLC-011 income and vehicle access → 911: response time by H3 cell → maps: Harbor Bridge and causeway closures → payments: aid dollars by tract",
+      "evidence": "Aid dollars at half the residents' share; 911 response 2.1× high-income tracts"
+    },
+    {
+      "thread_id": "T6",
+      "name": "Tanker cyberattack",
+      "join_path": "Network logs: SUP-0455 vendor phished from ASN-SYN-64512 at D-33 → vendor remote sessions on HOST-VSL-01 at D-20 and D0 04:00Z → telemetry: cargo tank levels fall on VSL-0041 and VSL-0042 at D0 04:00Z → environmental sensors: hydrocarbon spikes at WQ-01 to WQ-06 → satellite: oil slick extent by H3 cell → public health: respiratory and skin ER visits by shoreline tract → payments: spill damage claims",
+      "evidence": "Valve commands came from the vendor's session, not crew consoles, when the vendor had no open work order; the session source matches KESTREL's ASN"
+    },
+    {
+      "thread_id": "T7",
+      "name": "Opportunistic military attack",
+      "join_path": "Social media: geotagged drone-light posts near FAC-DOD-01 at D+1 to D+10 → maintenance: perimeter-sensor repair orders showing sensors down those nights → satellite: hull 2 nm off ENT-01 at D+31 04:20Z, inside VSL-0031's AIS gap → aircraft tracks: ADS-B navigation-integrity drop centered near TANK-0390 at D+38 to D+43 → ship tracks and news: VSL-0077's AIS stops at the jetties at D+44 06:10Z → maintenance: EOD report on DEV-02 recovered at D+52 → news: STATE-X operations abroad from D+46",
+      "evidence": "The device positions lie on the only track Halcyon Drift could have sailed during its gap; the interference centroid sits at the Quellmar terminal; the detonation lands on the eve of the planned outload restart"
+    }
+  ],
+  "links_between_threads": "T2 and T3 join on UEI-SYN-0390 and ORG-0901; T3 and T4 join on BANK-SYN-71 and 72. T4 and T6 join on ASN-SYN-64512. T7 joins T2 through VSL-0031's AIS gap and T3 through TANK-0390, where the GPS interference centers."
+}

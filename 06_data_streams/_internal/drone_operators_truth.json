@@ -1,0 +1,127 @@
+{
+ "_about": "Internal. Hostile unmanned aircraft and scenario roles of the authorised operators. Never give this file to participants.",
+ "hostile_uas": [
+  {
+   "ids": [
+    "UAS-RECON-01"
+   ],
+   "what": "Pre-storm reconnaissance drone flown from the yacht Narwhal Dream (VSL-0481) at Ingleside Marina Berth 7 (SLIP-ING-07): sorties 1-3 over GW-FAC-SUB-01 (D-11 04:30Z, D-9 06:47Z, D-9/8 04:15Z), sorties 4-5 over the Rendal berth TERM-01 (D-5 05:00Z, D-4/3 04:45Z). 400-600 ft above ground, 900 MHz burst data link, 2.4 GHz command link.",
+   "detected_by": [
+    "CBP aircraft CAMCC-04 (ACF-CBP-001) electronic support measures",
+    "Coast Guard radar buoys R-18 and R-22 raw archives (below alert threshold)"
+   ],
+   "events": [
+    "EVT-1901",
+    "EVT-1902",
+    "EVT-1903",
+    "EVT-1904",
+    "EVT-1905",
+    "EVT-1906"
+   ],
+   "threads": [
+    "T19"
+   ],
+   "public_from_day": 15,
+   "note": "Sorties 4 and 5 take place after the yacht's AIS goes dark on D-8; canon gives no launch point for them."
+  },
+  {
+   "ids": [
+    "UAS-SYN-01",
+    "UAS-SYN-02",
+    "UAS-SYN-03",
+    "UAS-SYN-04",
+    "UAS-SYN-05",
+    "UAS-SYN-06"
+   ],
+   "what": "Night overflights of NAS Corpus Christi and the Army depot on six nights between D+1 and D+10 while perimeter sensors are down; operated by STATE-X special forces.",
+   "events": [
+    "EVT-0318"
+   ],
+   "threads": [
+    "T7"
+   ],
+   "public": "residents' videos D+2; NAS statement D+6; FBI D+9; no sightings after D+11"
+  }
+ ],
+ "rules": [
+  "Hostile drones have no operator record, no FAA registration, no Remote ID and no ICAO address; they never appear in ADS-B or in drone_video.",
+  "No drone activity of any kind after D+11. The old D+30 port loiter (UNIDENTIFIED-D30, UNKNOWN-001) is removed."
+ ],
+ "truth": {
+  "DRN-OP-001": {
+   "role": "Argus Mk-7 swarm GRID01-GRID08: Phase 1 survey from D+3, Phase 2 utility yards D+8 (images the open breakers at SUB-02 and SUB-03), complete D+45.",
+   "events": [
+    "EVT-1104",
+    "EVT-1105"
+   ],
+   "threads": [
+    "T11"
+   ]
+  },
+  "DRN-OP-005": {
+   "role": "Two FLIR multirotors pre-staged at Corpus Christi International on D-1; SAR thermal imaging D+1 to D+5.",
+   "events": [
+    "EVT-1701",
+    "EVT-1703",
+    "EVT-1706"
+   ],
+   "threads": [
+    "T17"
+   ]
+  }
+ },
+ "id_migration": {
+  "by_old_operator_id": {
+   "DRN-OP-001": {
+    "new": "DRN-OP-001",
+    "note": "was 'FEMA Region VI UAS Team'; canon operator is the FEMA contractor Argus Aerial Systems (PUB-111)"
+   },
+   "DRN-OP-002": {
+    "new": "DRN-OP-002"
+   },
+   "DRN-OP-003": {
+    "new": "DRN-OP-003"
+   },
+   "DRN-OP-004": {
+    "new": null,
+    "note": "registry listed Texas National Guard small drones; drone_video files used DRN-OP-004 for the real station KIII, now Harborline 6 News (new DRN-OP-004)"
+   },
+   "DRN-OP-005": {
+    "new": "DRN-OP-011",
+    "note": "Coast Guard UAS support"
+   },
+   "DRN-OP-006": {
+    "new": "DRN-OP-012",
+    "note": "university program"
+   },
+   "DRN-OP-007": {
+    "new": "DRN-OP-007"
+   },
+   "DRN-OP-008": {
+    "new": null,
+    "note": "real outlet name (Texas Tribune) removed"
+   },
+   "DRN-OP-009": {
+    "new": "DRN-OP-009"
+   },
+   "DRN-OP-010": {
+    "new": "DRN-OP-010"
+   },
+   "DRN-OP-UNK": {
+    "new": null,
+    "note": "hostile; see hostile_uas"
+   },
+   "UNKNOWN-001": {
+    "new": null,
+    "note": "D+30 loiter removed from canon"
+   }
+  },
+  "by_old_flight_prefix": {
+   "FLT-KIII-": "DRN-OP-004 (Harborline 6 News)",
+   "FLT-FEMA-": "DRN-OP-001",
+   "FLT-CCFD-": "DRN-OP-003",
+   "FLT-TXDOT-": "DRN-OP-002",
+   "FLT-UNKNOWN-": null
+  }
+ }
+}

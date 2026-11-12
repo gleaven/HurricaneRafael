@@ -1,0 +1,250 @@
+[
+  {
+    "thread_id": "T1",
+    "name": "Storm cascade",
+    "truth": "Surge floods the Coastal Bend; both power feeds to O.N. Stevens fail; plant pumps fail; a citywide boil-water notice drives GI illness; pump parts arrive 25 days late; NAS and depot operations pause. Natural, no adversary.",
+    "lanes": [
+      "C",
+      "D"
+    ],
+    "phases_raw": "2–5"
+  },
+  {
+    "thread_id": "T2",
+    "name": "Dark vessel",
+    "truth": "MV Halcyon Drift goes dark at the offshore anchorage, spoofs FV Pelican Ridge's MMSI, and transfers 380 m³ of fuel to Barge 44. The fuel is sold through SUP-0390 to NAS Corpus Christi and fouls the station's backup generator.",
+    "lanes": [
+      "I",
+      "D",
+      "C"
+    ],
+    "phases_raw": "1, 4, 5"
+  },
+  {
+    "thread_id": "T3",
+    "name": "Fraud ring",
+    "truth": "SUP-0388 and SUP-0390 share an address, a bank account and a hidden owner (ORG-0901). They win sole-source contracts, overbill debris removal, and receive diverted benefit payments.",
+    "lanes": [
+      "C",
+      "I",
+      "D"
+    ],
+    "phases_raw": "1, 3–6"
+  },
+  {
+    "thread_id": "T4",
+    "name": "KESTREL campaign",
+    "truth": "Reconnaissance at D-35, phishing at D+1 to D+3, then credential stuffing at D+62 to D+70 that diverts benefit payments to BANK-SYN-71, 72 and 73. Its disinformation network links to the same lure domain.",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "phases_raw": "1, 3, 5, 6"
+  },
+  {
+    "thread_id": "T5",
+    "name": "Equity gap",
+    "truth": "Low-income surge-zone tracts receive aid dollars at half their share of residents, and their median 911 response time is 2.1× that of high-income tracts. Emerges from the storm and access, not from an adversary.",
+    "lanes": [
+      "C"
+    ],
+    "phases_raw": "3–6"
+  },
+  {
+    "thread_id": "T6",
+    "name": "Tanker cyberattack",
+    "truth": "KESTREL steals a remote-maintenance vendor's credentials, reaches the cargo systems of two laden tankers moored at TERM-01, and two hours before landfall opens their cargo valves and silences alarms. About 9,000 barrels spill, and the surge spreads the oil across 85 km² of bay and shoreline.",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "phases_raw": "1–6"
+  },
+  {
+    "thread_id": "T7",
+    "name": "Opportunistic military attack",
+    "truth": "STATE-X exploits the storm to delay the Fort Hood brigade's deployment through the strategic seaport. Drones scout NAS Corpus Christi while its sensors are down; Halcyon Drift's dark window covers laying two seabed explosive devices off the entrance channel; GPS interference from the Inner Harbor disrupts relief flights; one device detonates beside a tug at D+44, closing the channel for 14 days as STATE-X moves militarily abroad.",
+    "lanes": [
+      "D",
+      "I",
+      "C"
+    ],
+    "phases_raw": "1, 3–6"
+  },
+  {
+    "thread_id": "T11",
+    "name": "Aerial damage assessment corridor",
+    "color": "#2563a8",
+    "scenario": "rafael",
+    "truth": "While Coast Guard, FEMA, and Army National Guard aerial assets execute a legitimate and well-documented damage assessment operation over Corpus Christi following Hurricane Rafael, the cumulative imagery archive contains a critical anomaly that corroborates the T8 adversary action. Optical and thermal passes over utility substation yards GW-FAC-SUB-02 (Harbor View) and GW-FAC-SUB-03 (Crosstown) on D+8 and D+11 show main feeder breakers in sustained open-contact positions. When compared against the D-2 pre-storm baseline imagery archived at NAS-CC, analysts find that (a) the breaker positions are atypical for storm-induced mechanical failure patterns visible at other substations, (b) the surrounding structural damage at SUB-02 and SUB-03 is below threshold for the mechanical forces that would open those contacts, and (c) the positions are consistent with a remote SCADA command rather than physical disruption. AI tools analyzing the full imagery time-series should detect the spatial and temporal mismatch: damage-classification models trained on hurricane-only scenarios will misclassify SUB-02 and SUB-03 as within-normal-variance, while change-detection models comparing pre- and post-storm states at the breaker-component level will flag them as anomalous outliers against 47 other surveyed substations and switchyards in the metro area.",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ]
+  },
+  {
+    "thread_id": "T12",
+    "name": "Dark vessel and port surveillance",
+    "color": "#1a7a4a",
+    "scenario": "rafael",
+    "truth": "The Port of Corpus Christi's surveillance network — fixed cameras, two radar buoys, the AIS relay and Coast Guard vessel traffic logs — gives an independent physical record of two hidden events; it adds no vessel or incident of its own. First, it brackets the tanker valve attack (T6): cameras show MT Kalvora Star and MT Ostrel Bay intact at the Rendal Terminals berth until the cameras lose power at 02:30Z on D0, and the recovered radar buffer shows no other vessel moving in the channel from Port Condition Zulu through D+1, so the release can only have come from the ships' own cargo systems; the D+5 inspections then find valves opened with no console or deck-log entry and alarms inhibited. Second, after the partial reopening it records the dark vessel (T2, T7): on D+31 MV Halcyon Drift's AIS goes silent for 14 hours, a vessel broadcasting FV Pelican Ridge's identity appears at the anchorage, and radar holds contacts with no AIS match — two hulls side by side at the anchorage and one loitering about 2 nm off the entrance channel. Fusing radar tracks with AIS against the all-contacts-correlated baseline of D-7 to D-1 exposes the gap, the spoof and the uncorrelated hulls.",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ]
+  },
+  {
+    "thread_id": "T13",
+    "name": "911 dispatch corpus",
+    "color": "#cc4400",
+    "scenario": "rafael",
+    "truth": "Coastal Bend Emergency Communications Center (CBECC) — the fictional Nueces County 911 dispatch hub — processes an authentic record of the community's experience with Hurricane Rafael: a dramatic call volume spike at landfall (about 1,840 calls on D0), a peak of about 2,900 calls on D+1, a record 2,109 rescue requests on D+2, and a sustained elevated plateau from the boil water notice, extended power outages, and ongoing recovery through D+28. Within this authentic corpus, the STATE-X influence operation (T5) injects 23 false emergency calls between D+7 and D+10. The false calls describe flooding, gas leaks, and structure fires at locations geographically clustered within 400m of GW-FAC-SUB-02 (Harbor View substation) and GW-FAC-SUB-03 (Crosstown substation). The calls are made from prepaid/unregistered mobile phones on three carrier networks. Voice analysis reveals that all 23 calls share identical syntactic sentence structure in both English and Spanish variants, a cadence pattern inconsistent with genuine distress calls, and a uniform average words-per-sentence ratio of 11.3 (authentic distress calls in the corpus average 6.8). The false calls successfully divert 4 Texas Task Force 1 SAR teams on D+7 and 2 on D+8, delaying real rescue operations in Districts 3 and 4 by an estimated 4–6 hours during the period of maximum rescue demand. CBECC's CAD system logs and cross-agency radio dispatch traffic — combined with the call audio corpus in English and Spanish — provide AI training data for STT, intent classification, false-call detection, and volume forecasting.",
+    "lanes": [
+      "C",
+      "D"
+    ]
+  },
+  {
+    "thread_id": "T14",
+    "name": "Bilingual Emergency Communications",
+    "color": "#8b6914",
+    "scenario": "rafael",
+    "truth": "Corpus Christi's emergency alert infrastructure operates on an English-first workflow in which Spanish-language translations are routed through a secondary contractor (Nueces County Language Access Services) before distribution to KNCB and Spanish-language digital channels. Under normal conditions this lag is 2–4 hours; under surge conditions during Hurricane Rafael it stretched to 8–14 hours across every alert category. The most consequential gap occurred on D+12: the boil-water notice for Districts 3–4 (GW-PUB-001) was issued in English at 17:30 CDT but the Spanish version did not reach KNCB Coastal Bend Radio until 06:03 CDT on D+13 — a 12-hour-33-minute window during which approximately 22,000 Spanish-dominant residents in the affected zones had no official notification. Teams that plot English vs. Spanish alert timestamps across all four emergency categories (evacuation, shelter, water, power) will find a systematic 8–14 hour lag pattern that is not random noise but the structural fingerprint of a single-language-first workflow. The gastroenteritis cluster in Districts 3–4 (Thread T16) that began D+15 reflects, in part, this notification delay: Spanish-dominant households had less time to begin boiling water before the pathogen load in the system caused illness. The pattern also exposes a gap in FEMA's disaster information line, which was English-only from D0 through D+7, leaving non-English speakers without federal information for 8 days after landfall (household aid itself was not approved until D+57).",
+    "lanes": [
+      "C",
+      "D"
+    ]
+  },
+  {
+    "thread_id": "T15",
+    "name": "Social Media Influence Operation",
+    "color": "#9b2c8f",
+    "scenario": "rafael",
+    "truth": "STATE-X operated a coordinated inauthentic behavior (CIB) network on social media beginning D-5, managed through the same KESTREL operational infrastructure used for the utility SCADA cyberattack (T8) and the covert actions against the port and the air station (T7). The network went through three distinct phases: pre-storm amplification of false evacuation routes and shelter locations designed to create congestion and distrust of official guidance; post-landfall blame deflection targeting CBPWA/ERCOT to suppress organic inquiry into anomalous outage patterns; and post-attribution suppression designed to discredit the CISA investigation announced D+21. Two specific accounts — @TXCoastalWatchdog and @NuecesLocalNews — posted high-volume ERCOT-blame content in Phase 2 and later resolved to ASN 198765 (a KESTREL-linked autonomous system block), the same ASN that hosted the VPN exit nodes used in the utility SCADA intrusion (T8). This infrastructure overlap is the KESTREL network's fingerprint connecting the social operation to the physical cyberattack. Teams that pursue the IP overlap trail from the CISA utility investigation into the platform content-removal data will find the two accounts and confirm the state-nexus. The false shelter location posts in Phase 1 directed an estimated 400–600 evacuees toward Zavala Elementary (which had been closed as a shelter) and away from the Richard King High School shelter, contributing to 2–3 hours of traffic confusion on US-181 northbound during the D-2 evacuation window.",
+    "lanes": [
+      "C",
+      "I"
+    ]
+  },
+  {
+    "thread_id": "T16",
+    "name": "Hospital Surge and Clinical Triage",
+    "color": "#2e7d6b",
+    "scenario": "rafael",
+    "truth": "Shoreline Regional Medical Center (SRMC) and Bay City Medical Center (BCMC) together experienced two distinct surge waves during Hurricane Rafael. The first wave (D0–D+7) was storm-trauma-driven and expected; SRMC hit 140% inpatient capacity by D+2, running on generator power from D0 through D+8 with a critical diesel supply crisis at D+5. The second wave (D+15–D+28) was an acute gastroenteritis cluster that most emergency managers initially attributed to displacement stress and food spoilage — but its precise geographic and temporal signature reveals it as a consequence of the T9 water-pressure manipulation. The gastroenteritis admissions, when geocoded, cluster in Districts 3–4 (the boil-water zone) with a 3-day lag from the Zone 4 pressure drop event (D+12) that confirmed the SCADA manipulation had succeeded. The cluster onset at D+15 is also 3 days after the English boil-water notice was issued (D+12) and 2 days after the Spanish notice reached KNCB (D+13). This timing difference is not coincidental: analysis of admission records by household primary language shows that Spanish-dominant households in Districts 3–4 had a statistically higher admission rate in the first 48 hours of the cluster (D+15–D+16) than English-dominant households in the same geographic area, consistent with 24 fewer hours of protective behavior (boiling water). The gastroenteritis cluster is thus independent epidemiological confirmation that (a) the water-pressure manipulation caused real pathogen exposure, and (b) the Spanish-language alert delay (T14) measurably worsened health outcomes. The public health finding is not classified; the connection to the deliberate SCADA manipulation is classified.",
+    "lanes": [
+      "C",
+      "D"
+    ]
+  },
+  {
+    "thread_id": "T17",
+    "name": "Search and rescue operations",
+    "color": "#c5520a",
+    "scenario": "rafael",
+    "truth": "Between D0 (06:00Z September 14, 2027) and D+5 (22:00Z September 19), Corpus Christi Fire Department, Nueces County Sheriff Search and Rescue, Texas Task Force 1, US Coast Guard Sector Corpus Christi, and 87 credentialed civilian vessel operators conducted 1,427 documented rescues across the greater Corpus Christi metro area. The worst flooding struck Flour Bluff (southern Mustang Island corridor), Calallen (northwest quadrant), and the low-lying neighborhoods of Districts 3 and 4 — the same zones later subject to the CBPWA boil-water advisory. Coast Guard HH-60 Jayhawk crews and contracted UAS operators using FLIR thermal imagers rescued 341 people from rooftops and second-story windows during the helicopter operations peak at D+1 06:00 CDT. Beginning D+7 and continuing through D+10, 11 SAR teams — primarily ground-water hybrid CCFD units — were dispatched to addresses in northwest and central Corpus Christi corresponding to the grid-anomaly zones near GW-FAC-SUB-02 (Harbor View Switching Station) and GW-FAC-SUB-03 (Crosstown Feeder Station) in response to 911 calls reporting trapped survivors. All 11 dispatches yielded no victims. Retrospective metadata analysis reveals the calls originated from prepaid burner phones using the same carrier prefix cluster identified in the T13 false-call corpus, strongly suggesting that STATE-X's KESTREL network deliberately drew SAR assets toward the utility attack zones at the precise window when CBPWA field crews were also being rerouted — a compound diversion intended to suppress physical inspection of the targeted substations during the relay configuration manipulation window.",
+    "lanes": [
+      "C",
+      "D"
+    ]
+  },
+  {
+    "thread_id": "T19",
+    "name": "Drone and counter-UAV surveillance",
+    "color": "#5c2d91",
+    "scenario": "rafael",
+    "truth": "Beginning D-10 (September 4, 2027), STATE-X KESTREL operatives conducted five pre-attack drone reconnaissance sorties over two critical infrastructure targets in the Corpus Christi area. Three sorties surveyed GW-FAC-SUB-01 (Riverside Switching Station, the 345/138 kV transmission import point at 4201 Up River Road) on D-10, D-9, and D-8. Two sorties surveyed the Inner Harbor oil docks at Rendal Terminals (TERM-01, the berth of the two tankers attacked in T6) on D-5 and D-3. All five sorties used commercial off-the-shelf DJI-class multirotor platforms modified with encrypted 2.4/5.8 GHz control links and an additional 900 MHz data-exfiltration channel. The drones operated exclusively at night between 00:00 and 04:00 local time, at altitudes between 400 and 600 ft AGL — above the effective range of commercial security cameras and below the typical radar floor for FAA TRACON surveillance. No LAANC authorizations existed for any of the five sorties. CBP Air and Marine Operations Corpus Christi (CAMCC) Predator B aircraft CAMCC-04, on a routine pre-storm maritime patrol at D-9, detected an anomalous RF emission at 01:47Z near Up River Road — consistent with the 900 MHz data-exfiltration channel — using its Lynx multimode radar and the onboard AN/APS-149 electronic support measures suite. The detection was logged as 'possible drone activity' and routed to the FAA Corpus Christi TRACON, which found no corresponding primary radar return and no LAANC authorization, but took no further action. Three Coast Guard radar buoys at the Corpus Christi Bay shipping channel entrance (Buoys R-14, R-18, and R-22) recorded small-RCS tracks on D-8, D-5, and D-3, each consistent with a multirotor UAV at 400-600 ft AGL. After unidentified drones began overflying NAS Corpus Christi and the Army depot on the nights of D+1 to D+10 (T7, EVT-0318), the pre-storm tracks were retrospectively identified as reconnaissance by CAMCC and Coast Guard Sector intelligence staff. There were no sightings after D+11, and covert drones never appear in ADS-B. Critical cross-thread link: RF bearing lines from CAMCC-04's D-9 detection and two Coast Guard buoy track vectors from D-8 were triangulated to Berth 7, Ingleside Marina (Ingleside, TX, across Corpus Christi Bay). AIS records show the motor yacht 'Narwhal Dream', registered to front company Nereid Maritime Holdings LLC, moored at Ingleside Marina Berth 7 from D-12 to D-7, when it went AIS-dark. The pre-storm activity became public only on D+15 (PUB-181).",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ]
+  },
+  {
+    "thread_id": "T20",
+    "name": "Environmental sensors and spill tracking",
+    "color": "#2d7a3f",
+    "scenario": "rafael",
+    "truth": "The T6 attack on the cargo-control systems of MT Kalvora Star and MT Ostrel Bay opens their cargo valves at the Rendal Terminals berth from 04:00Z to 05:30Z on D0 and releases about 9,000 barrels of crude into the Inner Harbor. Surge and wind carry the oil out of the ship channel into Nueces and Corpus Christi bays, about 85 km² by D+2. The release is masked at first by darkness, surge and debris. The water-quality sonde network (WQ-01 to WQ-06) registers it in sequence — the Inner Harbor stations within the hour, the bay stations over D+1 and D+2 — but the automated alerts sit unreviewed until D+2. The O.N. Stevens Water Treatment Plant raw water intake (FAC-UTL-01) detects hydrocarbon trace at D+2 06:00Z (TPH: 0.42 mg/L, threshold 0.10 mg/L). The intake detection is a critical cross-system signal: the same FAC-UTL-01 historian that records the hydrocarbon trace at D+2 also records the pump setpoint manipulations beginning D+9 (T9 thread). An analyst with access to the full historian sees two independent anomalies — hydrocarbon intrusion and pump manipulation — in the same facility, 7 days apart. NOAA runs trajectory models from D+2; fishing and shellfish harvesting close on D+4; the owners of the two tankers are designated responsible parties on D+7; cleanup with booms and skimmers runs from D+5 and the main slick is declared contained on D+20; 340 oiled birds are documented. Cleanup moves to monitoring on D+44, the 60-day assessment finds bay TPH at 0.03 mg/L, and fishing grounds partly reopen on D+115.",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ]
+  },
+  {
+    "thread_id": "T21",
+    "name": "Broadcast and emergency alert corpus",
+    "color": "#b5460f",
+    "scenario": "rafael",
+    "truth": "T21 is a meta-thread: it does not introduce hidden adversary actions but generates the audio layer for the entire Hurricane Rafael corpus. Every public event in the scenario — from the first hurricane warning to the boil-water notice to the cyber-investigation announcement — has a corresponding broadcast-format artifact. The 8 fictional outlets (OUT-01 through OUT-08 KNCB) produce distinct audio personas with specific voice parameters, pacing, and format conventions. The Emergency Alert System broadcasts 14 official alerts from D-2 through D+42; FEMA IPAWS sends 7 Wireless Emergency Alerts. Each EAS alert carries English and Spanish text, phonetic markup, and prosody markers. The critical hidden cross-thread signal in T21 is the 12-hour-33-minute delay between the English boil-water EAS alert (D+12 17:30 local) and the Spanish-language KNCB broadcast and community alert (D+13 06:03 local) — this delay is a data point in the equity and communications failure narrative (connects to T14 if that thread examines communications equity). The EAS broadcasts also inadvertently reveal information sequencing: the cyber-investigation announcement broadcast (D+21) is the first time the public learns that the power outages were not entirely storm-caused, and the broadcast timing and outlet selection for that announcement was coordinated by FEMA's Joint Field Office with CBPWA — a detail visible only in the JFO operations log and the broadcast scheduling metadata.",
+    "lanes": [
+      "C"
+    ]
+  },
+  {
+    "thread_id": "T22",
+    "name": "Insurance and disaster fraud",
+    "color": "#6b3fa0",
+    "scenario": "rafael",
+    "truth": "The T2 fraud ring, operating through Corpus Christi-based Landmark Pacific Holdings LLC (fictional property management company), had already inflated replacement values on 230 properties before the storm using a network of complicit appraisers and insurance brokers. Post-storm, the ring pivots immediately to claims fraud. Within 72 hours of landfall, ring director Renaldo Carver-Mossbach (fictional) activates 23 claim runners who sign up storm-damaged property owners as clients, skimming a portion of legitimate IA payments and filing separate fraudulent claims on their behalf. The ring also files 94 fraudulent FEMA Individual Assistance applications — all submitted from a single Landmark Pacific Holdings office at 4411 Leopard Street, Corpus Christi (fictional address) — using reused property damage photos matched to multiple different addresses. A secondary fraud enterprise, FastDry Coastal LLC (fictional), operates a water damage restoration scam in Districts 3-4, charging 400% above market rates and billing for work never completed. The FBI Corpus Christi Resident Agency opens Operation Sandbar at D+30 when the volume of suspicious claims triggers an automated fraud detection flag in FEMA's Enterprise Coordination and Information Management System (ECIMS). By D+60, investigators identify the IP clustering pattern: 94 IA applications from 12 addresses all share the IP address 198.51.100.44 (a Landmark Pacific Holdings office). By D+90, 14 arrests are made including Carver-Mossbach and two FastDry Coastal principals. The operation is announced publicly at D+90 in a press conference by the FBI and Texas DPS.",
+    "lanes": [
+      "C",
+      "I"
+    ]
+  },
+  {
+    "thread_id": "T8",
+    "name": "Grid intrusion",
+    "truth": "STATE-X/KESTREL pre-positioned on the CBPWA OT network before Hurricane Rafael, then activated relay configuration modifications on GW-FAC-SUB-01 through SUB-04 from D-3 through D+16, tripping breakers under cover of storm damage and deepening outages for approximately 32,000 customers beyond what the hurricane caused. The relay undervoltage trip threshold on GW-FAC-SUB-01 was raised from 0.88 pu to 0.94 pu, causing a premature trip at landfall. Subsequent breaker-open commands at SUB-02 and SUB-03 were sent remotely via the GW-SYS-JMP-01 jump host during the restoration period, re-blacking out areas that had just been re-energized. All commands used the stolen credential of CBPWA field engineer GW-ENG-VELA, who was on vacation.",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "phase_onset": 3,
+    "phase_peak": 4,
+    "detection_path_summary": "Three convergent indicators: (1) relay trip voltage at GW-FAC-SUB-01 on D0 is 1 mpu above the modified threshold but would not have tripped the original 0.88 pu setting — detectable by comparing the D0 EMS event log with the D-30 commissioning test report; (2) SCADA operator-command log on D+7 and D+10 shows breaker-OPEN commands from a workstation with no logged-in operator; (3) GW-SYS-JMP-01 session logs tie all command sessions to the same out-of-state IP blocks that conducted the D-7 reconnaissance."
+  },
+  {
+    "thread_id": "T9",
+    "name": "Water SCADA manipulation",
+    "truth": "The same KESTREL session that pre-staged the relay modifications also suppressed the low-pressure alarm in GW-SYS-SCADA-01 and lowered the discharge pressure setpoint on FAC-UTL-01 Pump P-3 from 85 psi to 68 psi at D+9, compounded by the GW-FAC-SUB-03 trip (D+10) that also cut the pump room backup feeder, dropping Zone 4 distribution pressure to 14 psi. This triggered a 30-day boil water notice for 48,000 residents (D+12 to D+42). The GW-FAC-WTR-03 (Colorado River Booster) historian records an unauthorized setpoint change at D+9 02:08Z that reduced upstream pipeline flow, compounding the shortage. The alarm suppression file in GW-SYS-SCADA-01, written on D-3 at the same time as the relay modifications, is the single artifact that ties T8 and T9 together.",
+    "lanes": [
+      "C",
+      "I"
+    ],
+    "phase_onset": 3,
+    "phase_peak": 4,
+    "detection_path_summary": "Key detection artifacts: (1) Meridian historian tag FAC-UTL-01-P3-SET-PSI drops from 85 to 68 at D+9 02:04Z under user 'GW-ENG-VELA' — the same compromised credential as the relay sessions; (2) the ZONE4-DIST-PSI pressure tag was below 20 psi for three days before the boil water notice, but no alarm fired — traceable to the D-3 alarm suppression change; (3) pump P-3 motor amperage dropped 11 A at the moment of setpoint change — inconsistent with any storm-related cause; (4) GW-FAC-WTR-03 historian corroborates the same session modified the booster setpoint 4 minutes later."
+  },
+  {
+    "thread_id": "T10",
+    "name": "Hiding in the storm",
+    "truth": "The intrusion was deliberately designed to blend with hurricane effects: relay modifications were staged during the storm-preparation freeze so that the D0 trip would look like protective action; the D+7 and D+10 breaker-open commands were timed to coincide with ERCOT restoration switching so that additional trips would be attributed to field-crew activity; water-pressure drop was left to progress slowly so it would be attributed to storm-damaged pipes rather than pump manipulation. The critical mismatch is that 32,000 customers in areas with measured peak gusts below 60 mph experienced multi-day outages inconsistent with historical hurricane restoration curves. Additionally, the adversary's VPN sessions continued through D+16 — well after the storm — and the KESTREL C2 infrastructure used for the utility intrusion overlaps with infrastructure used in the Rafael T6/T7 covert military attack thread, connecting both operations to STATE-X.",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ],
+    "phase_onset": 2,
+    "phase_peak": 4,
+    "detection_path_summary": "Three convergent detection paths: (1) Storm-footprint mismatch — overlay of Corpus Christi peak-gust contours against outage-duration map; the two longest-outage clusters (northwest and central) fall in the 50–65 mph gust band, while comparable areas from previous storms restored in <36 hours; (2) Temporal impossibility — the SCADA alarm suppression and relay modification timestamps (D-3) predate any storm damage, eliminating a storm-caused explanation; (3) KESTREL attribution — two of the 14 VPN session source IPs appear in the classified KESTREL IOC set shared with Texas Cyber Command under TLP:RED, connecting the utility attack to the STATE-X network that also ran the Rafael T6 tanker-valve attack and T7 covert port attack."
+  },
+  {
+    "thread_id": "T18",
+    "name": "Utility SOC / SIEM telemetry",
+    "color": "#1e5f8c",
+    "scenario": "gridwater",
+    "truth": "Beginning D-14 (August 31, 2027), CBPWA's Sentinel Edge 3.1 SIEM began logging the earliest observable indicators of Operation DRIFTGLASS — a spearphish payload executed on workstation GW-WS-IT-04, generating an outbound C2 beacon to a Vantage-flagged threat actor IP (104.21.88.43) at 03:17Z. Over the following six weeks, the CBPWA Security Operations Center received 23 adversary-correlated alerts across four categories: C2 beaconing (8), after-hours historian access (7), relay config file writes (5), and alarm suppression list changes (3). None of the 23 were escalated to incident status before D+18. The reason: a confluence of analyst fatigue and an engineered false-positive avalanche. Baseline SIEM volume was approximately 2,400 alerts per day. During the storm window (D-2 through D+3), volume surged to a peak of 18,340 alerts on D0 — generator failovers, comms drops, sensor timeouts, and cascading OT reconnect storms — pushing the false positive rate to 94.2%. The two SOC analysts on duty during D0 manually suppressed or mass-acknowledged 94% of incoming alerts using a 'storm mode' bulk-dismiss rule, inadvertently mass-dismissing three adversary-correlated alerts including a relay config write (GW-EVT-103) and an alarm suppression list change (GW-EVT-104). The KESTREL intrusion exploited the storm-window false-positive surge as deliberate operational cover. The critical turning point was D+18, when a historian access session from source ASN AS-209144 (a KESTREL-associated VPN exit node) queried relay configuration tags for all five CBPWA substations — a query pattern that an ML anomaly detection model trained on the historian access baseline identified as 3.8 sigma above baseline. This alert (GW-EVT-111) was the first adversary alert escalated to the CBPWA CISO, Dr. Fatima Al-Rasheed-Obinna, who initiated a formal security investigation that ultimately led to SCADA isolation at D+28.",
+    "lanes": [
+      "C",
+      "D",
+      "I"
+    ]
+  }
+]

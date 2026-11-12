@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Synthetic data tools and six-month scenario</title>
+<style>
+:root{--bg:#fff;--text:#2c2c2a;--muted:#5f5e5a;--box-fill:#f1efe8;--box-stroke:#b4b2a9}
+@media (prefers-color-scheme:dark){:root{--bg:#1f1f1e;--text:#f1efe8;--muted:#b4b2a9;--box-fill:#2c2c2a;--box-stroke:#5f5e5a}}
+body{margin:0;padding:24px 16px;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:720px;margin:0 auto}
+h1{font-size:20px;font-weight:500;margin:0 0 4px}
+p{font-size:14px;color:var(--muted);margin:0 0 16px}
+svg{width:100%;height:auto;display:block}
+h2{font-size:18px;font-weight:500;margin:32px 0 8px}
+a{color:#185FA5}
+@media (prefers-color-scheme:dark){a{color:#85B7EB}}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:8px;border-bottom:1px solid var(--box-stroke)}
+th{font-weight:500;color:var(--muted)}
+tr.grp td{background:var(--box-fill);font-weight:500}
+ul{font-size:14px;color:var(--muted);padding-left:20px}
+.t{font-size:14px;fill:var(--text)}
+.th{font-size:14px;font-weight:500;fill:var(--text)}
+.ts{font-size:12px;fill:var(--muted)}
+.box{fill:var(--box-fill);stroke:var(--box-stroke)}
+.c-teal rect{fill:#E1F5EE;stroke:#0F6E56}.c-teal .th{fill:#085041}.c-teal .ts{fill:#0F6E56}
+.c-purple rect{fill:#EEEDFE;stroke:#534AB7}.c-purple .th{fill:#3C3489}.c-purple .ts{fill:#534AB7}
+.c-coral rect{fill:#FAECE7;stroke:#993C1D}.c-coral .th{fill:#712B13}.c-coral .ts{fill:#993C1D}
+@media (prefers-color-scheme:dark){
+.c-teal rect{fill:#085041;stroke:#5DCAA5}.c-teal .th{fill:#9FE1CB}.c-teal .ts{fill:#5DCAA5}
+.c-purple rect{fill:#3C3489;stroke:#AFA9EC}.c-purple .th{fill:#CECBF6}.c-purple .ts{fill:#AFA9EC}
+.c-coral rect{fill:#712B13;stroke:#F0997B}.c-coral .th{fill:#F5C4B3}.c-coral .ts{fill:#F0997B}}
+</style>
+</head>
+<body>
+<main>
+<h1>Six-month scenario: civilian, DoD and IC</h1>
+<p>Fictional Gulf Coast hurricane season. All 15 data sources link through place, time and ID.</p>
+<svg viewBox="0 0 680 490" role="img"><title>Six-month hurricane scenario across civilian, DoD and intelligence community</title><desc>Grid of six months by three communities showing each community's action and the data sources it uses, with a footer naming the shared join keys.</desc>
+<g class="c-teal"><rect x="90" y="12" width="186" height="30" rx="4" stroke-width="0.5"/><text class="th" x="183" y="27" text-anchor="middle" dominant-baseline="central">Civilian agencies</text></g>
+<g class="c-purple"><rect x="282" y="12" width="186" height="30" rx="4" stroke-width="0.5"/><text class="th" x="375" y="27" text-anchor="middle" dominant-baseline="central">DoD</text></g>
+<g class="c-coral"><rect x="474" y="12" width="186" height="30" rx="4" stroke-width="0.5"/><text class="th" x="567" y="27" text-anchor="middle" dominant-baseline="central">Intelligence community</text></g>
+
+<text class="th" x="16" y="72">Month 1</text><text class="ts" x="16" y="92">Baseline</text>
+<g class="c-teal"><rect x="90" y="52" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="100" y="72" dominant-baseline="central">Map vulnerable areas</text><text class="ts" x="100" y="92" dominant-baseline="central">Census, infra maps</text></g>
+<g class="c-purple"><rect x="282" y="52" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="292" y="72" dominant-baseline="central">Readiness baseline</text><text class="ts" x="292" y="92" dominant-baseline="central">Telemetry, maintenance</text></g>
+<g class="c-coral"><rect x="474" y="52" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="484" y="72" dominant-baseline="central">Pattern of life</text><text class="ts" x="484" y="92" dominant-baseline="central">Ship, aircraft tracks</text></g>
+
+<text class="th" x="16" y="134">Month 2</text><text class="ts" x="16" y="154">Signals</text>
+<g class="c-teal"><rect x="90" y="114" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="100" y="134" dominant-baseline="central">Pre-stage supplies</text><text class="ts" x="100" y="154" dominant-baseline="central">Weather, gauges, stock</text></g>
+<g class="c-purple"><rect x="282" y="114" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="292" y="134" dominant-baseline="central">Plan lift and ports</text><text class="ts" x="292" y="154" dominant-baseline="central">Ship, aircraft tracks</text></g>
+<g class="c-coral"><rect x="474" y="114" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="484" y="134" dominant-baseline="central">Watch foreign ships</text><text class="ts" x="484" y="154" dominant-baseline="central">Imagery, AIS, SAR</text></g>
+
+<text class="th" x="16" y="196">Month 3</text><text class="ts" x="16" y="216">Landfall</text>
+<g class="c-teal"><rect x="90" y="176" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="100" y="196" dominant-baseline="central">Surge 911, ER care</text><text class="ts" x="100" y="216" dominant-baseline="central">911, ER, satellite SAR</text></g>
+<g class="c-purple"><rect x="282" y="176" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="292" y="196" dominant-baseline="central">Assess bases, depots</text><text class="ts" x="292" y="216" dominant-baseline="central">Drone video, telemetry</text></g>
+<g class="c-coral"><rect x="474" y="176" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="484" y="196" dominant-baseline="central">Track disinfo, hacks</text><text class="ts" x="484" y="216" dominant-baseline="central">Social media, net logs</text></g>
+
+<text class="th" x="16" y="258">Month 4</text><text class="ts" x="16" y="278">Response</text>
+<g class="c-teal"><rect x="90" y="238" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="100" y="258" dominant-baseline="central">Move relief supplies</text><text class="ts" x="100" y="278" dominant-baseline="central">Inventory, health data</text></g>
+<g class="c-purple"><rect x="282" y="238" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="292" y="258" dominant-baseline="central">Airlift civil relief</text><text class="ts" x="292" y="278" dominant-baseline="central">Aircraft tracks, stock</text></g>
+<g class="c-coral"><rect x="474" y="238" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="484" y="258" dominant-baseline="central">Flag dark vessels</text><text class="ts" x="484" y="278" dominant-baseline="central">AIS gaps, imagery</text></g>
+
+<text class="th" x="16" y="320">Month 5</text><text class="ts" x="16" y="340">Recovery</text>
+<g class="c-teal"><rect x="90" y="300" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="100" y="320" dominant-baseline="central">Pay and screen claims</text><text class="ts" x="100" y="340" dominant-baseline="central">Payments, net logs</text></g>
+<g class="c-purple"><rect x="282" y="300" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="292" y="320" dominant-baseline="central">Repair and restock</text><text class="ts" x="292" y="340" dominant-baseline="central">Maintenance, contracts</text></g>
+<g class="c-coral"><rect x="474" y="300" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="484" y="320" dominant-baseline="central">Attribute intrusions</text><text class="ts" x="484" y="340" dominant-baseline="central">Net logs, payments</text></g>
+
+<text class="th" x="16" y="382">Month 6</text><text class="ts" x="16" y="402">Review</text>
+<g class="c-teal"><rect x="90" y="362" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="100" y="382" dominant-baseline="central">Audit aid equity</text><text class="ts" x="100" y="402" dominant-baseline="central">Census, payments, maps</text></g>
+<g class="c-purple"><rect x="282" y="362" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="292" y="382" dominant-baseline="central">After-action review</text><text class="ts" x="292" y="402" dominant-baseline="central">Telemetry, supply</text></g>
+<g class="c-coral"><rect x="474" y="362" width="186" height="56" rx="4" stroke-width="0.5"/><text class="th" x="484" y="382" dominant-baseline="central">Assess influence ops</text><text class="ts" x="484" y="402" dominant-baseline="central">News, social, tracks</text></g>
+
+<rect class="box" x="90" y="430" width="570" height="34" rx="4" stroke-width="0.5"/>
+<text class="ts" x="375" y="447" text-anchor="middle" dominant-baseline="central">Shared join keys across all three lanes: place, time, ID (vessel, aircraft, serial, contract)</text>
+</svg>
+
+<h2>Synthetic data tools by data source</h2>
+<p>Fit: Strong = a tool handles it directly. Good = minor extra work. Partial = needs a simulator or domain rules. Weak = use real data. Items marked (unverified) came from background knowledge, not a fetched page.</p>
+<div class="scroll"><table>
+<thead><tr><th>Source (type)</th><th>Synthetic generators</th><th>Real open data</th><th>Simulators</th><th>Fit</th></tr></thead>
+<tbody>
+<tr class="grp"><td colspan="5">Sensors and imagery</td></tr>
+<tr><td>Satellite imagery (Imagery)</td><td><a href="https://developer.nvidia.com/omniverse/replicator">Omniverse Replicator</a>, <a href="https://github.com/DLR-RM/BlenderProc">BlenderProc</a>, <a href="https://github.com/Unity-Technologies/SynthDet">Unity Perception</a> (optical only)</td><td>Sentinel-1/2 via <a href="https://eo-toolbox-rtd.readthedocs.io/en/latest/access_data/copernicus_dataspace/copernicus.html">Copernicus Data Space</a>; <a href="https://alphaxiv.org/abs/1807.01232">SpaceNet</a>, <a href="https://astro.paperswithcode.com/paper/xview-objects-in-context-in-overhead-imagery">xView</a></td><td>Radar: <a href="https://github.com/ims-as-luh/sar-sim">sar-sim</a>, <a href="https://github.com/malenie/RaySAR">RaySAR</a>, <a href="https://github.com/pakodekker/oceansar">OCEANSAR</a>, <a href="https://elib.dlr.de/198716/1/SEMUS___An_Open_Source_RF_Level_SAR_Emulator_for_Spaceborne_Applications_with_Interference_Modelling.pdf">SEMUS</a></td><td>Partial</td></tr>
+<tr><td>Drone video (Video)</td><td>Replicator, Unity Perception</td><td>Public drone datasets (unverified)</td><td><a href="https://github.com/carla-simulator/carla">CARLA</a> (unverified for aerial use)</td><td>Good</td></tr>
+<tr><td>Ship tracks (Location tracks)</td><td><a href="https://github.com/vanderschaarlab/synthcity">SynthCity</a>, <a href="https://github.com/ydataai/ydata-synthetic">ydata-synthetic</a>, <a href="https://github.com/sdv-dev/SDV">SDV</a> (statistics only)</td><td><a href="https://www.fisheries.noaa.gov/inport/item/77594">NOAA MarineCadastre AIS</a> (to 2025; gaps common)</td><td>None found; custom generator</td><td>Weak</td></tr>
+<tr><td>Aircraft tracks (Location tracks)</td><td>SDV, SynthCity (statistics only)</td><td>OpenSky Network ADS-B (<a href="https://github.com/Airspace-Encounter-Models/em-processing-opensky">processing tools</a>)</td><td><a href="https://github.com/TUDelft-CNS-ATM/bluesky">BlueSky</a> (OpenAP models)</td><td>Partial</td></tr>
+<tr><td>Environmental sensors (Time series)</td><td>SDV (sequential), SynthCity, ydata-synthetic</td><td>Gauge and air-quality feeds (unverified)</td><td>None needed</td><td>Good</td></tr>
+<tr><td>Equipment telemetry (Time series)</td><td>SDV (sequential), SynthCity, ydata-synthetic</td><td>None public for most equipment</td><td>None needed</td><td>Good</td></tr>
+<tr class="grp"><td colspan="5">Operational records</td></tr>
+<tr><td>Maintenance records (Records + text)</td><td>SDV for structure; <a href="https://docs.nvidia.com/nemo/curator/latest/curate-text/synthetic/nemo-data-designer.md">NeMo Data Designer</a> or <a href="https://github.com/argilla-io/distilabel">distilabel</a> for notes</td><td>None public for most fleets</td><td>None needed</td><td>Good</td></tr>
+<tr><td>Supply and inventory (Records)</td><td>SDV (multi-table), <a href="https://github.com/joke2k/faker">Faker</a>, <a href="https://github.com/lk-geimfari/mimesis">Mimesis</a></td><td>None</td><td>None needed</td><td>Strong</td></tr>
+<tr><td>Network security logs (Event logs)</td><td>NeMo Data Designer, SDV, Faker with templates</td><td>Public security-log datasets (unverified)</td><td>None found; attack patterns need domain rules</td><td>Partial</td></tr>
+<tr><td>Emergency 911 calls (Records + text)</td><td>SDV for time, location, type; NeMo Data Designer or distilabel for notes</td><td>Public incident feeds (unverified)</td><td>None needed</td><td>Good</td></tr>
+<tr><td>Payments and claims (Transactions)</td><td>SDV, <a href="https://github.com/sdv-dev/CTGAN">CTGAN</a>, SynthCity, Faker for identifiers</td><td>None public at transaction level</td><td>None needed</td><td>Strong</td></tr>
+<tr class="grp"><td colspan="5">Open and public data</td></tr>
+<tr><td>Weather and climate (Forecast grids)</td><td><a href="https://github.com/NVIDIA/earth2studio">Earth2Studio</a> AI pipelines; cBottle</td><td>GFS, HRRR, IFS, ERA5, IBTrACS via Earth2Studio (licenses vary)</td><td>WRF (unverified)</td><td>Partial; use real data</td></tr>
+<tr><td>Infrastructure maps (Map layers)</td><td>None purpose-built</td><td><a href="https://overturemaps.org/announcements/2026/overture-maps-foundation-reaches-50-members-as-industry-converges-on-open-data-to-ground-ai/">Overture Maps</a> (some ODbL), OpenStreetMap. HIFLD Open is shut down; see <a href="https://projectgeospatial.squarespace.com/geospatial-frontiers/the-phoenix-project-a-challenge-to-the-community-to-forge-an-open-source-successor-to-hifld">proposed successor</a></td><td>SUMO, OSMnx (unverified)</td><td>Weak; use real data</td></tr>
+<tr><td>Census demographics (Statistics by area)</td><td>SDV, SynthCity; Faker, Mimesis (people)</td><td>US Census data (unverified)</td><td>None needed</td><td>Strong</td></tr>
+<tr><td>News and social media (Text + images)</td><td>NeMo Data Designer, distilabel, <a href="https://www.sourcepulse.org/projects/1841752">Argilla generator</a>; Replicator or BlenderProc for images</td><td>Public feeds (unverified; terms vary)</td><td>None needed</td><td>Good for text, moderate for images</td></tr>
+<tr><td>Public health data (Statistics by area)</td><td><a href="https://github.com/synthetichealth/synthea">Synthea</a>; SDV or SynthCity for aggregates</td><td>Public health feeds (unverified)</td><td>Synthea (patient simulator)</td><td>Good</td></tr>
+</tbody></table></div>
+
+<h2>Tool reference</h2>
+<div class="scroll"><table>
+<thead><tr><th>Tool</th><th>Data types</th><th>License / status</th></tr></thead>
+<tbody>
+<tr><td><a href="https://github.com/sdv-dev/SDV">SDV</a></td><td>Tabular, multi-table, time series</td><td>Business Source License</td></tr>
+<tr><td>CTGAN / <a href="https://github.com/sdv-dev/Copulas/blob/master/LICENSE">Copulas</a></td><td>Tabular</td><td>Copulas: BSL 1.1, converts to MIT after a change date</td></tr>
+<tr><td>ydata-synthetic</td><td>Tabular, time series</td><td>Streamlit UI since 1.0.0</td></tr>
+<tr><td>SynthCity</td><td>Tabular, time series, survival</td><td>Fairness, privacy, evaluation</td></tr>
+<tr><td><a href="https://github.com/mostly-ai/mostlyai">MOSTLY AI SDK</a></td><td>Tabular, relational</td><td>Runs locally; licensing not confirmed</td></tr>
+<tr><td><a href="https://github.com/gretelai/gretel-synthetics">gretel-synthetics</a></td><td>Tabular, text, time series</td><td>Reportedly archived Feb 2026 after NVIDIA acquisition</td></tr>
+<tr><td>Faker, Mimesis</td><td>Fake field values</td><td>No cross-column statistics</td></tr>
+<tr><td>Synthea</td><td>Patient records</td><td>Healthcare simulator</td></tr>
+<tr><td>NeMo Data Designer</td><td>LLM text, structured data</td><td>Works with NeMo Curator and NIM</td></tr>
+<tr><td>distilabel, Argilla generator</td><td>LLM text</td><td>Argilla repo showed no commits for 6 months</td></tr>
+<tr><td>Replicator, BlenderProc, Unity Perception / SynthDet</td><td>Labeled images, depth, segmentation</td><td>SynthDet: Apache 2.0</td></tr>
+<tr><td>CARLA</td><td>Driving sensor data</td><td>Simulator</td></tr>
+<tr><td>BlueSky</td><td>Aircraft traffic</td><td>TU Delft simulator</td></tr>
+<tr><td>sar-sim, RaySAR, OCEANSAR</td><td>SAR radar images</td><td>Maintenance and licenses not checked</td></tr>
+</tbody></table></div>
+
+<h2>Gaps and caveats</h2>
+<ul>
+<li>No open generator found for ship-traffic simulation, weather grids or infrastructure maps; use real open data.</li>
+<li>Not verified in searches: Landsat access, WRF, SUMO, OSMnx, and the real-data feeds marked (unverified).</li>
+<li>Check the license and maintenance status of every tool before use. SDV and Copulas use the Business Source License.</li>
+</ul>
+</main>
+</body>
+</html>

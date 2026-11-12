@@ -1,0 +1,1450 @@
+{
+ "_about": "Internal. Scenario roles of vessels, scenario sets, and the map from every old identifier. Never give this file to participants.",
+ "truth": {
+  "VSL-0041": {
+   "role": "Laden tanker at TERM-01 Berth 7 from D-3; cargo valves opened remotely 04:00Z-05:30Z D0 (with VSL-0042, about 9,000 bbl). Never leaves the berth during the scenario (Captain of the Port order from D+6; departure not set in canon).",
+   "threads": [
+    "T6",
+    "T12",
+    "T20"
+   ],
+   "events": [
+    "EVT-0209",
+    "EVT-0210",
+    "EVT-0313",
+    "EVT-1203",
+    "EVT-1207"
+   ],
+   "public_name_from_day": 1
+  },
+  "VSL-0042": {
+   "role": "Second laden tanker at TERM-01 Berth 8; same attack.",
+   "threads": [
+    "T6",
+    "T12",
+    "T20"
+   ],
+   "events": [
+    "EVT-0209",
+    "EVT-0210",
+    "EVT-0313",
+    "EVT-1203",
+    "EVT-1207"
+   ],
+   "public_name_from_day": 1
+  },
+  "VSL-0012": {
+   "role": "Relief ship with 40 containers booked D-5; held offshore from D-2; rides out the storm at sea; waits at the anchorage D+3 to D+33; berths at TERM-07 on D+33.",
+   "threads": [
+    "T1",
+    "T5"
+   ],
+   "events": [
+    "EVT-0204",
+    "EVT-0207",
+    "EVT-0401"
+   ]
+  },
+  "VSL-0019": {
+   "role": "Sealift ship for the Fort Hood aviation brigade; outload postponed D-3, restart planned D+45, loads and sails D+59 to D+64. The name 'MV Cape Sandoval' is new in this registry; the Army never names the ship publicly.",
+   "threads": [
+    "T7"
+   ],
+   "events": [
+    "EVT-0207",
+    "EVT-0409"
+   ],
+   "public_name": "never (described only as a sealift ship)"
+  },
+  "VSL-0031": {
+   "role": "Sanctioned tanker serving STATE-X. Loiters at the offshore anchorage from D-45 under its true MMSI; in the Yankee queue; puts to sea at Zulu and returns D+3; AIS silent 02:00Z-16:00Z on D+30/31 while it broadcasts FV Pelican Ridge's MMSI, lays DEV-01 and DEV-02 about 2 nm off the entrance channel (04:20Z) and transfers 380 m3 of fuel to Barge 44 (09:30Z).",
+   "threads": [
+    "T2",
+    "T7",
+    "T12"
+   ],
+   "events": [
+    "EVT-0104",
+    "EVT-0207",
+    "EVT-0402",
+    "EVT-0403",
+    "EVT-0411",
+    "EVT-1201",
+    "EVT-1203"
+   ],
+   "public_name": "never",
+   "ais_rule": "no AIS gap before D+30 21:00 local; never enters the port; files no notice of arrival"
+  },
+  "VSL-0457": {
+   "role": "Real fishing vessel, about 600 nm away in the northeastern Gulf on D+30/31, whose MMSI is broadcast by VSL-0031 off Port Aransas. Home port Panama City, Florida (set in this registry so the 600 nm figure holds: Port Aransas to Cape San Blas is about 590-625 nm).",
+   "threads": [
+    "T2"
+   ],
+   "events": [
+    "EVT-0402"
+   ],
+   "public_name_from_day": 38
+  },
+  "BRG-0044": {
+   "role": "Receives 380 m3 of fuel from VSL-0031 alongside at the anchorage (radar: two hulls, one with no AIS match) at 09:30Z D+31 and delivers it up the ship channel to TERM-02 (SUP-0390, Quellmar) on D+32.",
+   "threads": [
+    "T2",
+    "T3"
+   ],
+   "events": [
+    "EVT-0403",
+    "EVT-0404"
+   ],
+   "public_name": "never",
+   "pushed_by": "VSL-0294"
+  },
+  "VSL-0294": {
+   "role": "Towboat that pushes Barge 44 on D+31/32 (pairing chosen in the registry pass; canon names only the barge)."
+  },
+  "VSL-0077": {
+   "role": "Harbor tug damaged when DEV-01 detonates beside it near the Port Aransas jetties at 06:10Z D+44; two crew injured (master Ray Dupree, deckhand Eddie Fontenot). Repaired at TERM-20 afterwards.",
+   "threads": [
+    "T7"
+   ],
+   "events": [
+    "EVT-0413"
+   ],
+   "public_name_from_day": 44
+  },
+  "VSL-0481": {
+   "role": "Front-company yacht (Nereid Maritime Holdings LLC) used as the launch point for the pre-storm drone sorties; at Ingleside Marina Berth 7 (SLIP-ING-07) D-12 to D-8, AIS last seen 2027-09-07T00:14Z, then dark.",
+   "threads": [
+    "T19"
+   ],
+   "events": [
+    "EVT-1901",
+    "EVT-1902",
+    "EVT-1903",
+    "EVT-1906"
+   ],
+   "public_name": "never"
+  },
+  "VSL-0104": {
+   "role": "Ordinary Suezmax with a similar name to VSL-0031; a deliberate distractor."
+  },
+  "VSL-0342": {
+   "role": "Navy channel search after the jetty blast, D+46 to D+58 (EOD and mine countermeasures); the salvage ship supports the spill response from about D+3 (Navy salvage equipment requested D+1).",
+   "events": [
+    "EVT-0315",
+    "EVT-0414"
+   ]
+  },
+  "VSL-0343": {
+   "role": "Navy channel search after the jetty blast, D+46 to D+58 (EOD and mine countermeasures); the salvage ship supports the spill response from about D+3 (Navy salvage equipment requested D+1).",
+   "events": [
+    "EVT-0315",
+    "EVT-0414"
+   ]
+  },
+  "VSL-0344": {
+   "role": "Navy channel search after the jetty blast, D+46 to D+58 (EOD and mine countermeasures); the salvage ship supports the spill response from about D+3 (Navy salvage equipment requested D+1).",
+   "events": [
+    "EVT-0315",
+    "EVT-0414"
+   ]
+  },
+  "VSL-0341": {
+   "role": "Navy channel search after the jetty blast, D+46 to D+58 (EOD and mine countermeasures); the salvage ship supports the spill response from about D+3 (Navy salvage equipment requested D+1).",
+   "events": [
+    "EVT-0315",
+    "EVT-0414"
+   ]
+  }
+ },
+ "scenario_sets": {
+  "yankee_queue_14": {
+   "what": "The 14 inbound vessels holding at the offshore anchorage under Port Condition Yankee (D-2 to D-1 18:00 local)",
+   "vessels": [
+    "VSL-0012",
+    "VSL-0031",
+    "VSL-0101",
+    "VSL-0102",
+    "VSL-0103",
+    "VSL-0104",
+    "VSL-0105",
+    "VSL-0106",
+    "VSL-0151",
+    "VSL-0152",
+    "VSL-0202",
+    "VSL-0203",
+    "VSL-0173",
+    "VSL-0108"
+   ],
+   "sources": [
+    "EVT-0207",
+    "PUB-107"
+   ],
+   "note": "Canon names only Gulf Provider and Halcyon Drift; the other twelve are chosen here."
+  },
+  "brightwake_fleet": {
+   "what": "Tankers whose cargo-control systems are maintained by Brightwake Marine Systems (credentials misused; public D+8)",
+   "vessels": [
+    "VSL-0041",
+    "VSL-0042",
+    "VSL-0102",
+    "VSL-0104",
+    "VSL-0106",
+    "VSL-0109",
+    "VSL-0110",
+    "VSL-0114",
+    "VSL-0118",
+    "VSL-0122",
+    "VSL-0154",
+    "VSL-0173",
+    "VSL-0177"
+   ],
+   "note": "Only VSL-0041 and VSL-0042 were attacked."
+  },
+  "storm_riders": {
+   "what": "Ships that put to sea at Zulu and return to the anchorage on D+3",
+   "vessels": [
+    "VSL-0012",
+    "VSL-0031",
+    "VSL-0101",
+    "VSL-0102",
+    "VSL-0103",
+    "VSL-0104",
+    "VSL-0105",
+    "VSL-0106",
+    "VSL-0151",
+    "VSL-0152",
+    "VSL-0202",
+    "VSL-0203",
+    "VSL-0173",
+    "VSL-0108"
+   ]
+  },
+  "spill_response": {
+   "what": "Vessels working the Inner Harbor spill from D+2",
+   "vessels": [
+    "VSL-0351",
+    "VSL-0352",
+    "VSL-0353",
+    "VSL-0354",
+    "VSL-0355"
+   ]
+  }
+ },
+ "id_migration": {
+  "by_old_vessel_id": {
+   "VSL-001": {
+    "new_vessel_id": "VSL-0041",
+    "old_name": "MT Kalvora Star"
+   },
+   "VSL-002": {
+    "new_vessel_id": "VSL-0042",
+    "old_name": "MT Ostrel Bay"
+   },
+   "VSL-003": {
+    "new_vessel_id": "VSL-0012",
+    "old_name": "MV Gulf Provider"
+   },
+   "VSL-004": {
+    "new_vessel_id": "VSL-0457",
+    "old_name": "FV Pelican Ridge"
+   },
+   "VSL-005": {
+    "new_vessel_id": "VSL-0077",
+    "old_name": "Corrin Bay"
+   },
+   "VSL-006": {
+    "new_vessel_id": "VSL-0101",
+    "old_name": "MT Valdris Sun"
+   },
+   "VSL-007": {
+    "new_vessel_id": "VSL-0102",
+    "old_name": "MT Brazos Star"
+   },
+   "VSL-008": {
+    "new_vessel_id": "VSL-0103",
+    "old_name": "MT Orinda Bay"
+   },
+   "VSL-009": {
+    "new_vessel_id": "VSL-0104",
+    "old_name": "MT Halcyon Aegis"
+   },
+   "VSL-010": {
+    "new_vessel_id": "VSL-0105",
+    "old_name": "MT Narvik Pioneer"
+   },
+   "VSL-011": {
+    "new_vessel_id": "VSL-0171",
+    "old_name": "MT Sennar Gulf"
+   },
+   "VSL-012": {
+    "new_vessel_id": "VSL-0106",
+    "old_name": "MT Corpus Prince"
+   },
+   "VSL-013": {
+    "new_vessel_id": "VSL-0151",
+    "old_name": "MT Pacific Prism"
+   },
+   "VSL-014": {
+    "new_vessel_id": "VSL-0172",
+    "old_name": "MT Gulf Chemist"
+   },
+   "VSL-015": {
+    "new_vessel_id": "VSL-0173",
+    "old_name": "MT Aransas Spirit"
+   },
+   "VSL-016": {
+    "new_vessel_id": "VSL-0152",
+    "old_name": "MT Galveston Star"
+   },
+   "VSL-017": {
+    "new_vessel_id": "VSL-0201",
+    "old_name": "MV Nueces Trader"
+   },
+   "VSL-018": {
+    "new_vessel_id": "VSL-0202",
+    "old_name": "MV Sable Horizon"
+   },
+   "VSL-019": {
+    "new_vessel_id": "VSL-0203",
+    "old_name": "MV Capehorn Eagle"
+   },
+   "VSL-020": {
+    "new_vessel_id": "VSL-0204",
+    "old_name": "MV Gulf Petcoke"
+   },
+   "VSL-021": {
+    "new_vessel_id": "VSL-0271",
+    "old_name": "Laguna Queen"
+   },
+   "VSL-022": {
+    "new_vessel_id": "VSL-0272",
+    "old_name": "Rockport Mariner"
+   },
+   "VSL-023": {
+    "new_vessel_id": "VSL-0301",
+    "old_name": "CCPILOT-1"
+   },
+   "VSL-024": {
+    "new_vessel_id": "VSL-0302",
+    "old_name": "CCPILOT-2"
+   },
+   "VSL-025": {
+    "new_vessel_id": "VSL-0261",
+    "old_name": "MV Deepwater Scout"
+   },
+   "VSL-026": {
+    "new_vessel_id": "VSL-0262",
+    "old_name": "MV Gulf Surveyor"
+   },
+   "VSL-027": {
+    "new_vessel_id": "VSL-0321",
+    "old_name": "USCGC Dependable"
+   },
+   "VSL-028": {
+    "new_vessel_id": "VSL-0323",
+    "old_name": "USCGC Capelin"
+   }
+  },
+  "by_old_mmsi": {
+   "538847203": {
+    "new_vessel_id": "VSL-0041",
+    "new_name": "MT Kalvora Star",
+    "new_mmsi": "538847203",
+    "old_name": "MT Kalvora Star"
+   },
+   "352091748": {
+    "new_vessel_id": "VSL-0042",
+    "new_name": "MT Ostrel Bay",
+    "new_mmsi": "352091748",
+    "old_name": "MT Ostrel Bay"
+   },
+   "308441927": {
+    "new_vessel_id": "VSL-0012",
+    "new_name": "MV Gulf Provider",
+    "new_mmsi": "308441927",
+    "old_name": "MV Gulf Provider"
+   },
+   "338724891": {
+    "new_vessel_id": "VSL-0457",
+    "new_name": "FV Pelican Ridge",
+    "new_mmsi": "338724891",
+    "old_name": "FV Pelican Ridge"
+   },
+   "338190847": {
+    "new_vessel_id": "VSL-0077",
+    "new_name": "Corrin Bay",
+    "new_mmsi": "338190847",
+    "old_name": "Corrin Bay"
+   },
+   "636094183": {
+    "new_vessel_id": "VSL-0101",
+    "new_name": "MT Valdris Sun",
+    "new_mmsi": "636231598",
+    "old_name": "MT Valdris Sun"
+   },
+   "538261094": {
+    "new_vessel_id": "VSL-0102",
+    "new_name": "MT Brazos Star",
+    "new_mmsi": "538127521",
+    "old_name": "MT Brazos Star"
+   },
+   "352874016": {
+    "new_vessel_id": "VSL-0103",
+    "new_name": "MT Orinda Bay",
+    "new_mmsi": "352398167",
+    "old_name": "MT Orinda Bay"
+   },
+   "248137094": {
+    "new_vessel_id": "VSL-0104",
+    "new_name": "MT Halcyon Aegis",
+    "new_mmsi": "248934326",
+    "old_name": "MT Halcyon Aegis"
+   },
+   "308594720": {
+    "new_vessel_id": "VSL-0105",
+    "new_name": "MT Narvik Pioneer",
+    "new_mmsi": "257983477",
+    "old_name": "MT Narvik Pioneer"
+   },
+   "237849102": {
+    "new_vessel_id": "VSL-0171",
+    "new_name": "MT Sennar Gulf",
+    "new_mmsi": "240460867",
+    "old_name": "MT Sennar Gulf"
+   },
+   "538482730": {
+    "new_vessel_id": "VSL-0106",
+    "new_name": "MT Corpus Prince",
+    "new_mmsi": "538388829",
+    "old_name": "MT Corpus Prince"
+   },
+   "538371849": {
+    "new_vessel_id": "VSL-0151",
+    "new_name": "MT Pacific Prism",
+    "new_mmsi": "538574848",
+    "old_name": "MT Pacific Prism"
+   },
+   "352047183": {
+    "new_vessel_id": "VSL-0172",
+    "new_name": "MT Gulf Chemist",
+    "new_mmsi": "352911786",
+    "old_name": "MT Gulf Chemist"
+   },
+   "636184027": {
+    "new_vessel_id": "VSL-0173",
+    "new_name": "MT Aransas Spirit",
+    "new_mmsi": "636671499",
+    "old_name": "MT Aransas Spirit"
+   },
+   "248291047": {
+    "new_vessel_id": "VSL-0152",
+    "new_name": "MT Galveston Star",
+    "new_mmsi": "248934027",
+    "old_name": "MT Galveston Star"
+   },
+   "352739841": {
+    "new_vessel_id": "VSL-0201",
+    "new_name": "MV Nueces Trader",
+    "new_mmsi": "352170227",
+    "old_name": "MV Nueces Trader"
+   },
+   "636027849": {
+    "new_vessel_id": "VSL-0202",
+    "new_name": "MV Sable Horizon",
+    "new_mmsi": "636617258",
+    "old_name": "MV Sable Horizon"
+   },
+   "538109473": {
+    "new_vessel_id": "VSL-0203",
+    "new_name": "MV Capehorn Eagle",
+    "new_mmsi": "538008157",
+    "old_name": "MV Capehorn Eagle"
+   },
+   "308728401": {
+    "new_vessel_id": "VSL-0204",
+    "new_name": "MV Gulf Petcoke",
+    "new_mmsi": "311684055",
+    "old_name": "MV Gulf Petcoke"
+   },
+   "338047291": {
+    "new_vessel_id": "VSL-0271",
+    "new_name": "Laguna Queen",
+    "new_mmsi": "367554881",
+    "old_name": "Laguna Queen"
+   },
+   "338284017": {
+    "new_vessel_id": "VSL-0272",
+    "new_name": "Rockport Mariner",
+    "new_mmsi": "367608374",
+    "old_name": "Rockport Mariner"
+   },
+   "338119047": {
+    "new_vessel_id": "VSL-0301",
+    "new_name": "Aransas Pilot I",
+    "new_mmsi": "367850078",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "CCPILOT-1"
+   },
+   "338119048": {
+    "new_vessel_id": "VSL-0302",
+    "new_name": "Aransas Pilot II",
+    "new_mmsi": "367487046",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "CCPILOT-2"
+   },
+   "338471028": {
+    "new_vessel_id": "VSL-0261",
+    "new_name": "MV Deepwater Scout",
+    "new_mmsi": "367450180",
+    "old_name": "MV Deepwater Scout"
+   },
+   "338284901": {
+    "new_vessel_id": "VSL-0262",
+    "new_name": "MV Gulf Surveyor",
+    "new_mmsi": "367068081",
+    "old_name": "MV Gulf Surveyor"
+   },
+   "338130026": {
+    "new_vessel_id": "VSL-0321",
+    "new_name": "USCGC Resolute Bay",
+    "new_mmsi": "369530490",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "USCGC Dependable"
+   },
+   "338130074": {
+    "new_vessel_id": "VSL-0323",
+    "new_name": "USCGC Cormorant Point",
+    "new_mmsi": "369092173",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "USCGC Capelin"
+   },
+   "229183047": {
+    "new_vessel_id": "VSL-0231",
+    "new_name": "MV Adriatic Carrier",
+    "new_mmsi": "248851149",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "Adriatic Carrier"
+   },
+   "319041827": {
+    "new_vessel_id": "VSL-0117",
+    "new_name": "MT Bayou Spirit",
+    "new_mmsi": "311572772",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "Bayou Spirit"
+   },
+   "338109472": {
+    "new_vessel_id": "VSL-0122",
+    "new_name": "MT Aldebaran Trader",
+    "new_mmsi": "209931775",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "Gulf Meridian"
+   },
+   "371204893": {
+    "new_vessel_id": "VSL-0118",
+    "new_name": "MT Santos Provider",
+    "new_mmsi": "352086571",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "Santos Provider"
+   },
+   "416002317": {
+    "new_vessel_id": "VSL-0031",
+    "new_name": "MV Halcyon Drift",
+    "new_mmsi": "511836259",
+    "old_name": "MV Halcyon Drift"
+   },
+   "477291038": {
+    "new_vessel_id": "VSL-0232",
+    "new_name": "MV Pacific Trader",
+    "new_mmsi": "477197225",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "Pacific Trader"
+   },
+   "503082914": {
+    "new_vessel_id": "VSL-0233",
+    "new_name": "MV Coastal Endeavor",
+    "new_mmsi": "305603093",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "Coastal Endeavor"
+   },
+   "338491027": {
+    "new_vessel_id": "VSL-0107",
+    "new_name": "MT Lone Star Carrier",
+    "new_mmsi": "538523635",
+    "old_name": "MT Lone Star Carrier"
+   },
+   "352918473": {
+    "new_vessel_id": "VSL-0122",
+    "new_name": "MT Aldebaran Trader",
+    "new_mmsi": "209931775",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT Rio Grande Tanker"
+   },
+   "308192847": {
+    "new_vessel_id": "VSL-0234",
+    "new_name": "MV San Antonio Bay",
+    "new_mmsi": "311107973",
+    "old_name": "MV San Antonio Bay"
+   },
+   "538284017": {
+    "new_vessel_id": "VSL-0153",
+    "new_name": "MT Ingleside Star",
+    "new_mmsi": "311515558",
+    "old_name": "MT Ingleside Star"
+   },
+   "636209481": {
+    "new_vessel_id": "VSL-0238",
+    "new_name": "MV Port Royal",
+    "new_mmsi": "636313182",
+    "old_name": "MV Port Royal"
+   },
+   "248309471": {
+    "new_vessel_id": "VSL-0177",
+    "new_name": "MT Copano Mist",
+    "new_mmsi": "538095179",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT Nueces Bay Tanker"
+   },
+   "352840192": {
+    "new_vessel_id": "VSL-0120",
+    "new_name": "MT Harbor Bay",
+    "new_mmsi": "477069936",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT Harbor Bay Crude"
+   },
+   "308571038": {
+    "new_vessel_id": "VSL-0235",
+    "new_name": "MV Coastal Express",
+    "new_mmsi": "305488239",
+    "old_name": "MV Coastal Express"
+   },
+   "538192047": {
+    "new_vessel_id": "VSL-0175",
+    "new_name": "MT Tarpon Reach",
+    "new_mmsi": "563289865",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT South Texas Product"
+   },
+   "636084710": {
+    "new_vessel_id": "VSL-0234",
+    "new_name": "MV San Antonio Bay",
+    "new_mmsi": "311107973",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MV Corpus Bay Freighter"
+   },
+   "248174029": {
+    "new_vessel_id": "VSL-0119",
+    "new_name": "MT La Quinta Express",
+    "new_mmsi": "248077259",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT La Quinta Crude"
+   },
+   "352190847": {
+    "new_vessel_id": "VSL-0174",
+    "new_name": "MT Rockport Trader",
+    "new_mmsi": "538974848",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT Galveston Product"
+   },
+   "308471039": {
+    "new_vessel_id": "VSL-0235",
+    "new_name": "MV Coastal Express",
+    "new_mmsi": "305488239",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MV Aransas Pass Cargo"
+   },
+   "538084710": {
+    "new_vessel_id": "VSL-0172",
+    "new_name": "MT Gulf Chemist",
+    "new_mmsi": "352911786",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT CC Chemical I"
+   },
+   "636172039": {
+    "new_vessel_id": "VSL-0176",
+    "new_name": "MT Laguna Verde",
+    "new_mmsi": "248790499",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT CC Chemical II"
+   },
+   "248481029": {
+    "new_vessel_id": "VSL-0108",
+    "new_name": "MT Storm Rider",
+    "new_mmsi": "248125690",
+    "old_name": "MT Storm Rider"
+   },
+   "308284710": {
+    "new_vessel_id": "VSL-0236",
+    "new_name": "MV Gulf Rebuilder",
+    "new_mmsi": "367087182",
+    "old_name": "MV Gulf Rebuilder"
+   },
+   "338290481": {
+    "new_vessel_id": "VSL-0324",
+    "new_name": "USCGC Live Oak",
+    "new_mmsi": "369509450",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "USCGC Elm Buoy Tender"
+   },
+   "338481029": {
+    "new_vessel_id": "VSL-0362",
+    "new_name": "SV Tejas Sounder",
+    "new_mmsi": "369953929",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MV Army Corps Pioneer"
+   },
+   "538491038": {
+    "new_vessel_id": "VSL-0154",
+    "new_name": "MT Lone Star Aurora",
+    "new_mmsi": "257516483",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT Lone Star LNG"
+   },
+   "636491038": {
+    "new_vessel_id": "VSL-0109",
+    "new_name": "MT Ingleside Pride",
+    "new_mmsi": "636610799",
+    "old_name": "MT Ingleside Pride"
+   },
+   "248591038": {
+    "new_vessel_id": "VSL-0113",
+    "new_name": "MT Maverick Bay",
+    "new_mmsi": "352641431",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT South Padre Crude"
+   },
+   "352291048": {
+    "new_vessel_id": "VSL-0174",
+    "new_name": "MT Rockport Trader",
+    "new_mmsi": "538974848",
+    "old_name": "MT Rockport Trader"
+   },
+   "308591048": {
+    "new_vessel_id": "VSL-0251",
+    "new_name": "MV Roosevelt Island",
+    "new_mmsi": "311939504",
+    "old_name": "MV Roosevelt Island"
+   },
+   "352047281": {
+    "new_vessel_id": "VSL-0110",
+    "new_name": "MT Nueces Sunrise",
+    "new_mmsi": "352104632",
+    "old_name": "MT Nueces Sunrise"
+   },
+   "338592018": {
+    "new_vessel_id": "VSL-0107",
+    "new_name": "MT Lone Star Carrier",
+    "new_mmsi": "538523635",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT Lone Star Crude 2"
+   },
+   "248691048": {
+    "new_vessel_id": "VSL-0119",
+    "new_name": "MT La Quinta Express",
+    "new_mmsi": "248077259",
+    "old_name": "MT La Quinta Express"
+   },
+   "636291048": {
+    "new_vessel_id": "VSL-0111",
+    "new_name": "MT Permian Sun",
+    "new_mmsi": "636203266",
+    "old_name": "MT Permian Sun"
+   },
+   "248482019": {
+    "new_vessel_id": "VSL-0112",
+    "new_name": "MT Gulf Knight",
+    "new_mmsi": "240769057",
+    "old_name": "MT Gulf Knight"
+   },
+   "352183047": {
+    "new_vessel_id": "VSL-0113",
+    "new_name": "MT Maverick Bay",
+    "new_mmsi": "352641431",
+    "old_name": "MT Maverick Bay"
+   },
+   "538591047": {
+    "new_vessel_id": "VSL-0114",
+    "new_name": "MT Chinook Spirit",
+    "new_mmsi": "538267169",
+    "old_name": "MT Chinook Spirit"
+   },
+   "636047292": {
+    "new_vessel_id": "VSL-0205",
+    "new_name": "MV Diamond Bulk",
+    "new_mmsi": "636978323",
+    "old_name": "MV Diamond Bulk"
+   },
+   "308192041": {
+    "new_vessel_id": "VSL-0206",
+    "new_name": "MV Corpus Grain",
+    "new_mmsi": "311676461",
+    "old_name": "MV Corpus Grain"
+   },
+   "352491038": {
+    "new_vessel_id": "VSL-0207",
+    "new_name": "MV Rio Hondo",
+    "new_mmsi": "352069581",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MV Rio Bulk Carrier"
+   },
+   "636582019": {
+    "new_vessel_id": "VSL-0155",
+    "new_name": "MT Coastal Bend Energy",
+    "new_mmsi": "563836854",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT Corpus LNG I"
+   },
+   "352292048": {
+    "new_vessel_id": "VSL-0176",
+    "new_name": "MT Laguna Verde",
+    "new_mmsi": "248790499",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT Nueces Chemical"
+   },
+   "308591038": {
+    "new_vessel_id": "VSL-0238",
+    "new_name": "MV Port Royal",
+    "new_mmsi": "636313182",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MV Lone Star Container"
+   },
+   "636291058": {
+    "new_vessel_id": "VSL-0251",
+    "new_name": "MV Roosevelt Island",
+    "new_mmsi": "311939504",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MV Gulf Ferry Express"
+   },
+   "338491047": {
+    "new_vessel_id": "VSL-0263",
+    "new_name": "MV Nueces Bay Supply",
+    "new_mmsi": "367414523",
+    "old_name": "MV Nueces Bay Supply"
+   },
+   "538782019": {
+    "new_vessel_id": "VSL-0106",
+    "new_name": "MT Corpus Prince",
+    "new_mmsi": "538388829",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT Corpus Christi Star"
+   },
+   "636482019": {
+    "new_vessel_id": "VSL-0121",
+    "new_name": "MT Gulf Coast Pioneer",
+    "new_mmsi": "636742315",
+    "old_name": "MT Gulf Coast Pioneer"
+   },
+   "308782019": {
+    "new_vessel_id": "VSL-0237",
+    "new_name": "MV Galveston Relief",
+    "new_mmsi": "367551226",
+    "old_name": "MV Galveston Relief"
+   },
+   "338782019": {
+    "new_vessel_id": "VSL-0236",
+    "new_name": "MV Gulf Rebuilder",
+    "new_mmsi": "367087182",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MV Houston Supply"
+   },
+   "338782049": {
+    "new_vessel_id": "VSL-0351",
+    "new_name": "Responder Aransas",
+    "new_mmsi": "367085734",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "Marine Spill Response I"
+   },
+   "338782059": {
+    "new_vessel_id": "VSL-0352",
+    "new_name": "GS Skimmer 11",
+    "new_mmsi": "367484366",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "Marine Spill Response II"
+   },
+   "636782019": {
+    "new_vessel_id": "VSL-0108",
+    "new_name": "MT Storm Rider",
+    "new_mmsi": "248125690",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT Lone Star Suezmax"
+   },
+   "352782019": {
+    "new_vessel_id": "VSL-0115",
+    "new_name": "MT Gulf Titan",
+    "new_mmsi": "563695507",
+    "old_name": "MT Gulf Titan"
+   },
+   "308882019": {
+    "new_vessel_id": "VSL-0238",
+    "new_name": "MV Port Royal",
+    "new_mmsi": "636313182",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MV Corpus Containers I"
+   },
+   "636882049": {
+    "new_vessel_id": "VSL-0116",
+    "new_name": "MT Refugio Bay",
+    "new_mmsi": "636357241",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet",
+    "old_name": "MT Refugio Bay Trader"
+   }
+  },
+  "by_old_name": {
+   "MT Kalvora Star": {
+    "new_vessel_id": "VSL-0041",
+    "new_name": "MT Kalvora Star",
+    "new_mmsi": "538847203"
+   },
+   "MT Ostrel Bay": {
+    "new_vessel_id": "VSL-0042",
+    "new_name": "MT Ostrel Bay",
+    "new_mmsi": "352091748"
+   },
+   "MV Gulf Provider": {
+    "new_vessel_id": "VSL-0012",
+    "new_name": "MV Gulf Provider",
+    "new_mmsi": "308441927"
+   },
+   "FV Pelican Ridge": {
+    "new_vessel_id": "VSL-0457",
+    "new_name": "FV Pelican Ridge",
+    "new_mmsi": "338724891"
+   },
+   "Corrin Bay": {
+    "new_vessel_id": "VSL-0077",
+    "new_name": "Corrin Bay",
+    "new_mmsi": "338190847"
+   },
+   "MT Valdris Sun": {
+    "new_vessel_id": "VSL-0101",
+    "new_name": "MT Valdris Sun",
+    "new_mmsi": "636231598"
+   },
+   "MT Brazos Star": {
+    "new_vessel_id": "VSL-0102",
+    "new_name": "MT Brazos Star",
+    "new_mmsi": "538127521"
+   },
+   "MT Orinda Bay": {
+    "new_vessel_id": "VSL-0103",
+    "new_name": "MT Orinda Bay",
+    "new_mmsi": "352398167"
+   },
+   "MT Halcyon Aegis": {
+    "new_vessel_id": "VSL-0104",
+    "new_name": "MT Halcyon Aegis",
+    "new_mmsi": "248934326"
+   },
+   "MT Narvik Pioneer": {
+    "new_vessel_id": "VSL-0105",
+    "new_name": "MT Narvik Pioneer",
+    "new_mmsi": "257983477"
+   },
+   "MT Sennar Gulf": {
+    "new_vessel_id": "VSL-0171",
+    "new_name": "MT Sennar Gulf",
+    "new_mmsi": "240460867"
+   },
+   "MT Corpus Prince": {
+    "new_vessel_id": "VSL-0106",
+    "new_name": "MT Corpus Prince",
+    "new_mmsi": "538388829"
+   },
+   "MT Pacific Prism": {
+    "new_vessel_id": "VSL-0151",
+    "new_name": "MT Pacific Prism",
+    "new_mmsi": "538574848"
+   },
+   "MT Gulf Chemist": {
+    "new_vessel_id": "VSL-0172",
+    "new_name": "MT Gulf Chemist",
+    "new_mmsi": "352911786"
+   },
+   "MT Aransas Spirit": {
+    "new_vessel_id": "VSL-0173",
+    "new_name": "MT Aransas Spirit",
+    "new_mmsi": "636671499"
+   },
+   "MT Galveston Star": {
+    "new_vessel_id": "VSL-0152",
+    "new_name": "MT Galveston Star",
+    "new_mmsi": "248934027"
+   },
+   "MV Nueces Trader": {
+    "new_vessel_id": "VSL-0201",
+    "new_name": "MV Nueces Trader",
+    "new_mmsi": "352170227"
+   },
+   "MV Sable Horizon": {
+    "new_vessel_id": "VSL-0202",
+    "new_name": "MV Sable Horizon",
+    "new_mmsi": "636617258"
+   },
+   "MV Capehorn Eagle": {
+    "new_vessel_id": "VSL-0203",
+    "new_name": "MV Capehorn Eagle",
+    "new_mmsi": "538008157"
+   },
+   "MV Gulf Petcoke": {
+    "new_vessel_id": "VSL-0204",
+    "new_name": "MV Gulf Petcoke",
+    "new_mmsi": "311684055"
+   },
+   "Laguna Queen": {
+    "new_vessel_id": "VSL-0271",
+    "new_name": "Laguna Queen",
+    "new_mmsi": "367554881"
+   },
+   "Rockport Mariner": {
+    "new_vessel_id": "VSL-0272",
+    "new_name": "Rockport Mariner",
+    "new_mmsi": "367608374"
+   },
+   "CCPILOT-1": {
+    "new_vessel_id": "VSL-0301",
+    "new_name": "Aransas Pilot I",
+    "new_mmsi": "367850078",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "CCPILOT-2": {
+    "new_vessel_id": "VSL-0302",
+    "new_name": "Aransas Pilot II",
+    "new_mmsi": "367487046",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MV Deepwater Scout": {
+    "new_vessel_id": "VSL-0261",
+    "new_name": "MV Deepwater Scout",
+    "new_mmsi": "367450180"
+   },
+   "MV Gulf Surveyor": {
+    "new_vessel_id": "VSL-0262",
+    "new_name": "MV Gulf Surveyor",
+    "new_mmsi": "367068081"
+   },
+   "USCGC Dependable": {
+    "new_vessel_id": "VSL-0321",
+    "new_name": "USCGC Resolute Bay",
+    "new_mmsi": "369530490",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "USCGC Capelin": {
+    "new_vessel_id": "VSL-0323",
+    "new_name": "USCGC Cormorant Point",
+    "new_mmsi": "369092173",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "Adriatic Carrier": {
+    "new_vessel_id": "VSL-0231",
+    "new_name": "MV Adriatic Carrier",
+    "new_mmsi": "248851149",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "Bayou Spirit": {
+    "new_vessel_id": "VSL-0117",
+    "new_name": "MT Bayou Spirit",
+    "new_mmsi": "311572772",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "Gulf Meridian": {
+    "new_vessel_id": "VSL-0122",
+    "new_name": "MT Aldebaran Trader",
+    "new_mmsi": "209931775",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "Ostrel Bay": {
+    "new_vessel_id": "VSL-0042",
+    "new_name": "MT Ostrel Bay",
+    "new_mmsi": "352091748",
+    "note": "prefix restored"
+   },
+   "Santos Provider": {
+    "new_vessel_id": "VSL-0118",
+    "new_name": "MT Santos Provider",
+    "new_mmsi": "352086571",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MV Halcyon Drift": {
+    "new_vessel_id": "VSL-0031",
+    "new_name": "MV Halcyon Drift",
+    "new_mmsi": "511836259"
+   },
+   "Pacific Trader": {
+    "new_vessel_id": "VSL-0232",
+    "new_name": "MV Pacific Trader",
+    "new_mmsi": "477197225",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "Coastal Endeavor": {
+    "new_vessel_id": "VSL-0233",
+    "new_name": "MV Coastal Endeavor",
+    "new_mmsi": "305603093",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "Kalvora Star": {
+    "new_vessel_id": "VSL-0041",
+    "new_name": "MT Kalvora Star",
+    "new_mmsi": "538847203",
+    "note": "prefix restored"
+   },
+   "MT Lone Star Carrier": {
+    "new_vessel_id": "VSL-0107",
+    "new_name": "MT Lone Star Carrier",
+    "new_mmsi": "538523635"
+   },
+   "MT Rio Grande Tanker": {
+    "new_vessel_id": "VSL-0122",
+    "new_name": "MT Aldebaran Trader",
+    "new_mmsi": "209931775",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MV San Antonio Bay": {
+    "new_vessel_id": "VSL-0234",
+    "new_name": "MV San Antonio Bay",
+    "new_mmsi": "311107973"
+   },
+   "MT Ingleside Star": {
+    "new_vessel_id": "VSL-0153",
+    "new_name": "MT Ingleside Star",
+    "new_mmsi": "311515558"
+   },
+   "MV Port Royal": {
+    "new_vessel_id": "VSL-0238",
+    "new_name": "MV Port Royal",
+    "new_mmsi": "636313182"
+   },
+   "MT Nueces Bay Tanker": {
+    "new_vessel_id": "VSL-0177",
+    "new_name": "MT Copano Mist",
+    "new_mmsi": "538095179",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Harbor Bay Crude": {
+    "new_vessel_id": "VSL-0120",
+    "new_name": "MT Harbor Bay",
+    "new_mmsi": "477069936",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MV Coastal Express": {
+    "new_vessel_id": "VSL-0235",
+    "new_name": "MV Coastal Express",
+    "new_mmsi": "305488239"
+   },
+   "MT South Texas Product": {
+    "new_vessel_id": "VSL-0175",
+    "new_name": "MT Tarpon Reach",
+    "new_mmsi": "563289865",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MV Corpus Bay Freighter": {
+    "new_vessel_id": "VSL-0234",
+    "new_name": "MV San Antonio Bay",
+    "new_mmsi": "311107973",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT La Quinta Crude": {
+    "new_vessel_id": "VSL-0119",
+    "new_name": "MT La Quinta Express",
+    "new_mmsi": "248077259",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Galveston Product": {
+    "new_vessel_id": "VSL-0174",
+    "new_name": "MT Rockport Trader",
+    "new_mmsi": "538974848",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MV Aransas Pass Cargo": {
+    "new_vessel_id": "VSL-0235",
+    "new_name": "MV Coastal Express",
+    "new_mmsi": "305488239",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT CC Chemical I": {
+    "new_vessel_id": "VSL-0172",
+    "new_name": "MT Gulf Chemist",
+    "new_mmsi": "352911786",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT CC Chemical II": {
+    "new_vessel_id": "VSL-0176",
+    "new_name": "MT Laguna Verde",
+    "new_mmsi": "248790499",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Storm Rider": {
+    "new_vessel_id": "VSL-0108",
+    "new_name": "MT Storm Rider",
+    "new_mmsi": "248125690"
+   },
+   "MV Gulf Rebuilder": {
+    "new_vessel_id": "VSL-0236",
+    "new_name": "MV Gulf Rebuilder",
+    "new_mmsi": "367087182"
+   },
+   "USCGC Elm Buoy Tender": {
+    "new_vessel_id": "VSL-0324",
+    "new_name": "USCGC Live Oak",
+    "new_mmsi": "369509450",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MV Army Corps Pioneer": {
+    "new_vessel_id": "VSL-0362",
+    "new_name": "SV Tejas Sounder",
+    "new_mmsi": "369953929",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Lone Star LNG": {
+    "new_vessel_id": "VSL-0154",
+    "new_name": "MT Lone Star Aurora",
+    "new_mmsi": "257516483",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Ingleside Pride": {
+    "new_vessel_id": "VSL-0109",
+    "new_name": "MT Ingleside Pride",
+    "new_mmsi": "636610799"
+   },
+   "MT South Padre Crude": {
+    "new_vessel_id": "VSL-0113",
+    "new_name": "MT Maverick Bay",
+    "new_mmsi": "352641431",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Rockport Trader": {
+    "new_vessel_id": "VSL-0174",
+    "new_name": "MT Rockport Trader",
+    "new_mmsi": "538974848"
+   },
+   "MV Roosevelt Island": {
+    "new_vessel_id": "VSL-0251",
+    "new_name": "MV Roosevelt Island",
+    "new_mmsi": "311939504"
+   },
+   "MT Nueces Sunrise": {
+    "new_vessel_id": "VSL-0110",
+    "new_name": "MT Nueces Sunrise",
+    "new_mmsi": "352104632"
+   },
+   "MT Lone Star Crude 2": {
+    "new_vessel_id": "VSL-0107",
+    "new_name": "MT Lone Star Carrier",
+    "new_mmsi": "538523635",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT La Quinta Express": {
+    "new_vessel_id": "VSL-0119",
+    "new_name": "MT La Quinta Express",
+    "new_mmsi": "248077259"
+   },
+   "MV Narvik Pioneer FEMA2": {
+    "new_vessel_id": "VSL-0237",
+    "new_name": "MV Galveston Relief",
+    "new_mmsi": "367551226",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Permian Sun": {
+    "new_vessel_id": "VSL-0111",
+    "new_name": "MT Permian Sun",
+    "new_mmsi": "636203266"
+   },
+   "MT Gulf Knight": {
+    "new_vessel_id": "VSL-0112",
+    "new_name": "MT Gulf Knight",
+    "new_mmsi": "240769057"
+   },
+   "MT Maverick Bay": {
+    "new_vessel_id": "VSL-0113",
+    "new_name": "MT Maverick Bay",
+    "new_mmsi": "352641431"
+   },
+   "MT Chinook Spirit": {
+    "new_vessel_id": "VSL-0114",
+    "new_name": "MT Chinook Spirit",
+    "new_mmsi": "538267169"
+   },
+   "MV Diamond Bulk": {
+    "new_vessel_id": "VSL-0205",
+    "new_name": "MV Diamond Bulk",
+    "new_mmsi": "636978323"
+   },
+   "MV Corpus Grain": {
+    "new_vessel_id": "VSL-0206",
+    "new_name": "MV Corpus Grain",
+    "new_mmsi": "311676461"
+   },
+   "MV Rio Bulk Carrier": {
+    "new_vessel_id": "VSL-0207",
+    "new_name": "MV Rio Hondo",
+    "new_mmsi": "352069581",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Corpus LNG I": {
+    "new_vessel_id": "VSL-0155",
+    "new_name": "MT Coastal Bend Energy",
+    "new_mmsi": "563836854",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Nueces Chemical": {
+    "new_vessel_id": "VSL-0176",
+    "new_name": "MT Laguna Verde",
+    "new_mmsi": "248790499",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MV Lone Star Container": {
+    "new_vessel_id": "VSL-0238",
+    "new_name": "MV Port Royal",
+    "new_mmsi": "636313182",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MV Gulf Ferry Express": {
+    "new_vessel_id": "VSL-0251",
+    "new_name": "MV Roosevelt Island",
+    "new_mmsi": "311939504",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MV Nueces Bay Supply": {
+    "new_vessel_id": "VSL-0263",
+    "new_name": "MV Nueces Bay Supply",
+    "new_mmsi": "367414523"
+   },
+   "MT Corpus Christi Star": {
+    "new_vessel_id": "VSL-0106",
+    "new_name": "MT Corpus Prince",
+    "new_mmsi": "538388829",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Gulf Coast Pioneer": {
+    "new_vessel_id": "VSL-0121",
+    "new_name": "MT Gulf Coast Pioneer",
+    "new_mmsi": "636742315"
+   },
+   "MV Galveston Relief": {
+    "new_vessel_id": "VSL-0237",
+    "new_name": "MV Galveston Relief",
+    "new_mmsi": "367551226"
+   },
+   "MV Houston Supply": {
+    "new_vessel_id": "VSL-0236",
+    "new_name": "MV Gulf Rebuilder",
+    "new_mmsi": "367087182",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "Marine Spill Response I": {
+    "new_vessel_id": "VSL-0351",
+    "new_name": "Responder Aransas",
+    "new_mmsi": "367085734",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "Marine Spill Response II": {
+    "new_vessel_id": "VSL-0352",
+    "new_name": "GS Skimmer 11",
+    "new_mmsi": "367484366",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Lone Star Suezmax": {
+    "new_vessel_id": "VSL-0108",
+    "new_name": "MT Storm Rider",
+    "new_mmsi": "248125690",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Gulf Titan": {
+    "new_vessel_id": "VSL-0115",
+    "new_name": "MT Gulf Titan",
+    "new_mmsi": "563695507"
+   },
+   "MV Corpus Containers I": {
+    "new_vessel_id": "VSL-0238",
+    "new_name": "MV Port Royal",
+    "new_mmsi": "636313182",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "MT Refugio Bay Trader": {
+    "new_vessel_id": "VSL-0116",
+    "new_name": "MT Refugio Bay",
+    "new_mmsi": "636357241",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "Sealift ro-ro ship (synthetic name)": {
+    "new_vessel_id": "VSL-0019",
+    "new_name": "MV Cape Sandoval",
+    "new_mmsi": "367916492",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   },
+   "Barge 44": {
+    "new_vessel_id": "BRG-0044",
+    "new_name": "Barge 44",
+    "new_mmsi": "367909632"
+   },
+   "Tug Corrin Bay": {
+    "new_vessel_id": "VSL-0077",
+    "new_name": "Corrin Bay",
+    "new_mmsi": "338190847",
+    "note": "old name retired; mapped to the nearest equivalent in the new fleet"
+   }
+  },
+  "by_scenario_entity": {
+   "VSL-0012": {
+    "new_vessel_id": "VSL-0012",
+    "placeholder_key": "MMSI-SYN-0101",
+    "mmsi": "308441927",
+    "imo": "IMO9491630",
+    "note": "00_scenario/entities.json keeps the same id; replace the MMSI-SYN placeholder with this MMSI"
+   },
+   "VSL-0019": {
+    "new_vessel_id": "VSL-0019",
+    "placeholder_key": "MMSI-SYN-0119",
+    "mmsi": "367916492",
+    "imo": "IMO9855317",
+    "note": "00_scenario/entities.json keeps the same id; replace the MMSI-SYN placeholder with this MMSI"
+   },
+   "VSL-0031": {
+    "new_vessel_id": "VSL-0031",
+    "placeholder_key": "MMSI-SYN-0131 / IMO-SYN-9031",
+    "mmsi": "511836259",
+    "imo": "IMO9804681",
+    "note": "00_scenario/entities.json keeps the same id; replace the MMSI-SYN placeholder with this MMSI"
+   },
+   "VSL-0457": {
+    "new_vessel_id": "VSL-0457",
+    "placeholder_key": "MMSI-SYN-0457",
+    "mmsi": "338724891",
+    "imo": null,
+    "note": "00_scenario/entities.json keeps the same id; replace the MMSI-SYN placeholder with this MMSI"
+   },
+   "BRG-0044": {
+    "new_vessel_id": "BRG-0044",
+    "placeholder_key": "MMSI-SYN-0444",
+    "mmsi": "367909632",
+    "imo": null,
+    "note": "00_scenario/entities.json keeps the same id; replace the MMSI-SYN placeholder with this MMSI"
+   },
+   "VSL-0041": {
+    "new_vessel_id": "VSL-0041",
+    "placeholder_key": "MMSI-SYN-0141",
+    "mmsi": "538847203",
+    "imo": "IMO9520027",
+    "note": "00_scenario/entities.json keeps the same id; replace the MMSI-SYN placeholder with this MMSI"
+   },
+   "VSL-0042": {
+    "new_vessel_id": "VSL-0042",
+    "placeholder_key": "MMSI-SYN-0142",
+    "mmsi": "352091748",
+    "imo": "IMO9487782",
+    "note": "00_scenario/entities.json keeps the same id; replace the MMSI-SYN placeholder with this MMSI"
+   },
+   "VSL-0077": {
+    "new_vessel_id": "VSL-0077",
+    "placeholder_key": "MMSI-SYN-0177",
+    "mmsi": "338190847",
+    "imo": null,
+    "note": "00_scenario/entities.json keeps the same id; replace the MMSI-SYN placeholder with this MMSI"
+   }
+  },
+  "notes": [
+   "Old vessels.json used VSL-001..VSL-028; the scenario files used four-digit ids for the same ships. The four-digit scenario ids win.",
+   "MV Halcyon Drift: old MMSI 416002317 (Taiwan prefix) replaced by a Palau-prefixed MMSI; old type 'general cargo' corrected to tanker (canon: sanctioned tanker).",
+   "FV Pelican Ridge: old registry based it at Port Aransas, which contradicts canon (it reports from 600 nm away); now Panama City, Florida.",
+   "The canon ships keep the MMSIs already in use (Kalvora Star, Ostrel Bay, Gulf Provider, Pelican Ridge, Corrin Bay). Every other vessel has a newly generated MMSI with the right prefix for its flag; US commercial craft use 367, US government 369."
+  ]
+ }
+}

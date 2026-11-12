@@ -1,0 +1,123 @@
+{
+ "_about": "Internal. Scenario roles of terminals and positions. Never give this file to participants.",
+ "truth": {
+  "TERM-01": {
+   "role": "Berths 7 and 8 hold MT Kalvora Star (VSL-0041) and MT Ostrel Bay (VSL-0042) from D-3. Cargo valves are opened remotely 04:00Z-05:30Z on D0; about 9,000 barrels spill here. Pre-storm drone sorties 4 and 5 (D-5, D-4) image this berth.",
+   "threads": [
+    "T6",
+    "T12",
+    "T19",
+    "T20"
+   ],
+   "events": [
+    "EVT-0209",
+    "EVT-0210",
+    "EVT-0313",
+    "EVT-1203",
+    "EVT-1904",
+    "EVT-1905"
+   ]
+  },
+  "TERM-02": {
+   "role": "Quellmar (SUP-0390) terminal. Barge 44 (BRG-0044) delivers 380 m3 of transferred fuel here on D+32; the GPS interference transmitter JAM-01 sits in a parked vehicle in the industrial area beside it, D+38 to D+43.",
+   "threads": [
+    "T2",
+    "T3",
+    "T7"
+   ],
+   "events": [
+    "EVT-0312",
+    "EVT-0404",
+    "EVT-0412"
+   ]
+  },
+  "TERM-07": {
+   "role": "MV Gulf Provider (VSL-0012) unloads 40 relief containers here on D+33; the Fort Hood aviation brigade loads the sealift ship (VSL-0019) here D+59 to D+64.",
+   "events": [
+    "EVT-0401",
+    "EVT-0409"
+   ]
+  },
+  "TERM-20": {
+   "role": "Tug Corrin Bay (VSL-0077) is repaired here after the D+44 blast (placement chosen in the registry pass; canon only says the tug was damaged)."
+  },
+  "HBR-ING": {
+   "role": "Motor yacht Narwhal Dream lies at 'Ingleside Marina Berth 7' (SLIP-ING-07) from D-12 to D-8 as the launch point for the pre-storm drone sorties.",
+   "threads": [
+    "T19"
+   ],
+   "events": [
+    "EVT-1901",
+    "EVT-1902",
+    "EVT-1903",
+    "EVT-1906"
+   ]
+  },
+  "TERM-08": {
+   "role": "Halcyon Drift (VSL-0031) loiters here from D-45; the 14-vessel Yankee queue holds here D-2 to D-1; storm-riding ships wait here D+3 to D+30; the AIS gap, the Pelican Ridge identity spoof and the transfer to Barge 44 happen here on D+30/31.",
+   "threads": [
+    "T2",
+    "T7",
+    "T12"
+   ]
+  },
+  "PILOT-BOARDING": {
+   "role": "DEV-01 and DEV-02 are laid about 2 nm off the entrance channel at 04:20Z on D+31 (EVT-0411); DEV-01 detonates beside Corrin Bay near the jetties at 06:10Z on D+44."
+  }
+ },
+ "id_migration": {
+  "terminals": {
+   "TERM-01": {
+    "new": "TERM-01",
+    "note": "same name; moved from a made-up downtown point to real Inner Harbor docks"
+   },
+   "TERM-02": {
+    "new": "TERM-02",
+    "note": "same name; real dock site"
+   },
+   "TERM-03": {
+    "new": "TERM-03",
+    "note": "renamed La Quinta LNG Terminal (was 'CC LNG')"
+   },
+   "TERM-04": {
+    "new": "TERM-04",
+    "note": "real refiner name removed; now the fictional Tule Lake Crude Terminal"
+   },
+   "TERM-05": {
+    "new": "TERM-05",
+    "note": "real company name removed; now the fictional Viola Liquids Hub"
+   },
+   "TERM-06": {
+    "new": "TERM-06",
+    "note": "renamed Avery Point Products Terminal (was 'Maxus Energy Terminal')"
+   },
+   "TERM-07": {
+    "new": "TERM-07",
+    "note": "berths TERM-07-B01..B03 keep their ids; B04 added"
+   },
+   "TERM-08": {
+    "new": "TERM-08",
+    "note": "now an anchorage area with ANCH-nn positions inside the real NOAA anchorage"
+   },
+   "TERM-09": {
+    "new": null,
+    "note": "'Aransas Pass Entrance Channel Jetties' was not a terminal; use sea_buoy / pilot_boarding. The id TERM-09 is reused for La Quinta Bulk Liquids Terminal."
+   },
+   "TERM-10": {
+    "new": null,
+    "note": "'NAS Corpus Christi Fuel Farm' is not a marine terminal; it belongs in the infrastructure registry. The id TERM-10 is reused for La Quinta Dry Bulk Dock."
+   },
+   "La Quinta Channel Berth 23": {
+    "new": "TERM-07-B01",
+    "note": "old Gulf Provider note; canon berths it at the Port of Corpus Christi on D+33"
+   },
+   "Ingleside Marina Berth 7": {
+    "new": "SLIP-ING-07"
+   },
+   "Pier 9": {
+    "new": null,
+    "note": "removed from canon"
+   }
+  }
+ }
+}

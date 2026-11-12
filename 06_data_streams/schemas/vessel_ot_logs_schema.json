@@ -1,0 +1,94 @@
+{
+  "source": "telemetry",
+  "stream_id": "vessel_ot_logs",
+  "folder": "05_other_sources/telemetry/",
+  "verified": true,
+  "generator": "scripts/streams/gen_ot_vessel.py",
+  "span": "2027-07-16T05:00Z to 2028-01-12T06:00Z",
+  "files": {
+    "vessel_cargo_control_kalvora_star.csv, vessel_cargo_control_ostrel_bay.csv": {
+      "standard": "Shipboard cargo-control system event log, one file per ship",
+      "fields": [
+        {
+          "name": "timestamp_utc",
+          "type": "ISO 8601 UTC"
+        },
+        {
+          "name": "mmsi / vessel_name",
+          "notes": "vessels.json"
+        },
+        {
+          "name": "record_type",
+          "notes": "LOGIN, LOGOUT (console sessions); CMD (operator command); STATE (position feedback from the valve controller); ALARM (raised, cleared, acknowledged, inhibit on/off); LEVEL (tank gauging); REMOTE (remote-maintenance gateway attach/detach); EVENT; SURVEY"
+        },
+        {
+          "name": "station",
+          "notes": "where the record came from: CCR-1, CCR-2 (cargo control room consoles), RMT-GW (remote-maintenance gateway), VALVE-CTRL, TANK-GAUGING, ALARM-PANEL"
+        },
+        {
+          "name": "operator",
+          "notes": "rank for crew (C/O, 2/O, 3/O, PUMPMAN) or vendor account for remote sessions"
+        },
+        {
+          "name": "tag",
+          "notes": "valve, tank or alarm point: MV-* manifold valves, DROP-VALVE-<tank>, COT-<tank> cargo tanks 1P..6S"
+        },
+        {
+          "name": "value / unit",
+          "notes": "LEVEL: innage in metres"
+        },
+        {
+          "name": "text",
+          "notes": "LEVEL: volume in barrels; REMOTE: gateway session id, access level, ticket"
+        }
+      ],
+      "cadence": "tank gauging every 5 minutes during cargo operations and on the night of 13-14 September, hourly while alongside 11-21 September, every 6 hours otherwise; other records as they occur"
+    },
+    "vessel_cargo_control_remote_sessions.csv": {
+      "standard": "Vendor remote-maintenance gateway session log (all ships the vendor serves)",
+      "fields": [
+        {
+          "name": "session_id",
+          "notes": "also quoted in the ship logs' REMOTE records"
+        },
+        {
+          "name": "gateway"
+        },
+        {
+          "name": "vendor_account"
+        },
+        {
+          "name": "src_ip / src_asn",
+          "notes": "documentation address ranges; network of the connecting client"
+        },
+        {
+          "name": "target_system",
+          "notes": "gw_host_registry.json external_systems[].system_id for the two ships that have one, else CCS-<mmsi>; empty for portal-only logins"
+        },
+        {
+          "name": "vessel_mmsi / vessel_name"
+        },
+        {
+          "name": "login_utc / logout_utc / duration_s"
+        },
+        {
+          "name": "access_level",
+          "notes": "portal, read-only, maintenance"
+        },
+        {
+          "name": "ticket_ref",
+          "notes": "vendor maintenance ticket, if any"
+        },
+        {
+          "name": "result",
+          "notes": "SUCCESS, FAILED: ..., DENIED: ..., or the administrative entry that disabled remote access"
+        },
+        {
+          "name": "bytes_out"
+        }
+      ]
+    }
+  },
+  "time_rule": "Second-level time rule shared with the IT/security log family: records in different systems that describe the same action agree to within a few seconds. A status change that follows a command is stamped 1-3 s after the command.",
+  "joins": "mmsi -> vessels.json and AIS; session_id links the gateway log and the ship logs"
+}

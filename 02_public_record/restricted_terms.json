@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Leak guard for public text (headline, dek, body). A term with public_from_day null may never appear; otherwise it may appear only on or after that day. Patterns are Python regular expressions, case-insensitive.",
+  "terms": [
+    {
+      "pattern": "Halcyon\\s+Drift",
+      "public_from_day": null,
+      "why": "Dark tanker is never public"
+    },
+    {
+      "pattern": "Barge\\s*44",
+      "public_from_day": null,
+      "why": "Fuel transfer is never public"
+    },
+    {
+      "pattern": "KESTREL",
+      "public_from_day": null,
+      "why": "Group name is never public"
+    },
+    {
+      "pattern": "STATE-X",
+      "public_from_day": null,
+      "why": "Sponsor is never named"
+    },
+    {
+      "pattern": "Meridian\\s+Strait|Varenia|Bayshore|Tessaly|Marsh\\s+Flats|Northridge|Joint\\s+Base\\s+Calder|Port\\s+Calder",
+      "public_from_day": null,
+      "why": "Retired fictional names from earlier drafts"
+    },
+    {
+      "pattern": "Brannoch",
+      "public_from_day": 114,
+      "why": "Named only in the D+114 court filing"
+    },
+    {
+      "pattern": "Marrick",
+      "public_from_day": 114,
+      "why": "Named only in the D+114 court filing"
+    },
+    {
+      "pattern": "Vantorra",
+      "public_from_day": 10,
+      "why": "Debris contract award"
+    },
+    {
+      "pattern": "Quellmar",
+      "public_from_day": 20,
+      "why": "Fuel contract becomes visible in records"
+    },
+    {
+      "pattern": "Brightwake",
+      "public_from_day": 8,
+      "why": "Vendor statement"
+    },
+    {
+      "pattern": "Kalvora|Ostrel|Rendal",
+      "public_from_day": 1,
+      "why": "Tanker and terminal names released by Unified Command"
+    },
+    {
+      "pattern": "Pelican\\s+Ridge",
+      "public_from_day": 38,
+      "why": "AIS anomaly reported"
+    },
+    {
+      "pattern": "Corrin\\s+Bay",
+      "public_from_day": 44,
+      "why": "Tug blast"
+    },
+    {
+      "pattern": "aid-help-portal",
+      "public_from_day": 16,
+      "why": "Domain named by researcher"
+    },
+    {
+      "pattern": "@CoastTruthTX",
+      "public_from_day": 2,
+      "why": "Viral account"
+    },
+    {
+      "pattern": "@GulfWatchPatriot",
+      "public_from_day": 3,
+      "why": "Viral account"
+    },
+    {
+      "pattern": "\\bEVT-\\d|\\bPUB-\\d|\\bCHR-\\d|\\bOUT-\\d|\\bARC-[A-Z]",
+      "public_from_day": null,
+      "why": "Internal ids"
+    },
+    {
+      "pattern": "BANK-SYN|ASN-SYN|SOC-ACC|MMSI-SYN|UEI-SYN|PIID-SYN|ICAO-SYN|NSN-SYN|SYN-PER|\\bDEV-0|\\bJAM-0|UAS-SYN|\\bVSL-0|\\bSUP-0|\\bORG-09|\\bEQP-\\d|\\bFAC-[A-Z]|\\bPLC-0|\\bTANK-0|\\bANC-OFF|\\bENT-01|\\bLF-01|\\bHOST-",
+      "public_from_day": null,
+      "why": "Internal ids"
+    },
+    {
+      "pattern": "\\bD[+-]\\d+|\\bD0\\b|truth_event_id",
+      "public_from_day": null,
+      "why": "Scenario day notation never appears in public text; use dates or relative wording"
+    },
+    {
+      "pattern": "readiness (?:fell|dropped|rate)[^.]*\\d+\\s?%",
+      "public_from_day": null,
+      "why": "DoD readiness percentages are not public"
+    }
+  ],
+  "pairs": [
+    {
+      "a": "Quellmar",
+      "b": "transmitter|GPS interference|jamm",
+      "until_day": null,
+      "why": "Never tie the fuel supplier to the GPS interference"
+    },
+    {
+      "a": "Brannoch|Marrick",
+      "b": "tanker|drone|explosive|device|transmitter|GPS|rumor|phishing|lookalike|spoof",
+      "until_day": null,
+      "why": "Never tie the offshore owner to the other hidden threads"
+    },
+    {
+      "a": "account takeover|taken over|hijacked|credential",
+      "b": "Vantorra|Quellmar|contractor",
+      "until_day": 114,
+      "why": "No link between account takeovers and contractors before the court filing"
+    },
+    {
+      "a": "Pelican Ridge|spoof",
+      "b": "explosive device|second device|blast",
+      "until_day": 48,
+      "why": "Analysts first note the timing on day 48"
+    },
+    {
+      "a": "foreign government|overseas power|foreign state broadcaster",
+      "b": "brigade|deployment",
+      "until_day": null,
+      "why": "Never imply the deployment motive"
+    }
+  ],
+  "pairs_note": "Story-level co-mention rules: if both patterns appear anywhere in one story's public text (and the story day is before until_day, or always when until_day is null), it is an error unless allowlisted."
+}

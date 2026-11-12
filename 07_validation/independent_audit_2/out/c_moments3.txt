@@ -1,0 +1,14 @@
+ADS-B airborne within 8 km of jetties 06:00-10:00Z 10-28: {'C6017': ('06:44:15', 159, 59)}
+AVL units within 5 km of jetties 06:10-08:00Z {'PA-1': 18} {'PA-1': '2027-10-28T06:13:11Z'}
+AVL road-distance (n, median, p99) 10-15: (307, 1.7, 17.2)  10-24 (jam): (321, 1.5, 17.2)
+['time_utc', 'sensor_id', 'event_type', 'direction', 'mmsi', 'vessel_name', 'est_length_m', 'berth_id', 'vessels_in_view', 'water_surface', 'note']
+camera events 05:50-07:00Z 13
+   {'time_utc': '2027-10-28T05:55:26Z', 'sensor_id': 'CAM-13', 'event_type': 'PASSAGE', 'direction': 'OUTBOUND', 'mmsi': '538523635', 'vessel_name': 'LONE STAR CARRIER', 'est_length_m': '249'}
+   {'time_utc': '2027-10-28T05:55:40Z', 'sensor_id': 'CAM-13', 'event_type': 'PASSAGE', 'direction': 'OUTBOUND', 'mmsi': '338190847', 'vessel_name': 'CORRIN BAY', 'est_length_m': '30'}
+   {'time_utc': '2027-10-28T06:00:00Z', 'sensor_id': 'CAM-01', 'event_type': 'FRAME', 'vessels_in_view': 'KALVORA STAR (TERM-01-B07); OSTREL BAY (TERM-01-B08)', 'water_surface': 'clear'}
+   {'time_utc': '2027-10-28T06:00:00Z', 'sensor_id': 'CAM-02', 'event_type': 'FRAME', 'vessels_in_view': 'GULF REBUILDER (TERM-07-B01)', 'water_surface': 'clear'}
+   {'time_utc': '2027-10-28T06:00:00Z', 'sensor_id': 'CAM-03', 'event_type': 'FRAME', 'vessels_in_view': 'LA QUINTA EXPRESS (TERM-17-B02)', 'water_surface': 'clear'}
+   {'time_utc': '2027-10-28T06:00:00Z', 'sensor_id': 'CAM-11', 'event_type': 'FRAME', 'vessels_in_view': 'none'}
+fin tx candidates 456 [(('ACCT-40134', 'credit', 'ACH credit', 'disaster assistance payment'), 174), (('ACCT-40172', 'credit', 'ACH credit', 'disaster assistance payment'), 138), (('ACCT-40203', 'credit', 'ACH credit', 'disaster assistance payment'), 104), (('ACCT-40203', 'credit', 'wire in', 'transfer'), 19), (('ACCT-40134', 'debit', 'wire out', 'transfer'), 10), (('ACCT-40172', 'debit', 'wire out', 'transfer'), 9), (('ACCT-40390', 'credit', 'check deposit', 'customer payment'), 1), (('ACCT-41230', 'credit', 'check deposit', 'customer payment'), 1)]
+aid-like tx 1708 span 2027-08-16T19:54:38Z 2028-01-11T20:39:02Z sum 6030012 [('ACCT-40203', 1360), ('ACCT-40134', 174), ('ACCT-40172', 138), ('ACCT-40310', 2), ('ACCT-42348', 2)]
+prepaid tx 1292 2027-08-16T19:54:38Z 2028-01-11T20:39:02Z 2130012 [('ACCT-40203', 1256), ('ACCT-40310', 2), ('ACCT-42348', 2), ('ACCT-41150', 2), ('ACCT-41320', 2)]

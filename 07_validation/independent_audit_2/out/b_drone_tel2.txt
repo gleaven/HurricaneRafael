@@ -1,0 +1,81 @@
+telemetry flights 444 log flights 445 only tel 0 only log ['CBAS-TIR-0925']
+unknown operators set()
+flights by D-day [(-30, 1), (-29, 1), (-28, 2), (-27, 1), (-26, 1), (-25, 2), (-21, 1), (-20, 1), (-19, 2), (-18, 1), (-17, 3), (-16, 1), (-15, 1), (-14, 1), (-13, 1), (-12, 1), (-6, 1), (-5, 1), (1, 20), (2, 20), (3, 25), (4, 19), (5, 8), (6, 10), (7, 7), (8, 14), (9, 8), (10, 9), (11, 6), (12, 6), (13, 3), (14, 3), (15, 11), (16, 5), (17, 4), (18, 4), (19, 1), (20, 4), (21, 4), (22, 14), (23, 3), (24, 6), (25, 2), (26, 1), (27, 4), (28, 5), (29, 9), (30, 7), (31, 5), (32, 2), (33, 1), (34, 3), (35, 5), (36, 13), (37, 3), (38, 4), (39, 4), (41, 1), (42, 3), (43, 8), (44, 4), (45, 9), (46, 3), (48, 2), (49, 3), (50, 7), (51, 2), (52, 5), (55, 2), (56, 2), (57, 7), (58, 3), (59, 2), (60, 3), (62, 1), (63, 2), (64, 8), (65, 3), (66, 1), (67, 3), (69, 2), (70, 2), (71, 2), (72, 1), (73, 2), (74, 1), (77, 1), (78, 1), (79, 2), (80, 1), (81, 1), (82, 1), (83, 1), (84, 2), (85, 2), (86, 2), (87, 1), (88, 1), (91, 1), (92, 1), (93, 1), (94, 2), (95, 2), (97, 1), (98, 2), (99, 1), (100, 1), (101, 1), (105, 1), (106, 1), (107, 1), (108, 1), (110, 1), (111, 1), (112, 2), (113, 2), (114, 1), (115, 1), (118, 2), (119, 2)]
+DRN-OP-001 Argus Aerial Systems | Contractor (FEMA damage survey) | n 40 days 2 45
+DRN-OP-002 Texas Department of Transportation, Corpus Christi District | State agency (bridge and road inspection) | n 10 days -28 112
+DRN-OP-003 Corpus Christi Fire Department, Technical Services | Local government (search and rescue) | n 15 days -17 95
+DRN-OP-004 Harborline 6 News | News media | n 29 days -16 118
+DRN-OP-005 Meridian Aerial Systems | Contractor (search and rescue thermal imaging) | n 43 days 1 12
+DRN-OP-006 Coastal Bend Power and Water Authority, Asset Inspection | Utility | n 46 days -27 113
+DRN-OP-007 The Bayside Ledger, Visual Journalism | News media | n 29 days -30 119
+DRN-OP-008 Port of Corpus Christi Authority Police | Local government (port security) | n 34 days -28 119
+DRN-OP-009 Texas Parks and Wildlife Department | State agency (wildlife and shoreline survey) | n 18 days -29 111
+DRN-OP-010 NOAA Office of Response and Restoration | Federal agency (oil spill mapping) | n 14 days 1 43
+DRN-OP-011 U.S. Coast Guard Sector Corpus Christi | Federal agency (spill response and boom inspection) | n 27 days 1 42
+DRN-OP-012 Texas A&M University-Corpus Christi, coastal research program | University | n 18 days -26 114
+DRN-OP-013 Nueces County Sheriff's Office | Local government (search and rescue) | n 52 days -17 95
+DRN-OP-014 Lone Palm Claims Imaging | Contractor (insurance damage surveys) | n 69 days 6 74
+flights TFR start..D+1 12Z: [('FLT-DRN-OP-005-20270915-01', '2027-09-15T11:47:02Z', 'MERIDIAN-TIR-SAR-CALALLEN-01')]
+   CBPWA-FEEDER-PATROL-SUB 23 2 35
+   CBPWA-FEEDER-PATROL-WTP 5 3 27
+   CBPWA-INSPECT-SUB 15 -27 113
+   CBPWA-INSPECT-WTP 3 -6 78
+   CCFD-SAR-FLOUR-BLUFF 8 1 5
+   CCFD-SAR-NORTH-BEACH 3 1 3
+   CCFD-TRAINING 4 -17 95
+   FEMA-UAV-0916-CCAD-HANGARS 1 2 2
+   FEMA-UAV-0917-GRID 8 3 3
+   FEMA-UAV-0918-GRID 8 4 4
+   FEMA-UAV-0922-UTL 6 8 8
+   FEMA-UAV-0929-UTL 1 15 15
+   FEMA-UAV-1006-RM 4 22 22
+   FEMA-UAV-1020-RM 4 36 36
+   FEMA-UAV-1029-RM 8 45 45
+   H6-AERIALS 19 -16 118
+   H6-STORM-COVERAGE 10 1 10
+   LEDGER-PHOTO 29 -30 119
+   LPC-CLAIMS-ARANSAS-PASS 14 8 73
+   LPC-CLAIMS-FLOUR-BLUFF 13 6 70
+   LPC-CLAIMS-NORTH-BEACH 2 23 30
+   LPC-CLAIMS-PADRE 12 7 74
+   LPC-CLAIMS-PORT-ARANSAS 11 7 69
+   LPC-CLAIMS-PORTLAND 8 9 64
+   LPC-CLAIMS-ROCKPORT 9 6 67
+   MERIDIAN-DAMAGE-CALALLEN 2 6 9
+   MERIDIAN-DAMAGE-FLOUR-BLUFF 5 8 12
+   MERIDIAN-DAMAGE-NORTH-BEACH 2 8 10
+   MERIDIAN-DAMAGE-PORTLAND 5 6 12
+   MERIDIAN-TIR-SAR-CALALLEN 12 1 5
+   MERIDIAN-TIR-SAR-FLOUR-BLUFF 8 1 5
+   MERIDIAN-TIR-SAR-NORTH-BEACH 9 1 5
+   NCSO-DEBRIS-CAL-VOLUME-SURVEY 8 15 64
+   NCSO-DEBRIS-FB-VOLUME-SURVEY 8 15 64
+   NCSO-DEBRIS-PTL-VOLUME-SURVEY 8 15 64
+   NCSO-DEBRIS-RKP-VOLUME-SURVEY 8 15 64
+   NCSO-DEBRIS-WEST-VOLUME-SURVEY 8 15 64
+   NCSO-SAR-CALALLEN 8 1 5
+   NCSO-TRAINING 4 -17 95
+   NOAA-ORR-CLEANUP-SURVEY-NUECES-BAY 1 36 36
+   NOAA-ORR-CLEANUP-SURVEY-PORTLAND 1 43 43
+   NOAA-ORR-OIL-MAPPING-NORTH-BEACH 3 3 22
+   NOAA-ORR-OIL-MAPPING-NUECES-BAY 3 9 29
+   NOAA-ORR-OIL-MAPPING-PORTLAND 2 6 15
+   NOAA-ORR-SHORELINE-NORTH-BEACH 2 1 2
+   NOAA-ORR-SHORELINE-NUECES-BAY 2 1 2
+   PORT-PERIMETER-PATROL 34 -28 119
+   TAMUCC-SHORELINE-FLOUR-BLUFF 6 -26 100
+   TAMUCC-SHORELINE-INDIAN-POINT 6 -12 114
+   TAMUCC-SHORELINE-PORTLAND 6 -19 107
+   TPWD-OILED-WILDLIFE-SURVEY 9 4 20
+   TPWD-ROOKERY-COUNT 9 -29 111
+   TXDOT-HARBOR-BRIDGE-POST-STORM 2 1 3
+   TXDOT-HARBOR-BRIDGE-ROUTINE 5 -28 112
+   TXDOT-JFK-CAUSEWAY-POST-STORM 1 2 2
+   TXDOT-NUECES-BAY-CAUSEWAY-POST-STORM 2 1 3
+   USCG-BOOM-INSPECTION-INDIAN-POINT 5 3 19
+   USCG-BOOM-INSPECTION-NORTH-BEACH 7 4 28
+   USCG-BOOM-INSPECTION-NUECES-BAY 5 5 21
+   USCG-BOOM-INSPECTION-PORTLAND 4 6 18
+   USCG-CLEANUP-SURVEY-INDIAN-POINT 2 31 35
+   USCG-CLEANUP-SURVEY-PORTLAND 2 38 42
+   USCG-SHORELINE-ASSESSMENT 2 1 2

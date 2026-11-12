@@ -1,0 +1,3315 @@
+{
+ "schema_version": "1.0",
+ "purpose": "The only facts news may report. A story on day N may use a fact only if its 'day' <= N. Each story lists the PUB ids it relies on in tags.public_facts. 'events' links to ground truth (internal only). Scenario values: all counts and amounts are fictional.",
+ "units_note": "Use US units in news: 3.4 m surge = about 11 feet; 112 km2 = about 43 square miles; 85 km2 = about 33 square miles; 380 m3 = about 2,400 barrels.",
+ "facts": [
+  {
+   "id": "PUB-001",
+   "day": -60,
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "statement": "Summer on the Coastal Bend: heavy tourism on Mustang and Padre islands; city urges water conservation during the heat.",
+   "sources": [
+    "CHR-024",
+    "CHR-042"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001",
+    "LF-01"
+   ]
+  },
+  {
+   "id": "PUB-002",
+   "day": -60,
+   "arcs": [
+    "ARC-PORT"
+   ],
+   "statement": "The Port of Corpus Christi is loading crude tankers at near-record pace; tankers routinely wait at the offshore anchorage.",
+   "sources": [
+    "CHR-023",
+    "CHR-064",
+    "CHR-011"
+   ],
+   "events": [
+    "EVT-0104"
+   ],
+   "places": [
+    "PORT-07",
+    "ANC-OFF"
+   ]
+  },
+  {
+   "id": "PUB-003",
+   "day": -58,
+   "arcs": [
+    "ARC-MILITARY",
+    "ARC-COMMUNITY"
+   ],
+   "statement": "Corpus Christi Army Depot is hiring helicopter mechanics; NAS Corpus Christi training squadrons are on a normal summer schedule.",
+   "sources": [
+    "CHR-022",
+    "CHR-021"
+   ],
+   "events": [],
+   "places": [
+    "FAC-DOD-01",
+    "FAC-DOD-02"
+   ]
+  },
+  {
+   "id": "PUB-004",
+   "day": -55,
+   "arcs": [
+    "ARC-COMMUNITY",
+    "ARC-STORM"
+   ],
+   "statement": "County emergency managers hold hurricane-season preparedness fairs; officials urge residents without cars to register for evacuation assistance.",
+   "sources": [
+    "CHR-025",
+    "CHR-049"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001",
+    "PLC-010"
+   ]
+  },
+  {
+   "id": "PUB-005",
+   "day": -52,
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "statement": "Bay shrimpers report a fair start to the season; fuel costs squeeze margins.",
+   "sources": [
+    "CHR-041"
+   ],
+   "events": [],
+   "places": [
+    "PLC-002"
+   ]
+  },
+  {
+   "id": "PUB-006",
+   "day": -50,
+   "arcs": [
+    "ARC-MILITARY"
+   ],
+   "statement": "NAS Corpus Christi completes a routine readiness inspection; base services operating normally.",
+   "sources": [
+    "CHR-021"
+   ],
+   "events": [
+    "EVT-0103"
+   ],
+   "places": [
+    "FAC-DOD-01"
+   ]
+  },
+  {
+   "id": "PUB-007",
+   "day": -48,
+   "arcs": [
+    "ARC-MILITARY"
+   ],
+   "statement": "A Fort Hood aviation brigade is scheduled to move its helicopters and equipment through the Port of Corpus Christi in late summer for an overseas rotation.",
+   "sources": [
+    "CHR-031",
+    "CHR-023"
+   ],
+   "events": [],
+   "places": [
+    "PORT-07",
+    "FAC-DOD-06"
+   ]
+  },
+  {
+   "id": "PUB-008",
+   "day": -45,
+   "arcs": [
+    "ARC-COMMUNITY",
+    "ARC-EQUITY"
+   ],
+   "statement": "Bus service and transit gaps leave many households without cars in low-income neighborhoods near the bay; advocates push for more evacuation rides.",
+   "sources": [
+    "CHR-049",
+    "CHR-040",
+    "CHR-008"
+   ],
+   "events": [],
+   "places": [
+    "PLC-010"
+   ]
+  },
+  {
+   "id": "PUB-009",
+   "day": -40,
+   "arcs": [
+    "ARC-OVERSEAS"
+   ],
+   "statement": "A foreign government announces large naval and special-operations exercises far from the Gulf; analysts call them a show of force.",
+   "sources": [
+    "CHR-012"
+   ],
+   "events": [
+    "EVT-0108"
+   ],
+   "places": [],
+   "note": "Writers: the country is never named; use 'a foreign government' or 'an overseas power'."
+  },
+  {
+   "id": "PUB-010",
+   "day": -38,
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "statement": "Port Aransas businesses report strong summer; bait shops and charters busy.",
+   "sources": [
+    "CHR-042"
+   ],
+   "events": [],
+   "places": [
+    "LF-01"
+   ]
+  },
+  {
+   "id": "PUB-011",
+   "day": -35,
+   "arcs": [
+    "ARC-AID",
+    "ARC-COMMUNITY"
+   ],
+   "statement": "Relief agencies stock warehouses ahead of peak hurricane season; freight forwarders sign standby relief contracts.",
+   "sources": [
+    "CHR-074",
+    "CHR-049"
+   ],
+   "events": [],
+   "places": [
+    "PORT-07"
+   ]
+  },
+  {
+   "id": "PUB-012",
+   "day": -30,
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "statement": "School year begins across Nueces County; districts review storm closure plans.",
+   "sources": [
+    "CHR-045"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001"
+   ]
+  },
+  {
+   "id": "PUB-013",
+   "day": -21,
+   "arcs": [
+    "ARC-STORM"
+   ],
+   "statement": "Seasonal outlook: forecasters expect above-normal Atlantic activity for the rest of the season.",
+   "sources": [
+    "CHR-029"
+   ],
+   "events": [
+    "EVT-0201"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-014",
+   "day": -14,
+   "arcs": [
+    "ARC-PORT"
+   ],
+   "statement": "Crude exports hit a monthly high; analysts note the port's outsized share of US crude exports, about half.",
+   "sources": [
+    "CHR-064",
+    "CHR-011"
+   ],
+   "events": [],
+   "places": [
+    "PORT-07"
+   ],
+   "note": "The 'about half' share is this corpus's figure, not a real statistic."
+  },
+  {
+   "id": "PUB-015",
+   "day": -10,
+   "arcs": [
+    "ARC-STORM"
+   ],
+   "statement": "Tropical Storm Rafael forms in the northwestern Caribbean Sea; long-range forecasts show it crossing the Yucatan Peninsula into the Gulf, with Texas among possible targets.",
+   "sources": [
+    "CHR-029",
+    "CHR-005"
+   ],
+   "events": [
+    "EVT-0202"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-016",
+   "day": -7,
+   "arcs": [
+    "ARC-STORM"
+   ],
+   "statement": "A plume of tropical moisture ahead of Rafael and a stalled front soak the Coastal Bend; the Nueces River rises at Calallen; soils are saturated.",
+   "sources": [
+    "CHR-029",
+    "CHR-005"
+   ],
+   "events": [
+    "EVT-0203"
+   ],
+   "places": [
+    "GAUGE-12",
+    "PLC-001"
+   ]
+  },
+  {
+   "id": "PUB-017",
+   "day": -6,
+   "arcs": [
+    "ARC-STORM"
+   ],
+   "statement": "Rafael crosses the Yucatan into the southern Gulf and becomes a hurricane; forecasters warn of strengthening over warm water.",
+   "sources": [
+    "CHR-029"
+   ],
+   "events": [],
+   "places": []
+  },
+  {
+   "id": "PUB-018",
+   "day": -5,
+   "arcs": [
+    "ARC-STORM",
+    "ARC-AID"
+   ],
+   "statement": "The forecast cone shifts toward the Texas coast and covers Corpus Christi; no watches yet, but officials urge residents to prepare; relief shipments booked, including 40 containers on the cargo ship MV Gulf Provider.",
+   "sources": [
+    "CHR-029",
+    "CHR-025",
+    "CHR-074"
+   ],
+   "events": [
+    "EVT-0204"
+   ],
+   "places": [
+    "PLC-001",
+    "PORT-07"
+   ]
+  },
+  {
+   "id": "PUB-019",
+   "day": -4,
+   "arcs": [
+    "ARC-MILITARY"
+   ],
+   "statement": "NAS Corpus Christi and NAS Kingsville fly training aircraft to NAS Joint Reserve Base Fort Worth; Corpus Christi Army Depot halts work and secures helicopters in hangars.",
+   "sources": [
+    "CHR-021",
+    "CHR-022",
+    "CHR-013"
+   ],
+   "events": [
+    "EVT-0205",
+    "EVT-0206"
+   ],
+   "places": [
+    "FAC-DOD-01",
+    "FAC-DOD-02",
+    "FAC-DOD-03",
+    "FAC-DOD-04"
+   ]
+  },
+  {
+   "id": "PUB-020",
+   "day": -3,
+   "arcs": [
+    "ARC-PORT",
+    "ARC-MILITARY"
+   ],
+   "statement": "The Coast Guard sets Port Condition X-Ray for the Port of Corpus Christi, meaning gale-force winds are possible within 48 hours: the port stays open, but ocean-going ships must plan to leave or get approval to stay; terminals begin winding down crude loading; the Fort Hood brigade's port movement is postponed.",
+   "sources": [
+    "CHR-020",
+    "CHR-023",
+    "CHR-011",
+    "CHR-031"
+   ],
+   "events": [
+    "EVT-0207"
+   ],
+   "places": [
+    "PORT-07",
+    "ANC-OFF",
+    "TERM-01"
+   ]
+  },
+  {
+   "id": "PUB-101",
+   "day": -3,
+   "arcs": [
+    "ARC-STORM"
+   ],
+   "statement": "Hurricane watch issued for the Coastal Bend about 48 hours before expected landfall; Rafael forecast to strengthen to a major hurricane.",
+   "sources": [
+    "CHR-029",
+    "CHR-025"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001",
+    "LF-01"
+   ]
+  },
+  {
+   "id": "PUB-140",
+   "day": -3,
+   "time_local": "07:00",
+   "type": "broadcast_announcement",
+   "source": "KNCB Coastal Bend Radio (OUT-08)",
+   "statement": "KNCB Coastal Bend Radio, 1480 AM, está ahora en modo de emergencia permanente a partir de las 7 de la mañana de hoy, sábado 11 de septiembre de 2027. Suspendemos nuestra programación regular para mantenerlos informados durante el Huracán Rafael. Transmitiremos en español toda la información oficial: los avisos del Servicio Nacional de Meteorología, las órdenes de evacuación cuando se emitan, los albergues y las rutas. Llame al 2-1-1 para transporte si no tiene vehículo. Escúchenos: seguiremos aquí las 24 horas del día, los 7 días de la semana, hasta que pase la emergencia.",
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "events": [
+    "EVT-1402"
+   ],
+   "places": [
+    "KNCB Coastal Bend Radio"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-021",
+   "day": -2,
+   "arcs": [
+    "ARC-STORM",
+    "ARC-EQUITY",
+    "ARC-AID"
+   ],
+   "statement": "Mandatory evacuation ordered Sunday morning for Zone A, the storm-surge zone (barrier islands and low-lying coastal areas); shelters open inland; residents without cars wait for county buses.",
+   "sources": [
+    "CHR-025",
+    "CHR-040",
+    "CHR-049"
+   ],
+   "events": [],
+   "places": [
+    "PLC-010",
+    "PLC-001"
+   ],
+   "time_local": "06:00"
+  },
+  {
+   "id": "PUB-102",
+   "day": -2,
+   "arcs": [
+    "ARC-STORM"
+   ],
+   "statement": "Hurricane warning issued Sunday afternoon, about 36 hours before expected landfall; Rafael forecast to come ashore near Port Aransas as a Category 3 with 9 to 12 feet of surge.",
+   "sources": [
+    "CHR-029",
+    "CHR-005",
+    "CHR-025"
+   ],
+   "events": [],
+   "places": [
+    "LF-01",
+    "PLC-001"
+   ]
+  },
+  {
+   "id": "PUB-107",
+   "day": -2,
+   "arcs": [
+    "ARC-PORT",
+    "ARC-STORM"
+   ],
+   "statement": "Port Condition Yankee: the Coast Guard closes the Port of Corpus Christi to inbound traffic; ocean-going ships head out; 14 inbound vessels wait at the offshore anchorage; crude exports halt.",
+   "sources": [
+    "CHR-020",
+    "CHR-023",
+    "CHR-011",
+    "CHR-010"
+   ],
+   "events": [
+    "EVT-0207"
+   ],
+   "places": [
+    "PORT-07",
+    "ANC-OFF"
+   ]
+  },
+  {
+   "id": "PUB-180",
+   "day": -2,
+   "time_local": "08:00",
+   "type": "official_notice",
+   "source": "FAA Flight Standards District Office — South Texas",
+   "statement": "The Federal Aviation Administration has issued Temporary Flight Restriction TFR-2027-CC-0441 effective 00:01 local time September 12, 2027, covering the greater Corpus Christi metropolitan area in advance of Hurricane Rafael. The TFR suspends all civil aircraft operations, manned and unmanned, within 30 nautical miles of Corpus Christi International Airport from the surface to 18,000 ft MSL, except for aircraft operating under emergency authorizations issued by the FAA Command Center. Operators with questions should contact the FAA Corpus Christi FSDO. This TFR will remain in effect until further notice.",
+   "arcs": [],
+   "events": [
+    "EVT-1905"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Corpus Christi International Airport"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-200",
+   "day": -2,
+   "time_local": "12:00",
+   "type": "emergency_alert",
+   "source": "IPAWS / NWS Corpus Christi",
+   "statement": "OFFICIAL EMERGENCY ALERT — HURRICANE WARNING — September 12, 2027 12:00 PM CDT: THE NATIONAL WEATHER SERVICE CORPUS CHRISTI HAS ISSUED A HURRICANE WARNING FOR NUECES COUNTY. HURRICANE RAFAEL IS EXPECTED TO MAKE LANDFALL NEAR PORT ARANSAS TEXAS AROUND 1 AM CDT TUESDAY SEPTEMBER 14. MAXIMUM SUSTAINED WINDS OF 115 MPH WITH HIGHER GUSTS ARE EXPECTED. LIFE-THREATENING STORM SURGE OF 9 TO 12 FEET ABOVE NORMAL TIDE LEVELS WILL OCCUR ALONG THE COAST. EVACUATION ZONE A IS UNDER A MANDATORY EVACUATION ORDER. RESIDENTS IN ZONES B AND C SHOULD PREPARE TO EVACUATE. PREPARE NOW. DO NOT WAIT. FOR SHELTER LOCATIONS CALL 211 OR VISIT READYNUECES.ORG. THIS MESSAGE IS AUTHORIZED BY THE NUECES COUNTY OFFICE OF EMERGENCY MANAGEMENT. [WEA 90-char: HURRICANE WARNING Rafael Cat 3 landfall 9/14 1am. Zone A EVACUATE; B-C prepare. Life-threatening. NWS]",
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "events": [
+    "EVT-2102"
+   ],
+   "places": [
+    "Nueces County",
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-022",
+   "day": -1,
+   "arcs": [
+    "ARC-STORM"
+   ],
+   "statement": "Rafael strengthens to a Category 3 as it nears the coast; the Coastal Bend is under a hurricane warning issued Sunday; landfall expected near Port Aransas around midnight to 2 a.m. Tuesday with 9 to 12 feet of storm surge.",
+   "sources": [
+    "CHR-029",
+    "CHR-005"
+   ],
+   "events": [],
+   "places": [
+    "LF-01"
+   ]
+  },
+  {
+   "id": "PUB-108",
+   "day": -1,
+   "arcs": [
+    "ARC-PORT",
+    "ARC-STORM"
+   ],
+   "statement": "Port Condition Zulu: the ship channel closes to all traffic; ships at the offshore anchorage put to sea to ride out the storm; two laden tankers remain moored at an Inner Harbor terminal with Coast Guard approval.",
+   "sources": [
+    "CHR-020",
+    "CHR-023",
+    "CHR-010"
+   ],
+   "events": [
+    "EVT-0207",
+    "EVT-0210"
+   ],
+   "places": [
+    "PORT-07",
+    "ANC-OFF",
+    "TERM-01"
+   ]
+  },
+  {
+   "id": "PUB-120",
+   "day": -1,
+   "time_local": "12:00",
+   "type": "official_statement",
+   "source": "Port of Corpus Christi Authority / USCG Captain of the Port",
+   "statement": "The Port of Corpus Christi Authority and the United States Coast Guard Captain of the Port have set Port Condition Zulu for the Port of Corpus Christi effective noon today, September 13, 2027, in advance of Hurricane Rafael. The Corpus Christi Ship Channel is closed to all commercial vessel traffic. Inbound traffic has been suspended since Port Condition Yankee was set on Sunday. Vessels still holding at the offshore anchorage have been directed to put to sea and must be clear of the anchorage by 6:00 p.m. today. Two laden tankers have Coast Guard approval to remain moored at an Inner Harbor terminal through the storm. Port Authority Director of Operations Julio Sandoval-Reeves stated: 'We have coordinated the safe departure of the vessels that were waiting offshore, and we are in contact with every vessel remaining in port. The safety of mariners and port workers is our highest priority.' The port will remain closed until post-storm surveys of channel depth, aids to navigation and terminal infrastructure are complete. Vessel agents should contact USCG Vessel Traffic Service Corpus Christi.",
+   "arcs": [
+    "ARC-PORT",
+    "ARC-COMMUNITY"
+   ],
+   "events": [
+    "EVT-1203"
+   ],
+   "places": [
+    "Port of Corpus Christi",
+    "Corpus Christi Bay",
+    "Corpus Christi Ship Channel"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-201",
+   "day": -1,
+   "time_local": "07:00",
+   "type": "emergency_alert",
+   "source": "IPAWS / Nueces County Office of Emergency Management",
+   "statement": "MANDATORY EVACUATION ORDER — September 13, 2027 7:00 AM CDT: BY ORDER OF THE NUECES COUNTY JUDGE, THE MANDATORY EVACUATION ORDERED SUNDAY FOR ZONE A IS EXTENDED TO ZONES B AND C. ALL RESIDENTS IN EVACUATION ZONES A, B, AND C MUST LEAVE. THIS INCLUDES ALL AREAS BELOW 10 FEET ELEVATION, ALL MOBILE AND MANUFACTURED HOMES COUNTYWIDE, AND ALL COASTAL AREAS. HURRICANE RAFAEL IS FORECAST AS A DANGEROUS CATEGORY 3 HURRICANE MAKING LANDFALL TONIGHT. LEAVE NOW. TAKE MEDICATIONS, IMPORTANT DOCUMENTS, AND PETS. NORTHBOUND ROUTES: US-77 NORTH AND TX-286 NORTH. SHELTERS ARE OPEN AT RICHARD M. BORCHARD REGIONAL FAIRGROUNDS IN ROBSTOWN, CALALLEN ISD FIELDHOUSE, AND ALICE HIGH SCHOOL. ZONA DE EVACUACION OBLIGATORIA: SE ORDENA LA EVACUACION DE TODAS LAS ZONAS A, B, Y C DEL CONDADO DE NUECES. EVACUEE AHORA. LLAME AL 211 PARA INFORMACION EN ESPANOL. [WEA 360-char: EVACUATION ORDER Nueces County Zones A B C. LEAVE NOW. Hurricane Rafael Cat 3 arrives tonight. Take meds, documents, pets. Shelters: Robstown Fairgrounds, Calallen ISD, Alice HS. Info: 211 or ReadyNueces.org]",
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "events": [
+    "EVT-2103"
+   ],
+   "places": [
+    "Nueces County",
+    "Corpus Christi",
+    "Robstown",
+    "Calallen"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-023",
+   "day": 0,
+   "arcs": [
+    "ARC-STORM"
+   ],
+   "statement": "Rafael makes landfall on Mustang Island near Port Aransas around 1 a.m. local time as a Category 3 hurricane; about 11 feet of surge floods Corpus Christi and Nueces bays; widespread outages.",
+   "sources": [
+    "CHR-029",
+    "CHR-025",
+    "CHR-042",
+    "CHR-060"
+   ],
+   "events": [
+    "EVT-0301"
+   ],
+   "places": [
+    "LF-01",
+    "PLC-001",
+    "PLC-002",
+    "PLC-003"
+   ]
+  },
+  {
+   "id": "PUB-024",
+   "day": 0,
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "statement": "Oil reported spilling at an Inner Harbor terminal as the storm arrived; two moored tankers involved; volume unknown; cause under investigation.",
+   "sources": [
+    "CHR-020",
+    "CHR-070"
+   ],
+   "events": [
+    "EVT-0313"
+   ],
+   "places": [
+    "TERM-01"
+   ]
+  },
+  {
+   "id": "PUB-025",
+   "day": 0,
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "statement": "The O.N. Stevens Water Treatment Plant lost both power feeds early in the storm; pumps damaged; low water pressure citywide; residents asked to conserve.",
+   "sources": [
+    "CHR-024",
+    "CHR-045"
+   ],
+   "events": [
+    "EVT-0302"
+   ],
+   "places": [
+    "FAC-UTL-01",
+    "FAC-UTL-02"
+   ]
+  },
+  {
+   "id": "PUB-110",
+   "day": 0,
+   "time_local": "04:30",
+   "type": "official_statement",
+   "source": "NOAA National Hurricane Center / Texas Division of Emergency Management",
+   "statement": "NOAA National Hurricane Center confirms that NOAA Hurricane Hunter aircraft completed a final reconnaissance pass over the Corpus Christi area at approximately 3:30 a.m. CDT, about two and a half hours after landfall, capturing synthetic aperture radar imagery of the Corpus Christi Bay and Ship Channel. The imagery, now available to federal and state emergency managers, shows the extent of storm surge inundation along the Ship Channel industrial corridor and in the coastal residential areas of Districts 3 and 4. Texas Division of Emergency Management Director of Operations Marlene Vasquez-Ruiz stated: 'This imagery gives our coordinating agencies a first look at flooding extent before ground teams can safely enter. It is a critical input to our initial damage estimates and search-and-rescue prioritization.' The SAR imagery will be shared with FEMA Region 6 and the Texas General Land Office for infrastructure impact assessment.",
+   "arcs": [
+    "ARC-AID",
+    "ARC-COMMUNITY"
+   ],
+   "events": [
+    "EVT-1102"
+   ],
+   "places": [
+    "Corpus Christi Bay",
+    "Corpus Christi Ship Channel"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-130",
+   "day": 0,
+   "time_local": "08:00",
+   "type": "press_release",
+   "source": "Nueces County Office of Emergency Management / Coastal Bend Emergency Communications Center",
+   "statement": "The Coastal Bend Emergency Communications Center (CBECC), Nueces County's 911 dispatch hub, is operating at maximum surge capacity as Hurricane Rafael makes landfall. CBECC Director Patricia Escamilla-Voss confirmed that the center is receiving approximately seven times its normal call volume and has activated mutual aid with San Patricio and Bee County dispatch centers. 'Our dispatchers are working alongside mutual aid partners to answer every call as quickly as possible,' Director Escamilla-Voss said. 'Please call 911 only for immediate life-safety emergencies — we need to keep the lines open for people in immediate danger.' Residents with non-emergency needs should wait until the storm has passed and check the City of Corpus Christi website and social media for updates on road closures, shelters, and power outages. CBECC urges the public to shelter in place if safe to do so and to avoid calling 911 for flooding updates that do not involve a person in immediate danger.",
+   "arcs": [
+    "ARC-COMMUNITY",
+    "ARC-AID"
+   ],
+   "events": [
+    "EVT-1301"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Nueces County"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-141",
+   "day": 0,
+   "time_local": "08:30",
+   "type": "press_release",
+   "source": "FEMA Region 6",
+   "statement": "FEMA Region 6 has opened a Hurricane Rafael information line for residents of Nueces, San Patricio and Aransas counties. Callers to 1-800-621-3362 can get information on shelters, emergency supplies and how to document storm damage. The line is staffed daily from 7 a.m. to 11 p.m. local time. No federal aid program for individual households has been approved; FEMA will announce any assistance programs, and how to register for them, if they are approved. Residents should photograph damage, keep receipts and contact their insurance companies first. FEMA staff are deploying to the area to support state and local emergency managers.",
+   "arcs": [
+    "ARC-AID"
+   ],
+   "events": [
+    "EVT-1404"
+   ],
+   "places": [
+    "Nueces County",
+    "San Patricio County",
+    "Aransas County"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-160",
+   "day": 0,
+   "time_local": "14:00",
+   "type": "press_release",
+   "source": "Shoreline Regional Medical Center",
+   "statement": "Shoreline Regional Medical Center is operating under its Hurricane Contingency Plan following Hurricane Rafael landfall. The hospital is on generator power and all patient care systems are fully operational. We are receiving storm-related trauma patients and are coordinating with Nueces County Emergency Management and FEMA to manage patient volumes. Our emergency department is open and accepting patients. Bay City Medical Center is also open and operating. Patients with non-emergency conditions are encouraged to use urgent care facilities when possible to allow both hospitals to focus on critical storm-related injuries. For life-threatening emergencies, call 911. Shoreline Regional Medical Center and Bay City Medical Center are committed to serving all Corpus Christi-area residents during this crisis, and bilingual clinical staff are available at both facilities.",
+   "arcs": [
+    "ARC-HEALTH"
+   ],
+   "events": [
+    "EVT-1602"
+   ],
+   "places": [
+    "Shoreline Regional Medical Center",
+    "Bay City Medical Center"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-202",
+   "day": 0,
+   "time_local": "00:45",
+   "type": "emergency_alert",
+   "source": "IPAWS / Nueces County Office of Emergency Management",
+   "statement": "SHELTER IN PLACE — September 14, 2027 12:45 AM CDT: HURRICANE RAFAEL IS APPROACHING. ALL RESIDENTS WHO HAVE NOT EVACUATED MUST SHELTER IN PLACE IMMEDIATELY. DO NOT ATTEMPT TO DRIVE. MAXIMUM WINDS AND STORM SURGE WILL OCCUR IN THE NEXT 2 TO 4 HOURS. GO TO AN INTERIOR ROOM ON THE HIGHEST FLOOR OF YOUR BUILDING. STAY AWAY FROM WINDOWS. IF YOUR SHELTER FLOODS, MOVE TO THE HIGHEST POINT AVAILABLE. DO NOT GO OUTSIDE UNTIL AUTHORITIES DECLARE IT SAFE. COASTLINE PUBLIC RADIO 89.7 FM AND KNCB 1480 AM ARE BROADCASTING CONTINUOUSLY. CALL 911 FOR LIFE-THREATENING EMERGENCIES ONLY. QUEDESE EN SU LUGAR. REFUGIESE EN UN CUARTO INTERIOR. ESCUCHE KNCB 1480 AM EN ESPANOL. [WEA 90-char: SHELTER IN PLACE. Rafael landfall now. Go interior room highest floor. No driving. 911 emergencies only.]",
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "events": [
+    "EVT-2104"
+   ],
+   "places": [
+    "Nueces County",
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-026",
+   "day": 1,
+   "arcs": [
+    "ARC-STORM",
+    "ARC-EQUITY"
+   ],
+   "statement": "911 call volume is running at a rate of about 2,900 calls a day, nearly ten times normal; most calls come from low-lying neighborhoods near the bay.",
+   "sources": [
+    "CHR-025",
+    "CHR-001"
+   ],
+   "events": [
+    "EVT-0303"
+   ],
+   "places": [
+    "PSAP-01",
+    "PLC-010"
+   ]
+  },
+  {
+   "id": "PUB-027",
+   "day": 1,
+   "arcs": [
+    "ARC-STORM"
+   ],
+   "statement": "The Harbor Bridge and Nueces Bay Causeway are closed; Portland and North Beach cut off from downtown until inspections finish.",
+   "sources": [
+    "CHR-025",
+    "CHR-044"
+   ],
+   "events": [
+    "EVT-0304"
+   ],
+   "places": [
+    "FAC-INF-01"
+   ]
+  },
+  {
+   "id": "PUB-028",
+   "day": 1,
+   "arcs": [
+    "ARC-STORM"
+   ],
+   "statement": "Satellite imagery shows about 43 square miles flooded across the three coastal counties.",
+   "sources": [
+    "CHR-060",
+    "CHR-005"
+   ],
+   "events": [
+    "EVT-0305"
+   ],
+   "places": [
+    "PLC-001",
+    "PLC-002",
+    "PLC-003"
+   ]
+  },
+  {
+   "id": "PUB-029",
+   "day": 1,
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "statement": "Coast Guard Sector Corpus Christi and the Texas General Land Office form a Unified Command; estimated release about 9,000 barrels of crude from MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth; on-water response waits for winds to drop; Navy salvage equipment requested.",
+   "sources": [
+    "CHR-020",
+    "CHR-028",
+    "CHR-070"
+   ],
+   "events": [
+    "EVT-0315"
+   ],
+   "places": [
+    "TERM-01",
+    "FAC-USCG-01"
+   ]
+  },
+  {
+   "id": "PUB-170",
+   "day": 1,
+   "time_local": "15:00",
+   "type": "official_statement",
+   "source": "US Coast Guard Sector Corpus Christi",
+   "statement": "Coast Guard Sector Corpus Christi reports that helicopter crews from Air Station Corpus Christi have conducted rescue operations continuously since 1:22 a.m. Tuesday, completing 180 hoist operations as of 3 p.m. Wednesday. Coast Guard HH-60 Jayhawk aircraft have operated in wind speeds up to 55 knots to reach survivors on rooftops and in second-story windows across the Flour Bluff and North Beach communities. Working alongside Texas Department of Public Safety Aviation and Customs and Border Protection Air units, Coast Guard crews have confirmed 341 persons rescued by air as of this report. Aerial thermal imaging has been instrumental in locating survivors in debris-filled floodwater. Ground and boat rescue operations have confirmed an additional 145 rescues, bringing the total to 486 persons. Coast Guard Sector Commander Delia Ostrowski-Han has requested mutual aid from Air Station Houston for additional rotary-wing support beginning tomorrow morning.",
+   "arcs": [],
+   "events": [
+    "EVT-1703"
+   ],
+   "places": [
+    "NAS Corpus Christi",
+    "Flour Bluff",
+    "North Beach"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-203",
+   "day": 1,
+   "time_local": "09:00",
+   "type": "broadcast_announcement",
+   "source": "Harborline 6 News / OUT-02",
+   "statement": "HARBORLINE 6 NEWS SPECIAL REPORT — September 15, 2027 9:00 AM CDT: Good morning. I am reporting from our backup studio. Hurricane Rafael came ashore near Port Aransas at approximately 1 AM Tuesday as a Category 3 storm with maximum sustained winds of 125 miles per hour. Twelve fatalities have been confirmed by Nueces County Emergency Management as of 9 AM; officials caution this number may rise as search and rescue operations continue. Widespread structural damage is reported across Districts 1 through 5. The Harbor Bridge and the Nueces Bay Causeway are closed until inspections are complete. Power outages affect more than 72,000 customers across Nueces County according to the Coastal Bend Power and Water Authority. Emergency shelters at the Robstown Fairgrounds and Calallen ISD Fieldhouse are open and accepting evacuees. A dusk-to-dawn curfew is in effect for all Corpus Christi city limits. Residents are advised not to return to evacuated areas until the all-clear is issued by Nueces County Emergency Management. We will continue to bring you updates throughout the day.",
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "events": [
+    "EVT-2105"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Nueces County",
+    "Harbor Bridge",
+    "Robstown",
+    "Calallen"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-030",
+   "day": 2,
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "statement": "Surge and wind carried oil out of the ship channel into Nueces and Corpus Christi bays; sheen covers about 33 square miles; oil on North Beach and Portland shorelines and in marshes.",
+   "sources": [
+    "CHR-028",
+    "CHR-060",
+    "CHR-044",
+    "CHR-005"
+   ],
+   "events": [
+    "EVT-0314"
+   ],
+   "places": [
+    "PORT-07",
+    "PLC-001",
+    "PLC-002"
+   ]
+  },
+  {
+   "id": "PUB-031",
+   "day": 2,
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "statement": "Cleanup crews deploy boom as winds drop; wildlife hotline opens.",
+   "sources": [
+    "CHR-028"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001",
+    "PLC-002"
+   ]
+  },
+  {
+   "id": "PUB-032",
+   "day": 2,
+   "arcs": [
+    "ARC-DRONES"
+   ],
+   "statement": "Residents post videos of lights hovering over NAS Corpus Christi at night.",
+   "sources": [
+    "CHR-048"
+   ],
+   "events": [
+    "EVT-0318"
+   ],
+   "places": [
+    "FAC-DOD-01"
+   ]
+  },
+  {
+   "id": "PUB-033",
+   "day": 2,
+   "arcs": [
+    "ARC-RUMORS"
+   ],
+   "statement": "Viral posts falsely claim the military is seizing homes and aid will go only to wealthy neighborhoods; accounts include @CoastTruthTX.",
+   "sources": [
+    "CHR-080",
+    "CHR-007",
+    "CHR-025"
+   ],
+   "events": [
+    "EVT-0309"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-121",
+   "day": 2,
+   "time_local": "10:00",
+   "type": "press_release",
+   "source": "USCG Sector Corpus Christi / National Response Center",
+   "statement": "The United States Coast Guard Sector Corpus Christi confirms that crude oil released at the Rendal Terminals berth in the Inner Harbor as Hurricane Rafael arrived has been carried by storm surge and wind out of the Corpus Christi Ship Channel into Nueces Bay and Corpus Christi Bay. Coast Guard overflights and NOAA aerial imagery this morning show sheen across about 33 square miles of the two bays, with oil on shorelines and in marshes. The source is the two moored tankers identified by the Unified Command on Wednesday, MT Kalvora Star and MT Ostrel Bay; the estimated release remains about 9,000 barrels, and the cause is under investigation. With winds dropping, response crews are deploying containment boom, and a wildlife hotline has opened. The National Response Center has been notified. The Captain of the Port has established a safety zone in the Inner Harbor, and the ship channel remains closed. The public is advised to avoid contact with oil and oiled shoreline and to stay out of affected waters until further notice.",
+   "arcs": [
+    "ARC-SPILL",
+    "ARC-PORT"
+   ],
+   "events": [
+    "EVT-1206"
+   ],
+   "places": [
+    "Corpus Christi Bay",
+    "Nueces Bay",
+    "Port of Corpus Christi",
+    "Corpus Christi Ship Channel"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-161",
+   "day": 2,
+   "time_local": "11:00",
+   "type": "press_release",
+   "source": "Shoreline Regional Medical Center",
+   "statement": "Shoreline Regional Medical Center has reached maximum patient capacity and is operating above its licensed bed count due to the volume of storm-related injuries and medical needs following Hurricane Rafael. We have deployed additional patient care areas and are working with regional partners to manage the surge. Bay City Medical Center is also operating above capacity. Shoreline Regional has requested mutual aid support from the Texas Department of State Health Services and FEMA's National Disaster Medical System. We continue to operate on generator power. We ask that community members donate blood if they are able — the Nueces Bay Blood Services is accepting donations at its Ayers Street location. All Corpus Christi area residents with life-threatening emergencies should call 911. We are grateful to our clinical staff who are working around the clock to care for our community.",
+   "arcs": [
+    "ARC-HEALTH",
+    "ARC-AID"
+   ],
+   "events": [
+    "EVT-1603"
+   ],
+   "places": [
+    "Shoreline Regional Medical Center",
+    "Bay City Medical Center",
+    "Nueces Bay Blood Services"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-171",
+   "day": 2,
+   "time_local": "18:00",
+   "type": "official_statement",
+   "source": "Nueces County Office of Emergency Management",
+   "statement": "Nueces County Emergency Management Coordinator announces that combined SAR teams have reached a cumulative total of 702 confirmed rescues as of 18:00 today. Search operations have expanded into the Districts 3 and 4 areas where post-storm surge flooding has persisted at depths between two and three feet in low-lying neighborhoods. Texas Task Force 1 swift-water units are conducting systematic grid searches in the Greenwood and Molina neighborhoods. Coastal Bend Emergency Communications Center Dispatch Chief Elena Vasquez-Okafor reports that all known stranded survivors in Flour Bluff have been reached; operations are now focused on the Calallen and northwest mainland corridors. Residents who remain in their homes and require assistance are urged to place a bright-colored item in a visible window or on their roof. Do not attempt to enter floodwater on foot. Nueces County Emergency Management has confirmed 23 storm-related deaths as of this evening.",
+   "arcs": [],
+   "events": [
+    "EVT-1704"
+   ],
+   "places": [
+    "Districts 3 and 4",
+    "Greenwood",
+    "Molina",
+    "Calallen"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-190",
+   "day": 2,
+   "time_local": "11:00",
+   "type": "regulatory_advisory",
+   "source": "Texas Commission on Environmental Quality",
+   "statement": "TCEQ WATER QUALITY NOTICE — September 16, 2027: The Texas Commission on Environmental Quality has confirmed that total petroleum hydrocarbon levels exceeding regulatory alert thresholds have been detected at the raw water intake of the O.N. Stevens Water Treatment Plant. Readings of 0.42 milligrams per liter were recorded at 06:00 UTC on September 16, 2027, against an alert threshold of 0.10 mg/L. Plant operators have activated emergency filtration protocols as required under TCEQ Permit WQ-2019-0074-PWS. The City of Corpus Christi Water Department reports that treated drinking water continues to meet the standards for hydrocarbons; the low system pressure reported since the storm is unrelated to this detection. The hydrocarbon contamination is linked to the oil release in the Inner Harbor of the Corpus Christi Ship Channel, which is under active investigation by the U.S. Coast Guard and TCEQ. TCEQ has opened Incident Case CC-ENV-2027-0916. Additional monitoring data will be released as available. Residents with questions may call TCEQ Region 11 at (512) 239-4300.",
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "events": [
+    "EVT-2003"
+   ],
+   "places": [
+    "O.N. Stevens Water Treatment Plant",
+    "Corpus Christi Ship Channel"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-191",
+   "day": 2,
+   "time_local": "16:30",
+   "type": "health_advisory",
+   "source": "Texas Commission on Environmental Quality / Corpus Christi-Nueces County Public Health District",
+   "statement": "AIR QUALITY HEALTH ADVISORY — September 16, 2027: The Texas Commission on Environmental Quality and the Corpus Christi-Nueces County Public Health District are issuing an air quality health advisory for neighborhoods within 3 kilometers of the Corpus Christi Ship Channel. Monitoring station CC-AQ-02 in the Hillcrest neighborhood has recorded benzene concentrations of 4.8 parts per billion, exceeding the EPA 72-hour reference concentration of 3 ppb. Elevated volatile organic compounds consistent with crude oil evaporation have been detected at multiple monitoring locations near the ship channel. This is associated with the Inner Harbor oil release under investigation by the U.S. Coast Guard. Sensitive populations including children, the elderly, and individuals with respiratory conditions should remain indoors with windows and doors closed until further notice. Air conditioning systems should be set to recirculate indoor air rather than draw outside air. Residents experiencing respiratory distress, eye irritation, or dizziness should contact the Corpus Christi-Nueces County Public Health District at (361) 826-7200 or call 911 for emergencies. Monitoring data is updated hourly at airnow.gov.",
+   "arcs": [
+    "ARC-HEALTH"
+   ],
+   "events": [
+    "EVT-2004"
+   ],
+   "places": [
+    "Hillcrest neighborhood",
+    "Corpus Christi Ship Channel"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-034",
+   "day": 3,
+   "arcs": [
+    "ARC-RUMORS"
+   ],
+   "statement": "County and base officials say the home-seizure claims are false; posts blaming refinery negligence for the spill also spread, including from @GulfWatchPatriot.",
+   "sources": [
+    "CHR-025",
+    "CHR-021",
+    "CHR-007",
+    "CHR-081"
+   ],
+   "events": [
+    "EVT-0309"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-035",
+   "day": 3,
+   "arcs": [
+    "ARC-MILITARY"
+   ],
+   "statement": "Corpus Christi Army Depot reports hangar roof damage and water intrusion; workers told to stand by.",
+   "sources": [
+    "CHR-022"
+   ],
+   "events": [
+    "EVT-0307"
+   ],
+   "places": [
+    "FAC-DOD-02"
+   ]
+  },
+  {
+   "id": "PUB-036",
+   "day": 3,
+   "arcs": [
+    "ARC-STORM"
+   ],
+   "statement": "Harbor Bridge and Nueces Bay Causeway reopen after inspection.",
+   "sources": [
+    "CHR-025"
+   ],
+   "events": [],
+   "places": [
+    "FAC-INF-01"
+   ]
+  },
+  {
+   "id": "PUB-037",
+   "day": 3,
+   "arcs": [
+    "ARC-AID",
+    "ARC-EQUITY"
+   ],
+   "statement": "Church and neighborhood hubs hand out food and water before official distribution reaches some neighborhoods.",
+   "sources": [
+    "CHR-049",
+    "CHR-040"
+   ],
+   "events": [],
+   "places": [
+    "PLC-010"
+   ]
+  },
+  {
+   "id": "PUB-038",
+   "day": 3,
+   "arcs": [
+    "ARC-HEALTH",
+    "ARC-SPILL"
+   ],
+   "statement": "ERs see respiratory and skin complaints from residents near oiled shorelines; health officials advise avoiding contact with oil.",
+   "sources": [
+    "CHR-026",
+    "CHR-043"
+   ],
+   "events": [
+    "EVT-0317"
+   ],
+   "places": [
+    "PLC-001",
+    "PLC-002"
+   ]
+  },
+  {
+   "id": "PUB-109",
+   "day": 3,
+   "arcs": [
+    "ARC-PORT"
+   ],
+   "statement": "Ships that rode out the storm at sea return to the offshore anchorage to wait for the channel to reopen; the channel stays closed while it is surveyed and the spill is contained.",
+   "sources": [
+    "CHR-020",
+    "CHR-010",
+    "CHR-023"
+   ],
+   "events": [
+    "EVT-0401"
+   ],
+   "places": [
+    "ANC-OFF",
+    "PORT-07"
+   ]
+  },
+  {
+   "id": "PUB-131",
+   "day": 3,
+   "time_local": "10:00",
+   "type": "press_release",
+   "source": "Nueces County Office of Emergency Management",
+   "statement": "Nueces County Emergency Management Coordinator Lt. Col. Raymond Okafor-Williams announced today that the Coastal Bend Emergency Communications Center handled about 2,900 emergency calls on Wednesday, September 15 — the busiest day in CBECC history and nearly ten times a normal day — and processed a record 2,109 rescue requests on Thursday, September 16, the most rescue calls the center has taken in a single day. The rescue surge was driven primarily by residents trapped by floodwater in Districts 3 and 4. 'Our dispatchers and the swift water rescue teams from Texas Task Force 1 worked through the night and into the next day to reach everyone who called,' said Okafor-Williams. 'We are proud of the professionalism shown by every member of the CBECC team.' On landfall day, Tuesday, September 14, the center took about 1,840 calls, about 1,100 of them rescue-related. Over the first three days of the storm response, CBECC handled more than 7,300 calls, compared to fewer than 1,000 calls during a normal three-day period. The center has sustained mutual aid staffing from San Patricio and Bee County, and anticipates call volume to remain elevated for several weeks as recovery operations continue.",
+   "arcs": [
+    "ARC-AID",
+    "ARC-COMMUNITY"
+   ],
+   "events": [
+    "EVT-1302"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Nueces County",
+    "Districts 3 and 4"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-212",
+   "day": 3,
+   "time_local": "08:00",
+   "type": "consumer_warning",
+   "source": "Texas Office of the Attorney General / FEMA",
+   "statement": "DISASTER FRAUD WARNING — September 17, 2027: The Texas Office of the Attorney General and FEMA are warning Corpus Christi area residents about price gouging and contractor fraud following Hurricane Rafael. Reports are already emerging of contractors demanding large upfront cash payments and then failing to perform work. Texas law prohibits price gouging during a declared disaster. Warning signs of contractor fraud include: demanding full payment upfront; no written contract; no Texas contractor license; using high-pressure tactics; claiming to be FEMA-affiliated (FEMA does NOT endorse private contractors). Legitimate FEMA Individual Assistance programs do not charge application fees. FEMA IA registration is NOT yet open for Nueces County — anyone charging fees to register for FEMA assistance is committing fraud. Report fraud to the OAG Consumer Protection Hotline at (800) 621-0508 or the FEMA Disaster Fraud Hotline at 1-866-720-5721. Texas OAG has opened a price gouging investigation in Nueces County.",
+   "arcs": [
+    "ARC-CONTRACTS"
+   ],
+   "events": [
+    "EVT-2202"
+   ],
+   "places": [
+    "Nueces County",
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-039",
+   "day": 4,
+   "arcs": [
+    "ARC-WATER",
+    "ARC-HEALTH"
+   ],
+   "statement": "Citywide boil-water notice issued; bring water to a rolling boil for two minutes; water distribution sites open.",
+   "sources": [
+    "CHR-024",
+    "CHR-026",
+    "CHR-045"
+   ],
+   "events": [
+    "EVT-0310"
+   ],
+   "places": [
+    "PLC-001"
+   ]
+  },
+  {
+   "id": "PUB-040",
+   "day": 4,
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "statement": "Because of the oil, the Texas Department of State Health Services closes shellfish harvesting and Texas Parks and Wildlife closes fishing in Nueces and Corpus Christi bays.",
+   "sources": [
+    "CHR-028",
+    "CHR-041"
+   ],
+   "events": [
+    "EVT-0317"
+   ],
+   "places": [
+    "PLC-001",
+    "PLC-002"
+   ]
+  },
+  {
+   "id": "PUB-103",
+   "day": 4,
+   "arcs": [
+    "ARC-AID"
+   ],
+   "statement": "A federal major disaster declaration for Nueces, San Patricio and Aransas counties covers debris removal and emergency protective measures; FEMA says aid to households (Individual Assistance) depends on joint damage assessments now under way.",
+   "sources": [
+    "CHR-027",
+    "CHR-025"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001",
+    "PLC-002",
+    "PLC-003"
+   ]
+  },
+  {
+   "id": "PUB-111",
+   "day": 4,
+   "time_local": "15:00",
+   "type": "press_release",
+   "source": "FEMA Region 6",
+   "statement": "FEMA Region 6 today released preliminary damage assessment results based on the first systematic aerial drone survey of the Corpus Christi metropolitan area. A team of eight unmanned aircraft operated by Argus Aerial Systems under FEMA contract completed 180 square kilometers of coverage over residential and coastal zones between September 17 and 18. Based on automated structure analysis of approximately 847,000 image tiles, FEMA estimates between 4,200 and 5,800 structures in Nueces County sustained major or severe damage from Hurricane Rafael. These figures are preliminary and will be updated as the survey expands to additional zones, including the utility corridor and commercial districts. FEMA Federal Coordinating Officer Dennis Park said: 'The aerial survey gives us the most comprehensive picture we have had in the first days after a Gulf Coast hurricane. We are sharing these results directly with Nueces County emergency management and the City of Corpus Christi to inform resource deployment.' Additional survey phases targeting utility infrastructure and the Port of Corpus Christi are scheduled to begin within the week.",
+   "arcs": [
+    "ARC-AID"
+   ],
+   "events": [
+    "EVT-1104"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Nueces County"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-192",
+   "day": 4,
+   "time_local": "18:00",
+   "type": "press_release",
+   "source": "Unified Command (U.S. Coast Guard Sector Corpus Christi / Texas General Land Office) / TCEQ",
+   "statement": "UNIFIED COMMAND UPDATE — September 18, 2027: The Unified Command for the Inner Harbor oil spill confirms heavy shoreline oiling along Nueces Bay. Oil released from MT Kalvora Star and MT Ostrel Bay as Hurricane Rafael arrived was carried out of the ship channel by surge and wind; sheen covers about 33 square miles of Nueces and Corpus Christi bays. A TCEQ water quality station in Nueces Bay recorded petroleum hydrocarbon levels of 2.1 mg/L this afternoon. Texas Parks and Wildlife biologists and personnel from the Coastal Bend Wildlife Rescue have documented 41 oiled birds along the Nueces Bay shoreline, including brown pelicans and laughing gulls. Wildlife rescue operations are underway. Because of the oil, Texas Parks and Wildlife has closed fishing and the Texas Department of State Health Services has closed shellfish harvesting in Nueces and Corpus Christi bays, effective immediately and until further notice. Additional containment boom is being placed at the Nueces Bay Causeway channel. The Coast Guard expects to issue its formal responsible-party designation within 72 hours. Contact: Unified Command Joint Information Center (JIC), (361) 555-0147.",
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "events": [
+    "EVT-2006"
+   ],
+   "places": [
+    "Nueces Bay",
+    "Nueces Bay Causeway",
+    "Corpus Christi Ship Channel"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-041",
+   "day": 5,
+   "arcs": [
+    "ARC-RUMORS"
+   ],
+   "statement": "City warns employees and residents about phishing emails impersonating a disaster-aid portal.",
+   "sources": [
+    "CHR-025",
+    "CHR-007"
+   ],
+   "events": [
+    "EVT-0306"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-172",
+   "day": 5,
+   "time_local": "17:00",
+   "type": "press_conference",
+   "source": "CCFD / US Coast Guard Sector Corpus Christi joint briefing",
+   "statement": "Coastal Bend Emergency Communications Center Dispatch Chief Elena Vasquez-Okafor and Coast Guard Sector Commander Delia Ostrowski-Han announced today that mass rescue operations in the Corpus Christi area have concluded, with 1,427 confirmed rescues over five days. The operation involved 34 coordinated teams at peak, including US Coast Guard, Texas Task Force 1, Corpus Christi Fire Department, Nueces County Sheriff Search and Rescue, and 87 credentialed civilian boat operators. Search teams recovered two bodies during the operation, both occupants of a submerged vehicle on Violet Road; the county's confirmed storm death toll stands at 23. Chief Vasquez-Okafor praised the performance of contracted UAS operators whose thermal imaging capabilities enabled the identification of survivors in darkness and debris. Commander Ostrowski-Han noted that this was the largest helicopter hoist rescue operation in Corpus Christi history. Remaining SAR resources will transition to welfare check mode; residents who have not yet been contacted by a welfare check team should call 211.",
+   "arcs": [],
+   "events": [
+    "EVT-1706"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Flour Bluff",
+    "Calallen",
+    "Violet Road"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-042",
+   "day": 6,
+   "arcs": [
+    "ARC-SPILL-CYBER"
+   ],
+   "statement": "Coast Guard says investigators are examining possible unauthorized remote access to the tankers' cargo-control systems; federal cyber teams assisting.",
+   "sources": [
+    "CHR-020",
+    "CHR-030"
+   ],
+   "events": [
+    "EVT-0316"
+   ],
+   "places": [
+    "TERM-01"
+   ]
+  },
+  {
+   "id": "PUB-043",
+   "day": 6,
+   "arcs": [
+    "ARC-DRONES"
+   ],
+   "statement": "NAS Corpus Christi says it is aware of drone reports and working with authorities; no impact to operations.",
+   "sources": [
+    "CHR-021"
+   ],
+   "events": [
+    "EVT-0318"
+   ],
+   "places": [
+    "FAC-DOD-01"
+   ]
+  },
+  {
+   "id": "PUB-044",
+   "day": 6,
+   "arcs": [
+    "ARC-HEALTH",
+    "ARC-WATER"
+   ],
+   "statement": "Wastewater testing shows a norovirus signal; stomach illness visits rising.",
+   "sources": [
+    "CHR-026"
+   ],
+   "events": [
+    "EVT-0310"
+   ],
+   "places": [
+    "WW-xx"
+   ]
+  },
+  {
+   "id": "PUB-045",
+   "day": 6,
+   "arcs": [
+    "ARC-MILITARY"
+   ],
+   "statement": "Training aircraft begin returning to NAS Corpus Christi and NAS Kingsville.",
+   "sources": [
+    "CHR-021",
+    "CHR-013"
+   ],
+   "events": [],
+   "places": [
+    "FAC-DOD-01",
+    "FAC-DOD-03"
+   ]
+  },
+  {
+   "id": "PUB-122",
+   "day": 6,
+   "time_local": "15:00",
+   "type": "press_release",
+   "source": "USCG Sector Corpus Christi",
+   "statement": "The United States Coast Guard Sector Corpus Christi confirms that marine inspectors and pollution investigators completed inspections aboard MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth yesterday, September 19, 2027. Both crews are safe. Both vessels remain moored under a Captain of the Port order and will not move until the investigation and the owners' obligations under federal oil spill law are addressed. Investigators documented the condition of the cargo systems on both ships and are examining possible unauthorized remote access to the tankers' cargo-control systems, with federal cyber teams assisting. The Coast Guard will not characterize the cause of the release while the investigation is open. The oil spill response continues, with containment boom deployed along affected shoreline in Nueces and Corpus Christi bays.",
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "events": [
+    "EVT-1207"
+   ],
+   "places": [
+    "Corpus Christi Ship Channel",
+    "Port of Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-173",
+   "day": 7,
+   "time_local": "10:00",
+   "type": "official_report",
+   "source": "US Coast Guard Sector Corpus Christi",
+   "statement": "The US Coast Guard Sector Corpus Christi has submitted its formal Incident Summary Report for Operation Rafael SAR (ISR-2027-CC-004) to Coast Guard District 8. The report certifies 1,427 total rescues: 341 by helicopter hoist, 1,041 by surface vessel (Coast Guard, state, and civilian), and 45 ambulatory survivor contacts. The report notes that contracted unmanned aerial system operators provided 112 thermal imaging annotations directly used to coordinate surface rescue operations. The Coast Guard thanks the community of Corpus Christi and all mutual-aid partners for their outstanding response. A formal after-action review will be conducted within 90 days.",
+   "arcs": [],
+   "events": [
+    "EVT-1708"
+   ],
+   "places": [
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-193",
+   "day": 7,
+   "time_local": "14:30",
+   "type": "press_release",
+   "source": "U.S. Coast Guard Sector Corpus Christi (Federal On-Scene Coordinator)",
+   "statement": "RESPONSIBLE PARTIES DESIGNATED — September 21, 2027: The U.S. Coast Guard, as Federal On-Scene Coordinator for the September 14 Inner Harbor oil release, has formally designated the owners of the tankers MT Kalvora Star and MT Ostrel Bay as responsible parties under the Oil Pollution Act of 1990. Oil fingerprint analysis by the Coast Guard confirms that oil samples collected in the Inner Harbor, Corpus Christi Bay and Nueces Bay match the crude oil cargoes aboard the two vessels. The owners have been issued Notices of Federal Interest and are required to fund cleanup and to set up a process for damage claims. The estimated discharge remains about 9,000 barrels of crude oil. To keep response contractors working without interruption, the Coast Guard has opened the Oil Spill Liability Trust Fund with an initial ceiling of $4.2 million, to be recovered from the responsible parties. The designation assigns financial responsibility for the response; it is not a finding on the cause of the release, which remains under investigation. Contact: Unified Command Joint Information Center (JIC), (361) 555-0147.",
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "events": [
+    "EVT-2007"
+   ],
+   "places": [
+    "Corpus Christi Ship Channel",
+    "Corpus Christi Bay",
+    "Nueces Bay"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-046",
+   "day": 8,
+   "arcs": [
+    "ARC-HEALTH"
+   ],
+   "statement": "ER visits for stomach illness up about 180% over normal; hallway beds in use.",
+   "sources": [
+    "CHR-026",
+    "CHR-043"
+   ],
+   "events": [
+    "EVT-0310"
+   ],
+   "places": [
+    "FAC-HOS-xx"
+   ]
+  },
+  {
+   "id": "PUB-047",
+   "day": 8,
+   "arcs": [
+    "ARC-SPILL-CYBER"
+   ],
+   "statement": "Brightwake Marine Systems says its remote-maintenance credentials were misused; it revoked all remote access and is cooperating.",
+   "sources": [
+    "CHR-071"
+   ],
+   "events": [
+    "EVT-0316"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-142",
+   "day": 8,
+   "time_local": "10:00",
+   "type": "press_release",
+   "source": "FEMA Region 6",
+   "statement": "FEMA's Hurricane Rafael information line is now available in Spanish. Beginning today, callers to 1-800-621-3362 may press 2 for Spanish-language assistance. Bilingual operators are staffed daily from 7 a.m. to 11 p.m. Spanish-language disaster information has also been posted online. The information line does not register households for aid: Individual Assistance has not been approved for Hurricane Rafael, and FEMA will announce it, and how to register, if that changes. For residents who need in-person help, FEMA and county staff are available at Richard King High School and Del Mar College East Campus.",
+   "arcs": [
+    "ARC-AID"
+   ],
+   "events": [
+    "EVT-1406"
+   ],
+   "places": [
+    "Richard King High School",
+    "Del Mar College East Campus"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-048",
+   "day": 9,
+   "arcs": [
+    "ARC-DRONES"
+   ],
+   "statement": "FBI confirms it is investigating drone reports near the air station.",
+   "sources": [
+    "CHR-033"
+   ],
+   "events": [],
+   "places": [
+    "FAC-DOD-01"
+   ]
+  },
+  {
+   "id": "PUB-049",
+   "day": 10,
+   "arcs": [
+    "ARC-CONTRACTS"
+   ],
+   "statement": "County awards a $14.2 million sole-source emergency debris contract to Vantorra Restoration LLC.",
+   "sources": [
+    "CHR-072",
+    "CHR-025"
+   ],
+   "events": [
+    "EVT-0311"
+   ],
+   "places": [
+    "PLC-001"
+   ]
+  },
+  {
+   "id": "PUB-050",
+   "day": 10,
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "statement": "Utility says damaged plant pumps need replacement parts; temporary pumps limit capacity.",
+   "sources": [
+    "CHR-024"
+   ],
+   "events": [
+    "EVT-0308"
+   ],
+   "places": [
+    "FAC-UTL-01"
+   ]
+  },
+  {
+   "id": "PUB-174",
+   "day": 10,
+   "time_local": "09:00",
+   "type": "media_report",
+   "source": "OUT-03 Coastline Public Radio",
+   "statement": "Coastline Public Radio has learned from Coastal Bend Emergency Communications Center dispatch records, obtained through a public records request, that 23 calls from unregistered prepaid phones since September 21 reported emergencies at addresses in northwest and central Corpus Christi near two utility sites — at least eleven of them describing trapped residents — but responders found no one and no emergency at any of those locations. Dispatch Chief Elena Vasquez-Okafor of the Coastal Bend Emergency Communications Center confirmed the unfounded calls, said the center had flagged the cluster internally and had referred the information to its law enforcement partners. No suspects have been identified.",
+   "arcs": [],
+   "events": [
+    "EVT-1707"
+   ],
+   "places": [
+    "northwest Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-051",
+   "day": 11,
+   "arcs": [
+    "ARC-DRONES"
+   ],
+   "statement": "No new drone sightings reported after ten days.",
+   "sources": [
+    "CHR-048",
+    "CHR-021"
+   ],
+   "events": [],
+   "places": [
+    "FAC-DOD-01"
+   ]
+  },
+  {
+   "id": "PUB-106",
+   "day": 12,
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "statement": "A claims center run for the tankers' owners opens for spill cleanup and property damage claims, as federal oil spill law requires.",
+   "sources": [
+    "CHR-028",
+    "CHR-070"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001",
+    "PLC-002"
+   ]
+  },
+  {
+   "id": "PUB-132",
+   "day": 12,
+   "time_local": "19:00",
+   "type": "official_statement",
+   "source": "Nueces County Office of Emergency Management / City of Corpus Christi",
+   "statement": "The Coastal Bend Emergency Communications Center is experiencing a significant increase in calls related to today's boil water notice for Districts 3 and 4. CBECC Director Patricia Escamilla-Voss urges residents with water safety questions to call the newly established NuecesInfoLine at 361-826-INFO rather than 911. '911 is for life-threatening emergencies only,' Director Escamilla-Voss said. 'The NuecesInfoLine has operators available to answer your questions about the boil water notice, water distribution sites, and when water service is expected to be restored — please use that number and keep 911 available for people whose lives are in danger.' The NuecesInfoLine is staffed 24 hours a day, 7 days a week. Information is also available in Spanish by pressing 2. Water distribution sites are open at the Tuloso-Midway High School gym, the Woodlawn Community Center, and Cefe Valenzuela Park; hours and addresses are listed at the City of Corpus Christi emergency management website.",
+   "arcs": [
+    "ARC-WATER",
+    "ARC-HEALTH"
+   ],
+   "events": [
+    "EVT-1305"
+   ],
+   "places": [
+    "Districts 3 and 4",
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-143",
+   "day": 12,
+   "time_local": "17:30",
+   "type": "emergency_alert",
+   "source": "Corpus Christi Water Department / Coastal Bend Power and Water Authority",
+   "statement": "BOIL WATER NOTICE — Districts 3 and 4. Effective immediately, all residents and businesses served by the City of Corpus Christi water system in Water Districts 3 and 4 (ZIP codes 78401, 78405, 78407, 78408, 78416 and 78417) are advised to boil all water used for drinking, cooking, and making ice. This notice is issued due to low system pressure in these districts following Hurricane Rafael damage to distribution infrastructure. To make water safe: bring water to a rolling boil for two minutes before use. This notice affects approximately 48,000 residents. Updates will be issued through the City's emergency notification system, local television and local radio. For more information call 361-826-1600.",
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "events": [
+    "EVT-1407"
+   ],
+   "places": [
+    "Districts 3 and 4",
+    "O.N. Stevens Water Treatment Plant"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-204",
+   "day": 12,
+   "time_local": "17:30",
+   "type": "emergency_alert",
+   "source": "IPAWS / Coastal Bend Power and Water Authority",
+   "statement": "BOIL WATER NOTICE — September 26, 2027 5:30 PM CDT: THE COASTAL BEND POWER AND WATER AUTHORITY HAS ISSUED A BOIL WATER NOTICE FOR DISTRICTS 3 AND 4 OF THE CORPUS CHRISTI WATER DISTRIBUTION SYSTEM. THIS NOTICE AFFECTS APPROXIMATELY 48,000 RESIDENTS. DUE TO LOW WATER PRESSURE AND DISTRIBUTION SYSTEM DISRUPTIONS, ALL TAP WATER MUST BE BOILED BEFORE USE FOR DRINKING, COOKING, MAKING ICE, OR BRUSHING TEETH. BRING WATER TO A ROLLING BOIL FOR TWO MINUTES BEFORE USE. BOTTLED WATER DISTRIBUTION SITES ARE OPERATING AT TULOSO-MIDWAY HIGH SCHOOL GYM, WOODLAWN COMMUNITY CENTER, AND CEFE VALENZUELA PARK. DISTRICTS 3 AND 4 INCLUDE THE FOLLOWING ZIP CODES: 78401, 78405, 78407, 78408, 78416, 78417. FOR INFORMATION CALL CBPWA AT (361) 555-0280. AVISO DE AGUA A HERVIR: La version en espanol de este aviso se distribuira por separado. [WEA: BOIL WATER NOTICE Districts 3-4 Corpus Christi. Boil all tap water before use. Bottled water: Tuloso-Midway HS, Woodlawn Ctr, Cefe Valenzuela Park. CBPWA (361)555-0280]",
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "events": [
+    "EVT-2106"
+   ],
+   "places": [
+    "Districts 3 and 4",
+    "Corpus Christi",
+    "Tuloso-Midway",
+    "Woodlawn",
+    "Cefe Valenzuela Park"
+   ],
+   "sources": []
+  },
+  {
+   "id": "GW-PUB-001",
+   "day": 12,
+   "time_local": "17:30",
+   "type": "official_notice",
+   "source": "City of Corpus Christi Water Department",
+   "threads": [
+    "T9"
+   ],
+   "public_places": [
+    "FAC-UTL-01"
+   ],
+   "note": "City attributes low pressure to hurricane damage; the pump setpoint manipulation (GW-EVT-006) is not publicly known yet.",
+   "statement": "The City of Corpus Christi Water Department has issued a boil water notice for Districts 3 and 4, effective immediately. Low water pressure in the distribution system serving the two districts — a consequence of storm damage to treatment and pumping infrastructure — means that contamination cannot be ruled out. Approximately 48,000 residents are affected. All tap water must be brought to a rolling boil for two minutes before drinking or cooking until further notice.",
+   "arcs": [],
+   "events": [],
+   "places": [
+    "FAC-UTL-01"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-144",
+   "day": 13,
+   "time_local": "09:30",
+   "type": "news_article",
+   "source": "Bayside Ledger (OUT-01)",
+   "statement": "Spanish-speaking residents of Districts 3 and 4 did not receive the city's boil-water notice until more than 12 hours after English-language alerts went out Sunday evening, the Bayside Ledger has confirmed. The notice, issued at 5:30 p.m. Sunday, reached KNCB Coastal Bend Radio — the primary news source for an estimated 34,000 Spanish-speaking listeners in Corpus Christi — only at 6:03 Monday morning. 'We received the official notice from the city this morning,' KNCB news director Marisol Fuentes-Vega said Monday. 'By then many of our listeners had already been using untreated water overnight.' Nueces County Office of Emergency Management spokesperson Cassandra Trejo-Morales confirmed the delay, attributing it to reduced staffing at the county's translation contractor, Nueces County Language Access Services. 'We are reviewing what happened and what can be done differently,' Trejo-Morales said. The boil-water notice covers approximately 48,000 residents and remained in effect as of press time.",
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "events": [
+    "EVT-1407",
+    "EVT-1408"
+   ],
+   "places": [
+    "Districts 3 and 4",
+    "KNCB Coastal Bend Radio"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-052",
+   "day": 14,
+   "arcs": [
+    "ARC-HEALTH"
+   ],
+   "statement": "Stomach illness visits begin to ease.",
+   "sources": [
+    "CHR-026"
+   ],
+   "events": [],
+   "places": []
+  },
+  {
+   "id": "PUB-053",
+   "day": 14,
+   "arcs": [
+    "ARC-EQUITY"
+   ],
+   "statement": "Residents in low-income neighborhoods near the bay report waiting days for help after the storm.",
+   "sources": [
+    "CHR-008",
+    "CHR-040",
+    "CHR-049"
+   ],
+   "events": [],
+   "places": [
+    "PLC-010"
+   ]
+  },
+  {
+   "id": "GW-PUB-002",
+   "day": 14,
+   "time_local": "14:00",
+   "type": "utility_statement",
+   "source": "Coastal Bend Power and Water Authority",
+   "threads": [
+    "T8"
+   ],
+   "public_places": [
+    "GW-FAC-SUB-02",
+    "GW-FAC-SUB-03"
+   ],
+   "note": "Utility publicly attributes extended outages to storm-related relay issues. The relay modifications (GW-EVT-003) are not yet discovered.",
+   "statement": "Restoration crews working in Corpus Christi have encountered cascading substation failures in the northwest and central districts that are extending the recovery timeline beyond initial estimates. Crews are on-site at two facilities to investigate protective relay conditions exacerbated by storm debris. We expect the final 32,000 affected customers in those areas to be restored within 7 to 10 days. We appreciate their patience.",
+   "arcs": [],
+   "events": [],
+   "places": [
+    "GW-FAC-SUB-02",
+    "GW-FAC-SUB-03"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-112",
+   "day": 15,
+   "time_local": "11:00",
+   "type": "press_release",
+   "source": "FEMA Region 6 / Texas Division of Emergency Management",
+   "statement": "FEMA's Mitigation Assessment Team today released the Phase 2 Utility Infrastructure Aerial Survey Summary for the Corpus Christi Hurricane Rafael response. The survey, completed over September 23 through 26, covered 23 utility infrastructure sites including five CBPWA electrical substations, the O.N. Stevens Water Treatment Plant, four pumping stations, and nine telecommunications relay facilities. The assessment found visible storm damage at 14 of the 23 sites, with the O.N. Stevens plant sustaining moderate roof damage to the C-pump station. The report identifies two CBPWA substations — Harbor View and Crosstown — as requiring follow-up engineering inspection due to equipment configurations observed in the imagery. Texas Division of Emergency Management Infrastructure Division Chief Rafael Montoya-Chen said: 'The aerial survey has given engineers a roadmap so that when crews reach those sites, they know what to look for and can prioritize the most critical restoration steps.' The full Phase 2 imagery set is available to credentialed government users through the FEMA GeoPlatform.",
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "events": [
+    "EVT-1107"
+   ],
+   "places": [
+    "O.N. Stevens Water Treatment Plant",
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-181",
+   "day": 15,
+   "time_local": "11:00",
+   "type": "press_release",
+   "source": "FAA and US Customs and Border Protection Air and Marine Operations",
+   "statement": "The Federal Aviation Administration and US Customs and Border Protection Air and Marine Operations today confirmed that investigators have identified multiple incidents of unauthorized unmanned aircraft system operations in the Corpus Christi area during the period preceding Hurricane Rafael. The aircraft operated without required FAA authorizations and were detected through a combination of radar and electronic sensor records. CBP Air and Marine Operations Corpus Christi (CAMCC) and the US Coast Guard are coordinating with the FAA and appropriate law enforcement agencies. Due to the ongoing nature of the investigation, no additional details about the number, location, or timing of the incidents can be released at this time. CBP and FAA jointly urge any members of the public with information about unauthorized drone operations in the Corpus Christi area between September 4 and September 12, 2027, to contact the FBI field office at 361-888-3111.",
+   "arcs": [],
+   "events": [
+    "EVT-1907"
+   ],
+   "places": [
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-213",
+   "day": 15,
+   "time_local": "11:00",
+   "type": "consumer_warning",
+   "source": "Texas Department of Public Safety",
+   "statement": "CONTRACTOR FRAUD ALERT — September 29, 2027: The Texas Department of Public Safety is issuing an urgent consumer alert following more than 300 complaints about fraudulent water damage contractors in the Corpus Christi area since Hurricane Rafael. Residents in Districts 3 and 4, particularly those affected by flooding and water damage from the storm, are most at risk. Specific complaints include contractors charging for water extraction, mold remediation, and drywall repair at prices 3 to 5 times above normal market rates; charging for services never performed; using forged insurance adjuster documentation; and requesting victims sign over assignment-of-benefits rights to allow direct billing to insurance carriers without homeowner review. DPS urges residents to: verify contractor license at license.state.tx.us; get minimum three written estimates; never sign assignment-of-benefits without reading the full document; pay only after work is completed and inspected. Any resident who believes they have been victimized should contact Texas DPS at (512) 424-2000 or local law enforcement. This warning applies to all contractors, including those offering emergency water damage restoration services.",
+   "arcs": [
+    "ARC-CONTRACTS"
+   ],
+   "events": [
+    "EVT-2203"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Districts 3 and 4"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-054",
+   "day": 16,
+   "arcs": [
+    "ARC-RUMORS"
+   ],
+   "statement": "Threat researcher finds rumor posts were coordinated across about 40 accounts and linked to the same lookalike aid site used in phishing emails (aid-help-portal.example).",
+   "sources": [
+    "CHR-063"
+   ],
+   "events": [
+    "EVT-0309"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-183",
+   "day": 16,
+   "time_local": "19:30",
+   "type": "media_report",
+   "source": "OUT-04 Gulfwater Maritime Report",
+   "statement": "Gulfwater Maritime Report has confirmed with sources familiar with the investigation that federal authorities are examining whether commercial drones conducted surveillance flights over the Port of Corpus Christi and at least one local power utility facility in the days before Hurricane Rafael. Sources say the flights were detected through radar records maintained by the Coast Guard. No organization has claimed responsibility. The timing of the flights — the week before Hurricane Rafael landfall — has drawn attention from investigators given subsequent damage to critical infrastructure during and after the storm. The FBI has asked for public tips.",
+   "arcs": [],
+   "events": [
+    "EVT-1907"
+   ],
+   "places": [
+    "Port of Corpus Christi",
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-162",
+   "day": 18,
+   "time_local": "15:00",
+   "type": "health_advisory",
+   "source": "Corpus Christi-Nueces County Public Health District",
+   "statement": "HEALTH ADVISORY: Waterborne Disease Cluster — Districts 3 and 4. The Corpus Christi-Nueces County Public Health District is investigating an elevated number of cases of acute gastrointestinal illness, including vomiting, diarrhea, nausea, and stomach cramps, among residents of Water Districts 3 and 4. As of today, Shoreline Regional Medical Center and Bay City Medical Center have treated more than 600 patients with these symptoms since September 29, the majority of whom reside in Districts 3 and 4. Laboratory tests have confirmed the presence of Cryptosporidium and Giardia — waterborne parasites — in multiple patient samples. These findings are consistent with consumption of untreated water. All residents in Districts 3 and 4 must continue to boil all water used for drinking, cooking, brushing teeth, and making ice until further notice. Boil water vigorously for two minutes before use. If you are experiencing severe dehydration, bloody diarrhea, or are immunocompromised, seek emergency medical care immediately. Additional information will be provided as the investigation continues. For questions, call the Corpus Christi-Nueces County Public Health District line: 361-826-7200.",
+   "arcs": [
+    "ARC-HEALTH",
+    "ARC-WATER"
+   ],
+   "events": [
+    "EVT-1607"
+   ],
+   "places": [
+    "Districts 3 and 4",
+    "Shoreline Regional Medical Center",
+    "Bay City Medical Center"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-055",
+   "day": 20,
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "statement": "Pump parts delayed: the supplier's local warehouse flooded and parts are shipping from out of state.",
+   "sources": [
+    "CHR-024",
+    "CHR-075"
+   ],
+   "events": [
+    "EVT-0308"
+   ],
+   "places": [
+    "FAC-UTL-01"
+   ]
+  },
+  {
+   "id": "PUB-056",
+   "day": 20,
+   "arcs": [
+    "ARC-CONTRACTS",
+    "ARC-MILITARY"
+   ],
+   "statement": "Federal contract records show a $2.1 million emergency fuel contract for NAS Corpus Christi to Quellmar Fuel Partners after the station's regular supplier flooded.",
+   "sources": [
+    "CHR-073",
+    "CHR-004"
+   ],
+   "events": [
+    "EVT-0312"
+   ],
+   "places": [
+    "FAC-DOD-01",
+    "TANK-0390"
+   ]
+  },
+  {
+   "id": "PUB-194",
+   "day": 20,
+   "time_local": "17:00",
+   "type": "press_release",
+   "source": "Unified Command Joint Information Center",
+   "statement": "CLEANUP MILESTONE — October 4, 2027: Unified Command announces that the main oil slick from the September 14 Inner Harbor discharge is contained. Primary skimming operations have concluded with recovery of approximately 142,000 gallons of oil-water mixture. TCEQ monitoring readings in Corpus Christi Bay have declined to an average of 0.40 milligrams per liter, down from a peak of 3.4 mg/L recorded on September 17. The O.N. Stevens Water Treatment Plant raw water intake has returned to below the 0.10 mg/L alert threshold and is operating normally. Coastal Bend Wildlife Rescue reports 340 oiled birds documented through today; 198 birds have been successfully rehabilitated and released. Shoreline cleanup operations in Nueces Bay are ongoing, with hand crews working approximately 6.4 kilometers of affected shoreline. The response is moving from emergency containment to shoreline cleanup. Fishing and shellfish harvesting closures in Nueces and Corpus Christi bays remain in effect pending state testing. Joint Information Center: (361) 555-0147.",
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "events": [
+    "EVT-2008"
+   ],
+   "places": [
+    "Corpus Christi Bay",
+    "Nueces Bay",
+    "O.N. Stevens Water Treatment Plant"
+   ],
+   "sources": []
+  },
+  {
+   "id": "GW-PUB-101",
+   "day": 20,
+   "time_local": "14:00",
+   "type": "official_advisory",
+   "source": "CBPWA Corporate Communications",
+   "statement": "Coastal Bend Power and Water Authority has confirmed that it is investigating anomalous access to internal network systems that may have occurred during the Hurricane Rafael response period. CBPWA's Security Operations Center identified unusual access patterns in network logs and has opened a formal security review in coordination with Vantage Security Systems, our SIEM and security technology partner. At this time there is no indication that customer data has been affected. CBPWA is working closely with relevant federal and state agencies. Additional information will be provided as the investigation progresses. CBPWA CISO Dr. Fatima Al-Rasheed-Obinna is leading the investigation.",
+   "arcs": [],
+   "events": [
+    "GW-EVT-106"
+   ],
+   "places": [
+    "CBPWA Security Operations Center"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-057",
+   "day": 21,
+   "arcs": [
+    "ARC-SPILL",
+    "ARC-HEALTH"
+   ],
+   "statement": "Fishing closure extended; respiratory complaints near shorelines easing.",
+   "sources": [
+    "CHR-028",
+    "CHR-026",
+    "CHR-041"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001",
+    "PLC-002"
+   ]
+  },
+  {
+   "id": "PUB-150",
+   "day": 21,
+   "time_local": "12:00",
+   "type": "press_release",
+   "source": "CISA / FBI",
+   "statement": "The Cybersecurity and Infrastructure Security Agency (CISA) and the Federal Bureau of Investigation today announced a joint investigation into anomalous activity affecting industrial control systems at a coastal electric utility in Texas during the Hurricane Rafael response period. The activity was identified during routine review of utility incident reports submitted under the Cyber Incident Reporting for Critical Infrastructure Act. CISA and FBI are working with the affected utility and state partners to assess the scope, origin, and impact of the activity. No attribution has been made at this time. Utilities in the Gulf Coast region are encouraged to review and implement CISA's operational technology security guidelines and report anomalous ICS activity through the CISA 24/7 operations center. This investigation is ongoing and additional information will be provided as appropriate.",
+   "arcs": [
+    "ARC-SPILL-CYBER"
+   ],
+   "events": [
+    "EVT-1506"
+   ],
+   "places": [
+    "Texas Gulf Coast"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-205",
+   "day": 21,
+   "time_local": "14:00",
+   "type": "press_release",
+   "source": "FEMA Joint Field Office Corpus Christi / Coastal Bend Power and Water Authority",
+   "statement": "JOINT STATEMENT — October 5, 2027: The Federal Emergency Management Agency Joint Field Office and the Coastal Bend Power and Water Authority are issuing this statement regarding the extended power outages affecting Corpus Christi following Hurricane Rafael. While the initial power outages were caused by wind and storm surge damage to the CBPWA transmission and distribution network, investigators from the federal government and CBPWA have determined that the duration of outages in certain districts was extended by deliberate interference with utility control systems beyond what storm damage alone would have caused. This determination was made following a technical review of utility operational data by federal investigators. The investigation is ongoing. CBPWA has implemented enhanced security measures for its control systems and is working with federal partners to prevent future incidents. No decision has been made on whether residents who experienced prolonged outages will be eligible for additional disaster assistance. Power has been restored to most customers; restoration in parts of northwest and central Corpus Christi is continuing while relay inspection and repair are completed. CBPWA urges any customer with information relevant to this investigation to contact the FBI Corpus Christi Resident Agency at (361) 555-0100.",
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "events": [
+    "EVT-2107"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Districts 1-5"
+   ],
+   "sources": []
+  },
+  {
+   "id": "GW-PUB-003",
+   "day": 21,
+   "time_local": "12:00",
+   "type": "government_statement",
+   "source": "Texas Governor's Office / FBI / CISA",
+   "threads": [
+    "T8",
+    "T9",
+    "T10"
+   ],
+   "public_places": [],
+   "note": "First public acknowledgment of the cyber dimension. No attribution made. References CBPWA without naming it.",
+   "statement": "The Federal Bureau of Investigation and the Cybersecurity and Infrastructure Security Agency are investigating unauthorized access to control systems at a Corpus Christi utility. Texas Cyber Command has been activated to assist. The Governor has directed all critical infrastructure operators in the state to review remote-access security procedures and report any anomalies to CISA. This investigation is active and ongoing; no further operational details will be released at this time.",
+   "arcs": [],
+   "events": [],
+   "places": [],
+   "sources": []
+  },
+  {
+   "id": "PUB-147",
+   "day": 21,
+   "time_local": "14:00",
+   "type": "report_summary",
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "threads": [
+    "T14"
+   ],
+   "statement": "The Texas Division of Emergency Management today released a first after-action snapshot on public communications during Hurricane Rafael. It notes 'observed delays in Spanish-language alert distribution' but gives no figures and makes no recommendations. Separately, a local chapter of the League of United Latin American Citizens filed a complaint with the state citing its limited-English-proficiency plan and Title VI of the Civil Rights Act. KNCB Coastal Bend Radio read the complaint on the air.",
+   "sources": [],
+   "events": [
+    "EVT-1409"
+   ],
+   "places": [
+    "Nueces County Commissioners Court"
+   ],
+   "source": "Nueces County Commissioners Court"
+  },
+  {
+   "id": "PUB-163",
+   "day": 23,
+   "time_local": "10:00",
+   "type": "press_release",
+   "source": "Texas Department of State Health Services",
+   "statement": "The Texas Department of State Health Services has completed a preliminary investigation into the waterborne disease outbreak affecting Corpus Christi Water Districts 3 and 4. DSHS has confirmed that Cryptosporidium parvum and Giardia lamblia are the causative agents of the outbreak. Both pathogens are transmitted exclusively through contaminated water. The investigation determined that exposure occurred during the period of low water pressure in Districts 3 and 4 following Hurricane Rafael, consistent with the Boil Water Notice issued by the City of Corpus Christi on September 26, 2027. DSHS is coordinating with the City of Corpus Christi, Coastal Bend Power and Water Authority, and the Corpus Christi-Nueces County Public Health District on the ongoing public health response. The Boil Water Notice for Districts 3 and 4 remains in effect. Residents should continue to boil all water before consumption. DSHS advises all immunocompromised individuals, infants, and elderly residents in the affected area to contact their healthcare provider if they have experienced any gastrointestinal symptoms.",
+   "arcs": [
+    "ARC-HEALTH",
+    "ARC-WATER"
+   ],
+   "events": [
+    "EVT-1608"
+   ],
+   "places": [
+    "Districts 3 and 4"
+   ],
+   "sources": []
+  },
+  {
+   "id": "GW-PUB-004",
+   "day": 23,
+   "time_local": "15:00",
+   "type": "federal_advisory",
+   "source": "CISA",
+   "threads": [
+    "T8",
+    "T9",
+    "T10"
+   ],
+   "public_places": [],
+   "note": "CISA advisory references the incident without naming CBPWA. Advisory AA27-266A is a fictional document number.",
+   "statement": "CISA has issued Emergency Directive 27-02 directing all federal agencies operating industrial control systems to audit remote-access credentials and configuration change logs within 72 hours. The directive follows a confirmed ICS incident at a Texas utility in which a threat actor gained access via compromised remote-access credentials and made unauthorized changes to operational technology systems. Owners and operators of critical infrastructure are strongly encouraged to review CISA Advisory AA27-266A for indicators and mitigations.",
+   "arcs": [],
+   "events": [],
+   "places": [],
+   "sources": []
+  },
+  {
+   "id": "PUB-104",
+   "day": 25,
+   "arcs": [
+    "ARC-AID",
+    "ARC-EQUITY"
+   ],
+   "statement": "Household damage assessments are slowed by spill-zone access limits, flooded roads and the scale of damage; the state formally asks FEMA to add Individual Assistance; advocates say families without savings are waiting.",
+   "sources": [
+    "CHR-027",
+    "CHR-025",
+    "CHR-049",
+    "CHR-040"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001",
+    "PLC-010"
+   ]
+  },
+  {
+   "id": "GW-PUB-005",
+   "day": 28,
+   "time_local": "18:00",
+   "type": "emergency_declaration",
+   "source": "Texas Governor's Office",
+   "threads": [
+    "T8",
+    "T9",
+    "T10"
+   ],
+   "public_places": [],
+   "note": "Supplemental declaration triggered by GW-EVT-014 (SCADA isolation). FEMA cyber team is a fictional extension of the existing Rafael FEMA presence.",
+   "statement": "Governor has amended the existing Hurricane Rafael disaster declaration to include a cyber emergency component covering Corpus Christi utility infrastructure. The Federal Emergency Management Agency has deployed a cybersecurity rapid response team to assist local and state authorities. The affected utility has isolated its control systems as a precautionary measure; field crews are managing operations manually. The Governor's office emphasized that the water supply remains safe for boiled use and that electric restoration continues.",
+   "arcs": [],
+   "events": [],
+   "places": [],
+   "sources": []
+  },
+  {
+   "id": "PUB-133",
+   "day": 29,
+   "time_local": "11:00",
+   "type": "press_release",
+   "source": "Coastal Bend Emergency Communications Center",
+   "statement": "The Coastal Bend Emergency Communications Center today reported that Hurricane Rafael emergency call volume has returned to near-normal levels, with 380 calls received yesterday — approaching the pre-storm daily baseline of 310 calls. CBECC Director Patricia Escamilla-Voss said the center is beginning a transition back to normal staffing over the next two weeks. 'Our dispatchers have shown extraordinary dedication over the past four weeks. The scale and duration of this response was unprecedented for our center, and I am incredibly proud of every person who answered calls, coordinated rescues, and kept working through the most demanding conditions I have seen in my career.' Director Escamilla-Voss noted that CBECC handled more than 44,200 calls in the four weeks after landfall, about five times the normal volume. The center is retaining all call records and audio as part of its standard after-action review process. Mutual aid units from San Patricio and Bee County will begin scaling back their support beginning October 14.",
+   "arcs": [
+    "ARC-AID"
+   ],
+   "events": [
+    "EVT-1307"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Nueces County"
+   ],
+   "sources": []
+  },
+  {
+   "id": "GW-PUB-102",
+   "day": 29,
+   "time_local": "12:00",
+   "type": "official_advisory",
+   "source": "CBPWA Corporate Communications",
+   "statement": "Coastal Bend Power and Water Authority has taken precautionary steps to isolate portions of its operational technology network following the identification of unauthorized access to network systems. These measures are being taken as part of an ongoing security investigation. The isolation is expected to cause no disruption to power or water service for CBPWA customers. CBPWA is cooperating with the Cybersecurity and Infrastructure Security Agency (CISA) and other relevant authorities. CBPWA emphasizes that the investigation is ongoing and no conclusions should be drawn about the nature or origin of the access at this time.",
+   "arcs": [],
+   "events": [
+    "GW-EVT-107"
+   ],
+   "places": [
+    "CBPWA",
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-058",
+   "day": 30,
+   "arcs": [
+    "ARC-PORT"
+   ],
+   "statement": "Ship channel partly reopens; spill decontamination keeps the inner channel restricted; anchorage backlog delays relief cargo including MV Gulf Provider.",
+   "sources": [
+    "CHR-020",
+    "CHR-023",
+    "CHR-074"
+   ],
+   "events": [
+    "EVT-0401",
+    "EVT-0410"
+   ],
+   "places": [
+    "PORT-07",
+    "ANC-OFF"
+   ]
+  },
+  {
+   "id": "PUB-123",
+   "day": 30,
+   "time_local": "14:00",
+   "type": "press_release",
+   "source": "Port of Corpus Christi Authority",
+   "statement": "The Port of Corpus Christi Authority announced today that the Corpus Christi Ship Channel has partly reopened to commercial traffic, 30 days after Hurricane Rafael closed it. The Coast Guard cleared the outer and bay reaches of the channel after surveys of channel depth and aids to navigation. The inner channel remains restricted while vessels and berths affected by the Inner Harbor oil spill are decontaminated; no date has been set for lifting that restriction. Ships waiting at the offshore anchorage will be brought in by priority, and the backlog will delay some cargo, including relief shipments. Port Authority Director of Operations Julio Sandoval-Reeves said: 'We are grateful for the patience of our customers and maritime partners. The port team, together with the Coast Guard, NOAA and our contractor crews, worked extraordinary hours to restore safe navigation after one of the most demanding storm responses in our history.' Six port security cameras along the Inner Harbor remain offline pending replacement parts. The Coast Guard investigation into the tanker oil release remains open.",
+   "arcs": [
+    "ARC-PORT",
+    "ARC-SPILL"
+   ],
+   "events": [
+    "EVT-1208"
+   ],
+   "places": [
+    "Port of Corpus Christi",
+    "Corpus Christi Ship Channel"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-145",
+   "day": 30,
+   "time_local": "09:00",
+   "type": "emergency_alert",
+   "source": "Corpus Christi Water Department / Coastal Bend Power and Water Authority",
+   "statement": "BOIL WATER NOTICES REMAIN IN EFFECT — weekly update. / LOS AVISOS DE HERVIR AGUA SIGUEN VIGENTES — actualización semanal. The Corpus Christi Water Department announces that the citywide boil water notice issued September 18, 2027 and the Boil Water Notice issued September 26, 2027 for Water Districts 3 and 4 both remain in effect as of 9:00 a.m. today, October 14, 2027. Replacement pump parts for the O.N. Stevens Water Treatment Plant have not yet arrived, and neither notice can be lifted until repairs are complete and water quality testing meets all state and federal standards. Continue to bring water to a rolling boil before drinking, cooking, making ice or brushing teeth. This update is being released in English and Spanish at the same time. / La Ciudad de Corpus Christi anuncia que el aviso de hervir agua para toda la ciudad, emitido el 18 de septiembre de 2027, y el aviso emitido el 26 de septiembre de 2027 para los Distritos de Agua 3 y 4 siguen vigentes a las 9:00 a.m. de hoy, 14 de octubre de 2027. Las piezas de repuesto para las bombas de la planta O.N. Stevens aún no han llegado. Siga hirviendo el agua antes de beberla, cocinar, hacer hielo o cepillarse los dientes. Este aviso se publica en inglés y en español al mismo tiempo.",
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "events": [
+    "EVT-1410"
+   ],
+   "places": [
+    "Districts 3 and 4"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-211",
+   "day": 30,
+   "time_local": "10:00",
+   "type": "industry_report",
+   "source": "Texas Department of Insurance / Insurance Council of Texas",
+   "statement": "DISASTER CLAIMS SURGE UPDATE — October 14, 2027: The Texas Department of Insurance and the Insurance Council of Texas report that Hurricane Rafael has generated approximately 187,000 property insurance claims across Nueces, San Patricio and Aransas counties as of October 14, representing an estimated $2.1 billion in insured losses. This ranks as the second-largest coastal insured loss event in Texas since Hurricane Harvey in 2017. Claims volume in the Corpus Christi metropolitan area exceeds industry catastrophe response models by approximately 23 percent. TDI has activated its Disaster Response Team and deployed 12 field claim examiners. The department notes an elevated pattern of large commercial property claims in Districts 3-5 that is under review. Adjusters are reporting difficulty verifying pre-storm property values in certain commercial portfolios. Homeowners and commercial property owners are reminded that Texas law requires insurers to acknowledge claims within 15 days and pay or deny within 15 business days of receiving all claim documentation. Residents experiencing claim delays should contact TDI at (800) 252-3439. TDI is tracking contractor fraud complaints and coordinating with the Texas DPS.",
+   "arcs": [
+    "ARC-CONTRACTS",
+    "ARC-RECOVERY"
+   ],
+   "events": [
+    "EVT-2204"
+   ],
+   "places": [
+    "Nueces County",
+    "Corpus Christi",
+    "Districts 3-5"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-214",
+   "day": 30,
+   "time_local": "09:00",
+   "type": "press_release",
+   "source": "Texas Department of Insurance",
+   "statement": "TDI ACTIVATES CLAIMS FRAUD TASK FORCE — October 14, 2027: Texas Department of Insurance Commissioner announces the activation of a Disaster Claims Fraud Task Force for Nueces County following Hurricane Rafael. The task force, operating in coordination with the FBI and Texas DPS, will focus on detecting and preventing fraudulent insurance claims arising from the storm. TDI has identified patterns of concern including clusters of large commercial property claims with similar damage narratives, inflated pre-storm appraisals, and claims for total losses on properties that sustained only partial damage. TDI emphasizes that filing a fraudulent insurance claim is a third-degree felony in Texas, punishable by 2 to 10 years in prison and fines up to $10,000. Insurers are reminded of their obligation to refer suspected fraud to TDI's Fraud Unit. TDI is working with the Insurance Council of Texas to establish a Nueces County claims database to identify duplicate and suspicious claims across carriers. Legitimate policyholders are encouraged to cooperate with claim investigations and to report any third party who pressured them into filing inflated claims.",
+   "arcs": [
+    "ARC-CONTRACTS"
+   ],
+   "events": [
+    "EVT-2204"
+   ],
+   "places": [
+    "Nueces County",
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-151",
+   "day": 32,
+   "time_local": "14:00",
+   "type": "press_release",
+   "source": "Texas Division of Emergency Management",
+   "statement": "The Texas Division of Emergency Management, working with federal partners, has identified and referred to law enforcement a network of social media accounts that disseminated false public safety information during Hurricane Rafael. The accounts distributed incorrect evacuation shelter locations, false road closure information, and misleading content about utility restoration and federal investigations. TDEM's social media monitoring tool, Coastal Alert, detected anomalous posting behavior consistent with coordinated inauthentic behavior. TDEM has referred account information to the FBI and has coordinated with social media platforms on account review. Members of the public who encountered false shelter or evacuation information during the Rafael response are asked to report it to TDEM's public information line at 512-424-2208. TDEM reminds the public to verify emergency information through official sources: NuecesCountyOEM.org, 2-1-1 Texas, and local broadcast stations designated in the Corpus Christi Emergency Alert System.",
+   "arcs": [
+    "ARC-SPILL-CYBER"
+   ],
+   "events": [
+    "EVT-1507",
+    "EVT-1508"
+   ],
+   "places": [
+    "Nueces County"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-182",
+   "day": 32,
+   "time_local": "10:00",
+   "type": "press_release",
+   "source": "Port of Corpus Christi Authority / CBPWA joint statement",
+   "statement": "The Port of Corpus Christi Authority and Coastal Bend Power and Water Authority today announced a joint counter-unmanned aircraft initiative for the Corpus Christi critical infrastructure corridor, following a recommendation in the FAA-CBP joint report on pre-storm unauthorized drone activity. The initiative will deploy an RF-sensing detection and direction-finding network at multiple sites across the port and utility infrastructure corridor, operated in coordination with the FAA and CBP Air and Marine Operations. Sentinel Airspace Inc. has been selected as the technology provider following a competitive evaluation. The network is expected to be operational within 90 days. Port Director Marcus Obianwu-Kelley and CBPWA CISO Dr. Fatima Al-Rasheed-Obinna jointly signed the agreement.",
+   "arcs": [],
+   "events": [
+    "EVT-1908"
+   ],
+   "places": [
+    "Port of Corpus Christi",
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-059",
+   "day": 33,
+   "arcs": [
+    "ARC-AID",
+    "ARC-PORT"
+   ],
+   "statement": "MV Gulf Provider berths and unloads 40 relief containers, about a month late.",
+   "sources": [
+    "CHR-074",
+    "CHR-023"
+   ],
+   "events": [
+    "EVT-0401"
+   ],
+   "places": [
+    "PORT-07"
+   ]
+  },
+  {
+   "id": "PUB-060",
+   "day": 34,
+   "arcs": [
+    "ARC-MILITARY",
+    "ARC-AID"
+   ],
+   "statement": "Relief flights begin landing at NAS Corpus Christi: 26 military C-17 flights and 14 civilian charters over ten days.",
+   "sources": [
+    "CHR-021",
+    "CHR-009"
+   ],
+   "events": [
+    "EVT-0405"
+   ],
+   "places": [
+    "FAC-DOD-01"
+   ]
+  },
+  {
+   "id": "GW-PUB-006",
+   "day": 35,
+   "time_local": "15:00",
+   "type": "utility_statement",
+   "source": "Coastal Bend Power and Water Authority",
+   "threads": [
+    "T8"
+   ],
+   "public_places": [
+    "GW-FAC-SUB-02",
+    "GW-FAC-SUB-03"
+   ],
+   "note": "No mention of the cyber cause per law enforcement guidance. 'Relay inspection and hardening' is accurate but understated.",
+   "statement": "Coastal Bend Power and Water Authority is pleased to announce that the final 3,200 customers in northwest Corpus Christi have been restored to electric service following extensive relay inspection, repair, and hardening work by our crews and ERCOT partners. All Corpus Christi load zones are now above 99 percent restoration. We thank residents for their patience during this extended recovery period.",
+   "arcs": [],
+   "events": [],
+   "places": [
+    "GW-FAC-SUB-02",
+    "GW-FAC-SUB-03"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-061",
+   "day": 36,
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "statement": "Replacement pump parts arrive at O.N. Stevens.",
+   "sources": [
+    "CHR-024",
+    "CHR-075"
+   ],
+   "events": [
+    "EVT-0406"
+   ],
+   "places": [
+    "FAC-UTL-01"
+   ]
+  },
+  {
+   "id": "GW-PUB-103",
+   "day": 36,
+   "time_local": "09:00",
+   "type": "official_advisory",
+   "source": "CBPWA Corporate Communications / CISA",
+   "statement": "Coastal Bend Power and Water Authority and the Cybersecurity and Infrastructure Security Agency have notified the public that CBPWA has completed an initial phase of remediation following a confirmed security incident affecting CBPWA's industrial control system network. CBPWA's security monitoring systems have returned to normal operational status. No customer data was exfiltrated. CISA has issued an ICS advisory (ICS-CERT-2027-CC-00441) to the broader critical infrastructure community regarding the attack techniques observed. CBPWA is conducting a comprehensive post-incident review and will implement additional security hardening measures identified during the investigation.",
+   "arcs": [],
+   "events": [
+    "GW-EVT-108"
+   ],
+   "places": [
+    "CBPWA",
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-062",
+   "day": 38,
+   "arcs": [
+    "ARC-AIS-ANOMALY"
+   ],
+   "statement": "Public AIS data shows the fishing vessel FV Pelican Ridge's identity broadcasting off Port Aransas overnight Oct. 14-15, the night after the channel partly reopened while the same vessel reported a position about 600 nautical miles away; an analyst calls it consistent with identity spoofing.",
+   "sources": [
+    "CHR-062",
+    "CHR-010"
+   ],
+   "events": [
+    "EVT-0402"
+   ],
+   "places": [
+    "ANC-OFF"
+   ]
+  },
+  {
+   "id": "PUB-152",
+   "day": 38,
+   "time_local": "11:00",
+   "type": "news_article",
+   "source": "Continental Wire Service (OUT-06)",
+   "statement": "Two major social media platforms announced Friday the removal of 847 accounts engaged in coordinated inauthentic behavior related to Hurricane Rafael public safety communications. The companies said the accounts had spread false evacuation shelter locations, fabricated road closure reports, and promoted misleading claims about the cause of extended power outages in Corpus Christi. The platforms said the accounts showed 'clear indicators of artificial coordination' including synchronized posting times, shared infrastructure, and near-identical content across different handles. The joint announcement followed referrals from the Texas Division of Emergency Management and the FBI's Cyber Division. Neither platform attributed the network to a specific actor or government. Texas Attorney General spokesperson Brandon Lacey-Rhinehart said the state was 'continuing to investigate the origin and intent of this coordinated effort to undermine public safety during a natural disaster.' The discovery of the false shelter posts is of particular concern: Nueces County OEM confirmed that at least 23 residents called the county 211 line on the day before landfall asking about Zavala Elementary as a shelter location, based on social media posts that have since been removed.",
+   "arcs": [
+    "ARC-SPILL-CYBER"
+   ],
+   "events": [
+    "EVT-1509"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Nueces County"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-063",
+   "day": 39,
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "statement": "Citywide boil-water notice lifted after pump repairs and testing; Districts 3 and 4 remain under their separate notice until testing there is complete.",
+   "sources": [
+    "CHR-024",
+    "CHR-045"
+   ],
+   "events": [
+    "EVT-0406"
+   ],
+   "places": [
+    "PLC-001"
+   ]
+  },
+  {
+   "id": "PUB-064",
+   "day": 39,
+   "arcs": [
+    "ARC-GPS"
+   ],
+   "statement": "Pilots report GPS interference within about 40 miles of Corpus Christi; FAA issues a notice; relief flights continue using backup navigation.",
+   "sources": [
+    "CHR-034",
+    "CHR-021"
+   ],
+   "events": [
+    "EVT-0412"
+   ],
+   "places": [
+    "FAC-DOD-01"
+   ]
+  },
+  {
+   "id": "PUB-153",
+   "day": 40,
+   "time_local": "09:00",
+   "type": "advisory",
+   "source": "Texas Office of the Attorney General",
+   "statement": "The Office of the Texas Attorney General today issued a consumer advisory warning Texans about misinformation campaigns targeting emergency communications during natural disasters. During Hurricane Rafael, coordinated social media accounts posted false information including incorrect evacuation shelter addresses, fabricated road closure reports, and misleading claims about the causes of utility outages in the Corpus Christi area. The OAG advises Texans to: verify emergency information only through official government websites and designated emergency broadcast stations; report suspected misinformation to local emergency management or through the FBI's Internet Crime Complaint Center (IC3.gov); and be cautious of social media accounts with limited post history that suddenly begin posting high volumes of local emergency content. The OAG is cooperating with the FBI's ongoing investigation into the organized distribution of false public safety information during the Rafael response period.",
+   "arcs": [],
+   "events": [
+    "EVT-1509"
+   ],
+   "places": [],
+   "sources": []
+  },
+  {
+   "id": "PUB-065",
+   "day": 41,
+   "arcs": [
+    "ARC-MILITARY"
+   ],
+   "statement": "NAS Corpus Christi backup generator failed during a power interruption; power restored; cause under review.",
+   "sources": [
+    "CHR-021",
+    "CHR-013"
+   ],
+   "events": [
+    "EVT-0407"
+   ],
+   "places": [
+    "FAC-DOD-01"
+   ]
+  },
+  {
+   "id": "PUB-206",
+   "day": 42,
+   "time_local": "11:00",
+   "type": "emergency_alert",
+   "source": "IPAWS / Coastal Bend Power and Water Authority",
+   "statement": "BOIL WATER NOTICE LIFTED — October 26, 2027 11:00 AM CDT / AVISO DE AGUA A HERVIR LEVANTADO — 26 de octubre de 2027 11:00 AM CDT: THE COASTAL BEND POWER AND WATER AUTHORITY ANNOUNCES THE LIFTING OF THE BOIL WATER NOTICE FOR DISTRICTS 3 AND 4, EFFECTIVE 11:00 AM TODAY, OCTOBER 26, 2027. WATER QUALITY TESTING HAS CONFIRMED THAT TAP WATER IN DISTRICTS 3 AND 4 MEETS ALL STATE AND FEDERAL DRINKING WATER STANDARDS. RESIDENTS MAY RESUME NORMAL WATER USE. FOR QUESTIONS CONTACT CBPWA AT (361) 555-0280. LA AUTORIDAD DE ENERGIA Y AGUA DEL COASTAL BEND ANUNCIA LA ELIMINACION DEL AVISO DE AGUA A HERVIR PARA LOS DISTRITOS 3 Y 4, A PARTIR DE LAS 11 AM DE HOY. EL AGUA DEL GRIFO EN LOS DISTRITOS 3 Y 4 CUMPLE CON TODOS LOS ESTANDARES DE CALIDAD DEL AGUA POTABLE. LOS RESIDENTES PUEDEN REANUDAR EL USO NORMAL DEL AGUA. [WEA: BOIL WATER NOTICE LIFTED Districts 3-4 Corpus Christi. Tap water is safe. Resume normal use. CBPWA (361)555-0280 / AVISO LEVANTADO Distritos 3-4. Agua de grifo es segura.]",
+   "arcs": [
+    "ARC-COMMUNITY"
+   ],
+   "events": [
+    "EVT-2108"
+   ],
+   "places": [
+    "Districts 3 and 4",
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "GW-PUB-007",
+   "day": 42,
+   "time_local": "11:00",
+   "type": "official_notice",
+   "source": "City of Corpus Christi Water Department",
+   "threads": [
+    "T9"
+   ],
+   "public_places": [
+    "FAC-UTL-01"
+   ],
+   "note": "30-day boil water notice lifted (D+12 to D+42). No mention of cyber cause.",
+   "statement": "The boil water notice for Districts 3 and 4 has been lifted, effective 11:00 AM today. Water pressure at all test points in the two districts has been confirmed above 40 psi and water quality testing has met all TCEQ standards. The O.N. Stevens Water Treatment Plant is operating at full capacity. Residents may resume normal tap water use. The City thanks residents for their cooperation during the 30-day notice period.",
+   "arcs": [],
+   "events": [],
+   "places": [
+    "FAC-UTL-01"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-066",
+   "day": 44,
+   "arcs": [
+    "ARC-SPILL",
+    "ARC-PORT"
+   ],
+   "statement": "Spill cleanup moves to monitoring; inner channel restrictions lifted.",
+   "sources": [
+    "CHR-028",
+    "CHR-020"
+   ],
+   "events": [
+    "EVT-0410"
+   ],
+   "places": [
+    "PORT-07"
+   ]
+  },
+  {
+   "id": "PUB-067",
+   "day": 44,
+   "arcs": [
+    "ARC-CHANNEL-BLAST",
+    "ARC-PORT"
+   ],
+   "statement": "Explosion beside the harbor tug Corrin Bay near the Port Aransas jetties around 1 a.m.; tug damaged; two crew injured; Coast Guard closes the channel; cause unknown; GPS interference reports have stopped.",
+   "sources": [
+    "CHR-020",
+    "CHR-047",
+    "CHR-042",
+    "CHR-034"
+   ],
+   "events": [
+    "EVT-0413",
+    "EVT-0412"
+   ],
+   "places": [
+    "ENT-01"
+   ]
+  },
+  {
+   "id": "PUB-068",
+   "day": 45,
+   "arcs": [
+    "ARC-MILITARY",
+    "ARC-CHANNEL-BLAST"
+   ],
+   "statement": "Fort Hood brigade's port movement delayed again by the channel closure.",
+   "sources": [
+    "CHR-031",
+    "CHR-009"
+   ],
+   "events": [
+    "EVT-0414"
+   ],
+   "places": [
+    "PORT-07",
+    "FAC-DOD-06"
+   ]
+  },
+  {
+   "id": "PUB-069",
+   "day": 45,
+   "arcs": [
+    "ARC-HEALTH",
+    "ARC-EQUITY"
+   ],
+   "statement": "ER visits back near normal except in low-income neighborhoods near the bay, still about 40% above normal.",
+   "sources": [
+    "CHR-026"
+   ],
+   "events": [
+    "EVT-0408"
+   ],
+   "places": [
+    "PLC-010"
+   ]
+  },
+  {
+   "id": "PUB-113",
+   "day": 45,
+   "time_local": "14:00",
+   "type": "press_release",
+   "source": "FEMA Region 6",
+   "statement": "FEMA Region 6 announced today the completion of the Hurricane Rafael Aerial Assessment Program, the most comprehensive post-storm aerial survey conducted in the Texas Gulf Coast region. From a pre-storm baseline on September 12 through October 29, federal, state, and contracted aerial assets generated more than 6.2 million georeferenced image tiles covering 183 square kilometers of the Corpus Christi metropolitan area. The imagery archive spans all phases of the disaster cycle from pre-storm baseline through active recovery. Beginning today, downsampled imagery from Phase 1 and Phase 2 surveys is publicly available through the FEMA OpenData portal for use by academic researchers, local governments, and community organizations engaged in recovery planning. FEMA Federal Coordinating Officer Dennis Park stated: 'This imagery archive is a resource that will support not just today's recovery, but future preparedness for the entire Texas Gulf Coast. We are grateful to NOAA, the Texas Army National Guard, and our contracted partners for executing this mission under difficult post-storm conditions.' Requests for access to full-resolution imagery should be directed to FEMA Region 6 Geospatial Programs at the contact listed below.",
+   "arcs": [
+    "ARC-AID"
+   ],
+   "events": [
+    "EVT-1108"
+   ],
+   "places": [
+    "Corpus Christi"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-134",
+   "day": 45,
+   "time_local": "10:00",
+   "type": "press_release",
+   "source": "Coastal Bend Emergency Communications Center",
+   "statement": "The Coastal Bend Emergency Communications Center today formally closed its Hurricane Rafael surge response posture and returned to standard staffing levels. Director Patricia Escamilla-Voss announced that CBECC has established a partnership with Nueces County Information Technology to preserve the call record archive from landfall through October 29 for training and after-action analysis purposes. The archive covers more than 56,000 calls in English and Spanish and represents the most complete 911 call record ever retained for a Gulf Coast storm response. Director Escamilla-Voss also announced a new 911 abuse reporting tip line, 1-800-NUECES-9, for residents to report suspected false emergency reports. 'During any major emergency, bad actors sometimes attempt to abuse the emergency communications system to divert rescuers,' said Escamilla-Voss. 'We take this seriously, and we ask the public to help us protect the integrity of 911 by reporting suspected abuse.' The NuecesInfoLine, opened during the boil-water notices, will close on Friday, November 5. CBECC thanks the residents of Districts 3 and 4 for their patience during the extended water notices.",
+   "arcs": [],
+   "events": [
+    "EVT-1308"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Nueces County"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-146",
+   "day": 45,
+   "time_local": "14:00",
+   "type": "testimony_summary",
+   "source": "Nueces County Commissioners Court",
+   "statement": "KNCB Coastal Bend Radio news director Marisol Fuentes-Vega testified before the Nueces County Commissioners Court today regarding gaps in bilingual emergency communications during Hurricane Rafael. Fuentes-Vega presented broadcast logs documenting delays between English and Spanish public alerts across four alert categories during the Rafael response: mandatory evacuation orders (2 hours 47 minutes), shelter-in-place guidance (7 hours 52 minutes), boil-water notice for Districts 3 and 4 (12 hours 33 minutes), and power restoration status announcements (average 9 hours 11 minutes). The average delay across all categories was 8 hours 6 minutes. Commissioners voted 4–1 to direct the county's Office of Emergency Management to issue a new Request for Proposals for language access services requiring simultaneous multi-language alert release within 30 minutes for all life-safety notifications.",
+   "arcs": [
+    "ARC-WATER"
+   ],
+   "events": [
+    "EVT-1411"
+   ],
+   "places": [
+    "Nueces County Commissioners Court"
+   ],
+   "sources": []
+  },
+  {
+   "id": "GW-PUB-104",
+   "day": 45,
+   "time_local": "10:00",
+   "type": "media_report",
+   "source": "OUT-05 Sabal Energy Wire",
+   "statement": "Sabal Energy Wire has obtained documents confirming that the prolonged power outages affecting portions of Corpus Christi following Hurricane Rafael were partly attributable to unauthorized modifications to protective relay settings at two CBPWA substations. The modifications, discovered during a security investigation that began October 2nd, caused affected relay groups to tolerate fault currents above their designed trip thresholds, extending grid restoration timelines by an estimated 11 to 18 days. CBPWA CISO Dr. Fatima Al-Rasheed-Obinna declined to comment on specific findings, citing an ongoing investigation. CISA confirmed that ICS-CERT advisory ICS-2027-CC-00441 covers incidents of this type.",
+   "arcs": [],
+   "events": [
+    "GW-EVT-107",
+    "GW-EVT-108"
+   ],
+   "places": [
+    "CBPWA",
+    "Corpus Christi",
+    "Harbor View",
+    "Crosstown"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-070",
+   "day": 46,
+   "arcs": [
+    "ARC-CHANNEL-BLAST"
+   ],
+   "statement": "Navy says the blast was caused by an explosive device; Navy explosive ordnance disposal and mine countermeasures teams are searching the channel with the Coast Guard; FBI investigating.",
+   "sources": [
+    "CHR-032",
+    "CHR-020",
+    "CHR-033"
+   ],
+   "events": [
+    "EVT-0414"
+   ],
+   "places": [
+    "ENT-01"
+   ]
+  },
+  {
+   "id": "PUB-071",
+   "day": 46,
+   "arcs": [
+    "ARC-OVERSEAS"
+   ],
+   "statement": "A crisis abroad escalates as an overseas power begins military operations; analysts note US forces' deployment timelines.",
+   "sources": [
+    "CHR-012"
+   ],
+   "events": [
+    "EVT-0415"
+   ],
+   "places": [],
+   "note": "Writers: never name the country."
+  },
+  {
+   "id": "PUB-072",
+   "day": 46,
+   "arcs": [
+    "ARC-RUMORS",
+    "ARC-OVERSEAS"
+   ],
+   "statement": "A foreign state broadcaster mocks the port closure as a sign of US weakness.",
+   "sources": [
+    "CHR-082",
+    "CHR-012"
+   ],
+   "events": [],
+   "places": []
+  },
+  {
+   "id": "PUB-073",
+   "day": 46,
+   "arcs": [
+    "ARC-PORT"
+   ],
+   "statement": "Crude exports halted again; traders watch for a prolonged closure.",
+   "sources": [
+    "CHR-011",
+    "CHR-064"
+   ],
+   "events": [
+    "EVT-0414"
+   ],
+   "places": [
+    "PORT-07"
+   ]
+  },
+  {
+   "id": "PUB-074",
+   "day": 47,
+   "arcs": [
+    "ARC-GPS"
+   ],
+   "statement": "FBI says investigators traced the GPS interference to a transmitter found in a parked vehicle in an industrial area near a fuel terminal off the Inner Harbor; investigation ongoing.",
+   "sources": [
+    "CHR-033",
+    "CHR-034"
+   ],
+   "events": [
+    "EVT-0412"
+   ],
+   "places": [
+    "TANK-0390"
+   ]
+  },
+  {
+   "id": "PUB-075",
+   "day": 47,
+   "arcs": [
+    "ARC-MILITARY"
+   ],
+   "statement": "Corpus Christi Army Depot back at full production with parts support from DLA Distribution Corpus Christi.",
+   "sources": [
+    "CHR-022"
+   ],
+   "events": [
+    "EVT-0409"
+   ],
+   "places": [
+    "FAC-DOD-02",
+    "FAC-DOD-05"
+   ]
+  },
+  {
+   "id": "PUB-076",
+   "day": 48,
+   "arcs": [
+    "ARC-AIS-ANOMALY",
+    "ARC-CHANNEL-BLAST"
+   ],
+   "statement": "Maritime analysts note the spoofed identity appeared near the entrance channel two weeks before the blast; officials decline to comment on any link.",
+   "sources": [
+    "CHR-062",
+    "CHR-010",
+    "CHR-020"
+   ],
+   "events": [
+    "EVT-0411"
+   ],
+   "places": [
+    "ENT-01"
+   ]
+  },
+  {
+   "id": "PUB-077",
+   "day": 49,
+   "arcs": [
+    "ARC-CHANNEL-BLAST"
+   ],
+   "statement": "Injured deckhand recovering; tug crew describe the blast.",
+   "sources": [
+    "CHR-046",
+    "CHR-047"
+   ],
+   "events": [
+    "EVT-0413"
+   ],
+   "places": [
+    "ENT-01"
+   ]
+  },
+  {
+   "id": "PUB-078",
+   "day": 52,
+   "arcs": [
+    "ARC-CHANNEL-BLAST"
+   ],
+   "statement": "Navy teams find a second explosive device near the entrance channel and render it safe.",
+   "sources": [
+    "CHR-032",
+    "CHR-020"
+   ],
+   "events": [
+    "EVT-0414"
+   ],
+   "places": [
+    "ENT-01"
+   ]
+  },
+  {
+   "id": "PUB-105",
+   "day": 57,
+   "arcs": [
+    "ARC-AID"
+   ],
+   "statement": "FEMA approves Individual Assistance for Nueces, San Patricio and Aransas counties; registration opens Saturday, Nov. 13.",
+   "sources": [
+    "CHR-027",
+    "CHR-025"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001",
+    "PLC-002",
+    "PLC-003"
+   ]
+  },
+  {
+   "id": "PUB-079",
+   "day": 58,
+   "arcs": [
+    "ARC-CHANNEL-BLAST",
+    "ARC-PORT"
+   ],
+   "statement": "Channel reopens after a 14-day closure and full sweep; exports resume.",
+   "sources": [
+    "CHR-020",
+    "CHR-023",
+    "CHR-011"
+   ],
+   "events": [
+    "EVT-0414"
+   ],
+   "places": [
+    "ENT-01",
+    "PORT-07"
+   ]
+  },
+  {
+   "id": "PUB-080",
+   "day": 59,
+   "arcs": [
+    "ARC-MILITARY"
+   ],
+   "statement": "The Fort Hood aviation brigade's helicopters and equipment load onto a sealift ship and begin sailing over the next five days; destination described only as an overseas rotation.",
+   "sources": [
+    "CHR-031",
+    "CHR-023",
+    "CHR-009"
+   ],
+   "events": [
+    "EVT-0409"
+   ],
+   "places": [
+    "PORT-07",
+    "FAC-DOD-06"
+   ]
+  },
+  {
+   "id": "PUB-081",
+   "day": 60,
+   "arcs": [
+    "ARC-AID"
+   ],
+   "statement": "FEMA individual assistance registration opens for the three coastal counties; long lines at recovery centers.",
+   "sources": [
+    "CHR-027",
+    "CHR-040",
+    "CHR-001"
+   ],
+   "events": [
+    "EVT-0501"
+   ],
+   "places": [
+    "PLC-001",
+    "PLC-002",
+    "PLC-003"
+   ]
+  },
+  {
+   "id": "PUB-164",
+   "day": 60,
+   "time_local": "10:00",
+   "type": "report_summary",
+   "source": "Shoreline Regional Medical Center / Bay City Medical Center",
+   "statement": "Shoreline Regional Medical Center and Bay City Medical Center today released their joint Hurricane Rafael Hospital Operations After-Action Report. The report documents the response of both facilities from September 11 through October 14, 2027. Combined, the two hospitals treated 4,217 hurricane-related patients over that period. The response involved two distinct patient surge waves: a trauma wave from landfall on September 14 through September 21, during which SRMC operated at up to 140% licensed bed capacity on generator power, and a waterborne disease cluster from September 29 through October 12, during which 1,820 patients were treated for Cryptosporidium and Giardia infection. The cluster was geographically concentrated in Water Districts 3 and 4. The report notes that early-cluster admissions disproportionately included patients from Spanish-dominant households, a pattern the report identifies as potentially related to the delay in Spanish-language boil-water notification. No patient deaths were directly attributable to the hospital surge response. The report recommends expanded generator diesel reserves, pre-positioned water testing capabilities, and enhanced multilingual patient communication protocols for future mass casualty and public health emergency events.",
+   "arcs": [
+    "ARC-HEALTH",
+    "ARC-WATER"
+   ],
+   "events": [
+    "EVT-1610"
+   ],
+   "places": [
+    "Shoreline Regional Medical Center",
+    "Bay City Medical Center",
+    "Districts 3 and 4"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-195",
+   "day": 60,
+   "time_local": "12:00",
+   "type": "regulatory_report",
+   "source": "Texas Commission on Environmental Quality / EPA Region 6",
+   "statement": "60-DAY REMEDIATION ASSESSMENT — November 13, 2027: The Texas Commission on Environmental Quality and EPA Region 6 have completed the 60-day remediation assessment for the Inner Harbor oil release (TCEQ Incident Case CC-ENV-2027-0916). Water quality monitoring shows Corpus Christi Bay total petroleum hydrocarbon concentrations have returned to 0.03 mg/L, below the TCEQ Class 2 surface water standard of 0.05 mg/L. Nueces Bay shoreline cleanup is 94 percent complete; minor tar ball accumulation persists on approximately 0.4 kilometers of shoreline near the Nueces Bay Causeway and will be addressed through the 2028 spring shoreline maintenance program. Raw-water intake readings at the O.N. Stevens Water Treatment Plant have remained below the hydrocarbon alert threshold for 52 consecutive days. The emergency response phase is hereby closed. Fishing and shellfish harvesting closures remain in effect until state testing supports reopening. Long-term ecological monitoring of Nueces Bay seagrass beds and oyster reef habitats will continue under a separate TCEQ Natural Resource Damage Assessment agreement with the owners of MT Kalvora Star and MT Ostrel Bay Total documented cleanup cost is $8.2 million. Wildlife rehabilitation costs of $0.9 million and estimated commercial fishing economic losses of $5.6 million are subject to Natural Resource Damage Assessment proceedings. This assessment has been transmitted to NOAA, USFWS, and Texas Parks and Wildlife for NRD purposes.",
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "events": [
+    "EVT-2009"
+   ],
+   "places": [
+    "Corpus Christi Bay",
+    "Nueces Bay",
+    "O.N. Stevens Water Treatment Plant"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-082",
+   "day": 63,
+   "arcs": [
+    "ARC-SPILL",
+    "ARC-AID"
+   ],
+   "statement": "The claims center run for the tankers' owners begins taking lost-income claims from fishers and shoreline businesses, as federal oil spill law requires; claims unpaid after 90 days can go to the Coast Guard's National Pollution Funds Center.",
+   "sources": [
+    "CHR-028",
+    "CHR-041"
+   ],
+   "events": [
+    "EVT-0508"
+   ],
+   "places": [
+    "PLC-001",
+    "PLC-002"
+   ]
+  },
+  {
+   "id": "PUB-083",
+   "day": 64,
+   "arcs": [
+    "ARC-PORTAL-BREACH"
+   ],
+   "statement": "Some aid applicants say their direct-deposit details were changed without their knowledge.",
+   "sources": [
+    "CHR-040",
+    "CHR-007"
+   ],
+   "events": [
+    "EVT-0502"
+   ],
+   "places": [
+    "PLC-001"
+   ]
+  },
+  {
+   "id": "PUB-084",
+   "day": 66,
+   "arcs": [
+    "ARC-PORTAL-BREACH"
+   ],
+   "statement": "FEMA confirms unauthorized access to some applicant accounts and urges applicants to verify deposit information.",
+   "sources": [
+    "CHR-027"
+   ],
+   "events": [
+    "EVT-0502"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-085",
+   "day": 71,
+   "arcs": [
+    "ARC-PORTAL-BREACH"
+   ],
+   "statement": "FEMA says 410 accounts were taken over after about 220,000 automated login attempts using passwords stolen elsewhere; extra verification added; affected applicants will be repaid.",
+   "sources": [
+    "CHR-027",
+    "CHR-063"
+   ],
+   "events": [
+    "EVT-0502"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-086",
+   "day": 75,
+   "arcs": [
+    "ARC-RUMORS"
+   ],
+   "statement": "A second wave of posts claims contractors are stealing aid; fact-checkers say some contract questions are legitimate but specific posts are false.",
+   "sources": [
+    "CHR-080",
+    "CHR-007"
+   ],
+   "events": [
+    "EVT-0507"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-087",
+   "day": 75,
+   "arcs": [
+    "ARC-CONTRACTS",
+    "ARC-MILITARY"
+   ],
+   "statement": "Navy suspends Quellmar Fuel Partners pending a fuel quality review linked to the station's generator failure; the company says its fuel meets specifications.",
+   "sources": [
+    "CHR-021",
+    "CHR-073"
+   ],
+   "events": [
+    "EVT-0506"
+   ],
+   "places": [
+    "FAC-DOD-01",
+    "TANK-0390"
+   ]
+  },
+  {
+   "id": "PUB-088",
+   "day": 78,
+   "arcs": [
+    "ARC-CONTRACTS"
+   ],
+   "statement": "Records show Vantorra Restoration billed for about 2.3 times the debris tonnage the county's own drone and satellite surveys estimated; the company denies overbilling.",
+   "sources": [
+    "CHR-004",
+    "CHR-072"
+   ],
+   "events": [
+    "EVT-0505"
+   ],
+   "places": [
+    "PLC-001"
+   ]
+  },
+  {
+   "id": "PUB-089",
+   "day": 80,
+   "arcs": [
+    "ARC-CONTRACTS"
+   ],
+   "statement": "County pauses payments to Vantorra pending an audit.",
+   "sources": [
+    "CHR-025",
+    "CHR-004"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001"
+   ]
+  },
+  {
+   "id": "PUB-090",
+   "day": 84,
+   "arcs": [
+    "ARC-CONTRACTS"
+   ],
+   "statement": "A federal inspector general opens a review of emergency debris and fuel contracts in the Coastal Bend.",
+   "sources": [
+    "CHR-004"
+   ],
+   "events": [],
+   "places": []
+  },
+  {
+   "id": "PUB-091",
+   "day": 90,
+   "arcs": [
+    "ARC-EQUITY"
+   ],
+   "statement": "Analysis by Coastline Public Radio and a Texas A&M-Corpus Christi researcher: low-income neighborhoods in the surge zone received aid dollars at about half their share of residents, and their median 911 response time was 2.1 times that of high-income areas.",
+   "sources": [
+    "CHR-008",
+    "CHR-061",
+    "CHR-049"
+   ],
+   "events": [
+    "EVT-0601"
+   ],
+   "places": [
+    "PLC-010",
+    "PLC-011"
+   ]
+  },
+  {
+   "id": "PUB-210",
+   "day": 90,
+   "time_local": "14:00",
+   "type": "press_release",
+   "source": "FBI Houston Division / Texas Department of Public Safety",
+   "statement": "OPERATION SANDBAR — 14 ARRESTED IN HURRICANE RAFAEL DISASTER FRAUD SCHEME — December 13, 2027: The Federal Bureau of Investigation Houston Division, FBI Corpus Christi Resident Agency, and the Texas Department of Public Safety Criminal Investigations Division today announced 14 arrests in connection with a large-scale disaster fraud scheme that targeted federal disaster assistance programs and private insurers following Hurricane Rafael. The defendants, led by Corpus Christi resident Renaldo Carver-Mossbach, 44, are accused of fraudulently inflating insurance values on 230 properties before the storm and subsequently filing 187 fraudulent insurance claims and 94 fraudulent FEMA Individual Assistance applications claiming damage that did not occur or was dramatically overstated. Total alleged fraud losses exceed $23 million. Property management company Landmark Pacific Holdings LLC, water damage restoration firm FastDry Coastal LLC, and appraisal firm Duvall and Sons Property Consultants are named in the complaint. The defendants face federal charges of wire fraud, mail fraud, false statements to a federal agency, and conspiracy, carrying maximum penalties of 20 to 30 years in federal prison. FEMA has suspended 94 Individual Assistance awards pending investigation and is contacting affected applicants whose claims were filed without their knowledge. Texas DPS urges any resident who engaged with FastDry Coastal LLC or Landmark Pacific Holdings representatives after the storm to contact the Operation Sandbar tip line at (361) 555-0199.",
+   "arcs": [
+    "ARC-CONTRACTS",
+    "ARC-RECOVERY"
+   ],
+   "events": [
+    "EVT-2207"
+   ],
+   "places": [
+    "Corpus Christi",
+    "Districts 3 and 4"
+   ],
+   "sources": []
+  },
+  {
+   "id": "PUB-092",
+   "day": 92,
+   "arcs": [
+    "ARC-EQUITY",
+    "ARC-AID"
+   ],
+   "statement": "County and FEMA announce door-to-door aid registration in low-income surge-zone neighborhoods.",
+   "sources": [
+    "CHR-025",
+    "CHR-027"
+   ],
+   "events": [],
+   "places": [
+    "PLC-010"
+   ]
+  },
+  {
+   "id": "PUB-093",
+   "day": 96,
+   "arcs": [
+    "ARC-MILITARY",
+    "ARC-DRONES"
+   ],
+   "statement": "Navy orders a security review at Texas air stations after the storm, citing drone reports and the channel attack.",
+   "sources": [
+    "CHR-021",
+    "CHR-032"
+   ],
+   "events": [
+    "EVT-0602"
+   ],
+   "places": [
+    "FAC-DOD-01",
+    "FAC-DOD-03"
+   ]
+  },
+  {
+   "id": "PUB-094",
+   "day": 104,
+   "arcs": [
+    "ARC-CONTRACTS"
+   ],
+   "statement": "FBI agents execute search warrants Monday, Dec. 27, at the offices of Vantorra Restoration and Quellmar Fuel Partners.",
+   "sources": [
+    "CHR-033",
+    "CHR-035",
+    "CHR-004"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001",
+    "TANK-0390"
+   ]
+  },
+  {
+   "id": "PUB-095",
+   "day": 105,
+   "arcs": [
+    "ARC-SPILL-CYBER",
+    "ARC-RECOVERY"
+   ],
+   "statement": "Coast Guard and CISA issue a maritime cyber advisory urging vessel operators to review vendor remote access to cargo systems.",
+   "sources": [
+    "CHR-030",
+    "CHR-020"
+   ],
+   "events": [
+    "EVT-0605"
+   ],
+   "places": [
+    "PORT-07"
+   ]
+  },
+  {
+   "id": "PUB-096",
+   "day": 110,
+   "arcs": [
+    "ARC-RECOVERY",
+    "ARC-WATER"
+   ],
+   "statement": "City plans to harden the water plant's power feeds; state reviews bridge wind-closure procedures.",
+   "sources": [
+    "CHR-024",
+    "CHR-025"
+   ],
+   "events": [
+    "EVT-0604"
+   ],
+   "places": [
+    "FAC-UTL-01",
+    "FAC-UTL-02",
+    "FAC-INF-01"
+   ]
+  },
+  {
+   "id": "PUB-097",
+   "day": 112,
+   "arcs": [
+    "ARC-OVERSEAS",
+    "ARC-SPILL-CYBER",
+    "ARC-CHANNEL-BLAST"
+   ],
+   "statement": "US officials attribute the tanker cyber intrusion and the explosive devices in the ship channel to a foreign government they did not name, calling them attempts to exploit the hurricane.",
+   "sources": [
+    "CHR-012",
+    "CHR-030",
+    "CHR-032"
+   ],
+   "events": [
+    "EVT-0603"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-098",
+   "day": 114,
+   "arcs": [
+    "ARC-CONTRACTS",
+    "ARC-PORTAL-BREACH"
+   ],
+   "statement": "Federal civil forfeiture filing says Vantorra Restoration and Quellmar Fuel Partners share an owner, Brannoch Maritime Holdings, an offshore company whose listed director is L. Marrick, and that bank accounts tied to the firms received about $3.9 million in diverted disaster aid.",
+   "sources": [
+    "CHR-035",
+    "CHR-004"
+   ],
+   "events": [
+    "EVT-0503"
+   ],
+   "places": []
+  },
+  {
+   "id": "PUB-099",
+   "day": 115,
+   "arcs": [
+    "ARC-SPILL"
+   ],
+   "statement": "About 4,200 spill damage claims filed; fishing grounds partly reopen after testing.",
+   "sources": [
+    "CHR-028",
+    "CHR-041"
+   ],
+   "events": [
+    "EVT-0508"
+   ],
+   "places": [
+    "PLC-001",
+    "PLC-002"
+   ]
+  },
+  {
+   "id": "PUB-100",
+   "day": 119,
+   "arcs": [
+    "ARC-RECOVERY"
+   ],
+   "statement": "Four months after Rafael: rebuilding continues; reviews of water, aid equity, port security and contracting are under way.",
+   "sources": [
+    "CHR-001",
+    "CHR-005",
+    "CHR-008"
+   ],
+   "events": [],
+   "places": [
+    "PLC-001"
+   ],
+   "note": "Last day of the corpus."
+  }
+ ],
+ "never_public": [
+  "MV Halcyon Drift, its operator's link to anything, the fuel transfer and Barge 44",
+  "KESTREL by name; STATE-X by name or any country name for the sponsor",
+  "The link between Brannoch Maritime Holdings and the tanker, drones, devices, phishing or rumor network",
+  "Internal IDs: EVT-, BANK-SYN-, ASN-SYN-, SOC-ACC-, MMSI-SYN-, UEI-SYN-, PIID-SYN-, DEV-, JAM-, UAS-SYN-, SYN-PER-",
+  "DoD readiness percentages, force-protection details, device design",
+  "Fraud ring identities",
+  {
+   "id": "GW-NP-001",
+   "description": "KESTREL attribution: IP overlap between GW-SYS-JMP-01 session logs and KESTREL C2 infrastructure documented in classified FBI/CISA indicator set. Links the utility attack to Rafael T6/T7 (STATE-X dark network). Classification: TLP:RED."
+  },
+  {
+   "id": "GW-NP-002",
+   "description": "GW-ENG-VELA credential theft: the specific phishing email, the implant on GW-WS-IT-04, and the full session log export from GW-SYS-JMP-01 are law-enforcement sensitive and not released publicly during the scenario window."
+  },
+  {
+   "id": "GW-NP-003",
+   "description": "Relay modification details: the specific 27-UV threshold values modified on GW-SYS-RTU-01 through RTU-04 are withheld from public advisories to prevent adversary confirmation of success."
+  }
+ ],
+ "known_quirks": [
+  "The tanker valves opened about 11 p.m. local on Sept. 13 (04:00Z on landfall day); public wording is 'as the storm arrived'.",
+  "FEMA Individual Assistance arrives on day 57-60 because household damage assessments were slowed (PUB-103 to PUB-105); earlier aid came through the disaster declaration, shelters and community hubs.",
+  "Two boil-water notices overlap. Citywide: Sept. 18 (day 4) to Oct. 23 (day 39). Districts 3 and 4: issued in English at 5:30 p.m. on Sept. 26 (day 12), reached KNCB in Spanish at 6:03 a.m. on Sept. 27, lifted at 11 a.m. on Oct. 26 (day 42). There was no partial lift on day 30.",
+  "There is one oil spill: about 9,000 barrels from MT Kalvora Star and MT Ostrel Bay at the Rendal Terminals berth. No other vessel was detained or named as a source.",
+  "The ship channel is closed from landfall to a partial reopening on day 30, closed again from the blast on day 44, and reopened on day 58. There was no phased reopening before day 30.",
+  "911: about 2,900 calls on Sept. 15 (day 1) is the peak; 2,109 on Sept. 16 (day 2) is the record for rescue requests.",
+  "FEMA: before Individual Assistance is approved (day 57; registration opens day 60) the FEMA phone number is an information line only."
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "source": "infrastructure",
+ "folder": "data/infrastructure/",
+ "format": "JSON / CSV",
+ "standard": "FEMA Historical Geospatial Damage Assessment Database (GDA)",
+ "reference": "https://services.arcgis.com/XG15cJAlne2vxtgt/arcgis/rest/services/FEMA_Historical_Geospatial_Damage_Assessment_Database/FeatureServer/0",
+ "notes": "FEMA GDA uses exact field names from the ArcGIS FeatureServer schema (fetched live). DMG_LEVEL coded values: NOD/AFF/MIN/MAJ/DES/UNK. ASMT_TYPE: RS=fire-crew windshield survey, AI=automated classification of aerial imagery (the time is when the classification was produced), FV=joint field verification, HI=FEMA housing inspection. Each row is one structure or infrastructure segment assessed.",
+ "entity_catalog": {
+  "assets": "registries/infrastructure_assets.json assets[] (asset_id; substations, water plant and pumps, tanks, wastewater plants, bridges, airport, fuel terminal)",
+  "facilities": "registries/facility_registry.json facilities[] (hospitals, shelters, schools, public buildings)",
+  "areas": "registries/areas.json (tracts, ZIPs, neighbourhoods for individual structures)"
+ },
+ "fields": [
+  {
+   "name": "structure_id",
+   "notes": "CC-<n>; one structure can have several assessment rows"
+  },
+  {
+   "name": "structure_type",
+   "notes": ""
+  },
+  {
+   "name": "address",
+   "notes": ""
+  },
+  {
+   "name": "city",
+   "notes": ""
+  },
+  {
+   "name": "zip",
+   "notes": ""
+  },
+  {
+   "name": "census_tract",
+   "notes": "areas.json tract code"
+  },
+  {
+   "name": "LATITUDE",
+   "notes": "WGS84, on land beside the named street"
+  },
+  {
+   "name": "LONGITUDE",
+   "notes": ""
+  },
+  {
+   "name": "DMG_LEVEL",
+   "notes": "DST destroyed, MAJ major, MIN minor, AFF affected, NVD no visible damage"
+  },
+  {
+   "name": "ASMT_TYPE",
+   "notes": "RS fire-crew windshield survey, AI automated classification of aerial imagery, FV joint field verification, HI FEMA housing inspection"
+  },
+  {
+   "name": "ASMT_DATE",
+   "notes": "Local date and time, YYYY-MM-DD HH:MM"
+  },
+  {
+   "name": "ASSESSOR",
+   "notes": ""
+  },
+  {
+   "name": "OCCUPANCY",
+   "notes": ""
+  },
+  {
+   "name": "YEAR_BUILT",
+   "notes": ""
+  },
+  {
+   "name": "SQ_FT",
+   "notes": ""
+  },
+  {
+   "name": "STORIES",
+   "notes": ""
+  },
+  {
+   "name": "FOUNDATION",
+   "notes": "Slab (first floor about 0.5 ft above grade), Pier and beam (about 2.5 ft), Elevated (on pilings, about 9 ft)"
+  },
+  {
+   "name": "FLOOD_DEPTH_FT",
+   "notes": "High-water mark above grade at the structure, measured on site; filled on field verification (FV) and housing inspection (HI) rows, empty where nobody measured (AI, RS)"
+  },
+  {
+   "name": "ROOF_DAMAGE_PCT",
+   "notes": "Share of roof covering lost; on AI rows the classifier's estimate from imagery, on FV and HI rows the inspector's; empty on windshield surveys (RS)"
+  },
+  {
+   "name": "ACCESS_NOTE",
+   "notes": "Assessor's remark"
+  },
+  {
+   "name": "INCIDENT_NUMBER",
+   "notes": "Disaster declaration number"
+  }
+ ],
+ "joins": [
+  {
+   "field": "structure_id",
+   "to": "for registered infrastructure: infrastructure_assets.json asset_id or facility_registry.json facility_id; individual homes and businesses get their own structure ids"
+  }
+ ],
+ "coverage": "at least 2027-08-15T00:00Z to 2028-01-12T06:00Z",
+ "files": {
+  "data/infrastructure/damage_assessment.csv": "structure damage assessments, one row per assessment",
+  "data/infrastructure/utility_site_survey.csv": "aerial survey findings per utility site (asset_id from infrastructure_assets.json): columns asset_id, asset_name, LATITUDE, LONGITUDE, survey_time_utc, phase, sensor, tile_set_id, tiles, yard_flood_status, visible_condition, equipment_observation. survey_time_utc is the start of the site's image acquisition; tile_set_id joins drone_video/logs/flight_log.csv or the collection index",
+  "data/infrastructure/aerial_survey/collection_index.csv": "aerial collections with tile counts and coverage: columns collection_id, start_utc, end_utc, phase, sensor, tiles, coverage, targets"
+ }
+}

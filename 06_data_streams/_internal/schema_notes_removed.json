@@ -1,0 +1,58 @@
+{
+ "_about": "Internal. Notes that used to sit in the participant-facing schema files and explained the hidden story. Kept for the stream generators; superseded by 00_scenario/canon_timeline.json where they differ.",
+ "notes": {
+  "03_scada_telemetry": {
+   "attack_signature_tags": [
+    "GW.SUB1.REL.UV_THR.SP — relay undervoltage threshold setpoint, modified D+2 (GW-EVT-003)",
+    "GW.UTL1.PUMP3.PRESS.SP — pump pressure setpoint, manipulated D+2 (GW-EVT-006)",
+    "GW.JMP.ACTIVE_SESSIONS.PV — VPN jumphost active sessions, spikes D-14 (GW-EVT-002)",
+    "GW.SCADA.ALARM_SUPR_CNT.PV — alarm suppression count, elevated D+1 to D+3 (GW-EVT-011)"
+   ],
+   "scenario_notes": {
+    "scan_rates": "Process values: 10s. Setpoints: on-change. Status bits: on-change. Historian compresses to ~30s during stable periods.",
+    "coverage": "D-14 to D+42, all 182 tags",
+    "anomaly_window": "D+1 23:00 UTC to D+3 08:00 UTC — attack footprint visible in setpoint changes and alarm suppression"
+   }
+  },
+  "04_social_media": {
+   "scenario_notes": {
+    "key_personas": [
+     "SOC-020 @CoastTruthTX — 4,200 followers, dis/misinfo amplifier, referenced 6x in stories",
+     "SOC-021 @GulfWatchPatriot — 2,800 followers, conspiracy content",
+     "SOC-010 @TruthAboutRafael — created D-1, goes silent D+8 03:47am (itself a signal)",
+     "SOC-005 @FishingWithFelipeCC — posts first oil sheen photos D+1 (legitimate witness)"
+    ],
+    "coverage": "D-7 to D+30 for active personas; D+8 silence for @TruthAboutRafael is a detectable anomaly",
+    "volume": "~200 posts/day baseline; spike ~2,400/day during D0–D+2 storm peak"
+   }
+  },
+  "10_network_logs": {
+   "scenario_notes": {
+    "attack_footprint": "D-14: Initial VPN access to jumphost (SSH log). D-5 to D-1: Historian reconnaissance (HTTP/SMB to 10.72.1.x). D+2 02:00-04:00 UTC: Modbus write_multiple_registers to relay setpoint tags, DNP3 DIRECT_OPERATE to breakers.",
+    "coverage": "D-14 to D+42, GridWater network only (IT and OT subnets)",
+    "file_size": "Estimated 500K rows/day baseline; spikes during attack window"
+   },
+   "entity_catalog_note": "Need a GridWater network asset registry: hostname, IP, role (HMI/historian/jumphost/workstation), subnet (IT vs OT), asset_id linking to scada_tags.json. Known hosts: GW-SYS-JMP-01 (jumphost, CLASSIFIED), GW-WS-IT-04 (workstation) — these IPs appear in logs but are not publicly disclosed.",
+   "subnets": {
+    "10.72.0.0/16": "GridWater OT network",
+    "10.72.1.0/24": "SCADA servers and historian",
+    "10.72.2.0/24": "HMI workstations",
+    "10.72.3.0/24": "Remote terminal units (RTUs/PLCs)",
+    "10.72.4.0/24": "IT/OT boundary (DMZ)",
+    "192.168.100.0/24": "GridWater IT corporate network"
+   }
+  },
+  "13_payments": {
+   "scenario_notes": {
+    "fraud_patterns": [
+     "Cluster of claims filed D+1 from addresses not in storm damage zone (pre-staged)",
+     "Single adjuster (ADJ-0847) approves 23 claims in 48 hours at 95%+ of claimed amount — well above peer average",
+     "Shell company 'RV Restoration LLC' registered D-3 receives $340K in contractor payments across 8 claims",
+     "Crypto transactions from two persona accounts to unidentified wallet D+10 and D+15"
+    ],
+    "coverage": "D0 to D+60"
+   },
+   "entity_catalog_note": "Need a company/entity registry for fictional insurers (CCC Coastal Insurance, Gulf Shield Mutual), adjusters, shell companies, and contractors receiving payments"
+  }
+ }
+}

@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "note": "Stories per day across all eight outlets, scaled to events. Every day from -60 to 119 must have at least one story. Maximums were raised on 2026-11-09 when the trade, wire, base-weekly and Spanish-language outlets were filled out (656 stories); a day above its maximum means one event is being over-covered. Total target about 650-700.",
+  "ranges": [
+    {
+      "start_day": -60,
+      "end_day": -11,
+      "min": 1,
+      "max": 4,
+      "why": "Quiet baseline; community, port, base life"
+    },
+    {
+      "start_day": -10,
+      "end_day": -6,
+      "min": 2,
+      "max": 5,
+      "why": "Storm forms and strengthens"
+    },
+    {
+      "start_day": -5,
+      "end_day": -3,
+      "min": 3,
+      "max": 8,
+      "why": "Base evacuations; Port Condition X-Ray (port open) on day -3"
+    },
+    {
+      "start_day": -2,
+      "end_day": -1,
+      "min": 4,
+      "max": 14,
+      "why": "Evacuations, warning, port closes to inbound (Yankee) and to all traffic (Zulu)"
+    },
+    {
+      "start_day": 0,
+      "end_day": 0,
+      "min": 7,
+      "max": 15,
+      "why": "Landfall, spill, water plant"
+    },
+    {
+      "start_day": 1,
+      "end_day": 1,
+      "min": 6,
+      "max": 13,
+      "why": "Damage, Unified Command, bridges"
+    },
+    {
+      "start_day": 2,
+      "end_day": 5,
+      "min": 4,
+      "max": 14,
+      "why": "Oil in the bays, rumors, boil-water notice"
+    },
+    {
+      "start_day": 6,
+      "end_day": 10,
+      "min": 3,
+      "max": 9,
+      "why": "Cyber angle, drones, illness surge, contracts"
+    },
+    {
+      "start_day": 11,
+      "end_day": 29,
+      "min": 1,
+      "max": 9,
+      "why": "Recovery grind"
+    },
+    {
+      "start_day": 30,
+      "end_day": 33,
+      "min": 2,
+      "max": 8,
+      "why": "Partial reopening, relief cargo"
+    },
+    {
+      "start_day": 34,
+      "end_day": 43,
+      "min": 1,
+      "max": 5,
+      "why": "Relief flights, AIS anomaly, notice lifted, GPS interference"
+    },
+    {
+      "start_day": 44,
+      "end_day": 44,
+      "min": 6,
+      "max": 8,
+      "why": "Blast at the jetties"
+    },
+    {
+      "start_day": 45,
+      "end_day": 47,
+      "min": 4,
+      "max": 12,
+      "why": "Device confirmed, crisis abroad, transmitter found"
+    },
+    {
+      "start_day": 48,
+      "end_day": 52,
+      "min": 2,
+      "max": 6,
+      "why": "Clearance, second device"
+    },
+    {
+      "start_day": 53,
+      "end_day": 57,
+      "min": 1,
+      "max": 6,
+      "why": "Waiting on clearance"
+    },
+    {
+      "start_day": 58,
+      "end_day": 59,
+      "min": 3,
+      "max": 7,
+      "why": "Reopening, brigade sails"
+    },
+    {
+      "start_day": 60,
+      "end_day": 71,
+      "min": 2,
+      "max": 7,
+      "why": "Aid registration, account takeovers"
+    },
+    {
+      "start_day": 72,
+      "end_day": 89,
+      "min": 1,
+      "max": 5,
+      "why": "Contracts scrutiny, rumor wave"
+    },
+    {
+      "start_day": 90,
+      "end_day": 92,
+      "min": 3,
+      "max": 8,
+      "why": "Equity analysis"
+    },
+    {
+      "start_day": 93,
+      "end_day": 103,
+      "min": 1,
+      "max": 4,
+      "why": "Reviews, holidays"
+    },
+    {
+      "start_day": 104,
+      "end_day": 105,
+      "min": 1,
+      "max": 7,
+      "why": "FBI searches and follow-up"
+    },
+    {
+      "start_day": 106,
+      "end_day": 111,
+      "min": 1,
+      "max": 4,
+      "why": "Advisory, hardening plan"
+    },
+    {
+      "start_day": 112,
+      "end_day": 114,
+      "min": 3,
+      "max": 6,
+      "why": "Attribution, court filing"
+    },
+    {
+      "start_day": 115,
+      "end_day": 119,
+      "min": 1,
+      "max": 8,
+      "why": "Six-month look-back"
+    }
+  ]
+}

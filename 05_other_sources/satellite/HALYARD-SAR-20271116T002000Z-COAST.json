@@ -1,0 +1,112 @@
+{
+ "type": "Feature",
+ "stac_version": "1.0.0",
+ "stac_extensions": [
+  "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+  "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+  "https://stac-extensions.github.io/sar/v1.0.0/schema.json"
+ ],
+ "id": "HALYARD-SAR-20271116T002000Z-COAST",
+ "collection": "coastal-bend-scenes",
+ "geometry": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     -97.95,
+     27.35
+    ],
+    [
+     -96.55,
+     27.35
+    ],
+    [
+     -96.55,
+     28.35
+    ],
+    [
+     -97.95,
+     28.35
+    ],
+    [
+     -97.95,
+     27.35
+    ]
+   ]
+  ]
+ },
+ "bbox": [
+  -97.95,
+  27.35,
+  -96.55,
+  28.35
+ ],
+ "links": [
+  {
+   "rel": "collection",
+   "href": "catalog.json",
+   "type": "application/json"
+  },
+  {
+   "rel": "self",
+   "href": "HALYARD-SAR-20271116T002000Z-COAST.json",
+   "type": "application/geo+json"
+  }
+ ],
+ "assets": {
+  "data": {
+   "href": "s3://coastal-bend-scenes/HALYARD-SAR-20271116T002000Z-COAST/sigma0_vv.tif",
+   "type": "image/tiff; application=geotiff",
+   "roles": [
+    "data"
+   ]
+  },
+  "thumbnail": {
+   "href": "s3://coastal-bend-scenes/HALYARD-SAR-20271116T002000Z-COAST/thumb.jpg",
+   "type": "image/jpeg",
+   "roles": [
+    "thumbnail"
+   ]
+  }
+ },
+ "properties": {
+  "datetime": "2027-11-16T00:20:00Z",
+  "title": "Routine radar acquisition",
+  "description": "Routine wide-swath radar acquisition. Vessel detections (hulls of 40 m or more): 1 at the offshore anchorage, 14 alongside in the Inner Harbor, 1 under way in the ship channel. Two small hulls with no AIS correlation (about 5 nautical miles offshore of Mustang Island; about 3 nautical miles off the entrance channel); below the size that must carry AIS.",
+  "platform": "Halyard-SAR-2",
+  "instruments": [
+   "X-band SAR"
+  ],
+  "constellation": "Halyard-SAR",
+  "gsd": 10,
+  "view:off_nadir": 11.0,
+  "view:sun_azimuth": 254.1,
+  "view:sun_elevation": -9.9,
+  "proj:epsg": 32614,
+  "sar:instrument_mode": "wide swath",
+  "sar:frequency_band": "X",
+  "sar:polarizations": [
+   "VV",
+   "VH"
+  ],
+  "detections": {
+   "vessels": {
+    "offshore_anchorage": 1,
+    "inner_harbor_alongside": 14,
+    "ship_channel_under_way": 1,
+    "uncorrelated": [
+     {
+      "description": "small hull about 5 nautical miles offshore of Mustang Island",
+      "length_m": 21,
+      "ais_match": false
+     },
+     {
+      "description": "small hull about 3 nautical miles off the entrance channel",
+      "length_m": 9,
+      "ais_match": false
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,268 @@
+{
+  "source": "R2",
+  "scope": "Every story tagged ARC-SPILL, ARC-SPILL-CYBER, ARC-PORT or ARC-AIS-ANOMALY (131 stories, days -60 to 119), read in full in day order as the Inner Harbor spill, how-the-valves-opened, ship channel/exports and vessel-identity storylines; checked against public_record, canon, characters, outlets and calendar.",
+  "stories_read": 131,
+  "findings": [
+    {
+      "id": "R2-001",
+      "severity": "high",
+      "story_id": "NWS-P048-02",
+      "field": "body",
+      "old": "Defense analysts have been watching US deployment timelines since an overseas power began military operations abroad last week. A foreign state broadcaster has mocked the port closure as a sign of US weakness. No official has publicly connected the blast to events overseas.",
+      "new": "A foreign state broadcaster has mocked the port closure as a sign of US weakness. Officials have not said who placed the device or why, and the FBI declined further comment.",
+      "reason": "Leak: in a story about the AIS spoofing and the blast, setting the brigade delay beside 'US deployment timelines' and an overseas power's operations, then raising 'events overseas', points readers to state involvement and motive before the day-112 attribution.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-002",
+      "severity": "medium",
+      "story_id": "NWS-P048-01",
+      "field": "body",
+      "old": "A closer review of the public track places the signal near the entrance channel and the jetties, the stretch of water where the tug was damaged around 1 a.m. Oct. 28.",
+      "new": "A closer review of the public track places the signal near the entrance channel, about two weeks before the Oct. 28 blast.",
+      "reason": "Goes past PUB-076 ('near the entrance channel two weeks before the blast') by placing the spoofed signal on the blast site itself, which implies a link officials have declined to make.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-003",
+      "severity": "medium",
+      "story_id": "NWS-P112-01",
+      "field": "body",
+      "old": "During the closure, a crisis abroad escalated as an overseas power began military operations. Tuesday's attribution did not mention that crisis.",
+      "new": "The Army has not said whether the two delays affected the brigade's mission.",
+      "reason": "Putting the attribution next to the brigade delay and the overseas power's operations suggests that the unnamed government is that power and that the motive was the deployment. Neither is in the public record.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-004",
+      "severity": "medium",
+      "story_id": "NWS-P050-02",
+      "field": "body",
+      "old": "Hours later on Oct. 28, an explosion",
+      "new": "Hours earlier that day, an explosion",
+      "reason": "Wrong order. The blast was around 1 a.m. Oct. 28, and the move to monitoring was announced later that day (NWS-P044-06: 'Around 1 a.m. the same day').",
+      "status": "applied"
+    },
+    {
+      "id": "R2-005",
+      "severity": "medium",
+      "story_id": "NWS-P042-01",
+      "field": "headline",
+      "old": "Opinion: The bays are healing on their own schedule. The people who work them need a plan.",
+      "new": "Opinion: The cleanup has a playbook. The people who work the bays still don't.",
+      "reason": "Near-copy of the same columnist's Oct. 10 headline (NWS-P026-01: 'The bays will heal on their own clock. Fishing families need one they can read.') over the same argument. The new headline uses this column's own dek.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-006",
+      "severity": "low",
+      "story_id": "NWS-P042-01",
+      "field": "body",
+      "old": "First, the state and the Unified Command should publish a plain-language timeline for testing and reopening the bays, even if the honest answer is \"not yet,\" and explain what the testing looks for.",
+      "new": "First, the state and the Unified Command should finally publish the plain-language testing and reopening timeline I asked for in this space this month, even if the honest answer is \"not yet.\"",
+      "reason": "Repeats the main ask of NWS-P026-01 as if new. Pointing back to the earlier column makes this read as a follow-up, not a copy.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-007",
+      "severity": "medium",
+      "story_id": "NWS-P094-01",
+      "field": "story",
+      "old": "",
+      "new": "Rewrite with its own angle. This Sabal piece repeats NWS-P086-01 (same outlet and analyst, eight days earlier) almost point for point: the year-end framing, two shutdowns, Holloway's 'two completely different causes/reasons ... that's what buyers/they'll remember', 'confidence, not capacity/reliability, not capacity' and 'markets can price a hurricane/buyers can live with a hurricane'. Keep the facts, but center it on something new, such as first-quarter bookings and charter terms, or a factual recap of the fall's volumes. Give Holloway new quotes and change the headline (currently 'close out a year of two shutdowns' against 'heads into year-end after two fall shutdowns').",
+      "reason": "Reads as copy-paste of an earlier story by the same outlet: same structure, headline and quotes.",
+      "status": "resolved_by_rewrite",
+      "resolution": "Handled by rewrite-W1/W2 (public record corrected and stories rewritten)."
+    },
+    {
+      "id": "R2-008",
+      "severity": "medium",
+      "story_id": "NWS-P074-01",
+      "field": "body",
+      "old": "the oyster season that normally opens in November has come and gone in the closed waters without a harvest",
+      "new": "the oyster season that opened Nov. 1 has brought no harvest from the closed waters",
+      "reason": "Real-world error: the Texas public oyster season runs Nov. 1 to April 30, so on Nov. 27 it has not 'come and gone'.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-009",
+      "severity": "low",
+      "story_id": "NWS-P058-02",
+      "field": "body",
+      "old": "the channel was also closed from the eve of Hurricane Rafael in September",
+      "new": "the channel was also closed from three days before Hurricane Rafael's landfall in September",
+      "reason": "The channel closed Sept. 11, three days before landfall (PUB-020), not on the eve of the storm. Every other story uses three days.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-010",
+      "severity": "low",
+      "story_id": "NWS-P062-01",
+      "field": "dek",
+      "old": "Five days after the channel reopened,",
+      "new": "Four days after the channel reopened,",
+      "reason": "The channel reopened Thursday, Nov. 11. This story is Monday, Nov. 15, four days later.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-011",
+      "severity": "low",
+      "story_id": "NWS-P062-01",
+      "field": "body",
+      "old": "Five days after the Coast Guard reopened the ship channel",
+      "new": "Four days after the Coast Guard reopened the ship channel",
+      "reason": "The channel reopened Thursday, Nov. 11. This story is Monday, Nov. 15, four days later.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-012",
+      "severity": "low",
+      "story_id": "NWS-P063-01",
+      "field": "body",
+      "old": "said Sunday he wanted to know \"what people can claim, where to file, and who signs the check.\"",
+      "new": "said Sunday he wanted agencies to \"tell people what they can claim, where to file, and who signs the check.\"",
+      "reason": "Misquote. Bell's words in NWS-P061-01 are 'Tell people what they can claim, where to file, and who signs the check'; the quoted fragment changes 'they' to 'people'.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-013",
+      "severity": "low",
+      "story_id": "NWS-P077-02",
+      "field": "body",
+      "old": "Oct. 28: Inner channel restrictions lifted. Around 1 a.m., an explosion beside the harbor tug Corrin Bay near the Port Aransas jetties damages the tug and injures two crew. Coast Guard closes the channel.",
+      "new": "Oct. 28: Around 1 a.m., an explosion beside the harbor tug Corrin Bay near the Port Aransas jetties damages the tug and injures two crew. Coast Guard closes the channel. Later that day, inner channel restrictions are lifted.",
+      "reason": "This dated log puts the lifting of the restrictions before the 1 a.m. blast. The restrictions were lifted later that day.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-014",
+      "severity": "low",
+      "story_id": "NWS-P000-04",
+      "field": "body",
+      "old": "The terminal's operator, which the Coast Guard did not identify Tuesday, said in a brief written statement that it had reported a discharge from two vessels at its berth and was working with authorities.",
+      "new": "The Coast Guard said the terminal's operator, which it did not identify Tuesday, had reported a discharge from two vessels at its berth and was working with authorities.",
+      "reason": "Weak plausibility: the Ledger could not run a written statement from a company it says it cannot name. Attribute the information to the Coast Guard.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-015",
+      "severity": "low",
+      "story_id": "NWS-P003-06",
+      "field": "body",
+      "old": "as Hurricane Rafael arrived early Tuesday, according to the Unified Command",
+      "new": "as Hurricane Rafael arrived, according to the Unified Command",
+      "reason": "Spill timing: the valves opened about 11 p.m. Monday, Sept. 13 (known quirk). The public wording is 'as the storm arrived', so don't pin the release to early Tuesday.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-016",
+      "severity": "low",
+      "story_id": "NWS-P003-05",
+      "field": "body",
+      "old": "at an Inner Harbor terminal as Hurricane Rafael arrived early Tuesday.",
+      "new": "at an Inner Harbor terminal as Hurricane Rafael arrived.",
+      "reason": "Spill timing: the release began about 11 p.m. Monday (known quirk). The public wording is 'as the storm arrived'.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-017",
+      "severity": "low",
+      "story_id": "NWS-P006-03",
+      "field": "body",
+      "old": "as Hurricane Rafael made landfall last week",
+      "new": "as Hurricane Rafael arrived last week",
+      "reason": "Spill timing: the release began about two hours before the 1 a.m. landfall (known quirk). The public wording is 'as the storm arrived', not 'as it made landfall'.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-018",
+      "severity": "low",
+      "story_id": "NWS-P087-01",
+      "field": "body",
+      "old": "berth as Hurricane Rafael made landfall Sept. 14, according to",
+      "new": "berth as Hurricane Rafael arrived in mid-September, according to",
+      "reason": "Spill timing: the release began about 11 p.m. Sept. 13, before the Sept. 14 landfall (known quirk). The public wording is 'as the storm arrived'.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-019",
+      "severity": "low",
+      "story_id": "NWS-P061-02",
+      "field": "body",
+      "old": "when the anchorage backlog took several days to clear",
+      "new": "when an anchorage backlog delayed relief cargo",
+      "reason": "No public figure says how long the October backlog took to clear. PUB-058/059 only say it delayed relief cargo.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-020",
+      "severity": "low",
+      "story_id": "NWS-P119-01",
+      "field": "body",
+      "old": "He is one of about 4,200 people who have filed spill damage claims.",
+      "new": "His is one of about 4,200 spill damage claims filed so far.",
+      "reason": "PUB-099 counts claims (about 4,200), not people.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-021",
+      "severity": "low",
+      "story_id": "NWS-P013-02",
+      "field": "body",
+      "old": "Bay shrimpers reported a fair start to the season this summer, though fuel costs were squeezing margins.",
+      "new": "Bay shrimpers had called it a fair start to the season this summer, with fuel costs eating into margins.",
+      "reason": "Same sentence word for word as NWS-P004-03, from a different outlet.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-022",
+      "severity": "low",
+      "story_id": "NWS-P021-03",
+      "field": "body",
+      "old": "The state extended the closure of fishing and shellfish harvesting in Nueces and Corpus Christi bays on Tuesday.",
+      "new": "On Tuesday the state extended its closure of fishing and shellfish harvesting in Nueces and Corpus Christi bays.",
+      "reason": "Same sentence word for word as NWS-P024-01, from a different outlet.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-023",
+      "severity": "low",
+      "story_id": "NWS-P113-03",
+      "field": "body",
+      "old": "Last week, the Coast Guard and the Cybersecurity and Infrastructure Security Agency urged vessel operators to review vendor remote access to cargo systems.",
+      "new": "Last week, the Coast Guard and the Cybersecurity and Infrastructure Security Agency told vessel operators to take a hard look at which vendors can reach their cargo systems remotely.",
+      "reason": "Same sentence word for word as NWS-P113-02 (Sabal) on the same day.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-024",
+      "severity": "low",
+      "story_id": "NWS-P113-03",
+      "field": "body",
+      "old": "When the next hurricane closes the channel, who is watching the channel while it is closed?",
+      "new": "When the next hurricane closes the channel, who keeps watch on the water while no ships can move?",
+      "reason": "Copies Holloway's line in the same day's NWS-P113-02 ('who's watching the channel while it's closed').",
+      "status": "applied"
+    },
+    {
+      "id": "R2-025",
+      "severity": "low",
+      "story_id": "NWS-P061-01",
+      "field": "body",
+      "old": "\"Smelled it first. Thought somebody's generator was leaking. Then I walked down and the sand was black at the edge.\"",
+      "new": "\"Smelled it two days after the storm, before I ever saw it. Then the whole edge of the sand went black.\"",
+      "reason": "Repeats Bell's Sept. 16 quote in NWS-P002-01 almost word for word (generator leaking; sand black at the edge). Same outlet.",
+      "status": "applied"
+    },
+    {
+      "id": "R2-026",
+      "severity": "low",
+      "story_id": "NWS-P104-01",
+      "field": "body",
+      "old": "\"Think of the surge as a bulldozer pushing the bay uphill. Whatever was floating on top went with it, into marshes a normal tide never touches,\" Brooks said.",
+      "new": "\"The oil is sitting in marsh a normal tide never reaches, so the tide can't do much to flush it back out,\" Brooks said.",
+      "reason": "Recycles Brooks's Nov. 30 analogy in NWS-P077-01 ('Picture the surge as a giant hand pushing the whole bay inland ... Whatever was floating ... went along for the ride'). Same outlet and reporter.",
+      "status": "applied"
+    }
+  ]
+}

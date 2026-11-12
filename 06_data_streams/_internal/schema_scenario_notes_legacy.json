@@ -1,0 +1,95 @@
+{
+ "not_for_participants": true,
+ "note": "scenario_notes and catalogue to-do notes removed from the seven land-side schemas on 2026-11-09. They pre-date the canon decisions (real hospital names, 'GridWater', old coverage windows and dates) and are kept only for reference; 00_scenario/canon_timeline.json governs.",
+ "removed": {
+  "02_911_cad_schema.json": {
+   "scenario_notes": {
+    "volume": "~450 calls/day baseline; spike to ~1,800/day D0–D+3 hurricane landfall period",
+    "anomalies": [
+     "GridWater pump station alarms D+2 05:30–06:15 — CCFD Engine 1 responds, finds flooding not fire (cover for SCADA manipulation)",
+     "Surge of chemical exposure/odor calls D+1 near Inner Harbor (oil spill)"
+    ],
+    "coverage": "D-3 to D+14"
+   }
+  },
+  "05_weather_schema.json": {
+   "scenario_notes": {
+    "peak": "D0 (Sep 14 2027): HourlyWindSpeed peaks ~110 knots at KCRP 11:30 CDT landfall, HourlySeaLevelPressure drops to ~27.60 inHg",
+    "coverage": "D-7 to D+14 for all three stations",
+    "note": "Separate from EPA AQS (air quality). NOAA ASOS covers wind, pressure, precip, temp. EPA AQS covers ozone/PM2.5 — see env_sensors stream."
+   }
+  },
+  "07_env_sensors_schema.json": {
+   "scenario_notes": {
+    "oil_spill_parameters": [
+     "Benzene (45201)",
+     "Toluene (45202)",
+     "Total Hydrocarbons (43102)",
+     "Hydrogen Sulfide (42401)"
+    ],
+    "anomaly": "Benzene and H2S spike at Corpus Christi Industrial District monitor D+1 06:00–D+3 18:00 (oil spill plume). Values exceed NAAQS threshold.",
+    "coverage": "D-3 to D+14 for air quality; hourly readings at 3 Corpus Christi monitors"
+   },
+   "entity_catalog_needed": true,
+   "entity_catalog_note": "Need a sensor registry with EPA Site Num, TCEQ site IDs, lat/lon, parameter codes, and operator for Corpus Christi area monitors near the port and Inner Harbor"
+  },
+  "11_maintenance_schema.json": {
+   "scenario_notes": {
+    "attack_cover": "Several emergency WOs opened D+2 for 'storm damage' at substation SUB1 and pump station PP1 — legitimate-looking but timed to coincide with cyberattack. Technicians' access logs should show no physical presence during claimed repair windows.",
+    "coverage": "D-30 to D+42 (baseline PM schedule + storm response surge)",
+    "volume": "~15 WOs/week baseline; spike to ~80/week D0 to D+7"
+   }
+  },
+  "14_infrastructure_schema.json": {
+   "scenario_notes": {
+    "critical_infrastructure": [
+     "Harbor Bridge (US-181 Corpus Christi Bridge) — MAJ damage to approach lanes D0",
+     "Corpus Christi Ship Channel levee — AFF breach risk D+1, pumps active",
+     "Calallen Water Treatment Plant (GridWater GW-WTP1) — physical facility AFF, equipment operational",
+     "SPID Corridor (South Padre Island Drive) — FL/WI damage to multiple commercial structures"
+    ],
+    "coverage": "D+1 to D+14 field assessments; D+1 RS assessment (satellite D+1 scene), D+5 and D+14 field canvass",
+    "assessment_waves": "Wave 1 (D+1 RS): modeled/satellite. Wave 2 (D+3-5 FA): first field teams. Wave 3 (D+7-14 FA): comprehensive survey."
+   },
+   "entity_catalog_needed": true,
+   "entity_catalog_note": "Need an infrastructure asset registry with structure_id, structure_type, address, lat/lon for Corpus Christi area critical infrastructure (bridges, roads, levees, utility substations, water treatment plants, hospitals)"
+  },
+  "15_census_schema.json": {
+   "scenario_notes": {
+    "use_cases": [
+     "T14 (Bilingual comms): pct_hispanic and B16004_025E identify tracts needing Spanish-language emergency messaging",
+     "T16 (Hospital surge): B27001 uninsured + poverty rates identify high-need medical populations",
+     "T13 (911 dispatch): overlay 911 call density on census data to identify underserved areas",
+     "T22 (Insurance fraud): cross-reference claim density vs B01003/B19013 for anomalous claim rates"
+    ],
+    "coverage": "All 73 Nueces County census tracts; ACS 2022 5-year estimates as baseline"
+   },
+   "entity_catalog_needed": false,
+   "nueces_county_tracts": {
+    "total_tracts": 73,
+    "corpus_christi_tracts": "~60",
+    "note": "Corpus Christi population ~325,000. High Hispanic/Latino population (~64% county-wide). Low-lying coastal tracts near North Beach and Calallen particularly vulnerable to storm surge."
+   }
+  },
+  "16_public_health_schema.json": {
+   "scenario_notes": {
+    "facilities": [
+     "Christus Spohn Hospital Corpus Christi — Memorial (525 beds, Level II Trauma) — primary surge facility",
+     "Christus Spohn Hospital Shoreline (secondary)",
+     "Bay Area Baptist Medical Center (smaller community hospital near port)",
+     "Emergency shelters: American Bank Center arena (capacity 10,000), Corpus Christi ISD sites"
+    ],
+    "coverage": "D-1 to D+14 for ed_visits; D-1 to D+30 for hospital_capacity_daily",
+    "surge_peak": "D0 to D+2: ED visit surge ~400% above baseline at Christus Spohn Memorial; both hospitals on diversion D+1 06:00-18:00",
+    "icd10_patterns": [
+     "S00-S99 (trauma/injury) spike D0-D+1",
+     "T63 (toxic effect) spike D+1-D+3 near Inner Harbor (oil spill chemical exposure)",
+     "F43 (acute stress reaction) sustained elevation D+1 to D+14",
+     "A09 (other gastroenteritis) spike D+5-D+10 (water contamination from oil/chemical runoff)"
+    ]
+   },
+   "entity_catalog_needed": true,
+   "entity_catalog_note": "Need a facility registry with C_Facility_ID, facility_name (fictional), facility_type, address, lat/lon, licensed_beds, ED_beds for Corpus Christi area hospitals and emergency shelters"
+  }
+ }
+}

@@ -1,0 +1,5170 @@
+{
+ "storm": "Rafael",
+ "atcf_id": "AL092027",
+ "basin": "Atlantic",
+ "season": 2027,
+ "source_format": "National Hurricane Center public advisories and HURDAT2-style best track",
+ "times": "UTC; issued_local is US Central",
+ "count": 68,
+ "advisories": [
+  {
+   "advisory_number": "1",
+   "atcf_id": "AL092027",
+   "storm_name": "NINE",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-02T15:00:00Z",
+   "issued_local": "1000 AM CDT THU SEP 02 2027",
+   "classification": "Tropical Depression",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 15.5,
+    "lon": -80.1
+   },
+   "max_sustained_winds_kt": 30,
+   "max_sustained_winds_mph": 35,
+   "min_central_pressure_mb": 1009,
+   "movement": "WNW at 5 kt",
+   "distance_to_corpus_christi_nm": 1214,
+   "headline": "Tropical Depression Nine moving west-northwest over the northwestern Caribbean Sea",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-03T03:00Z",
+     "lat": 16.0,
+     "lon": -81.0,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-03T15:00Z",
+     "lat": 16.4,
+     "lon": -81.6,
+     "max_wind_kt": 35,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-04T03:00Z",
+     "lat": 16.9,
+     "lon": -82.2,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-04T15:00Z",
+     "lat": 17.2,
+     "lon": -83.4,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-05T15:00Z",
+     "lat": 19.1,
+     "lon": -85.0,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-06T15:00Z",
+     "lat": 19.6,
+     "lon": -87.9,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-07T15:00Z",
+     "lat": 20.7,
+     "lon": -88.1,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "2",
+   "atcf_id": "AL092027",
+   "storm_name": "NINE",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-02T21:00:00Z",
+   "issued_local": "400 PM CDT THU SEP 02 2027",
+   "classification": "Tropical Depression",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 15.8,
+    "lon": -80.6
+   },
+   "max_sustained_winds_kt": 30,
+   "max_sustained_winds_mph": 35,
+   "min_central_pressure_mb": 1008,
+   "movement": "WNW at 5 kt",
+   "distance_to_corpus_christi_nm": 1183,
+   "headline": "Tropical Depression Nine moving west-northwest over the northwestern Caribbean Sea",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-03T09:00Z",
+     "lat": 16.3,
+     "lon": -81.4,
+     "max_wind_kt": 35,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-03T21:00Z",
+     "lat": 16.7,
+     "lon": -81.9,
+     "max_wind_kt": 35,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-04T09:00Z",
+     "lat": 17.0,
+     "lon": -83.0,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-04T21:00Z",
+     "lat": 18.2,
+     "lon": -84.1,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-05T21:00Z",
+     "lat": 19.0,
+     "lon": -86.1,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-06T21:00Z",
+     "lat": 20.3,
+     "lon": -87.7,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-07T21:00Z",
+     "lat": 21.2,
+     "lon": -88.8,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "3",
+   "atcf_id": "AL092027",
+   "storm_name": "NINE",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-03T03:00:00Z",
+   "issued_local": "1000 PM CDT THU SEP 02 2027",
+   "classification": "Tropical Depression",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 16.0,
+    "lon": -81.0
+   },
+   "max_sustained_winds_kt": 30,
+   "max_sustained_winds_mph": 35,
+   "min_central_pressure_mb": 1008,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 1156,
+   "headline": "Tropical Depression Nine moving west-northwest over the northwestern Caribbean Sea",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-03T15:00Z",
+     "lat": 16.4,
+     "lon": -81.8,
+     "max_wind_kt": 35,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-04T03:00Z",
+     "lat": 16.9,
+     "lon": -82.2,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-04T15:00Z",
+     "lat": 17.3,
+     "lon": -83.5,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-05T03:00Z",
+     "lat": 18.2,
+     "lon": -85.0,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-06T03:00Z",
+     "lat": 19.5,
+     "lon": -86.7,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-07T03:00Z",
+     "lat": 20.9,
+     "lon": -87.6,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-08T03:00Z",
+     "lat": 21.4,
+     "lon": -89.7,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "4",
+   "atcf_id": "AL092027",
+   "storm_name": "NINE",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-03T09:00:00Z",
+   "issued_local": "400 AM CDT FRI SEP 03 2027",
+   "classification": "Tropical Depression",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 16.2,
+    "lon": -81.3
+   },
+   "max_sustained_winds_kt": 30,
+   "max_sustained_winds_mph": 35,
+   "min_central_pressure_mb": 1006,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 1133,
+   "headline": "Tropical Depression Nine moving west-northwest over the northwestern Caribbean Sea",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-03T21:00Z",
+     "lat": 16.6,
+     "lon": -82.0,
+     "max_wind_kt": 35,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-04T09:00Z",
+     "lat": 17.3,
+     "lon": -82.9,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-04T21:00Z",
+     "lat": 17.9,
+     "lon": -83.9,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-05T09:00Z",
+     "lat": 18.8,
+     "lon": -85.5,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-06T09:00Z",
+     "lat": 19.5,
+     "lon": -86.8,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-07T09:00Z",
+     "lat": 20.3,
+     "lon": -87.8,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-08T09:00Z",
+     "lat": 22.0,
+     "lon": -89.8,
+     "max_wind_kt": 65,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "5",
+   "atcf_id": "AL092027",
+   "storm_name": "NINE",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-03T15:00:00Z",
+   "issued_local": "1000 AM CDT FRI SEP 03 2027",
+   "classification": "Tropical Depression",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 16.4,
+    "lon": -81.7
+   },
+   "max_sustained_winds_kt": 30,
+   "max_sustained_winds_mph": 35,
+   "min_central_pressure_mb": 1004,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 1109,
+   "headline": "Tropical Depression Nine moving west-northwest over the northwestern Caribbean Sea",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-04T03:00Z",
+     "lat": 16.9,
+     "lon": -82.3,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-04T15:00Z",
+     "lat": 17.5,
+     "lon": -83.5,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-05T03:00Z",
+     "lat": 18.2,
+     "lon": -84.8,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-05T15:00Z",
+     "lat": 18.8,
+     "lon": -85.9,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-06T15:00Z",
+     "lat": 19.5,
+     "lon": -87.6,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-07T15:00Z",
+     "lat": 20.1,
+     "lon": -88.1,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-08T15:00Z",
+     "lat": 22.1,
+     "lon": -91.8,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "6",
+   "atcf_id": "AL092027",
+   "storm_name": "NINE",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-03T21:00:00Z",
+   "issued_local": "400 PM CDT FRI SEP 03 2027",
+   "classification": "Tropical Depression",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 16.7,
+    "lon": -82.0
+   },
+   "max_sustained_winds_kt": 30,
+   "max_sustained_winds_mph": 35,
+   "min_central_pressure_mb": 1004,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 1086,
+   "headline": "Tropical Depression Nine moving west-northwest over the northwestern Caribbean Sea",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-04T09:00Z",
+     "lat": 17.2,
+     "lon": -83.0,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-04T21:00Z",
+     "lat": 18.0,
+     "lon": -84.2,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-05T09:00Z",
+     "lat": 18.4,
+     "lon": -85.3,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-05T21:00Z",
+     "lat": 19.1,
+     "lon": -85.9,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-06T21:00Z",
+     "lat": 19.9,
+     "lon": -87.6,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-07T21:00Z",
+     "lat": 20.3,
+     "lon": -90.0,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-08T21:00Z",
+     "lat": 21.4,
+     "lon": -91.9,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "7",
+   "atcf_id": "AL092027",
+   "storm_name": "NINE",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-04T03:00:00Z",
+   "issued_local": "1000 PM CDT FRI SEP 03 2027",
+   "classification": "Tropical Depression",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 16.9,
+    "lon": -82.3
+   },
+   "max_sustained_winds_kt": 30,
+   "max_sustained_winds_mph": 35,
+   "min_central_pressure_mb": 1004,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 1062,
+   "headline": "Tropical Depression Nine moving west-northwest over the northwestern Caribbean Sea",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-04T15:00Z",
+     "lat": 17.4,
+     "lon": -83.4,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-05T03:00Z",
+     "lat": 18.0,
+     "lon": -85.0,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-05T15:00Z",
+     "lat": 18.7,
+     "lon": -85.6,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-06T03:00Z",
+     "lat": 19.4,
+     "lon": -86.8,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-07T03:00Z",
+     "lat": 20.0,
+     "lon": -87.4,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-08T03:00Z",
+     "lat": 21.0,
+     "lon": -89.8,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-09T03:00Z",
+     "lat": 22.5,
+     "lon": -92.0,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "8",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-04T09:00:00Z",
+   "issued_local": "400 AM CDT SAT SEP 04 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 17.2,
+    "lon": -82.8
+   },
+   "max_sustained_winds_kt": 40,
+   "max_sustained_winds_mph": 45,
+   "min_central_pressure_mb": 1001,
+   "movement": "WNW at 7 kt",
+   "distance_to_corpus_christi_nm": 1029,
+   "headline": "Tropical Storm Rafael forms in the northwestern Caribbean Sea",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-04T21:00Z",
+     "lat": 17.7,
+     "lon": -84.1,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-05T09:00Z",
+     "lat": 18.4,
+     "lon": -85.2,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-05T21:00Z",
+     "lat": 19.0,
+     "lon": -86.1,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-06T09:00Z",
+     "lat": 19.3,
+     "lon": -86.9,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-07T09:00Z",
+     "lat": 20.6,
+     "lon": -88.2,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-08T09:00Z",
+     "lat": 20.6,
+     "lon": -90.4,
+     "max_wind_kt": 65,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-09T09:00Z",
+     "lat": 22.6,
+     "lon": -91.2,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "9",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-04T15:00:00Z",
+   "issued_local": "1000 AM CDT SAT SEP 04 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 17.5,
+    "lon": -83.5
+   },
+   "max_sustained_winds_kt": 45,
+   "max_sustained_winds_mph": 50,
+   "min_central_pressure_mb": 999,
+   "movement": "WNW at 7 kt",
+   "distance_to_corpus_christi_nm": 987,
+   "headline": "Tropical Storm Rafael heading for the Yucatan Peninsula",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-05T03:00Z",
+     "lat": 18.2,
+     "lon": -84.7,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-05T15:00Z",
+     "lat": 18.6,
+     "lon": -85.6,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-06T03:00Z",
+     "lat": 19.3,
+     "lon": -86.6,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-06T15:00Z",
+     "lat": 19.8,
+     "lon": -87.4,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-07T15:00Z",
+     "lat": 20.4,
+     "lon": -89.6,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-08T15:00Z",
+     "lat": 21.7,
+     "lon": -92.1,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-09T15:00Z",
+     "lat": 22.3,
+     "lon": -93.3,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "10",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-04T21:00:00Z",
+   "issued_local": "400 PM CDT SAT SEP 04 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 17.8,
+    "lon": -84.2
+   },
+   "max_sustained_winds_kt": 50,
+   "max_sustained_winds_mph": 60,
+   "min_central_pressure_mb": 997,
+   "movement": "WNW at 7 kt",
+   "distance_to_corpus_christi_nm": 945,
+   "headline": "Tropical Storm Rafael heading for the Yucatan Peninsula",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-05T09:00Z",
+     "lat": 18.5,
+     "lon": -85.2,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-05T21:00Z",
+     "lat": 19.2,
+     "lon": -86.4,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-06T09:00Z",
+     "lat": 19.6,
+     "lon": -86.9,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-06T21:00Z",
+     "lat": 20.0,
+     "lon": -87.7,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-07T21:00Z",
+     "lat": 20.5,
+     "lon": -88.9,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-08T21:00Z",
+     "lat": 21.0,
+     "lon": -92.4,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-09T21:00Z",
+     "lat": 23.7,
+     "lon": -92.9,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "11",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-05T03:00:00Z",
+   "issued_local": "1000 PM CDT SAT SEP 04 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 18.2,
+    "lon": -84.8
+   },
+   "max_sustained_winds_kt": 50,
+   "max_sustained_winds_mph": 60,
+   "min_central_pressure_mb": 995,
+   "movement": "NW at 6 kt",
+   "distance_to_corpus_christi_nm": 907,
+   "headline": "Tropical Storm Rafael heading for the Yucatan Peninsula",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-05T15:00Z",
+     "lat": 18.7,
+     "lon": -85.8,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-06T03:00Z",
+     "lat": 19.5,
+     "lon": -86.7,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-06T15:00Z",
+     "lat": 19.6,
+     "lon": -87.3,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-07T03:00Z",
+     "lat": 20.2,
+     "lon": -88.0,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-08T03:00Z",
+     "lat": 20.9,
+     "lon": -89.2,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-09T03:00Z",
+     "lat": 22.3,
+     "lon": -92.0,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-10T03:00Z",
+     "lat": 22.9,
+     "lon": -93.0,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "12",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-05T09:00:00Z",
+   "issued_local": "400 AM CDT SUN SEP 05 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 18.5,
+    "lon": -85.2
+   },
+   "max_sustained_winds_kt": 55,
+   "max_sustained_winds_mph": 65,
+   "min_central_pressure_mb": 993,
+   "movement": "NW at 6 kt",
+   "distance_to_corpus_christi_nm": 873,
+   "headline": "Tropical Storm Rafael heading for the Yucatan Peninsula",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-05T21:00Z",
+     "lat": 19.1,
+     "lon": -86.2,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-06T09:00Z",
+     "lat": 19.4,
+     "lon": -86.9,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-06T21:00Z",
+     "lat": 19.9,
+     "lon": -87.5,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-07T09:00Z",
+     "lat": 20.1,
+     "lon": -87.9,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-08T09:00Z",
+     "lat": 20.8,
+     "lon": -91.4,
+     "max_wind_kt": 65,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-09T09:00Z",
+     "lat": 22.6,
+     "lon": -92.8,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-10T09:00Z",
+     "lat": 23.2,
+     "lon": -94.4,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "13",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-05T15:00:00Z",
+   "issued_local": "1000 AM CDT SUN SEP 05 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 18.8,
+    "lon": -85.8
+   },
+   "max_sustained_winds_kt": 55,
+   "max_sustained_winds_mph": 65,
+   "min_central_pressure_mb": 991,
+   "movement": "NW at 6 kt",
+   "distance_to_corpus_christi_nm": 838,
+   "headline": "Tropical Storm Rafael heading for the Yucatan Peninsula",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-06T03:00Z",
+     "lat": 19.4,
+     "lon": -86.6,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-06T15:00Z",
+     "lat": 19.6,
+     "lon": -87.3,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-07T03:00Z",
+     "lat": 20.0,
+     "lon": -88.0,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-07T15:00Z",
+     "lat": 20.2,
+     "lon": -88.6,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-08T15:00Z",
+     "lat": 21.3,
+     "lon": -91.5,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-09T15:00Z",
+     "lat": 22.9,
+     "lon": -92.6,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-10T15:00Z",
+     "lat": 23.4,
+     "lon": -94.9,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "14",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-05T21:00:00Z",
+   "issued_local": "400 PM CDT SUN SEP 05 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 19.1,
+    "lon": -86.2
+   },
+   "max_sustained_winds_kt": 60,
+   "max_sustained_winds_mph": 70,
+   "min_central_pressure_mb": 989,
+   "movement": "NW at 6 kt",
+   "distance_to_corpus_christi_nm": 804,
+   "headline": "Tropical Storm Rafael heading for the Yucatan Peninsula",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-06T09:00Z",
+     "lat": 19.5,
+     "lon": -86.9,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-06T21:00Z",
+     "lat": 19.9,
+     "lon": -87.8,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-07T09:00Z",
+     "lat": 20.1,
+     "lon": -88.6,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-07T21:00Z",
+     "lat": 20.7,
+     "lon": -89.1,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-08T21:00Z",
+     "lat": 22.3,
+     "lon": -91.8,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-09T21:00Z",
+     "lat": 22.9,
+     "lon": -93.3,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-10T21:00Z",
+     "lat": 24.1,
+     "lon": -94.9,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "15",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-06T03:00:00Z",
+   "issued_local": "1000 PM CDT SUN SEP 05 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 19.4,
+    "lon": -86.7
+   },
+   "max_sustained_winds_kt": 60,
+   "max_sustained_winds_mph": 70,
+   "min_central_pressure_mb": 989,
+   "movement": "WNW at 4 kt",
+   "distance_to_corpus_christi_nm": 777,
+   "headline": "Tropical Storm Rafael heading for the Yucatan Peninsula",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-06T15:00Z",
+     "lat": 19.7,
+     "lon": -87.3,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-07T03:00Z",
+     "lat": 20.1,
+     "lon": -88.1,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-07T15:00Z",
+     "lat": 20.3,
+     "lon": -88.9,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-08T03:00Z",
+     "lat": 20.9,
+     "lon": -90.0,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-09T03:00Z",
+     "lat": 22.2,
+     "lon": -92.1,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-10T03:00Z",
+     "lat": 23.1,
+     "lon": -94.0,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-11T03:00Z",
+     "lat": 24.5,
+     "lon": -95.2,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "16",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-06T09:00:00Z",
+   "issued_local": "400 AM CDT MON SEP 06 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 19.5,
+    "lon": -87.0
+   },
+   "max_sustained_winds_kt": 55,
+   "max_sustained_winds_mph": 65,
+   "min_central_pressure_mb": 991,
+   "movement": "WNW at 4 kt",
+   "distance_to_corpus_christi_nm": 756,
+   "headline": "Tropical Storm Rafael heading for the Yucatan Peninsula",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-06T21:00Z",
+     "lat": 19.9,
+     "lon": -87.6,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-07T09:00Z",
+     "lat": 20.2,
+     "lon": -88.5,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-07T21:00Z",
+     "lat": 20.8,
+     "lon": -89.5,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-08T09:00Z",
+     "lat": 21.1,
+     "lon": -90.9,
+     "max_wind_kt": 65,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-09T09:00Z",
+     "lat": 22.3,
+     "lon": -93.2,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-10T09:00Z",
+     "lat": 23.6,
+     "lon": -94.4,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-11T09:00Z",
+     "lat": 24.6,
+     "lon": -95.6,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "17",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-06T15:00:00Z",
+   "issued_local": "1000 AM CDT MON SEP 06 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 19.7,
+    "lon": -87.3
+   },
+   "max_sustained_winds_kt": 55,
+   "max_sustained_winds_mph": 65,
+   "min_central_pressure_mb": 993,
+   "movement": "WNW at 4 kt",
+   "distance_to_corpus_christi_nm": 735,
+   "headline": "Rafael crossing the Yucatan Peninsula toward the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-07T03:00Z",
+     "lat": 20.1,
+     "lon": -88.0,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-07T15:00Z",
+     "lat": 20.4,
+     "lon": -88.8,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-08T03:00Z",
+     "lat": 20.9,
+     "lon": -90.0,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-08T15:00Z",
+     "lat": 21.3,
+     "lon": -91.3,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-09T15:00Z",
+     "lat": 22.4,
+     "lon": -93.0,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-10T15:00Z",
+     "lat": 23.8,
+     "lon": -94.2,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-11T15:00Z",
+     "lat": 25.1,
+     "lon": -95.7,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "18",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-06T21:00:00Z",
+   "issued_local": "400 PM CDT MON SEP 06 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 19.9,
+    "lon": -87.7
+   },
+   "max_sustained_winds_kt": 50,
+   "max_sustained_winds_mph": 60,
+   "min_central_pressure_mb": 995,
+   "movement": "WNW at 4 kt",
+   "distance_to_corpus_christi_nm": 715,
+   "headline": "Rafael crossing the Yucatan Peninsula toward the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-07T09:00Z",
+     "lat": 20.2,
+     "lon": -88.3,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-07T21:00Z",
+     "lat": 20.7,
+     "lon": -89.4,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-08T09:00Z",
+     "lat": 21.0,
+     "lon": -90.7,
+     "max_wind_kt": 65,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-08T21:00Z",
+     "lat": 21.8,
+     "lon": -91.8,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-09T21:00Z",
+     "lat": 23.1,
+     "lon": -93.2,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-10T21:00Z",
+     "lat": 24.3,
+     "lon": -94.6,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-11T21:00Z",
+     "lat": 25.7,
+     "lon": -95.1,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "19",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-07T03:00:00Z",
+   "issued_local": "1000 PM CDT MON SEP 06 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 20.0,
+    "lon": -88.0
+   },
+   "max_sustained_winds_kt": 50,
+   "max_sustained_winds_mph": 60,
+   "min_central_pressure_mb": 996,
+   "movement": "WNW at 4 kt",
+   "distance_to_corpus_christi_nm": 694,
+   "headline": "Rafael crossing the Yucatan Peninsula toward the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-07T15:00Z",
+     "lat": 20.4,
+     "lon": -88.8,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-08T03:00Z",
+     "lat": 20.9,
+     "lon": -89.9,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-08T15:00Z",
+     "lat": 21.4,
+     "lon": -91.3,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-09T03:00Z",
+     "lat": 22.1,
+     "lon": -92.5,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-10T03:00Z",
+     "lat": 23.2,
+     "lon": -93.8,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-11T03:00Z",
+     "lat": 24.3,
+     "lon": -95.5,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-12T03:00Z",
+     "lat": 26.0,
+     "lon": -95.7,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "20",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-07T09:00:00Z",
+   "issued_local": "400 AM CDT TUE SEP 07 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 20.2,
+    "lon": -88.3
+   },
+   "max_sustained_winds_kt": 45,
+   "max_sustained_winds_mph": 50,
+   "min_central_pressure_mb": 998,
+   "movement": "WNW at 4 kt",
+   "distance_to_corpus_christi_nm": 674,
+   "headline": "Rafael crossing the Yucatan Peninsula toward the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-07T21:00Z",
+     "lat": 20.7,
+     "lon": -89.4,
+     "max_wind_kt": 55,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-08T09:00Z",
+     "lat": 21.1,
+     "lon": -90.8,
+     "max_wind_kt": 65,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-08T21:00Z",
+     "lat": 21.8,
+     "lon": -92.0,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-09T09:00Z",
+     "lat": 22.3,
+     "lon": -92.7,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-10T09:00Z",
+     "lat": 23.7,
+     "lon": -94.5,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-11T09:00Z",
+     "lat": 24.8,
+     "lon": -95.2,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-12T09:00Z",
+     "lat": 25.9,
+     "lon": -96.2,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "21",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-07T15:00:00Z",
+   "issued_local": "1000 AM CDT TUE SEP 07 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 20.4,
+    "lon": -88.8
+   },
+   "max_sustained_winds_kt": 50,
+   "max_sustained_winds_mph": 60,
+   "min_central_pressure_mb": 997,
+   "movement": "WNW at 6 kt",
+   "distance_to_corpus_christi_nm": 646,
+   "headline": "Rafael crossing the Yucatan Peninsula toward the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-08T03:00Z",
+     "lat": 21.0,
+     "lon": -90.1,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-08T15:00Z",
+     "lat": 21.4,
+     "lon": -91.4,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-09T03:00Z",
+     "lat": 22.1,
+     "lon": -92.5,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-09T15:00Z",
+     "lat": 22.7,
+     "lon": -93.1,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-10T15:00Z",
+     "lat": 24.0,
+     "lon": -94.4,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-11T15:00Z",
+     "lat": 25.1,
+     "lon": -94.8,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-12T15:00Z",
+     "lat": 25.8,
+     "lon": -95.9,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "22",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-07T21:00:00Z",
+   "issued_local": "400 PM CDT TUE SEP 07 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 20.7,
+    "lon": -89.4
+   },
+   "max_sustained_winds_kt": 55,
+   "max_sustained_winds_mph": 65,
+   "min_central_pressure_mb": 992,
+   "movement": "WNW at 6 kt",
+   "distance_to_corpus_christi_nm": 610,
+   "headline": "Rafael crossing the Yucatan Peninsula toward the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-08T09:00Z",
+     "lat": 21.2,
+     "lon": -90.7,
+     "max_wind_kt": 65,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-08T21:00Z",
+     "lat": 21.8,
+     "lon": -92.0,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-09T09:00Z",
+     "lat": 22.4,
+     "lon": -92.7,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-09T21:00Z",
+     "lat": 23.1,
+     "lon": -93.5,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-10T21:00Z",
+     "lat": 23.9,
+     "lon": -94.6,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-11T21:00Z",
+     "lat": 25.2,
+     "lon": -95.6,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-12T21:00Z",
+     "lat": 26.5,
+     "lon": -95.7,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "23",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-08T03:00:00Z",
+   "issued_local": "1000 PM CDT TUE SEP 07 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 20.9,
+    "lon": -90.1
+   },
+   "max_sustained_winds_kt": 60,
+   "max_sustained_winds_mph": 70,
+   "min_central_pressure_mb": 988,
+   "movement": "WNW at 6 kt",
+   "distance_to_corpus_christi_nm": 575,
+   "headline": "Rafael crossing the Yucatan Peninsula toward the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-08T15:00Z",
+     "lat": 21.5,
+     "lon": -91.3,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-09T03:00Z",
+     "lat": 22.1,
+     "lon": -92.5,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-09T15:00Z",
+     "lat": 22.8,
+     "lon": -93.0,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-10T03:00Z",
+     "lat": 23.4,
+     "lon": -94.0,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-11T03:00Z",
+     "lat": 24.7,
+     "lon": -94.7,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-12T03:00Z",
+     "lat": 25.0,
+     "lon": -95.6,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-13T03:00Z",
+     "lat": 26.4,
+     "lon": -96.2,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "24",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-08T09:00:00Z",
+   "issued_local": "400 AM CDT WED SEP 08 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 1,
+   "center": {
+    "lat": 21.2,
+    "lon": -90.7
+   },
+   "max_sustained_winds_kt": 65,
+   "max_sustained_winds_mph": 75,
+   "min_central_pressure_mb": 982,
+   "movement": "WNW at 6 kt",
+   "distance_to_corpus_christi_nm": 541,
+   "headline": "Rafael becomes a hurricane over the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-08T21:00Z",
+     "lat": 21.8,
+     "lon": -92.0,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-09T09:00Z",
+     "lat": 22.5,
+     "lon": -92.8,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-09T21:00Z",
+     "lat": 23.1,
+     "lon": -93.5,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-10T09:00Z",
+     "lat": 23.7,
+     "lon": -94.1,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-11T09:00Z",
+     "lat": 24.9,
+     "lon": -95.0,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-12T09:00Z",
+     "lat": 26.0,
+     "lon": -96.0,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-13T09:00Z",
+     "lat": 27.1,
+     "lon": -96.4,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "25",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-08T15:00:00Z",
+   "issued_local": "1000 AM CDT WED SEP 08 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 1,
+   "center": {
+    "lat": 21.5,
+    "lon": -91.3
+   },
+   "max_sustained_winds_kt": 70,
+   "max_sustained_winds_mph": 80,
+   "min_central_pressure_mb": 980,
+   "movement": "WNW at 7 kt",
+   "distance_to_corpus_christi_nm": 504,
+   "headline": "Rafael becomes a hurricane over the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-09T03:00Z",
+     "lat": 22.1,
+     "lon": -92.4,
+     "max_wind_kt": 75,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-09T15:00Z",
+     "lat": 22.7,
+     "lon": -93.0,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-10T03:00Z",
+     "lat": 23.3,
+     "lon": -93.8,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-10T15:00Z",
+     "lat": 23.8,
+     "lon": -94.5,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-11T15:00Z",
+     "lat": 24.9,
+     "lon": -95.5,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-12T15:00Z",
+     "lat": 26.2,
+     "lon": -96.0,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-13T15:00Z",
+     "lat": 27.3,
+     "lon": -97.2,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "26",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-08T21:00:00Z",
+   "issued_local": "400 PM CDT WED SEP 08 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 1,
+   "center": {
+    "lat": 21.8,
+    "lon": -92.0
+   },
+   "max_sustained_winds_kt": 75,
+   "max_sustained_winds_mph": 85,
+   "min_central_pressure_mb": 978,
+   "movement": "WNW at 7 kt",
+   "distance_to_corpus_christi_nm": 465,
+   "headline": "Rafael becomes a hurricane over the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-09T09:00Z",
+     "lat": 22.5,
+     "lon": -92.8,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-09T21:00Z",
+     "lat": 23.1,
+     "lon": -93.4,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-10T09:00Z",
+     "lat": 23.7,
+     "lon": -94.1,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-10T21:00Z",
+     "lat": 24.1,
+     "lon": -94.6,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-11T21:00Z",
+     "lat": 25.1,
+     "lon": -95.7,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-12T21:00Z",
+     "lat": 26.2,
+     "lon": -96.2,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-13T21:00Z",
+     "lat": 27.6,
+     "lon": -96.7,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "27",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-09T03:00:00Z",
+   "issued_local": "1000 PM CDT WED SEP 08 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 1,
+   "center": {
+    "lat": 22.1,
+    "lon": -92.5
+   },
+   "max_sustained_winds_kt": 75,
+   "max_sustained_winds_mph": 85,
+   "min_central_pressure_mb": 976,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 433,
+   "headline": "Rafael becomes a hurricane over the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-09T15:00Z",
+     "lat": 22.7,
+     "lon": -93.2,
+     "max_wind_kt": 80,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-10T03:00Z",
+     "lat": 23.3,
+     "lon": -93.8,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-10T15:00Z",
+     "lat": 23.8,
+     "lon": -94.3,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-11T03:00Z",
+     "lat": 24.5,
+     "lon": -94.9,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-12T03:00Z",
+     "lat": 25.7,
+     "lon": -95.7,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-13T03:00Z",
+     "lat": 26.7,
+     "lon": -96.1,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-14T03:00Z",
+     "lat": 27.8,
+     "lon": -97.2,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "28",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-09T09:00:00Z",
+   "issued_local": "400 AM CDT THU SEP 09 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 1,
+   "center": {
+    "lat": 22.5,
+    "lon": -92.8
+   },
+   "max_sustained_winds_kt": 80,
+   "max_sustained_winds_mph": 90,
+   "min_central_pressure_mb": 974,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 407,
+   "headline": "Rafael becomes a hurricane over the southern Gulf",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-09T21:00Z",
+     "lat": 23.0,
+     "lon": -93.4,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-10T09:00Z",
+     "lat": 23.6,
+     "lon": -94.1,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-10T21:00Z",
+     "lat": 24.1,
+     "lon": -94.7,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-11T09:00Z",
+     "lat": 24.7,
+     "lon": -95.0,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-12T09:00Z",
+     "lat": 25.8,
+     "lon": -95.7,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-13T09:00Z",
+     "lat": 26.8,
+     "lon": -96.4,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-14T09:00Z",
+     "lat": 27.9,
+     "lon": -97.2,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "29",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-09T15:00:00Z",
+   "issued_local": "1000 AM CDT THU SEP 09 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 1,
+   "center": {
+    "lat": 22.8,
+    "lon": -93.1
+   },
+   "max_sustained_winds_kt": 80,
+   "max_sustained_winds_mph": 90,
+   "min_central_pressure_mb": 972,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 382,
+   "headline": "Hurricane Rafael strengthening over the Gulf; forecast cone now includes the Texas Coastal Bend",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-10T03:00Z",
+     "lat": 23.4,
+     "lon": -93.8,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-10T15:00Z",
+     "lat": 23.9,
+     "lon": -94.4,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-11T03:00Z",
+     "lat": 24.5,
+     "lon": -94.9,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-11T15:00Z",
+     "lat": 25.1,
+     "lon": -95.5,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-12T15:00Z",
+     "lat": 25.9,
+     "lon": -95.9,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-13T15:00Z",
+     "lat": 27.1,
+     "lon": -97.1,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-14T15:00Z",
+     "lat": 27.8,
+     "lon": -97.4,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "30",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-09T21:00:00Z",
+   "issued_local": "400 PM CDT THU SEP 09 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 23.0,
+    "lon": -93.4
+   },
+   "max_sustained_winds_kt": 85,
+   "max_sustained_winds_mph": 100,
+   "min_central_pressure_mb": 970,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 357,
+   "headline": "Hurricane Rafael strengthening over the Gulf; forecast cone now includes the Texas Coastal Bend",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-10T09:00Z",
+     "lat": 23.6,
+     "lon": -94.1,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-10T21:00Z",
+     "lat": 24.2,
+     "lon": -94.7,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-11T09:00Z",
+     "lat": 24.7,
+     "lon": -95.2,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-11T21:00Z",
+     "lat": 25.3,
+     "lon": -95.6,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-12T21:00Z",
+     "lat": 26.3,
+     "lon": -96.3,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-13T21:00Z",
+     "lat": 27.2,
+     "lon": -97.1,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-14T21:00Z",
+     "lat": 28.4,
+     "lon": -98.0,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "31",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-10T03:00:00Z",
+   "issued_local": "1000 PM CDT THU SEP 09 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 23.3,
+    "lon": -93.8
+   },
+   "max_sustained_winds_kt": 85,
+   "max_sustained_winds_mph": 100,
+   "min_central_pressure_mb": 968,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 333,
+   "headline": "Hurricane Rafael strengthening over the Gulf; forecast cone now includes the Texas Coastal Bend",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-10T15:00Z",
+     "lat": 23.9,
+     "lon": -94.4,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-11T03:00Z",
+     "lat": 24.5,
+     "lon": -94.9,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-11T15:00Z",
+     "lat": 25.0,
+     "lon": -95.3,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-12T03:00Z",
+     "lat": 25.5,
+     "lon": -95.7,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-13T03:00Z",
+     "lat": 26.7,
+     "lon": -96.5,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-14T03:00Z",
+     "lat": 27.7,
+     "lon": -96.9,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-15T03:00Z",
+     "lat": 28.7,
+     "lon": -98.5,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "32",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-10T09:00:00Z",
+   "issued_local": "400 AM CDT FRI SEP 10 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 23.6,
+    "lon": -94.1
+   },
+   "max_sustained_winds_kt": 85,
+   "max_sustained_winds_mph": 100,
+   "min_central_pressure_mb": 966,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 310,
+   "headline": "Hurricane Rafael strengthening over the Gulf; forecast cone now includes the Texas Coastal Bend",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-10T21:00Z",
+     "lat": 24.1,
+     "lon": -94.6,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-11T09:00Z",
+     "lat": 24.7,
+     "lon": -95.2,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-11T21:00Z",
+     "lat": 25.2,
+     "lon": -95.6,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-12T09:00Z",
+     "lat": 25.8,
+     "lon": -96.0,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-13T09:00Z",
+     "lat": 26.9,
+     "lon": -96.7,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-14T09:00Z",
+     "lat": 28.1,
+     "lon": -97.2,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-15T09:00Z",
+     "lat": 28.9,
+     "lon": -98.8,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "33",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-10T15:00:00Z",
+   "issued_local": "1000 AM CDT FRI SEP 10 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 23.9,
+    "lon": -94.3
+   },
+   "max_sustained_winds_kt": 90,
+   "max_sustained_winds_mph": 105,
+   "min_central_pressure_mb": 964,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 287,
+   "headline": "Hurricane Rafael strengthening over the Gulf; forecast cone now includes the Texas Coastal Bend",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-11T03:00Z",
+     "lat": 24.4,
+     "lon": -94.9,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-11T15:00Z",
+     "lat": 25.0,
+     "lon": -95.4,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-12T03:00Z",
+     "lat": 25.5,
+     "lon": -95.8,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-12T15:00Z",
+     "lat": 26.0,
+     "lon": -96.1,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-13T15:00Z",
+     "lat": 27.2,
+     "lon": -96.8,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-14T15:00Z",
+     "lat": 28.0,
+     "lon": -97.7,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 151
+    },
+    {
+     "tau_h": 120,
+     "valid_utc": "2027-09-15T15:00Z",
+     "lat": 29.3,
+     "lon": -99.2,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 198
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "34",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-10T21:00:00Z",
+   "issued_local": "400 PM CDT FRI SEP 10 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 24.2,
+    "lon": -94.7
+   },
+   "max_sustained_winds_kt": 90,
+   "max_sustained_winds_mph": 105,
+   "min_central_pressure_mb": 964,
+   "movement": "NW at 4 kt",
+   "distance_to_corpus_christi_nm": 264,
+   "headline": "Hurricane Rafael strengthening over the Gulf; forecast cone now includes the Texas Coastal Bend",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-11T09:00Z",
+     "lat": 24.7,
+     "lon": -95.1,
+     "max_wind_kt": 90,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-11T21:00Z",
+     "lat": 25.3,
+     "lon": -95.6,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-12T09:00Z",
+     "lat": 25.8,
+     "lon": -95.9,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-12T21:00Z",
+     "lat": 26.3,
+     "lon": -96.3,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-13T21:00Z",
+     "lat": 27.3,
+     "lon": -96.9,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-14T21:00Z",
+     "lat": 28.3,
+     "lon": -98.2,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 151
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "35",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-11T03:00:00Z",
+   "issued_local": "1000 PM CDT FRI SEP 10 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 24.4,
+    "lon": -94.9
+   },
+   "max_sustained_winds_kt": 90,
+   "max_sustained_winds_mph": 105,
+   "min_central_pressure_mb": 962,
+   "movement": "NW at 3 kt",
+   "distance_to_corpus_christi_nm": 242,
+   "headline": "Hurricane Rafael strengthening over the Gulf; forecast cone now includes the Texas Coastal Bend",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-11T15:00Z",
+     "lat": 25.0,
+     "lon": -95.4,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-12T03:00Z",
+     "lat": 25.5,
+     "lon": -95.8,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-12T15:00Z",
+     "lat": 26.0,
+     "lon": -96.2,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-13T03:00Z",
+     "lat": 26.6,
+     "lon": -96.5,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-14T03:00Z",
+     "lat": 27.7,
+     "lon": -97.0,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-15T03:00Z",
+     "lat": 28.6,
+     "lon": -98.6,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 151
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "36",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-11T09:00:00Z",
+   "issued_local": "400 AM CDT SAT SEP 11 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 24.7,
+    "lon": -95.1
+   },
+   "max_sustained_winds_kt": 90,
+   "max_sustained_winds_mph": 105,
+   "min_central_pressure_mb": 962,
+   "movement": "NW at 3 kt",
+   "distance_to_corpus_christi_nm": 222,
+   "headline": "Hurricane Rafael strengthening over the Gulf; forecast cone now includes the Texas Coastal Bend",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-11T21:00Z",
+     "lat": 25.3,
+     "lon": -95.6,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-12T09:00Z",
+     "lat": 25.8,
+     "lon": -96.0,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-12T21:00Z",
+     "lat": 26.3,
+     "lon": -96.3,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-13T09:00Z",
+     "lat": 26.9,
+     "lon": -96.7,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-14T09:00Z",
+     "lat": 27.9,
+     "lon": -97.3,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-15T09:00Z",
+     "lat": 29.0,
+     "lon": -98.8,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 151
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "37",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-11T15:00:00Z",
+   "issued_local": "1000 AM CDT SAT SEP 11 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 25.0,
+    "lon": -95.4
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 960,
+   "movement": "NW at 3 kt",
+   "distance_to_corpus_christi_nm": 201,
+   "headline": "Hurricane Watch in effect for the Texas Coastal Bend",
+   "watches_and_warnings": [
+    "Hurricane Watch: Baffin Bay to Sargent, Texas, including Corpus Christi Bay",
+    "Storm Surge Watch: Baffin Bay to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-12T03:00Z",
+     "lat": 25.5,
+     "lon": -95.8,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-12T15:00Z",
+     "lat": 26.0,
+     "lon": -96.1,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-13T03:00Z",
+     "lat": 26.5,
+     "lon": -96.5,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-13T15:00Z",
+     "lat": 27.1,
+     "lon": -96.8,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-14T15:00Z",
+     "lat": 28.1,
+     "lon": -97.7,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-15T15:00Z",
+     "lat": 29.3,
+     "lon": -99.3,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 151
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "37A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-11T18:00:00Z",
+   "issued_local": "100 PM CDT SAT SEP 11 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 25.1,
+    "lon": -95.5
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 959,
+   "movement": "NW at 3 kt",
+   "distance_to_corpus_christi_nm": 191,
+   "headline": "Hurricane Watch in effect for the Texas Coastal Bend",
+   "watches_and_warnings": [
+    "Hurricane Watch: Baffin Bay to Sargent, Texas, including Corpus Christi Bay",
+    "Storm Surge Watch: Baffin Bay to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-12T06:00Z",
+     "lat": 25.7,
+     "lon": -95.9,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-12T18:00Z",
+     "lat": 26.2,
+     "lon": -96.2,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-13T06:00Z",
+     "lat": 26.7,
+     "lon": -96.6,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-13T18:00Z",
+     "lat": 27.3,
+     "lon": -96.9,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-14T18:00Z",
+     "lat": 28.2,
+     "lon": -97.9,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 102
+    },
+    {
+     "tau_h": 96,
+     "valid_utc": "2027-09-15T18:00Z",
+     "lat": 29.5,
+     "lon": -99.4,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 151
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "38",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-11T21:00:00Z",
+   "issued_local": "400 PM CDT SAT SEP 11 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 25.3,
+    "lon": -95.6
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 958,
+   "movement": "NW at 3 kt",
+   "distance_to_corpus_christi_nm": 181,
+   "headline": "Hurricane Watch in effect for the Texas Coastal Bend",
+   "watches_and_warnings": [
+    "Hurricane Watch: Baffin Bay to Sargent, Texas, including Corpus Christi Bay",
+    "Storm Surge Watch: Baffin Bay to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-12T09:00Z",
+     "lat": 25.8,
+     "lon": -96.0,
+     "max_wind_kt": 95,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-12T21:00Z",
+     "lat": 26.3,
+     "lon": -96.3,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-13T09:00Z",
+     "lat": 26.9,
+     "lon": -96.7,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-13T21:00Z",
+     "lat": 27.4,
+     "lon": -96.9,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-14T21:00Z",
+     "lat": 28.3,
+     "lon": -98.1,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 102
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "38A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-12T00:00:00Z",
+   "issued_local": "700 PM CDT SAT SEP 11 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 25.4,
+    "lon": -95.7
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 958,
+   "movement": "NW at 3 kt",
+   "distance_to_corpus_christi_nm": 170,
+   "headline": "Hurricane Watch in effect for the Texas Coastal Bend",
+   "watches_and_warnings": [
+    "Hurricane Watch: Baffin Bay to Sargent, Texas, including Corpus Christi Bay",
+    "Storm Surge Watch: Baffin Bay to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-12T12:00Z",
+     "lat": 25.9,
+     "lon": -96.0,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-13T00:00Z",
+     "lat": 26.4,
+     "lon": -96.4,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-13T12:00Z",
+     "lat": 27.0,
+     "lon": -96.8,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-14T00:00Z",
+     "lat": 27.5,
+     "lon": -97.0,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-15T00:00Z",
+     "lat": 28.5,
+     "lon": -98.3,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 102
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "39",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-12T03:00:00Z",
+   "issued_local": "1000 PM CDT SAT SEP 11 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 25.5,
+    "lon": -95.8
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 958,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 162,
+   "headline": "Hurricane Watch in effect for the Texas Coastal Bend",
+   "watches_and_warnings": [
+    "Hurricane Watch: Baffin Bay to Sargent, Texas, including Corpus Christi Bay",
+    "Storm Surge Watch: Baffin Bay to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-12T15:00Z",
+     "lat": 26.0,
+     "lon": -96.1,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-13T03:00Z",
+     "lat": 26.5,
+     "lon": -96.5,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-13T15:00Z",
+     "lat": 27.1,
+     "lon": -96.8,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-14T03:00Z",
+     "lat": 27.6,
+     "lon": -97.1,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-15T03:00Z",
+     "lat": 28.6,
+     "lon": -98.5,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 102
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "39A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-12T06:00:00Z",
+   "issued_local": "100 AM CDT SUN SEP 12 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 25.6,
+    "lon": -95.9
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 957,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 153,
+   "headline": "Hurricane Watch in effect for the Texas Coastal Bend",
+   "watches_and_warnings": [
+    "Hurricane Watch: Baffin Bay to Sargent, Texas, including Corpus Christi Bay",
+    "Storm Surge Watch: Baffin Bay to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-12T18:00Z",
+     "lat": 26.1,
+     "lon": -96.2,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-13T06:00Z",
+     "lat": 26.7,
+     "lon": -96.6,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-13T18:00Z",
+     "lat": 27.2,
+     "lon": -96.9,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-14T06:00Z",
+     "lat": 27.8,
+     "lon": -97.1,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-15T06:00Z",
+     "lat": 28.8,
+     "lon": -98.7,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 102
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "40",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-12T09:00:00Z",
+   "issued_local": "400 AM CDT SUN SEP 12 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 25.8,
+    "lon": -96.0
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 956,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 144,
+   "headline": "Hurricane Watch in effect for the Texas Coastal Bend",
+   "watches_and_warnings": [
+    "Hurricane Watch: Baffin Bay to Sargent, Texas, including Corpus Christi Bay",
+    "Storm Surge Watch: Baffin Bay to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-12T21:00Z",
+     "lat": 26.3,
+     "lon": -96.3,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-13T09:00Z",
+     "lat": 26.9,
+     "lon": -96.7,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-13T21:00Z",
+     "lat": 27.4,
+     "lon": -96.9,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-14T09:00Z",
+     "lat": 27.9,
+     "lon": -97.3,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-15T09:00Z",
+     "lat": 29.0,
+     "lon": -98.9,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 102
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "40A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-12T12:00:00Z",
+   "issued_local": "700 AM CDT SUN SEP 12 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 25.9,
+    "lon": -96.0
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 955,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 135,
+   "headline": "Hurricane Watch in effect for the Texas Coastal Bend",
+   "watches_and_warnings": [
+    "Hurricane Watch: Baffin Bay to Sargent, Texas, including Corpus Christi Bay",
+    "Storm Surge Watch: Baffin Bay to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-13T00:00Z",
+     "lat": 26.4,
+     "lon": -96.4,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-13T12:00Z",
+     "lat": 27.0,
+     "lon": -96.8,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-14T00:00Z",
+     "lat": 27.5,
+     "lon": -97.0,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-14T12:00Z",
+     "lat": 28.0,
+     "lon": -97.5,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-15T12:00Z",
+     "lat": 29.1,
+     "lon": -99.0,
+     "max_wind_kt": 25,
+     "cone_radius_nm": 102
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "41",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-12T15:00:00Z",
+   "issued_local": "1000 AM CDT SUN SEP 12 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 26.0,
+    "lon": -96.1
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 954,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 126,
+   "headline": "Hurricane Watch in effect for the Texas Coastal Bend",
+   "watches_and_warnings": [
+    "Hurricane Watch: Baffin Bay to Sargent, Texas, including Corpus Christi Bay",
+    "Storm Surge Watch: Baffin Bay to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-13T03:00Z",
+     "lat": 26.5,
+     "lon": -96.5,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-13T15:00Z",
+     "lat": 27.1,
+     "lon": -96.8,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-14T03:00Z",
+     "lat": 27.6,
+     "lon": -97.1,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-14T15:00Z",
+     "lat": 28.1,
+     "lon": -97.7,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-15T15:00Z",
+     "lat": 29.3,
+     "lon": -99.2,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 102
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "42",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "special",
+   "issued_utc": "2027-09-12T17:00:00Z",
+   "issued_local": "1200 PM CDT SUN SEP 12 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 26.1,
+    "lon": -96.2
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 954,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 120,
+   "headline": "Hurricane Warning issued for the Texas Coastal Bend; Rafael expected near Port Aransas early Tuesday",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-13T05:00Z",
+     "lat": 26.6,
+     "lon": -96.5,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-13T17:00Z",
+     "lat": 27.2,
+     "lon": -96.9,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-14T05:00Z",
+     "lat": 27.7,
+     "lon": -97.1,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-14T17:00Z",
+     "lat": 28.2,
+     "lon": -97.8,
+     "max_wind_kt": 65,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-15T17:00Z",
+     "lat": 29.4,
+     "lon": -99.3,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 102
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "42A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-12T18:00:00Z",
+   "issued_local": "100 PM CDT SUN SEP 12 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 26.1,
+    "lon": -96.2
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 954,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 117,
+   "headline": "Rafael moving slowly toward the Texas coast; preparations should be rushed to completion",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-13T06:00Z",
+     "lat": 26.7,
+     "lon": -96.6,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-13T18:00Z",
+     "lat": 27.2,
+     "lon": -96.9,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-14T06:00Z",
+     "lat": 27.8,
+     "lon": -97.1,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-14T18:00Z",
+     "lat": 28.2,
+     "lon": -97.9,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 69
+    },
+    {
+     "tau_h": 72,
+     "valid_utc": "2027-09-15T18:00Z",
+     "lat": 29.5,
+     "lon": -99.4,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 102
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "43",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-12T21:00:00Z",
+   "issued_local": "400 PM CDT SUN SEP 12 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 26.3,
+    "lon": -96.3
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 953,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 108,
+   "headline": "Rafael moving slowly toward the Texas coast; preparations should be rushed to completion",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-13T09:00Z",
+     "lat": 26.9,
+     "lon": -96.7,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-13T21:00Z",
+     "lat": 27.4,
+     "lon": -96.9,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-14T09:00Z",
+     "lat": 27.9,
+     "lon": -97.3,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-14T21:00Z",
+     "lat": 28.4,
+     "lon": -98.1,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 69
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "43A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-13T00:00:00Z",
+   "issued_local": "700 PM CDT SUN SEP 12 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 26.4,
+    "lon": -96.4
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 952,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 100,
+   "headline": "Rafael moving slowly toward the Texas coast; preparations should be rushed to completion",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-13T12:00Z",
+     "lat": 27.0,
+     "lon": -96.8,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-14T00:00Z",
+     "lat": 27.5,
+     "lon": -97.0,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-14T12:00Z",
+     "lat": 28.0,
+     "lon": -97.5,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-15T00:00Z",
+     "lat": 28.5,
+     "lon": -98.3,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 69
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "44",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-13T03:00:00Z",
+   "issued_local": "1000 PM CDT SUN SEP 12 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 26.5,
+    "lon": -96.5
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 951,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 89,
+   "headline": "Rafael moving slowly toward the Texas coast; preparations should be rushed to completion",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-13T15:00Z",
+     "lat": 27.1,
+     "lon": -96.8,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-14T03:00Z",
+     "lat": 27.6,
+     "lon": -97.1,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-14T15:00Z",
+     "lat": 28.1,
+     "lon": -97.7,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-15T03:00Z",
+     "lat": 28.6,
+     "lon": -98.5,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 69
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "44A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-13T06:00:00Z",
+   "issued_local": "100 AM CDT MON SEP 13 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 26.7,
+    "lon": -96.6
+   },
+   "max_sustained_winds_kt": 95,
+   "max_sustained_winds_mph": 110,
+   "min_central_pressure_mb": 950,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 79,
+   "headline": "Rafael moving slowly toward the Texas coast; preparations should be rushed to completion",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-13T18:00Z",
+     "lat": 27.2,
+     "lon": -96.9,
+     "max_wind_kt": 105,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-14T06:00Z",
+     "lat": 27.8,
+     "lon": -97.1,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-14T18:00Z",
+     "lat": 28.2,
+     "lon": -97.9,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-15T06:00Z",
+     "lat": 28.8,
+     "lon": -98.7,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 69
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "45",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-13T09:00:00Z",
+   "issued_local": "400 AM CDT MON SEP 13 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 3,
+   "center": {
+    "lat": 26.9,
+    "lon": -96.7
+   },
+   "max_sustained_winds_kt": 105,
+   "max_sustained_winds_mph": 120,
+   "min_central_pressure_mb": 949,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 69,
+   "headline": "Rafael is now a Category 3 hurricane; life-threatening storm surge of 9 to 12 feet expected near Port Aransas",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-13T21:00Z",
+     "lat": 27.4,
+     "lon": -96.9,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-14T09:00Z",
+     "lat": 27.9,
+     "lon": -97.3,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-14T21:00Z",
+     "lat": 28.4,
+     "lon": -98.1,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-15T09:00Z",
+     "lat": 29.0,
+     "lon": -98.9,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 69
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "45A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-13T12:00:00Z",
+   "issued_local": "700 AM CDT MON SEP 13 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 3,
+   "center": {
+    "lat": 27.0,
+    "lon": -96.8
+   },
+   "max_sustained_winds_kt": 105,
+   "max_sustained_winds_mph": 120,
+   "min_central_pressure_mb": 948,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 59,
+   "headline": "Rafael is now a Category 3 hurricane; life-threatening storm surge of 9 to 12 feet expected near Port Aransas",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-14T00:00Z",
+     "lat": 27.5,
+     "lon": -97.0,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-14T12:00Z",
+     "lat": 28.0,
+     "lon": -97.5,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-15T00:00Z",
+     "lat": 28.5,
+     "lon": -98.3,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-15T12:00Z",
+     "lat": 29.1,
+     "lon": -99.0,
+     "max_wind_kt": 25,
+     "cone_radius_nm": 69
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "46",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-13T15:00:00Z",
+   "issued_local": "1000 AM CDT MON SEP 13 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 3,
+   "center": {
+    "lat": 27.1,
+    "lon": -96.8
+   },
+   "max_sustained_winds_kt": 105,
+   "max_sustained_winds_mph": 120,
+   "min_central_pressure_mb": 947,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 51,
+   "headline": "Rafael is now a Category 3 hurricane; life-threatening storm surge of 9 to 12 feet expected near Port Aransas",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-14T03:00Z",
+     "lat": 27.6,
+     "lon": -97.1,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-14T15:00Z",
+     "lat": 28.1,
+     "lon": -97.7,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-15T03:00Z",
+     "lat": 28.6,
+     "lon": -98.5,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-15T15:00Z",
+     "lat": 29.3,
+     "lon": -99.2,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 69
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "46A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-13T18:00:00Z",
+   "issued_local": "100 PM CDT MON SEP 13 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 3,
+   "center": {
+    "lat": 27.2,
+    "lon": -96.9
+   },
+   "max_sustained_winds_kt": 105,
+   "max_sustained_winds_mph": 120,
+   "min_central_pressure_mb": 946,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 43,
+   "headline": "Rafael is now a Category 3 hurricane; life-threatening storm surge of 9 to 12 feet expected near Port Aransas",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-14T06:00Z",
+     "lat": 27.8,
+     "lon": -97.1,
+     "max_wind_kt": 110,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-14T18:00Z",
+     "lat": 28.2,
+     "lon": -97.9,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-15T06:00Z",
+     "lat": 28.8,
+     "lon": -98.7,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 55
+    },
+    {
+     "tau_h": 48,
+     "valid_utc": "2027-09-15T18:00Z",
+     "lat": 29.5,
+     "lon": -99.4,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 69
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "47",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-13T21:00:00Z",
+   "issued_local": "400 PM CDT MON SEP 13 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 3,
+   "center": {
+    "lat": 27.4,
+    "lon": -96.9
+   },
+   "max_sustained_winds_kt": 110,
+   "max_sustained_winds_mph": 125,
+   "min_central_pressure_mb": 946,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 35,
+   "headline": "Rafael is now a Category 3 hurricane; life-threatening storm surge of 9 to 12 feet expected near Port Aransas",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-14T09:00Z",
+     "lat": 27.9,
+     "lon": -97.3,
+     "max_wind_kt": 100,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-14T21:00Z",
+     "lat": 28.4,
+     "lon": -98.1,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-15T09:00Z",
+     "lat": 29.0,
+     "lon": -98.9,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 55
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "47A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-14T00:00:00Z",
+   "issued_local": "700 PM CDT MON SEP 13 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 3,
+   "center": {
+    "lat": 27.5,
+    "lon": -97.0
+   },
+   "max_sustained_winds_kt": 110,
+   "max_sustained_winds_mph": 125,
+   "min_central_pressure_mb": 945,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 28,
+   "headline": "Rafael is now a Category 3 hurricane; life-threatening storm surge of 9 to 12 feet expected near Port Aransas",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-14T12:00Z",
+     "lat": 28.0,
+     "lon": -97.5,
+     "max_wind_kt": 85,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-15T00:00Z",
+     "lat": 28.5,
+     "lon": -98.3,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-15T12:00Z",
+     "lat": 29.1,
+     "lon": -99.0,
+     "max_wind_kt": 25,
+     "cone_radius_nm": 55
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "48",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-14T03:00:00Z",
+   "issued_local": "1000 PM CDT MON SEP 13 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 3,
+   "center": {
+    "lat": 27.6,
+    "lon": -97.1
+   },
+   "max_sustained_winds_kt": 110,
+   "max_sustained_winds_mph": 125,
+   "min_central_pressure_mb": 944,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 21,
+   "headline": "Rafael is now a Category 3 hurricane; life-threatening storm surge of 9 to 12 feet expected near Port Aransas",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-14T15:00Z",
+     "lat": 28.1,
+     "lon": -97.7,
+     "max_wind_kt": 70,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-15T03:00Z",
+     "lat": 28.6,
+     "lon": -98.5,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-15T15:00Z",
+     "lat": 29.3,
+     "lon": -99.2,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 55
+    }
+   ],
+   "corpus_christi_in_forecast_cone": true,
+   "landfall": null
+  },
+  {
+   "advisory_number": "48A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-14T06:00:00Z",
+   "issued_local": "100 AM CDT TUE SEP 14 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 3,
+   "center": {
+    "lat": 27.8,
+    "lon": -97.1
+   },
+   "max_sustained_winds_kt": 110,
+   "max_sustained_winds_mph": 125,
+   "min_central_pressure_mb": 943,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 15,
+   "headline": "Rafael weakening inland over South Texas; life-threatening flooding continues",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-14T18:00Z",
+     "lat": 28.2,
+     "lon": -97.9,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-15T06:00Z",
+     "lat": 28.8,
+     "lon": -98.7,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-15T18:00Z",
+     "lat": 29.5,
+     "lon": -99.4,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 55
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "48B",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "tropical cyclone update",
+   "issued_utc": "2027-09-14T06:00:00Z",
+   "issued_local": "100 AM CDT TUE SEP 14 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 3,
+   "center": {
+    "lat": 27.8,
+    "lon": -97.1
+   },
+   "max_sustained_winds_kt": 110,
+   "max_sustained_winds_mph": 125,
+   "min_central_pressure_mb": 943,
+   "movement": "NNW at 3 kt",
+   "distance_to_corpus_christi_nm": 15,
+   "headline": "Hurricane Rafael makes landfall on Mustang Island near Port Aransas, Texas, as a Category 3 hurricane at 0600 UTC (100 AM CDT)",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-14T18:00Z",
+     "lat": 28.2,
+     "lon": -97.9,
+     "max_wind_kt": 60,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-15T06:00Z",
+     "lat": 28.8,
+     "lon": -98.7,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 41
+    },
+    {
+     "tau_h": 36,
+     "valid_utc": "2027-09-15T18:00Z",
+     "lat": 29.5,
+     "lon": -99.4,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 55
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": {
+    "time_utc": "2027-09-14T06:00Z",
+    "location": "Mustang Island near Port Aransas, Texas",
+    "lat": 27.75,
+    "lon": -97.13,
+    "category": 3,
+    "max_sustained_winds_kt": 110,
+    "min_central_pressure_mb": 943
+   }
+  },
+  {
+   "advisory_number": "49",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-14T09:00:00Z",
+   "issued_local": "400 AM CDT TUE SEP 14 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 3,
+   "center": {
+    "lat": 27.9,
+    "lon": -97.3
+   },
+   "max_sustained_winds_kt": 100,
+   "max_sustained_winds_mph": 115,
+   "min_central_pressure_mb": 956,
+   "movement": "WNW at 4 kt",
+   "distance_to_corpus_christi_nm": 6,
+   "headline": "Rafael weakening inland over South Texas; life-threatening flooding continues",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-14T21:00Z",
+     "lat": 28.4,
+     "lon": -98.1,
+     "max_wind_kt": 50,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-15T09:00Z",
+     "lat": 29.0,
+     "lon": -98.9,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 41
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "49A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-14T12:00:00Z",
+   "issued_local": "700 AM CDT TUE SEP 14 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 2,
+   "center": {
+    "lat": 28.0,
+    "lon": -97.5
+   },
+   "max_sustained_winds_kt": 85,
+   "max_sustained_winds_mph": 100,
+   "min_central_pressure_mb": 968,
+   "movement": "WNW at 4 kt",
+   "distance_to_corpus_christi_nm": 13,
+   "headline": "Rafael weakening inland over South Texas; life-threatening flooding continues",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-15T00:00Z",
+     "lat": 28.5,
+     "lon": -98.3,
+     "max_wind_kt": 45,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-15T12:00Z",
+     "lat": 29.1,
+     "lon": -99.0,
+     "max_wind_kt": 25,
+     "cone_radius_nm": 41
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "50",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-14T15:00:00Z",
+   "issued_local": "1000 AM CDT TUE SEP 14 2027",
+   "classification": "Hurricane",
+   "saffir_simpson_category": 1,
+   "center": {
+    "lat": 28.1,
+    "lon": -97.7
+   },
+   "max_sustained_winds_kt": 70,
+   "max_sustained_winds_mph": 80,
+   "min_central_pressure_mb": 978,
+   "movement": "WNW at 4 kt",
+   "distance_to_corpus_christi_nm": 24,
+   "headline": "Rafael weakening inland over South Texas; life-threatening flooding continues",
+   "watches_and_warnings": [
+    "Hurricane Warning: Baffin Bay to Port O'Connor, Texas, including Nueces County and Corpus Christi Bay",
+    "Storm Surge Warning: Baffin Bay to Port O'Connor, Texas",
+    "Tropical Storm Warning: Port Mansfield to Baffin Bay and Port O'Connor to Sargent, Texas"
+   ],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-15T03:00Z",
+     "lat": 28.6,
+     "lon": -98.5,
+     "max_wind_kt": 40,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-15T15:00Z",
+     "lat": 29.3,
+     "lon": -99.2,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 41
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "50A",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "intermediate",
+   "issued_utc": "2027-09-14T18:00:00Z",
+   "issued_local": "100 PM CDT TUE SEP 14 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 28.2,
+    "lon": -97.9
+   },
+   "max_sustained_winds_kt": 60,
+   "max_sustained_winds_mph": 70,
+   "min_central_pressure_mb": 988,
+   "movement": "WNW at 4 kt",
+   "distance_to_corpus_christi_nm": 36,
+   "headline": "Rafael weakens to a tropical storm inland; all coastal warnings discontinued",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-15T06:00Z",
+     "lat": 28.8,
+     "lon": -98.7,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 26
+    },
+    {
+     "tau_h": 24,
+     "valid_utc": "2027-09-15T18:00Z",
+     "lat": 29.5,
+     "lon": -99.4,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 41
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "51",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-14T21:00:00Z",
+   "issued_local": "400 PM CDT TUE SEP 14 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 28.4,
+    "lon": -98.1
+   },
+   "max_sustained_winds_kt": 50,
+   "max_sustained_winds_mph": 60,
+   "min_central_pressure_mb": 994,
+   "movement": "NW at 5 kt",
+   "distance_to_corpus_christi_nm": 50,
+   "headline": "Rafael weakens to a tropical storm inland; all coastal warnings discontinued",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-15T09:00Z",
+     "lat": 29.0,
+     "lon": -98.9,
+     "max_wind_kt": 30,
+     "cone_radius_nm": 26
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "52",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-15T03:00:00Z",
+   "issued_local": "1000 PM CDT TUE SEP 14 2027",
+   "classification": "Tropical Storm",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 28.6,
+    "lon": -98.5
+   },
+   "max_sustained_winds_kt": 40,
+   "max_sustained_winds_mph": 45,
+   "min_central_pressure_mb": 1004,
+   "movement": "NW at 5 kt",
+   "distance_to_corpus_christi_nm": 77,
+   "headline": "Rafael weakens to a tropical storm inland; all coastal warnings discontinued",
+   "watches_and_warnings": [],
+   "forecast": [
+    {
+     "tau_h": 12,
+     "valid_utc": "2027-09-15T15:00Z",
+     "lat": 29.3,
+     "lon": -99.2,
+     "max_wind_kt": 20,
+     "cone_radius_nm": 26
+    }
+   ],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "53",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-15T09:00:00Z",
+   "issued_local": "400 AM CDT WED SEP 15 2027",
+   "classification": "Tropical Depression",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 29.0,
+    "lon": -98.9
+   },
+   "max_sustained_winds_kt": 30,
+   "max_sustained_winds_mph": 35,
+   "min_central_pressure_mb": 1009,
+   "movement": "NW at 5 kt",
+   "distance_to_corpus_christi_nm": 105,
+   "headline": "Rafael becomes a remnant low over south-central Texas; this is the last advisory",
+   "watches_and_warnings": [],
+   "forecast": [],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  },
+  {
+   "advisory_number": "54",
+   "atcf_id": "AL092027",
+   "storm_name": "RAFAEL",
+   "advisory_type": "public",
+   "issued_utc": "2027-09-15T15:00:00Z",
+   "issued_local": "1000 AM CDT WED SEP 15 2027",
+   "classification": "Post-Tropical Cyclone",
+   "saffir_simpson_category": null,
+   "center": {
+    "lat": 29.3,
+    "lon": -99.2
+   },
+   "max_sustained_winds_kt": 20,
+   "max_sustained_winds_mph": 25,
+   "min_central_pressure_mb": 1011,
+   "movement": "NW at 5 kt",
+   "distance_to_corpus_christi_nm": 133,
+   "headline": "Rafael becomes a remnant low over south-central Texas; this is the last advisory",
+   "watches_and_warnings": [],
+   "forecast": [],
+   "corpus_christi_in_forecast_cone": false,
+   "landfall": null
+  }
+ ],
+ "best_track": [
+  {
+   "time_utc": "2027-09-02T00:00Z",
+   "lat": 14.8,
+   "lon": -79.0,
+   "max_wind_kt": 25,
+   "min_pressure_mb": 1010,
+   "status": "TD"
+  },
+  {
+   "time_utc": "2027-09-02T06:00Z",
+   "lat": 15.08,
+   "lon": -79.45,
+   "max_wind_kt": 26,
+   "min_pressure_mb": 1010,
+   "status": "TD"
+  },
+  {
+   "time_utc": "2027-09-02T12:00Z",
+   "lat": 15.35,
+   "lon": -79.9,
+   "max_wind_kt": 28,
+   "min_pressure_mb": 1009,
+   "status": "TD"
+  },
+  {
+   "time_utc": "2027-09-02T18:00Z",
+   "lat": 15.62,
+   "lon": -80.35,
+   "max_wind_kt": 29,
+   "min_pressure_mb": 1009,
+   "status": "TD"
+  },
+  {
+   "time_utc": "2027-09-03T00:00Z",
+   "lat": 15.9,
+   "lon": -80.8,
+   "max_wind_kt": 30,
+   "min_pressure_mb": 1008,
+   "status": "TD"
+  },
+  {
+   "time_utc": "2027-09-03T06:00Z",
+   "lat": 16.12,
+   "lon": -81.14,
+   "max_wind_kt": 32,
+   "min_pressure_mb": 1007,
+   "status": "TD"
+  },
+  {
+   "time_utc": "2027-09-03T12:00Z",
+   "lat": 16.34,
+   "lon": -81.48,
+   "max_wind_kt": 34,
+   "min_pressure_mb": 1005,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-03T18:00Z",
+   "lat": 16.56,
+   "lon": -81.82,
+   "max_wind_kt": 36,
+   "min_pressure_mb": 1004,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-04T00:00Z",
+   "lat": 16.78,
+   "lon": -82.16,
+   "max_wind_kt": 38,
+   "min_pressure_mb": 1003,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-04T06:00Z",
+   "lat": 17.0,
+   "lon": -82.5,
+   "max_wind_kt": 40,
+   "min_pressure_mb": 1002,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-04T12:00Z",
+   "lat": 17.33,
+   "lon": -83.17,
+   "max_wind_kt": 43,
+   "min_pressure_mb": 1000,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-04T18:00Z",
+   "lat": 17.67,
+   "lon": -83.83,
+   "max_wind_kt": 47,
+   "min_pressure_mb": 998,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-05T00:00Z",
+   "lat": 18.0,
+   "lon": -84.5,
+   "max_wind_kt": 50,
+   "min_pressure_mb": 996,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-05T06:00Z",
+   "lat": 18.32,
+   "lon": -85.0,
+   "max_wind_kt": 52,
+   "min_pressure_mb": 994,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-05T12:00Z",
+   "lat": 18.65,
+   "lon": -85.5,
+   "max_wind_kt": 55,
+   "min_pressure_mb": 992,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-05T18:00Z",
+   "lat": 18.98,
+   "lon": -86.0,
+   "max_wind_kt": 58,
+   "min_pressure_mb": 990,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-06T00:00Z",
+   "lat": 19.3,
+   "lon": -86.5,
+   "max_wind_kt": 60,
+   "min_pressure_mb": 988,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-06T06:00Z",
+   "lat": 19.47,
+   "lon": -86.83,
+   "max_wind_kt": 58,
+   "min_pressure_mb": 990,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-06T12:00Z",
+   "lat": 19.63,
+   "lon": -87.17,
+   "max_wind_kt": 55,
+   "min_pressure_mb": 992,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-06T18:00Z",
+   "lat": 19.8,
+   "lon": -87.5,
+   "max_wind_kt": 52,
+   "min_pressure_mb": 994,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-07T00:00Z",
+   "lat": 19.97,
+   "lon": -87.83,
+   "max_wind_kt": 50,
+   "min_pressure_mb": 996,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-07T06:00Z",
+   "lat": 20.13,
+   "lon": -88.17,
+   "max_wind_kt": 48,
+   "min_pressure_mb": 997,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-07T12:00Z",
+   "lat": 20.3,
+   "lon": -88.5,
+   "max_wind_kt": 45,
+   "min_pressure_mb": 999,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-07T18:00Z",
+   "lat": 20.55,
+   "lon": -89.12,
+   "max_wind_kt": 51,
+   "min_pressure_mb": 995,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-08T00:00Z",
+   "lat": 20.8,
+   "lon": -89.75,
+   "max_wind_kt": 58,
+   "min_pressure_mb": 990,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-08T06:00Z",
+   "lat": 21.05,
+   "lon": -90.38,
+   "max_wind_kt": 64,
+   "min_pressure_mb": 985,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-08T12:00Z",
+   "lat": 21.3,
+   "lon": -91.0,
+   "max_wind_kt": 70,
+   "min_pressure_mb": 980,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-08T18:00Z",
+   "lat": 21.65,
+   "lon": -91.65,
+   "max_wind_kt": 72,
+   "min_pressure_mb": 979,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-09T00:00Z",
+   "lat": 22.0,
+   "lon": -92.3,
+   "max_wind_kt": 75,
+   "min_pressure_mb": 977,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-09T06:00Z",
+   "lat": 22.3,
+   "lon": -92.62,
+   "max_wind_kt": 78,
+   "min_pressure_mb": 975,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-09T12:00Z",
+   "lat": 22.6,
+   "lon": -92.95,
+   "max_wind_kt": 80,
+   "min_pressure_mb": 973,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-09T18:00Z",
+   "lat": 22.9,
+   "lon": -93.27,
+   "max_wind_kt": 82,
+   "min_pressure_mb": 971,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-10T00:00Z",
+   "lat": 23.2,
+   "lon": -93.6,
+   "max_wind_kt": 85,
+   "min_pressure_mb": 968,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-10T06:00Z",
+   "lat": 23.48,
+   "lon": -93.9,
+   "max_wind_kt": 86,
+   "min_pressure_mb": 967,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-10T12:00Z",
+   "lat": 23.75,
+   "lon": -94.2,
+   "max_wind_kt": 88,
+   "min_pressure_mb": 965,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-10T18:00Z",
+   "lat": 24.02,
+   "lon": -94.5,
+   "max_wind_kt": 89,
+   "min_pressure_mb": 964,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-11T00:00Z",
+   "lat": 24.3,
+   "lon": -94.8,
+   "max_wind_kt": 90,
+   "min_pressure_mb": 963,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-11T06:00Z",
+   "lat": 24.57,
+   "lon": -95.03,
+   "max_wind_kt": 91,
+   "min_pressure_mb": 962,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-11T12:00Z",
+   "lat": 24.85,
+   "lon": -95.25,
+   "max_wind_kt": 92,
+   "min_pressure_mb": 961,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-11T18:00Z",
+   "lat": 25.12,
+   "lon": -95.47,
+   "max_wind_kt": 94,
+   "min_pressure_mb": 959,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-12T00:00Z",
+   "lat": 25.4,
+   "lon": -95.7,
+   "max_wind_kt": 95,
+   "min_pressure_mb": 958,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-12T06:00Z",
+   "lat": 25.65,
+   "lon": -95.88,
+   "max_wind_kt": 96,
+   "min_pressure_mb": 957,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-12T12:00Z",
+   "lat": 25.9,
+   "lon": -96.05,
+   "max_wind_kt": 98,
+   "min_pressure_mb": 955,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-12T18:00Z",
+   "lat": 26.15,
+   "lon": -96.23,
+   "max_wind_kt": 99,
+   "min_pressure_mb": 954,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-13T00:00Z",
+   "lat": 26.4,
+   "lon": -96.4,
+   "max_wind_kt": 100,
+   "min_pressure_mb": 952,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-13T06:00Z",
+   "lat": 26.7,
+   "lon": -96.58,
+   "max_wind_kt": 102,
+   "min_pressure_mb": 950,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-13T12:00Z",
+   "lat": 27.0,
+   "lon": -96.75,
+   "max_wind_kt": 105,
+   "min_pressure_mb": 948,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-13T18:00Z",
+   "lat": 27.25,
+   "lon": -96.88,
+   "max_wind_kt": 107,
+   "min_pressure_mb": 946,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-14T00:00Z",
+   "lat": 27.5,
+   "lon": -97.0,
+   "max_wind_kt": 108,
+   "min_pressure_mb": 945,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-14T06:00Z",
+   "lat": 27.75,
+   "lon": -97.13,
+   "max_wind_kt": 110,
+   "min_pressure_mb": 943,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-14T12:00Z",
+   "lat": 27.98,
+   "lon": -97.52,
+   "max_wind_kt": 85,
+   "min_pressure_mb": 968,
+   "status": "HU"
+  },
+  {
+   "time_utc": "2027-09-14T18:00Z",
+   "lat": 28.2,
+   "lon": -97.9,
+   "max_wind_kt": 60,
+   "min_pressure_mb": 988,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-15T00:00Z",
+   "lat": 28.5,
+   "lon": -98.3,
+   "max_wind_kt": 45,
+   "min_pressure_mb": 999,
+   "status": "TS"
+  },
+  {
+   "time_utc": "2027-09-15T06:00Z",
+   "lat": 28.8,
+   "lon": -98.7,
+   "max_wind_kt": 30,
+   "min_pressure_mb": 1008,
+   "status": "TD"
+  },
+  {
+   "time_utc": "2027-09-15T12:00Z",
+   "lat": 29.15,
+   "lon": -99.05,
+   "max_wind_kt": 25,
+   "min_pressure_mb": 1010,
+   "status": "TD"
+  },
+  {
+   "time_utc": "2027-09-15T18:00Z",
+   "lat": 29.5,
+   "lon": -99.4,
+   "max_wind_kt": 20,
+   "min_pressure_mb": 1012,
+   "status": "LO"
+  }
+ ]
+}

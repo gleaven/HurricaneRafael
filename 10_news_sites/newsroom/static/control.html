@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Newsroom Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#eef1f4;--panel:#ffffff;--panel2:#f6f8fa;--fg:#14202b;--muted:#5d6b78;--line:#d6dde4;
+  --acc:#0b6e74;--acc-fg:#ffffff;--warn:#b7791f;--bad:#c0392b;--ok:#1f8a4c;--tick:#7a8794;
+  --bar:#9fb6c6;--bar-past:#0b6e74;--head:#c0392b;--chip:#e7ecf0;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Consolas,monospace;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0c1116;--panel:#141b22;--panel2:#1a232c;--fg:#e4eaf0;--muted:#8b9aa8;--line:#26323d;
+  --acc:#3fb8bf;--acc-fg:#06171a;--warn:#e0a63a;--bad:#ff6b5b;--ok:#4cc38a;--tick:#6c7b88;
+  --bar:#33495a;--bar-past:#3fb8bf;--head:#ff6b5b;--chip:#1f2a34;color-scheme:dark}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 var(--sans)}
+a{color:var(--acc)}
+button{font:inherit;color:inherit;cursor:pointer}
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;padding-block:12px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  border-bottom:1px solid var(--line);background:var(--panel)}
+.brand{font-weight:700;font-size:16px;display:flex;align-items:center;gap:10px}
+.brand .sub{font-weight:400;color:var(--muted);font-size:13px}
+.lamp{width:10px;height:10px;border-radius:50%;background:var(--muted);box-shadow:0 0 0 3px color-mix(in srgb,var(--muted) 25%,transparent)}
+.lamp.on{background:var(--ok);box-shadow:0 0 0 3px color-mix(in srgb,var(--ok) 30%,transparent);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px transparent}}
+.top nav{display:flex;gap:16px;margin-left:auto;flex-wrap:wrap}
+.top nav a{text-decoration:none;font-weight:500}
+.conn{font:12px var(--mono);color:var(--muted)}
+.conn.bad{color:var(--bad)}
+main{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;padding-block:14px 40px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));max-width:1500px;margin:0 auto}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;min-width:0}
+.panel h2{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;font-weight:600;display:flex;justify-content:space-between;gap:8px}
+.c5{grid-column:span 5}.c7{grid-column:span 7}.c12{grid-column:span 12}.c4{grid-column:span 4}.c8{grid-column:span 8}
+@media (max-width:980px){.c5,.c7,.c4,.c8{grid-column:span 12}}
+.dlabel{font:600 clamp(34px,6vw,56px)/1 var(--mono);letter-spacing:-.01em}
+.local{font-size:17px;margin-top:8px}
+.stats{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:10px;color:var(--muted);font:13px var(--mono)}
+.state{font-weight:600}.state.play{color:var(--ok)}.state.pause{color:var(--warn)}
+.strip{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.chiprow{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--chip);border-radius:999px;padding:3px 10px;font-size:12px}
+.chip b{font:600 11px var(--mono);letter-spacing:.05em}
+.lvl-emergency{background:color-mix(in srgb,var(--bad) 22%,var(--chip))}
+.lvl-warning{background:color-mix(in srgb,var(--bad) 14%,var(--chip))}
+.lvl-watch,.lvl-advisory{background:color-mix(in srgb,var(--warn) 18%,var(--chip))}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row+.row{margin-top:10px}
+.btn{border:1px solid var(--line);background:var(--panel2);border-radius:8px;padding:8px 12px;font-weight:500;white-space:nowrap}
+.btn:hover{border-color:var(--acc)}
+.btn.primary{background:var(--acc);color:var(--acc-fg);border-color:var(--acc);font-weight:700;min-width:110px}
+.btn.danger{color:var(--bad)}
+.btn.sm{padding:4px 9px;font-size:12px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:var(--panel2);padding:8px 10px;font:500 12px var(--mono)}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button.on{background:var(--acc);color:var(--acc-fg)}
+.lbl{font-size:12px;color:var(--muted);margin-right:4px}
+.toggle{display:inline-flex;gap:8px;align-items:center;font-size:13px;cursor:pointer}
+.confirm{display:none;gap:8px;align-items:center;flex-wrap:wrap;background:color-mix(in srgb,var(--bad) 10%,var(--panel));border:1px solid color-mix(in srgb,var(--bad) 40%,var(--line));border-radius:8px;padding:8px 10px;margin-top:10px}
+.confirm.show{display:flex}
+/* timeline */
+.tl-head{display:flex;justify-content:space-between;gap:10px;font:12px var(--mono);color:var(--muted);margin-bottom:6px;flex-wrap:wrap}
+#tl-preview{color:var(--fg);font-weight:600}
+.tl{position:relative;height:84px;border-radius:8px;background:var(--panel2);border:1px solid var(--line);overflow:hidden}
+#density{position:absolute;left:0;top:0;width:100%;height:100%}
+#ticks{position:absolute;inset:0;pointer-events:none}
+.tick{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed var(--tick);opacity:.55}
+.tick.d0{border-left:2px solid var(--head);opacity:.9}
+#playhead{position:absolute;top:0;bottom:0;width:2px;background:var(--head);pointer-events:none;box-shadow:0 0 0 1px color-mix(in srgb,var(--head) 30%,transparent)}
+#playhead::before{content:"";position:absolute;top:-1px;left:-5px;border:6px solid transparent;border-top-color:var(--head)}
+#scrub{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.tl-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:6px}
+/* lists */
+ol.list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;max-height:520px;overflow:auto}
+.q{display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;align-items:start;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel2)}
+.q.breaking{border-color:color-mix(in srgb,var(--bad) 55%,var(--line));background:color-mix(in srgb,var(--bad) 7%,var(--panel2))}
+.q .when{font:12px var(--mono);color:var(--muted);white-space:nowrap}
+.q .hl{font-weight:500;min-width:0}
+.q .sub{grid-column:2/3;font-size:12px;color:var(--muted)}
+.type{display:inline-block;font:600 10px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:4px;background:var(--chip);margin-right:6px;vertical-align:1px}
+.type.breaking{background:var(--bad);color:#fff}
+.odot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:0}
+.ogrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.oc{border:1px solid var(--line);border-radius:9px;padding:10px 12px;background:var(--panel2);display:flex;flex-direction:column;gap:6px;min-width:0;border-top:4px solid var(--oc,var(--acc))}
+.oc.held{background:repeating-linear-gradient(-45deg,var(--panel2),var(--panel2) 8px,color-mix(in srgb,var(--warn) 10%,var(--panel2)) 8px,color-mix(in srgb,var(--warn) 10%,var(--panel2)) 16px)}
+.oc .nm{font-weight:700;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.oc .nm small{font:12px var(--mono);color:var(--muted);font-weight:400}
+.bar{height:5px;border-radius:3px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--oc,var(--acc))}
+.oc .ln{font-size:12px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.oc .ln b{color:var(--fg);font-weight:500}
+.oc .acts{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.bc{font:600 11px var(--mono);color:var(--warn)}
+.ms{display:flex;gap:10px;align-items:baseline;padding:6px 8px;border-radius:6px;cursor:pointer;border:1px solid transparent}
+.ms:hover{border-color:var(--line);background:var(--panel2)}
+.ms .when{font:12px var(--mono);color:var(--muted);min-width:118px}
+.ms.passed{opacity:.5}
+.ms.next{border-color:var(--acc)}
+.lg{padding:7px 9px;border-left:3px solid var(--line);background:var(--panel2);border-radius:0 6px 6px 0}
+.lg .h{font:12px var(--mono);color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}
+.lg .k{font-weight:600;text-transform:uppercase;color:var(--fg)}
+.lg.release,.lg.next,.lg.step,.lg.jump{border-left-color:var(--acc)}
+.lg.forced,.lg.unhold{border-left-color:var(--ok)}
+.lg.hold,.lg.pause{border-left-color:var(--warn)}
+.lg.rewind,.lg.reset{border-left-color:var(--bad)}
+.lg ul{margin:4px 0 0;padding-left:18px;font-size:12px}
+.empty{color:var(--muted);font-size:13px;padding:8px 0}
+.kbd{font:11px var(--mono);border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px;background:var(--panel2)}
+.keys{font-size:12px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="lamp" id="lamp"></span>Newsroom Control <span class="sub">Hurricane Rafael exercise</span></div>
+  <nav><a href="/explorer" target="_blank" rel="noopener">Corpus explorer</a><a href="/" target="_blank" rel="noopener">Newsstand</a><a href="/feeds" target="_blank" rel="noopener">Team feeds</a></nav>
+  <div class="conn" id="conn">connecting…</div>
+</header>
+<main>
+  <section class="panel c5" aria-label="Scenario clock">
+    <h2>Scenario clock <span id="seq"></span></h2>
+    <div class="dlabel" id="dlabel">—</div>
+    <div class="local" id="local">—</div>
+    <div class="stats"><span class="state" id="state">—</span><span id="pub">—</span><span id="rate">—</span></div>
+    <div class="strip" id="strip"></div>
+  </section>
+
+  <section class="panel c7" aria-label="Transport">
+    <h2>Transport</h2>
+    <div class="row">
+      <button class="btn primary" id="play">Play</button>
+      <span class="lbl">Speed</span>
+      <div class="seg" id="speeds">
+        <button data-rate="60">1 min/s</button><button data-rate="600">10 min/s</button><button data-rate="3600">1 h/s</button><button data-rate="21600">6 h/s</button><button data-rate="86400">1 day/s</button>
+      </div>
+    </div>
+    <div class="row">
+      <span class="lbl">Step</span>
+      <button class="btn" data-step="-3600">−1 h</button>
+      <button class="btn" data-step="900">+15 min</button>
+      <button class="btn" data-step="3600">+1 h</button>
+      <button class="btn" data-step="21600">+6 h</button>
+      <button class="btn" data-step="86400">+1 day</button>
+      <button class="btn" id="next">Next story ▸</button>
+    </div>
+    <div class="row">
+      <label class="toggle"><input type="checkbox" id="pob"> Pause automatically when a breaking story drops</label>
+      <span style="flex:1"></span>
+      <button class="btn danger sm" id="reset">Reset clock…</button>
+    </div>
+    <div class="confirm" id="confirm" role="alert">
+      <span>Reset to the scenario start? This clears holds, early releases and the log. Every outlet goes back to its first day.</span>
+      <button class="btn danger sm" id="reset-yes">Yes, reset</button>
+      <button class="btn sm" id="reset-no">Cancel</button>
+    </div>
+    <div class="keys"><span><span class="kbd">Space</span> play/pause</span><span><span class="kbd">→</span> +1 h</span><span><span class="kbd">Shift</span>+<span class="kbd">→</span> +1 day</span><span><span class="kbd">←</span> −1 h</span><span><span class="kbd">N</span> next story</span></div>
+  </section>
+
+  <section class="panel c12" aria-label="Timeline">
+    <h2>Timeline <span id="tl-count"></span></h2>
+    <div class="tl-head"><span id="tl-start">—</span><span id="tl-preview">drag to move the clock</span><span id="tl-end">—</span></div>
+    <div class="tl" id="tl">
+      <canvas id="density"></canvas>
+      <div id="ticks"></div>
+      <div id="playhead"></div>
+      <input type="range" id="scrub" aria-label="Scenario time" step="900">
+    </div>
+    <div class="tl-legend"><span>Bars: stories per day (filled = published)</span><span>Dashed: milestones</span><span style="color:var(--head)">Red: landfall and the clock</span></div>
+  </section>
+
+  <section class="panel c5" aria-label="Up next">
+    <h2>Up next <span>only you see this</span></h2>
+    <ol class="list" id="upnext"></ol>
+  </section>
+
+  <section class="panel c7" aria-label="Outlets">
+    <h2>Outlets <span id="outlets-sum"></span></h2>
+    <div class="ogrid" id="outlets"></div>
+  </section>
+
+  <section class="panel c5" aria-label="Milestones">
+    <h2>Milestones <span>click to jump</span></h2>
+    <ol class="list" id="milestones"></ol>
+  </section>
+
+  <section class="panel c7" aria-label="Release log">
+    <h2>Release log <span>newest first</span></h2>
+    <ol class="list" id="log"></ol>
+  </section>
+</main>
+<script src="/static/control.js" defer></script>
+</body>
+</html>
