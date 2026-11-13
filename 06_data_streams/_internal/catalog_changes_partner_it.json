@@ -1,0 +1,225 @@
+{
+ "family": "partner organisation IT logs (partner_firewall_logs, partner_web_logs, partner_dns_logs, partner_auth_logs, partner_mail_logs, partner_endpoint_alerts)",
+ "new_registry": "06_data_streams/partner_it_registry.json (organisations -> hosts[host_id, ip], accounts[account, mailbox]); needs adding to check_entities and to the participant package",
+ "new_streams": [
+  {
+   "stream_id": "partner_firewall_logs",
+   "name": "Partner organisations: firewall logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/firewall_*.csv",
+   "format": "Edge firewall session log (one row per session, written when the session ends)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "device",
+     "src_ip"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per session; background is a sample",
+   "threads": [
+    "T1",
+    "T4",
+    "T6",
+    "T7"
+   ],
+   "expected_observation_count": 0,
+   "schema": "06_data_streams/schemas/partner_firewall_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County. Background activity is sampled about 1 in 40; records tied to another delivered stream are complete. See 11_hackathon/DATA_GUIDE.md."
+  },
+  {
+   "stream_id": "partner_web_logs",
+   "name": "Partner organisations: web gateway logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/web_*.csv",
+   "format": "Web gateway access log (transparent filtering; encrypted sites are logged as CONNECT with no path)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "client_ip",
+     "user"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per request; background is a sample",
+   "threads": [
+    "T1",
+    "T4",
+    "T6",
+    "T14"
+   ],
+   "expected_observation_count": 0,
+   "schema": "06_data_streams/schemas/partner_web_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County. Background activity is sampled about 1 in 40; records tied to another delivered stream are complete. See 11_hackathon/DATA_GUIDE.md."
+  },
+  {
+   "stream_id": "partner_dns_logs",
+   "name": "Partner organisations: DNS query logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/dns_*.csv",
+   "format": "Resolver query log",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "client_ip"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per query; a client that asked for a name in the last five minutes is not logged again",
+   "threads": [
+    "T4",
+    "T6"
+   ],
+   "expected_observation_count": 0,
+   "schema": "06_data_streams/schemas/partner_dns_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County. Background activity is sampled about 1 in 40; records tied to another delivered stream are complete. See 11_hackathon/DATA_GUIDE.md."
+  },
+  {
+   "stream_id": "partner_auth_logs",
+   "name": "Partner organisations: sign-on logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/auth_*.csv",
+   "format": "Sign-on log: workstation logons and logoffs, and remote sign-ons (single sign-on, webmail, VPN)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "host",
+     "account"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per event; complete for workstation sessions and remote sign-ons",
+   "threads": [
+    "T1",
+    "T4",
+    "T6",
+    "T14",
+    "T16"
+   ],
+   "expected_observation_count": 0,
+   "schema": "06_data_streams/schemas/partner_auth_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County. Background activity is sampled about 1 in 40; records tied to another delivered stream are complete. See 11_hackathon/DATA_GUIDE.md."
+  },
+  {
+   "stream_id": "partner_mail_logs",
+   "name": "Partner organisations: mail gateway logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/mail_*.csv",
+   "format": "Mail gateway message log (same columns as network_logs/audit/mail_gateway_*.csv)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "gateway"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per message; a sample, except that every row of the delivered city, air-station and vendor extracts is included unchanged",
+   "threads": [
+    "T1",
+    "T4",
+    "T6",
+    "T14"
+   ],
+   "expected_observation_count": 0,
+   "schema": "06_data_streams/schemas/partner_mail_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County. Background activity is sampled about 1 in 40; records tied to another delivered stream are complete. See 11_hackathon/DATA_GUIDE.md."
+  },
+  {
+   "stream_id": "partner_endpoint_alerts",
+   "name": "Partner organisations: endpoint protection events",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/endpoint_alerts_*.csv",
+   "format": "Endpoint protection console events (same columns as network_logs/audit/endpoint_protection.csv)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "host"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per event; a sample",
+   "threads": [
+    "T1"
+   ],
+   "expected_observation_count": 0,
+   "schema": "06_data_streams/schemas/partner_endpoint_alerts_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County. Background activity is sampled about 1 in 40; records tied to another delivered stream are complete. See 11_hackathon/DATA_GUIDE.md."
+  }
+ ],
+ "probes": "scripts/streams/probes_partner_it.py: 33 probes keyed ('PARTNER-...', stream_id). They are not MSEL events; expected_observation_count is 0 until the parent decides whether to add expected observations (suggested: EVT ids of the aid-lure wave, the vendor click, the tanker remote sessions and the public alerts could list these streams).",
+ "changes": [
+  {
+   "stream_id": "host_audit_logs",
+   "field": "notes",
+   "suggest": "mail_gateway_{city,airstation,brightwake}.csv, mail_url_clicks_* and account_logons_city_airstation.csv are extracts; the full-span logs of those organisations are in partner_it/ and contain every extract row unchanged",
+   "why": "so the extracts read as windows of a longer log"
+  }
+ ],
+ "applied": "2026-11-12: streams added to stream_catalog.json; observations added to the MSEL (expected_observation_count in the catalogue is now set from canon_timeline.json)"
+}

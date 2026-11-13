@@ -6,5 +6,10 @@
 #open	2027-07-26-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1816624581.027503	-	10.14.21.52	35.149.39.212	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1816568687.530451	-	10.14.21.11	69.186.246.75	443	Conn::Content_Gap	static-assets.utilitybilling-pay.com content gap (978 bytes missing)	10.14.21.11	69.186.246.75	443	Notice::ACTION_LOG
+1816584381.068529	-	10.14.20.15	162.242.183.106	443	Weird::Activity	possible_split_routing	10.14.20.15	162.242.183.106	443	Notice::ACTION_LOG
+1816584634.968092	-	10.14.21.22	10.14.10.6	53	DNS::External_Name	old-intranet.cbpwa.example is pointing to a local host	10.14.21.22	10.14.10.6	53	Notice::ACTION_LOG
+1816615590.038952	-	10.14.30.45	104.21.88.112	443	Weird::Activity	possible_split_routing	10.14.30.45	104.21.88.112	443	Notice::ACTION_LOG
+1816615991.388039	-	10.14.30.13	205.137.131.105	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.30.13	205.137.131.105	443	Notice::ACTION_LOG
+1816636679.046038	-	10.14.30.16	205.184.149.36	443	Conn::Content_Gap	www.nueces-county-tx.org content gap (5441 bytes missing)	10.14.30.16	205.184.149.36	443	Notice::ACTION_LOG
 #close	2027-07-27-00-00-00

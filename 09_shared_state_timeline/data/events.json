@@ -310,7 +310,8 @@
    "HOST-DOD-LOG-02"
   ],
   "observed_in": [
-   "portal_access_logs"
+   "portal_access_logs",
+   "partner_firewall_logs"
   ]
  },
  {
@@ -347,7 +348,10 @@
   ],
   "observed_in": [
    "host_audit_logs",
-   "vessel_ot_logs"
+   "vessel_ot_logs",
+   "partner_mail_logs",
+   "partner_web_logs",
+   "partner_dns_logs"
   ]
  },
  {
@@ -440,7 +444,8 @@
    "HOST-VSL-01"
   ],
   "observed_in": [
-   "vessel_ot_logs"
+   "vessel_ot_logs",
+   "partner_firewall_logs"
   ]
  },
  {
@@ -462,7 +467,12 @@
   ],
   "observed_in": [
    "host_audit_logs",
-   "zeek_logs"
+   "zeek_logs",
+   "firewall_logs",
+   "web_proxy_logs",
+   "packet_captures",
+   "windows_event_logs",
+   "endpoint_telemetry"
   ]
  },
  {
@@ -486,7 +496,11 @@
   ],
   "observed_in": [
    "siem_alerts",
-   "zeek_logs"
+   "zeek_logs",
+   "firewall_logs",
+   "web_proxy_logs",
+   "packet_captures",
+   "endpoint_telemetry"
   ]
  },
  {
@@ -696,7 +710,11 @@
   ],
   "observed_in": [
    "host_audit_logs",
-   "zeek_logs"
+   "zeek_logs",
+   "firewall_logs",
+   "packet_captures",
+   "windows_event_logs",
+   "endpoint_telemetry"
   ]
  },
  {
@@ -901,7 +919,8 @@
   ],
   "observed_in": [
    "adsb",
-   "base_status_reports"
+   "base_status_reports",
+   "partner_auth_logs"
   ]
  },
  {
@@ -1139,7 +1158,8 @@
   ],
   "observed_in": [
    "host_audit_logs",
-   "scada_historian"
+   "scada_historian",
+   "windows_event_logs"
   ]
  },
  {
@@ -1162,7 +1182,8 @@
   ],
   "observed_in": [
    "siem_alerts",
-   "host_audit_logs"
+   "host_audit_logs",
+   "windows_event_logs"
   ]
  },
  {
@@ -1404,7 +1425,8 @@
   ],
   "observed_in": [
    "eas_alerts",
-   "broadcast_logs"
+   "broadcast_logs",
+   "partner_web_logs"
   ]
  },
  {
@@ -1512,7 +1534,8 @@
   ],
   "observed_in": [
    "port_conditions",
-   "port_surveillance"
+   "port_surveillance",
+   "partner_mail_logs"
   ]
  },
  {
@@ -1533,7 +1556,8 @@
   "observed_in": [
    "eas_alerts",
    "broadcast_logs",
-   "shelters"
+   "shelters",
+   "partner_web_logs"
   ]
  },
  {
@@ -1803,7 +1827,8 @@
   ],
   "observed_in": [
    "ed_visits",
-   "hospital_capacity"
+   "hospital_capacity",
+   "partner_endpoint_alerts"
   ]
  },
  {
@@ -2237,7 +2262,11 @@
    "HOST-DOD-LOG-02"
   ],
   "observed_in": [
-   "host_audit_logs"
+   "host_audit_logs",
+   "partner_mail_logs",
+   "partner_web_logs",
+   "partner_dns_logs",
+   "partner_auth_logs"
   ]
  },
  {
@@ -3540,7 +3569,8 @@
   "observed_in": [
    "scada_historian",
    "outage_map",
-   "work_orders"
+   "work_orders",
+   "windows_event_logs"
   ]
  },
  {
@@ -3943,7 +3973,8 @@
   "observed_in": [
    "scada_historian",
    "outage_map",
-   "work_orders"
+   "work_orders",
+   "windows_event_logs"
   ]
  },
  {
@@ -4125,7 +4156,7 @@
   "kind": "truth",
   "t": 310.5,
   "t_end": null,
-  "label": "O.N. Stevens Water Treatment Plant issues Boil Water Notice GW-PUB-001 at 17:30 CDT for Districts 3 and 4 (48,000 residents). The notice is transmitted via the city's Everbridge mass notification system in English only. NCLAS receives the English source text at 17:35 CDT. Under the 2-hour life-safety SLA, Spanish delivery is due by 19:35 CDT. However, NCLAS is operating at reduced capacity (3 of 7 translators are unavailable due to storm displacement), and the Spanish text is not completed until 23:45 CDT. CBPWA/OEM does not transmit the Spanish Everbridge alert or forward to KNCB until the following morning. KNCB receives the boil-water notice text from OEM at 06:03 CDT D+13 and airs it at once. The gap is 12 hours 33 minutes from English public notification to Spanish air time.",
+  "label": "O.N. Stevens Water Treatment Plant issues Boil Water Notice GW-PUB-001 at 17:30 CDT for Districts 3 and 4 (48,000 residents). The notice is transmitted via the city's CoastAlert mass notification system in English only. NCLAS receives the English source text at 17:35 CDT. Under the 2-hour life-safety SLA, Spanish delivery is due by 19:35 CDT. However, NCLAS is operating at reduced capacity (3 of 7 translators are unavailable due to storm displacement), and the Spanish text is not completed until 23:45 CDT. CBPWA/OEM does not transmit the Spanish CoastAlert alert or forward to KNCB until the following morning. KNCB receives the boil-water notice text from OEM at 06:03 CDT D+13 and airs it at once. The gap is 12 hours 33 minutes from English public notification to Spanish air time.",
   "threads": [
    "T14",
    "T9"
@@ -4141,7 +4172,8 @@
   "observed_in": [
    "eas_alerts",
    "broadcast_logs",
-   "census"
+   "census",
+   "partner_mail_logs"
   ]
  },
  {
@@ -4525,7 +4557,8 @@
   "observed_in": [
    "ed_visits",
    "syndromic",
-   "public_record"
+   "public_record",
+   "partner_auth_logs"
   ]
  },
  {
@@ -4593,7 +4626,10 @@
    "PLC-001"
   ],
   "observed_in": [
-   "host_audit_logs"
+   "host_audit_logs",
+   "firewall_logs",
+   "windows_event_logs",
+   "host_triage"
   ]
  },
  {
@@ -4832,7 +4868,8 @@
    "PLC-001"
   ],
   "observed_in": [
-   "public_record"
+   "public_record",
+   "host_triage"
   ]
  },
  {
@@ -5055,7 +5092,10 @@
   "observed_in": [
    "work_orders",
    "siem_alerts",
-   "zeek_logs"
+   "zeek_logs",
+   "firewall_logs",
+   "web_proxy_logs",
+   "packet_captures"
   ]
  },
  {
@@ -5227,7 +5267,8 @@
   "observed_in": [
    "port_conditions",
    "ais",
-   "port_arrivals"
+   "port_arrivals",
+   "partner_web_logs"
   ]
  },
  {

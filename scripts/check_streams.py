@@ -47,7 +47,7 @@ sys.path.insert(0, os.path.join(HERE, "streams"))
 
 BANNED_COLUMNS = re.compile(r"attack|malicious|truth|phase_label|is_fake|is_fraud|ground_truth|thread|label_|_label$|anomaly_flag|compromised", re.I)
 BANNED_EVERYWHERE = [r"GridWater", r"Flint Hills", r"Valero", r"Citgo", r"NuStar", r"Buckeye", r"Caller[- ]?Times", r"\bKIII\b", r"\bKRIS\b",
-                     r"CHRISTUS", r"Spohn", r"Driscoll", r"State Farm", r"Auriga Meridian", r"Pier 9\b"]
+                     r"CHRISTUS", r"Spohn", r"Driscoll", r"State Farm", r"Auriga Meridian", r"Pier 9\b", r"Everbridge", r"CivicReady"]
 
 
 def load(rel):

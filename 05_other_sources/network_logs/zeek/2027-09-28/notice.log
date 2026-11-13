@@ -6,6 +6,5 @@
 #open	2027-09-28-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1822136043.818328	-	10.14.30.57	54.20.233.159	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1822136617.564271	-	10.14.30.27	205.116.220.120	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1822109841.685043	-	10.14.30.12	40.144.190.74	443	SSL::Certificate_Expires_Soon	Certificate login.helpdesk-tickets.com is going to expire soon	10.14.30.12	40.144.190.74	443	Notice::ACTION_LOG
 #close	2027-09-29-00-00-00

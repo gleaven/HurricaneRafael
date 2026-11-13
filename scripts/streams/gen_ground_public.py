@@ -85,7 +85,7 @@ def build_alerts():
     a = al["evacuation-zone-a"]
     en, es = when(a["release_en"]), when(a["release_es"])
     add("EVI-2027-0912-001", "NCOEM-2027-09-12-EVAC-A-001", "EVI", "MandatoryEvacuationOrder", en, en, es, when(al["evacuation-zone-abc"]["end"]),
-        "EAS-TV,EAS-Radio,IPAWS-WEA,CivicReady-SMS", True, en + 240, es + 180, "Nueces County Evacuation Zone A", "AREA-EVAC-A",
+        "EAS-TV,EAS-Radio,IPAWS-WEA,BendReady-SMS", True, en + 240, es + 180, "Nueces County Evacuation Zone A", "AREA-EVAC-A",
         "MANDATORY EVACUATION ORDER - Zone A (barrier islands and low-lying surge areas). Leave now. County buses for residents without transportation: call 2-1-1.",
         "ORDEN DE EVACUACION OBLIGATORIA - Zona A (islas de barrera y areas bajas). Salga ahora. Autobuses del condado para residentes sin transporte: llame al 2-1-1.",
         "NCOEM", "EXTREME")
@@ -100,14 +100,14 @@ def build_alerts():
     assert rows[-1]["CharCount_EN"] == 312, rows[-1]["CharCount_EN"]     # the count canon states is the real length
     a = al["evacuation-zone-abc"]
     en, es = when(a["release_en"]), when(a["release_es"])
-    add("EVI-2027-0913-001", "NCOEM-2027-09-13-EVAC-ABC-001", "EVI", "MandatoryEvacuationOrder", en, en, es, when(a["end"]), "EAS-TV,EAS-Radio,IPAWS-WEA,CivicReady-SMS", True,
+    add("EVI-2027-0913-001", "NCOEM-2027-09-13-EVAC-ABC-001", "EVI", "MandatoryEvacuationOrder", en, en, es, when(a["end"]), "EAS-TV,EAS-Radio,IPAWS-WEA,BendReady-SMS", True,
         en + 240, en + 240, "Nueces County Evacuation Zones A, B and C", "AREA-EVAC-A;AREA-EVAC-B;AREA-EVAC-C",
         "EVACUATION ORDER Nueces County Zones A B C. LEAVE NOW. Hurricane Rafael Cat 3 arrives 9/14. Take medications, documents, pets. Emergency.Alert.gov",
         "ORDEN DE EVACUACION Condado de Nueces Zonas A B C. SALGA AHORA. El huracan Rafael categoria 3 llega el 14 de septiembre. Lleve medicinas, documentos, mascotas.",
         "NCOEM", "EXTREME")
     a = al["shelter-zones-c-e"]
     en, es = when(a["release_en"]), when(a["release_es"])
-    add("SPW-2027-0913-001", "CCOEM-2027-09-13-SIP-CE-001", "SPW", "ShelterInPlaceGuidance", en, en, es, when(al["shelter-in-place"]["end"]), "IPAWS-WEA,CivicReady-SMS,City-Website", True,
+    add("SPW-2027-0913-001", "CCOEM-2027-09-13-SIP-CE-001", "SPW", "ShelterInPlaceGuidance", en, en, es, when(al["shelter-in-place"]["end"]), "IPAWS-WEA,BendReady-SMS,City-Website", True,
         en, es, "Corpus Christi Evacuation Zones C, D and E", "AREA-EVAC-C;AREA-EVAC-D;AREA-EVAC-E",
         "City of Corpus Christi: residents of Zones C, D and E who have not left should shelter in place from 8 PM. Stay off the roads. Shelter list: call 2-1-1.",
         "Ciudad de Corpus Christi: los residentes de las Zonas C, D y E que no hayan salido deben refugiarse en casa desde las 8 PM. No salga a las calles. Albergues: llame al 2-1-1.",
@@ -128,7 +128,7 @@ def build_alerts():
         "TCEQ / Corpus Christi-Nueces County Public Health District", "MODERATE")
     a = al["boil-water-citywide"]
     en, es = when(a["release_en"]), when(a["release_es"])
-    add("BWN-2027-0918-001", "CCWATER-2027-09-18-BWN-001", "CEM", "BoilWaterNotice", en, en, es, when(a["end"]), "EAS-TV,EAS-Radio,IPAWS-WEA,CivicReady-SMS,City-Website", True, en + 300, es + 300,
+    add("BWN-2027-0918-001", "CCWATER-2027-09-18-BWN-001", "CEM", "BoilWaterNotice", en, en, es, when(a["end"]), "EAS-TV,EAS-Radio,IPAWS-WEA,BendReady-SMS,City-Website", True, en + 300, es + 300,
         "City of Corpus Christi - all water customers", "AREA-CITY-CORPUSCHRISTI",
         "BOIL WATER NOTICE for all Corpus Christi water customers. Bring water to a rolling boil for two minutes before drinking or cooking. Water distribution sites are open.",
         "AVISO DE HERVIR EL AGUA para todos los clientes de agua de Corpus Christi. Hierva el agua durante dos minutos antes de beberla o cocinar. Hay sitios de distribucion de agua abiertos.",
@@ -146,25 +146,25 @@ def build_alerts():
     en, es = when(a["release_en"]), when(a["release_es"])
     bw = ("BOIL WATER NOTICE for Water Districts 3 and 4 of the Corpus Christi water system, around 48,000 residents. Low water pressure in both districts. "
           "Bring all water to a rolling boil for two minutes before drinking, cooking or brushing teeth. CBPWA and the City Water Department. Call 3-1-1.")
-    add("BWW-2027-0926-001", "CCWATER-2027-09-26-BWN-D34-001", "BWW", "BoilWaterNotice", en, en, es, when(a["end"]), "Everbridge,EAS-TV,EAS-Radio,IPAWS-WEA", True, en + 120, None,
+    add("BWW-2027-0926-001", "CCWATER-2027-09-26-BWN-D34-001", "BWW", "BoilWaterNotice", en, en, es, when(a["end"]), "CoastAlert,EAS-TV,EAS-Radio,IPAWS-WEA", True, en + 120, None,
         "Corpus Christi Water Districts 3 and 4", "AREA-WD-3;AREA-WD-4", bw,
         "AVISO DE HERVIR EL AGUA para los Distritos de Agua 3 y 4 de Corpus Christi, unos 48,000 residentes. Hierva toda el agua durante dos minutos antes de beberla, cocinar o cepillarse los dientes.",
         "Corpus Christi Water Department / CBPWA", "SEVERE")
     assert rows[-1]["CharCount_EN"] == 287, rows[-1]["CharCount_EN"]
     t = when(a["detail"]["weekly_update_first_simultaneous_bilingual"])
-    add("BWU-2027-1014-001", "CCWATER-2027-10-14-BWU-001", "CEM", "BoilWaterStatusUpdate", t, t, t, None, "Everbridge,EAS-Radio,City-Website", False, None, None,
+    add("BWU-2027-1014-001", "CCWATER-2027-10-14-BWU-001", "CEM", "BoilWaterStatusUpdate", t, t, t, None, "CoastAlert,EAS-Radio,City-Website", False, None, None,
         "City of Corpus Christi; Water Districts 3 and 4", "AREA-CITY-CORPUSCHRISTI;AREA-WD-3;AREA-WD-4",
         "BOIL WATER STATUS UPDATE: both boil water notices remain in effect. Continue to boil water for two minutes. Next update in one week.",
         "ACTUALIZACION DEL AVISO DE HERVIR EL AGUA: ambos avisos siguen vigentes. Siga hirviendo el agua durante dos minutos. Proxima actualizacion en una semana.",
         "Corpus Christi Water Department", "MODERATE")
     t = when(al["boil-water-citywide"]["end"])
-    add("BWA-2027-1023-001", "CCWATER-2027-10-23-BWL-001", "BWA", "BoilWaterNoticeLifted", t, t, t, None, "Everbridge,EAS-TV,EAS-Radio,City-Website", False, None, None,
+    add("BWA-2027-1023-001", "CCWATER-2027-10-23-BWL-001", "BWA", "BoilWaterNoticeLifted", t, t, t, None, "CoastAlert,EAS-TV,EAS-Radio,City-Website", False, None, None,
         "City of Corpus Christi except Water Districts 3 and 4", "AREA-CITY-CORPUSCHRISTI",
         "BOIL WATER NOTICE LIFTED for Corpus Christi after pump repairs and testing. The notice remains in effect for Water Districts 3 and 4.",
         "SE LEVANTA EL AVISO DE HERVIR EL AGUA en Corpus Christi tras la reparacion de bombas y pruebas. El aviso sigue vigente en los Distritos de Agua 3 y 4.",
         "Corpus Christi Water Department", "MODERATE")
     t = when(a["end"])
-    add("BWA-2027-1026-001", "CCWATER-2027-10-26-BWL-D34-001", "BWA", "BoilWaterNoticeLifted", t, t, t, None, "Everbridge,EAS-TV,EAS-Radio,IPAWS", False, None, None,
+    add("BWA-2027-1026-001", "CCWATER-2027-10-26-BWL-D34-001", "BWA", "BoilWaterNoticeLifted", t, t, t, None, "CoastAlert,EAS-TV,EAS-Radio,IPAWS", False, None, None,
         "Corpus Christi Water Districts 3 and 4", "AREA-WD-3;AREA-WD-4",
         "BOIL WATER NOTICE LIFTED for Water Districts 3 and 4. Pressure at all test points in both districts is confirmed above 40 psi and bacteriological samples have passed.",
         "SE LEVANTA EL AVISO DE HERVIR EL AGUA para los Distritos de Agua 3 y 4. La presion en todos los puntos de prueba de ambos distritos supera 40 psi y las muestras bacteriologicas pasaron.",

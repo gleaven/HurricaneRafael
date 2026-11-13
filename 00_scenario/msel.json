@@ -277,6 +277,14 @@
      "start_utc": "2027-08-10T05:00Z",
      "end_utc": "2027-08-13T05:00Z"
     }
+   },
+   {
+    "stream": "partner_firewall_logs",
+    "what": "Air station edge firewall: an inbound session for every outside request in the base logistics access log.",
+    "when": {
+     "start_utc": "2027-08-10T05:00Z",
+     "end_utc": "2027-08-12T05:00Z"
+    }
    }
   ],
   "observed_in_legacy": [
@@ -317,6 +325,30 @@
     "when": {
      "start_utc": "2027-08-12T05:00Z",
      "end_utc": "2027-08-16T05:00Z"
+    }
+   },
+   {
+    "stream": "partner_mail_logs",
+    "what": "Vendor mail gateway: the certificate-renewal message delivered to the shared support mailbox at 14:41Z.",
+    "when": {
+     "start_utc": "2027-08-12T05:00Z",
+     "end_utc": "2027-08-13T05:00Z"
+    }
+   },
+   {
+    "stream": "partner_web_logs",
+    "what": "Vendor web gateway: the request to the certificate-notice host 21 minutes after delivery, by the duty engineer.",
+    "when": {
+     "start_utc": "2027-08-12T05:00Z",
+     "end_utc": "2027-08-13T05:00Z"
+    }
+   },
+   {
+    "stream": "partner_dns_logs",
+    "what": "Vendor resolver: the lookup of the certificate-notice host just before the request.",
+    "when": {
+     "start_utc": "2027-08-12T05:00Z",
+     "end_utc": "2027-08-13T05:00Z"
     }
    }
   ],
@@ -425,6 +457,14 @@
      "start_utc": "2027-08-25T05:00Z",
      "end_utc": "2027-09-14T05:00Z"
     }
+   },
+   {
+    "stream": "partner_firewall_logs",
+    "what": "Vendor remote-maintenance gateway firewall: every tanker session in the vessel logs arrives here; sessions from the office and the staff VPN have vendor-side records, the sessions from a third network have none.",
+    "when": {
+     "start_utc": "2027-08-25T05:00Z",
+     "end_utc": "2027-09-14T06:00Z"
+    }
    }
   ],
   "observed_in_legacy": [
@@ -450,7 +490,7 @@
   "observed_in": [
    {
     "stream": "host_audit_logs",
-    "what": "Email gateway log: delivery of 'FEMA-PREP-GUIDANCE-2027.pdf.exe' from spoofed domain cbpwa-vendor-support[.]com at 08:14 CDT on 2027-08-30 (13:14Z) | Endpoint AV log: GW-WS-IT-04 disabled Windows Defender at 08:21 CDT (13:21Z) (silent, no alert raised)",
+    "what": "Email gateway log: delivery of the archive 'FEMA-PREP-GUIDANCE-2027.zip' (it holds 'FEMA-PREP-GUIDANCE-2027.pdf.exe') from spoofed domain cbpwa-vendor-support[.]com at 08:14 CDT on 2027-08-30 (13:14Z) | Endpoint AV log: GW-WS-IT-04 disabled Windows Defender at 08:21 CDT (13:21Z) (silent, no alert raised)",
     "when": {
      "start_utc": "2027-08-30T05:00Z",
      "end_utc": "2027-08-31T05:00Z"
@@ -463,10 +503,50 @@
      "start_utc": "2027-08-30T05:00Z",
      "end_utc": "2027-08-31T05:00Z"
     }
+   },
+   {
+    "stream": "firewall_logs",
+    "what": "Edge firewall session for the 13:23Z connection from GW-WS-IT-04 to the lookalike vendor name, 1.88 MB received.",
+    "when": {
+     "start_utc": "2027-08-30T05:00Z",
+     "end_utc": "2027-08-31T05:00Z"
+    }
+   },
+   {
+    "stream": "web_proxy_logs",
+    "what": "Web-filter record of the 13:23Z request with the server name and the logged-on user.",
+    "when": {
+     "start_utc": "2027-08-30T05:00Z",
+     "end_utc": "2027-08-31T05:00Z"
+    }
+   },
+   {
+    "stream": "packet_captures",
+    "what": "Captured handshake of the 13:23Z connection; the ClientHello names the lookalike vendor host.",
+    "when": {
+     "start_utc": "2027-08-30T05:00Z",
+     "end_utc": "2027-08-31T05:00Z"
+    }
+   },
+   {
+    "stream": "windows_event_logs",
+    "what": "On GW-WS-IT-04: the user's logon, real-time protection switched off at 13:21Z, a new service registered at 13:24Z.",
+    "when": {
+     "start_utc": "2027-08-30T05:00Z",
+     "end_utc": "2027-08-31T05:00Z"
+    }
+   },
+   {
+    "stream": "endpoint_telemetry",
+    "what": "On GW-WS-IT-04: the mail attachment written and started from the mail client, the lookup and download by that process, a second file written, a service installed.",
+    "when": {
+     "start_utc": "2027-08-30T05:00Z",
+     "end_utc": "2027-08-31T05:00Z"
+    }
    }
   ],
   "detection_artifacts": [
-   "Email gateway log: delivery of 'FEMA-PREP-GUIDANCE-2027.pdf.exe' from spoofed domain cbpwa-vendor-support[.]com at 08:14 CDT",
+   "Email gateway log: delivery of the archive 'FEMA-PREP-GUIDANCE-2027.zip' (it holds 'FEMA-PREP-GUIDANCE-2027.pdf.exe') from spoofed domain cbpwa-vendor-support[.]com at 08:14 CDT",
    "Endpoint AV log: GW-WS-IT-04 disabled Windows Defender at 08:21 CDT (silent, no alert raised)",
    "DNS query log: GW-WS-IT-04 resolves update-cdn.meridiancontrols[.]net (lookalike domain, not the real vendor) at 08:23 CDT"
   ],
@@ -513,6 +593,38 @@
    {
     "stream": "zeek_logs",
     "what": "Netflow record: session duration 4.2s, 318 bytes out, 212 bytes in, protocol TLS 1.3, SNI field: update-cdn.vantagesec-telemetry.net (typosquat of legitimate Vantage Security Systems telemetry domain)",
+    "when": {
+     "start_utc": "2027-08-31T03:17Z",
+     "end_utc": "2027-08-31T05:17Z"
+    }
+   },
+   {
+    "stream": "firewall_logs",
+    "what": "Edge firewall session of the first periodic outbound connection: 318 bytes out, 212 in, to 104.21.88.43:443.",
+    "when": {
+     "start_utc": "2027-08-31T03:17Z",
+     "end_utc": "2027-08-31T05:17Z"
+    }
+   },
+   {
+    "stream": "web_proxy_logs",
+    "what": "Web-filter record of the first periodic outbound connection (318 bytes out, 212 in), no user logged on.",
+    "when": {
+     "start_utc": "2027-08-31T03:17Z",
+     "end_utc": "2027-08-31T05:17Z"
+    }
+   },
+   {
+    "stream": "packet_captures",
+    "what": "Captured handshake of the first periodic outbound connection; the ClientHello carries the server name.",
+    "when": {
+     "start_utc": "2027-08-31T03:17Z",
+     "end_utc": "2027-08-31T05:17Z"
+    }
+   },
+   {
+    "stream": "endpoint_telemetry",
+    "what": "network_connect events from GW-WS-IT-04 to 104.21.88.43, each carrying the image of the service binary installed the day before.",
     "when": {
      "start_utc": "2027-08-31T03:17Z",
      "end_utc": "2027-08-31T05:17Z"
@@ -892,6 +1004,38 @@
      "start_utc": "2027-09-07T05:00Z",
      "end_utc": "2027-09-11T05:00Z"
     }
+   },
+   {
+    "stream": "firewall_logs",
+    "what": "Sessions to the remote-access gateway from outside addresses on both firewalls, the gateway-to-historian flows, and the 1.9 GB SMB flow from GW-WS-IT-04 to the DMZ historian replica on the boundary firewall.",
+    "when": {
+     "start_utc": "2027-09-07T02:00Z",
+     "end_utc": "2027-09-11T05:00Z"
+    }
+   },
+   {
+    "stream": "packet_captures",
+    "what": "Captured handshakes of the sessions from outside addresses to the remote-access gateway.",
+    "when": {
+     "start_utc": "2027-09-07T02:00Z",
+     "end_utc": "2027-09-11T05:00Z"
+    }
+   },
+   {
+    "stream": "windows_event_logs",
+    "what": "On the historian replica: network logon from 10.14.22.47 at 23:58Z on 2027-09-08 under the account of an engineer who is on leave, share reads, logoff; the matching service ticket on a domain controller.",
+    "when": {
+     "start_utc": "2027-09-07T02:00Z",
+     "end_utc": "2027-09-11T05:00Z"
+    }
+   },
+   {
+    "stream": "endpoint_telemetry",
+    "what": "network_connect from GW-WS-IT-04 to the historian replica on port 445 at 23:58Z on 2027-09-08.",
+    "when": {
+     "start_utc": "2027-09-07T02:00Z",
+     "end_utc": "2027-09-11T05:00Z"
+    }
    }
   ],
   "detection_artifacts": [
@@ -1215,6 +1359,14 @@
     "when": {
      "start_utc": "2027-09-10T05:00Z",
      "end_utc": "2027-09-20T05:00Z"
+    }
+   },
+   {
+    "stream": "partner_auth_logs",
+    "what": "Air station administration building: workstation logons fall to near zero from the evacuation until staff return.",
+    "when": {
+     "start_utc": "2027-09-10T05:00Z",
+     "end_utc": "2027-09-21T05:00Z"
     }
    }
   ],
@@ -1559,6 +1711,14 @@
      "start_utc": "2027-09-11T17:00Z",
      "end_utc": "2027-09-11T19:00Z"
     }
+   },
+   {
+    "stream": "windows_event_logs",
+    "what": "Remote-interactive logon on GW-SYS-SCADA-01 from the remote-access gateway at the time of the alarm-suppression change.",
+    "when": {
+     "start_utc": "2027-09-11T17:00Z",
+     "end_utc": "2027-09-11T19:00Z"
+    }
    }
   ],
   "detection_artifacts": [
@@ -1606,7 +1766,15 @@
    },
    {
     "stream": "host_audit_logs",
-    "what": "File audit log: file hash sha256=a3f8c2d1e9b04517 (modified), previous hash sha256=d7e1a0f3c2b18429 (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C",
+    "what": "File audit log: file hash sha256=cd926b73217c0994 (modified), previous hash sha256=2e78eabd6a1aa42f (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C",
+    "when": {
+     "start_utc": "2027-09-11T22:11Z",
+     "end_utc": "2027-09-12T00:11Z"
+    }
+   },
+   {
+    "stream": "windows_event_logs",
+    "what": "On GW-SRV-OT-01: network logon from the gateway and the write of relayconfigs\\sub02\\rtu_config_draft.xml at 22:11Z.",
     "when": {
      "start_utc": "2027-09-11T22:11Z",
      "end_utc": "2027-09-12T00:11Z"
@@ -1616,7 +1784,7 @@
   "detection_artifacts": [
    "Sentinel Edge 3.1 alert SE3-OT-2201-20270911T2211Z: src=GW-SYS-JMP-01, action=FILE_WRITE, path=\\\\gw-srv-ot-01\\relayconfigs\\sub02\\rtu_config_draft.xml, priority=MEDIUM",
    "SOC closure record: analyst SOC-AN-01, closure_time=2027-09-11T22:58Z, disposition=AUTHORIZED_MAINTENANCE, notes='Storm prep relay adjustment per ops supervisor note'",
-   "File audit log: file hash sha256=a3f8c2d1e9b04517 (modified), previous hash sha256=d7e1a0f3c2b18429 (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C"
+   "File audit log: file hash sha256=cd926b73217c0994 (modified), previous hash sha256=2e78eabd6a1aa42f (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C"
   ],
   "public_fact": null,
   "place_ids": [
@@ -1939,6 +2107,14 @@
      "start_utc": "2027-09-13T17:00Z",
      "end_utc": "2027-09-13T19:00Z"
     }
+   },
+   {
+    "stream": "partner_mail_logs",
+    "what": "Port operations mailbox: each Coast Guard port-condition order arrives within ten minutes of issue.",
+    "when": {
+     "start_utc": "2027-09-13T17:00Z",
+     "end_utc": "2027-09-13T19:00Z"
+    }
    }
   ],
   "detection_artifacts": [
@@ -1995,6 +2171,14 @@
    {
     "stream": "shelters",
     "what": "Nueces County 211 call log: 14 calls between 14:00 and 20:00 CDT from Zone D callers asking for shelter location clarification after hearing incorrect KNCB report.",
+    "when": {
+     "start_utc": "2027-09-13T18:00Z",
+     "end_utc": "2027-09-13T20:00Z"
+    }
+   },
+   {
+    "stream": "partner_web_logs",
+    "what": "City alerting workstations: logged-on operator and a request to the alerting service at each city alert transmission.",
     "when": {
      "start_utc": "2027-09-13T18:00Z",
      "end_utc": "2027-09-13T20:00Z"
@@ -2089,6 +2273,14 @@
    {
     "stream": "broadcast_logs",
     "what": "KNCB broadcast log: bilingual evacuation loop activated 12:15Z D-1; broadcast 24 times before landfall",
+    "when": {
+     "start_utc": "2027-09-13T12:00Z",
+     "end_utc": "2027-09-13T14:00Z"
+    }
+   },
+   {
+    "stream": "partner_web_logs",
+    "what": "County alerting workstation: logged-on operator and a request to the alerting service at each county alert transmission.",
     "when": {
      "start_utc": "2027-09-13T12:00Z",
      "end_utc": "2027-09-13T14:00Z"
@@ -2675,6 +2867,14 @@
      "start_utc": "2027-09-14T08:00Z",
      "end_utc": "2027-09-14T10:00Z"
     }
+   },
+   {
+    "stream": "partner_endpoint_alerts",
+    "what": "Hospital endpoint console: no events from the administrative wings while they have no power; clinical areas on generator keep reporting.",
+    "when": {
+     "start_utc": "2027-09-14T06:00Z",
+     "end_utc": "2027-09-22T15:00Z"
+    }
    }
   ],
   "detection_artifacts": [
@@ -2989,6 +3189,38 @@
     "when": {
      "start_utc": "2027-09-15T05:00Z",
      "end_utc": "2027-09-18T05:00Z"
+    }
+   },
+   {
+    "stream": "partner_mail_logs",
+    "what": "City and air-station mail gateways: the aid-themed message wave of 2027-09-15 to 09-18 inside the full-span mail logs.",
+    "when": {
+     "start_utc": "2027-09-15T05:00Z",
+     "end_utc": "2027-09-19T05:00Z"
+    }
+   },
+   {
+    "stream": "partner_web_logs",
+    "what": "City and air-station web gateways: ten requests to the lure host from internal workstations.",
+    "when": {
+     "start_utc": "2027-09-15T05:00Z",
+     "end_utc": "2027-09-19T05:00Z"
+    }
+   },
+   {
+    "stream": "partner_dns_logs",
+    "what": "City and air-station resolvers: the lookups of the lure host just before each request.",
+    "when": {
+     "start_utc": "2027-09-15T05:00Z",
+     "end_utc": "2027-09-19T05:00Z"
+    }
+   },
+   {
+    "stream": "partner_auth_logs",
+    "what": "City single sign-on and base webmail: sign-ons of the ten accounts from a new network with password only, each with its inbound firewall session.",
+    "when": {
+     "start_utc": "2027-09-15T05:00Z",
+     "end_utc": "2027-09-22T05:00Z"
     }
    }
   ],
@@ -4771,6 +5003,14 @@
      "start_utc": "2027-09-21T05:00Z",
      "end_utc": "2027-09-23T05:00Z"
     }
+   },
+   {
+    "stream": "windows_event_logs",
+    "what": "Remote-interactive logon on GW-WS-OPS-02 from the remote-access gateway about 95 s before the breaker-open command.",
+    "when": {
+     "start_utc": "2027-09-21T14:20Z",
+     "end_utc": "2027-09-21T16:00Z"
+    }
    }
   ],
   "detection_artifacts": [
@@ -5180,6 +5420,14 @@
      "start_utc": "2027-09-24T05:00Z",
      "end_utc": "2027-09-26T05:00Z"
     }
+   },
+   {
+    "stream": "windows_event_logs",
+    "what": "Remote-interactive logon on GW-WS-OPS-02 from the remote-access gateway about 95 s before the breaker-open command.",
+    "when": {
+     "start_utc": "2027-09-24T19:40Z",
+     "end_utc": "2027-09-24T21:00Z"
+    }
    }
   ],
   "detection_artifacts": [
@@ -5362,7 +5610,7 @@
    "C",
    "D"
   ],
-  "description": "O.N. Stevens Water Treatment Plant issues Boil Water Notice GW-PUB-001 at 17:30 CDT for Districts 3 and 4 (48,000 residents). The notice is transmitted via the city's Everbridge mass notification system in English only. NCLAS receives the English source text at 17:35 CDT. Under the 2-hour life-safety SLA, Spanish delivery is due by 19:35 CDT. However, NCLAS is operating at reduced capacity (3 of 7 translators are unavailable due to storm displacement), and the Spanish text is not completed until 23:45 CDT. CBPWA/OEM does not transmit the Spanish Everbridge alert or forward to KNCB until the following morning. KNCB receives the boil-water notice text from OEM at 06:03 CDT D+13 and airs it at once. The gap is 12 hours 33 minutes from English public notification to Spanish air time.",
+  "description": "O.N. Stevens Water Treatment Plant issues Boil Water Notice GW-PUB-001 at 17:30 CDT for Districts 3 and 4 (48,000 residents). The notice is transmitted via the city's CoastAlert mass notification system in English only. NCLAS receives the English source text at 17:35 CDT. Under the 2-hour life-safety SLA, Spanish delivery is due by 19:35 CDT. However, NCLAS is operating at reduced capacity (3 of 7 translators are unavailable due to storm displacement), and the Spanish text is not completed until 23:45 CDT. CBPWA/OEM does not transmit the Spanish CoastAlert alert or forward to KNCB until the following morning. KNCB receives the boil-water notice text from OEM at 06:03 CDT D+13 and airs it at once. The gap is 12 hours 33 minutes from English public notification to Spanish air time.",
   "observed_in": [
    {
     "stream": "eas_alerts",
@@ -5387,12 +5635,20 @@
      "start_utc": "2027-09-26T22:30Z",
      "end_utc": "2027-09-27T00:30Z"
     }
+   },
+   {
+    "stream": "partner_mail_logs",
+    "what": "County public-information mailbox: translation requests go out and the Spanish text comes back at the times in the translation job log.",
+    "when": {
+     "start_utc": "2027-09-26T22:30Z",
+     "end_utc": "2027-09-27T14:00Z"
+    }
    }
   ],
   "detection_artifacts": [
-   "Everbridge system log: GW-PUB-001 English alert transmitted 17:30 CDT D+12 to 48,000 registered devices in Districts 3–4.",
+   "CoastAlert system log: GW-PUB-001 English alert transmitted 17:30 CDT D+12 to 48,000 registered devices in Districts 3–4.",
    "NCLAS job log entry 2027-09-26-BWN-001: Source received 17:35 CDT. Translation assigned to available staff. Delivery timestamp: 23:45 CDT D+12. SLA breach: 4h 10m past 2-hour life-safety SLA.",
-   "OEM internal email trail: Spanish text received from NCLAS at 23:47 CDT D+12. Next action item (Everbridge Spanish blast and KNCB notification) assigned to morning shift. Email forwarded to KNCB at 05:58 CDT D+13.",
+   "OEM internal email trail: Spanish text received from NCLAS at 23:47 CDT D+12. Next action item (CoastAlert Spanish blast and KNCB notification) assigned to morning shift. Email forwarded to KNCB at 05:58 CDT D+13.",
    "KNCB broadcast log: GW-PUB-001 Spanish boil-water advisory aired 06:03 CDT D+13. Total English-to-Spanish public gap: 12h 33m.",
    "Census ACS data for Districts 3–4: estimated 22,400 residents (46.7%) who speak English 'less than very well,' classified as Spanish-dominant for notification purposes."
   ],
@@ -5560,7 +5816,7 @@
   ],
   "detection_artifacts": [
    "KNCB broadcast transcript 07:15 CDT D+13: 'Recibimos el aviso oficial esta mañana temprano de la ciudad. Sé que muchos de ustedes están preguntando — ¿por qué no lo supimos antes? Es una pregunta que también tenemos nosotros.' (We received the official notice early this morning from the city. I know many of you are asking — why didn't we know sooner? It is a question we also have.)",
-   "Harborline 6 field interview log: 7 of 9 District 3 evacuees at Richard King shelter stated they first heard about boil-water notice from KNCB on morning of D+13. 2 of 9 stated they heard from a neighbor. 0 of 9 stated they received an Everbridge alert in Spanish."
+   "Harborline 6 field interview log: 7 of 9 District 3 evacuees at Richard King shelter stated they first heard about boil-water notice from KNCB on morning of D+13. 2 of 9 stated they heard from a neighbor. 0 of 9 stated they received an CoastAlert alert in Spanish."
   ],
   "public_fact": "PUB-144",
   "place_ids": [
@@ -5900,6 +6156,14 @@
      "start_utc": "2027-10-02T05:00Z",
      "end_utc": "2027-10-03T05:00Z"
     }
+   },
+   {
+    "stream": "partner_auth_logs",
+    "what": "Both hospitals: clinical workstation unlocks rise well above the pre-storm level around the busiest emergency-department days.",
+    "when": {
+     "start_utc": "2027-10-02T05:00Z",
+     "end_utc": "2027-10-07T05:00Z"
+    }
    }
   ],
   "detection_artifacts": [
@@ -5944,6 +6208,30 @@
    {
     "stream": "host_audit_logs",
     "what": "GW-SYS-JMP-01 session log export: 14 sessions, source IPs spanning Netherlands, Romania, Singapore VPS blocks; all authenticated as GW-ENG-VELA; total session time 11.4 hours | Meridian historian audit log shared with CISA: confirms alarm suppression and setpoint changes trace to same VPN sessions",
+    "when": {
+     "start_utc": "2027-10-02T21:00Z",
+     "end_utc": "2027-10-02T23:00Z"
+    }
+   },
+   {
+    "stream": "firewall_logs",
+    "what": "All 14 sessions from outside Texas to the remote-access gateway are in the edge and the boundary firewall logs with their outside source addresses.",
+    "when": {
+     "start_utc": "2027-09-07T02:00Z",
+     "end_utc": "2027-10-02T23:00Z"
+    }
+   },
+   {
+    "stream": "windows_event_logs",
+    "what": "Logons and logoffs of the fourteen sessions on the remote-access gateway with their source addresses.",
+    "when": {
+     "start_utc": "2027-09-07T02:00Z",
+     "end_utc": "2027-10-02T23:00Z"
+    }
+   },
+   {
+    "stream": "host_triage",
+    "what": "Triage collections of the remote-access gateway and the historian taken at 21:22Z and 21:41Z; the gateway's logon history lists the 14 sessions.",
     "when": {
      "start_utc": "2027-10-02T21:00Z",
      "end_utc": "2027-10-02T23:00Z"
@@ -6317,6 +6605,14 @@
      "start_utc": "2027-10-05T16:00Z",
      "end_utc": "2027-10-05T18:00Z"
     }
+   },
+   {
+    "stream": "host_triage",
+    "what": "Triage collection of GW-WS-IT-04 (2027-10-12) and of the scoping set: file listing, services, execution history and placeholder hashes agree with the event logs.",
+    "when": {
+     "start_utc": "2027-10-12T12:00Z",
+     "end_utc": "2027-10-14T19:00Z"
+    }
    }
   ],
   "public_fact": "GW-PUB-003",
@@ -6677,7 +6973,7 @@
    },
    {
     "stream": "siem_alerts",
-    "what": "Alert volume falls about 90 percent after 08:00Z on D+28; the outbound beacon alert SE3-NET-9941 is last seen at 10:04Z.",
+    "what": "Alerts from control-network sources stop when the control network is cut off at 12:00Z on D+28 (about 90 percent fewer from those rules; corporate alerts carry on); the outbound beacon alert SE3-NET-9941 is last seen at 10:04Z.",
     "when": {
      "start_utc": "2027-10-12T05:00Z",
      "end_utc": "2027-10-14T05:00Z"
@@ -6690,11 +6986,35 @@
      "start_utc": "2027-10-12T05:00Z",
      "end_utc": "2027-10-14T05:00Z"
     }
+   },
+   {
+    "stream": "firewall_logs",
+    "what": "Allowed connections from GW-WS-IT-04 to 104.21.88.43 end at 10:04Z on 2027-10-12; none afterwards.",
+    "when": {
+     "start_utc": "2027-10-12T05:00Z",
+     "end_utc": "2027-10-14T05:00Z"
+    }
+   },
+   {
+    "stream": "web_proxy_logs",
+    "what": "Web-filter records for the periodic connection stop after 10:04Z on 2027-10-12.",
+    "when": {
+     "start_utc": "2027-10-12T05:00Z",
+     "end_utc": "2027-10-14T05:00Z"
+    }
+   },
+   {
+    "stream": "packet_captures",
+    "what": "The last captured connection from GW-WS-IT-04 to 104.21.88.43 is at 10:04Z on 2027-10-12.",
+    "when": {
+     "start_utc": "2027-10-12T05:00Z",
+     "end_utc": "2027-10-14T05:00Z"
+    }
    }
   ],
   "detection_artifacts": [
    "CBPWA SCADA isolation work order WO-2027-OT-0881: initiated 08:00Z D+28, authorized by Dr. Al-Rasheed-Obinna and CBPWA Operations Director, scope: JMP-01 offline, ClearPath VPN suspended, HIST-01 isolated",
-   "Post-isolation Sentinel Edge alert volume: D+28 post-08:00Z = 1,847 alerts (90% drop from D+27), C2 beacon SE3-NET-9941 last seen D+28 10:04Z",
+   "Post-isolation Sentinel Edge: control-network alert rules silent from 12:00Z on D+28 until reconnection (about 90% fewer alerts from those rules), C2 beacon SE3-NET-9941 last seen D+28 10:04Z",
    "Relay config re-verification report: SUB-02 relays R-02A/B/C found with anomalous overcurrent thresholds (2400A vs baseline 1200A); SUB-03 relay R-03A also modified"
   ],
   "public_fact": "GW-PUB-102",
@@ -6753,6 +7073,14 @@
     "when": {
      "start_utc": "2027-10-14T05:00Z",
      "end_utc": "2027-10-18T05:00Z"
+    }
+   },
+   {
+    "stream": "partner_web_logs",
+    "what": "Port gate offices: no user web activity from landfall to D+3, little while the channel is closed, back to normal after reopening.",
+    "when": {
+     "start_utc": "2027-10-14T05:00Z",
+     "end_utc": "2027-10-21T05:00Z"
     }
    }
   ],
@@ -8366,7 +8694,7 @@
   "observed_in": [
    {
     "stream": "aid_applications",
-    "what": "FEMA DisasterAssistance.gov server log: 94 application submissions from IP 198.51.100.44 between D+60 06:01Z and D+62 23:59Z; submission cluster timestamps: burst 1 D+60 06:01-09:17Z (31 apps), burst 2 D+61 01:00-04:45Z (29 apps), burst 3 D+62 23:00-23:59Z (34 apps) | FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash CC-DAM-0014.jpg appears in 7...",
+    "what": "FEMA DisasterAssistance.gov server log: 94 application submissions from IP 198.51.100.44 between D+60 06:01Z and D+62 23:59Z; submission cluster timestamps: burst 1 D+60 06:01-09:17Z (31 apps), burst 2 D+61 01:00-04:45Z (29 apps), burst 3 D+62 23:00-23:59Z (34 apps) | FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash 056a6eeab2bf0df6.jpg appears in 7...",
     "when": {
      "start_utc": "2027-11-13T06:01Z",
      "end_utc": "2027-11-16T06:00Z"
@@ -8375,7 +8703,7 @@
   ],
   "detection_artifacts": [
    "FEMA DisasterAssistance.gov server log: 94 application submissions from IP 198.51.100.44 between D+60 06:01Z and D+62 23:59Z; submission cluster timestamps: burst 1 D+60 06:01-09:17Z (31 apps), burst 2 D+61 01:00-04:45Z (29 apps), burst 3 D+62 23:00-23:59Z (34 apps)",
-   "FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash CC-DAM-0014.jpg appears in 7 applications with 7 different property addresses",
+   "FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash 056a6eeab2bf0df6.jpg appears in 7 applications with 7 different property addresses",
    "IP geolocation record: 198.51.100.44 registered to Landmark Pacific Holdings LLC, 4411 Leopard Street, Corpus Christi TX 78408; ISP: Spectrum Business"
   ],
   "public_fact": null,

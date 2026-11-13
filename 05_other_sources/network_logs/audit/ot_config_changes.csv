@@ -1,94 +1,146 @@
 time_utc,device,parameter,old_value,new_value,change_type,session_user,source_host,change_ticket
-2027-07-20T17:23:14Z,GW-SYS-RTU-WTR1,relay 27-UV time delay (s),2.0,1.5,file replaced,GW-OPS-RODRIGUEZ,GW-SYS-JMP-01,CHG-27-1886
-2027-07-20T23:34:49Z,GW-SYS-RTU-WTR2,relay 51 time dial,2.0,2.5,remote write,GW-ENG-LOPEZ,GW-SYS-JMP-01,CHG-27-1368
-2027-07-21T13:50:50Z,GW-SYS-RTU-02,transformer LTC band (V),2.0,1.5,remote write,GW-ENG-LOPEZ,GW-SYS-JMP-01,CHG-27-1654
-2027-07-21T22:58:36Z,GW-SYS-RTU-05,feeder CT ratio check,600:5,600:5,remote write,GW-WTR-WRIGHT,GW-WTP-HMI-02,CHG-27-1847
-2027-07-22T19:27:19Z,GW-SYS-RTU-03,clock sync source,GPS-A,GPS-B,remote write,GW-ENG-JOHNSON,GW-SYS-JMP-01,CHG-27-1623
-2027-07-27T21:25:51Z,GW-WTP-DCS-01,discharge pressure setpoint (psi),82,85,local panel,GW-TEC-SHAH,local panel,CHG-27-0920
-2027-07-27T22:27:55Z,GW-SYS-RTU-WTR2,discharge pressure setpoint (psi),82,85,remote write,GW-OPS-PEREZ,GW-SYS-JMP-01,
-2027-08-03T15:38:07Z,GW-SYS-RTU-04,chlorine residual alarm low (mg/L),0.5,0.6,file replaced,GW-ENG-LOPEZ,GW-SYS-JMP-01,CHG-27-1658
-2027-08-07T22:38:13Z,GW-WTP-DCS-01,recloser shots,3,2,file replaced,GW-WTR-SANCHEZ,GW-WTP-HMI-02,CHG-27-1137
-2027-08-08T15:56:06Z,GW-SYS-RTU-UTL1,discharge pressure setpoint (psi),82,85,local panel,GW-TEC-WALKER,local panel,CHG-27-0817
-2027-08-08T23:31:36Z,GW-SYS-RTU-02,clock sync source,GPS-A,GPS-B,local panel,GW-WTR-CANTU,local panel,CHG-27-1334
-2027-08-12T14:12:09Z,GW-SYS-RTU-WTR1,booster discharge setpoint (psi),70,72,file replaced,GW-ENG-JIMENEZ,GW-SYS-JMP-01,CHG-27-0892
-2027-08-15T15:10:00Z,GW-SYS-RTU-01,relay 27-UV pickup (pu),,0.88,local panel,GW-ENG-VELA,GW-WS-ENG-03,CHG-27-0744
-2027-08-16T22:51:47Z,GW-SYS-RTU-01,relay 27-UV time delay (s),2.0,1.5,remote write,GW-OPS-RODRIGUEZ,GW-SYS-JMP-01,CHG-27-1538
-2027-08-25T23:12:43Z,GW-SYS-RTU-05,relay 51 time dial,2.0,2.5,remote write,GW-ENG-JIMENEZ,GW-SYS-JMP-01,CHG-27-1378
-2027-08-28T12:50:44Z,GW-SYS-RTU-UTL1,recloser shots,3,2,local panel,GW-ENG-CLARK,local panel,CHG-27-1631
-2027-08-29T20:39:41Z,GW-SYS-RTU-04,chlorine residual alarm low (mg/L),0.5,0.6,file replaced,GW-ENG-GARZA,GW-WS-ENG-05,CHG-27-1540
-2027-08-31T17:35:16Z,GW-SYS-RTU-WTR1,tank high-level alarm (ft),31.5,31.0,remote write,GW-ENG-SCHROEDER,GW-SYS-JMP-01,CHG-27-1000
-2027-09-01T19:19:49Z,GW-SYS-RTU-03,transformer LTC band (V),2.0,1.5,remote write,GW-WTR-SAENZ,GW-SYS-JMP-01,CHG-27-1900
-2027-09-02T18:39:42Z,GW-SYS-RTU-01,relay 51 time dial,2.0,2.5,local panel,GW-TEC-CHAVEZ,local panel,CHG-27-1695
-2027-09-04T21:03:41Z,GW-SYS-RTU-WTR2,discharge pressure setpoint (psi),82,85,local panel,GW-TEC-WILSON,local panel,CHG-27-1694
+2027-07-18T15:31:54Z,GW-SYS-RTU-05,breaker failure timer (cycles),12,10,file replaced,GW-WTR-PENA,GW-SYS-JMP-01,CHG-27-0627
+2027-07-18T21:08:14Z,GW-WTP-DCS-01,configuration file 01_active.cfg,last_modified 2027-02-15T07:44:11Z,last_modified 2027-07-18T21:08:14Z,file replaced,GW-WTR-PENA,GW-SYS-JMP-01,CHG-27-0656
+2027-07-19T13:08:28Z,GW-SYS-RTU-WTR2,tank high-level alarm (ft),31.5,31.0,remote write,GW-TEC-MARTINEZ,GW-WS-ENG-05,CHG-27-0633
+2027-07-20T18:18:40Z,GW-SYS-RTU-05,relay 50 instantaneous pickup (A),4800,5200,local panel,GW-ENG-LOPEZ,local panel,CHG-27-0664
+2027-07-25T17:46:49Z,GW-SYS-RTU-01,feeder CT ratio,600:5,800:5,remote write,GW-WTR-SANCHEZ,GW-WS-ENG-01,
+2027-07-26T13:19:30Z,GW-SYS-RTU-04,configuration file 04_active.cfg,last_modified 2027-06-16T07:08:24Z,last_modified 2027-07-26T13:19:30Z,file replaced,GW-ENG-CLARK,GW-WS-ENG-02,CHG-27-0653
+2027-07-26T13:27:37Z,GW-SYS-RTU-02,relay 50 instantaneous pickup (A),4800,5200,local panel,GW-ENG-LOPEZ,local panel,CHG-27-0661
+2027-07-26T13:50:14Z,GW-SYS-RTU-UTL1,clock sync source,GPS-A,GPS-B,remote write,GW-ENG-RAMOS,GW-SYS-JMP-01,CHG-27-0651
+2027-07-27T21:27:26Z,GW-SYS-RTU-02,configuration file 02_active.cfg,last_modified 2027-06-24T15:16:20Z,last_modified 2027-07-27T21:27:26Z,file replaced,GW-TEC-ADAMS,GW-WS-ENG-04,CHG-27-0665
+2027-07-29T12:08:21Z,GW-SYS-RTU-02,configuration file 02_active.cfg,last_modified 2027-03-29T02:51:42Z,last_modified 2027-07-29T12:08:21Z,file replaced,GW-WTR-WHITE,GW-WS-ENG-03,CHG-27-0684
+2027-07-30T19:32:44Z,GW-SYS-RTU-05,relay 27-UV pickup (pu),0.90,0.88,remote write,GW-TEC-ADAMS,GW-SYS-JMP-01,
+2027-08-01T22:21:26Z,GW-SYS-RTU-02,configuration file 02_active.cfg,last_modified 2027-03-01T20:17:44Z,last_modified 2027-08-01T22:21:26Z,file replaced,GW-WTR-SANCHEZ,GW-WS-ENG-01,
+2027-08-03T16:28:59Z,GW-SYS-RTU-03,recloser shots,3,2,remote write,GW-ENG-PATEL,GW-SYS-JMP-01,CHG-27-0670
+2027-08-04T18:10:50Z,GW-WTP-DCS-01,configuration file 01_active.cfg,last_modified 2027-04-20T01:41:14Z,last_modified 2027-08-04T18:10:50Z,file replaced,GW-ENG-RUIZ,GW-SYS-JMP-01,CHG-27-0715
+2027-08-05T14:54:23Z,GW-SYS-RTU-WTR1,discharge pressure setpoint (psi),82,85,remote write,GW-TEC-CHAVEZ,GW-SYS-JMP-01,CHG-27-0681
+2027-08-07T12:36:09Z,GW-SYS-RTU-04,configuration file 04_active.cfg,last_modified 2027-01-21T01:15:48Z,last_modified 2027-08-07T12:36:09Z,file replaced,GW-WTR-MORALES,GW-WS-ENG-01,CHG-27-0721
+2027-08-07T19:54:28Z,GW-SYS-RTU-03,relays R-03A/B/C overcurrent trip (A),1000,1200,local panel,GW-WTR-PENA,local panel,CHG-27-0695
+2027-08-08T12:51:07Z,GW-SYS-RTU-04,recloser shots,3,2,remote write,GW-WTR-MORALES,GW-SYS-JMP-01,CHG-27-0718
+2027-08-08T20:14:43Z,GW-WTP-DCS-01,filter backwash interval (h),48,36,local panel,GW-WTR-MORALES,local panel,
+2027-08-10T14:58:18Z,GW-SYS-RTU-04,clock sync source,GPS-A,GPS-B,local panel,GW-TEC-THOMAS,local panel,CHG-27-0695
+2027-08-11T21:59:28Z,GW-SYS-RTU-03,breaker failure timer (cycles),12,10,remote write,GW-WTR-PENA,GW-WS-ENG-01,CHG-27-0711
+2027-08-12T22:04:23Z,GW-SYS-RTU-01,feeder CT ratio,600:5,800:5,remote write,GW-ENG-RUIZ,GW-SYS-JMP-01,
+2027-08-14T22:30:13Z,GW-SYS-RTU-03,relay 27-UV time delay (s),2.0,1.5,file replaced,GW-WTR-CANTU,GW-SYS-JMP-01,CHG-27-0736
+2027-08-15T15:10:00Z,GW-SYS-RTU-01,relay 27-UV pickup (pu),,0.88,local panel,GW-ENG-VELA,local panel,CHG-27-0704
+2027-08-15T15:41:47Z,GW-SYS-RTU-02,relay 27-UV pickup (pu),,0.88,local panel,GW-ENG-VELA,local panel,CHG-27-0704
+2027-08-15T16:15:50Z,GW-SYS-RTU-03,relay 27-UV pickup (pu),,0.88,local panel,GW-ENG-VELA,local panel,CHG-27-0704
+2027-08-15T16:43:17Z,GW-SYS-RTU-04,relay 27-UV pickup (pu),,0.88,local panel,GW-ENG-VELA,local panel,CHG-27-0704
+2027-08-15T17:10:52Z,GW-SYS-RTU-05,relay 27-UV pickup (pu),,0.88,local panel,GW-ENG-VELA,local panel,CHG-27-0704
+2027-08-17T16:58:52Z,GW-SYS-RTU-WTR3,tank high-level alarm (ft),31.5,31.0,remote write,GW-ENG-JIMENEZ,GW-SYS-JMP-01,CHG-27-0717
+2027-08-18T16:33:49Z,GW-SYS-RTU-WTR2,tank high-level alarm (ft),31.5,31.0,remote write,GW-ENG-GARZA,GW-SYS-JMP-01,CHG-27-0720
+2027-08-19T16:46:28Z,GW-SYS-RTU-03,recloser shots,3,2,remote write,GW-TEC-CHAVEZ,GW-WS-ENG-05,CHG-27-0723
+2027-08-19T19:52:39Z,GW-SYS-RTU-05,configuration file 05_active.cfg,last_modified 2027-04-30T05:26:45Z,last_modified 2027-08-19T19:52:39Z,file replaced,GW-TEC-SHAH,GW-WS-ENG-04,CHG-27-0755
+2027-08-20T20:59:47Z,GW-SYS-RTU-WTR1,configuration file wtr1_active.cfg,last_modified 2027-04-04T18:56:05Z,last_modified 2027-08-20T20:59:47Z,file replaced,GW-ENG-MARTINEZ,GW-SYS-JMP-01,CHG-27-0738
+2027-08-21T12:31:54Z,GW-SYS-RTU-01,relay 27-UV pickup (pu),0.90,0.88,local panel,GW-WTR-CANTU,local panel,CHG-27-0755
+2027-08-24T20:53:27Z,GW-SYS-RTU-03,transformer LTC band (V),2.0,1.5,local panel,GW-TEC-SHAH,local panel,CHG-27-0764
+2027-08-27T16:39:25Z,GW-WTP-DCS-01,clearwell level setpoint (ft),14.0,14.5,local panel,GW-ENG-BAKER,local panel,
+2027-08-28T14:14:35Z,GW-SYS-RTU-WTR3,configuration file wtr3_active.cfg,last_modified 2027-05-08T11:09:02Z,last_modified 2027-08-28T14:14:35Z,file replaced,GW-WTR-PENA,GW-SYS-JMP-01,CHG-27-0745
+2027-08-29T16:11:03Z,GW-SYS-RTU-WTR3,pump start level (ft),18.0,19.5,remote write,GW-WTR-WHITE,GW-WS-ENG-03,CHG-27-0749
+2027-08-29T16:26:42Z,GW-SYS-RTU-04,relays R-04A/B/C overcurrent trip (A),1000,1200,file replaced,GW-WTR-WHITE,GW-WS-ENG-03,CHG-27-0745
+2027-08-30T18:06:41Z,GW-SYS-RTU-01,clock sync source,GPS-A,GPS-B,local panel,GW-TEC-SHAH,local panel,CHG-27-0762
+2027-09-01T13:31:05Z,GW-SYS-RTU-WTR3,configuration file wtr3_active.cfg,last_modified 2027-06-12T02:10:44Z,last_modified 2027-09-01T13:31:05Z,file replaced,GW-ENG-RAMOS,GW-SYS-JMP-01,
+2027-09-01T17:55:50Z,GW-SYS-RTU-01,configuration file 01_active.cfg,last_modified 2027-02-26T11:44:44Z,last_modified 2027-09-01T17:55:50Z,file replaced,GW-ENG-JOHNSON,GW-WS-ENG-01,CHG-27-0752
+2027-09-02T14:59:49Z,GW-WTP-DCS-01,configuration file 01_active.cfg,last_modified 2027-03-28T12:56:07Z,last_modified 2027-09-02T14:59:49Z,file replaced,GW-TEC-MILLER,GW-WS-ENG-05,CHG-27-0780
+2027-09-04T18:50:54Z,GW-SYS-RTU-WTR2,pump start level (ft),18.0,19.5,local panel,GW-WTR-PENA,local panel,CHG-27-0779
+2027-09-06T17:29:35Z,GW-SYS-RTU-01,clock sync source,GPS-A,GPS-B,remote write,GW-WTR-SANCHEZ,GW-SYS-JMP-01,CHG-27-0773
+2027-09-08T19:04:39Z,GW-SYS-RTU-01,breaker failure timer (cycles),12,10,local panel,GW-ENG-RAMOS,local panel,CHG-27-0793
+2027-09-09T14:44:49Z,GW-SYS-RTU-05,clock sync source,GPS-A,GPS-B,file replaced,GW-ENG-JIMENEZ,GW-WS-ENG-03,CHG-27-0800
+2027-09-09T19:55:29Z,GW-WTP-DCS-01,filter backwash interval (h),48,36,remote write,GW-TEC-ADAMS,GW-SYS-JMP-01,CHG-27-0808
 2027-09-11T17:04:23Z,GW-SYS-RTU-01,relay 27-UV pickup (pu),0.88,0.94,remote write,GW-ENG-VELA,GW-SYS-JMP-01,
-2027-09-11T22:11:26Z,GW-SYS-RTU-04,configuration file rtu04_active.cfg,last_modified 2027-08-15T16:02:11Z,last_modified 2027-09-11T22:11:26Z,file replaced,GW-ENG-VELA,GW-SYS-JMP-01,
+2027-09-11T22:11:26Z,GW-SYS-RTU-04,configuration file 04_active.cfg,last_modified 2027-08-15T16:02:11Z,last_modified 2027-09-11T22:11:26Z,file replaced,GW-ENG-VELA,GW-SYS-JMP-01,
 2027-09-11T22:11:48Z,GW-SYS-RTU-02,relays R-02A/B/C overcurrent trip (A),1200,2400,file replaced,GW-ENG-VELA,GW-SYS-JMP-01,
-2027-09-18T17:00:31Z,GW-SYS-RTU-WTR1,discharge pressure setpoint (psi),82,85,remote write,GW-TEC-WILSON,GW-SYS-JMP-01,CHG-27-0851
-2027-09-20T16:42:40Z,GW-SYS-RTU-04,relay 51 time dial,2.0,2.5,remote write,GW-OPS-PEREZ,GW-WS-OPS-05,CHG-27-0830
-2027-09-20T16:58:42Z,GW-SYS-RTU-01,feeder CT ratio check,600:5,600:5,remote write,GW-OPS-ANDERSON,GW-SYS-JMP-01,CHG-27-1309
-2027-09-22T15:54:11Z,GW-SYS-RTU-01,transformer LTC band (V),2.0,1.5,remote write,GW-TEC-WILSON,GW-SYS-JMP-01,CHG-27-1272
+2027-09-16T16:37:31Z,GW-SYS-RTU-01,relay 27-UV pickup (pu),0.90,0.88,local panel,GW-WTR-NELSON,local panel,EMR-27-102
+2027-09-21T13:19:54Z,GW-SYS-RTU-03,breaker failure timer (cycles),12,10,local panel,GW-WTR-PENA,local panel,EMR-27-104
+2027-09-21T22:37:48Z,GW-SYS-RTU-05,transformer LTC band (V),2.0,1.5,local panel,GW-TEC-MILLER,local panel,EMR-27-106
+2027-09-22T18:57:38Z,GW-SYS-RTU-04,relays R-04A/B/C overcurrent trip (A),1000,1200,local panel,GW-ENG-BAKER,local panel,EMR-27-108
 2027-09-23T02:04:01Z,GW-SYS-RTU-UTL1,P-3 discharge pressure setpoint (psi),85,68,remote write,GW-ENG-VELA,GW-SYS-JMP-01,
 2027-09-23T02:08:00Z,GW-SYS-RTU-WTR3,booster discharge setpoint (psi),72,54,remote write,GW-ENG-VELA,GW-SYS-JMP-01,
-2027-09-24T20:08:03Z,GW-SYS-RTU-05,recloser shots,3,2,remote write,GW-ENG-RAMOS,GW-SYS-JMP-01,CHG-27-1624
-2027-09-25T22:40:39Z,GW-SYS-RTU-04,relay 27-UV time delay (s),2.0,1.5,local panel,GW-TEC-ADAMS,local panel,CHG-27-1478
-2027-09-29T23:03:36Z,GW-WTP-DCS-01,booster discharge setpoint (psi),70,72,remote write,GW-ENG-NGUYEN,GW-SYS-JMP-01,
-2027-09-30T13:59:24Z,GW-SYS-RTU-WTR2,transformer LTC band (V),2.0,1.5,file replaced,GW-ENG-GARZA,GW-SYS-JMP-01,CHG-27-1883
-2027-09-30T22:02:31Z,GW-SYS-RTU-03,discharge pressure setpoint (psi),82,85,remote write,GW-ENG-LOPEZ,GW-SYS-JMP-01,CHG-27-1333
-2027-10-01T16:13:10Z,GW-WTP-DCS-01,relay 51 time dial,2.0,2.5,remote write,GW-OPS-PEREZ,GW-WS-OPS-05,
-2027-10-04T18:54:09Z,GW-SYS-RTU-UTL1,booster discharge setpoint (psi),70,72,file replaced,GW-WTR-SANCHEZ,GW-SYS-JMP-01,CHG-27-1236
-2027-10-05T14:00:45Z,GW-WTP-DCS-01,transformer LTC band (V),2.0,1.5,file replaced,GW-WTR-ALLEN,GW-SYS-JMP-01,CHG-27-1700
-2027-10-07T15:47:14Z,GW-SYS-RTU-WTR1,booster discharge setpoint (psi),70,72,remote write,GW-TEC-MILLER,GW-SYS-JMP-01,CHG-27-1459
-2027-10-07T19:25:44Z,GW-SYS-RTU-03,discharge pressure setpoint (psi),82,85,remote write,GW-TEC-ADAMS,GW-SYS-JMP-01,CHG-27-0901
-2027-10-09T21:43:51Z,GW-SYS-RTU-04,discharge pressure setpoint (psi),82,85,local panel,GW-WTR-MORALES,local panel,CHG-27-0873
-2027-10-11T23:08:01Z,GW-SYS-RTU-03,relay 51 time dial,2.0,2.5,remote write,GW-TEC-THOMAS,GW-SYS-JMP-01,CHG-27-1417
-2027-10-12T12:14:00Z,GW-SYS-RTU-UTL1,P-3 discharge pressure setpoint (psi),68,85,local panel,GW-OPS-PEREZ,GW-WTP-HMI-01,SI-2027-CC-001
-2027-10-12T12:26:00Z,GW-SYS-RTU-WTR3,booster discharge setpoint (psi),54,72,local panel,GW-OPS-PEREZ,local panel,SI-2027-CC-001
-2027-10-12T18:34:05Z,GW-SYS-RTU-UTL1,clock sync source,GPS-A,GPS-B,file replaced,GW-ENG-GARZA,GW-WS-ENG-05,CHG-27-0853
-2027-10-12T18:57:24Z,GW-WTP-DCS-01,tank high-level alarm (ft),31.5,31.0,remote write,GW-TEC-WALKER,GW-SYS-JMP-01,CHG-27-1564
-2027-10-13T15:27:09Z,GW-SYS-RTU-04,transformer LTC band (V),2.0,1.5,remote write,GW-WTR-WRIGHT,GW-WTP-HMI-02,CHG-27-1521
-2027-10-13T15:35:50Z,GW-SYS-RTU-05,relay 27-UV time delay (s),2.0,1.5,remote write,GW-TEC-WILSON,GW-SYS-JMP-01,CHG-27-1688
-2027-10-14T15:21:20Z,GW-SYS-RTU-05,relay 51 time dial,2.0,2.5,remote write,GW-ENG-JOHNSON,GW-WS-ENG-01,CHG-27-0877
-2027-10-17T17:36:33Z,GW-SYS-RTU-01,discharge pressure setpoint (psi),82,85,local panel,GW-WTR-ALLEN,local panel,CHG-27-0862
-2027-10-18T21:16:44Z,GW-SYS-RTU-02,transformer LTC band (V),2.0,1.5,file replaced,GW-ENG-JOHNSON,GW-WS-ENG-01,CHG-27-1891
-2027-10-19T16:12:43Z,GW-SYS-RTU-01,relay 27-UV pickup (pu),0.94,0.88,local panel,GW-OPS-PHAM,local panel,SI-2027-CC-001
-2027-10-19T16:47:43Z,GW-SYS-RTU-02,relays R-02A/B/C overcurrent trip (A),2400,1200,local panel,GW-OPS-PHAM,local panel,SI-2027-CC-001
-2027-10-19T21:43:38Z,GW-SYS-RTU-04,discharge pressure setpoint (psi),82,85,file replaced,GW-OPS-RODRIGUEZ,GW-SYS-JMP-01,CHG-27-1479
-2027-10-24T16:17:25Z,GW-WTP-DCS-01,clock sync source,GPS-A,GPS-B,remote write,GW-WTR-WHITE,GW-SYS-JMP-01,CHG-27-1052
-2027-10-26T14:16:15Z,GW-SYS-RTU-05,recloser shots,3,2,remote write,GW-OPS-SCOTT,GW-SYS-JMP-01,
-2027-10-29T14:45:11Z,GW-SYS-RTU-02,discharge pressure setpoint (psi),82,85,remote write,GW-WTR-ALLEN,GW-SYS-JMP-01,CHG-27-1246
-2027-10-31T22:14:28Z,GW-SYS-RTU-02,recloser shots,3,2,remote write,GW-OPS-PEREZ,GW-SYS-JMP-01,CHG-27-1115
-2027-11-02T12:09:58Z,GW-SYS-RTU-03,discharge pressure setpoint (psi),82,85,local panel,GW-OPS-PHAM,local panel,CHG-27-0941
-2027-11-04T13:17:44Z,GW-SYS-RTU-WTR2,chlorine residual alarm low (mg/L),0.5,0.6,remote write,GW-TEC-MILLER,GW-SYS-JMP-01,CHG-27-1269
-2027-11-05T12:03:17Z,GW-SYS-RTU-05,feeder CT ratio check,600:5,600:5,local panel,GW-WTR-MORALES,local panel,CHG-27-1293
-2027-11-14T18:27:35Z,GW-SYS-RTU-01,recloser shots,3,2,remote write,GW-WTR-WHITE,GW-SYS-JMP-01,CHG-27-1238
-2027-11-18T19:46:14Z,GW-SYS-RTU-05,discharge pressure setpoint (psi),82,85,remote write,GW-TEC-WALKER,GW-SYS-JMP-01,
-2027-11-19T16:18:38Z,GW-SYS-RTU-WTR2,booster discharge setpoint (psi),70,72,remote write,GW-TEC-THOMAS,GW-SYS-JMP-01,CHG-27-1597
-2027-11-20T15:38:43Z,GW-WTP-DCS-01,relay 51 time dial,2.0,2.5,local panel,GW-OPS-RODRIGUEZ,local panel,CHG-27-1442
-2027-11-25T00:29:53Z,GW-SYS-RTU-05,clock sync source,GPS-A,GPS-B,remote write,GW-OPS-ALVAREZ,GW-SYS-JMP-01,CHG-27-1187
-2027-11-25T18:36:47Z,GW-SYS-RTU-02,booster discharge setpoint (psi),70,72,local panel,GW-OPS-ALVAREZ,local panel,
-2027-11-26T17:26:15Z,GW-SYS-RTU-02,clock sync source,GPS-A,GPS-B,remote write,GW-WTR-PENA,GW-WTP-HMI-02,CHG-27-1654
-2027-11-29T16:00:15Z,GW-SYS-RTU-04,transformer LTC band (V),2.0,1.5,file replaced,GW-ENG-BAKER,GW-SYS-JMP-01,CHG-27-1552
-2027-11-30T20:54:12Z,GW-SYS-RTU-03,relay 51 time dial,2.0,2.5,remote write,GW-ENG-VELA,GW-SYS-JMP-01,CHG-27-1213
-2027-12-01T17:45:12Z,GW-SYS-RTU-UTL1,chlorine residual alarm low (mg/L),0.5,0.6,remote write,GW-TEC-SHAH,GW-SYS-JMP-01,CHG-27-1123
-2027-12-02T13:58:43Z,GW-SYS-RTU-UTL1,tank high-level alarm (ft),31.5,31.0,remote write,GW-TEC-CHAVEZ,GW-SYS-JMP-01,CHG-27-0846
-2027-12-02T23:26:00Z,GW-SYS-RTU-UTL1,chlorine residual alarm low (mg/L),0.5,0.6,remote write,GW-ENG-SMITH,GW-SYS-JMP-01,CHG-27-1234
-2027-12-03T13:58:32Z,GW-SYS-RTU-03,relay 27-UV time delay (s),2.0,1.5,local panel,GW-ENG-SCHROEDER,local panel,CHG-27-0857
-2027-12-09T16:54:40Z,GW-SYS-RTU-02,relay 51 time dial,2.0,2.5,remote write,GW-OPS-SCOTT,GW-SYS-JMP-01,
-2027-12-10T13:35:07Z,GW-SYS-RTU-UTL1,recloser shots,3,2,local panel,GW-OPS-SCOTT,local panel,CHG-27-1454
-2027-12-11T23:07:42Z,GW-WTP-DCS-01,feeder CT ratio check,600:5,600:5,remote write,GW-WTR-WRIGHT,GW-SYS-JMP-01,
-2027-12-15T18:14:41Z,GW-SYS-RTU-05,booster discharge setpoint (psi),70,72,remote write,GW-OPS-RODRIGUEZ,GW-WS-OPS-05,
-2027-12-17T22:45:17Z,GW-SYS-RTU-WTR1,recloser shots,3,2,local panel,GW-WTR-WRIGHT,local panel,CHG-27-1169
-2027-12-18T00:29:11Z,GW-SYS-RTU-01,relay 27-UV time delay (s),2.0,1.5,remote write,GW-ENG-NGUYEN,GW-SYS-JMP-01,CHG-27-1356
-2027-12-18T22:30:52Z,GW-SYS-RTU-WTR2,recloser shots,3,2,remote write,GW-OPS-ALVAREZ,GW-SYS-JMP-01,CHG-27-0998
-2027-12-20T14:43:31Z,GW-SYS-RTU-WTR2,discharge pressure setpoint (psi),82,85,remote write,GW-ENG-GARZA,GW-SYS-JMP-01,CHG-27-1711
-2027-12-20T16:09:22Z,GW-SYS-RTU-WTR1,tank high-level alarm (ft),31.5,31.0,file replaced,GW-ENG-JOHNSON,GW-WS-ENG-01,CHG-27-0899
-2027-12-21T00:25:30Z,GW-SYS-RTU-WTR2,chlorine residual alarm low (mg/L),0.5,0.6,remote write,GW-WTR-PENA,GW-WTP-HMI-02,CHG-27-1562
-2027-12-21T14:04:30Z,GW-SYS-RTU-04,feeder CT ratio check,600:5,600:5,remote write,GW-WTR-SANCHEZ,GW-SYS-JMP-01,CHG-27-1970
-2027-12-22T22:30:57Z,GW-SYS-RTU-02,feeder CT ratio check,600:5,600:5,local panel,GW-TEC-MORENO,local panel,CHG-27-1296
-2027-12-23T17:45:40Z,GW-SYS-RTU-04,discharge pressure setpoint (psi),82,85,remote write,GW-TEC-CHAVEZ,GW-SYS-JMP-01,CHG-27-1508
-2027-12-24T18:44:03Z,GW-SYS-RTU-02,recloser shots,3,2,remote write,GW-TEC-MARTINEZ,GW-SYS-JMP-01,CHG-27-1039
-2027-12-29T13:00:57Z,GW-SYS-RTU-WTR2,feeder CT ratio check,600:5,600:5,remote write,GW-OPS-SCHROEDER,GW-WS-OPS-05,CHG-27-0870
-2027-12-30T15:15:11Z,GW-SYS-RTU-UTL1,discharge pressure setpoint (psi),82,85,remote write,GW-WTR-SAENZ,GW-WTP-HMI-02,CHG-27-1534
-2027-12-30T18:25:53Z,GW-SYS-RTU-01,feeder CT ratio check,600:5,600:5,local panel,GW-ENG-VILLARREAL,local panel,CHG-27-1427
-2028-01-05T17:35:02Z,GW-SYS-RTU-WTR1,feeder CT ratio check,600:5,600:5,remote write,GW-WTR-SANCHEZ,GW-WTP-HMI-02,CHG-27-1216
-2028-01-07T21:52:27Z,GW-WTP-DCS-01,discharge pressure setpoint (psi),82,85,remote write,GW-ENG-JOHNSON,GW-SYS-JMP-01,CHG-27-0896
+2027-09-23T22:35:51Z,GW-WTP-DCS-01,filter backwash interval (h),48,36,local panel,GW-TEC-MILLER,local panel,EMR-27-110
+2027-09-23T22:43:57Z,GW-WTP-DCS-01,chlorine residual alarm low (mg/L),0.5,0.6,local panel,GW-ENG-THOMAS,local panel,EMR-27-112
+2027-09-26T19:57:59Z,GW-SYS-RTU-UTL1,booster discharge setpoint (psi),70,72,local panel,GW-ENG-SCHROEDER,local panel,EMR-27-113
+2027-09-29T20:13:42Z,GW-SYS-RTU-05,transformer LTC band (V),2.0,1.5,local panel,GW-ENG-VELA,local panel,EMR-27-116
+2027-10-06T17:24:31Z,GW-SYS-RTU-WTR3,pump start level (ft),18.0,19.5,local panel,GW-ENG-RAMOS,local panel,EMR-27-118
+2027-10-06T22:03:49Z,GW-SYS-RTU-WTR1,tank high-level alarm (ft),31.5,31.0,local panel,GW-TEC-CHAVEZ,local panel,EMR-27-119
+2027-10-10T23:02:28Z,GW-SYS-RTU-WTR1,booster discharge setpoint (psi),70,72,local panel,GW-ENG-VILLARREAL,local panel,EMR-27-121
+2027-10-12T12:14:00Z,GW-SYS-RTU-UTL1,P-3 discharge pressure setpoint (psi),68,85,local panel,GW-ENG-RUIZ,GW-WTP-HMI-01,SI-2027-CC-001
+2027-10-12T12:26:00Z,GW-SYS-RTU-WTR3,booster discharge setpoint (psi),54,72,local panel,GW-ENG-RUIZ,local panel,SI-2027-CC-001
+2027-10-17T12:38:28Z,GW-SYS-RTU-WTR2,booster discharge setpoint (psi),70,72,local panel,GW-ENG-GARZA,local panel,EMR-27-123
+2027-10-19T16:12:43Z,GW-SYS-RTU-01,relay 27-UV pickup (pu),0.94,0.88,local panel,GW-ENG-RAMOS,local panel,SI-2027-CC-001
+2027-10-19T16:47:43Z,GW-SYS-RTU-02,relays R-02A/B/C overcurrent trip (A),2400,1200,local panel,GW-ENG-RAMOS,local panel,SI-2027-CC-001
+2027-10-20T18:37:35Z,GW-WTP-DCS-01,filter backwash interval (h),48,36,local panel,GW-ENG-CLARK,local panel,EMR-27-125
+2027-10-20T19:23:43Z,GW-SYS-RTU-01,relay 51 time dial,2.0,2.5,local panel,GW-WTR-SANCHEZ,local panel,EMR-27-128
+2027-10-21T22:56:34Z,GW-SYS-RTU-02,relay 51 time dial,2.0,2.5,local panel,GW-WTR-MORALES,local panel,EMR-27-129
+2027-10-22T00:46:25Z,GW-SYS-RTU-04,breaker failure timer (cycles),12,10,local panel,GW-ENG-RAMOS,local panel,EMR-27-131
+2027-10-27T19:58:49Z,GW-WTP-DCS-01,chlorine residual alarm low (mg/L),0.5,0.6,remote write,GW-TEC-ADAMS,GW-SYS-JMP-01,CHG-27-0823
+2027-10-29T21:35:28Z,GW-SYS-RTU-WTR1,tank high-level alarm (ft),31.5,31.0,remote write,GW-TEC-MORENO,GW-WS-ENG-02,CHG-27-0830
+2027-10-31T17:56:27Z,GW-SYS-RTU-UTL1,configuration file utl1_active.cfg,last_modified 2027-09-21T10:43:30Z,last_modified 2027-10-31T17:56:27Z,file replaced,GW-WTR-MORALES,GW-SYS-JMP-01,CHG-27-0831
+2027-11-01T13:20:59Z,GW-SYS-RTU-05,relay 27-UV pickup (pu),0.90,0.88,local panel,GW-WTR-WHITE,local panel,CHG-27-0825
+2027-11-01T18:21:01Z,GW-SYS-RTU-WTR2,booster discharge setpoint (psi),70,72,local panel,GW-ENG-PATEL,local panel,CHG-27-0831
+2027-11-02T16:33:59Z,GW-SYS-RTU-05,relay 50 instantaneous pickup (A),4800,5200,file replaced,GW-ENG-JOHNSON,GW-SYS-JMP-01,
+2027-11-02T21:14:22Z,GW-SYS-RTU-02,relay 27-UV pickup (pu),0.90,0.88,local panel,GW-WTR-WHITE,local panel,CHG-27-0839
+2027-11-03T13:37:19Z,GW-SYS-RTU-WTR2,booster discharge setpoint (psi),70,72,remote write,GW-WTR-MORALES,GW-SYS-JMP-01,CHG-27-0839
+2027-11-03T17:37:16Z,GW-SYS-RTU-03,transformer LTC band (V),2.0,1.5,remote write,GW-WTR-PENA,GW-SYS-JMP-01,CHG-27-0840
+2027-11-04T18:08:36Z,GW-SYS-RTU-01,relay 51 time dial,2.0,2.5,file replaced,GW-TEC-MARTINEZ,GW-SYS-JMP-01,CHG-27-0825
+2027-11-06T15:09:06Z,GW-SYS-RTU-01,relay 27-UV time delay (s),2.0,1.5,file replaced,GW-WTR-WHITE,GW-WS-ENG-03,CHG-27-0853
+2027-11-07T15:44:19Z,GW-SYS-RTU-01,clock sync source,GPS-A,GPS-B,remote write,GW-WTR-MORALES,GW-WS-ENG-01,CHG-27-0832
+2027-11-07T19:21:47Z,GW-SYS-RTU-01,clock sync source,GPS-A,GPS-B,remote write,GW-WTR-MORALES,GW-SYS-JMP-01,CHG-27-0823
+2027-11-07T22:17:12Z,GW-WTP-DCS-01,configuration file 01_active.cfg,last_modified 2027-06-25T10:56:51Z,last_modified 2027-11-07T22:17:12Z,file replaced,GW-WTR-MORALES,GW-WS-ENG-01,CHG-27-0831
+2027-11-09T14:25:53Z,GW-SYS-RTU-01,relay 27-UV pickup (pu),0.90,0.88,remote write,GW-ENG-RAMOS,GW-WS-ENG-01,CHG-27-0849
+2027-11-11T13:45:21Z,GW-SYS-RTU-02,relay 27-UV pickup (pu),0.90,0.88,remote write,GW-TEC-ADAMS,GW-WS-ENG-04,
+2027-11-11T19:21:34Z,GW-WTP-DCS-01,clearwell level setpoint (ft),14.0,14.5,remote write,GW-ENG-BAKER,GW-SYS-JMP-01,CHG-27-0867
+2027-11-13T20:08:21Z,GW-SYS-RTU-05,feeder CT ratio,600:5,800:5,local panel,GW-WTR-WHITE,local panel,CHG-27-0839
+2027-11-14T22:15:32Z,GW-SYS-RTU-03,transformer LTC band (V),2.0,1.5,remote write,GW-WTR-SANCHEZ,GW-WS-ENG-01,CHG-27-0836
+2027-11-16T18:59:20Z,GW-SYS-RTU-04,configuration file 04_active.cfg,last_modified 2027-10-24T10:44:32Z,last_modified 2027-11-16T18:59:20Z,file replaced,GW-TEC-HERNANDEZ,GW-SYS-JMP-01,CHG-27-0859
+2027-11-16T21:15:35Z,GW-SYS-RTU-05,recloser shots,3,2,remote write,GW-ENG-VILLARREAL,GW-WS-ENG-04,CHG-27-0851
+2027-11-17T13:46:47Z,GW-SYS-RTU-03,relay 51 time dial,2.0,2.5,remote write,GW-ENG-NGUYEN,GW-WS-ENG-02,CHG-27-0866
+2027-11-17T17:12:09Z,GW-SYS-RTU-WTR2,discharge pressure setpoint (psi),82,85,local panel,GW-ENG-MARTINEZ,local panel,CHG-27-0857
+2027-11-18T22:16:34Z,GW-SYS-RTU-03,configuration file 03_active.cfg,last_modified 2027-06-16T17:07:19Z,last_modified 2027-11-18T22:16:34Z,file replaced,GW-ENG-MARTINEZ,GW-SYS-JMP-01,CHG-27-0885
+2027-11-20T13:41:16Z,GW-SYS-RTU-WTR3,discharge pressure setpoint (psi),82,85,remote write,GW-WTR-MORALES,GW-WS-ENG-01,CHG-27-0890
+2027-11-20T21:47:17Z,GW-SYS-RTU-01,configuration file 01_active.cfg,last_modified 2027-10-22T09:25:05Z,last_modified 2027-11-20T21:47:17Z,file replaced,GW-WTR-MORALES,GW-SYS-JMP-01,CHG-27-0872
+2027-11-21T13:15:16Z,GW-SYS-RTU-05,configuration file 05_active.cfg,last_modified 2027-10-12T07:04:10Z,last_modified 2027-11-21T13:15:16Z,file replaced,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-11-21T15:46:36Z,GW-SYS-RTU-02,relay 27-UV pickup (pu),0.90,0.88,local panel,GW-WTR-CANTU,local panel,CHG-27-0864
+2027-11-23T16:25:35Z,GW-SYS-RTU-UTL1,P-3 discharge pressure setpoint (psi),85,82,local panel,GW-TEC-THOMAS,local panel,CHG-27-0896
+2027-11-25T14:43:10Z,GW-SYS-RTU-WTR3,booster discharge setpoint (psi),70,72,remote write,GW-WTR-WHITE,GW-WS-ENG-03,CHG-27-0867
+2027-11-25T15:35:36Z,GW-SYS-RTU-UTL1,configuration file utl1_active.cfg,last_modified 2027-09-10T00:07:51Z,last_modified 2027-11-25T15:35:36Z,file replaced,GW-WTR-WHITE,GW-SYS-JMP-01,CHG-27-0868
+2027-11-27T20:00:02Z,GW-SYS-RTU-01,relay 27-UV pickup (pu),0.90,0.88,remote write,GW-WTR-MORALES,GW-SYS-JMP-01,
+2027-11-29T16:58:45Z,GW-SYS-RTU-WTR1,tank high-level alarm (ft),31.5,31.0,remote write,GW-ENG-JIMENEZ,GW-WS-ENG-03,CHG-27-0892
+2027-12-01T15:32:55Z,GW-WTP-DCS-01,clearwell level setpoint (ft),14.0,14.5,local panel,GW-TEC-SHAH,local panel,
+2027-12-03T19:02:43Z,GW-SYS-RTU-05,relays R-05A/B/C overcurrent trip (A),1000,1200,file replaced,GW-TEC-THOMAS,GW-WS-ENG-03,CHG-27-0929
+2027-12-05T14:58:29Z,GW-WTP-DCS-01,configuration file 01_active.cfg,last_modified 2027-09-11T01:34:26Z,last_modified 2027-12-05T14:58:29Z,file replaced,GW-WTR-PENA,GW-SYS-JMP-01,
+2027-12-05T16:28:20Z,GW-SYS-RTU-05,relays R-05A/B/C overcurrent trip (A),1000,1200,remote write,GW-WTR-PENA,GW-WS-ENG-01,CHG-27-0924
+2027-12-08T23:40:18Z,GW-SYS-RTU-WTR1,low suction cut-out (psi),8,10,local panel,GW-ENG-RUIZ,local panel,CHG-27-0926
+2027-12-09T14:21:54Z,GW-SYS-RTU-03,configuration file 03_active.cfg,last_modified 2027-07-28T13:20:03Z,last_modified 2027-12-09T14:21:54Z,file replaced,GW-ENG-BAKER,GW-WS-ENG-03,CHG-27-0922
+2027-12-10T14:14:10Z,GW-SYS-RTU-05,clock sync source,GPS-A,GPS-B,remote write,GW-ENG-GARZA,GW-SYS-JMP-01,CHG-27-0928
+2027-12-10T15:13:44Z,GW-SYS-RTU-WTR2,pump start level (ft),18.0,19.5,local panel,GW-TEC-SHAH,local panel,CHG-27-0913
+2027-12-10T16:16:20Z,GW-SYS-RTU-04,relay 27-UV time delay (s),2.0,1.5,remote write,GW-TEC-SHAH,GW-WS-ENG-04,CHG-27-0925
+2027-12-10T17:06:04Z,GW-SYS-RTU-02,relays R-02A/B/C overcurrent trip (A),1000,1200,local panel,GW-ENG-JIMENEZ,local panel,
+2027-12-10T19:40:34Z,GW-SYS-RTU-05,clock sync source,GPS-A,GPS-B,remote write,GW-WTR-PENA,GW-WS-ENG-01,CHG-27-0913
+2027-12-11T20:55:28Z,GW-SYS-RTU-04,breaker failure timer (cycles),12,10,local panel,GW-WTR-SANCHEZ,local panel,CHG-27-0914
+2027-12-11T22:22:59Z,GW-SYS-RTU-UTL1,pump start level (ft),18.0,19.5,remote write,GW-WTR-CANTU,GW-WS-ENG-04,CHG-27-0941
+2027-12-12T18:05:36Z,GW-SYS-RTU-WTR1,pump start level (ft),18.0,19.5,local panel,GW-WTR-CANTU,local panel,CHG-27-0928
+2027-12-14T21:04:31Z,GW-SYS-RTU-WTR1,clock sync source,GPS-A,GPS-B,remote write,GW-ENG-LOPEZ,GW-WS-ENG-02,CHG-27-0922
+2027-12-16T20:29:48Z,GW-SYS-RTU-01,relays R-01A/B/C overcurrent trip (A),1000,1200,local panel,GW-ENG-JOHNSON,local panel,CHG-27-0943
+2027-12-17T15:41:44Z,GW-SYS-RTU-02,breaker failure timer (cycles),12,10,local panel,GW-TEC-THOMAS,local panel,
+2027-12-17T16:48:46Z,GW-SYS-RTU-WTR2,low suction cut-out (psi),8,10,local panel,GW-TEC-THOMAS,local panel,CHG-27-0940
+2027-12-17T17:21:09Z,GW-SYS-RTU-UTL1,booster discharge setpoint (psi),70,72,remote write,GW-TEC-ADAMS,GW-SYS-JMP-01,CHG-27-0936
+2027-12-17T18:40:35Z,GW-SYS-RTU-WTR1,discharge pressure setpoint (psi),82,85,remote write,GW-ENG-RAMOS,GW-SYS-JMP-01,CHG-27-0951
+2027-12-17T20:14:45Z,GW-SYS-RTU-03,relay 51 time dial,2.0,2.5,local panel,GW-TEC-MORENO,local panel,CHG-27-0952
+2027-12-18T16:20:39Z,GW-SYS-RTU-04,relay 50 instantaneous pickup (A),4800,5200,local panel,GW-WTR-MORALES,local panel,CHG-27-0935
+2027-12-18T20:09:59Z,GW-SYS-RTU-WTR2,configuration file wtr2_active.cfg,last_modified 2027-09-18T10:53:20Z,last_modified 2027-12-18T20:09:59Z,file replaced,GW-WTR-PENA,GW-SYS-JMP-01,
+2027-12-20T17:02:05Z,GW-SYS-RTU-04,feeder CT ratio,600:5,800:5,local panel,GW-TEC-CHAVEZ,local panel,CHG-27-0957
+2027-12-21T13:01:06Z,GW-SYS-RTU-WTR3,booster discharge setpoint (psi),70,72,local panel,GW-TEC-ADAMS,local panel,CHG-27-0943
+2027-12-21T19:49:24Z,GW-SYS-RTU-UTL1,clock sync source,GPS-A,GPS-B,remote write,GW-TEC-MARTINEZ,GW-WS-ENG-05,CHG-27-0961
+2027-12-22T17:07:59Z,GW-SYS-RTU-UTL1,booster discharge setpoint (psi),70,72,local panel,GW-WTR-MORALES,local panel,CHG-27-0950
+2027-12-23T23:23:18Z,GW-SYS-RTU-WTR3,configuration file wtr3_active.cfg,last_modified 2027-09-14T17:12:12Z,last_modified 2027-12-23T23:23:18Z,file replaced,GW-ENG-RUIZ,GW-SYS-JMP-01,CHG-27-0950
+2027-12-27T14:06:56Z,GW-SYS-RTU-02,clock sync source,GPS-A,GPS-B,remote write,GW-TEC-HERNANDEZ,GW-WS-ENG-02,CHG-27-0951
+2027-12-29T21:27:33Z,GW-SYS-RTU-WTR2,low suction cut-out (psi),8,10,local panel,GW-TEC-WILSON,local panel,CHG-27-0961
+2027-12-31T14:38:14Z,GW-SYS-RTU-UTL1,P-3 discharge pressure setpoint (psi),82,85,remote write,GW-WTR-WHITE,GW-WS-ENG-03,CHG-27-1003
+2027-12-31T15:52:06Z,GW-SYS-RTU-04,feeder CT ratio,600:5,800:5,local panel,GW-WTR-WHITE,local panel,
+2028-01-04T14:36:31Z,GW-SYS-RTU-02,relay 51 time dial,2.0,2.5,local panel,GW-ENG-BAKER,local panel,CHG-27-0987
+2028-01-06T20:44:54Z,GW-WTP-DCS-01,configuration file 01_active.cfg,last_modified 2027-08-11T20:44:54Z,last_modified 2028-01-06T20:44:54Z,file replaced,GW-ENG-SMITH,GW-WS-ENG-04,CHG-27-0995
+2028-01-08T13:08:37Z,GW-SYS-RTU-WTR2,pump start level (ft),18.0,19.5,remote write,GW-WTR-SANCHEZ,GW-WS-ENG-01,CHG-27-1021
+2028-01-08T17:17:45Z,GW-SYS-RTU-WTR1,tank high-level alarm (ft),31.5,31.0,remote write,GW-WTR-WHITE,GW-WS-ENG-03,CHG-27-1024
+2028-01-09T19:52:31Z,GW-SYS-RTU-03,relays R-03A/B/C overcurrent trip (A),1200,1000,remote write,GW-WTR-CANTU,GW-SYS-JMP-01,
+2028-01-09T20:44:02Z,GW-SYS-RTU-04,relays R-04A/B/C overcurrent trip (A),1000,1200,remote write,GW-WTR-CANTU,GW-SYS-JMP-01,CHG-27-1019
+2028-01-09T20:58:32Z,GW-SYS-RTU-05,configuration file 05_active.cfg,last_modified 2027-07-08T05:30:47Z,last_modified 2028-01-09T20:58:32Z,file replaced,GW-WTR-CANTU,GW-SYS-JMP-01,CHG-27-1003

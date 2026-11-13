@@ -6,8 +6,12 @@
 #open	2027-12-26-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1829805890.027791	-	10.14.20.18	64.211.79.65	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1829823794.188834	-	10.14.22.28	35.204.89.191	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1829841219.649597	-	10.14.22.23	185.164.174.51	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1829849253.360183	-	10.14.30.57	216.223.153.143	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1829785181.011355	-	10.14.21.14	69.50.18.138	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.21.14	69.50.18.138	443	Notice::ACTION_LOG
+1829787393.602365	-	10.14.30.33	69.50.18.138	443	SSL::Certificate_Expires_Soon	Certificate www.pumpworks-service.com is going to expire soon	10.14.30.33	69.50.18.138	443	Notice::ACTION_LOG
+1829787994.961711	-	10.14.21.47	104.110.7.66	443	Conn::Content_Gap	api.insurance-claims-portal.com content gap (1160 bytes missing)	10.14.21.47	104.110.7.66	443	Notice::ACTION_LOG
+1829797410.078455	-	10.14.22.31	52.95.38.188	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.22.31	52.95.38.188	443	Notice::ACTION_LOG
+1829805982.330345	-	10.14.30.27	10.14.10.5	53	DNS::External_Name	portal-test.cbpwa-services.org is pointing to a local host	10.14.30.27	10.14.10.5	53	Notice::ACTION_LOG
+1829809076.078286	-	10.14.30.30	108.202.131.235	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.30.30	108.202.131.235	443	Notice::ACTION_LOG
+1829819743.341720	-	10.14.22.34	52.26.190.130	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.22.34	52.26.190.130	443	Notice::ACTION_LOG
+1829823343.953727	-	10.14.22.13	157.136.186.81	443	SSL::Certificate_Expires_Soon	Certificate www-2.bayside-ledger.example is going to expire soon	10.14.22.13	157.136.186.81	443	Notice::ACTION_LOG
 #close	2027-12-27-00-00-00

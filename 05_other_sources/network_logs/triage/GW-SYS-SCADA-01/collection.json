@@ -1,0 +1,62 @@
+{
+ "host": "GW-SYS-SCADA-01",
+ "ip": "10.72.1.30",
+ "os": "Windows Server 2019",
+ "collected_utc": "2027-10-13T15:03:11Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 12,
+   "sha256": "bd4ad70e5c36798340e24d795747c7f633a025e5b64337da3161e6de64de3a25"
+  },
+  "file_listing.csv": {
+   "rows": 42,
+   "sha256": "c39dbb2096c32fae8fa4ec4a9436435f0f089613b5f8c4e8aa582dc6c522f561"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "65ae34299e18f315363529fd395a39169e1d1f754285455a1b6d2e35920dbcfc"
+  },
+  "autoruns.csv": {
+   "rows": 14,
+   "sha256": "a51204aac23116948f393df48b73de9a9402c3f8bf90363600fce675032e509c"
+  },
+  "execution_history.csv": {
+   "rows": 12,
+   "sha256": "2f3d3ecf8a15a24ee8becd9d48c69d7754038fed52143138f47aff9772221f31"
+  },
+  "logon_history.csv": {
+   "rows": 67,
+   "sha256": "698e57f992cc6ccb32ce3f49bd2d6cc05631d40af51dfddb5dccc4ee58a24823"
+  },
+  "installed_software.csv": {
+   "rows": 2,
+   "sha256": "5486e81bd9d3a77d7bc5b78dc56c849f8b7b978acd472ae007a03c6ff48ab480"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "61ff2fd17b5cec81daa3e90b2310e43eefabc986f5e106342d676bc99ce7626c"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/alarmlist_export.exe.placeholder.txt",
+   "stands_in_for": "C:\\Support\\alarmlist_export.exe",
+   "sha256": "f5b8a8fa1cc326740074c665d8eb0a62721e94fec6542b10308d4b3f280f497d"
+  },
+  {
+   "file": "placeholders/serialterm.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\bin\\serialterm.exe",
+   "sha256": "682e6a9bdd285c38b702b712b5f4ed2412c4a9e72908987d59de51713b1831b8"
+  },
+  {
+   "file": "placeholders/exportcsv.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\exportcsv.exe",
+   "sha256": "fd4f5b036f38d9039ead83cc3c5d6a5f22776a42d98c7e085f57f8ff027cac13"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

@@ -6,8 +6,10 @@
 #open	2027-08-12-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1818046824.666215	-	10.14.30.45	64.102.136.8	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1818051300.000000	-	10.14.12.21	-	-	Scan::Port_Scan	internal scanner swept 10.14.20.0/24 (scheduled)	10.14.12.21	-	-	Notice::ACTION_LOG
-1818071943.961956	-	10.14.30.51	69.90.2.11	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1818099374.586915	-	10.14.22.36	185.89.22.232	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1818040769.905904	-	10.14.30.44	142.29.151.184	443	Weird::Activity	possible_split_routing	10.14.30.44	142.29.151.184	443	Notice::ACTION_LOG
+1818051312.233086	-	10.14.12.21	-	-	Scan::Port_Scan	10.14.12.21 scanned at least 233 unique hosts on port 445/tcp in 8m23s	10.14.12.21	-	-	Notice::ACTION_LOG
+1818070564.606065	-	10.14.22.12	10.14.10.6	53	DNS::External_Name	gis-preview.cbpwa-services.org is pointing to a local host	10.14.22.12	10.14.10.6	53	Notice::ACTION_LOG
+1818078741.136599	-	10.14.30.67	199.52.45.214	443	SSL::Certificate_Expires_Soon	Certificate login.weatherradar-tiles.com is going to expire soon	10.14.30.67	199.52.45.214	443	Notice::ACTION_LOG
+1818100759.844294	-	10.14.21.15	64.219.140.227	443	Weird::Activity	possible_split_routing	10.14.21.15	64.219.140.227	443	Notice::ACTION_LOG
+1818105580.799882	-	10.14.21.39	205.12.151.203	443	SSL::Certificate_Expires_Soon	Certificate static.officesuite-mail.com is going to expire soon	10.14.21.39	205.12.151.203	443	Notice::ACTION_LOG
 #close	2027-08-13-00-00-00

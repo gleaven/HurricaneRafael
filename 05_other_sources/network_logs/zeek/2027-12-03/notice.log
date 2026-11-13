@@ -6,8 +6,4 @@
 #open	2027-12-03-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1827807031.155319	-	10.14.30.11	185.164.174.51	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1827853120.261827	-	10.14.21.21	205.206.104.197	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1827865200.886451	-	10.14.21.39	35.204.89.191	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1827874054.013771	-	10.14.30.24	205.184.149.36	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
 #close	2027-12-04-00-00-00

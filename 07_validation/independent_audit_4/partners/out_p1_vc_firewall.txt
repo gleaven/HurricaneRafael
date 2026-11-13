@@ -1,0 +1,147 @@
+
+### firewall.device nunique=8
+org                bcmc    brw   city  county  nascc   port   srmc
+device                                                            
+BCMC-FW-EDGE-01   27928      0      0       0      0      0      0
+BRW-FW-DMZ-01         0   1592      0       0      0      0      0
+BRW-FW-EDGE-01        0  28261      0       0      0      0      0
+CC-FW-EDGE-01         0      0  65578       0      0      0      0
+NASCC-FW-EDGE-01      0      0      0       0  44805      0      0
+NC-FW-EDGE-01         0      0      0   36663      0      0      0
+PCCA-FW-EDGE-01       0      0      0       0      0  33233      0
+SRMC-FW-EDGE-01       0      0      0       0      0      0  39266
+
+### firewall.action nunique=2
+org      bcmc    brw   city  county  nascc   port   srmc
+action                                                  
+allow   25141  26387  57246   32365  39695  28805  33166
+deny     2787   3466   8332    4298   5110   4428   6100
+
+### firewall.rule_name nunique=63 per org {'bcmc': 9, 'brw': 10, 'city': 7, 'county': 9, 'nascc': 10, 'port': 9, 'srmc': 9}
+
+### firewall.src_zone nunique=17
+org          bcmc    brw   city  county  nascc   port   srmc
+src_zone                                                    
+DMZ             0      0      0    1457      0      0      0
+Internet        0      0      0   11067      0      0      0
+Servers         0      0      0   12068      0      0      0
+Users           0      0      0   11958      0      0      0
+clinical        0      0      0       0      0      0   9277
+datacenter      0      0      0       0      0      0  11934
+dmz           886   1051      0       0   2283   1281   1381
+inside      17327      0      0       0      0  21568      0
+internet        0   1592  31384       0      0      0  16542
+lan             0  18695      0       0      0      0      0
+outside      9628      0      0       0      0  10287      0
+servers         0      0  16345       0      0      0      0
+trust           0      0      0       0  17464      0      0
+untrust         0      0      0       0  25058      0      0
+users           0      0  17849       0      0      0      0
+vpn            87    147      0     113      0     97    132
+wan             0   8368      0       0      0      0      0
+
+### firewall.dst_zone nunique=7
+org        bcmc    brw   city  county  nascc   port   srmc
+dst_zone                                                  
+DMZ           0      0      0   11067      0      0      0
+Internet      0      0      0   25596      0      0      0
+dmz        9628   9960  31384       0  25058  10287  16542
+internet      0      0  34194       0      0      0  22724
+outside   18300      0      0       0      0  22946      0
+untrust       0      0      0       0  19747      0      0
+wan           0  19893      0       0      0      0      0
+
+### firewall.src_ip nunique=32670 per org {'bcmc': 3379, 'brw': 3853, 'city': 10082, 'county': 3729, 'nascc': 7556, 'port': 3634, 'srmc': 5489}
+
+### firewall.src_port nunique=62042 per org {'bcmc': 20919, 'brw': 22069, 'city': 38564, 'county': 25553, 'nascc': 30950, 'port': 23881, 'srmc': 27634}
+
+### firewall.dst_ip nunique=2202 per org {'bcmc': 534, 'brw': 530, 'city': 452, 'county': 598, 'nascc': 590, 'port': 584, 'srmc': 595}
+
+### firewall.dst_port nunique=35
+org        bcmc    brw   city  county  nascc   port   srmc
+dst_port                                                  
+0           657    730    864     765    690    737    875
+11211        38     34    113      45     73     53     60
+123         947   1009   1094     961   1024    973   1018
+1433        132    143    359     168    198    217    273
+161          86    105    256     164    161    166    206
+1900         47     76    202      90    115     93    140
+21           67     64    171      86    111     86    152
+22          241   1355    724     354    458    383    513
+23          242    350    770     452    525    423    528
+2323         57     80    169     107    110    110    140
+25         3711   3554    206    5642   9061   4957   5561
+27017        31     22     86      62     70     38     58
+3306         60     92    192     102    114    103    123
+3389        242    281    674     379    461    366    513
+37215        40     25    103      28     49     68     56
+443       11223  11799  38692   13440  20129  11199  14772
+445         336    360    857     422    540    401    603
+4500        284      0    415     293      0      0    826
+5060        116    154    339     168    224    161    272
+5223          0      0      0       0      0    412      0
+53         7100   7342  13664    9803   7359   8844   8511
+5432         30     47    101      43     74     63     86
+5555         51     69    177      68     94     76    123
+5900         92    119    232     151    175    139    199
+6379        105     91    287     142    111    147    220
+6661        700      0      0       0      0      0   1248
+7547         71     75    207      89    112     99    124
+80          917    931   2697    1539   1577   1250   1356
+8080        154    168    530     183    252    260    374
+8088         33     37     75      51     41     67     53
+81           27     52     89      33     49     39     66
+8443         66     72   1145     787    782    117    146
+8883          0    221      0       0      0   1149      0
+9200         25     25     88      46     66     37     71
+9418          0    371      0       0      0      0      0
+
+### firewall.proto nunique=3
+org     bcmc    brw   city  county  nascc   port   srmc
+proto                                                  
+icmp     657    730    864     765    690    737    875
+tcp    18653  20403  48631   24374  35159  22206  27358
+udp     8618   8720  16083   11524   8956  10290  11033
+
+### firewall.app nunique=22
+org             bcmc    brw   city  county  nascc   port   srmc
+app                                                            
+-                391    388   1162     523    649    581    798
+dns             7100   7342  13664    9803   7359   8844   8511
+ftp               67     64    171      86    111     86    152
+git                0    371      0       0      0      0      0
+hl7              700      0      0       0      0      0   1248
+ipsec-esp-udp    284      0    415     293      0      0    826
+mqtt               0    221      0       0      0   1149      0
+ms-ds-smb        336    360    857     422    540    401    603
+ms-rdp           242    281    674     379    461    366    513
+mssql            132    143    359     168    198    217    273
+mysql             60     92    192     102    114    103    123
+ntp              947   1009   1094     961   1024    973   1018
+ping             657    730    864     765    690    737    875
+sip              116    154    339     168    224    161    272
+smtp            3711   3554    206    5642   9061   4957   5561
+snmp              86    105    256     164    161    166    206
+ssdp              47     76    202      90    115     93    140
+ssh              241   1355    724     354    458    383    513
+ssl            11289  11871  39837   14227  20911  11728  14918
+telnet           299    430    939     559    635    533    668
+vnc               92    119    232     151    175    139    199
+web-browsing    1131   1188   3391    1806   1919   1616   1849
+
+### firewall.bytes_sent nunique=55381 per org {'bcmc': 12798, 'brw': 11364, 'city': 10208, 'county': 14209, 'nascc': 17154, 'port': 13184, 'srmc': 17536}
+
+### firewall.bytes_recv nunique=93859 per org {'bcmc': 13172, 'brw': 12503, 'city': 35447, 'county': 15345, 'nascc': 19579, 'port': 13621, 'srmc': 17261}
+
+### firewall.duration_s nunique=14689 per org {'bcmc': 4019, 'brw': 3328, 'city': 1668, 'county': 2886, 'nascc': 1176, 'port': 3265, 'srmc': 6066}
+
+### firewall.nat_src_ip nunique=126 per org {'bcmc': 3, 'brw': 110, 'city': 5, 'county': 4, 'nascc': 3, 'port': 4, 'srmc': 3}
+
+### firewall.session_end_reason nunique=5
+org                   bcmc    brw   city  county  nascc   port   srmc
+session_end_reason                                                   
+aged-out              9072   9755  16535   11819   9874  10562  11279
+policy-deny           2787   3466   8332    4298   5110   4428   6100
+tcp-fin              15100  14140  36457   18485  26148  16908  19862
+tcp-rst-from-client    585   2108   2176     947   2857    717   1002
+tcp-rst-from-server    384    384   2078    1114    816    618   1023

@@ -136,8 +136,8 @@ RHEL, UBU = "Red Hat Enterprise Linux 8", "Ubuntu Server 22.04 LTS"
 
 # ---------------- corporate network gear
 host("GW-FW-EDGE-01", "corp-mgmt", 1, "Internet edge firewall (active)", "Firewall OS 7.4", "firewall", "Network", crit="critical",
-     aliases=["FW-EDGE-01"], vendor="Bastille Networks")
-host("GW-FW-EDGE-02", "corp-mgmt", 2, "Internet edge firewall (standby)", "Firewall OS 7.4", "firewall", "Network", crit="critical", vendor="Bastille Networks")
+     aliases=["FW-EDGE-01"], vendor="Corvane Networks")
+host("GW-FW-EDGE-02", "corp-mgmt", 2, "Internet edge firewall (standby)", "Firewall OS 7.4", "firewall", "Network", crit="critical", vendor="Corvane Networks")
 host("GW-SW-CORE-01", "corp-mgmt", 11, "Core switch, headquarters", "Switch OS 17.9", "switch", "Network", crit="high")
 host("GW-SW-CORE-02", "corp-mgmt", 12, "Core switch, headquarters", "Switch OS 17.9", "switch", "Network", crit="high")
 for i in range(1, 7):
@@ -162,20 +162,20 @@ SRV = [
     ("GW-SRV-CIS-01", 46, "Customer information and billing system", WS19, "high"),
     ("GW-SRV-OMS-01", 47, "Outage management system", WS19, "critical"),
     ("GW-SRV-GIS-01", 48, "Geographic information system", WS19, "medium"),
-    ("GW-SRV-MAXIMO-01", 49, "Work-order and asset management (Maximo 7.6)", WS19, "medium"),
+    ("GW-SRV-WAM-01", 49, "Work-order and asset management (FieldLedger 7.6)", WS19, "medium"),
     ("GW-SRV-HR-01", 50, "HR, timekeeping and leave system", WS19, "medium"),
     ("GW-SRV-IVR-01", 52, "Customer call centre IVR", WS16, "medium"),
     ("GW-SRV-COMMS-01", 53, "Radio dispatch gateway", WS16, "high"),
-    ("GW-SRV-WSUS-01", 60, "Patch management", WS19, "medium"),
+    ("GW-SRV-PATCH-01", 60, "Patch management", WS19, "medium"),
     ("GW-SRV-BKP-01", 61, "Backup server", WS19, "high"),
-    ("GW-SRV-SCCM-01", 62, "Endpoint configuration management", WS19, "medium"),
+    ("GW-SRV-ECM-01", 62, "Endpoint configuration management", WS19, "medium"),
     ("GW-SRV-CA-01", 63, "Certificate authority", WS19, "high"),
     ("GW-SRV-RADIUS-01", 64, "RADIUS / network policy server", WS19, "high"),
     ("GW-SRV-INTRA-01", 70, "Intranet and document management", WS19, "low"),
     ("GW-SRV-VDI-01", 71, "Virtual desktop broker", WS19, "medium"),
-    ("GW-SRV-HV-01", 80, "Virtualisation host", "VMware ESXi 7.0", "high"),
-    ("GW-SRV-HV-02", 81, "Virtualisation host", "VMware ESXi 7.0", "high"),
-    ("GW-SRV-HV-03", 82, "Virtualisation host", "VMware ESXi 7.0", "high"),
+    ("GW-SRV-HV-01", 80, "Virtualisation host", "HostVisor 7.0", "high"),
+    ("GW-SRV-HV-02", 81, "Virtualisation host", "HostVisor 7.0", "high"),
+    ("GW-SRV-HV-03", 82, "Virtualisation host", "HostVisor 7.0", "high"),
     ("GW-SAN-01", 90, "Storage array controller", "Array OS 9.2", "high"),
 ]
 for n, last, role, os_, crit in SRV:
@@ -203,15 +203,15 @@ host("GW-SRV-DNSX-01", "inet-dmz", 40, "External DNS", UBU, "server", "Network")
 host("GW-SRV-MFT-01", "inet-dmz", 41, "Managed file transfer (regulatory and ERCOT filings)", RHEL, "server", "IT Infrastructure")
 
 # ---------------- IT/OT DMZ
-host("GW-OT-FW-01", "ot-dmz", 1, "IT/OT boundary firewall", "Industrial firewall OS 6.2", "firewall", "OT Engineering", crit="critical", vendor="Bastille Networks")
-host("GW-OT-FW-02", "ot-dmz", 2, "IT/OT boundary firewall (standby)", "Industrial firewall OS 6.2", "firewall", "OT Engineering", crit="critical", vendor="Bastille Networks")
+host("GW-OT-FW-01", "ot-dmz", 1, "IT/OT boundary firewall", "Industrial firewall OS 6.2", "firewall", "OT Engineering", crit="critical", vendor="Corvane Networks")
+host("GW-OT-FW-02", "ot-dmz", 2, "IT/OT boundary firewall (standby)", "Industrial firewall OS 6.2", "firewall", "OT Engineering", crit="critical", vendor="Corvane Networks")
 host("GW-SYS-JMP-01", "ot-dmz", 88, "Remote-access gateway and jump host for OT (ClearPath SecureReach 2.1)", WS16, "jump host", "OT Engineering",
      asset_tag="GW-SYS-JMP-01", vendor="ClearPath Network Solutions", crit="critical", aliases=["VPN-GW-01", "ClearPath VPN Gateway"],
      note="Pivot for every OT session in T8/T9/T10: 14 sessions under GW-ENG-VELA from outside Texas (D-7 to D+16), historian sessions, breaker-open commands relayed through GW-WS-OPS-02. Taken offline D+28 12:30Z.")
 host("GW-SRV-HIST-DMZ", "ot-dmz", 20, "Historian replica for business users (read-only)", WS19, "server", "OT Engineering", vendor="Meridian Controls Corp")
 host("GW-SRV-OTPATCH-01", "ot-dmz", 30, "OT patch and antivirus staging", WS19, "server", "OT Engineering")
 host("GW-SRV-OTXFER-01", "ot-dmz", 31, "OT file transfer broker", RHEL, "server", "OT Engineering")
-host("GW-NET-MON-01", "ot-dmz", 50, "Network sensor, IT/OT boundary (Zeek)", UBU, "sensor", "Security Operations", aliases=["GW-NET-MON"],
+host("GW-NET-MON-01", "ot-dmz", 50, "Network sensor, core and IT/OT boundary taps (Zeek)", UBU, "sensor", "Security Operations", aliases=["GW-NET-MON"],
      note="Zeek sensor producing conn/dns/notice logs for the IT/OT boundary.")
 host("GW-SRV-SIEM-OT", "ot-dmz", 51, "SIEM log collector (OT)", RHEL, "server", "Security Operations", vendor="Vantage Security Systems")
 
@@ -485,11 +485,11 @@ for i in range(6):
 service_accounts = [
     ("svc_backup", "Backup agent", "IT Infrastructure", ["GW-SRV-BKP-01"], "nightly 22:00-04:00"),
     ("svc_sql_erp", "Finance database service", "IT Infrastructure", ["GW-SRV-SQL-01", "GW-SRV-SQL-02", "GW-SRV-ERP-01"], "continuous"),
-    ("svc_maximo", "Work-order system integration", "IT Infrastructure", ["GW-SRV-MAXIMO-01", "GW-SRV-SQL-01"], "continuous"),
+    ("svc_wam", "Work-order system integration", "IT Infrastructure", ["GW-SRV-WAM-01", "GW-SRV-SQL-01"], "continuous"),
     ("svc_oms", "Outage management integration", "IT Infrastructure", ["GW-SRV-OMS-01", "GW-SRV-GIS-01"], "continuous"),
     ("svc_gis_sync", "GIS replication", "GIS and Planning", ["GW-SRV-GIS-01", "GW-SRV-FILE-02"], "hourly"),
-    ("svc_sccm", "Endpoint configuration management", "IT Infrastructure", ["GW-SRV-SCCM-01"], "continuous"),
-    ("svc_wsus", "Patch distribution", "IT Infrastructure", ["GW-SRV-WSUS-01"], "nightly"),
+    ("svc_ecm", "Endpoint configuration management", "IT Infrastructure", ["GW-SRV-ECM-01"], "continuous"),
+    ("svc_patch", "Patch distribution", "IT Infrastructure", ["GW-SRV-PATCH-01"], "nightly"),
     ("svc_print", "Print spooler", "IT Infrastructure", ["GW-SRV-PRINT-01"], "continuous"),
     ("svc_siem_collect", "SIEM log collection", "Security Operations", ["GW-SRV-SIEM-01", "GW-SRV-SIEM-02", "GW-SRV-SIEM-OT"], "continuous"),
     ("svc_edr", "Endpoint protection updates", "Security Operations", ["GW-SRV-EDR-01"], "continuous"),
@@ -528,7 +528,7 @@ external = [
 
 registry = {
     "metadata": {"organisation": UTILITY, "abbr": ABBR, "description": "IT and OT hosts, network zones, equipment and accounts of the utility, for joining with network, SIEM, historian and work-order records.",
-                 "ad_domain": AD_DOMAIN, "ot_domain": OT_DOMAIN, "mail_domain": MAIL_DOMAIN, "public_address_block": "203.0.113.16/28",
+                 "ad_domain": AD_DOMAIN, "ot_domain": OT_DOMAIN, "mail_domain": MAIL_DOMAIN, "public_address_block": "12.186.44.64/28",
                  "siem": "Sentinel Edge 3.1 (Vantage Security Systems)", "scada": "Meridian HorizonView 4.2 (Meridian Controls Corp)",
                  "ot_remote_access": "ClearPath SecureReach 2.1 on GW-SYS-JMP-01 (ClearPath Network Solutions)",
                  "naming": {"workstations": "GW-WS-IT-nn (corporate), GW-LT-FLD-nn (field laptops), GW-WS-OPS-nn (operator consoles), GW-WS-ENG-nn (engineering)",
@@ -558,7 +558,7 @@ OLD_REG = {"GW-HIST-01": "GW-SRV-HIST-01", "GW-HIST-02": "GW-SRV-HIST-02", "GW-E
            "GW-RTU-PWR-01": "GW-SYS-RTAC-UTL1-A", "GW-RTU-PWR-02": "GW-SYS-RTAC-UTL1-B", "GW-DMZ-01": "GW-SYS-JMP-01", "GW-IT-04": "GW-WS-IT-04",
            "GW-IT-EDR": "GW-SRV-EDR-01", "GW-IT-AD": "GW-SRV-DC-01", "GW-IT-EMAIL": "GW-SRV-MAIL-01", "GW-IT-FW": "GW-FW-EDGE-01", "GW-OT-FW": "GW-OT-FW-01",
            "GW-NET-MON": "GW-NET-MON-01", "GW-SCADA-SRV": "GW-SYS-SCADA-01", "GW-DCS-WTP": "GW-WTP-DCS-01", "GW-RTU-WW-01": "none (city wastewater)",
-           "GW-BACKUP-PWR": "GW-WTP-GEN-CTRL", "GW-PSTN-01": "GW-SRV-COMMS-01", "GW-MAXIMO": "GW-SRV-MAXIMO-01", "HOST-911-01": "EXT-CAD-01",
+           "GW-BACKUP-PWR": "GW-WTP-GEN-CTRL", "GW-PSTN-01": "GW-SRV-COMMS-01", "GW-MAXIMO": "GW-SRV-WAM-01", "HOST-911-01": "EXT-CAD-01",
            "HOST-PORTAL-01": "EXT-AIDPORTAL-01", "HOST-DOD-LOG-02": "EXT-NASLOG-02", "HOST-VSL-01": "EXT-KALVORA-CCS + EXT-OSTREL-CCS"}
 SIEM_HOST = {"FW-EDGE-01": "GW-FW-EDGE-01", "VPN-GW-01": "GW-SYS-JMP-01", "GW-WS-IT-44": "GW-WS-IT-04", "GW-SRV-DC-01": "GW-SRV-DC-01", "GW-SRV-FILE-01": "GW-SRV-FILE-01",
              "GW-SRV-PRINT-01": "GW-SRV-PRINT-01", "HIST-SRV-01": "GW-SRV-HIST-01", "SCADA-SRV-01": "GW-SYS-SCADA-01", "RTU-PWR": "GW-SYS-RTAC-UTL1-A",
@@ -575,7 +575,7 @@ truth = {
     "adversary_infrastructure": {
         "c2_first_beacon": {"dst_ip": "104.21.88.43", "dst_port": 443, "sni": "update-cdn.vantagesec-telemetry.net", "first_seen_utc": "2027-08-31T03:17Z", "last_seen_utc": "2027-10-12T10:04Z", "alert_family": "SE3-NET-9941"},
         "lookalike_domains": ["cbpwa-vendor-support.com (lure sender)", "update-cdn.meridiancontrols.net", "update-cdn.vantagesec-telemetry.net"],
-        "lure_attachment": "FEMA-PREP-GUIDANCE-2027.pdf.exe",
+        "lure_attachment": "FEMA-PREP-GUIDANCE-2027.zip (mail log); FEMA-PREP-GUIDANCE-2027.pdf.exe inside it (host logs)",
         "vpn_exit_blocks": {"tor_exit": "185.220.101.0/24 (sessions D-7 to D-4 and D-3)", "nl_vps": "45.141.152.0/24 (D+7 14:27-14:33Z and later)",
                             "hosting_asn_198765": ["198.51.47.0/24", "198.51.48.0/24"], "asn_labels": ["AS-209144 (SIEM enrichment label)", "ASN 198765 Meridian Transit Hosting, NL (CISA annex)"]},
         "session_count": 14, "session_window": "D-7 to D+18 (2027-09-07 to 2027-10-02)", "historian_session_ids": ["HIST-20270907-00441", "HIST-20271002-00917"],
@@ -596,7 +596,7 @@ truth = {
                              "10.72.3.10": ipmap["GW-SYS-RTU-UTL1"], "10.72.3.11": ipmap["GW-SYS-RTAC-UTL1-A"], "10.72.3.12": ipmap["GW-SYS-RTAC-UTL1-B"], "10.72.3.20": ipmap["GW-WTP-DCS-01"],
                              "10.72.3.30": "n/a (city wastewater)", "10.72.4.1": ipmap["GW-OT-FW-01"], "10.72.4.50": ipmap["GW-NET-MON-01"], "10.72.4.88": ipmap["GW-SYS-JMP-01"],
                              "192.168.100.1": ipmap["GW-FW-EDGE-01"], "192.168.100.5": ipmap["GW-SRV-DC-01"], "192.168.100.10": ipmap["GW-SRV-EDR-01"], "192.168.100.20": ipmap["GW-SRV-MAIL-01"],
-                             "192.168.100.44": ipmap["GW-WS-IT-04"], "192.168.100.80": ipmap["GW-SRV-COMMS-01"], "192.168.100.90": ipmap["GW-SRV-MAXIMO-01"], "198.51.100.42": "192.0.2.70 (Brightwake remote-maintenance gateway)"},
+                             "192.168.100.44": ipmap["GW-WS-IT-04"], "192.168.100.80": ipmap["GW-SRV-COMMS-01"], "192.168.100.90": ipmap["GW-SRV-WAM-01"], "198.51.100.42": "192.0.2.70 (Brightwake remote-maintenance gateway)"},
             "siem_alerts": {"10.72.1.0/24 sources (workstation-like)": "corporate user ranges 10.14.20.0/22", "10.72.2.1, 10.72.2.3, 10.72.2.5": "corporate workstations", "10.72.3.x": "substation and plant devices 10.72.11-15.x, 10.72.30.x",
                             "198.51.100.88, 198.51.100.7, 198.51.100.111, 203.0.113.42, 192.0.2.14, 45.33.32.156": "generic internet noise; choose from documentation ranges but never 198.51.100.44 (reserved for a canon fraud address)",
                             "91.108.56.33, 185.220.101.47": "intruder exits: use adversary_infrastructure blocks"},
@@ -608,7 +608,7 @@ truth = {
                             "GW-PP1-RTU": "GW-SYS-RTU-UTL1", "GW-PWR-RTU": "GW-SYS-RTAC-UTL1-A", "GW-BKP-RTU": "GW-SYS-RTAC-UTL1-B", "GW-GEN-01": "EQP-1140",
                             "GW-SUB01-BKR-MAIN": "same (CB-1)", "GW-SUB02-BKR-MAIN": "same (CB-7)", "GW-SUB03-BKR-MAIN": "same (CB-12)"},
         "names": {"GridWater / GridWater CC / gwcc": "Coastal Bend Power and Water Authority (CBPWA)", "ClearPath SecureReach EDR Server (old registry)": "GW-SRV-EDR-01; ClearPath is the OT remote-access vendor only",
-                  "Dragos OT Firewall (real vendor name in old registry)": "Bastille Networks industrial firewall (fictional)", "AVEVA PI / Yokogawa / Schneider / SEL / GE / Fortinet / Cummins (real vendor names in old files)": "Meridian Controls Corp, Halden Protection, Bastille Networks (fictional)"}},
+                  "Dragos OT Firewall (real vendor name in old registry)": "Corvane Networks industrial firewall (fictional)", "AVEVA PI / Yokogawa / Schneider / SEL / GE / Fortinet / Cummins (real vendor names in old files)": "Meridian Controls Corp, Halden Protection, Corvane Networks (fictional)"}},
     "breaker_yard_designations": {"GW-FAC-SUB-02": {"CB-7": "B2-A (opened by command D+7 14:28Z)", "CB-8": "B2-C (opens by transfer trip with CB-7)"}, "GW-FAC-SUB-03": {"CB-12": "B3-B (opened by command D+10 19:43Z)"}},
     "ids_shared_with_other_registries": {"sites and equipment": "infrastructure_assets.json (GW-FAC-*, EQP-11xx, FAC-UTL-02-A/B, GW-SUB0n-BKR-MAIN, GW-SUB0n-REL-27, GW-FAC-DSS-01)",
                                          "pressure zones": "areas.json AREA-PZ-1..5", "added here": ["GW-SUB0n-CB-<m>", "GW-SUB0n-REL-R0nX", "GW-SUB0n-T1", "GW-SUB0n-BUS", "GW-DSS01-*", "GW-FAC-WTR-0n-BPk",

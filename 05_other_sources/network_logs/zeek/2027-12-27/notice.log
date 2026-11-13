@@ -6,12 +6,6 @@
 #open	2027-12-27-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1829883275.584400	-	10.14.22.12	162.161.100.100	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1829905088.649679	-	10.14.30.33	35.149.39.212	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1829930005.360762	-	10.14.22.19	157.213.180.7	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1829939696.385850	-	10.14.20.33	54.20.233.159	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1829941258.364193	-	10.14.20.33	216.223.153.143	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1829948398.477886	-	10.14.22.24	151.223.11.125	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1829949624.689685	-	10.14.21.27	216.243.199.172	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1829949659.298667	-	10.14.22.19	54.104.64.23	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+1829884486.541249	-	10.14.30.40	40.247.95.23	443	SSL::Certificate_Expires_Soon	Certificate cdn.airline-bookings.net is going to expire soon	10.14.30.40	40.247.95.23	443	Notice::ACTION_LOG
+1829948482.115986	-	10.14.22.22	13.60.133.44	443	Conn::Content_Gap	api.certstatus-ocsp.net content gap (5951 bytes missing)	10.14.22.22	13.60.133.44	443	Notice::ACTION_LOG
 #close	2027-12-28-00-00-00

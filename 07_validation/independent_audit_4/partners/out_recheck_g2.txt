@@ -1,0 +1,134 @@
+##### defect 1
+aid_portal_access 691800 story rows 223199
+   client_network values occurring only on story rows: []
+   user_agent_family values occurring only on story rows: []
+   status values occurring only on story rows: []
+   path values occurring only on story rows: []
+   event values occurring only on story rows: []
+   method values occurring only on story rows: []
+   ASN 64512 + login_success: 1659 rows, 410 story
+   ASN 64512 + account_created: 1028 rows, 6 story
+   ASN 64512 + login_failed: 220375 rows, 220047 story
+   ASN 64512 + page_view: 10493 rows, 2315 story
+   python-requests: 230217 rows, 222260 story; outside the two story windows: 7957
+   curl: 5444 rows, 907 story; outside the two story windows: 4537
+   404: 4721 story 539
+base_logistics_access 48036 story rows 680
+   client_network values occurring only on story rows: []
+   user_agent_family values occurring only on story rows: []
+   status values occurring only on story rows: []
+   path values occurring only on story rows: []
+   event values occurring only on story rows: []
+   method values occurring only on story rows: []
+   ASN 64512 + login_success: 0 rows, 0 story
+   ASN 64512 + account_created: 0 rows, 0 story
+   ASN 64512 + login_failed: 221 rows, 186 story
+   ASN 64512 + page_view: 633 rows, 494 story
+   python-requests: 1791 rows, 453 story; outside the two story windows: 1338
+   curl: 1039 rows, 227 story; outside the two story windows: 812
+   404: 1458 story 428
+aid_applications source_asn 64512: 1414 story 416 {'application': 955, 'account_change': 459}
+##### defect 2
+sign-on rows from 203.0.113.x: 1203 story 10 | last octet < 100: 623 story 7
+story octets min/max 3 253 | background octets used: 33 min 2 max 248
+best contiguous octet window holding >= 8 of the 10 story sign-ons: purity 0.032 [40,128) story 8 of 251 rows
+  firewall city rows from 203.0.113.x: 567 story 7
+  firewall nascc rows from 203.0.113.x: 1485 story 1043
+  firewall brw rows from 203.0.113.x: 95 story 16
+  firewall port rows from 203.0.113.x: 158 story 0
+  firewall srmc rows from 203.0.113.x: 344 story 0
+  firewall bcmc rows from 203.0.113.x: 74 story 0
+  firewall county rows from 203.0.113.x: 186 story 0
+inbound SMTP sessions from documentation ranges: 2263 story 361 {'brw': 1153, 'nascc': 601, 'county': 242, 'port': 159, 'srmc': 50, 'bcmc': 49, 'city': 9}
+partner logs ASN 64512 + password + new device: 446 story 10
+extract same conjunction: 22 story 10
+##### defect 3
+vendor plan: {'internal': '10.80.0.0/16', 'servers': '10.80.8.0/24', 'public_block': '192.0.2.64/26', 'office_egress': '192.0.2.96-111 (workstations leave through a pool; an address is kept for about an hour and a half)', 'vpn_egress': '192.0.2.112-126', 'vpn_pool': '10.80.250.0/24'}
+vendor egress addresses used: 32 min uses 6 max 8814 | any 198.51.100.x in vendor logs: 92
+  pool: 192.0.2.71 .. 192.0.2.126 holes: []
+aid_portal_access distinct outside clients 48250 | clients that are a partner registry address or inside a partner public block: 0 []
+base_logistics_access distinct outside clients 875 | clients that are a partner registry address or inside a partner public block: 0 []
+198.51.100.44 rows in aid portal: 1089
+##### defect 4
+addresses with a network label, all streams: 61588 | with more than one label: 0 []
+{'198.51.100': ['ASN 64500'], '203.0.113': ['ASN 64512'], '192.0.2': ['ASN 64496']}
+spellings: Counter({'ASN': 61588})
+##### defect 5
+aid_portal_access rows from 100.64.0.0/10: 0
+base_logistics_access rows from 100.64.0.0/10: 0
+##### defect 6
+accounts registering and applying from one address: 30058 same user agent: 100.0%
+addresses with >= 4 rows: 37066 one user agent: 36325 two: 665 three or more: 76
+##### defect 7
+network share before / after registration opens:
+    ASN 7018 0.153 0.250
+    ASN 11427 0.115 0.185
+    ASN 22773 0.097 0.158
+    ASN 20057 0.089 0.154
+    ASN 21928 0.063 0.105
+    ASN 64500 0.033 0.041
+    ASN 64512 0.025 0.028
+    ASN 20115 0.018 0.025
+    ASN 7922 0.012 0.018
+    ASN 64496 0.009 0.010
+    ASN 64503 0.074 0.005
+    ASN 64504 0.084 0.005
+networks seen only after opening: [] | only before: []
+   info views/day 2027-08-02 to 2027-08-08 mean 115
+   info views/day 2027-09-08 to 2027-09-13 mean 190
+   info views/day 2027-09-14 to 2027-09-14 mean 220
+   info views/day 2027-09-15 to 2027-09-21 mean 414
+   info views/day 2027-09-28 to 2027-10-04 mean 264
+   info views/day 2027-10-19 to 2027-10-25 mean 140
+   info views/day 2027-11-06 to 2027-11-12 mean 2535
+   info views/day 2027-11-13 to 2027-11-19 mean 3562
+   info views/day 2027-12-20 to 2027-12-26 mean 155
+   Jul-Aug info views per weekday day 116, per weekend day 110
+   page shares: {'/': 34.3, '/help/documents': 19.6, '/disasters/current': 18.2, '/help/eligibility': 14.0, '/es/ayuda': 8.2, '/help/contact': 5.7}
+   login_success share by local hour: min 0.4 max 6.9 {0: 1.1, 1: 0.7, 2: 0.5, 3: 0.5, 4: 0.4, 5: 0.8, 6: 1.6, 7: 3.2, 8: 4.8, 9: 5.9, 10: 6.8, 11: 6.6, 12: 6.5, 13: 5.9, 14: 6.0, 15: 5.9, 16: 6.1, 17: 6.4, 18: 6.3, 19: 6.9, 20: 6.4, 21: 5.3, 22: 3.4, 23: 2.0}
+##### defect 8
+register: GET 37447 POST 34538 | GET /applications 17721 GET /applications/new 31361
+register->apply seconds percentiles 5/25/50/75/95/99: [390, 631, 959, 1613, 214374, 552541] accounts created without an application: 2404
+applicants who never sign in again: 31%; sign-ins per returning applicant 50/90/max: [2, 5, 10]
+status views per account with any: 50/90/max [2, 6, 1466]
+ordinary status codes: {'200': 327212, '201': 95238, '401': 19847, '302': 10291, '304': 7541, '404': 4182, '422': 2082, '403': 1671, '503': 537}
+median bytes by path: {'/robots.txt': 312, '/.well-known/security.txt': 423, '/sitemap.xml': 2922, '/account/mailing-address': 5201, '/account/direct-deposit': 5208, '/account/email-address': 5223, '/account/phone-number': 5231, '/account/recover': 5606, '/login': 6130, '/help/contact': 9445, '/account/profile': 9937, '/status': 11860, '/applications': 12662, '/account/register': 14265, '/help/documents': 16872, '/': 18490, '/es/ayuda': 19998, '/help/eligibility': 21421, '/applications/new': 23920, '/disasters/current': 27208}
+story failed logins: 220047 with an account id: 10664 distinct ids 8010 that exist: 8007
+exact duplicate rows aid: 0
+logistics inside rows: 41628 share 08-16 local: 80%, 00-05: 2.4%
+logistics per weekday 285, weekend day 93, Thanksgiving 112
+accounts 126 addresses per account 50/90/max [1, 1, 1]
+logistics accounts not in the air station registry: 0
+logistics failed logins: 264 followed by success within two minutes: 223
+exact duplicate rows logistics: 0
+##### defect 9
+srmc window 2027-09-14T06:17:03Z 2027-09-22T14:14:33Z | administration wing rows inside: auth 0 web 0 endpoint 0
+bcmc window 2027-09-14T06:31:40Z 2027-09-22T15:42:10Z | administration wing rows inside: auth 0 web 0 endpoint 0
+air station administration building logons by date: {'2027-09-08': 30, '2027-09-09': 27, '2027-09-10': 17, '2027-09-11': 0, '2027-09-12': 0, '2027-09-13': 2, '2027-09-15': 0, '2027-09-21': 16}
+##### defect 10
+city session h pct 5/25/50/75/95: [1.6, 4.1, 7.7, 11.7, 12.1] | ws fail share 7.5% followed by success within 1 h 76% | remote fail 5.4% | remote share 02h 1.0 12h 4.0 19h 7.8 | empty logon hours []
+nascc session h pct 5/25/50/75/95: [1.7, 4.0, 7.7, 8.0, 9.2] | ws fail share 3.7% followed by success within 1 h 80% | remote fail 3.1% | remote share 02h 1.0 12h 6.2 19h 7.1 | empty logon hours []
+brw session h pct 5/25/50/75/95: [1.6, 4.1, 7.5, 10.0, 12.1] | ws fail share 9.7% followed by success within 1 h 75% | remote fail 6.7% | remote share 02h 1.1 12h 3.9 19h 3.8 | empty logon hours []
+port session h pct 5/25/50/75/95: [2.6, 5.9, 11.7, 12.0, 12.3] | ws fail share 7.0% followed by success within 1 h 80% | remote fail 6.3% | remote share 02h 1.7 12h 3.6 19h 5.8 | empty logon hours []
+srmc session h pct 5/25/50/75/95: [0.7, 2.1, 4.0, 6.8, 12.5] | ws fail share 10.5% followed by success within 1 h 76% | remote fail 8.8% | remote share 02h 2.7 12h 4.2 19h 6.1 | empty logon hours []
+bcmc session h pct 5/25/50/75/95: [0.7, 1.8, 3.1, 4.9, 9.2] | ws fail share 10.3% followed by success within 1 h 82% | remote fail 10.6% | remote share 02h 2.8 12h 2.8 19h 6.8 | empty logon hours []
+county session h pct 5/25/50/75/95: [2.0, 4.4, 8.2, 11.9, 12.1] | ws fail share 6.7% followed by success within 1 h 85% | remote fail 4.2% | remote share 02h 1.8 12h 4.0 19h 7.0 | empty logon hours []
+event   AGENT_HEARTBEAT_MISSED  AGENT_UPDATED  DEFINITIONS_UPDATED  REALTIME_PROTECTION_DISABLED  REALTIME_PROTECTION_ENABLED  SCAN_COMPLETED  SCAN_STARTED  THREAT_QUARANTINED
+org                                                                                                                                                                            
+bcmc                        10              3                   42                             5                           13              20             1                   5
+brw                         10              3                   47                             6                           13              15             1                   5
+city                         8              4                   39                             4                           11              29             2                   3
+county                      11              4                   36                             4                           13              25             2                   5
+nascc                        7             10                   29                             2                            7              40             3                   2
+port                        13              5                   35                             3                            9              30             2                   3
+srmc                         7              7                   28                             2                            6              45             4                   2
+dst_port  3389  22  23  445  80  8080
+org                                  
+bcmc         5   8  14    3   9     4
+brw          7  12  12   13   9     5
+city        11  12   9   13   3     6
+county      14  12   5    2   8     8
+nascc       16   4   7    7   5     3
+port         4  13  11    4  10     7
+srmc         9   4   6    3   7    10
+firewall bytes_recv / web bytes_in for larger flows: pct 5/50/95 [1.023, 1.051, 1.079] n 48562

@@ -43,14 +43,18 @@ Written by `scripts/build_delivery.py`. Internal: for the game master.
 - `17_drone_detections_schema.json`: entity_catalog, generator, scenario_notes
 - `avl_schema.json`: generator_reference, location_rule
 - `broadcast_logs_schema.json`: generator_reference
+- `dhcp_logs_schema.json`: verified
 - `eas_alerts_schema.json`: generator_reference
+- `firewall_logs_schema.json`: verified
 - `fuel_deliveries_schema.json`: generator, verified
 - `outage_map_schema.json`: generator, verified
+- `packet_captures_schema.json`: verified
 - `port_surveillance_schema.json`: scenario_notes, verified
 - `public_record_schema.json`: generator_reference
 - `sar_missions_schema.json`: generator_reference
 - `shelters_schema.json`: generator_reference
 - `vessel_ot_logs_schema.json`: generator, verified
+- `web_proxy_logs_schema.json`: verified
 
 ## Staged release
 

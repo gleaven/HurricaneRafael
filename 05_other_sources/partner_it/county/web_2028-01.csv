@@ -1,0 +1,795 @@
+time_utc,client_ip,user,method,scheme,host,url_path,status,action,category,bytes_out,bytes_in,user_agent_family,policy
+2028-01-01T00:00:11Z,10.70.20.78,8ea56d1,CONNECT,https,www.mesquitetelecom.example,-,200,allowed,business,7987,193838,Firefox/Windows,County-Default
+2028-01-01T00:48:15Z,10.70.21.78,a583b26,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,3196,39104,Edge/Windows,County-Default
+2028-01-01T02:08:06Z,10.70.10.74,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,1114,68331,-,County-Default
+2028-01-01T02:42:31Z,10.70.10.98,-,GET,http,www.ntp-pool-public.org,/static/05deef0.js,204,allowed,software updates,4077,424,-,County-Default
+2028-01-01T03:20:51Z,10.70.21.78,a583b26,CONNECT,https,www.orbitcpa.example,-,200,allowed,finance,3297,112282,Edge/Windows,County-Default
+2028-01-01T04:39:43Z,10.70.20.87,-,GET,http,cdn.certstatus-ocsp.net,/pki/37223e.crl,200,allowed,software updates,3061,48122,-,County-Default
+2028-01-01T04:44:57Z,10.70.21.93,efbceb6,CONNECT,https,www.cedarlandscaping.example,-,200,allowed,business,2367,37890,Edge/Windows,County-Default
+2028-01-01T05:36:52Z,10.70.30.86,-,GET,http,www.certstatus-ocsp.net,/v1/check?id=05ec3ac9d4,302,allowed,software updates,3969,593,-,County-Default
+2028-01-01T06:23:21Z,10.70.21.90,-,HEAD,http,cdn.certstatus-ocsp.net,/static/b498e0d.js,200,allowed,software updates,2015,93548,-,County-Default
+2028-01-01T08:03:06Z,10.70.10.86,-,GET,http,static.ntp-pool-public.org,/ocsp/550a81e6c094,200,allowed,software updates,2770,59307,-,County-Default
+2028-01-01T12:34:43Z,10.70.21.66,c735a91,CONNECT,https,www.tejanoairport.example,-,200,allowed,business,4453,44988,Edge/Windows,County-Default
+2028-01-01T12:46:41Z,10.70.21.60,0d6ae84,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,3711,208979,Chrome/Windows,County-Default
+2028-01-01T12:56:10Z,10.70.21.87,60d183c,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2681,93564,Chrome/Windows,County-Default
+2028-01-01T17:57:27Z,10.70.21.90,41476fd,CONNECT,https,www.zenithcog.example,-,200,allowed,business,1503,134406,Edge/Windows,County-Default
+2028-01-01T19:47:58Z,10.70.21.66,c735a91,CONNECT,https,sso-login.streamvideo-cdn.net,-,403,blocked,streaming media,528,1257,Edge/Windows,County-Blocked
+2028-01-01T20:20:38Z,10.70.21.63,c953b36,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,615,80479,Chrome/Windows,County-Default
+2028-01-01T20:41:30Z,10.70.30.86,-,CONNECT,https,www.ntp-pool-public.org,-,200,allowed,software updates,5265,50698,-,County-Default
+2028-01-01T20:45:04Z,10.70.21.72,03e610e,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3289,44559,Edge/Windows,County-Default
+2028-01-01T21:06:30Z,10.70.20.69,-,GET,http,defs.sentinel-endpoint-updates.example,/,204,allowed,software updates,3659,695,-,County-Default
+2028-01-01T21:35:33Z,10.70.20.93,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,7063,188993,-,County-Default
+2028-01-01T22:10:25Z,10.70.21.75,f7f35cf,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2270,99582,Firefox/Windows,County-Default
+2028-01-01T22:41:51Z,10.70.21.69,a5d77a4,CONNECT,https,static-assets.retail-orders.com,-,200,allowed,shopping,2195,121063,Edge/Windows,County-Default
+2028-01-01T23:31:39Z,10.70.21.78,c341cc4,CONNECT,https,www.training-lms.net,-,200,allowed,education,876,71609,Chrome/Windows,County-Default
+2028-01-01T23:40:41Z,10.70.21.63,c953b36,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2034,83184,Chrome/Windows,County-Default
+2028-01-02T00:25:27Z,10.70.21.93,efbceb6,CONNECT,https,webeoc.tdem-portal.example,-,200,allowed,government,2172,60131,Edge/Windows,County-Default
+2028-01-02T00:43:59Z,10.70.21.69,1a0117b,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,4055,92998,Chrome/Windows,County-Default
+2028-01-02T01:35:23Z,10.70.21.72,772cd7a,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,3213,125012,Chrome/Windows,County-Default
+2028-01-02T01:41:45Z,10.70.21.60,d08ccc3,CONNECT,https,www.txdot-roadconditions.example,-,502,allowed,government,3395,339,Firefox/Windows,County-Default
+2028-01-02T02:39:27Z,10.70.21.60,d08ccc3,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,5299,58830,Edge/Windows,County-Default
+2028-01-02T03:48:25Z,10.70.20.87,-,GET,http,static.osupdates-delivery.com,/ocsp/76b4c3b26ae1,200,allowed,software updates,5304,66053,-,County-Default
+2028-01-02T04:58:55Z,10.70.21.66,5878eb7,CONNECT,https,www.lonestarauto.example,-,200,allowed,shopping,546,226964,Chrome/Windows,County-Default
+2028-01-02T05:22:28Z,10.70.21.78,a583b26,CONNECT,https,update-cdn.socialfeed-img.com,-,200,allowed,social media,2656,60506,Edge/Windows,County-Default
+2028-01-02T07:03:47Z,10.70.10.101,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,5726,13927,-,County-Default
+2028-01-02T08:56:09Z,10.70.21.69,1a0117b,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,3605,57049,Chrome/Windows,County-Default
+2028-01-02T10:04:55Z,10.70.21.72,772cd7a,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,4006,18523,Chrome/Windows,County-Default
+2028-01-02T10:26:05Z,10.70.20.84,-,CONNECT,https,static.browser-safecheck.net,-,200,allowed,software updates,3344,394491,-,County-Default
+2028-01-02T11:28:06Z,10.70.21.72,772cd7a,CONNECT,https,www.orbitcpa.example,-,200,allowed,finance,4512,73896,Chrome/Windows,County-Default
+2028-01-02T11:37:31Z,10.70.30.83,-,CONNECT,https,defs.sentinel-endpoint-updates.example,-,200,allowed,software updates,3700,112146,-,County-Default
+2028-01-02T11:55:15Z,10.70.10.143,-,GET,http,defs.sentinel-endpoint-updates.example,/content/e6aac18d.cab,200,allowed,software updates,3042,27469,-,County-Default
+2028-01-02T13:13:34Z,10.70.21.87,e463e73,CONNECT,https,www.tejanoairport.example,-,200,allowed,business,6007,22736,Edge/Windows,County-Default
+2028-01-02T13:54:53Z,10.70.21.87,e463e73,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,7016,39732,Edge/Windows,County-Default
+2028-01-02T14:13:01Z,10.70.10.68,-,GET,http,defs.sentinel-endpoint-updates.example,/index.html,304,allowed,software updates,2519,471,-,County-Default
+2028-01-02T14:32:40Z,10.70.21.69,1ae9d54,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2784,76248,Firefox/Windows,County-Default
+2028-01-02T14:57:46Z,10.70.20.75,-,GET,http,defs.sentinel-endpoint-updates.example,/static/5d936c0.js,200,allowed,software updates,4417,104627,-,County-Default
+2028-01-02T15:23:10Z,10.70.21.69,1ae9d54,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,1363,106170,Firefox/Windows,County-Default
+2028-01-02T15:56:01Z,10.70.21.63,d7b17a1,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,5717,120820,Edge/Windows,County-Default
+2028-01-02T16:01:10Z,10.70.10.92,-,GET,http,www-east.telemetry-osvendor.com,/ocsp/5da9d342a040,200,allowed,software updates,2382,157121,-,County-Default
+2028-01-02T16:21:25Z,10.70.20.87,-,GET,http,www.certstatus-ocsp.net,/static/c8774ab.js,200,allowed,software updates,3965,97920,-,County-Default
+2028-01-02T16:47:55Z,10.70.21.63,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,3886,127263,-,County-Default
+2028-01-02T16:49:44Z,10.70.20.11,-,GET,http,auth-prod.certstatus-ocsp.net,/robots.txt,200,allowed,software updates,4056,168353,-,County-Default
+2028-01-02T16:52:28Z,10.70.21.63,d7b17a1,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,4022,22522,Edge/Windows,County-Default
+2028-01-02T17:47:17Z,10.70.10.65,-,GET,http,defs.sentinel-endpoint-updates.example,/images/bf0476.png,200,allowed,software updates,3044,90116,-,County-Default
+2028-01-02T18:01:19Z,10.70.21.69,1ae9d54,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4493,80760,Firefox/Windows,County-Default
+2028-01-02T19:06:15Z,10.70.21.63,d7b17a1,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,1442,75967,Edge/Windows,County-Default
+2028-01-02T19:09:17Z,10.70.10.80,2c8f026,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,2313,24495,Edge/Windows,County-Default
+2028-01-02T19:13:34Z,10.70.21.75,54ab664,GET,http,api.adnetwork-static.net,/,200,allowed,advertising,1374,52647,Edge/Windows,County-Default
+2028-01-02T19:30:25Z,10.70.21.93,321f269,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2274,58844,Firefox/Windows,County-Default
+2028-01-02T19:38:32Z,10.70.10.80,2c8f026,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,1946,70289,Edge/Windows,County-Default
+2028-01-02T20:23:10Z,10.70.21.66,a87494d,CONNECT,https,www.zenithcog.example,-,200,allowed,business,1388,93556,Edge/Windows,County-Default
+2028-01-02T20:36:14Z,10.70.21.78,765ad21,CONNECT,https,cdn.cloudstorage-sync.com,-,200,allowed,content delivery,1165,88226,Chrome/Windows,County-Default
+2028-01-02T22:04:33Z,10.70.21.93,321f269,CONNECT,https,update-cdn.txroadwatch.org,-,200,allowed,government,7109,56776,Firefox/Windows,County-Default
+2028-01-02T23:02:43Z,10.70.21.75,54ab664,CONNECT,https,www.orbitcpa.example,-,200,allowed,finance,6342,91041,Edge/Windows,County-Default
+2028-01-02T23:43:28Z,10.70.21.84,da0450c,CONNECT,https,forms.event-signup-sheets.example,-,200,allowed,uncategorised,3419,64232,Edge/Windows,County-Default
+2028-01-03T00:12:25Z,10.70.21.87,c35f527,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,8719,137092,Firefox/Windows,County-Default
+2028-01-03T00:20:08Z,10.70.21.78,527b2a5,CONNECT,https,cdn.adnetwork-static.net,-,200,allowed,advertising,5509,62995,Edge/Windows,County-Default
+2028-01-03T00:54:39Z,10.70.30.62,-,GET,http,static.ntp-pool-public.org,/v2/check?id=78bd910bc3,200,allowed,software updates,10471,42929,-,County-Default
+2028-01-03T00:58:58Z,10.70.21.78,527b2a5,CONNECT,https,static.benefits-portal.com,-,200,allowed,business software,1975,38038,Edge/Windows,County-Default
+2028-01-03T01:04:40Z,10.70.21.69,6bc7a16,CONNECT,https,webeoc.tdem-portal.example,-,200,allowed,government,1226,105795,Edge/Windows,County-Default
+2028-01-03T03:06:38Z,10.70.10.149,-,GET,http,auth-prod.certstatus-ocsp.net,/,200,allowed,software updates,3908,35169,-,County-Default
+2028-01-03T05:04:18Z,10.70.21.81,87d87dd,CONNECT,https,api-gw.cloudstorage-sync.com,-,200,allowed,online storage,707,105666,Edge/Windows,County-Default
+2028-01-03T05:20:27Z,10.70.21.81,87d87dd,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,2830,50221,Chrome/Windows,County-Default
+2028-01-03T06:16:02Z,10.70.21.63,67b5bbf,CONNECT,https,www.driftwoodcpa.example,-,200,allowed,finance,7464,132544,Firefox/Windows,County-Default
+2028-01-03T06:50:59Z,10.70.20.81,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,1513,52171,-,County-Default
+2028-01-03T07:27:28Z,10.70.30.74,-,GET,http,static.telemetry-osvendor.com,/updates/0210d/manifest.xml,200,allowed,software updates,11556,20860,-,County-Default
+2028-01-03T07:28:49Z,10.70.21.81,87d87dd,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3745,44503,Chrome/Windows,County-Default
+2028-01-03T08:37:53Z,10.70.21.93,858465a,CONNECT,https,www.sanpatgroup.example,-,200,allowed,business,1988,122761,Edge/Windows,County-Default
+2028-01-03T10:17:47Z,10.70.21.81,87d87dd,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1411,10577,Chrome/Windows,County-Default
+2028-01-03T10:35:35Z,10.70.21.66,9c36f24,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,2862,41460,Firefox/Windows,County-Default
+2028-01-03T11:03:25Z,10.70.10.98,-,CONNECT,https,defs.sentinel-endpoint-updates.example,-,200,allowed,software updates,3842,36034,-,County-Default
+2028-01-03T12:30:34Z,10.70.21.60,b8c3ff5,CONNECT,https,www.gulfutilities.example,-,200,allowed,business,4013,16580,Edge/Windows,County-Default
+2028-01-03T13:01:59Z,10.70.10.101,b6530a6,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,971,19616,Edge/Windows,County-Default
+2028-01-03T13:34:44Z,10.70.10.134,0261d00,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1597,111751,Firefox/Windows,County-Default
+2028-01-03T13:46:10Z,10.70.20.11,3082c44,CONNECT,https,www.webinar-invites.example,-,200,allowed,business,8691,152596,Firefox/Windows,County-Default
+2028-01-03T14:10:14Z,10.70.10.101,b6530a6,GET,http,codes.municipal-code-library.example,/v3/check?id=37ca87211c,204,allowed,government,2120,393,Edge/Windows,County-Default
+2028-01-03T14:37:56Z,10.70.10.86,-,GET,http,defs.sentinel-endpoint-updates.example,/pki/5baa1d.crl,200,allowed,software updates,2127,42228,-,County-Default
+2028-01-03T14:51:13Z,10.70.10.104,f23c367,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,6431,90538,Firefox/Windows,County-Default
+2028-01-03T14:56:44Z,10.70.10.110,917036a,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,1850,155984,Chrome/Windows,County-Default
+2028-01-03T15:10:08Z,10.70.10.140,3be2e39,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,6934,16393,Firefox/Windows,County-Default
+2028-01-03T15:12:53Z,10.70.21.87,e463e73,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,1996,26795,Edge/Windows,County-Default
+2028-01-03T15:19:48Z,10.70.20.90,9a6f10c,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,871,62981,Firefox/Windows,County-Default
+2028-01-03T15:35:24Z,10.70.30.71,cea4f7e,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,3344,109820,Edge/Windows,County-Default
+2028-01-03T15:39:06Z,10.70.30.74,4517aa1,GET,http,static.officesuite-mail.com,/updates/f3eb6/manifest.xml,200,allowed,business software,2725,36031,Edge/Windows,County-Default
+2028-01-03T15:45:21Z,10.70.10.116,3e8cb45,CONNECT,https,www.seawalldrainage.example,-,200,allowed,business,356,102637,Edge/Windows,County-Default
+2028-01-03T16:00:53Z,10.70.30.71,cea4f7e,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,2233,59187,Edge/Windows,County-Default
+2028-01-03T16:02:37Z,10.70.10.140,3be2e39,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,6653,40291,Firefox/Windows,County-Default
+2028-01-03T16:11:56Z,10.70.10.92,e3697c5,CONNECT,https,www.tidewaterlandscaping.example,-,200,allowed,weather,5359,51400,Chrome/Windows,County-Default
+2028-01-03T16:13:03Z,10.70.21.90,56a081d,GET,http,www.lonestarauto.example,/pki/c16f44.crl,404,allowed,shopping,568,109298,Edge/Windows,County-Default
+2028-01-03T16:35:25Z,10.70.10.149,dad32ae,CONNECT,https,www.gulf-coast-catering.example,-,200,allowed,uncategorised,3426,31891,Edge/Windows,County-Default
+2028-01-03T16:49:01Z,10.70.10.83,7c087f5,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,4335,52300,Chrome/Windows,County-Default
+2028-01-03T16:52:31Z,10.70.10.74,cdd179f,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,11600,231177,Firefox/Windows,County-Default
+2028-01-03T17:12:29Z,10.70.20.11,3082c44,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,3007,31561,Firefox/Windows,County-Default
+2028-01-03T17:13:26Z,10.70.10.128,3ae3f6f,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,5101,76090,Firefox/Windows,County-Default
+2028-01-03T17:16:03Z,10.70.10.143,f5dbe4e,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3366,26541,Edge/Windows,County-Default
+2028-01-03T17:26:59Z,10.70.20.72,6b244f0,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,1416,31650,Edge/Windows,County-Default
+2028-01-03T17:33:44Z,10.70.30.80,dcb2256,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,1367,109431,Chrome/Windows,County-Default
+2028-01-03T18:07:58Z,10.70.30.80,dcb2256,CONNECT,https,webeoc.tdem-portal.example,-,200,allowed,government,2891,143764,Chrome/Windows,County-Default
+2028-01-03T18:21:52Z,10.70.10.146,e14b179,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,1317,9250,Edge/Windows,County-Default
+2028-01-03T18:40:50Z,10.70.21.81,f25757f,CONNECT,https,go.summitairport.example,-,200,allowed,business,7428,112255,Firefox/Windows,County-Default
+2028-01-03T18:41:44Z,10.70.30.62,7fecbeb,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,3018,59952,Edge/Windows,County-Default
+2028-01-03T18:58:18Z,10.70.10.134,0261d00,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,3440,57936,Edge/Windows,County-Default
+2028-01-03T19:11:59Z,10.70.30.83,2cb2251,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,453,17137,Chrome/Windows,County-Default
+2028-01-03T19:18:55Z,10.70.30.71,cea4f7e,CONNECT,https,www.cellcarrier-account.com,-,200,allowed,business,694,104617,Edge/Windows,County-Default
+2028-01-03T19:23:53Z,10.70.10.95,061924b,CONNECT,https,api.fleetfuel-cards.com,-,200,allowed,finance,2281,48766,Edge/Windows,County-Default
+2028-01-03T19:32:56Z,10.70.10.146,e14b179,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,2402,107403,Firefox/Windows,County-Default
+2028-01-03T19:35:54Z,10.70.10.113,-,GET,http,static.ntp-pool-public.org,/,200,allowed,software updates,5578,127544,-,County-Default
+2028-01-03T19:42:55Z,10.70.10.104,f23c367,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,2670,9257,Firefox/Windows,County-Default
+2028-01-03T19:46:48Z,10.70.10.92,e3697c5,CONNECT,https,www.nuecesauto.example,-,200,allowed,shopping,5576,69848,Edge/Windows,County-Default
+2028-01-03T19:57:34Z,10.70.30.83,2cb2251,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,4205,156393,Chrome/Windows,County-Default
+2028-01-03T20:15:22Z,10.70.21.84,da0450c,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,1610,61746,Edge/Windows,County-Default
+2028-01-03T20:18:08Z,10.70.10.149,dad32ae,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3802,36398,Edge/Windows,County-Default
+2028-01-03T20:27:30Z,10.70.30.89,2609121,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,1135,48308,Edge/Windows,County-Default
+2028-01-03T20:31:05Z,10.70.10.137,a356c98,CONNECT,https,www.zenithcog.example,-,200,allowed,business,7320,240411,Chrome/Windows,County-Default
+2028-01-03T20:36:49Z,10.70.30.65,86f9fde,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,2091,140143,Edge/Windows,County-Default
+2028-01-03T20:37:35Z,10.70.30.62,7fecbeb,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,2408,151994,Edge/Windows,County-Default
+2028-01-03T20:39:55Z,10.70.21.60,b8c3ff5,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,686,35236,Firefox/Windows,County-Default
+2028-01-03T20:59:32Z,10.70.30.62,7fecbeb,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2661,121189,Edge/Windows,County-Default
+2028-01-03T21:02:11Z,10.70.10.98,4fc32d0,CONNECT,https,www.zenithcog.example,-,200,allowed,business,1979,198389,Chrome/Windows,County-Default
+2028-01-03T21:02:26Z,10.70.10.77,03f5e19,CONNECT,https,api.fleetfuel-cards.com,-,200,allowed,finance,2255,29009,Chrome/Windows,County-Default
+2028-01-03T21:09:46Z,10.70.30.71,cea4f7e,CONNECT,https,update-cdn.txroadwatch.org,-,200,allowed,government,5850,92516,Edge/Windows,County-Default
+2028-01-03T21:47:23Z,10.70.10.134,0261d00,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,631,23911,Firefox/Windows,County-Default
+2028-01-03T21:52:29Z,10.70.30.77,5fccad8,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,3426,83421,Firefox/Windows,County-Default
+2028-01-03T21:53:10Z,10.70.10.98,4fc32d0,CONNECT,https,gis.coastalbend-parcels.example,-,502,allowed,government,5130,258,Chrome/Windows,County-Default
+2028-01-03T22:04:01Z,10.70.21.63,d7b17a1,CONNECT,https,www.cedarairport.example,-,200,allowed,business,3626,192594,Edge/Windows,County-Default
+2028-01-03T22:12:40Z,10.70.10.113,0475d6b,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,8141,31251,Edge/Windows,County-Default
+2028-01-03T23:03:34Z,10.70.21.81,f25757f,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,1769,67687,Edge/Windows,County-Default
+2028-01-03T23:08:22Z,10.70.21.81,f25757f,CONNECT,https,www.zenithcog.example,-,200,allowed,business,712,52617,Edge/Windows,County-Default
+2028-01-03T23:21:37Z,10.70.10.107,443d0e4,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,3576,32990,Edge/Windows,County-Default
+2028-01-03T23:49:27Z,10.70.250.165,efe22d2,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4026,115013,Firefox/Windows,County-Default
+2028-01-04T01:07:18Z,10.70.10.71,087d171,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,4972,275145,Firefox/Windows,County-Default
+2028-01-04T01:21:11Z,10.70.21.69,6bc7a16,CONNECT,https,rest-api.hotel-reservations.com,-,200,allowed,travel,1680,60019,Edge/Windows,County-Default
+2028-01-04T01:26:33Z,10.70.21.72,105bf3a,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,6133,63139,Edge/Windows,County-Default
+2028-01-04T01:52:23Z,10.70.21.93,858465a,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,7327,139976,Edge/Windows,County-Default
+2028-01-04T02:01:44Z,10.70.21.81,87d87dd,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,2903,98866,Chrome/Windows,County-Default
+2028-01-04T02:13:19Z,10.70.21.78,527b2a5,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2398,107817,Edge/Windows,County-Default
+2028-01-04T02:17:26Z,10.70.21.87,c35f527,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,1837,88544,Edge/Windows,County-Default
+2028-01-04T02:29:19Z,10.70.21.75,e28079c,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,3674,40694,Firefox/Windows,County-Default
+2028-01-04T02:43:46Z,10.70.21.60,bfc373e,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,7054,112865,Chrome/Windows,County-Default
+2028-01-04T03:19:14Z,10.70.21.81,87d87dd,CONNECT,https,www.streamvideo-cdn.net,-,403,blocked,streaming media,413,1387,Chrome/Windows,County-Blocked
+2028-01-04T04:05:49Z,10.70.21.78,527b2a5,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,3004,57463,Edge/Windows,County-Default
+2028-01-04T04:23:01Z,10.70.21.90,24663a8,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,5478,6882,Firefox/Windows,County-Default
+2028-01-04T05:21:51Z,10.70.10.110,-,GET,http,defs.sentinel-endpoint-updates.example,/pki/33e018.crl,200,allowed,software updates,519,73335,-,County-Default
+2028-01-04T07:46:52Z,10.70.21.72,105bf3a,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,3253,224592,Edge/Windows,County-Default
+2028-01-04T07:58:15Z,10.70.21.84,efe22d2,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2165,45896,Edge/Windows,County-Default
+2028-01-04T08:04:46Z,10.70.30.77,-,GET,http,auth-prod.certstatus-ocsp.net,/favicon.ico,503,allowed,software updates,6551,113645,-,County-Default
+2028-01-04T08:11:18Z,10.70.30.77,-,CONNECT,https,www.browser-safecheck.net,-,200,allowed,software updates,2257,101374,-,County-Default
+2028-01-04T08:58:50Z,10.70.21.87,c35f527,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,2937,30344,Edge/Windows,County-Default
+2028-01-04T09:19:43Z,10.70.21.84,efe22d2,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,5512,56382,Chrome/Windows,County-Default
+2028-01-04T10:26:25Z,10.70.21.87,c35f527,CONNECT,https,www.magnoliafoodbank.example,-,200,allowed,finance,1087,222537,Edge/Windows,County-Default
+2028-01-04T10:42:34Z,10.70.21.69,-,GET,http,www-east.telemetry-osvendor.com,/pki/360b8b.crl,200,allowed,software updates,4799,105710,-,County-Default
+2028-01-04T12:35:50Z,10.70.21.84,62204b8,CONNECT,https,www.tejanoairport.example,-,200,allowed,business,1810,36263,Chrome/Windows,County-Default
+2028-01-04T13:12:48Z,10.70.21.63,c953b36,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1906,2228,Chrome/Windows,County-Default
+2028-01-04T13:21:01Z,10.70.21.69,a5d77a4,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,3448,73784,Edge/Windows,County-Default
+2028-01-04T13:27:27Z,10.70.20.84,-,GET,http,static.telemetry-osvendor.com,/favicon.ico,200,allowed,software updates,2970,202379,-,County-Default
+2028-01-04T14:08:18Z,10.70.21.60,0d6ae84,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3061,109257,Edge/Windows,County-Default
+2028-01-04T14:34:46Z,10.70.30.77,5fccad8,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,3274,1957,Firefox/Windows,County-Default
+2028-01-04T14:37:08Z,10.70.10.101,b6530a6,CONNECT,https,www.tidewaterlandscaping.example,-,200,allowed,weather,4074,29773,Edge/Windows,County-Default
+2028-01-04T14:48:59Z,10.70.30.71,cea4f7e,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,2967,67673,Edge/Windows,County-Default
+2028-01-04T14:53:53Z,10.70.10.122,4c4a9f5,CONNECT,https,sso-login.harborline6.example,-,200,allowed,news,5963,115382,Edge/Windows,County-Default
+2028-01-04T15:00:31Z,10.70.30.62,7fecbeb,CONNECT,https,static.packagetracker-api.net,-,200,allowed,business,1155,87327,Edge/Windows,County-Default
+2028-01-04T15:04:18Z,10.70.10.116,3e8cb45,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,2144,17596,Edge/Windows,County-Default
+2028-01-04T15:10:42Z,10.70.21.81,9d368ed,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,4762,60381,Edge/Windows,County-Default
+2028-01-04T15:11:32Z,10.70.20.11,3082c44,CONNECT,https,www.oleanderfleet.example,-,200,allowed,business,3122,68472,Firefox/Windows,County-Default
+2028-01-04T15:25:58Z,10.70.21.69,a5d77a4,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,3027,68200,Edge/Windows,County-Default
+2028-01-04T15:51:46Z,10.70.10.86,8329bf6,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1789,267929,Edge/Windows,County-Default
+2028-01-04T15:54:24Z,10.70.10.98,4fc32d0,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,425,11478,Chrome/Windows,County-Default
+2028-01-04T15:55:39Z,10.70.10.89,ed70462,CONNECT,https,www.cellcarrier-account.com,-,200,allowed,business,4678,111830,Firefox/Windows,County-Default
+2028-01-04T16:05:18Z,10.70.30.68,2c360a5,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3185,83517,Edge/Windows,County-Default
+2028-01-04T16:16:49Z,10.70.30.68,2c360a5,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1356,114261,Edge/Windows,County-Default
+2028-01-04T16:17:43Z,10.70.21.90,41476fd,CONNECT,https,sso-login.hotel-reservations.com,-,200,allowed,travel,1971,197782,Edge/Windows,County-Default
+2028-01-04T16:19:45Z,10.70.10.128,3ae3f6f,CONNECT,https,static.training-lms.net,-,200,allowed,education,5555,18953,Chrome/Windows,County-Default
+2028-01-04T16:23:00Z,10.70.10.74,cdd179f,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,3609,129744,Firefox/Windows,County-Default
+2028-01-04T16:25:41Z,10.70.10.128,3ae3f6f,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,1357,50799,Chrome/Windows,County-Default
+2028-01-04T16:25:41Z,10.70.21.75,f7f35cf,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,9629,107926,Firefox/Windows,County-Default
+2028-01-04T16:28:01Z,10.70.30.68,2c360a5,CONNECT,https,www.driftwoodcpa.example,-,200,allowed,finance,10474,209833,Edge/Windows,County-Default
+2028-01-04T16:40:12Z,10.70.21.60,0d6ae84,CONNECT,https,api-v2.nueces-county-tx.org,-,200,allowed,government,1104,24355,Chrome/Windows,County-Default
+2028-01-04T17:08:33Z,10.70.10.122,4c4a9f5,CONNECT,https,www.coastal-bend-fishing-reports.example,-,200,allowed,uncategorised,4638,75834,Edge/Windows,County-Default
+2028-01-04T17:11:23Z,10.70.10.92,e3697c5,CONNECT,https,www.liveoakisd.example,-,200,allowed,education,3799,66365,Chrome/Windows,County-Default
+2028-01-04T17:30:06Z,10.70.20.66,31e303b,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,1268,320923,Firefox/Windows,County-Default
+2028-01-04T17:31:59Z,10.70.10.86,8329bf6,CONNECT,https,static.benefits-portal.com,-,200,allowed,business software,2341,134179,Edge/Windows,County-Default
+2028-01-04T17:42:43Z,10.70.10.119,66fd795,CONNECT,https,static.coastalbendweather.net,-,200,allowed,weather,2989,103175,Chrome/Windows,County-Default
+2028-01-04T17:43:50Z,10.70.10.77,03f5e19,CONNECT,https,webeoc.tdem-portal.example,-,200,allowed,government,4905,10905,Chrome/Windows,County-Default
+2028-01-04T18:00:18Z,10.70.10.125,042196d,CONNECT,https,www.hilltophousing.example,-,200,allowed,business,11940,79053,Chrome/Windows,County-Default
+2028-01-04T18:02:13Z,10.70.10.86,8329bf6,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4676,83345,Edge/Windows,County-Default
+2028-01-04T18:20:44Z,10.70.10.128,3ae3f6f,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,2383,35197,Chrome/Windows,County-Default
+2028-01-04T18:22:59Z,10.70.10.65,ab571ad,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,3009,110622,Chrome/Windows,County-Default
+2028-01-04T18:34:36Z,10.70.30.74,4517aa1,CONNECT,https,www.gulfutilities.example,-,200,allowed,business,11013,66515,Edge/Windows,County-Default
+2028-01-04T18:38:32Z,10.70.20.93,1e3920e,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,3303,41195,Edge/Windows,County-Default
+2028-01-04T19:18:20Z,10.70.21.66,c735a91,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,5832,26323,Edge/Windows,County-Default
+2028-01-04T19:23:23Z,10.70.10.134,0261d00,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,1357,95287,Firefox/Windows,County-Default
+2028-01-04T19:29:02Z,10.70.10.77,03f5e19,CONNECT,https,login.fleetfuel-cards.com,-,200,allowed,finance,5712,148558,Chrome/Windows,County-Default
+2028-01-04T19:32:36Z,10.70.10.122,4c4a9f5,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,1628,186282,Edge/Windows,County-Default
+2028-01-04T19:33:45Z,10.70.21.84,62204b8,CONNECT,https,www.gulfutilities.example,-,200,allowed,business,2840,39607,Chrome/Windows,County-Default
+2028-01-04T19:35:49Z,10.70.30.74,4517aa1,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,1544,102702,Edge/Windows,County-Default
+2028-01-04T19:36:01Z,10.70.30.65,86f9fde,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3617,60737,Edge/Windows,County-Default
+2028-01-04T19:41:48Z,10.70.30.83,2cb2251,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3302,126731,Edge/Windows,County-Default
+2028-01-04T19:44:50Z,10.70.10.131,745487e,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,2101,56856,Firefox/Windows,County-Default
+2028-01-04T19:49:33Z,10.70.10.125,042196d,CONNECT,https,www.hilltophousing.example,-,200,allowed,business,1622,86821,Edge/Windows,County-Default
+2028-01-04T19:56:41Z,10.70.21.66,c735a91,CONNECT,https,www.gulfutilities.example,-,200,allowed,business,8687,7579,Edge/Windows,County-Default
+2028-01-04T20:10:11Z,10.70.21.72,03e610e,GET,http,www.cdn-jslibs.net,/ocsp/d18a29ce209e,200,allowed,content delivery,7120,98122,Edge/Windows,County-Default
+2028-01-04T20:18:20Z,10.70.10.95,061924b,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,2879,128770,Chrome/Windows,County-Default
+2028-01-04T20:36:09Z,10.70.20.60,37f1313,CONNECT,https,www.benefits-portal.com,-,200,allowed,business software,8422,104117,Firefox/Windows,County-Default
+2028-01-04T20:58:23Z,10.70.10.125,042196d,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,4127,178501,Edge/Windows,County-Default
+2028-01-04T21:14:08Z,10.70.10.95,061924b,GET,http,portal.state-purchasing.example,/content/652092ad.cab,404,allowed,government,2760,58614,Edge/Windows,County-Default
+2028-01-04T21:16:46Z,10.70.10.146,e14b179,GET,http,www.zenithcog.example,/robots.txt,200,allowed,business,1434,153618,Edge/Windows,County-Default
+2028-01-04T21:20:07Z,10.70.10.125,042196d,CONNECT,https,www.seawalldrainage.example,-,200,allowed,business,11512,93311,Edge/Windows,County-Default
+2028-01-04T21:24:42Z,10.70.30.68,2c360a5,CONNECT,https,www.zenithcog.example,-,200,allowed,business,2564,46477,Edge/Windows,County-Default
+2028-01-04T21:28:39Z,10.70.21.78,c341cc4,CONNECT,https,www.alamosurveying.example,-,200,allowed,business,2933,135730,Chrome/Windows,County-Default
+2028-01-04T21:33:49Z,10.70.10.128,3ae3f6f,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,6526,113216,Chrome/Windows,County-Default
+2028-01-04T21:35:48Z,10.70.10.128,3ae3f6f,CONNECT,https,links.coastalchamber.example,-,200,allowed,business,5135,90197,Chrome/Windows,County-Default
+2028-01-04T21:40:24Z,10.70.10.101,b6530a6,CONNECT,https,login.docsign-flow.com,-,200,allowed,online storage,8509,17948,Edge/Windows,County-Default
+2028-01-04T21:45:37Z,10.70.10.95,061924b,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2180,90791,Edge/Windows,County-Default
+2028-01-04T21:54:08Z,10.70.10.101,b6530a6,CONNECT,https,web-static.cellcarrier-account.com,-,200,allowed,business,3511,183456,Edge/Windows,County-Default
+2028-01-04T21:55:02Z,10.70.10.113,0475d6b,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,3637,67189,Edge/Windows,County-Default
+2028-01-04T22:14:37Z,10.70.10.95,061924b,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,2809,38386,Edge/Windows,County-Default
+2028-01-04T22:37:45Z,10.70.21.84,62204b8,GET,http,www.cctexas-services.org,/static/6540c5d.js,304,allowed,government,8090,313,Chrome/Windows,County-Default
+2028-01-04T22:52:21Z,10.70.10.143,-,CONNECT,https,static.browser-safecheck.net,-,200,allowed,software updates,5652,41496,-,County-Default
+2028-01-04T23:03:56Z,10.70.21.66,c735a91,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,3762,97151,Edge/Windows,County-Default
+2028-01-04T23:07:01Z,10.70.10.107,443d0e4,GET,http,static.hrcloud-payroll.com,/robots.txt,200,allowed,finance,461,36420,Edge/Windows,County-Default
+2028-01-05T00:10:30Z,10.70.21.60,d08ccc3,CONNECT,https,lonestarhvac.example,-,200,allowed,business,5472,89764,Firefox/Windows,County-Default
+2028-01-05T00:58:59Z,10.70.20.11,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,2612,27946,-,County-Default
+2028-01-05T01:34:00Z,10.70.20.84,-,GET,http,defs.sentinel-endpoint-updates.example,/ocsp/912deedd117a,304,allowed,software updates,1715,601,-,County-Default
+2028-01-05T01:34:56Z,10.70.21.90,1d2e800,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,2109,37800,Chrome/Windows,County-Default
+2028-01-05T01:50:19Z,10.70.21.60,d08ccc3,CONNECT,https,www.zenithcog.example,-,200,allowed,business,1633,125620,Edge/Windows,County-Default
+2028-01-05T04:14:17Z,10.70.21.81,98173db,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,7069,87850,Edge/Windows,County-Default
+2028-01-05T04:42:38Z,10.70.30.80,-,CONNECT,https,defs.sentinel-endpoint-updates.example,-,200,allowed,software updates,2141,22024,-,County-Default
+2028-01-05T04:43:45Z,10.70.21.63,414f925,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,1612,128615,Chrome/Windows,County-Default
+2028-01-05T04:47:05Z,10.70.10.125,-,POST,http,www-east.telemetry-osvendor.com,/ocsp/189e343bbcbc,304,allowed,software updates,2819,521,-,County-Default
+2028-01-05T06:00:05Z,10.70.20.72,-,GET,http,defs.sentinel-endpoint-updates.example,/index.html,200,allowed,software updates,6307,10887,-,County-Default
+2028-01-05T06:03:00Z,10.70.10.95,-,CONNECT,https,www.certstatus-ocsp.net,-,200,allowed,software updates,1621,138979,-,County-Default
+2028-01-05T06:14:13Z,10.70.21.72,772cd7a,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,5191,238281,Chrome/Windows,County-Default
+2028-01-05T07:03:58Z,10.70.21.84,-,GET,http,www.ntp-pool-public.org,/ocsp/a493add77ddf,200,allowed,software updates,7824,167293,-,County-Default
+2028-01-05T08:09:35Z,10.70.21.63,414f925,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,767,70897,Chrome/Windows,County-Default
+2028-01-05T08:57:36Z,10.70.21.81,98173db,CONNECT,https,www.zenithcog.example,-,200,allowed,business,6092,36227,Edge/Windows,County-Default
+2028-01-05T09:16:25Z,10.70.21.78,a583b26,CONNECT,https,sso-login.harborline6.example,-,200,allowed,news,3669,8416,Edge/Windows,County-Default
+2028-01-05T09:37:34Z,10.70.10.125,-,GET,http,defs.sentinel-endpoint-updates.example,/ocsp/954518b00f57,200,allowed,software updates,3889,80429,-,County-Default
+2028-01-05T11:48:33Z,10.70.10.125,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,5744,41903,-,County-Default
+2028-01-05T12:15:57Z,10.70.21.75,f7f35cf,CONNECT,https,rest-api.hotel-reservations.com,-,200,allowed,travel,4601,183192,Edge/Windows,County-Default
+2028-01-05T12:24:39Z,10.70.21.72,03e610e,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,2549,105750,Edge/Windows,County-Default
+2028-01-05T13:21:57Z,10.70.20.72,6b244f0,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,3102,71975,Edge/Windows,County-Default
+2028-01-05T13:50:52Z,10.70.21.60,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,4761,3992,-,County-Default
+2028-01-05T13:54:38Z,10.70.21.93,59a7264,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3160,29455,Chrome/Windows,County-Default
+2028-01-05T14:06:23Z,10.70.10.77,03f5e19,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,4412,143140,Chrome/Windows,County-Default
+2028-01-05T14:15:16Z,10.70.20.63,6d7887a,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,2926,56523,Chrome/Windows,County-Default
+2028-01-05T14:21:17Z,10.70.10.131,745487e,CONNECT,https,www-2.coastalbendweather.net,-,200,allowed,weather,2328,64538,Firefox/Windows,County-Default
+2028-01-05T14:31:19Z,10.70.10.131,745487e,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,2457,21015,Edge/Windows,County-Default
+2028-01-05T14:48:20Z,10.70.10.62,d36f478,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,352,7658,Edge/Windows,County-Default
+2028-01-05T15:10:33Z,10.70.10.80,2c8f026,CONNECT,https,www.mesquitetelecom.example,-,200,allowed,business,6771,44950,Edge/Windows,County-Default
+2028-01-05T15:14:57Z,10.70.21.72,03e610e,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,4807,16739,Edge/Windows,County-Default
+2028-01-05T15:17:39Z,10.70.21.84,62204b8,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,6504,13570,Chrome/Windows,County-Default
+2028-01-05T15:19:31Z,10.70.10.131,745487e,CONNECT,https,sso-login.hotel-reservations.com,-,200,allowed,travel,7161,100203,Firefox/Windows,County-Default
+2028-01-05T15:22:19Z,10.70.10.107,443d0e4,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,6860,71109,Edge/Windows,County-Default
+2028-01-05T15:28:17Z,10.70.30.62,7fecbeb,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,1095,74829,Edge/Windows,County-Default
+2028-01-05T15:41:29Z,10.70.20.11,3082c44,CONNECT,https,origination.alertgateway.example,-,200,allowed,government,5183,21595,Firefox/Windows,County-Default
+2028-01-05T15:41:47Z,10.70.10.134,-,GET,http,www-east.telemetry-osvendor.com,/images/74aa89.png,404,allowed,software updates,4095,32535,-,County-Default
+2028-01-05T15:43:45Z,10.70.10.122,4c4a9f5,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,366,36599,Edge/Windows,County-Default
+2028-01-05T15:46:30Z,10.70.10.65,ab571ad,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,4107,132939,Edge/Windows,County-Default
+2028-01-05T15:52:00Z,10.70.30.68,2c360a5,CONNECT,https,www.gulfutilities.example,-,200,allowed,business,5198,183553,Edge/Windows,County-Default
+2028-01-05T15:53:42Z,10.70.30.68,2c360a5,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,755,71572,Edge/Windows,County-Default
+2028-01-05T16:10:28Z,10.70.10.146,e14b179,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,3762,27032,Edge/Windows,County-Default
+2028-01-05T16:11:37Z,10.70.10.86,8329bf6,CONNECT,https,login.fleetfuel-cards.com,-,200,allowed,finance,4127,55784,Edge/Windows,County-Default
+2028-01-05T16:23:57Z,10.70.10.140,3be2e39,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,6348,221881,Firefox/Windows,County-Default
+2028-01-05T16:30:20Z,10.70.21.60,-,CONNECT,https,defs.sentinel-endpoint-updates.example,-,200,allowed,software updates,1094,142284,-,County-Default
+2028-01-05T16:37:00Z,10.70.10.143,f5dbe4e,CONNECT,https,www.storm-prep-guides.org,-,200,allowed,weather,3972,73364,Edge/Windows,County-Default
+2028-01-05T16:47:13Z,10.70.10.128,3ae3f6f,HEAD,http,www.nueces-county-tx.org,/content/f6be0a98.cab,200,allowed,government,2045,35621,Chrome/Windows,County-Default
+2028-01-05T16:56:50Z,10.70.10.149,dad32ae,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,1542,145415,Edge/Windows,County-Default
+2028-01-05T17:08:17Z,10.70.20.66,31e303b,CONNECT,https,www.mesquitetelecom.example,-,200,allowed,business,395,83712,Firefox/Windows,County-Default
+2028-01-05T17:14:45Z,10.70.20.78,8ea56d1,CONNECT,https,cdn-east.storm-prep-guides.org,-,200,allowed,weather,1455,69685,Firefox/Windows,County-Default
+2028-01-05T17:16:24Z,10.70.30.65,86f9fde,CONNECT,https,www.tejanoairport.example,-,200,allowed,business,2144,127210,Edge/Windows,County-Default
+2028-01-05T17:25:12Z,10.70.30.71,cea4f7e,CONNECT,https,static.school-district-cc.org,-,200,allowed,education,5871,143656,Firefox/Windows,County-Default
+2028-01-05T17:30:49Z,10.70.30.83,2cb2251,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,6755,166708,Chrome/Windows,County-Default
+2028-01-05T17:35:25Z,10.70.20.87,3906658,CONNECT,https,static-assets.retail-orders.com,-,200,allowed,shopping,3305,37948,Chrome/Windows,County-Default
+2028-01-05T17:36:44Z,10.70.20.78,8ea56d1,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,2338,14757,Firefox/Windows,County-Default
+2028-01-05T17:42:46Z,10.70.10.98,4fc32d0,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,1599,230562,Chrome/Windows,County-Default
+2028-01-05T17:49:56Z,10.70.10.134,-,CONNECT,https,www.browser-safecheck.net,-,200,allowed,software updates,1043,58827,-,County-Default
+2028-01-05T17:50:23Z,10.70.30.83,2cb2251,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4782,61956,Chrome/Windows,County-Default
+2028-01-05T17:58:20Z,10.70.10.86,8329bf6,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,1804,13523,Chrome/Windows,County-Default
+2028-01-05T18:16:35Z,10.70.20.93,1e3920e,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4318,7664,Edge/Windows,County-Default
+2028-01-05T18:16:48Z,10.70.21.66,c735a91,CONNECT,https,www.training-lms.net,-,200,allowed,education,1025,49418,Edge/Windows,County-Default
+2028-01-05T18:21:40Z,10.70.10.122,4c4a9f5,CONNECT,https,www.txdot-roadconditions.example,-,504,allowed,government,1986,231,Edge/Windows,County-Default
+2028-01-05T18:21:43Z,10.70.10.140,3be2e39,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,1407,30951,Firefox/Windows,County-Default
+2028-01-05T18:24:33Z,10.70.21.93,59a7264,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4150,196268,Chrome/Windows,County-Default
+2028-01-05T18:24:58Z,10.70.10.140,3be2e39,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,6403,101651,Firefox/Windows,County-Default
+2028-01-05T18:27:49Z,10.70.10.134,0261d00,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,4160,111997,Firefox/Windows,County-Default
+2028-01-05T18:28:42Z,10.70.10.68,731476a,CONNECT,https,www.pioneerconventions.example,-,200,allowed,business,394,58495,Edge/Windows,County-Default
+2028-01-05T18:43:39Z,10.70.10.62,d36f478,CONNECT,https,static.cctexas-services.org,-,200,allowed,government,1370,72294,Edge/Windows,County-Default
+2028-01-05T18:53:42Z,10.70.10.119,66fd795,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,5143,56629,Chrome/Windows,County-Default
+2028-01-05T19:01:59Z,10.70.10.131,745487e,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,6158,42039,Firefox/Windows,County-Default
+2028-01-05T19:13:23Z,10.70.10.134,0261d00,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,4347,43801,Firefox/Windows,County-Default
+2028-01-05T19:25:36Z,10.70.30.86,56f61cb,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1080,177411,Edge/Windows,County-Default
+2028-01-05T19:28:42Z,10.70.10.89,ed70462,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,6170,115931,Chrome/Windows,County-Default
+2028-01-05T19:31:04Z,10.70.10.89,ed70462,CONNECT,https,api-v2.nueces-county-tx.org,-,200,allowed,government,5099,147966,Firefox/Windows,County-Default
+2028-01-05T19:36:53Z,10.70.10.65,ab571ad,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,1305,7032,Chrome/Windows,County-Default
+2028-01-05T19:44:20Z,10.70.20.63,6d7887a,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,1836,110301,Chrome/Windows,County-Default
+2028-01-05T19:46:25Z,10.70.20.72,6b244f0,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,2068,45634,Edge/Windows,County-Default
+2028-01-05T19:46:38Z,10.70.21.87,60d183c,CONNECT,https,static.coastalbendweather.net,-,200,allowed,weather,722,50556,Chrome/Windows,County-Default
+2028-01-05T20:16:11Z,10.70.30.71,cea4f7e,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1726,55669,Edge/Windows,County-Default
+2028-01-05T20:28:33Z,10.70.10.119,66fd795,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,2542,113827,Chrome/Windows,County-Default
+2028-01-05T20:59:44Z,10.70.10.74,cdd179f,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,10486,65300,Firefox/Windows,County-Default
+2028-01-05T21:03:03Z,10.70.10.68,731476a,GET,http,api-gw.cloudstorage-sync.com,/robots.txt,301,allowed,online storage,2435,276,Edge/Windows,County-Default
+2028-01-05T21:08:17Z,10.70.10.95,061924b,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,2400,76854,Edge/Windows,County-Default
+2028-01-05T21:09:58Z,10.70.20.75,ab14688,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1179,54165,Chrome/Windows,County-Default
+2028-01-05T21:10:06Z,10.70.21.90,41476fd,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,1734,122588,Edge/Windows,County-Default
+2028-01-05T21:16:47Z,10.70.10.116,3e8cb45,GET,http,static.coastalbendweather.net,/favicon.ico,200,allowed,weather,4941,86778,Edge/Windows,County-Default
+2028-01-05T21:29:00Z,10.70.10.74,cdd179f,CONNECT,https,webeoc.tdem-portal.example,-,200,allowed,government,1919,239131,Firefox/Windows,County-Default
+2028-01-05T21:29:13Z,10.70.21.63,c953b36,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3866,136119,Chrome/Windows,County-Default
+2028-01-05T21:29:43Z,10.70.10.77,03f5e19,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,6500,84482,Chrome/Windows,County-Default
+2028-01-05T21:37:09Z,10.70.10.119,66fd795,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4879,201113,Chrome/Windows,County-Default
+2028-01-05T21:40:01Z,10.70.21.63,c953b36,CONNECT,https,auth-prod.storm-prep-guides.org,-,502,allowed,weather,4471,373,Chrome/Windows,County-Default
+2028-01-05T21:44:52Z,10.70.10.125,042196d,CONNECT,https,www.zenithcog.example,-,200,allowed,business,668,92978,Edge/Windows,County-Default
+2028-01-05T21:47:34Z,10.70.10.77,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,6273,109482,-,County-Default
+2028-01-05T21:50:22Z,10.70.21.69,a5d77a4,CONNECT,https,www.mustangplumbing.example,-,200,allowed,business,3320,51053,Edge/Windows,County-Default
+2028-01-05T22:04:47Z,10.70.10.77,03f5e19,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,1868,66534,Firefox/Windows,County-Default
+2028-01-05T22:11:13Z,10.70.10.143,f5dbe4e,CONNECT,https,www.gulfutilities.example,-,200,allowed,business,1476,90415,Edge/Windows,County-Default
+2028-01-05T22:40:40Z,10.70.21.72,03e610e,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,3321,57166,Edge/Windows,County-Default
+2028-01-05T23:00:53Z,10.70.10.95,061924b,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,6402,143469,Edge/Windows,County-Default
+2028-01-05T23:58:42Z,10.70.10.146,-,CONNECT,https,www.ntp-pool-public.org,-,200,allowed,software updates,3612,23492,-,County-Default
+2028-01-06T00:07:31Z,10.70.21.63,c953b36,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2317,87429,Edge/Windows,County-Default
+2028-01-06T00:25:37Z,10.70.10.131,-,CONNECT,https,defs.sentinel-endpoint-updates.example,-,200,allowed,software updates,4692,37984,-,County-Default
+2028-01-06T02:12:06Z,10.70.250.41,8ff6231,CONNECT,https,www.cedarairport.example,-,200,allowed,business,3356,17742,Edge/Windows,County-Default
+2028-01-06T02:16:35Z,10.70.250.41,8ff6231,CONNECT,https,www.storm-prep-guides.org,-,200,allowed,weather,11106,30340,Edge/Windows,County-Default
+2028-01-06T03:27:14Z,10.70.21.93,efbceb6,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1259,71794,Edge/Windows,County-Default
+2028-01-06T03:47:03Z,10.70.21.84,3eef1e0,CONNECT,https,login.fleetfuel-cards.com,-,200,allowed,finance,5758,157798,Chrome/Windows,County-Default
+2028-01-06T06:35:02Z,10.70.10.74,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,1325,70427,-,County-Default
+2028-01-06T06:49:21Z,10.70.21.69,1a0117b,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3690,99276,Chrome/Windows,County-Default
+2028-01-06T07:03:44Z,10.70.21.90,1d2e800,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,4408,49175,Chrome/Windows,County-Default
+2028-01-06T07:05:54Z,10.70.21.72,772cd7a,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,5314,160927,Chrome/Windows,County-Default
+2028-01-06T08:27:29Z,10.70.10.122,-,GET,http,www.ntp-pool-public.org,/ocsp/d96fcf1cae69,200,allowed,software updates,2880,262988,-,County-Default
+2028-01-06T10:41:24Z,10.70.10.71,-,GET,http,defs.sentinel-endpoint-updates.example,/robots.txt,200,allowed,software updates,1638,193710,-,County-Default
+2028-01-06T11:01:29Z,10.70.21.84,3eef1e0,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,1481,110825,Chrome/Windows,County-Default
+2028-01-06T11:52:41Z,10.70.21.81,f25757f,CONNECT,https,www.mesquitefoodbank.example,-,200,allowed,finance,6654,75606,Edge/Windows,County-Default
+2028-01-06T13:22:30Z,10.70.21.63,d7b17a1,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,801,88584,Edge/Windows,County-Default
+2028-01-06T14:23:18Z,10.70.10.113,0475d6b,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,2258,217532,Edge/Windows,County-Default
+2028-01-06T14:29:31Z,10.70.30.71,cea4f7e,CONNECT,https,www.southtexprint.example,-,200,allowed,business,994,133193,Edge/Windows,County-Default
+2028-01-06T14:32:12Z,10.70.10.71,087d171,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,1934,101061,Firefox/Windows,County-Default
+2028-01-06T14:42:42Z,10.70.30.71,cea4f7e,CONNECT,https,www.txdot-roadconditions.example,-,502,allowed,government,1354,153,Edge/Windows,County-Default
+2028-01-06T14:46:57Z,10.70.20.75,ab14688,CONNECT,https,www.tidewaterlandscaping.example,-,200,allowed,weather,2443,44307,Chrome/Windows,County-Default
+2028-01-06T14:58:31Z,10.70.10.149,dad32ae,CONNECT,https,api.fleetfuel-cards.com,-,200,allowed,finance,2529,88690,Edge/Windows,County-Default
+2028-01-06T15:01:44Z,10.70.30.86,56f61cb,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,1320,82667,Edge/Windows,County-Default
+2028-01-06T15:04:44Z,10.70.10.143,f5dbe4e,CONNECT,https,cdn.hotel-reservations.com,-,200,allowed,travel,2762,37072,Edge/Windows,County-Default
+2028-01-06T15:08:14Z,10.70.20.69,5eb2745,GET,http,login.docsign-flow.com,/v3/check?id=58a5d1069a,200,allowed,online storage,3197,33960,Edge/Windows,County-Default
+2028-01-06T15:14:15Z,10.70.10.104,f23c367,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,7028,73961,Firefox/Windows,County-Default
+2028-01-06T15:16:05Z,10.70.20.60,37f1313,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,3759,4889,Firefox/Windows,County-Default
+2028-01-06T15:29:51Z,10.70.20.75,ab14688,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,3545,185439,Chrome/Windows,County-Default
+2028-01-06T15:33:06Z,10.70.30.68,2c360a5,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,2813,15496,Edge/Windows,County-Default
+2028-01-06T15:33:33Z,10.70.30.74,4517aa1,CONNECT,https,www.driftwoodcpa.example,-,200,allowed,finance,1021,25295,Edge/Windows,County-Default
+2028-01-06T15:34:15Z,10.70.21.81,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,3310,72799,-,County-Default
+2028-01-06T15:40:24Z,10.70.10.122,4c4a9f5,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,3354,41907,Firefox/Windows,County-Default
+2028-01-06T15:53:58Z,10.70.21.69,1ae9d54,CONNECT,https,www.fleetfuel-cards.com,-,200,allowed,finance,834,68774,Firefox/Windows,County-Default
+2028-01-06T15:54:19Z,10.70.10.116,3e8cb45,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3426,195316,Edge/Windows,County-Default
+2028-01-06T16:08:36Z,10.70.10.65,ab571ad,CONNECT,https,www.tejanoairport.example,-,200,allowed,business,2228,124626,Chrome/Windows,County-Default
+2028-01-06T16:13:00Z,10.70.21.60,b8c3ff5,CONNECT,https,www.tejanoairport.example,-,200,allowed,business,559,155844,Edge/Windows,County-Default
+2028-01-06T16:18:08Z,10.70.10.104,f23c367,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,5887,64467,Firefox/Windows,County-Default
+2028-01-06T16:20:23Z,10.70.10.86,8329bf6,CONNECT,https,sso-login.hotel-reservations.com,-,200,allowed,travel,1846,189623,Edge/Windows,County-Default
+2028-01-06T16:21:48Z,10.70.20.90,9a6f10c,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,1034,118353,Chrome/Windows,County-Default
+2028-01-06T16:28:28Z,10.70.30.65,86f9fde,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,2143,101483,Edge/Windows,County-Default
+2028-01-06T16:31:27Z,10.70.10.122,4c4a9f5,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,7126,54135,Edge/Windows,County-Default
+2028-01-06T16:32:01Z,10.70.10.131,745487e,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,2867,58594,Firefox/Windows,County-Default
+2028-01-06T16:37:49Z,10.70.30.71,cea4f7e,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,5371,20747,Edge/Windows,County-Default
+2028-01-06T16:41:21Z,10.70.10.101,b6530a6,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,9257,96909,Edge/Windows,County-Default
+2028-01-06T16:49:51Z,10.70.30.62,7fecbeb,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,1286,62094,Edge/Windows,County-Default
+2028-01-06T16:58:54Z,10.70.20.90,9a6f10c,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,3779,104587,Firefox/Windows,County-Default
+2028-01-06T17:01:27Z,10.70.10.113,0475d6b,CONNECT,https,www.orbitcpa.example,-,200,allowed,finance,7216,35814,Edge/Windows,County-Default
+2028-01-06T17:03:21Z,10.70.10.122,4c4a9f5,CONNECT,https,www.mesquitetelecom.example,-,200,allowed,business,956,74899,Edge/Windows,County-Default
+2028-01-06T17:21:13Z,10.70.10.104,f23c367,CONNECT,https,www.coastal-bend-fishing-reports.example,-,200,allowed,uncategorised,4618,197925,Firefox/Windows,County-Default
+2028-01-06T17:32:24Z,10.70.20.75,ab14688,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2158,23722,Chrome/Windows,County-Default
+2028-01-06T17:37:26Z,10.70.10.89,ed70462,CONNECT,https,static.newswire-national.com,-,200,allowed,news,1226,195942,Firefox/Windows,County-Default
+2028-01-06T17:41:07Z,10.70.21.81,f25757f,CONNECT,https,img-cdn.docsign-flow.com,-,200,allowed,content delivery,2876,149619,Edge/Windows,County-Default
+2028-01-06T17:52:52Z,10.70.30.68,2c360a5,CONNECT,https,records.county-clerk-search.example,-,200,allowed,government,5630,158143,Edge/Windows,County-Default
+2028-01-06T17:56:34Z,10.70.10.101,b6530a6,CONNECT,https,rest-api.hotel-reservations.com,-,200,allowed,travel,1411,50976,Edge/Windows,County-Default
+2028-01-06T18:02:43Z,10.70.10.110,-,CONNECT,https,www.osupdates-delivery.com,-,200,allowed,software updates,2802,35189,-,County-Default
+2028-01-06T18:13:12Z,10.70.20.75,ab14688,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,3004,46379,Chrome/Windows,County-Default
+2028-01-06T18:17:48Z,10.70.10.83,7c087f5,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,5171,89312,Chrome/Windows,County-Default
+2028-01-06T18:27:00Z,10.70.21.72,303cb1f,GET,http,www.officesuite-cdn.net,/static/d3bb6ec.js,200,allowed,content delivery,4044,64671,Edge/Windows,County-Default
+2028-01-06T18:28:14Z,10.70.10.116,3e8cb45,CONNECT,https,www.orbitcpa.example,-,200,allowed,finance,1316,82411,Edge/Windows,County-Default
+2028-01-06T18:46:57Z,10.70.10.131,745487e,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2885,136376,Firefox/Windows,County-Default
+2028-01-06T19:06:16Z,10.70.10.107,443d0e4,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,5630,107302,Edge/Windows,County-Default
+2028-01-06T19:10:02Z,10.70.30.77,5fccad8,GET,http,www.truckrental-fleet.com,/updates/c5bb9/manifest.xml,200,allowed,shopping,614,53150,Firefox/Windows,County-Default
+2028-01-06T19:21:37Z,10.70.20.66,-,GET,http,static.osupdates-delivery.com,/content/2a3269eb.cab,200,allowed,software updates,1537,35631,-,County-Default
+2028-01-06T19:34:19Z,10.70.30.89,-,GET,http,www-east.telemetry-osvendor.com,/robots.txt,304,allowed,software updates,6329,481,-,County-Default
+2028-01-06T19:35:19Z,10.70.21.72,303cb1f,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2140,44155,Edge/Windows,County-Default
+2028-01-06T19:35:31Z,10.70.10.62,d36f478,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,3762,85102,Edge/Windows,County-Default
+2028-01-06T19:46:36Z,10.70.10.137,a356c98,CONNECT,https,www.lonestarauto.example,-,200,allowed,shopping,11190,61448,Chrome/Windows,County-Default
+2028-01-06T19:47:45Z,10.70.10.137,a356c98,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,3188,25535,Chrome/Windows,County-Default
+2028-01-06T20:00:18Z,10.70.10.86,8329bf6,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,5869,206836,Edge/Windows,County-Default
+2028-01-06T20:04:15Z,10.70.20.69,5eb2745,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,4469,79012,Edge/Windows,County-Default
+2028-01-06T20:04:38Z,10.70.10.65,ab571ad,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2230,29397,Chrome/Windows,County-Default
+2028-01-06T20:09:54Z,10.70.10.107,443d0e4,CONNECT,https,api-v2.nueces-county-tx.org,-,200,allowed,government,3920,44207,Edge/Windows,County-Default
+2028-01-06T20:10:16Z,10.70.10.98,4fc32d0,CONNECT,https,www.nuecesauto.example,-,200,allowed,shopping,4468,77303,Chrome/Windows,County-Default
+2028-01-06T20:13:37Z,10.70.30.68,2c360a5,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,1356,40788,Edge/Windows,County-Default
+2028-01-06T20:22:24Z,10.70.21.69,1ae9d54,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4006,134980,Firefox/Windows,County-Default
+2028-01-06T20:43:55Z,10.70.30.74,4517aa1,CONNECT,https,www.storm-prep-guides.org,-,200,allowed,weather,5261,35007,Edge/Windows,County-Default
+2028-01-06T20:51:07Z,10.70.10.137,a356c98,CONNECT,https,rest-api.hotel-reservations.com,-,200,allowed,travel,4722,50294,Chrome/Windows,County-Default
+2028-01-06T20:53:38Z,10.70.10.89,-,CONNECT,https,defs.sentinel-endpoint-updates.example,-,200,allowed,software updates,1905,35051,-,County-Default
+2028-01-06T21:07:49Z,10.70.30.74,4517aa1,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,2403,127297,Edge/Windows,County-Default
+2028-01-06T21:39:52Z,10.70.10.128,3ae3f6f,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,1932,15354,Chrome/Windows,County-Default
+2028-01-06T21:50:54Z,10.70.10.83,7c087f5,CONNECT,https,www.cdn-jslibs.net,-,502,allowed,content delivery,1272,370,Chrome/Windows,County-Default
+2028-01-06T21:53:28Z,10.70.30.77,5fccad8,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3959,167561,Firefox/Windows,County-Default
+2028-01-06T22:07:38Z,10.70.30.65,86f9fde,CONNECT,https,www.orbitcpa.example,-,200,allowed,finance,5288,78828,Firefox/Windows,County-Default
+2028-01-06T22:10:39Z,10.70.10.68,731476a,CONNECT,https,www-east.officesuite-mail.com,-,200,allowed,business software,9227,39289,Edge/Windows,County-Default
+2028-01-06T22:24:38Z,10.70.20.78,-,CONNECT,https,static.ntp-pool-public.org,-,200,allowed,software updates,2921,90158,-,County-Default
+2028-01-07T00:36:27Z,10.70.21.81,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,2051,74651,-,County-Default
+2028-01-07T00:50:04Z,10.70.10.68,-,GET,http,www.ntp-pool-public.org,/updates/0068d/manifest.xml,200,allowed,software updates,1561,139345,-,County-Default
+2028-01-07T01:17:47Z,10.70.10.65,-,GET,http,auth-prod.certstatus-ocsp.net,/content/c348a09b.cab,200,allowed,software updates,4114,275599,-,County-Default
+2028-01-07T01:55:51Z,10.70.21.66,9c36f24,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,4520,105047,Firefox/Windows,County-Default
+2028-01-07T02:21:00Z,10.70.21.81,87d87dd,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,4509,182112,Chrome/Windows,County-Default
+2028-01-07T02:35:48Z,10.70.21.72,105bf3a,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,1934,59986,Edge/Windows,County-Default
+2028-01-07T04:10:33Z,10.70.21.90,24663a8,CONNECT,https,jobs.govt-careers.example,-,200,allowed,government,2554,169900,Firefox/Windows,County-Default
+2028-01-07T04:26:30Z,10.70.21.81,87d87dd,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2342,145566,Chrome/Windows,County-Default
+2028-01-07T04:29:12Z,10.70.21.90,24663a8,CONNECT,https,www.orbitcpa.example,-,200,allowed,finance,2428,84426,Firefox/Windows,County-Default
+2028-01-07T05:40:03Z,10.70.21.60,bfc373e,CONNECT,https,www-2.coastalbendweather.net,-,200,allowed,weather,8547,67972,Chrome/Windows,County-Default
+2028-01-07T05:53:26Z,10.70.21.90,24663a8,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,643,99890,Firefox/Windows,County-Default
+2028-01-07T06:00:43Z,10.70.21.78,527b2a5,CONNECT,https,www.fleetfuel-cards.com,-,200,allowed,finance,2317,114417,Edge/Windows,County-Default
+2028-01-07T06:29:52Z,10.70.10.137,-,GET,http,api.certstatus-ocsp.net,/static/30a8e8d.js,200,allowed,software updates,2557,81099,-,County-Default
+2028-01-07T06:44:38Z,10.70.10.146,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,521,106755,-,County-Default
+2028-01-07T07:31:29Z,10.70.21.78,527b2a5,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3496,47303,Edge/Windows,County-Default
+2028-01-07T08:37:22Z,10.70.21.72,105bf3a,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,1039,64632,Chrome/Windows,County-Default
+2028-01-07T10:04:22Z,10.70.10.137,-,GET,http,defs.sentinel-endpoint-updates.example,/,204,allowed,software updates,1011,621,-,County-Default
+2028-01-07T10:16:07Z,10.70.21.93,-,CONNECT,https,defs.sentinel-endpoint-updates.example,-,200,allowed,software updates,2030,53804,-,County-Default
+2028-01-07T11:27:44Z,10.70.21.84,efe22d2,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3075,53313,Edge/Windows,County-Default
+2028-01-07T12:14:03Z,10.70.21.93,321f269,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,454,1356,Firefox/Windows,County-Blocked
+2028-01-07T12:41:03Z,10.70.21.90,56a081d,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,9505,24193,Edge/Windows,County-Default
+2028-01-07T13:07:18Z,10.70.10.137,a356c98,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4788,68252,Chrome/Windows,County-Default
+2028-01-07T13:25:45Z,10.70.10.89,ed70462,CONNECT,https,www.mustangplumbing.example,-,200,allowed,business,1186,93255,Firefox/Windows,County-Default
+2028-01-07T13:44:36Z,10.70.10.68,-,GET,http,cdn.certstatus-ocsp.net,/index.html,404,allowed,software updates,6640,75681,-,County-Default
+2028-01-07T13:51:58Z,10.70.30.80,dcb2256,CONNECT,https,api.fleetfuel-cards.com,-,200,allowed,finance,4238,176205,Chrome/Windows,County-Default
+2028-01-07T13:59:12Z,10.70.10.113,0475d6b,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,4053,39378,Edge/Windows,County-Default
+2028-01-07T14:00:44Z,10.70.20.60,37f1313,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2533,266884,Firefox/Windows,County-Default
+2028-01-07T14:09:05Z,10.70.10.101,b6530a6,CONNECT,https,update-cdn.txroadwatch.org,-,200,allowed,government,6137,54675,Firefox/Windows,County-Default
+2028-01-07T14:12:22Z,10.70.30.74,4517aa1,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,657,145988,Edge/Windows,County-Default
+2028-01-07T14:27:27Z,10.70.10.95,061924b,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,2448,79968,Edge/Windows,County-Default
+2028-01-07T14:29:29Z,10.70.20.90,9a6f10c,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,4199,142337,Chrome/Windows,County-Default
+2028-01-07T14:38:45Z,10.70.30.65,86f9fde,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,1207,88006,Edge/Windows,County-Default
+2028-01-07T14:50:45Z,10.70.21.84,da0450c,GET,http,www.sanpatgroup.example,/pki/62a481.crl,200,allowed,business,3747,125056,Edge/Windows,County-Default
+2028-01-07T15:05:55Z,10.70.10.101,b6530a6,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,1364,46364,Chrome/Windows,County-Default
+2028-01-07T15:12:09Z,10.70.20.69,5eb2745,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,981,63097,Edge/Windows,County-Default
+2028-01-07T15:23:01Z,10.70.10.74,cdd179f,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,6012,16869,Firefox/Windows,County-Default
+2028-01-07T15:32:47Z,10.70.21.63,d7b17a1,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,1288,55605,Edge/Windows,County-Default
+2028-01-07T15:34:44Z,10.70.21.84,da0450c,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,5060,124351,Edge/Windows,County-Default
+2028-01-07T15:52:33Z,10.70.10.89,ed70462,CONNECT,https,img-cdn.docsign-flow.com,-,200,allowed,content delivery,4151,179407,Firefox/Windows,County-Default
+2028-01-07T15:59:10Z,10.70.20.69,5eb2745,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,2301,24629,Edge/Windows,County-Default
+2028-01-07T16:11:11Z,10.70.30.71,cea4f7e,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,892,36880,Edge/Windows,County-Default
+2028-01-07T16:18:50Z,10.70.30.68,2c360a5,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,5667,17328,Firefox/Windows,County-Default
+2028-01-07T16:36:32Z,10.70.21.72,303cb1f,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,1495,32446,Chrome/Windows,County-Default
+2028-01-07T16:47:52Z,10.70.30.77,5fccad8,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,2992,11719,Firefox/Windows,County-Default
+2028-01-07T16:53:17Z,10.70.10.146,e14b179,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1636,46958,Edge/Windows,County-Default
+2028-01-07T16:53:22Z,10.70.10.83,7c087f5,CONNECT,https,www.mesquitefoodbank.example,-,200,allowed,finance,6938,273025,Chrome/Windows,County-Default
+2028-01-07T17:00:40Z,10.70.10.74,cdd179f,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,4258,59362,Firefox/Windows,County-Default
+2028-01-07T17:03:06Z,10.70.21.63,d7b17a1,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,698,57907,Edge/Windows,County-Default
+2028-01-07T17:07:31Z,10.70.10.89,ed70462,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,478,1340,Firefox/Windows,County-Blocked
+2028-01-07T17:18:43Z,10.70.20.93,1e3920e,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1633,66267,Edge/Windows,County-Default
+2028-01-07T17:22:54Z,10.70.20.84,defa1e2,CONNECT,https,www.storm-prep-guides.org,-,200,allowed,weather,2018,42539,Edge/Windows,County-Default
+2028-01-07T17:27:33Z,10.70.21.63,d7b17a1,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,5069,84430,Edge/Windows,County-Default
+2028-01-07T17:55:44Z,10.70.20.81,deae412,CONNECT,https,www.fleetfuel-cards.com,-,200,allowed,finance,724,161553,Edge/Windows,County-Default
+2028-01-07T18:09:28Z,10.70.21.81,f25757f,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4160,176482,Edge/Windows,County-Default
+2028-01-07T18:19:48Z,10.70.21.81,f25757f,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,7454,156496,Edge/Windows,County-Default
+2028-01-07T18:40:35Z,10.70.10.110,917036a,CONNECT,https,www.orbitcpa.example,-,200,allowed,finance,1987,56465,Chrome/Windows,County-Default
+2028-01-07T19:04:40Z,10.70.20.75,-,GET,http,www.certstatus-ocsp.net,/favicon.ico,200,allowed,software updates,5161,55417,-,County-Default
+2028-01-07T19:10:58Z,10.70.10.68,731476a,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,5856,98902,Edge/Windows,County-Default
+2028-01-07T19:26:29Z,10.70.10.134,0261d00,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,4830,39093,Firefox/Windows,County-Default
+2028-01-07T19:38:24Z,10.70.10.77,03f5e19,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,1664,30279,Chrome/Windows,County-Default
+2028-01-07T19:44:16Z,10.70.10.110,917036a,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,6252,24803,Chrome/Windows,County-Default
+2028-01-07T19:45:05Z,10.70.10.143,f5dbe4e,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,3674,103140,Chrome/Windows,County-Default
+2028-01-07T19:50:33Z,10.70.10.125,042196d,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,815,147926,Edge/Windows,County-Default
+2028-01-07T20:05:20Z,10.70.30.68,2c360a5,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,2101,134580,Edge/Windows,County-Default
+2028-01-07T20:17:09Z,10.70.10.95,061924b,CONNECT,https,www.storm-prep-guides.org,-,200,allowed,weather,2468,37032,Edge/Windows,County-Default
+2028-01-07T20:40:37Z,10.70.10.86,8329bf6,CONNECT,https,sso-login.harborline6.example,-,200,allowed,news,5246,134223,Edge/Windows,County-Default
+2028-01-07T20:54:53Z,10.70.30.62,7fecbeb,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,1687,61738,Edge/Windows,County-Default
+2028-01-07T22:02:30Z,10.70.20.72,6b244f0,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,2736,91133,Edge/Windows,County-Default
+2028-01-07T22:29:38Z,10.70.21.78,765ad21,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,3473,125239,Chrome/Windows,County-Default
+2028-01-07T22:31:15Z,10.70.21.87,e463e73,CONNECT,https,jobs.govt-careers.example,-,200,allowed,government,8287,68738,Edge/Windows,County-Default
+2028-01-07T23:10:04Z,10.70.30.62,7fecbeb,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,3364,18939,Edge/Windows,County-Default
+2028-01-07T23:35:40Z,10.70.21.63,d7b17a1,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,3371,12780,Chrome/Windows,County-Default
+2028-01-08T00:07:25Z,10.70.21.75,e28079c,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,4104,48381,Edge/Windows,County-Default
+2028-01-08T00:25:31Z,10.70.21.84,-,CONNECT,https,static.ntp-pool-public.org,-,200,allowed,software updates,2771,7457,-,County-Default
+2028-01-08T01:50:53Z,10.70.21.93,858465a,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4125,62365,Edge/Windows,County-Default
+2028-01-08T02:03:10Z,10.70.21.66,9c36f24,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3421,102175,Firefox/Windows,County-Default
+2028-01-08T03:20:36Z,10.70.21.75,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,1774,72436,-,County-Default
+2028-01-08T03:38:21Z,10.70.21.72,105bf3a,CONNECT,https,static.school-district-cc.org,-,200,allowed,education,5410,82587,Edge/Windows,County-Default
+2028-01-08T04:04:12Z,10.70.21.87,c35f527,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,4657,53637,Edge/Windows,County-Default
+2028-01-08T04:24:27Z,10.70.21.75,e28079c,CONNECT,https,www.mesquitetelecom.example,-,200,allowed,business,2043,33319,Edge/Windows,County-Default
+2028-01-08T04:36:37Z,10.70.10.107,-,CONNECT,https,static.ntp-pool-public.org,-,200,allowed,software updates,4184,78370,-,County-Default
+2028-01-08T04:53:37Z,10.70.21.75,e28079c,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,2729,18966,Firefox/Windows,County-Default
+2028-01-08T05:46:45Z,10.70.21.69,-,GET,http,defs.sentinel-endpoint-updates.example,/updates/b1b5f/manifest.xml,200,allowed,software updates,3046,189974,-,County-Default
+2028-01-08T07:01:57Z,10.70.21.84,efe22d2,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,3172,75962,Edge/Windows,County-Default
+2028-01-08T10:05:58Z,10.70.21.72,105bf3a,CONNECT,https,www.benefits-portal.com,-,200,allowed,business software,1053,221730,Edge/Windows,County-Default
+2028-01-08T10:13:47Z,10.70.21.69,6bc7a16,CONNECT,https,static-assets.retail-orders.com,-,200,allowed,shopping,1362,59437,Edge/Windows,County-Default
+2028-01-08T10:47:55Z,10.70.21.66,9c36f24,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,5642,95939,Firefox/Windows,County-Default
+2028-01-08T11:04:35Z,10.70.21.63,67b5bbf,GET,http,api.airline-bookings.net,/index.html,200,allowed,travel,2400,46724,Firefox/Windows,County-Default
+2028-01-08T13:21:53Z,10.70.10.140,-,GET,http,defs.sentinel-endpoint-updates.example,/favicon.ico,200,allowed,software updates,3879,193271,-,County-Default
+2028-01-08T14:48:14Z,10.70.30.80,-,GET,http,www.certstatus-ocsp.net,/updates/b395a/manifest.xml,200,allowed,software updates,316,42494,-,County-Default
+2028-01-08T16:38:54Z,10.70.21.87,60d183c,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,2547,69998,Chrome/Windows,County-Default
+2028-01-08T16:39:01Z,10.70.10.95,-,GET,http,www.ntp-pool-public.org,/static/0a97317.js,200,allowed,software updates,895,91580,-,County-Default
+2028-01-08T16:44:13Z,10.70.10.83,-,GET,http,www.browser-safecheck.net,/updates/817e0/manifest.xml,200,allowed,software updates,2659,44460,-,County-Default
+2028-01-08T17:22:11Z,10.70.30.89,-,GET,http,defs.sentinel-endpoint-updates.example,/pki/ad3692.crl,200,allowed,software updates,2305,34359,-,County-Default
+2028-01-08T18:25:50Z,10.70.21.63,c953b36,CONNECT,https,www-2.coastalbendweather.net,-,200,allowed,weather,4092,32256,Chrome/Windows,County-Default
+2028-01-08T19:48:43Z,10.70.21.84,62204b8,CONNECT,https,www.tejanoairport.example,-,200,allowed,business,5449,29800,Chrome/Windows,County-Default
+2028-01-08T20:19:29Z,10.70.10.101,b6530a6,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,1116,42337,Edge/Windows,County-Default
+2028-01-08T21:07:53Z,10.70.10.62,-,CONNECT,https,defs.sentinel-endpoint-updates.example,-,200,allowed,software updates,3297,93820,-,County-Default
+2028-01-08T22:07:01Z,10.70.21.78,c341cc4,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,509,923,Chrome/Windows,County-Blocked
+2028-01-08T22:22:04Z,10.70.21.72,03e610e,CONNECT,https,static.bayside-ledger.example,-,200,allowed,news,608,150206,Edge/Windows,County-Default
+2028-01-08T22:35:11Z,10.70.20.69,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,1072,92629,-,County-Default
+2028-01-08T22:54:24Z,10.70.20.90,-,GET,http,api.certstatus-ocsp.net,/updates/a111e/manifest.xml,200,allowed,software updates,3448,66482,-,County-Default
+2028-01-08T23:43:00Z,10.70.21.66,5878eb7,CONNECT,https,static.partsdepot-supply.com,-,200,allowed,shopping,8806,36045,Chrome/Windows,County-Default
+2028-01-09T00:11:51Z,10.70.21.90,1d2e800,CONNECT,https,www.zenithcog.example,-,200,allowed,business,5165,42210,Chrome/Windows,County-Default
+2028-01-09T00:48:20Z,10.70.21.93,efbceb6,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,991,57367,Chrome/Windows,County-Default
+2028-01-09T01:00:25Z,10.70.21.84,3eef1e0,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,1054,57488,Chrome/Windows,County-Default
+2028-01-09T01:35:15Z,10.70.21.84,3eef1e0,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,6563,81159,Chrome/Windows,County-Default
+2028-01-09T01:59:17Z,10.70.21.93,efbceb6,GET,http,www.zenithcog.example,/pki/7b843c.crl,200,allowed,business,2802,157340,Edge/Windows,County-Default
+2028-01-09T02:08:38Z,10.70.30.86,-,GET,http,defs.sentinel-endpoint-updates.example,/images/d611c5.png,200,allowed,software updates,1264,65666,-,County-Default
+2028-01-09T02:24:12Z,10.70.21.63,414f925,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,7857,19294,Chrome/Windows,County-Default
+2028-01-09T02:31:20Z,10.70.21.81,98173db,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,4405,33532,Edge/Windows,County-Default
+2028-01-09T02:37:49Z,10.70.21.60,d08ccc3,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,1413,67156,Edge/Windows,County-Default
+2028-01-09T02:58:46Z,10.70.10.101,-,GET,http,www.browser-safecheck.net,/favicon.ico,404,allowed,software updates,879,22880,-,County-Default
+2028-01-09T03:03:41Z,10.70.21.63,414f925,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2039,129233,Chrome/Windows,County-Default
+2028-01-09T03:23:34Z,10.70.21.66,5878eb7,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,1442,82628,Chrome/Windows,County-Default
+2028-01-09T04:17:58Z,10.70.10.128,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,9750,80781,-,County-Default
+2028-01-09T04:34:59Z,10.70.21.72,772cd7a,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,2188,58730,Edge/Windows,County-Default
+2028-01-09T05:16:07Z,10.70.20.78,-,CONNECT,https,defs.sentinel-endpoint-updates.example,-,200,allowed,software updates,3205,159729,-,County-Default
+2028-01-09T05:27:17Z,10.70.10.92,-,GET,http,static.telemetry-osvendor.com,/pki/dbc53e.crl,200,allowed,software updates,2346,46476,-,County-Default
+2028-01-09T05:32:08Z,10.70.21.66,5878eb7,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,10675,32052,Chrome/Windows,County-Default
+2028-01-09T06:07:08Z,10.70.21.90,1d2e800,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,2720,17828,Chrome/Windows,County-Default
+2028-01-09T06:23:57Z,10.70.21.84,3eef1e0,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,2685,184224,Chrome/Windows,County-Default
+2028-01-09T06:36:35Z,10.70.21.87,4d38359,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,2976,131854,Edge/Windows,County-Default
+2028-01-09T07:01:48Z,10.70.10.104,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,2569,148970,-,County-Default
+2028-01-09T07:56:14Z,10.70.10.131,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,1558,52556,-,County-Default
+2028-01-09T09:47:12Z,10.70.30.71,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,4787,86129,-,County-Default
+2028-01-09T11:01:50Z,10.70.30.86,-,GET,http,static.osupdates-delivery.com,/,200,allowed,software updates,2733,64284,-,County-Default
+2028-01-09T11:13:05Z,10.70.21.60,d08ccc3,CONNECT,https,update-cdn.txroadwatch.org,-,200,allowed,government,2111,44031,Edge/Windows,County-Default
+2028-01-09T15:08:23Z,10.70.20.81,-,GET,http,www.certstatus-ocsp.net,/pki/a32975.crl,200,allowed,software updates,3729,58361,-,County-Default
+2028-01-09T15:12:07Z,10.70.10.143,-,GET,http,defs.sentinel-endpoint-updates.example,/content/a40175ba.cab,301,allowed,software updates,3784,340,-,County-Default
+2028-01-09T15:30:14Z,10.70.21.78,c341cc4,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,1965,94787,Edge/Windows,County-Default
+2028-01-09T15:30:50Z,10.70.21.60,0d6ae84,CONNECT,https,www.southtexprint.example,-,200,allowed,business,3839,59508,Chrome/Windows,County-Default
+2028-01-09T16:00:43Z,10.70.21.87,-,GET,http,api.certstatus-ocsp.net,/favicon.ico,200,allowed,software updates,2300,44666,-,County-Default
+2028-01-09T18:21:43Z,10.70.21.87,60d183c,CONNECT,https,cdn-east.storm-prep-guides.org,-,200,allowed,weather,3751,21106,Chrome/Windows,County-Default
+2028-01-09T19:01:46Z,10.70.21.63,c953b36,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,1001,52499,Chrome/Windows,County-Default
+2028-01-09T19:38:06Z,10.70.10.134,-,GET,http,static.ntp-pool-public.org,/favicon.ico,301,allowed,software updates,5542,596,-,County-Default
+2028-01-09T20:37:42Z,10.70.30.68,-,CONNECT,https,static.browser-safecheck.net,-,200,allowed,software updates,2416,21001,-,County-Default
+2028-01-09T20:38:26Z,10.70.21.72,03e610e,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2095,14831,Edge/Windows,County-Default
+2028-01-09T20:39:04Z,10.70.10.140,-,GET,http,www.browser-safecheck.net,/static/32af2c6.js,200,allowed,software updates,3589,35392,-,County-Default
+2028-01-09T23:32:07Z,10.70.21.66,c735a91,CONNECT,https,www.training-lms.net,-,200,allowed,education,1594,34387,Edge/Windows,County-Default
+2028-01-10T01:41:17Z,10.70.21.72,772cd7a,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,2902,80666,Chrome/Windows,County-Default
+2028-01-10T01:49:46Z,10.70.21.84,3eef1e0,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,6401,22833,Chrome/Windows,County-Default
+2028-01-10T02:07:53Z,10.70.21.78,a583b26,CONNECT,https,www-east.officesuite-mail.com,-,200,allowed,business software,1840,22087,Edge/Windows,County-Default
+2028-01-10T03:17:01Z,10.70.21.63,414f925,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,3563,44891,Chrome/Windows,County-Default
+2028-01-10T04:58:37Z,10.70.10.89,-,CONNECT,https,www.certstatus-ocsp.net,-,200,allowed,software updates,2388,8776,-,County-Default
+2028-01-10T05:26:58Z,10.70.20.93,-,GET,http,www.certstatus-ocsp.net,/pki/f3ccb6.crl,200,allowed,software updates,1702,89388,-,County-Default
+2028-01-10T05:43:42Z,10.70.21.87,4d38359,CONNECT,https,www.zenithcog.example,-,200,allowed,business,1667,210317,Edge/Windows,County-Default
+2028-01-10T06:06:52Z,10.70.21.78,a583b26,CONNECT,https,www.orbitcpa.example,-,200,allowed,finance,2377,105859,Edge/Windows,County-Default
+2028-01-10T06:12:52Z,10.70.30.65,-,GET,http,cdn.certstatus-ocsp.net,/v1/check?id=2ed694db6d,302,allowed,software updates,3677,443,-,County-Default
+2028-01-10T06:47:48Z,10.70.21.93,efbceb6,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,2565,50739,Edge/Windows,County-Default
+2028-01-10T06:58:53Z,10.70.30.89,-,GET,http,static.telemetry-osvendor.com,/,200,allowed,software updates,1081,50472,-,County-Default
+2028-01-10T07:00:43Z,10.70.10.116,-,GET,http,www-east.telemetry-osvendor.com,/updates/6aa30/manifest.xml,200,allowed,software updates,1618,126885,-,County-Default
+2028-01-10T07:01:21Z,10.70.21.93,efbceb6,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,526,1448,Edge/Windows,County-Blocked
+2028-01-10T07:12:23Z,10.70.21.63,414f925,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,2015,52316,Edge/Windows,County-Default
+2028-01-10T07:39:53Z,10.70.20.60,-,GET,http,static.browser-safecheck.net,/static/06e05e2.js,200,allowed,software updates,8169,120987,-,County-Default
+2028-01-10T08:18:29Z,10.70.21.66,5878eb7,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,5335,160183,Chrome/Windows,County-Default
+2028-01-10T09:37:30Z,10.70.10.125,-,CONNECT,https,www.ntp-pool-public.org,-,200,allowed,software updates,3488,61456,-,County-Default
+2028-01-10T10:29:20Z,10.70.21.63,414f925,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2150,150905,Chrome/Windows,County-Default
+2028-01-10T10:29:53Z,10.70.10.95,-,GET,http,www-east.telemetry-osvendor.com,/updates/40651/manifest.xml,200,allowed,software updates,6268,11169,-,County-Default
+2028-01-10T10:31:08Z,10.70.21.72,772cd7a,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4291,47155,Chrome/Windows,County-Default
+2028-01-10T11:10:18Z,10.70.21.81,98173db,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,3081,15539,Edge/Windows,County-Default
+2028-01-10T11:47:43Z,10.70.21.75,eb1dae6,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,1330,153074,Chrome/Windows,County-Default
+2028-01-10T11:56:03Z,10.70.21.87,e463e73,CONNECT,https,www.pioneerconventions.example,-,200,allowed,business,1525,80345,Edge/Windows,County-Default
+2028-01-10T12:08:25Z,10.70.21.78,765ad21,CONNECT,https,www-east.harborline6.example,-,200,allowed,news,3082,108849,Chrome/Windows,County-Default
+2028-01-10T12:14:05Z,10.70.10.122,-,GET,http,api.certstatus-ocsp.net,/v3/check?id=0f9cbeb517,200,allowed,software updates,5305,132072,-,County-Default
+2028-01-10T12:47:09Z,10.70.30.86,56f61cb,CONNECT,https,www.coastal-bend-fishing-reports.example,-,200,allowed,uncategorised,2917,106811,Edge/Windows,County-Default
+2028-01-10T13:27:48Z,10.70.21.60,b8c3ff5,CONNECT,https,www.training-lms.net,-,200,allowed,education,2746,100641,Edge/Windows,County-Default
+2028-01-10T13:42:12Z,10.70.10.134,0261d00,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,932,27117,Firefox/Windows,County-Default
+2028-01-10T14:04:14Z,10.70.10.131,745487e,CONNECT,https,sso-login.hotel-reservations.com,-,200,allowed,travel,2351,78408,Firefox/Windows,County-Default
+2028-01-10T14:11:54Z,10.70.20.60,37f1313,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,4141,30199,Firefox/Windows,County-Default
+2028-01-10T14:34:50Z,10.70.21.81,f25757f,GET,http,grants.federal-grants-portal.example,/static/ecf5e85.js,200,allowed,government,6556,147855,Edge/Windows,County-Default
+2028-01-10T14:35:02Z,10.70.20.75,-,GET,http,static.osupdates-delivery.com,/updates/ecb3d/manifest.xml,200,allowed,software updates,4024,29044,-,County-Default
+2028-01-10T14:36:46Z,10.70.21.69,1ae9d54,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2177,53139,Firefox/Windows,County-Default
+2028-01-10T14:38:19Z,10.70.10.92,e3697c5,CONNECT,https,newswire-national.example,-,200,allowed,news,8283,218186,Chrome/Windows,County-Default
+2028-01-10T14:47:42Z,10.70.30.80,dcb2256,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,6210,51568,Chrome/Windows,County-Default
+2028-01-10T14:53:38Z,10.70.30.86,56f61cb,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,5337,72436,Edge/Windows,County-Default
+2028-01-10T15:18:53Z,10.70.10.89,ed70462,CONNECT,https,api.fleetfuel-cards.com,-,200,allowed,finance,9607,93421,Firefox/Windows,County-Default
+2028-01-10T15:24:50Z,10.70.20.90,-,GET,http,static.browser-safecheck.net,/index.html,200,allowed,software updates,2326,205789,-,County-Default
+2028-01-10T15:25:36Z,10.70.20.90,9a6f10c,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,1217,51711,Chrome/Windows,County-Default
+2028-01-10T15:39:29Z,10.70.20.69,5eb2745,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,4769,82830,Edge/Windows,County-Default
+2028-01-10T15:42:10Z,10.70.10.77,-,CONNECT,https,www.browser-safecheck.net,-,200,allowed,software updates,533,86360,-,County-Default
+2028-01-10T15:42:31Z,10.70.30.86,56f61cb,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1520,15600,Edge/Windows,County-Default
+2028-01-10T15:46:31Z,10.70.10.137,a356c98,CONNECT,https,auth-prod.storm-prep-guides.org,-,200,allowed,weather,2508,21940,Chrome/Windows,County-Default
+2028-01-10T15:48:31Z,10.70.10.98,4fc32d0,GET,http,gis.coastalbend-parcels.example,/v1/check?id=f896cd6d3c,200,allowed,government,2969,78497,Chrome/Windows,County-Default
+2028-01-10T15:54:14Z,10.70.30.86,56f61cb,CONNECT,https,www.storm-prep-guides.org,-,200,allowed,weather,3970,9276,Edge/Windows,County-Default
+2028-01-10T16:00:06Z,10.70.10.65,ab571ad,CONNECT,https,www.gulf-coast-catering.example,-,200,allowed,uncategorised,1751,17995,Chrome/Windows,County-Default
+2028-01-10T16:05:18Z,10.70.10.83,7c087f5,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2339,17993,Chrome/Windows,County-Default
+2028-01-10T16:19:42Z,10.70.10.68,731476a,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,6095,41567,Edge/Windows,County-Default
+2028-01-10T16:23:30Z,10.70.30.89,2609121,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,7147,81125,Edge/Windows,County-Default
+2028-01-10T16:29:17Z,10.70.10.65,ab571ad,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,8049,112761,Chrome/Windows,County-Default
+2028-01-10T16:31:47Z,10.70.30.83,2cb2251,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,2571,175044,Chrome/Windows,County-Default
+2028-01-10T16:36:44Z,10.70.30.80,dcb2256,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,1495,84044,Chrome/Windows,County-Default
+2028-01-10T16:46:16Z,10.70.10.92,e3697c5,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,534,1135,Chrome/Windows,County-Blocked
+2028-01-10T16:50:01Z,10.70.21.63,d7b17a1,CONNECT,https,click.keel-library-foundation.example,-,200,allowed,business,12205,146426,Edge/Windows,County-Default
+2028-01-10T16:58:51Z,10.70.20.93,1e3920e,CONNECT,https,static.partsdepot-supply.com,-,200,allowed,shopping,545,68068,Edge/Windows,County-Default
+2028-01-10T17:03:37Z,10.70.10.110,917036a,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1027,110036,Chrome/Windows,County-Default
+2028-01-10T17:03:47Z,10.70.10.137,a356c98,CONNECT,https,www.hilltophousing.example,-,200,allowed,business,5608,67001,Chrome/Windows,County-Default
+2028-01-10T17:20:17Z,10.70.10.113,0475d6b,CONNECT,https,static.coastalbendweather.net,-,200,allowed,weather,2766,22549,Edge/Windows,County-Default
+2028-01-10T17:24:02Z,10.70.10.149,dad32ae,CONNECT,https,static.coastalbendweather.net,-,200,allowed,weather,3546,107488,Edge/Windows,County-Default
+2028-01-10T17:54:59Z,10.70.10.110,917036a,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,3297,175042,Chrome/Windows,County-Default
+2028-01-10T18:00:58Z,10.70.10.143,f5dbe4e,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,6824,83781,Edge/Windows,County-Default
+2028-01-10T18:06:36Z,10.70.10.134,0261d00,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,2831,65605,Edge/Windows,County-Default
+2028-01-10T18:06:43Z,10.70.30.83,2cb2251,CONNECT,https,cdn.adnetwork-static.net,-,200,allowed,advertising,4868,76404,Chrome/Windows,County-Default
+2028-01-10T18:26:57Z,10.70.30.89,2609121,CONNECT,https,www.zenithcog.example,-,200,allowed,business,4068,29882,Edge/Windows,County-Default
+2028-01-10T19:02:11Z,10.70.10.146,e14b179,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4878,168519,Edge/Windows,County-Default
+2028-01-10T19:13:45Z,10.70.30.62,7fecbeb,CONNECT,https,www.hilltophousing.example,-,200,allowed,business,2087,72070,Edge/Windows,County-Default
+2028-01-10T19:53:36Z,10.70.21.63,d7b17a1,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,5618,16829,Edge/Windows,County-Default
+2028-01-10T19:58:49Z,10.70.10.125,042196d,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,6383,97697,Edge/Windows,County-Default
+2028-01-10T20:08:33Z,10.70.30.68,2c360a5,CONNECT,https,records.county-clerk-search.example,-,200,allowed,government,3143,122310,Edge/Windows,County-Default
+2028-01-10T20:10:50Z,10.70.30.77,5fccad8,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,11011,61343,Firefox/Windows,County-Default
+2028-01-10T20:15:06Z,10.70.30.86,56f61cb,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4231,322138,Edge/Windows,County-Default
+2028-01-10T20:21:18Z,10.70.20.72,6b244f0,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,1301,32291,Edge/Windows,County-Default
+2028-01-10T20:37:50Z,10.70.10.95,061924b,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,1738,86278,Edge/Windows,County-Default
+2028-01-10T20:57:33Z,10.70.30.65,86f9fde,CONNECT,https,www.aransascatering.example,-,200,allowed,business,7464,35664,Edge/Windows,County-Default
+2028-01-10T21:00:05Z,10.70.10.107,443d0e4,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,4576,63909,Edge/Windows,County-Default
+2028-01-10T21:14:24Z,10.70.30.65,86f9fde,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,1217,160473,Edge/Windows,County-Default
+2028-01-10T21:21:31Z,10.70.20.81,deae412,CONNECT,https,www.keelrentals.example,-,200,allowed,travel,6382,8594,Edge/Windows,County-Default
+2028-01-10T21:34:46Z,10.70.21.69,1ae9d54,GET,http,portal.state-purchasing.example,/updates/3add1/manifest.xml,200,allowed,government,4591,8867,Firefox/Windows,County-Default
+2028-01-10T21:39:30Z,10.70.30.71,cea4f7e,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,3122,133695,Edge/Windows,County-Default
+2028-01-10T21:39:52Z,10.70.21.63,d7b17a1,CONNECT,https,www.docsign-flow.example,-,200,allowed,online storage,11031,198711,Edge/Windows,County-Default
+2028-01-10T21:42:03Z,10.70.20.84,defa1e2,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,4683,110367,Edge/Windows,County-Default
+2028-01-10T21:53:53Z,10.70.20.87,-,GET,http,defs.sentinel-endpoint-updates.example,/v1/check?id=052bcbb7d3,200,allowed,software updates,4944,216722,-,County-Default
+2028-01-10T21:58:33Z,10.70.30.77,5fccad8,CONNECT,https,www.storm-prep-guides.org,-,200,allowed,weather,9154,109434,Firefox/Windows,County-Default
+2028-01-10T22:34:34Z,10.70.10.107,443d0e4,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,7282,93222,Chrome/Windows,County-Default
+2028-01-10T22:39:58Z,10.70.20.78,8ea56d1,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,1500,15300,Firefox/Windows,County-Default
+2028-01-10T23:06:10Z,10.70.20.66,31e303b,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,2560,21092,Firefox/Windows,County-Default
+2028-01-10T23:11:04Z,10.70.21.66,a87494d,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,591,1089,Edge/Windows,County-Blocked
+2028-01-10T23:29:23Z,10.70.21.78,765ad21,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,944,65725,Chrome/Windows,County-Default
+2028-01-10T23:40:17Z,10.70.10.128,3ae3f6f,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,4707,56954,Chrome/Windows,County-Default
+2028-01-10T23:50:32Z,10.70.20.66,-,GET,http,static.browser-safecheck.net,/v1/check?id=4085c4d857,304,allowed,software updates,986,233,-,County-Default
+2028-01-11T00:33:19Z,10.70.30.83,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,5550,47027,-,County-Default
+2028-01-11T01:27:28Z,10.70.21.87,c35f527,CONNECT,https,www.newswire-national.com,-,200,allowed,news,6260,50324,Edge/Windows,County-Default
+2028-01-11T03:05:30Z,10.70.21.66,9c36f24,CONNECT,https,webeoc.tdem-portal.example,-,200,allowed,government,2405,64225,Firefox/Windows,County-Default
+2028-01-11T06:49:53Z,10.70.21.75,e28079c,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2012,70794,Edge/Windows,County-Default
+2028-01-11T09:12:05Z,10.70.10.65,-,GET,http,defs.sentinel-endpoint-updates.example,/static/43f2dc3.js,200,allowed,software updates,1713,77682,-,County-Default
+2028-01-11T09:28:18Z,10.70.21.75,e28079c,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1132,79017,Edge/Windows,County-Default
+2028-01-11T10:27:17Z,10.70.21.66,9c36f24,CONNECT,https,cdn.fleetfuel-cards.com,-,200,allowed,finance,4280,160979,Firefox/Windows,County-Default
+2028-01-11T11:41:18Z,10.70.21.81,87d87dd,CONNECT,https,www.zenithcog.example,-,200,allowed,business,4803,31807,Chrome/Windows,County-Default
+2028-01-11T11:41:54Z,10.70.10.77,-,GET,http,www.ntp-pool-public.org,/ocsp/4e56896b407e,200,allowed,software updates,4920,36350,-,County-Default
+2028-01-11T12:57:07Z,10.70.21.87,e463e73,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,8791,132672,Edge/Windows,County-Default
+2028-01-11T13:15:22Z,10.70.250.104,1d74a43,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,8626,54779,Chrome/Windows,County-Default
+2028-01-11T13:19:35Z,10.70.10.101,-,GET,http,defs.sentinel-endpoint-updates.example,/ocsp/93261e88cc9f,200,allowed,software updates,5874,58289,-,County-Default
+2028-01-11T13:40:59Z,10.70.10.137,a356c98,CONNECT,https,www.southtexprint.example,-,200,allowed,business,2385,63838,Chrome/Windows,County-Default
+2028-01-11T13:49:22Z,10.70.10.83,7c087f5,CONNECT,https,www.tejanoairport.example,-,200,allowed,business,3466,265005,Chrome/Windows,County-Default
+2028-01-11T13:55:56Z,10.70.20.63,6d7887a,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,2825,48508,Chrome/Windows,County-Default
+2028-01-11T14:23:16Z,10.70.21.72,303cb1f,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,1132,103032,Edge/Windows,County-Default
+2028-01-11T14:40:08Z,10.70.10.68,731476a,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,5539,57575,Edge/Windows,County-Default
+2028-01-11T14:42:00Z,10.70.250.145,c953b36,CONNECT,https,api.fleetfuel-cards.com,-,200,allowed,finance,3205,86139,Edge/Windows,County-Default
+2028-01-11T14:44:15Z,10.70.10.128,3ae3f6f,CONNECT,https,lonestarhvac.example,-,200,allowed,business,4467,186163,Chrome/Windows,County-Default
+2028-01-11T14:44:38Z,10.70.10.77,03f5e19,GET,http,www.txdot-roadconditions.example,/favicon.ico,200,allowed,government,2189,157997,Edge/Windows,County-Default
+2028-01-11T14:50:30Z,10.70.10.128,3ae3f6f,CONNECT,https,api-v2.nueces-county-tx.org,-,200,allowed,government,5935,90179,Chrome/Windows,County-Default
+2028-01-11T14:53:05Z,10.70.30.80,dcb2256,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3216,39862,Chrome/Windows,County-Default
+2028-01-11T14:55:34Z,10.70.30.89,2609121,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,641,110301,Edge/Windows,County-Default
+2028-01-11T15:15:23Z,10.70.21.78,765ad21,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3304,91433,Chrome/Windows,County-Default
+2028-01-11T15:17:35Z,10.70.30.86,56f61cb,CONNECT,https,web-portal.hospital-patient-portal.org,-,200,allowed,health,3208,64716,Edge/Windows,County-Default
+2028-01-11T15:19:00Z,10.70.10.95,061924b,CONNECT,https,cdn.hotel-reservations.com,-,200,allowed,travel,3852,39404,Edge/Windows,County-Default
+2028-01-11T15:38:41Z,10.70.10.122,4c4a9f5,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,7822,145843,Edge/Windows,County-Default
+2028-01-11T15:39:09Z,10.70.21.78,765ad21,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,6497,111106,Chrome/Windows,County-Default
+2028-01-11T15:41:13Z,10.70.10.83,7c087f5,CONNECT,https,static.benefits-portal.com,-,200,allowed,business software,8394,44110,Chrome/Windows,County-Default
+2028-01-11T15:45:07Z,10.70.10.83,7c087f5,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,3165,130859,Chrome/Windows,County-Default
+2028-01-11T15:46:38Z,10.70.10.71,087d171,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,1416,148380,Firefox/Windows,County-Default
+2028-01-11T15:51:57Z,10.70.10.149,dad32ae,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,3269,114002,Edge/Windows,County-Default
+2028-01-11T16:00:55Z,10.70.10.83,7c087f5,CONNECT,https,static-assets.retail-orders.com,-,200,allowed,shopping,2863,61126,Chrome/Windows,County-Default
+2028-01-11T16:05:07Z,10.70.21.60,-,GET,http,cdn.certstatus-ocsp.net,/index.html,301,allowed,software updates,2269,596,-,County-Default
+2028-01-11T16:18:06Z,10.70.10.140,3be2e39,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,6534,89200,Firefox/Windows,County-Default
+2028-01-11T16:21:41Z,10.70.20.75,ab14688,CONNECT,https,www.inglesidetelecom.example,-,200,allowed,business,6629,179478,Edge/Windows,County-Default
+2028-01-11T16:23:44Z,10.70.10.113,0475d6b,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,2683,83703,Edge/Windows,County-Default
+2028-01-11T16:29:58Z,10.70.21.84,da0450c,CONNECT,https,img-cdn.docsign-flow.com,-,200,allowed,content delivery,2642,196690,Edge/Windows,County-Default
+2028-01-11T17:03:39Z,10.70.30.86,56f61cb,CONNECT,https,login.docsign-flow.com,-,200,allowed,online storage,6457,138422,Edge/Windows,County-Default
+2028-01-11T17:12:14Z,10.70.10.128,3ae3f6f,CONNECT,https,www.sanpatgroup.example,-,200,allowed,business,1761,91540,Edge/Windows,County-Default
+2028-01-11T17:16:17Z,10.70.10.116,-,GET,http,defs.sentinel-endpoint-updates.example,/index.html,200,allowed,software updates,6163,87790,-,County-Default
+2028-01-11T17:21:23Z,10.70.10.140,3be2e39,CONNECT,https,web-static.cellcarrier-account.com,-,200,allowed,business,4116,1677,Firefox/Windows,County-Default
+2028-01-11T17:36:56Z,10.70.10.131,745487e,CONNECT,https,www.driftwoodcpa.example,-,200,allowed,finance,4123,131102,Firefox/Windows,County-Default
+2028-01-11T17:39:32Z,10.70.10.71,087d171,CONNECT,https,www.tidewaterlandscaping.example,-,200,allowed,weather,3033,60580,Firefox/Windows,County-Default
+2028-01-11T17:42:06Z,10.70.21.87,e463e73,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,1428,65232,Edge/Windows,County-Default
+2028-01-11T17:46:28Z,10.70.21.78,765ad21,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,3383,19532,Chrome/Windows,County-Default
+2028-01-11T17:48:03Z,10.70.30.71,cea4f7e,CONNECT,https,login.docsign-flow.com,-,200,allowed,online storage,3459,13991,Edge/Windows,County-Default
+2028-01-11T18:10:19Z,10.70.21.69,1ae9d54,CONNECT,https,www.fleetfuel-cards.com,-,200,allowed,finance,8779,12304,Firefox/Windows,County-Default
+2028-01-11T18:13:15Z,10.70.10.68,731476a,CONNECT,https,static.coastalbendweather.net,-,200,allowed,weather,1093,53791,Firefox/Windows,County-Default
+2028-01-11T18:20:40Z,10.70.10.95,061924b,CONNECT,https,www.hilltophousing.example,-,200,allowed,business,1997,30239,Edge/Windows,County-Default
+2028-01-11T18:29:01Z,10.70.10.68,731476a,CONNECT,https,www.rgv-truck-parts.example,-,200,allowed,uncategorised,2801,51171,Edge/Windows,County-Default
+2028-01-11T18:41:03Z,10.70.20.69,5eb2745,GET,http,www.oleanderfleet.example,/robots.txt,200,allowed,business,3701,92961,Edge/Windows,County-Default
+2028-01-11T18:43:59Z,10.70.30.65,86f9fde,CONNECT,https,webeoc.tdem-portal.example,-,200,allowed,government,3953,221821,Edge/Windows,County-Default
+2028-01-11T18:45:44Z,10.70.21.75,54ab664,CONNECT,https,cdn.adnetwork-static.net,-,200,allowed,advertising,2167,113035,Edge/Windows,County-Default
+2028-01-11T18:52:33Z,10.70.21.75,54ab664,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3087,172260,Edge/Windows,County-Default
+2028-01-11T19:07:01Z,10.70.30.83,2cb2251,CONNECT,https,login.docsign-flow.com,-,200,allowed,online storage,872,133087,Chrome/Windows,County-Default
+2028-01-11T19:24:32Z,10.70.20.78,8ea56d1,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1194,7169,Firefox/Windows,County-Default
+2028-01-11T19:24:56Z,10.70.10.89,ed70462,CONNECT,https,click.kingfishercollege.example,-,200,allowed,education,4021,141228,Firefox/Windows,County-Default
+2028-01-11T19:25:25Z,10.70.20.60,37f1313,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,1809,116550,Firefox/Windows,County-Default
+2028-01-11T19:46:10Z,10.70.21.87,e463e73,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,935,170103,Edge/Windows,County-Default
+2028-01-11T19:47:13Z,10.70.21.90,56a081d,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,4195,27510,Edge/Windows,County-Default
+2028-01-11T20:01:52Z,10.70.30.86,56f61cb,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,11198,131922,Edge/Windows,County-Default
+2028-01-11T20:12:42Z,10.70.10.68,731476a,CONNECT,https,www.gulfutilities.example,-,200,allowed,business,4725,61668,Edge/Windows,County-Default
+2028-01-11T20:13:46Z,10.70.20.69,5eb2745,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,1451,125192,Edge/Windows,County-Default
+2028-01-11T20:31:07Z,10.70.21.81,f25757f,GET,http,api.adnetwork-static.net,/index.html,301,allowed,advertising,5311,491,Chrome/Windows,County-Default
+2028-01-11T20:44:52Z,10.70.10.83,7c087f5,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,3332,39901,Chrome/Windows,County-Default
+2028-01-11T20:49:55Z,10.70.21.81,-,GET,http,auth-prod.certstatus-ocsp.net,/,200,allowed,software updates,2405,45195,-,County-Default
+2028-01-11T20:53:22Z,10.70.21.84,da0450c,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,1686,12910,Edge/Windows,County-Default
+2028-01-11T21:10:03Z,10.70.30.77,5fccad8,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,7397,65902,Firefox/Windows,County-Default
+2028-01-11T21:29:09Z,10.70.10.119,66fd795,CONNECT,https,www.mesquitetelecom.example,-,200,allowed,business,3060,11792,Chrome/Windows,County-Default
+2028-01-11T21:43:53Z,10.70.10.77,03f5e19,CONNECT,https,www.hilltophousing.example,-,200,allowed,business,4895,47971,Chrome/Windows,County-Default
+2028-01-11T21:49:08Z,10.70.10.146,e14b179,CONNECT,https,static.benefits-portal.com,-,200,allowed,business software,5840,110417,Edge/Windows,County-Default
+2028-01-11T22:05:35Z,10.70.30.80,dcb2256,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,3524,49724,Chrome/Windows,County-Default
+2028-01-11T22:18:52Z,10.70.10.65,ab571ad,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,5790,206091,Chrome/Windows,County-Default
+2028-01-11T22:20:23Z,10.70.30.68,2c360a5,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,1884,107268,Edge/Windows,County-Default
+2028-01-11T22:55:18Z,10.70.21.72,-,CONNECT,https,defs.sentinel-endpoint-updates.example,-,200,allowed,software updates,1174,47600,-,County-Default
+2028-01-11T23:26:23Z,10.70.21.69,1ae9d54,CONNECT,https,www.cedarairport.example,-,200,allowed,business,1530,158876,Firefox/Windows,County-Default
+2028-01-11T23:36:09Z,10.70.21.93,321f269,CONNECT,https,www.zenithcog.example,-,200,allowed,business,3256,276509,Firefox/Windows,County-Default
+2028-01-11T23:55:58Z,10.70.30.83,2cb2251,CONNECT,https,www.cedarairport.example,-,200,allowed,business,4638,61855,Chrome/Windows,County-Default
+2028-01-12T00:01:22Z,10.70.10.101,-,GET,http,api.certstatus-ocsp.net,/ocsp/0775ca0a518a,200,allowed,software updates,4113,41310,-,County-Default
+2028-01-12T00:10:05Z,10.70.21.60,bfc373e,CONNECT,https,click.keel-library-foundation.example,-,200,allowed,business,7940,83425,Chrome/Windows,County-Default
+2028-01-12T02:55:41Z,10.70.21.69,6bc7a16,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4782,176283,Edge/Windows,County-Default
+2028-01-12T02:56:57Z,10.70.21.90,24663a8,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,1820,180334,Firefox/Windows,County-Default
+2028-01-12T03:00:58Z,10.70.21.78,527b2a5,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,2981,27743,Edge/Windows,County-Default
+2028-01-12T03:29:26Z,10.70.10.92,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,1709,155029,-,County-Default
+2028-01-12T03:29:26Z,10.70.21.69,6bc7a16,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,1388,47079,Edge/Windows,County-Default
+2028-01-12T04:10:31Z,10.70.21.75,-,GET,http,www.ntp-pool-public.org,/index.html,302,allowed,software updates,1470,197,-,County-Default
+2028-01-12T04:50:27Z,10.70.10.68,-,GET,http,www.browser-safecheck.net,/ocsp/085f0c3ea28e,301,allowed,software updates,670,470,-,County-Default
+2028-01-12T07:04:58Z,10.70.21.63,67b5bbf,CONNECT,https,www.tejanoairport.example,-,200,allowed,business,3130,137251,Firefox/Windows,County-Default
+2028-01-12T07:33:12Z,10.70.21.66,9c36f24,CONNECT,https,www.tidewaterlandscaping.example,-,200,allowed,weather,3054,51395,Firefox/Windows,County-Default
+2028-01-12T07:38:08Z,10.70.21.63,67b5bbf,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,1743,66560,Firefox/Windows,County-Default
+2028-01-12T07:59:19Z,10.70.30.65,-,GET,http,www.osupdates-delivery.com,/robots.txt,404,allowed,software updates,1267,122119,-,County-Default
+2028-01-12T08:54:40Z,10.70.21.72,-,GET,http,defs.sentinel-endpoint-updates.example,/pki/089e14.crl,200,allowed,software updates,6563,86915,-,County-Default
+2028-01-12T09:21:11Z,10.70.21.75,e28079c,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,4035,26986,Edge/Windows,County-Default
+2028-01-12T09:45:51Z,10.70.30.83,-,GET,http,auth-prod.certstatus-ocsp.net,/v2/check?id=c9c91ee917,200,allowed,software updates,10749,179136,-,County-Default
+2028-01-12T11:24:41Z,10.70.21.84,-,POST,http,static.telemetry-osvendor.com,/ocsp/2a873dace224,200,allowed,software updates,2849,44440,-,County-Default
+2028-01-12T11:37:14Z,10.70.10.80,-,GET,http,defs.sentinel-endpoint-updates.example,/,304,allowed,software updates,2936,298,-,County-Default
+2028-01-12T12:01:15Z,10.70.21.72,03e610e,CONNECT,https,flourbluff-college.example,-,200,allowed,education,4368,91761,Edge/Windows,County-Default
+2028-01-12T12:05:29Z,10.70.21.60,0d6ae84,CONNECT,https,go.calallen-drainage.example,-,200,allowed,business,6418,89935,Chrome/Windows,County-Default
+2028-01-12T13:06:19Z,10.70.21.87,60d183c,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,9499,5966,Chrome/Windows,County-Default
+2028-01-12T13:37:34Z,10.70.30.86,56f61cb,CONNECT,https,www.orbitcpa.example,-,200,allowed,finance,1643,40868,Edge/Windows,County-Default
+2028-01-12T13:39:13Z,10.70.10.86,8329bf6,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,2080,64868,Edge/Windows,County-Default
+2028-01-12T13:54:05Z,10.70.21.87,60d183c,CONNECT,https,img-cdn.docsign-flow.com,-,200,allowed,content delivery,4524,192259,Chrome/Windows,County-Default
+2028-01-12T14:21:07Z,10.70.10.131,745487e,CONNECT,https,www.southtexprint.example,-,200,allowed,business,1663,39815,Firefox/Windows,County-Default
+2028-01-12T14:25:08Z,10.70.10.107,443d0e4,CONNECT,https,click.baypointrotary.example,-,200,allowed,business,4779,101749,Edge/Windows,County-Default
+2028-01-12T15:03:11Z,10.70.10.149,dad32ae,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3802,24931,Edge/Windows,County-Default
+2028-01-12T15:04:39Z,10.70.10.143,f5dbe4e,GET,http,cdn.hotel-reservations.com,/robots.txt,304,allowed,travel,1378,421,Edge/Windows,County-Default
+2028-01-12T15:21:47Z,10.70.10.116,3e8cb45,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,6641,121844,Edge/Windows,County-Default
+2028-01-12T15:22:15Z,10.70.10.143,f5dbe4e,CONNECT,https,static.benefits-portal.com,-,200,allowed,business software,2249,69616,Edge/Windows,County-Default
+2028-01-12T15:31:28Z,10.70.10.89,ed70462,CONNECT,https,www.training-lms.net,-,200,allowed,education,6838,53982,Firefox/Windows,County-Default
+2028-01-12T15:33:19Z,10.70.30.62,7fecbeb,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,1548,57562,Edge/Windows,County-Default
+2028-01-12T15:45:24Z,10.70.21.75,f7f35cf,CONNECT,https,jobs.govt-careers.example,-,200,allowed,government,6435,50439,Firefox/Windows,County-Default
+2028-01-12T15:55:41Z,10.70.10.143,f5dbe4e,CONNECT,https,www.zenithcog.example,-,200,allowed,business,2227,65570,Edge/Windows,County-Default
+2028-01-12T16:11:04Z,10.70.30.74,4517aa1,CONNECT,https,grants.federal-grants-portal.example,-,200,allowed,government,3898,38700,Edge/Windows,County-Default
+2028-01-12T16:14:45Z,10.70.30.80,dcb2256,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,1104,89075,Chrome/Windows,County-Default
+2028-01-12T16:38:30Z,10.70.10.95,061924b,CONNECT,https,static.coastalbendweather.net,-,200,allowed,weather,869,49889,Edge/Windows,County-Default
+2028-01-12T16:47:10Z,10.70.30.74,4517aa1,CONNECT,https,www.mesquitetelecom.example,-,200,allowed,business,3514,59475,Edge/Windows,County-Default
+2028-01-12T16:57:18Z,10.70.30.74,4517aa1,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,2538,28699,Edge/Windows,County-Default
+2028-01-12T17:02:55Z,10.70.10.128,3ae3f6f,CONNECT,https,www.officesuite-mail.example,-,200,allowed,business software,4159,198171,Chrome/Windows,County-Default
+2028-01-12T17:08:57Z,10.70.30.83,2cb2251,CONNECT,https,www.benefits-portal.com,-,200,allowed,business software,3496,82496,Chrome/Windows,County-Default
+2028-01-12T17:09:43Z,10.70.21.90,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,1528,86196,-,County-Default
+2028-01-12T17:11:34Z,10.70.30.80,dcb2256,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1114,141601,Chrome/Windows,County-Default
+2028-01-12T17:14:28Z,10.70.21.72,03e610e,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3440,43825,Edge/Windows,County-Default
+2028-01-12T17:18:32Z,10.70.10.89,ed70462,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,935,112162,Firefox/Windows,County-Default
+2028-01-12T17:20:18Z,10.70.10.140,3be2e39,CONNECT,https,static.benefits-portal.com,-,200,allowed,business software,4445,31276,Firefox/Windows,County-Default
+2028-01-12T17:22:30Z,10.70.20.11,3082c44,CONNECT,https,origination.alertgateway.example,-,200,allowed,government,8005,47753,Firefox/Windows,County-Default
+2028-01-12T17:39:12Z,10.70.10.137,a356c98,CONNECT,https,static.coastalbendweather.net,-,200,allowed,weather,1983,82622,Chrome/Windows,County-Default
+2028-01-12T17:45:56Z,10.70.10.119,66fd795,CONNECT,https,www-east.harborline6.example,-,200,allowed,news,2767,111492,Chrome/Windows,County-Default
+2028-01-12T17:51:45Z,10.70.10.83,7c087f5,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,2502,127009,Chrome/Windows,County-Default
+2028-01-12T18:32:49Z,10.70.10.140,3be2e39,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,2001,61526,Firefox/Windows,County-Default
+2028-01-12T18:37:08Z,10.70.10.140,3be2e39,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,9936,60599,Firefox/Windows,County-Default
+2028-01-12T18:48:12Z,10.70.30.83,2cb2251,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2761,94283,Chrome/Windows,County-Default
+2028-01-12T18:48:14Z,10.70.10.104,-,GET,http,static.telemetry-osvendor.com,/updates/7528a/manifest.xml,200,allowed,software updates,12818,81513,-,County-Default
+2028-01-12T18:52:27Z,10.70.30.86,56f61cb,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,4914,180802,Edge/Windows,County-Default
+2028-01-12T18:55:18Z,10.70.20.72,6b244f0,GET,http,portal.state-purchasing.example,/favicon.ico,304,allowed,government,1592,331,Edge/Windows,County-Default
+2028-01-12T18:55:52Z,10.70.10.143,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,3652,88973,-,County-Default
+2028-01-12T19:12:10Z,10.70.10.83,7c087f5,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,4307,318133,Chrome/Windows,County-Default
+2028-01-12T19:39:05Z,10.70.10.116,3e8cb45,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3887,48815,Edge/Windows,County-Default
+2028-01-12T19:56:28Z,10.70.20.72,6b244f0,CONNECT,https,www.rgv-truck-parts.example,-,200,allowed,uncategorised,5439,26880,Edge/Windows,County-Default
+2028-01-12T19:59:09Z,10.70.10.65,ab571ad,CONNECT,https,www.southtexprint.example,-,200,allowed,business,3821,25872,Chrome/Windows,County-Default
+2028-01-12T20:24:13Z,10.70.10.131,745487e,GET,http,update-cdn.socialfeed-img.com,/updates/d8d59/manifest.xml,200,allowed,social media,5340,105884,Firefox/Windows,County-Default
+2028-01-12T20:26:13Z,10.70.30.71,cea4f7e,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,1500,39234,Edge/Windows,County-Default
+2028-01-12T20:33:00Z,10.70.30.86,56f61cb,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,7840,179053,Edge/Windows,County-Default
+2028-01-12T21:04:30Z,10.70.20.81,deae412,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,6164,26514,Edge/Windows,County-Default
+2028-01-12T21:15:17Z,10.70.10.116,-,CONNECT,https,www.osupdates-delivery.com,-,200,allowed,software updates,5188,68478,-,County-Default
+2028-01-12T21:17:59Z,10.70.10.62,d36f478,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,7053,35395,Edge/Windows,County-Default
+2028-01-12T21:43:04Z,10.70.21.93,59a7264,CONNECT,https,www.tx-comptroller-forms.example,-,200,allowed,government,2113,22583,Chrome/Windows,County-Default
+2028-01-12T21:49:21Z,10.70.10.104,f23c367,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,3473,315769,Firefox/Windows,County-Default
+2028-01-12T22:32:18Z,10.70.10.80,2c8f026,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,8790,308767,Edge/Windows,County-Default
+2028-01-12T22:47:30Z,10.70.21.72,03e610e,CONNECT,https,click.baypointrotary.example,-,200,allowed,business,3503,168807,Edge/Windows,County-Default
+2028-01-12T22:55:11Z,10.70.10.116,3e8cb45,CONNECT,https,www.lonestarauto.example,-,200,allowed,shopping,1510,102572,Edge/Windows,County-Default
+2028-01-12T23:03:07Z,10.70.21.75,f7f35cf,CONNECT,https,api-v2.nueces-county-tx.org,-,200,allowed,government,4846,59468,Firefox/Windows,County-Default
+2028-01-12T23:06:03Z,10.70.21.72,03e610e,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3238,74427,Edge/Windows,County-Default
+2028-01-12T23:10:04Z,10.70.20.78,8ea56d1,CONNECT,https,jobs.govt-careers.example,-,200,allowed,government,2001,78353,Firefox/Windows,County-Default

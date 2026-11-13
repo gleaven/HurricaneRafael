@@ -1,0 +1,62 @@
+{
+ "host": "GW-SRV-FILE-01",
+ "ip": "10.14.10.20",
+ "os": "Windows Server 2019",
+ "collected_utc": "2027-10-14T13:25:41Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 13,
+   "sha256": "24c1353a7b338710ac989a534a0be2eee47cb9d85c7ab24d3e4fa35b6e47db48"
+  },
+  "file_listing.csv": {
+   "rows": 55,
+   "sha256": "751cf085fe4974257b7858fbc6a628d81d6ab1d0ab4fe0fa4ac59df2bc577876"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "0fb9608da91eee97936a1412649603c182db0ae1186787c2abf8b413b117fdc4"
+  },
+  "autoruns.csv": {
+   "rows": 15,
+   "sha256": "bd614cac60bcad1b484ac62cce0ead56e1fb9df467eeb43b10ff457f550e7a3f"
+  },
+  "execution_history.csv": {
+   "rows": 14,
+   "sha256": "660042b605f2767ca4f8f8de8d1bd4a4952aa20b998453dbeb39a5123a77fe9e"
+  },
+  "logon_history.csv": {
+   "rows": 1724,
+   "sha256": "0a1268e4b8b7cc54e628181921ee65a46a1169af924825a177add4a9d389246f"
+  },
+  "installed_software.csv": {
+   "rows": 3,
+   "sha256": "45ca83a48fedd96d1c90389ddf15522f716338f825770f9b4f347df2f33493ae"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "61a9da3d687f15fd69bef55fb78dd3a468c838fef57eb39ae09efd2687e72a49"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/gisclip.exe.placeholder.txt",
+   "stands_in_for": "C:\\Program Files\\CBPWA\\Scripts\\gisclip.exe",
+   "sha256": "dae180cebed067de501a82a641d6c46858c7437bd8560baacddc38fd53026496"
+  },
+  {
+   "file": "placeholders/rtu_snapshot.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\rtu_snapshot.exe",
+   "sha256": "9ac5b7e75930ad44fc357c6172b60df067547de91cbeb45c2240be1aea55234f"
+  },
+  {
+   "file": "placeholders/wiring_report.exe.placeholder.txt",
+   "stands_in_for": "C:\\Utilities\\wiring_report.exe",
+   "sha256": "1782d287839c18872199a95433f880250e985ec424fbcf0ca1d7606522589168"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

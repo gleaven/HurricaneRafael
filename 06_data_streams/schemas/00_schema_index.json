@@ -1,6 +1,6 @@
 {
- "description": "Schema templates for all 16 Rafael scenario data streams. Each file defines exact real-world field names, types, examples, and scenario-specific notes. Build data generation against these schemas — do not deviate from field names.",
- "research_status": "Stream schemas follow real-world formats; the four schemas for telemetry, social media, network logs and payments were revised on 2026-11-09 to match the rebuilt registries",
+ "description": "Schema templates for the Rafael scenario data streams. Each file defines exact real-world field names, types, examples, and scenario-specific notes. Build data generation against these schemas — do not deviate from field names.",
+ "research_status": "Stream schemas follow real-world formats; the four schemas for telemetry, social media, network logs and payments were revised on 2026-11-09 to match the rebuilt registries; thirteen schemas for the raw IT and security logs were added on 2026-11-12",
  "schemas": [
   {
    "file": "01_ais_schema.json",
@@ -189,6 +189,97 @@
    "source": "vessel_ot_logs",
    "standard": "see file",
    "entity_catalog": "see 06_data_streams/stream_catalog.json",
+   "verified": true
+  },
+  {
+   "file": "firewall_logs_schema.json",
+   "source": "network_logs/firewall",
+   "standard": "Firewall session log (CSV)",
+   "entity_catalog": "gw_host_registry.json",
+   "verified": true
+  },
+  {
+   "file": "web_proxy_logs_schema.json",
+   "source": "network_logs/proxy",
+   "standard": "Web and DNS filter access log (CSV)",
+   "entity_catalog": "gw_host_registry.json",
+   "verified": true
+  },
+  {
+   "file": "dhcp_logs_schema.json",
+   "source": "network_logs/dhcp",
+   "standard": "DHCP lease audit log (CSV)",
+   "entity_catalog": "gw_host_registry.json",
+   "verified": true
+  },
+  {
+   "file": "packet_captures_schema.json",
+   "source": "network_logs/pcap",
+   "standard": "libpcap, flow-cutoff capture",
+   "entity_catalog": "gw_host_registry.json",
+   "verified": true
+  },
+  {
+   "file": "windows_event_logs_schema.json",
+   "source": "network_logs/windows",
+   "standard": "Windows event logs as JSON Lines (forwarded subset)",
+   "entity_catalog": "gw_host_registry.json",
+   "verified": true
+  },
+  {
+   "file": "endpoint_telemetry_schema.json",
+   "source": "network_logs/endpoint",
+   "standard": "Endpoint agent events as JSON Lines",
+   "entity_catalog": "gw_host_registry.json",
+   "verified": true
+  },
+  {
+   "file": "host_triage_schema.json",
+   "source": "network_logs/triage",
+   "standard": "Triage collection tables (CSV) with collection.json",
+   "entity_catalog": "gw_host_registry.json",
+   "verified": true
+  },
+  {
+   "file": "partner_firewall_schema.json",
+   "source": "partner_it/<org>/firewall",
+   "standard": "Edge firewall session log (CSV)",
+   "entity_catalog": "partner_it_registry.json",
+   "verified": true
+  },
+  {
+   "file": "partner_web_schema.json",
+   "source": "partner_it/<org>/web",
+   "standard": "Web gateway access log (CSV)",
+   "entity_catalog": "partner_it_registry.json",
+   "verified": true
+  },
+  {
+   "file": "partner_dns_schema.json",
+   "source": "partner_it/<org>/dns",
+   "standard": "Resolver query log (CSV)",
+   "entity_catalog": "partner_it_registry.json",
+   "verified": true
+  },
+  {
+   "file": "partner_auth_schema.json",
+   "source": "partner_it/<org>/auth",
+   "standard": "Sign-on log (CSV)",
+   "entity_catalog": "partner_it_registry.json",
+   "verified": true
+  },
+  {
+   "file": "partner_mail_schema.json",
+   "source": "partner_it/<org>/mail",
+   "standard": "Mail gateway message log (CSV)",
+   "entity_catalog": "partner_it_registry.json",
+   "verified": true
+  },
+  {
+   "file": "partner_endpoint_alerts_schema.json",
+   "source": "partner_it/<org>/endpoint_alerts",
+   "standard": "Endpoint protection console events (CSV)",
+   "entity_catalog": "partner_it_registry.json",
    "verified": true
   }
  ],

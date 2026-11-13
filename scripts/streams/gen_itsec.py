@@ -2,21 +2,35 @@
 host_audit_logs, portal_access_logs).
 
     python3 scripts/streams/gen_itsec.py [siem] [zeek] [audit] [portal]      (no argument = all)
+    python3 scripts/streams/gen_itsec.py zeek:2027-09                       (one month of the sensor logs; run each month where a command may not run long)
 
 Everything here is observation data: what a mail gateway, a remote-access gateway, a historian,
 a network sensor, a SIEM and a web portal would have recorded. Records say who connected to
 what, when, and what changed; they contain no instructions and no explanation of intent.
 
+How the pieces agree (one source of truth per table, see the model section below):
+  * the remote-access gateway's sessions, the historian's sessions, the alarm-suppression list,
+    the file-integrity monitor, the configuration-change log and the SCADA command log are each
+    built once (cached functions) and used by all three writers: the audit tables are those rows,
+    the SIEM alerts about them are derived from them one to one, and the network sensor has the
+    flow for each of them;
+  * people appear only while itsec_shared.workday() has them at work (or on call and not away);
+  * every record, ordinary or not, is drawn through the same functions and vocabularies.
+
 Shared clock rule (same as the OT family, see ot_model.py): where canon gives an event to the
 minute, the physical effect is at second 00 + int(sha256(event_id), 16) % 50; the log evidence
 that precedes an effect (logon, session attach, write request) leads it by a few seconds.
-Remote sessions come from ot_model.KNOWN_REMOTE_SESSIONS so the historian's session-count tags
-and these logs agree to the second.
 
-Background network flows are sampled 1 in 200 (stated in the schema); flows that involve the
-hosts canon cares about are complete.
+Sampling of the network sensor: user-driven traffic and internal service chatter are a 1-in-200
+sample. Recorded in full: periodic machine-to-internet series (agents, licence and update checks,
+external time sync), mail transfers at the gateway that appear in the mail log, remote-access and
+VPN sessions, and the flows behind alerts and audit records.
+
+The writers live in itsec_siem.py, itsec_zeek.py (+ itsec_zeek_extra.py), itsec_audit.py and
+itsec_portal.py; this module holds the constants, the helpers and the model.
 """
 import csv
+import functools
 import hashlib
 import os
 import sys
@@ -25,7 +39,6 @@ from common import *            # noqa: F401,F403
 import ot_model as M
 
 NET = "05_other_sources/network_logs"
-OLD = None
 DAY = 86400
 SPAN_START = D0_EPOCH - 60 * 86400       # this family starts at the scenario start (2027-07-16) so there is a long quiet baseline
 H = reg("gw_host_registry")
@@ -37,9 +50,13 @@ EXT = {e["system_id"]: e for e in H["external_systems"]}
 WORKST = [h for h in HOSTS if h["device_type"] in ("workstation", "laptop")]
 SERVERS = [h for h in HOSTS if h["device_type"] in ("server", "historian", "scada server", "storage", "appliance")]
 ENGINEERS = [u for u in USERS if u.get("ot_account")]
+OPERATORS = [u for u in ENGINEERS if u["department"] == "System Operations"]
+FIELD_ENG = [u for u in ENGINEERS if u["department"] != "System Operations"]
 SOC = {"SOC-AN-01": "jperez", "SOC-AN-02": "tperez", "SOC-AN-03": "imorales"}
+HOLIDAYS = {-8, 72, 73, 101, 102, 108, 109}     # local scenario days: Labor Day, Thanksgiving and the day after, 24, 25, 31 Dec, 1 Jan
 
 WS04, JMP, HIST1, HISTDMZ, SCADA1, OPS02 = "GW-WS-IT-04", "GW-SYS-JMP-01", "GW-SRV-HIST-01", "GW-SRV-HIST-DMZ", "GW-SYS-SCADA-01", "GW-WS-OPS-02"
+OT01, SIEMOT, PATCH, ECM, WAM = "GW-SRV-OT-01", "GW-SRV-SIEM-OT", "GW-SRV-PATCH-01", "GW-SRV-ECM-01", "GW-SRV-WAM-01"
 BEACON_IP, BEACON_SNI = "104.21.88.43", "update-cdn.vantagesec-telemetry.net"
 BEACON_FIRST, BEACON_LAST = ts("2027-08-31T03:17Z") + 12, ts("2027-10-12T10:04Z") + 37
 # canon correction: the lure reaches the mailbox the morning before the first beacon
@@ -47,11 +64,28 @@ LURE_T = ts("2027-08-30T13:14Z") + 9
 AV_OFF_T = ts("2027-08-30T13:21Z") + 44
 DNS_Q_T = ts("2027-08-30T13:23Z") + 2
 RULE_CREATED = ts("2027-08-19T11:34Z") + 20
-RULE_REMOVED = ts("2027-10-18T15:20Z")
-STORM_MODE_ON, STORM_MODE_OFF = ts("2027-09-14T06:14Z") + 5, ts("2027-09-18T14:00Z")
+RULE_REMOVED = ts("2027-10-18T15:20Z") + 26
+WL_0117 = ts("2027-08-31T14:22Z") + 48
+STORM_MODE_ON, STORM_MODE_OFF = ts("2027-09-14T06:14Z") + 5, ts("2027-09-18T14:00Z") + 41
 ISOLATE = M.T["isolate"]
+WS04_REMOVED = ISOLATE                       # the workstation is unplugged when the network is cut and never returns
+FREEZE_ON, FREEZE_OFF = ts("2027-09-10T21:00Z"), ts("2027-10-25T15:00Z")
 WS04_USER = next((u for u in USERS if WS04 in u.get("normal_hosts", [])), USERS[10])
 VELA = next(u for u in USERS if u["username"] == "rvela")
+
+
+def z(t):
+    return iso(t)
+
+
+def hsh(*k, n=16):
+    return hashlib.sha256("|".join(map(str, k)).encode()).hexdigest()[:n]
+
+
+def frac(*k):
+    """A fixed fraction in [0, 1) for a key (sub-second parts and small offsets of records whose minute canon fixes)."""
+    return int(hsh(*k, n=8), 16) / 16 ** 8
+
 
 # the fourteen out-of-hours sessions: (start, seconds, source address, country, network label)
 _SRC = (["185.220.101.%d" % n for n in (34, 34, 71, 12, 34, 88, 71)] + ["185.220.101.34", "185.220.101.12"] +
@@ -67,25 +101,22 @@ assert sum(_TAGS) == 11847
 _BYTES_OUT = [412_884_113, 218_640_927, 631_277_405, 377_915_662, 948_103_388, 839_226_740, 671_951_765] + [3_118_442, 2_207_915, 1_904_371, 1_126_608, 2_588_930, 913_277, 4_402_159]   # first seven total 4.1 GB
 for s, tg, b in zip(SESSIONS, _TAGS, _BYTES_OUT):
     s["tags"], s["bytes_out"] = tg, int(b)
-    d = local_dt(s["start"]).astimezone(UTC)
+    s["bytes_in"] = int(9000 + s["dur"] * (60 + int(hashlib.sha256(f"bi|{s['n']}".encode()).hexdigest()[:6], 16) % 340)
+                        + int(hashlib.sha256(f"bi2|{s['n']}".encode()).hexdigest()[:6], 16) % 1931)   # what the client sent: keystrokes and pointer
+    _kk = int(hashlib.sha256(f"gwlead|{s['n']}".encode()).hexdigest()[:8], 16)
+    s["lead"], s["tail"] = 5 + _kk % 40, 8 - (_kk >> 8) % 50          # the gateway's login precedes, and its logout follows, by a varying few seconds
     s["hist_id"] = None
 SESSIONS[0]["hist_id"], SESSIONS[-1]["hist_id"] = "HIST-20270907-00441", "HIST-20271002-00917"
 
 
-def z(t):
-    return iso(t)
-
-
-def hsh(*k, n=16):
-    return hashlib.sha256("|".join(map(str, k)).encode()).hexdigest()[:n]
-
-
 def work_factor(t):
-    """Share of normal office activity at epoch t (hour of day, weekend, storm, evacuation)."""
+    """Share of normal office activity at epoch t (hour of day, weekend, public holiday, storm, evacuation)."""
     l = local_dt(t)
     f = 1.0 if 7 <= l.hour < 18 else (0.25 if 5 <= l.hour < 22 else 0.06)
     if l.weekday() >= 5:
         f *= 0.25
+    elif day_of(t) in HOLIDAYS:
+        f *= 0.2
     d = (t - D0_EPOCH) / DAY
     if -1.5 <= d < 0.2:
         f *= 0.35
@@ -106,231 +137,371 @@ def months():
     return out
 
 
-# ======================================================================================
-# SIEM
-# ======================================================================================
-SIEM_COLS = ["alert_id", "time_utc", "rule_id", "rule_name", "category", "priority", "src_host", "src_ip", "dst_host", "dst_ip", "dst_port",
-             "user", "detail", "disposition", "closed_utc", "closed_by", "close_note"]
-RULES = [  # id, family, name, category, priority, weight (ordinary days), storm weight
-    ("1001", "AUTH", "FAILED_LOGON_BURST", "authentication", "LOW", 16, 4),
-    ("1007", "AUTH", "ACCOUNT_LOCKOUT", "authentication", "LOW", 5, 2),
-    ("1012", "AUTH", "LOGON_OUTSIDE_HOURS", "authentication", "LOW", 6, 5),
-    ("2003", "EP", "PUP_DETECTED", "endpoint", "LOW", 5, 1),
-    ("2010", "EP", "AGENT_OFFLINE", "endpoint", "LOW", 6, 30),
-    ("2017", "EP", "USB_STORAGE_MOUNTED", "endpoint", "LOW", 4, 1),
-    ("3004", "NET", "DNS_UNCATEGORISED_DOMAIN", "network", "LOW", 9, 2),
-    ("3011", "NET", "INTERNAL_PORT_SWEEP", "network", "LOW", 5, 1),
-    ("3020", "NET", "LINK_DOWN", "network", "LOW", 2, 34),
-    ("3025", "NET", "VPN_NEW_LOCATION", "network", "LOW", 3, 6),
-    ("9941", "NET", "FLAGGED_IP_OUTBOUND", "network", "LOW", 1.2, 0.3),
-    ("4002", "MAIL", "MAIL_ATTACHMENT_QUARANTINED", "mail", "LOW", 7, 2),
-    ("4009", "MAIL", "SPOOFED_SENDER_BLOCKED", "mail", "LOW", 5, 2),
-    ("5003", "POL", "POLICY_BLOCKED_SITE", "policy", "INFO", 12, 2),
-    ("5011", "POL", "ADMIN_GROUP_CHANGE", "policy", "MEDIUM", 0.6, 0.2),
-    ("1104", "OT", "HISTORIAN_BULK_QUERY", "ot", "LOW", 1.0, 0.4),
-    ("2201", "OT", "OT_FILE_WRITE", "ot", "MEDIUM", 0.5, 0.2),
-    ("3301", "OT", "ALARM_SUPPRESSION_CHANGE", "ot", "MEDIUM", 0.3, 0.2),
-    ("6001", "OT", "DEVICE_COMM_LOSS", "ot", "MEDIUM", 1.5, 22),
-    ("6004", "OT", "UPS_ON_BATTERY", "ot", "MEDIUM", 0.4, 9),
-    ("6010", "OT", "MAINT_WINDOW_ACTIVITY", "ot", "INFO", 4, 1),
-    ("7002", "SYS", "LOG_SOURCE_SILENT", "system", "LOW", 2, 12),
-    ("7005", "SYS", "DISK_THRESHOLD", "system", "INFO", 2, 1),
-]
-NOTES_BY_CAT = {"authentication": ["Password mistyped", "User travelling", "Shared kiosk account", "Service account retry"],
-                "endpoint": ["Benign software", "Approved removable media", "Laptop asleep", "Reimaged"],
-                "network": ["Known scanner", "Switch maintenance", "Carrier outage", "Printer firmware lookup", "Whitelisted vendor range"],
-                "mail": ["Newsletter", "User confirmed sender", "Released on request"], "policy": ["Category corrected", "Approved by manager"],
-                "ot": ["Per maintenance schedule", "Field crew on site", "Storm damage", "Communications path down"],
-                "system": ["Log source restarted", "Disk cleaned up", "Collector lag"]}
-CLOSE_NOTES = {"FALSE_POSITIVE": ["Known scanner", "User confirmed", "Benign software", "Whitelisted vendor range", "Expected after patching"],
-               "BENIGN_TRUE_POSITIVE": ["Password mistyped", "User travelling", "Approved removable media", "Printer firmware lookup"],
-               "AUTO_ACK": [""], "AUTHORIZED_MAINTENANCE": ["Per maintenance schedule", "Vendor session with ticket"],
-               "STORM_BULK_DISMISSED": ["SE3-BULK-STORM-01"], "ESCALATED": ["Ticket opened"], "OPEN": [""]}
-
-
-def siem_daily_count(day, g):
-    canon_counts = {-2: 4812, -1: 7341, 0: 18340, 1: 16207, 2: 14884, 3: 12201, 4: 6633, 35: 2312}
-    if day in canon_counts:
-        return canon_counts[day]
-    if 5 <= day <= 12:
-        return int(6000 - (day - 4) * 430 + g.integers(-90, 90))
-    if day == 28:
-        return None                      # handled by hour (drop after 08:00Z)
-    if 29 <= day <= 34:
-        return int([232, 251, 244, 610, 1480, 1935][day - 29] * (1 + g.normal(0, 0.04)))   # sources come back in batches
-    l = local_dt(local_ts(day, "12:00"))
-    base = 2300 if l.weekday() < 5 else 1750
-    return int(base * (1 + g.normal(0, 0.035)))
-
-
-def gen_siem():
-    g = rng("siem_alerts")
-    retire([f"{NET}/siem_alerts.csv"])
-    special = siem_specials()
-    by_day = {}
-    for t, row in special:
-        by_day.setdefault(day_utc(t), []).append((t, row))
-    files = {}
-    seen_ids = {}
-    daily = []
-    first_day, last_day = day_utc(SPAN_START), day_utc(SPAN_END - 1)
-    for d in range(first_day, last_day + 1):
-        t0 = D0_EPOCH + d * DAY
-        n = siem_daily_count(d, g)
-        storm = min(1.0, max(0.0, 1 - abs(d - 0.8) / 4.5)) if -2 <= d <= 5 else 0.0
-        w = np.array([r[5] * (1 - storm) + r[6] * storm for r in RULES], float)
-        w /= w.sum()
-        if n is None:                    # the day external connectivity is cut: ~90 % fewer alerts after 08:00Z
-            before = int(2300 * 8 / 24 * 1.05)
-            after = int(2300 * 16 / 24 * 0.1)
-            times = np.concatenate([t0 + np.sort(g.integers(0, 8 * 3600, before)), t0 + 8 * 3600 + np.sort(g.integers(0, 16 * 3600, after))])
-        else:
-            n_bg = max(0, n - len(by_day.get(d, [])))
-            hours = np.array([work_factor(t0 + h * 3600 + 1800) + 0.35 + 1.4 * storm for h in range(24)])
-            hsel = g.choice(24, n_bg, p=hours / hours.sum())
-            times = np.sort(t0 + hsel * 3600 + g.integers(0, 3600, n_bg))
-        rows = list(by_day.get(d, []))
-        ridx = g.choice(len(RULES), len(times), p=w)
-        for t, ri in zip(times, ridx):
-            rows.append((int(t), siem_background(int(t), RULES[ri], g, d)))
-        rows.sort(key=lambda x: x[0])
-        fp_target = None
-        if d == 35:                       # the day's audit states the false-positive rate
-            fp_target = set(g.choice(len(rows), round(0.113 * len(rows)), replace=False).tolist())
-        mon = dt.datetime.fromtimestamp(t0, UTC).strftime("%Y-%m")
-        for k, (t, row) in enumerate(rows):
-            stamp = dt.datetime.fromtimestamp(t, UTC).strftime("%Y%m%dT%H%MZ")
-            base = f"SE3-{row['fam']}-{row['rule']}-{stamp}"
-            c = seen_ids.get(base, 0)
-            seen_ids[base] = c + 1
-            aid = row.get("alert_id") or (base if c == 0 else f"{base}-{c + 1}")
-            if fp_target is not None and not row.get("fixed"):
-                row["disp"] = "FALSE_POSITIVE" if k in fp_target else ("BENIGN_TRUE_POSITIVE" if row["disp"] == "FALSE_POSITIVE" else row["disp"])
-                row["note"] = str(g.choice(NOTES_BY_CAT.get(row["cat"], [""])))
-            files.setdefault(mon, []).append([aid, z(t), f"SE3-{row['fam']}-{row['rule']}", row["name"], row["cat"], row["prio"], row.get("src_host", ""),
-                                              row.get("src_ip", ""), row.get("dst_host", ""), row.get("dst_ip", ""), row.get("dst_port", ""), row.get("user", ""),
-                                              row.get("detail", ""), row["disp"], z(row["closed"]) if row.get("closed") else "", row.get("closed_by", ""), row.get("note", "")])
-        fp = sum(1 for _, r in rows if r["disp"] == "FALSE_POSITIVE")
-        daily.append([dt.datetime.fromtimestamp(t0, UTC).strftime("%Y-%m-%d"), len(rows), fp, f"{100 * fp / max(1, len(rows)):.1f}",
-                      sum(1 for _, r in rows if r["disp"] == "OPEN" and r["fam"] == "ML")])
-    total = 0
-    for mon, rows in sorted(files.items()):
-        total += write_csv(f"{NET}/siem/siem_alerts_{mon}.csv", SIEM_COLS, rows)
-    write_csv(f"{NET}/siem/daily_summary.csv", ["date_utc", "alerts", "closed_false_positive", "false_positive_rate_pct", "open_ml_anomaly_alerts"], daily)
-    rules = [
-        [z(RULE_CREATED), "CREATE", "MAINT-EXCEPT-0892", "exception", "auto-acknowledge SE3-OT-1104 when source is GW-SYS-JMP-01", "svc_fieldops_ext", ""],
-        [z(ts("2027-08-24T15:02Z")), "CREATE", "MAINT-EXCEPT-0893", "exception", "auto-acknowledge SE3-OT-6010 during approved windows", "aclark", "CHG-27-0812"],
-        [z(ts("2027-08-31T14:22Z")), "UPDATE", "WL-NET-0117", "whitelist", "104.21.88.0/24 added to vendor CDN range", SOC["SOC-AN-02"], ""],
-        [z(STORM_MODE_ON), "ACTIVATE", "SE3-BULK-STORM-01", "bulk dismissal", "storm mode: dismiss LOW and MEDIUM alerts from 44 device-availability and OT maintenance rule families", SOC["SOC-AN-01"], "EOC-ACT-27-09"],
-        [z(STORM_MODE_OFF), "DEACTIVATE", "SE3-BULK-STORM-01", "bulk dismissal", "storm mode ended", SOC["SOC-AN-01"], "EOC-ACT-27-09"],
-        [z(RULE_REMOVED), "DELETE", "MAINT-EXCEPT-0892", "exception", "removed (AUDIT-EXC-2027-10)", "falrasheedobinna", "SI-2027-CC-001"],
-        [z(ts("2027-10-19T00:30Z")), "REPORT", "AUDIT-EXC-2027-10", "audit", "exception rule audit complete: 41 rules reviewed, 1 removed", "bflores", "SI-2027-CC-001"],
-    ]
-    write_csv(f"{NET}/siem/rule_changes.csv", ["time_utc", "action", "rule_id", "rule_type", "description", "changed_by", "change_ticket"], rules)
-    print(f"siem_alerts: {total:,} alerts in {len(files)} files")
-
-
 def day_utc(t):
     return int((t - D0_EPOCH) // DAY)
 
 
-def siem_background(t, rule, g, d):
-    rid, fam, name, cat, prio, _, _ = rule
-    h = CORP[g.integers(len(CORP))] if cat in ("authentication", "endpoint", "policy", "mail", "network") else SERVERS[g.integers(len(SERVERS))]
-    row = {"fam": fam, "rule": rid, "name": name, "cat": cat, "prio": prio, "src_host": h["hostname"], "src_ip": h["ip"]}
-    u = USERS[g.integers(len(USERS))]
-    if cat in ("authentication", "policy", "mail"):
-        row["user"] = u["username"]
-    if name == "FLAGGED_IP_OUTBOUND":
-        row.update(dst_ip=f"{g.integers(13, 220)}.{g.integers(1, 250)}.{g.integers(1, 250)}.{g.integers(2, 250)}", dst_port=443, detail=f"bytes_out={int(g.integers(200, 90000))}")
-    elif name == "HISTORIAN_BULK_QUERY":
-        e = ENGINEERS[g.integers(len(ENGINEERS))]
-        row.update(src_host=e["normal_hosts"][-1], src_ip=IP.get(e["normal_hosts"][-1], ""), dst_host=HIST1, dst_ip=IP[HIST1], user=e["ot_account"],
-                   detail=f"session_duration={int(g.integers(200, 2400))}s tags_queried={int(g.integers(120, 520))}")
-    elif name == "OT_FILE_WRITE":
-        e = ENGINEERS[g.integers(len(ENGINEERS))]
-        row.update(src_host=e["normal_hosts"][-1], src_ip=IP.get(e["normal_hosts"][-1], ""), dst_host="GW-SRV-OT-01", dst_ip=IP["GW-SRV-OT-01"], user=e["ot_account"],
-                   detail="action=FILE_WRITE path=\\\\gw-srv-ot-01\\projects\\" + f"wo{int(g.integers(4100, 5200))}\\notes.docx")
-    elif name == "ALARM_SUPPRESSION_CHANGE":
-        row.update(src_host="GW-WS-OPS-01", src_ip=IP.get("GW-WS-OPS-01", ""), dst_host=SCADA1, dst_ip=IP[SCADA1], detail=f"suppressed_alarm_count={int(g.integers(11, 16))} threshold=30")
-    elif name in ("DEVICE_COMM_LOSS", "UPS_ON_BATTERY", "LINK_DOWN", "AGENT_OFFLINE", "LOG_SOURCE_SILENT"):
-        row["detail"] = f"duration={int(g.integers(30, 5400))}s"
-    elif name == "FAILED_LOGON_BURST":
-        row["detail"] = f"failures={int(g.integers(5, 14))} window=300s"
-    if not boundary_open(t) and JMP in (row.get("src_host"), row.get("dst_host")):   # gateway is powered off
-        row.update(src_host="GW-WS-ENG-01", src_ip=IP["GW-WS-ENG-01"])
-        if row.get("dst_host") == JMP:
-            row.update(dst_host=HIST1, dst_ip=IP[HIST1])
-    storm_mode = STORM_MODE_ON <= t < STORM_MODE_OFF and prio in ("LOW", "MEDIUM", "INFO")
-    if storm_mode and cat in ("ot", "network", "endpoint", "system"):
-        row.update(disp="STORM_BULK_DISMISSED", closed=t + int(g.integers(20, 400)), closed_by=SOC["SOC-AN-01"], note="SE3-BULK-STORM-01")
-    elif prio == "INFO" or name == "MAINT_WINDOW_ACTIVITY":
-        row.update(disp="AUTO_ACK", closed=t, closed_by="system", note="")
-    else:
-        r = g.random()
-        disp = "FALSE_POSITIVE" if r < 0.14 else ("BENIGN_TRUE_POSITIVE" if r < 0.93 else ("AUTHORIZED_MAINTENANCE" if r < 0.985 else "ESCALATED"))
-        an = list(SOC.values())[g.integers(3)]
-        row.update(disp=disp, closed=t + int(g.integers(600, 9 * 3600) * (3 if -1 <= d <= 5 else 1)), closed_by=an,
-                   note="Ticket opened" if disp == "ESCALATED" else str(g.choice(NOTES_BY_CAT.get(cat, [""]))))
-    return row
+FIRST_D, LAST_D = day_utc(SPAN_START), day_utc(SPAN_END - 1)
 
 
-def siem_specials():
-    """Alerts canon names, as the SIEM recorded them."""
+def shared():
+    """The shared presence model (imported late: it imports this module)."""
+    import itsec_shared
+    return itsec_shared
+
+
+CORP = [h for h in HOSTS if h["device_type"] in ("workstation", "laptop") and h["ip"].startswith("10.14.")]
+CORP_NAMES = {h["hostname"] for h in CORP}
+WIN_CORP = [h for h in HOSTS if str(h.get("os", "")).startswith("Windows") and h["ip"].startswith(("10.14.", "172.20."))]
+OT_CONSOLES = [h["hostname"] for h in HOSTS if h["device_type"] in ("operator workstation", "engineering workstation")]
+OPS_CONSOLES = [h["hostname"] for h in HOSTS if h["device_type"] == "operator workstation"]
+ENG_WS = [h["hostname"] for h in HOSTS if h["device_type"] == "engineering workstation"]
+IT_ADMIN = [h for h in CORP if "IT Infrastructure" in h.get("role", "")] or CORP[:6]
+RTUS = [h["hostname"] for h in HOSTS if h["device_type"] == "rtu"]
+SVC = [a for a in H["service_accounts"] if a.get("normal_hosts") and a["normal_hosts"][0] in BYNAME and not a["account"].endswith("_ext")
+       and "support" not in a["account"] and "mgmt" not in a["account"] and str(BYNAME[a["normal_hosts"][0]].get("os", "")).startswith("Windows")]
+_UNCAT_A = ["bright", "north", "quick", "blue", "prime", "metro", "coast", "delta", "happy", "smart", "open", "easy", "star", "green", "rapid", "true"]
+_UNCAT_B = ["deals", "media", "tools", "labs", "hub", "zone", "cloud", "apps", "links", "press", "forum", "mart", "pixel", "stream", "works", "notes"]
+_UNCAT_TLD = ["com", "net", "org", "info", "io", "co", "site", "online", "xyz", "top"]
+
+
+def uncat_name(g):
+    """A name the DNS filter has no category for (new or little-known sites)."""
+    first = str(g.choice(['www', 'cdn', 'app', 'img', 'static', 'api', 'm', 'www', 'cdn', 'app', 'api', 'cdn-1', 'app-prod', 'img-cdn', 'static-web', 'api-v2', 'dl-cdn', 'update-cdn']))
+    a, b = _UNCAT_A[int(g.integers(len(_UNCAT_A)))], _UNCAT_B[int(g.integers(len(_UNCAT_B)))]
+    return (f"{first}.{a}{'-' if (len(a) * 7 + len(b)) % 4 == 0 else ''}{b}"
+            f"{int(g.integers(2, 99)) if g.random() < 0.4 else ''}.{_UNCAT_TLD[int(g.integers(len(_UNCAT_TLD)))]}")
+
+
+# ---- outside names and addresses -------------------------------------------------------------------------
+_SITE_WORDS = ["coastalbendweather.net", "txroadwatch.org", "officesuite-mail.com", "officesuite-cdn.net", "osupdates-delivery.com", "geomaps-tiles.net",
+               "ledgerfinance-cloud.com", "gridnotices-tx.org", "meetroom-video.com", "bayside-ledger.example", "harborline6.example", "vantage-security.com",
+               "meridiancontrols.com", "ntp-pool-public.org", "fontcdn-static.net", "hrcloud-payroll.com", "partsdepot-supply.com", "utilitybilling-pay.com",
+               "nueces-county-tx.org", "cctexas-services.org", "tx-waterboard.org", "pipefittings-direct.com", "fleetfuel-cards.com", "docsign-flow.com",
+               "searchindex-api.com", "adnetwork-static.net", "streamvideo-cdn.net", "socialfeed-img.com", "packagetracker-api.net", "weatherradar-tiles.com",
+               "telemetry-osvendor.com", "browser-safecheck.net", "certstatus-ocsp.net", "cloudstorage-sync.com", "helpdesk-tickets.com", "training-lms.net",
+               "benefits-portal.com", "scada-vendor-docs.com", "relaytech-support.net", "pumpworks-service.com", "gis-basemaps.org", "newswire-national.com",
+               "airline-bookings.net", "hotel-reservations.com", "retail-orders.com", "bank-online-secure.com", "insurance-claims-portal.com", "school-district-cc.org",
+               "hospital-patient-portal.org", "storm-prep-guides.org", "generator-parts.net", "truckrental-fleet.com", "cellcarrier-account.com", "cdn-jslibs.net"]
+_PREFIX = [13, 23, 34, 35, 40, 52, 54, 64, 69, 96, 104, 108, 142, 151, 157, 162, 185, 199, 205, 216]
+_HOME = [24, 47, 66, 67, 68, 70, 72, 73, 75, 76, 97, 98, 99, 107, 174]
+SITE_IPS = {}
+_g0 = rng("itsec", "sites")
+for _w in _SITE_WORDS:
+    for _sub in (["www", "api", "cdn", "login"] if _g0.random() < 0.5 else ["www", "static"]):
+        SITE_IPS[f"{_sub}.{_w}"] = [f"{_PREFIX[int(_g0.integers(len(_PREFIX)))]}.{int(_g0.integers(1, 250))}.{int(_g0.integers(1, 250))}.{int(_g0.integers(2, 250))}"
+                                    for _ in range(int(_g0.integers(1, 4)))]
+# two vendors keep part of their public content in the same hosting range as the address the first flagged-address alert named
+SITE_IPS["assets.meridiancontrols.com"] = ["104.21.88.17", "104.21.88.201"]
+SITE_IPS["downloads.vantage-security.com"] = ["104.21.88.112"]
+SITE_IPS["status.relaytech-support.net"] = ["104.21.88.66"]
+# first labels are as varied as on real sites: about a fifth carry a hyphen (regional edges, versions, update channels)
+_HY = {"www": ["www-2", "web-portal", "www-east"], "api": ["api-v2", "rest-api", "api-gw"], "cdn": ["edge-cdn", "cdn-east", "img-cdn", "update-cdn", "dl-cdn"],
+       "login": ["sso-login", "auth-prod"], "static": ["static-assets", "web-static", "update-cdn"]}
+for _k in sorted(SITE_IPS):
+    _l, _rest = _k.split(".", 1)
+    _hv = int(hashlib.sha256(("hy|" + _k).encode()).hexdigest()[:6], 16)
+    if _l in _HY and (_hv % 9 < 2 or ("-" not in _rest and _hv % 9 < 4)):
+        SITE_IPS[f"{_HY[_l][(_hv >> 4) % len(_HY[_l])]}.{_rest}"] = SITE_IPS.pop(_k)
+SITES = sorted(SITE_IPS)
+STATES = [("SF", "ShADadFf", 0.935), ("S0", "S", 0.02), ("REJ", "Sr", 0.012), ("RSTO", "ShADaR", 0.014), ("RSTR", "ShADdr", 0.008), ("SH", "ShADF", 0.006), ("OTH", "Aa", 0.005)]
+
+# TLS as the sensor sees it: protocol version and cipher suite belong to the server name
+_TLS13 = ["TLS_AES_128_GCM_SHA256"] * 11 + ["TLS_AES_256_GCM_SHA384"] * 7 + ["TLS_CHACHA20_POLY1305_SHA256"] * 2
+_TLS12 = ["TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"] * 8 + ["TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"] * 7 + ["TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"] * 3 + \
+    ["TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"] * 2
+_TLS_SALT = "tls7"
+
+
+def tls_for(name):
+    """(version, cipher) a server name negotiates with the utility's clients. Appliances and the utility's own
+    services still speak TLS 1.2; four public sites in five speak 1.3."""
+    own = name.endswith("cbpwa.example")
+    k = int(hsh(_TLS_SALT, name, n=6), 16)
+    if own or k % 5 == 0:
+        return "TLSv12", _TLS12[(k // 5) % len(_TLS12)]
+    return "TLSv13", _TLS13[(k // 5) % len(_TLS13)]
+
+
+def ssl_row(t, c, name, resumed=None):
+    """ssl.log row for connection row c."""
+    ver, ciph = tls_for(name)
+    res = (frac("res", c[1]) < 0.2) if resumed is None else resumed
+    if int(c[10]) < 1200 and c[11] == "SF":             # too small for a certificate exchange: an abbreviated handshake
+        res = True
+    return [f"{t:.6f}", c[1], c[2], c[3], c[4], c[5], ver, ciph, name, "T" if res else "F", "T"]
+
+
+def home_ip(g):
+    """A residential-looking address for staff working from home."""
+    return f"{_HOME[int(g.integers(len(_HOME)))]}.{int(g.integers(1, 250))}.{int(g.integers(1, 250))}.{int(g.integers(2, 250))}"
+
+
+_HOME_NETS = [7018, 20057, 11427, 22773]
+
+
+def home_net(username):
+    """The access provider of a person's home connection (a network label)."""
+    return f"AS-{_HOME_NETS[int(hsh('homenet', username, n=4), 16) % len(_HOME_NETS)]}"
+
+
+def home_addr(username, t):
+    """The address of a person's home connection at time t: the same for months, re-assigned by the provider
+    zero to three times in the span."""
+    n = int(hsh("homechg", username, n=2), 16) % 4
+    k = sum(1 for i in range(n) if SPAN_START + frac("homecut", username, i) * (SPAN_END - SPAN_START) <= t)
+    h = hsh("home", username, k, n=10)
+    pfx = _HOME[(_HOME_NETS.index(int(home_net(username)[3:])) * 4 + int(h[:2], 16) % 4) % len(_HOME)]
+    return f"{pfx}.{1 + int(h[2:4], 16) % 249}.{1 + int(h[4:6], 16) % 249}.{2 + int(h[6:8], 16) % 248}"
+
+
+def away_addr(username, key):
+    """An address used once while travelling (hotel, relatives, a mobile hotspot)."""
+    h = hsh("trav", username, key, n=10)
+    return f"{_HOME[int(h[:2], 16) % len(_HOME)]}.{1 + int(h[2:4], 16) % 249}.{1 + int(h[4:6], 16) % 249}.{2 + int(h[6:8], 16) % 248}"
+
+
+_OUI = ["3c:52:82", "f4:8e:38", "a4:bb:6d", "00:1a:4b", "d8:9e:f3", "54:bf:64", "8c:ec:4b", "b0:7b:25", "e4:54:e8", "98:90:96", "28:f1:0e", "c8:5b:76"]
+_OUI_HOME = _OUI + ["70:85:c2", "04:d4:c4", "9c:b6:d0", "f0:18:98", "ac:de:48", "38:f9:d3", "dc:a6:32", "00:e0:4c"]
+
+
+def mac_of(hostname):
+    """Adapter address: the fleet was bought in a few batches, so prefixes repeat."""
+    x = hsh("mac", hostname, n=12)
+    return _OUI[int(x[:4], 16) % len(_OUI)] + ":" + ":".join(x[i:i + 2] for i in range(4, 10, 2))
+
+
+_B32 = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
+LAPTOP_OF = {h["primary_user"]: h["hostname"] for h in HOSTS if h["device_type"] == "laptop" and h.get("primary_user")}
+
+
+@functools.lru_cache(maxsize=None)
+def remote_devices(username):
+    """The one or two devices a member of staff uses on the employee VPN: [(host name, MAC)]. The first is their
+    registry laptop where they have one, otherwise a home computer; about a third have a second device at home."""
     out = []
+    if username in LAPTOP_OF:
+        out.append((LAPTOP_OF[username], mac_of(LAPTOP_OF[username])))
 
-    def add(t, fam, rule, name, cat, prio, disp, **kw):
-        row = {"fam": fam, "rule": rule, "name": name, "cat": cat, "prio": prio, "disp": disp, "fixed": True}
-        row.update(kw)
-        out.append((int(t), row))
-
-    g = rng("siem_alerts", "beacon")
-    # outbound connection alerts for the same destination, every time the rule matched before the range was whitelisted,
-    # then daily digest hits from the whitelist-audit rule until the last connection
-    add(BEACON_FIRST, "NET", "9941", "FLAGGED_IP_OUTBOUND", "network", "LOW", "FALSE_POSITIVE", src_host=WS04, src_ip=IP[WS04], dst_ip=BEACON_IP, dst_port=443,
-        detail="bytes_out=318", closed=ts("2027-08-31T14:22Z"), closed_by=SOC["SOC-AN-02"], note="Cloud CDN, whitelisted vendor range")
-    t = BEACON_FIRST
-    for bt in beacon_times():
-        if bt == ts("2027-09-15T01:17Z") + 21 or (bt - t >= 20 * 3600 and bt > BEACON_FIRST and abs(bt - (ts("2027-09-15T01:17Z") + 21)) > 20 * 3600 and bt != BEACON_LAST):
-            t = bt
-            storm = STORM_MODE_ON <= bt < STORM_MODE_OFF
-            add(bt, "NET", "9941", "FLAGGED_IP_OUTBOUND", "network", "LOW", "STORM_BULK_DISMISSED" if storm else "AUTO_ACK", src_host=WS04, src_ip=IP[WS04], dst_ip=BEACON_IP,
-                dst_port=443, detail=f"bytes_out={int(g.integers(300, 340))} whitelist=WL-NET-0117", closed=bt + (int(g.integers(60, 300)) if storm else 0),
-                closed_by=SOC["SOC-AN-01"] if storm else "system", note="SE3-BULK-STORM-01" if storm else "WL-NET-0117")
-    add(BEACON_LAST, "NET", "9941", "FLAGGED_IP_OUTBOUND", "network", "LOW", "AUTO_ACK", src_host=WS04, src_ip=IP[WS04], dst_ip=BEACON_IP, dst_port=443,
-        detail="bytes_out=318 whitelist=WL-NET-0117", closed=BEACON_LAST, closed_by="system", note="WL-NET-0117")
-    # historian bulk-query alerts for the out-of-hours sessions
-    for s in SESSIONS:
-        storm = STORM_MODE_ON <= s["start"] < STORM_MODE_OFF
-        last = s["n"] == 14
-        if last:
-            add(s["start"], "ML", "0044", "SESSION_BEHAVIOUR_ANOMALY", "ot", "ANOMALY_HIGH", "ESCALATED", src_host=JMP, src_ip=IP[JMP], dst_host=HIST1, dst_ip=IP[HIST1],
-                user="GW-SYS-JMP-01\\svc_fieldops_ext", detail=f"session_id={s['hist_id']} src_asn=AS-209144 tags_queried=1241 tag_groups=relay_config(all 5 substations) anomaly_score=3.84",
-                closed=ts("2027-10-02T15:10Z"), closed_by="falrasheedobinna", note="SI-2027-CC-001 opened")
-        add(s["start"] + 2, "OT", "1104", "HISTORIAN_BULK_QUERY", "ot", "LOW", "STORM_BULK_DISMISSED" if storm else "AUTO_ACK", src_host=JMP, src_ip=IP[JMP], dst_host=HIST1, dst_ip=IP[HIST1],
-            user="GW-SYS-JMP-01\\svc_fieldops_ext", detail=f"session_duration={min(s['dur'], 1500)}s tags_queried={s['tags']}",
-            closed=s["start"] + (140 if storm else 2), closed_by=SOC["SOC-AN-01"] if storm else "system", note="SE3-BULK-STORM-01" if storm else "exception rule MAINT-EXCEPT-0892")
-    # file write on the relay configuration share
-    add(M.T["cfg_sub2"] - 3, "OT", "2201", "OT_FILE_WRITE", "ot", "MEDIUM", "AUTHORIZED_MAINTENANCE", src_host=JMP, src_ip=IP[JMP], dst_host="GW-SRV-OT-01", dst_ip=IP["GW-SRV-OT-01"],
-        user="GW-ENG-VELA", detail="action=FILE_WRITE path=\\\\gw-srv-ot-01\\relayconfigs\\sub02\\rtu_config_draft.xml", closed=ts("2027-09-11T22:58Z"), closed_by=SOC["SOC-AN-01"],
-        note="Storm prep relay adjustment per ops supervisor note")
-    # alarm-suppression list changes
-    prev = 12
-    for i, (t, n) in enumerate(M.SUPPRESSION_STEPS):
-        storm = STORM_MODE_ON <= t < STORM_MODE_OFF
-        last = i == len(M.SUPPRESSION_STEPS) - 1
-        if last:
-            continue
-        add(t + 4, "OT", "3301", "ALARM_SUPPRESSION_CHANGE", "ot", "MEDIUM" if n < 30 else "HIGH", "STORM_BULK_DISMISSED" if storm else "BENIGN_TRUE_POSITIVE",
-            src_host=JMP, src_ip=IP[JMP], dst_host=SCADA1, dst_ip=IP[SCADA1], user="GW-ENG-VELA", detail=f"suppressed_alarm_count={n} threshold=30 added={n - prev}",
-            closed=t + (300 if storm else 5400), closed_by=SOC["SOC-AN-01"] if storm else SOC["SOC-AN-03"],
-            note="SE3-BULK-STORM-01" if storm else ("Storm preparation" if t < LANDFALL else "Restoration work, nuisance alarms"))
-        prev = n
-    add(ts("2027-09-15T09:44Z") + 16, "OT", "3301", "ALARM_SUPPRESSION_CHANGE", "ot", "HIGH", "STORM_BULK_DISMISSED", src_host=SCADA1, src_ip=IP[SCADA1], dst_host=SCADA1, dst_ip=IP[SCADA1],
-        detail="suppressed_alarm_count=38 threshold=30 periodic re-evaluation", closed=ts("2027-09-15T09:49Z"), closed_by=SOC["SOC-AN-01"], note="SE3-BULK-STORM-01")
-    add(ts("2027-09-23T04:00Z") + 11, "OT", "3301", "ALARM_SUPPRESSION_CHANGE", "ot", "HIGH", "OPEN", src_host=JMP, src_ip=IP[JMP], dst_host=SCADA1, dst_ip=IP[SCADA1],
-        detail="suppressed_alarm_count=94 threshold=30 change_count_since_2027-09-09=7", alert_id="SE3-OT-3301-20270923T0400Z")
+    def home(kind, k):
+        x = hashlib.sha256(f"homedev|{username}|{k}".encode()).digest()
+        return (f"{kind}-{''.join(_B32[b % 32] for b in x[:7])}", _OUI_HOME[x[8] % len(_OUI_HOME)] + ":" + ":".join(f"{b:02x}" for b in x[9:12]))
+    if not out:
+        out.append(home("DESKTOP", 0))
+    if int(hsh("dev2", username, n=4), 16) % 100 < 34:
+        out.append(home("LAPTOP" if int(hsh("dev2k", username, n=2), 16) % 2 else "DESKTOP", 1))
     return out
+
+
+def in_normal_hours(u, t):
+    """Inside the hours the directory lists for an office worker (shift staff: when on shift)."""
+    if u.get("normal_hours", "").startswith("rotating"):
+        return shared().on_shift(u, t)
+    l = local_dt(t)
+    last = 5 if u.get("normal_hours", "").startswith("Mon-Sat") else 4
+    return l.weekday() <= last and day_of(t) not in HOLIDAYS and 7 <= l.hour + l.minute / 60 < (19 if last == 5 else 17.5)
+
+
+@functools.lru_cache(maxsize=None)
+def vpn_sessions():
+    """Sessions on the employee VPN, in order of connection: dicts id, user, t, dur, src_ip, src_network, device, mac,
+    pool_ip, bytes_in, bytes_out, new_location, rdp (None or dict t, dur, host, alert).
+    People, not traffic, make them: staff working from home on a weekday away from the office (many more around the
+    storm), evening check-ins after a day at work, the odd weekend or day-off session. Each person connects from their
+    own home address (or, now and then, from somewhere else) on their own one or two devices; people with a desktop
+    in the office often open a remote-desktop session to it."""
+    S = shared()
+    raw = []
+    for d in range(day_of(SPAN_START) + 1, day_of(SPAN_END - 1) + 1):
+        noon = local_ts(d, "12:00")
+        wd = local_dt(noon).weekday()
+        for u in USERS:
+            name = u["username"]
+            lv = S.LEAVE.get(name)
+            if (lv and lv[0] - DAY <= noon <= lv[1] + DAY) or not u.get("normal_hosts"):
+                continue
+            rot = u.get("normal_hours", "").startswith("rotating")
+            w = S.workday(u, d)
+            prop, k = frac("remote", name), frac("vpnday", name, d)
+            ss = []
+            if not rot and w is None and wd < 5 and d not in HOLIDAYS:
+                if k < (0.15 + 0.6 * prop) * (0.45 if 0 <= d < 3 else 1.0):          # working from home
+                    a = local_ts(d, "07:00") + frac("vpns", name, d) * 2.5 * 3600
+                    for i in range(1 + (frac("vpnn", name, d) < 0.45) + (frac("vpnn2", name, d) < 0.12)):
+                        dur = 1800 + frac("vpnd", name, d, i) ** 1.5 * 4.5 * 3600
+                        ss.append((a, dur))
+                        a += dur + 600 + frac("vpng", name, d, i) * 5400
+            elif not rot and w is not None:
+                if k < 0.02 + 0.10 * prop:                                           # evening check-in
+                    ss.append((w[1] + 3600 + frac("vpne", name, d) * 4.5 * 3600, 420 + frac("vpned", name, d) ** 2 * 5400))
+            elif w is None and k < (0.015 + 0.04 * prop if rot else 0.01 + 0.05 * prop):   # a day off
+                ss.append((local_ts(d, "09:00") + frac("vpns", name, d) * 11 * 3600, 300 + frac("vpned", name, d) ** 2 * 3600))
+            for a, dur in ss:
+                raw.append((a + frac("vpnf", name, a), dur, u))
+    raw.sort(key=lambda x: (x[0], x[2]["username"]))
+    out, in_use, seen = [], {}, set()
+    for i, (t, dur, u) in enumerate(raw):
+        name = u["username"]
+        for ipx in [x for x, v in in_use.items() if v <= t]:
+            del in_use[ipx]
+        k0 = int(hsh("vpnpool", name, int(t), n=6), 16) % 200
+        pool = next(f"10.14.250.{10 + (k0 + j) % 200}" for j in range(200) if f"10.14.250.{10 + (k0 + j) % 200}" not in in_use)
+        in_use[pool] = t + dur + 2
+        trav = frac("vpntrav", name, int(t)) < 0.03
+        src = away_addr(name, int(t)) if trav else home_addr(name, t)
+        devs = remote_devices(name)
+        dev = devs[0] if (len(devs) == 1 or frac("vpndev", name, int(t)) < 0.78) else devs[1]
+        first_home = home_addr(name, SPAN_START)
+        new = (name, src) not in seen and src != first_home
+        seen.add((name, src))
+        ws = u["normal_hosts"][0]
+        rdp = None
+        if dev[0] not in BYNAME and ws in CORP_NAMES and BYNAME[ws]["device_type"] == "workstation" and ws != WS04 and dur > 600 and frac("vpnrdp", name, int(t)) < 0.55:
+            rt = int(t + 40 + frac("vpnrt", name, int(t)) * 200)
+            rdp = dict(t=rt, dur=max(120.0, dur - (rt - t) - 20 - frac("vpnre", name, int(t)) * 0.3 * dur), host=ws, alert=not in_normal_hours(u, rt))
+        gb = hsh("vpnb", name, int(t), n=12)
+        out.append(dict(id=f"VPN-{i + 1:05d}", user=name, t=t, dur=dur, src_ip=src, src_network=home_net(name) if not trav else f"AS-{_HOME_NETS[int(gb[:2], 16) % 4]}",
+                        device=dev[0], mac=dev[1], pool_ip=pool, bytes_in=int(6000 + dur * (300 + int(gb[2:6], 16) % 1400)), bytes_out=int(9000 + dur * (900 + int(gb[6:10], 16) % 6000)),
+                        new_location=new, rdp=rdp))
+    return out
+
+
+# ---- browsers ------------------------------------------------------------------------------------------------
+_BROWSER_T0 = ts("2027-07-06T00:00Z")
+
+
+def browsers_of(host):
+    """Browsers installed on a workstation, the one its user prefers first. Every machine has the system browser."""
+    k = int(hsh("browsers", host, n=6), 16)
+    out = ["edge"]
+    if k % 100 < 62:
+        out.append("chrome")
+    if (k >> 8) % 100 < 14:
+        out.append("firefox")
+    if len(out) > 1 and (k >> 16) % 100 < 70:
+        out = out[1:] + out[:1]
+    return out
+
+
+def browser_version(host, fam, t):
+    """Major version of a browser on a machine at time t: a new one about every four weeks, each machine a few days behind."""
+    lag = int(hsh("brlag", host, fam, n=4), 16) % (9 * DAY)
+    step = max(0, int((t - _BROWSER_T0 - lag) // (28 * DAY)))
+    if fam == "firefox":
+        return 128 if int(hsh("fxesr", host, n=2), 16) % 5 < 2 else 140 + step
+    return 137 + step
+
+
+def browser_ua(host, t, key=""):
+    """User-agent string of the browser a logged-on person uses on this machine at time t."""
+    fams = browsers_of(host)
+    fam = fams[0] if (len(fams) == 1 or frac("brpick", host, key) < 0.85) else fams[1 + int(frac("brpick2", host, key) * (len(fams) - 1))]
+    v = browser_version(host, fam, t)
+    if fam == "firefox":
+        return f"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:{v}.0) Gecko/20100101 Firefox/{v}.0"
+    base = f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{v}.0.0.0 Safari/537.36"
+    return base + (f" Edg/{v}.0.0.0" if fam == "edge" else "")
+
+
+def boundary_open(t):
+    """False while the OT network is cut off from everything else (canon isolation window)."""
+    return not (ISOLATE <= t < M.T["reconnect"])
+
+
+def eng_ws(e):
+    """The engineering or operator workstation inside the control network a person works from."""
+    for h in reversed(e.get("normal_hosts", [])):
+        if h in ENG_WS or h in OPS_CONSOLES:
+            return h
+    return ENG_WS[sum(map(ord, e["username"])) % len(ENG_WS)]
+
+
+def inside_host(e, t):
+    return eng_ws(e)
+
+
+def at_work(pool, t, g, tries=24):
+    """Someone from pool who is at work at t (None if nobody is)."""
+    S = shared()
+    for _ in range(tries):
+        u = pool[int(g.integers(len(pool)))]
+        if S.on_shift(u, t):
+            return u
+    return None
+
+
+def on_call(pool, t, g, tries=24):
+    """Someone from pool who is not away at t (leave, absent that weekday)."""
+    S = shared()
+    for _ in range(tries):
+        u = pool[int(g.integers(len(pool)))]
+        if not S.away(u, t):
+            return u
+    return None
+
+
+def uid(*k):
+    return "C" + hsh(*k, n=17)
+
+
+def conn(t, o, op, r, rp, proto, svc, dur, ob, rb, state="SF", hist="ShADadFf"):
+    """conn.log row. Packet counts follow the payload: a TCP connection has its handshake and teardown plus about one
+    segment per 1,400 bytes and the acknowledgements; UDP and ICMP have one packet per message."""
+    ob, rb = int(ob), int(rb)
+    lo = "T" if o.startswith(("10.", "172.20.")) else "F"
+    lr = "T" if r.startswith(("10.", "172.20.")) else "F"
+    k = int(hsh("pk", t, o, op, n=4), 16)
+    if proto != "tcp":
+        opk = max(1, -(-ob // 1200))
+        rpk = max(1, -(-rb // 1200)) if rb else 0
+        return [f"{t:.6f}", uid(t, o, op, r, rp), o, op, r, rp, proto, svc, f"{dur:.6f}", ob, rb, state, lo, lr, 0, hist, opk, ob + opk * 28, rpk, rb + rpk * 28]
+    opt = 12 if (k >> 3) % 5 < 3 else 0                 # TCP timestamps on most stacks
+    syn = 8 + 4 * ((k >> 6) % 4)                        # options on the SYN
+    if state == "S0":
+        dur, ob, rb, opk, rpk = 0.0, 0, 0, 1 + k % 3, 0
+        return [f"{t:.6f}", uid(t, o, op, r, rp), o, op, r, rp, proto, svc, f"{dur:.6f}", ob, rb, state, lo, lr, 0, hist, opk, opk * (40 + syn + opt), 0, 0]
+    if state == "REJ":
+        dur, ob, rb, opk, rpk = 0.0, 0, 0, 1, 1
+        return [f"{t:.6f}", uid(t, o, op, r, rp), o, op, r, rp, proto, svc, f"{dur:.6f}", ob, rb, state, lo, lr, 0, hist, 1, 40 + syn + opt, 1, 40]
+    if svc == "ssl" and state == "SF" and rb >= 1200:   # a full handshake: hello, certificate chain, key exchange
+        ob, rb = max(ob, 390 + (k >> 4) % 240), max(rb, 2650 + (k >> 2) % 2100)
+    seg_o, seg_r = -(-ob // 1400), -(-rb // 1400)
+    opk = 3 + seg_o + (seg_r + 1) // 2 + k % 2
+    rpk = 2 + seg_r + (seg_o + 1) // 2 + (k >> 1) % 2
+    if state == "SF" and hist == "ShADadFf":
+        hist = _HIST[(k >> 5) % len(_HIST)] if rb else "ShADaFf"
+        if "t" in hist or "T" in hist:
+            opk += 1
+    return [f"{t:.6f}", uid(t, o, op, r, rp), o, op, r, rp, proto, svc, f"{dur:.6f}", ob, rb, state, lo, lr, 0, hist, opk, ob + opk * (40 + opt) + syn, rpk, rb + rpk * (40 + opt) + syn]
+
+
+_HIST = ["ShADadFf"] * 9 + ["ShADadfF"] * 4 + ["ShADdaFf"] * 3 + ["ShAdDaFf"] * 2 + ["ShADadFfR", "ShADadtFf", "ShADadTFf", "ShADdAaFf", "ShADadFfr", "ShADadGFf"]
+
+
+def dns_row(t, o, r, q, ans, g):
+    """One dns.log row. Its uid is the uid of the UDP/53 connection that carried it (see dns_conn)."""
+    op = 49152 + int(g.integers(0, 16000))
+    return [f"{t:.6f}", uid(t, o, op, r, 53), o, op, r, 53, "udp", int(g.integers(1, 65000)), q, "C_INTERNET", "A", "NOERROR", "F", "T", "T", ans, f"{int(g.integers(60, 3600))}.000000"]
+
+
+def dns_conn(d):
+    """The conn.log row for a dns.log row (same uid, same endpoints). Sizes follow the name and the answer."""
+    t = float(d[0])
+    k = int(hsh("dq", d[1], n=6), 16)
+    q = 17 + len(d[8]) + 1
+    a = q + (16 * (1 + d[15].count(",")) if d[15] not in ("-", "") else 0) + (k % 3) * 12
+    c = conn(t, d[2], d[3], d[4], 53, "udp", "dns", 0.0004 + (k % 9000) / 1e6 * (1 + 20 * ((k >> 8) % 50 == 0)), q, a, "SF", "Dd")
+    c[1] = d[1]
+    return c
+
+
+def pick_state(g):
+    r, acc = g.random(), 0.0
+    for st, hist, p in STATES:
+        acc += p
+        if r < acc:
+            return st, hist
+    return "SF", "ShADadFf"
 
 
 def beacon_times():
@@ -349,81 +520,750 @@ def beacon_times():
     return sorted(out)
 
 
-# ======================================================================================
-# Zeek
-# ======================================================================================
-CONN_F = ["ts", "uid", "id.orig_h", "id.orig_p", "id.resp_h", "id.resp_p", "proto", "service", "duration", "orig_bytes", "resp_bytes", "conn_state",
-          "local_orig", "local_resp", "missed_bytes", "history", "orig_pkts", "orig_ip_bytes", "resp_pkts", "resp_ip_bytes"]
-CONN_TY = ["time", "string", "addr", "port", "addr", "port", "enum", "string", "interval", "count", "count", "string", "bool", "bool", "count", "string", "count", "count", "count", "count"]
-DNS_F = ["ts", "uid", "id.orig_h", "id.orig_p", "id.resp_h", "id.resp_p", "proto", "trans_id", "query", "qclass_name", "qtype_name", "rcode_name", "AA", "RD", "RA", "answers", "TTLs"]
-DNS_TY = ["time", "string", "addr", "port", "addr", "port", "enum", "count", "string", "string", "string", "string", "bool", "bool", "bool", "vector[string]", "vector[interval]"]
-SSL_F = ["ts", "uid", "id.orig_h", "id.orig_p", "id.resp_h", "id.resp_p", "version", "cipher", "server_name", "resumed", "established"]
-SSL_TY = ["time", "string", "addr", "port", "addr", "port", "string", "string", "string", "bool", "bool"]
-NOT_F = ["ts", "uid", "id.orig_h", "id.resp_h", "id.resp_p", "note", "msg", "src", "dst", "p", "actions"]
-NOT_TY = ["time", "string", "addr", "addr", "port", "enum", "string", "addr", "addr", "port", "set[enum]"]
-_SITE_WORDS = ["coastalbendweather.net", "txroadwatch.org", "officesuite-mail.com", "officesuite-cdn.net", "osupdates-delivery.com", "geomaps-tiles.net",
-               "ledgerfinance-cloud.com", "gridnotices-tx.org", "meetroom-video.com", "bayside-ledger.example", "harborline6.example", "vantage-security.com",
-               "meridiancontrols.com", "ntp-pool-public.org", "fontcdn-static.net", "hrcloud-payroll.com", "partsdepot-supply.com", "utilitybilling-pay.com",
-               "nueces-county-tx.org", "cctexas-services.org", "tx-waterboard.org", "pipefittings-direct.com", "fleetfuel-cards.com", "docsign-flow.com",
-               "searchindex-api.com", "adnetwork-static.net", "streamvideo-cdn.net", "socialfeed-img.com", "packagetracker-api.net", "weatherradar-tiles.com",
-               "telemetry-osvendor.com", "browser-safecheck.net", "certstatus-ocsp.net", "cloudstorage-sync.com", "helpdesk-tickets.com", "training-lms.net",
-               "benefits-portal.com", "scada-vendor-docs.com", "relaytech-support.net", "pumpworks-service.com", "gis-basemaps.org", "newswire-national.com",
-               "airline-bookings.net", "hotel-reservations.com", "retail-orders.com", "bank-online-secure.com", "insurance-claims-portal.com", "school-district-cc.org",
-               "hospital-patient-portal.org", "storm-prep-guides.org", "generator-parts.net", "truckrental-fleet.com", "cellcarrier-account.com", "cdn-jslibs.net"]
-_PREFIX = [13, 23, 34, 35, 40, 52, 54, 64, 69, 96, 104, 108, 142, 151, 157, 162, 185, 199, 205, 216]
-_HOME = [24, 47, 66, 67, 68, 70, 72, 73, 75, 76, 97, 98, 99, 107, 174]
-SITE_IPS = {}
-_g0 = rng("itsec", "sites")
-for _w in _SITE_WORDS:
-    for _sub in (["www", "api", "cdn", "login"] if _g0.random() < 0.5 else ["www", "static"]):
-        SITE_IPS[f"{_sub}.{_w}"] = [f"{_PREFIX[int(_g0.integers(len(_PREFIX)))]}.{int(_g0.integers(1, 250))}.{int(_g0.integers(1, 250))}.{int(_g0.integers(2, 250))}"
-                                    for _ in range(int(_g0.integers(1, 4)))]
-SITES = sorted(SITE_IPS)
-CORP = [h for h in HOSTS if h["device_type"] in ("workstation", "laptop") and h["ip"].startswith("10.14.")]
-OT_CONSOLES = [h["hostname"] for h in HOSTS if h["device_type"] in ("operator workstation", "engineering workstation")]
-IT_ADMIN = [h for h in CORP if "IT Infrastructure" in h.get("role", "")] or CORP[:6]
-RTUS = [h["hostname"] for h in HOSTS if h["device_type"] == "rtu"]
-STATES = [("SF", "ShADadFf", 0.935), ("S0", "S", 0.02), ("REJ", "Sr", 0.012), ("RSTO", "ShADaR", 0.014), ("RSTR", "ShADdr", 0.008), ("SH", "ShADF", 0.006), ("OTH", "Aa", 0.005)]
+# ==========================================================================================================
+# The model: one source of truth per table. Every writer (audit table, SIEM alert, network flow) uses these.
+# ==========================================================================================================
+@functools.lru_cache(maxsize=None)
+def change_records():
+    """Approved OT changes in the change system, in order of creation: [(created, id, summary, owner)]. Numbers are issued
+    in sequence (other departments take some). None is approved while the storm-preparation freeze is on."""
+    g = rng("host_audit", "chg_pool")
+    summaries = ["firmware update, substation switch", "historian disk expansion", "HMI display revision", "firewall rule review", "RTU battery replacement", "chlorine analyser calibration constants",
+                 "SCADA point database update", "relay settings revision", "pump controller tuning", "tank level transmitter replacement", "operator console patching", "alarm list housekeeping",
+                 "remote diagnostics, water-system controllers", "historian tag review", "protection settings verification", "engineering file server clean-up", "setpoint review, booster stations",
+                 "operator display corrections", "communications path test", "trend report for planning"]
+    out, n = [], 610
+    for d in range(FIRST_D - 16, LAST_D + 1):
+        l = local_dt(local_ts(d, "12:00"))
+        for _ in range(int(g.poisson(2.7 if (l.weekday() < 5 and d not in HOLIDAYS) else 0.15))):
+            a = local_ts(d, f"{int(g.integers(7, 17)):02d}:{int(g.integers(0, 60)):02d}") + int(g.integers(0, 60))
+            e = FIELD_ENG[int(g.integers(len(FIELD_ENG)))] if d < FIRST_D else at_work(FIELD_ENG, a, g)
+            sm, gap = summaries[int(g.integers(len(summaries)))], int(g.integers(1, 4))
+            if e and not (FREEZE_ON - 3 * 3600 <= a < FREEZE_OFF):
+                out.append([a, None, sm, e["username"]])
+    out.sort(key=lambda r: r[0])
+    for r in out:
+        n += 1 + (int(hsh("chgn", r[0], n=4), 16) % 3 == 0) + (int(hsh("chgn2", r[0], n=4), 16) % 11 == 0)
+        r[1] = f"CHG-27-{n:04d}"
+    return [tuple(r) for r in out]
 
 
-def home_ip(g):
-    """A residential-looking address for staff working from home."""
-    return f"{_HOME[int(g.integers(len(_HOME)))]}.{int(g.integers(1, 250))}.{int(g.integers(1, 250))}.{int(g.integers(2, 250))}"
+def cite_chg(t, *key):
+    """A change ticket somebody would cite for work at time t: one approved in the two weeks before (empty if there is none)."""
+    c = [r[1] for r in change_records() if t - 14 * DAY <= r[0] <= t - 3600]
+    return c[int(hsh("cite", t, *key, n=6), 16) % len(c)] if c else ""
 
 
-def boundary_open(t):
-    """False while the OT network is cut off from everything else (canon isolation window)."""
-    return not (ISOLATE <= t < M.T["reconnect"])
+@functools.lru_cache(maxsize=None)
+def _work_orders():
+    out = []
+    p = os.path.join(ROOT, "05_other_sources/maintenance/work_orders.csv")
+    if os.path.exists(p):
+        with open(p, newline="", encoding="utf-8") as fh:
+            for r in csv.DictReader(fh):
+                a = ts(r["reported_date"])
+                b = max([ts(r[k]) for k in ("actual_finish", "status_date", "sched_finish") if r.get(k)] or [a + 20 * DAY])
+                if r.get("org_id") == "CBPWA" and r["wonum"].startswith("WO-"):
+                    out.append((a, b, r["wonum"]))
+    return sorted(out)
 
 
-def inside_host(e, t):
-    """The host a person works from: their usual one, or an engineering workstation inside the control network
-    while the remote-access gateway is powered off (canon isolation window)."""
-    h = e["normal_hosts"][-1]
-    if h == JMP and not boundary_open(t):
-        return f"GW-WS-ENG-0{1 + sum(map(ord, e['username'])) % 5}"
-    return h
+def cite_wo(t, *key):
+    """A work order open at time t in the maintenance system (empty if there is none)."""
+    c = [w for a, b, w in _work_orders() if a <= t <= b + 2 * DAY]
+    return c[int(hsh("citewo", t, *key, n=6), 16) % len(c)] if c else ""
+
+
+SUB_RTU = ["GW-SYS-RTU-01", "GW-SYS-RTU-02", "GW-SYS-RTU-03", "GW-SYS-RTU-04", "GW-SYS-RTU-05"]
+WATER_RTU = ["GW-SYS-RTU-UTL1", "GW-SYS-RTU-WTR1", "GW-SYS-RTU-WTR2", "GW-SYS-RTU-WTR3"]
+DCS = ["GW-WTP-DCS-01"]
+PAR_SUB = [("recloser shots", "3", "2"), ("clock sync source", "GPS-A", "GPS-B"), ("transformer LTC band (V)", "2.0", "1.5"), ("relay 51 time dial", "2.0", "2.5"),
+           ("relay 27-UV time delay (s)", "2.0", "1.5"), ("relay 50 instantaneous pickup (A)", "4800", "5200"), ("feeder CT ratio", "600:5", "800:5"),
+           ("relay 27-UV pickup (pu)", "0.90", "0.88"), ("relays overcurrent trip (A)", "1000", "1200"), ("breaker failure timer (cycles)", "12", "10")]
+PAR_WATER = [("tank high-level alarm (ft)", "31.5", "31.0"), ("discharge pressure setpoint (psi)", "82", "85"), ("booster discharge setpoint (psi)", "70", "72"),
+             ("pump start level (ft)", "18.0", "19.5"), ("clock sync source", "GPS-A", "GPS-B"), ("low suction cut-out (psi)", "8", "10")]
+PAR_DCS = [("chlorine residual alarm low (mg/L)", "0.5", "0.6"), ("filter backwash interval (h)", "48", "36"), ("turbidity alarm high (NTU)", "0.30", "0.25"),
+           ("clearwell level setpoint (ft)", "14.0", "14.5")]
+RD_HOSTS = (OPS02, "GW-SYS-SCADA-02", "GW-WTP-HMI-01", "GW-WS-ENG-03")
+
+
+def _pars(dev):
+    return PAR_SUB if dev in SUB_RTU else (PAR_DCS if dev in DCS else PAR_WATER)
+
+
+def _par_name(dev, par, key):
+    """The parameter as the device's own table names it (relay group of that substation, pump of that station)."""
+    if par == "relays overcurrent trip (A)":
+        return f"relays R-0{dev[-1]}A/B/C overcurrent trip (A)"
+    if par == "discharge pressure setpoint (psi)" and dev == "GW-SYS-RTU-UTL1":
+        return f"P-{1 + int(hsh('pump', key, n=2), 16) % 4} discharge pressure setpoint (psi)"
+    return par
+
+
+@functools.lru_cache(maxsize=None)
+def cfg_changes():
+    """Setting changes on field devices: dicts t, device, parameter, old, new, how, account, source, ticket, kind.
+    Ordinary approved changes stop at the storm-preparation freeze and resume when it is lifted; in between there are
+    only emergency changes made at the device during restoration."""
+    g = rng("host_audit", "cfg2")
+    out = []
+    devs = SUB_RTU + WATER_RTU + DCS
+    for i in range(158):
+        d = int(g.integers(-58, 118))
+        a = local_ts(d, f"{int(g.integers(7, 18)):02d}:{int(g.integers(0, 60)):02d}") + int(g.integers(0, 60))
+        e = at_work(FIELD_ENG, a, g)
+        dev = devs[int(g.integers(len(devs)))]
+        par, old, new = _pars(dev)[int(g.integers(len(_pars(dev))))]
+        if i >= 150:                                    # a few more of the kinds every station sees in half a year
+            dev, par, old, new = [("GW-SYS-RTU-02", "relays overcurrent trip (A)", "1000", "1200"), ("GW-SYS-RTU-UTL1", "discharge pressure setpoint (psi)", "82", "85"),
+                                  ("GW-SYS-RTU-03", "relays overcurrent trip (A)", "1200", "1000"), ("GW-SYS-RTU-WTR3", "booster discharge setpoint (psi)", "70", "72"),
+                                  ("GW-SYS-RTU-UTL1", "discharge pressure setpoint (psi)", "85", "82"), ("GW-SYS-RTU-02", "relays overcurrent trip (A)", "1200", "1000"),
+                                  ("GW-SYS-RTU-01", "relay 27-UV pickup (pu)", "0.90", "0.88"), ("GW-SYS-RTU-UTL1", "discharge pressure setpoint (psi)", "85", "88")][i - 150]
+        par = _par_name(dev, par, i if i < 150 else ("P3", i))
+        if i in (151, 154, 157):
+            par = "P-3 discharge pressure setpoint (psi)"
+        how = str(g.choice(["remote write", "local panel", "file replaced", "remote write"]))
+        via_jmp, tk, age = g.random() < 0.5, g.random(), int(g.integers(20, 200))
+        if not e or FREEZE_ON - 2 * 3600 <= a < FREEZE_OFF:
+            continue
+        if how == "file replaced" and not (dev in SUB_RTU and int(hsh("frk", i, n=2), 16) % 2 == 0):   # a settings file pushed whole is logged either as the file or as the setting it changed
+            par, old, new = f"configuration file {dev.split('-')[-1].lower()}_active.cfg", f"last_modified {z(a - age * DAY - 3711 * (i % 17))}", f"last_modified {z(a)}"
+        out.append(dict(t=a, device=dev, parameter=par, old=old, new=new, how=how, account=e["ot_account"], user=e["username"],
+                        source="local panel" if how == "local panel" else (JMP if via_jmp else eng_ws(e)),
+                        ticket=cite_chg(a, "cfg", i) if tk < 0.85 else "", kind="ordinary"))
+    # commissioning values recorded in mid-August (the audits later compare against them)
+    for k, dev in enumerate(SUB_RTU):
+        a = ts("2027-08-15T15:10Z") + k * 1740 + (int(frac("comm", dev) * 600) if k else 0)
+        out.append(dict(t=a, device=dev, parameter="relay 27-UV pickup (pu)", old="", new="0.88", how="local panel", account="GW-ENG-VELA", user="rvela",
+                        source="local panel", ticket=cite_chg(ts("2027-08-15T15:10Z"), "commissioning"), kind="ordinary"))
+    # emergency changes at the device while the freeze is on (restoration)
+    n_em = 0
+    for i in range(40):
+        d = int(g.integers(1, 40))
+        a = local_ts(d, f"{int(g.integers(6, 20)):02d}:{int(g.integers(0, 60)):02d}") + int(g.integers(0, 60))
+        e = on_call(FIELD_ENG, a, g)
+        dev = devs[int(g.integers(len(devs)))]
+        par, old, new = _pars(dev)[int(g.integers(len(_pars(dev))))]
+        par = _par_name(dev, par, ("em", i))
+        tk = int(g.integers(100, 400))
+        if not e or not (FREEZE_ON <= a < FREEZE_OFF) or n_em >= 16:
+            continue
+        n_em += 1
+        out.append(dict(t=a, device=dev, parameter=par, old=old, new=new, how="local panel", account=e["ot_account"], user=e["username"], source="local panel",
+                        ticket="EMR", kind="emergency"))
+    em = sorted([c for c in out if c["kind"] == "emergency"], key=lambda c: c["t"])
+    for k, c in enumerate(em):                           # emergency tickets are numbered as they are raised
+        c["ticket"] = f"EMR-27-{101 + 2 * k + int(hsh('emr', c['t'], n=2), 16) % 2:03d}"
+
+    def st(key, off, dev, par, old, new, how):
+        return dict(t=M.T[key] + off, device=dev, parameter=par, old=old, new=new, how=how, account="GW-ENG-VELA", user=None, source=JMP, ticket="", kind="session")
+
+    out += [st("uv_thr_sub1", 0, "GW-SYS-RTU-01", "relay 27-UV pickup (pu)", "0.88", "0.94", "remote write"),
+            st("cfg_sub2", 41, "GW-SYS-RTU-02", "relays R-02A/B/C overcurrent trip (A)", "1200", "2400", "file replaced"),
+            st("cfg_rtu4", 0, "GW-SYS-RTU-04", "configuration file 04_active.cfg", "last_modified 2027-08-15T16:02:11Z", f"last_modified {z(M.T['cfg_rtu4'])}", "file replaced"),
+            st("p3_sp", 0, "GW-SYS-RTU-UTL1", "P-3 discharge pressure setpoint (psi)", "85", "68", "remote write"),
+            st("bstr_sp", 0, "GW-SYS-RTU-WTR3", "booster discharge setpoint (psi)", "72", "54", "remote write")]
+    e0, e1 = FIELD_ENG[0], FIELD_ENG[1]
+
+    def rs(key, dev, par, old, new, e, src):
+        return dict(t=M.T[key], device=dev, parameter=par, old=old, new=new, how="local panel", account=e["ot_account"], user=e["username"], source=src,
+                    ticket="SI-2027-CC-001", kind="restore")
+
+    out += [rs("p3_restore", "GW-SYS-RTU-UTL1", "P-3 discharge pressure setpoint (psi)", "68", "85", e0, "GW-WTP-HMI-01"),
+            rs("bstr_restore", "GW-SYS-RTU-WTR3", "booster discharge setpoint (psi)", "54", "72", e0, "local panel"),
+            rs("relay_reset_sub1", "GW-SYS-RTU-01", "relay 27-UV pickup (pu)", "0.94", "0.88", e1, "local panel"),
+            rs("relay_reset_sub2", "GW-SYS-RTU-02", "relays R-02A/B/C overcurrent trip (A)", "2400", "1200", e1, "local panel")]
+    return sorted(out, key=lambda x: x["t"])
 
 
 def legit_config_changes():
-    """Ordinary approved setting changes on field devices: (epoch, device, parameter, old, new, how, account, source host, ticket)."""
-    g = rng("host_audit", "legit_cfg")
-    out = []
-    devs = ["GW-SYS-RTU-02", "GW-SYS-RTU-03", "GW-SYS-RTU-05", "GW-SYS-RTU-UTL1", "GW-SYS-RTU-WTR1", "GW-SYS-RTU-WTR2", "GW-WTP-DCS-01", "GW-SYS-RTU-01", "GW-SYS-RTU-04"]
-    pars = [("feeder CT ratio check", "600:5", "600:5"), ("tank high-level alarm (ft)", "31.5", "31.0"), ("recloser shots", "3", "2"), ("chlorine residual alarm low (mg/L)", "0.5", "0.6"),
-            ("clock sync source", "GPS-A", "GPS-B"), ("transformer LTC band (V)", "2.0", "1.5"), ("relay 51 time dial", "2.0", "2.5"), ("discharge pressure setpoint (psi)", "82", "85"),
-            ("booster discharge setpoint (psi)", "70", "72"), ("relay 27-UV time delay (s)", "2.0", "1.5")]
-    for i in range(90):
-        a = local_ts(int(g.integers(-58, 118)), f"{int(g.integers(7, 19)):02d}:{int(g.integers(0, 60)):02d}") + int(g.integers(0, 60))
-        if STORM_MODE_ON - 4 * DAY < a < STORM_MODE_OFF:
+    """(old interface) ordinary changes as tuples."""
+    return [(c["t"], c["device"], c["parameter"], c["old"], c["new"], c["how"], c["account"], c["source"], c["ticket"]) for c in cfg_changes() if c["kind"] == "ordinary"]
+
+
+@functools.lru_cache(maxsize=None)
+def gateway_sessions():
+    """Sessions on the remote-access gateway, in order of login: dicts id, account, user, src_ip, src_network, src_country,
+    login, logout, dur, bytes_out, bytes_in, auth, targets (list), ticket, kind."""
+    g = rng("host_audit", "gw2")
+    rows = []
+    nets = [7018, 20057, 11427, 22773]
+    hostile = [(s["start"] - 1800, s["start"] + s["dur"] + 1800) for s in SESSIONS]
+
+    def clash(a, b):
+        return any(a < y and b > x for x, y in hostile)
+
+    def add(kind, account, user, src, net, a, dur, targets, ticket, auth, bo, bi, cc="US"):
+        if not (boundary_open(a) and boundary_open(a + dur)):
+            return
+        kb = int(hsh("gwb", account, int(a), n=8), 16)   # the gateway forwards screens out and input in
+        bo, bi = 40000 + dur * (900 + kb % 5200) + (kb >> 5) % 2713, 9000 + dur * (60 + (kb >> 16) % 340) + (kb >> 9) % 1931
+        rows.append(dict(kind=kind, account=account, user=user, src_ip=src, src_network=net, src_country=cc, login=int(a), logout=int(a + dur), dur=int(dur),
+                         bytes_out=int(bo), bytes_in=int(bi), auth=auth, targets=list(targets), ticket=ticket))
+
+    pool = [HIST1, "GW-WS-ENG-03", OT01, "GW-SYS-SCADA-02", "GW-WTP-HMI-01", "GW-SYS-RTU-03", "GW-SYS-RTU-05", OPS02, SCADA1]
+    for d in range(FIRST_D, LAST_D + 1):
+        t0 = D0_EPOCH + d * DAY
+        l = local_dt(t0 + 43200)
+        if l.weekday() < 5 and d not in HOLIDAYS and not (-1 <= d <= 4):
+            for _ in range(int(g.poisson(5))):
+                a = local_ts(d, f"{int(g.integers(7, 17)):02d}:{int(g.integers(0, 60)):02d}") + int(g.integers(0, 60))
+                e = at_work(FIELD_ENG, a, g)
+                dur = int(g.gamma(2, 1500)) + 120
+                office, tk = g.random() < 0.7, g.random()
+                tg = [str(g.choice([HIST1, "GW-WS-ENG-03", OT01, "GW-SYS-SCADA-02", "GW-WTP-HMI-01", "GW-SYS-RTU-03", OPS02]))]
+                if g.random() < 0.14:
+                    tg += [str(x) for x in g.choice(pool, int(g.integers(1, 3)), replace=False) if str(x) != tg[0]]
+                src, net = (home_ip(g), f"AS-{int(g.choice(nets))}")
+                bo, bi, au = g.gamma(2, 4e5) + 9000, g.gamma(2, 3e6) + 40000, g.random()
+                if e:
+                    src, net = home_addr(e["username"], a), home_net(e["username"])
+                    if office:
+                        src, net = IP.get(e["normal_hosts"][0], "10.14.30.20"), "internal"
+                    add("ordinary", e["ot_account"], e["username"], src, net, a, dur, tg,
+                        cite_chg(a, "gw", e["username"]) if tk < 0.62 else (cite_wo(a, "gw", e["username"]) if tk < 0.8 else ""), "token" if au < 0.82 else "password only", bo, bi)
+        # on-call engineers after hours and at weekends (storm restoration, call-outs)
+        for _ in range(int(g.poisson(1.1 if not (0 <= d <= 30) else 2.4))):
+            a = t0 + int(g.integers(0, DAY))
+            e = on_call(FIELD_ENG, a, g)
+            dur = int(g.gamma(2, 1300)) + 180
+            src, net, tk, au = home_ip(g), f"AS-{int(g.choice(nets))}", g.random(), g.random()
+            tg = [str(g.choice([HIST1, "GW-SYS-SCADA-02", "GW-WTP-HMI-01", OPS02, "GW-SYS-RTU-05"]))]
+            bo, bi = g.gamma(2, 5e5) + 9000, g.gamma(2, 3e6) + 40000
+            if e:
+                src, net = home_addr(e["username"], a), home_net(e["username"])
+            if e and not (7 <= local_dt(a).hour < 18 and local_dt(a).weekday() < 5):
+                add("oncall", e["ot_account"], e["username"], src, net, a, dur, tg, cite_wo(a, "oc", e["username"]) if tk < 0.55 else "", "token" if au < 0.7 else "password only", bo, bi)
+        if g.random() < 0.25 and l.weekday() < 5:
+            a = local_ts(d, f"{int(g.integers(9, 15)):02d}:{int(g.integers(0, 60)):02d}") + int(g.integers(0, 60))
+            add("vendor", str(g.choice(["svc_meridian_support", "svc_vantage_mgmt"])), None, f"69.48.219.{int(g.integers(205, 225))}", "AS-64499", a, int(g.gamma(2, 2400)) + 300,
+                [str(g.choice([HIST1, "GW-SYS-SCADA-02", SIEMOT]))], f"VND-{int(g.integers(3000, 3999))}", "token", g.gamma(2, 6e5) + 9000, g.gamma(2, 2e6) + 40000)
+    # routine checks of the water-system controllers by engineers at work (read-only diagnostics, a few a week)
+    gw_ = rng("host_audit", "gw_water")
+    for d in range(FIRST_D, LAST_D + 1):
+        l = local_dt(D0_EPOCH + d * DAY + 43200)
+        for _ in range(int(gw_.poisson(0.75))):
+            a = local_ts(d, f"{int(gw_.integers(7, 17)):02d}:{int(gw_.integers(0, 60)):02d}") + int(gw_.integers(0, 60))
+            e = at_work(FIELD_ENG, a, gw_)
+            dur, tk = int(gw_.gamma(2, 700)) + 150, gw_.random()
+            tg = [WATER_RTU[int(gw_.integers(len(WATER_RTU)))]] if gw_.random() < 0.8 else [DCS[int(gw_.integers(len(DCS)))]]
+            if gw_.random() < 0.3:
+                tg.append(WATER_RTU[int(gw_.integers(len(WATER_RTU)))])
+            bo, bi = gw_.gamma(2, 2e5) + 9000, gw_.gamma(2, 1e6) + 40000
+            if e and l.weekday() < 5 and d not in HOLIDAYS and not (-1 <= d <= 4) and not clash(a, a + dur):
+                add("ordinary", e["ot_account"], e["username"], IP.get(e["normal_hosts"][0], "10.14.30.20"), "internal", a, dur, sorted(set(tg)),
+                    cite_wo(a, "wtr", e["username"]) if tk < 0.7 else "", "token", bo, bi)
+    # routine checks of the substation controllers and the SCADA server (read-only diagnostics; now and then a round of several stations)
+    gs_ = rng("host_audit", "gw_subs")
+    for d in range(FIRST_D, LAST_D + 1):
+        l = local_dt(D0_EPOCH + d * DAY + 43200)
+        for _ in range(int(gs_.poisson(1.5))):
+            a = local_ts(d, f"{int(gs_.integers(7, 17)):02d}:{int(gs_.integers(0, 60)):02d}") + int(gs_.integers(0, 60))
+            e = at_work(FIELD_ENG, a, gs_)
+            dur, tk, r1, r2 = int(gs_.gamma(2, 800)) + 180, gs_.random(), gs_.random(), gs_.random()
+            tg = [SCADA1] if r1 < 0.42 else [SUB_RTU[int(gs_.integers(len(SUB_RTU)))]]
+            if r2 < 0.22:
+                extra = [str(x) for x in gs_.choice(SUB_RTU + WATER_RTU + [SCADA1, HIST1, OT01], int(gs_.integers(2, 5)), replace=False)]
+                tg += [x for x in extra if x not in tg]
+                dur += 400 * len(tg)
+            elif r2 < 0.4:
+                x = str(gs_.choice(SUB_RTU + [HIST1, SCADA1]))
+                tg += [x] if x not in tg else []
+            bo, bi = gs_.gamma(2, 2e5) + 9000, gs_.gamma(2, 1e6) + 40000
+            if e and l.weekday() < 5 and d not in HOLIDAYS and not (-1 <= d <= 4) and not clash(a, a + dur):
+                add("ordinary", e["ot_account"], e["username"], IP.get(e["normal_hosts"][0], "10.14.30.20"), "internal", a, dur, tg,
+                    (cite_wo(a, "sub", e["username"]) if tk < 0.6 else cite_chg(a, "sub", e["username"])) if tk < 0.85 else "", "token" if tk > 0.1 else "password only", bo, bi)
+    # the field-operations contractor's ordinary daytime sessions (the account is disabled on 2027-10-02)
+    gc = rng("host_audit", "contractor2")
+    for d in range(FIRST_D, day_utc(ts("2027-10-02T00:00Z"))):
+        r1, hh, mm, ss, dur, ip4, r2, tk, au = gc.random(), int(gc.integers(8, 16)), int(gc.integers(0, 60)), int(gc.integers(0, 60)), int(gc.gamma(2, 1100)) + 240, \
+            int(gc.integers(18, 30)), gc.random(), gc.random(), gc.random()
+        bo, bi = gc.gamma(2, 3e5) + 9000, gc.gamma(2, 2e6) + 40000
+        if local_dt(D0_EPOCH + d * DAY + 43200).weekday() < 5 and d not in HOLIDAYS and r1 < 0.38 and not (-2 <= d <= 6):
+            a = local_ts(d, f"{hh:02d}:{mm:02d}") + ss
+            if clash(a, a + dur):
+                continue
+            add("contractor", "svc_fieldops_ext", None, f"66.193.54.{ip4}", "AS-11427", a, dur, [HIST1] + ([SIEMOT] if r2 < 0.12 else []),
+                cite_wo(a, "ctr") if tk < 0.75 else "", "token" if au < 0.8 else "password only", bo, bi)
+    # the early-morning session of that account during which an exception rule was added on the OT log collector
+    add("contractor", "svc_fieldops_ext", None, "66.193.54.23", "AS-11427", RULE_CREATED - 188, 547, [SIEMOT], "", "token", 412_907, 1_988_114)
+    # engineers travelling for work (a conference, a factory acceptance test, mutual-aid planning) connect from abroad on a few evenings
+    gt = rng("host_audit", "gw_travel")
+    trips = [(-47, "MX", "AS-28403", "187.190"), (-31, "CA", "AS-13768", "99.231"), (-20, "MX", "AS-28403", "189.203"), (52, "CA", "AS-5089", "142.116"), (64, "GB", "AS-35228", "86.142"),
+             (79, "MX", "AS-28403", "187.189"), (93, "CA", "AS-13768", "99.248")]
+    for k, (d0, cc, net, pfx) in enumerate(trips):
+        e = FIELD_ENG[int(gt.integers(len(FIELD_ENG)))]
+        ipx = f"{pfx}.{int(gt.integers(2, 250))}.{int(gt.integers(2, 250))}"
+        for j in range(int(gt.integers(1, 4))):
+            a = local_ts(d0 + j, f"{int(gt.integers(18, 23)):02d}:{int(gt.integers(0, 60)):02d}") + int(gt.integers(0, 60))
+            dur, tk = int(gt.gamma(2, 900)) + 240, gt.random()
+            tg = [str(gt.choice([HIST1, "GW-WS-ENG-03", "GW-SYS-SCADA-02", "GW-WTP-HMI-01"]))]
+            if shared().away(e, a) or clash(a, a + dur):
+                continue
+            add("ordinary", e["ot_account"], e["username"], ipx, net, a, dur, tg, cite_chg(a, "trv", k) if tk < 0.5 else cite_wo(a, "trv", k), "token", 0, 0, cc=cc)
+    # every approved setting change made through the gateway happens inside a gateway session of that engineer
+    gl = rng("host_audit", "cfg_sessions2")
+    by_user = {u["username"]: u for u in USERS}
+    for c in cfg_changes():
+        if c["source"] != JMP or c["kind"] != "ordinary":
             continue
-        e = ENGINEERS[g.integers(len(ENGINEERS))]
-        par, old, new = pars[int(g.integers(len(pars)))]
-        how = str(g.choice(["remote write", "local panel", "file replaced", "remote write"]))
-        via_jmp = how != "local panel" and g.random() < 0.55 and boundary_open(a)
-        out.append((a, devs[int(g.integers(len(devs)))], par, old, new, how, e["ot_account"],
-                    "local panel" if how == "local panel" else (JMP if via_jmp else e["normal_hosts"][-1]), f"CHG-27-{int(g.integers(800, 1990)):04d}" if g.random() < 0.85 else ""))
-    return sorted(out)
+        e = by_user[c["user"]]
+        a = c["t"] - int(gl.integers(90, 700))
+        dur = (c["t"] - a) + int(gl.integers(120, 1500))
+        add("cfg", c["account"], c["user"], IP.get(e["normal_hosts"][0], "10.14.30.20"), "internal", a, dur, [c["device"]], c["ticket"], "token", gl.gamma(2, 3e5) + 9000, gl.gamma(2, 2e6) + 40000)
+    # the fourteen sessions
+    for s in SESSIONS:
+        targets = [HIST1]
+        for k, hname in (("uv_thr_sub1", ["GW-SYS-RTU-01", SCADA1]), ("cfg_sub2", [OT01, "GW-SYS-RTU-04", "GW-SYS-RTU-02"]), ("sub2_cmd", [OPS02]), ("sub3_cmd", [OPS02]),
+                         ("p3_sp", ["GW-SYS-RTU-UTL1", "GW-SYS-RTU-WTR3"])):
+            if s["start"] <= M.T[k] <= s["start"] + s["dur"]:
+                targets += hname
+        if any(s["start"] <= t <= s["start"] + s["dur"] for t, _ in M.SUPPRESSION_STEPS) and SCADA1 not in targets:
+            targets.append(SCADA1)
+        rows.append(dict(kind="session", n=s["n"], account="GW-ENG-VELA", user=None, src_ip=s["ip"], src_network=s["asn"], src_country=s["cc"], login=s["start"] - s["lead"],
+                         logout=s["start"] + s["dur"] + s["tail"], dur=s["dur"] + s["lead"] + s["tail"], bytes_out=s["bytes_out"], bytes_in=s["bytes_in"], auth="password only",
+                         targets=targets, ticket=""))
+    rows.sort(key=lambda r: r["login"])
+    n = 20000
+    for r in rows:                                    # ids are issued in order of login, from one counter shared with refused attempts
+        n += 1 + (int(hsh("rasgap", r["login"], n=4), 16) % 9 == 0) + (int(hsh("rasgap2", r["login"], n=4), 16) % 31 == 0)
+        r["id"] = f"RAS-{n}"
+    return rows
+
+
+def ordinary_gateway_sessions(g=None):
+    """(old interface) the sessions as lists, the fourteen excluded."""
+    rows = [[r["id"], JMP, r["account"], r["src_ip"], r["src_network"], r["src_country"], z(r["login"]), z(r["logout"]), r["dur"], r["bytes_out"], r["bytes_in"], r["auth"],
+             ";".join(r["targets"]), r["ticket"]] for r in gateway_sessions() if r["kind"] != "session"]
+    return rows, 0
+
+
+TAG_GROUPS = ["load_profile", "feeder_voltage", "pump_flow;pressure", "tank_level", "water_quality", "breaker_status", "transformer_temp", "relay_settings", "relay_config;breaker_status",
+              "relay_config(SUB-03)", "breaker_status(SUB-01)", "pump_setpoints;pressure_zones", "alarm_config", "relay_settings;tap_position", "breaker_status(SUB-05)",
+              "relay_config(SUB-01..SUB-05)", "pump_setpoints;booster_setpoints", "feeder_voltage;relay_settings", "relay_config;protection_events", "relay_config;alarm_config",
+              "breaker_status;relay_settings", "breaker_status(SUB-02)", "breaker_status(SUB-03)", "relay_config;pump_setpoints", "relay_config(SUB-02)", "breaker_status(SUB-04)"]
+_STORY_GROUPS = ["relay_settings;tap_position", "feeder_voltage;relay_settings", "relay_config;breaker_status", "relay_config(SUB-01..SUB-05)", "relay_config;protection_events",
+                 "pump_setpoints;pressure_zones", "relay_config;alarm_config", "breaker_status;relay_settings", "alarm_config", "breaker_status(SUB-02)", "pump_setpoints;booster_setpoints",
+                 "breaker_status(SUB-03)", "relay_config;pump_setpoints", "relay_config(SUB-01..SUB-05)"]
+
+
+@functools.lru_cache(maxsize=None)
+def historian_rows():
+    """Sessions on the historian, in order of start: dicts t, id, account, client, dur, tags, groups, qtype, kind, gw (gateway session id or None)."""
+    g = rng("host_audit", "hist2")
+    rows = []
+
+    def add(t, account, client, dur, tags, groups, qtype, kind, gw=None, **kw):
+        rows.append(dict(t=int(t), account=account, client=client, dur=int(dur), tags=int(tags), groups=groups, qtype=qtype, kind=kind, gw=gw, **kw))
+
+    def grp():
+        return TAG_GROUPS[int(g.integers(len(TAG_GROUPS)))]
+
+    for d in range(FIRST_D, LAST_D + 1):
+        t0 = D0_EPOCH + d * DAY
+        l = local_dt(t0 + 43200)
+        for _ in range(int(g.poisson(5.5 if (l.weekday() < 5 and d not in HOLIDAYS) else 2.2) * (0.3 if -1 <= d <= 4 else 1))):
+            a = local_ts(d, f"{int(g.integers(6, 19)):02d}:{int(g.integers(0, 60)):02d}") + int(g.integers(0, 60))
+            dur = int(g.gamma(2, 500)) + 30
+            bulk = g.random() < 0.07
+            tags = (int(g.gamma(2, 260)) + 150) if bulk else (int(g.gamma(2, 60)) + 4)
+            person, k4, gr = g.random() < 0.6, int(g.integers(4)), grp()
+            if person:
+                e = at_work(ENGINEERS, a, g)
+                if e:
+                    add(a, e["ot_account"], eng_ws(e), dur, tags, gr, "bulk read" if bulk else "trend", "direct")
+            else:
+                acct, cl = [("svc_scada_hist", SCADA1), ("svc_scada_hist", "GW-SYS-SCADA-02"), ("svc_hist_repl", HISTDMZ), ("svc_oms", "GW-SRV-OMS-01")][k4]
+                if cl in (HISTDMZ, "GW-SRV-OMS-01") and not (boundary_open(a) and boundary_open(a + dur)):
+                    continue
+                add(a, acct, cl, dur, tags, gr, "bulk read" if bulk else "trend", "service")
+    # sessions opened through the remote-access gateway (one for each gateway session that lists the historian)
+    for r in gateway_sessions():
+        if r["kind"] == "session" or HIST1 not in r["targets"]:
+            continue
+        a = r["login"] + 7 + int(g.integers(3, 60))
+        dur = max(25, min(r["dur"] - (a - r["login"]) - 8, int(g.gamma(2, 420)) + 40))
+        ext = r["kind"] in ("contractor", "vendor")
+        bulk = g.random() < (0.45 if ext else 0.25)
+        kp = int(hsh("profile", r["id"], n=4), 16) % 100     # some engineers use a connection profile stored on the gateway, not their own account
+        prof = None if ext or kp >= 16 else ("svc_scada_hist" if kp < 9 or r["login"] >= ts("2027-10-02T00:00Z") else "svc_fieldops_ext")
+        add(a, f"{JMP}\\{r['account']}" if ext else (f"{JMP}\\{prof}" if prof else r["account"]), JMP, dur, (int(g.gamma(2, 260)) + 150) if bulk else (int(g.gamma(2, 70)) + 12), grp(), "bulk read" if bulk else "trend",
+            "gateway", r["id"])
+    by_n = {r["n"]: r for r in gateway_sessions() if r["kind"] == "session"}
+    for s, gr in zip(SESSIONS, _STORY_GROUPS):
+        dur = 862 if s["n"] == 1 else int(min(s["dur"] - 12, 1700) * (0.62 + 0.36 * frac("hd", s["n"])))
+        add(s["start"] + 3, f"{JMP}\\svc_fieldops_ext", JMP, dur, s["tags"], gr, "bulk read", "session", by_n[s["n"]]["id"], n=s["n"], hid=s["hist_id"])
+    rows.sort(key=lambda r: r["t"])
+    # session numbers come from one counter shared with other historian clients, so they rise with time in uneven steps;
+    # the two numbers canon states (00441 and 00917) are honoured and the rest are laid out around them
+    i0 = next(i for i, r in enumerate(rows) if r.get("hid") == "HIST-20270907-00441")
+    i1 = next(i for i, r in enumerate(rows) if r.get("hid") == "HIST-20271002-00917")
+    gi = rng("host_audit", "hist_ids2")
+    seq = [0] * len(rows)
+    seq[i0], seq[i1] = 441, 917
+    assert i0 <= 440 and i1 - i0 - 1 <= 474, (i0, i1 - i0 - 1, "historian sessions do not fit around the two fixed session numbers")
+    before = sorted(gi.choice(np.arange(1, 441), i0, replace=False).tolist())
+    for i in range(i0):
+        seq[i] = before[i]
+    mid = sorted(gi.choice(np.arange(442, 917), i1 - i0 - 1, replace=False).tolist())
+    for k, i in enumerate(range(i0 + 1, i1)):
+        seq[i] = mid[k]
+    n = 917
+    for i in range(i1 + 1, len(rows)):
+        n += int(gi.integers(1, 4))
+        seq[i] = n
+    for r, q in zip(rows, seq):
+        r["id"] = f"HIST-{dt.datetime.fromtimestamp(r['t'], UTC):%Y%m%d}-{q % 100000:05d}"
+    return rows
+
+
+def _ot_supp_steps():
+    """((first time, first count), [(time, count) changes]) of the suppressed-alarm count as the SCADA historian recorded it."""
+    import glob as _glob
+    pts = []
+    for p in sorted(_glob.glob(os.path.join(ROOT, "05_other_sources/telemetry/historian_SYSTEM_*.csv"))):
+        with open(p, encoding="utf-8") as fh:
+            for line in fh:
+                if line.startswith("GW.SCADA.ALARM_SUPR_CNT.PV,"):
+                    _, t, v, _q = line.rstrip("\n").split(",")
+                    pts.append((ts(t[:16] + "Z") + int(t[17:19]), int(float(v))))
+    pts.sort()
+    out, prev = [], pts[0][1]
+    for t, v in pts:
+        if v != prev:
+            out.append((t, v))
+            prev = v
+    return pts[0], out
+
+
+SUPP_CATS = ["communications", "tank level", "nuisance door contact", "pump flow", "water quality sensor", "substation relay"]
+
+
+@functools.lru_cache(maxsize=None)
+def alarm_points():
+    """The alarm points that can be put on the suppression list: {category: [name]} with their fixed point numbers.
+    Point numbers come from the SCADA point database, not from the order in which points were suppressed."""
+    pts = {c: [] for c in SUPP_CATS}
+    for k in range(1, 6):
+        pts["substation relay"] += [f"SUB-0{k} relay trip"] + [f"SUB-0{k} feeder {n} overcurrent" for n in range(1, 6)] + [f"SUB-0{k} breaker fail", f"SUB-0{k} transformer temp high",
+                                                                                                                         f"SUB-0{k} bus undervoltage"]
+        pts["communications"] += [f"SUB-0{k} RTU comms fail", f"SUB-0{k} relay comms fail"]
+        pts["nuisance door contact"] += [f"SUB-0{k} control house door", f"SUB-0{k} yard gate"]
+    for n in range(1, 7):
+        pts["pump flow"] += [f"Pump station {n} P-{m} flow low" for m in range(1, 5)] + [f"Pump station {n} discharge pressure low"]
+        pts["communications"] += [f"Pump station {n} comms fail"]
+        pts["nuisance door contact"] += [f"Pump station {n} door"]
+    for n in range(1, 5):
+        pts["pump flow"] += [f"Booster {n} flow low", f"Booster {n} low suction"]
+    for n in range(1, 11):
+        pts["tank level"] += [f"Tank {n} level high", f"Tank {n} level low"]
+    pts["water quality sensor"] += [f"WTP filter {n} turbidity high" for n in range(1, 9)] + [f"Zone {n} chlorine residual low" for n in range(1, 13)] + \
+        [f"Zone {n} pressure low" for n in range(1, 13)] + ["WTP chlorine residual low", "WTP clearwell level low", "WTP raw water turbidity high", "WTP pH out of range"]
+    ids, used = {}, set()
+    for c in SUPP_CATS:
+        for name in pts[c]:
+            n = 2000 + int(hsh("almpt", name, n=6), 16) % 7000
+            while n in used:
+                n += 1
+            used.add(n)
+            ids[name] = n
+    return pts, ids
+
+
+def _alm(name):
+    return f"ALM-{alarm_points()[1][name]} ({name})"
+
+
+@functools.lru_cache(maxsize=None)
+def suppression_batches():
+    """Changes of the alarm-suppression list: dicts t, n (count after), delta, kind, by, source, ticket, system, rows.
+    Counts and times are those of the SCADA historian's suppressed-alarm tag; before that tag starts, ordinary changes
+    are laid out the same way (a few a month, the count staying between 9 and 15). Every row, whoever made the change,
+    names a point of the SCADA point database."""
+    g = rng("host_audit", "supp3")
+    S = shared()
+    pts, _ids = alarm_points()
+    cat_of = {name: c for c, names in pts.items() for name in names}
+    (t_first, n_first), steps = _ot_supp_steps()
+    pre, cnt, t = [], 12, SPAN_START - 2 * DAY
+    while True:
+        t += int(g.integers(2 * DAY, 6 * DAY))
+        tl = t - (t % DAY) + int(g.integers(13 * 3600, 21 * 3600)) + int(g.integers(0, 3600))
+        if tl >= t_first - DAY:
+            break
+        cnt = int(np.clip(cnt + g.choice([-2, -1, 1, 1, 2]), 9, 15))
+        pre.append((tl, cnt))
+    if pre:
+        pre[-1] = (pre[-1][0], n_first)
+    story = {int(a) for a, _ in M.SUPPRESSION_STEPS}
+    rebuilt = int(M.T["isolate"] + 4 * 3600 + 1140)
+    start = [pts["communications"][i] for i in (1, 6, 11, 14)] + [pts["tank level"][i] for i in (2, 9, 15)] + [pts["nuisance door contact"][i] for i in (0, 5, 12)] + \
+        [pts["substation relay"][28], pts["pump flow"][7]]
+    active, added_by = list(start), {}
+    out, prev = [], 12
+    for t, n in pre + steps:
+        if n == prev:
+            continue
+        delta = n - prev
+        rows = []
+        if int(t) in story:
+            kind, by, src, ticket = "session", "GW-ENG-VELA", JMP, ""
+        elif int(t) == rebuilt:
+            kind, by, src, ticket = "restore", FIELD_ENG[0]["ot_account"], "GW-WS-OPS-01", "SI-2027-CC-001"
+        else:
+            ops = [x for x in S.sessions_at(t) if (x["host"] in OPS_CONSOLES or x["host"] in ENG_WS) and S.USER_BY_NAME[x["user"]].get("ot_account")]
+            x = ops[int(g.integers(len(ops)))] if ops else None
+            u = S.USER_BY_NAME[x["user"]] if x else OPERATORS[int(g.integers(len(OPERATORS)))]
+            kind, by, src = "ordinary", u["ot_account"], (x["host"] if x else "GW-WS-OPS-01")
+            ticket = cite_chg(t, "supp") if g.random() < 0.7 else ""
+        for j in range(abs(delta)):
+            tj = t + (j * (0.15 + 0.5 * frac("supj", t, j)) if delta > 0 else -(abs(delta) - 1 - j) * (0.1 + 0.3 * frac("supr", t, j)))
+            if delta > 0:
+                if kind == "session":
+                    d3 = int(t) == int(M.T["supp_list_d3"])
+                    want = "substation relay" if d3 else ["substation relay", "pump flow", "water quality sensor"][(int(hsh("sc", t, n=2), 16) + j) % 3]
+                    free = [p_ for p_ in pts[want] if p_ not in active and (not d3 or "relay trip" in p_ or "overcurrent" in p_)]
+                    free.sort(key=lambda p_: (0 if (d3 and "relay trip" in p_) else 1, hsh("sp", t, p_)))
+                    free = free or [p_ for c in SUPP_CATS for p_ in pts[c] if p_ not in active]
+                    name = free[0]
+                else:
+                    free = [p_ for c in SUPP_CATS for p_ in pts[c] if p_ not in active]
+                    k_, r_ = int(g.integers(len(free))), g.random()
+                    trips = [p_ for p_ in free if "relay trip" in p_]
+                    name = trips[k_ % len(trips)] if trips and r_ < 0.16 else free[k_]      # relay points are suppressed for test work now and then
+                active.append(name)
+                added_by[name] = kind
+                rows.append((int(tj), "ADD", _alm(name), cat_of[name]))
+            else:
+                if kind == "ordinary":
+                    mine = [p_ for p_ in active if added_by.get(p_, "ordinary") == "ordinary"] or active
+                    name = mine[int(g.integers(len(mine)))]
+                else:
+                    mine = [p_ for p_ in active if added_by.get(p_) == "session"] or active
+                    name = mine[0]
+                active.remove(name)
+                rows.append((int(tj), "REMOVE", _alm(name), "restored" if kind == "restore" else cat_of[name]))
+        water = sum(1 for r in rows if r[3] in ("pump flow", "water quality sensor", "tank level"))
+        out.append(dict(t=int(t), n=n, delta=delta, kind=kind, by=by, source=src, ticket=ticket, rows=rows,
+                        system="GW-WTP-DCS-01" if water > len(rows) / 2 and kind != "restore" else SCADA1))
+        prev = n
+    return out
+
+
+def supp_count_at(t):
+    n = 12
+    for b in suppression_batches():
+        if b["t"] <= t:
+            n = b["n"]
+    return n
+
+
+def _fim_catalog():
+    """Monitored files on the OT engineering file server: [(relative path, weight, kind)]. kind: 'relay' (settings of a
+    substation's relays), 'cfg' (water-system setpoints), 'doc' (everything else), 'monthly' (one file per month)."""
+    f = []
+    for k in range(1, 6):
+        d = f"relayconfigs\\sub{k:02d}"
+        f += [(d + "\\rtu_config_draft.xml", 5, "relay"), (d + "\\rtu_config_active.xml", 2, "relay"), (d + f"\\relay_settings_R-{k:02d}A.xml", 2, "relay"),
+              (d + f"\\relay_settings_R-{k:02d}B.xml", 2, "relay"), (d + f"\\relay_settings_R-{k:02d}C.xml", 2, "relay"), (d + f"\\protection_coordination_sub{k:02d}.xlsx", 2, "doc"),
+              (d + f"\\sld_sub{k:02d}_rev{'BCDCB'[k - 1]}.dwg", 1, "doc"), (d + "\\test_report_2027.pdf", 1, "doc")]
+    f += [("relayconfigs\\archive\\relay_settings_2026Q4.zip", 1, "doc"), ("relayconfigs\\archive\\relay_settings_2027Q2.zip", 1, "doc"), ("relayconfigs\\readme_change_procedure.docx", 1, "doc")]
+    f += [(f"setpoints\\pump_station_{n}_setpoints.cfg", 3, "cfg") for n in range(1, 7)] + [("setpoints\\booster_setpoints.cfg", 3, "cfg"), ("setpoints\\tank_level_alarms.cfg", 2, "cfg"),
+                                                                                      ("setpoints\\pressure_zones.xlsx", 2, "doc"), ("setpoints\\wtp_dosing_setpoints.cfg", 2, "cfg")]
+    f += [(f"procedures\\switching_procedure_SP-{n}.docx", 1, "doc") for n in (101, 104, 107, 112, 115, 118, 121)] + \
+        [("procedures\\lockout_tagout_checklist.docx", 2, "doc"), ("procedures\\storm_restoration_plan_2027.docx", 3, "doc"), ("procedures\\relay_test_procedure.docx", 1, "doc"),
+         ("procedures\\boil_water_notice_procedure.docx", 1, "doc"), ("procedures\\black_start_checklist.docx", 1, "doc")]
+    for proj in ("feeder_14_reconductor", "sub03_breaker_replacement", "booster2_vfd_upgrade", "scada_point_database_2027", "wtp_filter_4_rehab", "tank_5_recoat", "ami_pilot",
+                 "sub05_relay_upgrade", "pump_station_3_generator", "fiber_ring_phase2"):
+        f += [(f"projects\\{proj}\\{name}", w, "doc") for name, w in (("scope.docx", 1), ("schedule.xlsx", 3), ("punchlist.xlsx", 3), ("cost_estimate.xlsx", 2), ("commissioning_notes.docx", 2),
+                                                                    ("vendor_quote.pdf", 1), ("meeting_notes.docx", 3))]
+    f += [(f"drawings\\E-{100 + i}_{name}.dwg", 1, "doc") for i, name in enumerate(("one_line_system", "sub01_protection", "sub02_protection", "sub03_protection", "sub04_protection",
+                                                                                 "sub05_protection", "wtp_power_distribution", "pump_station_typical", "scada_network", "fiber_ring"))]
+    f += [("drawings\\drawing_index.xlsx", 2, "doc"), ("wtp\\reports\\turbidity_summary_2027.xlsx", 3, "doc"), ("wtp\\reports\\filter_run_log_2027.xlsx", 3, "doc")]
+    f += [("wtp\\reports\\daily_ops_report_{m}.xlsx", 7, "monthly"), ("wtp\\reports\\chlorine_log_{m}.xlsx", 5, "monthly"), ("wtp\\reports\\lab_results_{m}.pdf", 2, "monthly"),
+          ("projects\\status_report_{m}.docx", 2, "monthly")]
+    return f
+
+
+def _fim_diff(path, kind, key):
+    """What the monitor's comparison of two versions of a settings file says (empty for other files)."""
+    k = int(hsh("diff", path, key, n=8), 16)
+    if kind == "relay":
+        sub = path.split("\\sub")[1][:2]
+        rel, a = f"R-{sub}{'ABC'[k % 3]}", [900, 1000, 1200, 1400][(k >> 2) % 4]
+        opts = [f"overcurrent_trip_threshold {a}A -> {a + [100, 200, -100][(k >> 5) % 3]}A for " + (f"relays R-{sub}A, R-{sub}B, R-{sub}C" if (k >> 13) % 2 == 0 else f"relay {rel}"), f"overcurrent_trip_threshold {a}A -> {a + 200}A for relays R-{sub}A, R-{sub}B" + (f", R-{sub}C" if (k >> 3) % 3 else ""),
+                f"relay 51 time dial {['2.0', '2.5', '3.0'][(k >> 4) % 3]} -> {['2.5', '2.0', '1.5'][(k >> 4) % 3]} for " + (f"relays R-{sub}A, R-{sub}B, R-{sub}C" if (k >> 11) % 3 == 0 else f"relay {rel}"), f"CT ratio field corrected 600:5 -> 800:5 for {rel}",
+                f"recloser shots {3 - (k >> 6) % 2} -> {2 + (k >> 6) % 2} for {rel}", f"27-UV time delay {['2.0', '1.5'][(k >> 7) % 2]}s -> {['1.5', '2.0'][(k >> 7) % 2]}s", "comment block updated",
+                f"revision label rev {1 + (k >> 8) % 9} -> rev {2 + (k >> 8) % 9}", "station name corrected", f"LTC band {['2.0', '1.5'][(k >> 9) % 2]}V -> {['1.5', '2.0'][(k >> 9) % 2]}V",
+                f"breaker failure timer {12 + (k >> 10) % 3} -> {10 + (k >> 10) % 2} cycles for {rel}", f"alarm text edited for {rel}",
+                f"overcurrent_trip_threshold {a}A -> {a + [200, 100, -200][(k >> 6) % 3]}A for relays R-{sub}A, R-{sub}B, R-{sub}C"]
+        return opts[(k >> 12) % len(opts)]
+    if kind == "cfg":
+        n, v = 1 + (k >> 3) % 4, 70 + (k >> 5) % 18
+        opts = [f"P-{n} discharge setpoint {v} -> {v + [2, 3, -2][(k >> 9) % 3]} psi", f"tank {1 + (k >> 4) % 10} high-level alarm 31.5 -> 31.0 ft", f"low suction cut-out {8 + (k >> 6) % 3} -> {10 + (k >> 6) % 3} psi",
+                f"pump start level {17 + (k >> 7) % 3}.0 -> {18 + (k >> 7) % 3}.5 ft", "comment block updated", f"revision label rev {1 + (k >> 8) % 9} -> rev {2 + (k >> 8) % 9}",
+                f"chlorine dose setpoint {['1.8', '2.0', '2.2'][(k >> 10) % 3]} -> {['2.0', '2.2', '2.0'][(k >> 10) % 3]} mg/L", f"lead/lag rotation P-{n} -> P-{1 + n % 4}"]
+        return opts[(k >> 12) % len(opts)]
+    return ""
+
+
+STORY_FILE = "relayconfigs\\sub02\\rtu_config_draft.xml"
+
+
+@functools.lru_cache(maxsize=None)
+def fim_rows():
+    """Monitored file changes on the OT engineering file server: dicts t, path, key, event, prev, new, user, source, diff, kind.
+    The same few hundred files are edited again and again; each version's hash follows the previous one."""
+    g = rng("host_audit", "fim3")
+    cat = _fim_catalog()
+    w = np.array([c[1] for c in cat], float)
+    w /= w.sum()
+    ev = []
+
+    def add(a, e_acct, src, kind="ordinary"):
+        rel, _w, fk = cat[int(g.choice(len(cat), p=w))]
+        if fk == "monthly":
+            rel = rel.format(m=f"{local_dt(a):%Y-%m}")
+        ev.append(dict(t=int(a), rel=rel, fk=fk, user=e_acct, source=src, kind=kind))
+
+    for d in range(FIRST_D, LAST_D + 1):
+        l = local_dt(D0_EPOCH + d * DAY + 43200)
+        for _ in range(int(g.poisson(3.4 if (l.weekday() < 5 and d not in HOLIDAYS) else 0.4) * (0.3 if -1 <= d <= 6 else 1))):
+            a = local_ts(d, f"{int(g.integers(7, 18)):02d}:{int(g.integers(0, 60)):02d}") + int(g.integers(0, 60))
+            e = at_work(FIELD_ENG, a, g)
+            if e:
+                add(a, e["ot_account"], eng_ws(e))
+    for r in gateway_sessions():                       # writes made through the gateway happen inside that person's gateway session
+        if r["kind"] in ("ordinary", "oncall") and OT01 in r["targets"]:
+            add(r["login"] + 30 + int(g.integers(0, max(1, r["dur"] - 60))), r["account"], JMP, "gateway")
+    ev.append(dict(t=M.T["cfg_sub2"], rel=STORY_FILE, fk="relay", user="GW-ENG-VELA", source=JMP, kind="session"))
+    ev.sort(key=lambda x: x["t"])
+    ver, out = {}, []
+    for x in ev:
+        v0 = 3 + int(hsh("v0", x["rel"], n=2), 16) % 20 if x["fk"] != "monthly" else 0
+        v = ver.get(x["rel"], v0)
+        ver[x["rel"]] = v + 1
+        created = x["fk"] == "monthly" and v == 0
+        diff = _fim_diff(x["rel"], x["fk"], v) if not created else ""
+        if x["kind"] == "session":
+            diff = "overcurrent_trip_threshold 1200A -> 2400A for relays R-02A, R-02B, R-02C"
+        out.append(dict(t=x["t"], path="\\\\gw-srv-ot-01\\" + x["rel"], key=f"{x['rel']}|{x['t']}", event="CREATED" if created else "MODIFIED",
+                        prev="" if created else "sha256=" + hsh("fv", x["rel"], v), new="sha256=" + hsh("fv", x["rel"], v + 1), user=x["user"], source=x["source"], diff=diff, kind=x["kind"]))
+    # the two hashes canon quotes for the draft file of the second substation: the version before and the version after that change
+    idx = [i for i, r in enumerate(out) if r["path"].endswith(STORY_FILE)]
+    k = next(i for i in idx if out[i]["kind"] == "session")
+    assert out[k]["prev"] != out[k]["new"]             # (the two hashes canon quotes are these generated values)
+    return out
+
+
+CMD_BY_TYPE = {"circuit breaker": ["BREAKER OPEN", "BREAKER CLOSE", "RECLOSE ENABLE", "RECLOSE DISABLE", "TAG NOTE", "ALARM ACK"],
+               "feeder breaker": ["BREAKER OPEN", "BREAKER CLOSE", "RECLOSE ENABLE", "TAG NOTE"], "feeder circuit breaker": ["BREAKER OPEN", "BREAKER CLOSE", "RECLOSE ENABLE", "TAG NOTE"],
+               "power transformer": ["TAP RAISE", "TAP LOWER", "ALARM ACK", "TAG NOTE"], "bus": ["CAP BANK SWITCH", "ALARM ACK", "TAG NOTE"],
+               "booster pump": ["PUMP START", "PUMP STOP", "SETPOINT ENTRY", "ALARM ACK"], "high-service pump": ["PUMP START", "PUMP STOP", "SETPOINT ENTRY", "ALARM ACK"]}
+CMD_EQUIP = [e for e in H["equipment"] if e.get("type") in CMD_BY_TYPE and e["equipment_id"].startswith("GW-")]
+
+
+def _cmd_rate(d):
+    """Operator actions a day: more switching in the storm and through restoration."""
+    return 2.6 if d < -1 else (6 if d < 0 else (16 if d < 1 else (12 if d < 5 else (7 if d < 15 else (4 if d < 36 else 2.6)))))
+
+
+@functools.lru_cache(maxsize=None)
+def scada_cmds():
+    """Operator actions on the SCADA server: dicts t, ws, operator, command, device, origin, console, origin_host.
+    Each device has a state: a breaker that was opened is closed again before it can be opened once more, a pump that
+    was stopped is started again, reclosing that was disabled is enabled again."""
+    g = rng("host_audit", "cmd3")
+    S = shared()
+    out = []
+    rd = [r for r in gateway_sessions() if r["kind"] in ("ordinary", "oncall") and any(t in RD_HOSTS for t in r["targets"]) and r["dur"] > 400]
+    brk = [e for e in CMD_EQUIP if "breaker" in e["type"]]
+    pmp = [e for e in CMD_EQUIP if "pump" in e["type"]]
+    xfm = [e for e in CMD_EQUIP if e["type"] == "power transformer"]
+    bus = [e for e in CMD_EQUIP if e["type"] == "bus"]
+    sub1 = [e["equipment_id"] for e in brk if "SUB01" in e["equipment_id"]][:2]
+    busy = {"GW-SUB02-CB-7": [(M.T["sub2_cmd"] - 6 * 3600, M.T["sub2_close"] + 3600)], "GW-SUB03-CB-12": [(M.T["sub3_cmd"] - 6 * 3600, M.T["sub3_close"] + 3600)]}
+    for dev in sub1:
+        busy[dev] = [(M.T["sub1_trip"] - 6 * 3600, M.T["sub1_back"] + 6 * 3600)]
+
+    def free(dev, a, b):
+        return all(b < x or a > y for x, y in busy.get(dev, []))
+
+    def console(a, r2, r3):
+        ops = [x for x in S.sessions_at(a) if x["host"] in OPS_CONSOLES and S.USER_BY_NAME[x["user"]].get("ot_account")]
+        if not ops:
+            return None
+        x = ops[r3 % len(ops)]
+        return dict(ws=x["host"], operator="" if r2 < 0.1 else x["user"], origin="console", console=f"CON-{hsh('con', a, n=6)}", origin_host="")
+
+    def put(a, who, command, dev):
+        out.append(dict(t=int(a), command=command, device=dev, **who))
+
+    auto = dict(ws="", operator="", origin="automation", console="", origin_host="")
+    k = 0
+    for d in range(FIRST_D, LAST_D + 1):
+        for _ in range(int(g.poisson(_cmd_rate(d)))):
+            a = D0_EPOCH + d * DAY + int(g.integers(0, DAY))
+            r, r2, r3, r4, gap = g.random(), g.random(), int(g.integers(1 << 30)), g.random(), g.random()
+            kind = "pair_brk" if r4 < 0.18 else ("pair_pump" if r4 < 0.32 else ("pair_recl" if r4 < 0.40 else ("tap" if r4 < 0.60 else ("cap" if r4 < 0.68 else ("ack" if r4 < 0.86 else
+                                                                                                                                                              ("note" if r4 < 0.94 else "setpoint"))))))
+            who = console(a, r2, r3)
+            if r >= 0.82 and r < 0.9 and rd and kind != "pair_pump":           # an engineer through the remote-access gateway, inside one of their sessions
+                s_ = rd[k % len(rd)]
+                k += 7
+                a = s_["login"] + 90 + r3 % (s_["dur"] - 120)
+                who = dict(ws=next(t for t in s_["targets"] if t in RD_HOSTS), operator="" if r2 < 0.2 else s_["user"], origin="remote desktop", console="", origin_host=JMP)
+            elif r >= 0.9 and kind in ("pair_pump", "pair_recl", "cap", "pair_brk"):
+                who = auto                                # automatic schemes: level control, reclosing, capacitor control, protection
+            if who is None:
+                continue
+            if kind == "pair_brk":
+                e = brk[r3 % len(brk)]["equipment_id"]
+                b = a + 1200 + gap ** 2 * 8 * 3600
+                who2 = console(b, r2, r3 >> 3)
+                if not free(e, a - 600, b + 600) or who2 is None:
+                    continue
+                busy.setdefault(e, []).append((a - 600, b + 600))
+                put(a, who, "BREAKER OPEN", e)
+                put(b, who2, "BREAKER CLOSE", e)
+            elif kind == "pair_pump":
+                e = pmp[r3 % len(pmp)]["equipment_id"]
+                b = a + 1800 + gap * 9 * 3600
+                who2 = console(b, r2, r3 >> 3) if who is not auto else auto
+                if not free(e, a - 600, b + 600) or who2 is None:
+                    continue
+                busy.setdefault(e, []).append((a - 600, b + 600))
+                running = int(hsh("run", e, n=2), 16) % 3 > 0          # most pumps run; a standby pump is started and stopped again
+                put(a, who, "PUMP STOP" if running else "PUMP START", e)
+                put(b, who2, "PUMP START" if running else "PUMP STOP", e)
+            elif kind == "pair_recl":
+                e = brk[(r3 >> 5) % len(brk)]["equipment_id"]
+                b = a + 3600 + gap * 9 * 3600
+                who2 = console(b, r2, r3 >> 3)
+                if not free("recl:" + e, a - 600, b + 600) or not free(e, a - 600, b + 600) or who2 is None:
+                    continue
+                busy.setdefault("recl:" + e, []).append((a - 600, b + 600))
+                put(a, who, "RECLOSE DISABLE", e)
+                put(b, who2, "RECLOSE ENABLE", e)
+            elif kind == "tap" and xfm:
+                put(a, who, ["TAP RAISE", "TAP LOWER"][r3 % 2], xfm[(r3 >> 2) % len(xfm)]["equipment_id"])
+            elif kind == "cap" and bus:
+                put(a, who, "CAP BANK SWITCH", bus[r3 % len(bus)]["equipment_id"])
+            elif kind == "setpoint" and pmp:
+                put(a, who, "SETPOINT ENTRY", pmp[r3 % len(pmp)]["equipment_id"])
+            else:
+                eq = CMD_EQUIP[r3 % len(CMD_EQUIP)]
+                put(a, who, "ALARM ACK" if kind == "ack" and "ALARM ACK" in CMD_BY_TYPE[eq["type"]] else "TAG NOTE", eq["equipment_id"])
+    # the storm trip of the first substation and its restoration; the two openings given over remote desktop and their closing at restoration
+    for n_, dev in enumerate(sub1):
+        put(M.T["sub1_trip"] + 0.2 * n_, auto, "BREAKER OPEN", dev)
+        w = console(M.T["sub1_back"] + 140 + 95 * n_, 0.5, n_) or auto
+        put(M.T["sub1_back"] + 140 + 95 * n_, w, "BREAKER CLOSE", dev)
+    for key, key2, dev in (("sub2_cmd", "sub2_close", "GW-SUB02-CB-7"), ("sub3_cmd", "sub3_close", "GW-SUB03-CB-12")):
+        put(M.T[key], dict(ws=OPS02, operator="", origin="remote desktop", console="", origin_host=JMP), "BREAKER OPEN", dev)
+        w = console(M.T[key2], 0.5, 1) or dict(ws="GW-WS-OPS-01", operator="", origin="console", console=f"CON-{hsh('con', M.T[key2], n=6)}", origin_host="")
+        put(M.T[key2], w, "BREAKER CLOSE", dev)
+    return sorted(out, key=lambda x: x["t"])
 
 
 def zeek_write(day_dir, name, fields, types, rows, open_t):
@@ -438,662 +1278,19 @@ def zeek_write(day_dir, name, fields, types, rows, open_t):
     return len(rows)
 
 
-def uid(*k):
-    return "C" + hsh(*k, n=17)
-
-
-def conn(t, o, op, r, rp, proto, svc, dur, ob, rb, state="SF", hist="ShADadFf"):
-    if state in ("S0", "REJ"):
-        dur, rb = 0.0, 0
-        ob = 0 if state == "S0" else ob
-    lo = "T" if o.startswith(("10.", "172.20.")) else "F"
-    lr = "T" if r.startswith(("10.", "172.20.")) else "F"
-    opk, rpk = max(3, int(ob / 900) + 4), max(3, int(rb / 1200) + 4)
-    return [f"{t:.6f}", uid(t, o, op, r, rp), o, op, r, rp, proto, svc, f"{dur:.6f}", int(ob), int(rb), state, lo, lr, 0, hist, opk, int(ob + opk * 40), rpk, int(rb + rpk * 40)]
-
-
-def zeek_special():
-    """Flows the sensor must contain in full: (epoch, kind, row)."""
-    g = rng("zeek", "special")
-    out = []
-    dc = IP["GW-SRV-DC-01"]
-    for i, bt in enumerate(beacon_times()):
-        op = 49152 + int(g.integers(0, 16000))
-        t = bt + g.random()
-        first = i == 0
-        c = conn(t, IP[WS04], op, BEACON_IP, 443, "tcp", "ssl", 4.2 if first else float(g.uniform(3.6, 4.9)), 318 if first else int(g.integers(300, 340)),
-                 212 if first else int(g.integers(190, 240)))
-        out.append((t, "conn", c))
-        out.append((t + 0.08, "ssl", [f"{t + 0.08:.6f}", c[1], IP[WS04], op, BEACON_IP, 443, "TLSv13", "TLS_AES_256_GCM_SHA384", BEACON_SNI, "F", "T"]))
-        if first or g.random() < 0.3:
-            out.append((t - 0.4, "dns", dns_row(t - 0.4, IP[WS04], dc, BEACON_SNI, BEACON_IP, g)))
-    out.append((DNS_Q_T, "dns", dns_row(DNS_Q_T, IP[WS04], dc, "update-cdn.meridiancontrols.net", "104.21.88.43", g)))
-    out.append((DNS_Q_T + 1.2, "conn", conn(DNS_Q_T + 1.2, IP[WS04], 50211, "104.21.88.43", 443, "tcp", "ssl", 61.4, 20114, 1884012)))
-    out.append((DNS_Q_T + 1.3, "ssl", [f"{DNS_Q_T + 1.3:.6f}", uid(DNS_Q_T + 1.2, IP[WS04], 50211, "104.21.88.43", 443), IP[WS04], 50211, "104.21.88.43", 443, "TLSv13",
-                                     "TLS_AES_256_GCM_SHA384", "update-cdn.meridiancontrols.net", "F", "T"]))
-    # large internal transfer from the DMZ historian replica to the one workstation
-    t = ts("2027-09-08T23:58Z") + 14
-    out.append((t, "conn", conn(t, IP[WS04], 51877, IP[HISTDMZ], 445, "tcp", "smb", 2710.5, 4.1e6, 1.9e9)))
-    # the fourteen out-of-hours sessions through the remote-access gateway and what they touched
-    for s in SESSIONS:
-        a = s["start"] - 18
-        out.append((a, "conn", conn(a, s["ip"], 40000 + s["n"] * 311, IP[JMP], 443, "tcp", "ssl", s["dur"] + 24, 1.4e6 + s["dur"] * 900, s["bytes_out"])))
-        out.append((a + 0.1, "ssl", [f"{a + 0.1:.6f}", uid(a, s["ip"], 40000 + s["n"] * 311, IP[JMP], 443), s["ip"], 40000 + s["n"] * 311, IP[JMP], 443, "TLSv12",
-                                     "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384", "remote.cbpwa.example", "F", "T"]))
-        out.append((s["start"] + 3, "conn", conn(s["start"] + 3, IP[JMP], 52000 + s["n"], IP[HIST1], 5450, "tcp", "-", min(s["dur"], 1500), 9000 + s["tags"] * 40, s["tags"] * 5200)))
-    def touch(t, dst, port, svc, ob=2400, rb=1800, dur=2.2):
-        out.append((t, "conn", conn(t, IP[JMP], 53000 + int(t) % 9000, IP[dst], port, "tcp", svc, dur, ob, rb)))
-    touch(M.T["uv_thr_sub1"] - 6, "GW-SYS-RTU-01", 20000, "dnp3")
-    touch(M.T["supp_list_d3"] - 5, SCADA1, 3389, "rdp", 18000, 240000, 41.0)
-    touch(M.T["cfg_sub2"] - 4, "GW-SRV-OT-01", 445, "smb", 61000, 3100, 3.1)
-    touch(M.T["cfg_rtu4"] - 4, "GW-SYS-RTU-04", 20000, "dnp3")
-    touch(M.T["cfg_sub2"] + 36, "GW-SYS-RTU-02", 20000, "dnp3")
-    for k in ("sub2_cmd", "sub3_cmd"):
-        touch(M.T[k] - 95, OPS02, 3389, "rdp", 240000, 3.6e6, 190.0)
-        t2 = M.T[k] - 2
-        out.append((t2, "conn", conn(t2, IP[OPS02], 49800, IP[SCADA1], 4000, "tcp", "-", 1.1, 880, 640)))
-    touch(M.T["p3_sp"] - 5, "GW-SYS-RTU-UTL1", 502, "modbus")
-    touch(M.T["bstr_sp"] - 5, "GW-SYS-RTU-WTR3", 502, "modbus")
-    return out
-
-
-def dns_row(t, o, r, q, ans, g):
-    """One dns.log row. Its uid is the uid of the UDP/53 connection that carried it (see dns_conn)."""
-    op = 49152 + int(g.integers(0, 16000))
-    return [f"{t:.6f}", uid(t, o, op, r, 53), o, op, r, 53, "udp", int(g.integers(1, 65000)), q, "C_INTERNET", "A", "NOERROR", "F", "T", "T", ans, f"{int(g.integers(60, 3600))}.000000"]
-
-
-def dns_conn(d):
-    """The conn.log row for a dns.log row (same uid, same endpoints)."""
-    t = float(d[0])
-    c = conn(t, d[2], d[3], d[4], 53, "udp", "dns", 0.004, 44, 92, "SF", "Dd")
-    c[1] = d[1]
-    return c
-
-
-def pick_state(g):
-    r, acc = g.random(), 0.0
-    for st, hist, p in STATES:
-        acc += p
-        if r < acc:
-            return st, hist
-    return "SF", "ShADadFf"
-
-
-def gen_zeek():
-    import glob as _glob
-    import shutil
-    old = [os.path.relpath(p, ROOT) for p in _glob.glob(os.path.join(ROOT, NET, "20*")) + _glob.glob(os.path.join(ROOT, NET, "_consolidated"))]
-    for rel in old:                                   # retire once: never overwrite an archived copy
-        dst = os.path.join(ROOT, "_versions", "streams_pre_regen_20261109", rel)
-        if not os.path.exists(dst):
-            os.makedirs(os.path.dirname(dst), exist_ok=True)
-            shutil.move(os.path.join(ROOT, rel), dst)
+def main(parts=None):
+    import itsec_audit
+    import itsec_portal
+    import itsec_siem
+    import itsec_zeek
+    table = {"siem": itsec_siem.gen_siem, "zeek": itsec_zeek.gen_zeek, "audit": itsec_audit.gen_audit, "portal": itsec_portal.gen_portal}
+    for p in parts or ["siem", "zeek", "audit", "portal"]:
+        if p.startswith("zeek:"):                      # one month of the sensor logs: zeek:2027-09
+            itsec_zeek.gen_zeek(p.split(":", 1)[1])
         else:
-            shutil.rmtree(os.path.join(ROOT, rel), ignore_errors=True)
-    special = {}
-    for t, kind, row in zeek_special():
-        special.setdefault(day_utc(t), {}).setdefault(kind, []).append((t, row))
-    gs = rng("zeek", "gateway_sessions")
-    for r in ordinary_gateway_sessions(rng("host_audit"))[0]:
-        login = int(dt.datetime.strptime(r[6], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=UTC).timestamp())
-        a_t = login - 2 + float(gs.random())
-        op = 40000 + int(gs.integers(0, 20000))
-        c = conn(a_t, r[3], op, IP[JMP], 443, "tcp", "ssl", r[8] + 2 + float(gs.random()), r[10], r[9])
-        day = special.setdefault(day_utc(a_t), {})
-        day.setdefault("conn", []).append((a_t, c))
-        day.setdefault("ssl", []).append((a_t + 0.1, [f"{a_t + 0.1:.6f}", c[1], r[3], op, IP[JMP], 443, "TLSv12", "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384", "remote.cbpwa.example", "F", "T"]))
-        for k, tgt in enumerate(r[12].split(";")):
-            if tgt not in IP:
-                continue
-            t2 = login + 7 + k * int(gs.integers(20, 240)) + float(gs.random())
-            left = max(20.0, r[8] - (t2 - login) - 5)
-            if "RTU" in tgt:
-                water = "UTL" in tgt or "WTR" in tgt or "WTP" in tgt
-                port, svc, dur2, ob, rb = (502 if water else 20000), ("modbus" if water else "dnp3"), float(gs.uniform(1.5, 40)), int(gs.gamma(2, 1500)) + 400, int(gs.gamma(2, 1800)) + 300
-            elif tgt == HIST1:
-                port, svc, dur2, ob, rb = 5450, "-", min(left, float(gs.gamma(2, 400)) + 20), int(gs.gamma(2, 2e4)) + 2000, int(gs.gamma(2, 6e5)) + 9000
-            elif tgt == "GW-SRV-OT-01":
-                port, svc, dur2, ob, rb = 445, "smb", min(left, float(gs.gamma(2, 20)) + 2), int(gs.gamma(2, 4e4)) + 900, int(gs.gamma(2, 3e5)) + 1200
-            else:
-                port, svc, dur2, ob, rb = 3389, "rdp", min(left, float(gs.gamma(2, 600)) + 30), int(gs.gamma(2, 9e4)) + 6000, int(gs.gamma(2, 2e6)) + 40000
-            day.setdefault("conn", []).append((t2, conn(t2, IP[JMP], 52000 + int(gs.integers(0, 9000)), IP[tgt], port, "tcp", svc, dur2, ob, rb)))
-    dc = [IP["GW-SRV-DC-01"], IP["GW-SRV-DC-02"]]
-    wsip = [h["ip"] for h in CORP]
-    srv = [h["ip"] for h in SERVERS if h["ip"].startswith("10.14.")]
-    admin = [h["ip"] for h in IT_ADMIN]
-    counts = {"conn": 0, "dns": 0, "ssl": 0, "notice": 0}
-    legit_cfg = {}
-    for c in legit_config_changes():
-        if c[7] == JMP and c[1] in IP:
-            legit_cfg.setdefault(day_utc(c[0]), []).append(c)
-    DIR = [(88, "krb"), (389, "ldap"), (445, "smb"), (135, "dce_rpc")]
-    APP = [(443, "ssl"), (1433, "-"), (8443, "ssl"), (445, "smb")]
-    for d in range(day_utc(SPAN_START), day_utc(SPAN_END - 1) + 1):
-        g = rng("zeek", d)
-        t0 = D0_EPOCH + d * DAY
-        wf = np.array([work_factor(t0 + h * 3600 + 1800) for h in range(24)])
-        n = int(1500 * (0.25 + wf.mean() * 2.2))
-        hsel = g.choice(24, n, p=(wf + 0.05) / (wf + 0.05).sum())
-        times = np.sort(t0 + hsel * 3600 + g.random(n) * 3600)
-        rows = {k: [x for x in special.get(d, {}).get(k, [])] for k in counts}
-        for _, drow in list(rows["dns"]):                # every DNS answer rides on a UDP/53 connection with the same uid
-            rows["conn"].append((float(drow[0]), dns_conn(drow)))
-        kinds = g.choice(8, n, p=[0.3, 0.14, 0.2, 0.08, 0.08, 0.08, 0.07, 0.05])
-        for t, k in zip(times, kinds):
-            o = wsip[g.integers(len(wsip))]
-            op = 49152 + int(g.integers(0, 16000))
-            st, hist = pick_state(g)
-            if k == 0:                                    # web
-                site = SITES[g.integers(len(SITES))]
-                dst = SITE_IPS[site][int(g.integers(len(SITE_IPS[site])))]
-                c = conn(t, o, op, dst, 443, "tcp", "ssl", float(g.gamma(2, 9)), int(g.gamma(2, 2200)), int(g.gamma(2, 60000)), st, hist)
-                rows["conn"].append((t, c))
-                if st == "SF" and g.random() < 0.6:
-                    rows["ssl"].append((t, [f"{t + 0.05:.6f}", c[1], o, op, dst, 443, "TLSv13" if g.random() < 0.8 else "TLSv12", "TLS_AES_128_GCM_SHA256", site, "T" if g.random() < 0.2 else "F", "T"]))
-                if g.random() < 0.5:
-                    dr = dns_row(t - 0.2, o, dc[g.integers(2)], site, dst, g)
-                    rows["dns"].append((t - 0.2, dr)); rows["conn"].append((t - 0.2, dns_conn(dr)))
-            elif k == 1:                                  # directory / file services
-                port, svc = DIR[int(g.integers(len(DIR)))]
-                rows["conn"].append((t, conn(t, o, op, dc[g.integers(2)], port, "tcp", svc, float(g.gamma(2, 1.2)), int(g.gamma(2, 1400)), int(g.gamma(2, 2600)), st, hist)))
-            elif k == 2:                                  # dns
-                site = SITES[g.integers(len(SITES))]
-                dr = dns_row(t, o, dc[g.integers(2)], site, SITE_IPS[site][0], g)
-                rows["dns"].append((t, dr)); rows["conn"].append((t, dns_conn(dr)))
-            elif k == 3:                                  # mail
-                rows["conn"].append((t, conn(t, o, op, IP["GW-SRV-MAIL-01"], 443, "tcp", "ssl", float(g.gamma(2, 20)), int(g.gamma(2, 9000)), int(g.gamma(2, 40000)), st, hist)))
-            elif k == 4:                                  # internal application servers
-                port, svc = APP[int(g.integers(len(APP)))]
-                rows["conn"].append((t, conn(t, o, op, srv[g.integers(len(srv))], port, "tcp", svc, float(g.gamma(2, 14)), int(g.gamma(2, 5000)), int(g.gamma(2, 30000)), st, hist)))
-            elif k == 5:                                  # staff VPN from home
-                rows["conn"].append((t, conn(t, home_ip(g), op, IP["GW-VPN-EMP-01"], 443, "tcp", "ssl", float(g.gamma(2, 1800)), int(g.gamma(2, 4e5)), int(g.gamma(2, 2e6)))))
-            elif k == 6:                                  # historian replica across the IT/OT boundary
-                if boundary_open(t):
-                    rows["conn"].append((t, conn(t, IP[HIST1], op, IP[HISTDMZ], 5450, "tcp", "-", float(g.gamma(2, 30)), int(g.gamma(2, 2e5)), int(g.gamma(2, 4000)))))
-            else:                                         # (kept for its random draws only: gateway flows are written from the session log, see ordinary_gateway_sessions)
-                e = ENGINEERS[g.integers(len(ENGINEERS))]
-                office = g.random() < 0.7
-                src = IP.get(e["normal_hosts"][0], o) if office else home_ip(g)
-                if boundary_open(t):
-                    _unused = ((t, conn(t, src, op, IP[JMP], 443, "tcp", "ssl", float(g.gamma(2, 900)), int(g.gamma(2, 2e5)), int(g.gamma(2, 1.5e6)))))
-                    tgt = str(g.choice(OT_CONSOLES + [HIST1, "GW-SRV-OT-01", SCADA1]))
-                    if tgt in OT_CONSOLES or tgt == SCADA1:
-                        _unused = ((t + 9, conn(t + 9, IP[JMP], 52000 + int(g.integers(0, 9000)), IP[tgt], 3389, "tcp", "rdp", float(g.gamma(2, 600)), int(g.gamma(2, 9e4)), int(g.gamma(2, 2e6)))))
-                    elif tgt == HIST1:
-                        _unused = ((t + 9, conn(t + 9, IP[JMP], 52000 + int(g.integers(0, 9000)), IP[tgt], 5450, "tcp", "-", float(g.gamma(2, 400)), int(g.gamma(2, 2e4)), int(g.gamma(2, 6e5)))))
-                    else:
-                        _unused = ((t + 9, conn(t + 9, IP[JMP], 52000 + int(g.integers(0, 9000)), IP[tgt], 445, "tcp", "smb", float(g.gamma(2, 20)), int(g.gamma(2, 4e4)), int(g.gamma(2, 3e5)))))
-        # IT administrators managing servers by remote desktop
-        for _ in range(int(g.poisson(9 * (0.3 + wf.mean())))):
-            t = t0 + int(g.integers(6, 22)) * 3600 + g.random() * 3600
-            rows["conn"].append((t, conn(t, admin[g.integers(len(admin))], 49152 + int(g.integers(0, 16000)), srv[g.integers(len(srv))], 3389, "tcp", "rdp", float(g.gamma(2, 500)), int(g.gamma(2, 8e4)), int(g.gamma(2, 1.5e6)))))
-        # operator consoles talking to the SCADA servers (sampled) and the front-end processors polling field devices (sampled)
-        for _ in range(int(g.poisson(26))):
-            t = t0 + g.random() * DAY
-            ws = OT_CONSOLES[int(g.integers(len(OT_CONSOLES)))]
-            rows["conn"].append((t, conn(t, IP[ws], 49152 + int(g.integers(0, 16000)), IP[str(g.choice([SCADA1, "GW-SYS-SCADA-02"]))], 4000, "tcp", "-", float(g.gamma(2, 2.0)), int(g.gamma(2, 700)), int(g.gamma(2, 900)))))
-        for _ in range(int(g.poisson(30))):
-            t = t0 + g.random() * DAY
-            rtu = RTUS[int(g.integers(len(RTUS)))]
-            water = "UTL" in rtu or "WTR" in rtu or "WTP" in rtu
-            rows["conn"].append((t, conn(t, IP[str(g.choice(["GW-SRV-FEP-01", "GW-SRV-FEP-02"]))], 49152 + int(g.integers(0, 16000)), IP[rtu], 502 if water else 20000, "tcp",
-                                         "modbus" if water else "dnp3", float(g.gamma(2, 1.5)), int(g.gamma(2, 600)), int(g.gamma(2, 2400)))))
-        # approved remote setting changes made through the gateway (they are in the configuration-change log with their tickets)
-        for c in legit_cfg.get(d, []):
-            water = "UTL" in c[1] or "WTR" in c[1] or "WTP" in c[1]
-            rows["conn"].append((c[0] - 5, conn(c[0] - 5, IP[JMP], 53000 + int(c[0]) % 9000, IP[c[1]], 502 if water else 20000, "tcp", "modbus" if water else "dnp3", 2.0 + (c[0] % 7) / 10, 2100 + c[0] % 600, 1500 + c[0] % 700)))
-        # nightly backups and the weekly internal vulnerability scan
-        for i in range(6):
-            t = t0 + 3 * 3600 + i * 1200 + g.random() * 300
-            s_ip = srv[(d + i) % len(srv)]
-            rows["conn"].append((t, conn(t, s_ip, 51000 + i, IP["GW-SRV-BKP-01"], 10000, "tcp", "-", float(g.uniform(400, 2600)), int(g.gamma(3, 6e8)), int(g.gamma(2, 3e5)))))
-        if (d % 7) == 2:
-            t = t0 + 6 * 3600 + 900
-            rows["notice"].append((t, [f"{t:.6f}", "-", IP.get("GW-SRV-VULN-01", srv[0]), "-", "-", "Scan::Port_Scan", "internal scanner swept 10.14.20.0/24 (scheduled)", IP.get("GW-SRV-VULN-01", srv[0]), "-", "-", "Notice::ACTION_LOG"]))
-        for _ in range(int(g.poisson(3))):
-            t = t0 + g.random() * DAY
-            site = SITES[g.integers(len(SITES))]
-            rows["notice"].append((t, [f"{t:.6f}", "-", wsip[g.integers(len(wsip))], SITE_IPS[site][0], 443,
-                                       str(g.choice(["SSL::Invalid_Server_Cert", "SSL::Certificate_Expires_Soon", "DNS::External_Name", "Conn::Content_Gap"])),
-                                       "-", "-", "-", 443, "Notice::ACTION_LOG"]))
-        dd = dt.datetime.fromtimestamp(t0, UTC).strftime("%Y-%m-%d")
-        for kname, f, ty in (("conn", CONN_F, CONN_TY), ("dns", DNS_F, DNS_TY), ("ssl", SSL_F, SSL_TY), ("notice", NOT_F, NOT_TY)):
-            rr = [r for _, r in sorted(rows[kname], key=lambda x: x[0])]
-            counts[kname] += zeek_write(dd, kname, f, ty, rr, t0)
-    print("zeek_logs:", ", ".join(f"{k} {v:,}" for k, v in counts.items()))
-
-
-# ======================================================================================
-# host audit logs
-# ======================================================================================
-def ordinary_gateway_sessions(g):
-    """The ordinary sessions on the remote-access gateway (staff, on-call, vendors, the field contractor).
-    gen_audit writes them to the session log; gen_zeek writes the matching network flows, so that every
-    session in the log, ordinary or not, has its flow at the sensor."""
-    rows = []
-    sid = 20000
-    for d in range(day_utc(SPAN_START), day_utc(SPAN_END - 1) + 1):
-        t0 = D0_EPOCH + d * DAY
-        l = local_dt(t0 + 43200)
-        gate_off = ISOLATE <= t0 + 43200 < M.T["reconnect"]
-        if l.weekday() < 5 and not gate_off and not (-1 <= d <= 4):
-            for _ in range(int(g.poisson(5))):
-                e = ENGINEERS[g.integers(len(ENGINEERS))]
-                if e["username"] == "rvela" and ts("2027-09-06T22:00Z") <= t0 <= ts("2027-09-22T06:00Z"):
-                    continue                               # on leave
-                a = local_ts(d, f"{int(g.integers(7, 17)):02d}:{int(g.integers(0, 60)):02d}") + int(g.integers(0, 60))
-                dur = int(g.gamma(2, 1500)) + 120
-                sid += 1
-                office = g.random() < 0.7
-                tk = g.random()
-                rows.append([f"RAS-{sid}", JMP, e["ot_account"], IP.get(e["normal_hosts"][0], "10.14.30.20") if office else home_ip(g),
-                             "internal" if office else f"AS-{int(g.choice([7018, 20057, 11427, 22773]))}", "US", z(a), z(a + dur), dur, int(g.gamma(2, 4e5)), int(g.gamma(2, 3e6)),
-                             "token" if g.random() < 0.82 else "password only", str(g.choice([HIST1, "GW-WS-ENG-03", "GW-SRV-OT-01", "GW-SYS-SCADA-02", "GW-WTP-HMI-01", "GW-SYS-RTU-03", OPS02])),
-                             f"CHG-27-{int(g.integers(700, 1900)):04d}" if tk < 0.62 else (f"WO-{int(g.integers(40000, 48000))}" if tk < 0.8 else "")])
-        # on-call engineers after hours and at weekends (storm restoration, call-outs)
-        if not gate_off:
-            for _ in range(int(g.poisson(1.1 if not (0 <= d <= 30) else 2.4))):
-                e = ENGINEERS[g.integers(len(ENGINEERS))]
-                if e["username"] == "rvela" and ts("2027-09-06T22:00Z") <= t0 <= ts("2027-09-22T06:00Z"):
-                    continue
-                a = t0 + int(g.integers(0, DAY))
-                if 7 <= local_dt(a).hour < 18 and local_dt(a).weekday() < 5:
-                    continue
-                dur = int(g.gamma(2, 1300)) + 180
-                sid += 1
-                tk = g.random()
-                rows.append([f"RAS-{sid}", JMP, e["ot_account"], home_ip(g), f"AS-{int(g.choice([7018, 20057, 11427, 22773]))}",
-                             "US", z(a), z(a + dur), dur, int(g.gamma(2, 5e5)), int(g.gamma(2, 3e6)), "token" if g.random() < 0.7 else "password only",
-                             str(g.choice([HIST1, "GW-SYS-SCADA-02", "GW-WTP-HMI-01", OPS02, "GW-SYS-RTU-05"])), f"WO-{int(g.integers(40000, 48000))}" if tk < 0.55 else ""])
-            if g.random() < 0.25:
-                a = local_ts(d, f"{int(g.integers(9, 15)):02d}:{int(g.integers(0, 60)):02d}")
-                dur = int(g.gamma(2, 2400)) + 300
-                sid += 1
-                rows.append([f"RAS-{sid}", JMP, str(g.choice(["svc_meridian_support", "svc_vantage_mgmt"])), f"192.0.2.{int(g.integers(205, 225))}", "AS-64499", "US", z(a), z(a + dur), dur,
-                             int(g.gamma(2, 6e5)), int(g.gamma(2, 2e6)), "token", str(g.choice([HIST1, "GW-SYS-SCADA-02"])), f"VND-{int(g.integers(3000, 3999))}"])
-    # the field-operations contractor's ordinary daytime sessions (the account is disabled on 2027-10-02)
-    gc = rng("host_audit", "contractor")
-    for d in range(day_utc(SPAN_START), day_utc(ts("2027-10-02T00:00Z"))):
-        if local_dt(D0_EPOCH + d * DAY + 43200).weekday() < 5 and gc.random() < 0.38 and not (-2 <= d <= 6):
-            a = local_ts(d, f"{int(gc.integers(8, 16)):02d}:{int(gc.integers(0, 60)):02d}") + int(gc.integers(0, 60))
-            dur = int(gc.gamma(2, 1100)) + 240
-            sid += 1
-            rows.append([f"RAS-{sid}", JMP, "svc_fieldops_ext", f"66.193.54.{int(gc.integers(18, 30))}", "AS-11427", "US", z(a), z(a + dur), dur, int(gc.gamma(2, 3e5)), int(gc.gamma(2, 2e6)),
-                         "token" if gc.random() < 0.8 else "password only", HIST1, f"WO-{int(gc.integers(40000, 48000))}" if gc.random() < 0.75 else ""])
-    rows = [r for r in rows if boundary_open(ts(r[6])) and boundary_open(ts(r[7]))]
-    gm = rng("host_audit", "targets")                 # ordinary sessions often touch more than one host
-    pool = [HIST1, "GW-WS-ENG-03", "GW-SRV-OT-01", "GW-SYS-SCADA-02", "GW-WTP-HMI-01", "GW-SYS-RTU-03", "GW-SYS-RTU-05", OPS02, SCADA1]
-    for r in rows:
-        if gm.random() < 0.14:
-            extra = [str(x) for x in gm.choice(pool, int(gm.integers(1, 3)), replace=False) if str(x) != r[12]]
-            r[12] = ";".join(sorted(set([r[12]] + extra)))
-    return rows, sid
-
-
-def gen_audit():
-    g = rng("host_audit")
-    A = f"{NET}/audit"
-    # ---- remote-access gateway sessions
-    rows, sid = ordinary_gateway_sessions(g)
-    ordinary = [list(r) for r in rows]
-    for s in SESSIONS:
-        sid += 1
-        targets = [HIST1]
-        for k, hname in (("uv_thr_sub1", "GW-SYS-RTU-01;" + SCADA1), ("cfg_sub2", "GW-SRV-OT-01;GW-SYS-RTU-04"), ("sub2_cmd", OPS02), ("sub3_cmd", OPS02), ("p3_sp", "GW-SYS-RTU-UTL1;GW-SYS-RTU-WTR3")):
-            if s["start"] <= M.T[k] <= s["start"] + s["dur"]:
-                targets.append(hname)
-        rows.append([f"RAS-{sid}", JMP, "GW-ENG-VELA", s["ip"], s["asn"], s["cc"], z(s["start"] - 16), z(s["start"] + s["dur"] + 6), s["dur"] + 22, s["bytes_out"], int(1.4e6 + s["dur"] * 900 + g.integers(0, 90000)),
-                     "password only", ";".join(targets), ""])
-    rows.sort(key=lambda r: r[6])
-    for i, r in enumerate(rows):                      # ids are issued in order of login
-        r[0] = f"RAS-{20001 + i}"
-    n1 = write_csv(f"{A}/remote_access_sessions.csv", ["session_id", "gateway", "account", "src_ip", "src_network", "src_country", "login_utc", "logout_utc", "duration_s", "bytes_out",
-                                                       "bytes_in", "auth_method", "target_hosts", "change_ticket"], rows)
-    # ---- historian access
-    rows = []
-    hn = 400
-    for d in range(day_utc(SPAN_START), day_utc(SPAN_END - 1) + 1):
-        t0 = D0_EPOCH + d * DAY
-        l = local_dt(t0 + 43200)
-        for _ in range(int(g.poisson(9 if l.weekday() < 5 else 3) * (0.3 if -1 <= d <= 4 else 1))):
-            e = ENGINEERS[g.integers(len(ENGINEERS))] if g.random() < 0.6 else None
-            a = local_ts(d, f"{int(g.integers(6, 19)):02d}:{int(g.integers(0, 60)):02d}") + int(g.integers(0, 60))
-            dur = int(g.gamma(2, 500)) + 30
-            hn += 1
-            bulk = g.random() < 0.07
-            rows.append([a, f"HIST-{dt.datetime.fromtimestamp(a, UTC):%Y%m%d}-{hn % 100000:05d}", HIST1, e["ot_account"] if e else str(g.choice(["svc_scada_hist", "svc_hist_repl", "svc_oms"])),
-                         inside_host(e, a) if e else str(g.choice([SCADA1, HISTDMZ, "GW-SRV-OMS-01"])), z(a), z(a + dur), dur, (int(g.gamma(2, 260)) + 150) if bulk else (int(g.gamma(2, 60)) + 4),
-                         str(g.choice(["load_profile", "feeder_voltage", "pump_flow;pressure", "tank_level", "water_quality", "breaker_status", "transformer_temp", "relay_settings", "relay_config;breaker_status",
-                                       "relay_config(SUB-03)", "breaker_status(SUB-01)", "pump_setpoints;pressure_zones", "alarm_config", "relay_settings;tap_position", "breaker_status(SUB-05)",
-                                       "relay_config(SUB-01..SUB-05)", "pump_setpoints;booster_setpoints"])),
-                         "bulk read" if bulk else "trend"])
-        if l.weekday() < 5 and g.random() < 0.3 and D0_EPOCH + d * DAY < ts("2027-10-02T00:00Z") and not (-2 <= d <= 6):   # contractor reports
-            a = local_ts(d, f"{int(g.integers(8, 16)):02d}:{int(g.integers(0, 60)):02d}") + int(g.integers(0, 60))
-            dur = int(g.gamma(2, 420)) + 60
-            hn += 1
-            rows.append([a, f"HIST-{dt.datetime.fromtimestamp(a, UTC):%Y%m%d}-{hn % 100000:05d}", HIST1, "GW-SYS-JMP-01\\svc_fieldops_ext", JMP, z(a), z(a + dur), dur, int(g.gamma(2, 110)) + 20,
-                         str(g.choice(["feeder_voltage", "breaker_status", "relay_settings;tap_position", "pump_flow;pressure", "load_profile"])), str(g.choice(["trend", "bulk read", "trend"]))])
-    groups = ["relay_settings;tap_position", "feeder_voltage;relay_settings", "relay_config;breaker_status", "relay_config(SUB-01..SUB-05)", "relay_config;protection_events",
-              "pump_setpoints;pressure_zones", "relay_config;alarm_config", "breaker_status;relay_settings", "alarm_config", "breaker_status(SUB-02)", "pump_setpoints;booster_setpoints",
-              "breaker_status(SUB-03)", "relay_config;pump_setpoints", "relay_config(all 5 substations)"]
-    for s, grp in zip(SESSIONS, groups):
-        hid = s["hist_id"] or ""
-        dur = min(s["dur"], 1500) if s["n"] != 1 else 862
-        rows.append([s["start"] + 3, hid, HIST1, "GW-SYS-JMP-01\\svc_fieldops_ext", JMP, z(s["start"] + 3), z(s["start"] + 3 + dur), dur, s["tags"], grp, "bulk read"])
-    rows.sort(key=lambda r: r[0])
-    # session numbers come from one counter shared with other historian clients, so they rise with time in uneven steps;
-    # the two numbers canon states (00441 and 00917) are honoured and the rest are laid out around them
-    i0 = next(i for i, r in enumerate(rows) if r[1] == "HIST-20270907-00441")
-    i1 = next(i for i, r in enumerate(rows) if r[1] == "HIST-20271002-00917")
-    gi = rng("host_audit", "hist_ids")
-    seq = [0] * len(rows)
-    seq[i0], seq[i1] = 441, 917
-    before = sorted(gi.choice(np.arange(1, 441), i0, replace=False).tolist()) if i0 <= 440 else list(range(441 - i0, 441))
-    for i in range(i0):
-        seq[i] = before[i]
-    mid = sorted(gi.choice(np.arange(442, 917), i1 - i0 - 1, replace=False).tolist())
-    for k, i in enumerate(range(i0 + 1, i1)):
-        seq[i] = mid[k]
-    n = 917
-    for i in range(i1 + 1, len(rows)):
-        n += int(gi.integers(1, 4))
-        seq[i] = n
-    for r, q in zip(rows, seq):
-        r[1] = f"HIST-{dt.datetime.fromtimestamp(r[0], UTC):%Y%m%d}-{q % 100000:05d}"
-    n2 = write_csv(f"{A}/historian_access.csv", ["session_id", "server", "account", "client_host", "start_utc", "end_utc", "duration_s", "tags_queried", "tag_groups", "query_type"], [r[1:] for r in rows])
-    # ---- configuration changes on field devices and SCADA
-    cfg = [[z(ts("2027-08-15T15:10Z")), "GW-SYS-RTU-01", "relay 27-UV pickup (pu)", "", "0.88", "local panel", "GW-ENG-VELA", "GW-WS-ENG-03", "CHG-27-0744"]]
-    for c in legit_config_changes():
-        cfg.append([z(c[0])] + list(c[1:]))
-    cfg += [
-        [z(M.T["uv_thr_sub1"]), "GW-SYS-RTU-01", "relay 27-UV pickup (pu)", "0.88", "0.94", "remote write", "GW-ENG-VELA", JMP, ""],
-        [z(M.T["cfg_sub2"] + 41), "GW-SYS-RTU-02", "relays R-02A/B/C overcurrent trip (A)", "1200", "2400", "file replaced", "GW-ENG-VELA", JMP, ""],
-        [z(M.T["cfg_rtu4"]), "GW-SYS-RTU-04", "configuration file rtu04_active.cfg", "last_modified 2027-08-15T16:02:11Z", f"last_modified {z(M.T['cfg_rtu4'])}", "file replaced", "GW-ENG-VELA", JMP, ""],
-        [z(M.T["p3_sp"]), "GW-SYS-RTU-UTL1", "P-3 discharge pressure setpoint (psi)", "85", "68", "remote write", "GW-ENG-VELA", JMP, ""],
-        [z(M.T["bstr_sp"]), "GW-SYS-RTU-WTR3", "booster discharge setpoint (psi)", "72", "54", "remote write", "GW-ENG-VELA", JMP, ""],
-        [z(M.T["p3_restore"]), "GW-SYS-RTU-UTL1", "P-3 discharge pressure setpoint (psi)", "68", "85", "local panel", ENGINEERS[0]["ot_account"], "GW-WTP-HMI-01", "SI-2027-CC-001"],
-        [z(M.T["bstr_restore"]), "GW-SYS-RTU-WTR3", "booster discharge setpoint (psi)", "54", "72", "local panel", ENGINEERS[0]["ot_account"], "local panel", "SI-2027-CC-001"],
-        [z(M.T["relay_reset_sub1"]), "GW-SYS-RTU-01", "relay 27-UV pickup (pu)", "0.94", "0.88", "local panel", ENGINEERS[1]["ot_account"], "local panel", "SI-2027-CC-001"],
-        [z(M.T["relay_reset_sub2"]), "GW-SYS-RTU-02", "relays R-02A/B/C overcurrent trip (A)", "2400", "1200", "local panel", ENGINEERS[1]["ot_account"], "local panel", "SI-2027-CC-001"],
-    ]
-    cfg.sort(key=lambda r: r[0])
-    n3 = write_csv(f"{A}/ot_config_changes.csv", ["time_utc", "device", "parameter", "old_value", "new_value", "change_type", "session_user", "source_host", "change_ticket"], cfg)
-    # ---- SCADA command log (operator actions)
-    cmd = []
-    for d in range(day_utc(SPAN_START), day_utc(SPAN_END - 1) + 1):
-        for _ in range(int(g.poisson(2.2))):
-            a = D0_EPOCH + d * DAY + int(g.integers(0, DAY))
-            op = USERS[int(g.integers(len(USERS)))]["username"]
-            r = g.random()
-            ws = str(g.choice(["GW-WS-OPS-01", "GW-WS-OPS-03", "GW-HMI-WALL-01", OPS02]))
-            command = str(g.choice(["CAP BANK SWITCH", "TAP RAISE", "TAP LOWER", "ALARM ACK", "TAG NOTE", "SETPOINT ENTRY", "BREAKER CLOSE", "BREAKER OPEN", "RECLOSE ENABLE"]))
-            device = str(g.choice(["GW-SUB01-T1", "GW-SUB03-T1", "GW-SUB05-BUS", "GW-FAC-WTR-01-BP1", "GW-SUB04-CB-14", "GW-SUB01-CB-2", "GW-SUB05-CB-19", "GW-SUB03-CB-10", "GW-SUB02-CB-6", "GW-SUB02-CB-7", "GW-SUB03-CB-12",
-                                   "GW-SUB02-CB-5", "GW-SUB03-CB-9", "GW-SUB04-CB-15", "GW-SUB01-CB-3"]))
-            if r < 0.8 or (r < 0.9 and not boundary_open(a)):   # operator at the console
-                cmd.append([z(a), SCADA1, ws, "" if g.random() < 0.12 else op, command, device, "EXECUTED", "console", f"CON-{hsh('con', a, n=6)}", ""])
-            elif r < 0.9:                                 # on-call engineer through the remote-access gateway
-                e = ENGINEERS[g.integers(len(ENGINEERS))]
-                cmd.append([z(a), SCADA1, ws, e["username"], command, device, "EXECUTED", "remote desktop", "", JMP])
-            else:                                         # automatic schemes (reclosing, capacitor control, load transfer)
-                cmd.append([z(a), SCADA1, "", "", command, device, "EXECUTED", "automation", "", ""])
-    # a command given over remote desktop belongs to a session on the remote-access gateway: place each one inside an
-    # ordinary session of an engineer who opened a console or server that day (the gateway log and the network sensor show it)
-    acct_user = {e["ot_account"]: e["username"] for e in ENGINEERS}
-    rd_hosts = (OPS02, "GW-SYS-SCADA-02", "GW-WTP-HMI-01", "GW-WS-ENG-03")
-    cand = [r for r in ordinary if r[2] in acct_user and any(t in rd_hosts for t in r[12].split(";")) and r[8] > 400 + 240 * r[12].count(";")]
-    gr = rng("host_audit", "rd_sessions")
-    order = gr.permutation(len(cand))
-    k = 0
-    for r in cmd:
-        if r[7] == "remote desktop":
-            s_ = cand[int(order[k % len(cand)])]
-            k += 1
-            login = int(dt.datetime.strptime(s_[6], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=UTC).timestamp())
-            lo = 90 + 240 * s_[12].count(";")
-            r[0] = z(login + int(gr.integers(lo, s_[8] - 30)))
-            r[2] = next(t for t in s_[12].split(";") if t in rd_hosts)
-            r[3] = acct_user[s_[2]]
-    gb = rng("host_audit", "rd_operator")             # the SCADA server does not always resolve the remote-desktop user
-    for r in cmd:
-        if r[7] == "remote desktop" and gb.random() < 0.2:
-            r[3] = ""
-    for k, dev in (("sub2_cmd", "GW-SUB02-CB-7"), ("sub3_cmd", "GW-SUB03-CB-12")):
-        cmd.append([z(M.T[k]), SCADA1, OPS02, "", "BREAKER OPEN", dev, "EXECUTED", "remote desktop", "", JMP])
-    cmd.sort(key=lambda r: r[0])
-    n4 = write_csv(f"{A}/scada_command_log.csv", ["time_utc", "scada_server", "workstation", "operator", "command", "device", "result", "origin", "console_session_id", "origin_host"], cmd)
-    # ---- alarm suppression list
-    sup, cats = [], ["substation relay", "pump flow", "water quality sensor", "tank level", "communications"]
-    base_t = ts("2027-07-02T14:00Z")
-    for i in range(12):
-        sup.append([z(base_t + i * 3 * DAY + int(g.integers(-9, 9)) * 3600 + int(g.integers(0, 3600))), SCADA1, "ADD", f"ALM-{2100 + i}", str(g.choice(["communications", "tank level", "nuisance door contact"])),
-                    ("operator shift supervisor", "GW-ENG-VELA", "GW-ENG-BAKER")[i % 3], ("GW-WS-OPS-01", "GW-WS-ENG-03", "GW-WS-ENG-03")[i % 3], "" if i % 3 == 0 else f"CHG-27-{600 + i:04d}", i + 1])
-    prev, pt = 12, 3000
-    for t, n in M.SUPPRESSION_STEPS:
-        for j in range(n - prev):
-            pt += 1
-            cat = "substation relay" if t == M.T["supp_list_d3"] else cats[(pt + j) % 3]
-            dev = f"SUB-0{1 + j % 4} relay trip" if t == M.T["supp_list_d3"] else cat
-            sup.append([z(t + j // 6), SCADA1 if "relay" in cat else "GW-WTP-DCS-01", "ADD", f"ALM-{pt} ({dev})", cat, "GW-ENG-VELA", JMP, "", prev + j + 1])
-        prev = n
-    tr = M.T["isolate"] + 1800
-    for j in range(82):
-        tr += int(g.integers(8, 75)) + (int(g.integers(600, 2400)) if j % 14 == 13 else 0)
-        sup.append([z(tr), SCADA1, "REMOVE", f"ALM-{3001 + j}", "restored", ENGINEERS[0]["ot_account"], "GW-WS-OPS-01", "SI-2027-CC-001", 94 - j - 1])
-    sup.sort(key=lambda r: r[0])
-    n5 = write_csv(f"{A}/alarm_suppression_audit.csv", ["time_utc", "system", "action", "alarm_point", "category", "changed_by", "source_host", "change_ticket", "active_suppressions_after"], sup)
-    # ---- file integrity on the OT file server
-    fim = []
-    for i in range(160):
-        a = local_ts(int(g.integers(-59, 118)), f"{int(g.integers(7, 18)):02d}:{int(g.integers(0, 60)):02d}")
-        e = ENGINEERS[g.integers(len(ENGINEERS))]
-        path = "\\\\gw-srv-ot-01\\" + str(g.choice(["projects", "drawings", "relayconfigs\\archive", "procedures", "wtp\\reports"])) + f"\\{hsh('f', i, n=8)}." + str(g.choice(["docx", "pdf", "xml", "xlsx"]))
-        summ = ""
-        if path.endswith(".xml"):
-            summ = str(g.choice(["comment block updated", "relay 51 time dial 2.0 -> 2.5 for relay R-05B", "CT ratio field corrected 600:5 -> 800:5 for R-03C", "revision label updated",
-                                 "recloser shots 3 -> 2 for R-04A", "LTC band 2.0V -> 1.5V", "overcurrent_trip_threshold 900A -> 1000A for relay R-05A", "alarm text edited"]))
-        fim.append([z(a), "GW-SRV-OT-01", path, "MODIFIED", "sha256=" + hsh("p", i), "sha256=" + hsh("n", i), e["ot_account"], JMP if (g.random() < 0.3 and boundary_open(a)) else inside_host(e, a), summ])
-    fim.append([z(M.T["cfg_sub2"]), "GW-SRV-OT-01", "\\\\gw-srv-ot-01\\relayconfigs\\sub02\\rtu_config_draft.xml", "MODIFIED", "sha256=d7e1a0f3c2b18429", "sha256=a3f8c2d1e9b04517", "GW-ENG-VELA", JMP,
-                "overcurrent_trip_threshold 1200A -> 2400A for relays R-02A, R-02B, R-02C"])
-    fim.sort(key=lambda r: r[0])
-    n6 = write_csv(f"{A}/file_integrity.csv", ["time_utc", "host", "path", "event", "previous_hash", "new_hash", "user", "source_host", "diff_summary"], fim)
-    # ---- change management and audits
-    chg = [[z(ts("2027-09-10T21:00Z")), "CHG-FREEZE-27-09", "Storm-preparation change freeze", "all OT configuration changes suspended until further notice", "OT Engineering manager", "ACTIVE"],
-           [z(ts("2027-09-28T22:10Z")), "TXRC-2027-09-28-004", "ERCOT relay audit ticket", "possible relay config drift at Riverside Switching Station; investigating", "ERCOT compliance", "OPEN"],
-           [z(ts("2027-09-28T22:25Z")), "QRY-CHG-27-311", "Change-system search", "relay threshold change, SUB-01, since commissioning date: 0 approved work orders found", "bflores", "CLOSED"],
-           [z(ts("2027-09-30T18:20Z")), "QRY-CHG-27-318", "Change-system search", "configuration file change, SUB-04 RTU, 2027-09-11: 0 approved work orders found", "bflores", "CLOSED"],
-           [z(ts("2027-10-02T15:10Z")), "SI-2027-CC-001", "Security incident", "opened by CISO after session-behaviour anomaly", "falrasheedobinna", "OPEN"]]
-    for i in range(140):
-        a = local_ts(int(g.integers(-59, 118)), f"{int(g.integers(8, 17)):02d}:{int(g.integers(0, 60)):02d}")
-        chg.append([z(a), f"CHG-27-{int(g.integers(700, 1999)):04d}", "Approved change", str(g.choice(["firmware update, substation switch", "historian disk expansion", "HMI display revision", "firewall rule review",
-                    "RTU battery replacement", "chlorine analyser calibration constants", "SCADA point database update"])), ENGINEERS[g.integers(len(ENGINEERS))]["username"], "CLOSED"])
-    chg.sort(key=lambda r: r[0])
-    n7 = write_csv(f"{A}/change_management.csv", ["time_utc", "record_id", "record_type", "summary", "owner", "status"], chg)
-    aud = [[z(ts("2027-09-28T22:02Z")), "ERCOT relay settings audit", "GW-SYS-RTU-01", "Riverside Switching Station (SUB-01)", "27-UV pickup (pu)", "0.94", "0.88", "2027-08-15", "MISMATCH"],
-           [z(ts("2027-09-28T22:02Z")), "ERCOT relay settings audit", "GW-SYS-RTU-05", "SUB-05", "27-UV pickup (pu)", "0.88", "0.88", "2027-08-15", "MATCH"],
-           [z(M.T["rtu4_found"]), "internal configuration review", "GW-SYS-RTU-04", "SUB-04", "configuration file last_modified", f"{z(M.T['cfg_rtu4'])} by GW-ENG-VELA", "2027-08-15T16:02:11Z by GW-ENG-VELA", "2027-08-15", "MISMATCH"],
-           [z(ts("2027-10-02T21:20Z")), "evidence export", JMP, "remote-access gateway", "session log export SLE-2027-10-02", "", "", "", "EXPORTED"],
-           [z(ts("2027-10-02T21:40Z")), "evidence export", HIST1, "historian", "audit log export HAE-2027-10-02", "2027-09-07 to 2027-10-02", "", "", "EXPORTED"]]
-    n8 = write_csv(f"{A}/settings_audits.csv", ["time_utc", "audit", "device", "site", "item", "found", "record_value", "record_date", "result"], aud)
-    # ---- endpoint protection
-    av = []
-    for d in range(day_utc(SPAN_START) - 1, day_utc(SPAN_END - 1) + 1):
-        for _ in range(int(g.poisson(40) * (0.3 if 0 <= d <= 4 else 1))):
-            h = WORKST[g.integers(len(WORKST))]
-            a = D0_EPOCH + d * DAY + int(g.integers(0, DAY))
-            ev, det = [("DEFINITIONS_UPDATED", "engine 4.18"), ("SCAN_COMPLETED", "0 threats"), ("REALTIME_PROTECTION_ENABLED", "policy refresh"), ("THREAT_QUARANTINED", "PUA:Win32/Toolbar"),
-                       ("AGENT_HEARTBEAT_MISSED", "")][int(g.choice(5, p=[0.45, 0.33, 0.1, 0.04, 0.08]))]
-            av.append([z(a), h["hostname"], h["ip"], ev, det, "system"])
-    ga = rng("host_audit", "av_toggle")
-    for i in range(34):
-        h = CORP[ga.integers(len(CORP))]
-        if h["hostname"] == WS04:
-            continue
-        a = local_ts(int(ga.integers(-58, 118)), f"{int(ga.integers(7, 18)):02d}:{int(ga.integers(0, 60)):02d}") + int(ga.integers(0, 60))
-        who = str(ga.choice([USERS[ga.integers(len(USERS))]["username"], "svc_sccm", "svc_edr"]))
-        av.append([z(a), h["hostname"], h["ip"], "REALTIME_PROTECTION_DISABLED", str(ga.choice(["setting changed locally", "disabled by management task", "setting changed locally"])), who])
-        if ga.random() < 0.8:
-            av.append([z(a + int(ga.integers(240, 5400))), h["hostname"], h["ip"], "REALTIME_PROTECTION_ENABLED", str(ga.choice(["policy refresh", "setting changed locally"])), "system"])
-    av.append([z(AV_OFF_T), WS04, IP[WS04], "REALTIME_PROTECTION_DISABLED", "setting changed locally", WS04_USER["username"]])
-    av.sort(key=lambda r: r[0])
-    n9 = write_csv(f"{A}/endpoint_protection.csv", ["time_utc", "host", "ip", "event", "detail", "initiated_by"], av)
-    # ---- mail gateways
-    def mail_bg(a, gw, dom, rcpts, n, gg):
-        out = []
-        subj = ["Re: schedule", "Invoice attached", "Meeting notes", "Outage map update", "Shift roster", "FW: vendor quote", "Storm readiness checklist", "Timesheet reminder", "Newsletter", "Delivery notice"]
-        for _ in range(n):
-            t = a + int(gg.integers(0, DAY))
-            ext = gg.random() < 0.6
-            out.append([z(t), gw, "inbound" if ext else "internal", f"{hsh('s', t, n=6)}@{'partner-mail.example' if ext else dom}", "partner-mail.example" if ext else dom,
-                        rcpts[gg.integers(len(rcpts))], str(gg.choice(subj)), "" if gg.random() < 0.8 else f"{hsh('a', t, n=5)}.pdf", int(gg.gamma(2, 40000)), "clean", "delivered", "<" + hsh("m", t, gw) + "@mail>"])
-        return out
-    cb_rc = [u["email"] for u in USERS]
-    mail = []
-    for d in range(day_utc(SPAN_START) - 1, day_utc(SPAN_END - 1) + 1):
-        mail += mail_bg(D0_EPOCH + d * DAY, "GW-GW-MAIL-01", "cbpwa.example", cb_rc, int(110 * (0.3 + work_factor(D0_EPOCH + d * DAY + 15 * 3600))), g)
-    mail.append([z(LURE_T), "GW-GW-MAIL-01", "inbound", "preparedness@cbpwa-vendor-support.com", "cbpwa-vendor-support.com", WS04_USER["email"], "FEMA hurricane preparedness guidance for utilities",
-                 "FEMA-PREP-GUIDANCE-2027.pdf.exe", 412877, "clean", "delivered", "<" + hsh("lure") + "@cbpwa-vendor-support.com>"])
-    mail.sort(key=lambda r: r[0])
-    cols = ["time_utc", "gateway", "direction", "sender", "sender_domain", "recipient", "subject", "attachment_names", "size_bytes", "verdict", "action", "message_id"]
-    n10 = write_csv(f"{A}/mail_gateway_cbpwa.csv", cols, mail)
-    # vendor (Brightwake Marine Systems): one message opened by one mailbox
-    bw = [f"{n}@brightwake-marine.example" for n in ("o.pryce", "service.desk", "j.tran", "m.okoye", "remote.support", "accounts", "l.hart", "d.silva")]
-    g2 = rng("host_audit", "bw")
-    mail = []
-    for d in range(-60, -20):
-        mail += mail_bg(D0_EPOCH + d * DAY, "BRW-MX-01", "brightwake-marine.example", bw, 25, g2)
-    t_bw = ts("2027-08-12T14:41Z") + 7
-    mail.append([z(t_bw), "BRW-MX-01", "inbound", "class-renewals@marine-certification-notices.example", "marine-certification-notices.example", "remote.support@brightwake-marine.example",
-                 "Remote access certificate renewal required", "", 48211, "clean", "delivered", "<" + hsh("bw") + "@marine-certification-notices.example>"])
-    mail.sort(key=lambda r: r[0])
-    write_csv(f"{A}/mail_gateway_brightwake.csv", cols, mail)
-    write_csv(f"{A}/mail_url_clicks_brightwake.csv", ["time_utc", "gateway", "mailbox", "message_id", "url_host", "client_ip", "sender_network"],
-              [[z(t_bw + 1260), "BRW-MX-01", "remote.support@brightwake-marine.example", "<" + hsh("bw") + "@marine-certification-notices.example>", "certificates.marine-certification-notices.example",
-                "198.51.100.10", "ASN 64512"]])
-    # city and air-station gateways: about 1,200 messages over three days, ten mailboxes click, those accounts then log on from the same network
-    g3 = rng("host_audit", "aid_mail")
-    city = [f"{hsh('c', i, n=7)}@cctexas.example" for i in range(900)]
-    nas = [f"{hsh('n', i, n=7)}@nascc.navy.example" for i in range(400)]
-    rows_c, rows_n, clicks, sso = [], [], [], []
-    for d in range(-2, 8):
-        rows_c += mail_bg(D0_EPOCH + d * DAY, "CITY-MX-02", "cctexas.example", city, 160, g3)
-        rows_n += mail_bg(D0_EPOCH + d * DAY, "NASCC-MX-01", "nascc.navy.example", nas, 90, g3)
-    a0, a1 = ts("2027-09-15T13:00Z"), ts("2027-09-18T02:00Z")
-    for i in range(1200):
-        t = a0 + int(g3.integers(0, a1 - a0))
-        is_city = i < 840
-        rc = city[g3.integers(len(city))] if is_city else nas[g3.integers(len(nas))]
-        (rows_c if is_city else rows_n).append([z(t), "CITY-MX-02" if is_city else "NASCC-MX-01", "inbound", f"assistance-{int(g3.integers(10, 99))}@aid-help-portal.example", "aid-help-portal.example", rc,
-                                                 "Disaster assistance: confirm your account to receive aid", "", int(g3.integers(9000, 16000)), "clean", "delivered",
-                                                 "<" + hsh("aid", i) + "@aid-help-portal.example>"])
-    clickers = [(city[i * 37 % 900], "CITY-MX-02") for i in range(7)] + [(nas[i * 53 % 400], "NASCC-MX-01") for i in range(3)]
-    for i, (mb, gw) in enumerate(clickers):
-        t = a0 + 3600 + i * 5 * 3600 + int(g3.integers(0, 3000))
-        clicks.append([z(t), gw, mb, "aid-help-portal.example", f"10.{60 if gw.startswith('CITY') else 61}.{int(g3.integers(1, 200))}.{int(g3.integers(2, 250))}"])
-        t2 = t + int(g3.integers(1800, 9 * 3600))
-        sso.append([z(t2), "city single sign-on" if gw.startswith("CITY") else "base webmail", mb, f"203.0.113.{int(g3.integers(17, 81))}", "ASN 64512", "SUCCESS", "password", "new device"])
-    for i in range(2600):
-        t = D0_EPOCH - 2 * DAY + int(g3.integers(0, 10 * DAY))
-        is_city = g3.random() < 0.7
-        mb = city[g3.integers(len(city))] if is_city else nas[g3.integers(len(nas))]
-        sso.append([z(t), "city single sign-on" if is_city else "base webmail", mb, home_ip(g3),
-                    f"ASN {int(g3.choice([7018, 20057, 11427, 22773]))}", "SUCCESS" if g3.random() < 0.96 else "FAILED", "password+token", "known device" if g3.random() < 0.9 else "new device"])
-    rows_c.sort(key=lambda r: r[0]); rows_n.sort(key=lambda r: r[0]); clicks.sort(key=lambda r: r[0]); sso.sort(key=lambda r: r[0])
-    write_csv(f"{A}/mail_gateway_city.csv", cols, rows_c)
-    write_csv(f"{A}/mail_gateway_airstation.csv", cols, rows_n)
-    write_csv(f"{A}/mail_url_clicks_city_airstation.csv", ["time_utc", "gateway", "mailbox", "url_host", "client_ip"], clicks)
-    write_csv(f"{A}/account_logons_city_airstation.csv", ["time_utc", "service", "account", "src_ip", "src_network", "result", "auth_method", "device"], sso)
-    print(f"host_audit_logs: sessions {n1:,}, historian {n2:,}, config {n3}, commands {n4:,}, suppression {n5}, files {n6}, change {n7}, audits {n8}, endpoint {n9:,}, mail {n10:,}")
-
-
-# ======================================================================================
-# aid portal access logs
-# ======================================================================================
-PORTAL_COLS = ["time_utc", "system", "client_ip", "client_network", "method", "path", "status", "event", "account_ref", "user_agent_family", "bytes"]
-UA = ["Chrome/Windows", "Safari/iOS", "Chrome/Android", "Edge/Windows", "Firefox/Windows", "Safari/macOS", "Samsung/Android"]
-UA_P = [0.24, 0.31, 0.22, 0.08, 0.03, 0.07, 0.05]
-
-
-def gen_portal():
-    g = rng("portal_access")
-    P = f"{NET}/portal"
-    files = {}
-
-    def add(t, system, ip, net, method, path, status, event, acct="", ua=None, size=None):
-        mon = dt.datetime.fromtimestamp(t, UTC).strftime("%Y-%m")
-        files.setdefault((system, mon), []).append([z(t), system, ip, net, method, path, status, event, acct, ua or UA[int(g.choice(len(UA), p=UA_P))], size if size is not None else int(g.integers(900, 42000))])
-
-    aid, naslog = "EXT-AIDPORTAL-01", "EXT-NASLOG-02"
-    OPEN_T = min(ts(r["submitted_utc"]) for r in csv.DictReader(open(os.path.join(ROOT, "05_other_sources/payments/aid_applications.csv"), encoding="utf-8", newline="")) if r["submitted_utc"]) - 60
-    start = SPAN_START
-    # ordinary visitors, both systems, whole span
-    for d in range(int((start - D0_EPOCH) // DAY), day_utc(SPAN_END - 1) + 1):
-        t0 = D0_EPOCH + d * DAY
-        boost = 6 if 0 <= d < 60 else 1                       # people looking for information after the storm
-        for _ in range(int(g.poisson(60 * boost))):
-            t = t0 + int(g.integers(0, DAY))
-            add(t, aid, f"100.{g.integers(64, 127)}.{g.integers(1, 250)}.{g.integers(2, 250)}", f"ASN {int(g.choice([7018, 20057, 11427, 22773, 21928]))}", "GET",
-                str(g.choice(["/", "/disasters/current", "/help/eligibility", "/help/documents", "/es/ayuda", "/login", "/status"])), 200, "page_view")
-        for _ in range(int(g.poisson(45 * (0.3 if -1 <= d <= 5 else 1)))):
-            t = t0 + int(g.integers(0, DAY))
-            ok = g.random() < 0.97
-            add(t, naslog, f"10.200.{g.integers(1, 40)}.{g.integers(2, 250)}", "base network", "POST" if g.random() < 0.3 else "GET",
-                str(g.choice(["/login", "/orders", "/fuel/requests", "/inventory", "/reports/daily"])), 200 if ok else 401, "login_success" if ok else "login_failed",
-                f"nas-{hsh('u', int(g.integers(0, 180)), n=6)}", "Edge/Windows")
-    # probing of both login pages from one network, 10-13 August; no account entered successfully
-    a0, a1 = ts("2027-08-10T05:00Z"), ts("2027-08-13T05:00Z")
-    paths = ["/login", "/account/recover", "/account/register", "/api/v1/session", "/admin", "/login.aspx", "/owa", "/status", "/.well-known/security.txt", "/help/contact"]
-    for i in range(3400):
-        t = a0 + int(g.integers(0, a1 - a0))
-        sysid = aid if i % 5 else naslog
-        p = paths[int(g.integers(len(paths)))]
-        st = 401 if p in ("/login", "/api/v1/session", "/login.aspx") else (404 if p in ("/admin", "/owa", "/login.aspx") else 200)
-        add(t, sysid, f"203.0.113.{int(g.integers(17, 81))}", "ASN 64512", "POST" if st == 401 else "GET", p, st, "login_failed" if st == 401 else "page_view",
-            (str(g.choice(["admin", "administrator", "test", "fema", "support", "info", "claims", "jsmith", "mgarcia", "applicant"])) + (str(int(g.integers(1, 99))) if g.random() < 0.5 else "")) if st == 401 else "", "python-requests" if i % 3 else "curl", int(g.integers(200, 2400)))
-    # registrations, account changes and sign-ins, mirrored from the applications data so the two streams agree
-    with open(os.path.join(ROOT, "05_other_sources/payments/aid_applications.csv"), encoding="utf-8", newline="") as fh:
-        for r in csv.DictReader(fh):
-            net = f"ASN {r['source_asn']}" if r["source_asn"] else ""
-            if r["record_type"] == "application" and r["channel"] == "web":
-                t = ts(r["submitted_utc"])
-                add(max(OPEN_T, t - int(g.integers(300, 1500))), aid, r["source_ip"], net, "POST", "/account/register", 201, "account_created", r["account_id"])
-                add(t, aid, r["source_ip"], net, "POST", "/applications", 201, "application_submitted", r["account_id"])
-                for _ in range(int(g.poisson(1.3)) if not r["source_ip"].startswith("203.0.113.") else 0):   # people come back to check their status, and mistype passwords
-                    tb = t + int(g.gamma(1.5, 5 * DAY))
-                    if tb < SPAN_END:
-                        if g.random() < 0.09:
-                            add(tb - int(g.integers(8, 90)), aid, r["source_ip"], net, "POST", "/login", 401, "login_failed", r["account_id"], None, int(g.integers(470, 560)))
-                        add(tb, aid, r["source_ip"], net, "POST", "/login", 200, "login_success", r["account_id"])
-                        add(tb + int(g.integers(5, 200)), aid, r["source_ip"], net, "GET", "/status", 200, "page_view", r["account_id"])
-            elif r["record_type"] == "account_change" and r["login_utc"]:
-                tl, tc = ts(r["login_utc"]), ts(r["changed_utc"])
-                if r["source_ip"].startswith("203.0.113."):               # a few wrong guesses against the same account before the one that works
-                    for k in range(int(g.integers(0, 5))):
-                        add(tl - int(g.integers(20, 6 * 3600)), aid, f"203.0.113.{int(g.integers(17, 81))}", net, "POST", "/login", 401, "login_failed", r["account_id"], "python-requests", int(g.integers(470, 560)))
-                add(tl, aid, r["source_ip"], net, "POST", "/login", 200, "login_success", r["account_id"], "python-requests" if r["source_ip"].startswith("203.0.113.") else None)
-                add(tc, aid, r["source_ip"], net, "POST", "/account/" + r["field_changed"].split(" restored")[0].replace(" ", "-"), 200,
-                    "profile_updated: " + r["field_changed"], r["account_id"], "python-requests" if r["source_ip"].startswith("203.0.113.") else None)
-    # automated sign-in attempts in bursts, 15-24 November: about 220,000 failures
-    b0, b1 = ts("2027-11-15T06:00Z"), ts("2027-11-24T06:00Z")
-    nb = int(g.integers(55, 75))
-    bursts = np.sort(g.integers(b0, b1 - 3 * 3600, nb))
-    per = g.multinomial(int(g.integers(218200, 221400)), g.dirichlet(np.full(nb, 1.6)))
-    ipw = g.dirichlet(np.full(64, 0.9))
-    for bt, n in zip(bursts, per):
-        tt = bt + np.sort(g.integers(0, int(g.integers(1500, 4 * 3600)), n))
-        ips = 17 + g.choice(64, n, p=ipw)
-        sizes = g.integers(470, 560, n)
-        for t, ipn, sz in zip(tt, ips, sizes):
-            add(int(t), aid, f"203.0.113.{int(ipn)}", "ASN 64512", "POST", "/login", 401, "login_failed", f"ACC-{hsh('cs', int(t), int(ipn), n=10).upper()}", "python-requests", int(sz))
-    total = 0
-    for (system, mon), rows in sorted(files.items()):
-        rows.sort(key=lambda r: r[0])
-        name = "aid_portal_access" if system == aid else "base_logistics_access"
-        total += write_csv(f"{P}/{name}_{mon}.csv", PORTAL_COLS, rows)
-    print(f"portal_access_logs: {total:,} rows in {len(files)} files")
+            table[p]()
 
 
 if __name__ == "__main__":
-    parts = sys.argv[1:] or ["siem", "zeek", "audit", "portal"]
-    for p in parts:
-        {"siem": gen_siem, "zeek": gen_zeek, "audit": gen_audit, "portal": gen_portal}[p]()
+    import gen_itsec as _self          # one module instance for the writers, whatever the entry point
+    _self.main(sys.argv[1:])

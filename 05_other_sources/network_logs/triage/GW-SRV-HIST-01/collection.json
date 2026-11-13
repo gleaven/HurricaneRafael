@@ -1,0 +1,62 @@
+{
+ "host": "GW-SRV-HIST-01",
+ "ip": "10.72.1.10",
+ "os": "Windows Server 2019",
+ "collected_utc": "2027-10-02T21:41:08Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 12,
+   "sha256": "55c94debf82fda1e0c2d6f132ecd1edc682b702cc3d3da4d63e2f7bd90590657"
+  },
+  "file_listing.csv": {
+   "rows": 42,
+   "sha256": "6968b3b286395b2e5732ac70209b64a040742578ea31a9980bd2feea4630422c"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "61c0401488ab2600e60e5ea3d1ef58d3fd61b33d6f481f11349b3388934dae41"
+  },
+  "autoruns.csv": {
+   "rows": 14,
+   "sha256": "9fe2aa9adec2549a39230394438c77084c68e84e70be44054f5ebef5603b1ec3"
+  },
+  "execution_history.csv": {
+   "rows": 14,
+   "sha256": "87a1f2b4d549e0b5b96d90b10ea9f2c34ee2baee24a3b0cf63b7609939b928c9"
+  },
+  "logon_history.csv": {
+   "rows": 44,
+   "sha256": "e08d8df81d5f80b148b791b6fb9cac33e739426eebd6e0a56e6357b78f1cff6f"
+  },
+  "installed_software.csv": {
+   "rows": 2,
+   "sha256": "caa9f99c63e9e5754e3831c6142ae7455607cb15f2e7a75c83d7f5cdd8eabef9"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "1707e7067353c9aad8d8779ab5ae7b7d04f8f1830ebe35b31a93a5cf6716f907"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/rtu_snapshot.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\rtu_snapshot.exe",
+   "sha256": "c4359db558005f011fed9bd189b758a3963edd141c046fcf80f6fa11d2904296"
+  },
+  {
+   "file": "placeholders/meterbatch.exe.placeholder.txt",
+   "stands_in_for": "C:\\Utilities\\meterbatch.exe",
+   "sha256": "97081fceefef0609ae6e9d878983c29b573cafe9207fba613976c40180034d79"
+  },
+  {
+   "file": "placeholders/printfix.exe.placeholder.txt",
+   "stands_in_for": "C:\\Utilities\\printfix.exe",
+   "sha256": "bcc9ea07df09a7410118331790eec593a53f7afbbe8868dbf16d322320d4cf2b"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

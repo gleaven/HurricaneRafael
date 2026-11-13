@@ -1,0 +1,14 @@
+name,display_name,start_type,state,image_path,account,installed_utc
+Dnscache,DNS Client,auto,running,C:\Windows\System32\svchost.exe,NetworkService,2027-03-19T20:27:30Z
+EventLog,Windows Event Log,auto,running,C:\Windows\System32\svchost.exe,LocalService,2027-03-19T20:27:30Z
+WinDefend,Microsoft Defender Antivirus Service,auto,running,C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MsMpEng.exe,LocalSystem,2027-03-19T20:27:30Z
+wuauserv,Windows Update,manual,stopped,C:\Windows\System32\svchost.exe,LocalSystem,2027-03-19T20:27:30Z
+Spooler,Print Spooler,auto,running,C:\Windows\System32\spoolsv.exe,LocalSystem,2027-03-19T20:27:30Z
+LanmanWorkstation,Workstation,auto,running,C:\Windows\System32\svchost.exe,NetworkService,2027-03-19T20:27:30Z
+Schedule,Task Scheduler,auto,running,C:\Windows\System32\svchost.exe,LocalSystem,2027-03-19T20:27:30Z
+W32Time,Windows Time,auto,running,C:\Windows\System32\svchost.exe,LocalService,2027-03-19T20:27:30Z
+VantageCollectorService,Vantage Collector Service,auto,running,C:\Program Files\Vantage Security\Collector\vscollect.exe,LocalSystem,2027-07-22T05:50:37Z
+EndpointProtectionAgent,Endpoint Protection Agent,auto,running,C:\Program Files\EndpointAgent\epagent.exe,LocalSystem,2027-08-20T04:10:49Z
+AssetInventoryAgent,Asset Inventory Agent,auto,running,C:\Program Files\AssetInventory\invagent.exe,LocalSystem,2027-06-16T11:23:05Z
+SMSAgentHost,SMS Agent Host,auto,running,C:\Windows\CCM\CcmExec.exe,LocalSystem,2027-06-27T20:02:49Z
+BackupAgentService,Backup Agent Service,auto,running,C:\Program Files\BackupAgent\bkagent.exe,LocalSystem,2027-08-06T05:10:41Z

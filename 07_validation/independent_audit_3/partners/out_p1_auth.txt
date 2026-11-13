@@ -1,0 +1,77 @@
+
+##### city auth n=64444
+  host [113 distinct] top: 'CC-SSO-01':32788, 'CC-PSB-WS-009':708, 'CC-PSB-WS-013':694, 'CC-PSB-WS-012':691, 'CC-PSB-WS-011':688, 'CC-PSB-WS-001':680 | n<=3 values: 0
+  event_id [4]: 'sso-login':32788, '4634':15362, '4624':15361, '4625':933
+  account [1093 distinct] top: 'f0851b3':241, '74b8002':234, '66a5409':234, '11efad4':231, 'f15f6db':231, 'e30bdfd':230 | n<=3 values: 0
+  logon_type [2]: 'remote':32788, '2':31656
+  src_ip [5958 distinct] top: '10.60.21.28':708, '10.60.21.32':694, '10.60.21.31':691, '10.60.21.30':688, '10.60.21.20':680, '10.60.21.29':680 | n<=3 values: 4946
+  src_network [9]: 'internal':31656, 'ASN 22773':8488, 'ASN 11427':8322, 'ASN 7018':8171, 'ASN 20057':7070, 'ASN 64503':249, 'ASN 64496':244, 'ASN 64510':237, 'ASN 64512':7
+  result [2]: 'SUCCESS':62202, 'FAILED':2242
+  auth_method [2]: 'password':32866, 'password+token':31578
+  device [3]: 'domain workstation':31656, 'known device':29459, 'new device':3329
+
+##### nascc auth n=34296
+  host [70 distinct] top: 'NASCC-OWA-01':14342, 'NASCC-OPS-WS-011':700, 'NASCC-OPS-WS-008':689, 'NASCC-OPS-WS-003':686, 'NASCC-OPS-WS-001':686, 'NASCC-OPS-WS-006':684 | n<=3 values: 0
+  event_id [4]: 'webmail-login':14342, '4624':9701, '4634':9690, '4625':563
+  account [505 distinct] top: '133c30d':223, 'b7fa4d9':221, 'd81b2ce':220, '2d73287':219, 'e50f263':218, '80d4179':217 | n<=3 values: 0
+  logon_type [2]: '2':19954, 'remote':14342
+  src_ip [2636 distinct] top: '10.61.20.30':700, '10.61.20.27':689, '10.61.20.22':686, '10.61.20.20':686, '10.61.20.25':684, '10.61.20.28':683 | n<=3 values: 2167
+  src_network [9]: 'internal':19954, 'ASN 20057':3646, 'ASN 11427':3537, 'ASN 22773':3449, 'ASN 7018':3357, 'ASN 64510':118, 'ASN 64496':117, 'ASN 64503':115, 'ASN 64512':3
+  result [2]: 'SUCCESS':33125, 'FAILED':1171
+  auth_method [3]: 'smartcard':19954, 'password+token':13821, 'password':521
+  device [3]: 'domain workstation':19954, 'known device':12918, 'new device':1424
+
+##### brw auth n=11751
+  host [35]: 'BRW-VPN-01':1390, 'BRW-NOC-WS-005':691, 'BRW-NOC-WS-004':686, 'BRW-NOC-WS-006':679, 'BRW-NOC-WS-001':677, 'BRW-NOC-WS-002':666, 'BRW-NOC-WS-003':666, 'BRW-HQ-WS-012':243, 'BRW-HQ-WS-022':241, 'BRW-HQ-WS-005':240, 'BRW-HQ-WS-004':235, 'BRW-HQ-WS-014':235, 'BRW-HQ-WS-002':234, 'BRW-HQ-WS-019':232, 'BRW-HQ-WS-025':231, 'BRW-HQ-WS-021':231, 'BRW-HQ-WS-028':230, 'BRW-HQ-WS-023':230, 'BRW-HQ-WS-011':227, 'BRW-HQ-WS-015':227, 'BRW-HQ-WS-003':226, 'BRW-HQ-WS-013':225, 'BRW-HQ-WS-016':225, 'BRW-HQ-WS-018':222, 'BRW-HQ-WS-007':222, 'BRW-HQ-WS-010':220, 'BRW-HQ-WS-017':218, 'BRW-HQ-WS-020':217, 'BRW-HQ-WS-027':217, 'BRW-HQ-WS-024':217, 'BRW-HQ-WS-006':215, 'BRW-HQ-WS-001':211, 'BRW-HQ-WS-026':210, 'BRW-HQ-WS-008':210, 'BRW-HQ-WS-009':205
+  event_id [4]: '4634':5025, '4624':5024, 'vpn-login':1390, '4625':312
+  account [52 distinct] top: 'c.whitlock':269, 'v.castell':268, 'f.okafor':267, 'z.pemberton':266, 'w.ibarra':264, 'u.sorensen':263 | n<=3 values: 0
+  logon_type [2]: '2':10361, 'remote':1390
+  src_ip [226 distinct] top: '10.80.2.24':691, '10.80.2.23':686, '10.80.2.25':679, '10.80.2.20':677, '10.80.2.21':666, '10.80.2.22':666 | n<=3 values: 142
+  src_network [5]: 'internal':10361, 'ASN 20057':437, 'ASN 7018':381, 'ASN 11427':349, 'ASN 22773':223
+  result [2]: 'SUCCESS':11390, 'FAILED':361
+  auth_method [2]: 'password':10398, 'password+token':1353
+  device [3]: 'domain workstation':10361, 'known device':1250, 'new device':140
+
+##### port auth n=19961
+  host [49 distinct] top: 'PCCA-VPN-01':1773, 'PCCA-SEC-WS-005':707, 'PCCA-HMO-WS-006':700, 'PCCA-SEC-WS-010':693, 'PCCA-SEC-WS-008':692, 'PCCA-HMO-WS-001':692 | n<=3 values: 0
+  event_id [4]: '4634':8823, '4624':8819, 'vpn-login':1773, '4625':546
+  account [163 distinct] top: 'e5e9d07':234, 'eecd7fb':233, 'bb6a3a2':231, '50dd889':230, '9ee3fba':229, '1e3049b':228 | n<=3 values: 0
+  logon_type [2]: '2':18188, 'remote':1773
+  src_ip [379 distinct] top: '10.90.20.24':707, '10.90.21.25':700, '10.90.20.29':693, '10.90.20.27':692, '10.90.21.20':692, '10.90.20.28':690 | n<=3 values: 169
+  src_network [5]: 'internal':18188, 'ASN 7018':576, 'ASN 20057':445, 'ASN 22773':400, 'ASN 11427':352
+  result [2]: 'SUCCESS':19346, 'FAILED':615
+  auth_method [2]: 'password':18259, 'password+token':1702
+  device [3]: 'domain workstation':18188, 'known device':1605, 'new device':168
+
+##### srmc auth n=60671
+  host [63 distinct] top: 'SRMC-VPN-01':5102, 'SRMC-CLIN-WS-025':1273, 'SRMC-CLIN-WS-012':1268, 'SRMC-CLIN-WS-036':1263, 'SRMC-CLIN-WS-015':1260, 'SRMC-CLIN-WS-020':1258 | n<=3 values: 0
+  event_id [4]: '4624':38556, '4634':15996, 'vpn-login':5102, '4625':1017
+  account [210 distinct] top: '0a1ce9c':381, '626d788':373, '80cc049':364, 'c6fdd96':363, '88384b9':357, '0dc53c4':356 | n<=3 values: 0
+  logon_type [3]: '2':33040, '7':22529, 'remote':5102
+  src_ip [794 distinct] top: '10.110.10.44':1273, '10.110.10.31':1268, '10.110.10.55':1263, '10.110.10.34':1260, '10.110.10.39':1258, '10.110.10.53':1255 | n<=3 values: 522
+  src_network [5]: 'internal':55569, 'ASN 7018':1537, 'ASN 11427':1459, 'ASN 20057':1113, 'ASN 22773':993
+  result [2]: 'SUCCESS':59454, 'FAILED':1217
+  auth_method [3]: 'badge+pin':51277, 'password+token':4946, 'password':4448
+  device [3]: 'domain workstation':55569, 'known device':4580, 'new device':522
+
+##### bcmc auth n=43404
+  host [45 distinct] top: 'BCMC-VPN-01':3659, 'BCMC-CLIN-WS-001':1281, 'BCMC-CLIN-WS-020':1267, 'BCMC-CLIN-WS-008':1262, 'BCMC-CLIN-WS-003':1261, 'BCMC-CLIN-WS-030':1254 | n<=3 values: 0
+  event_id [4]: '4624':27683, '4634':11372, 'vpn-login':3659, '4625':690
+  account [149 distinct] top: '06bbd62':368, '76159f5':367, 'de0a913':366, 'f6a8d7a':365, 'd321064':364, '030457a':362 | n<=3 values: 0
+  logon_type [3]: '2':23457, '7':16288, 'remote':3659
+  src_ip [553 distinct] top: '10.112.10.20':1281, '10.112.10.39':1267, '10.112.10.27':1262, '10.112.10.22':1261, '10.112.10.49':1254, '10.112.10.25':1250 | n<=3 values: 360
+  src_network [5]: 'internal':39745, 'ASN 22773':1265, 'ASN 11427':877, 'ASN 20057':806, 'ASN 7018':711
+  result [2]: 'SUCCESS':42564, 'FAILED':840
+  auth_method [3]: 'badge+pin':36731, 'password+token':3535, 'password':3138
+  device [3]: 'domain workstation':39745, 'known device':3299, 'new device':360
+
+##### county auth n=23018
+  host [66 distinct] top: 'NC-VPN-01':2186, 'NC-SO-WS-005':701, 'NC-SO-WS-007':701, 'NC-SO-WS-004':698, 'NC-SO-WS-002':696, 'NC-SO-WS-010':694 | n<=3 values: 0
+  event_id [4]: '4624':10107, '4634':10104, 'vpn-login':2186, '4625':621
+  account [217 distinct] top: 'dad32ae':243, '3f42c71':239, 'ef8d345':238, '2cb2251':235, 'e0dca18':233, 'b6530a6':232 | n<=3 values: 1
+  logon_type [2]: '2':20832, 'remote':2186
+  src_ip [512 distinct] top: '10.70.21.24':701, '10.70.21.26':701, '10.70.21.23':698, '10.70.21.21':696, '10.70.21.29':694, '10.70.21.25':681 | n<=3 values: 235
+  src_network [5]: 'internal':20832, 'ASN 22773':592, 'ASN 20057':585, 'ASN 11427':506, 'ASN 7018':503
+  result [2]: 'SUCCESS':22323, 'FAILED':695
+  auth_method [2]: 'password':20922, 'password+token':2096
+  device [3]: 'domain workstation':20832, 'known device':1956, 'new device':230

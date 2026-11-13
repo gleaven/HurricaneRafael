@@ -1,0 +1,38 @@
+{
+ "source": "partner_it",
+ "stream_id": "partner_dns_logs",
+ "folder": "05_other_sources/partner_it/",
+ "files": "dns_<YYYY-MM>.csv",
+ "standard": "Resolver query log",
+ "span": "2027-07-16T00:00Z to 2028-01-12T06:00Z",
+ "cadence": "per query; a client that asked for a name and record type in the last five minutes answers from its own cache and is not logged again",
+ "notes": "One folder per organisation: city, nascc, brw, port, srmc, bcmc, county. Each organisation has its own products, rule names, zone names and habits; do not assume a value seen in one folder means the same in another. Hosts, addresses and accounts are in 06_data_streams/partner_it_registry.json.",
+ "fields": [
+  {
+   "name": "time_utc",
+   "type": "ISO 8601 UTC"
+  },
+  {
+   "name": "client_ip"
+  },
+  {
+   "name": "query"
+  },
+  {
+   "name": "qtype",
+   "type": "A | AAAA | SRV"
+  },
+  {
+   "name": "rcode",
+   "type": "NOERROR | NXDOMAIN"
+  },
+  {
+   "name": "answer",
+   "notes": "the address returned (the one the client then connects to); a name for SRV queries; - when there is none"
+  },
+  {
+   "name": "resolver",
+   "notes": "address of the resolver that answered (registry host)"
+  }
+ ]
+}

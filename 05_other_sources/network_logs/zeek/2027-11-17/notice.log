@@ -6,5 +6,7 @@
 #open	2027-11-17-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1826437453.545752	-	10.14.21.27	142.177.115.137	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+1826416768.369778	-	10.14.30.59	96.9.223.104	80	HTTP::Unusual_User_Agent	static.bayside-ledger.example user agent not seen before on this network	10.14.30.59	96.9.223.104	80	Notice::ACTION_LOG
+1826431518.138885	-	10.14.30.29	34.247.77.73	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.30.29	34.247.77.73	443	Notice::ACTION_LOG
+1826465363.650658	-	10.14.21.31	104.154.192.173	443	Weird::Activity	possible_split_routing	10.14.21.31	104.154.192.173	443	Notice::ACTION_LOG
 #close	2027-11-18-00-00-00

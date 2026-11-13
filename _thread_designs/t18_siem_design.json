@@ -144,7 +144,7 @@
         },
         {
           "stream": "host_audit_logs",
-          "what": "File audit log: file hash sha256=a3f8c2d1e9b04517 (modified), previous hash sha256=d7e1a0f3c2b18429 (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C",
+          "what": "File audit log: file hash sha256=cd926b73217c0994 (modified), previous hash sha256=2e78eabd6a1aa42f (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C",
           "when": {
             "start_utc": "2027-09-11T22:11Z",
             "end_utc": "2027-09-12T00:11Z"
@@ -154,7 +154,7 @@
       "detection_artifacts": [
         "Sentinel Edge 3.1 alert SE3-OT-2201-20270911T2211Z: src=GW-SYS-JMP-01, action=FILE_WRITE, path=\\\\gw-srv-ot-01\\relayconfigs\\sub02\\rtu_config_draft.xml, priority=MEDIUM",
         "SOC closure record: analyst SOC-AN-01, closure_time=2027-09-11T22:58Z, disposition=AUTHORIZED_MAINTENANCE, notes='Storm prep relay adjustment per ops supervisor note'",
-        "File audit log: file hash sha256=a3f8c2d1e9b04517 (modified), previous hash sha256=d7e1a0f3c2b18429 (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C"
+        "File audit log: file hash sha256=cd926b73217c0994 (modified), previous hash sha256=2e78eabd6a1aa42f (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C"
       ],
       "public_fact": null,
       "place_ids": [

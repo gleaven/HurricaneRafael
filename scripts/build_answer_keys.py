@@ -107,6 +107,13 @@ T = {
 ID_RE = re.compile(r"\b(?:GW-[A-Z0-9]+(?:-[A-Z0-9]+)+|GW\.[A-Z0-9.]+|EXT-[A-Z]+-[A-Z0-9-]+|VSL-\d{4}|BRG-\d{4}|TERM-\d{2}(?:-B\d{2})?|SLIP-[A-Z]+-\d+|ANCH-\d+|FAC-[A-Z]+-\d{3}|WQ-\d{2}|GAUGE-\d{2}|AQS-[0-9A-Z-]+|ORG-\d{4}|VND-\d{4}|ACCT-\d+|EQP-\d{4}|SE3-[A-Z]+-\d{4}-\d{8}T\d{4}Z|HIST-\d{8}-\d{5}|OUT-\d{2}|AREA-[A-Z0-9-]+|IPAWS-[A-Z0-9-]+|[A-Z]{2,5}-\d{3,4}(?!\d))")
 
 
+# Raw IT and security logs (added 2026-11-12). They corroborate a step, they do not replace it: the steps of a key are
+# chosen from the other streams exactly as before, and every raw-log observation of a step's event is listed under
+# that step as "also_in", so a key still walks the whole thread and not only its first days.
+RAW = {"firewall_logs", "web_proxy_logs", "dhcp_logs", "packet_captures", "windows_event_logs", "endpoint_telemetry", "host_triage",
+       "partner_firewall_logs", "partner_web_logs", "partner_dns_logs", "partner_auth_logs", "partner_mail_logs", "partner_endpoint_alerts"}
+
+
 def main():
     threads = load("00_scenario/threads.json")
     tl = load("00_scenario/canon_timeline.json")
@@ -118,7 +125,7 @@ def main():
         tid = th["thread_id"]
         q, concl, diff, joins = T[tid]
         mine = sorted([o for o in obs if tid in o["threads"]], key=lambda o: (o["start_utc"], o["event_id"], o["stream"]))
-        data = [o for o in mine if o["stream"] not in ("news", "public_record")]
+        data = [o for o in mine if o["stream"] not in ("news", "public_record") and o["stream"] not in RAW]
         pub = [o for o in mine if o["stream"] in ("news", "public_record")]
         chosen = data if len(data) >= 4 else data + pub
         steps, seen = [], set()
@@ -141,15 +148,21 @@ def main():
                 jn = None
             js.append({"n": i + 1, "observation": {"event_id": o["event_id"], "stream": o["stream"]}, "files": cat[o["stream"]].get("path_glob"),
                        "window_utc": [o["start_utc"], o["end_utc"]], "look_for": o["what"], "entity_ids": sorted(set(ID_RE.findall(o["what"])))[:12], "join_to_next": jn})
+            if not any(x["observation"]["event_id"] == o["event_id"] for x in js[:-1]):       # raw logs are listed once per event, under its first step
+                also = sorted((r for r in obs if r["event_id"] == o["event_id"] and r["stream"] in RAW), key=lambda r: r["stream"])
+                if also:
+                    js[-1]["also_in"] = [{"stream": r["stream"], "files": cat[r["stream"]].get("path_glob"), "window_utc": [r["start_utc"], r["end_utc"]], "look_for": r["what"]} for r in also]
         streams = sorted({s["observation"]["stream"] for s in js})
-        out_threads.append({"thread_id": tid, "name": th["name"], "question": q, "difficulty": diff, "streams": streams, "key_joins": joins, "steps": js, "conclusion": concl,
+        raw = sorted({a["stream"] for s in js for a in s.get("also_in", [])})
+        out_threads.append({"thread_id": tid, "name": th["name"], "question": q, "difficulty": diff, "streams": streams, "raw_log_streams": raw, "key_joins": joins, "steps": js, "conclusion": concl,
                             "public_from": sorted({o["event_id"] for o in pub})[:8], "observations_total": len(mine)})
         paths.append({"thread_id": tid, "name": th["name"], "join_path": " → ".join(f"{s['observation']['stream']} ({s['observation']['event_id']})" for s in js), "evidence": concl})
     out = {"_about": "Internal. Built by scripts/build_answer_keys.py from the expected observations; every step is checked on disk by scripts/check_answer_keys.py.",
            "threads": out_threads, "paths": paths, "links_between_threads": old.get("links_between_threads"), "meta_join_gridwater": old.get("meta_join_gridwater")}
     with open(os.path.join(ROOT, "06_answer_key", "answer_key.json"), "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, indent=1)
-    print(f"answer keys: {len(out_threads)} threads, {sum(len(t['steps']) for t in out_threads)} steps")
+    print(f"answer keys: {len(out_threads)} threads, {sum(len(t['steps']) for t in out_threads)} steps, "
+          f"{sum(len(s.get('also_in', [])) for t in out_threads for s in t['steps'])} raw-log records listed under them")
 
 
 if __name__ == "__main__":

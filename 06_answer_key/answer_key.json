@@ -21,6 +21,9 @@
     "weather",
     "work_orders"
    ],
+   "raw_log_streams": [
+    "partner_auth_logs"
+   ],
    "key_joins": [
     "weather and gauges -> scada_historian by time",
     "scada_historian tag -> work_orders asset_id",
@@ -214,7 +217,18 @@
      ],
      "look_for": "Navy training aircraft leave NAS Corpus Christi (KNGP) and NAS Kingsville (KNQI) in waves and land at NAS JRB Fort Worth; none return before D+6.",
      "entity_ids": [],
-     "join_to_next": "to base_status_reports on time"
+     "join_to_next": "to base_status_reports on time",
+     "also_in": [
+      {
+       "stream": "partner_auth_logs",
+       "files": "05_other_sources/partner_it/*/auth_*.csv",
+       "window_utc": [
+        "2027-09-10T05:00Z",
+        "2027-09-21T05:00Z"
+       ],
+       "look_for": "Air station administration building: workstation logons fall to near zero from the evacuation until staff return."
+      }
+     ]
     },
     {
      "n": 13,
@@ -285,7 +299,7 @@
     "EVT-0304",
     "EVT-0604"
    ],
-   "observations_total": 79
+   "observations_total": 82
   },
   {
    "thread_id": "T2",
@@ -302,6 +316,7 @@
     "port_surveillance",
     "satellite"
    ],
+   "raw_log_streams": [],
    "key_joins": [
     "ais mmsi gap + port_surveillance radar contact with no AIS at the same place and time",
     "ais identity seen in two places (shore feed vs satellite feed)",
@@ -580,6 +595,7 @@
     "fuel_deliveries",
     "satellite"
    ],
+   "raw_log_streams": [],
    "key_joins": [
     "contracts_vendor_registry bank_account_id shared by two supplier_id",
     "contracts_invoices quantity vs contracts_debris_monitoring estimated tons by area and period",
@@ -868,6 +884,13 @@
     "portal_access_logs",
     "social_media"
    ],
+   "raw_log_streams": [
+    "partner_auth_logs",
+    "partner_dns_logs",
+    "partner_firewall_logs",
+    "partner_mail_logs",
+    "partner_web_logs"
+   ],
    "key_joins": [
     "portal_access_logs client network in August, September and November",
     "portal_access_logs account_ref = aid_applications account_id (deposit changes) -> financial_transactions account_id",
@@ -890,7 +913,18 @@
       "EXT-AIDPORTAL-01",
       "EXT-NASLOG-02"
      ],
-     "join_to_next": "to host_audit_logs on time"
+     "join_to_next": "to host_audit_logs on time",
+     "also_in": [
+      {
+       "stream": "partner_firewall_logs",
+       "files": "05_other_sources/partner_it/*/firewall_*.csv",
+       "window_utc": [
+        "2027-08-10T05:00Z",
+        "2027-08-12T05:00Z"
+       ],
+       "look_for": "Air station edge firewall: an inbound session for every outside request in the base logistics access log."
+      }
+     ]
     },
     {
      "n": 2,
@@ -905,7 +939,45 @@
      ],
      "look_for": "City and NAS mail gateways: about 1,200 messages impersonating a disaster-aid portal and linking aid-help-portal.example; clicks from ten mailboxes (seven city, three NAS), followed by logins with those accounts from ASN-SYN-64512.",
      "entity_ids": [],
-     "join_to_next": "to social_media on time"
+     "join_to_next": "to social_media on time",
+     "also_in": [
+      {
+       "stream": "partner_auth_logs",
+       "files": "05_other_sources/partner_it/*/auth_*.csv",
+       "window_utc": [
+        "2027-09-15T05:00Z",
+        "2027-09-22T05:00Z"
+       ],
+       "look_for": "City single sign-on and base webmail: sign-ons of the ten accounts from a new network with password only, each with its inbound firewall session."
+      },
+      {
+       "stream": "partner_dns_logs",
+       "files": "05_other_sources/partner_it/*/dns_*.csv",
+       "window_utc": [
+        "2027-09-15T05:00Z",
+        "2027-09-19T05:00Z"
+       ],
+       "look_for": "City and air-station resolvers: the lookups of the lure host just before each request."
+      },
+      {
+       "stream": "partner_mail_logs",
+       "files": "05_other_sources/partner_it/*/mail_*.csv",
+       "window_utc": [
+        "2027-09-15T05:00Z",
+        "2027-09-19T05:00Z"
+       ],
+       "look_for": "City and air-station mail gateways: the aid-themed message wave of 2027-09-15 to 09-18 inside the full-span mail logs."
+      },
+      {
+       "stream": "partner_web_logs",
+       "files": "05_other_sources/partner_it/*/web_*.csv",
+       "window_utc": [
+        "2027-09-15T05:00Z",
+        "2027-09-19T05:00Z"
+       ],
+       "look_for": "City and air-station web gateways: ten requests to the lure host from internal workstations."
+      }
+     ]
     },
     {
      "n": 3,
@@ -1009,7 +1081,7 @@
     "EVT-0309",
     "EVT-0507"
    ],
-   "observations_total": 10
+   "observations_total": 15
   },
   {
    "thread_id": "T5",
@@ -1026,6 +1098,7 @@
     "shelters",
     "social_media"
    ],
+   "raw_log_streams": [],
    "key_joins": [
     "cad_911 census_tract -> census income quartile; response time = first_arrival - call_received",
     "aid_applications tract dollars vs census population",
@@ -1300,6 +1373,12 @@
     "vessel_ot_logs",
     "water_quality"
    ],
+   "raw_log_streams": [
+    "partner_dns_logs",
+    "partner_firewall_logs",
+    "partner_mail_logs",
+    "partner_web_logs"
+   ],
    "key_joins": [
     "vessel_ot_logs remote session_id -> valve command records on both mmsi",
     "vessel_ot_logs time -> water_quality nearest sonde within the hour",
@@ -1319,7 +1398,36 @@
      ],
      "look_for": "Brightwake Marine Systems mail gateway: a targeted lure from ASN-SYN-64512 infrastructure is delivered and opened by one mailbox.",
      "entity_ids": [],
-     "join_to_next": "to vessel_ot_logs on session_id, time"
+     "join_to_next": "to vessel_ot_logs on session_id, time",
+     "also_in": [
+      {
+       "stream": "partner_dns_logs",
+       "files": "05_other_sources/partner_it/*/dns_*.csv",
+       "window_utc": [
+        "2027-08-12T05:00Z",
+        "2027-08-13T05:00Z"
+       ],
+       "look_for": "Vendor resolver: the lookup of the certificate-notice host just before the request."
+      },
+      {
+       "stream": "partner_mail_logs",
+       "files": "05_other_sources/partner_it/*/mail_*.csv",
+       "window_utc": [
+        "2027-08-12T05:00Z",
+        "2027-08-13T05:00Z"
+       ],
+       "look_for": "Vendor mail gateway: the certificate-renewal message delivered to the shared support mailbox at 14:41Z."
+      },
+      {
+       "stream": "partner_web_logs",
+       "files": "05_other_sources/partner_it/*/web_*.csv",
+       "window_utc": [
+        "2027-08-12T05:00Z",
+        "2027-08-13T05:00Z"
+       ],
+       "look_for": "Vendor web gateway: the request to the certificate-notice host 21 minutes after delivery, by the duty engineer."
+      }
+     ]
     },
     {
      "n": 2,
@@ -1349,7 +1457,18 @@
      ],
      "look_for": "Remote sessions to the cargo-control networks of MT Kalvora Star and MT Ostrel Bay from ASN-SYN-64512 using Brightwake credentials: read-only, maintenance-length sessions with no matching maintenance ticket.",
      "entity_ids": [],
-     "join_to_next": "to drone_detections on time"
+     "join_to_next": "to drone_detections on time",
+     "also_in": [
+      {
+       "stream": "partner_firewall_logs",
+       "files": "05_other_sources/partner_it/*/firewall_*.csv",
+       "window_utc": [
+        "2027-08-25T05:00Z",
+        "2027-09-14T06:00Z"
+       ],
+       "look_for": "Vendor remote-maintenance gateway firewall: every tanker session in the vessel logs arrives here; sessions from the office and the staff VPN have vendor-side records, the sessions from a third network have none."
+      }
+     ]
     },
     {
      "n": 4,
@@ -1450,7 +1569,18 @@
      ],
      "look_for": "COTP Order 27-2027: Port Condition Zulu effective 17:00Z D-1; channel closed to all traffic; vessels at the offshore anchorage directed to sea. Order served on the agents of every vessel in or approaching the port.",
      "entity_ids": [],
-     "join_to_next": "to port_surveillance on time, mmsi"
+     "join_to_next": "to port_surveillance on time, mmsi",
+     "also_in": [
+      {
+       "stream": "partner_mail_logs",
+       "files": "05_other_sources/partner_it/*/mail_*.csv",
+       "window_utc": [
+        "2027-09-13T17:00Z",
+        "2027-09-13T19:00Z"
+       ],
+       "look_for": "Port operations mailbox: each Coast Guard port-condition order arrives within ten minutes of issue."
+      }
+     ]
     },
     {
      "n": 10,
@@ -1575,7 +1705,7 @@
     "EVT-1206",
     "EVT-2007"
    ],
-   "observations_total": 47
+   "observations_total": 52
   },
   {
    "thread_id": "T7",
@@ -1594,6 +1724,7 @@
     "satellite",
     "social_media"
    ],
+   "raw_log_streams": [],
    "key_joins": [
     "drone_detections sensor status + sighting reports on the same nights",
     "ais gap + port_surveillance radar track near the entrance channel -> position of the blast (ais tug mmsi, cad_911 incident)",
@@ -1868,6 +1999,7 @@
     "outage_map",
     "satellite"
    ],
+   "raw_log_streams": [],
    "key_joins": [
     "drone_telemetry mission_name/tile set -> damage_assessment utility_site_survey asset_id",
     "thermal_survey_readings asset_id -> outage_map substation_id and time",
@@ -2115,6 +2247,9 @@
     "satellite",
     "vessel_ot_logs"
    ],
+   "raw_log_streams": [
+    "partner_mail_logs"
+   ],
    "key_joins": [
     "port_surveillance camera berth_id/time vs vessel_ot_logs",
     "port_surveillance radar track with ais_correlated = false vs ais gap for the mmsi at that position",
@@ -2196,7 +2331,18 @@
      ],
      "look_for": "COTP Order 27-2027: Port Condition Zulu effective 17:00Z D-1; channel closed to all traffic; vessels at the offshore anchorage directed to sea. Order served on the agents of every vessel in or approaching the port.",
      "entity_ids": [],
-     "join_to_next": "to port_surveillance on time, mmsi"
+     "join_to_next": "to port_surveillance on time, mmsi",
+     "also_in": [
+      {
+       "stream": "partner_mail_logs",
+       "files": "05_other_sources/partner_it/*/mail_*.csv",
+       "window_utc": [
+        "2027-09-13T17:00Z",
+        "2027-09-13T19:00Z"
+       ],
+       "look_for": "Port operations mailbox: each Coast Guard port-condition order arrives within ten minutes of issue."
+      }
+     ]
     },
     {
      "n": 6,
@@ -2376,7 +2522,7 @@
    "public_from": [
     "EVT-1206"
    ],
-   "observations_total": 23
+   "observations_total": 24
   },
   {
    "thread_id": "T13",
@@ -2389,6 +2535,7 @@
     "eas_alerts",
     "sar_missions"
    ],
+   "raw_log_streams": [],
    "key_joins": [
     "cad_911 daily counts vs cbecc_daily_call_volume",
     "cad_911 callback_number -> ali_subscriber_records class of service",
@@ -2631,6 +2778,11 @@
     "shelters",
     "syndromic"
    ],
+   "raw_log_streams": [
+    "partner_auth_logs",
+    "partner_mail_logs",
+    "partner_web_logs"
+   ],
    "key_joins": [
     "eas_alerts ReleasedAt_EN vs ReleasedAt_ES by alert_id",
     "broadcast_logs translation_jobs alert_id -> first_aired",
@@ -2695,7 +2847,18 @@
      ],
      "look_for": "KNCB broadcast transcript excerpt (paraphrase, 13:45 CDT): 'Los residentes de la Zona D deben ir al Colegio Collier en Leopard Street' — incorrect. Official shelter for Zone D is Richard King High School, 5225 Gollihar Rd.",
      "entity_ids": [],
-     "join_to_next": "to eas_alerts on alert_id, time"
+     "join_to_next": "to eas_alerts on alert_id, time",
+     "also_in": [
+      {
+       "stream": "partner_web_logs",
+       "files": "05_other_sources/partner_it/*/web_*.csv",
+       "window_utc": [
+        "2027-09-13T18:00Z",
+        "2027-09-13T20:00Z"
+       ],
+       "look_for": "City alerting workstations: logged-on operator and a request to the alerting service at each city alert transmission."
+      }
+     ]
     },
     {
      "n": 5,
@@ -2787,7 +2950,18 @@
      "entity_ids": [
       "BWN-001"
      ],
-     "join_to_next": "to census on time window and place"
+     "join_to_next": "to census on time window and place",
+     "also_in": [
+      {
+       "stream": "partner_mail_logs",
+       "files": "05_other_sources/partner_it/*/mail_*.csv",
+       "window_utc": [
+        "2027-09-26T22:30Z",
+        "2027-09-27T14:00Z"
+       ],
+       "look_for": "County public-information mailbox: translation requests go out and the Spanish text comes back at the times in the translation job log."
+      }
+     ]
     },
     {
      "n": 11,
@@ -2847,7 +3021,18 @@
      ],
      "look_for": "Stool panels from D+18: Cryptosporidium and Giardia positives; gastrointestinal admissions of about 218 a day at SRMC and 122 at BCMC from D+18 to D+22, almost all from Districts 3 and 4.",
      "entity_ids": [],
-     "join_to_next": "to syndromic on facility_id, time"
+     "join_to_next": "to syndromic on facility_id, time",
+     "also_in": [
+      {
+       "stream": "partner_auth_logs",
+       "files": "05_other_sources/partner_it/*/auth_*.csv",
+       "window_utc": [
+        "2027-10-02T05:00Z",
+        "2027-10-07T05:00Z"
+       ],
+       "look_for": "Both hospitals: clinical workstation unlocks rise well above the pre-storm level around the busiest emergency-department days."
+      }
+     ]
     },
     {
      "n": 15,
@@ -2890,7 +3075,7 @@
     "EVT-1411",
     "EVT-1607"
    ],
-   "observations_total": 27
+   "observations_total": 30
   },
   {
    "thread_id": "T15",
@@ -2901,6 +3086,7 @@
     "shelters",
     "social_media"
    ],
+   "raw_log_streams": [],
    "key_joins": [
     "social_media text reuse + created_at slots by screen_name",
     "social_media url host -> the lure domain in mail logs",
@@ -3066,6 +3252,10 @@
     "scada_historian",
     "syndromic"
    ],
+   "raw_log_streams": [
+    "partner_auth_logs",
+    "partner_endpoint_alerts"
+   ],
    "key_joins": [
     "hospital_capacity by facility_id and day",
     "ed_visits CC_Category by tract and language",
@@ -3130,7 +3320,18 @@
      ],
      "look_for": "SRMC ED census D0: 118 patients by 18:00 CDT. Trauma: 4 crush injuries, 2 near-drowning, 11 laceration/wound, 8 fracture, 19 other storm-related, 74 non-storm. Admission rate: 31% (37 of 118 admitted). | EMS run report summary D0: 44 EMS calls dispatched to SRMC, 28 to BCMC. Total Rafael-related transport D0: 72. Major trauma (ISS > 15): 6 patients.",
      "entity_ids": [],
-     "join_to_next": "to hospital_capacity on facility_id, time"
+     "join_to_next": "to hospital_capacity on facility_id, time",
+     "also_in": [
+      {
+       "stream": "partner_endpoint_alerts",
+       "files": "05_other_sources/partner_it/*/endpoint_alerts_*.csv",
+       "window_utc": [
+        "2027-09-14T06:00Z",
+        "2027-09-22T15:00Z"
+       ],
+       "look_for": "Hospital endpoint console: no events from the administrative wings while they have no power; clinical areas on generator keep reporting."
+      }
+     ]
     },
     {
      "n": 5,
@@ -3220,7 +3421,18 @@
      ],
      "look_for": "Stool panels from D+18: Cryptosporidium and Giardia positives; gastrointestinal admissions of about 218 a day at SRMC and 122 at BCMC from D+18 to D+22, almost all from Districts 3 and 4.",
      "entity_ids": [],
-     "join_to_next": "to syndromic on facility_id, time"
+     "join_to_next": "to syndromic on facility_id, time",
+     "also_in": [
+      {
+       "stream": "partner_auth_logs",
+       "files": "05_other_sources/partner_it/*/auth_*.csv",
+       "window_utc": [
+        "2027-10-02T05:00Z",
+        "2027-10-07T05:00Z"
+       ],
+       "look_for": "Both hospitals: clinical workstation unlocks rise well above the pre-storm level around the busiest emergency-department days."
+      }
+     ]
     },
     {
      "n": 11,
@@ -3320,7 +3532,7 @@
     "EVT-1608",
     "EVT-1610"
    ],
-   "observations_total": 20
+   "observations_total": 22
   },
   {
    "thread_id": "T17",
@@ -3334,6 +3546,7 @@
     "drone_telemetry",
     "sar_missions"
    ],
+   "raw_log_streams": [],
    "key_joins": [
     "sar_missions asset_id -> adsb icao24 / avl unit_id",
     "sar_missions incident_number -> cad_911",
@@ -3582,6 +3795,7 @@
     "ais",
     "drone_detections"
    ],
+   "raw_log_streams": [],
    "key_joins": [
     "drone_detections authorization_id empty vs laanc_authorizations",
     "bearing lines from two sensor_id at the same time -> a position",
@@ -3740,6 +3954,7 @@
     "vessel_ot_logs",
     "water_quality"
    ],
+   "raw_log_streams": [],
    "key_joins": [
     "vessel_ot_logs valve time -> water_quality sensor_id order of arrival",
     "air_quality sensor_id by wind direction (weather)",
@@ -3922,6 +4137,9 @@
     "broadcast_logs",
     "eas_alerts"
    ],
+   "raw_log_streams": [
+    "partner_web_logs"
+   ],
    "key_joins": [
     "eas_alerts alert_id -> broadcast alert_relay_log -> station_program_log",
     "station_status_log off-air windows"
@@ -3994,7 +4212,18 @@
      ],
      "look_for": "KNCB broadcast log: bilingual evacuation loop activated 12:15Z D-1; broadcast 24 times before landfall",
      "entity_ids": [],
-     "join_to_next": "to eas_alerts on alert_id, time"
+     "join_to_next": "to eas_alerts on alert_id, time",
+     "also_in": [
+      {
+       "stream": "partner_web_logs",
+       "files": "05_other_sources/partner_it/*/web_*.csv",
+       "window_utc": [
+        "2027-09-13T12:00Z",
+        "2027-09-13T14:00Z"
+       ],
+       "look_for": "County alerting workstation: logged-on operator and a request to the alerting service at each county alert transmission."
+      }
+     ]
     },
     {
      "n": 5,
@@ -4156,7 +4385,7 @@
    "public_from": [
     "EVT-2107"
    ],
-   "observations_total": 14
+   "observations_total": 15
   },
   {
    "thread_id": "T22",
@@ -4168,6 +4397,7 @@
     "broadcast_logs",
     "insurance_claims"
    ],
+   "raw_log_streams": [],
    "key_joins": [
     "insurance_claims policy_transaction (pre-storm value increases) -> claim by holder_id/policy_id",
     "claims text reuse and adjuster_id concentration",
@@ -4215,9 +4445,8 @@
       "2027-11-13T06:01Z",
       "2027-11-16T06:00Z"
      ],
-     "look_for": "FEMA DisasterAssistance.gov server log: 94 application submissions from IP 198.51.100.44 between D+60 06:01Z and D+62 23:59Z; submission cluster timestamps: burst 1 D+60 06:01-09:17Z (31 apps), burst 2 D+61 01:00-04:45Z (29 apps), burst 3 D+62 23:00-23:59Z (34 apps) | FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash CC-DAM-0014.jpg appears in 7...",
+     "look_for": "FEMA DisasterAssistance.gov server log: 94 application submissions from IP 198.51.100.44 between D+60 06:01Z and D+62 23:59Z; submission cluster timestamps: burst 1 D+60 06:01-09:17Z (31 apps), burst 2 D+61 01:00-04:45Z (29 apps), burst 3 D+62 23:00-23:59Z (34 apps) | FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash 056a6eeab2bf0df6.jpg appears in 7...",
      "entity_ids": [
-      "DAM-0014",
       "SA-2027",
       "TX-4471"
      ],
@@ -4265,6 +4494,13 @@
     "siem_alerts",
     "zeek_logs"
    ],
+   "raw_log_streams": [
+    "endpoint_telemetry",
+    "firewall_logs",
+    "packet_captures",
+    "web_proxy_logs",
+    "windows_event_logs"
+   ],
    "key_joins": [
     "host_audit_logs remote_access_sessions time window -> ot_config_changes / scada_command_log in the same window",
     "scada_historian setting tag change time = config change time (to the second)",
@@ -4283,11 +4519,58 @@
       "2027-08-30T05:00Z",
       "2027-08-31T05:00Z"
      ],
-     "look_for": "Email gateway log: delivery of 'FEMA-PREP-GUIDANCE-2027.pdf.exe' from spoofed domain cbpwa-vendor-support[.]com at 08:14 CDT on 2027-08-30 (13:14Z) | Endpoint AV log: GW-WS-IT-04 disabled Windows Defender at 08:21 CDT (13:21Z) (silent, no alert raised)",
+     "look_for": "Email gateway log: delivery of the archive 'FEMA-PREP-GUIDANCE-2027.zip' (it holds 'FEMA-PREP-GUIDANCE-2027.pdf.exe') from spoofed domain cbpwa-vendor-support[.]com at 08:14 CDT on 2027-08-30 (13:14Z) | Endpoint AV log: GW-WS-IT-04 disabled Windows Defender at 08:21 CDT (13:21Z) (silent, no alert raised)",
      "entity_ids": [
       "GW-WS-IT-04"
      ],
-     "join_to_next": "to zeek_logs on time"
+     "join_to_next": "to zeek_logs on time",
+     "also_in": [
+      {
+       "stream": "endpoint_telemetry",
+       "files": "05_other_sources/network_logs/endpoint/*.jsonl",
+       "window_utc": [
+        "2027-08-30T05:00Z",
+        "2027-08-31T05:00Z"
+       ],
+       "look_for": "On GW-WS-IT-04: the mail attachment written and started from the mail client, the lookup and download by that process, a second file written, a service installed."
+      },
+      {
+       "stream": "firewall_logs",
+       "files": "05_other_sources/network_logs/firewall/fw_*.csv",
+       "window_utc": [
+        "2027-08-30T05:00Z",
+        "2027-08-31T05:00Z"
+       ],
+       "look_for": "Edge firewall session for the 13:23Z connection from GW-WS-IT-04 to the lookalike vendor name, 1.88 MB received."
+      },
+      {
+       "stream": "packet_captures",
+       "files": "05_other_sources/network_logs/pcap/perimeter_*.pcap",
+       "window_utc": [
+        "2027-08-30T05:00Z",
+        "2027-08-31T05:00Z"
+       ],
+       "look_for": "Captured handshake of the 13:23Z connection; the ClientHello names the lookalike vendor host."
+      },
+      {
+       "stream": "web_proxy_logs",
+       "files": "05_other_sources/network_logs/proxy/web_proxy_*.csv",
+       "window_utc": [
+        "2027-08-30T05:00Z",
+        "2027-08-31T05:00Z"
+       ],
+       "look_for": "Web-filter record of the 13:23Z request with the server name and the logged-on user."
+      },
+      {
+       "stream": "windows_event_logs",
+       "files": "05_other_sources/network_logs/windows/*.jsonl",
+       "window_utc": [
+        "2027-08-30T05:00Z",
+        "2027-08-31T05:00Z"
+       ],
+       "look_for": "On GW-WS-IT-04: the user's logon, real-time protection switched off at 13:21Z, a new service registered at 13:24Z."
+      }
+     ]
     },
     {
      "n": 2,
@@ -4322,7 +4605,45 @@
       "GW-WS-IT-04",
       "SE3-NET-9941-20270831T0317Z"
      ],
-     "join_to_next": "to zeek_logs on time"
+     "join_to_next": "to zeek_logs on time",
+     "also_in": [
+      {
+       "stream": "endpoint_telemetry",
+       "files": "05_other_sources/network_logs/endpoint/*.jsonl",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "network_connect events from GW-WS-IT-04 to 104.21.88.43, each carrying the image of the service binary installed the day before."
+      },
+      {
+       "stream": "firewall_logs",
+       "files": "05_other_sources/network_logs/firewall/fw_*.csv",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "Edge firewall session of the first periodic outbound connection: 318 bytes out, 212 in, to 104.21.88.43:443."
+      },
+      {
+       "stream": "packet_captures",
+       "files": "05_other_sources/network_logs/pcap/perimeter_*.pcap",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "Captured handshake of the first periodic outbound connection; the ClientHello carries the server name."
+      },
+      {
+       "stream": "web_proxy_logs",
+       "files": "05_other_sources/network_logs/proxy/web_proxy_*.csv",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "Web-filter record of the first periodic outbound connection (318 bytes out, 212 in), no user logged on."
+      }
+     ]
     },
     {
      "n": 4,
@@ -4440,7 +4761,45 @@
       "GW-FAC-SUB-01",
       "GW-SYS-JMP-01"
      ],
-     "join_to_next": "to zeek_logs on time"
+     "join_to_next": "to zeek_logs on time",
+     "also_in": [
+      {
+       "stream": "endpoint_telemetry",
+       "files": "05_other_sources/network_logs/endpoint/*.jsonl",
+       "window_utc": [
+        "2027-09-07T02:00Z",
+        "2027-09-11T05:00Z"
+       ],
+       "look_for": "network_connect from GW-WS-IT-04 to the historian replica on port 445 at 23:58Z on 2027-09-08."
+      },
+      {
+       "stream": "firewall_logs",
+       "files": "05_other_sources/network_logs/firewall/fw_*.csv",
+       "window_utc": [
+        "2027-09-07T02:00Z",
+        "2027-09-11T05:00Z"
+       ],
+       "look_for": "Sessions to the remote-access gateway from outside addresses on both firewalls, the gateway-to-historian flows, and the 1.9 GB SMB flow from GW-WS-IT-04 to the DMZ historian replica on the boundary firewall."
+      },
+      {
+       "stream": "packet_captures",
+       "files": "05_other_sources/network_logs/pcap/perimeter_*.pcap",
+       "window_utc": [
+        "2027-09-07T02:00Z",
+        "2027-09-11T05:00Z"
+       ],
+       "look_for": "Captured handshakes of the sessions from outside addresses to the remote-access gateway."
+      },
+      {
+       "stream": "windows_event_logs",
+       "files": "05_other_sources/network_logs/windows/*.jsonl",
+       "window_utc": [
+        "2027-09-07T02:00Z",
+        "2027-09-11T05:00Z"
+       ],
+       "look_for": "On the historian replica: network logon from 10.14.22.47 at 23:58Z on 2027-09-08 under the account of an engineer who is on leave, share reads, logoff; the matching service ticket on a domain controller."
+      }
+     ]
     },
     {
      "n": 11,
@@ -4476,7 +4835,18 @@
       "GW-SYS-RTU-01",
       "GW-SYS-SCADA-01"
      ],
-     "join_to_next": "to scada_historian on time"
+     "join_to_next": "to scada_historian on time",
+     "also_in": [
+      {
+       "stream": "windows_event_logs",
+       "files": "05_other_sources/network_logs/windows/*.jsonl",
+       "window_utc": [
+        "2027-09-11T17:00Z",
+        "2027-09-11T19:00Z"
+       ],
+       "look_for": "Remote-interactive logon on GW-SYS-SCADA-01 from the remote-access gateway at the time of the alarm-suppression change."
+      }
+     ]
     },
     {
      "n": 13,
@@ -4508,9 +4878,20 @@
       "2027-09-11T22:11Z",
       "2027-09-12T00:11Z"
      ],
-     "look_for": "File audit log: file hash sha256=a3f8c2d1e9b04517 (modified), previous hash sha256=d7e1a0f3c2b18429 (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C",
+     "look_for": "File audit log: file hash sha256=cd926b73217c0994 (modified), previous hash sha256=2e78eabd6a1aa42f (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C",
      "entity_ids": [],
-     "join_to_next": "to siem_alerts on host, user, time"
+     "join_to_next": "to siem_alerts on host, user, time",
+     "also_in": [
+      {
+       "stream": "windows_event_logs",
+       "files": "05_other_sources/network_logs/windows/*.jsonl",
+       "window_utc": [
+        "2027-09-11T22:11Z",
+        "2027-09-12T00:11Z"
+       ],
+       "look_for": "On GW-SRV-OT-01: network logon from the gateway and the write of relayconfigs\\sub02\\rtu_config_draft.xml at 22:11Z."
+      }
+     ]
     },
     {
      "n": 15,
@@ -4558,7 +4939,7 @@
     "GW-EVT-014",
     "GW-EVT-015"
    ],
-   "observations_total": 57
+   "observations_total": 81
   },
   {
    "thread_id": "T9",
@@ -4577,6 +4958,11 @@
     "siem_alerts",
     "syndromic",
     "work_orders"
+   ],
+   "raw_log_streams": [
+    "partner_auth_logs",
+    "partner_mail_logs",
+    "windows_event_logs"
    ],
    "key_joins": [
     "scada_historian setpoint tags step at 02:04Z/02:08Z = ot_config_changes rows = remote session window",
@@ -4601,7 +4987,18 @@
       "GW-SYS-RTU-01",
       "GW-SYS-SCADA-01"
      ],
-     "join_to_next": "to scada_historian on time"
+     "join_to_next": "to scada_historian on time",
+     "also_in": [
+      {
+       "stream": "windows_event_logs",
+       "files": "05_other_sources/network_logs/windows/*.jsonl",
+       "window_utc": [
+        "2027-09-11T17:00Z",
+        "2027-09-11T19:00Z"
+       ],
+       "look_for": "Remote-interactive logon on GW-SYS-SCADA-01 from the remote-access gateway at the time of the alarm-suppression change."
+      }
+     ]
     },
     {
      "n": 2,
@@ -4785,7 +5182,18 @@
      "entity_ids": [
       "BWN-001"
      ],
-     "join_to_next": "to census on time window and place"
+     "join_to_next": "to census on time window and place",
+     "also_in": [
+      {
+       "stream": "partner_mail_logs",
+       "files": "05_other_sources/partner_it/*/mail_*.csv",
+       "window_utc": [
+        "2027-09-26T22:30Z",
+        "2027-09-27T14:00Z"
+       ],
+       "look_for": "County public-information mailbox: translation requests go out and the Spanish text comes back at the times in the translation job log."
+      }
+     ]
     },
     {
      "n": 13,
@@ -4830,7 +5238,18 @@
      ],
      "look_for": "Stool panels from D+18: Cryptosporidium and Giardia positives; gastrointestinal admissions of about 218 a day at SRMC and 122 at BCMC from D+18 to D+22, almost all from Districts 3 and 4.",
      "entity_ids": [],
-     "join_to_next": "to syndromic on facility_id, time"
+     "join_to_next": "to syndromic on facility_id, time",
+     "also_in": [
+      {
+       "stream": "partner_auth_logs",
+       "files": "05_other_sources/partner_it/*/auth_*.csv",
+       "window_utc": [
+        "2027-10-02T05:00Z",
+        "2027-10-07T05:00Z"
+       ],
+       "look_for": "Both hospitals: clinical workstation unlocks rise well above the pre-storm level around the busiest emergency-department days."
+      }
+     ]
     },
     {
      "n": 16,
@@ -4858,7 +5277,7 @@
     "GW-EVT-014",
     "GW-EVT-016"
    ],
-   "observations_total": 35
+   "observations_total": 42
   },
   {
    "thread_id": "T10",
@@ -4872,6 +5291,13 @@
     "siem_alerts",
     "work_orders",
     "zeek_logs"
+   ],
+   "raw_log_streams": [
+    "endpoint_telemetry",
+    "firewall_logs",
+    "packet_captures",
+    "web_proxy_logs",
+    "windows_event_logs"
    ],
    "key_joins": [
     "siem rule_changes (exception rule, storm mode) -> dispositions of the alerts that mattered",
@@ -4890,11 +5316,58 @@
       "2027-08-30T05:00Z",
       "2027-08-31T05:00Z"
      ],
-     "look_for": "Email gateway log: delivery of 'FEMA-PREP-GUIDANCE-2027.pdf.exe' from spoofed domain cbpwa-vendor-support[.]com at 08:14 CDT on 2027-08-30 (13:14Z) | Endpoint AV log: GW-WS-IT-04 disabled Windows Defender at 08:21 CDT (13:21Z) (silent, no alert raised)",
+     "look_for": "Email gateway log: delivery of the archive 'FEMA-PREP-GUIDANCE-2027.zip' (it holds 'FEMA-PREP-GUIDANCE-2027.pdf.exe') from spoofed domain cbpwa-vendor-support[.]com at 08:14 CDT on 2027-08-30 (13:14Z) | Endpoint AV log: GW-WS-IT-04 disabled Windows Defender at 08:21 CDT (13:21Z) (silent, no alert raised)",
      "entity_ids": [
       "GW-WS-IT-04"
      ],
-     "join_to_next": "to zeek_logs on time"
+     "join_to_next": "to zeek_logs on time",
+     "also_in": [
+      {
+       "stream": "endpoint_telemetry",
+       "files": "05_other_sources/network_logs/endpoint/*.jsonl",
+       "window_utc": [
+        "2027-08-30T05:00Z",
+        "2027-08-31T05:00Z"
+       ],
+       "look_for": "On GW-WS-IT-04: the mail attachment written and started from the mail client, the lookup and download by that process, a second file written, a service installed."
+      },
+      {
+       "stream": "firewall_logs",
+       "files": "05_other_sources/network_logs/firewall/fw_*.csv",
+       "window_utc": [
+        "2027-08-30T05:00Z",
+        "2027-08-31T05:00Z"
+       ],
+       "look_for": "Edge firewall session for the 13:23Z connection from GW-WS-IT-04 to the lookalike vendor name, 1.88 MB received."
+      },
+      {
+       "stream": "packet_captures",
+       "files": "05_other_sources/network_logs/pcap/perimeter_*.pcap",
+       "window_utc": [
+        "2027-08-30T05:00Z",
+        "2027-08-31T05:00Z"
+       ],
+       "look_for": "Captured handshake of the 13:23Z connection; the ClientHello names the lookalike vendor host."
+      },
+      {
+       "stream": "web_proxy_logs",
+       "files": "05_other_sources/network_logs/proxy/web_proxy_*.csv",
+       "window_utc": [
+        "2027-08-30T05:00Z",
+        "2027-08-31T05:00Z"
+       ],
+       "look_for": "Web-filter record of the 13:23Z request with the server name and the logged-on user."
+      },
+      {
+       "stream": "windows_event_logs",
+       "files": "05_other_sources/network_logs/windows/*.jsonl",
+       "window_utc": [
+        "2027-08-30T05:00Z",
+        "2027-08-31T05:00Z"
+       ],
+       "look_for": "On GW-WS-IT-04: the user's logon, real-time protection switched off at 13:21Z, a new service registered at 13:24Z."
+      }
+     ]
     },
     {
      "n": 2,
@@ -4929,7 +5402,45 @@
       "GW-WS-IT-04",
       "SE3-NET-9941-20270831T0317Z"
      ],
-     "join_to_next": "to zeek_logs on time"
+     "join_to_next": "to zeek_logs on time",
+     "also_in": [
+      {
+       "stream": "endpoint_telemetry",
+       "files": "05_other_sources/network_logs/endpoint/*.jsonl",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "network_connect events from GW-WS-IT-04 to 104.21.88.43, each carrying the image of the service binary installed the day before."
+      },
+      {
+       "stream": "firewall_logs",
+       "files": "05_other_sources/network_logs/firewall/fw_*.csv",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "Edge firewall session of the first periodic outbound connection: 318 bytes out, 212 in, to 104.21.88.43:443."
+      },
+      {
+       "stream": "packet_captures",
+       "files": "05_other_sources/network_logs/pcap/perimeter_*.pcap",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "Captured handshake of the first periodic outbound connection; the ClientHello carries the server name."
+      },
+      {
+       "stream": "web_proxy_logs",
+       "files": "05_other_sources/network_logs/proxy/web_proxy_*.csv",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "Web-filter record of the first periodic outbound connection (318 bytes out, 212 in), no user logged on."
+      }
+     ]
     },
     {
      "n": 4,
@@ -4963,7 +5474,45 @@
       "GW-FAC-SUB-01",
       "GW-SYS-JMP-01"
      ],
-     "join_to_next": "to zeek_logs on time"
+     "join_to_next": "to zeek_logs on time",
+     "also_in": [
+      {
+       "stream": "endpoint_telemetry",
+       "files": "05_other_sources/network_logs/endpoint/*.jsonl",
+       "window_utc": [
+        "2027-09-07T02:00Z",
+        "2027-09-11T05:00Z"
+       ],
+       "look_for": "network_connect from GW-WS-IT-04 to the historian replica on port 445 at 23:58Z on 2027-09-08."
+      },
+      {
+       "stream": "firewall_logs",
+       "files": "05_other_sources/network_logs/firewall/fw_*.csv",
+       "window_utc": [
+        "2027-09-07T02:00Z",
+        "2027-09-11T05:00Z"
+       ],
+       "look_for": "Sessions to the remote-access gateway from outside addresses on both firewalls, the gateway-to-historian flows, and the 1.9 GB SMB flow from GW-WS-IT-04 to the DMZ historian replica on the boundary firewall."
+      },
+      {
+       "stream": "packet_captures",
+       "files": "05_other_sources/network_logs/pcap/perimeter_*.pcap",
+       "window_utc": [
+        "2027-09-07T02:00Z",
+        "2027-09-11T05:00Z"
+       ],
+       "look_for": "Captured handshakes of the sessions from outside addresses to the remote-access gateway."
+      },
+      {
+       "stream": "windows_event_logs",
+       "files": "05_other_sources/network_logs/windows/*.jsonl",
+       "window_utc": [
+        "2027-09-07T02:00Z",
+        "2027-09-11T05:00Z"
+       ],
+       "look_for": "On the historian replica: network logon from 10.14.22.47 at 23:58Z on 2027-09-08 under the account of an engineer who is on leave, share reads, logoff; the matching service ticket on a domain controller."
+      }
+     ]
     },
     {
      "n": 6,
@@ -4999,7 +5548,18 @@
       "GW-SYS-RTU-01",
       "GW-SYS-SCADA-01"
      ],
-     "join_to_next": "to scada_historian on time"
+     "join_to_next": "to scada_historian on time",
+     "also_in": [
+      {
+       "stream": "windows_event_logs",
+       "files": "05_other_sources/network_logs/windows/*.jsonl",
+       "window_utc": [
+        "2027-09-11T17:00Z",
+        "2027-09-11T19:00Z"
+       ],
+       "look_for": "Remote-interactive logon on GW-SYS-SCADA-01 from the remote-access gateway at the time of the alarm-suppression change."
+      }
+     ]
     },
     {
      "n": 8,
@@ -5088,7 +5648,18 @@
      ],
      "look_for": "Crew dispatched to SUB-02 finds no physical cause; the ticket is closed as a loose relay.",
      "entity_ids": [],
-     "join_to_next": "to scada_historian on time"
+     "join_to_next": "to scada_historian on time",
+     "also_in": [
+      {
+       "stream": "windows_event_logs",
+       "files": "05_other_sources/network_logs/windows/*.jsonl",
+       "window_utc": [
+        "2027-09-21T14:20Z",
+        "2027-09-21T16:00Z"
+       ],
+       "look_for": "Remote-interactive logon on GW-WS-OPS-02 from the remote-access gateway about 95 s before the breaker-open command."
+      }
+     ]
     },
     {
      "n": 13,
@@ -5154,7 +5725,18 @@
      ],
      "look_for": "Crew dispatched to SUB-03 reports no apparent physical cause.",
      "entity_ids": [],
-     "join_to_next": null
+     "join_to_next": null,
+     "also_in": [
+      {
+       "stream": "windows_event_logs",
+       "files": "05_other_sources/network_logs/windows/*.jsonl",
+       "window_utc": [
+        "2027-09-24T19:40Z",
+        "2027-09-24T21:00Z"
+       ],
+       "look_for": "Remote-interactive logon on GW-WS-OPS-02 from the remote-access gateway about 95 s before the breaker-open command."
+      }
+     ]
     }
    ],
    "conclusion": "Every action is timed to look like storm effects: changes during the freeze, commands during restoration switching, alerts auto-acknowledged by an exception rule created weeks earlier, analysts in storm mode bulk-dismissing the rest.",
@@ -5163,7 +5745,7 @@
     "GW-EVT-012",
     "GW-EVT-014"
    ],
-   "observations_total": 28
+   "observations_total": 48
   },
   {
    "thread_id": "T18",
@@ -5175,6 +5757,13 @@
     "siem_alerts",
     "work_orders",
     "zeek_logs"
+   ],
+   "raw_log_streams": [
+    "endpoint_telemetry",
+    "firewall_logs",
+    "packet_captures",
+    "web_proxy_logs",
+    "windows_event_logs"
    ],
    "key_joins": [
     "siem_alerts alert family by time -> disposition and closer",
@@ -5198,7 +5787,45 @@
       "GW-WS-IT-04",
       "SE3-NET-9941-20270831T0317Z"
      ],
-     "join_to_next": "to zeek_logs on time"
+     "join_to_next": "to zeek_logs on time",
+     "also_in": [
+      {
+       "stream": "endpoint_telemetry",
+       "files": "05_other_sources/network_logs/endpoint/*.jsonl",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "network_connect events from GW-WS-IT-04 to 104.21.88.43, each carrying the image of the service binary installed the day before."
+      },
+      {
+       "stream": "firewall_logs",
+       "files": "05_other_sources/network_logs/firewall/fw_*.csv",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "Edge firewall session of the first periodic outbound connection: 318 bytes out, 212 in, to 104.21.88.43:443."
+      },
+      {
+       "stream": "packet_captures",
+       "files": "05_other_sources/network_logs/pcap/perimeter_*.pcap",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "Captured handshake of the first periodic outbound connection; the ClientHello carries the server name."
+      },
+      {
+       "stream": "web_proxy_logs",
+       "files": "05_other_sources/network_logs/proxy/web_proxy_*.csv",
+       "window_utc": [
+        "2027-08-31T03:17Z",
+        "2027-08-31T05:17Z"
+       ],
+       "look_for": "Web-filter record of the first periodic outbound connection (318 bytes out, 212 in), no user logged on."
+      }
+     ]
     },
     {
      "n": 2,
@@ -5263,9 +5890,20 @@
       "2027-09-11T22:11Z",
       "2027-09-12T00:11Z"
      ],
-     "look_for": "File audit log: file hash sha256=a3f8c2d1e9b04517 (modified), previous hash sha256=d7e1a0f3c2b18429 (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C",
+     "look_for": "File audit log: file hash sha256=cd926b73217c0994 (modified), previous hash sha256=2e78eabd6a1aa42f (baseline), diff shows overcurrent_trip_threshold changed from 1200A to 2400A for relays R-02A, R-02B, R-02C",
      "entity_ids": [],
-     "join_to_next": "to siem_alerts on host, user, time"
+     "join_to_next": "to siem_alerts on host, user, time",
+     "also_in": [
+      {
+       "stream": "windows_event_logs",
+       "files": "05_other_sources/network_logs/windows/*.jsonl",
+       "window_utc": [
+        "2027-09-11T22:11Z",
+        "2027-09-12T00:11Z"
+       ],
+       "look_for": "On GW-SRV-OT-01: network logon from the gateway and the write of relayconfigs\\sub02\\rtu_config_draft.xml at 22:11Z."
+      }
+     ]
     },
     {
      "n": 6,
@@ -5368,11 +6006,40 @@
       "2027-10-12T05:00Z",
       "2027-10-14T05:00Z"
      ],
-     "look_for": "Alert volume falls about 90 percent after 08:00Z on D+28; the outbound beacon alert SE3-NET-9941 is last seen at 10:04Z.",
+     "look_for": "Alerts from control-network sources stop when the control network is cut off at 12:00Z on D+28 (about 90 percent fewer from those rules; corporate alerts carry on); the outbound beacon alert SE3-NET-9941 is last seen at 10:04Z.",
      "entity_ids": [
       "NET-9941"
      ],
-     "join_to_next": "to work_orders on time"
+     "join_to_next": "to work_orders on time",
+     "also_in": [
+      {
+       "stream": "firewall_logs",
+       "files": "05_other_sources/network_logs/firewall/fw_*.csv",
+       "window_utc": [
+        "2027-10-12T05:00Z",
+        "2027-10-14T05:00Z"
+       ],
+       "look_for": "Allowed connections from GW-WS-IT-04 to 104.21.88.43 end at 10:04Z on 2027-10-12; none afterwards."
+      },
+      {
+       "stream": "packet_captures",
+       "files": "05_other_sources/network_logs/pcap/perimeter_*.pcap",
+       "window_utc": [
+        "2027-10-12T05:00Z",
+        "2027-10-14T05:00Z"
+       ],
+       "look_for": "The last captured connection from GW-WS-IT-04 to 104.21.88.43 is at 10:04Z on 2027-10-12."
+      },
+      {
+       "stream": "web_proxy_logs",
+       "files": "05_other_sources/network_logs/proxy/web_proxy_*.csv",
+       "window_utc": [
+        "2027-10-12T05:00Z",
+        "2027-10-14T05:00Z"
+       ],
+       "look_for": "Web-filter records for the periodic connection stop after 10:04Z on 2027-10-12."
+      }
+     ]
     },
     {
      "n": 12,
@@ -5425,7 +6092,7 @@
    ],
    "conclusion": "The first outbound connection is alerted and closed as a false positive; the historian sessions are auto-acknowledged by an exception rule nobody approved; storm mode dismisses three alerts that mattered; the anomaly model finally flags the fourteenth session.",
    "public_from": [],
-   "observations_total": 14
+   "observations_total": 22
   }
  ],
  "paths": [

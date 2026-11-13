@@ -1,0 +1,286 @@
+##### security sep {'nosp': 392249}
+  shape 18854 4624|time_utc,host,channel,provider,event_id,record_id,level,user,domain,logon_type,logon_id
+  shape 59969 4624|time_utc,host,channel,provider,event_id,record_id,level,user,domain,logon_type,logon_id,src_ip
+  shape 30 4625|time_utc,host,channel,provider,event_id,record_id,level,user,logon_type,process,sub_status
+  shape 45779 4625|time_utc,host,channel,provider,event_id,record_id,level,user,logon_type,sub_status
+  shape 78655 4634|time_utc,host,channel,provider,event_id,record_id,level,user,domain,logon_type,logon_id
+  shape 18157 4647|time_utc,host,channel,provider,event_id,record_id,level,user,domain,logon_id
+  shape 3846 4672|time_utc,host,channel,provider,event_id,record_id,level,user,domain,logon_id,privileges
+  shape 46 4722|time_utc,host,channel,provider,event_id,record_id,level,user,domain,target_user
+  shape 50 4725|time_utc,host,channel,provider,event_id,record_id,level,user,domain,target_user
+  shape 203 4728|time_utc,host,channel,provider,event_id,record_id,level,user,domain,target_user,group,group_domain,src_host
+  shape 204 4732|time_utc,host,channel,provider,event_id,record_id,level,user,domain,target_user,group,group_domain
+  shape 1276 4740|time_utc,host,channel,provider,event_id,record_id,level,domain,target_user,caller_computer
+  shape 220 4756|time_utc,host,channel,provider,event_id,record_id,level,user,domain,target_user,group,group_domain,src_host
+  shape 23847 4768|time_utc,host,channel,provider,event_id,record_id,level,user,domain,src_ip,service,status
+  shape 46419 4769|time_utc,host,channel,provider,event_id,record_id,level,user,domain,src_ip,service,status
+  shape 5122 4771|time_utc,host,channel,provider,event_id,record_id,level,user,domain,src_ip,status,outcome
+  shape 22457 4800|time_utc,host,channel,provider,event_id,record_id,level,user,domain,logon_id
+  shape 22455 4801|time_utc,host,channel,provider,event_id,record_id,level,user,domain,logon_id
+  shape 17198 5140|time_utc,host,channel,provider,event_id,record_id,level,user,domain,src_ip,share
+  shape 27462 5145|time_utc,host,channel,provider,event_id,record_id,level,user,domain,src_ip,share,path,access
+v:4624:channel 1 [('Security', 78823)]
+v:4624:domain 3 [('CBPWA', 75589), ('CBPWA-OT', 3212), ('GW-SYS-JMP-01', 22)]
+v:4624:event_id 1 [(4624, 78823)]
+v:4624:host 203 top [('GW-SRV-MAIL-01', 13633), ('GW-SRV-DC-01', 8448), ('GW-SRV-DC-02', 8370), ('GW-SRV-FILE-02', 3831), ('GW-SRV-PRINT-01', 3824), ('GW-SRV-FILE-01', 3777)] rare [('GW-SRV-OTBKP-01', 2), ('GW-SRV-ICCP-01', 2), ('GW-SRV-OTPATCH-01', 2), ('GW-WS-IT-04', 1)] nsingle 1
+v:4624:level 1 [('information', 78823)]
+v:4624:logon_type 5 [(3, 56647), (2, 18104), (10, 3322), (11, 632), (5, 118)]
+v:4624:provider 1 [('Microsoft-Windows-Security-Auditing', 78823)]
+v:4624:src_ip 496 top [('10.14.12.42', 864), ('10.14.30.35', 656), ('10.14.30.62', 646), ('10.14.30.38', 645), ('10.72.4.88', 622), ('10.14.30.36', 621)] rare [('24.107.206.23', 2), ('10.14.250.59', 2), ('69.48.219.215', 2), ('66.193.54.26', 2), ('10.14.250.206', 2), ('69.48.219.223', 2), ('66.193.54.29', 2), ('73.138.176.200', 2), ('10.14.250.89', 2), ('69.48.219.205', 2), ('66.193.54.21', 2), ('185.220.101.71', 2), ('185.220.101.12', 2), ('10.14.250.115', 2), ('69.48.219.207', 2)] nsingle 33
+v:4624:user 404 top [('svc_backup', 792), ('mokafor', 657), ('mjimenez', 639), ('mmendoza', 636), ('cokafor', 632), ('lscott', 628)] rare [('svc_otbackup', 2), ('svc_iccp', 2), ('svc_otpatch', 2)] nsingle 0
+v:4625:channel 1 [('Security', 45809)]
+v:4625:event_id 1 [(4625, 45809)]
+v:4625:host 183 top [('GW-WS-OPS-03', 848), ('GW-WS-OPS-01', 776), ('GW-WS-OPS-02', 736), ('GW-WS-SOC-02', 709), ('GW-WTP-HMI-01', 691), ('GW-WS-SOC-01', 691)] rare [] nsingle 0
+v:4625:level 1 [('information', 45809)]
+v:4625:logon_type 2 [(7, 42641), (2, 3168)]
+v:4625:process 1 [('C:\\Windows\\System32\\consent.exe', 30)]
+v:4625:provider 1 [('Microsoft-Windows-Security-Auditing', 45809)]
+v:4625:sub_status 5 [('0xC000006A', 39371), ('0xC0000071', 3171), ('0xC000006F', 1636), ('0xC0000070', 1486), ('0xC0000234', 145)]
+v:4625:user 190 top [('hkowalski', 427), ('kdiaz', 412), ('dchavez', 395), ('bflores', 390), ('acantu', 383), ('falrasheedobinna', 380)] rare [] nsingle 0
+v:4634:channel 1 [('Security', 78655)]
+v:4634:domain 3 [('CBPWA', 75446), ('CBPWA-OT', 3187), ('GW-SYS-JMP-01', 22)]
+v:4634:event_id 1 [(4634, 78655)]
+v:4634:host 199 top [('GW-SRV-MAIL-01', 13632), ('GW-SRV-DC-01', 8448), ('GW-SRV-DC-02', 8370), ('GW-SRV-FILE-02', 3825), ('GW-SRV-PRINT-01', 3818), ('GW-SRV-FILE-01', 3777)] rare [('GW-WS-IT-04', 1)] nsingle 1
+v:4634:level 1 [('information', 78655)]
+v:4634:logon_type 3 [(3, 56646), (2, 18687), (10, 3322)]
+v:4634:provider 1 [('Microsoft-Windows-Security-Auditing', 78655)]
+v:4634:user 391 top [('svc_backup', 786), ('mokafor', 657), ('mjimenez', 639), ('mmendoza', 636), ('cokafor', 631), ('lscott', 628)] rare [] nsingle 0
+v:4647:channel 1 [('Security', 18157)]
+v:4647:domain 2 [('CBPWA', 17256), ('CBPWA-OT', 901)]
+v:4647:event_id 1 [(4647, 18157)]
+v:4647:host 167 top [('GW-WS-OPS-01', 240), ('GW-WS-OPS-02', 240), ('GW-WS-OPS-03', 216), ('GW-WS-OPS-04', 193), ('GW-WS-OPS-05', 192), ('GW-WS-SOC-02', 182)] rare [('GW-WS-IT-04', 1)] nsingle 1
+v:4647:level 1 [('information', 18157)]
+v:4647:provider 1 [('Microsoft-Windows-Security-Auditing', 18157)]
+v:4647:user 181 top [('dchavez', 137), ('mvasquez', 134), ('lguerra', 132), ('kdiaz', 132), ('omartinez', 131), ('mflores', 130)] rare [] nsingle 0
+v:4672:channel 1 [('Security', 3846)]
+v:4672:domain 2 [('CBPWA', 2427), ('CBPWA-OT', 1419)]
+v:4672:event_id 1 [(4672, 3846)]
+v:4672:host 50 top [('GW-WTP-HMI-01', 313), ('GW-WS-OPS-02', 283), ('GW-WS-SOC-02', 182), ('GW-WS-SOC-01', 181), ('GW-WTP-HMI-02', 180), ('GW-WS-OPS-01', 151)] rare [] nsingle 0
+v:4672:level 1 [('information', 3846)]
+v:4672:privileges 1 [('SeSecurityPrivilege;SeBackupPrivilege;SeDebugPrivilege', 3846)]
+v:4672:provider 1 [('Microsoft-Windows-Security-Auditing', 3846)]
+v:4672:user 59 top [('ldavis', 205), ('dortiz2', 199), ('omartin', 198), ('rsmith', 189), ('alongoria', 189), ('lramos', 188)] rare [('svc_meridian_support', 2)] nsingle 0
+v:4722:channel 1 [('Security', 46)]
+v:4722:domain 1 [('CBPWA', 46)]
+v:4722:event_id 1 [(4722, 46)]
+v:4722:host 2 [('GW-SRV-DC-02', 27), ('GW-SRV-DC-01', 19)]
+v:4722:level 1 [('information', 46)]
+v:4722:provider 1 [('Microsoft-Windows-Security-Auditing', 46)]
+v:4722:target_user 33 top [('wkowalski', 4), ('salvarez', 2), ('jbenavides', 2), ('mjohnson', 2), ('btrevino', 2), ('lyoung', 2)] rare [('salvarez', 2), ('jbenavides', 2), ('mjohnson', 2), ('btrevino', 2), ('lyoung', 2), ('lscott', 2), ('yguerra', 2), ('nadams', 2), ('hkowalski', 2), ('eruiz', 2), ('mmendoza', 1), ('ohernandez', 1), ('lshah2', 1), ('mtran', 1), ('rguerra', 1)] nsingle 22
+v:4722:user 10 [('dortiz2', 7), ('mvillarreal', 7), ('landerson', 7), ('alongoria', 6), ('lramos', 4), ('yallen', 4), ('cgarcia', 3), ('rsmith', 3), ('omartin', 3), ('ldavis', 2)]
+v:4725:channel 1 [('Security', 50)]
+v:4725:domain 2 [('CBPWA', 49), ('CBPWA-OT', 1)]
+v:4725:event_id 1 [(4725, 50)]
+v:4725:host 3 [('GW-SRV-DC-02', 28), ('GW-SRV-DC-01', 21), ('GW-SYS-JMP-01', 1)]
+v:4725:level 1 [('information', 50)]
+v:4725:provider 1 [('Microsoft-Windows-Security-Auditing', 50)]
+v:4725:target_user 35 top [('wkowalski', 4), ('salvarez', 2), ('mjohnson', 2), ('btrevino', 2), ('jbenavides', 2), ('lyoung', 2)] rare [('salvarez', 2), ('mjohnson', 2), ('btrevino', 2), ('jbenavides', 2), ('lyoung', 2), ('nmensah', 2), ('omartinez', 2), ('lscott', 2), ('yguerra', 2), ('hkowalski', 2), ('nadams', 2), ('eruiz', 2), ('mmendoza', 1), ('ohernandez', 1), ('lshah2', 1)] nsingle 22
+v:4725:user 11 [('landerson', 8), ('dortiz2', 7), ('mvillarreal', 7), ('alongoria', 6), ('yallen', 5), ('rsmith', 4), ('lramos', 4), ('cgarcia', 3), ('omartin', 3), ('ldavis', 2), ('GW-OPS-PEREZ', 1)]
+v:4728:channel 1 [('Security', 203)]
+v:4728:domain 1 [('CBPWA', 203)]
+v:4728:event_id 1 [(4728, 203)]
+v:4728:group 7 [('Helpdesk Operators', 37), ('Finance-Approvers', 30), ('SQL-Admins', 28), ('VPN-Users', 28), ('Storm-Response', 28), ('GIS-Editors', 26), ('Workstation Admins', 26)]
+v:4728:group_domain 1 [('CBPWA', 203)]
+v:4728:host 2 [('GW-SRV-DC-02', 110), ('GW-SRV-DC-01', 93)]
+v:4728:level 1 [('information', 203)]
+v:4728:provider 1 [('Microsoft-Windows-Security-Auditing', 203)]
+v:4728:src_host 11 [('GW-WS-IT-57', 26), ('GW-WS-IT-51', 25), ('GW-WS-IT-58', 25), ('GW-WS-IT-52', 24), ('GW-WS-IT-53', 21), ('GW-WS-IT-54', 19), ('GW-WS-IT-60', 19), ('GW-WS-IT-56', 17), ('GW-WS-IT-59', 13), ('GW-WS-IT-55', 13), ('GW-SRV-DC-01', 1)]
+v:4728:target_user 126 top [('alongoria', 6), ('rle', 4), ('npatel2', 4), ('jperez', 4), ('cjohnson', 3), ('mpatel', 3)] rare [('jlopez', 2), ('ashah', 2), ('psanchez', 2), ('egutierrez', 2), ('mcastillo', 2), ('lscott', 2), ('ltaylor', 2), ('acantu', 2), ('ldavis', 2), ('gzamora', 2), ('msanchez', 2), ('lshah', 2), ('tbrown', 2), ('rvela', 2), ('callen', 2)] nsingle 72
+v:4728:user 11 [('yallen', 26), ('alongoria', 25), ('omartin', 25), ('lramos', 24), ('mvillarreal', 21), ('rsmith', 19), ('ldavis', 19), ('landerson', 17), ('dortiz2', 13), ('cgarcia', 13), ('svc_ecm', 1)]
+v:4732:channel 1 [('Security', 204)]
+v:4732:domain 1 [('CBPWA', 204)]
+v:4732:event_id 1 [(4732, 204)]
+v:4732:group 3 [('Administrators', 72), ('Remote Desktop Users', 70), ('Power Users', 62)]
+v:4732:group_domain 10 [('GW-WS-IT-54', 30), ('GW-WS-IT-58', 25), ('GW-WS-IT-60', 25), ('GW-WS-IT-59', 22), ('GW-WS-IT-56', 21), ('GW-WS-IT-51', 17), ('GW-WS-IT-52', 17), ('GW-WS-IT-53', 16), ('GW-WS-IT-55', 16), ('GW-WS-IT-57', 15)]
+v:4732:host 10 [('GW-WS-IT-54', 30), ('GW-WS-IT-58', 25), ('GW-WS-IT-60', 25), ('GW-WS-IT-59', 22), ('GW-WS-IT-56', 21), ('GW-WS-IT-51', 17), ('GW-WS-IT-52', 17), ('GW-WS-IT-53', 16), ('GW-WS-IT-55', 16), ('GW-WS-IT-57', 15)]
+v:4732:level 1 [('information', 204)]
+v:4732:provider 1 [('Microsoft-Windows-Security-Auditing', 204)]
+v:4732:target_user 120 top [('bflores', 5), ('vkowalski', 5), ('dgonzalez', 4), ('ohernandez', 4), ('ahall', 4), ('msanchez', 4)] rare [('scantu', 2), ('snguyen', 2), ('ithomas', 2), ('mvasquez2', 2), ('salvarez', 2), ('awhite', 2), ('ltaylor', 2), ('klongoria', 2), ('tbrown', 2), ('vrodriguez', 2), ('lwilliams', 2), ('mpatel', 2), ('lwright', 2), ('dschroeder', 2), ('kjackson', 2)] nsingle 64
+v:4732:user 10 [('rsmith', 30), ('omartin', 25), ('ldavis', 25), ('dortiz2', 22), ('landerson', 21), ('alongoria', 17), ('lramos', 17), ('mvillarreal', 16), ('cgarcia', 16), ('yallen', 15)]
+v:4740:caller_computer 183 top [('GW-WS-OPS-02', 25), ('GW-WS-SOC-01', 23), ('GW-WS-OPS-04', 22), ('GW-WS-OPS-03', 22), ('GW-WS-OPS-05', 21), ('GW-WTP-HMI-01', 21)] rare [('GW-SRV-IVR-01', 2), ('GW-WS-IT-155', 2), ('GW-WS-IT-52', 2), ('GW-WS-IT-87', 2), ('GW-WS-IT-148', 2), ('GW-WS-IT-62', 2), ('GW-WS-IT-71', 2), ('GW-WS-IT-89', 2), ('GW-WS-IT-142', 2), ('GW-LT-FLD-132', 2), ('GW-WS-IT-14', 1), ('GW-LT-FLD-90', 1), ('GW-LT-FLD-127', 1), ('GW-WS-IT-49', 1)] nsingle 4
+v:4740:channel 1 [('Security', 1276)]
+v:4740:domain 1 [('CBPWA', 1276)]
+v:4740:event_id 1 [(4740, 1276)]
+v:4740:host 2 [('GW-SRV-DC-02', 658), ('GW-SRV-DC-01', 618)]
+v:4740:level 1 [('information', 1276)]
+v:4740:provider 1 [('Microsoft-Windows-Security-Auditing', 1276)]
+v:4740:target_user 190 top [('mtran', 16), ('kdiaz', 15), ('spena', 14), ('acantu', 14), ('falrasheedobinna', 14), ('dwilson', 14)] rare [('svc_ivr', 2), ('ltaylor', 2), ('lramos', 2), ('tpatel', 2), ('dramos', 2), ('ischroeder', 2), ('cdvorak', 2), ('nadams', 2), ('acastillo', 1), ('tvasquez', 1), ('imartin', 1)] nsingle 3
+v:4756:channel 1 [('Security', 220)]
+v:4756:domain 1 [('CBPWA', 220)]
+v:4756:event_id 1 [(4756, 220)]
+v:4756:group 3 [('All-Staff-Notify', 82), ('Contractors-External', 78), ('Field-Mobile-Users', 60)]
+v:4756:group_domain 1 [('CBPWA', 220)]
+v:4756:host 2 [('GW-SRV-DC-02', 113), ('GW-SRV-DC-01', 107)]
+v:4756:level 1 [('information', 220)]
+v:4756:provider 1 [('Microsoft-Windows-Security-Auditing', 220)]
+v:4756:src_host 10 [('GW-WS-IT-59', 32), ('GW-WS-IT-60', 26), ('GW-WS-IT-54', 26), ('GW-WS-IT-57', 25), ('GW-WS-IT-58', 24), ('GW-WS-IT-53', 21), ('GW-WS-IT-51', 21), ('GW-WS-IT-52', 18), ('GW-WS-IT-56', 15), ('GW-WS-IT-55', 12)]
+v:4756:target_user 126 top [('aallen', 6), ('hramos', 5), ('agreen', 4), ('ehernandez', 4), ('dgonzalez', 4), ('ejimenez', 4)] rare [('wgutierrez', 2), ('lshah', 2), ('mlongoria', 2), ('sclark', 2), ('mwalker', 2), ('vkowalski', 2), ('lramos', 2), ('rsmith', 2), ('slopez', 2), ('tramos', 2), ('rle', 2), ('jbenavides', 2), ('imiller', 2), ('cmoreno', 2), ('jlopez', 2)] nsingle 62
+v:4756:user 10 [('dortiz2', 32), ('ldavis', 26), ('rsmith', 26), ('yallen', 25), ('omartin', 24), ('mvillarreal', 21), ('alongoria', 21), ('lramos', 18), ('landerson', 15), ('cgarcia', 12)]
+v:4768:channel 1 [('Security', 23847)]
+v:4768:domain 2 [('CBPWA', 22943), ('CBPWA-OT', 904)]
+v:4768:event_id 1 [(4768, 23847)]
+v:4768:host 4 [('GW-SRV-DC-02', 11390), ('GW-SRV-DC-01', 11010), ('GW-SRV-OTDC-02', 733), ('GW-SRV-OTDC-01', 714)]
+v:4768:level 1 [('information', 23847)]
+v:4768:provider 1 [('Microsoft-Windows-Security-Auditing', 23847)]
+v:4768:service 1 [('krbtgt', 23847)]
+v:4768:src_ip 173 top [('10.72.2.12', 242), ('10.72.2.11', 241), ('10.72.2.13', 217), ('10.14.12.42', 215), ('10.14.12.41', 202), ('10.72.2.14', 194)] rare [] nsingle 0
+v:4768:status 1 [('0x0', 23847)]
+v:4768:user 347 top [('dchavez', 163), ('kdiaz', 153), ('mflores', 152), ('dmendoza', 152), ('mvasquez', 152), ('vthomas', 151)] rare [] nsingle 0
+v:4769:channel 1 [('Security', 46419)]
+v:4769:domain 2 [('CBPWA', 45374), ('CBPWA-OT', 1045)]
+v:4769:event_id 1 [(4769, 46419)]
+v:4769:host 4 [('GW-SRV-DC-02', 22750), ('GW-SRV-DC-01', 22056), ('GW-SRV-OTDC-02', 815), ('GW-SRV-OTDC-01', 798)]
+v:4769:level 1 [('information', 46419)]
+v:4769:provider 1 [('Microsoft-Windows-Security-Auditing', 46419)]
+v:4769:service 178 top [('ldap/gw-srv-dc-02', 5670), ('ldap/gw-srv-dc-01', 5521), ('cifs/gw-srv-file-02', 4724), ('cifs/gw-srv-file-01', 4642), ('cifs/gw-srv-print-01', 3718), ('MSSQLSvc/gw-srv-sql-01:1433', 968)] rare [('gw-ws-it-04$', 1)] nsingle 1
+v:4769:src_ip 174 top [('10.14.12.42', 542), ('10.14.12.41', 446), ('10.14.30.63', 366), ('10.14.30.35', 361), ('10.14.30.39', 360), ('10.14.30.62', 359)] rare [] nsingle 0
+v:4769:status 1 [('0x0', 46419)]
+v:4769:user 374 top [('rguerra', 306), ('dchavez', 302), ('dschroeder', 298), ('yguerra', 294), ('mvasquez', 292), ('aramirez', 291)] rare [('GW-ENG-GARZA', 2), ('GW-ENG-RUIZ', 2), ('GW-TEC-SHAH', 2), ('GW-WTR-SANCHEZ', 1), ('GW-ENG-SMITH', 1)] nsingle 2
+v:4771:channel 1 [('Security', 5122)]
+v:4771:domain 1 [('CBPWA', 5122)]
+v:4771:event_id 1 [(4771, 5122)]
+v:4771:host 2 [('GW-SRV-DC-02', 2656), ('GW-SRV-DC-01', 2466)]
+v:4771:level 1 [('information', 5122)]
+v:4771:outcome 1 [('failure', 5122)]
+v:4771:provider 1 [('Microsoft-Windows-Security-Auditing', 5122)]
+v:4771:src_ip 183 top [('10.72.2.12', 99), ('10.72.2.15', 90), ('10.14.12.41', 88), ('10.72.2.14', 87), ('10.72.30.41', 85), ('10.72.2.13', 84)] rare [] nsingle 0
+v:4771:status 1 [('0x18', 5122)]
+v:4771:user 190 top [('kdiaz', 64), ('mtran', 61), ('spena', 57), ('acantu', 56), ('falrasheedobinna', 56), ('awhite2', 56)] rare [] nsingle 0
+v:4800:channel 1 [('Security', 22457)]
+v:4800:domain 2 [('CBPWA', 17439), ('CBPWA-OT', 5018)]
+v:4800:event_id 1 [(4800, 22457)]
+v:4800:host 37 top [('GW-WS-OPS-02', 1349), ('GW-WS-OPS-01', 1344), ('GW-WS-OPS-03', 1207), ('GW-WS-OPS-05', 1089), ('GW-WS-OPS-04', 1064), ('GW-WTP-HMI-01', 1001)] rare [] nsingle 0
+v:4800:level 1 [('information', 22457)]
+v:4800:provider 1 [('Microsoft-Windows-Security-Auditing', 22457)]
+v:4800:user 50 top [('ldavis', 575), ('tpena', 550), ('ycantu', 536), ('omartin', 531), ('sanderson', 527), ('hvillarreal', 523)] rare [] nsingle 0
+v:4801:channel 1 [('Security', 22455)]
+v:4801:domain 2 [('CBPWA', 17439), ('CBPWA-OT', 5016)]
+v:4801:event_id 1 [(4801, 22455)]
+v:4801:host 37 top [('GW-WS-OPS-02', 1347), ('GW-WS-OPS-01', 1344), ('GW-WS-OPS-03', 1207), ('GW-WS-OPS-05', 1089), ('GW-WS-OPS-04', 1064), ('GW-WTP-HMI-01', 1001)] rare [] nsingle 0
+v:4801:level 1 [('information', 22455)]
+v:4801:provider 1 [('Microsoft-Windows-Security-Auditing', 22455)]
+v:4801:user 50 top [('ldavis', 575), ('tpena', 550), ('ycantu', 536), ('omartin', 531), ('sanderson', 527), ('hvillarreal', 523)] rare [] nsingle 0
+v:5140:channel 1 [('Security', 17198)]
+v:5140:domain 2 [('CBPWA', 16643), ('CBPWA-OT', 555)]
+v:5140:event_id 1 [(5140, 17198)]
+v:5140:host 7 [('GW-SRV-FILE-02', 3742), ('GW-SRV-PRINT-01', 3720), ('GW-SRV-FILE-01', 3703), ('GW-SRV-DC-02', 2727), ('GW-SRV-DC-01', 2686), ('GW-SRV-OT-01', 521), ('GW-SRV-HIST-DMZ', 99)]
+v:5140:level 1 [('information', 17198)]
+v:5140:provider 1 [('Microsoft-Windows-Security-Auditing', 17198)]
+v:5140:share 16 [('\\\\*\\IPC$', 3720), ('\\\\*\\SYSVOL', 3595), ('\\\\*\\NETLOGON', 1818), ('\\\\*\\drawings', 1313), ('\\\\*\\gis_exports', 1285), ('\\\\*\\standards', 1238), ('\\\\*\\finance', 770), ('\\\\*\\public', 746), ('\\\\*\\procurement', 733), ('\\\\*\\hr', 729), ('\\\\*\\customer_service', 725), ('\\\\*\\projects', 114), ('\\\\*\\wtp', 114), ('\\\\*\\relayconfigs', 107), ('\\\\*\\exports$', 99), ('\\\\*\\procedures', 92)]
+v:5140:src_ip 172 top [('10.14.12.42', 292), ('10.14.30.35', 203), ('10.14.12.41', 196), ('10.14.30.62', 195), ('10.14.30.63', 191), ('10.14.30.36', 189)] rare [] nsingle 0
+v:5140:user 362 top [('bflores', 180), ('mokafor', 176), ('hkowalski', 166), ('mmendoza', 164), ('lscott', 162), ('mjimenez', 159)] rare [('GW-ENG-GARZA', 2), ('GW-ENG-RUIZ', 2), ('GW-WTR-CANTU', 2), ('GW-TEC-SHAH', 2), ('GW-WTR-SANCHEZ', 1), ('GW-WTR-PENA', 1), ('GW-WTR-WHITE', 1), ('GW-ENG-SMITH', 1)] nsingle 4
+v:5145:access 2 [('ReadData', 22440), ('WriteData', 5022)]
+v:5145:channel 1 [('Security', 27462)]
+v:5145:domain 2 [('CBPWA', 25809), ('CBPWA-OT', 1653)]
+v:5145:event_id 1 [(5145, 27462)]
+v:5145:host 6 [('GW-SRV-FILE-02', 7471), ('GW-SRV-FILE-01', 7353), ('GW-SRV-DC-02', 5447), ('GW-SRV-DC-01', 5409), ('GW-SRV-OT-01', 1579), ('GW-SRV-HIST-DMZ', 203)]
+v:5145:level 1 [('information', 27462)]
+v:5145:path 1486 top [('logon.cmd', 3638), ('cbpwa.example\\Policies\\{4F5B7048-0000-0000-0000-H}\\gpt.ini', 539), ('cbpwa.example\\Policies\\{5773EC2D-0000-0000-0000-H}\\gpt.ini', 539), ('cbpwa.example\\Policies\\{DBE1EDC1-0000-0000-0000-H}\\gpt.ini', 539), ('cbpwa.example\\Policies\\{B2007537-0000-0000-0000-H}\\gpt.ini', 532), ('cbpwa.example\\Policies\\{5CD3E9B6-0000-0000-0000-H}\\gpt.ini', 529)] rare [('sub01\\11b9eec0.xlsx', 2), ('sub05\\e6f76fb9.xlsx', 2), ('sub03\\7d2d2e9a.xlsx', 2), ('sub03\\1174358f.xlsx', 2), ('sub05\\2116db35.docx', 2), ('sub03\\b72d514d.cfg', 2), ('exports\\feeder_summary_wk29.xlsx', 2), ('sub01\\deb139f4.docx', 2), ('sub01\\d82b58aa.xlsx', 2), ('reports\\9a36137e.docx', 2), ('sub05\\151566ab.cfg', 2), ('sub05\\bf81020e.cfg', 2), ('exports\\pump_runtime_20270725.csv', 2), ('reports\\2116db35.docx', 2), ('reports\\1174358f.xlsx', 2)] nsingle 870
+v:5145:provider 1 [('Microsoft-Windows-Security-Auditing', 27462)]
+v:5145:share 16 [('\\\\*\\SYSVOL', 7218), ('\\\\*\\NETLOGON', 3638), ('\\\\*\\drawings', 2661), ('\\\\*\\gis_exports', 2559), ('\\\\*\\standards', 2488), ('\\\\*\\finance', 1554), ('\\\\*\\public', 1471), ('\\\\*\\hr', 1451), ('\\\\*\\customer_service', 1442), ('\\\\*\\procurement', 1435), ('\\\\*\\relayconfigs', 411), ('\\\\*\\projects', 370), ('\\\\*\\wtp', 267), ('\\\\*\\procedures', 240), ('\\\\*\\exports$', 203), ('\\\\*\\setpoints', 54)]
+v:5145:src_ip 172 top [('10.14.12.42', 436), ('10.72.4.88', 324), ('10.72.1.41', 296), ('10.14.30.62', 291), ('10.14.30.35', 280), ('10.14.30.63', 276)] rare [] nsingle 0
+v:5145:user 364 top [('bflores', 278), ('mokafor', 231), ('hkowalski', 225), ('lscott', 225), ('mjimenez', 220), ('aadams', 207)] rare [('GW-WTR-WRIGHT', 1)] nsingle 1
+##### system sep {'nosp': 21091}
+  shape 1117 1074|time_utc,host,channel,provider,event_id,record_id,level,user,process,reason,shutdown_type
+  shape 1254 6005|time_utc,host,channel,provider,event_id,record_id,level,message
+  shape 1117 6006|time_utc,host,channel,provider,event_id,record_id,level,message
+  shape 137 6008|time_utc,host,channel,provider,event_id,record_id,level,message
+  shape 15886 7036|time_utc,host,channel,provider,event_id,record_id,level,service_name,state
+  shape 1580 7045|time_utc,host,channel,provider,event_id,record_id,level,service_name,image_path,service_type,start_type,account
+v:1074:channel 1 [('System', 1117)]
+v:1074:event_id 1 [(1074, 1117)]
+v:1074:host 236 top [('GW-WS-IT-121', 6), ('GW-WS-SOC-03', 6), ('GW-WS-IT-72', 6), ('GW-WS-IT-16', 6), ('GW-WS-IT-147', 6), ('GW-WS-IT-69', 6)] rare [('GW-WS-IT-04', 2), ('GW-SRV-HIST-DMZ', 2), ('GW-SRV-HIST-03', 2), ('GW-WTR03-HMI', 2), ('GW-SUB05-HMI', 2), ('GW-WS-ENG-05', 2), ('GW-GEN01-HMI', 2), ('GW-WTP-LAB-01', 2), ('GW-SRV-OTBKP-01', 2), ('GW-SUB03-HMI', 2), ('GW-SRV-ICCP-01', 2), ('GW-SYS-SCADA-02', 2), ('GW-SUB04-HMI', 2), ('GW-WS-BCC-01', 2), ('GW-SRV-HIST-02', 2)] nsingle 2
+v:1074:level 1 [('information', 1117)]
+v:1074:process 2 [('C:\\Windows\\servicing\\TrustedInstaller.exe', 1116), ('C:\\Windows\\System32\\shutdown.exe', 1)]
+v:1074:provider 1 [('User32', 1117)]
+v:1074:reason 2 [('Operating System: Service pack (Planned)', 1116), ('Other (Planned)', 1)]
+v:1074:shutdown_type 2 [('restart', 1116), ('power off', 1)]
+v:1074:user 1 [('SYSTEM', 1117)]
+v:6005:channel 1 [('System', 1254)]
+v:6005:event_id 1 [(6005, 1254)]
+v:6005:host 236 top [('GW-WS-IT-121', 7), ('GW-WS-IT-72', 7), ('GW-WS-IT-16', 7), ('GW-WS-IT-147', 7), ('GW-WS-IT-64', 7), ('GW-WS-IT-41', 7)] rare [('GW-SRV-HIST-03', 2), ('GW-SRV-HIST-DMZ', 2), ('GW-WTR03-HMI', 2), ('GW-SUB05-HMI', 2), ('GW-WS-ENG-05', 2), ('GW-WTP-LAB-01', 2), ('GW-GEN01-HMI', 2), ('GW-SRV-OTBKP-01', 2), ('GW-SUB03-HMI', 2), ('GW-SRV-ICCP-01', 2), ('GW-SYS-SCADA-02', 2), ('GW-SUB04-HMI', 2), ('GW-WS-BCC-01', 2), ('GW-SRV-HIST-02', 2), ('GW-WTP-HMI-02', 2)] nsingle 2
+v:6005:level 1 [('information', 1254)]
+v:6005:message 1 [('The Event log service was started.', 1254)]
+v:6005:provider 1 [('EventLog', 1254)]
+v:6006:channel 1 [('System', 1117)]
+v:6006:event_id 1 [(6006, 1117)]
+v:6006:host 236 top [('GW-WS-IT-121', 6), ('GW-WS-SOC-03', 6), ('GW-WS-IT-72', 6), ('GW-WS-IT-16', 6), ('GW-WS-IT-147', 6), ('GW-WS-IT-69', 6)] rare [('GW-WS-IT-04', 2), ('GW-SRV-HIST-DMZ', 2), ('GW-SRV-HIST-03', 2), ('GW-WTR03-HMI', 2), ('GW-SUB05-HMI', 2), ('GW-WS-ENG-05', 2), ('GW-GEN01-HMI', 2), ('GW-WTP-LAB-01', 2), ('GW-SRV-OTBKP-01', 2), ('GW-SUB03-HMI', 2), ('GW-SRV-ICCP-01', 2), ('GW-SYS-SCADA-02', 2), ('GW-SUB04-HMI', 2), ('GW-WS-BCC-01', 2), ('GW-SRV-HIST-02', 2)] nsingle 2
+v:6006:level 1 [('information', 1117)]
+v:6006:message 1 [('The Event log service was stopped.', 1117)]
+v:6006:provider 1 [('EventLog', 1117)]
+v:6008:channel 1 [('System', 137)]
+v:6008:event_id 1 [(6008, 137)]
+v:6008:host 137 top [('GW-WS-IT-141', 1), ('GW-LT-FLD-92', 1), ('GW-WS-IT-156', 1), ('GW-WS-IT-135', 1), ('GW-LT-FLD-110', 1), ('GW-LT-FLD-103', 1)] rare [('GW-WS-IT-141', 1), ('GW-LT-FLD-92', 1), ('GW-WS-IT-156', 1), ('GW-WS-IT-135', 1), ('GW-LT-FLD-110', 1), ('GW-LT-FLD-103', 1), ('GW-WS-IT-101', 1), ('GW-WS-IT-136', 1), ('GW-LT-FLD-93', 1), ('GW-WS-IT-05', 1), ('GW-LT-FLD-124', 1), ('GW-LT-FLD-96', 1), ('GW-LT-FLD-102', 1), ('GW-LT-FLD-98', 1), ('GW-WS-IT-03', 1)] nsingle 137
+v:6008:level 1 [('error', 137)]
+v:6008:message 1 [('The previous system shutdown was unexpected.', 137)]
+v:6008:provider 1 [('EventLog', 137)]
+v:7036:channel 1 [('System', 15886)]
+v:7036:event_id 1 [(7036, 15886)]
+v:7036:host 236 top [('GW-WS-IT-21', 101), ('GW-SRV-SQL-01', 98), ('GW-WS-IT-23', 98), ('GW-LT-FLD-116', 97), ('GW-WS-IT-144', 91), ('GW-WS-IT-149', 90)] rare [] nsingle 0
+v:7036:level 1 [('information', 15886)]
+v:7036:provider 1 [('Service Control Manager', 15886)]
+v:7036:service_name 82 top [('Windows Update', 2956), ('Background Intelligent Transfer Service', 1708), ('Windows Modules Installer', 1704), ('Portable Device Enumerator Service', 1676), ('Software Protection', 1664), ('Windows Installer', 1590)] rare [('Sabal Helper Service', 2), ('Marlin Sync Service', 2), ('Aransas Update Service', 2), ('Mesquite License Service', 2), ('Redfish Monitor Service', 2), ('Saltgrass Update Service', 2), ('Brazos License Service', 2), ('Saltgrass Helper Service', 2), ('Mesquite Sync Service', 2), ('Baypoint Update Service', 2), ('Tidewater Sync Service', 2), ('Marlin Monitor Service', 2), ('Nueces License Service', 2), ('Padre Update Service', 2), ('Gulfline Monitor Service', 2)] nsingle 45
+v:7036:state 2 [('running', 9360), ('stopped', 6526)]
+v:7045:account 1 [('LocalSystem', 1580)]
+v:7045:channel 1 [('System', 1580)]
+v:7045:event_id 1 [(7045, 1580)]
+v:7045:host 236 top [('GW-WS-IT-99', 10), ('GW-WS-IT-36', 9), ('GW-LT-FLD-92', 9), ('GW-WS-IT-154', 9), ('GW-LT-FLD-103', 9), ('GW-WS-IT-46', 9)] rare [] nsingle 0
+v:7045:image_path 42 top [('C:\\Program Files\\EndpointAgent\\epagent.exe', 678), ('C:\\Program Files\\Vantage Security\\Collector\\vscollect.exe', 641), ('C:\\Windows\\System32\\spool\\drivers\\x64\\3\\prnhost.exe', 86), ('C:\\Program Files\\BackupAgent\\bkagent.exe', 52), ('C:\\Program Files\\Meridian Controls\\OpConsole\\OpConsole.exe', 20), ('C:\\Program Files\\Aransas\\aransassvc.exe', 7)] rare [('C:\\ProgramData\\Padre\\padresvc.exe', 2), ('C:\\ProgramData\\Baypoint\\baypointsvc.exe', 2), ('C:\\Program Files\\Saltgrass\\saltgrasssvc.exe', 2), ('C:\\Program Files\\Pelican\\pelicansvc.exe', 2), ('C:\\Program Files\\Padre\\padresvc.exe', 2), ('C:\\ProgramData\\Tidewater\\tidewatersvc.exe', 2), ('C:\\Program Files\\Heron\\heronsvc.exe', 2), ('C:\\ProgramData\\PumpWorks\\Monitor\\pwmetrics.exe', 1), ('C:\\ProgramData\\Redfish\\redfishsvc.exe', 1), ('C:\\Program Files\\SafeCheck\\scupdate.exe', 1), ('C:\\ProgramData\\OutageView\\Feeds\\radarfeed.exe', 1), ('C:\\ProgramData\\VantageTelemetry\\vstelemetry.exe', 1), ('C:\\ProgramData\\Heron\\heronsvc.exe', 1), ('C:\\ProgramData\\DocSignFlow\\dsfstatus.exe', 1), ('C:\\ProgramData\\Mesquite\\mesquitesvc.exe', 1)] nsingle 11
+v:7045:level 1 [('information', 1580)]
+v:7045:provider 1 [('Service Control Manager', 1580)]
+v:7045:service_name 74 top [('Endpoint Protection Agent', 678), ('Vantage Collector Service', 641), ('Print Driver Host', 86), ('Backup Agent Service', 52), ('Meridian Console Bridge', 20), ('Aransas Monitor Service', 4)] rare [('Sabal Helper Service', 2), ('Marlin Sync Service', 2), ('Aransas Update Service', 2), ('Mesquite License Service', 2), ('Redfish Monitor Service', 2), ('Saltgrass Update Service', 2), ('Brazos License Service', 2), ('Saltgrass Helper Service', 2), ('Mesquite Sync Service', 2), ('Baypoint Update Service', 2), ('Tidewater Sync Service', 2), ('Marlin Monitor Service', 2), ('Nueces License Service', 2), ('Padre Update Service', 2), ('Gulfline Monitor Service', 2)] nsingle 45
+v:7045:service_type 1 [('user mode service', 1580)]
+v:7045:start_type 1 [('auto start', 1580)]
+##### defender sep {'nosp': 15289}
+  shape 2354 1001|time_utc,host,channel,provider,event_id,record_id,level,scan_type,result
+  shape 4439 1116|time_utc,host,channel,provider,event_id,record_id,level,user,path,threat_name,severity
+  shape 4439 1117|time_utc,host,channel,provider,event_id,record_id,level,user,path,threat_name,action
+  shape 3250 2000|time_utc,host,channel,provider,event_id,record_id,level,engine_version,signature_version
+  shape 746 5000|time_utc,host,channel,provider,event_id,record_id,level,user,detail
+  shape 61 5001|time_utc,host,channel,provider,event_id,record_id,level,user,detail
+v:1001:channel 1 [('Microsoft-Windows-Windows Defender/Operational', 2354)]
+v:1001:event_id 1 [(1001, 2354)]
+v:1001:host 167 top [('GW-WS-IT-70', 26), ('GW-WS-IT-145', 25), ('GW-LT-FLD-102', 25), ('GW-WS-IT-121', 25), ('GW-WS-IT-163', 24), ('GW-WS-IT-50', 24)] rare [] nsingle 0
+v:1001:level 1 [('information', 2354)]
+v:1001:provider 1 [('Microsoft-Windows-Windows Defender', 2354)]
+v:1001:result 1 [('0 threats', 2354)]
+v:1001:scan_type 1 [('Quick', 2354)]
+v:1116:channel 1 [('Microsoft-Windows-Windows Defender/Operational', 4439)]
+v:1116:event_id 1 [(1116, 4439)]
+v:1116:host 167 top [('GW-WS-SOC-02', 77), ('GW-WS-SOC-01', 73), ('GW-WS-IT-45', 46), ('GW-WS-IT-28', 46), ('GW-WS-IT-47', 46), ('GW-WS-IT-37', 45)] rare [('GW-WS-IT-160', 2), ('GW-WS-IT-163', 2), ('GW-WS-IT-159', 1), ('GW-WS-IT-04', 1), ('GW-WS-IT-161', 1), ('GW-WS-IT-158', 1)] nsingle 4
+v:1116:level 1 [('warning', 4439)]
+v:1116:path 4439 top [('C:\\Users\\Public\\Downloads\\942584c85.exe', 1), ('C:\\Users\\Public\\Downloads\\1c3370e0e.exe', 1), ('C:\\Users\\Public\\Downloads\\3272ec192.exe', 1), ('C:\\Users\\Public\\Downloads\\1efd80710.exe', 1), ('C:\\Users\\kjimenez\\Downloads\\c69fc01b1.exe', 1), ('C:\\Users\\bruiz\\Downloads\\955b42485.exe', 1)] rare [('C:\\Users\\Public\\Downloads\\942584c85.exe', 1), ('C:\\Users\\Public\\Downloads\\1c3370e0e.exe', 1), ('C:\\Users\\Public\\Downloads\\3272ec192.exe', 1), ('C:\\Users\\Public\\Downloads\\1efd80710.exe', 1), ('C:\\Users\\kjimenez\\Downloads\\c69fc01b1.exe', 1), ('C:\\Users\\bruiz\\Downloads\\955b42485.exe', 1), ('C:\\Users\\dgomez\\Downloads\\5b8a533e8.exe', 1), ('C:\\Users\\rtran\\Downloads\\c34730482.exe', 1), ('C:\\Users\\dgonzalez\\Downloads\\b84b29138.exe', 1), ('C:\\Users\\mvasquez\\Downloads\\6cb292836.exe', 1), ('C:\\Users\\msanchez\\Downloads\\7a0d6ccd9.exe', 1), ('C:\\Users\\sanderson\\Downloads\\d60aa436b.exe', 1), ('C:\\Users\\acastillo\\Downloads\\9db3392cd.exe', 1), ('C:\\Users\\ssanchez\\Downloads\\7596c60a6.exe', 1), ('C:\\Users\\dwilson\\Downloads\\bb393852b.exe', 1)] nsingle 4439
+v:1116:provider 1 [('Microsoft-Windows-Windows Defender', 4439)]
+v:1116:severity 1 [('Low', 4439)]
+v:1116:threat_name 8 [('PUA:Win32/Toolbar', 743), ('PUA:Win32/DownloadManager', 731), ('PUA:Win32/CouponHelper', 726), ('PUA:Win32/PCOptimizer', 711), ('PUA:Win32/BundleInstaller', 709), ('PUA:Win32/SearchAssist', 691), ('Adware:Win32/SearchTab', 66), ('PUA:Win32/DriverUpdater', 62)]
+v:1116:user 162 top [('SYSTEM', 289), ('dchavez', 44), ('eruiz', 43), ('dmendoza', 43), ('lguerra', 43), ('mjohnson', 42)] rare [] nsingle 0
+v:1117:action 1 [('Quarantine', 4439)]
+v:1117:channel 1 [('Microsoft-Windows-Windows Defender/Operational', 4439)]
+v:1117:event_id 1 [(1117, 4439)]
+v:1117:host 167 top [('GW-WS-SOC-02', 77), ('GW-WS-SOC-01', 73), ('GW-WS-IT-45', 46), ('GW-WS-IT-28', 46), ('GW-WS-IT-47', 46), ('GW-WS-IT-37', 45)] rare [('GW-WS-IT-160', 2), ('GW-WS-IT-163', 2), ('GW-WS-IT-159', 1), ('GW-WS-IT-04', 1), ('GW-WS-IT-161', 1), ('GW-WS-IT-158', 1)] nsingle 4
+v:1117:level 1 [('information', 4439)]
+v:1117:path 4439 top [('C:\\Users\\Public\\Downloads\\942584c85.exe', 1), ('C:\\Users\\Public\\Downloads\\1c3370e0e.exe', 1), ('C:\\Users\\Public\\Downloads\\3272ec192.exe', 1), ('C:\\Users\\Public\\Downloads\\1efd80710.exe', 1), ('C:\\Users\\kjimenez\\Downloads\\c69fc01b1.exe', 1), ('C:\\Users\\bruiz\\Downloads\\955b42485.exe', 1)] rare [('C:\\Users\\Public\\Downloads\\942584c85.exe', 1), ('C:\\Users\\Public\\Downloads\\1c3370e0e.exe', 1), ('C:\\Users\\Public\\Downloads\\3272ec192.exe', 1), ('C:\\Users\\Public\\Downloads\\1efd80710.exe', 1), ('C:\\Users\\kjimenez\\Downloads\\c69fc01b1.exe', 1), ('C:\\Users\\bruiz\\Downloads\\955b42485.exe', 1), ('C:\\Users\\dgomez\\Downloads\\5b8a533e8.exe', 1), ('C:\\Users\\rtran\\Downloads\\c34730482.exe', 1), ('C:\\Users\\dgonzalez\\Downloads\\b84b29138.exe', 1), ('C:\\Users\\mvasquez\\Downloads\\6cb292836.exe', 1), ('C:\\Users\\msanchez\\Downloads\\7a0d6ccd9.exe', 1), ('C:\\Users\\sanderson\\Downloads\\d60aa436b.exe', 1), ('C:\\Users\\acastillo\\Downloads\\9db3392cd.exe', 1), ('C:\\Users\\ssanchez\\Downloads\\7596c60a6.exe', 1), ('C:\\Users\\dwilson\\Downloads\\bb393852b.exe', 1)] nsingle 4439
+v:1117:provider 1 [('Microsoft-Windows-Windows Defender', 4439)]
+v:1117:threat_name 8 [('PUA:Win32/Toolbar', 743), ('PUA:Win32/DownloadManager', 731), ('PUA:Win32/CouponHelper', 726), ('PUA:Win32/PCOptimizer', 711), ('PUA:Win32/BundleInstaller', 709), ('PUA:Win32/SearchAssist', 691), ('Adware:Win32/SearchTab', 66), ('PUA:Win32/DriverUpdater', 62)]
+v:1117:user 162 top [('SYSTEM', 289), ('dchavez', 44), ('eruiz', 43), ('dmendoza', 43), ('lguerra', 43), ('mjohnson', 42)] rare [] nsingle 0
+v:2000:channel 1 [('Microsoft-Windows-Windows Defender/Operational', 3250)]
+v:2000:engine_version 27 top [('4.18.2402', 157), ('4.18.2401', 146), ('4.18.2407', 143), ('4.18.2415', 138), ('4.18.2413', 135), ('4.18.2406', 134)] rare [] nsingle 0
+v:2000:event_id 1 [(2000, 3250)]
+v:2000:host 167 top [('GW-WS-IT-154', 32), ('GW-WS-SOC-04', 30), ('GW-WS-IT-41', 30), ('GW-WS-IT-69', 30), ('GW-WS-IT-65', 28), ('GW-WS-IT-118', 28)] rare [] nsingle 0
+v:2000:level 1 [('information', 3250)]
+v:2000:provider 1 [('Microsoft-Windows-Windows Defender', 3250)]
+v:2000:signature_version 350 top [('1.417.2723.0', 22), ('1.417.1544.0', 20), ('1.417.2732.0', 19), ('1.417.3052.0', 18), ('1.417.344.0', 18), ('1.417.2897.0', 18)] rare [('1.417.1064.0', 2), ('1.417.1498.0', 2), ('1.417.1542.0', 1)] nsingle 1
+v:5000:channel 1 [('Microsoft-Windows-Windows Defender/Operational', 746)]
+v:5000:detail 2 [('policy refresh', 728), ('setting changed locally', 18)]
+v:5000:event_id 1 [(5000, 746)]
+v:5000:host 167 top [('GW-WS-IT-158', 11), ('GW-WS-IT-29', 9), ('GW-WS-IT-157', 9), ('GW-WS-IT-39', 9), ('GW-WS-IT-142', 9), ('GW-WS-IT-87', 9)] rare [('GW-WS-IT-162', 2), ('GW-LT-FLD-111', 2), ('GW-WS-IT-35', 2), ('GW-WS-IT-58', 2), ('GW-WS-IT-65', 2), ('GW-LT-FLD-137', 2), ('GW-WS-IT-100', 2), ('GW-WS-IT-50', 2), ('GW-WS-IT-161', 2), ('GW-WS-IT-25', 2), ('GW-WTP-LAB-01', 2), ('GW-WS-IT-159', 2), ('GW-LT-FLD-128', 2), ('GW-WS-IT-149', 2), ('GW-WS-IT-106', 2)] nsingle 8
+v:5000:level 1 [('information', 746)]
+v:5000:provider 1 [('Microsoft-Windows-Windows Defender', 746)]
+v:5000:user 1 [('SYSTEM', 746)]
+v:5001:channel 1 [('Microsoft-Windows-Windows Defender/Operational', 61)]
+v:5001:detail 2 [('setting changed locally', 40), ('disabled by management task', 21)]
+v:5001:event_id 1 [(5001, 61)]
+v:5001:host 51 top [('GW-WS-IT-142', 3), ('GW-LT-FLD-140', 2), ('GW-WS-IT-34', 2), ('GW-WS-IT-83', 2), ('GW-WS-IT-35', 2), ('GW-WS-IT-95', 2)] rare [('GW-LT-FLD-140', 2), ('GW-WS-IT-34', 2), ('GW-WS-IT-83', 2), ('GW-WS-IT-35', 2), ('GW-WS-IT-95', 2), ('GW-WS-IT-39', 2), ('GW-WS-IT-36', 2), ('GW-WS-IT-57', 2), ('GW-WS-IT-108', 1), ('GW-WS-IT-30', 1), ('GW-WS-IT-148', 1), ('GW-LT-FLD-92', 1), ('GW-LT-FLD-110', 1), ('GW-WS-IT-18', 1), ('GW-WS-IT-03', 1)] nsingle 42
+v:5001:level 1 [('information', 61)]
+v:5001:provider 1 [('Microsoft-Windows-Windows Defender', 61)]
+v:5001:user 35 top [('svc_edr', 11), ('svc_ecm', 10), ('jmoreno', 2), ('cdvorak', 2), ('btrevino', 2), ('psalinas', 2)] rare [('jmoreno', 2), ('cdvorak', 2), ('btrevino', 2), ('psalinas', 2), ('omartinez', 2), ('abenavides', 2), ('yallen', 2), ('klongoria', 1), ('awhite2', 1), ('kjackson', 1), ('treyes', 1), ('dgonzalez', 1), ('lshah', 1), ('aclark', 1), ('acastillo2', 1)] nsingle 26

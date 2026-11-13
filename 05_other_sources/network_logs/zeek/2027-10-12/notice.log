@@ -6,6 +6,5 @@
 #open	2027-10-12-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1823325058.506558	-	10.14.30.51	96.165.16.240	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1823326290.324022	-	10.14.21.14	162.204.194.173	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1823341057.470396	-	10.14.30.30	199.178.18.12	443	Conn::Content_Gap	api.pipefittings-direct.com content gap (369 bytes missing)	10.14.30.30	199.178.18.12	443	Notice::ACTION_LOG
 #close	2027-10-13-00-00-00

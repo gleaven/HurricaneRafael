@@ -1,0 +1,169 @@
+
+### system nunique=1
+month          2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+system                                                                      
+EXT-NASLOG-02      791     2223     1330     1484     1552     1544      648
+
+### client_network nunique=15
+month           2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+client_network                                                               
+ASN 11427            19       21       48       31       42       33       16
+ASN 20057            14       28       31       31       34       41       20
+ASN 21928            20       33       34       31       26       33       19
+ASN 22773            18       36       40       34       41       35       17
+ASN 64497             2        2        6        2       12        3        0
+ASN 64498             1        3        3        3        1        6        0
+ASN 64501             0        5        2        1        0        3        1
+ASN 64502             1        1        2        3        2        2        0
+ASN 64505             0        2        1        3        5        1        2
+ASN 64506             1        2        2        2        0        4        0
+ASN 64508             2        1        2        2        4        1        2
+ASN 64509             1        5        1        4        5        5        1
+ASN 64512             0      680        0        0        0        0        0
+ASN 7018             21       29       41       34       44       42       17
+base network        691     1375     1117     1303     1336     1335      553
+
+### method nunique=2
+month   2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+method                                                               
+GET         595     1598      989     1072     1152     1131      486
+POST        196      625      341      412      400      413      162
+
+### path nunique=19
+month                      2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+path                                                                                    
+/                               15       32       43       29       31       32       11
+/.well-known/security.txt        0       73        0        0        0        0        0
+/account/recover                 0       61        0        0        0        0        0
+/account/register                0       89        0        0        0        0        0
+/admin                           0       57        0        0        0        0        0
+/api/v1/session                  0       73        0        0        0        0        0
+/contact                        18       27       32       31       42       26       23
+/fuel/requests                 146      287      189      273      264      274      103
+/help                           21       32       34       32       32       39       15
+/help/contact                    0       60        0        0        0        0        0
+/inventory                     143      246      231      276      284      259      112
+/login                         163      376      267      289      290      305      114
+/login.aspx                      0       63        0        0        0        0        0
+/orders                        125      279      234      261      297      272      109
+/owa                             0       59        0        0        0        0        0
+/reports/daily                 126      291      233      234      241      259      130
+/robots.txt                     16       24       27       26       36       39       12
+/status                          0       68        0        0        0        0        0
+/suppliers                      18       26       40       33       35       39       19
+
+### status nunique=3
+month   2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+status                                                               
+200         766     1850     1309     1450     1516     1514      629
+401          25      257       21       34       36       30       19
+404           0      116        0        0        0        0        0
+
+### event nunique=3
+month          2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+event                                                                       
+login_failed        25      257       21       34       36       30       19
+login_success      666     1331     1096     1269     1300     1305      534
+page_view          100      635      213      181      216      209       95
+
+### user_agent_family nunique=10
+month              2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+user_agent_family                                                               
+Chrome/Android          11       14       23       27       26       21       11
+Chrome/Windows          14       23       27       15       21       27       12
+Edge/Windows           701     1390     1141     1329     1362     1364      563
+Firefox/Windows         17       25       21       28       28       30       12
+Safari/iOS               9       21       23       18       20       13        8
+Safari/macOS             6       13       30       19       22       20        9
+Samsung/Android          9       25       18       18       21       20        9
+crawler                 24       32       47       30       52       49       24
+curl                     0      227        0        0        0        0        0
+python-requests          0      453        0        0        0        0        0
+
+### event x status
+status          200  401  404
+event                        
+login_failed      0  422    0
+login_success  7501    0    0
+page_view      1533    0  116
+
+### path x event
+event                      login_failed  login_success  page_view
+path                                                             
+/                                     0              0        193
+/.well-known/security.txt             0              0         73
+/account/recover                      0              0         61
+/account/register                     0              0         89
+/admin                                0              0         57
+/api/v1/session                      73              0          0
+/contact                              0              0        199
+/fuel/requests                       45           1491          0
+/help                                 0              0        205
+/help/contact                         0              0         60
+/inventory                           38           1513          0
+/login                              117           1492        195
+/login.aspx                          63              0          0
+/orders                              57           1520          0
+/owa                                  0              0         59
+/reports/daily                       29           1485          0
+/robots.txt                           0              0        180
+/status                               0              0         68
+/suppliers                            0              0        210
+
+### path x method
+method                      GET  POST
+path                                 
+/                           193     0
+/.well-known/security.txt    73     0
+/account/recover             61     0
+/account/register            89     0
+/admin                       57     0
+/api/v1/session               0    73
+/contact                    199     0
+/fuel/requests             1083   453
+/help                       205     0
+/help/contact                60     0
+/inventory                 1088   463
+/login                     1246   558
+/login.aspx                   0    63
+/orders                    1106   471
+/owa                         59     0
+/reports/daily             1046   468
+/robots.txt                 180     0
+/status                      68     0
+/suppliers                  210     0
+
+### client_network x event
+event           login_failed  login_success  page_view
+client_network                                        
+ASN 11427                  0              0        210
+ASN 20057                  0              0        199
+ASN 21928                  0              0        196
+ASN 22773                  0              0        221
+ASN 64497                  0              0         27
+ASN 64498                  0              0         17
+ASN 64501                  0              0         12
+ASN 64502                  0              0         11
+ASN 64505                  0              0         14
+ASN 64506                  0              0         11
+ASN 64508                  0              0         14
+ASN 64509                  0              0         22
+ASN 64512                213              0        467
+ASN 7018                   0              0        228
+base network             209           7501          0
+
+### ua x client_network
+client_network     ASN 11427  ASN 20057  ASN 21928  ASN 22773  ASN 64497  ASN 64498  ASN 64501  ASN 64502  ASN 64505  ASN 64506  ASN 64508  ASN 64509  ASN 64512  ASN 7018  base network
+user_agent_family                                                                                                                                                                       
+Chrome/Android            22         30         20         23          0          0          0          4          2          0          2          1          0        29             0
+Chrome/Windows            31         17         23         22          5          4          1          1          3          1          0          3          0        28             0
+Edge/Windows              18         22         20         32          4          3          3          0          3          2          1          3          0        29          7710
+Firefox/Windows           30         21         26         31          5          3          3          1          1          2          3          6          0        29             0
+Safari/iOS                20         17         26         22          2          1          0          0          0          1          1          1          0        21             0
+Safari/macOS              22         25         18         24          5          0          1          1          1          1          3          1          0        17             0
+Samsung/Android           20         22         17         23          0          0          2          1          2          1          1          2          0        29             0
+crawler                   47         45         46         44          6          6          2          3          2          3          3          5          0        46             0
+curl                       0          0          0          0          0          0          0          0          0          0          0          0        227         0             0
+python-requests            0          0          0          0          0          0          0          0          0          0          0          0        453         0             0
+account_ref nunique 289  empty 1649
+client_ip nunique 6492

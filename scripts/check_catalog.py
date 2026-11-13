@@ -112,8 +112,11 @@ def main():
     folder_cols = {}
     for fo in folder_text:
         seen, cols, base = set(), set(), set()
+        nested = [x + "/" for x in folder_text if x != fo and x.startswith(fo + "/")]      # sub-folders with a schema of their own
         for f in sorted(glob.glob(fo + "/**/*", recursive=True)):
             if not f.endswith((".csv", ".log", ".jsonl")) or os.path.basename(f).startswith("_"):
+                continue
+            if any(f.replace("\\", "/").startswith(x) for x in nested):
                 continue
             base.add(os.path.basename(f))
             key = re.sub(r"\d{4}-?\d{2}(-\d{2})?", "", f)

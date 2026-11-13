@@ -6,4 +6,7 @@
 #open	2027-09-27-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
+1822025763.007379	-	10.14.22.36	104.198.18.183	80	HTTP::Unusual_User_Agent	www-2.generator-parts.net user agent not seen before on this network	10.14.22.36	104.198.18.183	80	Notice::ACTION_LOG
+1822038725.605510	-	10.14.30.53	185.204.29.50	443	Conn::Content_Gap	cdn.cloudstorage-sync.com content gap (722 bytes missing)	10.14.30.53	185.204.29.50	443	Notice::ACTION_LOG
+1822077411.011310	-	10.14.22.31	10.14.10.5	53	DNS::External_Name	gis-preview.cbpwa-services.org is pointing to a local host	10.14.22.31	10.14.10.5	53	Notice::ACTION_LOG
 #close	2027-09-28-00-00-00

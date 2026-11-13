@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "purpose": "The controlled list of data streams. MSEL observed_in entries, stream generators, validators and the knowledge graph use these stream_id values and no others.",
  "clock": {
   "d0_epoch_utc_midnight": 1820880000,
@@ -1333,14 +1333,14 @@
     "T18"
    ],
    "expected_observation_count": 8,
-   "notes": "Monthly alert files plus rule_changes.csv and daily_summary.csv. Starts 2027-07-16."
+   "notes": "Monthly alert files plus rule_changes.csv and daily_summary.csv. Alerts about a person name someone who is at work on the machine they are logged on to. Alerts about historian bulk reads, monitored file writes and alarm-suppression changes correspond one to one to rows of the audit tables (the daily re-evaluation alerts raised while the suppression list is over its threshold have no row of their own); alerts about a new VPN location or a remote-desktop logon outside a person's listed hours correspond to a row of the employee VPN table and a Windows logon; the raw records behind the other alerts are in the Zeek, firewall, web-filter, Windows event, endpoint and mail-gateway logs. Alerts are closed by the security team's members while they are on shift, by rule (automatic acknowledgement, storm-mode bulk dismissal), or remain open. Alerts from control-network sources raised while the control network was cut off (2027-10-12 to 2027-10-19) reached the SIEM at reconnection and keep their event time; the device-availability rules for those sources did not run in that period."
   },
   {
    "stream_id": "zeek_logs",
    "name": "Network connection logs",
    "delivered": true,
    "path_glob": "05_other_sources/network_logs/zeek/*/*.log",
-   "format": "Zeek conn, dns and notice TSV with OT protocol notices",
+   "format": "Zeek TSV logs: conn, dns, ssl, http, files, x509 and notice",
    "key_columns": {
     "time": "ts (epoch seconds, UTC)",
     "entity_ids": [
@@ -1359,21 +1359,21 @@
      119
     ]
    },
-   "cadence": "one folder per UTC day: conn, dns, ssl, notice",
+   "cadence": "one folder per UTC day: conn, dns, ssl, http, files, x509, notice",
    "threads": [
     "T8",
     "T10",
     "T18"
    ],
    "expected_observation_count": 4,
-   "notes": "Background flows are sampled 1 in 200; flows involving hosts with alerts or remote sessions are complete. dns.log rows share their uid with the UDP/53 row in conn.log. Endpoints are in id.orig_h / id.resp_h. External addresses and names are invented. Starts 2027-07-16."
+   "notes": "Sampling rule for all network_logs streams of the utility: traffic that people cause (browsing, opening applications and files) is a 1-in-200 sample; recorded in full are traffic that machines produce on a schedule (agents, licence, update and time checks), remote-access gateway and employee VPN sessions, mail transfers of every message in the mail gateway log, and the flows behind alerts and audit records. Do not compute volumes from the sampled part without scaling. dns.log rows share their uid with the UDP/53 row in conn.log; ssl.log has a row for nearly every established TLS flow and its cert_chain_fps joins x509.log (TLS 1.2 only); http.log and files.log cover plain-HTTP requests. No two rows of conn.log share a uid. dns.log holds A, AAAA, PTR and SRV lookups, inside and outside names. External addresses and names were made up for the exercise and say nothing about the real holders of those addresses. Runs 2027-07-16T00:00Z to the end of 2028-01-12 UTC."
   },
   {
    "stream_id": "host_audit_logs",
    "name": "Host, access and mail audit logs",
    "delivered": true,
    "path_glob": "05_other_sources/network_logs/audit/*.csv",
-   "format": "VPN sessions, historian access, file and configuration audit, change tickets, mail gateway, endpoint detections, by organisation",
+   "format": "Gateway and VPN sessions, historian access, file and configuration audit, change tickets, mail gateway, endpoint detections",
    "key_columns": {
     "time": "time_utc (login_utc / start_utc in the session tables)",
     "entity_ids": [
@@ -1406,14 +1406,14 @@
     "T18"
    ],
    "expected_observation_count": 11,
-   "notes": "Sixteen tables: remote-access sessions, historian access, device configuration changes, SCADA command log, alarm-suppression audit, file integrity, change management, settings audits, endpoint protection, mail gateways and follow-on logons."
+   "notes": "Tables: remote-access gateway sessions, employee VPN sessions, historian access, device configuration changes, SCADA command log, alarm-suppression audit, file integrity, change management, settings audits, endpoint protection, the utility's mail gateway, and extracts of three partner organisations' mail and sign-on logs (row-for-row subsets of partner_it) and their mail gateways' reports of every followed link in the same windows. Every gateway session, VPN session, historian session, monitored file write, remote setting change and SCADA command has its network flow in the Zeek logs. mail_gateway_cbpwa.csv holds a sample of ordinary mail (inbound, internal and outbound) plus every message behind a mail alert (quarantined or rejected). The file-integrity table covers the whole engineering file server; change tickets (CHG-, EMR-) are records of change_management.csv (whose records begin a few weeks earlier), work orders (WO-) are rows of maintenance/work_orders.csv, vendor tickets (VND-) are not in the data. Records dated from 2027-10-02T14:33Z include the utility's own investigation and response."
   },
   {
    "stream_id": "portal_access_logs",
    "name": "Aid portal and logistics system access logs",
    "delivered": true,
    "path_glob": "05_other_sources/network_logs/portal/*.csv",
-   "format": "Web authentication log: time, system, account hash, source address and ASN, result",
+   "format": "Web access log: time, system, client address and its network, method, path, status, event, account, user agent family, response size",
    "key_columns": {
     "time": "time_utc",
     "entity_ids": [
@@ -1426,7 +1426,41 @@
    },
    "ids_from_registry": [
     "06_data_streams/gw_host_registry.json",
-    "06_data_streams/entity_registry.json"
+    "06_data_streams/entity_registry.json",
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one row per request",
+   "threads": [
+    "T4"
+   ],
+   "expected_observation_count": 2,
+   "notes": "aid_portal_access_YYYY-MM[_NN].csv and base_logistics_access_YYYY-MM.csv. Every request is logged, by people and by crawlers, monitors and scripts. account_ref is the applications stream's account_id (aid portal) or an air-station account of partner_it_registry.json (logistics system); it is empty when a sign-in name matches no account. Registration opens 2027-11-13T06:00Z (midnight local); the aid portal has no accounts before that. client_network is the network of the address; the same address carries the same number in every stream."
+  },
+  {
+   "stream_id": "firewall_logs",
+   "name": "Firewall session logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/firewall/fw_*.csv",
+   "format": "CSV session and drop log of the internet edge firewall and the IT/OT boundary firewall",
+   "key_columns": {
+    "time": "time_utc (session end; start = time_utc - duration_s)",
+    "entity_ids": [
+     "src_ip",
+     "dst_ip",
+     "device"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
    ],
    "required_span": {
     "start_utc": "2027-07-16T05:00Z",
@@ -1436,12 +1470,428 @@
      119
     ]
    },
-   "cadence": "per attempt (aggregated per minute during floods)",
+   "cadence": "one file per device and month",
    "threads": [
-    "T4"
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 5,
+   "notes": "Follows the sampling rule stated under zeek_logs. One allow record for every Zeek conn row that crosses the device, TCP and UDP (join on the 5-tuple; time_utc is the session end, conn ts + duration, to the second; byte counters include IP headers). Drops of unsolicited inbound internet traffic are a sample and have no Zeek row; while the control network was isolated the boundary device logs denied retries. Public block 12.186.44.64/28; outbound source NAT in nat_src_ip."
+  },
+  {
+   "stream_id": "web_proxy_logs",
+   "name": "Web and DNS filter logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/proxy/web_proxy_*.csv",
+   "format": "CSV access log of the transparent web and DNS filter",
+   "key_columns": {
+    "time": "time_utc (request time)",
+    "entity_ids": [
+     "client_ip",
+     "user"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one file per month",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 3,
+   "notes": "Follows the sampling rule stated under zeek_logs. One allowed record for every outbound web connection in the Zeek conn log (same client and start second; payload byte counts). Complete regardless of the flow sample: one blocked record per POLICY_BLOCKED_SITE alert and one DNS-filter record per DNS_UNCATEGORISED_DOMAIN alert (the time, client and name of the dns.log row behind it). user is the person logged on for requests made in that person's session and '-' for machine traffic. HTTPS shows the server name only."
+  },
+  {
+   "stream_id": "dhcp_logs",
+   "name": "Address lease logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/dhcp/dhcp_leases_*.csv",
+   "format": "CSV lease audit log (user networks and the employee VPN pool)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "hostname",
+     "ip",
+     "mac"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one file per month",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 0,
+   "notes": "Complete. Reserved addresses equal the registry addresses; a machine logs nothing while it is switched off. The employee VPN pool (10.14.250.0/24) has one lease per session in audit/employee_vpn_sessions.csv; home computers on the VPN have names of the form DESKTOP-XXXXXXX or LAPTOP-XXXXXXX and are not in the registry."
+  },
+  {
+   "stream_id": "packet_captures",
+   "name": "Perimeter packet capture",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/pcap/perimeter_*.pcap",
+   "format": "libpcap files, Ethernet/IPv4, flow-cutoff capture on the inside of the internet edge",
+   "key_columns": {
+    "time": "packet timestamp (epoch, UTC)",
+    "entity_ids": [],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one file per UTC day",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 4,
+   "notes": "Flow-cutoff capture: the handshake and first application message of every Zeek conn row that crosses the internet edge, TCP and UDP (join on the 5-tuple; first packet at conn ts), so it follows the sampling rule stated under zeek_logs. Handshakes, DNS, NTP and plain-HTTP headers in clear; everything else is opaque filler. No file content."
+  },
+  {
+   "stream_id": "windows_event_logs",
+   "name": "Windows event logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/windows/*.jsonl",
+   "format": "JSON Lines; Security, System and Defender channels of the utility's Windows hosts, forwarded subset of event ids",
+   "key_columns": {
+    "time": "time_utc (milliseconds)",
+    "entity_ids": [
+     "host",
+     "user",
+     "target_user",
+     "src_ip"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one file per channel and month (split into _01, _02 when over 40 MB)",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 7,
+   "notes": "A forwarded subset of event ids. Complete: interactive logons, logoffs, locks and unlocks; remote-desktop logons; and the events behind every SIEM alert, audit-table row and Zeek flow that a Windows host would record. Network logons and share access follow the Zeek flows and are therefore a sample for user-driven activity. Starts 2027-07-15 (one day of lead-in). Schema: schemas/windows_event_logs_schema.json."
+  },
+  {
+   "stream_id": "endpoint_telemetry",
+   "name": "Endpoint telemetry",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/endpoint/*.jsonl",
+   "format": "JSON Lines; process, network, DNS, file, registry, service, task and removable-device events from the endpoint agent",
+   "key_columns": {
+    "time": "time_utc (milliseconds)",
+    "entity_ids": [
+     "host",
+     "user",
+     "src_ip",
+     "dst_ip"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one file per month",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 3,
+   "notes": "One network_connect per Zeek conn row that starts at a Windows host (join on the 5-tuple, within 0.5 s) and one dns_query per Zeek dns row, except ordinary web browsing, of which the agent's records keep every second connection and lookup; ICMP is not recorded. Process starts, file, service, task and removable-device events are complete for what the other logs name and a sample otherwise. Process exits are not recorded. Schema: schemas/endpoint_telemetry_schema.json."
+  },
+  {
+   "stream_id": "host_triage",
+   "name": "Host triage collections",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/triage/**/*.*",
+   "format": "CSV tables, collection.json and inert text placeholders per collected host",
+   "key_columns": {
+    "time": "collected_utc (collection.json); the *_utc columns in the tables",
+    "entity_ids": [
+     "host"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-10-02T21:00Z",
+    "end_utc": "2027-10-14T19:00Z",
+    "days": [
+     18,
+     30
+    ]
+   },
+   "cadence": "one folder per collected host",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
    ],
    "expected_observation_count": 2,
-   "notes": "aid_portal_access_YYYY-MM.csv and base_logistics_access_YYYY-MM.csv; account_ref is the applications stream's account_id for real accounts. Registration opens 2027-11-13T06:00Z (midnight local); before that the aid portal serves information pages only."
+   "notes": "Fourteen collections taken 2027-10-02 to 2027-10-14. Listings and hashes only; the files under placeholders/ are inert text stand-ins whose SHA-256 equals the hash the logs record. Schema: schemas/host_triage_schema.json."
+  },
+  {
+   "stream_id": "partner_firewall_logs",
+   "name": "Partner organisations: firewall logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/firewall_*.csv",
+   "format": "Edge firewall session log (one row per session, written when the session ends)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "device",
+     "src_ip"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per session; background is a sample",
+   "threads": [
+    "T1",
+    "T4",
+    "T6",
+    "T7"
+   ],
+   "expected_observation_count": 2,
+   "schema": "06_data_streams/schemas/partner_firewall_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County; seven separate networks, hosts and accounts in partner_it_registry.json. A sample of ordinary sessions; sessions that carried a remote sign-on, a logged mail message or a request recorded by another delivered system are all present. time_utc is the session end."
+  },
+  {
+   "stream_id": "partner_web_logs",
+   "name": "Partner organisations: web gateway logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/web_*.csv",
+   "format": "Web gateway access log (transparent filtering; encrypted sites are logged as CONNECT with no path)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "client_ip",
+     "user"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per request; background is a sample",
+   "threads": [
+    "T1",
+    "T4",
+    "T6",
+    "T14"
+   ],
+   "expected_observation_count": 5,
+   "schema": "06_data_streams/schemas/partner_web_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County; seven separate networks, hosts and accounts in partner_it_registry.json. A sample of ordinary browsing (about 1 in 40). Every allowed request has its firewall session and a DNS lookup shortly before it."
+  },
+  {
+   "stream_id": "partner_dns_logs",
+   "name": "Partner organisations: DNS query logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/dns_*.csv",
+   "format": "Resolver query log",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "client_ip"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per query; a sample",
+   "threads": [
+    "T4",
+    "T6"
+   ],
+   "expected_observation_count": 2,
+   "schema": "06_data_streams/schemas/partner_dns_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County; seven separate networks, hosts and accounts in partner_it_registry.json. A sample (about 1 in 40), with the lookup behind every logged web request."
+  },
+  {
+   "stream_id": "partner_auth_logs",
+   "name": "Partner organisations: sign-on logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/auth_*.csv",
+   "format": "Sign-on log: workstation logons and logoffs, and remote sign-ons (single sign-on, webmail, VPN)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "host",
+     "account"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per event; complete for workstation sessions and remote sign-ons",
+   "threads": [
+    "T1",
+    "T4",
+    "T6",
+    "T14",
+    "T16"
+   ],
+   "expected_observation_count": 3,
+   "schema": "06_data_streams/schemas/partner_auth_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County; seven separate networks, hosts and accounts in partner_it_registry.json. Complete for workstation logons and logoffs and for remote sign-ons of the hosts and accounts in the registry."
+  },
+  {
+   "stream_id": "partner_mail_logs",
+   "name": "Partner organisations: mail gateway logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/mail_*.csv",
+   "format": "Mail gateway message log (same columns as network_logs/audit/mail_gateway_*.csv)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "gateway"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per message; a sample, except that every row of the delivered city, air-station and vendor extracts is included unchanged",
+   "threads": [
+    "T1",
+    "T4",
+    "T6",
+    "T14"
+   ],
+   "expected_observation_count": 4,
+   "schema": "06_data_streams/schemas/partner_mail_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County; seven separate networks, hosts and accounts in partner_it_registry.json. A sample of ordinary mail (about 1 in 25; bulk mailings more completely). The tables network_logs/audit/mail_gateway_{city,airstation,brightwake}.csv are row-for-row extracts of these logs."
+  },
+  {
+   "stream_id": "partner_endpoint_alerts",
+   "name": "Partner organisations: endpoint protection events",
+   "delivered": true,
+   "path_glob": "05_other_sources/partner_it/*/endpoint_alerts_*.csv",
+   "format": "Endpoint protection console events (same columns as network_logs/audit/endpoint_protection.csv)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "host"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/partner_it_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T00:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "per event; a sample",
+   "threads": [
+    "T1"
+   ],
+   "expected_observation_count": 1,
+   "schema": "06_data_streams/schemas/partner_endpoint_alerts_schema.json",
+   "notes": "City of Corpus Christi, Naval Air Station Corpus Christi, Brightwake Marine Systems, Port of Corpus Christi Authority, Shoreline Regional Medical Center, Bay City Medical Center, Nueces County; seven separate networks, hosts and accounts in partner_it_registry.json. A sample of endpoint protection console events."
   },
   {
    "stream_id": "vessel_ot_logs",

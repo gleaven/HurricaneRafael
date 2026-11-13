@@ -6,7 +6,7 @@
 #open	2027-11-05-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1825393479.286605	-	10.14.20.12	34.32.56.133	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1825429624.280042	-	10.14.20.35	205.137.131.105	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1825447095.058818	-	10.14.12.41	35.130.140.3	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1825379732.284158	-	10.14.20.41	52.220.34.193	443	Conn::Content_Gap	api.adnetwork-static.net content gap (4537 bytes missing)	10.14.20.41	52.220.34.193	443	Notice::ACTION_LOG
+1825382319.522818	-	10.14.30.29	96.9.223.104	443	Weird::Activity	possible_split_routing	10.14.30.29	96.9.223.104	443	Notice::ACTION_LOG
+1825425465.060019	-	10.14.30.48	185.72.4.177	443	SSL::Certificate_Expires_Soon	Certificate login.scada-vendor-docs.com is going to expire soon	10.14.30.48	185.72.4.177	443	Notice::ACTION_LOG
 #close	2027-11-06-00-00-00

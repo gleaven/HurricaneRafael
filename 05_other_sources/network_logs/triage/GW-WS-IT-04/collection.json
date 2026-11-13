@@ -1,0 +1,82 @@
+{
+ "host": "GW-WS-IT-04",
+ "ip": "10.14.22.47",
+ "os": "Windows 11 Enterprise 23H2",
+ "collected_utc": "2027-10-12T15:47:07Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 14,
+   "sha256": "75c23628f916b996683f5b6cb9351386eeb81e18d778d5d644d17a33db1163d1"
+  },
+  "file_listing.csv": {
+   "rows": 158,
+   "sha256": "6be4f70b7c9fdcd80049439fe7a1e3d2e15a6672f98c4a76ae9999b7a3c8ee92"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "c4989dbde9b0c49bdf8b0983d855730b1f3397dc3448951cc4484f94389d3907"
+  },
+  "autoruns.csv": {
+   "rows": 18,
+   "sha256": "cee292c0c9943940c13df6bb0e9329bfcfad756c8956bf8222283a699e5c1210"
+  },
+  "execution_history.csv": {
+   "rows": 39,
+   "sha256": "5585aa565c53aeac417481318479885e1980404cc8f755e01615263e5d3529ab"
+  },
+  "logon_history.csv": {
+   "rows": 52,
+   "sha256": "61b4f02215b565846b970a212a1dfd3a0d3d29ff1f759eb97b7deb6970c48a7d"
+  },
+  "installed_software.csv": {
+   "rows": 9,
+   "sha256": "57ee4cadff5163a05cda279cd674c14f0683d7b8de51e8692716c7ba747b6d51"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "536248a43e079d0fd0a44f6100f34a2d20c7bb5249c9f5bef5143bb26140316a"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/vstelemetry.exe.placeholder.txt",
+   "stands_in_for": "C:\\ProgramData\\VantageTelemetry\\vstelemetry.exe",
+   "sha256": "68c125df70cfa63c6c0ed69e78bd30f8a6bb202f828314a6c7aaca7de0b5ef56"
+  },
+  {
+   "file": "placeholders/firmware_stage.exe.placeholder.txt",
+   "stands_in_for": "C:\\Support\\firmware_stage.exe",
+   "sha256": "d16fb86ea300db882932c28c42a8935f7575a70a4ee96dfe402964e6d46adc20"
+  },
+  {
+   "file": "placeholders/relaydiff.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\bin\\relaydiff.exe",
+   "sha256": "ad86d052969e195a83b1c2f129d686f3607c688d4a00f3fc5f03092b55b2a104"
+  },
+  {
+   "file": "placeholders/drvcheck.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\drvcheck.exe",
+   "sha256": "734cf3c1b66f8b16cdd2fca1fdaaa312c607729b967fe20e8e43ee4d02dbb882"
+  },
+  {
+   "file": "placeholders/MeterReadExport.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\MeterReadExport\\MeterReadExport.exe",
+   "sha256": "3424388261ad0ba538910a70f3a3311c702b2938e624a330c3029581ee6cac46"
+  },
+  {
+   "file": "placeholders/FEMA-PREP-GUIDANCE-2027.pdf.exe.placeholder.txt",
+   "stands_in_for": "C:\\Users\\dgonzalez\\AppData\\Local\\Temp\\Temp1_FEMA-PREP-GUIDANCE-2027.zip\\FEMA-PREP-GUIDANCE-2027.pdf.exe",
+   "sha256": "55ce6ffdee44d7e69f936f0c45d55312599a60cb4ebfb539d449ef0ce63a6fd5"
+  },
+  {
+   "file": "placeholders/LagunaInstaller_8.11_x64.exe.placeholder.txt",
+   "stands_in_for": "C:\\Users\\eruiz\\Downloads\\LagunaInstaller_8.11_x64.exe",
+   "sha256": "31b7d036b7e3340730d981f1c0b59c2838afd27b863e90fa76c61a3a5ea73603"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

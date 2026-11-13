@@ -1,0 +1,59 @@
+{
+ "source": "partner_it",
+ "stream_id": "partner_mail_logs",
+ "folder": "data/partner_it/",
+ "files": "mail_<YYYY-MM>.csv",
+ "standard": "Mail gateway message log (same columns as network_logs/audit/mail_gateway_*.csv)",
+ "span": "2027-07-16T00:00Z to 2028-01-12T06:00Z",
+ "cadence": "per message; a sample of ordinary mail (about 1 in 25), with bulk mailings more completely represented",
+ "notes": "One folder per organisation: city, nascc, brw, port, srmc, bcmc, county. Each organisation has its own products, rule names, zone names and habits; do not assume a value seen in one folder means the same in another. Hosts, addresses and accounts are in registries/partner_it_registry.json.",
+ "fields": [
+  {
+   "name": "time_utc",
+   "type": "ISO 8601 UTC"
+  },
+  {
+   "name": "gateway",
+   "notes": "registry host_id of the mail gateway"
+  },
+  {
+   "name": "direction",
+   "type": "inbound | internal | outbound",
+   "notes": "inbound | internal | outbound"
+  },
+  {
+   "name": "sender"
+  },
+  {
+   "name": "sender_domain",
+   "notes": "domain of the sender address"
+  },
+  {
+   "name": "recipient"
+  },
+  {
+   "name": "subject"
+  },
+  {
+   "name": "attachment_names"
+  },
+  {
+   "name": "size_bytes",
+   "type": "int"
+  },
+  {
+   "name": "verdict",
+   "type": "clean | spam",
+   "notes": "clean | spam | blocked attachment type | sender failed authentication"
+  },
+  {
+   "name": "action",
+   "type": "delivered | quarantined",
+   "notes": "delivered | quarantined | rejected"
+  },
+  {
+   "name": "message_id",
+   "notes": "as written by the sending system"
+  }
+ ]
+}

@@ -6,13 +6,9 @@
 #open	2027-11-06-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1825472027.566791	-	10.14.21.20	157.136.186.81	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1825474213.918316	-	10.14.30.54	64.3.6.47	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1825474919.044921	-	10.14.20.28	54.13.44.217	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1825496885.351938	-	10.14.21.13	205.184.149.36	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1825505972.812395	-	10.14.20.11	185.172.97.58	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1825519151.874922	-	10.14.30.30	151.68.243.101	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1825522911.809773	-	10.14.22.38	108.202.131.235	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1825531453.233216	-	10.14.30.42	157.82.200.81	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1825534346.551214	-	10.14.21.52	69.99.168.245	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1825491945.002022	-	10.14.20.39	108.60.98.42	443	SSL::Certificate_Expires_Soon	Certificate login.nueces-county-tx.org is going to expire soon	10.14.20.39	108.60.98.42	443	Notice::ACTION_LOG
+1825492015.771806	-	10.14.21.26	69.7.230.27	443	SSL::Certificate_Expires_Soon	Certificate api.scada-vendor-docs.com is going to expire soon	10.14.21.26	69.7.230.27	443	Notice::ACTION_LOG
+1825496560.123260	-	10.14.22.23	216.130.240.145	443	Weird::Activity	possible_split_routing	10.14.22.23	216.130.240.145	443	Notice::ACTION_LOG
+1825541389.821738	-	10.14.30.21	10.14.10.5	53	DNS::External_Name	old-intranet.cbpwa.example is pointing to a local host	10.14.30.21	10.14.10.5	53	Notice::ACTION_LOG
+1825544846.306502	-	10.14.21.14	40.219.200.230	443	Conn::Content_Gap	static.osupdates-delivery.com content gap (4269 bytes missing)	10.14.21.14	40.219.200.230	443	Notice::ACTION_LOG
 #close	2027-11-07-00-00-00

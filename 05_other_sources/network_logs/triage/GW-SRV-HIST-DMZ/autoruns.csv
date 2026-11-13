@@ -1,0 +1,15 @@
+location,name,image_path,signer,sha256,enabled,first_seen_utc
+service,DNS Client,C:\Windows\System32\svchost.exe,Microsoft Windows,d25ebd1ea06740e499837dc0aba3a6aca380f436522ea7c33f50aab96431eb41,yes,2026-08-03T12:25:53Z
+service,Windows Event Log,C:\Windows\System32\svchost.exe,Microsoft Windows,d25ebd1ea06740e499837dc0aba3a6aca380f436522ea7c33f50aab96431eb41,yes,2026-08-03T12:25:53Z
+service,Microsoft Defender Antivirus Service,C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MsMpEng.exe,Microsoft Windows,8b099c7eeb1cfa53e718e8fc738450ef0710b1d5806354ba1f262857e21c377a,yes,2026-08-03T12:25:53Z
+service,Print Spooler,C:\Windows\System32\spoolsv.exe,Microsoft Windows,fa3f275fd1ed38af8f91c059564aa5dfed9b60bd2890105fe3c24cbf93541567,yes,2026-08-03T12:25:53Z
+service,Workstation,C:\Windows\System32\svchost.exe,Microsoft Windows,d25ebd1ea06740e499837dc0aba3a6aca380f436522ea7c33f50aab96431eb41,yes,2026-08-03T12:25:53Z
+service,Task Scheduler,C:\Windows\System32\svchost.exe,Microsoft Windows,d25ebd1ea06740e499837dc0aba3a6aca380f436522ea7c33f50aab96431eb41,yes,2026-08-03T12:25:53Z
+service,Windows Time,C:\Windows\System32\svchost.exe,Microsoft Windows,d25ebd1ea06740e499837dc0aba3a6aca380f436522ea7c33f50aab96431eb41,yes,2026-08-03T12:25:53Z
+service,Vantage Collector Service,C:\Program Files\Vantage Security\Collector\vscollect.exe,Vantage Security Systems Inc,6c8d57ef846e28dddfc4cf757c773e8d8130fba7182c84ae77263601e792aaa4,yes,2027-10-04T05:04:53Z
+service,Endpoint Protection Agent,C:\Program Files\EndpointAgent\epagent.exe,Endpoint Agent Software Inc,bb6f04a96bc35175367fdb0db21f838f95228e540157063a2054b74850ec4f98,yes,2027-08-22T04:37:47Z
+service,Asset Inventory Agent,C:\Program Files\AssetInventory\invagent.exe,Asset Inventory Software Inc,a41b22914e903b622a5ad1fe76bdd8957dd47600de30e9d499954cbaaeb4506e,yes,2026-10-04T21:59:53Z
+service,Meridian Historian,C:\Program Files\Meridian Controls\Historian\histsrv.exe,Meridian Controls Corp,e083bbf659b351b1adaff794ff405370b558f3724293f37d65d32cf39dbd9cc6,yes,2027-01-13T16:08:08Z
+scheduled task,\Microsoft\Windows\Defender\Scheduled Scan,"""C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MsMpEng.exe"" -scan",,,yes,2026-08-03T12:25:53Z
+scheduled task,\Microsoft\Windows\UpdateOrchestrator\Schedule Scan,C:\Windows\System32\usoclient.exe StartScan,,,yes,2026-08-03T12:25:53Z
+scheduled task,\Vantage Security\Collector Update Check,"""C:\Program Files\Vantage Security\Collector\vscollect.exe"" /updatecheck",,,yes,2027-10-04T05:04:51Z

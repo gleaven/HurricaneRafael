@@ -6,6 +6,10 @@
 #open	2028-01-09-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1830992572.608338	-	10.14.30.31	54.20.233.159	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1831000823.161544	-	10.14.22.34	142.26.13.166	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1830994296.069076	-	10.14.21.45	216.177.199.69	443	Conn::Content_Gap	api.storm-prep-guides.org content gap (6510 bytes missing)	10.14.21.45	216.177.199.69	443	Notice::ACTION_LOG
+1830997437.510280	-	10.14.30.22	52.162.236.89	443	Conn::Content_Gap	www.tx-waterboard.org content gap (8989 bytes missing)	10.14.30.22	52.162.236.89	443	Notice::ACTION_LOG
+1831035334.050979	-	10.14.30.56	10.14.10.6	53	DNS::External_Name	lab.cbpwa.example is pointing to a local host	10.14.30.56	10.14.10.6	53	Notice::ACTION_LOG
+1831052153.839325	-	10.14.30.13	157.82.200.81	443	Weird::Activity	possible_split_routing	10.14.30.13	157.82.200.81	443	Notice::ACTION_LOG
+1831053570.871245	-	10.14.21.29	205.116.220.120	80	HTTP::Unusual_User_Agent	www.docsign-flow.com user agent not seen before on this network	10.14.21.29	205.116.220.120	80	Notice::ACTION_LOG
+1831056176.785897	-	10.14.21.36	185.72.4.177	443	Conn::Content_Gap	login.scada-vendor-docs.com content gap (420 bytes missing)	10.14.21.36	185.72.4.177	443	Notice::ACTION_LOG
 #close	2028-01-10-00-00-00

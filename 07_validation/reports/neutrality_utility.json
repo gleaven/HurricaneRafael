@@ -1,0 +1,366 @@
+{
+ "complete": true,
+ "missing": [],
+ "logs": {
+  "siem": {
+   "SE3-NET-9941": {
+    "rows": 5630,
+    "story": 45,
+    "neutral": 0
+   },
+   "SE3-OT-1104": {
+    "rows": 122,
+    "story": 14,
+    "neutral": 0
+   },
+   "SE3-OT-3301": {
+    "rows": 101,
+    "story": 7,
+    "neutral": 62
+   },
+   "SE3-OT-2201": {
+    "rows": 551,
+    "story": 1,
+    "neutral": 0
+   },
+   "SE3-ML-0044": {
+    "rows": 50,
+    "story": 1,
+    "neutral": 0
+   }
+  },
+  "siem.rule_changes": {
+   "": {
+    "rows": 63,
+    "story": 2,
+    "neutral": 2
+   }
+  },
+  "audit.remote_access": {
+   "": {
+    "rows": 1085,
+    "story": 14,
+    "neutral": 0
+   }
+  },
+  "audit.historian": {
+   "": {
+    "rows": 969,
+    "story": 14,
+    "neutral": 0
+   }
+  },
+  "audit.ot_config": {
+   "": {
+    "rows": 145,
+    "story": 5,
+    "neutral": 4
+   }
+  },
+  "audit.suppression": {
+   "": {
+    "rows": 216,
+    "story": 82,
+    "neutral": 85
+   }
+  },
+  "audit.file_integrity": {
+   "": {
+    "rows": 551,
+    "story": 1,
+    "neutral": 0
+   }
+  },
+  "audit.scada_cmd": {
+   "": {
+    "rows": 626,
+    "story": 2,
+    "neutral": 0
+   }
+  },
+  "audit.change_mgmt": {
+   "": {
+    "rows": 319,
+    "story": 0
+   }
+  },
+  "audit.endpoint_protection": {
+   "": {
+    "rows": 7325,
+    "story": 1,
+    "neutral": 0
+   }
+  },
+  "audit.mail": {
+   "": {
+    "rows": 48298,
+    "story": 1,
+    "neutral": 0
+   }
+  },
+  "zeek.dns": {
+   "": {
+    "rows": 270079,
+    "story": 50,
+    "neutral": 0
+   }
+  },
+  "zeek.conn": {
+   "": {
+    "rows": 732345,
+    "story": 265,
+    "neutral": 0
+   }
+  },
+  "zeek.ssl": {
+   "": {
+    "rows": 206882,
+    "story": 182,
+    "neutral": 0
+   }
+  },
+  "zeek.notice": {
+   "": {
+    "rows": 576,
+    "story": 0
+   }
+  },
+  "firewall": {
+   "GW-FW-EDGE-01": {
+    "rows": 414242,
+    "story": 182,
+    "neutral": 0
+   },
+   "GW-OT-FW-01": {
+    "rows": 24490,
+    "story": 47,
+    "neutral": 0
+   }
+  },
+  "proxy": {
+   "": {
+    "rows": 378387,
+    "story": 168,
+    "neutral": 0
+   }
+  },
+  "windows": {
+   "5001": {
+    "rows": 61,
+    "story": 1,
+    "neutral": 0
+   },
+   "4624": {
+    "rows": 79492,
+    "story": 25,
+    "neutral": 0
+   },
+   "4634": {
+    "rows": 79325,
+    "story": 24,
+    "neutral": 0
+   },
+   "4769": {
+    "rows": 46506,
+    "story": 2,
+    "neutral": 0
+   },
+   "5140": {
+    "rows": 17467,
+    "story": 2,
+    "neutral": 0
+   },
+   "5145": {
+    "rows": 27902,
+    "story": 11,
+    "neutral": 0
+   },
+   "4672": {
+    "rows": 3966,
+    "story": 9,
+    "neutral": 0
+   },
+   "7045": {
+    "rows": 1579,
+    "story": 1,
+    "neutral": 0
+   },
+   "7036": {
+    "rows": 15887,
+    "story": 1,
+    "neutral": 0
+   }
+  },
+  "endpoint": {
+   "file_create": {
+    "rows": 12253,
+    "story": 11,
+    "neutral": 0
+   },
+   "process_start": {
+    "rows": 115657,
+    "story": 31,
+    "neutral": 0
+   },
+   "dns_query": {
+    "rows": 187791,
+    "story": 50,
+    "neutral": 0
+   },
+   "network_connect": {
+    "rows": 363121,
+    "story": 196,
+    "neutral": 0
+   },
+   "service_install": {
+    "rows": 1579,
+    "story": 1,
+    "neutral": 0
+   }
+  },
+  "triage.files": {
+   "": {
+    "rows": 1064,
+    "story": 11,
+    "neutral": 0
+   }
+  },
+  "triage.services": {
+   "": {
+    "rows": 177,
+    "story": 1,
+    "neutral": 0
+   }
+  },
+  "triage.autoruns": {
+   "": {
+    "rows": 214,
+    "story": 1,
+    "neutral": 0
+   }
+  },
+  "triage.tasks": {
+   "": {
+    "rows": 42,
+    "story": 0
+   }
+  },
+  "triage.exec": {
+   "": {
+    "rows": 312,
+    "story": 2,
+    "neutral": 0
+   }
+  },
+  "triage.logons": {
+   "": {
+    "rows": 4397,
+    "story": 14,
+    "neutral": 0
+   }
+  },
+  "triage.software": {
+   "": {
+    "rows": 62,
+    "story": 0
+   }
+  }
+ },
+ "findings": [],
+ "allowed": {
+  "which rules fired on the activity, what they reported and how analysts closed them (checked separately for one-of-a-kind notes by the shape features)": 184,
+  "identity: the attacker's addresses and networks, the two outside names, the compromised workstation, account and gateway are what the analysis has to find": 364,
+  "the storm-mode dismissal note, carried by tens of thousands of alerts of other rules": 2,
+  "an incident case opened by the utility's own response (documented in the guides)": 1,
+  "content of the two rule changes": 30,
+  "sessions from abroad": 8,
+  "content: what was read from the historian": 26,
+  "content of the change: what was altered is the finding itself": 255,
+  "content: which alarms were suppressed and how many were active": 54,
+  "content: which breaker, from where": 68,
+  "the network zone the compromised workstation sits in (its identity at a coarser grain)": 10,
+  "where a connection went or what ran: exact values only; their shapes, lengths and labels are still tested": 67,
+  "a double extension is a real property of the lure file": 4,
+  "the lure file's own name (several words, a year, two extensions)": 2,
+  "the same double extension inside a quoted command line": 1,
+  "an unsigned program registered as an auto-start service is a real forensic property": 23
+ },
+ "by_log": {},
+ "allow_list": [
+  {
+   "log": ".",
+   "column": ".",
+   "reason": "identity: the attacker's addresses and networks, the two outside names, the compromised workstation, account and gateway are what the analysis has to find"
+  },
+  {
+   "log": "remote_access",
+   "column": "src_country",
+   "reason": "sessions from abroad"
+  },
+  {
+   "log": "firewall",
+   "column": "^src_zone$",
+   "reason": "the network zone the compromised workstation sits in (its identity at a coarser grain)"
+  },
+  {
+   "log": "remote_access|ot_config|suppression|historian",
+   "column": "change_ticket|auth_method",
+   "reason": "no ticket, password only"
+  },
+  {
+   "log": "ot_config",
+   "column": "^(parameter|old_value|new_value|device)$",
+   "reason": "content of the change: what was altered is the finding itself"
+  },
+  {
+   "log": "suppression",
+   "column": "^(alarm_point|active_suppressions_after|category|system)$",
+   "reason": "content: which alarms were suppressed and how many were active"
+  },
+  {
+   "log": "historian",
+   "column": "^(tags_queried|tag_groups|duration_s|query_type)$",
+   "reason": "content: what was read from the historian"
+  },
+  {
+   "log": "remote_access",
+   "column": "^(target_hosts|duration_s|bytes_out|bytes_in)$",
+   "reason": "content: what the session reached and its size"
+  },
+  {
+   "log": "siem$",
+   "column": "^(detail|rule_id|rule_name|priority|category|dst_host|dst_ip|disposition|close_note|closed_by)$",
+   "reason": "which rules fired on the activity, what they reported and how analysts closed them (checked separately for one-of-a-kind notes by the shape features)"
+  },
+  {
+   "log": "siem.rule_changes",
+   "column": "^(description|action|rule_type|changed_by)$",
+   "reason": "content of the two rule changes"
+  },
+  {
+   "log": "file_integrity",
+   "column": "^(path|diff_summary|previous_hash|new_hash)$",
+   "reason": "content of the write"
+  },
+  {
+   "log": "scada_cmd",
+   "column": "^(device|command|workstation|operator|origin|origin_host)$",
+   "reason": "content: which breaker, from where"
+  },
+  {
+   "log": "zeek|firewall|proxy|endpoint|windows",
+   "column": "bytes|size|duration|pkts|missed",
+   "reason": "size and length of a transfer"
+  },
+  {
+   "log": "triage.autoruns",
+   "column": "^(signer|location|enabled)$",
+   "reason": "an unsigned program registered as an auto-start service is a real forensic property"
+  },
+  {
+   "log": "zeek|firewall|proxy|endpoint|windows|triage",
+   "column": "port$|^path$|image|^service|_name$|sha256|hash|md5|signer|answers|query|^host$|^src_host$|process|command_line|parent",
+   "reason": "where a connection went or what ran: exact values only; their shapes, lengths and labels are still tested"
+  }
+ ]
+}

@@ -344,7 +344,7 @@ Times are UTC unless the column name says local. `<month>` in a file name means 
 | `data/telemetry/historian_SUB03_<month>.csv` | 6 | 4.3 MB | 85,118 | `Timestamp` | 2027-08-15 00:00 | 2028-01-12 02:15 |
 | `data/telemetry/historian_SUB04_<month>.csv` | 6 | 4.6 MB | 90,347 | `Timestamp` | 2027-08-15 00:00 | 2028-01-12 02:10 |
 | `data/telemetry/historian_SUB05_<month>.csv` | 6 | 4.5 MB | 88,792 | `Timestamp` | 2027-08-15 00:00 | 2028-01-12 03:25 |
-| `data/telemetry/historian_SYSTEM_<month>.csv` | 6 | 3.0 MB | 58,115 | `Timestamp` | 2027-08-15 00:00 | 2028-01-12 06:00 |
+| `data/telemetry/historian_SYSTEM_<month>.csv` | 6 | 3.0 MB | 58,114 | `Timestamp` | 2027-08-15 00:00 | 2028-01-12 06:00 |
 | `data/telemetry/historian_TANKS_<month>.csv` | 6 | 8.2 MB | 168,478 | `Timestamp` | 2027-08-15 00:00 | 2028-01-12 05:05 |
 | `data/telemetry/historian_WTP_<month>.csv` | 6 | 10.6 MB | 200,257 | `Timestamp` | 2027-08-15 00:00 | 2028-01-12 06:00 |
 
@@ -401,8 +401,8 @@ Times are UTC unless the column name says local. `<month>` in a file name means 
 | Files | Count | Size | Records | Time column | First | Last |
 |---|---|---|---|---|---|---|
 | `data/network_logs/siem/daily_summary.csv` | 1 | 0.0 MB | 181 | `date_utc` | 2027-07-16 00:00 | 2028-01-12 00:00 |
-| `data/network_logs/siem/rule_changes.csv` | 1 | 0.0 MB | 7 | `time_utc` | 2027-08-19 11:34 | 2027-10-19 00:30 |
-| `data/network_logs/siem/siem_alerts_<month>.csv` | 7 | 91.6 MB | 459,464 | `time_utc` | 2027-07-16 00:00 | 2028-01-12 23:59 |
+| `data/network_logs/siem/rule_changes.csv` | 1 | 0.0 MB | 63 | `time_utc` | 2027-07-22 15:41 | 2028-01-07 22:11 |
+| `data/network_logs/siem/siem_alerts_<month>.csv` | 7 | 90.7 MB | 468,452 | `time_utc` | 2027-07-16 00:00 | 2028-01-12 23:59 |
 
 `daily_summary.csv` columns: `date_utc`, `alerts`, `closed_false_positive`, `false_positive_rate_pct`, `open_ml_anomaly_alerts`
 
@@ -414,45 +414,57 @@ Times are UTC unless the column name says local. `<month>` in a file name means 
 
 | Files | Count | Size | Records | Time column | First | Last |
 |---|---|---|---|---|---|---|
-| `data/network_logs/zeek/<YYYY-MM-DD>/conn.log` | 181 | 45.9 MB | 352,082 | `ts` | 2027-07-16 00:00 | 2028-01-12 23:59 |
-| `data/network_logs/zeek/<YYYY-MM-DD>/dns.log` | 181 | 17.1 MB | 107,777 | `ts` | 2027-07-16 00:00 | 2028-01-12 23:59 |
-| `data/network_logs/zeek/<YYYY-MM-DD>/notice.log` | 181 | 0.1 MB | 559 | `ts` | 2027-07-16 00:00 | 2028-01-12 23:59 |
-| `data/network_logs/zeek/<YYYY-MM-DD>/ssl.log` | 181 | 7.1 MB | 52,570 | `ts` | 2027-07-16 00:00 | 2028-01-12 23:59 |
+| `data/network_logs/zeek/<YYYY-MM-DD>/conn.log` | 181 | 91.7 MB | 732,345 | `ts` | 2027-07-16 00:00 | 2028-01-12 23:59 |
+| `data/network_logs/zeek/<YYYY-MM-DD>/dns.log` | 181 | 42.7 MB | 270,079 | `ts` | 2027-07-16 00:00 | 2028-01-12 23:59 |
+| `data/network_logs/zeek/<YYYY-MM-DD>/files.log` | 181 | 7.7 MB | 33,550 | `ts` | 2027-07-16 00:00 | 2028-01-12 23:59 |
+| `data/network_logs/zeek/<YYYY-MM-DD>/http.log` | 181 | 9.4 MB | 40,761 | `ts` | 2027-07-16 00:00 | 2028-01-12 23:59 |
+| `data/network_logs/zeek/<YYYY-MM-DD>/notice.log` | 181 | 0.2 MB | 576 | `ts` | 2027-07-16 00:00 | 2028-01-12 23:59 |
+| `data/network_logs/zeek/<YYYY-MM-DD>/ssl.log` | 181 | 33.5 MB | 206,882 | `ts` | 2027-07-16 00:00 | 2028-01-12 23:59 |
+| `data/network_logs/zeek/<YYYY-MM-DD>/x509.log` | 181 | 2.9 MB | 8,273 | `ts` | 2027-07-16 00:00 | 2028-01-12 23:59 |
 
 `conn.log` columns: `ts`, `uid`, `id.orig_h`, `id.orig_p`, `id.resp_h`, `id.resp_p`, `proto`, `service`, `duration`, `orig_bytes`, `resp_bytes`, `conn_state`, `local_orig`, `local_resp`, `missed_bytes`, `history`, `orig_pkts`, `orig_ip_bytes`, `resp_pkts`, `resp_ip_bytes`
 
 `dns.log` columns: `ts`, `uid`, `id.orig_h`, `id.orig_p`, `id.resp_h`, `id.resp_p`, `proto`, `trans_id`, `query`, `qclass_name`, `qtype_name`, `rcode_name`, `AA`, `RD`, `RA`, `answers`, `TTLs`
 
+`files.log` columns: `ts`, `fuid`, `tx_hosts`, `rx_hosts`, `conn_uids`, `source`, `depth`, `analyzers`, `mime_type`, `filename`, `duration`, `local_orig`, `is_orig`, `seen_bytes`, `total_bytes`, `missing_bytes`, `overflow_bytes`, `timedout`, `md5`, `sha1`
+
+`http.log` columns: `ts`, `uid`, `id.orig_h`, `id.orig_p`, `id.resp_h`, `id.resp_p`, `trans_depth`, `method`, `host`, `uri`, `referrer`, `version`, `user_agent`, `request_body_len`, `response_body_len`, `status_code`, `status_msg`, `tags`, `resp_fuids`, `resp_mime_types`
+
 `notice.log` columns: `ts`, `uid`, `id.orig_h`, `id.resp_h`, `id.resp_p`, `note`, `msg`, `src`, `dst`, `p`, `actions`
 
-`ssl.log` columns: `ts`, `uid`, `id.orig_h`, `id.orig_p`, `id.resp_h`, `id.resp_p`, `version`, `cipher`, `server_name`, `resumed`, `established`
+`ssl.log` columns: `ts`, `uid`, `id.orig_h`, `id.orig_p`, `id.resp_h`, `id.resp_p`, `version`, `cipher`, `server_name`, `resumed`, `established`, `cert_chain_fps`
+
+`x509.log` columns: `ts`, `fingerprint`, `certificate.version`, `certificate.serial`, `certificate.subject`, `certificate.issuer`, `certificate.not_valid_before`, `certificate.not_valid_after`, `certificate.key_alg`, `certificate.sig_alg`, `certificate.key_type`, `certificate.key_length`, `certificate.exponent`, `san.dns`, `basic_constraints.ca`, `host_cert`, `client_cert`
 
 ## Host, access and mail audit logs (`host_audit_logs`)
 
 | Files | Count | Size | Records | Time column | First | Last |
 |---|---|---|---|---|---|---|
-| `data/network_logs/audit/account_logons_city_airstation.csv` | 1 | 0.3 MB | 2,610 | `time_utc` | 2027-09-12 00:02 | 2027-09-21 23:56 |
-| `data/network_logs/audit/alarm_suppression_audit.csv` | 1 | 0.0 MB | 176 | `time_utc` | 2027-07-02 21:28 | 2027-10-12 15:26 |
-| `data/network_logs/audit/change_management.csv` | 1 | 0.0 MB | 145 | `time_utc` | 2027-07-17 13:10 | 2028-01-08 15:59 |
-| `data/network_logs/audit/endpoint_protection.csv` | 1 | 0.6 MB | 7,342 | `time_utc` | 2027-07-15 00:53 | 2028-01-12 23:44 |
-| `data/network_logs/audit/file_integrity.csv` | 1 | 0.0 MB | 161 | `time_utc` | 2027-07-24 15:39 | 2028-01-09 17:02 |
-| `data/network_logs/audit/historian_access.csv` | 1 | 0.2 MB | 1,326 | `start_utc` | 2027-07-16 13:05 | 2028-01-13 00:27 |
-| `data/network_logs/audit/mail_gateway_airstation.csv` | 1 | 0.3 MB | 1,260 | `time_utc` | 2027-09-12 00:01 | 2027-09-21 23:44 |
-| `data/network_logs/audit/mail_gateway_brightwake.csv` | 1 | 0.2 MB | 1,001 | `time_utc` | 2027-07-16 00:14 | 2027-08-24 22:42 |
-| `data/network_logs/audit/mail_gateway_cbpwa.csv` | 1 | 3.7 MB | 20,943 | `time_utc` | 2027-07-15 00:11 | 2028-01-12 23:52 |
-| `data/network_logs/audit/mail_gateway_city.csv` | 1 | 0.5 MB | 2,440 | `time_utc` | 2027-09-12 00:21 | 2027-09-21 23:57 |
-| `data/network_logs/audit/mail_url_clicks_brightwake.csv` | 1 | 0.0 MB | 1 | `time_utc` | 2027-08-12 15:02 | 2027-08-12 15:02 |
-| `data/network_logs/audit/mail_url_clicks_city_airstation.csv` | 1 | 0.0 MB | 10 | `time_utc` | 2027-09-15 14:15 | 2027-09-17 11:30 |
-| `data/network_logs/audit/ot_config_changes.csv` | 1 | 0.0 MB | 93 | `time_utc` | 2027-07-20 17:23 | 2028-01-07 21:52 |
-| `data/network_logs/audit/remote_access_sessions.csv` | 1 | 0.1 MB | 843 | `login_utc` | 2027-07-16 12:56 | 2028-01-12 22:53 |
-| `data/network_logs/audit/scada_command_log.csv` | 1 | 0.0 MB | 401 | `time_utc` | 2027-07-16 02:47 | 2028-01-12 19:45 |
-| `data/network_logs/audit/settings_audits.csv` | 1 | 0.0 MB | 5 | `time_utc` | 2027-09-28 22:02 | 2027-10-02 21:40 |
+| `data/network_logs/audit/account_logons_city_airstation.csv` | 1 | 0.1 MB | 1,168 | `time_utc` | 2027-09-12 00:02 | 2027-09-21 23:57 |
+| `data/network_logs/audit/alarm_suppression_audit.csv` | 1 | 0.0 MB | 216 | `time_utc` | 2027-07-16 15:53 | 2028-01-09 16:27 |
+| `data/network_logs/audit/change_management.csv` | 1 | 0.0 MB | 319 | `time_utc` | 2027-06-30 15:51 | 2028-01-12 22:03 |
+| `data/network_logs/audit/employee_vpn_sessions.csv` | 1 | 0.4 MB | 2,647 | `login_utc` | 2027-07-16 12:02 | 2028-01-12 05:14 |
+| `data/network_logs/audit/endpoint_protection.csv` | 1 | 0.6 MB | 7,325 | `time_utc` | 2027-07-16 00:34 | 2028-01-12 23:01 |
+| `data/network_logs/audit/file_integrity.csv` | 1 | 0.1 MB | 551 | `time_utc` | 2027-07-16 22:01 | 2028-01-12 23:20 |
+| `data/network_logs/audit/historian_access.csv` | 1 | 0.1 MB | 969 | `start_utc` | 2027-07-16 15:37 | 2028-01-12 23:26 |
+| `data/network_logs/audit/mail_gateway_airstation.csv` | 1 | 0.2 MB | 859 | `time_utc` | 2027-09-12 10:02 | 2027-09-21 23:47 |
+| `data/network_logs/audit/mail_gateway_brightwake.csv` | 1 | 0.2 MB | 973 | `time_utc` | 2027-07-16 00:05 | 2027-08-24 23:46 |
+| `data/network_logs/audit/mail_gateway_cbpwa.csv` | 1 | 10.0 MB | 48,298 | `time_utc` | 2027-07-16 00:10 | 2028-01-12 23:52 |
+| `data/network_logs/audit/mail_gateway_city.csv` | 1 | 0.5 MB | 2,332 | `time_utc` | 2027-09-12 00:20 | 2027-09-21 23:54 |
+| `data/network_logs/audit/mail_url_clicks_brightwake.csv` | 1 | 0.0 MB | 68 | `time_utc` | 2027-07-16 23:19 | 2027-08-24 18:27 |
+| `data/network_logs/audit/mail_url_clicks_city_airstation.csv` | 1 | 0.0 MB | 172 | `time_utc` | 2027-09-12 11:31 | 2027-09-21 20:51 |
+| `data/network_logs/audit/ot_config_changes.csv` | 1 | 0.0 MB | 145 | `time_utc` | 2027-07-18 15:31 | 2028-01-09 20:58 |
+| `data/network_logs/audit/remote_access_sessions.csv` | 1 | 0.2 MB | 1,085 | `login_utc` | 2027-07-16 13:36 | 2028-01-12 22:01 |
+| `data/network_logs/audit/scada_command_log.csv` | 1 | 0.1 MB | 626 | `time_utc` | 2027-07-16 15:00 | 2028-01-12 22:55 |
+| `data/network_logs/audit/settings_audits.csv` | 1 | 0.0 MB | 24 | `time_utc` | 2027-08-03 15:03 | 2027-11-09 16:21 |
 
 `account_logons_city_airstation.csv` columns: `time_utc`, `service`, `account`, `src_ip`, `src_network`, `result`, `auth_method`, `device`
 
 `alarm_suppression_audit.csv` columns: `time_utc`, `system`, `action`, `alarm_point`, `category`, `changed_by`, `source_host`, `change_ticket`, `active_suppressions_after`
 
 `change_management.csv` columns: `time_utc`, `record_id`, `record_type`, `summary`, `owner`, `status`
+
+`employee_vpn_sessions.csv` columns: `session_id`, `gateway`, `account`, `src_ip`, `src_network`, `device`, `assigned_ip`, `login_utc`, `logout_utc`, `duration_s`, `bytes_in`, `bytes_out`, `auth_method`
 
 `endpoint_protection.csv` columns: `time_utc`, `host`, `ip`, `event`, `detail`, `initiated_by`
 
@@ -484,12 +496,156 @@ Times are UTC unless the column name says local. `<month>` in a file name means 
 
 | Files | Count | Size | Records | Time column | First | Last |
 |---|---|---|---|---|---|---|
-| `data/network_logs/portal/aid_portal_access_<month>.csv` | 7 | 50.5 MB | 396,213 | `time_utc` | 2027-07-16 00:27 | 2028-01-12 23:05 |
-| `data/network_logs/portal/base_logistics_access_<month>.csv` | 7 | 1.1 MB | 8,724 | `time_utc` | 2027-07-16 00:04 | 2028-01-12 23:52 |
+| `data/network_logs/portal/aid_portal_access_<month>.csv` | 6 | 28.5 MB | 243,255 | `time_utc` | 2027-07-16 00:00 | 2028-01-12 05:55 |
+| `data/network_logs/portal/aid_portal_access_<month>_01.csv` | 1 | 32.6 MB | 270,435 | `time_utc` | 2027-11-01 00:00 | 2027-11-18 21:21 |
+| `data/network_logs/portal/aid_portal_access_<month>_02.csv` | 1 | 32.1 MB | 270,434 | `time_utc` | 2027-11-18 21:21 | 2027-11-30 23:59 |
+| `data/network_logs/portal/base_logistics_access_<month>.csv` | 7 | 11.9 MB | 106,751 | `time_utc` | 2027-07-16 01:03 | 2028-01-12 04:39 |
 
 `aid_portal_access_<month>.csv` columns: `time_utc`, `system`, `client_ip`, `client_network`, `method`, `path`, `status`, `event`, `account_ref`, `user_agent_family`, `bytes`
 
+`aid_portal_access_<month>_01.csv` columns: `time_utc`, `system`, `client_ip`, `client_network`, `method`, `path`, `status`, `event`, `account_ref`, `user_agent_family`, `bytes`
+
+`aid_portal_access_<month>_02.csv` columns: `time_utc`, `system`, `client_ip`, `client_network`, `method`, `path`, `status`, `event`, `account_ref`, `user_agent_family`, `bytes`
+
 `base_logistics_access_<month>.csv` columns: `time_utc`, `system`, `client_ip`, `client_network`, `method`, `path`, `status`, `event`, `account_ref`, `user_agent_family`, `bytes`
+
+## Firewall session logs (`firewall_logs`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/network_logs/firewall/fw_GW-FW-EDGE-01_<month>.csv` | 7 | 65.8 MB | 414,242 | `time_utc` | 2027-07-16 00:01 | 2028-01-12 23:59 |
+| `data/network_logs/firewall/fw_GW-OT-FW-01_<month>.csv` | 7 | 3.8 MB | 24,490 | `time_utc` | 2027-07-16 00:19 | 2028-01-12 23:58 |
+
+`fw_GW-FW-EDGE-01_<month>.csv` columns: `time_utc`, `device`, `action`, `rule_name`, `src_zone`, `dst_zone`, `src_ip`, `src_port`, `dst_ip`, `dst_port`, `proto`, `app`, `bytes_sent`, `bytes_recv`, `duration_s`, `nat_src_ip`, `session_end_reason`
+
+`fw_GW-OT-FW-01_<month>.csv` columns: `time_utc`, `device`, `action`, `rule_name`, `src_zone`, `dst_zone`, `src_ip`, `src_port`, `dst_ip`, `dst_port`, `proto`, `app`, `bytes_sent`, `bytes_recv`, `duration_s`, `nat_src_ip`, `session_end_reason`
+
+## Web and DNS filter logs (`web_proxy_logs`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/network_logs/proxy/web_proxy_<month>.csv` | 7 | 54.2 MB | 378,387 | `time_utc` | 2027-07-15 23:59 | 2028-01-12 23:59 |
+
+`web_proxy_<month>.csv` columns: `time_utc`, `client_ip`, `user`, `method`, `scheme`, `host`, `url_path`, `status`, `action`, `category`, `bytes_out`, `bytes_in`, `user_agent_family`, `policy`
+
+## Address lease logs (`dhcp_logs`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/network_logs/dhcp/dhcp_leases_<month>.csv` | 7 | 1.6 MB | 14,740 | `time_utc` | 2027-07-16 00:23 | 2028-01-12 23:56 |
+
+`dhcp_leases_<month>.csv` columns: `time_utc`, `server`, `event`, `ip`, `mac`, `hostname`, `scope`, `lease_s`
+
+## Perimeter packet capture (`packet_captures`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/network_logs/pcap/perimeter_<YYYY-MM-DD>.pcap` | 181 | 119.6 MB | 1,079,464 | `packet timestamp` | 2027-07-16 00:00 | 2028-01-12 23:58 |
+
+`perimeter_<YYYY-MM-DD>.pcap` columns: `Ethernet / IPv4 / TCP or UDP packets (classic pcap, microsecond timestamps)`
+
+## Windows event logs (`windows_event_logs`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/network_logs/windows/defender_<month>.jsonl` | 7 | 5.1 MB | 15,739 | `time_utc` | 2027-07-16 01:14 | 2028-01-12 23:01 |
+| `data/network_logs/windows/security_<month>.jsonl` | 7 | 109.3 MB | 394,164 | `time_utc` | 2027-07-15 19:37 | 2028-01-12 23:59 |
+| `data/network_logs/windows/system_<month>.jsonl` | 7 | 5.2 MB | 21,091 | `time_utc` | 2027-07-15 00:10 | 2028-01-12 23:57 |
+
+`defender_<month>.jsonl` columns: `time_utc`, `host`, `channel`, `provider`, `event_id`, `record_id`, `level`, `engine_version`, `signature_version`
+
+`security_<month>.jsonl` columns: `time_utc`, `host`, `channel`, `provider`, `event_id`, `record_id`, `level`, `user`, `domain`, `target_user`
+
+`system_<month>.jsonl` columns: `time_utc`, `host`, `channel`, `provider`, `event_id`, `record_id`, `level`, `service_name`, `state`
+
+## Endpoint telemetry (`endpoint_telemetry`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/network_logs/endpoint/endpoint_<month>.jsonl` | 7 | 204.4 MB | 686,224 | `time_utc` | 2027-07-15 00:10 | 2028-01-12 23:59 |
+
+`endpoint_<month>.jsonl` columns: `time_utc`, `host`, `event_type`, `user`, `pid`, `image`, `ppid`, `parent_image`, `command_line`, `sha256`, `signer`
+
+## Host triage collections (`host_triage`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/network_logs/triage/<host>/autoruns.csv` | 14 | 0.0 MB | 214 | none (static table) |  |  |
+| `data/network_logs/triage/<host>/collection.json` | 14 | 0.0 MB | 0 | none (static table) |  |  |
+| `data/network_logs/triage/<host>/execution_history.csv` | 14 | 0.0 MB | 312 | none (static table) |  |  |
+| `data/network_logs/triage/<host>/file_listing.csv` | 14 | 0.2 MB | 1,064 | none (static table) |  |  |
+| `data/network_logs/triage/<host>/installed_software.csv` | 14 | 0.0 MB | 62 | none (static table) |  |  |
+| `data/network_logs/triage/<host>/logon_history.csv` | 14 | 0.3 MB | 4,397 | `time_utc` | 2027-08-18 21:39 | 2027-10-14 17:07 |
+| `data/network_logs/triage/<host>/network_config.csv` | 14 | 0.0 MB | 14 | none (static table) |  |  |
+| `data/network_logs/triage/<host>/placeholders/<file name>.placeholder.txt` | 52 | 0.0 MB | 0 | none (static table) |  |  |
+| `data/network_logs/triage/<host>/scheduled_tasks.csv` | 14 | 0.0 MB | 42 | none (static table) |  |  |
+| `data/network_logs/triage/<host>/services.csv` | 14 | 0.0 MB | 177 | none (static table) |  |  |
+
+`autoruns.csv` columns: `location`, `name`, `image_path`, `signer`, `sha256`, `enabled`, `first_seen_utc`
+
+`collection.json` columns: `host`, `ip`, `os`, `collected_utc`, `collected_by`, `tool`, `case`, `logon_history_window_days`, `items`, `samples`, `note`
+
+`execution_history.csv` columns: `image_path`, `run_count`, `first_run_utc`, `last_run_utc`, `sha256`
+
+`file_listing.csv` columns: `path`, `size_bytes`, `created_utc`, `modified_utc`, `sha256`, `signer`
+
+`installed_software.csv` columns: `name`, `version`, `publisher`, `install_date`
+
+`logon_history.csv` columns: `time_utc`, `event_id`, `user`, `domain`, `logon_type`, `src_ip`, `logon_id`
+
+`network_config.csv` columns: `interface`, `ip`, `mac`, `gateway`, `dns_servers`, `dhcp_enabled`
+
+`scheduled_tasks.csv` columns: `task_name`, `action`, `author`, `created_utc`, `last_run_utc`, `trigger`
+
+`services.csv` columns: `name`, `display_name`, `start_type`, `state`, `image_path`, `account`, `installed_utc`
+
+## Partner organisations: firewall logs (`partner_firewall_logs`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/partner_it/<org>/firewall_<month>.csv` | 49 | 50.2 MB | 344,288 | `time_utc` | 2027-07-16 00:00 | 2028-01-12 23:59 |
+
+`firewall_<month>.csv` columns: `time_utc`, `device`, `action`, `rule_name`, `src_zone`, `dst_zone`, `src_ip`, `src_port`, `dst_ip`, `dst_port`, `proto`, `app`, `bytes_sent`, `bytes_recv`, `duration_s`, `nat_src_ip`, `session_end_reason`
+
+## Partner organisations: web gateway logs (`partner_web_logs`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/partner_it/<org>/web_<month>.csv` | 49 | 11.5 MB | 76,996 | `time_utc` | 2027-07-16 00:00 | 2028-01-12 23:54 |
+
+`web_<month>.csv` columns: `time_utc`, `client_ip`, `user`, `method`, `scheme`, `host`, `url_path`, `status`, `action`, `category`, `bytes_out`, `bytes_in`, `user_agent_family`, `policy`
+
+## Partner organisations: DNS query logs (`partner_dns_logs`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/partner_it/<org>/dns_<month>.csv` | 49 | 8.4 MB | 84,794 | `time_utc` | 2027-07-16 00:00 | 2028-01-12 23:54 |
+
+`dns_<month>.csv` columns: `time_utc`, `client_ip`, `query`, `qtype`, `rcode`, `answer`, `resolver`
+
+## Partner organisations: sign-on logs (`partner_auth_logs`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/partner_it/<org>/auth_<month>.csv` | 49 | 33.1 MB | 291,228 | `time_utc` | 2027-07-16 00:00 | 2028-01-12 23:59 |
+
+`auth_<month>.csv` columns: `time_utc`, `host`, `event_id`, `account`, `logon_type`, `src_ip`, `src_network`, `result`, `auth_method`, `device`
+
+## Partner organisations: mail gateway logs (`partner_mail_logs`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/partner_it/<org>/mail_<month>.csv` | 49 | 16.8 MB | 74,833 | `time_utc` | 2027-07-16 00:05 | 2028-01-12 23:57 |
+
+`mail_<month>.csv` columns: `time_utc`, `gateway`, `direction`, `sender`, `sender_domain`, `recipient`, `subject`, `attachment_names`, `size_bytes`, `verdict`, `action`, `message_id`
+
+## Partner organisations: endpoint protection events (`partner_endpoint_alerts`)
+
+| Files | Count | Size | Records | Time column | First | Last |
+|---|---|---|---|---|---|---|
+| `data/partner_it/<org>/endpoint_alerts_<month>.csv` | 49 | 1.4 MB | 15,175 | `time_utc` | 2027-07-16 00:21 | 2028-01-12 23:46 |
+
+`endpoint_alerts_<month>.csv` columns: `time_utc`, `host`, `ip`, `event`, `detail`, `initiated_by`
 
 ## Tanker cargo-control and vendor remote-access logs (`vessel_ot_logs`)
 

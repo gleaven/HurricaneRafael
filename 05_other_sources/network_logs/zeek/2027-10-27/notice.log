@@ -6,8 +6,7 @@
 #open	2027-10-27-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1824645633.621942	-	10.14.22.30	23.68.238.14	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1824661123.218859	-	10.14.20.19	96.143.242.82	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1824676233.018719	-	10.14.20.21	23.241.175.6	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1824679301.587567	-	10.14.20.33	69.50.18.138	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1824633785.053866	-	10.14.30.24	104.133.68.75	80	HTTP::Unusual_User_Agent	api.streamvideo-cdn.net user agent not seen before on this network	10.14.30.24	104.133.68.75	80	Notice::ACTION_LOG
+1824657988.611262	-	10.14.21.31	54.136.201.110	80	HTTP::Unusual_User_Agent	update-cdn.pumpworks-service.com user agent not seen before on this network	10.14.21.31	54.136.201.110	80	Notice::ACTION_LOG
+1824667074.651959	-	10.14.21.40	157.2.26.33	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.21.40	157.2.26.33	443	Notice::ACTION_LOG
 #close	2027-10-28-00-00-00

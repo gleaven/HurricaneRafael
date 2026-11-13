@@ -6,5 +6,5 @@
 #open	2027-09-08-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1820422094.546973	-	10.14.21.20	151.68.243.101	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1820436048.969237	-	10.14.30.59	142.141.64.117	443	Weird::Activity	possible_split_routing	10.14.30.59	142.141.64.117	443	Notice::ACTION_LOG
 #close	2027-09-09-00-00-00

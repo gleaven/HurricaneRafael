@@ -6,9 +6,8 @@
 #open	2027-11-15-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1826257805.416064	-	10.14.22.15	216.185.240.222	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1826260704.910966	-	10.14.30.47	157.246.5.2	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1826278606.454610	-	10.14.21.42	157.2.26.33	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1826291854.547129	-	10.14.22.25	23.61.232.190	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1826307669.946864	-	10.14.21.29	40.247.95.23	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1826243854.521696	-	10.14.30.46	151.68.243.101	443	SSL::Certificate_Expires_Soon	Certificate api-gw.cloudstorage-sync.com is going to expire soon	10.14.30.46	151.68.243.101	443	Notice::ACTION_LOG
+1826282602.860413	-	10.14.20.24	162.101.67.214	443	Conn::Content_Gap	cdn.streamvideo-cdn.net content gap (2081 bytes missing)	10.14.20.24	162.101.67.214	443	Notice::ACTION_LOG
+1826285240.191167	-	10.14.21.51	35.229.79.13	443	Conn::Content_Gap	www.cctexas-services.org content gap (7810 bytes missing)	10.14.21.51	35.229.79.13	443	Notice::ACTION_LOG
+1826294642.520532	-	10.14.21.38	10.14.10.5	53	DNS::External_Name	portal-test.cbpwa-services.org is pointing to a local host	10.14.21.38	10.14.10.5	53	Notice::ACTION_LOG
 #close	2027-11-16-00-00-00

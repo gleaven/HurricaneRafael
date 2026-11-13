@@ -29,7 +29,19 @@ SRC = os.path.join(ROOT, "05_other_sources")
 REG = os.path.join(ROOT, "06_data_streams")
 csv.field_size_limit(10 ** 8)
 
-BANNED = re.compile(rb"GridWater|Flint Hills|Valero|Citgo|NuStar|Buckeye Partners|Caller-?Times|\bKIII\b|KRIS-?TV|CHRISTUS|Spohn|Driscoll Children|State Farm|Auriga Meridian|Fort Cavazos", re.I)
+def _not_registry_address():
+    """Regex for addresses that are not registry entries: anything outside the utility's registered /24 networks
+    (outside addresses, and an address from another network that a returning laptop asks to renew and is refused),
+    and the employee VPN pool."""
+    zones = json.load(open(os.path.join(REG, "gw_host_registry.json"), encoding="utf-8"))["network_zones"]
+    nets = sorted({re.escape(".".join(z["cidr"].split("/")[0].split(".")[:3])) for z in zones if z["cidr"].endswith("/24") and z["zone"] != "corp-vpn"})
+    return r"^(?!(?:" + "|".join(nets) + r")\.)"
+
+
+NOT_REGISTRY_ADDRESS = _not_registry_address()
+PARTNER_POOL = r"^10\.\d+\.250\."          # the partner organisations' VPN pools
+
+BANNED = re.compile(rb"GridWater|Flint Hills|Valero|Citgo|NuStar|Buckeye Partners|Caller-?Times|\bKIII\b|KRIS-?TV|CHRISTUS|Spohn|Driscoll Children|State Farm|Auriga Meridian|Fort Cavazos|Everbridge|CivicReady", re.I)
 
 
 def load(name):
@@ -103,6 +115,17 @@ def registry_classes():
     for k in ("channel_segments", "ship_agents"):
         if isinstance(tr.get(k), list):
             add("segment" if k == "channel_segments" else "agent", "terminal_registry", k, "segment_id" if k == "channel_segments" else "agent_id")
+    if os.path.exists(os.path.join(REG, "partner_it_registry.json")):
+        for o in load("partner_it_registry")["organisations"]:
+            where = ("partner_it_registry", o["org_id"])
+            for h in o["hosts"]:
+                for f in ("host_id", "hostname", "ip"):
+                    if h.get(f):
+                        R.setdefault("partner_host", {})[str(h[f])] = where + (h["host_id"],)
+            for a in o["accounts"]:
+                for f in ("account", "mailbox"):
+                    if a.get(f):
+                        R.setdefault("partner_account", {})[str(a[f])] = where + (a["account"],)
     cu = load("cad_units")
     R["agency"] = {k: ("cad_units", "agencies", k) for k in cu.get("agencies", {})}
     for k in ("broadcast_stations",):
@@ -151,11 +174,33 @@ CHECKS = [
     ("maintenance/work_orders.csv", "site_id", ["site", "asset"], {"optional": True}),
     ("maintenance/base_status_reports.csv", "installation_id", ["facility"], {}), ("maintenance/base_status_reports.csv", "equipment_id", ["asset", "equipment"], {"optional": True}),
     ("network_logs/siem/siem_alerts_*.csv", "src_host", ["host"], {"optional": True}), ("network_logs/siem/siem_alerts_*.csv", "dst_host", ["host"], {"optional": True}),
+    ("network_logs/siem/siem_alerts_*.csv", "user", ["user"], {"optional": True, "ignore": r"\\"}),   # HOST\\account forms are checked through the audit tables
     ("network_logs/audit/remote_access_sessions.csv", "gateway", ["host"], {}), ("network_logs/audit/remote_access_sessions.csv", "account", ["user"], {}),
+    ("network_logs/audit/employee_vpn_sessions.csv", "gateway", ["host"], {}), ("network_logs/audit/employee_vpn_sessions.csv", "account", ["user"], {}),
+    ("network_logs/audit/employee_vpn_sessions.csv", "device", ["host"], {"ignore": r"^(DESKTOP|LAPTOP)-[A-Z2-9]{7}$"}),
     ("network_logs/audit/historian_access.csv", "server", ["host"], {}), ("network_logs/audit/endpoint_protection.csv", "host", ["host"], {}),
     ("network_logs/audit/ot_config_changes.csv", "device", ["host"], {}), ("network_logs/audit/file_integrity.csv", "host", ["host"], {}),
     ("network_logs/audit/scada_command_log.csv", "scada_server", ["host"], {}), ("network_logs/audit/scada_command_log.csv", "device", ["equipment", "asset"], {}),
     ("network_logs/portal/*.csv", "system", ["host"], {}),
+    # raw IT and security logs of the utility: internal addresses, host names and accounts come from gw_host_registry.json
+    # (outside addresses and the employee VPN pool 10.14.250.0/24 are not registry entries)
+    ("network_logs/firewall/fw_*.csv", "device", ["host"], {}),
+    ("network_logs/firewall/fw_*.csv", "src_ip", ["host"], {"ignore": NOT_REGISTRY_ADDRESS}), ("network_logs/firewall/fw_*.csv", "dst_ip", ["host"], {"ignore": NOT_REGISTRY_ADDRESS}),
+    ("network_logs/proxy/web_proxy_*.csv", "client_ip", ["host"], {}), ("network_logs/proxy/web_proxy_*.csv", "user", ["user"], {"optional": True}),
+    ("network_logs/dhcp/dhcp_leases_*.csv", "server", ["host"], {}), ("network_logs/dhcp/dhcp_leases_*.csv", "hostname", ["host"], {"optional": True, "ignore": r"^(DESKTOP|LAPTOP)-[A-Z2-9]{7}$"}),   # staff home computers on the VPN
+    ("network_logs/dhcp/dhcp_leases_*.csv", "ip", ["host"], {"ignore": NOT_REGISTRY_ADDRESS}),
+    ("network_logs/windows/*.jsonl", "host", ["host"], {}), ("network_logs/windows/*.jsonl", "user", ["user", "host"], {"optional": True, "strip": "$", "ignore": r"^SYSTEM$"}),
+    ("network_logs/windows/*.jsonl", "target_user", ["user"], {"optional": True}), ("network_logs/windows/*.jsonl", "caller_computer", ["host"], {"optional": True}),
+    ("network_logs/windows/*.jsonl", "src_host", ["host"], {"optional": True}),
+    ("network_logs/endpoint/*.jsonl", "host", ["host"], {}), ("network_logs/endpoint/*.jsonl", "user", ["user", "host"], {"optional": True, "strip": "$", "ignore": r"^SYSTEM$"}),
+    ("network_logs/triage/*/collection.json", "host", ["host"], {}),
+    # partner organisations: hosts, internal addresses and accounts come from partner_it_registry.json
+    ("partner_it/*/firewall_*.csv", "device", ["partner_host"], {}),
+    ("partner_it/*/web_*.csv", "client_ip", ["partner_host"], {"ignore": PARTNER_POOL}), ("partner_it/*/web_*.csv", "user", ["partner_account"], {"optional": True}),
+    ("partner_it/*/dns_*.csv", "client_ip", ["partner_host"], {"ignore": PARTNER_POOL}), ("partner_it/*/dns_*.csv", "resolver", ["partner_host"], {}),
+    ("partner_it/*/auth_*.csv", "host", ["partner_host"], {}), ("partner_it/*/auth_*.csv", "account", ["partner_account"], {}),
+    ("partner_it/*/mail_*.csv", "gateway", ["partner_host"], {}),
+    ("partner_it/*/endpoint_alerts_*.csv", "host", ["partner_host"], {}), ("partner_it/*/endpoint_alerts_*.csv", "ip", ["partner_host"], {}),
     ("payments/contracts_awards.csv", "supplier_id", ["vendor"], {}), ("payments/contracts_awards.csv", "awarding_org_id", ["org"], {"optional": True}),
     ("payments/contracts_invoices.csv", "supplier_id", ["vendor"], {}), ("payments/contracts_invoices.csv", "remit_bank_account_id", ["account"], {"optional": True}),
     ("payments/contracts_invoices.csv", "work_area_id", ["area"], {"optional": True}), ("payments/contracts_vendor_registry.csv", "supplier_id", ["vendor"], {}),
@@ -201,6 +246,18 @@ def main():
         splitter = re.compile(opt["split"]) if opt.get("split") else None
         missing_col = False
         for fp in files:
+            if fp.endswith(".jsonl"):                      # JSON Lines written with compact separators: "key":"value"
+                rx = re.compile(rb'"' + col.encode() + rb'":"((?:[^"\\]|\\.)*)"')
+                with open(fp, "rb") as fh:
+                    for line in fh:
+                        for m in rx.finditer(line):
+                            v = m.group(1).decode("utf-8", "replace").replace("\\\\", "\\")
+                            vals[v] = vals.get(v, 0) + 1
+                continue
+            if fp.endswith(".json"):
+                v = str(json.load(open(fp, encoding="utf-8")).get(col, ""))
+                vals[v] = vals.get(v, 0) + 1
+                continue
             with open(fp, encoding="utf-8", errors="replace", newline="") as fh:
                 rd = csv.reader(fh)
                 h = next(rd, [])
@@ -220,6 +277,8 @@ def main():
             parts = [p for p in (splitter.split(v) if splitter else [v])]
             for p in parts:
                 p = p.strip()
+                if opt.get("strip") and p.endswith(opt["strip"]):      # machine accounts: HOSTNAME$
+                    p = p[:-len(opt["strip"])]
                 if opt.get("ignore") and re.search(opt["ignore"], p):
                     continue
                 if p in BLANKS:

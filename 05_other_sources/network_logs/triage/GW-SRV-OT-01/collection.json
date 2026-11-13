@@ -1,0 +1,57 @@
+{
+ "host": "GW-SRV-OT-01",
+ "ip": "10.72.1.20",
+ "os": "Windows Server 2019",
+ "collected_utc": "2027-10-13T16:20:47Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 11,
+   "sha256": "84a7ee1683c3d66c61bda447317ebd45b020b6be95649a30e0521060df7ca7a1"
+  },
+  "file_listing.csv": {
+   "rows": 40,
+   "sha256": "6d88b719f2aa22beb14020ff650cee51a4d6503cdd1012d200ce29a3e468ab6a"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "63e5f9980fb60faf349b8a2cb0cfc03b2e7f947c26356cb016825ef8e25b98b4"
+  },
+  "autoruns.csv": {
+   "rows": 13,
+   "sha256": "f812204fc98f4fedab959f92b8f0032718d54fc301cb3e0b84500f55d796e3bb"
+  },
+  "execution_history.csv": {
+   "rows": 12,
+   "sha256": "837ace3b6ff79b4c1e798807b6dbd46a5dc551bf84e8e403e09126154a1c2c5b"
+  },
+  "logon_history.csv": {
+   "rows": 248,
+   "sha256": "2f4ee1a3d301e097b3a868c1d07a5f3be844b05ec7345bfc4a7cdffe905efb20"
+  },
+  "installed_software.csv": {
+   "rows": 2,
+   "sha256": "5486e81bd9d3a77d7bc5b78dc56c849f8b7b978acd472ae007a03c6ff48ab480"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "f881927a565aaf0968caefa3e37a778f98ffe4ccf681f199da142aff4a660d15"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/meterbatch.exe.placeholder.txt",
+   "stands_in_for": "C:\\Program Files\\CBPWA\\Scripts\\meterbatch.exe",
+   "sha256": "7a2312102a3d5d7a92f8e295923d96a689756454fadb3f683b2982fb80e726a3"
+  },
+  {
+   "file": "placeholders/drvcheck.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\bin\\drvcheck.exe",
+   "sha256": "db1647fa18b82cb89383c46953086ede2bce7d0e7cb7a3518c4b0d7768df0c44"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

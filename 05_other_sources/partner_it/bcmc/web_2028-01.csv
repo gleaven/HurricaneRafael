@@ -1,0 +1,489 @@
+time_utc,client_ip,user,method,scheme,host,url_path,status,action,category,bytes_out,bytes_in,user_agent_family,policy
+2028-01-01T00:30:56Z,10.112.10.64,29bb2b9,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,2082,151375,Chrome/Windows,default
+2028-01-01T01:43:34Z,10.112.10.43,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,1623,66397,-,default
+2028-01-01T02:32:44Z,10.112.10.88,9a2fc83,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,6435,118476,Chrome/Windows,default
+2028-01-01T03:26:35Z,10.112.10.79,6562994,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,3565,12411,Chrome/Windows,default
+2028-01-01T03:50:40Z,10.112.10.46,0eddeab,CONNECT,https,www.inglesiderehab.example,-,200,allowed,business,7180,203164,Edge/Windows,default
+2028-01-01T04:35:08Z,10.112.10.67,d64b3eb,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,548,10192,Chrome/Windows,default
+2028-01-01T05:59:33Z,10.112.10.55,29e1771,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,5745,159981,Edge/Windows,default
+2028-01-01T06:24:12Z,10.112.10.79,-,CONNECT,https,www.ntp-pool-public.org,-,504,allowed,software updates,4826,38,-,default
+2028-01-01T07:30:58Z,10.112.10.88,-,CONNECT,https,www.osupdates-delivery.com,-,200,allowed,software updates,1653,94168,-,default
+2028-01-01T08:04:42Z,10.112.30.37,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,3687,80659,-,default
+2028-01-01T08:26:48Z,10.112.10.67,432ab27,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1897,115626,Chrome/Windows,default
+2028-01-01T09:35:42Z,10.112.10.49,0099da8,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,8372,44134,Chrome/Windows,default
+2028-01-01T11:50:37Z,10.112.10.37,418d5a6,CONNECT,https,cdn-east.storm-prep-guides.org,-,200,allowed,weather,2497,141525,Chrome/Windows,default
+2028-01-01T12:47:45Z,10.112.10.76,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,6736,32197,-,default
+2028-01-01T14:03:34Z,10.112.10.67,d64b3eb,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,4268,139085,Chrome/Windows,default
+2028-01-01T14:18:24Z,10.112.10.58,-,GET,http,auth-prod.certstatus-ocsp.net,/v2/check?id=9d810b9efd,200,allowed,software updates,4288,102035,-,default
+2028-01-01T14:56:19Z,10.112.10.55,a8b78a0,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,4425,28821,Chrome/Windows,default
+2028-01-01T15:59:07Z,10.112.10.43,fc8db28,CONNECT,https,www.vertexlegal.example,-,200,allowed,business,3939,116957,Edge/Windows,default
+2028-01-01T16:10:08Z,10.112.10.31,0e7e80f,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,4448,113985,Chrome/Windows,default
+2028-01-01T16:33:07Z,10.112.10.46,d1f3e49,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,1136,47025,Chrome/Windows,default
+2028-01-01T18:16:31Z,10.112.10.82,f6a8d7a,CONNECT,https,www.padreorthopedics.example,-,200,allowed,business,5590,194281,Chrome/Windows,default
+2028-01-01T18:58:40Z,10.112.10.67,9571bfc,CONNECT,https,www.drug-reference.example,-,200,allowed,health,824,25285,Chrome/Windows,default
+2028-01-01T20:05:17Z,10.112.10.64,246d579,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,5247,49296,Edge/Windows,default
+2028-01-01T20:41:12Z,10.112.10.85,27808c1,CONNECT,https,rest-api.hotel-reservations.com,-,200,allowed,travel,3109,131846,Edge/Windows,default
+2028-01-01T20:46:31Z,10.112.10.31,4a3b513,CONNECT,https,www.hrcloud-payroll.com,-,200,allowed,finance,2301,28481,Chrome/Windows,default
+2028-01-01T21:45:56Z,10.112.10.79,6562994,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,2486,100976,Chrome/Windows,default
+2028-01-01T23:24:40Z,10.112.30.37,-,GET,http,www.ntp-pool-public.org,/content/f169984d.cab,200,allowed,software updates,1027,255398,-,default
+2028-01-02T00:05:09Z,10.112.10.43,-,HEAD,http,www.browser-safecheck.net,/pki/90252d.crl,200,allowed,software updates,2859,45270,-,default
+2028-01-02T00:14:06Z,10.112.10.79,6562994,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,1923,57574,Chrome/Windows,default
+2028-01-02T00:29:27Z,10.112.10.34,96a5c90,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,3969,87244,Edge/Windows,default
+2028-01-02T00:46:35Z,10.112.10.88,9a2fc83,CONNECT,https,static.packagetracker-api.net,-,200,allowed,business,4063,186208,Chrome/Windows,default
+2028-01-02T02:00:36Z,10.112.10.49,c6ddab1,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,3835,19789,Chrome/Windows,default
+2028-01-02T02:18:06Z,10.112.10.88,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,1279,60265,-,default
+2028-01-02T02:33:57Z,10.112.10.88,1651309,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,2599,50630,Chrome/Windows,default
+2028-01-02T03:16:34Z,10.112.30.58,-,GET,http,content.harbourlight-av.example,/robots.txt,200,allowed,software updates,5002,47448,-,default
+2028-01-02T03:57:13Z,10.112.10.70,8913137,CONNECT,https,www.joint-accreditation.example,-,502,allowed,health,1827,271,Chrome/Windows,default
+2028-01-02T04:26:44Z,10.112.10.55,8e85612,CONNECT,https,static.bayside-ledger.example,-,200,allowed,news,3210,49805,Chrome/Windows,default
+2028-01-02T04:27:54Z,10.112.10.52,d92fdf9,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,3297,33542,Chrome/Windows,default
+2028-01-02T04:32:11Z,10.112.10.85,cde0031,CONNECT,https,cdn.fleetfuel-cards.com,-,200,allowed,finance,1967,106643,Chrome/Windows,default
+2028-01-02T05:36:35Z,10.112.10.25,eca293f,CONNECT,https,www.padre-island-rentals.example,-,200,allowed,uncategorised,6063,73727,Chrome/Windows,default
+2028-01-02T05:45:36Z,10.112.10.61,e7be302,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,7326,87889,Chrome/Windows,default
+2028-01-02T06:33:10Z,10.112.10.79,cd9a498,CONNECT,https,auth-prod.storm-prep-guides.org,-,200,allowed,weather,2642,97189,Chrome/Windows,default
+2028-01-02T07:01:47Z,10.112.30.64,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,1908,189353,-,default
+2028-01-02T08:30:03Z,10.112.10.61,e7e3e56,CONNECT,https,static.newswire-national.com,-,200,allowed,news,1788,21328,Chrome/Windows,default
+2028-01-02T08:39:16Z,10.112.10.46,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,1011,103524,-,default
+2028-01-02T08:52:34Z,10.112.10.52,d92fdf9,CONNECT,https,www.school-district-cc.org,-,200,allowed,education,1061,165046,Chrome/Windows,default
+2028-01-02T09:18:04Z,10.112.10.31,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,713,96521,-,default
+2028-01-02T10:09:18Z,10.112.10.85,d321064,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,5113,283666,Chrome/Windows,default
+2028-01-02T11:34:08Z,10.112.10.82,f6a8d7a,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,2614,130165,Chrome/Windows,default
+2028-01-02T13:18:42Z,10.112.10.76,17fff96,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,9640,57992,Edge/Windows,default
+2028-01-02T13:26:38Z,10.112.10.55,8e85612,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,2812,46584,Chrome/Windows,default
+2028-01-02T13:50:34Z,10.112.10.49,c6ddab1,CONNECT,https,www.drug-reference.example,-,200,allowed,health,3093,56406,Chrome/Windows,default
+2028-01-02T14:05:23Z,10.112.10.25,f78b121,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,2246,18572,Edge/Windows,default
+2028-01-02T16:23:47Z,10.112.10.88,6988b10,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,2631,13824,Edge/Windows,default
+2028-01-02T16:45:56Z,10.112.10.49,c6ddab1,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,5976,22760,Chrome/Windows,default
+2028-01-02T17:19:44Z,10.112.10.55,-,GET,http,api.certstatus-ocsp.net,/pki/c162a9.crl,200,allowed,software updates,3175,92827,-,default
+2028-01-02T17:41:33Z,10.112.10.40,-,GET,http,www.ntp-pool-public.org,/images/4a04c1.png,200,allowed,software updates,6301,25597,-,default
+2028-01-02T18:01:34Z,10.112.10.52,835ae62,CONNECT,https,www.drug-reference.example,-,200,allowed,health,2538,51516,Chrome/Windows,default
+2028-01-02T18:32:47Z,10.112.10.67,-,HEAD,http,content.harbourlight-av.example,/updates/138cd/manifest.xml,301,allowed,software updates,3137,459,-,default
+2028-01-02T18:46:01Z,10.112.10.46,d1f3e49,CONNECT,https,www.portlandlogistics.example,-,200,allowed,business,435,62002,Chrome/Windows,default
+2028-01-02T19:05:30Z,10.112.10.28,5d144f4,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,2411,37687,Edge/Windows,default
+2028-01-02T20:35:31Z,10.112.10.40,44937c3,CONNECT,https,www.klebergoncology.example,-,200,allowed,business,934,60309,Edge/Windows,default
+2028-01-02T20:43:12Z,10.112.10.31,0e7e80f,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,5277,145473,Chrome/Windows,default
+2028-01-02T21:23:16Z,10.112.10.67,9571bfc,GET,http,www.blood-center-coastalbend.example,/ocsp/0a239049f569,200,allowed,health,3539,95442,Chrome/Windows,default
+2028-01-02T23:56:54Z,10.112.10.88,04c28c5,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,9907,34270,Chrome/Windows,default
+2028-01-03T00:05:39Z,10.112.10.70,a2fa0b0,CONNECT,https,click.vertex-biomed.example,-,200,allowed,business,7187,156607,Edge/Windows,default
+2028-01-03T00:08:36Z,10.112.10.46,0eddeab,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1801,119580,Edge/Windows,default
+2028-01-03T00:09:06Z,10.112.10.55,8060cf7,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,4726,126044,Chrome/Windows,default
+2028-01-03T00:23:43Z,10.112.30.37,-,GET,http,content.harbourlight-av.example,/favicon.ico,404,allowed,software updates,2207,275507,-,default
+2028-01-03T00:28:30Z,10.112.10.40,436443c,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,730,12773,Chrome/Windows,default
+2028-01-03T01:12:56Z,10.112.30.49,-,GET,http,www.browser-safecheck.net,/content/f98ccfde.cab,200,allowed,software updates,1524,48829,-,default
+2028-01-03T01:30:21Z,10.112.10.46,0eddeab,CONNECT,https,www.southtexelectric.example,-,200,allowed,business,5156,72824,Edge/Windows,default
+2028-01-03T02:22:42Z,10.112.10.43,d91f0be,CONNECT,https,www.anchorpediatrics.example,-,200,allowed,business,667,80621,Chrome/Windows,default
+2028-01-03T02:34:43Z,10.112.10.49,f4001fc,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,2092,31750,Chrome/Windows,default
+2028-01-03T03:34:12Z,10.112.10.52,ce643fa,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,4275,39219,Chrome/Windows,default
+2028-01-03T05:02:22Z,10.112.10.67,cf00f6d,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,3511,98705,Chrome/Windows,default
+2028-01-03T05:09:44Z,10.112.10.49,c6ddab1,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,5640,125945,Chrome/Windows,default
+2028-01-03T07:13:20Z,10.112.10.28,aef5a22,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,3071,138091,Firefox/Windows,default
+2028-01-03T10:39:11Z,10.112.10.52,20744cd,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,719,325847,Edge/Windows,default
+2028-01-03T10:54:07Z,10.112.10.76,94047f1,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,4192,43195,Edge/Windows,default
+2028-01-03T12:18:59Z,10.112.10.79,ca7700e,CONNECT,https,www.harborpathology.example,-,200,allowed,business,1620,64358,Edge/Windows,default
+2028-01-03T12:58:55Z,10.112.30.25,b39c790,CONNECT,https,www.mustangdialysis.example,-,200,allowed,business,3832,135406,Chrome/Windows,default
+2028-01-03T13:58:28Z,10.112.10.85,d321064,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,1630,3792,Edge/Windows,default
+2028-01-03T14:02:42Z,10.112.10.67,d64b3eb,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,2494,95689,Chrome/Windows,default
+2028-01-03T14:06:54Z,10.112.30.25,b39c790,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,6896,41828,Chrome/Windows,default
+2028-01-03T15:47:58Z,10.112.10.64,-,GET,http,www.ntp-pool-public.org,/v1/check?id=b85e62afdb,301,allowed,software updates,2010,464,-,default
+2028-01-03T15:57:50Z,10.112.10.64,03f1d10,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,1296,131465,Edge/Windows,default
+2028-01-03T16:13:44Z,10.112.10.37,61e166f,CONNECT,https,static.bayside-ledger.example,-,200,allowed,news,5634,82257,Chrome/Windows,default
+2028-01-03T16:31:54Z,10.112.10.82,76f1884,CONNECT,https,www.pioneerrehab.example,-,200,allowed,business,4282,11154,Chrome/Windows,default
+2028-01-03T16:44:30Z,10.112.10.31,9b954ec,CONNECT,https,www.tidewatercreditunion.example,-,200,allowed,weather,3653,174243,Chrome/Windows,default
+2028-01-03T17:10:35Z,10.112.10.67,9571bfc,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,2035,25796,Chrome/Windows,default
+2028-01-03T17:14:18Z,10.112.30.25,b39c790,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,1308,7251,Chrome/Windows,default
+2028-01-03T17:33:52Z,10.112.30.31,edbfe1a,CONNECT,https,login.docsign-flow.com,-,200,allowed,online storage,1925,73006,Edge/Windows,default
+2028-01-03T17:48:27Z,10.112.10.28,272d51c,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,3661,26615,Chrome/Windows,default
+2028-01-03T18:27:52Z,10.112.10.46,a6a68e1,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,2910,212165,Firefox/Windows,default
+2028-01-03T18:45:36Z,10.112.10.43,d91f0be,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1767,105837,Chrome/Windows,default
+2028-01-03T19:26:03Z,10.112.30.34,76159f5,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,3946,13732,Edge/Windows,default
+2028-01-03T19:48:31Z,10.112.30.34,76159f5,CONNECT,https,www.drug-reference.example,-,200,allowed,health,9643,46311,Edge/Windows,default
+2028-01-03T20:08:51Z,10.112.30.40,2f6a163,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,2820,75017,Chrome/Windows,default
+2028-01-03T20:10:07Z,10.112.10.49,c6ddab1,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2271,393763,Chrome/Windows,default
+2028-01-03T20:16:15Z,10.112.10.73,b5216c9,CONNECT,https,www-east.harborline6.example,-,200,allowed,news,2770,29898,Chrome/Windows,default
+2028-01-03T20:35:56Z,10.112.30.31,edbfe1a,CONNECT,https,rx.eprescribe-network.example,-,200,allowed,health,2104,114303,Edge/Windows,default
+2028-01-03T20:46:39Z,10.112.10.25,-,GET,http,static.telemetry-osvendor.com,/index.html,200,allowed,software updates,5248,63691,-,default
+2028-01-03T21:26:57Z,10.112.10.25,daa9372,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,6202,28991,Chrome/Windows,default
+2028-01-03T21:39:11Z,10.112.10.34,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,2498,98873,-,default
+2028-01-03T21:45:38Z,10.112.10.67,9571bfc,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3138,141070,Chrome/Windows,default
+2028-01-03T21:48:25Z,10.112.10.40,d759890,CONNECT,https,rest-api.hotel-reservations.com,-,200,allowed,travel,2627,150960,Edge/Windows,default
+2028-01-03T21:55:40Z,10.112.10.49,c6ddab1,CONNECT,https,www.school-district-cc.org,-,200,allowed,education,1039,39396,Chrome/Windows,default
+2028-01-03T22:18:50Z,10.112.10.55,-,GET,http,www-east.telemetry-osvendor.com,/pki/1f047d.crl,200,allowed,software updates,2454,12079,-,default
+2028-01-03T22:29:03Z,10.112.10.34,96a5c90,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,4037,8525,Edge/Windows,default
+2028-01-03T22:38:00Z,10.112.10.40,d759890,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,7710,267465,Chrome/Windows,default
+2028-01-03T23:29:24Z,10.112.10.85,d321064,CONNECT,https,www.cloudstorage-sync.com,-,200,allowed,online storage,2824,118943,Edge/Windows,default
+2028-01-03T23:39:01Z,10.112.30.34,76159f5,CONNECT,https,www.school-district-cc.org,-,200,allowed,education,1646,27145,Edge/Windows,default
+2028-01-03T23:52:05Z,10.112.10.49,0099da8,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,723,1460,Chrome/Windows,web-filter-block
+2028-01-03T23:57:25Z,10.112.10.85,d321064,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,3897,32850,Chrome/Windows,default
+2028-01-04T02:36:31Z,10.112.10.70,-,GET,http,www.ntp-pool-public.org,/,304,allowed,software updates,10824,684,-,default
+2028-01-04T02:51:14Z,10.112.10.73,b5216c9,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,5840,206523,Chrome/Windows,default
+2028-01-04T03:17:56Z,10.112.10.79,6562994,CONNECT,https,www.vertexlegal.example,-,200,allowed,business,6953,183443,Chrome/Windows,default
+2028-01-04T04:36:05Z,10.112.10.85,-,CONNECT,https,www.browser-safecheck.net,-,200,allowed,software updates,3377,73510,-,default
+2028-01-04T05:30:39Z,10.112.10.34,d25d353,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,1120,72394,Chrome/Windows,default
+2028-01-04T06:42:24Z,10.112.10.58,72a7857,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,3672,24025,Edge/Windows,default
+2028-01-04T07:01:33Z,10.112.10.82,bb99125,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,10007,76947,Edge/Windows,default
+2028-01-04T07:53:16Z,10.112.10.28,5d144f4,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,611,75166,Edge/Windows,default
+2028-01-04T07:54:04Z,10.112.250.47,eada294,CONNECT,https,www.southtexelectric.example,-,200,allowed,business,4264,35607,Chrome/Windows,default
+2028-01-04T07:58:59Z,10.112.10.67,d64b3eb,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,5197,119224,Chrome/Windows,default
+2028-01-04T08:13:16Z,10.112.10.49,44a6019,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,5392,48281,Chrome/Windows,default
+2028-01-04T08:32:54Z,10.112.10.73,b00c535,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,4876,68226,Edge/Windows,default
+2028-01-04T09:07:08Z,10.112.10.37,590dc65,CONNECT,https,static.bayside-ledger.example,-,200,allowed,news,3264,54959,Edge/Windows,default
+2028-01-04T09:08:28Z,10.112.10.61,7e3777a,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,1315,77955,Edge/Windows,default
+2028-01-04T09:08:49Z,10.112.10.31,74be4f8,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,3438,24177,Edge/Windows,default
+2028-01-04T09:18:30Z,10.112.10.88,9a2fc83,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,4071,106084,Chrome/Windows,default
+2028-01-04T09:47:08Z,10.112.10.82,-,GET,http,static.ntp-pool-public.org,/ocsp/821704313929,200,allowed,software updates,2855,94561,-,default
+2028-01-04T10:04:19Z,10.112.10.85,cde0031,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,4723,40439,Chrome/Windows,default
+2028-01-04T10:12:17Z,10.112.10.82,bb99125,CONNECT,https,www.storm-prep-guides.org,-,200,allowed,weather,6173,110017,Edge/Windows,default
+2028-01-04T10:42:49Z,10.112.10.28,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,1407,34342,-,default
+2028-01-04T10:47:06Z,10.112.10.49,0099da8,CONNECT,https,baypointdialysis.example,-,200,allowed,business,8903,164879,Chrome/Windows,default
+2028-01-04T11:32:02Z,10.112.10.67,d64b3eb,POST,http,www.fontcdn-static.net,/robots.txt,200,allowed,content delivery,1114,94017,Chrome/Windows,default
+2028-01-04T12:25:00Z,10.112.10.70,343a860,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,1906,106039,Edge/Windows,default
+2028-01-04T12:49:01Z,10.112.10.34,149c744,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,4217,16697,Chrome/Windows,default
+2028-01-04T13:04:45Z,10.112.30.28,15032d4,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,5972,124810,Chrome/Windows,default
+2028-01-04T13:19:14Z,10.112.10.52,d92fdf9,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1061,68555,Chrome/Windows,default
+2028-01-04T14:20:23Z,10.112.10.73,b5216c9,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3490,28185,Chrome/Windows,default
+2028-01-04T14:52:07Z,10.112.30.55,eada294,CONNECT,https,www.granitecreditunion.example,-,200,allowed,finance,6252,111354,Chrome/Windows,default
+2028-01-04T14:58:43Z,10.112.10.34,149c744,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2122,59106,Chrome/Windows,default
+2028-01-04T15:04:52Z,10.112.10.43,e5dbae2,CONNECT,https,update-cdn.txroadwatch.org,-,200,allowed,government,5345,40769,Edge/Windows,default
+2028-01-04T15:22:16Z,10.112.30.49,29cc326,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,3674,33326,Chrome/Windows,default
+2028-01-04T16:10:43Z,10.112.30.64,71f4661,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,7788,117255,Chrome/Windows,default
+2028-01-04T17:03:00Z,10.112.10.52,-,POST,http,www.certstatus-ocsp.net,/favicon.ico,200,allowed,software updates,1423,4523,-,default
+2028-01-04T17:07:28Z,10.112.30.61,0674075,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3695,85551,Chrome/Windows,default
+2028-01-04T17:18:40Z,10.112.30.37,c3997a4,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2598,84080,Edge/Windows,default
+2028-01-04T17:51:18Z,10.112.30.52,77abf54,CONNECT,https,www.libertyrehab.example,-,200,allowed,business,3263,16975,Edge/Windows,default
+2028-01-04T18:18:48Z,10.112.30.52,77abf54,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,1628,159326,Edge/Windows,default
+2028-01-04T18:24:27Z,10.112.30.28,15032d4,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,2876,22622,Edge/Windows,default
+2028-01-04T18:33:36Z,10.112.10.31,f74e833,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,1458,21136,Edge/Windows,default
+2028-01-04T19:20:07Z,10.112.30.52,77abf54,CONNECT,https,img-cdn.docsign-flow.com,-,200,allowed,content delivery,1378,152568,Edge/Windows,default
+2028-01-04T19:28:35Z,10.112.30.37,c3997a4,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,2772,99723,Chrome/Windows,default
+2028-01-04T20:35:38Z,10.112.30.64,71f4661,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,1916,28311,Edge/Windows,default
+2028-01-04T20:40:43Z,10.112.30.37,c3997a4,CONNECT,https,www.vertexlegal.example,-,200,allowed,business,7496,122135,Edge/Windows,default
+2028-01-04T21:14:53Z,10.112.10.31,f74e833,CONNECT,https,www.mustangdialysis.example,-,200,allowed,business,2236,45129,Edge/Windows,default
+2028-01-04T21:51:49Z,10.112.30.28,15032d4,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,4076,58786,Chrome/Windows,default
+2028-01-04T22:06:37Z,10.112.10.46,13651ca,CONNECT,https,click.vertex-biomed.example,-,200,allowed,business,9840,91085,Chrome/Windows,default
+2028-01-04T22:28:47Z,10.112.10.73,d93afe7,CONNECT,https,www.cloudstorage-sync.com,-,200,allowed,online storage,1476,147897,Edge/Windows,default
+2028-01-04T22:58:04Z,10.112.30.55,eada294,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,3606,30717,Chrome/Windows,default
+2028-01-04T23:05:00Z,10.112.10.76,2d88204,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3124,57637,Edge/Windows,default
+2028-01-05T00:19:11Z,10.112.10.76,2d88204,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,1172,148465,Edge/Windows,default
+2028-01-05T01:09:16Z,10.112.10.34,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,2332,37909,-,default
+2028-01-05T01:35:29Z,10.112.10.37,ed3b1ce,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,981,40424,Chrome/Windows,default
+2028-01-05T02:23:23Z,10.112.10.49,0099da8,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,2267,114970,Chrome/Windows,default
+2028-01-05T02:31:51Z,10.112.10.28,b7eb56b,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,1576,28069,Edge/Windows,default
+2028-01-05T03:10:14Z,10.112.10.31,4a3b513,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,3398,87979,Chrome/Windows,default
+2028-01-05T04:11:49Z,10.112.10.58,2215ad4,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,4476,17235,Chrome/Windows,default
+2028-01-05T04:38:40Z,10.112.10.25,-,CONNECT,https,static.ntp-pool-public.org,-,200,allowed,software updates,4088,51840,-,default
+2028-01-05T05:07:36Z,10.112.10.46,-,POST,http,static.telemetry-osvendor.com,/robots.txt,304,allowed,software updates,1901,282,-,default
+2028-01-05T05:36:14Z,10.112.10.37,c8482ff,CONNECT,https,www.bluebonnetoffice.example,-,200,allowed,business,5668,182338,Chrome/Windows,default
+2028-01-05T06:04:37Z,10.112.10.34,-,GET,http,www-east.telemetry-osvendor.com,/images/a9c206.png,200,allowed,software updates,4202,121007,-,default
+2028-01-05T07:16:07Z,10.112.10.88,-,CONNECT,https,www.certstatus-ocsp.net,-,200,allowed,software updates,2360,16813,-,default
+2028-01-05T07:31:19Z,10.112.10.64,03f1d10,CONNECT,https,login.fleetfuel-cards.com,-,200,allowed,finance,3782,98823,Edge/Windows,default
+2028-01-05T08:42:46Z,10.112.10.37,c8482ff,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3465,39449,Chrome/Windows,default
+2028-01-05T09:17:49Z,10.112.10.58,2215ad4,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,5314,121656,Edge/Windows,default
+2028-01-05T11:14:31Z,10.112.10.43,c47811e,CONNECT,https,www.summithospice.example,-,200,allowed,business,6085,40099,Chrome/Windows,default
+2028-01-05T11:42:15Z,10.112.10.46,e6e3f20,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,3923,92583,Edge/Windows,default
+2028-01-05T14:35:41Z,10.112.10.67,d64b3eb,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,1752,45215,Chrome/Windows,default
+2028-01-05T14:55:51Z,10.112.10.37,b7c057c,CONNECT,https,www.drug-reference.example,-,200,allowed,health,3693,178920,Chrome/Windows,default
+2028-01-05T15:01:03Z,10.112.30.58,de0a913,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3214,32129,Chrome/Windows,default
+2028-01-05T15:06:55Z,10.112.30.64,71f4661,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,4124,95051,Edge/Windows,default
+2028-01-05T16:06:47Z,10.112.10.76,c2c9b85,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,3634,68245,Edge/Windows,default
+2028-01-05T16:19:10Z,10.112.30.40,-,GET,http,cdn.certstatus-ocsp.net,/pki/9aee6e.crl,304,allowed,software updates,1057,461,-,default
+2028-01-05T16:26:39Z,10.112.30.37,c3997a4,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,2112,212305,Edge/Windows,default
+2028-01-05T16:31:22Z,10.112.30.61,0674075,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,2162,11898,Chrome/Windows,default
+2028-01-05T16:41:32Z,10.112.30.49,29cc326,CONNECT,https,www.southtexelectric.example,-,200,allowed,business,3756,29177,Chrome/Windows,default
+2028-01-05T16:56:02Z,10.112.30.43,ead0a45,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,2918,41312,Chrome/Windows,default
+2028-01-05T17:26:36Z,10.112.10.46,0eddeab,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,4449,51067,Edge/Windows,default
+2028-01-05T17:38:37Z,10.112.30.61,0674075,CONNECT,https,www.summithospice.example,-,200,allowed,business,3653,161137,Chrome/Windows,default
+2028-01-05T17:48:19Z,10.112.30.37,c3997a4,CONNECT,https,www.padreorthopedics.example,-,200,allowed,business,5973,34715,Edge/Windows,default
+2028-01-05T18:07:06Z,10.112.10.52,20744cd,CONNECT,https,www.drug-reference.example,-,200,allowed,health,5663,105496,Chrome/Windows,default
+2028-01-05T19:04:08Z,10.112.30.40,2f6a163,CONNECT,https,www.anchorpediatrics.example,-,200,allowed,business,3498,19677,Chrome/Windows,default
+2028-01-05T20:36:47Z,10.112.10.58,2215ad4,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,1370,47955,Chrome/Windows,default
+2028-01-05T20:42:16Z,10.112.10.67,cf00f6d,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,823,30687,Chrome/Windows,default
+2028-01-05T20:57:54Z,10.112.10.88,1651309,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,6395,105283,Edge/Windows,default
+2028-01-05T21:27:44Z,10.112.30.46,d29509a,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1413,89308,Chrome/Windows,default
+2028-01-05T21:56:33Z,10.112.30.46,d29509a,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,1022,28708,Chrome/Windows,default
+2028-01-05T22:03:14Z,10.112.10.61,adbc6e1,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,8845,93904,Chrome/Windows,default
+2028-01-05T22:06:32Z,10.112.10.76,17fff96,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,5453,25323,Edge/Windows,default
+2028-01-05T22:37:07Z,10.112.30.43,ead0a45,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,1833,38902,Chrome/Windows,default
+2028-01-05T22:47:38Z,10.112.10.70,bb04840,CONNECT,https,www.klebergoncology.example,-,200,allowed,business,2288,256346,Firefox/Windows,default
+2028-01-05T23:52:55Z,10.112.10.28,afa096f,CONNECT,https,www.mustangdialysis.example,-,200,allowed,business,3137,51056,Chrome/Windows,default
+2028-01-05T23:58:02Z,10.112.10.46,e6e3f20,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3917,45164,Edge/Windows,default
+2028-01-06T00:24:09Z,10.112.10.31,f74e833,CONNECT,https,static.newswire-national.com,-,200,allowed,news,5261,146680,Edge/Windows,default
+2028-01-06T01:43:09Z,10.112.10.28,aef5a22,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,5063,102863,Firefox/Windows,default
+2028-01-06T02:38:38Z,10.112.10.67,e567490,CONNECT,https,click.lagunaems.example,-,200,allowed,business,3797,157744,Chrome/Windows,default
+2028-01-06T02:56:52Z,10.112.30.40,2f6a163,CONNECT,https,api.airline-bookings.net,-,200,allowed,travel,2557,96029,Chrome/Windows,default
+2028-01-06T02:58:11Z,10.112.10.85,c8da159,CONNECT,https,cdn.adnetwork-static.net,-,200,allowed,advertising,740,193710,Edge/Windows,default
+2028-01-06T03:14:54Z,10.112.10.25,daa9372,CONNECT,https,tracker.parcel-status-update.example,-,200,allowed,uncategorised,3316,158251,Chrome/Windows,default
+2028-01-06T03:43:52Z,10.112.10.79,6562994,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,2108,72753,Chrome/Windows,default
+2028-01-06T03:45:29Z,10.112.30.40,2f6a163,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,585,1259,Chrome/Windows,web-filter-block
+2028-01-06T05:31:38Z,10.112.10.31,4a3b513,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,5400,147586,Chrome/Windows,default
+2028-01-06T05:56:01Z,10.112.10.79,ca7700e,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,455,1441,Edge/Windows,web-filter-block
+2028-01-06T05:59:33Z,10.112.10.67,d64b3eb,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1349,107992,Chrome/Windows,default
+2028-01-06T06:42:05Z,10.112.30.61,-,GET,http,api.certstatus-ocsp.net,/v2/check?id=5c3d7a64a3,200,allowed,software updates,4331,8098,-,default
+2028-01-06T09:00:35Z,10.112.10.28,aef5a22,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,3790,118108,Firefox/Windows,default
+2028-01-06T09:08:25Z,10.112.10.28,aef5a22,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,5203,35312,Firefox/Windows,default
+2028-01-06T09:51:58Z,10.112.30.58,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,8284,19877,-,default
+2028-01-06T13:18:53Z,10.112.10.40,6d26f2d,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,4052,86789,Chrome/Windows,default
+2028-01-06T13:35:26Z,10.112.30.61,0674075,CONNECT,https,www-east.officesuite-mail.com,-,200,allowed,business software,4226,57806,Chrome/Windows,default
+2028-01-06T13:46:01Z,10.112.10.73,966e8a5,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1565,217003,Chrome/Windows,default
+2028-01-06T13:51:15Z,10.112.30.46,-,GET,http,cdn.certstatus-ocsp.net,/,304,allowed,software updates,914,463,-,default
+2028-01-06T13:53:04Z,10.112.10.58,2215ad4,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,771,84652,Chrome/Windows,default
+2028-01-06T13:53:33Z,10.112.10.28,272d51c,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,2471,39203,Chrome/Windows,default
+2028-01-06T15:15:23Z,10.112.10.76,94047f1,CONNECT,https,www.driftwoodpathology.example,-,200,allowed,business,4358,172815,Chrome/Windows,default
+2028-01-06T15:29:35Z,10.112.10.31,74be4f8,CONNECT,https,www.harborpathology.example,-,200,allowed,business,4435,127158,Edge/Windows,default
+2028-01-06T16:15:03Z,10.112.30.58,de0a913,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,3840,227879,Chrome/Windows,default
+2028-01-06T16:45:52Z,10.112.30.49,29cc326,CONNECT,https,www.redfishpediatrics.example,-,200,allowed,business,3085,162443,Chrome/Windows,default
+2028-01-06T16:59:34Z,10.112.10.58,8529909,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3679,197630,Chrome/Windows,default
+2028-01-06T17:44:36Z,10.112.30.43,ead0a45,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,5722,181897,Chrome/Windows,default
+2028-01-06T17:50:45Z,10.112.30.61,0674075,CONNECT,https,www.redfishpediatrics.example,-,200,allowed,business,2652,148145,Chrome/Windows,default
+2028-01-06T18:24:23Z,10.112.10.31,9b954ec,CONNECT,https,www.drug-reference.example,-,200,allowed,health,2102,41986,Chrome/Windows,default
+2028-01-06T18:30:33Z,10.112.30.28,15032d4,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,6320,15536,Edge/Windows,default
+2028-01-06T18:40:10Z,10.112.10.34,d25d353,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,6797,151142,Chrome/Windows,default
+2028-01-06T18:48:38Z,10.112.10.82,6f1bf60,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,8155,113703,Edge/Windows,default
+2028-01-06T19:23:06Z,10.112.30.31,edbfe1a,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,1317,113593,Edge/Windows,default
+2028-01-06T19:52:26Z,10.112.10.40,b11ae26,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3959,152046,Edge/Windows,default
+2028-01-06T20:38:50Z,10.112.30.64,71f4661,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,5215,181475,Edge/Windows,default
+2028-01-06T21:10:20Z,10.112.30.55,eada294,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,1651,63339,Edge/Windows,default
+2028-01-06T21:48:19Z,10.112.30.28,15032d4,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,2555,62454,Chrome/Windows,default
+2028-01-06T21:51:23Z,10.112.30.34,76159f5,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,7793,49998,Edge/Windows,default
+2028-01-06T22:22:24Z,10.112.30.43,ead0a45,CONNECT,https,rx.eprescribe-network.example,-,200,allowed,health,2186,67309,Chrome/Windows,default
+2028-01-06T22:35:54Z,10.112.10.73,966e8a5,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,654,105828,Chrome/Windows,default
+2028-01-06T22:40:34Z,10.112.10.31,f74e833,CONNECT,https,static.bayside-ledger.example,-,200,allowed,news,9694,273489,Edge/Windows,default
+2028-01-06T22:59:47Z,10.112.10.46,13651ca,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,2289,182915,Chrome/Windows,default
+2028-01-06T23:46:34Z,10.112.10.58,f4847dc,CONNECT,https,static.bayside-ledger.example,-,200,allowed,news,4171,13742,Chrome/Windows,default
+2028-01-07T00:15:45Z,10.112.10.34,d25d353,CONNECT,https,www.anchorpediatrics.example,-,200,allowed,business,10768,91691,Chrome/Windows,default
+2028-01-07T01:15:58Z,10.112.10.52,d92fdf9,CONNECT,https,www-east.officesuite-mail.com,-,200,allowed,business software,1574,114815,Chrome/Windows,default
+2028-01-07T01:51:21Z,10.112.10.67,e567490,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3440,35469,Chrome/Windows,default
+2028-01-07T02:01:02Z,10.112.10.85,c8da159,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,524,123627,Edge/Windows,default
+2028-01-07T02:55:14Z,10.112.250.46,76f1884,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,4198,21918,Edge/Windows,default
+2028-01-07T02:58:41Z,10.112.10.43,94bd92e,CONNECT,https,hie.coastalbend-healthexchange.example,-,504,allowed,health,2344,106,Chrome/Windows,default
+2028-01-07T03:51:50Z,10.112.10.43,94bd92e,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,4594,117294,Chrome/Windows,default
+2028-01-07T04:14:38Z,10.112.10.34,96a5c90,CONNECT,https,www.summithospice.example,-,200,allowed,business,3533,17053,Edge/Windows,default
+2028-01-07T06:24:02Z,10.112.10.40,b11ae26,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,4378,78733,Edge/Windows,default
+2028-01-07T08:43:29Z,10.112.10.34,149c744,CONNECT,https,www.cloudstorage-sync.com,-,200,allowed,online storage,1523,83937,Chrome/Windows,default
+2028-01-07T09:02:38Z,10.112.10.40,6d26f2d,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,540,1191,Chrome/Windows,web-filter-block
+2028-01-07T09:22:05Z,10.112.10.67,9571bfc,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,1995,156622,Chrome/Windows,default
+2028-01-07T09:26:44Z,10.112.10.55,8060cf7,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,2183,35850,Chrome/Windows,default
+2028-01-07T09:41:11Z,10.112.10.85,096bda6,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,1768,47157,Chrome/Windows,default
+2028-01-07T10:55:01Z,10.112.10.25,f78b121,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,5363,62426,Edge/Windows,default
+2028-01-07T11:20:26Z,10.112.10.37,418d5a6,CONNECT,https,www.klebergoncology.example,-,200,allowed,business,8390,196044,Chrome/Windows,default
+2028-01-07T12:19:33Z,10.112.30.34,76159f5,CONNECT,https,www.coastal-bend-fishing-reports.example,-,200,allowed,uncategorised,3645,26050,Edge/Windows,default
+2028-01-07T12:28:06Z,10.112.10.40,6d26f2d,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,2071,60576,Chrome/Windows,default
+2028-01-07T12:32:47Z,10.112.10.61,adbc6e1,CONNECT,https,login.insurance-claims-portal.com,-,200,allowed,insurance,2955,4816,Chrome/Windows,default
+2028-01-07T13:02:54Z,10.112.10.40,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,2583,10728,-,default
+2028-01-07T13:15:02Z,10.112.10.64,2a1a653,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,3515,122595,Edge/Windows,default
+2028-01-07T14:26:23Z,10.112.10.28,aef5a22,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,4487,42666,Firefox/Windows,default
+2028-01-07T14:47:51Z,10.112.10.85,cde0031,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,10283,31809,Chrome/Windows,default
+2028-01-07T15:13:54Z,10.112.10.88,-,CONNECT,https,static.browser-safecheck.net,-,200,allowed,software updates,5244,141444,-,default
+2028-01-07T16:06:15Z,10.112.10.40,5f2b6d4,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,2306,209900,Chrome/Windows,default
+2028-01-07T16:06:50Z,10.112.30.28,15032d4,CONNECT,https,web-static.cellcarrier-account.com,-,200,allowed,business,2143,114386,Edge/Windows,default
+2028-01-07T16:12:02Z,10.112.10.70,bb04840,CONNECT,https,go.heronpharma.example,-,200,allowed,health,4292,147737,Firefox/Windows,default
+2028-01-07T16:28:14Z,10.112.30.31,edbfe1a,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,4970,113908,Edge/Windows,default
+2028-01-07T16:30:20Z,10.112.10.55,29e1771,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,12386,60156,Edge/Windows,default
+2028-01-07T16:37:19Z,10.112.30.34,76159f5,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1717,61588,Edge/Windows,default
+2028-01-07T16:51:21Z,10.112.30.55,eada294,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,5342,41647,Chrome/Windows,default
+2028-01-07T16:56:11Z,10.112.10.88,4482d00,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,3344,116678,Edge/Windows,default
+2028-01-07T17:08:03Z,10.112.10.82,bb99125,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,6304,66064,Edge/Windows,default
+2028-01-07T17:23:30Z,10.112.30.46,d29509a,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,336,44142,Chrome/Windows,default
+2028-01-07T17:33:49Z,10.112.10.82,bb99125,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,4369,140000,Edge/Windows,default
+2028-01-07T17:37:12Z,10.112.30.37,c3997a4,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,7948,85737,Edge/Windows,default
+2028-01-07T18:21:13Z,10.112.10.88,1651309,CONNECT,https,cdn.adnetwork-static.net,-,200,allowed,advertising,1438,101905,Edge/Windows,default
+2028-01-07T18:47:44Z,10.112.30.55,eada294,CONNECT,https,img-cdn.docsign-flow.com,-,200,allowed,content delivery,2633,62109,Chrome/Windows,default
+2028-01-07T20:15:06Z,10.112.30.43,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,4782,169193,-,default
+2028-01-07T20:40:29Z,10.112.30.25,b39c790,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,2525,75789,Chrome/Windows,default
+2028-01-07T21:06:26Z,10.112.30.28,15032d4,CONNECT,https,www.padrestaffing.example,-,200,allowed,business,8518,120082,Chrome/Windows,default
+2028-01-07T22:45:00Z,10.112.10.73,-,CONNECT,https,static.browser-safecheck.net,-,200,allowed,software updates,6585,70461,-,default
+2028-01-07T23:00:56Z,10.112.10.76,48658fd,CONNECT,https,www.driftwoodpathology.example,-,200,allowed,business,1494,68573,Chrome/Windows,default
+2028-01-07T23:36:42Z,10.112.10.37,590dc65,CONNECT,https,rest-api.hotel-reservations.com,-,200,allowed,travel,970,74721,Edge/Windows,default
+2028-01-08T00:50:37Z,10.112.10.73,31fdf33,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,3228,117558,Chrome/Windows,default
+2028-01-08T01:12:43Z,10.112.10.43,30b7c77,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,5291,77664,Edge/Windows,default
+2028-01-08T02:36:13Z,10.112.10.67,e567490,CONNECT,https,www.hrcloud-payroll.com,-,200,allowed,finance,4645,49394,Chrome/Windows,default
+2028-01-08T03:34:40Z,10.112.10.52,6b29e95,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,3422,106970,Firefox/Windows,default
+2028-01-08T04:06:11Z,10.112.10.49,f4001fc,CONNECT,https,www.mustangdialysis.example,-,200,allowed,business,3256,89554,Chrome/Windows,default
+2028-01-08T04:18:48Z,10.112.10.52,6b29e95,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3910,55469,Firefox/Windows,default
+2028-01-08T07:03:26Z,10.112.10.40,5f2b6d4,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,3330,161339,Chrome/Windows,default
+2028-01-08T07:54:22Z,10.112.10.31,0e7e80f,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,2983,153129,Edge/Windows,default
+2028-01-08T08:10:07Z,10.112.10.34,676d0de,CONNECT,https,www.drug-reference.example,-,200,allowed,health,1664,124765,Edge/Windows,default
+2028-01-08T08:23:39Z,10.112.10.40,5f2b6d4,CONNECT,https,www.newswire-national.com,-,200,allowed,news,6038,51918,Chrome/Windows,default
+2028-01-08T09:31:36Z,10.112.10.64,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,2074,16492,-,default
+2028-01-08T09:36:36Z,10.112.30.49,-,CONNECT,https,static.browser-safecheck.net,-,200,allowed,software updates,2870,160585,-,default
+2028-01-08T11:07:11Z,10.112.10.34,2a568f2,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,5276,75245,Edge/Windows,default
+2028-01-08T14:00:05Z,10.112.30.40,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,2511,24263,-,default
+2028-01-08T14:02:28Z,10.112.10.88,04c28c5,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,4307,153973,Chrome/Windows,default
+2028-01-08T14:12:14Z,10.112.10.40,5f2b6d4,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,2365,53043,Chrome/Windows,default
+2028-01-08T14:38:13Z,10.112.10.70,343a860,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,1230,216901,Edge/Windows,default
+2028-01-08T15:51:55Z,10.112.10.49,f4001fc,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,3493,42060,Chrome/Windows,default
+2028-01-08T16:25:24Z,10.112.10.31,0e7e80f,CONNECT,https,www.anchorpediatrics.example,-,200,allowed,business,4406,41320,Chrome/Windows,default
+2028-01-08T16:50:30Z,10.112.30.46,d29509a,CONNECT,https,www.tejanosupply.example,-,200,allowed,shopping,1030,50404,Chrome/Windows,default
+2028-01-08T17:40:28Z,10.112.10.76,2d88204,CONNECT,https,click.vertex-biomed.example,-,200,allowed,business,14528,81182,Chrome/Windows,default
+2028-01-08T17:43:18Z,10.112.10.76,2d88204,CONNECT,https,www.drug-reference.example,-,200,allowed,health,1082,56170,Edge/Windows,default
+2028-01-08T18:55:00Z,10.112.10.79,110cb4e,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,2388,236091,Chrome/Windows,default
+2028-01-08T19:03:14Z,10.112.10.79,110cb4e,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,3142,35118,Chrome/Windows,default
+2028-01-08T19:48:53Z,10.112.10.49,f4001fc,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,7288,29934,Chrome/Windows,default
+2028-01-08T20:00:17Z,10.112.10.55,1a1e0c7,CONNECT,https,static.partsdepot-supply.com,-,200,allowed,shopping,3118,66091,Chrome/Windows,default
+2028-01-08T20:47:57Z,10.112.10.67,432ab27,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,1661,62708,Chrome/Windows,default
+2028-01-08T22:44:48Z,10.112.10.34,06bbd62,CONNECT,https,click.vertex-biomed.example,-,200,allowed,business,3084,150600,Edge/Windows,default
+2028-01-08T23:11:20Z,10.112.10.76,c2c9b85,CONNECT,https,www.drug-reference.example,-,200,allowed,health,489,87556,Edge/Windows,default
+2028-01-08T23:12:58Z,10.112.10.70,a2fa0b0,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,6262,93025,Chrome/Windows,default
+2028-01-09T01:19:00Z,10.112.10.70,a2fa0b0,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,2647,204049,Chrome/Windows,default
+2028-01-09T01:33:14Z,10.112.10.73,b5216c9,CONNECT,https,www.sanpat-radiology.example,-,200,allowed,business,11572,212202,Chrome/Windows,default
+2028-01-09T01:53:46Z,10.112.10.28,865877c,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,3747,75900,Edge/Windows,default
+2028-01-09T03:23:39Z,10.112.10.52,fcc5e15,CONNECT,https,static.coastalbendweather.net,-,504,allowed,weather,941,27,Chrome/Windows,default
+2028-01-09T04:28:52Z,10.112.10.49,44a6019,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,2915,86905,Chrome/Windows,default
+2028-01-09T06:38:17Z,10.112.10.37,61e166f,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,2289,18549,Chrome/Windows,default
+2028-01-09T06:40:15Z,10.112.10.61,-,GET,http,auth-prod.certstatus-ocsp.net,/v2/check?id=a651c53e61,301,allowed,software updates,545,337,-,default
+2028-01-09T08:15:46Z,10.112.10.61,e7e3e56,CONNECT,https,www.redfishpediatrics.example,-,200,allowed,business,3259,88732,Chrome/Windows,default
+2028-01-09T09:06:46Z,10.112.10.25,eca293f,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,5304,66205,Chrome/Windows,default
+2028-01-09T09:14:45Z,10.112.10.34,149c744,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,8459,140667,Chrome/Windows,default
+2028-01-09T09:43:38Z,10.112.30.55,-,GET,http,www.ntp-pool-public.org,/robots.txt,200,allowed,software updates,6038,29588,-,default
+2028-01-09T10:11:28Z,10.112.30.25,-,GET,http,www.browser-safecheck.net,/favicon.ico,304,allowed,software updates,4126,211,-,default
+2028-01-09T10:38:36Z,10.112.10.34,-,GET,http,static.ntp-pool-public.org,/static/c97ce76.js,200,allowed,software updates,1221,4736,-,default
+2028-01-09T10:41:31Z,10.112.10.76,19ba432,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,5830,105381,Edge/Windows,default
+2028-01-09T12:48:33Z,10.112.10.61,-,GET,http,content.harbourlight-av.example,/content/9a400cab.cab,200,allowed,software updates,3407,210736,-,default
+2028-01-09T13:23:14Z,10.112.10.73,b5216c9,GET,http,www.blood-center-coastalbend.example,/images/fdcd8b.png,200,allowed,health,2035,76631,Chrome/Windows,default
+2028-01-09T13:35:06Z,10.112.10.49,a003bf1,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3346,107078,Edge/Windows,default
+2028-01-09T14:23:00Z,10.112.10.43,e5dbae2,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1784,69920,Edge/Windows,default
+2028-01-09T14:27:49Z,10.112.30.28,-,GET,http,api.certstatus-ocsp.net,/images/6fc353.png,200,allowed,software updates,2499,236072,-,default
+2028-01-09T14:49:12Z,10.112.10.88,1651309,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,11224,134004,Edge/Windows,default
+2028-01-09T16:48:03Z,10.112.30.52,-,CONNECT,https,www.osupdates-delivery.com,-,200,allowed,software updates,3236,27989,-,default
+2028-01-09T17:11:31Z,10.112.10.25,daa9372,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,1176,232323,Chrome/Windows,default
+2028-01-09T17:33:23Z,10.112.10.76,17fff96,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,3866,93576,Chrome/Windows,default
+2028-01-09T18:03:03Z,10.112.10.70,7dbd4b2,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,2082,10514,Chrome/Windows,default
+2028-01-09T19:19:36Z,10.112.10.88,1651309,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3715,58252,Edge/Windows,default
+2028-01-09T19:25:22Z,10.112.10.40,5f2b6d4,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,3720,29756,Chrome/Windows,default
+2028-01-09T19:33:01Z,10.112.10.49,44a6019,CONNECT,https,static.partsdepot-supply.com,-,200,allowed,shopping,2344,215065,Chrome/Windows,default
+2028-01-09T22:07:44Z,10.112.250.136,030457a,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2776,64380,Edge/Windows,default
+2028-01-09T22:23:02Z,10.112.10.34,149c744,CONNECT,https,cdn.harborline6.example,-,200,allowed,news,7041,13822,Chrome/Windows,default
+2028-01-09T23:11:08Z,10.112.10.70,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,7573,71091,-,default
+2028-01-09T23:44:18Z,10.112.10.64,1cd0f91,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3880,130790,Chrome/Windows,default
+2028-01-10T00:15:57Z,10.112.10.25,aa08049,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,2701,247639,Chrome/Windows,default
+2028-01-10T01:23:19Z,10.112.10.61,e7be302,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,1998,49515,Chrome/Windows,default
+2028-01-10T01:41:05Z,10.112.10.52,d92fdf9,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3268,49632,Chrome/Windows,default
+2028-01-10T01:44:32Z,10.112.10.82,f6a8d7a,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,1529,15402,Edge/Windows,default
+2028-01-10T03:30:23Z,10.112.10.82,f6a8d7a,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3368,29077,Chrome/Windows,default
+2028-01-10T04:41:48Z,10.112.10.61,e7be302,CONNECT,https,auth-prod.storm-prep-guides.org,-,200,allowed,weather,2758,15242,Chrome/Windows,default
+2028-01-10T04:59:54Z,10.112.10.61,e7be302,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3250,150033,Chrome/Windows,default
+2028-01-10T05:05:36Z,10.112.10.82,-,CONNECT,https,static.browser-safecheck.net,-,200,allowed,software updates,2401,60759,-,default
+2028-01-10T07:44:32Z,10.112.30.31,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,3397,119758,-,default
+2028-01-10T08:05:32Z,10.112.10.31,c290193,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,5003,107959,Edge/Windows,default
+2028-01-10T08:22:22Z,10.112.10.52,835ae62,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,6076,72298,Chrome/Windows,default
+2028-01-10T08:37:06Z,10.112.10.43,94bd92e,CONNECT,https,www.newswire-national.com,-,200,allowed,news,3849,140817,Firefox/Windows,default
+2028-01-10T08:43:33Z,10.112.10.82,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,2496,66163,-,default
+2028-01-10T08:51:14Z,10.112.10.34,676d0de,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,4748,39390,Edge/Windows,default
+2028-01-10T09:09:39Z,10.112.10.88,9a2fc83,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,1708,49152,Chrome/Windows,default
+2028-01-10T09:53:02Z,10.112.10.43,94bd92e,CONNECT,https,www-east.harborline6.example,-,200,allowed,news,7503,56921,Chrome/Windows,default
+2028-01-10T12:01:01Z,10.112.10.37,c8482ff,CONNECT,https,auth-prod.storm-prep-guides.org,-,200,allowed,weather,2066,51812,Chrome/Windows,default
+2028-01-10T12:32:53Z,10.112.10.40,436443c,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,1372,91026,Edge/Windows,default
+2028-01-10T13:19:57Z,10.112.10.88,9a2fc83,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,2557,57487,Chrome/Windows,default
+2028-01-10T13:28:12Z,10.112.10.88,9a2fc83,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,2916,65198,Chrome/Windows,default
+2028-01-10T13:36:08Z,10.112.10.64,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,6221,74684,-,default
+2028-01-10T13:39:26Z,10.112.30.46,-,GET,http,cdn.certstatus-ocsp.net,/index.html,302,allowed,software updates,3864,530,-,default
+2028-01-10T13:53:48Z,10.112.10.58,f4847dc,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,477,121816,Chrome/Windows,default
+2028-01-10T14:31:13Z,10.112.10.52,6b29e95,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,5201,31647,Firefox/Windows,default
+2028-01-10T14:45:00Z,10.112.30.31,edbfe1a,CONNECT,https,rx.eprescribe-network.example,-,200,allowed,health,2213,64562,Edge/Windows,default
+2028-01-10T14:56:56Z,10.112.30.31,edbfe1a,CONNECT,https,static.bayside-ledger.example,-,200,allowed,news,1121,99296,Edge/Windows,default
+2028-01-10T15:13:09Z,10.112.10.28,afa096f,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1672,65332,Chrome/Windows,default
+2028-01-10T16:31:44Z,10.112.30.28,15032d4,GET,http,web-portal.searchindex-api.com,/robots.txt,200,allowed,search engines,5156,41292,Chrome/Windows,default
+2028-01-10T17:44:14Z,10.112.30.64,71f4661,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3031,27093,Edge/Windows,default
+2028-01-10T17:55:24Z,10.112.30.49,29cc326,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,2740,104632,Chrome/Windows,default
+2028-01-10T18:07:15Z,10.112.10.85,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,4525,51890,-,default
+2028-01-10T18:32:39Z,10.112.10.73,966e8a5,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,2905,61865,Chrome/Windows,default
+2028-01-10T18:38:55Z,10.112.10.85,c8da159,CONNECT,https,rx.eprescribe-network.example,-,200,allowed,health,1571,92293,Edge/Windows,default
+2028-01-10T18:55:54Z,10.112.30.25,b39c790,CONNECT,https,www.mustangdialysis.example,-,200,allowed,business,2582,95750,Chrome/Windows,default
+2028-01-10T18:58:52Z,10.112.10.40,b11ae26,CONNECT,https,www.school-district-cc.org,-,200,allowed,education,5678,103064,Edge/Windows,default
+2028-01-10T20:18:39Z,10.112.10.40,b11ae26,CONNECT,https,www.drug-reference.example,-,200,allowed,health,1096,138426,Edge/Windows,default
+2028-01-10T20:25:01Z,10.112.10.82,bb99125,CONNECT,https,www.driftwoodpathology.example,-,200,allowed,business,721,39814,Edge/Windows,default
+2028-01-10T21:46:32Z,10.112.30.52,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,2818,104350,-,default
+2028-01-10T22:32:44Z,10.112.10.64,-,GET,http,www-east.telemetry-osvendor.com,/index.html,200,allowed,software updates,2432,16182,-,default
+2028-01-10T22:37:21Z,10.112.10.28,5d144f4,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,928,121484,Edge/Windows,default
+2028-01-10T23:16:55Z,10.112.30.34,76159f5,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,9545,148715,Edge/Windows,default
+2028-01-11T00:13:47Z,10.112.10.28,afa096f,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,3757,70476,Chrome/Windows,default
+2028-01-11T01:04:02Z,10.112.10.58,f4847dc,CONNECT,https,rx.eprescribe-network.example,-,200,allowed,health,882,69371,Chrome/Windows,default
+2028-01-11T01:24:42Z,10.112.10.82,76f1884,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,12778,49905,Edge/Windows,default
+2028-01-11T01:25:55Z,10.112.10.85,355bb56,CONNECT,https,static.benefits-portal.com,-,200,allowed,business software,2855,49065,Chrome/Windows,default
+2028-01-11T02:21:43Z,10.112.10.67,d0a634b,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,1867,36470,Chrome/Windows,default
+2028-01-11T03:29:56Z,10.112.10.37,ed3b1ce,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,4086,43007,Chrome/Windows,default
+2028-01-11T03:57:41Z,10.112.10.25,184e9a9,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,2533,29151,Edge/Windows,default
+2028-01-11T04:22:35Z,10.112.30.25,-,GET,http,static.osupdates-delivery.com,/,200,allowed,software updates,2579,28099,-,default
+2028-01-11T04:28:30Z,10.112.10.76,2d88204,CONNECT,https,www.drug-reference.example,-,200,allowed,health,4063,83997,Edge/Windows,default
+2028-01-11T06:07:29Z,10.112.10.85,-,CONNECT,https,static.ntp-pool-public.org,-,200,allowed,software updates,1252,76696,-,default
+2028-01-11T06:42:25Z,10.112.10.73,b00c535,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,3738,31606,Edge/Windows,default
+2028-01-11T07:56:13Z,10.112.10.73,b00c535,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,5126,19165,Edge/Windows,default
+2028-01-11T09:34:58Z,10.112.10.85,-,GET,http,content.harbourlight-av.example,/,200,allowed,software updates,6613,65625,-,default
+2028-01-11T10:31:05Z,10.112.10.79,ca7700e,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,840,100716,Edge/Windows,default
+2028-01-11T12:48:15Z,10.112.10.64,29bb2b9,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,4927,21363,Edge/Windows,default
+2028-01-11T13:55:38Z,10.112.10.85,-,GET,http,www.osupdates-delivery.com,/updates/76a53/manifest.xml,304,allowed,software updates,1911,551,-,default
+2028-01-11T14:14:54Z,10.112.30.28,15032d4,CONNECT,https,www.school-district-cc.org,-,200,allowed,education,6564,47107,Chrome/Windows,default
+2028-01-11T15:04:19Z,10.112.30.25,b39c790,CONNECT,https,www.anchorpediatrics.example,-,200,allowed,business,2412,28453,Chrome/Windows,default
+2028-01-11T15:18:45Z,10.112.30.34,76159f5,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,6512,71467,Chrome/Windows,default
+2028-01-11T15:29:12Z,10.112.30.25,b39c790,CONNECT,https,www.fronteralabs.example,-,200,allowed,business,4974,54215,Chrome/Windows,default
+2028-01-11T17:14:19Z,10.112.30.28,15032d4,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,427,150239,Chrome/Windows,default
+2028-01-11T17:56:18Z,10.112.10.67,432ab27,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2346,30424,Chrome/Windows,default
+2028-01-11T19:20:53Z,10.112.10.73,966e8a5,CONNECT,https,www.vertexlegal.example,-,200,allowed,business,8986,160160,Chrome/Windows,default
+2028-01-11T20:02:19Z,10.112.30.31,edbfe1a,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,1794,120648,Edge/Windows,default
+2028-01-11T20:06:59Z,10.112.10.79,cd9a498,CONNECT,https,www.driftwoodpathology.example,-,200,allowed,business,3620,71272,Chrome/Windows,default
+2028-01-11T20:51:28Z,10.112.10.43,fc8db28,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,6256,87564,Edge/Windows,default
+2028-01-11T20:52:48Z,10.112.10.55,8060cf7,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,589,187873,Chrome/Windows,default
+2028-01-11T20:57:33Z,10.112.10.79,6562994,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,2576,74940,Chrome/Windows,default
+2028-01-11T21:21:28Z,10.112.30.55,eada294,CONNECT,https,www.orbitsolutions.example,-,200,allowed,business,2099,54146,Chrome/Windows,default
+2028-01-11T21:48:11Z,10.112.10.43,fc8db28,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,5040,117402,Edge/Windows,default
+2028-01-11T22:26:05Z,10.112.30.55,eada294,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,3300,50209,Chrome/Windows,default
+2028-01-11T22:28:07Z,10.112.10.70,bb04840,CONNECT,https,www.granitecreditunion.example,-,200,allowed,finance,3249,22294,Firefox/Windows,default
+2028-01-11T22:29:55Z,10.112.10.61,e7be302,CONNECT,https,www.flourbluffhealthplan.example,-,200,allowed,health,6751,78874,Chrome/Windows,default
+2028-01-11T22:43:38Z,10.112.10.49,0099da8,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,6869,26661,Chrome/Windows,default
+2028-01-11T23:39:01Z,10.112.10.37,ed3b1ce,CONNECT,https,static.officesuite-mail.com,-,502,allowed,business software,2911,199,Edge/Windows,default
+2028-01-12T00:01:48Z,10.112.10.73,b5216c9,CONNECT,https,shorelinerehab.example,-,200,allowed,business,5799,154142,Chrome/Windows,default
+2028-01-12T00:33:07Z,10.112.10.85,d321064,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,4154,64672,Chrome/Windows,default
+2028-01-12T02:35:09Z,10.112.10.61,e7e3e56,CONNECT,https,www.redfishpediatrics.example,-,200,allowed,business,1018,213361,Chrome/Windows,default
+2028-01-12T03:28:00Z,10.112.10.61,-,CONNECT,https,www.browser-safecheck.net,-,200,allowed,software updates,2856,186772,-,default
+2028-01-12T03:42:37Z,10.112.10.58,8529909,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,1159,75022,Edge/Windows,default
+2028-01-12T04:52:52Z,10.112.10.67,432ab27,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3057,111727,Chrome/Windows,default
+2028-01-12T06:34:22Z,10.112.10.46,13651ca,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,1520,163152,Chrome/Windows,default
+2028-01-12T07:50:07Z,10.112.250.21,246d579,CONNECT,https,files.svc-portal-cdn.example,-,200,allowed,uncategorised,4963,99110,Chrome/Windows,default
+2028-01-12T08:21:52Z,10.112.10.64,f0c3f6f,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,4756,91834,Chrome/Windows,default
+2028-01-12T09:14:46Z,10.112.10.79,3f340b4,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,9510,33129,Chrome/Windows,default
+2028-01-12T09:28:07Z,10.112.10.52,fcc5e15,CONNECT,https,www.southtexelectric.example,-,200,allowed,business,4343,51782,Chrome/Windows,default
+2028-01-12T09:42:45Z,10.112.10.67,e567490,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,2099,101552,Chrome/Windows,default
+2028-01-12T09:58:36Z,10.112.10.61,adbc6e1,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,3111,159164,Chrome/Windows,default
+2028-01-12T10:32:48Z,10.112.10.49,-,GET,http,content.harbourlight-av.example,/updates/22e96/manifest.xml,200,allowed,software updates,3846,127961,-,default
+2028-01-12T10:39:09Z,10.112.10.61,adbc6e1,CONNECT,https,www.fronteralabs.example,-,200,allowed,business,1597,218228,Chrome/Windows,default
+2028-01-12T10:59:45Z,10.112.10.55,a8b78a0,CONNECT,https,www.mesapharma.example,-,200,allowed,health,1966,73484,Chrome/Windows,default
+2028-01-12T11:20:14Z,10.112.10.52,-,CONNECT,https,www.osupdates-delivery.com,-,200,allowed,software updates,7831,40597,-,default
+2028-01-12T11:47:35Z,10.112.10.73,d93afe7,CONNECT,https,www.cloudstorage-sync.com,-,200,allowed,online storage,2199,50004,Edge/Windows,default
+2028-01-12T13:39:45Z,10.112.10.58,8529909,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,6540,69436,Chrome/Windows,default
+2028-01-12T13:45:02Z,10.112.30.40,2f6a163,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,4770,43054,Chrome/Windows,default
+2028-01-12T13:45:23Z,10.112.10.85,c8da159,CONNECT,https,static.bayside-ledger.example,-,200,allowed,news,7075,75352,Edge/Windows,default
+2028-01-12T14:05:49Z,10.112.250.95,76159f5,CONNECT,https,www.mustangdialysis.example,-,200,allowed,business,1476,62649,Chrome/Windows,default
+2028-01-12T14:23:00Z,10.112.10.61,23d3d30,CONNECT,https,www.padre-island-rentals.example,-,200,allowed,uncategorised,2246,205926,Chrome/Windows,default
+2028-01-12T14:33:23Z,10.112.10.70,a2fa0b0,GET,http,www.blood-center-coastalbend.example,/static/cc9840c.js,200,allowed,health,1462,35478,Chrome/Windows,default
+2028-01-12T14:53:22Z,10.112.30.34,76159f5,CONNECT,https,www.anchorpediatrics.example,-,200,allowed,business,1827,65251,Chrome/Windows,default
+2028-01-12T14:56:51Z,10.112.30.52,77abf54,CONNECT,https,www.fleetfuel-cards.com,-,200,allowed,finance,3032,95741,Edge/Windows,default
+2028-01-12T15:09:59Z,10.112.10.52,ce643fa,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,7392,37980,Chrome/Windows,default
+2028-01-12T15:43:57Z,10.112.30.52,77abf54,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,2332,24390,Edge/Windows,default
+2028-01-12T15:56:21Z,10.112.30.49,29cc326,GET,http,www.clinical-guidelines.example,/content/382410e0.cab,200,allowed,health,1292,127016,Chrome/Windows,default
+2028-01-12T16:31:49Z,10.112.30.37,c3997a4,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,1509,75494,Edge/Windows,default
+2028-01-12T16:37:51Z,10.112.10.49,c6ddab1,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,3805,35184,Chrome/Windows,default
+2028-01-12T16:43:32Z,10.112.10.55,8e85612,CONNECT,https,www.baysideradiology.example,-,200,allowed,business,2159,54496,Chrome/Windows,default
+2028-01-12T16:55:47Z,10.112.10.88,7c52701,GET,http,www.anchorpediatrics.example,/index.html,200,allowed,business,685,43601,Chrome/Windows,default
+2028-01-12T16:56:03Z,10.112.30.49,29cc326,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,6082,34730,Chrome/Windows,default
+2028-01-12T17:06:51Z,10.112.30.58,de0a913,CONNECT,https,static.partsdepot-supply.com,-,200,allowed,shopping,448,122686,Chrome/Windows,default
+2028-01-12T17:08:51Z,10.112.30.37,c3997a4,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,4050,84715,Edge/Windows,default
+2028-01-12T17:19:23Z,10.112.30.34,76159f5,CONNECT,https,www.coastal-bend-fishing-reports.example,-,200,allowed,uncategorised,5047,27084,Edge/Windows,default
+2028-01-12T17:22:47Z,10.112.10.73,b5216c9,CONNECT,https,www.saballabs.example,-,200,allowed,business,2420,64872,Chrome/Windows,default
+2028-01-12T18:09:52Z,10.112.30.58,de0a913,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,877,32659,Chrome/Windows,default
+2028-01-12T18:16:24Z,10.112.30.43,ead0a45,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2347,153671,Chrome/Windows,default
+2028-01-12T18:19:19Z,10.112.30.31,edbfe1a,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,3152,75800,Edge/Windows,default
+2028-01-12T18:21:22Z,10.112.30.28,15032d4,CONNECT,https,www.baysideradiology.example,-,200,allowed,business,5813,67816,Chrome/Windows,default
+2028-01-12T18:46:38Z,10.112.30.64,71f4661,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,3609,36224,Edge/Windows,default
+2028-01-12T18:46:49Z,10.112.10.73,b5216c9,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,10949,102172,Chrome/Windows,default
+2028-01-12T19:54:29Z,10.112.30.28,15032d4,CONNECT,https,www.pioneerrehab.example,-,200,allowed,business,1179,23497,Chrome/Windows,default
+2028-01-12T20:19:01Z,10.112.30.61,0674075,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,713,63217,Chrome/Windows,default
+2028-01-12T20:23:04Z,10.112.30.58,de0a913,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,7637,225690,Chrome/Windows,default
+2028-01-12T20:29:42Z,10.112.30.49,29cc326,CONNECT,https,api-gw.cloudstorage-sync.com,-,200,allowed,online storage,2161,98940,Chrome/Windows,default
+2028-01-12T20:30:39Z,10.112.30.34,76159f5,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,1767,96339,Edge/Windows,default
+2028-01-12T20:42:23Z,10.112.30.37,c3997a4,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,3750,86209,Edge/Windows,default
+2028-01-12T21:20:07Z,10.112.10.88,9a2fc83,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,3293,96400,Chrome/Windows,default
+2028-01-12T21:50:44Z,10.112.30.25,-,GET,http,static.osupdates-delivery.com,/content/58fd148b.cab,200,allowed,software updates,977,37935,-,default
+2028-01-12T21:52:07Z,10.112.10.73,966e8a5,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,2595,176549,Chrome/Windows,default
+2028-01-12T22:52:53Z,10.112.10.85,355bb56,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,770,169163,Chrome/Windows,default
+2028-01-12T23:22:01Z,10.112.30.58,de0a913,CONNECT,https,www.baysideradiology.example,-,200,allowed,business,8407,24872,Chrome/Windows,default
+2028-01-12T23:26:04Z,10.112.10.31,9b954ec,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,752,157815,Chrome/Windows,default
+2028-01-12T23:30:59Z,10.112.10.28,aef5a22,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,3596,48926,Firefox/Windows,default

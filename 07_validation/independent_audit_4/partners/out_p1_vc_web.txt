@@ -1,0 +1,99 @@
+
+### web.client_ip nunique=826 per org {'bcmc': 105, 'brw': 126, 'city': 105, 'county': 147, 'nascc': 66, 'port': 124, 'srmc': 153}
+
+### web.user nunique=1031 per org {'bcmc': 164, 'brw': 52, 'city': 187, 'county': 157, 'nascc': 127, 'port': 126, 'srmc': 224}
+
+### web.method nunique=4
+org      bcmc   brw   city  county  nascc  port  srmc
+method                                               
+CONNECT  7271  7739  15646   10920   7135  9059  8667
+GET       746   675   2053    1215   1169   936   978
+HEAD       12    13     45      41     30    25    19
+POST       48    31    111      61     69    48    49
+
+### web.scheme nunique=2
+org     bcmc   brw   city  county  nascc  port  srmc
+scheme                                              
+http     806   719   2209    1317   1268  1009  1046
+https   7271  7739  15646   10920   7135  9059  8667
+
+### web.host nunique=449 per org {'bcmc': 165, 'brw': 181, 'city': 205, 'county': 173, 'nascc': 182, 'port': 179, 'srmc': 173}
+
+### web.url_path nunique=5291 per org {'bcmc': 507, 'brw': 455, 'city': 1411, 'county': 852, 'nascc': 785, 'port': 645, 'srmc': 666}
+
+### web.status nunique=11
+org     bcmc   brw   city  county  nascc  port  srmc
+status                                              
+200     7639  8158  17017   11543   7638  9545  9010
+204       31    23     67      42     44    37    21
+301       26    31     73      53     58    40    48
+302       35    21     89      75     51    49    36
+304       86    91    261     141    169    95   126
+403      126     0      6     166    284   123   304
+404       47    42    103      73     58    55    60
+500        9     8     22       6     14     6     7
+502       40    49    116      71     52    71    60
+503       10     4     31      14     12     7    12
+504       28    31     70      53     23    40    29
+
+### web.action nunique=2
+org      bcmc   brw   city  county  nascc  port  srmc
+action                                               
+allowed  7951  8458  17849   12071   8119  9945  9409
+blocked   126     0      6     166    284   123   304
+
+### web.category nunique=23
+org                bcmc   brw  city  county  nascc  port  srmc
+category                                                      
+adult content         0     0     0       0      0     0     1
+advertising          44   144   198     171     45   125   212
+business            866  1323  2400    1355   1108   869  1079
+business software   577   324   959     566    306   632   574
+content delivery    697   963  2068     877    707  1070  1032
+education            58   156   237     149    205   231   132
+finance             341   427  1045     417    416   437   347
+gambling              0     0     6       1      1     0     0
+government          589   545  4320    3521   1999  1575   667
+health             2318    44    92     140     59    31  2207
+insurance            41   127    90     306     48    83    55
+news                149   209   438     357    289   382   256
+online storage      140    92   207     347    136   343   129
+search engines       88   180   132     240     56   308   187
+shopping            132   739   664     548    104   448   328
+social media         72     3    14      56     27    93   128
+software updates   1061   906  3107    1825   1833  1343  1409
+streaming media     126   226   237     165    120   123   175
+technology            4   715   220       0     79     0     0
+transportation        0   552     0       0      0  1184     0
+travel              247   260   384     438    189   276   264
+uncategorised       112    93   216     120    135    88   179
+weather             415   430   821     638    541   427   352
+
+### web.bytes_out nunique=9985 per org {'bcmc': 4811, 'brw': 4907, 'city': 6833, 'county': 5914, 'nascc': 4906, 'port': 5398, 'srmc': 5291}
+
+### web.bytes_in nunique=59601 per org {'bcmc': 7857, 'brw': 8221, 'city': 16760, 'county': 11701, 'nascc': 8062, 'port': 9732, 'srmc': 9314}
+
+### web.user_agent_family nunique=4
+org                bcmc   brw  city  county  nascc  port  srmc
+user_agent_family                                             
+-                  1061   906  3107    1825   1833  1343  1409
+Chrome/Windows     4295  4759  5381    3162    698  3203  1871
+Edge/Windows       2555  1571  8094    5198   5718  4846  6245
+Firefox/Windows     166  1222  1273    2052    154   676   188
+
+### web.policy nunique=13
+org                   bcmc   brw   city  county  nascc  port  srmc
+policy                                                            
+County-Blocked           0     0      0     166      0     0     0
+County-Default           0     0      0   12071      0     0     0
+DON-category-deny        0     0      0       0    284     0     0
+DON-standard             0     0      0       0   8119     0     0
+allow-all-logged         0  8458      0       0      0     0     0
+blocked-by-category      0     0      0       0      0   123     0
+category-block           0     0      6       0      0     0     0
+category-denied          0     0      0       0      0     0   304
+clinical-workstation     0     0      0       0      0     0  9409
+default               7951     0      0       0      0     0     0
+default-allow            0     0  17849       0      0     0     0
+standard-user            0     0      0       0      0  9945     0
+web-filter-block       126     0      0       0      0     0     0

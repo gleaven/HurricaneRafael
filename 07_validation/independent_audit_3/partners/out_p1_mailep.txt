@@ -1,0 +1,140 @@
+
+##### city mail n=23409
+  gateway [1]: 'CITY-MX-02':23409
+  direction [2]: 'inbound':14433, 'internal':8976
+  sender [22636 distinct] top: 'assistance-52@aid-help-portal.example':17, 'assistance-19@aid-help-portal.example':16, 'assistance-34@aid-help-portal.example':15, 'assistance-20@aid-help-portal.example':15, 'assistance-76@aid-help-portal.example':14, 'assistance-74@aid-help-portal.example':14 | n<=3 values: 22547
+  sender_domain [3]: 'partner-mail.example':13593, 'cctexas.example':8976, 'aid-help-portal.example':840
+  recipient [900 distinct] top: '978df88@cctexas.example':42, '59d9054@cctexas.example':42, '02a52c0@cctexas.example':41, '79afa14@cctexas.example':41, 'e6d9e7d@cctexas.example':41, '4851d5e@cctexas.example':41 | n<=3 values: 0
+  subject [11]: 'Newsletter':2373, 'Timesheet reminder':2346, 'Outage map update':2261, 'FW: vendor quote':2259, 'Re: schedule':2250, 'Delivery notice':2237, 'Invoice attached':2236, 'Storm readiness checklist':2235, 'Meeting notes':2213, 'Shift roster':2159, 'Disaster assistance: confirm your account to receive aid':840
+  attachment_names [4511 distinct] top: '':18889, '501a7.pdf':2, '29294.pdf':2, '6255f.pdf':2, '6c7fe.pdf':2, '84e2b.pdf':2 | n<=3 values: 4510
+  size_bytes [21760 distinct] top: '33351':4, '71753':4, '50885':4, '32545':3, '22118':3, '81876':3 | n<=3 values: 21757
+  verdict [2]: 'clean':23019, 'spam':390
+  action [2]: 'delivered':23019, 'quarantined':390
+  message_id [23409 distinct] top: '<f8688a687197264f@mail>':1, '<5b7e173718df7a1d@mail>':1, '<886a00108fc76766@mail>':1, '<57bfa7602b2b8e69@mail>':1, '<fa1a356b4ccd7e82@mail>':1, '<b1d7336706857843@mail>':1 | n<=3 values: 23409
+
+##### nascc mail n=12829
+  gateway [1]: 'NASCC-MX-01':12829
+  direction [2]: 'inbound':7766, 'internal':5063
+  sender [12550 distinct] top: 'assistance-64@aid-help-portal.example':8, 'assistance-35@aid-help-portal.example':8, 'assistance-34@aid-help-portal.example':8, 'assistance-23@aid-help-portal.example':7, 'assistance-60@aid-help-portal.example':7, 'assistance-53@aid-help-portal.example':7 | n<=3 values: 12497
+  sender_domain [3]: 'partner-mail.example':7406, 'nascc.navy.example':5063, 'aid-help-portal.example':360
+  recipient [400 distinct] top: '3cda761@nascc.navy.example':49, '7997072@nascc.navy.example':49, 'a3f4b25@nascc.navy.example':49, 'fa1bf4c@nascc.navy.example':47, '0820172@nascc.navy.example':47, '58cfaab@nascc.navy.example':46 | n<=3 values: 0
+  subject [11]: 'Invoice attached':1290, 'Re: schedule':1288, 'Storm readiness checklist':1247, 'Shift roster':1245, 'FW: vendor quote':1244, 'Timesheet reminder':1239, 'Outage map update':1236, 'Meeting notes':1234, 'Delivery notice':1226, 'Newsletter':1220, 'Disaster assistance: confirm your account to receive aid':360
+  attachment_names [2527 distinct] top: '':10294, '39cea.pdf':2, 'b31c7.pdf':2, 'fff26.pdf':2, '4f7e8.pdf':2, 'a125a.pdf':2 | n<=3 values: 2526
+  size_bytes [12300 distinct] top: '73737':3, '80748':3, '8349':3, '24522':3, '63966':3, '97827':3 | n<=3 values: 12300
+  verdict [2]: 'clean':12610, 'spam':219
+  action [2]: 'delivered':12610, 'quarantined':219
+  message_id [12829 distinct] top: '<378e9cbc0a6bcecb@mail>':1, '<44f71da26815e048@mail>':1, '<8b496b5c7fa24764@mail>':1, '<7419c9eb2d5f6344@mail>':1, '<9bde2b3484aa10e6@mail>':1, '<765bd759b0509c47@mail>':1 | n<=3 values: 12829
+
+##### brw mail n=3699
+  gateway [1]: 'BRW-MX-01':3699
+  direction [2]: 'inbound':2229, 'internal':1470
+  sender [3697 distinct] top: 'd2f9c4@partner-mail.example':2, '1ac3d3@partner-mail.example':2, 'bc141b@brightwake-marine.example':1, '068882@brightwake-marine.example':1, '02f60a@partner-mail.example':1, 'c43e4b@brightwake-marine.example':1 | n<=3 values: 3697
+  sender_domain [3]: 'partner-mail.example':2228, 'brightwake-marine.example':1470, 'marine-certification-notices.example':1
+  recipient [8]: 'm.okoye@brightwake-marine.example':496, 'o.pryce@brightwake-marine.example':471, 'l.hart@brightwake-marine.example':471, 'd.silva@brightwake-marine.example':464, 'j.tran@brightwake-marine.example':464, 'service.desk@brightwake-marine.example':455, 'remote.support@brightwake-marine.example':450, 'accounts@brightwake-marine.example':428
+  subject [11]: 'Outage map update':409, 'Delivery notice':399, 'Re: schedule':377, 'FW: vendor quote':374, 'Meeting notes':370, 'Storm readiness checklist':367, 'Shift roster':366, 'Timesheet reminder':357, 'Invoice attached':343, 'Newsletter':336, 'Remote access certificate renewal required':1
+  attachment_names [763 distinct] top: '':2937, 'e99f6.pdf':1, '13593.pdf':1, '49511.pdf':1, '4b850.pdf':1, '46a1f.pdf':1 | n<=3 values: 762
+  size_bytes [3647 distinct] top: '75805':3, '57205':2, '41083':2, '79652':2, '70897':2, '40962':2 | n<=3 values: 3647
+  verdict [2]: 'clean':3638, 'spam':61
+  action [2]: 'delivered':3638, 'quarantined':61
+  message_id [3699 distinct] top: '<164cc642bda26a15@mail>':1, '<4c85395c53f68290@mail>':1, '<65b2304f750330d1@mail>':1, '<8822fde361c8b834@mail>':1, '<24b865cbb9b4ccd0@mail>':1, '<c0148974a95d0ff9@mail>':1 | n<=3 values: 3699
+
+##### port mail n=6240
+  gateway [1]: 'PCCA-MX-01':6240
+  direction [3]: 'inbound':3750, 'internal':1363, 'outbound':1127
+  sender [5255 distinct] top: 'notices@uscg-sector-cc.example':20, '57ce0a4@portofcc.example':14, '0833eab@portofcc.example':14, '0f51580@portofcc.example':14, '85d4914@portofcc.example':13, '9fe5568@portofcc.example':13 | n<=3 values: 5102
+  sender_domain [3]: 'partner-mail.example':3730, 'portofcc.example':2490, 'uscg-sector-cc.example':20
+  recipient [1291 distinct] top: '4133484@portofcc.example':46, 'c8f7c78@portofcc.example':45, 'e33d9d2@portofcc.example':44, '37525c5@portofcc.example':44, 'port.operations@portofcc.example':43, '9be18eb@portofcc.example':40 | n<=3 values: 1127
+  subject [30]: 'Timesheet reminder':665, 'Invoice attached':642, 'Re: schedule':636, 'Meeting notes':625, 'Newsletter':624, 'Storm readiness checklist':617, 'Delivery notice':616, 'FW: vendor quote':609, 'Shift roster':603, 'Outage map update':583, 'MSIB 27-031: channel status':1, 'MSIB 27-034: notice':1, 'MSIB 27-041: port condition':1, 'COTP LTR 27-2026: vessel order':1, 'MSIB 27-042: port condition':1, 'COTP ORDER 27-2027: port condition':1, 'PCCA STORM LOG: notice':1, 'COTP ORDER 27-2028: safety zone':1, 'MSIB 27-044: channel status':1, 'COTP ORDER 27-2029: vessel order':1, 'MSIB 27-046: notice':1, 'MSIB 27-047: channel status':1, 'MSIB 27-051: channel status':1, 'MSIB 27-056: channel status':1, 'COTP ORDER 27-2031: channel status':1, 'MSIB 27-058: security zone':1, 'MSIB 27-060: notice':1, 'MSIB 27-062: channel status':1, 'COTP LTR 27-2034: vessel order':1, 'MSIB 27-071: port condition':1
+  attachment_names [1227 distinct] top: '':5014, '248f1.pdf':1, '7e569.pdf':1, 'eaac3.pdf':1, '43c1a.pdf':1, '07458.pdf':1 | n<=3 values: 1226
+  size_bytes [6122 distinct] top: '47505':3, '47088':2, '76428':2, '16149':2, '21102':2, '77494':2 | n<=3 values: 6122
+  verdict [2]: 'clean':6149, 'spam':91
+  action [2]: 'delivered':6149, 'quarantined':91
+  message_id [6240 distinct] top: '<b7bf04b875540508@mail>':1, '<fc23aa4001637398@mail>':1, '<91d3dff8f599abb4@mail>':1, '<d3e18b9d836bbbcc@mail>':1, '<546f5099f770feca@mail>':1, '<e10dba773835bcc1@mail>':1 | n<=3 values: 6240
+
+##### srmc mail n=8292
+  gateway [1]: 'SRMC-MX-01':8292
+  direction [3]: 'inbound':4984, 'internal':1830, 'outbound':1478
+  sender [7022 distinct] top: '7c39fb5@shorelineregional.example':16, 'ae375ab@shorelineregional.example':15, 'fcda746@shorelineregional.example':14, 'd3a8269@shorelineregional.example':14, '8ad3f2a@shorelineregional.example':14, '49df599@shorelineregional.example':13 | n<=3 values: 6828
+  sender_domain [2]: 'partner-mail.example':4984, 'shorelineregional.example':3308
+  recipient [1687 distinct] top: '1acb92c@shorelineregional.example':57, '1e28678@shorelineregional.example':48, '85f6713@shorelineregional.example':46, '7e4cb54@shorelineregional.example':45, '71af80d@shorelineregional.example':45, '758cace@shorelineregional.example':44 | n<=3 values: 1477
+  subject [10]: 'Meeting notes':888, 'Shift roster':844, 'Re: schedule':837, 'FW: vendor quote':835, 'Newsletter':834, 'Outage map update':819, 'Invoice attached':815, 'Storm readiness checklist':810, 'Delivery notice':809, 'Timesheet reminder':801
+  attachment_names [1684 distinct] top: '':6605, '172af.pdf':2, '1fc4e.pdf':2, 'b2f33.pdf':2, '83b12.pdf':2, '85079.pdf':1 | n<=3 values: 1683
+  size_bytes [8085 distinct] top: '29458':3, '109836':3, '98408':3, '61739':3, '17647':2, '22776':2 | n<=3 values: 8085
+  verdict [2]: 'clean':8136, 'spam':156
+  action [2]: 'delivered':8136, 'quarantined':156
+  message_id [8292 distinct] top: '<52e7d66c77e48f2f@mail>':1, '<71246eea0a13384e@mail>':1, '<f40932f1cc275ab2@mail>':1, '<72478e3e2be223dd@mail>':1, '<6fba302e2f5e7260@mail>':1, '<7dc678ff137bda45@mail>':1 | n<=3 values: 8292
+
+##### bcmc mail n=5672
+  gateway [1]: 'BCMC-MX-01':5672
+  direction [3]: 'inbound':3358, 'internal':1273, 'outbound':1041
+  sender [4777 distinct] top: '418d5a6@baycitymedical.example':13, 'ae3a876@baycitymedical.example':13, '6988b10@baycitymedical.example':13, 'e7e3e56@baycitymedical.example':13, '44937c3@baycitymedical.example':12, '31a02d4@baycitymedical.example':12 | n<=3 values: 4641
+  sender_domain [2]: 'partner-mail.example':3358, 'baycitymedical.example':2314
+  recipient [1190 distinct] top: 'e05c474@baycitymedical.example':49, '76159f5@baycitymedical.example':45, 'e6e3f20@baycitymedical.example':44, 'afa096f@baycitymedical.example':41, 'e5dbae2@baycitymedical.example':40, '030457a@baycitymedical.example':40 | n<=3 values: 1041
+  subject [10]: 'Delivery notice':617, 'Newsletter':580, 'Meeting notes':579, 'Outage map update':569, 'Timesheet reminder':568, 'Shift roster':562, 'FW: vendor quote':555, 'Re: schedule':554, 'Storm readiness checklist':551, 'Invoice attached':537
+  attachment_names [1181 distinct] top: '':4492, '241da.pdf':1, '7b664.pdf':1, 'd093f.pdf':1, '81b32.pdf':1, '3ce8c.pdf':1 | n<=3 values: 1180
+  size_bytes [5588 distinct] top: '141770':2, '38326':2, '222902':2, '53023':2, '23105':2, '58462':2 | n<=3 values: 5588
+  verdict [2]: 'clean':5579, 'spam':93
+  action [2]: 'delivered':5579, 'quarantined':93
+  message_id [5672 distinct] top: '<714491880cc5a28d@mail>':1, '<e42f018ec1309e28@mail>':1, '<68360dd0725de82f@mail>':1, '<801a5b1ce6dd2528@mail>':1, '<32e9d9f20099b728@mail>':1, '<dcccd1184ffbab5f@mail>':1 | n<=3 values: 5672
+
+##### county mail n=7692
+  gateway [1]: 'NUECES-MX-01':7692
+  direction [3]: 'inbound':4600, 'internal':1695, 'outbound':1397
+  sender [6507 distinct] top: '1adb398@nuecesco.example':13, '27f5337@nuecesco.example':13, 'eoc.pio@nuecesco.example':13, 'cd0cd24@nuecesco.example':12, '6b244f0@nuecesco.example':12, '5878eb7@nuecesco.example':12 | n<=3 values: 6314
+  sender_domain [3]: 'partner-mail.example':4594, 'nuecesco.example':3092, 'nclas-language.example':6
+  recipient [1608 distinct] top: '09a9bc6@nuecesco.example':44, '0475d6b@nuecesco.example':44, '9c36f24@nuecesco.example':43, 'f25757f@nuecesco.example':42, '9d368ed@nuecesco.example':42, '4c50e9f@nuecesco.example':40 | n<=3 values: 1389
+  subject [23]: 'Timesheet reminder':811, 'FW: vendor quote':786, 'Outage map update':773, 'Re: schedule':768, 'Delivery notice':764, 'Newsletter':764, 'Invoice attached':761, 'Meeting notes':754, 'Storm readiness checklist':753, 'Shift roster':745, 'Translation request 2027-09-09-STANDBY-001':1, 'Translation request 2027-09-12-EVAC-001':1, 'Translation delivered 2027-09-12-EVAC-001':1, 'Translation request 2027-09-13-SIP-001':1, 'Translation delivered 2027-09-13-SIP-001':1, 'Translation request 2027-09-26-BWN-001':1, 'Translation delivered 2027-09-26-BWN-001':1, 'Translation request 2027-10-14-BW-001':1, 'Translation delivered 2027-10-14-BW-001':1, 'Translation request 2027-10-23-BW-001':1, 'Translation delivered 2027-10-23-BW-001':1, 'Translation request 2027-10-26-BW-001':1, 'Translation delivered 2027-10-26-BW-001':1
+  attachment_names [1541 distinct] top: '':6140, 'alert_text_en.pdf':6, 'alert_text_es.pdf':6, 'd9ec3.pdf':2, 'bbdb2.pdf':2, '6c951.pdf':1 | n<=3 values: 1538
+  size_bytes [7538 distinct] top: '9020':3, '40200':3, '112466':2, '115563':2, '82351':2, '5701':2 | n<=3 values: 7538
+  verdict [2]: 'clean':7545, 'spam':147
+  action [2]: 'delivered':7545, 'quarantined':147
+  message_id [7692 distinct] top: '<9ff2051756eb2315@mail>':1, '<7fa4323232c7b823@mail>':1, '<8b610d42847dc845@mail>':1, '<6b7af42d80927ea4@mail>':1, '<156a14bbe167ed09@mail>':1, '<fc31a61f83c9ee02@mail>':1 | n<=3 values: 7692
+
+##### city endpoint_alerts n=3859
+  host [112 distinct] top: 'CC-EOC-WS-011':46, 'CC-EOC-WS-903':45, 'CC-CH-WS-019':44, 'CC-EOC-ALERT-01':44, 'CC-SVC-WS-002':44, 'CC-CH-WS-028':44 | n<=3 values: 0
+  ip [112 distinct] top: '10.60.20.30':46, '10.60.199.77':45, '10.60.10.38':44, '10.60.20.11':44, '10.60.40.21':44, '10.60.10.47':44 | n<=3 values: 0
+  event [5]: 'DEFINITIONS_UPDATED':1759, 'SCAN_COMPLETED':1258, 'REALTIME_PROTECTION_ENABLED':382, 'AGENT_HEARTBEAT_MISSED':327, 'THREAT_QUARANTINED':133
+  detail [41 distinct] top: 'engine 4.18':1759, '0 threats':1258, 'policy refresh':382, '':290, 'PUA:Win32/Toolbar':133, 'last seen 2027-09-14T06:47:56Z':2 | n<=3 values: 36
+  initiated_by [1]: 'system':3859
+
+##### nascc endpoint_alerts n=2598
+  host [69 distinct] top: 'NASCC-ADM-WS-013':53, 'NASCC-ADM-WS-018':49, 'NASCC-ADM-WS-005':47, 'NASCC-OPS-WS-008':46, 'NASCC-PWD-WS-007':45, 'NASCC-PWD-WS-005':44 | n<=3 values: 0
+  ip [69 distinct] top: '10.61.10.32':53, '10.61.10.37':49, '10.61.10.24':47, '10.61.20.27':46, '10.61.40.26':45, '10.61.40.24':44 | n<=3 values: 0
+  event [5]: 'DEFINITIONS_UPDATED':1115, 'SCAN_COMPLETED':846, 'AGENT_HEARTBEAT_MISSED':265, 'REALTIME_PROTECTION_ENABLED':263, 'THREAT_QUARANTINED':109
+  detail [64 distinct] top: 'engine 4.18':1115, '0 threats':846, 'policy refresh':263, '':205, 'PUA:Win32/Toolbar':109, 'last seen 2027-10-24T18:42:42Z':2 | n<=3 values: 59
+  initiated_by [1]: 'system':2598
+
+##### brw endpoint_alerts n=1055
+  host [34]: 'BRW-HQ-WS-002':46, 'BRW-HQ-WS-012':42, 'BRW-HQ-WS-023':40, 'BRW-HQ-WS-018':38, 'BRW-NOC-WS-001':36, 'BRW-HQ-WS-001':35, 'BRW-HQ-WS-014':33, 'BRW-HQ-WS-022':33, 'BRW-NOC-WS-005':33, 'BRW-HQ-WS-006':33, 'BRW-NOC-WS-004':32, 'BRW-HQ-WS-005':32, 'BRW-NOC-WS-006':32, 'BRW-NOC-WS-003':32, 'BRW-HQ-WS-024':32, 'BRW-HQ-WS-027':31, 'BRW-HQ-WS-025':31, 'BRW-HQ-WS-011':31, 'BRW-HQ-WS-026':30, 'BRW-HQ-WS-019':30, 'BRW-HQ-WS-007':30, 'BRW-HQ-WS-008':29, 'BRW-HQ-WS-016':29, 'BRW-HQ-WS-010':29, 'BRW-HQ-WS-028':29, 'BRW-HQ-WS-004':28, 'BRW-NOC-WS-002':27, 'BRW-HQ-WS-015':27, 'BRW-HQ-WS-003':26, 'BRW-HQ-WS-017':26, 'BRW-HQ-WS-021':25, 'BRW-HQ-WS-020':25, 'BRW-HQ-WS-013':23, 'BRW-HQ-WS-009':20
+  ip [34]: '10.80.1.21':46, '10.80.1.31':42, '10.80.1.42':40, '10.80.1.37':38, '10.80.2.20':36, '10.80.1.20':35, '10.80.1.33':33, '10.80.1.41':33, '10.80.2.24':33, '10.80.1.25':33, '10.80.2.23':32, '10.80.1.24':32, '10.80.2.25':32, '10.80.2.22':32, '10.80.1.43':32, '10.80.1.46':31, '10.80.1.44':31, '10.80.1.30':31, '10.80.1.45':30, '10.80.1.38':30, '10.80.1.26':30, '10.80.1.27':29, '10.80.1.35':29, '10.80.1.29':29, '10.80.1.47':29, '10.80.1.23':28, '10.80.2.21':27, '10.80.1.34':27, '10.80.1.22':26, '10.80.1.36':26, '10.80.1.40':25, '10.80.1.39':25, '10.80.1.32':23, '10.80.1.28':20
+  event [5]: 'DEFINITIONS_UPDATED':499, 'SCAN_COMPLETED':332, 'AGENT_HEARTBEAT_MISSED':96, 'REALTIME_PROTECTION_ENABLED':89, 'THREAT_QUARANTINED':39
+  detail [5]: 'engine 4.18':499, '0 threats':332, '':96, 'policy refresh':89, 'PUA:Win32/Toolbar':39
+  initiated_by [1]: 'system':1055
+
+##### port endpoint_alerts n=1518
+  host [48 distinct] top: 'PCCA-SEC-WS-003':49, 'PCCA-ADM-WS-001':44, 'PCCA-SEC-WS-001':42, 'PCCA-ADM-WS-011':41, 'PCCA-ADM-WS-018':38, 'PCCA-ADM-WS-002':38 | n<=3 values: 0
+  ip [48 distinct] top: '10.90.20.22':49, '10.90.10.20':44, '10.90.20.20':42, '10.90.10.30':41, '10.90.10.37':38, '10.90.10.21':38 | n<=3 values: 0
+  event [5]: 'DEFINITIONS_UPDATED':686, 'SCAN_COMPLETED':484, 'REALTIME_PROTECTION_ENABLED':157, 'AGENT_HEARTBEAT_MISSED':138, 'THREAT_QUARANTINED':53
+  detail [24]: 'engine 4.18':686, '0 threats':484, 'policy refresh':157, '':119, 'PUA:Win32/Toolbar':53, 'last seen 2027-09-14T06:34:41Z':1, 'last seen 2027-09-14T06:40:13Z':1, 'last seen 2027-09-14T06:39:13Z':1, 'last seen 2027-09-14T06:37:10Z':1, 'last seen 2027-09-14T06:36:53Z':1, 'last seen 2027-09-14T06:34:44Z':1, 'last seen 2027-09-14T06:40:56Z':1, 'last seen 2027-09-14T06:34:16Z':1, 'last seen 2027-09-14T06:36:47Z':1, 'last seen 2027-09-14T06:31:55Z':1, 'last seen 2027-09-14T06:36:00Z':1, 'last seen 2027-09-14T06:31:20Z':1, 'last seen 2027-09-14T06:37:36Z':1, 'last seen 2027-09-14T06:34:27Z':1, 'last seen 2027-09-14T06:32:39Z':1, 'last seen 2027-09-14T06:39:59Z':1, 'last seen 2027-09-14T06:37:54Z':1, 'last seen 2027-09-14T06:40:38Z':1, 'last seen 2027-09-14T06:35:10Z':1
+  initiated_by [1]: 'system':1518
+
+##### srmc endpoint_alerts n=2172
+  host [62 distinct] top: 'SRMC-CLIN-WS-037':46, 'SRMC-CLIN-WS-039':45, 'SRMC-CLIN-WS-012':45, 'SRMC-CLIN-WS-006':44, 'SRMC-CLIN-WS-023':44, 'SRMC-CLIN-WS-020':43 | n<=3 values: 0
+  ip [62 distinct] top: '10.110.10.56':46, '10.110.10.58':45, '10.110.10.31':45, '10.110.10.25':44, '10.110.10.42':44, '10.110.10.39':43 | n<=3 values: 0
+  event [5]: 'DEFINITIONS_UPDATED':976, 'SCAN_COMPLETED':697, 'REALTIME_PROTECTION_ENABLED':233, 'AGENT_HEARTBEAT_MISSED':193, 'THREAT_QUARANTINED':73
+  detail [41 distinct] top: 'engine 4.18':976, '0 threats':697, 'policy refresh':233, '':156, 'PUA:Win32/Toolbar':73, 'last seen 2027-09-14T06:11:23Z':2 | n<=3 values: 36
+  initiated_by [1]: 'system':2172
+
+##### bcmc endpoint_alerts n=1635
+  host [44 distinct] top: 'BCMC-ADM-WS-004':53, 'BCMC-CLIN-WS-002':50, 'BCMC-CLIN-WS-028':48, 'BCMC-CLIN-WS-017':47, 'BCMC-ADM-WS-009':45, 'BCMC-CLIN-WS-022':44 | n<=3 values: 0
+  ip [44 distinct] top: '10.112.30.23':53, '10.112.10.21':50, '10.112.10.47':48, '10.112.10.36':47, '10.112.30.28':45, '10.112.10.41':44 | n<=3 values: 0
+  event [5]: 'DEFINITIONS_UPDATED':743, 'SCAN_COMPLETED':531, 'REALTIME_PROTECTION_ENABLED':156, 'AGENT_HEARTBEAT_MISSED':141, 'THREAT_QUARANTINED':64
+  detail [29]: 'engine 4.18':743, '0 threats':531, 'policy refresh':156, '':117, 'PUA:Win32/Toolbar':64, 'last seen 2027-09-14T06:23:20Z':1, 'last seen 2027-09-14T06:23:04Z':1, 'last seen 2027-09-14T06:22:13Z':1, 'last seen 2027-09-14T06:27:41Z':1, 'last seen 2027-09-14T06:23:52Z':1, 'last seen 2027-09-14T06:25:47Z':1, 'last seen 2027-09-14T06:28:32Z':1, 'last seen 2027-09-14T06:29:56Z':1, 'last seen 2027-09-14T06:25:50Z':1, 'last seen 2027-09-14T06:27:03Z':1, 'last seen 2027-09-14T06:26:58Z':1, 'last seen 2027-09-14T06:23:31Z':1, 'last seen 2027-09-14T06:29:01Z':1, 'last seen 2027-09-14T06:22:46Z':1, 'last seen 2027-09-14T06:24:42Z':1, 'last seen 2027-09-14T06:31:31Z':1, 'last seen 2027-09-14T06:23:46Z':1, 'last seen 2027-09-14T06:30:34Z':1, 'last seen 2027-09-14T06:23:25Z':1, 'last seen 2027-09-14T06:23:40Z':1, 'last seen 2027-09-14T06:24:53Z':1, 'last seen 2027-09-14T06:21:44Z':1, 'last seen 2027-09-14T06:22:50Z':1, 'last seen 2027-09-14T06:26:39Z':1
+  initiated_by [1]: 'system':1635
+
+##### county endpoint_alerts n=2004
+  host [65 distinct] top: 'NC-CTH-WS-023':43, 'NC-CTH-WS-012':43, 'NC-EOC-WS-005':41, 'NC-PH-WS-004':40, 'NC-CTH-WS-002':39, 'NC-CTH-WS-006':39 | n<=3 values: 0
+  ip [65 distinct] top: '10.70.10.42':43, '10.70.10.31':43, '10.70.20.24':41, '10.70.30.23':40, '10.70.10.21':39, '10.70.10.25':39 | n<=3 values: 0
+  event [5]: 'DEFINITIONS_UPDATED':885, 'SCAN_COMPLETED':660, 'REALTIME_PROTECTION_ENABLED':209, 'AGENT_HEARTBEAT_MISSED':170, 'THREAT_QUARANTINED':80
+  detail [20]: 'engine 4.18':885, '0 threats':660, 'policy refresh':209, '':155, 'PUA:Win32/Toolbar':80, 'last seen 2027-09-14T07:19:59Z':1, 'last seen 2027-09-14T06:51:27Z':1, 'last seen 2027-09-14T06:54:48Z':1, 'last seen 2027-09-14T06:49:55Z':1, 'last seen 2027-09-14T06:48:04Z':1, 'last seen 2027-09-14T06:45:05Z':1, 'last seen 2027-09-14T06:52:45Z':1, 'last seen 2027-09-14T06:53:29Z':1, 'last seen 2027-09-14T06:48:48Z':1, 'last seen 2027-09-14T06:45:20Z':1, 'last seen 2027-09-14T06:51:32Z':1, 'last seen 2027-09-14T06:51:06Z':1, 'last seen 2027-09-14T06:47:29Z':1, 'last seen 2027-09-14T06:51:50Z':1, 'last seen 2027-09-14T06:51:33Z':1
+  initiated_by [1]: 'system':2004

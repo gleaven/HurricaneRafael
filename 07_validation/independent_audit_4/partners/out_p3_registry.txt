@@ -1,0 +1,99 @@
+['CITY', 'NASCC', 'BRW', 'PORT', 'SRMC', 'BCMC', 'COUNTY']
+
+==== CITY city hosts 121 accounts 903 sites 9 ws users 186
+ device types {'server': 13, 'firewall': 1, 'mail gateway': 1, 'remote access': 1, 'workstation': 78, 'console': 27} os {'Windows Server 2022': 3, 'Windows Server 2019': 8, 'Appliance OS 9': 3, 'Windows Server 2016': 1, 'Firewall OS 7': 1, 'Windows 11 Enterprise 23H2': 57, 'Windows 10 Enterprise 22H2': 37, 'Windows 11 Enterprise 24H2': 11}
+ auth hosts not in reg: []
+ auth accounts not in reg: 0 [] rows 0
+ ws logons by account not listed on host: 0 of 37232 []
+ ws src_ip values: {'10.60.21.42': 862, '10.60.21.35': 830, '10.60.21.39': 829}
+ web client_ip not in reg: 0 []  users not in reg: []
+ dns client not in reg: 0 []  resolver not in reg: set() {'10.60.2.10': 13905, '10.60.2.11': 5511}
+ ep hosts not in reg: set()  ip mismatch: 0  initiated_by not in reg: []
+ mail gateway: {'CITY-MX-02'} in reg True  own mailboxes not in reg: 0 [] of 903
+ fw device not in reg: set()
+ fw internal src not in reg: 0 []
+ nat_src_ip: {'': 31384, '64.134.20.7': 16345, '64.134.20.2': 6966, '64.134.20.3': 6443, '64.134.20.4': 4440} plan {'internal': '10.60.0.0/16', 'servers': '10.60.2.0/24', 'public_block': '64.134.20.0/27'}
+
+==== NASCC nascc hosts 78 accounts 402 sites 7 ws users 126
+ device types {'server': 9, 'firewall': 1, 'mail gateway': 1, 'remote access': 1, 'workstation': 54, 'console': 12} os {'Windows Server 2019': 7, 'Appliance OS 9': 3, 'Windows Server 2016': 1, 'Firewall OS 7': 1, 'Windows 11 Enterprise 23H2': 32, 'Windows 10 Enterprise 22H2': 34}
+ auth hosts not in reg: []
+ auth accounts not in reg: 0 [] rows 0
+ ws logons by account not listed on host: 0 of 28767 []
+ ws src_ip values: {'10.61.20.105': 1254, '10.61.20.120': 1240, '10.61.20.132': 1233}
+ web client_ip not in reg: 0 []  users not in reg: []
+ dns client not in reg: 0 []  resolver not in reg: set() {'10.61.4.6': 4778, '10.61.4.5': 4677}
+ ep hosts not in reg: set()  ip mismatch: 0  initiated_by not in reg: []
+ mail gateway: {'NASCC-MX-01'} in reg True  own mailboxes not in reg: 0 [] of 401
+ fw device not in reg: set()
+ fw internal src not in reg: 0 []
+ nat_src_ip: {'': 27341, '162.40.88.2': 8800, '162.40.88.7': 8664} plan {'internal': '10.61.0.0/16', 'servers': '10.61.4.0/24', 'public_block': '162.40.88.0/27', 'logistics_enclave': '10.200.0.0/16 (client addresses are leased, not individually registered)'}
+
+==== BRW brw hosts 45 accounts 66 sites 5 ws users 48
+ device types {'server': 7, 'firewall': 2, 'mail gateway': 1, 'remote access': 2, 'workstation': 28, 'console': 5} os {'Windows Server 2022': 3, 'Red Hat Enterprise Linux 9': 3, 'Windows Server 2019': 1, 'Firewall OS 7': 2, 'Appliance OS 9': 3, 'Windows 11 Enterprise 24H2': 19, 'Windows 11 Enterprise 23H2': 9, 'macOS 15': 5}
+ auth hosts not in reg: []
+ auth accounts not in reg: 0 [] rows 0
+ ws logons by account not listed on host: 0 of 11971 []
+ ws src_ip values: {'10.80.2.54': 826, '10.80.2.51': 804, '10.80.2.52': 791}
+ web client_ip not in reg: 93 ['10.80.250.103', '10.80.250.104', '10.80.250.107', '10.80.250.108', '10.80.250.110', '10.80.250.111']  users not in reg: []
+ dns client not in reg: 93 ['10.80.250.103', '10.80.250.104', '10.80.250.107', '10.80.250.108', '10.80.250.110', '10.80.250.111']  resolver not in reg: set() {'10.80.8.10': 8066, '10.80.8.1': 896}
+ ep hosts not in reg: set()  ip mismatch: 0  initiated_by not in reg: []
+ mail gateway: {'BRW-MX-01'} in reg True  own mailboxes not in reg: 0 [] of 56
+ fw device not in reg: set()
+ fw internal src not in reg: 93 ['10.80.250.103', '10.80.250.104', '10.80.250.107', '10.80.250.108', '10.80.250.110', '10.80.250.111']
+ nat_src_ip: {'': 11011, '198.51.100.7': 8759, '198.51.100.45': 230, '198.51.100.57': 230, '198.51.100.25': 229, '198.51.100.41': 229, '198.51.100.39': 225, '198.51.100.48': 224} plan {'internal': '10.80.0.0/16', 'servers': '10.80.8.0/24', 'public_addressing': "provider-assigned addresses in a range shared with the provider's other customers; outbound traffic leaves through a rotating pool", 'vpn_pool': '10.80.250.0/24'}
+
+==== PORT port hosts 61 accounts 152 sites 6 ws users 110
+ device types {'server': 10, 'firewall': 1, 'mail gateway': 1, 'remote access': 1, 'workstation': 30, 'console': 18} os {'Windows Server 2019': 8, 'Windows Server 2016': 1, 'Appliance OS 9': 3, 'Firewall OS 7': 1, 'Windows 11 Enterprise 23H2': 36, 'Windows 10 Enterprise 22H2': 12}
+ auth hosts not in reg: []
+ auth accounts not in reg: 0 [] rows 0
+ ws logons by account not listed on host: 0 of 22323 []
+ ws src_ip values: {'10.90.21.24': 870, '10.90.21.27': 843, '10.90.20.27': 843}
+ web client_ip not in reg: 76 ['10.90.250.100', '10.90.250.101', '10.90.250.103', '10.90.250.112', '10.90.250.115', '10.90.250.118']  users not in reg: []
+ dns client not in reg: 76 ['10.90.250.100', '10.90.250.101', '10.90.250.103', '10.90.250.112', '10.90.250.115', '10.90.250.118']  resolver not in reg: set() {'10.90.5.5': 7451, '10.90.5.6': 3822}
+ ep hosts not in reg: set()  ip mismatch: 0  initiated_by not in reg: []
+ mail gateway: {'PCCA-MX-01'} in reg True  own mailboxes not in reg: 0 [] of 152
+ fw device not in reg: set()
+ fw internal src not in reg: 76 ['10.90.250.100', '10.90.250.101', '10.90.250.103', '10.90.250.112', '10.90.250.115', '10.90.250.118']
+ nat_src_ip: {'': 11568, '69.15.201.7': 10159, '69.15.201.2': 5768, '69.15.201.3': 5738} plan {'internal': '10.90.0.0/16', 'servers': '10.90.5.0/24', 'public_block': '69.15.201.0/27', 'vpn_pool': '10.90.250.0/24'}
+
+==== SRMC srmc hosts 66 accounts 265 sites 4 ws users 200
+ device types {'server': 13, 'firewall': 1, 'mail gateway': 1, 'remote access': 1, 'clinical workstation': 30, 'workstation': 20} os {'Windows Server 2019': 11, 'Windows Server 2016': 1, 'Appliance OS 9': 3, 'Firewall OS 7': 1, 'Windows 10 Enterprise LTSC 2021': 24, 'Windows 11 Enterprise 23H2': 17, 'Windows 10 Enterprise 22H2': 9}
+ auth hosts not in reg: []
+ auth accounts not in reg: 0 [] rows 0
+ ws logons by account not listed on host: 0 of 64200 []
+ ws src_ip values: {'10.110.10.71': 2087, '10.110.10.74': 2039, '10.110.10.113': 2014}
+ web client_ip not in reg: 103 ['10.110.250.102', '10.110.250.103', '10.110.250.107', '10.110.250.108', '10.110.250.109', '10.110.250.112']  users not in reg: []
+ dns client not in reg: 103 ['10.110.250.102', '10.110.250.103', '10.110.250.107', '10.110.250.108', '10.110.250.109', '10.110.250.112']  resolver not in reg: set() {'10.110.0.10': 6696, '10.110.0.11': 4417}
+ ep hosts not in reg: set()  ip mismatch: 0  initiated_by not in reg: []
+ mail gateway: {'SRMC-MX-01'} in reg True  own mailboxes not in reg: 0 [] of 265
+ fw device not in reg: set()
+ fw internal src not in reg: 99 ['10.110.250.102', '10.110.250.107', '10.110.250.108', '10.110.250.109', '10.110.250.112', '10.110.250.114']
+ nat_src_ip: {'': 17923, '96.88.14.7': 11934, '96.88.14.2': 9409} plan {'internal': '10.110.0.0/16', 'servers': '10.110.0.0/24', 'public_block': '96.88.14.0/27', 'vpn_pool': '10.110.250.0/24'}
+
+==== BCMC bcmc hosts 47 accounts 196 sites 4 ws users 146
+ device types {'server': 8, 'firewall': 1, 'mail gateway': 1, 'remote access': 1, 'clinical workstation': 22, 'workstation': 14} os {'Windows Server 2016': 4, 'Windows Server 2019': 3, 'Appliance OS 9': 3, 'Firewall OS 7': 1, 'Windows 10 Enterprise LTSC 2021': 6, 'Windows 10 Enterprise 22H2': 27, 'Windows 11 Enterprise 23H2': 3}
+ auth hosts not in reg: []
+ auth accounts not in reg: 0 [] rows 0
+ ws logons by account not listed on host: 0 of 47139 []
+ ws src_ip values: {'10.112.10.79': 2029, '10.112.10.70': 2026, '10.112.10.61': 2005}
+ web client_ip not in reg: 69 ['10.112.250.100', '10.112.250.101', '10.112.250.106', '10.112.250.108', '10.112.250.109', '10.112.250.110']  users not in reg: []
+ dns client not in reg: 69 ['10.112.250.100', '10.112.250.101', '10.112.250.106', '10.112.250.108', '10.112.250.109', '10.112.250.110']  resolver not in reg: set() {'10.112.1.5': 8673, '10.112.1.1': 466}
+ ep hosts not in reg: set()  ip mismatch: 0  initiated_by not in reg: []
+ mail gateway: {'BCMC-MX-01'} in reg True  own mailboxes not in reg: 0 [] of 196
+ fw device not in reg: set()
+ fw internal src not in reg: 69 ['10.112.250.100', '10.112.250.101', '10.112.250.106', '10.112.250.108', '10.112.250.109', '10.112.250.110']
+ nat_src_ip: {'': 10514, '104.190.33.2': 8935, '104.190.33.7': 8479} plan {'internal': '10.112.0.0/16', 'servers': '10.112.1.0/24', 'public_block': '104.190.33.0/27', 'vpn_pool': '10.112.250.0/24'}
+
+==== COUNTY county hosts 78 accounts 185 sites 6 ws users 140
+ device types {'server': 10, 'firewall': 1, 'mail gateway': 1, 'remote access': 1, 'workstation': 40, 'console': 25} os {'Windows Server 2019': 6, 'Windows Server 2016': 3, 'Appliance OS 9': 3, 'Firewall OS 7': 1, 'Windows 11 Enterprise 23H2': 35, 'Windows 10 Enterprise 22H2': 30}
+ auth hosts not in reg: []
+ auth accounts not in reg: 0 [] rows 0
+ ws logons by account not listed on host: 0 of 25606 []
+ ws src_ip values: {'10.70.21.87': 841, '10.70.21.63': 840, '10.70.21.72': 833}
+ web client_ip not in reg: 82 ['10.70.250.102', '10.70.250.103', '10.70.250.104', '10.70.250.105', '10.70.250.106', '10.70.250.107']  users not in reg: []
+ dns client not in reg: 82 ['10.70.250.102', '10.70.250.103', '10.70.250.104', '10.70.250.105', '10.70.250.106', '10.70.250.107']  resolver not in reg: set() {'10.70.3.5': 10773, '10.70.3.6': 2565}
+ ep hosts not in reg: set()  ip mismatch: 0  initiated_by not in reg: []
+ mail gateway: {'NUECES-MX-01'} in reg True  own mailboxes not in reg: 0 [] of 185
+ fw device not in reg: set()
+ fw internal src not in reg: 81 ['10.70.250.102', '10.70.250.103', '10.70.250.104', '10.70.250.105', '10.70.250.106', '10.70.250.107']
+ nat_src_ip: {'': 12524, '199.21.76.7': 12068, '199.21.76.2': 6595, '199.21.76.3': 5476} plan {'internal': '10.70.0.0/16', 'servers': '10.70.3.0/24', 'public_block': '199.21.76.0/27', 'vpn_pool': '10.70.250.0/24'}

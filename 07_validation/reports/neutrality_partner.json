@@ -1,0 +1,1760 @@
+{
+ "complete": true,
+ "groups_scanned": [
+  "aid_applications",
+  "extracts",
+  "partner_bcmc",
+  "partner_brw",
+  "partner_city",
+  "partner_county",
+  "partner_nascc",
+  "partner_port",
+  "partner_srmc",
+  "portal_aid",
+  "portal_logistics",
+  "registry",
+  "relations",
+  "vessel"
+ ],
+ "groups_to_do": [],
+ "findings": [],
+ "allowed": [
+  {
+   "table": "city/mail",
+   "feature": "shape:sender:pat=a-9@a-a-a.a",
+   "story": 840,
+   "benign": 0,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "city/mail",
+   "feature": "shape:sender_domain:pat=a-a-a.a",
+   "story": 840,
+   "benign": 437,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "city/mail",
+   "feature": "shape:subject:first=disaster",
+   "story": 840,
+   "benign": 0,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "city/mail",
+   "feature": "shape:subject:last=aid",
+   "story": 840,
+   "benign": 0,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "city/mail",
+   "feature": "shape:subject:pat=Aa a: a a a a a a",
+   "story": 840,
+   "benign": 0,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "nascc/mail",
+   "feature": "shape:sender:pat=a-9@a-a-a.a",
+   "story": 360,
+   "benign": 0,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "nascc/mail",
+   "feature": "shape:sender_domain:pat=a-a-a.a",
+   "story": 360,
+   "benign": 1290,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "nascc/mail",
+   "feature": "shape:subject:first=disaster",
+   "story": 360,
+   "benign": 0,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "nascc/mail",
+   "feature": "shape:subject:last=aid",
+   "story": 360,
+   "benign": 0,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "nascc/mail",
+   "feature": "shape:subject:len=32-63",
+   "story": 360,
+   "benign": 843,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "nascc/mail",
+   "feature": "shape:subject:pat=Aa a: a a a a a a",
+   "story": 360,
+   "benign": 0,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "brw/mail",
+   "feature": "shape:sender:pat=a-a@a-a-a.a",
+   "story": 1,
+   "benign": 0,
+   "need": 20,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "brw/mail",
+   "feature": "shape:subject:last=required",
+   "story": 1,
+   "benign": 5,
+   "need": 20,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "portal_aid[one-address applications]",
+   "feature": "pair:client_network=ASN 64500&user_agent_family=Safari/macOS",
+   "story": 746,
+   "benign": 1253,
+   "need": 2000,
+   "allowed": "one address submitting many applications: its provider and its three devices' browsers are that one office's"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "pair:client_network=ASN 64512&user_agent_family=Edge/Windows",
+   "story": 21214,
+   "benign": 1010,
+   "need": 2000,
+   "allowed": "the sign-in run and the takeovers come through one provider (the join canon uses between threads); the provider's label alone has ordinary company"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "pair:event=login_failed&user_agent_family=Chrome/Android",
+   "story": 64927,
+   "benign": 1401,
+   "need": 2000,
+   "allowed": "the volume of failed sign-ins is the credential-stuffing run"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "pair:event=login_failed&user_agent_family=Chrome/Windows",
+   "story": 83397,
+   "benign": 1163,
+   "need": 2000,
+   "allowed": "the volume of failed sign-ins is the credential-stuffing run"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "pair:event=login_failed&user_agent_family=Edge/Windows",
+   "story": 21214,
+   "benign": 389,
+   "need": 2000,
+   "allowed": "the volume of failed sign-ins is the credential-stuffing run"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "pair:event=login_failed&user_agent_family=Safari/iOS",
+   "story": 49526,
+   "benign": 1859,
+   "need": 2000,
+   "allowed": "the volume of failed sign-ins is the credential-stuffing run"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "pair:status=401&user_agent_family=Chrome/Android",
+   "story": 64927,
+   "benign": 1401,
+   "need": 2000,
+   "allowed": "the volume of failed sign-ins is the credential-stuffing run"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "pair:status=401&user_agent_family=Chrome/Windows",
+   "story": 83397,
+   "benign": 1163,
+   "need": 2000,
+   "allowed": "the volume of failed sign-ins is the credential-stuffing run"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "pair:status=401&user_agent_family=Edge/Windows",
+   "story": 21214,
+   "benign": 389,
+   "need": 2000,
+   "allowed": "the volume of failed sign-ins is the credential-stuffing run"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "pair:status=401&user_agent_family=Safari/iOS",
+   "story": 49526,
+   "benign": 1859,
+   "need": 2000,
+   "allowed": "the volume of failed sign-ins is the credential-stuffing run"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "triple:client_network=ASN 64512&method=POST&user_agent_family=Chrome/Android",
+   "story": 64927,
+   "benign": 948,
+   "need": 2000,
+   "allowed": "the sign-in run and the takeovers come through one provider (the join canon uses between threads); the provider's label alone has ordinary company"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "triple:client_network=ASN 64512&method=POST&user_agent_family=Chrome/Windows",
+   "story": 83397,
+   "benign": 1127,
+   "need": 2000,
+   "allowed": "the sign-in run and the takeovers come through one provider (the join canon uses between threads); the provider's label alone has ordinary company"
+  },
+  {
+   "table": "portal_aid[sign-in run]",
+   "feature": "triple:client_network=ASN 64512&method=POST&user_agent_family=Safari/iOS",
+   "story": 49526,
+   "benign": 1405,
+   "need": 2000,
+   "allowed": "the sign-in run and the takeovers come through one provider (the join canon uses between threads); the provider's label alone has ordinary company"
+  },
+  {
+   "table": "portal_aid[takeovers and planted applications]",
+   "feature": "exact:event=profile_updated: direct deposit",
+   "story": 410,
+   "benign": 464,
+   "need": 2000,
+   "allowed": "a sign-in to an existing account followed by a change of its deposit details is the takeover itself"
+  },
+  {
+   "table": "portal_aid[takeovers and planted applications]",
+   "feature": "exact:path=/account/direct-deposit",
+   "story": 410,
+   "benign": 464,
+   "need": 2000,
+   "allowed": "a sign-in to an existing account followed by a change of its deposit details is the takeover itself"
+  },
+  {
+   "table": "portal_aid[takeovers and planted applications]",
+   "feature": "pair:client_network=ASN 64512&event=login_success",
+   "story": 410,
+   "benign": 1273,
+   "need": 2000,
+   "allowed": "a sign-in to an existing account followed by a change of its deposit details is the takeover itself"
+  },
+  {
+   "table": "portal_aid[takeovers and planted applications]",
+   "feature": "triple:client_network=ASN 64512&method=POST&status=200",
+   "story": 820,
+   "benign": 1333,
+   "need": 2000,
+   "allowed": "the sign-in run and the takeovers come through one provider (the join canon uses between threads); the provider's label alone has ordinary company"
+  },
+  {
+   "table": "portal_aid[takeovers and planted applications]",
+   "feature": "triple:client_network=ASN 64512&method=POST&user_agent_family=Chrome/Android",
+   "story": 209,
+   "benign": 948,
+   "need": 1045,
+   "allowed": "the sign-in run and the takeovers come through one provider (the join canon uses between threads); the provider's label alone has ordinary company"
+  },
+  {
+   "table": "portal_aid[takeovers and planted applications]",
+   "feature": "triple:client_network=ASN 64512&method=POST&user_agent_family=Chrome/Windows",
+   "story": 350,
+   "benign": 1127,
+   "need": 1750,
+   "allowed": "the sign-in run and the takeovers come through one provider (the join canon uses between threads); the provider's label alone has ordinary company"
+  },
+  {
+   "table": "vessel_sessions",
+   "feature": "exact:src_asn=ASN 64512",
+   "story": 15,
+   "benign": 0,
+   "need": 75,
+   "allowed": "a third network (neither the vendor's office nor its VPN) is the join canon uses between threads; other outside networks appear in ordinary sessions"
+  },
+  {
+   "table": "vessel_sessions",
+   "feature": "exact:target_system=EXT-KALVORA-CCS",
+   "story": 5,
+   "benign": 2,
+   "need": 25,
+   "allowed": "the misuse was aimed at two ships; each of them also has ordinary sessions"
+  },
+  {
+   "table": "vessel_sessions",
+   "feature": "exact:target_system=EXT-OSTREL-CCS",
+   "story": 5,
+   "benign": 4,
+   "need": 25,
+   "allowed": "the misuse was aimed at two ships; each of them also has ordinary sessions"
+  },
+  {
+   "table": "vessel_sessions",
+   "feature": "exact:vessel_mmsi=352091748",
+   "story": 5,
+   "benign": 4,
+   "need": 25,
+   "allowed": "the misuse was aimed at two ships; each of them also has ordinary sessions"
+  },
+  {
+   "table": "vessel_sessions",
+   "feature": "exact:vessel_mmsi=538847203",
+   "story": 5,
+   "benign": 2,
+   "need": 25,
+   "allowed": "the misuse was aimed at two ships; each of them also has ordinary sessions"
+  },
+  {
+   "table": "vessel_sessions",
+   "feature": "exact:vessel_name=MT Kalvora Star",
+   "story": 5,
+   "benign": 2,
+   "need": 25,
+   "allowed": "the misuse was aimed at two ships; each of them also has ordinary sessions"
+  },
+  {
+   "table": "vessel_sessions",
+   "feature": "exact:vessel_name=MT Ostrel Bay",
+   "story": 5,
+   "benign": 4,
+   "need": 25,
+   "allowed": "the misuse was aimed at two ships; each of them also has ordinary sessions"
+  },
+  {
+   "table": "mail_gateway_city",
+   "feature": "shape:message_id:len=16-31",
+   "story": 840,
+   "benign": 238,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_city",
+   "feature": "shape:message_id:pat=<A@A>",
+   "story": 840,
+   "benign": 172,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_city",
+   "feature": "shape:sender:hyph1=y",
+   "story": 840,
+   "benign": 117,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_city",
+   "feature": "shape:sender:len=32-63",
+   "story": 840,
+   "benign": 252,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_city",
+   "feature": "shape:sender:pat=a-9@a-a-a.a",
+   "story": 840,
+   "benign": 0,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_city",
+   "feature": "shape:sender_domain:hyph1=y",
+   "story": 840,
+   "benign": 254,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_city",
+   "feature": "shape:sender_domain:pat=a-a-a.a",
+   "story": 840,
+   "benign": 19,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_city",
+   "feature": "shape:subject:first=disaster",
+   "story": 840,
+   "benign": 0,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_city",
+   "feature": "shape:subject:last=aid",
+   "story": 840,
+   "benign": 0,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_city",
+   "feature": "shape:subject:pat=Aa a: a a a a a a",
+   "story": 840,
+   "benign": 0,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_city",
+   "feature": "shape:subject:tpl=disaster assistance: confirm your account to receive aid",
+   "story": 840,
+   "benign": 0,
+   "need": 2000,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_airstation",
+   "feature": "shape:sender:dots=1",
+   "story": 360,
+   "benign": 66,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_airstation",
+   "feature": "shape:sender:hyph1=y",
+   "story": 360,
+   "benign": 47,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_airstation",
+   "feature": "shape:sender:pat=a-9@a-a-a.a",
+   "story": 360,
+   "benign": 0,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_airstation",
+   "feature": "shape:sender_domain:pat=a-a-a.a",
+   "story": 360,
+   "benign": 46,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_airstation",
+   "feature": "shape:subject:first=disaster",
+   "story": 360,
+   "benign": 0,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_airstation",
+   "feature": "shape:subject:last=aid",
+   "story": 360,
+   "benign": 0,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_airstation",
+   "feature": "shape:subject:len=32-63",
+   "story": 360,
+   "benign": 13,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_airstation",
+   "feature": "shape:subject:pat=Aa a: a a a a a a",
+   "story": 360,
+   "benign": 0,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_airstation",
+   "feature": "shape:subject:tpl=disaster assistance: confirm your account to receive aid",
+   "story": 360,
+   "benign": 0,
+   "need": 1800,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_brightwake",
+   "feature": "shape:sender:pat=a-a@a-a-a.a",
+   "story": 1,
+   "benign": 0,
+   "need": 20,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_brightwake",
+   "feature": "shape:sender_domain:len=32-63",
+   "story": 1,
+   "benign": 6,
+   "need": 20,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_brightwake",
+   "feature": "shape:subject:last=required",
+   "story": 1,
+   "benign": 1,
+   "need": 20,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_brightwake",
+   "feature": "shape:subject:pat=Aa a a a a",
+   "story": 1,
+   "benign": 1,
+   "need": 20,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_gateway_brightwake",
+   "feature": "shape:subject:tpl=remote access certificate renewal required",
+   "story": 1,
+   "benign": 0,
+   "need": 20,
+   "allowed": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "mail_url_clicks_brightwake",
+   "feature": "exact:sender_network=ASN 64512",
+   "story": 1,
+   "benign": 1,
+   "need": 5,
+   "allowed": "the network a message was sent from is a property of its sender; the vendor's full mail and firewall logs show other senders on that provider"
+  },
+  {
+   "table": "account_logons_city_airstation",
+   "feature": "pair:src_network=ASN 64512&device=new device",
+   "story": 10,
+   "benign": 15,
+   "need": 50,
+   "allowed": "a sign-on from a network and a device new for the account is the takeover; the table is a ten-day extract and the full logs hold the ordinary company (checked there)"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "exact:tract=480401",
+   "story": 205,
+   "benign": 797,
+   "need": 1025,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "pair:source_asn=64500&self_reported_damage=major",
+   "story": 94,
+   "benign": 262,
+   "need": 470,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "pair:source_asn=64500&tenure=rent",
+   "story": 94,
+   "benign": 457,
+   "need": 470,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "pair:source_asn=64500&zip=78407",
+   "story": 94,
+   "benign": 18,
+   "need": 470,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&deposit_routing_number=990000015",
+   "story": 11,
+   "benign": 46,
+   "need": 55,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&deposit_routing_number=990000026",
+   "story": 18,
+   "benign": 49,
+   "need": 90,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&deposit_routing_number=990000048",
+   "story": 14,
+   "benign": 40,
+   "need": 70,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&deposit_routing_number=990000070",
+   "story": 10,
+   "benign": 45,
+   "need": 50,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&deposit_routing_number=990000092",
+   "story": 10,
+   "benign": 38,
+   "need": 50,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&deposit_routing_number=990000114",
+   "story": 10,
+   "benign": 38,
+   "need": 50,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&household_size=3",
+   "story": 23,
+   "benign": 104,
+   "need": 115,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&household_size=4",
+   "story": 21,
+   "benign": 76,
+   "need": 105,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&household_size=5",
+   "story": 17,
+   "benign": 40,
+   "need": 85,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&primary_language=en",
+   "story": 94,
+   "benign": 269,
+   "need": 470,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&self_reported_damage=major",
+   "story": 94,
+   "benign": 165,
+   "need": 470,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:channel=web&zip=78407&tenure=rent",
+   "story": 94,
+   "benign": 301,
+   "need": 470,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:source_asn=64500&household_size=1&deposit_routing_number=990000048",
+   "story": 6,
+   "benign": 18,
+   "need": 30,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:source_asn=64500&household_size=2&deposit_routing_number=990000026",
+   "story": 6,
+   "benign": 20,
+   "need": 30,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:source_asn=64500&household_size=5&deposit_routing_number=990000015",
+   "story": 6,
+   "benign": 10,
+   "need": 30,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:zip=78407&household_size=4&self_reported_damage=major",
+   "story": 21,
+   "benign": 101,
+   "need": 105,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:zip=78407&household_size=5&deposit_routing_number=990000015",
+   "story": 6,
+   "benign": 15,
+   "need": 30,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:zip=78407&household_size=5&self_reported_damage=major",
+   "story": 17,
+   "benign": 68,
+   "need": 85,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:zip=78407&primary_language=en&self_reported_damage=major",
+   "story": 94,
+   "benign": 376,
+   "need": 470,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:zip=78407&self_reported_damage=major&deposit_routing_number=990000026",
+   "story": 18,
+   "benign": 70,
+   "need": 90,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:zip=78407&self_reported_damage=major&deposit_routing_number=990000048",
+   "story": 14,
+   "benign": 57,
+   "need": 70,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:zip=78407&self_reported_damage=major&deposit_routing_number=990000092",
+   "story": 10,
+   "benign": 48,
+   "need": 50,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:zip=78407&self_reported_damage=major&deposit_routing_number=990000114",
+   "story": 10,
+   "benign": 47,
+   "need": 50,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[one-address applications]",
+   "feature": "triple:zip=78407&tenure=rent&self_reported_damage=major",
+   "story": 94,
+   "benign": 383,
+   "need": 470,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[planted applications]",
+   "feature": "pair:source_asn=64512&self_reported_damage=destroyed",
+   "story": 6,
+   "benign": 29,
+   "need": 30,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[planted applications]",
+   "feature": "triple:source_asn=64512&zip=78405&primary_language=en",
+   "story": 6,
+   "benign": 23,
+   "need": 30,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[planted applications]",
+   "feature": "triple:source_asn=64512&zip=78405&tenure=own",
+   "story": 6,
+   "benign": 21,
+   "need": 30,
+   "allowed": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "exact:field_changed=direct deposit",
+   "story": 410,
+   "benign": 746,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "exact:login_ip_seen_before=N",
+   "story": 410,
+   "benign": 700,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "exact:source_asn=64512",
+   "story": 410,
+   "benign": 998,
+   "need": 2000,
+   "allowed": "the takeovers come through one provider (the join canon uses between threads); about a thousand ordinary applicants use the same provider"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:channel=web&household_size=",
+   "story": 410,
+   "benign": 1499,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:channel=web&primary_language=",
+   "story": 410,
+   "benign": 1499,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:channel=web&self_reported_damage=",
+   "story": 410,
+   "benign": 1499,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:channel=web&tenure=",
+   "story": 410,
+   "benign": 1499,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:record_type=account_change&channel=web",
+   "story": 410,
+   "benign": 1499,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:record_type=account_change&county=Aransas",
+   "story": 41,
+   "benign": 192,
+   "need": 205,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:record_type=account_change&deposit_routing_number=990000037",
+   "story": 308,
+   "benign": 112,
+   "need": 1540,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:record_type=account_change&deposit_routing_number=990000125",
+   "story": 102,
+   "benign": 97,
+   "need": 510,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:record_type=account_change&zip=78358",
+   "story": 11,
+   "benign": 50,
+   "need": 55,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:record_type=account_change&zip=78382",
+   "story": 30,
+   "benign": 142,
+   "need": 150,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:record_type=account_change&zip=78390",
+   "story": 3,
+   "benign": 14,
+   "need": 20,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:record_type=account_change&zip=78413",
+   "story": 10,
+   "benign": 47,
+   "need": 50,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:record_type=account_change&zip=78416",
+   "story": 32,
+   "benign": 149,
+   "need": 160,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:record_type=account_change&zip=78417",
+   "story": 3,
+   "benign": 12,
+   "need": 20,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "pair:record_type=account_change&zip=78418",
+   "story": 47,
+   "benign": 233,
+   "need": 235,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "shape:previous_deposit_account_masked:case=lower",
+   "story": 410,
+   "benign": 1370,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "shape:previous_deposit_account_masked:dig1=y",
+   "story": 410,
+   "benign": 1370,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "shape:previous_deposit_account_masked:dots=0",
+   "story": 410,
+   "benign": 1370,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "shape:previous_deposit_account_masked:first=****#",
+   "story": 410,
+   "benign": 1370,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "shape:previous_deposit_account_masked:hyph1=n",
+   "story": 410,
+   "benign": 1370,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "shape:previous_deposit_account_masked:last=****#",
+   "story": 410,
+   "benign": 1370,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "shape:previous_deposit_account_masked:len=8-15",
+   "story": 410,
+   "benign": 1370,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "shape:previous_deposit_account_masked:pat=****9",
+   "story": 410,
+   "benign": 1370,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "shape:previous_deposit_account_masked:tpl=****#",
+   "story": 410,
+   "benign": 1370,
+   "need": 2000,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:county=Aransas&deposit_routing_number=990000037&assistance_type=other needs assistance",
+   "story": 13,
+   "benign": 60,
+   "need": 65,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:county=Aransas&household_size=&deposit_routing_number=990000037",
+   "story": 68,
+   "benign": 221,
+   "need": 340,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:county=Aransas&primary_language=&deposit_routing_number=990000037",
+   "story": 68,
+   "benign": 221,
+   "need": 340,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:county=Aransas&self_reported_damage=&deposit_routing_number=990000037",
+   "story": 68,
+   "benign": 221,
+   "need": 340,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:county=Aransas&tenure=&deposit_routing_number=990000037",
+   "story": 68,
+   "benign": 221,
+   "need": 340,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:household_size=&deposit_routing_number=990000037&assistance_type=",
+   "story": 308,
+   "benign": 112,
+   "need": 1540,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:household_size=&deposit_routing_number=990000125&assistance_type=",
+   "story": 102,
+   "benign": 97,
+   "need": 510,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:primary_language=&deposit_routing_number=990000037&assistance_type=",
+   "story": 308,
+   "benign": 112,
+   "need": 1540,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:primary_language=&deposit_routing_number=990000125&assistance_type=",
+   "story": 102,
+   "benign": 97,
+   "need": 510,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:self_reported_damage=&deposit_routing_number=990000037&assistance_type=",
+   "story": 308,
+   "benign": 112,
+   "need": 1540,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:self_reported_damage=&deposit_routing_number=990000125&assistance_type=",
+   "story": 102,
+   "benign": 97,
+   "need": 510,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:tenure=&deposit_routing_number=990000037&assistance_type=",
+   "story": 308,
+   "benign": 112,
+   "need": 1540,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:tenure=&deposit_routing_number=990000125&assistance_type=",
+   "story": 102,
+   "benign": 97,
+   "need": 510,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78358&household_size=&deposit_routing_number=990000037",
+   "story": 16,
+   "benign": 55,
+   "need": 80,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78358&primary_language=&deposit_routing_number=990000037",
+   "story": 16,
+   "benign": 55,
+   "need": 80,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78358&self_reported_damage=&deposit_routing_number=990000037",
+   "story": 16,
+   "benign": 55,
+   "need": 80,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78358&tenure=&deposit_routing_number=990000037",
+   "story": 16,
+   "benign": 55,
+   "need": 80,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78359&household_size=&deposit_routing_number=990000037",
+   "story": 6,
+   "benign": 25,
+   "need": 30,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78359&primary_language=&deposit_routing_number=990000037",
+   "story": 6,
+   "benign": 25,
+   "need": 30,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78359&self_reported_damage=&deposit_routing_number=990000037",
+   "story": 6,
+   "benign": 25,
+   "need": 30,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78359&tenure=&deposit_routing_number=990000037",
+   "story": 6,
+   "benign": 25,
+   "need": 30,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78362&household_size=&deposit_routing_number=990000037",
+   "story": 18,
+   "benign": 80,
+   "need": 90,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78362&primary_language=&deposit_routing_number=990000037",
+   "story": 18,
+   "benign": 80,
+   "need": 90,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78362&self_reported_damage=&deposit_routing_number=990000037",
+   "story": 18,
+   "benign": 80,
+   "need": 90,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78362&tenure=&deposit_routing_number=990000037",
+   "story": 18,
+   "benign": 80,
+   "need": 90,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78382&deposit_routing_number=990000037&assistance_type=other needs assistance",
+   "story": 10,
+   "benign": 43,
+   "need": 50,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78382&household_size=&deposit_routing_number=990000037",
+   "story": 52,
+   "benign": 166,
+   "need": 260,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78382&primary_language=&deposit_routing_number=990000037",
+   "story": 52,
+   "benign": 166,
+   "need": 260,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78382&self_reported_damage=&deposit_routing_number=990000037",
+   "story": 52,
+   "benign": 166,
+   "need": 260,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78382&tenure=&deposit_routing_number=990000037",
+   "story": 52,
+   "benign": 166,
+   "need": 260,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78410&household_size=&deposit_routing_number=990000037",
+   "story": 72,
+   "benign": 336,
+   "need": 360,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78410&primary_language=&deposit_routing_number=990000037",
+   "story": 72,
+   "benign": 336,
+   "need": 360,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78410&self_reported_damage=&deposit_routing_number=990000037",
+   "story": 72,
+   "benign": 336,
+   "need": 360,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78410&tenure=&deposit_routing_number=990000037",
+   "story": 72,
+   "benign": 336,
+   "need": 360,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78411&deposit_routing_number=990000037&assistance_type=housing assistance",
+   "story": 8,
+   "benign": 31,
+   "need": 40,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78411&household_size=&deposit_routing_number=990000037",
+   "story": 52,
+   "benign": 230,
+   "need": 260,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78411&primary_language=&deposit_routing_number=990000037",
+   "story": 52,
+   "benign": 230,
+   "need": 260,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78411&self_reported_damage=&deposit_routing_number=990000037",
+   "story": 52,
+   "benign": 230,
+   "need": 260,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78411&tenure=&deposit_routing_number=990000037",
+   "story": 52,
+   "benign": 230,
+   "need": 260,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78413&household_size=&deposit_routing_number=990000037",
+   "story": 16,
+   "benign": 56,
+   "need": 80,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78413&primary_language=&deposit_routing_number=990000037",
+   "story": 16,
+   "benign": 56,
+   "need": 80,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78413&self_reported_damage=&deposit_routing_number=990000037",
+   "story": 16,
+   "benign": 56,
+   "need": 80,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78413&tenure=&deposit_routing_number=990000037",
+   "story": 16,
+   "benign": 56,
+   "need": 80,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78414&deposit_routing_number=990000037&assistance_type=home repair",
+   "story": 8,
+   "benign": 27,
+   "need": 40,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78414&household_size=&deposit_routing_number=990000037",
+   "story": 36,
+   "benign": 141,
+   "need": 180,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78414&primary_language=&deposit_routing_number=990000037",
+   "story": 36,
+   "benign": 141,
+   "need": 180,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78414&self_reported_damage=&deposit_routing_number=990000037",
+   "story": 36,
+   "benign": 141,
+   "need": 180,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78414&tenure=&deposit_routing_number=990000037",
+   "story": 36,
+   "benign": 141,
+   "need": 180,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78418&deposit_routing_number=990000037&assistance_type=other needs assistance",
+   "story": 11,
+   "benign": 53,
+   "need": 55,
+   "allowed": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78418&household_size=&deposit_routing_number=990000037",
+   "story": 78,
+   "benign": 267,
+   "need": 390,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78418&primary_language=&deposit_routing_number=990000037",
+   "story": 78,
+   "benign": 267,
+   "need": 390,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78418&self_reported_damage=&deposit_routing_number=990000037",
+   "story": 78,
+   "benign": 267,
+   "need": 390,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications[takeovers]",
+   "feature": "triple:zip=78418&tenure=&deposit_routing_number=990000037",
+   "story": 78,
+   "benign": 267,
+   "need": 390,
+   "allowed": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications",
+   "feature": "reuse:damage_photo_hashes used by more than one application",
+   "story": 29,
+   "benign": 0,
+   "need": 1,
+   "allowed": "reused photographs across applications are how the ring is found"
+  }
+ ],
+ "findings_by_table": {},
+ "allow_list": [
+  {
+   "table": "/mail$|^mail_gateway",
+   "feature": "^(shape|exact):(subject|sender|sender_domain|message_id)[:=]",
+   "reason": "a bulk mailing has its own subject, sender names and message-id domain; ordinary bulk mailings of the same size exist beside it (checked: see bulk_company)"
+  },
+  {
+   "table": "aid_applications\\[takeovers\\]",
+   "feature": "^(exact|pair|triple):.*(login_ip_seen_before|field_changed|record_type|status|channel|assistance_type)",
+   "reason": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "aid_applications\\[takeovers\\]",
+   "feature": "^(pair|triple):.*deposit_routing_number=",
+   "reason": "the diverted payments go to a few accounts at two local banks (many accounts changed to the same deposit account is how such a diversion is found); both banks have thousands of ordinary customers and ordinary changes to them"
+  },
+  {
+   "table": "aid_applications\\[(one-address applications|planted applications)\\]",
+   "feature": "^(exact|pair|triple):.*(zip|tract|area_id|county|tenure|self_reported_damage|primary_language|household_size|damaged_address|record_type|status|channel|source_asn)",
+   "reason": "many near-identical applications from one address: same ZIP, tenure and damage level are what such a ring looks like"
+  },
+  {
+   "table": "aid_applications",
+   "feature": "^shape:(previous_deposit_account_masked|login_ip_seen_before|field_changed|deposit_account_masked):",
+   "reason": "a deposit change after a sign-in from an address never seen for that account is the takeover itself"
+  },
+  {
+   "table": "account_logons_city_airstation",
+   "feature": "^(pair|triple):.*device=new device",
+   "reason": "a sign-on from a network and a device new for the account is the takeover; the table is a ten-day extract and the full logs hold the ordinary company (checked there)"
+  },
+  {
+   "table": "mail_url_clicks_brightwake",
+   "feature": "^exact:sender_network=",
+   "reason": "the network a message was sent from is a property of its sender; the vendor's full mail and firewall logs show other senders on that provider"
+  },
+  {
+   "table": "aid_applications",
+   "feature": "^(reuse):damage_photo_hashes",
+   "reason": "reused photographs across applications are how the ring is found"
+  },
+  {
+   "table": "portal_aid",
+   "feature": "^(exact|pair|triple):.*event=login_failed",
+   "reason": "the volume of failed sign-ins is the credential-stuffing run"
+  },
+  {
+   "table": "portal_aid",
+   "feature": "^(exact|pair|triple):.*status=401",
+   "reason": "the volume of failed sign-ins is the credential-stuffing run"
+  },
+  {
+   "table": "portal_aid.*takeovers",
+   "feature": "^(exact|pair|triple):.*(profile_updated: direct deposit|path=/account/direct-deposit|event=login_success)",
+   "reason": "a sign-in to an existing account followed by a change of its deposit details is the takeover itself"
+  },
+  {
+   "table": "portal_aid\\[one-address applications\\]",
+   "feature": "^(pair|triple):.*client_network=",
+   "reason": "one address submitting many applications: its provider and its three devices' browsers are that one office's"
+  },
+  {
+   "table": "portal_aid\\[(sign-in run|takeovers and planted applications)\\]",
+   "feature": "^(pair|triple):.*client_network=ASN 64512",
+   "reason": "the sign-in run and the takeovers come through one provider (the join canon uses between threads); the provider's label alone has ordinary company"
+  },
+  {
+   "table": "aid_applications\\[takeovers\\]",
+   "feature": "^exact:source_asn=64512$",
+   "reason": "the takeovers come through one provider (the join canon uses between threads); about a thousand ordinary applicants use the same provider"
+  },
+  {
+   "table": "vessel",
+   "feature": "^(exact|pair|triple):.*(ticket_ref=$|ticket_ref=\\(none\\)|vendor_account=)",
+   "reason": "sessions without a ticket by one vendor account are the misuse itself; ordinary sessions without a ticket exist"
+  },
+  {
+   "table": "vessel",
+   "feature": "^(exact|pair|triple):.*(vessel_name=|vessel_mmsi=|target_system=)|^shape:(vessel_name|target_system):(tpl|last|first)=",
+   "reason": "the misuse was aimed at two ships; each of them also has ordinary sessions"
+  },
+  {
+   "table": "vessel",
+   "feature": "^exact:src_asn=|^pair:.*src_asn=|^triple:.*src_asn=|^shape:src_ip:",
+   "reason": "a third network (neither the vendor's office nor its VPN) is the join canon uses between threads; other outside networks appear in ordinary sessions"
+  }
+ ],
+ "tables": {
+  "city/mail": {
+   "rows": 26345,
+   "story": 840
+  },
+  "city/web": {
+   "rows": 18130,
+   "story": 7
+  },
+  "city/dns": {
+   "rows": 19749,
+   "story": 7
+  },
+  "city/firewall": {
+   "rows": 65788,
+   "story": 14
+  },
+  "city/auth": {
+   "rows": 60057,
+   "story": 7
+  },
+  "nascc/mail": {
+   "rows": 14111,
+   "story": 360
+  },
+  "nascc/web": {
+   "rows": 8839,
+   "story": 3
+  },
+  "nascc/dns": {
+   "rows": 9876,
+   "story": 3
+  },
+  "nascc/firewall": {
+   "rows": 108645,
+   "story": 1046
+  },
+  "nascc/auth": {
+   "rows": 38292,
+   "story": 3
+  },
+  "brw/mail": {
+   "rows": 4438,
+   "story": 1
+  },
+  "brw/web": {
+   "rows": 8733,
+   "story": 1
+  },
+  "brw/dns": {
+   "rows": 9212,
+   "story": 1
+  },
+  "brw/firewall": {
+   "rows": 30449,
+   "story": 17
+  },
+  "brw/auth": {
+   "rows": 13654,
+   "story": 0
+  },
+  "port/mail": {
+   "rows": 6656,
+   "story": 0
+  },
+  "port/web": {
+   "rows": 10456,
+   "story": 0
+  },
+  "port/dns": {
+   "rows": 11645,
+   "story": 0
+  },
+  "port/firewall": {
+   "rows": 33989,
+   "story": 0
+  },
+  "port/auth": {
+   "rows": 23956,
+   "story": 0
+  },
+  "srmc/mail": {
+   "rows": 9174,
+   "story": 0
+  },
+  "srmc/web": {
+   "rows": 10136,
+   "story": 0
+  },
+  "srmc/dns": {
+   "rows": 11519,
+   "story": 0
+  },
+  "srmc/firewall": {
+   "rows": 40139,
+   "story": 0
+  },
+  "srmc/auth": {
+   "rows": 70191,
+   "story": 0
+  },
+  "bcmc/mail": {
+   "rows": 6023,
+   "story": 0
+  },
+  "bcmc/web": {
+   "rows": 7963,
+   "story": 0
+  },
+  "bcmc/dns": {
+   "rows": 8911,
+   "story": 0
+  },
+  "bcmc/firewall": {
+   "rows": 27935,
+   "story": 0
+  },
+  "bcmc/auth": {
+   "rows": 57148,
+   "story": 0
+  },
+  "county/mail": {
+   "rows": 8086,
+   "story": 0
+  },
+  "county/web": {
+   "rows": 12739,
+   "story": 0
+  },
+  "county/dns": {
+   "rows": 13882,
+   "story": 0
+  },
+  "county/firewall": {
+   "rows": 37343,
+   "story": 0
+  },
+  "county/auth": {
+   "rows": 27930,
+   "story": 0
+  },
+  "portal_aid": {
+   "rows": 784124,
+   "story": 224149,
+   "stories": {
+    "august probe": 2720,
+    "one-address applications": 1101,
+    "sign-in run": 219064,
+    "takeovers and planted applications": 1264
+   }
+  },
+  "portal_logistics": {
+   "rows": 106751,
+   "story": 680
+  },
+  "vessel_sessions": {
+   "rows": 74,
+   "story": 15
+  },
+  "mail_gateway_city": {
+   "rows": 2332,
+   "story": 840
+  },
+  "mail_gateway_airstation": {
+   "rows": 859,
+   "story": 360
+  },
+  "mail_gateway_brightwake": {
+   "rows": 973,
+   "story": 1
+  },
+  "mail_url_clicks_city_airstation": {
+   "rows": 172,
+   "story": 10
+  },
+  "mail_url_clicks_brightwake": {
+   "rows": 68,
+   "story": 1
+  },
+  "account_logons_city_airstation": {
+   "rows": 1168,
+   "story": 10
+  },
+  "city/web:seconds from lookup to request": {
+   "story": 7,
+   "benign": 18123
+  },
+  "city/auth:seconds from inbound session start to sign-on": {
+   "story": 7,
+   "benign": 21302
+  },
+  "nascc/web:seconds from lookup to request": {
+   "story": 3,
+   "benign": 8836
+  },
+  "nascc/auth:seconds from inbound session start to sign-on": {
+   "story": 0,
+   "benign": 0
+  },
+  "brw/web:seconds from lookup to request": {
+   "story": 1,
+   "benign": 8732
+  },
+  "brw/auth:seconds from inbound session start to sign-on": {
+   "story": 0,
+   "benign": 0
+  },
+  "vessel_sessions:gateway firewall duration minus vessel session duration": {
+   "story": 12,
+   "benign": 50
+  },
+  "partner_it_registry": {
+   "rows": 496,
+   "story": 11
+  },
+  "aid_applications": {
+   "rows": 136175,
+   "story": 1043,
+   "stories": {
+    "one-address applications": 205,
+    "planted applications": 18,
+    "takeovers": 820
+   }
+  }
+ }
+}

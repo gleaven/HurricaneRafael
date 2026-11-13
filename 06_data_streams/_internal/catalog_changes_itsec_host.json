@@ -1,0 +1,182 @@
+{
+ "_about": "Proposed additions to 06_data_streams/stream_catalog.json for the raw host logs of the utility (fork H, 2026-11-12). Generator: scripts/streams/gen_itsec_host.py (model in itsec_host_model.py); probes: scripts/streams/probes_itsec_host.py. expected_observation_count is 0 until the canon timeline lists these streams; the probe file already has probes for the events under suggested_expected_observations and invariant probes keyed INV-*.",
+ "add_streams": [
+  {
+   "stream_id": "windows_event_logs",
+   "name": "Windows event logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/windows/*.jsonl",
+   "format": "JSON Lines; Security, System and Defender channels of the utility's Windows hosts, forwarded subset of event ids",
+   "key_columns": {
+    "time": "time_utc (milliseconds)",
+    "entity_ids": [
+     "host",
+     "user",
+     "target_user",
+     "src_ip"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one file per channel and month (split into _01, _02 when over 40 MB)",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 0,
+   "notes": "A forwarded subset of event ids. Interactive sessions and everything named by a SIEM alert, an audit-table row or a Zeek flow is complete; other background follows the Zeek sample. Starts 2027-07-15 (one day of lead-in, like the endpoint-protection table). Schema: schemas/windows_event_logs_schema.json."
+  },
+  {
+   "stream_id": "endpoint_telemetry",
+   "name": "Endpoint telemetry",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/endpoint/*.jsonl",
+   "format": "JSON Lines; process, network, DNS, file, registry, service, task and removable-device events from the endpoint agent",
+   "key_columns": {
+    "time": "time_utc (milliseconds)",
+    "entity_ids": [
+     "host",
+     "user",
+     "src_ip",
+     "dst_ip"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one file per month",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 0,
+   "notes": "One network_connect per Zeek conn row that starts at a Windows host (join on the 5-tuple, within 0.5 s) and one dns_query per Zeek dns row, so the background is the same 1-in-200 sample. Process exits are not recorded. Schema: schemas/endpoint_telemetry_schema.json."
+  },
+  {
+   "stream_id": "host_triage",
+   "name": "Host triage collections",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/triage/*/*",
+   "format": "CSV tables, collection.json and inert text placeholders per collected host",
+   "key_columns": {
+    "time": "collection.json collected_utc; *_utc columns in the tables",
+    "entity_ids": [
+     "host"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-10-02T21:00Z",
+    "end_utc": "2027-10-14T19:00Z",
+    "days": [
+     18,
+     30
+    ]
+   },
+   "cadence": "one folder per collected host",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 0,
+   "notes": "Fourteen collections taken 2027-10-02 to 2027-10-14. Listings and hashes only; placeholders are text files whose SHA-256 equals the hash the logs record. Schema: schemas/host_triage_schema.json."
+  }
+ ],
+ "suggested_expected_observations": [
+  {
+   "event_id": "GW-EVT-001 / GW-EVT-101",
+   "streams": [
+    "windows_event_logs",
+    "endpoint_telemetry"
+   ],
+   "what": "On the workstation: mail attachment written and started, real-time protection disabled, lookup and download, second file, service registered; afterwards every connection to the same address carries the service binary's image"
+  },
+  {
+   "event_id": "GW-EVT-002 / GW-EVT-102",
+   "streams": [
+    "windows_event_logs",
+    "endpoint_telemetry"
+   ],
+   "what": "Network logon, share reads and logoff on the historian replica from the workstation under the account of a person on leave; service ticket on a domain controller"
+  },
+  {
+   "event_id": "GW-EVT-011",
+   "streams": [
+    "windows_event_logs",
+    "host_triage"
+   ],
+   "what": "Fourteen out-of-hours logons on the remote-access gateway with their source addresses; gateway and historian collected 2027-10-02"
+  },
+  {
+   "event_id": "GW-EVT-003",
+   "streams": [
+    "windows_event_logs"
+   ],
+   "what": "Remote-interactive logon on the SCADA server from the gateway at the time of the suppression-list change"
+  },
+  {
+   "event_id": "GW-EVT-103 / GW-EVT-010",
+   "streams": [
+    "windows_event_logs"
+   ],
+   "what": "Network logon and write of relayconfigs\\sub02\\rtu_config_draft.xml on the engineering file server from the gateway"
+  },
+  {
+   "event_id": "GW-EVT-005, GW-EVT-007",
+   "streams": [
+    "windows_event_logs"
+   ],
+   "what": "Remote-interactive logon on the operator workstation from the gateway about 95 s before each breaker-open command"
+  },
+  {
+   "event_id": "GW-EVT-012",
+   "streams": [
+    "host_triage"
+   ],
+   "what": "The workstation's collection agrees with the event logs (files, hashes, service)"
+  }
+ ],
+ "check_entities_columns": {
+  "windows_event_logs": [
+   "host",
+   "user",
+   "target_user",
+   "caller_computer",
+   "src_host"
+  ],
+  "endpoint_telemetry": [
+   "host",
+   "user"
+  ],
+  "host_triage": [
+   "collection.json host"
+  ]
+ },
+ "size_note": "windows_event_logs is about 275 MB (budget was 130 MB): 598,000 of its 1.0 million Security events are the 4625 records that back the 66,547 failed-logon-burst alerts one for one. See the fork report.",
+ "applied": "2026-11-12: streams added to stream_catalog.json; observations added to the MSEL (expected_observation_count in the catalogue is now set from canon_timeline.json)"
+}

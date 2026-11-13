@@ -6,5 +6,9 @@
 #open	2027-11-26-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1827235854.177046	-	10.14.21.52	64.15.198.244	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1827247826.787079	-	10.14.21.22	64.203.112.80	80	HTTP::Unusual_User_Agent	web-portal.meetroom-video.com user agent not seen before on this network	10.14.21.22	64.203.112.80	80	Notice::ACTION_LOG
+1827252334.245799	-	10.14.30.55	13.71.156.212	443	Weird::Activity	possible_split_routing	10.14.30.55	13.71.156.212	443	Notice::ACTION_LOG
+1827263270.327756	-	10.14.22.21	64.211.79.65	80	HTTP::Unusual_User_Agent	cdn.helpdesk-tickets.com user agent not seen before on this network	10.14.22.21	64.211.79.65	80	Notice::ACTION_LOG
+1827270341.839425	-	10.14.21.46	13.71.156.212	443	SSL::Certificate_Expires_Soon	Certificate static.benefits-portal.com is going to expire soon	10.14.21.46	13.71.156.212	443	Notice::ACTION_LOG
+1827272762.410752	-	10.14.20.25	10.14.10.5	53	DNS::External_Name	old-intranet.cbpwa.example is pointing to a local host	10.14.20.25	10.14.10.5	53	Notice::ACTION_LOG
 #close	2027-11-27-00-00-00

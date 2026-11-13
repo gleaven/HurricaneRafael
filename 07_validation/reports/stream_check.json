@@ -2,39 +2,23 @@
  "failures": 0,
  "streams": [
   {
-   "stream": "social_media",
+   "stream": "scada_historian",
    "problems": [],
    "observations": {
-    "expected": 12,
-    "present": 12,
+    "expected": 14,
+    "present": 14,
     "missing": [],
     "no_probe": []
    },
-   "files": 318,
-   "mb": 119.4,
+   "files": 72,
+   "mb": 59.5,
    "span": [
-    1815733194.0,
-    1831269420.0
+    1818288000.0,
+    1831269656.0
    ]
   },
   {
-   "stream": "contracts",
-   "problems": [],
-   "observations": {
-    "expected": 6,
-    "present": 6,
-    "missing": [],
-    "no_probe": []
-   },
-   "files": 6,
-   "mb": 0.3,
-   "span": [
-    887173140,
-    1831265940
-   ]
-  },
-  {
-   "stream": "financial_transactions",
+   "stream": "partner_firewall_logs",
    "problems": [],
    "observations": {
     "expected": 2,
@@ -42,11 +26,107 @@
     "missing": [],
     "no_probe": []
    },
-   "files": 1,
-   "mb": 5.5,
+   "files": 49,
+   "mb": 50.2,
    "span": [
-    1818362778,
-    1831251449
+    1815696007,
+    1831334379
+   ]
+  },
+  {
+   "stream": "partner_web_logs",
+   "problems": [],
+   "observations": {
+    "expected": 5,
+    "present": 5,
+    "missing": [],
+    "no_probe": []
+   },
+   "files": 49,
+   "mb": 11.5,
+   "span": [
+    1815696008,
+    1831334059
+   ]
+  },
+  {
+   "stream": "partner_dns_logs",
+   "problems": [],
+   "observations": {
+    "expected": 2,
+    "present": 2,
+    "missing": [],
+    "no_probe": []
+   },
+   "files": 49,
+   "mb": 8.4,
+   "span": [
+    1815696007,
+    1831334059
+   ]
+  },
+  {
+   "stream": "partner_auth_logs",
+   "problems": [],
+   "observations": {
+    "expected": 3,
+    "present": 3,
+    "missing": [],
+    "no_probe": []
+   },
+   "files": 49,
+   "mb": 33.1,
+   "span": [
+    1815696042,
+    1831334399
+   ]
+  },
+  {
+   "stream": "partner_mail_logs",
+   "problems": [],
+   "observations": {
+    "expected": 4,
+    "present": 4,
+    "missing": [],
+    "no_probe": []
+   },
+   "files": 49,
+   "mb": 16.8,
+   "span": [
+    1815696316,
+    1831334269
+   ]
+  },
+  {
+   "stream": "partner_endpoint_alerts",
+   "problems": [],
+   "observations": {
+    "expected": 1,
+    "present": 1,
+    "missing": [],
+    "no_probe": []
+   },
+   "files": 49,
+   "mb": 1.4,
+   "span": [
+    1815697307,
+    1831333565
+   ]
+  },
+  {
+   "stream": "vessel_ot_logs",
+   "problems": [],
+   "observations": {
+    "expected": 6,
+    "present": 6,
+    "missing": [],
+    "no_probe": []
+   },
+   "files": 3,
+   "mb": 3.7,
+   "span": [
+    1815714000.0,
+    1831249800.0
    ]
   },
   {
@@ -61,37 +141,9 @@
    "files": 1,
    "mb": 32.1,
    "span": [
-    1826085660,
+    1826085675,
     1831262284
    ]
-  },
-  {
-   "stream": "insurance_claims",
-   "problems": [],
-   "observations": {
-    "expected": 3,
-    "present": 3,
-    "missing": [],
-    "no_probe": []
-   },
-   "files": 1,
-   "mb": 2.1,
-   "span": [
-    1815713940,
-    1831265940
-   ]
-  },
-  {
-   "stream": "census",
-   "problems": [],
-   "observations": {
-    "expected": 3,
-    "present": 3,
-    "missing": [],
-    "no_probe": []
-   },
-   "files": 2,
-   "mb": 0.0
   }
  ]
 }

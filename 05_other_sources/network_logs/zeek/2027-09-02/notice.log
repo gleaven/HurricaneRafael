@@ -6,5 +6,5 @@
 #open	2027-09-02-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1819865700.000000	-	10.14.12.21	-	-	Scan::Port_Scan	internal scanner swept 10.14.20.0/24 (scheduled)	10.14.12.21	-	-	Notice::ACTION_LOG
+1819865727.397884	-	10.14.12.21	-	-	Scan::Port_Scan	10.14.12.21 scanned at least 253 unique hosts on port 443/tcp in 2m57s	10.14.12.21	-	-	Notice::ACTION_LOG
 #close	2027-09-03-00-00-00

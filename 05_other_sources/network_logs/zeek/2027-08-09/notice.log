@@ -6,6 +6,8 @@
 #open	2027-08-09-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1817783989.523147	-	10.14.21.46	162.52.158.165	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1817826270.957797	-	10.14.12.43	151.223.11.125	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1817776204.930001	-	10.14.20.34	35.130.140.3	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.20.34	35.130.140.3	443	Notice::ACTION_LOG
+1817783920.307592	-	10.14.21.49	13.193.145.21	443	Weird::Activity	possible_split_routing	10.14.21.49	13.193.145.21	443	Notice::ACTION_LOG
+1817836808.197595	-	10.14.30.26	162.101.67.214	443	Conn::Content_Gap	cdn.streamvideo-cdn.net content gap (6942 bytes missing)	10.14.30.26	162.101.67.214	443	Notice::ACTION_LOG
+1817839963.990641	-	10.14.20.41	10.14.10.5	53	DNS::External_Name	lab.cbpwa.example is pointing to a local host	10.14.20.41	10.14.10.5	53	Notice::ACTION_LOG
 #close	2027-08-10-00-00-00

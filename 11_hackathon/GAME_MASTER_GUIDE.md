@@ -33,6 +33,8 @@ The builder refuses to produce a package (exit 1, with the file and the offendin
 
 Limits of a staged cut (also in the builder's help text): tables that keep being updated after a record is opened (work orders, port calls, dispatch records, claims, contracts) ship whole once the record's opening time is before the cut, so they can show a later status. Tables with no time column ship whole. `social_media/_account_lookup.jsonl` is an end-of-collection snapshot and only appears once the cut passes 12 January 2028. If a stage must hide a particular development, cut before it or hold those tables back.
 
+**The utility's own investigation is in the data.** From 2027-10-02T14:33Z the utility's security and audit records include its response to the intrusion: the incident ticket, evidence exports, settings audits that name what was found, host triage collections (2 to 14 October), the isolation of the control network (12 to 19 October) and the restoration changes that cite the incident ticket. A team that receives those records can read the conclusion from them. For the harder exercise on the utility thread, hand out a staged package cut before 2027-10-02 (for example `--until 2027-10-02`) and release the rest later; the all-at-once package is the easier one. The participant data guide states the same date in neutral words.
+
 Suggested stage boundaries, chosen to fall between developments rather than on them: 2027-09-12, 2027-09-20, 2027-10-10, 2027-10-27, 2027-11-13, 2027-12-15, then everything.
 
 ## 3. Run the newsroom
@@ -86,7 +88,7 @@ The storyline summaries are in `07_validation/reports/thread_completeness.md` (o
 
 ## 5. Scoring
 
-`06_answer_key/answer_key.json` has, for each of the 22 storylines: the question, a difficulty (easy, medium, hard, expert), the streams involved, the key joins between them, the steps (each naming the records that carry it: stream, files, entity ids, time window), and the conclusion. `python scripts/check_answer_keys.py --only=T1,T2,T3,T4` (run in groups) confirms every step's records exist in the delivered files.
+`06_answer_key/answer_key.json` has, for each of the 22 storylines: the question, a difficulty (easy, medium, hard, expert), the streams involved, the key joins between them, the steps (each naming the records that carry it: stream, files, entity ids, time window), and the conclusion. `python scripts/check_answer_keys.py --only=T1,T2,T3,T4` (run in groups) confirms every step's records exist in the delivered files. Where the raw IT and security logs also hold records of a step's event, the step lists them under `also_in` (stream, files, time window, what to look for): a team that backs a finding with those raw records as well as the alert or audit row has corroborated it independently.
 
 A workable rubric for one finding sheet (see the player brief for the sheet's shape):
 
@@ -117,10 +119,11 @@ Run these and expect PASS from each. Long ones are written to be repeated until 
 ```
 python scripts/build_all.py                       narrative pipeline, expected observations, answer keys, graph, RSS, release
 python scripts/check_acceptance.py                the ten narrative criteria and the file lock
-python scripts/check_streams.py --only=<streams>  every stream against the timeline (run in groups; 357 observations in all)
+python scripts/check_streams.py --only=<streams>  every stream against the timeline (run in groups; 398 observations in all)
 python scripts/check_entities.py                  every id in every stream is in a registry
 python scripts/check_geo.py --resume              repeat until "COMPLETE - PASS": every position against real geography
 python scripts/check_answer_keys.py --only=T1,T2,T3,T4     in groups
+python scripts/check_itsec_raw.py --resume        repeat until PASS: the raw IT and security logs agree with the logs they come from
 python scripts/check_thread_completeness.py
 python scripts/check_map.py                       the map's data: no vessel on land, no moving vehicle off a road
 python 10_news_sites/newsroom/tools/verify_gating.py

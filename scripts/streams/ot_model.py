@@ -80,12 +80,13 @@ T = {
 
 # alarm suppression list: (time, active count). Baseline 12; seven changes since D-5 add 82.
 SUPPRESSION_STEPS = [
-    (E("2027-09-09T03:12Z", "GW-EVT-105"), 18),
+    # seven changes since 2027-09-09, each made during one of the out-of-hours remote sessions below
+    (ts("2027-09-09T03:12Z") + 41, 18),
+    (ts("2027-09-10T04:47Z") + 18, 23),
     (T["supp_list_d3"], 29),
-    (E("2027-09-13T04:41Z", "GW-EVT-105"), 38),
-    (E("2027-09-16T08:22Z", "GW-EVT-105"), 52),
-    (E("2027-09-19T05:37Z", "GW-EVT-105"), 64),
-    (E("2027-09-21T14:25Z", "GW-EVT-005"), 74),
+    (ts("2027-09-11T22:15Z") + 52, 38),
+    (ts("2027-09-14T08:36Z") + 29, 52),
+    (ts("2027-09-21T14:25Z") + 48, 74),
     (T["supp_peak"], 94),
 ]
 

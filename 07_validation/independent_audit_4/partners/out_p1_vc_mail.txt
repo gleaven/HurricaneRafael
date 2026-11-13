@@ -1,0 +1,47 @@
+
+### mail.gateway nunique=7
+org           bcmc   brw   city  county  nascc  port  srmc
+gateway                                                   
+BCMC-MX-01    6035     0      0       0      0     0     0
+BRW-MX-01        0  4439      0       0      0     0     0
+CITY-MX-02       0     0  26274       0      0     0     0
+NASCC-MX-01      0     0      0       0  14073     0     0
+NUECES-MX-01     0     0      0    8098      0     0     0
+PCCA-MX-01       0     0      0       0      0  6649     0
+SRMC-MX-01       0     0      0       0      0     0  9157
+
+### mail.direction nunique=3
+org        bcmc   brw   city  county  nascc  port  srmc
+direction                                              
+inbound    2767  2434  12832    4090   6679  3599  4048
+internal   2382   954   8104    2551   5110  1769  3728
+outbound    886  1051   5338    1457   2284  1281  1381
+
+### mail.sender nunique=8993 per org {'bcmc': 1006, 'brw': 728, 'city': 2979, 'county': 1175, 'nascc': 1519, 'port': 999, 'srmc': 1271}
+
+### mail.sender_domain nunique=4022 per org {'bcmc': 510, 'brw': 440, 'city': 1227, 'county': 594, 'nascc': 588, 'port': 497, 'srmc': 607}
+
+### mail.recipient nunique=5260 per org {'bcmc': 510, 'brw': 374, 'city': 1943, 'county': 612, 'nascc': 911, 'port': 550, 'srmc': 710}
+
+### mail.subject nunique=29751 per org {'bcmc': 2743, 'brw': 2700, 'city': 11017, 'county': 4156, 'nascc': 5369, 'port': 3332, 'srmc': 3886}
+
+### mail.attachment_names nunique=8254 per org {'bcmc': 865, 'brw': 720, 'city': 2855, 'county': 1165, 'nascc': 1815, 'port': 1025, 'srmc': 1228}
+
+### mail.size_bytes nunique=56366 per org {'bcmc': 5882, 'brw': 4368, 'city': 23500, 'county': 7816, 'nascc': 13297, 'port': 6492, 'srmc': 8828}
+
+### mail.verdict nunique=4
+org                           bcmc   brw   city  county  nascc  port  srmc
+verdict                                                                   
+blocked attachment type         13    17     67      23     34    17    19
+clean                         5844  4287  25860    7946  13959  6516  8965
+sender failed authentication    10    10     51      18     20    14    19
+spam                           168   125    296     111     60   102   154
+
+### mail.action nunique=3
+org          bcmc   brw   city  county  nascc  port  srmc
+action                                                   
+delivered    5844  4287  25860    7946  13959  6516  8965
+quarantined   181   142    363     134     94   119   173
+rejected       10    10     51      18     20    14    19
+
+### mail.message_id nunique=74723 per org {'bcmc': 6035, 'brw': 4439, 'city': 26272, 'county': 8098, 'nascc': 14073, 'port': 6649, 'srmc': 9157}

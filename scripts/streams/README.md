@@ -44,3 +44,52 @@ more to do; state is kept under `$GROUND_CKPT`, default `/tmp/ground_ckpt`).
 `sar_plan.py` exposes `SORTIES`, the one rescue sortie schedule shared with the aircraft tracks
 (data in `sar_plan_data.json`, written by `gen_ground.py`). `verify_ground_geo.py` runs the official
 position rules on every ground source file by file; repeat until it prints `COMPLETE - PASS`.
+
+## IT and security family (SIEM, network sensor, audit tables, portals, raw logs, partner organisations)
+
+The raw logs are derived from the logs that were already delivered, so that every log describes the same
+activity. Run order (each step reads the files the earlier steps wrote; shell calls are limited to about
+three minutes here, so the long ones resume):
+
+    python3 scripts/streams/gen_itsec.py siem                 # alerts (itsec_siem.py; who and where come from itsec_shared.py)
+    python3 scripts/streams/gen_itsec.py zeek:2027-07         # sensor logs one month at a time, zeek:2027-07 ... zeek:2028-01 (itsec_zeek.py, itsec_zeek_extra.py);
+                                                              #   several months fit in one call: gen_itsec.py zeek:2027-07 zeek:2027-08
+    python3 scripts/streams/gen_itsec.py audit                # audit tables (itsec_audit.py), including the gateway and VPN session tables and the mail behind mail alerts
+    python3 scripts/streams/gen_itsec.py portal               # aid portal and base logistics access logs (itsec_portal.py)
+    python3 scripts/streams/gen_itsec_net.py --all --fresh --budget=120    # firewall, web filter, DHCP, packet capture (57 parts)
+    python3 scripts/streams/gen_itsec_net.py --all --resume --budget=120   # repeat until DONE
+    python3 scripts/streams/gen_itsec_host.py --all --budget=130           # Windows events, endpoint telemetry, triage last; add --resume and repeat until DONE
+    python3 scripts/streams/gen_itsec_net.py dhcp             # once more: the lease log reads the host family's power and reboot model
+    python3 scripts/streams/gen_partner_it.py --all --resume  # partner registry, seven organisations and the six extract tables in network_logs/audit/
+
+Anything that changes the alerts, the Zeek logs or the audit tables means re-running everything below it.
+
+Dependencies on other families: `gen_itsec.py portal` mirrors `payments/aid_applications.csv` (written by
+`gen_finance.py`) into the aid-portal log, and `gen_partner_it.py` reads the tanker remote-session table
+(`gen_ot_vessel.py`), the portal logs, and the alert, port, hospital and base-status streams. So after a change to
+`gen_ot_vessel.py` or `gen_finance.py`, re-run `gen_itsec.py portal` and then `gen_partner_it.py --all`.
+
+- `netmap.py` is the one address-to-network table for outside addresses: the portal logs, the aid applications, the
+  tanker remote-session table, the partner sign-on logs and their extracts all take addresses and `ASN <number>`
+  labels from it, so the same address carries the same network number everywhere. (The utility's own remote-session
+  and VPN tables still label networks themselves.)
+
+- `itsec_shared.py` is the shared model: who is at work when (`workday`, `interactive_sessions`, `sessions_at`,
+  `user_on`), readers for the delivered Zeek, alert and audit files, zones, and the column lists of the raw logs.
+  Logons, DHCP leases, web-filter user names and process owners all come from it.
+- `gen_itsec.py` holds the model the writers share: gateway sessions, employee VPN sessions (people, their home
+  addresses and devices), historian sessions, suppression changes, file writes, setting changes, SCADA commands,
+  installed browsers. Alerts, flows, audit rows, leases and logons about one of these are all written from the one record.
+- Sampling convention for the utility: traffic that people cause is a 1-in-200 sample, the same sample in every
+  log; sessions, alerts, scheduled machine traffic, mail transfers and everything behind an alert or an audit
+  record are complete. The partner organisations state theirs per log (sign-ons complete; web and DNS about
+  1 in 40; mail about 1 in 25).
+- Story records are drawn through the same functions, vocabularies and distributions as background records. The
+  probe files include neutrality checks that fail if a value on a story record is rare elsewhere.
+- The raw logs carry observable records only: no payloads, no file contents, no executable samples, no command
+  lines beyond a program path and an opened document. Triage collections hold inert text placeholders whose
+  SHA-256 is the hash the logs record.
+- Checks: the story records are probed through `scripts/check_streams.py` (keys `(event id, stream)` in
+  `probes_itsec.py`, `probes_itsec_net.py`, `probes_itsec_host.py`, `probes_partner_it.py`); the invariants that tie
+  the raw logs to the delivered logs (every crossing flow has its firewall record, every alert its raw events,
+  every extract row is in the partner logs, and so on) run through `python3 scripts/check_itsec_raw.py --resume`.

@@ -6,9 +6,7 @@
 #open	2027-11-19-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1826588013.330001	-	10.14.30.20	205.206.104.197	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1826588674.395139	-	10.14.20.30	142.26.13.166	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1826599388.692792	-	10.14.21.52	13.193.145.21	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1826632684.167013	-	10.14.20.14	199.116.64.226	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1826657271.386822	-	10.14.30.25	34.161.144.54	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1826627823.202088	-	10.14.30.12	23.176.192.232	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.30.12	23.176.192.232	443	Notice::ACTION_LOG
+1826642727.324129	-	10.14.30.19	69.186.246.75	443	Conn::Content_Gap	static-assets.utilitybilling-pay.com content gap (3496 bytes missing)	10.14.30.19	69.186.246.75	443	Notice::ACTION_LOG
+1826667251.996368	-	10.14.20.31	10.14.10.5	53	DNS::External_Name	portal-test.cbpwa-services.org is pointing to a local host	10.14.20.31	10.14.10.5	53	Notice::ACTION_LOG
 #close	2027-11-20-00-00-00

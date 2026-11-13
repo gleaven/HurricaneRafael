@@ -6,5 +6,10 @@
 #open	2027-08-05-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1817446500.000000	-	10.14.12.21	-	-	Scan::Port_Scan	internal scanner swept 10.14.20.0/24 (scheduled)	10.14.12.21	-	-	Notice::ACTION_LOG
+1817446514.173392	-	10.14.12.21	-	-	Scan::Port_Scan	10.14.12.21 scanned at least 215 unique hosts on port 445/tcp in 5m33s	10.14.12.21	-	-	Notice::ACTION_LOG
+1817468049.348437	-	10.14.22.16	10.14.10.6	53	DNS::External_Name	gis-preview.cbpwa-services.org is pointing to a local host	10.14.22.16	10.14.10.6	53	Notice::ACTION_LOG
+1817468312.229327	-	10.14.21.54	64.219.140.227	443	Conn::Content_Gap	cdn.nueces-county-tx.org content gap (8592 bytes missing)	10.14.21.54	64.219.140.227	443	Notice::ACTION_LOG
+1817475830.275111	-	10.14.21.39	162.101.67.214	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.21.39	162.101.67.214	443	Notice::ACTION_LOG
+1817477721.479226	-	10.14.30.45	52.220.34.193	80	HTTP::Unusual_User_Agent	api.adnetwork-static.net user agent not seen before on this network	10.14.30.45	52.220.34.193	80	Notice::ACTION_LOG
+1817486662.735077	-	10.14.20.20	157.200.106.243	80	HTTP::Unusual_User_Agent	web-portal.hospital-patient-portal.org user agent not seen before on this network	10.14.20.20	157.200.106.243	80	Notice::ACTION_LOG
 #close	2027-08-06-00-00-00

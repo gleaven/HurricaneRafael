@@ -1,0 +1,74 @@
+{
+ "source": "partner_it",
+ "stream_id": "partner_web_logs",
+ "folder": "data/partner_it/",
+ "files": "web_<YYYY-MM>.csv",
+ "standard": "Web gateway access log (transparent filtering; encrypted sites are logged as CONNECT with no path)",
+ "span": "2027-07-16T00:00Z to 2028-01-12T06:00Z",
+ "cadence": "per request; a sample (about 1 in 40 of the requests of people at their desks or on the VPN, and of machines' own traffic)",
+ "notes": "One folder per organisation: city, nascc, brw, port, srmc, bcmc, county. Each organisation has its own products, rule names, zone names and habits; do not assume a value seen in one folder means the same in another. Hosts, addresses and accounts are in registries/partner_it_registry.json.",
+ "fields": [
+  {
+   "name": "time_utc",
+   "type": "ISO 8601 UTC",
+   "notes": "start of the request"
+  },
+  {
+   "name": "client_ip",
+   "notes": "registry host ip or VPN pool address"
+  },
+  {
+   "name": "user",
+   "notes": "registry account of the person logged on at the client, or - when the machine itself made the request"
+  },
+  {
+   "name": "method",
+   "type": "CONNECT | GET",
+   "notes": "CONNECT for encrypted sites (no path is visible); GET, POST or HEAD otherwise"
+  },
+  {
+   "name": "scheme",
+   "type": "https | http"
+  },
+  {
+   "name": "host",
+   "notes": "name requested; outside names are invented"
+  },
+  {
+   "name": "url_path",
+   "notes": "- for encrypted sites"
+  },
+  {
+   "name": "status",
+   "type": "int",
+   "notes": "HTTP status the gateway returned or relayed: 200, 204, 301, 302, 304, 403 (blocked by policy), 404, 500, 502, 503, 504"
+  },
+  {
+   "name": "action",
+   "type": "allowed | blocked",
+   "notes": "allowed | blocked"
+  },
+  {
+   "name": "category",
+   "notes": "the gateway's site category"
+  },
+  {
+   "name": "bytes_out",
+   "type": "int",
+   "notes": "payload bytes sent by the client"
+  },
+  {
+   "name": "bytes_in",
+   "type": "int",
+   "notes": "payload bytes returned"
+  },
+  {
+   "name": "user_agent_family",
+   "notes": "browser family and platform; - for machine traffic"
+  },
+  {
+   "name": "policy",
+   "notes": "the organisation's own policy names"
+  }
+ ]
+}

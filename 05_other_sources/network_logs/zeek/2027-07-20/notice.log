@@ -6,7 +6,6 @@
 #open	2027-07-20-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1816067989.621606	-	10.14.22.30	35.238.200.208	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1816082294.810883	-	10.14.30.31	35.229.79.13	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1816124360.062191	-	10.14.30.55	108.186.80.182	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1816096497.818953	-	10.14.30.35	40.239.50.161	80	HTTP::Unusual_User_Agent	www.storm-prep-guides.org user agent not seen before on this network	10.14.30.35	40.239.50.161	80	Notice::ACTION_LOG
+1816104765.660085	-	10.14.22.23	34.78.110.81	80	HTTP::Unusual_User_Agent	auth-prod.airline-bookings.net user agent not seen before on this network	10.14.22.23	34.78.110.81	80	Notice::ACTION_LOG
 #close	2027-07-21-00-00-00

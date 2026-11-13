@@ -6,6 +6,9 @@
 #open	2027-09-20-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1821463842.347818	-	10.14.30.27	162.40.1.160	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1821481944.474505	-	10.14.30.61	64.102.136.8	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1821404374.231744	-	10.14.30.31	10.14.10.5	53	DNS::External_Name	portal-test.cbpwa-services.org is pointing to a local host	10.14.30.31	10.14.10.5	53	Notice::ACTION_LOG
+1821438027.930864	-	10.14.22.33	34.32.56.133	80	HTTP::Unusual_User_Agent	www.streamvideo-cdn.net user agent not seen before on this network	10.14.22.33	34.32.56.133	80	Notice::ACTION_LOG
+1821454401.774029	-	10.14.30.41	216.223.153.143	443	Conn::Content_Gap	login.docsign-flow.com content gap (7126 bytes missing)	10.14.30.41	216.223.153.143	443	Notice::ACTION_LOG
+1821456712.502099	-	10.14.30.57	205.206.104.197	443	SSL::Certificate_Expires_Soon	Certificate www.socialfeed-img.com is going to expire soon	10.14.30.57	205.206.104.197	443	Notice::ACTION_LOG
+1821473508.501183	-	10.14.21.21	108.17.68.161	443	SSL::Certificate_Expires_Soon	Certificate static.telemetry-osvendor.com is going to expire soon	10.14.21.21	108.17.68.161	443	Notice::ACTION_LOG
 #close	2027-09-21-00-00-00

@@ -1,0 +1,62 @@
+
+### auth.host nunique=410 per org {'bcmc': 37, 'brw': 34, 'city': 106, 'county': 66, 'nascc': 67, 'port': 49, 'srmc': 51}
+
+### auth.event_id nunique=6
+org             bcmc   brw   city  county  nascc   port   srmc
+event_id                                                      
+4624           27463  5764  18015   12323  13845  10780  37412
+4625            1811   589   1641    1247   1426   1033   2423
+4634           17865  5618  17576   12036  13496  10510  24365
+sso-login          0     0  21433       0      0      0      0
+vpn-login       3325  1023      0    1772      0   1384   5082
+webmail-login      0     0      0       0   9493      0      0
+
+### auth.account nunique=2382 per org {'bcmc': 191, 'brw': 52, 'city': 1050, 'county': 178, 'nascc': 509, 'port': 143, 'srmc': 259}
+
+### auth.logon_type nunique=3
+org          bcmc    brw   city  county  nascc   port   srmc
+logon_type                                                  
+2           38028  11971  37232   25606  28767  22323  51794
+7            9111      0      0       0      0      0  12406
+remote       3325   1023  21433    1772   9493   1384   5082
+
+### auth.src_ip nunique=13664 per org {'bcmc': 1169, 'brw': 304, 'city': 6208, 'county': 838, 'nascc': 2815, 'port': 723, 'srmc': 1692}
+
+### auth.src_network nunique=11
+org           bcmc    brw   city  county  nascc   port   srmc
+src_network                                                  
+ASN 11427      609      3   4327     492   1509    398   1075
+ASN 20057      460    199   3316     252   1387    177    814
+ASN 20115       29    294    959      82    553     25     84
+ASN 21928      537     23   2187     193   1047     55    541
+ASN 22773      567      0   3458     173   1702    191    995
+ASN 64496       24      4     89      13      2      3     62
+ASN 64499       30      1    188      59    202      0     26
+ASN 64512       54     34    738     117    176     16    176
+ASN 7018      1002     26   5837     343   2805    456   1206
+ASN 7922        13    439    334      48    110     63    103
+internal     47139  11971  37232   25606  28767  22323  64200
+
+### auth.result nunique=2
+org       bcmc    brw   city  county  nascc   port   srmc
+result                                                   
+FAILED    1981    642   2891    1345   1911   1109   2702
+SUCCESS  48483  12352  55774   26033  36349  22598  66580
+
+### auth.auth_method nunique=4
+org              bcmc    brw   city  county  nascc   port   srmc
+auth_method                                                     
+badge+pin       43332      0      0       0      0      0  58759
+password         4026  11971  39400   25677   1303  22366   5441
+password+token   3106   1023  19265    1701    860   1341   5082
+smartcard           0      0      0       0  36097      0      0
+
+### auth.device nunique=6
+org                    bcmc   brw   city  county  nascc   port   srmc
+device                                                               
+clinical workstation  43332     0      0       0      0      0  58759
+domain workstation     3807  7115  20841   10649  14239   7690   5441
+known device           3146   956  20205    1661   8933   1287   4784
+managed mac               0  2449      0       0      0      0      0
+new device              179    67   1228     111    560     97    298
+shared console            0  2407  16391   14957  14528  14633      0

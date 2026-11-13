@@ -6,7 +6,6 @@
 #open	2027-11-22-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1826850030.271636	-	10.14.30.31	52.95.38.188	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1826885331.303865	-	10.14.30.15	69.90.2.11	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1826886753.328578	-	10.14.30.43	34.182.190.28	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1826850637.514936	-	10.14.30.63	35.229.79.13	443	Weird::Activity	possible_split_routing	10.14.30.63	35.229.79.13	443	Notice::ACTION_LOG
+1826892052.269709	-	10.14.30.40	64.3.6.47	80	HTTP::Unusual_User_Agent	www.cdn-jslibs.net user agent not seen before on this network	10.14.30.40	64.3.6.47	80	Notice::ACTION_LOG
 #close	2027-11-23-00-00-00

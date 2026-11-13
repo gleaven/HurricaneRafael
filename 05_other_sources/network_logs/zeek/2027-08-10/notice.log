@@ -6,4 +6,5 @@
 #open	2027-08-10-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
+1817889900.302257	-	10.14.21.29	162.152.124.142	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.21.29	162.152.124.142	443	Notice::ACTION_LOG
 #close	2027-08-11-00-00-00

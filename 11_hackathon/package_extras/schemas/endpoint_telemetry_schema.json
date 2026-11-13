@@ -1,0 +1,57 @@
+{
+ "source": "endpoint_telemetry",
+ "folder": "data/network_logs/endpoint/",
+ "format": "JSON Lines, one event per line",
+ "files": {
+  "endpoint_<YYYY-MM>.jsonl": "events recorded by the endpoint agent on the utility's Windows hosts"
+ },
+ "common_keys": {
+  "time_utc": "event time, UTC, milliseconds",
+  "host": "host name",
+  "event_type": "process_start, network_connect, dns_query, file_create, registry_set, service_install, task_create, usb_device",
+  "user": "account that owns the acting process (SYSTEM for services)",
+  "pid": "process id of the acting process",
+  "image": "full path of the acting process"
+ },
+ "event_keys": {
+  "process_start": "ppid, parent_image, command_line, sha256, signer (empty when the file is not signed)",
+  "network_connect": "src_ip, src_port, dst_ip, dst_port, protocol",
+  "dns_query": "query, answers, rcode",
+  "file_create": "path, size, sha256",
+  "registry_set": "reg_key, reg_value",
+  "service_install": "service_name, service_image, start_type",
+  "task_create": "task_name, task_action, task_trigger",
+  "usb_device": "device_vendor, device_model, device_serial, drive_letter"
+ },
+ "notes": "The agent records process starts but not process exits. A TCP or UDP flow in the Zeek logs that starts at a Windows host has its network_connect (same addresses and ports, within half a second) and a Zeek DNS lookup from a Windows host its dns_query, except that for ordinary web browsing (the categorised public sites of the Zeek sample) the agent's records keep every second connection and lookup. ICMP is not recorded. Because the Zeek background is a 1-in-200 sample of user-driven traffic, so is this. Programs that run as services start with the machine; a process already running when the logs begin has no process_start until the next restart. protocol is tcp or udp. device_serial identifies a removable drive wherever it is plugged in. Events owned by a person lie inside that account's logon on that host.",
+ "joins": [
+  {
+   "field": "host",
+   "to": "gw_host_registry.json hosts[].hostname"
+  },
+  {
+   "field": "user",
+   "to": "gw_host_registry.json users[].username, users[].ot_account, service_accounts[].account"
+  },
+  {
+   "field": "src_ip, src_port, dst_ip, dst_port",
+   "to": "network_logs/zeek/<day>/conn.log id.orig_h, id.orig_p, id.resp_h, id.resp_p"
+  },
+  {
+   "field": "query",
+   "to": "network_logs/zeek/<day>/dns.log query"
+  },
+  {
+   "field": "host + user + time_utc",
+   "to": "network_logs/windows/security_*.jsonl logon (4624) to logoff (4634) of that account on that host"
+  },
+  {
+   "field": "service_name",
+   "to": "network_logs/windows/system_*.jsonl event 7045"
+  },
+  {
+   "field": "sha256",
+   "to": "network_logs/triage/<HOST>/file_listing.csv, execution_history.csv"
+  }
+ ]
+}

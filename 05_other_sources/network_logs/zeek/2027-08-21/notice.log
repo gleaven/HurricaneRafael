@@ -6,6 +6,8 @@
 #open	2027-08-21-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1818839266.924372	-	10.14.20.15	162.204.194.173	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1818865023.416550	-	10.14.21.39	104.174.106.39	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+1818845704.576462	-	10.14.30.16	54.44.130.84	443	SSL::Certificate_Expires_Soon	Certificate cdn.adnetwork-static.net is going to expire soon	10.14.30.16	54.44.130.84	443	Notice::ACTION_LOG
+1818873590.458286	-	10.14.22.23	104.70.165.180	443	SSL::Certificate_Expires_Soon	Certificate static.coastalbendweather.net is going to expire soon	10.14.22.23	104.70.165.180	443	Notice::ACTION_LOG
+1818874433.421527	-	10.14.22.35	157.136.186.81	443	Weird::Activity	possible_split_routing	10.14.22.35	157.136.186.81	443	Notice::ACTION_LOG
+1818875496.760301	-	10.14.21.24	10.14.10.6	53	DNS::External_Name	gis-preview.cbpwa-services.org is pointing to a local host	10.14.21.24	10.14.10.6	53	Notice::ACTION_LOG
 #close	2027-08-22-00-00-00

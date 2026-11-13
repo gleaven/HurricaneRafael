@@ -6,7 +6,10 @@
 #open	2027-08-30-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1819615823.451367	-	10.14.12.42	13.133.178.101	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1819630571.860809	-	10.14.30.41	162.161.100.100	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1819669701.618117	-	10.14.21.15	108.186.80.182	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1819594440.202619	-	10.14.21.38	69.55.157.104	443	Weird::Activity	possible_split_routing	10.14.21.38	69.55.157.104	443	Notice::ACTION_LOG
+1819632564.163138	-	10.14.12.43	10.14.10.6	53	DNS::External_Name	old-intranet.cbpwa.example is pointing to a local host	10.14.12.43	10.14.10.6	53	Notice::ACTION_LOG
+1819644554.914780	-	10.14.21.27	35.204.89.191	80	HTTP::Unusual_User_Agent	static.browser-safecheck.net user agent not seen before on this network	10.14.21.27	35.204.89.191	80	Notice::ACTION_LOG
+1819647696.194756	-	10.14.30.27	157.246.5.2	443	Conn::Content_Gap	update-cdn.socialfeed-img.com content gap (5490 bytes missing)	10.14.30.27	157.246.5.2	443	Notice::ACTION_LOG
+1819648897.144360	-	10.14.21.25	185.210.211.86	443	Weird::Activity	possible_split_routing	10.14.21.25	185.210.211.86	443	Notice::ACTION_LOG
+1819657740.364738	-	10.14.30.31	185.72.4.177	443	Conn::Content_Gap	login.scada-vendor-docs.com content gap (4494 bytes missing)	10.14.30.31	185.72.4.177	443	Notice::ACTION_LOG
 #close	2027-08-31-00-00-00

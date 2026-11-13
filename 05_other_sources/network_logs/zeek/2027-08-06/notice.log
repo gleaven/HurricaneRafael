@@ -6,8 +6,5 @@
 #open	2027-08-06-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1817518782.793839	-	10.14.20.25	64.3.6.47	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1817524310.714705	-	10.14.20.18	40.96.142.31	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1817541554.617852	-	10.14.20.29	205.206.104.197	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1817561387.831037	-	10.14.21.12	34.247.77.73	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1817551668.849235	-	10.14.30.19	23.61.232.190	80	HTTP::Unusual_User_Agent	www.helpdesk-tickets.com user agent not seen before on this network	10.14.30.19	23.61.232.190	80	Notice::ACTION_LOG
 #close	2027-08-07-00-00-00

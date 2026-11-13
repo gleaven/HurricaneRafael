@@ -6,7 +6,8 @@
 #open	2027-10-11-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1823242452.859740	-	10.14.22.26	216.223.153.143	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1823273344.313683	-	10.14.20.27	142.177.115.137	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1823294128.367823	-	10.14.20.19	108.60.98.42	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1823222678.017228	-	10.14.20.11	23.241.175.6	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.20.11	23.241.175.6	443	Notice::ACTION_LOG
+1823227746.113670	-	10.14.21.44	108.202.131.235	443	SSL::Certificate_Expires_Soon	Certificate static.meetroom-video.com is going to expire soon	10.14.21.44	108.202.131.235	443	Notice::ACTION_LOG
+1823232082.471268	-	10.14.30.23	157.137.113.78	80	HTTP::Unusual_User_Agent	www.certstatus-ocsp.net user agent not seen before on this network	10.14.30.23	157.137.113.78	80	Notice::ACTION_LOG
+1823296513.750777	-	10.14.30.39	104.67.224.128	443	SSL::Certificate_Expires_Soon	Certificate sso-login.harborline6.example is going to expire soon	10.14.30.39	104.67.224.128	443	Notice::ACTION_LOG
 #close	2027-10-12-00-00-00

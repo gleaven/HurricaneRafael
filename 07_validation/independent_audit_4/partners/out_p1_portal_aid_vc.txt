@@ -1,0 +1,187 @@
+
+### system nunique=1
+month             2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+system                                                                         
+EXT-AIDPORTAL-01      960     4562     6811    11205   337174    34147     2073
+
+### client_network nunique=17
+month           2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+client_network                                                               
+ASN 11427           169      342     1243     1939    14934     4262      261
+ASN 20057           188      335     1246     2085    14372     4288      272
+ASN 20115             0        0        0        0    13832     4125      199
+ASN 21928           173      328     1198     2003    14671     4198      310
+ASN 22773           174      336     1228     2074    15139     4483      320
+ASN 64497             8       36       99      184       69       20        6
+ASN 64498            16       31       93      170       85       35        9
+ASN 64500             0        0        0        0    14380     4247      146
+ASN 64501             8       17       73      125       50       31        8
+ASN 64502             8       23       86      129       71       28       10
+ASN 64505             7       14       71      150       65       20        5
+ASN 64506            13       21      104      130       54       16        9
+ASN 64508            14       19       86      118       68       20        9
+ASN 64509            12       19       88      130       56       24        4
+ASN 64512             0     2720        0        0   220885        0        0
+ASN 7018            170      321     1196     1968    14570     4405      322
+ASN 7922              0        0        0        0    13873     3945      183
+
+### method nunique=2
+month   2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+method                                                               
+GET         960     3762     6811    11205    32506    13275     1108
+POST          0      800        0        0   304668    20872      965
+
+### path nunique=20
+month                      2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+path                                                                                    
+/                              124      250      934     1616      741      251       96
+/.well-known/security.txt        0      290        0        0        0        0        0
+/account/direct-deposit          0        0        0        0      567      296       11
+/account/email-address           0        0        0        0       87      170       11
+/account/mailing-address         0        0        0        0      122      206        6
+/account/phone-number            0        0        0        0      144      282        7
+/account/recover                 0      269        0        0        0        0        0
+/account/register                0      254        0        0    26564     3259      235
+/admin                           0      301        0        0        0        0        0
+/api/v1/session                  0      257        0        0        0        0        0
+/applications                    0        0        0        0    26559     3264      235
+/disasters/current             131      260      995     1645      720      264       87
+/es/ayuda                      133      251      976     1564      761      254      101
+/help/contact                    0      257        0        0        0        0        0
+/help/documents                139      263      951     1613      827      305      109
+/help/eligibility              135      262      953     1594      730      241      115
+/login                         170      566     1018     1529   251395    13685      566
+/login.aspx                      0      257        0        0        0        0        0
+/owa                             0      267        0        0        0        0        0
+/status                        128      558      984     1644    27957    11670      494
+
+### status nunique=4
+month   2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+status                                                               
+200         960     3194     6811    11205    61540    26581     1573
+201           0        0        0        0    53123     6523      470
+401           0      800        0        0   222511     1043       30
+404           0      568        0        0        0        0        0
+
+### event nunique=9
+month                             2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+event                                                                                          
+account_created                         0        0        0        0    26564     3259      235
+application_submitted                   0        0        0        0    26559     3264      235
+login_failed                            0      800        0        0   222511     1043       30
+login_success                           0        0        0        0    28114    12352      430
+page_view                             960     3762     6811    11205    32506    13275     1108
+profile_updated: direct deposit         0        0        0        0      567      296       11
+profile_updated: email address          0        0        0        0       87      170       11
+profile_updated: mailing address        0        0        0        0      122      206        6
+profile_updated: phone number           0        0        0        0      144      282        7
+
+### user_agent_family nunique=9
+month              2027-07  2027-08  2027-09  2027-10  2027-11  2027-12  2028-01
+user_agent_family                                                               
+Chrome/Android         231      383     1528     2515    25610     7579      481
+Chrome/Windows         230      423     1560     2661    27962     8198      488
+Edge/Windows            81      170      532      876     9456     2661      161
+Firefox/Windows         27       60      215      310     3459      999       68
+Safari/iOS             288      583     2148     3448    35859    10640      640
+Safari/macOS            61      136      485      798     8173     2348      142
+Samsung/Android         42       87      343      597     5782     1722       93
+curl                     0      907        0        0        0        0        0
+python-requests          0     1813        0        0   220873        0        0
+
+### event x status
+status                              200    201     401  404
+event                                                      
+account_created                       0  30058       0    0
+application_submitted                 0  30058       0    0
+login_failed                          0      0  224384    0
+login_success                     40896      0       0    0
+page_view                         69059      0       0  568
+profile_updated: direct deposit     874      0       0    0
+profile_updated: email address      268      0       0    0
+profile_updated: mailing address    334      0       0    0
+profile_updated: phone number       433      0       0    0
+
+### path x event
+event                      account_created  application_submitted  login_failed  login_success  page_view  profile_updated: direct deposit  profile_updated: email address  profile_updated: mailing address  profile_updated: phone number
+path                                                                                                                                                                                                                                       
+/                                        0                      0             0              0       4012                                0                               0                                 0                              0
+/.well-known/security.txt                0                      0             0              0        290                                0                               0                                 0                              0
+/account/direct-deposit                  0                      0             0              0          0                              874                               0                                 0                              0
+/account/email-address                   0                      0             0              0          0                                0                             268                                 0                              0
+/account/mailing-address                 0                      0             0              0          0                                0                               0                               334                              0
+/account/phone-number                    0                      0             0              0          0                                0                               0                                 0                            433
+/account/recover                         0                      0             0              0        269                                0                               0                                 0                              0
+/account/register                    30058                      0             0              0        254                                0                               0                                 0                              0
+/admin                                   0                      0             0              0        301                                0                               0                                 0                              0
+/api/v1/session                          0                      0           257              0          0                                0                               0                                 0                              0
+/applications                            0                  30058             0              0          0                                0                               0                                 0                              0
+/disasters/current                       0                      0             0              0       4102                                0                               0                                 0                              0
+/es/ayuda                                0                      0             0              0       4040                                0                               0                                 0                              0
+/help/contact                            0                      0             0              0        257                                0                               0                                 0                              0
+/help/documents                          0                      0             0              0       4207                                0                               0                                 0                              0
+/help/eligibility                        0                      0             0              0       4030                                0                               0                                 0                              0
+/login                                   0                      0        223870          40896       4163                                0                               0                                 0                              0
+/login.aspx                              0                      0           257              0          0                                0                               0                                 0                              0
+/owa                                     0                      0             0              0        267                                0                               0                                 0                              0
+/status                                  0                      0             0              0      43435                                0                               0                                 0                              0
+
+### path x method
+method                       GET    POST
+path                                    
+/                           4012       0
+/.well-known/security.txt    290       0
+/account/direct-deposit        0     874
+/account/email-address         0     268
+/account/mailing-address       0     334
+/account/phone-number          0     433
+/account/recover             269       0
+/account/register            254   30058
+/admin                       301       0
+/api/v1/session                0     257
+/applications                  0   30058
+/disasters/current          4102       0
+/es/ayuda                   4040       0
+/help/contact                257       0
+/help/documents             4207       0
+/help/eligibility           4030       0
+/login                      4163  264766
+/login.aspx                    0     257
+/owa                         267       0
+/status                    43435       0
+
+### client_network x event
+event           account_created  application_submitted  login_failed  login_success  page_view  profile_updated: direct deposit  profile_updated: email address  profile_updated: mailing address  profile_updated: phone number
+client_network                                                                                                                                                                                                                  
+ASN 11427                  3717                   3717           417           5081      10018                               61                              35                                50                             54
+ASN 20057                  3645                   3645           419           4900       9996                               55                              28                                43                             55
+ASN 20115                  3768                   3768           448           5086       4874                               70                              34                                49                             59
+ASN 21928                  3720                   3720           430           4943       9899                               59                              28                                37                             45
+ASN 22773                  3847                   3847           478           5174      10225                               60                              35                                29                             59
+ASN 64497                     0                      0             0              0        422                                0                               0                                 0                              0
+ASN 64498                     0                      0             0              0        439                                0                               0                                 0                              0
+ASN 64500                  3886                   3886           471           5265       5084                               51                              40                                43                             47
+ASN 64501                     0                      0             0              0        312                                0                               0                                 0                              0
+ASN 64502                     0                      0             0              0        355                                0                               0                                 0                              0
+ASN 64505                     0                      0             0              0        332                                0                               0                                 0                              0
+ASN 64506                     0                      0             0              0        347                                0                               0                                 0                              0
+ASN 64508                     0                      0             0              0        334                                0                               0                                 0                              0
+ASN 64509                     0                      0             0              0        333                                0                               0                                 0                              0
+ASN 64512                     6                      6        220853            410       1920                              410                               0                                 0                              0
+ASN 7018                   3740                   3740           425           4987       9896                               48                              34                                33                             49
+ASN 7922                   3729                   3729           443           5050       4841                               60                              34                                50                             65
+
+### ua x client_network
+client_network     ASN 11427  ASN 20057  ASN 20115  ASN 21928  ASN 22773  ASN 64497  ASN 64498  ASN 64500  ASN 64501  ASN 64502  ASN 64505  ASN 64506  ASN 64508  ASN 64509  ASN 64512  ASN 7018  ASN 7922
+user_agent_family                                                                                                                                                                                         
+Chrome/Android          5108       5045       4064       4988       5283         99        107       4212         64         80         78         75         84         77          1      5007      3955
+Chrome/Windows          5419       5440       4305       5575       5784        119         99       4512         64         81         89         78         73         68          4      5491      4321
+Edge/Windows            1873       1846       1447       1835       1831         30         46       1538         23         20         26         33         26         30          2      1862      1469
+Firefox/Windows          677        696        501        677        720         10         10        530         13         18         12         10          8          8          0       677       571
+Safari/iOS              7203       7014       5654       7050       7358        125        128       5754        102        111         98        108        113        112          4      7110      5562
+Safari/macOS            1689       1602       1282       1586       1632         25         31       1305         30         22         18         30         22         25          1      1607      1236
+Samsung/Android         1181       1143        903       1170       1146         14         18        922         16         23         11         13          8         13          0      1198       887
+curl                       0          0          0          0          0          0          0          0          0          0          0          0          0          0        907         0         0
+python-requests            0          0          0          0          0          0          0          0          0          0          0          0          0          0     222686         0         0
+account_ref nunique 246301  empty 30640
+client_ip nunique 56251

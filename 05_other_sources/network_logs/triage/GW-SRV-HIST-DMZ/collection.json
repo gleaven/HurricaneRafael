@@ -1,0 +1,67 @@
+{
+ "host": "GW-SRV-HIST-DMZ",
+ "ip": "10.72.4.20",
+ "os": "Windows Server 2019",
+ "collected_utc": "2027-10-13T19:30:19Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 12,
+   "sha256": "f45bb57bb20c9b68cbbc3b5be2250d570363391b68055d45d913ac8ac6025f53"
+  },
+  "file_listing.csv": {
+   "rows": 43,
+   "sha256": "82aeabba416e788fc921b5ff5e4a5e781ee491ed8f0b84f7c4460da3c8206f38"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "2450fc6c4b28f36a2219c58f0b1a2fc30f4d2eb90d303e41a4506f7da55e7097"
+  },
+  "autoruns.csv": {
+   "rows": 14,
+   "sha256": "6f7f91b4974cd2127c3f18f52a78109ed8a9cd9366f7f3980814daed9900fd9c"
+  },
+  "execution_history.csv": {
+   "rows": 12,
+   "sha256": "3aac105696905967ea9a06fae03e09ab2d1c73f577738c94873c6d50ff331c13"
+  },
+  "logon_history.csv": {
+   "rows": 144,
+   "sha256": "bae9f9723490ead8d07e8f771ee39a9f2c49c79c40a70280c8409b941e18f928"
+  },
+  "installed_software.csv": {
+   "rows": 2,
+   "sha256": "b404b3c6940ae352c2eb707db6ff2024639a0f9113a6c354c74899f4cc8f145b"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "f0d81e3ced9db3eca4ae45fb49887829d345a064c6b5267a4f5f0a24fc7c2b94"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/alarmlist_export.exe.placeholder.txt",
+   "stands_in_for": "C:\\Support\\alarmlist_export.exe",
+   "sha256": "bfffd2c73bd5702d2d82705083ef2c8c30794a09d61b4997c6a8a27db3d65a29"
+  },
+  {
+   "file": "placeholders/backupverify.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\bin\\backupverify.exe",
+   "sha256": "0d4c09d9229b9c417f41c5c1e6a4ef647c7abc17c092526696a5663353250830"
+  },
+  {
+   "file": "placeholders/cfgdiff.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\bin\\cfgdiff.exe",
+   "sha256": "c492c6f703d7301f75da2b4293f31bdfcc2ed95022d3b47c54c41c788b004451"
+  },
+  {
+   "file": "placeholders/drvcheck.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\drvcheck.exe",
+   "sha256": "c1f63c8f2b4b90dde99c5edf0067b219b6a415b59505920becb5ea452d9f641b"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

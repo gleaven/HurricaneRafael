@@ -6,6 +6,6 @@
 #open	2027-08-08-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1817728535.833024	-	10.14.30.46	23.68.238.14	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1817743540.457411	-	10.14.22.25	64.217.47.114	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1817701363.052145	-	10.14.22.17	216.185.240.222	443	SSL::Certificate_Expires_Soon	Certificate api-v2.nueces-county-tx.org is going to expire soon	10.14.22.17	216.185.240.222	443	Notice::ACTION_LOG
+1817703817.742468	-	10.14.30.30	34.130.191.40	443	SSL::Certificate_Expires_Soon	Certificate www.truckrental-fleet.com is going to expire soon	10.14.30.30	34.130.191.40	443	Notice::ACTION_LOG
 #close	2027-08-09-00-00-00

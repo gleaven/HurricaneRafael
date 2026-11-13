@@ -1,0 +1,64 @@
+{
+ "source": "dhcp_logs",
+ "folder": "data/network_logs/dhcp/",
+ "format": "CSV",
+ "standard": "Lease audit log of the DHCP service on the domain controllers and of the employee VPN address pool; column names are plain",
+ "notes": "All times UTC with a Z suffix. Complete for the user networks. Workstations and laptops have reserved addresses: the address of a machine is always its address in gw_host_registry.json. Desktops renew every four days while they run and ask again each time they start; laptops ask when they are docked at the start of the owner's working day. A machine that is switched off logs nothing. The employee VPN pool (scope corp-vpn, 10.14.250.0/24) hands an address to each remote session: one ASSIGN and one RELEASE for every connection to the VPN concentrator in the Zeek conn log (VPN sessions are recorded in full). A VPN device is a company laptop (hostname in the registry) or a home computer; a home computer's name (DESKTOP-..., LAPTOP-...) and MAC address are not in the registry but do not change from session to session.",
+ "entity_catalog": "registries/gw_host_registry.json (hosts by hostname)",
+ "files": {
+  "leases": {
+   "filename": "dhcp_leases_<YYYY-MM>.csv",
+   "description": "One row per lease event, in time order.",
+   "fields": [
+    {
+     "name": "time_utc",
+     "type": "datetime",
+     "example": "2027-07-16T00:23:31Z",
+     "notes": ""
+    },
+    {
+     "name": "server",
+     "type": "string",
+     "example": "GW-SRV-DC-01",
+     "notes": "hostname in gw_host_registry.json"
+    },
+    {
+     "name": "event",
+     "type": "string",
+     "example": "RENEW",
+     "notes": "ASSIGN, RENEW, RELEASE, EXPIRE, NACK (a request for an address of another network, refused)"
+    },
+    {
+     "name": "ip",
+     "type": "ip",
+     "example": "10.14.20.25",
+     "notes": ""
+    },
+    {
+     "name": "mac",
+     "type": "string",
+     "example": "02:98:36:95:87:55",
+     "notes": "Stable per device"
+    },
+    {
+     "name": "hostname",
+     "type": "string",
+     "example": "GW-WS-IT-75",
+     "notes": "hostname in gw_host_registry.json; on scope corp-vpn it may be the name of a home computer (DESKTOP-..., LAPTOP-...) that is not in the registry"
+    },
+    {
+     "name": "scope",
+     "type": "string",
+     "example": "corp-users-ops",
+     "notes": "zone in gw_host_registry.json network_zones"
+    },
+    {
+     "name": "lease_s",
+     "type": "int",
+     "example": "691200",
+     "notes": "Lease length granted, 0 for RELEASE, EXPIRE and NACK"
+    }
+   ]
+  }
+ }
+}

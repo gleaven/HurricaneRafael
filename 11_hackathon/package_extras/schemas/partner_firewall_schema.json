@@ -1,0 +1,83 @@
+{
+ "source": "partner_it",
+ "stream_id": "partner_firewall_logs",
+ "folder": "data/partner_it/",
+ "files": "firewall_<YYYY-MM>.csv",
+ "standard": "Edge firewall session log (one row per session, written when the session ends)",
+ "span": "2027-07-16T00:00Z to 2028-01-12T06:00Z",
+ "cadence": "per session, written when the session ends; sessions that carry a remote sign-on or a mail message are complete, the rest is a sample (about 1 in 40)",
+ "notes": "One folder per organisation: city, nascc, brw, port, srmc, bcmc, county. Each organisation has its own products, rule names, zone names and habits; do not assume a value seen in one folder means the same in another. Hosts, addresses and accounts are in registries/partner_it_registry.json.",
+ "fields": [
+  {
+   "name": "time_utc",
+   "type": "ISO 8601 UTC",
+   "notes": "end of the session; start = time_utc - duration_s"
+  },
+  {
+   "name": "device",
+   "notes": "registry host_id of the firewall (the vendor has a second one in front of its hosted gateway)"
+  },
+  {
+   "name": "action",
+   "type": "allow | deny",
+   "notes": "allow | deny"
+  },
+  {
+   "name": "rule_name",
+   "notes": "the organisation's own rule names"
+  },
+  {
+   "name": "src_zone",
+   "notes": "the organisation's own zone names"
+  },
+  {
+   "name": "dst_zone",
+   "notes": "the organisation's own zone names"
+  },
+  {
+   "name": "src_ip",
+   "notes": "internal addresses are registry hosts, or the organisation's VPN pool"
+  },
+  {
+   "name": "src_port",
+   "type": "int"
+  },
+  {
+   "name": "dst_ip"
+  },
+  {
+   "name": "dst_port",
+   "type": "int"
+  },
+  {
+   "name": "proto",
+   "notes": "tcp | udp | icmp"
+  },
+  {
+   "name": "app",
+   "notes": "application the firewall identified (ssl, web-browsing, dns, ntp, smtp, ping, ...); - when it identified none"
+  },
+  {
+   "name": "bytes_sent",
+   "type": "int",
+   "notes": "bytes from the source, including packet headers (larger than the web gateway's payload count for the same request)"
+  },
+  {
+   "name": "bytes_recv",
+   "type": "int",
+   "notes": "bytes to the source, including packet headers"
+  },
+  {
+   "name": "duration_s",
+   "type": "float"
+  },
+  {
+   "name": "nat_src_ip",
+   "notes": "public address an outbound session left from; empty for inbound sessions"
+  },
+  {
+   "name": "session_end_reason",
+   "notes": "tcp-fin | tcp-rst-from-server | tcp-rst-from-client | aged-out | policy-deny"
+  }
+ ]
+}

@@ -1,0 +1,947 @@
+time_utc,client_ip,user,method,scheme,host,url_path,status,action,category,bytes_out,bytes_in,user_agent_family,policy
+2027-07-16T00:00:59Z,10.110.10.44,118756c,CONNECT,https,rx.eprescribe-network.example,-,200,allowed,health,3782,106309,Chrome/Windows,clinical-workstation
+2027-07-16T00:14:56Z,10.110.10.59,7c0ef14,CONNECT,https,www.prairieems.example,-,200,allowed,business,3446,243053,Edge/Windows,clinical-workstation
+2027-07-16T00:43:11Z,10.110.30.67,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,3786,194746,-,clinical-workstation
+2027-07-16T00:44:02Z,10.110.10.68,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,4787,88719,-,clinical-workstation
+2027-07-16T01:03:48Z,10.110.10.80,-,GET,http,static.osupdates-delivery.com,/,304,allowed,software updates,3902,490,-,clinical-workstation
+2027-07-16T01:33:05Z,10.110.10.113,578e672,CONNECT,https,www.granitetelecom.example,-,200,allowed,business,2476,43899,Edge/Windows,clinical-workstation
+2027-07-16T02:19:58Z,10.110.10.77,487d902,CONNECT,https,www.prairieems.example,-,200,allowed,business,3109,6116,Edge/Windows,clinical-workstation
+2027-07-16T04:05:35Z,10.110.10.44,7681f18,CONNECT,https,www.socialfeed-img.com,-,403,blocked,social media,713,1158,Chrome/Windows,category-denied
+2027-07-16T04:06:21Z,10.110.10.92,dc130d5,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,2022,46647,Edge/Windows,clinical-workstation
+2027-07-16T04:18:14Z,10.110.10.80,3bb9326,CONNECT,https,www.harborrehab.example,-,200,allowed,business,7689,71336,Edge/Windows,clinical-workstation
+2027-07-16T04:41:33Z,10.110.10.41,960b16a,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,735,20148,Edge/Windows,clinical-workstation
+2027-07-16T05:25:06Z,10.110.10.122,b8bf53a,CONNECT,https,pacs-view.teleradiology-group.example,-,200,allowed,health,1270,70017,Edge/Windows,clinical-workstation
+2027-07-16T05:39:56Z,10.110.10.77,2e2274d,CONNECT,https,www.training-lms.net,-,200,allowed,education,9087,40986,Edge/Windows,clinical-workstation
+2027-07-16T06:43:16Z,10.110.10.41,960b16a,CONNECT,https,www.coastal-bend-fishing-reports.example,-,200,allowed,uncategorised,4475,59401,Edge/Windows,clinical-workstation
+2027-07-16T07:05:59Z,10.110.10.89,67d36f6,CONNECT,https,www-2.coastalbendweather.net,-,200,allowed,weather,4220,19299,Chrome/Windows,clinical-workstation
+2027-07-16T09:07:39Z,10.110.10.122,-,CONNECT,https,www.certstatus-ocsp.net,-,200,allowed,software updates,2441,69630,-,clinical-workstation
+2027-07-16T09:13:29Z,10.110.10.89,67d36f6,CONNECT,https,login.cloudstorage-sync.com,-,200,allowed,online storage,843,122208,Chrome/Windows,clinical-workstation
+2027-07-16T10:38:14Z,10.110.250.151,156d1dc,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,4377,55154,Edge/Windows,clinical-workstation
+2027-07-16T11:30:47Z,10.110.10.65,-,GET,http,www.ntp-pool-public.org,/favicon.ico,200,allowed,software updates,432,160419,-,clinical-workstation
+2027-07-16T12:53:54Z,10.110.30.91,5344602,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,2243,69569,Edge/Windows,clinical-workstation
+2027-07-16T13:51:28Z,10.110.10.59,c632de6,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1922,119932,Edge/Windows,clinical-workstation
+2027-07-16T13:51:54Z,10.110.10.56,064c976,CONNECT,https,www.saltgrassoncology.example,-,200,allowed,business,2348,146325,Edge/Windows,clinical-workstation
+2027-07-16T13:53:02Z,10.110.30.97,d9ffb57,POST,http,web-portal.geomaps-tiles.net,/favicon.ico,200,allowed,content delivery,4512,23286,Edge/Windows,clinical-workstation
+2027-07-16T13:55:18Z,10.110.10.101,90e3ad6,CONNECT,https,static.packagetracker-api.net,-,200,allowed,business,1846,37569,Chrome/Windows,clinical-workstation
+2027-07-16T14:11:11Z,10.110.10.80,19768f8,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,675,66311,Edge/Windows,clinical-workstation
+2027-07-16T14:26:46Z,10.110.10.56,064c976,CONNECT,https,rx.eprescribe-network.example,-,200,allowed,health,3412,32367,Edge/Windows,clinical-workstation
+2027-07-16T15:18:58Z,10.110.30.64,cc3b53a,CONNECT,https,sso-login.streamvideo-cdn.net,-,403,blocked,streaming media,894,1168,Edge/Windows,category-denied
+2027-07-16T15:41:10Z,10.110.30.97,d9ffb57,CONNECT,https,cdn-east.storm-prep-guides.org,-,200,allowed,weather,1784,150058,Edge/Windows,clinical-workstation
+2027-07-16T15:45:43Z,10.110.30.55,5e87d6e,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,2299,84539,Edge/Windows,clinical-workstation
+2027-07-16T16:02:47Z,10.110.30.43,3f606b1,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,1894,80681,Chrome/Windows,clinical-workstation
+2027-07-16T16:07:13Z,10.110.30.61,2385ce9,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,4846,90182,Edge/Windows,clinical-workstation
+2027-07-16T16:10:49Z,10.110.10.125,-,GET,http,www.ntp-pool-public.org,/favicon.ico,200,allowed,software updates,6334,60749,-,clinical-workstation
+2027-07-16T16:13:31Z,10.110.10.116,6df88c9,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,607,85839,Edge/Windows,clinical-workstation
+2027-07-16T16:44:42Z,10.110.30.97,d9ffb57,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,4649,40780,Edge/Windows,clinical-workstation
+2027-07-16T16:50:05Z,10.110.10.95,8d29ece,CONNECT,https,www.fleetfuel-cards.com,-,200,allowed,finance,4955,103516,Chrome/Windows,clinical-workstation
+2027-07-16T17:42:19Z,10.110.10.47,a38aa25,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2418,136095,Edge/Windows,clinical-workstation
+2027-07-16T18:20:22Z,10.110.10.56,1d3de39,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,1970,78860,Edge/Windows,clinical-workstation
+2027-07-16T18:22:13Z,10.110.10.116,a7033b1,CONNECT,https,www.cctexas-services.org,-,200,allowed,government,2727,110884,Edge/Windows,clinical-workstation
+2027-07-16T18:41:29Z,10.110.30.64,cc3b53a,CONNECT,https,www.gulf-coast-catering.example,-,200,allowed,uncategorised,11944,140641,Edge/Windows,clinical-workstation
+2027-07-16T18:53:01Z,10.110.10.83,a875734,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,2936,51156,Edge/Windows,clinical-workstation
+2027-07-16T18:58:46Z,10.110.30.40,6537b0a,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,1467,18931,Edge/Windows,clinical-workstation
+2027-07-16T19:16:48Z,10.110.30.55,5e87d6e,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3073,12515,Edge/Windows,clinical-workstation
+2027-07-16T19:19:36Z,10.110.10.119,5f98e62,CONNECT,https,static.training-lms.net,-,200,allowed,education,4416,45474,Chrome/Windows,clinical-workstation
+2027-07-16T19:40:27Z,10.110.10.122,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,2688,21447,-,clinical-workstation
+2027-07-16T19:43:34Z,10.110.30.73,32fb2c3,CONNECT,https,sso-login.harborline6.example,-,200,allowed,news,1550,96112,Chrome/Windows,clinical-workstation
+2027-07-16T19:55:59Z,10.110.10.53,7e19960,CONNECT,https,www.gulfpathology.example,-,200,allowed,business,4285,130855,Edge/Windows,clinical-workstation
+2027-07-16T20:13:40Z,10.110.10.89,d45331a,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2305,27556,Edge/Windows,clinical-workstation
+2027-07-16T20:34:08Z,10.110.10.41,a1d8314,CONNECT,https,sso-login.streamvideo-cdn.net,-,403,blocked,streaming media,388,1337,Chrome/Windows,category-denied
+2027-07-16T21:02:57Z,10.110.10.59,b8500ea,CONNECT,https,cdn.bank-online-secure.com,-,200,allowed,finance,3294,134414,Edge/Windows,clinical-workstation
+2027-07-16T21:18:20Z,10.110.10.56,1d3de39,CONNECT,https,www.baypointrentals.example,-,200,allowed,travel,3196,85818,Edge/Windows,clinical-workstation
+2027-07-16T21:53:51Z,10.110.30.46,ee3176e,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,5195,68941,Edge/Windows,clinical-workstation
+2027-07-16T22:50:35Z,10.110.10.107,19ca7d0,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3342,36472,Edge/Windows,clinical-workstation
+2027-07-16T22:51:28Z,10.110.10.104,064018b,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,4642,49126,Edge/Windows,clinical-workstation
+2027-07-16T23:10:40Z,10.110.10.107,19ca7d0,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,11117,162595,Edge/Windows,clinical-workstation
+2027-07-16T23:17:20Z,10.110.10.62,d3f307e,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,1474,83044,Edge/Windows,clinical-workstation
+2027-07-17T00:11:13Z,10.110.250.211,7d70f6c,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,1881,50777,Edge/Windows,clinical-workstation
+2027-07-17T00:28:47Z,10.110.10.116,53af7d5,CONNECT,https,cdn.cloudstorage-sync.com,-,200,allowed,content delivery,5297,126109,Edge/Windows,clinical-workstation
+2027-07-17T01:02:53Z,10.110.10.50,2313af1,CONNECT,https,static.bayside-ledger.example,-,200,allowed,news,16519,12648,Edge/Windows,clinical-workstation
+2027-07-17T01:17:45Z,10.110.10.98,71af80d,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,4468,11057,Edge/Windows,clinical-workstation
+2027-07-17T01:24:58Z,10.110.10.83,911c44b,CONNECT,https,www.deltaimaging.example,-,200,allowed,business,3985,64005,Edge/Windows,clinical-workstation
+2027-07-17T01:49:32Z,10.110.10.44,131c34c,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,4281,18295,Edge/Windows,clinical-workstation
+2027-07-17T01:54:36Z,10.110.10.104,3e6dbec,CONNECT,https,api-gw.cloudstorage-sync.com,-,200,allowed,online storage,1300,19764,Edge/Windows,clinical-workstation
+2027-07-17T02:08:38Z,10.110.10.74,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,4408,89936,-,clinical-workstation
+2027-07-17T02:17:26Z,10.110.30.40,-,POST,http,sig.corvid-security-cloud.example,/ocsp/0ca23725c608,301,allowed,software updates,5588,522,-,clinical-workstation
+2027-07-17T03:03:37Z,10.110.10.89,eace556,CONNECT,https,www.deltaimaging.example,-,200,allowed,business,3377,54614,Edge/Windows,clinical-workstation
+2027-07-17T04:37:39Z,10.110.10.53,f647d1a,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,6837,42123,Edge/Windows,clinical-workstation
+2027-07-17T04:57:32Z,10.110.10.77,0f200f8,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,2137,15918,Chrome/Windows,clinical-workstation
+2027-07-17T05:06:17Z,10.110.30.73,-,GET,http,sig.corvid-security-cloud.example,/content/919fe160.cab,200,allowed,software updates,1845,15991,-,clinical-workstation
+2027-07-17T05:41:10Z,10.110.10.101,33c2b77,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,7630,14072,Edge/Windows,clinical-workstation
+2027-07-17T05:49:23Z,10.110.10.101,33c2b77,CONNECT,https,www.libertyphysicians.example,-,200,allowed,business,593,21914,Edge/Windows,clinical-workstation
+2027-07-17T06:32:55Z,10.110.10.98,5f91019,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,828,3541,Edge/Windows,clinical-workstation
+2027-07-17T06:53:55Z,10.110.10.89,-,GET,http,static.browser-safecheck.net,/static/7fba5f3.js,200,allowed,software updates,2230,16873,-,clinical-workstation
+2027-07-17T07:07:13Z,10.110.10.89,eace556,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,6849,74272,Edge/Windows,clinical-workstation
+2027-07-17T07:49:07Z,10.110.10.77,0f200f8,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,4962,25437,Chrome/Windows,clinical-workstation
+2027-07-17T08:27:05Z,10.110.30.73,-,GET,http,auth-prod.certstatus-ocsp.net,/ocsp/4dfc65edc16b,200,allowed,software updates,1876,195617,-,clinical-workstation
+2027-07-17T10:44:47Z,10.110.10.101,33c2b77,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,2098,156783,Edge/Windows,clinical-workstation
+2027-07-17T11:39:30Z,10.110.10.65,8b77bf6,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1749,26309,Chrome/Windows,clinical-workstation
+2027-07-17T11:57:33Z,10.110.10.80,-,GET,http,www.osupdates-delivery.com,/content/5b278b93.cab,404,allowed,software updates,3672,25067,-,clinical-workstation
+2027-07-17T12:15:32Z,10.110.10.65,8b77bf6,CONNECT,https,files.svc-portal-cdn.example,-,200,allowed,uncategorised,349,104787,Chrome/Windows,clinical-workstation
+2027-07-17T13:37:00Z,10.110.30.43,3f606b1,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,1611,100997,Edge/Windows,clinical-workstation
+2027-07-17T13:38:23Z,10.110.10.53,90fe3cd,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2434,75890,Edge/Windows,clinical-workstation
+2027-07-17T15:06:03Z,10.110.30.76,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,5482,10899,-,clinical-workstation
+2027-07-17T16:05:58Z,10.110.10.128,280fc51,CONNECT,https,www.flourbluffdialysis.example,-,200,allowed,business,6289,111505,Edge/Windows,clinical-workstation
+2027-07-17T16:12:53Z,10.110.10.122,9aaa798,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,2748,104649,Edge/Windows,clinical-workstation
+2027-07-17T16:14:56Z,10.110.10.107,8a8d925,CONNECT,https,mesahospice.example,-,200,allowed,business,4174,228965,Chrome/Windows,clinical-workstation
+2027-07-17T16:55:18Z,10.110.30.88,-,CONNECT,https,www.certstatus-ocsp.net,-,200,allowed,software updates,5947,145470,-,clinical-workstation
+2027-07-17T17:25:47Z,10.110.10.53,0030016,CONNECT,https,www.libertyphysicians.example,-,200,allowed,business,2538,42821,Chrome/Windows,clinical-workstation
+2027-07-17T17:41:38Z,10.110.10.44,508c840,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,4151,59734,Edge/Windows,clinical-workstation
+2027-07-17T17:51:42Z,10.110.30.64,-,GET,http,www-east.telemetry-osvendor.com,/robots.txt,304,allowed,software updates,1128,286,-,clinical-workstation
+2027-07-17T18:24:57Z,10.110.10.98,9e5d48f,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,1294,67631,Edge/Windows,clinical-workstation
+2027-07-17T20:15:29Z,10.110.30.43,3f606b1,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,3763,14418,Chrome/Windows,clinical-workstation
+2027-07-17T20:25:40Z,10.110.10.71,975577e,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,4879,94760,Chrome/Windows,clinical-workstation
+2027-07-17T20:26:24Z,10.110.10.41,960b16a,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,1846,95322,Edge/Windows,clinical-workstation
+2027-07-17T22:20:52Z,10.110.30.43,3f606b1,CONNECT,https,www.drug-reference.example,-,200,allowed,health,5245,87864,Chrome/Windows,clinical-workstation
+2027-07-17T22:56:49Z,10.110.10.101,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,924,47985,-,clinical-workstation
+2027-07-17T23:41:52Z,10.110.10.50,ad56e17,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1284,25743,Edge/Windows,clinical-workstation
+2027-07-18T00:36:54Z,10.110.10.92,e3f8818,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3356,104029,Edge/Windows,clinical-workstation
+2027-07-18T00:43:09Z,10.110.10.41,9e51af5,CONNECT,https,www.brazossigns.example,-,200,allowed,business,468,23812,Chrome/Windows,clinical-workstation
+2027-07-18T00:45:14Z,10.110.10.50,ad56e17,CONNECT,https,static.school-district-cc.org,-,200,allowed,education,841,15477,Edge/Windows,clinical-workstation
+2027-07-18T01:23:46Z,10.110.10.116,49fd038,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,3084,39013,Edge/Windows,clinical-workstation
+2027-07-18T02:11:25Z,10.110.30.58,-,GET,http,www-east.telemetry-osvendor.com,/updates/4fe84/manifest.xml,200,allowed,software updates,4506,107447,-,clinical-workstation
+2027-07-18T03:34:14Z,10.110.10.116,49fd038,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,3164,55710,Edge/Windows,clinical-workstation
+2027-07-18T03:44:24Z,10.110.10.65,fcda746,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1588,16127,Chrome/Windows,clinical-workstation
+2027-07-18T04:31:34Z,10.110.10.101,c1f7ef6,CONNECT,https,cdn-east.storm-prep-guides.org,-,200,allowed,weather,5385,87536,Edge/Windows,clinical-workstation
+2027-07-18T04:40:02Z,10.110.10.65,fcda746,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,417,70156,Chrome/Windows,clinical-workstation
+2027-07-18T05:13:52Z,10.110.10.98,648266f,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,2086,63004,Edge/Windows,clinical-workstation
+2027-07-18T05:59:09Z,10.110.10.95,29d20e9,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,2153,42184,Chrome/Windows,clinical-workstation
+2027-07-18T07:10:47Z,10.110.10.53,-,GET,http,www.osupdates-delivery.com,/v2/check?id=522bd46224,200,allowed,software updates,4559,85372,-,clinical-workstation
+2027-07-18T08:23:44Z,10.110.30.40,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,4712,59638,-,clinical-workstation
+2027-07-18T08:38:20Z,10.110.10.95,-,GET,http,sig.corvid-security-cloud.example,/static/7b62a84.js,200,allowed,software updates,1167,53817,-,clinical-workstation
+2027-07-18T10:54:26Z,10.110.30.40,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,4995,44934,-,clinical-workstation
+2027-07-18T12:17:37Z,10.110.10.68,17b6b33,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,3420,45144,Edge/Windows,clinical-workstation
+2027-07-18T12:17:53Z,10.110.10.77,2e2274d,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,1885,48649,Edge/Windows,clinical-workstation
+2027-07-18T13:16:01Z,10.110.10.50,ab26834,CONNECT,https,cdn-east.storm-prep-guides.org,-,200,allowed,weather,1413,30332,Edge/Windows,clinical-workstation
+2027-07-18T13:22:59Z,10.110.30.94,-,CONNECT,https,static.browser-safecheck.net,-,200,allowed,software updates,5021,184715,-,clinical-workstation
+2027-07-18T13:34:52Z,10.110.10.80,dbde9b4,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,2928,149883,Chrome/Windows,clinical-workstation
+2027-07-18T13:50:31Z,10.110.10.128,a2694fd,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,5270,27872,Chrome/Windows,clinical-workstation
+2027-07-18T14:10:52Z,10.110.30.52,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,3920,64111,-,clinical-workstation
+2027-07-18T14:21:34Z,10.110.10.92,e3f8818,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,4270,34629,Edge/Windows,clinical-workstation
+2027-07-18T14:57:46Z,10.110.10.44,628aa82,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,4525,107165,Edge/Windows,clinical-workstation
+2027-07-18T15:02:20Z,10.110.10.59,b8500ea,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,6589,60602,Edge/Windows,clinical-workstation
+2027-07-18T16:18:47Z,10.110.10.77,2e2274d,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,5435,102982,Edge/Windows,clinical-workstation
+2027-07-18T17:03:22Z,10.110.10.77,88384b9,CONNECT,https,www.deltaimaging.example,-,200,allowed,business,1426,30280,Edge/Windows,clinical-workstation
+2027-07-18T17:20:12Z,10.110.30.88,-,GET,http,static.osupdates-delivery.com,/static/fff799e.js,200,allowed,software updates,1902,82700,-,clinical-workstation
+2027-07-18T17:58:54Z,10.110.10.56,064c976,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1261,125607,Edge/Windows,clinical-workstation
+2027-07-18T18:17:41Z,10.110.10.107,19ca7d0,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,8464,3519,Edge/Windows,clinical-workstation
+2027-07-18T19:03:07Z,10.110.10.128,a2694fd,CONNECT,https,cdn.harborline6.example,-,200,allowed,news,3622,50996,Chrome/Windows,clinical-workstation
+2027-07-18T19:05:12Z,10.110.10.95,acde8fe,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,3343,71746,Chrome/Windows,clinical-workstation
+2027-07-18T19:20:26Z,10.110.10.110,3f3825e,CONNECT,https,api-gw.cloudstorage-sync.com,-,200,allowed,online storage,7542,29325,Edge/Windows,clinical-workstation
+2027-07-18T19:30:18Z,10.110.10.59,7c0ef14,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,2196,78885,Edge/Windows,clinical-workstation
+2027-07-18T19:48:23Z,10.110.10.98,71af80d,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,459,165577,Edge/Windows,clinical-workstation
+2027-07-18T20:27:19Z,10.110.10.116,8947914,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,1526,166701,Chrome/Windows,clinical-workstation
+2027-07-18T21:13:35Z,10.110.10.53,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,1841,19244,-,clinical-workstation
+2027-07-18T22:27:19Z,10.110.10.68,15f7720,CONNECT,https,email.vertexprint.example,-,200,allowed,business,5204,68791,Chrome/Windows,clinical-workstation
+2027-07-18T23:23:10Z,10.110.30.58,-,GET,http,sig.corvid-security-cloud.example,/images/ba4307.png,200,allowed,software updates,2337,49090,-,clinical-workstation
+2027-07-19T00:17:05Z,10.110.10.119,2f7901e,CONNECT,https,www.deltaimaging.example,-,200,allowed,business,4780,67193,Firefox/Windows,clinical-workstation
+2027-07-19T00:18:33Z,10.110.10.95,5c0755a,CONNECT,https,www.oleanderems.example,-,200,allowed,business,2685,219644,Edge/Windows,clinical-workstation
+2027-07-19T00:52:37Z,10.110.10.65,568ebec,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,868,193682,Edge/Windows,clinical-workstation
+2027-07-19T00:53:11Z,10.110.10.104,6202355,CONNECT,https,www.harborrehab.example,-,200,allowed,business,1257,83263,Edge/Windows,clinical-workstation
+2027-07-19T01:13:26Z,10.110.10.65,568ebec,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3135,75869,Edge/Windows,clinical-workstation
+2027-07-19T01:21:28Z,10.110.10.56,3a21010,CONNECT,https,www.granitemedia.example,-,200,allowed,news,5993,112634,Edge/Windows,clinical-workstation
+2027-07-19T01:31:34Z,10.110.10.50,ab26834,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,3533,175889,Edge/Windows,clinical-workstation
+2027-07-19T01:57:50Z,10.110.10.125,5551be5,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,5869,91260,Edge/Windows,clinical-workstation
+2027-07-19T02:12:03Z,10.110.10.62,db7b03a,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,4216,148968,Edge/Windows,clinical-workstation
+2027-07-19T02:40:42Z,10.110.10.86,-,GET,http,www.browser-safecheck.net,/content/a441db10.cab,200,allowed,software updates,2084,115934,-,clinical-workstation
+2027-07-19T03:17:10Z,10.110.10.68,15f7720,CONNECT,https,www.deltaimaging.example,-,200,allowed,business,7166,66088,Chrome/Windows,clinical-workstation
+2027-07-19T03:42:02Z,10.110.10.65,568ebec,CONNECT,https,www-east.harborline6.example,-,200,allowed,news,2412,293795,Edge/Windows,clinical-workstation
+2027-07-19T03:45:29Z,10.110.10.47,378e1c1,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,1294,24708,Chrome/Windows,clinical-workstation
+2027-07-19T04:22:57Z,10.110.250.125,ef22f11,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2336,44130,Edge/Windows,clinical-workstation
+2027-07-19T04:46:58Z,10.110.10.47,378e1c1,CONNECT,https,www.packagetracker-api.net,-,200,allowed,business,2330,104648,Chrome/Windows,clinical-workstation
+2027-07-19T04:50:36Z,10.110.10.47,378e1c1,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,5048,268170,Chrome/Windows,clinical-workstation
+2027-07-19T05:58:26Z,10.110.10.104,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,2700,209359,-,clinical-workstation
+2027-07-19T07:17:39Z,10.110.10.98,648266f,CONNECT,https,www.flourbluffdialysis.example,-,200,allowed,business,561,163272,Edge/Windows,clinical-workstation
+2027-07-19T08:04:57Z,10.110.10.119,6e67858,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,6145,127137,Edge/Windows,clinical-workstation
+2027-07-19T08:27:25Z,10.110.10.83,911c44b,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,1872,79629,Edge/Windows,clinical-workstation
+2027-07-19T09:12:08Z,10.110.10.62,626d788,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,1613,95695,Chrome/Windows,clinical-workstation
+2027-07-19T09:36:29Z,10.110.30.94,-,CONNECT,https,www.ntp-pool-public.org,-,200,allowed,software updates,3993,297595,-,clinical-workstation
+2027-07-19T10:57:51Z,10.110.10.47,f6ae3a9,GET,http,www.cdn-jslibs.net,/images/7c369c.png,200,allowed,content delivery,6208,14799,Firefox/Windows,clinical-workstation
+2027-07-19T10:59:46Z,10.110.10.98,648266f,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,1621,141527,Edge/Windows,clinical-workstation
+2027-07-19T12:53:55Z,10.110.10.77,7ea76fe,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,4232,105175,Edge/Windows,clinical-workstation
+2027-07-19T13:45:33Z,10.110.30.82,496a297,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,2089,90134,Edge/Windows,clinical-workstation
+2027-07-19T13:59:03Z,10.110.30.70,60fa350,CONNECT,https,static.training-lms.net,-,200,allowed,education,3559,48262,Firefox/Windows,clinical-workstation
+2027-07-19T14:07:14Z,10.110.10.68,3039175,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1833,115202,Edge/Windows,clinical-workstation
+2027-07-19T14:08:05Z,10.110.30.46,ee3176e,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,453,12321,Chrome/Windows,clinical-workstation
+2027-07-19T15:05:29Z,10.110.30.61,2385ce9,CONNECT,https,www.gulfems.example,-,200,allowed,business,4195,102891,Edge/Windows,clinical-workstation
+2027-07-19T15:07:17Z,10.110.10.86,82476f1,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,5115,72353,Edge/Windows,clinical-workstation
+2027-07-19T15:41:56Z,10.110.10.59,ea46839,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,5733,41011,Edge/Windows,clinical-workstation
+2027-07-19T16:22:40Z,10.110.10.50,ee3b345,CONNECT,https,www.calichesecurity.example,-,200,allowed,business,1445,30251,Edge/Windows,clinical-workstation
+2027-07-19T16:30:48Z,10.110.30.61,2385ce9,CONNECT,https,www.drug-reference.example,-,200,allowed,health,7510,80081,Edge/Windows,clinical-workstation
+2027-07-19T16:43:45Z,10.110.10.56,064c976,GET,http,rx.eprescribe-network.example,/,304,allowed,health,2225,426,Edge/Windows,clinical-workstation
+2027-07-19T17:27:49Z,10.110.10.65,8b77bf6,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,4036,39756,Chrome/Windows,clinical-workstation
+2027-07-19T17:29:33Z,10.110.30.64,cc3b53a,CONNECT,https,www.baypointrentals.example,-,200,allowed,travel,2634,76004,Edge/Windows,clinical-workstation
+2027-07-19T17:48:21Z,10.110.30.94,85f6713,CONNECT,https,www.flourblufftires.example,-,200,allowed,shopping,2483,63004,Edge/Windows,clinical-workstation
+2027-07-19T18:33:32Z,10.110.10.68,cf83fce,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,7697,20080,Edge/Windows,clinical-workstation
+2027-07-19T18:48:21Z,10.110.10.44,21aac1a,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,2260,38005,Edge/Windows,clinical-workstation
+2027-07-19T18:51:53Z,10.110.30.97,d9ffb57,CONNECT,https,www.baypointrentals.example,-,200,allowed,travel,7629,51418,Edge/Windows,clinical-workstation
+2027-07-19T19:29:50Z,10.110.30.40,6537b0a,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,1305,25153,Edge/Windows,clinical-workstation
+2027-07-19T19:43:05Z,10.110.30.40,6537b0a,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2771,105769,Edge/Windows,clinical-workstation
+2027-07-19T20:02:06Z,10.110.30.61,2385ce9,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,2527,160432,Edge/Windows,clinical-workstation
+2027-07-19T20:33:29Z,10.110.10.71,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,2914,74002,-,clinical-workstation
+2027-07-19T20:37:55Z,10.110.10.125,ca1e34b,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,5711,222984,Chrome/Windows,clinical-workstation
+2027-07-19T21:13:06Z,10.110.10.83,781c111,CONNECT,https,static.training-lms.net,-,200,allowed,education,1903,42897,Edge/Windows,clinical-workstation
+2027-07-19T21:29:29Z,10.110.30.52,4a3dc61,CONNECT,https,files.svc-portal-cdn.example,-,200,allowed,uncategorised,8501,51624,Edge/Windows,clinical-workstation
+2027-07-19T21:29:50Z,10.110.10.83,781c111,CONNECT,https,www.brazossigns.example,-,200,allowed,business,3599,15180,Edge/Windows,clinical-workstation
+2027-07-19T21:38:53Z,10.110.30.70,60fa350,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,1399,177435,Firefox/Windows,clinical-workstation
+2027-07-19T21:44:20Z,10.110.30.85,1772e2d,CONNECT,https,www.flourblufftires.example,-,200,allowed,shopping,1615,142416,Chrome/Windows,clinical-workstation
+2027-07-19T21:47:36Z,10.110.10.104,01778ab,CONNECT,https,www.training-lms.net,-,200,allowed,education,3565,42169,Edge/Windows,clinical-workstation
+2027-07-19T22:03:53Z,10.110.10.116,6df88c9,CONNECT,https,forms.event-signup-sheets.example,-,200,allowed,uncategorised,1757,66812,Edge/Windows,clinical-workstation
+2027-07-19T22:23:51Z,10.110.10.71,136d7d2,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,1280,133852,Edge/Windows,clinical-workstation
+2027-07-19T22:28:17Z,10.110.10.74,ae375ab,CONNECT,https,go.rockport-hospice.example,-,200,allowed,business,4584,172049,Edge/Windows,clinical-workstation
+2027-07-19T22:42:32Z,10.110.10.53,0030016,CONNECT,https,www.brazossigns.example,-,200,allowed,business,1524,135071,Chrome/Windows,clinical-workstation
+2027-07-19T22:45:52Z,10.110.10.50,ee3b345,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1494,62908,Edge/Windows,clinical-workstation
+2027-07-19T22:53:40Z,10.110.30.43,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,2363,27510,-,clinical-workstation
+2027-07-19T23:15:42Z,10.110.10.65,-,GET,http,sig.corvid-security-cloud.example,/robots.txt,200,allowed,software updates,4138,71420,-,clinical-workstation
+2027-07-19T23:48:56Z,10.110.10.44,7681f18,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,1733,45122,Edge/Windows,clinical-workstation
+2027-07-19T23:51:56Z,10.110.10.68,-,GET,http,www.ntp-pool-public.org,/v2/check?id=443d0adf26,404,allowed,software updates,909,13326,-,clinical-workstation
+2027-07-19T23:55:57Z,10.110.10.119,6e67858,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,11836,153747,Edge/Windows,clinical-workstation
+2027-07-20T00:00:49Z,10.110.250.203,9be945f,GET,http,www.deltaimaging.example,/,404,allowed,business,3352,32490,Edge/Windows,clinical-workstation
+2027-07-20T01:39:11Z,10.110.10.125,ca1e34b,GET,http,portal.payer-eligibility.example,/pki/fa0b43.crl,200,allowed,health,2424,98600,Chrome/Windows,clinical-workstation
+2027-07-20T01:55:57Z,10.110.10.50,d9fff6c,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,1326,109224,Edge/Windows,clinical-workstation
+2027-07-20T02:20:59Z,10.110.10.41,49df599,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,2018,234859,Edge/Windows,clinical-workstation
+2027-07-20T02:48:22Z,10.110.10.80,2216701,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,4076,66756,Edge/Windows,clinical-workstation
+2027-07-20T03:04:07Z,10.110.10.65,fcda746,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2078,286724,Chrome/Windows,clinical-workstation
+2027-07-20T04:21:12Z,10.110.10.80,2216701,CONNECT,https,www.orbitpediatrics.example,-,200,allowed,business,3636,86069,Edge/Windows,clinical-workstation
+2027-07-20T04:21:17Z,10.110.10.59,6dea356,CONNECT,https,www.brazossigns.example,-,200,allowed,business,3034,19322,Edge/Windows,clinical-workstation
+2027-07-20T04:34:00Z,10.110.10.44,7681f18,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,9071,114039,Chrome/Windows,clinical-workstation
+2027-07-20T04:52:19Z,10.110.10.107,-,CONNECT,https,www.ntp-pool-public.org,-,200,allowed,software updates,4050,70343,-,clinical-workstation
+2027-07-20T05:15:08Z,10.110.10.95,37ea5fc,CONNECT,https,login.adnetwork-static.net,-,200,allowed,advertising,3703,43524,Chrome/Windows,clinical-workstation
+2027-07-20T05:45:45Z,10.110.30.94,-,GET,http,static.ntp-pool-public.org,/content/7aeddb1d.cab,302,allowed,software updates,2179,336,-,clinical-workstation
+2027-07-20T06:17:06Z,10.110.10.50,ab26834,CONNECT,https,static.training-lms.net,-,200,allowed,education,1704,171596,Edge/Windows,clinical-workstation
+2027-07-20T06:28:04Z,10.110.10.77,-,GET,http,www.ntp-pool-public.org,/robots.txt,200,allowed,software updates,2016,117114,-,clinical-workstation
+2027-07-20T06:41:23Z,10.110.10.119,3e1fe4a,CONNECT,https,www.rockportcardiology.example,-,200,allowed,business,6948,60509,Edge/Windows,clinical-workstation
+2027-07-20T07:19:25Z,10.110.10.92,-,GET,http,sig.corvid-security-cloud.example,/robots.txt,200,allowed,software updates,3016,123718,-,clinical-workstation
+2027-07-20T08:05:16Z,10.110.10.50,d9fff6c,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,1531,77932,Edge/Windows,clinical-workstation
+2027-07-20T08:55:43Z,10.110.10.86,13680e8,CONNECT,https,redfishbiomed.example,-,200,allowed,business,2827,133883,Edge/Windows,clinical-workstation
+2027-07-20T10:16:11Z,10.110.10.89,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,7953,151176,-,clinical-workstation
+2027-07-20T10:17:11Z,10.110.10.110,5b45a3f,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,1987,70223,Edge/Windows,clinical-workstation
+2027-07-20T11:31:51Z,10.110.10.53,8f27edf,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,3217,109444,Edge/Windows,clinical-workstation
+2027-07-20T11:36:15Z,10.110.10.53,8f27edf,CONNECT,https,www.baypointems.example,-,200,allowed,business,4285,125060,Edge/Windows,clinical-workstation
+2027-07-20T12:04:20Z,10.110.10.110,5b45a3f,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,4539,62410,Edge/Windows,clinical-workstation
+2027-07-20T12:07:33Z,10.110.30.73,32fb2c3,CONNECT,https,www.libertyphysicians.example,-,200,allowed,business,1356,31341,Chrome/Windows,clinical-workstation
+2027-07-20T12:24:31Z,10.110.10.74,620398d,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1733,87990,Edge/Windows,clinical-workstation
+2027-07-20T12:48:36Z,10.110.30.73,32fb2c3,CONNECT,https,www.brazossigns.example,-,200,allowed,business,2439,282620,Chrome/Windows,clinical-workstation
+2027-07-20T12:54:48Z,10.110.10.101,981d0ad,CONNECT,https,web-portal.hospital-patient-portal.org,-,200,allowed,health,2619,107674,Edge/Windows,clinical-workstation
+2027-07-20T13:12:05Z,10.110.10.50,ab26834,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,1320,61193,Edge/Windows,clinical-workstation
+2027-07-20T13:14:17Z,10.110.10.101,981d0ad,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,3943,238673,Edge/Windows,clinical-workstation
+2027-07-20T13:42:14Z,10.110.30.88,d5f4b99,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,826,36481,Chrome/Windows,clinical-workstation
+2027-07-20T13:55:42Z,10.110.30.64,cc3b53a,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,3748,67862,Edge/Windows,clinical-workstation
+2027-07-20T14:12:26Z,10.110.30.82,496a297,CONNECT,https,www.socialfeed-img.com,-,403,blocked,social media,387,1016,Edge/Windows,category-denied
+2027-07-20T15:08:26Z,10.110.10.50,ab26834,CONNECT,https,update-cdn.txroadwatch.org,-,200,allowed,government,1754,42821,Edge/Windows,clinical-workstation
+2027-07-20T15:20:39Z,10.110.10.125,962a970,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,723,116706,Edge/Windows,clinical-workstation
+2027-07-20T15:27:27Z,10.110.10.119,cd834f8,CONNECT,https,api-gw.cloudstorage-sync.com,-,200,allowed,online storage,2607,47315,Firefox/Windows,clinical-workstation
+2027-07-20T15:36:29Z,10.110.10.116,69aab85,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,2274,104415,Edge/Windows,clinical-workstation
+2027-07-20T16:02:15Z,10.110.30.82,496a297,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,5455,41688,Edge/Windows,clinical-workstation
+2027-07-20T16:25:19Z,10.110.30.55,5e87d6e,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,1239,54572,Edge/Windows,clinical-workstation
+2027-07-20T16:25:39Z,10.110.10.83,a875734,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,1177,183814,Edge/Windows,clinical-workstation
+2027-07-20T16:51:46Z,10.110.30.85,1772e2d,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1639,59800,Chrome/Windows,clinical-workstation
+2027-07-20T17:24:15Z,10.110.30.64,cc3b53a,CONNECT,https,static.training-lms.net,-,200,allowed,education,1653,38558,Edge/Windows,clinical-workstation
+2027-07-20T17:39:43Z,10.110.30.94,85f6713,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,2961,123532,Edge/Windows,clinical-workstation
+2027-07-20T17:53:27Z,10.110.30.46,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,2897,80706,-,clinical-workstation
+2027-07-20T18:03:13Z,10.110.30.91,5344602,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,8743,115208,Edge/Windows,clinical-workstation
+2027-07-20T18:16:01Z,10.110.30.40,6537b0a,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,4242,16631,Edge/Windows,clinical-workstation
+2027-07-20T18:19:07Z,10.110.30.52,4a3dc61,CONNECT,https,api.harborline6.example,-,200,allowed,news,6594,8910,Edge/Windows,clinical-workstation
+2027-07-20T18:27:20Z,10.110.30.91,5344602,GET,http,www.blood-center-coastalbend.example,/content/195af534.cab,200,allowed,health,3281,57603,Edge/Windows,clinical-workstation
+2027-07-20T18:31:04Z,10.110.10.44,21aac1a,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,7177,81532,Chrome/Windows,clinical-workstation
+2027-07-20T18:31:44Z,10.110.10.92,5f3696a,CONNECT,https,southtexclinic.example,-,200,allowed,health,4477,121295,Edge/Windows,clinical-workstation
+2027-07-20T18:36:25Z,10.110.30.64,cc3b53a,CONNECT,https,static.partsdepot-supply.com,-,200,allowed,shopping,2746,18936,Edge/Windows,clinical-workstation
+2027-07-20T18:40:16Z,10.110.10.110,5b45a3f,CONNECT,https,go.airline-bookings.example,-,200,allowed,travel,9912,120470,Edge/Windows,clinical-workstation
+2027-07-20T18:55:16Z,10.110.30.70,60fa350,CONNECT,https,api-gw.cloudstorage-sync.com,-,200,allowed,online storage,1998,19375,Firefox/Windows,clinical-workstation
+2027-07-20T18:55:29Z,10.110.10.65,7c8fe37,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2234,145168,Edge/Windows,clinical-workstation
+2027-07-20T19:00:22Z,10.110.30.67,c6f8149,CONNECT,https,www.oleanderems.example,-,200,allowed,business,2518,117439,Edge/Windows,clinical-workstation
+2027-07-20T19:33:47Z,10.110.10.77,0f200f8,CONNECT,https,www.oleanderems.example,-,200,allowed,business,4901,75733,Chrome/Windows,clinical-workstation
+2027-07-20T19:43:20Z,10.110.10.107,87398e5,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,3204,185567,Edge/Windows,clinical-workstation
+2027-07-20T19:47:50Z,10.110.10.119,cd834f8,CONNECT,https,static.training-lms.net,-,200,allowed,education,7428,200500,Firefox/Windows,clinical-workstation
+2027-07-20T20:03:56Z,10.110.30.52,4a3dc61,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1162,38892,Edge/Windows,clinical-workstation
+2027-07-20T20:23:35Z,10.110.30.40,6537b0a,CONNECT,https,www-2.bayside-ledger.example,-,200,allowed,news,2469,29843,Edge/Windows,clinical-workstation
+2027-07-20T20:31:59Z,10.110.10.122,5800f47,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1569,56424,Chrome/Windows,clinical-workstation
+2027-07-20T20:40:45Z,10.110.10.41,9e51af5,CONNECT,https,www.mustanganesthesia.example,-,200,allowed,business,1746,253497,Chrome/Windows,clinical-workstation
+2027-07-20T20:50:48Z,10.110.10.74,ae375ab,CONNECT,https,southtexclinic.example,-,200,allowed,health,3653,300411,Edge/Windows,clinical-workstation
+2027-07-20T20:54:00Z,10.110.30.79,d99e6c0,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,1699,37894,Edge/Windows,clinical-workstation
+2027-07-20T21:15:37Z,10.110.10.104,516dd1a,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,3254,39014,Edge/Windows,clinical-workstation
+2027-07-20T21:30:33Z,10.110.10.68,1146d14,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,1979,40780,Edge/Windows,clinical-workstation
+2027-07-20T23:34:19Z,10.110.10.86,13680e8,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,7803,64384,Edge/Windows,clinical-workstation
+2027-07-20T23:36:40Z,10.110.10.68,17b6b33,CONNECT,https,www.brazospathology.example,-,200,allowed,business,1264,121365,Edge/Windows,clinical-workstation
+2027-07-20T23:49:11Z,10.110.10.53,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,3323,241249,-,clinical-workstation
+2027-07-20T23:53:50Z,10.110.10.77,487d902,CONNECT,https,www.gulfpathology.example,-,502,allowed,business,3818,47,Edge/Windows,clinical-workstation
+2027-07-21T00:02:26Z,10.110.10.89,eace556,CONNECT,https,www-east.officesuite-mail.com,-,200,allowed,business software,1834,78601,Edge/Windows,clinical-workstation
+2027-07-21T00:11:27Z,10.110.10.80,0551004,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,5489,177871,Edge/Windows,clinical-workstation
+2027-07-21T00:26:40Z,10.110.10.71,b931fc2,CONNECT,https,laguna-pathology.example,-,200,allowed,business,3910,133929,Edge/Windows,clinical-workstation
+2027-07-21T00:29:43Z,10.110.10.122,5800f47,CONNECT,https,www.harborrehab.example,-,200,allowed,business,2902,55130,Chrome/Windows,clinical-workstation
+2027-07-21T00:48:56Z,10.110.10.65,219058a,CONNECT,https,www.docsign-flow.com,-,200,allowed,online storage,851,58884,Edge/Windows,clinical-workstation
+2027-07-21T00:56:54Z,10.110.10.53,90fe3cd,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,2472,155245,Edge/Windows,clinical-workstation
+2027-07-21T01:32:26Z,10.110.10.125,34c40eb,CONNECT,https,static.partsdepot-supply.com,-,200,allowed,shopping,6580,272435,Edge/Windows,clinical-workstation
+2027-07-21T01:35:21Z,10.110.30.67,-,GET,http,static.osupdates-delivery.com,/,200,allowed,software updates,2753,31852,-,clinical-workstation
+2027-07-21T01:49:03Z,10.110.10.113,8ad3f2a,CONNECT,https,www.training-lms.net,-,200,allowed,education,2843,68462,Chrome/Windows,clinical-workstation
+2027-07-21T02:25:32Z,10.110.10.119,5f98e62,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,3709,23593,Chrome/Windows,clinical-workstation
+2027-07-21T02:28:16Z,10.110.10.116,49fd038,CONNECT,https,pacs-view.teleradiology-group.example,-,200,allowed,health,2389,92913,Edge/Windows,clinical-workstation
+2027-07-21T02:30:15Z,10.110.30.49,-,GET,http,static.browser-safecheck.net,/index.html,304,allowed,software updates,556,687,-,clinical-workstation
+2027-07-21T03:02:38Z,10.110.10.122,-,POST,http,api.certstatus-ocsp.net,/,200,allowed,software updates,3554,14624,-,clinical-workstation
+2027-07-21T04:10:28Z,10.110.10.113,578e672,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,2871,119079,Edge/Windows,clinical-workstation
+2027-07-21T04:21:12Z,10.110.10.71,-,CONNECT,https,www.certstatus-ocsp.net,-,200,allowed,software updates,2710,144941,-,clinical-workstation
+2027-07-21T04:49:57Z,10.110.10.113,578e672,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,10915,17873,Edge/Windows,clinical-workstation
+2027-07-21T05:00:10Z,10.110.10.86,141e36f,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,1038,90884,Edge/Windows,clinical-workstation
+2027-07-21T06:33:48Z,10.110.10.68,3039175,CONNECT,https,static.packagetracker-api.net,-,200,allowed,business,1034,203915,Edge/Windows,clinical-workstation
+2027-07-21T06:49:30Z,10.110.10.104,6202355,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,2625,33020,Edge/Windows,clinical-workstation
+2027-07-21T06:53:53Z,10.110.10.68,3039175,GET,http,www.socialfeed-img.com,/,403,blocked,social media,475,1359,Edge/Windows,category-denied
+2027-07-21T08:42:24Z,10.110.10.50,d9fff6c,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,2449,26390,Edge/Windows,clinical-workstation
+2027-07-21T08:57:02Z,10.110.10.74,-,CONNECT,https,www.certstatus-ocsp.net,-,200,allowed,software updates,3027,21983,-,clinical-workstation
+2027-07-21T09:40:19Z,10.110.10.50,d9fff6c,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,2735,127993,Edge/Windows,clinical-workstation
+2027-07-21T10:43:42Z,10.110.10.101,90e3ad6,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,2549,61331,Chrome/Windows,clinical-workstation
+2027-07-21T11:33:24Z,10.110.10.107,87398e5,CONNECT,https,rx.eprescribe-network.example,-,200,allowed,health,6034,22724,Edge/Windows,clinical-workstation
+2027-07-21T13:20:45Z,10.110.30.52,4a3dc61,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2461,27994,Edge/Windows,clinical-workstation
+2027-07-21T13:29:15Z,10.110.30.43,3f606b1,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,2110,25077,Chrome/Windows,clinical-workstation
+2027-07-21T13:39:08Z,10.110.30.46,ee3176e,CONNECT,https,www.docsign-flow.com,-,200,allowed,online storage,5102,26674,Chrome/Windows,clinical-workstation
+2027-07-21T13:40:44Z,10.110.30.64,cc3b53a,CONNECT,https,www.brazospathology.example,-,200,allowed,business,11209,213361,Edge/Windows,clinical-workstation
+2027-07-21T13:52:13Z,10.110.30.85,1772e2d,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,9123,40815,Chrome/Windows,clinical-workstation
+2027-07-21T14:06:07Z,10.110.10.41,a1d8314,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,4413,77419,Chrome/Windows,clinical-workstation
+2027-07-21T14:44:03Z,10.110.30.52,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,2710,110200,-,clinical-workstation
+2027-07-21T15:07:10Z,10.110.10.77,88384b9,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,2423,31162,Edge/Windows,clinical-workstation
+2027-07-21T15:24:08Z,10.110.30.64,cc3b53a,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,644,58032,Edge/Windows,clinical-workstation
+2027-07-21T15:40:20Z,10.110.30.43,3f606b1,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2676,83119,Chrome/Windows,clinical-workstation
+2027-07-21T15:46:35Z,10.110.30.61,2385ce9,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,743,144104,Edge/Windows,clinical-workstation
+2027-07-21T15:48:26Z,10.110.10.122,b8bf53a,CONNECT,https,www.oleanderlandscaping.example,-,200,allowed,business,2764,127479,Edge/Windows,clinical-workstation
+2027-07-21T16:25:21Z,10.110.30.55,5e87d6e,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,6090,40311,Edge/Windows,clinical-workstation
+2027-07-21T16:35:44Z,10.110.30.85,1772e2d,CONNECT,https,www.sanpatoncology.example,-,200,allowed,business,6612,106072,Chrome/Windows,clinical-workstation
+2027-07-21T16:44:10Z,10.110.10.92,3866bac,CONNECT,https,www.granitetelecom.example,-,200,allowed,business,6938,122215,Edge/Windows,clinical-workstation
+2027-07-21T16:47:26Z,10.110.10.80,0551004,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,3947,59297,Edge/Windows,clinical-workstation
+2027-07-21T16:59:17Z,10.110.10.44,131c34c,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,1823,72689,Edge/Windows,clinical-workstation
+2027-07-21T17:02:42Z,10.110.10.110,b6612ec,CONNECT,https,www.rockport-solutions.example,-,200,allowed,business,5899,201930,Edge/Windows,clinical-workstation
+2027-07-21T17:36:22Z,10.110.30.82,496a297,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,492,22726,Edge/Windows,clinical-workstation
+2027-07-21T17:45:20Z,10.110.30.82,496a297,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2481,216839,Edge/Windows,clinical-workstation
+2027-07-21T18:22:08Z,10.110.30.88,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,2919,189942,-,clinical-workstation
+2027-07-21T18:50:28Z,10.110.30.70,60fa350,CONNECT,https,www.novatelecom.example,-,200,allowed,business,757,85705,Firefox/Windows,clinical-workstation
+2027-07-21T19:14:58Z,10.110.30.94,85f6713,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1813,105128,Edge/Windows,clinical-workstation
+2027-07-21T19:19:40Z,10.110.30.76,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,589,25638,-,clinical-workstation
+2027-07-21T19:21:10Z,10.110.10.89,dd2a440,CONNECT,https,www.oleanderems.example,-,200,allowed,business,2213,37980,Edge/Windows,clinical-workstation
+2027-07-21T19:34:23Z,10.110.30.91,5344602,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,2858,213244,Edge/Windows,clinical-workstation
+2027-07-21T19:54:01Z,10.110.30.73,32fb2c3,CONNECT,https,api.harborline6.example,-,200,allowed,news,5676,27011,Chrome/Windows,clinical-workstation
+2027-07-21T19:56:47Z,10.110.30.61,2385ce9,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,8288,35248,Edge/Windows,clinical-workstation
+2027-07-21T20:20:29Z,10.110.30.97,-,GET,http,sig.corvid-security-cloud.example,/pki/45cd16.crl,200,allowed,software updates,6737,42885,-,clinical-workstation
+2027-07-21T20:23:24Z,10.110.10.122,-,GET,http,www-east.telemetry-osvendor.com,/robots.txt,200,allowed,software updates,1527,25035,-,clinical-workstation
+2027-07-21T21:08:57Z,10.110.10.47,3456206,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1738,88090,Chrome/Windows,clinical-workstation
+2027-07-21T21:37:20Z,10.110.10.65,8b77bf6,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,1426,66875,Chrome/Windows,clinical-workstation
+2027-07-21T21:47:10Z,10.110.30.64,cc3b53a,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,4912,60940,Edge/Windows,clinical-workstation
+2027-07-21T22:00:14Z,10.110.10.53,f647d1a,CONNECT,https,www.oleanderems.example,-,200,allowed,business,4669,28528,Edge/Windows,clinical-workstation
+2027-07-21T22:20:57Z,10.110.30.94,85f6713,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,3269,16052,Edge/Windows,clinical-workstation
+2027-07-21T22:29:53Z,10.110.10.68,17b6b33,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,5096,43944,Edge/Windows,clinical-workstation
+2027-07-21T22:31:02Z,10.110.10.80,dbde9b4,CONNECT,https,static.packagetracker-api.net,-,200,allowed,business,6624,70380,Chrome/Windows,clinical-workstation
+2027-07-21T22:58:11Z,10.110.30.94,85f6713,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,2749,80907,Edge/Windows,clinical-workstation
+2027-07-22T00:04:23Z,10.110.10.98,9e5d48f,CONNECT,https,www.packagetracker-api.net,-,200,allowed,business,1887,15874,Edge/Windows,clinical-workstation
+2027-07-22T00:14:37Z,10.110.30.79,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,2341,79150,-,clinical-workstation
+2027-07-22T00:18:29Z,10.110.10.86,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,668,17322,-,clinical-workstation
+2027-07-22T00:52:25Z,10.110.10.68,17b6b33,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,1520,91453,Edge/Windows,clinical-workstation
+2027-07-22T02:14:06Z,10.110.10.119,2f7901e,CONNECT,https,www.oleanderems.example,-,200,allowed,business,1319,68333,Firefox/Windows,clinical-workstation
+2027-07-22T02:37:39Z,10.110.10.65,8b77bf6,CONNECT,https,cdn.harborline6.example,-,200,allowed,news,4767,33916,Chrome/Windows,clinical-workstation
+2027-07-22T03:08:01Z,10.110.10.41,d7ed442,CONNECT,https,www.socialfeed-img.com,-,403,blocked,social media,452,1415,Edge/Windows,category-denied
+2027-07-22T03:19:13Z,10.110.10.104,3e6dbec,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1727,11068,Edge/Windows,clinical-workstation
+2027-07-22T03:21:17Z,10.110.10.47,ae330c2,GET,http,portal.payer-eligibility.example,/updates/115b0/manifest.xml,200,allowed,health,1687,85722,Edge/Windows,clinical-workstation
+2027-07-22T03:40:49Z,10.110.10.53,c6fdd96,CONNECT,https,click.nova-imaging.example,-,200,allowed,business,11173,179780,Edge/Windows,clinical-workstation
+2027-07-22T04:31:26Z,10.110.10.86,82476f1,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,6683,46563,Edge/Windows,clinical-workstation
+2027-07-22T05:14:36Z,10.110.10.44,7681f18,CONNECT,https,www.brazossigns.example,-,200,allowed,business,7120,62683,Edge/Windows,clinical-workstation
+2027-07-22T05:50:53Z,10.110.10.53,c6fdd96,POST,http,www.helpdesk-tickets.com,/ocsp/be4972838a58,200,allowed,business software,5273,30663,Edge/Windows,clinical-workstation
+2027-07-22T07:39:31Z,10.110.10.95,37ea5fc,CONNECT,https,www.socialfeed-img.com,-,403,blocked,social media,342,1219,Chrome/Windows,category-denied
+2027-07-22T07:40:09Z,10.110.10.128,f322a39,CONNECT,https,login.cloudstorage-sync.com,-,200,allowed,online storage,5283,171216,Edge/Windows,clinical-workstation
+2027-07-22T09:12:08Z,10.110.10.74,134cb1b,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,4338,27582,Edge/Windows,clinical-workstation
+2027-07-22T09:36:37Z,10.110.10.125,34c40eb,CONNECT,https,api-gw.cloudstorage-sync.com,-,200,allowed,online storage,1667,100839,Edge/Windows,clinical-workstation
+2027-07-22T09:43:50Z,10.110.10.65,-,GET,http,static.telemetry-osvendor.com,/robots.txt,200,allowed,software updates,7601,59916,-,clinical-workstation
+2027-07-22T09:50:29Z,10.110.10.68,3039175,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,8926,84303,Edge/Windows,clinical-workstation
+2027-07-22T10:08:43Z,10.110.10.128,f322a39,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,2827,183748,Edge/Windows,clinical-workstation
+2027-07-22T12:55:31Z,10.110.10.98,d46f174,CONNECT,https,cdn.harborline6.example,-,200,allowed,news,1317,19411,Edge/Windows,clinical-workstation
+2027-07-22T13:08:27Z,10.110.10.53,c6fdd96,CONNECT,https,www.baypointrentals.example,-,200,allowed,travel,1256,72922,Edge/Windows,clinical-workstation
+2027-07-22T13:23:02Z,10.110.30.91,5344602,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,3762,30131,Edge/Windows,clinical-workstation
+2027-07-22T13:33:23Z,10.110.10.125,98431ed,CONNECT,https,www.gulfpathology.example,-,200,allowed,business,8683,186462,Edge/Windows,clinical-workstation
+2027-07-22T14:21:36Z,10.110.30.58,ed29896,CONNECT,https,www.brazospathology.example,-,200,allowed,business,3443,121831,Chrome/Windows,clinical-workstation
+2027-07-22T14:30:46Z,10.110.10.65,efd4fc8,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,3344,71568,Chrome/Windows,clinical-workstation
+2027-07-22T14:34:33Z,10.110.30.55,5e87d6e,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,2907,19573,Edge/Windows,clinical-workstation
+2027-07-22T14:46:57Z,10.110.10.128,280fc51,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,5688,19316,Edge/Windows,clinical-workstation
+2027-07-22T14:49:47Z,10.110.10.119,cd834f8,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,1441,104834,Firefox/Windows,clinical-workstation
+2027-07-22T15:04:22Z,10.110.30.52,4a3dc61,CONNECT,https,www.streamvideo-cdn.net,-,403,blocked,streaming media,350,1217,Edge/Windows,category-denied
+2027-07-22T16:11:40Z,10.110.30.97,d9ffb57,CONNECT,https,www.brazossigns.example,-,200,allowed,business,1001,111072,Edge/Windows,clinical-workstation
+2027-07-22T16:36:57Z,10.110.10.44,628aa82,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,845,1410,Edge/Windows,category-denied
+2027-07-22T16:49:59Z,10.110.10.128,280fc51,CONNECT,https,www.flourbluffdialysis.example,-,200,allowed,business,2287,192709,Edge/Windows,clinical-workstation
+2027-07-22T16:54:49Z,10.110.30.73,32fb2c3,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,2641,49394,Chrome/Windows,clinical-workstation
+2027-07-22T17:04:44Z,10.110.10.50,2313af1,GET,http,www.rockportcardiology.example,/index.html,200,allowed,business,3974,66783,Edge/Windows,clinical-workstation
+2027-07-22T17:18:45Z,10.110.10.68,3039175,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,2731,42073,Edge/Windows,clinical-workstation
+2027-07-22T17:23:44Z,10.110.10.56,1d3de39,CONNECT,https,sso-login.harborline6.example,-,200,allowed,news,6521,52341,Edge/Windows,clinical-workstation
+2027-07-22T17:53:52Z,10.110.30.52,4a3dc61,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,3107,64703,Edge/Windows,clinical-workstation
+2027-07-22T18:48:22Z,10.110.10.77,88384b9,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,9581,115340,Edge/Windows,clinical-workstation
+2027-07-22T19:28:34Z,10.110.10.107,8a8d925,CONNECT,https,www-2.bayside-ledger.example,-,200,allowed,news,3204,53874,Chrome/Windows,clinical-workstation
+2027-07-22T19:37:44Z,10.110.10.56,1d3de39,CONNECT,https,files.svc-portal-cdn.example,-,200,allowed,uncategorised,8359,159250,Edge/Windows,clinical-workstation
+2027-07-22T19:42:35Z,10.110.30.49,006445b,CONNECT,https,www.mustanganesthesia.example,-,200,allowed,business,3670,110305,Edge/Windows,clinical-workstation
+2027-07-22T20:10:46Z,10.110.30.82,496a297,CONNECT,https,www.socialfeed-img.com,-,403,blocked,social media,645,944,Edge/Windows,category-denied
+2027-07-22T20:22:11Z,10.110.30.43,3f606b1,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2653,24059,Chrome/Windows,clinical-workstation
+2027-07-22T20:45:08Z,10.110.10.110,95939ff,CONNECT,https,www.packagetracker-api.net,-,502,allowed,business,4044,391,Edge/Windows,clinical-workstation
+2027-07-22T21:07:31Z,10.110.30.85,1772e2d,CONNECT,https,www.harborsystems.example,-,200,allowed,business,1762,49141,Edge/Windows,clinical-workstation
+2027-07-22T21:11:45Z,10.110.10.41,-,GET,http,api.certstatus-ocsp.net,/pki/b540cb.crl,200,allowed,software updates,3190,11293,-,clinical-workstation
+2027-07-22T21:27:47Z,10.110.30.94,85f6713,CONNECT,https,www.brazospathology.example,-,200,allowed,business,4227,106487,Edge/Windows,clinical-workstation
+2027-07-22T21:34:09Z,10.110.10.56,1d3de39,CONNECT,https,sso-login.harborline6.example,-,200,allowed,news,4133,16022,Edge/Windows,clinical-workstation
+2027-07-22T21:37:58Z,10.110.10.125,34c40eb,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,4291,145348,Edge/Windows,clinical-workstation
+2027-07-22T21:41:55Z,10.110.10.71,0948284,CONNECT,https,www.gulf-coast-catering.example,-,200,allowed,uncategorised,6252,67513,Chrome/Windows,clinical-workstation
+2027-07-22T22:06:48Z,10.110.10.116,69aab85,CONNECT,https,auth-prod.storm-prep-guides.org,-,200,allowed,weather,5396,51832,Edge/Windows,clinical-workstation
+2027-07-22T22:14:07Z,10.110.10.104,01778ab,CONNECT,https,static.school-district-cc.org,-,200,allowed,education,2856,49602,Chrome/Windows,clinical-workstation
+2027-07-22T22:23:10Z,10.110.10.47,3456206,CONNECT,https,www.baypointrentals.example,-,200,allowed,travel,6810,42713,Edge/Windows,clinical-workstation
+2027-07-22T22:36:19Z,10.110.30.64,cc3b53a,CONNECT,https,forms.event-signup-sheets.example,-,200,allowed,uncategorised,4450,179803,Edge/Windows,clinical-workstation
+2027-07-22T23:51:38Z,10.110.30.61,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,3244,142403,-,clinical-workstation
+2027-07-23T00:26:59Z,10.110.10.122,6a7be7f,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,2837,117406,Edge/Windows,clinical-workstation
+2027-07-23T01:00:49Z,10.110.10.65,7c8fe37,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,2752,57167,Edge/Windows,clinical-workstation
+2027-07-23T01:04:55Z,10.110.30.76,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,840,21958,-,clinical-workstation
+2027-07-23T01:58:26Z,10.110.10.68,91e6976,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,2773,122247,Edge/Windows,clinical-workstation
+2027-07-23T03:40:57Z,10.110.30.52,-,CONNECT,https,static.ntp-pool-public.org,-,200,allowed,software updates,2203,154449,-,clinical-workstation
+2027-07-23T03:48:40Z,10.110.10.71,b931fc2,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,3653,105667,Edge/Windows,clinical-workstation
+2027-07-23T04:13:15Z,10.110.10.116,8947914,CONNECT,https,web-portal.searchindex-api.com,-,200,allowed,search engines,5241,67049,Chrome/Windows,clinical-workstation
+2027-07-23T05:07:38Z,10.110.10.119,2f7901e,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,5803,94716,Firefox/Windows,clinical-workstation
+2027-07-23T06:07:12Z,10.110.10.101,bd776b2,CONNECT,https,www.packagetracker-api.net,-,200,allowed,business,4966,29965,Edge/Windows,clinical-workstation
+2027-07-23T07:42:14Z,10.110.10.98,9e5d48f,CONNECT,https,forms.event-signup-sheets.example,-,200,allowed,uncategorised,3021,70997,Edge/Windows,clinical-workstation
+2027-07-23T07:54:27Z,10.110.10.56,7aba79f,CONNECT,https,api-gw.cloudstorage-sync.com,-,200,allowed,online storage,1641,64089,Edge/Windows,clinical-workstation
+2027-07-23T08:27:01Z,10.110.10.101,33c2b77,CONNECT,https,login.docsign-flow.com,-,200,allowed,online storage,3493,118849,Edge/Windows,clinical-workstation
+2027-07-23T08:37:41Z,10.110.10.83,4902188,CONNECT,https,www.brazossigns.example,-,200,allowed,business,4522,84212,Edge/Windows,clinical-workstation
+2027-07-23T08:49:25Z,10.110.30.67,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,2854,73616,-,clinical-workstation
+2027-07-23T08:56:58Z,10.110.30.49,-,GET,http,www.certstatus-ocsp.net,/v3/check?id=621006a64c,200,allowed,software updates,6292,345997,-,clinical-workstation
+2027-07-23T10:33:25Z,10.110.10.71,-,GET,http,static.telemetry-osvendor.com,/static/027ea3f.js,302,allowed,software updates,768,529,-,clinical-workstation
+2027-07-23T10:48:07Z,10.110.10.110,5b45a3f,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,3510,21691,Edge/Windows,clinical-workstation
+2027-07-23T11:36:05Z,10.110.10.71,975577e,CONNECT,https,www.flourblufftires.example,-,200,allowed,shopping,4986,127819,Chrome/Windows,clinical-workstation
+2027-07-23T12:28:00Z,10.110.10.98,9e5d48f,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,1097,27741,Edge/Windows,clinical-workstation
+2027-07-23T12:36:50Z,10.110.10.113,aaf0c97,CONNECT,https,web-portal.searchindex-api.com,-,200,allowed,search engines,1148,49427,Edge/Windows,clinical-workstation
+2027-07-23T12:56:51Z,10.110.10.92,3866bac,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,995,27406,Edge/Windows,clinical-workstation
+2027-07-23T12:58:27Z,10.110.10.80,2216701,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,5387,162366,Edge/Windows,clinical-workstation
+2027-07-23T13:30:28Z,10.110.10.83,781c111,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,4192,84574,Edge/Windows,clinical-workstation
+2027-07-23T13:47:38Z,10.110.30.85,1772e2d,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,1631,56125,Chrome/Windows,clinical-workstation
+2027-07-23T13:53:11Z,10.110.30.64,cc3b53a,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,8136,327113,Edge/Windows,clinical-workstation
+2027-07-23T14:00:31Z,10.110.30.85,1772e2d,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,4451,77891,Chrome/Windows,clinical-workstation
+2027-07-23T14:08:46Z,10.110.30.88,d5f4b99,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,2215,112850,Edge/Windows,clinical-workstation
+2027-07-23T14:22:18Z,10.110.30.79,d99e6c0,CONNECT,https,www.harborrehab.example,-,200,allowed,business,768,58320,Edge/Windows,clinical-workstation
+2027-07-23T15:16:52Z,10.110.10.50,-,GET,http,sig.corvid-security-cloud.example,/updates/bbf38/manifest.xml,200,allowed,software updates,3308,123911,-,clinical-workstation
+2027-07-23T15:25:43Z,10.110.10.56,1acb92c,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,999,131383,Edge/Windows,clinical-workstation
+2027-07-23T15:57:26Z,10.110.30.64,cc3b53a,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,7943,77171,Edge/Windows,clinical-workstation
+2027-07-23T16:10:19Z,10.110.30.52,4a3dc61,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2730,98672,Edge/Windows,clinical-workstation
+2027-07-23T16:27:15Z,10.110.10.89,3493703,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,8128,147318,Edge/Windows,clinical-workstation
+2027-07-23T16:33:45Z,10.110.30.76,0a1ce9c,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,3108,119158,Edge/Windows,clinical-workstation
+2027-07-23T16:41:02Z,10.110.10.104,064018b,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,5446,50610,Edge/Windows,clinical-workstation
+2027-07-23T16:45:25Z,10.110.10.71,975577e,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,3752,64847,Chrome/Windows,clinical-workstation
+2027-07-23T17:04:23Z,10.110.10.107,8e28ee2,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,6188,160070,Edge/Windows,clinical-workstation
+2027-07-23T17:12:02Z,10.110.30.64,cc3b53a,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,6066,56955,Edge/Windows,clinical-workstation
+2027-07-23T17:13:11Z,10.110.10.44,7681f18,CONNECT,https,www.drug-reference.example,-,200,allowed,health,669,64748,Edge/Windows,clinical-workstation
+2027-07-23T17:21:49Z,10.110.10.98,9e5d48f,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,4419,110222,Edge/Windows,clinical-workstation
+2027-07-23T17:24:46Z,10.110.30.88,d5f4b99,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,1968,85149,Edge/Windows,clinical-workstation
+2027-07-23T17:50:09Z,10.110.10.98,9e5d48f,CONNECT,https,www.gulf-coast-catering.example,-,200,allowed,uncategorised,1638,152829,Edge/Windows,clinical-workstation
+2027-07-23T17:52:27Z,10.110.10.71,975577e,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,3318,78237,Chrome/Windows,clinical-workstation
+2027-07-23T18:20:08Z,10.110.10.71,975577e,CONNECT,https,www.brazossigns.example,-,200,allowed,business,4237,79993,Edge/Windows,clinical-workstation
+2027-07-23T18:23:33Z,10.110.30.70,60fa350,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,2084,170450,Firefox/Windows,clinical-workstation
+2027-07-23T18:33:40Z,10.110.30.49,006445b,CONNECT,https,login.docsign-flow.com,-,200,allowed,online storage,7836,144381,Edge/Windows,clinical-workstation
+2027-07-23T18:34:29Z,10.110.10.83,c43321e,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,8856,98128,Edge/Windows,clinical-workstation
+2027-07-23T19:14:51Z,10.110.10.107,8e28ee2,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,3195,226724,Edge/Windows,clinical-workstation
+2027-07-23T19:25:08Z,10.110.30.64,cc3b53a,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,2638,137872,Edge/Windows,clinical-workstation
+2027-07-23T19:37:20Z,10.110.30.88,-,GET,http,api.certstatus-ocsp.net,/images/0e6956.png,200,allowed,software updates,3092,119280,-,clinical-workstation
+2027-07-23T19:53:36Z,10.110.30.97,d9ffb57,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,4092,52210,Edge/Windows,clinical-workstation
+2027-07-23T19:59:49Z,10.110.30.67,c6f8149,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,1937,6283,Edge/Windows,clinical-workstation
+2027-07-23T20:16:04Z,10.110.10.59,c632de6,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,2223,177355,Edge/Windows,clinical-workstation
+2027-07-23T20:18:49Z,10.110.10.41,960b16a,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,5066,91255,Edge/Windows,clinical-workstation
+2027-07-23T20:32:16Z,10.110.10.65,568ebec,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,649,91453,Edge/Windows,clinical-workstation
+2027-07-23T21:46:34Z,10.110.10.65,568ebec,CONNECT,https,www.streamvideo-cdn.net,-,403,blocked,streaming media,340,1381,Edge/Windows,category-denied
+2027-07-23T21:46:48Z,10.110.30.46,ee3176e,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,4462,57221,Chrome/Windows,clinical-workstation
+2027-07-23T22:52:54Z,10.110.10.113,aaf0c97,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,4422,214045,Edge/Windows,clinical-workstation
+2027-07-23T23:16:18Z,10.110.10.104,064018b,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,2080,201129,Edge/Windows,clinical-workstation
+2027-07-23T23:54:08Z,10.110.10.110,b6612ec,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,4162,127489,Edge/Windows,clinical-workstation
+2027-07-24T01:24:03Z,10.110.10.122,a8abd85,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1771,150067,Chrome/Windows,clinical-workstation
+2027-07-24T01:46:59Z,10.110.10.77,487d902,CONNECT,https,www.saltgrass-clinic.example,-,200,allowed,health,4412,122684,Edge/Windows,clinical-workstation
+2027-07-24T01:51:09Z,10.110.10.62,9dba085,CONNECT,https,www.gulfpathology.example,-,200,allowed,business,1472,120827,Edge/Windows,clinical-workstation
+2027-07-24T01:57:37Z,10.110.10.104,064018b,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,542,156620,Edge/Windows,clinical-workstation
+2027-07-24T02:32:39Z,10.110.10.92,5f3696a,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3613,34292,Edge/Windows,clinical-workstation
+2027-07-24T02:51:40Z,10.110.10.65,8b77bf6,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,1677,80393,Chrome/Windows,clinical-workstation
+2027-07-24T03:06:39Z,10.110.10.65,8b77bf6,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,3430,60020,Chrome/Windows,clinical-workstation
+2027-07-24T03:21:04Z,10.110.10.68,cf83fce,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,1525,209431,Edge/Windows,clinical-workstation
+2027-07-24T03:27:58Z,10.110.10.50,ad56e17,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2229,13242,Edge/Windows,clinical-workstation
+2027-07-24T04:07:05Z,10.110.10.71,b931fc2,CONNECT,https,www.deltaimaging.example,-,200,allowed,business,2384,19621,Edge/Windows,clinical-workstation
+2027-07-24T04:23:23Z,10.110.10.50,ad56e17,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,2019,53515,Edge/Windows,clinical-workstation
+2027-07-24T05:14:58Z,10.110.10.101,c1f7ef6,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,453,36149,Edge/Windows,clinical-workstation
+2027-07-24T05:21:09Z,10.110.10.101,c1f7ef6,CONNECT,https,www-east.harborline6.example,-,200,allowed,news,1325,46045,Edge/Windows,clinical-workstation
+2027-07-24T05:30:59Z,10.110.10.107,19ca7d0,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,5234,109829,Edge/Windows,clinical-workstation
+2027-07-24T05:48:39Z,10.110.10.41,ef22f11,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2530,114964,Edge/Windows,clinical-workstation
+2027-07-24T05:56:42Z,10.110.250.183,742db5f,CONNECT,https,www.oleanderems.example,-,200,allowed,business,4442,73949,Edge/Windows,clinical-workstation
+2027-07-24T06:10:18Z,10.110.10.119,5f98e62,CONNECT,https,www.oleanderems.example,-,200,allowed,business,1780,23030,Chrome/Windows,clinical-workstation
+2027-07-24T06:38:55Z,10.110.250.188,a8abd85,CONNECT,https,login.docsign-flow.com,-,200,allowed,online storage,4494,39656,Edge/Windows,clinical-workstation
+2027-07-24T06:49:28Z,10.110.10.104,064018b,CONNECT,https,forms.event-signup-sheets.example,-,200,allowed,uncategorised,2162,34032,Edge/Windows,clinical-workstation
+2027-07-24T07:36:04Z,10.110.10.101,-,CONNECT,https,static.ntp-pool-public.org,-,200,allowed,software updates,2195,118003,-,clinical-workstation
+2027-07-24T07:50:09Z,10.110.30.61,-,GET,http,static.osupdates-delivery.com,/content/cea2f2b3.cab,200,allowed,software updates,929,33930,-,clinical-workstation
+2027-07-24T08:00:55Z,10.110.10.59,b8500ea,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2525,91121,Edge/Windows,clinical-workstation
+2027-07-24T08:11:37Z,10.110.10.122,5800f47,CONNECT,https,login.cloudstorage-sync.com,-,200,allowed,online storage,4347,50016,Chrome/Windows,clinical-workstation
+2027-07-24T08:13:16Z,10.110.10.92,4f30647,CONNECT,https,www.baypointems.example,-,200,allowed,business,7278,149801,Edge/Windows,clinical-workstation
+2027-07-24T08:56:19Z,10.110.10.68,15f7720,CONNECT,https,www.prairieems.example,-,200,allowed,business,1940,31149,Chrome/Windows,clinical-workstation
+2027-07-24T09:07:54Z,10.110.10.47,f6ae3a9,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,4148,69121,Firefox/Windows,clinical-workstation
+2027-07-24T09:11:34Z,10.110.10.122,5800f47,CONNECT,https,static.training-lms.net,-,200,allowed,education,1508,23408,Chrome/Windows,clinical-workstation
+2027-07-24T09:19:44Z,10.110.10.47,f6ae3a9,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2141,55278,Firefox/Windows,clinical-workstation
+2027-07-24T10:30:33Z,10.110.10.122,5800f47,CONNECT,https,static.cctexas-services.org,-,200,allowed,government,2409,95084,Chrome/Windows,clinical-workstation
+2027-07-24T10:38:11Z,10.110.10.65,568ebec,CONNECT,https,web-portal.geomaps-tiles.net,-,502,allowed,content delivery,5706,172,Edge/Windows,clinical-workstation
+2027-07-24T11:00:24Z,10.110.10.59,b8500ea,CONNECT,https,static.training-lms.net,-,200,allowed,education,9667,39348,Edge/Windows,clinical-workstation
+2027-07-24T11:07:26Z,10.110.10.74,7e4cb54,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3925,108189,Edge/Windows,clinical-workstation
+2027-07-24T11:27:21Z,10.110.10.77,487d902,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,3747,53835,Edge/Windows,clinical-workstation
+2027-07-24T11:30:17Z,10.110.10.47,f6ae3a9,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,3378,59257,Firefox/Windows,clinical-workstation
+2027-07-24T11:49:47Z,10.110.10.74,84bbdaf,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,475,191409,Edge/Windows,clinical-workstation
+2027-07-24T11:58:17Z,10.110.10.41,9e51af5,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,8753,103939,Chrome/Windows,clinical-workstation
+2027-07-24T12:04:17Z,10.110.10.47,f6ae3a9,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,2202,60641,Firefox/Windows,clinical-workstation
+2027-07-24T12:06:09Z,10.110.10.86,b88d2d7,CONNECT,https,www.nueces-imaging.example,-,200,allowed,business,3791,108799,Edge/Windows,clinical-workstation
+2027-07-24T12:34:18Z,10.110.10.104,516dd1a,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2614,36501,Edge/Windows,clinical-workstation
+2027-07-24T12:42:40Z,10.110.10.59,b8500ea,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1325,83678,Edge/Windows,clinical-workstation
+2027-07-24T13:24:03Z,10.110.10.86,b88d2d7,CONNECT,https,sso-login.streamvideo-cdn.net,-,403,blocked,streaming media,468,918,Edge/Windows,category-denied
+2027-07-24T13:25:43Z,10.110.10.92,5f3696a,CONNECT,https,www.gulfpathology.example,-,200,allowed,business,6940,174851,Edge/Windows,clinical-workstation
+2027-07-24T13:37:54Z,10.110.10.89,dd2a440,CONNECT,https,www.flourbluffdialysis.example,-,200,allowed,business,4187,36957,Edge/Windows,clinical-workstation
+2027-07-24T13:45:48Z,10.110.10.98,9e5d48f,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,7085,66628,Edge/Windows,clinical-workstation
+2027-07-24T14:33:42Z,10.110.10.83,c43321e,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,8092,104407,Edge/Windows,clinical-workstation
+2027-07-24T15:33:05Z,10.110.10.104,516dd1a,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,3203,223489,Edge/Windows,clinical-workstation
+2027-07-24T15:53:38Z,10.110.10.44,-,GET,http,sig.corvid-security-cloud.example,/content/7954376f.cab,302,allowed,software updates,2485,507,-,clinical-workstation
+2027-07-24T15:56:41Z,10.110.10.53,c6fdd96,GET,http,auth-prod.airline-bookings.net,/favicon.ico,200,allowed,travel,1854,66493,Edge/Windows,clinical-workstation
+2027-07-24T16:02:03Z,10.110.10.104,516dd1a,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2231,119817,Edge/Windows,clinical-workstation
+2027-07-24T16:20:13Z,10.110.10.92,5f3696a,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,3269,109858,Edge/Windows,clinical-workstation
+2027-07-24T16:21:04Z,10.110.10.71,80cc049,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,1610,83191,Edge/Windows,clinical-workstation
+2027-07-24T16:28:26Z,10.110.10.125,0a9f2f9,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1344,69635,Edge/Windows,clinical-workstation
+2027-07-24T16:37:33Z,10.110.10.101,33c2b77,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,3647,21238,Edge/Windows,clinical-workstation
+2027-07-24T17:45:02Z,10.110.10.53,-,GET,http,api.certstatus-ocsp.net,/content/615ae3af.cab,304,allowed,software updates,4048,299,-,clinical-workstation
+2027-07-24T17:46:05Z,10.110.10.107,086e100,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,6556,127926,Chrome/Windows,clinical-workstation
+2027-07-24T18:01:38Z,10.110.10.89,3493703,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,4216,105780,Edge/Windows,clinical-workstation
+2027-07-24T19:02:10Z,10.110.10.89,3493703,CONNECT,https,www-2.bayside-ledger.example,-,200,allowed,news,4526,142988,Edge/Windows,clinical-workstation
+2027-07-24T19:13:52Z,10.110.10.50,d9fff6c,CONNECT,https,www.mesa-radiology.example,-,200,allowed,business,3943,192166,Edge/Windows,clinical-workstation
+2027-07-24T19:18:49Z,10.110.30.61,2385ce9,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,845,61822,Edge/Windows,clinical-workstation
+2027-07-24T19:46:13Z,10.110.10.71,e41b404,CONNECT,https,login.cloudstorage-sync.com,-,200,allowed,online storage,3141,121135,Chrome/Windows,clinical-workstation
+2027-07-24T19:56:12Z,10.110.10.77,88384b9,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,2227,209381,Edge/Windows,clinical-workstation
+2027-07-24T20:26:40Z,10.110.10.83,a875734,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,2511,104785,Edge/Windows,clinical-workstation
+2027-07-24T20:29:08Z,10.110.10.68,3039175,CONNECT,https,api.fleetfuel-cards.com,-,200,allowed,finance,2522,215526,Edge/Windows,clinical-workstation
+2027-07-24T20:29:59Z,10.110.10.89,3493703,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,1654,28219,Edge/Windows,clinical-workstation
+2027-07-24T21:31:57Z,10.110.10.65,fcda746,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,6912,24414,Chrome/Windows,clinical-workstation
+2027-07-24T21:33:12Z,10.110.10.128,f322a39,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,4168,26235,Edge/Windows,clinical-workstation
+2027-07-24T21:55:05Z,10.110.10.92,5f3696a,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,2406,4096,Edge/Windows,clinical-workstation
+2027-07-24T22:09:22Z,10.110.30.79,-,GET,http,static.osupdates-delivery.com,/v1/check?id=323372e7e5,404,allowed,software updates,3560,22102,-,clinical-workstation
+2027-07-24T22:31:54Z,10.110.10.83,-,GET,http,api.certstatus-ocsp.net,/v1/check?id=1c6de364f8,200,allowed,software updates,3561,20428,-,clinical-workstation
+2027-07-24T23:16:42Z,10.110.10.92,5f3696a,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3531,63842,Edge/Windows,clinical-workstation
+2027-07-24T23:33:50Z,10.110.10.80,2216701,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,5796,60821,Edge/Windows,clinical-workstation
+2027-07-24T23:46:42Z,10.110.10.77,7ea76fe,CONNECT,https,www.southtexlegal.example,-,200,allowed,business,4698,93276,Edge/Windows,clinical-workstation
+2027-07-24T23:49:14Z,10.110.10.56,1d3de39,CONNECT,https,www.rockportcardiology.example,-,200,allowed,business,2658,62692,Edge/Windows,clinical-workstation
+2027-07-25T00:09:02Z,10.110.30.73,-,GET,http,cdn.certstatus-ocsp.net,/,302,allowed,software updates,2432,388,-,clinical-workstation
+2027-07-25T03:13:01Z,10.110.10.128,280fc51,CONNECT,https,labs.reference-diagnostics.example,-,200,allowed,health,7109,117436,Edge/Windows,clinical-workstation
+2027-07-25T04:26:32Z,10.110.10.65,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,977,47899,-,clinical-workstation
+2027-07-25T05:06:44Z,10.110.10.71,e41b404,CONNECT,https,api-v2.nueces-county-tx.org,-,200,allowed,government,2681,230986,Chrome/Windows,clinical-workstation
+2027-07-25T05:09:04Z,10.110.10.59,ea46839,CONNECT,https,login.helpdesk-tickets.com,-,200,allowed,business software,3512,72562,Edge/Windows,clinical-workstation
+2027-07-25T05:31:26Z,10.110.10.128,280fc51,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,4972,131500,Edge/Windows,clinical-workstation
+2027-07-25T05:35:54Z,10.110.10.122,-,GET,http,sig.corvid-security-cloud.example,/,200,allowed,software updates,3579,27723,-,clinical-workstation
+2027-07-25T08:08:21Z,10.110.10.101,33c2b77,CONNECT,https,api-v2.nueces-county-tx.org,-,200,allowed,government,5087,15443,Edge/Windows,clinical-workstation
+2027-07-25T08:09:35Z,10.110.10.101,33c2b77,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,3173,84634,Edge/Windows,clinical-workstation
+2027-07-25T08:36:23Z,10.110.10.80,19768f8,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,4618,4494,Edge/Windows,clinical-workstation
+2027-07-25T08:52:02Z,10.110.10.47,f6ae3a9,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2426,108862,Firefox/Windows,clinical-workstation
+2027-07-25T08:53:48Z,10.110.30.97,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,3361,17798,-,clinical-workstation
+2027-07-25T10:31:33Z,10.110.10.44,7681f18,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,6204,43526,Edge/Windows,clinical-workstation
+2027-07-25T11:14:12Z,10.110.10.65,8b77bf6,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,4723,36413,Chrome/Windows,clinical-workstation
+2027-07-25T12:14:07Z,10.110.10.101,33c2b77,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,3548,112588,Edge/Windows,clinical-workstation
+2027-07-25T12:15:55Z,10.110.10.83,781c111,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,1353,151158,Edge/Windows,clinical-workstation
+2027-07-25T13:47:33Z,10.110.10.80,0551004,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,6314,110375,Edge/Windows,clinical-workstation
+2027-07-25T15:02:19Z,10.110.10.68,-,CONNECT,https,www.browser-safecheck.net,-,200,allowed,software updates,6257,61062,-,clinical-workstation
+2027-07-25T15:52:47Z,10.110.10.119,6e67858,CONNECT,https,sso-login.streamvideo-cdn.net,-,403,blocked,streaming media,332,1179,Edge/Windows,category-denied
+2027-07-25T16:33:15Z,10.110.10.86,141e36f,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,2902,80776,Edge/Windows,clinical-workstation
+2027-07-25T16:35:22Z,10.110.10.116,6df88c9,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,2861,31594,Edge/Windows,clinical-workstation
+2027-07-25T16:51:18Z,10.110.10.86,141e36f,CONNECT,https,static.school-district-cc.org,-,200,allowed,education,3984,33491,Edge/Windows,clinical-workstation
+2027-07-25T17:10:48Z,10.110.10.86,141e36f,CONNECT,https,www.prairieems.example,-,200,allowed,business,3652,75818,Edge/Windows,clinical-workstation
+2027-07-25T17:45:42Z,10.110.10.50,226459a,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,1305,155580,Chrome/Windows,clinical-workstation
+2027-07-25T17:48:30Z,10.110.10.50,226459a,CONNECT,https,www.novatelecom.example,-,200,allowed,business,2374,33106,Chrome/Windows,clinical-workstation
+2027-07-25T18:46:48Z,10.110.30.55,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,7251,6497,-,clinical-workstation
+2027-07-25T18:54:20Z,10.110.10.80,6a4be26,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,4437,103532,Edge/Windows,clinical-workstation
+2027-07-25T19:13:05Z,10.110.10.110,95939ff,CONNECT,https,www.granitemedia.example,-,200,allowed,news,344,99101,Edge/Windows,clinical-workstation
+2027-07-25T19:50:23Z,10.110.10.47,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,1719,29686,-,clinical-workstation
+2027-07-25T19:57:56Z,10.110.10.53,7e19960,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,1240,27353,Edge/Windows,clinical-workstation
+2027-07-25T19:59:28Z,10.110.10.59,ea46839,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,3056,44287,Edge/Windows,clinical-workstation
+2027-07-25T20:25:53Z,10.110.30.73,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,1874,138628,-,clinical-workstation
+2027-07-25T20:58:57Z,10.110.10.119,cd834f8,GET,http,pacs-view.teleradiology-group.example,/favicon.ico,200,allowed,health,1538,59917,Chrome/Windows,clinical-workstation
+2027-07-25T21:12:57Z,10.110.10.74,ae375ab,CONNECT,https,www.rockportcardiology.example,-,200,allowed,business,2334,46580,Edge/Windows,clinical-workstation
+2027-07-25T21:27:13Z,10.110.10.110,5b45a3f,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,2920,97758,Edge/Windows,clinical-workstation
+2027-07-25T21:45:46Z,10.110.10.56,2748c54,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,5854,79031,Chrome/Windows,clinical-workstation
+2027-07-25T22:05:47Z,10.110.10.89,67d36f6,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,2825,57278,Chrome/Windows,clinical-workstation
+2027-07-25T22:38:51Z,10.110.10.113,1f16634,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,4983,51449,Edge/Windows,clinical-workstation
+2027-07-25T22:51:13Z,10.110.10.95,-,GET,http,static.osupdates-delivery.com,/index.html,200,allowed,software updates,3043,63243,-,clinical-workstation
+2027-07-25T22:53:09Z,10.110.250.219,85f6713,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,4738,41448,Edge/Windows,clinical-workstation
+2027-07-26T00:08:02Z,10.110.10.62,-,GET,http,sig.corvid-security-cloud.example,/robots.txt,200,allowed,software updates,1650,197381,-,clinical-workstation
+2027-07-26T00:49:42Z,10.110.10.68,1146d14,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1167,17314,Chrome/Windows,clinical-workstation
+2027-07-26T01:06:23Z,10.110.10.80,6a4be26,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,1390,85910,Edge/Windows,clinical-workstation
+2027-07-26T01:47:25Z,10.110.10.116,53af7d5,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,1523,94560,Edge/Windows,clinical-workstation
+2027-07-26T02:23:40Z,10.110.10.122,d9161cf,CONNECT,https,liveoak-oncology.example,-,200,allowed,business,3585,219489,Edge/Windows,clinical-workstation
+2027-07-26T02:23:42Z,10.110.10.101,981d0ad,CONNECT,https,www.calichesecurity.example,-,200,allowed,business,1915,73827,Edge/Windows,clinical-workstation
+2027-07-26T02:30:43Z,10.110.10.107,-,GET,http,sig.corvid-security-cloud.example,/ocsp/6c04f01d4b16,304,allowed,software updates,5904,553,-,clinical-workstation
+2027-07-26T02:39:42Z,10.110.10.56,064c976,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,745,115814,Edge/Windows,clinical-workstation
+2027-07-26T02:55:21Z,10.110.10.113,8ad3f2a,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,4471,27046,Chrome/Windows,clinical-workstation
+2027-07-26T02:59:56Z,10.110.10.59,c632de6,GET,http,www.truckrental-fleet.com,/updates/f2c43/manifest.xml,200,allowed,shopping,1855,135809,Edge/Windows,clinical-workstation
+2027-07-26T03:50:14Z,10.110.10.113,8ad3f2a,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,5981,47114,Chrome/Windows,clinical-workstation
+2027-07-26T04:18:00Z,10.110.10.125,5551be5,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,4944,98708,Edge/Windows,clinical-workstation
+2027-07-26T04:58:57Z,10.110.10.110,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,6004,57655,-,clinical-workstation
+2027-07-26T04:58:57Z,10.110.10.92,e3f8818,CONNECT,https,www.gulf-coast-catering.example,-,200,allowed,uncategorised,4027,111049,Edge/Windows,clinical-workstation
+2027-07-26T05:37:59Z,10.110.10.71,e41b404,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2971,57451,Chrome/Windows,clinical-workstation
+2027-07-26T06:11:14Z,10.110.10.50,2313af1,CONNECT,https,sso-login.streamvideo-cdn.net,-,403,blocked,streaming media,718,1413,Edge/Windows,category-denied
+2027-07-26T06:16:40Z,10.110.10.122,d9161cf,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3963,122139,Edge/Windows,clinical-workstation
+2027-07-26T06:18:29Z,10.110.10.59,c632de6,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,2636,52492,Edge/Windows,clinical-workstation
+2027-07-26T07:02:25Z,10.110.10.95,5c0755a,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,4388,14094,Edge/Windows,clinical-workstation
+2027-07-26T07:16:36Z,10.110.10.68,-,GET,http,www.osupdates-delivery.com,/pki/e9bd35.crl,200,allowed,software updates,5832,103941,-,clinical-workstation
+2027-07-26T08:05:11Z,10.110.10.47,026f65f,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,2517,88463,Edge/Windows,clinical-workstation
+2027-07-26T08:11:56Z,10.110.10.44,628aa82,CONNECT,https,rx.eprescribe-network.example,-,200,allowed,health,6206,37499,Edge/Windows,clinical-workstation
+2027-07-26T08:22:01Z,10.110.10.107,8e28ee2,CONNECT,https,www-east.harborline6.example,-,200,allowed,news,4707,208902,Edge/Windows,clinical-workstation
+2027-07-26T09:01:49Z,10.110.10.50,ee3b345,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,1549,25721,Edge/Windows,clinical-workstation
+2027-07-26T10:12:53Z,10.110.10.89,eace556,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2772,316309,Edge/Windows,clinical-workstation
+2027-07-26T10:49:02Z,10.110.30.82,-,POST,http,www.browser-safecheck.net,/static/60925e1.js,200,allowed,software updates,4755,45353,-,clinical-workstation
+2027-07-26T11:33:40Z,10.110.10.110,5b45a3f,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,1662,63146,Edge/Windows,clinical-workstation
+2027-07-26T12:00:34Z,10.110.10.113,99b2b67,CONNECT,https,www.baypointrentals.example,-,200,allowed,travel,1871,101196,Edge/Windows,clinical-workstation
+2027-07-26T12:20:57Z,10.110.30.58,ed29896,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,2502,24138,Chrome/Windows,clinical-workstation
+2027-07-26T12:29:03Z,10.110.30.67,c6f8149,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,1260,98925,Chrome/Windows,clinical-workstation
+2027-07-26T12:37:43Z,10.110.30.58,ed29896,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,5924,131355,Chrome/Windows,clinical-workstation
+2027-07-26T12:40:03Z,10.110.30.88,d5f4b99,CONNECT,https,www.harborrehab.example,-,200,allowed,business,2459,38588,Edge/Windows,clinical-workstation
+2027-07-26T12:53:01Z,10.110.10.62,bf14a05,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2945,104266,Edge/Windows,clinical-workstation
+2027-07-26T12:56:54Z,10.110.10.119,3e1fe4a,CONNECT,https,www.alamo-nurse-staffing.example,-,200,allowed,business,6929,221752,Edge/Windows,clinical-workstation
+2027-07-26T13:12:10Z,10.110.10.50,2313af1,CONNECT,https,sso-login.streamvideo-cdn.net,-,403,blocked,streaming media,505,1316,Edge/Windows,category-denied
+2027-07-26T13:12:52Z,10.110.10.116,69aab85,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,11307,139628,Edge/Windows,clinical-workstation
+2027-07-26T13:20:51Z,10.110.30.46,ee3176e,GET,http,api-gw.cloudstorage-sync.com,/content/913cdb2e.cab,304,allowed,online storage,1794,270,Chrome/Windows,clinical-workstation
+2027-07-26T13:26:05Z,10.110.10.77,487d902,GET,http,www.streamvideo-cdn.net,/,403,blocked,streaming media,587,1018,Edge/Windows,category-denied
+2027-07-26T13:50:41Z,10.110.30.67,c6f8149,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,3603,6392,Edge/Windows,clinical-workstation
+2027-07-26T14:07:19Z,10.110.10.86,fdc4b6a,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,5991,43470,Edge/Windows,clinical-workstation
+2027-07-26T14:11:56Z,10.110.10.86,fdc4b6a,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,2667,20551,Edge/Windows,clinical-workstation
+2027-07-26T15:02:44Z,10.110.30.46,ee3176e,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,4808,5708,Chrome/Windows,clinical-workstation
+2027-07-26T15:19:43Z,10.110.30.67,-,CONNECT,https,static.ntp-pool-public.org,-,200,allowed,software updates,6101,38813,-,clinical-workstation
+2027-07-26T15:47:01Z,10.110.30.46,ee3176e,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,3520,117536,Chrome/Windows,clinical-workstation
+2027-07-26T15:52:36Z,10.110.10.95,f9e3699,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,5655,25997,Edge/Windows,clinical-workstation
+2027-07-26T15:57:58Z,10.110.10.56,3a21010,CONNECT,https,www.baypointems.example,-,200,allowed,business,1391,44677,Edge/Windows,clinical-workstation
+2027-07-26T16:22:22Z,10.110.30.70,60fa350,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3681,208612,Firefox/Windows,clinical-workstation
+2027-07-26T16:25:29Z,10.110.10.74,ae375ab,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,2217,91561,Edge/Windows,clinical-workstation
+2027-07-26T16:34:34Z,10.110.30.43,3f606b1,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,2646,66111,Chrome/Windows,clinical-workstation
+2027-07-26T16:50:48Z,10.110.10.122,a8abd85,GET,http,www.nursing-board-tx.example,/images/2253d0.png,301,allowed,government,775,209,Chrome/Windows,clinical-workstation
+2027-07-26T17:27:11Z,10.110.10.47,ae330c2,CONNECT,https,www.coastal-ems.example,-,200,allowed,business,3842,79705,Edge/Windows,clinical-workstation
+2027-07-26T17:27:46Z,10.110.30.43,3f606b1,CONNECT,https,api-v2.nueces-county-tx.org,-,200,allowed,government,3424,71346,Chrome/Windows,clinical-workstation
+2027-07-26T17:39:36Z,10.110.30.55,5e87d6e,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,4229,162437,Edge/Windows,clinical-workstation
+2027-07-26T17:50:18Z,10.110.10.41,9e51af5,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1442,54457,Chrome/Windows,clinical-workstation
+2027-07-26T18:28:01Z,10.110.30.49,006445b,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,3722,136668,Edge/Windows,clinical-workstation
+2027-07-26T19:00:27Z,10.110.10.53,0030016,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,8375,109002,Chrome/Windows,clinical-workstation
+2027-07-26T19:04:18Z,10.110.30.91,5344602,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,5102,228284,Edge/Windows,clinical-workstation
+2027-07-26T19:06:16Z,10.110.10.56,3a21010,CONNECT,https,www.brazossigns.example,-,200,allowed,business,1186,42887,Edge/Windows,clinical-workstation
+2027-07-26T19:06:59Z,10.110.30.61,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,6312,113153,-,clinical-workstation
+2027-07-26T19:07:23Z,10.110.10.116,69aab85,CONNECT,https,api.harborline6.example,-,200,allowed,news,6162,21328,Edge/Windows,clinical-workstation
+2027-07-26T19:11:44Z,10.110.30.76,0a1ce9c,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,2363,32248,Edge/Windows,clinical-workstation
+2027-07-26T19:17:29Z,10.110.30.94,85f6713,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,3441,146143,Edge/Windows,clinical-workstation
+2027-07-26T19:28:11Z,10.110.30.79,d99e6c0,CONNECT,https,www.brazossigns.example,-,200,allowed,business,5001,48873,Edge/Windows,clinical-workstation
+2027-07-26T19:49:15Z,10.110.10.62,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,4535,91383,-,clinical-workstation
+2027-07-26T20:06:19Z,10.110.10.86,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,3648,31950,-,clinical-workstation
+2027-07-26T20:24:46Z,10.110.10.53,0030016,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,1812,46455,Chrome/Windows,clinical-workstation
+2027-07-26T20:39:29Z,10.110.10.62,626d788,CONNECT,https,www.streamvideo-cdn.net,-,403,blocked,streaming media,567,1148,Chrome/Windows,category-denied
+2027-07-26T20:44:28Z,10.110.30.43,3f606b1,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,1442,40613,Chrome/Windows,clinical-workstation
+2027-07-26T20:44:32Z,10.110.10.41,9e51af5,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,3162,122488,Edge/Windows,clinical-workstation
+2027-07-26T20:49:12Z,10.110.10.116,69aab85,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1682,134900,Edge/Windows,clinical-workstation
+2027-07-26T21:08:46Z,10.110.10.116,69aab85,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,8633,40191,Edge/Windows,clinical-workstation
+2027-07-26T22:26:18Z,10.110.10.71,0948284,CONNECT,https,www.orbitpediatrics.example,-,200,allowed,business,1716,97184,Edge/Windows,clinical-workstation
+2027-07-26T23:01:06Z,10.110.10.68,3039175,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,4165,143232,Edge/Windows,clinical-workstation
+2027-07-26T23:04:20Z,10.110.10.101,bd776b2,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,1761,155753,Edge/Windows,clinical-workstation
+2027-07-26T23:15:00Z,10.110.10.92,e3f8818,CONNECT,https,login.docsign-flow.com,-,200,allowed,online storage,1733,156564,Edge/Windows,clinical-workstation
+2027-07-27T00:08:25Z,10.110.10.68,3039175,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2960,9270,Edge/Windows,clinical-workstation
+2027-07-27T00:09:38Z,10.110.10.110,95939ff,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,2885,74830,Edge/Windows,clinical-workstation
+2027-07-27T00:17:08Z,10.110.10.71,975577e,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,759,106925,Chrome/Windows,clinical-workstation
+2027-07-27T00:57:05Z,10.110.10.101,bd776b2,CONNECT,https,www.padreevents.example,-,200,allowed,business,2169,82780,Edge/Windows,clinical-workstation
+2027-07-27T01:57:00Z,10.110.10.107,086e100,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,5298,40078,Chrome/Windows,clinical-workstation
+2027-07-27T02:14:53Z,10.110.10.122,a8abd85,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,8044,41023,Chrome/Windows,clinical-workstation
+2027-07-27T02:22:38Z,10.110.10.56,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,6108,90300,-,clinical-workstation
+2027-07-27T02:35:35Z,10.110.10.128,156d1dc,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,4922,169418,Chrome/Windows,clinical-workstation
+2027-07-27T02:40:12Z,10.110.10.74,14104c6,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,3244,57170,Edge/Windows,clinical-workstation
+2027-07-27T02:58:27Z,10.110.10.119,c61ac3e,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,10338,127441,Edge/Windows,clinical-workstation
+2027-07-27T03:53:56Z,10.110.10.116,49fd038,CONNECT,https,www.cypressimaging.example,-,200,allowed,business,8614,142824,Edge/Windows,clinical-workstation
+2027-07-27T04:59:47Z,10.110.10.56,1acb92c,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,6132,102418,Edge/Windows,clinical-workstation
+2027-07-27T05:35:46Z,10.110.10.77,-,GET,http,static.ntp-pool-public.org,/images/a02ee9.png,200,allowed,software updates,5842,161890,-,clinical-workstation
+2027-07-27T05:57:26Z,10.110.10.77,0f200f8,CONNECT,https,rx.eprescribe-network.example,-,200,allowed,health,1794,55002,Chrome/Windows,clinical-workstation
+2027-07-27T06:57:51Z,10.110.10.71,136d7d2,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,2361,24533,Edge/Windows,clinical-workstation
+2027-07-27T07:59:39Z,10.110.10.128,f322a39,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,1819,40887,Edge/Windows,clinical-workstation
+2027-07-27T09:30:13Z,10.110.10.56,7aba79f,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,4626,170587,Edge/Windows,clinical-workstation
+2027-07-27T11:39:03Z,10.110.10.41,49df599,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,2832,42898,Edge/Windows,clinical-workstation
+2027-07-27T12:41:43Z,10.110.10.92,3866bac,CONNECT,https,static.training-lms.net,-,200,allowed,education,1949,16493,Edge/Windows,clinical-workstation
+2027-07-27T12:59:12Z,10.110.10.80,6a4be26,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,1238,77984,Edge/Windows,clinical-workstation
+2027-07-27T13:26:19Z,10.110.30.40,6537b0a,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2640,149463,Edge/Windows,clinical-workstation
+2027-07-27T13:45:03Z,10.110.30.94,85f6713,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,2540,70815,Edge/Windows,clinical-workstation
+2027-07-27T13:54:50Z,10.110.10.95,-,GET,http,static.browser-safecheck.net,/updates/be608/manifest.xml,200,allowed,software updates,2967,128013,-,clinical-workstation
+2027-07-27T14:12:59Z,10.110.30.97,d9ffb57,CONNECT,https,www.drug-reference.example,-,200,allowed,health,3066,52601,Edge/Windows,clinical-workstation
+2027-07-27T14:13:30Z,10.110.10.98,-,GET,http,sig.corvid-security-cloud.example,/robots.txt,200,allowed,software updates,3123,92330,-,clinical-workstation
+2027-07-27T14:25:45Z,10.110.10.125,962a970,CONNECT,https,www.cloudstorage-sync.com,-,200,allowed,online storage,1885,577956,Edge/Windows,clinical-workstation
+2027-07-27T14:30:27Z,10.110.10.71,e41b404,CONNECT,https,mesaphysicians.example,-,200,allowed,business,4609,92562,Chrome/Windows,clinical-workstation
+2027-07-27T15:07:55Z,10.110.30.94,85f6713,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,2206,155055,Edge/Windows,clinical-workstation
+2027-07-27T15:27:21Z,10.110.10.128,156d1dc,CONNECT,https,www.coastal-bend-fishing-reports.example,-,200,allowed,uncategorised,2411,177957,Chrome/Windows,clinical-workstation
+2027-07-27T15:36:15Z,10.110.10.122,6a7be7f,POST,http,cdn.geomaps-tiles.net,/content/c88ee1d1.cab,301,allowed,content delivery,926,368,Edge/Windows,clinical-workstation
+2027-07-27T16:03:46Z,10.110.10.119,c61ac3e,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3475,100411,Edge/Windows,clinical-workstation
+2027-07-27T16:29:50Z,10.110.30.97,d9ffb57,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,2220,92765,Edge/Windows,clinical-workstation
+2027-07-27T16:30:29Z,10.110.30.61,2385ce9,CONNECT,https,www.rockportoncology.example,-,200,allowed,business,5845,90802,Edge/Windows,clinical-workstation
+2027-07-27T16:42:49Z,10.110.30.64,cc3b53a,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,1068,61928,Edge/Windows,clinical-workstation
+2027-07-27T16:54:44Z,10.110.10.119,c61ac3e,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,1512,56294,Edge/Windows,clinical-workstation
+2027-07-27T16:54:56Z,10.110.10.101,c1f7ef6,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,3233,138176,Edge/Windows,clinical-workstation
+2027-07-27T16:56:21Z,10.110.10.80,2216701,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,4042,68045,Edge/Windows,clinical-workstation
+2027-07-27T17:02:25Z,10.110.10.98,-,GET,http,api.certstatus-ocsp.net,/,304,allowed,software updates,2091,455,-,clinical-workstation
+2027-07-27T17:21:23Z,10.110.30.82,496a297,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,1416,100499,Edge/Windows,clinical-workstation
+2027-07-27T17:23:39Z,10.110.10.119,c61ac3e,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1575,69216,Edge/Windows,clinical-workstation
+2027-07-27T17:32:31Z,10.110.30.73,32fb2c3,GET,http,static.benefits-portal.com,/ocsp/777dfd6a8800,200,allowed,business software,900,320486,Chrome/Windows,clinical-workstation
+2027-07-27T17:42:04Z,10.110.30.52,4a3dc61,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,4753,30310,Chrome/Windows,clinical-workstation
+2027-07-27T17:59:48Z,10.110.30.88,d5f4b99,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,5535,76984,Edge/Windows,clinical-workstation
+2027-07-27T18:07:43Z,10.110.30.46,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,985,53871,-,clinical-workstation
+2027-07-27T18:16:04Z,10.110.30.70,60fa350,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,6187,19055,Firefox/Windows,clinical-workstation
+2027-07-27T18:24:31Z,10.110.30.79,d99e6c0,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,4389,118793,Edge/Windows,clinical-workstation
+2027-07-27T18:24:39Z,10.110.10.128,156d1dc,CONNECT,https,www.harborsystems.example,-,200,allowed,business,3551,56797,Chrome/Windows,clinical-workstation
+2027-07-27T18:36:48Z,10.110.10.89,3493703,CONNECT,https,www.baypointrentals.example,-,200,allowed,travel,2233,118095,Edge/Windows,clinical-workstation
+2027-07-27T18:58:32Z,10.110.30.82,496a297,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,5622,45147,Edge/Windows,clinical-workstation
+2027-07-27T19:19:39Z,10.110.30.70,60fa350,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,3242,22523,Firefox/Windows,clinical-workstation
+2027-07-27T20:03:11Z,10.110.10.68,17b6b33,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,4254,178854,Edge/Windows,clinical-workstation
+2027-07-27T20:17:19Z,10.110.10.41,49df599,CONNECT,https,pacs-view.teleradiology-group.example,-,200,allowed,health,1682,87113,Edge/Windows,clinical-workstation
+2027-07-27T21:24:45Z,10.110.10.98,648266f,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,2887,190080,Edge/Windows,clinical-workstation
+2027-07-27T21:30:20Z,10.110.30.91,-,GET,http,www-east.telemetry-osvendor.com,/static/862700d.js,200,allowed,software updates,1528,24856,-,clinical-workstation
+2027-07-27T21:35:04Z,10.110.30.64,cc3b53a,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1216,120241,Edge/Windows,clinical-workstation
+2027-07-27T21:36:27Z,10.110.10.116,49fd038,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,2930,51159,Edge/Windows,clinical-workstation
+2027-07-27T22:09:30Z,10.110.10.104,064018b,CONNECT,https,pacs-view.teleradiology-group.example,-,200,allowed,health,521,50096,Edge/Windows,clinical-workstation
+2027-07-27T22:27:32Z,10.110.10.98,648266f,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,2706,91781,Edge/Windows,clinical-workstation
+2027-07-27T23:16:39Z,10.110.10.107,87398e5,CONNECT,https,go.retail-orders.example,-,200,allowed,shopping,2794,143460,Edge/Windows,clinical-workstation
+2027-07-28T00:44:46Z,10.110.10.50,2313af1,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,2144,135196,Edge/Windows,clinical-workstation
+2027-07-28T01:58:32Z,10.110.10.119,cd834f8,CONNECT,https,static.packagetracker-api.net,-,200,allowed,business,5803,12998,Firefox/Windows,clinical-workstation
+2027-07-28T02:24:05Z,10.110.10.41,a1d8314,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,2877,3512,Chrome/Windows,clinical-workstation
+2027-07-28T02:26:36Z,10.110.10.65,568ebec,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,5183,122236,Edge/Windows,clinical-workstation
+2027-07-28T02:48:10Z,10.110.10.83,a875734,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,5078,58710,Edge/Windows,clinical-workstation
+2027-07-28T03:21:40Z,10.110.10.101,cfaf3ca,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,4911,52367,Edge/Windows,clinical-workstation
+2027-07-28T03:23:41Z,10.110.10.119,c61ac3e,CONNECT,https,tracker.parcel-status-update.example,-,200,allowed,uncategorised,4699,19203,Edge/Windows,clinical-workstation
+2027-07-28T03:38:40Z,10.110.10.107,87398e5,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,2103,95615,Edge/Windows,clinical-workstation
+2027-07-28T03:38:59Z,10.110.10.86,b88d2d7,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1977,55727,Edge/Windows,clinical-workstation
+2027-07-28T04:06:41Z,10.110.10.77,7ea76fe,CONNECT,https,static.benefits-portal.com,-,200,allowed,business software,838,65827,Edge/Windows,clinical-workstation
+2027-07-28T05:03:03Z,10.110.10.98,648266f,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,5012,102139,Edge/Windows,clinical-workstation
+2027-07-28T05:09:25Z,10.110.10.95,f9e3699,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,8450,197903,Edge/Windows,clinical-workstation
+2027-07-28T06:11:12Z,10.110.10.71,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,2104,94111,-,clinical-workstation
+2027-07-28T06:32:17Z,10.110.10.62,bf14a05,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,5652,12900,Edge/Windows,clinical-workstation
+2027-07-28T06:50:33Z,10.110.10.53,f647d1a,CONNECT,https,www.oleanderems.example,-,200,allowed,business,3652,112102,Edge/Windows,clinical-workstation
+2027-07-28T08:07:04Z,10.110.250.51,742db5f,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,2104,32958,Edge/Windows,clinical-workstation
+2027-07-28T08:24:46Z,10.110.10.65,568ebec,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,7650,213743,Edge/Windows,clinical-workstation
+2027-07-28T08:40:47Z,10.110.10.122,6a7be7f,CONNECT,https,www.fleetfuel-cards.com,-,200,allowed,finance,822,84266,Edge/Windows,clinical-workstation
+2027-07-28T09:21:48Z,10.110.10.41,ef22f11,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,3374,55525,Edge/Windows,clinical-workstation
+2027-07-28T11:50:40Z,10.110.10.77,7ea76fe,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,3127,89984,Edge/Windows,clinical-workstation
+2027-07-28T11:57:09Z,10.110.10.68,15f7720,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1403,27587,Chrome/Windows,clinical-workstation
+2027-07-28T12:05:48Z,10.110.10.44,508c840,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,884,40055,Edge/Windows,clinical-workstation
+2027-07-28T12:30:12Z,10.110.10.110,11219ff,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,2339,95513,Edge/Windows,clinical-workstation
+2027-07-28T12:36:26Z,10.110.10.122,a8abd85,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3451,37590,Chrome/Windows,clinical-workstation
+2027-07-28T12:58:47Z,10.110.10.95,-,HEAD,http,cdn.certstatus-ocsp.net,/index.html,200,allowed,software updates,750,82842,-,clinical-workstation
+2027-07-28T13:02:28Z,10.110.10.101,33c2b77,CONNECT,https,cdn.harborline6.example,-,200,allowed,news,9386,82770,Edge/Windows,clinical-workstation
+2027-07-28T14:13:13Z,10.110.10.53,7e19960,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,3749,94741,Edge/Windows,clinical-workstation
+2027-07-28T14:41:38Z,10.110.10.44,508c840,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,1947,84727,Edge/Windows,clinical-workstation
+2027-07-28T14:43:03Z,10.110.30.85,1772e2d,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,1029,81593,Chrome/Windows,clinical-workstation
+2027-07-28T15:05:55Z,10.110.30.58,ed29896,CONNECT,https,www.novatelecom.example,-,200,allowed,business,6478,34793,Chrome/Windows,clinical-workstation
+2027-07-28T15:23:09Z,10.110.10.41,960b16a,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,4740,83969,Edge/Windows,clinical-workstation
+2027-07-28T15:41:00Z,10.110.30.91,5344602,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,1349,137963,Edge/Windows,clinical-workstation
+2027-07-28T15:47:57Z,10.110.10.59,c6cc7d5,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,4668,230702,Chrome/Windows,clinical-workstation
+2027-07-28T15:50:09Z,10.110.30.40,6537b0a,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,1284,88901,Edge/Windows,clinical-workstation
+2027-07-28T16:14:55Z,10.110.30.70,60fa350,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,890,59294,Firefox/Windows,clinical-workstation
+2027-07-28T16:33:50Z,10.110.10.101,-,HEAD,http,sig.corvid-security-cloud.example,/content/93209959.cab,302,allowed,software updates,2135,223,-,clinical-workstation
+2027-07-28T16:37:00Z,10.110.10.59,c6cc7d5,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,2140,197934,Chrome/Windows,clinical-workstation
+2027-07-28T17:04:08Z,10.110.30.76,0a1ce9c,CONNECT,https,api.airline-bookings.net,-,200,allowed,travel,4535,29859,Edge/Windows,clinical-workstation
+2027-07-28T17:18:23Z,10.110.30.64,-,GET,http,static.ntp-pool-public.org,/static/463be43.js,301,allowed,software updates,4387,276,-,clinical-workstation
+2027-07-28T17:39:58Z,10.110.30.70,60fa350,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,6318,35329,Firefox/Windows,clinical-workstation
+2027-07-28T17:42:44Z,10.110.10.89,d45331a,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,2721,92003,Edge/Windows,clinical-workstation
+2027-07-28T17:56:21Z,10.110.10.95,29d20e9,CONNECT,https,cdn-east.storm-prep-guides.org,-,200,allowed,weather,3083,88627,Chrome/Windows,clinical-workstation
+2027-07-28T18:13:19Z,10.110.10.89,d45331a,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,3067,70213,Edge/Windows,clinical-workstation
+2027-07-28T18:17:42Z,10.110.30.73,32fb2c3,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,4065,53864,Chrome/Windows,clinical-workstation
+2027-07-28T18:20:59Z,10.110.10.50,ee3b345,CONNECT,https,www.prairieems.example,-,200,allowed,business,3253,37431,Edge/Windows,clinical-workstation
+2027-07-28T18:43:10Z,10.110.30.70,60fa350,CONNECT,https,www.libertyphysicians.example,-,200,allowed,business,1698,36740,Firefox/Windows,clinical-workstation
+2027-07-28T18:50:04Z,10.110.30.70,60fa350,CONNECT,https,www.fleetfuel-cards.com,-,200,allowed,finance,5960,177766,Firefox/Windows,clinical-workstation
+2027-07-28T18:51:25Z,10.110.10.74,84bbdaf,CONNECT,https,static.training-lms.net,-,200,allowed,education,6001,105942,Edge/Windows,clinical-workstation
+2027-07-28T19:04:18Z,10.110.30.64,cc3b53a,CONNECT,https,www.baypointrentals.example,-,200,allowed,travel,790,46165,Edge/Windows,clinical-workstation
+2027-07-28T19:13:55Z,10.110.10.116,53af7d5,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,10568,60984,Edge/Windows,clinical-workstation
+2027-07-28T19:26:22Z,10.110.30.67,c6f8149,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,1562,39441,Edge/Windows,clinical-workstation
+2027-07-28T19:27:54Z,10.110.250.110,e5f6647,CONNECT,https,www.socialfeed-img.com,-,403,blocked,social media,745,984,Edge/Windows,category-denied
+2027-07-28T19:31:11Z,10.110.30.91,5344602,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,4071,25625,Edge/Windows,clinical-workstation
+2027-07-28T19:38:25Z,10.110.30.64,cc3b53a,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,721,64235,Edge/Windows,clinical-workstation
+2027-07-28T19:48:44Z,10.110.30.85,1772e2d,CONNECT,https,www.cellcarrier-account.com,-,200,allowed,business,8049,34757,Chrome/Windows,clinical-workstation
+2027-07-28T20:13:09Z,10.110.30.52,4a3dc61,CONNECT,https,www.prairieems.example,-,200,allowed,business,5884,21561,Edge/Windows,clinical-workstation
+2027-07-28T20:20:02Z,10.110.10.89,eace556,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,4336,55245,Edge/Windows,clinical-workstation
+2027-07-28T20:38:16Z,10.110.10.80,19768f8,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,5223,127851,Edge/Windows,clinical-workstation
+2027-07-28T21:06:09Z,10.110.10.71,136d7d2,CONNECT,https,www.mesa-radiology.example,-,200,allowed,business,4292,126818,Edge/Windows,clinical-workstation
+2027-07-28T21:27:32Z,10.110.10.92,e3f8818,CONNECT,https,hie.coastalbend-healthexchange.example,-,200,allowed,health,1603,159654,Edge/Windows,clinical-workstation
+2027-07-28T21:39:23Z,10.110.30.64,cc3b53a,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,747,167212,Edge/Windows,clinical-workstation
+2027-07-28T21:50:48Z,10.110.30.85,1772e2d,CONNECT,https,courses-training-lms.example,-,200,allowed,education,6001,117247,Chrome/Windows,clinical-workstation
+2027-07-28T21:54:15Z,10.110.10.56,1d3de39,CONNECT,https,courses-training-lms.example,-,200,allowed,education,7187,184550,Edge/Windows,clinical-workstation
+2027-07-28T22:20:28Z,10.110.10.95,29d20e9,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,4880,173327,Chrome/Windows,clinical-workstation
+2027-07-28T23:48:50Z,10.110.10.125,0a9f2f9,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,7488,32271,Edge/Windows,clinical-workstation
+2027-07-29T00:13:58Z,10.110.10.41,-,GET,http,static.ntp-pool-public.org,/content/6987c7a8.cab,200,allowed,software updates,2833,62427,-,clinical-workstation
+2027-07-29T00:42:43Z,10.110.10.104,1a5023c,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2536,77416,Edge/Windows,clinical-workstation
+2027-07-29T00:52:13Z,10.110.250.32,0551004,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,830,1319,Chrome/Windows,category-denied
+2027-07-29T01:08:23Z,10.110.10.86,82476f1,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,4593,54776,Edge/Windows,clinical-workstation
+2027-07-29T01:17:16Z,10.110.10.107,6050994,CONNECT,https,courses-training-lms.example,-,200,allowed,education,7623,83977,Chrome/Windows,clinical-workstation
+2027-07-29T01:18:50Z,10.110.10.101,-,GET,http,static.telemetry-osvendor.com,/content/36ea29b8.cab,503,allowed,software updates,2530,125705,-,clinical-workstation
+2027-07-29T01:22:12Z,10.110.10.119,5f98e62,CONNECT,https,courses-training-lms.example,-,200,allowed,education,5107,103518,Chrome/Windows,clinical-workstation
+2027-07-29T02:13:18Z,10.110.30.43,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,383,30202,-,clinical-workstation
+2027-07-29T02:18:58Z,10.110.10.83,a875734,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1354,112283,Edge/Windows,clinical-workstation
+2027-07-29T03:27:51Z,10.110.30.58,-,GET,http,static.telemetry-osvendor.com,/,200,allowed,software updates,2369,14407,-,clinical-workstation
+2027-07-29T03:37:17Z,10.110.10.116,a7033b1,CONNECT,https,www.prairieems.example,-,200,allowed,business,2464,78434,Edge/Windows,clinical-workstation
+2027-07-29T04:31:52Z,10.110.10.92,742db5f,CONNECT,https,www.coastal-bend-fishing-reports.example,-,200,allowed,uncategorised,2647,27597,Chrome/Windows,clinical-workstation
+2027-07-29T04:40:40Z,10.110.10.125,5551be5,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,2832,148192,Edge/Windows,clinical-workstation
+2027-07-29T04:45:40Z,10.110.10.47,f6ae3a9,CONNECT,https,courses-training-lms.example,-,200,allowed,education,5616,112012,Firefox/Windows,clinical-workstation
+2027-07-29T04:48:18Z,10.110.10.104,3e6dbec,CONNECT,https,cdn.adnetwork-static.net,-,200,allowed,advertising,2681,79920,Edge/Windows,clinical-workstation
+2027-07-29T05:14:20Z,10.110.10.89,3493703,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,1944,122209,Edge/Windows,clinical-workstation
+2027-07-29T05:40:17Z,10.110.10.44,628aa82,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,4410,177171,Edge/Windows,clinical-workstation
+2027-07-29T05:53:14Z,10.110.10.128,156d1dc,CONNECT,https,cdn.cloudstorage-sync.com,-,200,allowed,content delivery,585,47142,Edge/Windows,clinical-workstation
+2027-07-29T08:06:53Z,10.110.10.83,911c44b,CONNECT,https,courses-training-lms.example,-,200,allowed,education,11202,151487,Edge/Windows,clinical-workstation
+2027-07-29T09:08:31Z,10.110.10.95,8d29ece,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,3650,117902,Chrome/Windows,clinical-workstation
+2027-07-29T09:10:10Z,10.110.10.65,7c8fe37,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,1291,15953,Edge/Windows,clinical-workstation
+2027-07-29T09:41:55Z,10.110.10.71,b931fc2,CONNECT,https,courses-training-lms.example,-,200,allowed,education,3856,99466,Edge/Windows,clinical-workstation
+2027-07-29T10:01:15Z,10.110.10.62,9dba085,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,3377,97206,Edge/Windows,clinical-workstation
+2027-07-29T11:00:07Z,10.110.10.110,3f3825e,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,9923,44261,Edge/Windows,clinical-workstation
+2027-07-29T12:20:55Z,10.110.10.77,487d902,CONNECT,https,www.baycitymedical.example,-,200,allowed,health,3447,155354,Chrome/Windows,clinical-workstation
+2027-07-29T12:27:03Z,10.110.10.125,34c40eb,CONNECT,https,courses-training-lms.example,-,200,allowed,education,3160,227487,Edge/Windows,clinical-workstation
+2027-07-29T13:23:38Z,10.110.30.43,-,GET,http,static.browser-safecheck.net,/favicon.ico,200,allowed,software updates,5450,55748,-,clinical-workstation
+2027-07-29T14:10:37Z,10.110.30.85,1772e2d,GET,http,portal.payer-eligibility.example,/v3/check?id=809cba2a8e,304,allowed,health,1852,307,Chrome/Windows,clinical-workstation
+2027-07-29T14:22:57Z,10.110.30.94,85f6713,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,4656,51984,Edge/Windows,clinical-workstation
+2027-07-29T14:26:05Z,10.110.10.116,49fd038,CONNECT,https,www.coastal-ems.example,-,200,allowed,business,5117,86164,Edge/Windows,clinical-workstation
+2027-07-29T14:30:50Z,10.110.10.89,eace556,CONNECT,https,auth-prod.storm-prep-guides.org,-,200,allowed,weather,951,54229,Edge/Windows,clinical-workstation
+2027-07-29T14:47:08Z,10.110.30.67,c6f8149,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,8361,37393,Edge/Windows,clinical-workstation
+2027-07-29T14:53:09Z,10.110.10.47,f6ae3a9,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1549,71827,Firefox/Windows,clinical-workstation
+2027-07-29T14:56:53Z,10.110.10.68,91e6976,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,3268,63413,Edge/Windows,clinical-workstation
+2027-07-29T15:53:19Z,10.110.30.70,60fa350,CONNECT,https,cdn.harborline6.example,-,200,allowed,news,9709,163138,Firefox/Windows,clinical-workstation
+2027-07-29T16:20:58Z,10.110.30.40,6537b0a,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,2398,38461,Edge/Windows,clinical-workstation
+2027-07-29T16:21:35Z,10.110.10.77,487d902,CONNECT,https,api.harborline6.example,-,200,allowed,news,4316,349936,Edge/Windows,clinical-workstation
+2027-07-29T16:31:50Z,10.110.10.116,6df88c9,CONNECT,https,courses-training-lms.example,-,200,allowed,education,4223,244297,Edge/Windows,clinical-workstation
+2027-07-29T17:04:54Z,10.110.30.76,0a1ce9c,CONNECT,https,www.socialfeed-img.com,-,403,blocked,social media,456,986,Edge/Windows,category-denied
+2027-07-29T17:41:11Z,10.110.30.40,6537b0a,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,2519,40228,Edge/Windows,clinical-workstation
+2027-07-29T17:58:57Z,10.110.30.49,006445b,CONNECT,https,www.southtex-supply.example,-,200,allowed,shopping,10037,128329,Edge/Windows,clinical-workstation
+2027-07-29T18:08:09Z,10.110.30.40,6537b0a,CONNECT,https,www.socialfeed-img.com,-,403,blocked,social media,364,1182,Edge/Windows,category-denied
+2027-07-29T18:48:05Z,10.110.10.122,a8abd85,CONNECT,https,www.orbitpediatrics.example,-,200,allowed,business,1692,98530,Chrome/Windows,clinical-workstation
+2027-07-29T18:48:23Z,10.110.30.76,0a1ce9c,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,680,98265,Edge/Windows,clinical-workstation
+2027-07-29T18:59:53Z,10.110.10.50,d9fff6c,CONNECT,https,www.seawallcpa.example,-,200,allowed,finance,2773,215530,Edge/Windows,clinical-workstation
+2027-07-29T19:20:53Z,10.110.30.40,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,4476,8566,-,clinical-workstation
+2027-07-29T20:04:14Z,10.110.10.65,568ebec,CONNECT,https,www.gulfpathology.example,-,200,allowed,business,527,191996,Edge/Windows,clinical-workstation
+2027-07-29T20:07:32Z,10.110.30.49,006445b,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,2047,74163,Edge/Windows,clinical-workstation
+2027-07-29T20:36:22Z,10.110.30.67,c6f8149,CONNECT,https,login.cloudstorage-sync.com,-,200,allowed,online storage,3646,166871,Edge/Windows,clinical-workstation
+2027-07-29T20:41:32Z,10.110.30.82,496a297,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,6282,26001,Edge/Windows,clinical-workstation
+2027-07-29T20:45:42Z,10.110.10.41,9e51af5,CONNECT,https,frontera-ems.example,-,200,allowed,business,4375,227620,Chrome/Windows,clinical-workstation
+2027-07-29T20:46:30Z,10.110.10.65,568ebec,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1451,144099,Edge/Windows,clinical-workstation
+2027-07-29T20:47:06Z,10.110.10.119,cd834f8,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,13222,71786,Firefox/Windows,clinical-workstation
+2027-07-29T20:59:50Z,10.110.30.94,85f6713,CONNECT,https,api.harborline6.example,-,200,allowed,news,2775,55228,Edge/Windows,clinical-workstation
+2027-07-29T21:00:34Z,10.110.10.113,288c966,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,965,41404,Edge/Windows,clinical-workstation
+2027-07-29T21:21:58Z,10.110.10.44,508c840,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,3005,5975,Edge/Windows,clinical-workstation
+2027-07-29T22:39:59Z,10.110.10.86,d05d678,CONNECT,https,www.prairieems.example,-,200,allowed,business,3065,66281,Edge/Windows,clinical-workstation
+2027-07-29T23:17:11Z,10.110.10.74,620398d,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,1492,100256,Edge/Windows,clinical-workstation
+2027-07-29T23:47:42Z,10.110.10.110,3f3825e,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,5431,158858,Edge/Windows,clinical-workstation
+2027-07-30T00:27:03Z,10.110.10.92,742db5f,CONNECT,https,courses-training-lms.example,-,200,allowed,education,2832,99904,Edge/Windows,clinical-workstation
+2027-07-30T00:35:51Z,10.110.30.61,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,6516,205629,-,clinical-workstation
+2027-07-30T01:00:09Z,10.110.10.44,508c840,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,5788,27431,Edge/Windows,clinical-workstation
+2027-07-30T01:34:48Z,10.110.10.68,-,CONNECT,https,www.browser-safecheck.net,-,200,allowed,software updates,3877,5405,-,clinical-workstation
+2027-07-30T01:47:56Z,10.110.10.62,-,GET,http,sig.corvid-security-cloud.example,/images/86b3c0.png,200,allowed,software updates,3067,39315,-,clinical-workstation
+2027-07-30T02:54:57Z,10.110.10.59,c632de6,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,9963,91458,Edge/Windows,clinical-workstation
+2027-07-30T03:27:32Z,10.110.10.92,4f30647,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,2413,105428,Edge/Windows,clinical-workstation
+2027-07-30T03:47:19Z,10.110.10.125,34c40eb,CONNECT,https,links.gulfsurgical.example,-,200,allowed,business,5179,109334,Edge/Windows,clinical-workstation
+2027-07-30T04:00:55Z,10.110.10.122,5800f47,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,1579,44147,Chrome/Windows,clinical-workstation
+2027-07-30T04:04:59Z,10.110.30.82,-,CONNECT,https,www.ntp-pool-public.org,-,200,allowed,software updates,5010,46486,-,clinical-workstation
+2027-07-30T04:12:54Z,10.110.10.47,3456206,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,1749,27832,Chrome/Windows,clinical-workstation
+2027-07-30T04:21:17Z,10.110.10.116,53af7d5,CONNECT,https,www.granitemedia.example,-,200,allowed,news,2705,340483,Edge/Windows,clinical-workstation
+2027-07-30T04:37:24Z,10.110.10.107,6050994,CONNECT,https,cdn.harborline6.example,-,200,allowed,news,1770,53313,Chrome/Windows,clinical-workstation
+2027-07-30T05:14:51Z,10.110.10.98,71af80d,CONNECT,https,www.training-lms.net,-,200,allowed,education,4595,108751,Edge/Windows,clinical-workstation
+2027-07-30T06:10:55Z,10.110.10.95,5c0755a,CONNECT,https,www.sanpatoncology.example,-,200,allowed,business,1900,139020,Edge/Windows,clinical-workstation
+2027-07-30T06:38:55Z,10.110.10.89,d45331a,CONNECT,https,web-static.cellcarrier-account.com,-,200,allowed,business,6527,101809,Edge/Windows,clinical-workstation
+2027-07-30T07:00:31Z,10.110.10.101,bd776b2,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2216,16201,Edge/Windows,clinical-workstation
+2027-07-30T07:09:23Z,10.110.10.83,781c111,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,2774,7121,Edge/Windows,clinical-workstation
+2027-07-30T07:14:16Z,10.110.10.101,bd776b2,CONNECT,https,cdn.cloudstorage-sync.com,-,200,allowed,content delivery,3064,176773,Edge/Windows,clinical-workstation
+2027-07-30T08:02:29Z,10.110.10.80,2216701,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2168,137980,Edge/Windows,clinical-workstation
+2027-07-30T08:18:39Z,10.110.10.74,ae375ab,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3713,57923,Edge/Windows,clinical-workstation
+2027-07-30T08:28:43Z,10.110.10.74,-,GET,http,static.ntp-pool-public.org,/static/c4e1ea3.js,200,allowed,software updates,5287,122843,-,clinical-workstation
+2027-07-30T08:37:32Z,10.110.30.52,-,GET,http,sig.corvid-security-cloud.example,/static/253016c.js,200,allowed,software updates,3453,210789,-,clinical-workstation
+2027-07-30T08:45:13Z,10.110.10.41,ef22f11,CONNECT,https,courses-training-lms.example,-,200,allowed,education,4783,198591,Edge/Windows,clinical-workstation
+2027-07-30T11:07:18Z,10.110.10.86,fdc4b6a,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,1785,116178,Edge/Windows,clinical-workstation
+2027-07-30T11:46:30Z,10.110.10.47,378e1c1,CONNECT,https,courses-training-lms.example,-,200,allowed,education,5462,179202,Chrome/Windows,clinical-workstation
+2027-07-30T12:28:45Z,10.110.30.73,32fb2c3,CONNECT,https,courses-training-lms.example,-,200,allowed,education,8346,137965,Chrome/Windows,clinical-workstation
+2027-07-30T12:57:40Z,10.110.30.97,-,GET,http,auth-prod.certstatus-ocsp.net,/,200,allowed,software updates,4777,101326,-,clinical-workstation
+2027-07-30T13:44:29Z,10.110.10.128,280fc51,CONNECT,https,courses-training-lms.example,-,200,allowed,education,8452,244466,Edge/Windows,clinical-workstation
+2027-07-30T13:58:41Z,10.110.30.64,cc3b53a,CONNECT,https,rx.eprescribe-network.example,-,200,allowed,health,4498,85660,Edge/Windows,clinical-workstation
+2027-07-30T14:02:29Z,10.110.10.83,c43321e,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,511,30320,Edge/Windows,clinical-workstation
+2027-07-30T14:20:24Z,10.110.30.46,ee3176e,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,3557,47777,Chrome/Windows,clinical-workstation
+2027-07-30T14:32:20Z,10.110.10.65,efd4fc8,CONNECT,https,www.hrcloud-payroll.com,-,200,allowed,finance,4672,38875,Chrome/Windows,clinical-workstation
+2027-07-30T14:34:09Z,10.110.30.49,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,6162,374685,-,clinical-workstation
+2027-07-30T14:35:41Z,10.110.10.89,dd2a440,CONNECT,https,courses-training-lms.example,-,200,allowed,education,7010,75627,Edge/Windows,clinical-workstation
+2027-07-30T14:44:00Z,10.110.10.101,bd776b2,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,3295,73248,Edge/Windows,clinical-workstation
+2027-07-30T15:07:07Z,10.110.10.116,53af7d5,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,2043,19213,Edge/Windows,clinical-workstation
+2027-07-30T15:19:06Z,10.110.30.64,-,GET,http,www.certstatus-ocsp.net,/ocsp/e35552b7032a,302,allowed,software updates,1611,608,-,clinical-workstation
+2027-07-30T15:28:11Z,10.110.10.41,a1d8314,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1821,137311,Chrome/Windows,clinical-workstation
+2027-07-30T15:42:48Z,10.110.10.110,5b45a3f,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2356,119775,Edge/Windows,clinical-workstation
+2027-07-30T16:07:54Z,10.110.10.101,33c2b77,CONNECT,https,login.hospital-patient-portal.org,-,504,allowed,health,3894,41,Edge/Windows,clinical-workstation
+2027-07-30T16:10:46Z,10.110.10.62,d3f307e,CONNECT,https,courses-training-lms.example,-,200,allowed,education,4609,156753,Edge/Windows,clinical-workstation
+2027-07-30T16:25:46Z,10.110.30.88,d5f4b99,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,491,73187,Edge/Windows,clinical-workstation
+2027-07-30T16:32:27Z,10.110.30.76,0a1ce9c,CONNECT,https,courses-training-lms.example,-,200,allowed,education,3844,218228,Edge/Windows,clinical-workstation
+2027-07-30T16:35:12Z,10.110.30.73,32fb2c3,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,4092,11323,Chrome/Windows,clinical-workstation
+2027-07-30T16:35:41Z,10.110.10.101,33c2b77,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,1281,50041,Edge/Windows,clinical-workstation
+2027-07-30T17:18:52Z,10.110.10.53,c6fdd96,CONNECT,https,southtexclinic.example,-,200,allowed,health,4899,170402,Edge/Windows,clinical-workstation
+2027-07-30T17:21:55Z,10.110.10.53,c6fdd96,CONNECT,https,courses-training-lms.example,-,200,allowed,education,3442,273032,Edge/Windows,clinical-workstation
+2027-07-30T17:34:17Z,10.110.10.62,d3f307e,CONNECT,https,www-2.bayside-ledger.example,-,200,allowed,news,1514,90660,Edge/Windows,clinical-workstation
+2027-07-30T17:36:45Z,10.110.10.104,1a5023c,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,4217,23121,Edge/Windows,clinical-workstation
+2027-07-30T17:54:01Z,10.110.10.62,d3f307e,CONNECT,https,static.packagetracker-api.net,-,200,allowed,business,2537,107751,Edge/Windows,clinical-workstation
+2027-07-30T17:54:39Z,10.110.10.59,b8500ea,CONNECT,https,www.docsign-flow.com,-,200,allowed,online storage,1840,122451,Edge/Windows,clinical-workstation
+2027-07-30T18:01:41Z,10.110.30.97,d9ffb57,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,1812,55806,Edge/Windows,clinical-workstation
+2027-07-30T18:07:35Z,10.110.30.49,006445b,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,4923,49655,Edge/Windows,clinical-workstation
+2027-07-30T18:19:52Z,10.110.10.56,064c976,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,1517,76523,Edge/Windows,clinical-workstation
+2027-07-30T18:21:11Z,10.110.10.119,6e67858,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,2257,91112,Edge/Windows,clinical-workstation
+2027-07-30T18:28:31Z,10.110.10.77,2e2274d,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1967,30446,Edge/Windows,clinical-workstation
+2027-07-30T18:38:48Z,10.110.30.64,cc3b53a,GET,http,www.nueces-county-tx.org,/ocsp/7cca846a83d9,200,allowed,government,3922,246810,Edge/Windows,clinical-workstation
+2027-07-30T18:44:45Z,10.110.10.68,1146d14,CONNECT,https,www.training-lms.net,-,200,allowed,education,8125,136873,Edge/Windows,clinical-workstation
+2027-07-30T18:52:28Z,10.110.30.82,496a297,CONNECT,https,www.socialfeed-img.com,-,403,blocked,social media,829,1401,Edge/Windows,category-denied
+2027-07-30T19:01:27Z,10.110.10.68,1146d14,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,2550,96150,Edge/Windows,clinical-workstation
+2027-07-30T19:52:56Z,10.110.10.119,6e67858,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2903,51009,Edge/Windows,clinical-workstation
+2027-07-30T20:09:36Z,10.110.30.79,d99e6c0,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3993,114946,Edge/Windows,clinical-workstation
+2027-07-30T20:13:37Z,10.110.10.44,508c840,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,8736,28884,Edge/Windows,clinical-workstation
+2027-07-30T20:25:52Z,10.110.10.59,6dea356,CONNECT,https,www.baypointems.example,-,200,allowed,business,4011,184519,Edge/Windows,clinical-workstation
+2027-07-30T20:29:34Z,10.110.30.49,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,2317,39795,-,clinical-workstation
+2027-07-30T21:51:13Z,10.110.30.85,1772e2d,CONNECT,https,www.cloudstorage-sync.com,-,200,allowed,online storage,4247,106177,Chrome/Windows,clinical-workstation
+2027-07-30T21:54:21Z,10.110.30.55,5e87d6e,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,3834,58533,Edge/Windows,clinical-workstation
+2027-07-30T22:51:16Z,10.110.10.89,3493703,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,5510,63309,Edge/Windows,clinical-workstation
+2027-07-30T22:52:48Z,10.110.10.101,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,4981,42289,-,clinical-workstation
+2027-07-30T22:59:01Z,10.110.10.128,-,GET,http,sig.corvid-security-cloud.example,/robots.txt,200,allowed,software updates,9819,31941,-,clinical-workstation
+2027-07-30T23:07:09Z,10.110.250.22,9be945f,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,610,62370,Edge/Windows,clinical-workstation
+2027-07-30T23:24:30Z,10.110.10.77,88384b9,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,3019,129073,Edge/Windows,clinical-workstation
+2027-07-30T23:48:00Z,10.110.10.62,8f8aa45,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,1080,106122,Edge/Windows,clinical-workstation
+2027-07-31T00:21:55Z,10.110.10.98,d46f174,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1643,185622,Edge/Windows,clinical-workstation
+2027-07-31T00:45:39Z,10.110.10.104,6202355,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,1057,74000,Edge/Windows,clinical-workstation
+2027-07-31T01:03:09Z,10.110.10.47,026f65f,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,3512,102441,Edge/Windows,clinical-workstation
+2027-07-31T01:24:18Z,10.110.10.122,d9161cf,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,3944,76592,Edge/Windows,clinical-workstation
+2027-07-31T01:25:26Z,10.110.10.53,7e19960,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,1526,98243,Edge/Windows,clinical-workstation
+2027-07-31T01:46:14Z,10.110.10.113,288c966,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,2129,34583,Edge/Windows,clinical-workstation
+2027-07-31T01:54:52Z,10.110.10.80,2216701,CONNECT,https,static.truckrental-fleet.com,-,200,allowed,shopping,3597,136561,Edge/Windows,clinical-workstation
+2027-07-31T02:13:15Z,10.110.10.83,911c44b,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,1708,45193,Edge/Windows,clinical-workstation
+2027-07-31T02:14:36Z,10.110.10.128,2c52d09,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,2579,125055,Edge/Windows,clinical-workstation
+2027-07-31T02:52:43Z,10.110.10.101,981d0ad,CONNECT,https,login.fleetfuel-cards.com,-,200,allowed,finance,2811,121819,Edge/Windows,clinical-workstation
+2027-07-31T02:56:12Z,10.110.30.67,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,5951,98637,-,clinical-workstation
+2027-07-31T03:33:27Z,10.110.10.113,288c966,CONNECT,https,api.harborline6.example,-,200,allowed,news,2435,20019,Edge/Windows,clinical-workstation
+2027-07-31T03:34:45Z,10.110.10.116,6df88c9,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,1626,194375,Edge/Windows,clinical-workstation
+2027-07-31T03:57:49Z,10.110.10.104,-,GET,http,sig.corvid-security-cloud.example,/pki/9491cb.crl,200,allowed,software updates,10716,65058,-,clinical-workstation
+2027-07-31T03:59:51Z,10.110.10.110,3f3825e,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,2491,36615,Edge/Windows,clinical-workstation
+2027-07-31T04:18:39Z,10.110.10.53,7e19960,CONNECT,https,www.baypointems.example,-,200,allowed,business,3949,110959,Edge/Windows,clinical-workstation
+2027-07-31T04:22:41Z,10.110.10.62,9dba085,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,2582,110073,Edge/Windows,clinical-workstation
+2027-07-31T04:51:32Z,10.110.10.56,064c976,CONNECT,https,www.rockporttires.example,-,200,allowed,shopping,4504,23970,Edge/Windows,clinical-workstation
+2027-07-31T05:13:47Z,10.110.10.62,9dba085,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,1064,126205,Edge/Windows,clinical-workstation
+2027-07-31T05:35:58Z,10.110.30.94,-,POST,http,static.osupdates-delivery.com,/pki/f8cb39.crl,404,allowed,software updates,2580,99400,-,clinical-workstation
+2027-07-31T05:52:14Z,10.110.10.74,ae375ab,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,9100,60825,Edge/Windows,clinical-workstation
+2027-07-31T06:01:13Z,10.110.10.80,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,1375,50564,-,clinical-workstation
+2027-07-31T06:08:32Z,10.110.30.88,-,GET,http,static.osupdates-delivery.com,/static/e212f8f.js,304,allowed,software updates,723,462,-,clinical-workstation
+2027-07-31T06:08:57Z,10.110.10.50,ee3b345,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,3097,111129,Edge/Windows,clinical-workstation
+2027-07-31T06:21:32Z,10.110.10.86,d05d678,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,3923,130975,Edge/Windows,clinical-workstation
+2027-07-31T07:56:21Z,10.110.10.92,5f3696a,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,1380,117445,Edge/Windows,clinical-workstation
+2027-07-31T08:15:14Z,10.110.10.116,49fd038,CONNECT,https,www.blood-center-coastalbend.example,-,200,allowed,health,3920,168350,Edge/Windows,clinical-workstation
+2027-07-31T10:02:20Z,10.110.10.50,2313af1,CONNECT,https,courses-training-lms.example,-,200,allowed,education,5552,138092,Edge/Windows,clinical-workstation
+2027-07-31T10:18:33Z,10.110.10.116,49fd038,CONNECT,https,www.nursing-board-tx.example,-,200,allowed,government,2081,135591,Edge/Windows,clinical-workstation
+2027-07-31T12:30:06Z,10.110.30.58,ed29896,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,1124,50615,Chrome/Windows,clinical-workstation
+2027-07-31T12:49:13Z,10.110.10.59,7c0ef14,CONNECT,https,www.deltaimaging.example,-,200,allowed,business,5264,52916,Edge/Windows,clinical-workstation
+2027-07-31T12:52:36Z,10.110.10.68,1146d14,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,6296,116879,Edge/Windows,clinical-workstation
+2027-07-31T13:31:29Z,10.110.10.53,7e19960,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,4144,122787,Edge/Windows,clinical-workstation
+2027-07-31T14:31:03Z,10.110.30.58,ed29896,CONNECT,https,portal.payer-eligibility.example,-,504,allowed,health,5432,278,Chrome/Windows,clinical-workstation
+2027-07-31T14:55:36Z,10.110.10.56,3a21010,CONNECT,https,www.granitemedia.example,-,200,allowed,news,4531,172699,Edge/Windows,clinical-workstation
+2027-07-31T16:01:07Z,10.110.30.40,-,GET,http,www-east.telemetry-osvendor.com,/images/04154e.png,200,allowed,software updates,2206,102046,-,clinical-workstation
+2027-07-31T16:04:33Z,10.110.10.119,cd834f8,CONNECT,https,www.joint-accreditation.example,-,200,allowed,health,3779,215266,Firefox/Windows,clinical-workstation
+2027-07-31T16:24:02Z,10.110.30.58,ed29896,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,2620,108919,Chrome/Windows,clinical-workstation
+2027-07-31T17:15:03Z,10.110.10.68,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,1404,160397,-,clinical-workstation
+2027-07-31T17:33:54Z,10.110.10.47,a38aa25,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,1399,37598,Edge/Windows,clinical-workstation
+2027-07-31T17:41:06Z,10.110.30.58,ed29896,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,860,102717,Chrome/Windows,clinical-workstation
+2027-07-31T18:40:53Z,10.110.30.70,-,CONNECT,https,static.ntp-pool-public.org,-,200,allowed,software updates,4046,57790,-,clinical-workstation
+2027-07-31T18:50:01Z,10.110.10.68,17b6b33,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,547,110643,Edge/Windows,clinical-workstation
+2027-07-31T18:59:47Z,10.110.30.58,ed29896,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,3466,47606,Chrome/Windows,clinical-workstation
+2027-07-31T19:01:34Z,10.110.10.59,7c0ef14,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,5189,145926,Edge/Windows,clinical-workstation
+2027-07-31T19:13:20Z,10.110.10.101,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,1274,65785,-,clinical-workstation
+2027-07-31T20:36:43Z,10.110.10.68,17b6b33,CONNECT,https,portal.payer-eligibility.example,-,200,allowed,health,7991,28665,Edge/Windows,clinical-workstation
+2027-07-31T20:46:26Z,10.110.10.107,6050994,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,773,178250,Chrome/Windows,clinical-workstation
+2027-07-31T20:56:26Z,10.110.10.122,d9161cf,CONNECT,https,www.packagetracker-api.net,-,200,allowed,business,3736,36693,Edge/Windows,clinical-workstation
+2027-07-31T21:40:23Z,10.110.10.44,-,CONNECT,https,www.osupdates-delivery.com,-,200,allowed,software updates,2317,175873,-,clinical-workstation
+2027-07-31T23:11:20Z,10.110.30.91,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,2742,13327,-,clinical-workstation
+2027-07-31T23:30:23Z,10.110.10.92,742db5f,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,1674,89539,Edge/Windows,clinical-workstation
+2027-07-31T23:32:24Z,10.110.10.56,-,GET,http,www.osupdates-delivery.com,/v2/check?id=b4926d3f98,200,allowed,software updates,1779,145742,-,clinical-workstation
+2027-07-31T23:40:04Z,10.110.10.74,7e4cb54,CONNECT,https,cdn-east.storm-prep-guides.org,-,200,allowed,weather,1539,15060,Edge/Windows,clinical-workstation
+2027-07-31T23:47:22Z,10.110.10.68,91e6976,CONNECT,https,www.medical-ce-credits.example,-,200,allowed,health,1168,109355,Edge/Windows,clinical-workstation
+2027-07-31T23:54:31Z,10.110.10.83,a875734,CONNECT,https,www.clinical-guidelines.example,-,200,allowed,health,1013,51808,Edge/Windows,clinical-workstation

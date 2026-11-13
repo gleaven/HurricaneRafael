@@ -25,6 +25,7 @@ from collections import defaultdict
 import numpy as np
 
 import fuel_ledger
+import netmap
 
 from common import (D0_EPOCH, SPAN_END, canon, day_of, geo_handle, internal, iso, local_dt, local_ts, reg, retire,
                     rng, utc_offset, write_csv)
@@ -831,8 +832,9 @@ HIJACK_ASN = 64512
 
 
 def ip_for(key):
-    x = int(h("ip", key)[:8], 16)
-    return f"100.{64 + x % 64}.{(x >> 8) % 256}.{1 + (x >> 16) % 254}"
+    """(address, network number) of a household. Both come from the address table every stream shares
+    (netmap): the same address carries the same network number in the portal log and everywhere else."""
+    return netmap.home(key)
 
 
 def build_aid(W):
@@ -916,6 +918,26 @@ def build_aid(W):
 
     banks = ["BANK-CC-001", "BANK-CC-002", "BANK-CC-004", "BANK-CC-005", "BANK-CC-007", "BANK-CC-008", "BANK-CC-009", "BANK-CC-010", "BANK-CC-006"]
 
+    def ord_bank(drawn, key):
+        """An ordinary applicant's bank: all eleven local institutions have customers (the hash decides, so no other field moves)."""
+        k = int(h("bank11", key)[:6], 16) % 110
+        return "BANK-CC-003" if k < 11 else ("BANK-CC-011" if k < 19 else drawn)
+
+    def unit_style(addr, key):
+        """Flats are written the way people write them: Apt 12, Unit 12, #12, Unit B3."""
+        if " Apt " not in addr:
+            return addr
+        head, n = addr.rsplit(" Apt ", 1)
+        k = int(h("unit", key)[:6], 16)
+        style = k % 10
+        if style < 4:
+            return addr
+        if style < 6:
+            return f"{head} Unit {n}"
+        if style == 6:
+            return f"{head} #{n}"
+        return f"{head} Unit {chr(65 + (k >> 8) % 6)}{1 + (k >> 12) % 16}"
+
     def make_app(i, area_id, tract, zipc, county, t_sub, channel, rr, door=False):
         a = W.area[area_id]
         low = area_id in W.low_income
@@ -931,7 +953,8 @@ def build_aid(W):
         dmg = str(rr.choice(["destroyed", "major", "minor", "affected"], p={"A": [.1, .38, .37, .15], "B": [.04, .27, .44, .25],
                                                                               "C": [.02, .16, .45, .37], "D": [.01, .1, .4, .49]}[zone]))
         if channel == "web":
-            ip, asn = ip_for(("home", rid)), int(ISP_ASN[int(rr.integers(len(ISP_ASN)))])
+            rr.integers(len(ISP_ASN))                      # (draw kept so every other field stays as it was)
+            ip, asn = ip_for(("home", rid))
             dev = "dev-" + h("dev", rid)[:12]
         elif channel == "recovery centre":
             k = list(drc_ips)[int(rr.integers(3))]
@@ -941,7 +964,8 @@ def build_aid(W):
         else:
             ip, asn, dev = "", "", ""
         photos = ";".join(f"{h('aidph', rid, k)[:16]}.jpg" for k in range(int(rr.integers(1, 6)))) if channel != "phone" else ""
-        bank = banks[int(rr.integers(len(banks)))]
+        bank = ord_bank(banks[int(rr.integers(len(banks)))], rid)
+        addr = unit_style(addr, rid)
         return {"application_id": rid, "account_id": "ACC-" + h("acct", rid)[:10].upper(), "t": int(t_sub), "channel": channel, "ip": ip, "asn": asn,
                 "dev": dev, "area_id": area_id, "tract": tract, "zip": zipc, "county": county, "name": person(rr, lang),
                 "addr": f"{addr}, {city} TX {zipc}", "hh": int(rr.choice([1, 2, 3, 4, 5, 6, 7], p=[.2, .25, .19, .17, .1, .06, .03])),
@@ -985,7 +1009,8 @@ def build_aid(W):
     lph_addr = sorted({W.pol[p]["property_address"] for p in W.lph if "78407" in W.pol[p]["property_address"] or "78408" in W.pol[p]["property_address"]})
     if len(lph_addr) < 30:
         lph_addr = sorted({W.pol[p]["property_address"] for p in W.lph})
-    photos23 = [f"CC-DAM-{k:04d}.jpg" for k in range(1, 24)]
+    photos23 = [f"{h('ringph', k)[:16]}.jpg" for k in range(1, 24)]        # the same two dozen pictures, uploaded again and again
+    P14 = photos23[13]
     # the first burst starts a minute after the midnight opening (00:01-03:17 Central = 06:01-09:17Z)
     bursts = [(ts_("2027-11-13T06:01:00"), ts_("2027-11-13T09:17:00"), 31), (ts_("2027-11-14T01:00:00"), ts_("2027-11-14T04:45:00"), 29),
               (ts_("2027-11-15T23:00:00"), ts_("2027-11-15T23:59:00"), 34)]
@@ -994,16 +1019,16 @@ def build_aid(W):
     photo_use = defaultdict(int)
     for b0, b1, n in bursts:
         times = sorted(int(x) for x in rr.integers(b0, b1 + 1, size=n))
-        times[0], times[-1] = b0, b1
+        times[0], times[-1] = b0 + 3 + int(h("bsec", b0)[:4], 16) % 50, b1 + 3 + int(h("bsec", b1)[:4], 16) % 50      # inside the first and the last minute
         for t in times:
             rid = runner["ids"][k]
             base = lph_addr[k % len(lph_addr)].split(",")[0]
             ph = []
-            if photo_use["CC-DAM-0014.jpg"] < 7 and k % 13 == 0:
-                ph.append("CC-DAM-0014.jpg")
+            if photo_use[P14] < 7 and k % 13 == 0:
+                ph.append(P14)
             while len(ph) < 2 + k % 3:
                 c = photos23[int(rr.integers(23))]
-                if c == "CC-DAM-0014.jpg" or c in ph:
+                if c == P14 or c in ph:
                     continue
                 ph.append(c)
             for c in ph:
@@ -1017,8 +1042,8 @@ def build_aid(W):
                          "door": False, "runner": True})
             k += 1
     # make sure all 23 photos occur and one of them seven times
-    seven = [a for a in apps if a.get("runner") and "CC-DAM-0014.jpg" in a["photos"]]
-    extra = [a for a in apps if a.get("runner") and "CC-DAM-0014.jpg" not in a["photos"]]
+    seven = [a for a in apps if a.get("runner") and P14 in a["photos"]]
+    extra = [a for a in apps if a.get("runner") and P14 not in a["photos"]]
     for a in extra[: max(0, 7 - len(seven))]:
         a["photos"] = "CC-DAM-0014.jpg;" + a["photos"]
     used = set(p for a in apps if a.get("runner") for p in a["photos"].split(";"))
@@ -1034,7 +1059,7 @@ def build_aid(W):
         acct_id, bank = recv[k % 3]
         t = OPEN_TS + int((1.5 + k * 0.9) * DAY) + int(rr.integers(0, 6 * 3600))
         apps.append({"application_id": s["registration_id"], "account_id": "ACC-" + h("acct", s["registration_id"])[:10].upper(), "t": t,
-                     "channel": "web", "ip": f"203.0.113.{21 + k % 2}", "asn": HIJACK_ASN, "dev": shared_dev[k % 2], "area_id": "AREA-TRACT-481201",
+                     "channel": "web", "ip": netmap.story_ip(21 + k % 2), "asn": HIJACK_ASN, "dev": shared_dev[k % 2], "area_id": "AREA-TRACT-481201",
                      "tract": "481201", "zip": "78405", "county": "Nueces", "name": s["name"], "addr": shared_addr[k % 2], "hh": 4 + k % 2,
                      "lang": "en", "tenure": "own", "dmg": "destroyed", "photos": ";".join(f"{h('synph', k % 2, j)[:16]}.jpg" for j in range(3)),
                      "routing": W.inst[bank]["routing_number"], "masked": W.acct[acct_id]["account_number_masked"], "low": False, "door": False,
@@ -1138,7 +1163,7 @@ def build_aid(W):
 
     # ---- account changes: ordinary ones, and the 410 after a login from an address not seen before
     stuff0, stuff1 = ts_("2027-11-15T18:00:00"), ts_("2027-11-23T22:00:00")
-    proxies = [f"203.0.113.{x}" for x in range(17, 81)]
+    proxies = list(netmap.STORY_POOL)
     rr = rng("hijack")
     hij_apps = [a for a in apps if a.get("hijacked")]
     # successes come in the same bursts as the login floods: evenings and nights local time
@@ -1164,11 +1189,12 @@ def build_aid(W):
                 continue
             field = str(rr.choice(["direct deposit", "phone number", "mailing address", "email address"], p=[.33, .3, .22, .15]))
             same = rr.random() < 0.82 and a["channel"] == "web"
-            ip = a["ip"] if same else (ip_for(("chg", a["application_id"])) if a["channel"] != "phone" or rr.random() < 0.6 else "")
+            other_ip, other_asn = ip_for(("chg", a["application_id"]))
+            ip = a["ip"] if same else (other_ip if a["channel"] != "phone" or rr.random() < 0.6 else "")
             newmask = mask4("dep2", a["application_id"]) if field == "direct deposit" else ""
-            bank = banks[int(rr.integers(len(banks)))]
+            bank = ord_bank(banks[int(rr.integers(len(banks)))], ("chg", a["application_id"]))
             emit(a, "account_change", t, changed_utc=iso(t), channel="web" if ip else "phone", source_ip=ip,
-                 source_asn=(a["asn"] if same else int(ISP_ASN[int(rr.integers(len(ISP_ASN)))])) if ip else "",
+                 source_asn=(a["asn"] if same else (other_asn, rr.integers(len(ISP_ASN)))[0]) if ip else "",
                  device_id=(a["dev"] if same else "dev-" + h("chgdev", a["application_id"])[:12]) if ip else "", field_changed=field,
                  login_utc=iso(t - int(rr.integers(60, 900))) if ip else "", login_ip_seen_before=("Y" if same else "N") if ip else "",
                  deposit_routing_number=W.inst[bank]["routing_number"] if newmask else "", deposit_account_masked=newmask,

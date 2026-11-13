@@ -1,0 +1,35 @@
+{
+ "source": "partner_it",
+ "stream_id": "partner_endpoint_alerts",
+ "folder": "05_other_sources/partner_it/",
+ "files": "endpoint_alerts_<YYYY-MM>.csv",
+ "standard": "Endpoint protection console events (same columns as network_logs/audit/endpoint_protection.csv)",
+ "span": "2027-07-16T00:00Z to 2028-01-12T06:00Z",
+ "cadence": "per event; a sample",
+ "notes": "One folder per organisation: city, nascc, brw, port, srmc, bcmc, county. Each organisation has its own products, rule names, zone names and habits; do not assume a value seen in one folder means the same in another. Hosts, addresses and accounts are in 06_data_streams/partner_it_registry.json.",
+ "fields": [
+  {
+   "name": "time_utc",
+   "type": "ISO 8601 UTC"
+  },
+  {
+   "name": "host",
+   "notes": "registry host_id"
+  },
+  {
+   "name": "ip"
+  },
+  {
+   "name": "event",
+   "notes": "DEFINITIONS_UPDATED, SCAN_STARTED, SCAN_COMPLETED, REALTIME_PROTECTION_ENABLED, REALTIME_PROTECTION_DISABLED, THREAT_QUARANTINED, AGENT_UPDATED, AGENT_HEARTBEAT_MISSED"
+  },
+  {
+   "name": "detail",
+   "notes": "version strings and detection names in the vocabulary of the organisation's endpoint product (three different products are in use)"
+  },
+  {
+   "name": "initiated_by",
+   "notes": "system, or the registry account that started it"
+  }
+ ]
+}

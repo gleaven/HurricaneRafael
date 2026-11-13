@@ -1,0 +1,62 @@
+{
+ "host": "GW-WS-IT-33",
+ "ip": "10.14.21.36",
+ "os": "Windows 10 Enterprise 22H2",
+ "collected_utc": "2027-10-13T18:41:03Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 15,
+   "sha256": "bd636660b857a75c76818a656772941aa6a2f06de0a3332e58274fd3c5d9552d"
+  },
+  "file_listing.csv": {
+   "rows": 98,
+   "sha256": "a978c1d39ef88da0d90e6694684d2352c721212b979f34228be641c3eca37fa1"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "653ea0f5b102d02e188d8c7ac8bf9a0a1736e32cf023e89bdf9bc0ce872a9259"
+  },
+  "autoruns.csv": {
+   "rows": 19,
+   "sha256": "a9653642da2497e9901fde2419e467662951ec384acd529206fee3985917a4a6"
+  },
+  "execution_history.csv": {
+   "rows": 38,
+   "sha256": "d999aeb2ef6e844042e4a7e29daeb70c9b52665abacefc3a8dffdc1ed1b1acb6"
+  },
+  "logon_history.csv": {
+   "rows": 159,
+   "sha256": "fb8c04ba8564d93452923b6863ecc3a66d6bb6a67e219897fb0b700fb03948e6"
+  },
+  "installed_software.csv": {
+   "rows": 10,
+   "sha256": "1dfa9ab76c0d5c16e3b6a749849a06b2f9990becf71b80f9d03dd0a616d58582"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "c440c594d2be8a6c2a3406a36c2a4f91a029c73c4f87354c16742225b7c1b02e"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/MeterReadExport.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\MeterReadExport\\MeterReadExport.exe",
+   "sha256": "3424388261ad0ba538910a70f3a3311c702b2938e624a330c3029581ee6cac46"
+  },
+  {
+   "file": "placeholders/rtu_snapshot.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\rtu_snapshot.exe",
+   "sha256": "7deb4729b790fb00ae64e83d51355170ddd91b302147c01da023b6d4ffb53631"
+  },
+  {
+   "file": "placeholders/BrazosConfig_4.28.exe.placeholder.txt",
+   "stands_in_for": "C:\\Users\\aramirez\\Downloads\\BrazosConfig_4.28.exe",
+   "sha256": "c75a43dc04993f231da2ef0373cc106565d2110bc6856bab7a1148f44117d719"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

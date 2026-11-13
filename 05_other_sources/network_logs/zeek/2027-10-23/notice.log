@@ -6,8 +6,8 @@
 #open	2027-10-23-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1824283036.636131	-	10.14.20.37	64.3.6.47	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1824295114.787960	-	10.14.20.22	104.136.183.237	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1824303282.367892	-	10.14.22.21	205.98.242.157	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1824319275.026837	-	10.14.22.17	54.13.44.217	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+1824254851.012227	-	10.14.20.25	64.203.112.80	443	Conn::Content_Gap	web-portal.meetroom-video.com content gap (4439 bytes missing)	10.14.20.25	64.203.112.80	443	Notice::ACTION_LOG
+1824257010.351880	-	10.14.21.23	34.182.190.28	443	Weird::Activity	possible_split_routing	10.14.21.23	34.182.190.28	443	Notice::ACTION_LOG
+1824291405.310744	-	10.14.20.31	23.113.237.56	443	Conn::Content_Gap	www-east.vantage-security.com content gap (4725 bytes missing)	10.14.20.31	23.113.237.56	443	Notice::ACTION_LOG
+1824293627.173202	-	10.14.22.37	64.211.79.65	80	HTTP::Unusual_User_Agent	cdn.helpdesk-tickets.com user agent not seen before on this network	10.14.22.37	64.211.79.65	80	Notice::ACTION_LOG
 #close	2027-10-24-00-00-00

@@ -69,7 +69,9 @@ def vela_sessions():
 # ---------------------------------------------------------------- probes
 def p_0106():
     a, b = "2027-08-10T05:00", "2027-08-13T05:00"
-    r = [x for x in rows("portal/*_2027-08.csv") if x["client_ip"].startswith("203.0.113.") and a <= x["time_utc"] < b]
+    import netmap
+    r = [x for x in rows("portal/*_2027-08.csv") if x["client_ip"] in netmap.STORY_SET and a <= x["time_utc"] < b]
+    assert len({x["client_ip"] for x in r}) == 64 and {x["client_network"] for x in r} == {"ASN 64512"}
     systems = {x["system"] for x in r}
     ok_logins = [x for x in r if x["event"] == "login_success"]
     return (len(r) > 1000 and len(systems) == 2 and not ok_logins, f"{len(r)} requests from ASN 64512 to {sorted(systems)}, {len(ok_logins)} successful logins")
@@ -77,8 +79,10 @@ def p_0106():
 
 def p_0107():
     m = [x for x in rows("audit/mail_gateway_brightwake.csv") if x["time_utc"].startswith("2027-08-12") and x["sender_domain"] == "marine-certification-notices.example"]
-    c = rows("audit/mail_url_clicks_brightwake.csv")
-    return (len(m) == 1 and len(c) == 1 and c[0]["mailbox"] == m[0]["recipient"], f"{len(m)} message delivered {m[0]['time_utc'] if m else ''}, opened by {len(c)} mailbox")
+    allc = rows("audit/mail_url_clicks_brightwake.csv")           # the report holds every followed link of the window
+    c = [x for x in allc if x["url_host"].endswith("marine-certification-notices.example")]
+    return (len(m) == 1 and len(c) == 1 and c[0]["mailbox"] == m[0]["recipient"] and len(allc) > 5,
+            f"{len(m)} message delivered {m[0]['time_utc'] if m else ''}, its link followed by {len(c)} mailbox ({len(allc) - len(c)} other followed links in the report)")
 
 
 def p_101_siem():
@@ -98,7 +102,7 @@ def p_101_zeek():
 
 
 def p_001_audit():
-    m = [x for x in rows("audit/mail_gateway_cbpwa.csv") if "FEMA-PREP-GUIDANCE-2027.pdf.exe" in x["attachment_names"]]
+    m = [x for x in rows("audit/mail_gateway_cbpwa.csv") if "FEMA-PREP-GUIDANCE-2027.zip" in x["attachment_names"]]
     a = [x for x in rows("audit/endpoint_protection.csv") if x["host"] == "GW-WS-IT-04" and x["event"] == "REALTIME_PROTECTION_DISABLED"]
     ok = len(m) == 1 and m[0]["sender_domain"] == "cbpwa-vendor-support.com" and len(a) == 1 and m[0]["time_utc"] < a[0]["time_utc"] and a[0]["time_utc"][11:16] == "13:21" and m[0]["time_utc"][11:16] == "13:14"
     return ok, f"attachment delivered {m[0]['time_utc'] if m else '-'}; protection disabled {a[0]['time_utc'] if a else '-'}"
@@ -147,8 +151,8 @@ def p_003_audit():
 
 
 def p_103_audit():
-    f = [x for x in rows("audit/file_integrity.csv") if x["path"].endswith("relayconfigs\\sub02\\rtu_config_draft.xml")]
-    ok = len(f) == 1 and f[0]["time_utc"].startswith("2027-09-11T22:11") and f[0]["new_hash"] == "sha256=a3f8c2d1e9b04517" and f[0]["previous_hash"] == "sha256=d7e1a0f3c2b18429" \
+    f = [x for x in rows("audit/file_integrity.csv") if x["path"].endswith("relayconfigs\\sub02\\rtu_config_draft.xml") and x["time_utc"].startswith("2027-09-11T22:11")]
+    ok = len(f) == 1 and f[0]["time_utc"].startswith("2027-09-11T22:11") and f[0]["new_hash"] == "sha256=cd926b73217c0994" and f[0]["previous_hash"] == "sha256=2e78eabd6a1aa42f" \
         and "1200A -> 2400A" in f[0]["diff_summary"] and all(k in f[0]["diff_summary"] for k in ("R-02A", "R-02B", "R-02C"))
     return ok, f"file modified {f[0]['time_utc']}" if f else "no record"
 
@@ -173,13 +177,16 @@ def p_104_siem():
 def p_0306():
     c = [x for x in rows("audit/mail_gateway_city.csv") if x["sender_domain"] == "aid-help-portal.example"]
     n = [x for x in rows("audit/mail_gateway_airstation.csv") if x["sender_domain"] == "aid-help-portal.example"]
-    cl = rows("audit/mail_url_clicks_city_airstation.csv")
-    lg = [x for x in rows("audit/account_logons_city_airstation.csv") if x["src_network"] == "ASN 64512"]
+    allcl = rows("audit/mail_url_clicks_city_airstation.csv")     # the report holds every followed link of the window
+    cl = [x for x in allcl if x["url_host"] == "aid-help-portal.example"]
+    ck = {x["mailbox"]: x["time_utc"] for x in cl}                   # ordinary staff also sign on from that provider; the follow-on sign-ons are those of the clicked accounts
+    lg = [x for x in rows("audit/account_logons_city_airstation.csv") if x["src_network"] == "ASN 64512" and x["account"] in ck and x["time_utc"] > ck[x["account"]]]
     win = all("2027-09-15T05:00" <= x["time_utc"] < "2027-09-18T05:00" for x in c + n)
     city_clicks = sum(1 for x in cl if x["gateway"].startswith("CITY"))
     ok = 1100 <= len(c) + len(n) <= 1300 and win and len(cl) == 10 and city_clicks == 7 and {x["account"] for x in lg} == {x["mailbox"] for x in cl} \
         and all(any(l["account"] == k["mailbox"] and l["time_utc"] > k["time_utc"] for l in lg) for k in cl)
-    return ok, f"{len(c) + len(n)} messages, {len(cl)} mailboxes clicked ({city_clicks} city, {len(cl) - city_clicks} air station), {len(lg)} follow-on logons from ASN 64512"
+    return ok and len(allcl) >= 6 * len(cl), (f"{len(c) + len(n)} messages, {len(cl)} mailboxes followed its link ({city_clicks} city, {len(cl) - city_clicks} air station; "
+                                              f"{len(allcl) - len(cl)} other followed links in the report), {len(lg)} follow-on logons from ASN 64512")
 
 
 def p_105_audit():
@@ -205,7 +212,7 @@ def p_009():
 
 
 def p_010():
-    a = [x for x in rows("audit/settings_audits.csv") if x["device"] == "GW-SYS-RTU-04"]
+    a = [x for x in rows("audit/settings_audits.csv") if x["device"] == "GW-SYS-RTU-04" and x["result"] == "MISMATCH"]
     ok = len(a) == 1 and "2027-09-11T22:11" in a[0]["found"] and "GW-ENG-VELA" in a[0]["found"] and a[0]["time_utc"].startswith("2027-09-30T18")
     stamp = a[0]["found"].split(" ")[0] if a else ""
     s = [x for x in vela_sessions() if x["login_utc"] <= stamp <= x["logout_utc"] and x["src_ip"].startswith("185.220.")]
@@ -227,18 +234,22 @@ def p_106():
 
 def p_011():
     s = vela_sessions()
-    hours = sum(int(x["duration_s"]) - 22 for x in s) / 3600
+    hours = sum(int(x["duration_s"]) for x in s) / 3600
     cc = {x["src_country"] for x in s}
     e = [x for x in rows("audit/settings_audits.csv") if x["result"] == "EXPORTED" and x["time_utc"].startswith("2027-10-02T21")]
     return (len(s) == 14 and abs(hours - 11.4) < 0.05 and {"NL", "RO", "SG"} <= cc and len(e) == 2, f"{len(s)} sessions, {hours:.1f} h, source countries {sorted(cc)}; {len(e)} exports")
 
 
 def p_107_siem():
-    day = [x for x in siem() if x["time_utc"].startswith("2027-10-12")]
-    before = sum(1 for x in day if x["time_utc"][11:13] < "08") / 8
-    after = sum(1 for x in day if x["time_utc"][11:13] >= "08") / 16
+    """Control-network rules fall silent when the control network is cut off (12:00Z on D+28); the corporate rules carry on."""
+    dev = ("SE3-OT-6001", "SE3-OT-6004", "SE3-OT-6010")
+    before = sum(1 for x in siem() if x["rule_id"] in dev and "2027-10-11T12" <= x["time_utc"] < "2027-10-12T12") / 24
+    after = sum(1 for x in siem() if x["rule_id"] in dev and "2027-10-12T12" <= x["time_utc"] < "2027-10-13T12") / 24
+    corp_b = sum(1 for x in siem() if x["category"] == "policy" and x["time_utc"].startswith("2027-10-11"))
+    corp_a = sum(1 for x in siem() if x["category"] == "policy" and x["time_utc"].startswith("2027-10-13"))
     last = max((x["time_utc"] for x in siem() if x["rule_id"] == "SE3-NET-9941" and x["dst_ip"] == "104.21.88.43"), default="")
-    return (after <= 0.15 * before and last.startswith("2027-10-12T10:04"), f"{before:.0f}/h before 08:00Z, {after:.0f}/h after; last outbound alert {last}")
+    return (after <= 0.15 * before and corp_a >= 0.6 * corp_b and last.startswith("2027-10-12T10:04"),
+            f"control-network device rules {before:.1f}/h before the cut, {after:.1f}/h after; web-policy alerts {corp_b} two days before, {corp_a} the day after; last outbound alert {last}")
 
 
 def p_107_zeek():
@@ -260,7 +271,8 @@ def p_108():
 
 
 def p_0502():
-    r = [x for x in rows("portal/aid_portal_access_2027-11.csv") if x["client_ip"].startswith("203.0.113.") and "2027-11-15T06:00" <= x["time_utc"] < "2027-11-24T06:00"]
+    import netmap                                       # the provider also has ordinary customers; the sign-in runs come from its 64 addresses that also made the August requests
+    r = [x for x in rows("portal/aid_portal_access_2027-11*.csv") if x["client_ip"] in netmap.STORY_SET and "2027-11-15T06:00" <= x["time_utc"] < "2027-11-24T06:00"]
     fails = sum(1 for x in r if x["event"] == "login_failed")
     ok_acc = {x["account_ref"] for x in r if x["event"] == "login_success"}
     return (215000 <= fails <= 225000 and len(ok_acc) == 410, f"{fails:,} failed logins, {len(ok_acc)} accounts entered")

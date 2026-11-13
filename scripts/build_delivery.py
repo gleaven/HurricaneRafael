@@ -32,11 +32,15 @@ Checks (the run fails, exit 1, if any of these finds something)
       the same in posts, dispatch narratives, reports and scene descriptions is listed for review in
       11_hackathon/delivery_warnings.json instead (a company's own account or the people spreading a
       link may legitimately use a name before the news does)
+    * packet captures are binary: what is scanned in them is the text they carry in clear (HTTP request and
+      response headers, TLS server names, DNS names). The rest of each packet is opaque filler bytes, where a
+      text pattern can only match by chance.
 
 Staged release (--until) and its limits
     Row-oriented files are cut on their main time column (table below; UTC, or the file's local clock
-    where the column is local). Zeek logs are cut by day folder, satellite scenes by scene time, the
-    advisory file by advisory time. Tables with no time column (sensor lists, registries, census,
+    where the column is local). Zeek logs are cut by day folder, packet captures by the day in the file
+    name, a host triage collection ships only once its collection time is before the cut, satellite scenes
+    are cut by scene time, the advisory file by advisory time. Tables with no time column (sensor lists, registries, census,
     geography) ship whole. Records that keep being updated after they are opened (work orders, port
     calls, dispatch records with clearance times, claims, contracts) ship whole once their opening
     time is before the cut, so they can show a later status: cut after the period you want to hide,
@@ -61,7 +65,7 @@ CACHE = os.path.join(OUT, "_cache", "delivery_scan.json")
 D0 = dt.date(2027, 9, 14)
 
 REGISTRIES = ["vessels", "terminal_registry", "aircraft_registry", "drone_operators", "facility_registry", "infrastructure_assets",
-              "sensor_registry", "cad_units", "areas", "gw_host_registry", "scada_tags", "personas", "organizations", "entity_registry"]
+              "sensor_registry", "cad_units", "areas", "gw_host_registry", "scada_tags", "personas", "organizations", "entity_registry", "partner_it_registry"]
 DOCS = ["PLAYER_BRIEF.md", "DATA_GUIDE.md"]
 NOT_SHIPPED_STREAMS = {"news": "stories are released by the newsroom on the exercise clock (web pages, RSS, API), not as a file"}
 
@@ -162,7 +166,66 @@ def row_time(idx, row):
 
 
 def obj_time(o):
-    return norm_time(o.get("lookup_utc") or o.get("returned_utc") or o.get("created_at") or o.get("issued_local") or "")
+    return norm_time(o.get("lookup_utc") or o.get("returned_utc") or o.get("created_at") or o.get("issued_local") or o.get("time_utc") or "")
+
+
+# ---------------------------------------------------------------------------------- packet captures
+def pcap_packets(data):
+    """(timestamp, payload bytes, source port, destination port) of every TCP/UDP packet in a classic pcap file."""
+    import struct
+    if len(data) < 24 or data[:4] not in (b"\xd4\xc3\xb2\xa1", b"\xa1\xb2\xc3\xd4"):
+        return
+    e = "<" if data[:4] == b"\xd4\xc3\xb2\xa1" else ">"
+    off = 24
+    while off + 16 <= len(data):
+        sec, usec, incl, _orig = struct.unpack(e + "IIII", data[off:off + 16])
+        pkt = data[off + 16:off + 16 + incl]
+        off += 16 + incl
+        if len(pkt) < 34 or pkt[12:14] != b"\x08\x00":
+            continue
+        ihl = (pkt[14] & 15) * 4
+        proto, l4 = pkt[23], 14 + ihl
+        if proto == 6 and len(pkt) >= l4 + 20:
+            sp, dp = struct.unpack("!HH", pkt[l4:l4 + 4])
+            yield sec + usec / 1e6, pkt[l4 + (pkt[l4 + 12] >> 4) * 4:], sp, dp
+        elif proto == 17 and len(pkt) >= l4 + 8:
+            sp, dp = struct.unpack("!HH", pkt[l4:l4 + 4])
+            yield sec + usec / 1e6, pkt[l4 + 8:], sp, dp
+
+
+def _tls_server_name(p):
+    """Server name in a TLS ClientHello, or b''."""
+    try:
+        if len(p) < 43 or p[0] != 0x16 or p[5] != 0x01:
+            return b""
+        i = 5 + 4 + 2 + 32
+        i += 1 + p[i]
+        i += 2 + int.from_bytes(p[i:i + 2], "big")
+        i += 1 + p[i]
+        end = i + 2 + int.from_bytes(p[i:i + 2], "big")
+        i += 2
+        while i + 4 <= min(end, len(p)):
+            et, el = int.from_bytes(p[i:i + 2], "big"), int.from_bytes(p[i + 2:i + 4], "big")
+            if et == 0:
+                n = int.from_bytes(p[i + 7:i + 9], "big")
+                return p[i + 9:i + 9 + n]
+            i += 4 + el
+    except IndexError:
+        pass
+    return b""
+
+
+def pcap_text(data):
+    """The cleartext carried in a capture: HTTP headers, TLS server names, DNS payloads."""
+    out = []
+    for _t, p, sp, dp in pcap_packets(data):
+        if p[:5] in (b"GET /", b"POST ", b"HEAD ", b"PUT /", b"HTTP/"):
+            out.append(p.split(b"\r\n\r\n", 1)[0])
+        elif p[:1] == b"\x16":
+            out.append(_tls_server_name(p))
+        elif 53 in (sp, dp):
+            out.append(bytes(c if 32 <= c < 127 else 46 for c in p[12:]))
+    return b"\n".join(x for x in out if x)
 
 
 def day_of(tnorm):
@@ -311,6 +374,8 @@ def scan_file(pkg, src, never_rx, gated):
     full = os.path.join(ROOT, src)
     with open(full, "rb") as fh:
         data = fh.read()
+    if src.endswith(".pcap"):
+        data = pcap_text(data)                                 # binary capture: scan the text it carries in clear
     probs = []
     m = INTERNAL.search(data)
     if m:
@@ -391,7 +456,11 @@ def file_facts(src, data):
             if lines:
                 a, b = json.loads(lines[0]), json.loads(lines[-1])
                 f["cols"] = list(a.keys())
-                f.update(tcol=next((k for k in ("lookup_utc", "returned_utc", "created_at", "issued_local") if k in a), None), t0=obj_time(a), t1=obj_time(b))
+                f.update(tcol=next((k for k in ("lookup_utc", "returned_utc", "created_at", "issued_local", "time_utc") if k in a), None), t0=obj_time(a), t1=obj_time(b))
+        elif src.endswith(".pcap"):
+            ts_ = [t for t, _p, _s, _d in pcap_packets(data)]
+            f = {"rows": len(ts_), "tcol": "packet timestamp", "cols": ["Ethernet / IPv4 / TCP or UDP packets (classic pcap, microsecond timestamps)"],
+                 "t0": norm_time(str(int(min(ts_)))) if ts_ else None, "t1": norm_time(str(int(max(ts_)))) if ts_ else None}
         elif src.endswith(".log"):
             lines = data.split(b"\n")
             cols = next((l.decode().split("\t")[1:] for l in lines if l.startswith(b"#fields")), [])
@@ -417,6 +486,14 @@ def group_name(pkg):
     d, base = os.path.split(pkg)
     if "/zeek/" in pkg:
         return "data/network_logs/zeek/<YYYY-MM-DD>/" + base
+    if base.endswith(".pcap"):
+        return d + "/" + re.sub(r"\d{4}-\d{2}-\d{2}", "<YYYY-MM-DD>", base)
+    if "/triage/" in pkg:
+        return "data/network_logs/triage/<host>/" + ("placeholders/<file name>.placeholder.txt" if "/placeholders/" in pkg else base)
+    if d.startswith("data/partner_it/"):
+        return "data/partner_it/<org>/" + re.sub(r"\d{4}-\d{2}", "<month>", base)
+    if d.endswith(("network_logs/windows", "network_logs/endpoint", "network_logs/firewall")):
+        return d + "/" + re.sub(r"_\d{2}(?=\.)", "[_NN]", re.sub(r"\d{4}-\d{2}", "<month>", base))
     if d.endswith("social_media") and not base.startswith("_"):
         return d + "/<account or group>.jsonl"
     if d == "data/satellite" and base != "catalog.json":
@@ -477,6 +554,15 @@ def copy_until(src_full, dst_full, until):
     name = os.path.basename(src_full)
     if until is not None and src_full.endswith(".log") and os.path.basename(os.path.dirname(src_full)) >= until[:10]:
         return None                                        # Zeek day folder on or after the cut
+    if until is not None and src_full.endswith(".pcap"):   # one capture file per UTC day
+        m = re.search(r"\d{4}-\d{2}-\d{2}", name)
+        if m and m.group(0) >= until[:10]:
+            return None
+    if until is not None and "/triage/" in src_full.replace(os.sep, "/"):       # a collection exists only once it has been taken
+        d = os.path.dirname(src_full)
+        cj = os.path.join(d if os.path.exists(os.path.join(d, "collection.json")) else os.path.dirname(d), "collection.json")
+        if os.path.exists(cj) and (norm_time(json.load(open(cj, encoding="utf-8")).get("collected_utc") or "") or "") >= until:
+            return None
     os.makedirs(os.path.dirname(dst_full), exist_ok=True)
     if until is None:
         shutil.copyfile(src_full, dst_full)

@@ -6,12 +6,6 @@
 #open	2027-09-23-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1821668212.481827	-	10.14.30.65	69.199.161.89	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1821680100.000000	-	10.14.12.21	-	-	Scan::Port_Scan	internal scanner swept 10.14.20.0/24 (scheduled)	10.14.12.21	-	-	Notice::ACTION_LOG
-1821688596.146111	-	10.14.20.26	69.50.18.138	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1821696522.803926	-	10.14.21.40	199.204.29.71	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1821701369.482154	-	10.14.22.25	162.40.1.160	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1821713434.622154	-	10.14.22.47	104.70.165.180	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1821717388.038136	-	10.14.30.12	13.60.133.44	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1821722720.824530	-	10.14.20.15	108.234.182.59	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1821680110.101231	-	10.14.12.21	-	-	Scan::Port_Scan	10.14.12.21 scanned at least 235 unique hosts on port 445/tcp in 4m24s	10.14.12.21	-	-	Notice::ACTION_LOG
+1821706188.845293	-	10.14.20.37	157.200.106.243	443	SSL::Certificate_Expires_Soon	Certificate web-portal.hospital-patient-portal.org is going to expire soon	10.14.20.37	157.200.106.243	443	Notice::ACTION_LOG
 #close	2027-09-24-00-00-00

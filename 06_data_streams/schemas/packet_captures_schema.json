@@ -1,0 +1,41 @@
+{
+ "source": "packet_captures",
+ "folder": "05_other_sources/network_logs/pcap/",
+ "format": "pcap (classic libpcap, microsecond timestamps, Ethernet)",
+ "verified": true,
+ "standard": "libpcap 2.4 capture files; open with tcpdump, Wireshark, tshark, Zeek or any pcap library",
+ "notes": "A flow-cutoff capture on the inside interface of the internet edge firewall: for every flow in the Zeek conn log that crosses the edge, the opening packets only. TCP: the handshake and the first application message (the TLS ClientHello with the server name, the HTTP request, the mail server's greeting). UDP: the request and its answer (DNS, time synchronisation). Sampling follows the Zeek logs: traffic that people cause is a 1-in-200 sample; machine-generated periodic traffic, sessions through the remote-access gateway and the employee VPN, and the flows behind an alert or an audit record are recorded in full. Addresses are the internal ones (before outbound NAT, after inbound NAT), so a flow is joined to conn.log by its 5-tuple; the first packet carries the conn ts to the microsecond. Nothing after the first message is kept, and what is not protocol framing is filler. Payload byte counts never exceed those of the flow. One file per UTC day, named for the day the flows started.",
+ "entity_catalog": "06_data_streams/gw_host_registry.json (hosts by ip)",
+ "files": {
+  "capture": {
+   "filename": "perimeter_<YYYY-MM-DD>.pcap",
+   "description": "Packets in time order.",
+   "fields": [
+    {
+     "name": "frame",
+     "type": "ethernet",
+     "example": "",
+     "notes": "Source or destination MAC 02:.. of the firewall's inside interface tells the direction"
+    },
+    {
+     "name": "ip",
+     "type": "ipv4",
+     "example": "10.14.21.19 > 199.21.58.64",
+     "notes": "TTL and identification as sent; header checksum valid"
+    },
+    {
+     "name": "tcp / udp",
+     "type": "transport",
+     "example": "58048 > 443 [S]",
+     "notes": "Sequence numbers, flags, options and checksums valid"
+    },
+    {
+     "name": "payload",
+     "type": "bytes",
+     "example": "TLS ClientHello",
+     "notes": "TLS ClientHello, HTTP request line and headers, SMTP greeting, DNS and NTP messages in clear; nothing further is kept"
+    }
+   ]
+  }
+ }
+}

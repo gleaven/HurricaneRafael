@@ -1,0 +1,67 @@
+{
+ "host": "GW-WS-IT-118",
+ "ip": "10.14.30.42",
+ "os": "Windows 11 Enterprise 23H2",
+ "collected_utc": "2027-10-14T18:15:44Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 13,
+   "sha256": "e97a58e92024a5602991122f8e87f9282ace3e164f1e6266bd9e6defb17e9751"
+  },
+  "file_listing.csv": {
+   "rows": 95,
+   "sha256": "48833235b378d6ee696def2c7f7399e7a83a44a0d3a5f2e1fe51d79527886891"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "df11d2c3a0e8148f67673f12346953b526e7137bf4e8c72dbf733a528deb2f99"
+  },
+  "autoruns.csv": {
+   "rows": 16,
+   "sha256": "4f87beb230360724375ce2182c3a57cdea706d98a6569e9c02b1ccf0c43ecb66"
+  },
+  "execution_history.csv": {
+   "rows": 36,
+   "sha256": "49830a99d1a2b7a2d79df31b77da9bdcbef5351dd6f5ef90492cbec771754bff"
+  },
+  "logon_history.csv": {
+   "rows": 155,
+   "sha256": "59738f29aafeb0087e647f307890e15fd63f4859f620998215193ae9c97443d8"
+  },
+  "installed_software.csv": {
+   "rows": 6,
+   "sha256": "31229e392c53b2ae418df2735d35cd749dc248cc2c490021b3516218355110bf"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "e3b6543c613a9fdded117b5cd287f2be74c84f71959f7c593bc5a676ab1112fc"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/firmware_stage.exe.placeholder.txt",
+   "stands_in_for": "C:\\Program Files\\CBPWA\\Scripts\\firmware_stage.exe",
+   "sha256": "a7f5c515ccee2ec8080b58524684a45c4fd6e5888c0c534a1fc57dd88ecb7945"
+  },
+  {
+   "file": "placeholders/serialterm.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\bin\\serialterm.exe",
+   "sha256": "d2662092703527ce42bb699641bbfc801f83d84b8642586429c1f79e7b552f9d"
+  },
+  {
+   "file": "placeholders/MeterReadExport.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\MeterReadExport\\MeterReadExport.exe",
+   "sha256": "3424388261ad0ba538910a70f3a3311c702b2938e624a330c3029581ee6cac46"
+  },
+  {
+   "file": "placeholders/BrazosConverter.exe.placeholder.txt",
+   "stands_in_for": "C:\\Users\\egutierrez\\Downloads\\BrazosConverter.exe",
+   "sha256": "cdd776b1fa2f0e2855a08ccee0957994ba3dcccf5fcb9efdc93212c51acfa59e"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

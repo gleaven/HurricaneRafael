@@ -53,7 +53,7 @@
    "update-cdn.meridiancontrols.net",
    "update-cdn.vantagesec-telemetry.net"
   ],
-  "lure_attachment": "FEMA-PREP-GUIDANCE-2027.pdf.exe",
+  "lure_attachment": "FEMA-PREP-GUIDANCE-2027.zip (mail log); FEMA-PREP-GUIDANCE-2027.pdf.exe inside it (host logs)",
   "vpn_exit_blocks": {
    "tor_exit": "185.220.101.0/24 (sessions D-7 to D-4 and D-3)",
    "nl_vps": "45.141.152.0/24 (D+7 14:27-14:33Z and later)",
@@ -104,7 +104,7 @@
    "GW-RTU-WW-01": "none (city wastewater)",
    "GW-BACKUP-PWR": "GW-WTP-GEN-CTRL",
    "GW-PSTN-01": "GW-SRV-COMMS-01",
-   "GW-MAXIMO": "GW-SRV-MAXIMO-01",
+   "GW-MAXIMO": "GW-SRV-WAM-01",
    "HOST-911-01": "EXT-CAD-01",
    "HOST-PORTAL-01": "EXT-AIDPORTAL-01",
    "HOST-DOD-LOG-02": "EXT-NASLOG-02",
@@ -226,8 +226,8 @@
   "names": {
    "GridWater / GridWater CC / gwcc": "Coastal Bend Power and Water Authority (CBPWA)",
    "ClearPath SecureReach EDR Server (old registry)": "GW-SRV-EDR-01; ClearPath is the OT remote-access vendor only",
-   "Dragos OT Firewall (real vendor name in old registry)": "Bastille Networks industrial firewall (fictional)",
-   "AVEVA PI / Yokogawa / Schneider / SEL / GE / Fortinet / Cummins (real vendor names in old files)": "Meridian Controls Corp, Halden Protection, Bastille Networks (fictional)"
+   "Dragos OT Firewall (real vendor name in old registry)": "Corvane Networks industrial firewall (fictional)",
+   "AVEVA PI / Yokogawa / Schneider / SEL / GE / Fortinet / Cummins (real vendor names in old files)": "Meridian Controls Corp, Halden Protection, Corvane Networks (fictional)"
   }
  },
  "breaker_yard_designations": {

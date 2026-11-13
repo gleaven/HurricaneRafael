@@ -6,9 +6,7 @@
 #open	2027-12-10-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1828398882.167293	-	10.14.30.22	104.198.18.183	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1828443721.238726	-	10.14.22.33	199.178.18.12	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1828454367.998197	-	10.14.22.31	34.182.190.28	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1828478954.862381	-	10.14.30.16	162.62.176.6	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1828483018.409961	-	10.14.22.18	40.247.95.23	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1828418256.796385	-	10.14.30.33	10.14.10.6	53	DNS::External_Name	gis-preview.cbpwa-services.org is pointing to a local host	10.14.30.33	10.14.10.6	53	Notice::ACTION_LOG
+1828435639.740532	-	10.14.21.16	205.137.131.105	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.21.16	205.137.131.105	443	Notice::ACTION_LOG
+1828443663.257804	-	10.14.21.25	10.14.10.6	53	DNS::External_Name	lab.cbpwa.example is pointing to a local host	10.14.21.25	10.14.10.6	53	Notice::ACTION_LOG
 #close	2027-12-11-00-00-00

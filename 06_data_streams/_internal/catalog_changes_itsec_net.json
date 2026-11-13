@@ -1,0 +1,199 @@
+{
+ "_about": "Proposed additions to 06_data_streams/stream_catalog.json for the raw network logs of the utility (fork N, 2026-11-12). Generator: scripts/streams/gen_itsec_net.py; probes: scripts/streams/probes_itsec_net.py. expected_observation_count is 0 until the canon timeline lists these streams; the probe file already has probes for the events named under suggested_expected_observations.",
+ "add_streams": [
+  {
+   "stream_id": "firewall_logs",
+   "name": "Firewall session logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/firewall/fw_*.csv",
+   "format": "CSV session and drop log of the internet edge firewall and the IT/OT boundary firewall",
+   "key_columns": {
+    "time": "time_utc (session end; start = time_utc - duration_s)",
+    "entity_ids": [
+     "src_ip",
+     "dst_ip",
+     "device"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one file per device and month",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 0,
+   "notes": "Same sampling as zeek_logs: background is a 1-in-200 sample; everything involving hosts with alerts or remote sessions is complete. One allow record per Zeek conn row that crosses the device (join on the 5-tuple; time_utc equals conn ts + duration to the second). Drops of unsolicited internet traffic and, while the control network was isolated, of retries across the boundary have no Zeek row. Public block 12.186.44.64/28; outbound source NAT in nat_src_ip."
+  },
+  {
+   "stream_id": "web_proxy_logs",
+   "name": "Web and DNS filter logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/proxy/web_proxy_*.csv",
+   "format": "CSV access log of the transparent web and DNS filter",
+   "key_columns": {
+    "time": "time_utc (request time)",
+    "entity_ids": [
+     "client_ip",
+     "user"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one file per month",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 0,
+   "notes": "Same sampling as zeek_logs: background is a 1-in-200 sample; everything involving hosts with alerts or remote sessions is complete. One record per outbound web connection in the Zeek conn log (same client address and start second, same byte counts for HTTPS), one blocked record per POLICY_BLOCKED_SITE alert, one DNS record per DNS_UNCATEGORISED_DOMAIN alert. HTTPS shows the server name only."
+  },
+  {
+   "stream_id": "dhcp_logs",
+   "name": "Address lease logs",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/dhcp/dhcp_leases_*.csv",
+   "format": "CSV lease audit log (user networks and the employee VPN pool)",
+   "key_columns": {
+    "time": "time_utc",
+    "entity_ids": [
+     "hostname",
+     "ip",
+     "mac"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one file per month",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 0,
+   "notes": "Reserved addresses equal the registry addresses. One VPN pool lease per connection to the VPN concentrator in the Zeek conn log."
+  },
+  {
+   "stream_id": "packet_captures",
+   "name": "Perimeter packet capture",
+   "delivered": true,
+   "path_glob": "05_other_sources/network_logs/pcap/perimeter_*.pcap",
+   "format": "libpcap files, Ethernet/IPv4, flow-cutoff capture on the inside of the internet edge",
+   "key_columns": {
+    "time": "packet timestamp (epoch, UTC)",
+    "entity_ids": [
+     "ip addresses"
+    ],
+    "location": []
+   },
+   "ids_from_registry": [
+    "06_data_streams/gw_host_registry.json"
+   ],
+   "required_span": {
+    "start_utc": "2027-07-16T05:00Z",
+    "end_utc": "2028-01-12T06:00Z",
+    "days": [
+     -60,
+     119
+    ]
+   },
+   "cadence": "one file per UTC day",
+   "threads": [
+    "T8",
+    "T10",
+    "T18"
+   ],
+   "expected_observation_count": 0,
+   "notes": "Same sampling as zeek_logs: background is a 1-in-200 sample; everything involving hosts with alerts or remote sessions is complete. First packets of every Zeek conn row that crosses the edge (join on the 5-tuple; first packet at conn ts). Handshakes and HTTP headers in clear, everything else opaque filler; no file content."
+  }
+ ],
+ "suggested_expected_observations": [
+  {
+   "event_id": "GW-EVT-001",
+   "streams": [
+    "firewall_logs",
+    "web_proxy_logs",
+    "packet_captures"
+   ],
+   "what": "The 13:23Z connection from the workstation to the lookalike vendor name: edge session with 1.88 MB received; web-filter record with the name and the logged-on user; ClientHello naming it."
+  },
+  {
+   "event_id": "GW-EVT-101",
+   "streams": [
+    "firewall_logs",
+    "web_proxy_logs",
+    "packet_captures"
+   ],
+   "what": "First periodic outbound connection: 318 bytes out, 212 in, to 104.21.88.43:443."
+  },
+  {
+   "event_id": "GW-EVT-002",
+   "streams": [
+    "firewall_logs",
+    "packet_captures"
+   ],
+   "what": "Sessions to the remote-access gateway from outside addresses on both firewalls; gateway-to-historian flows; the 1.9 GB SMB flow from the workstation to the DMZ historian on the boundary firewall."
+  },
+  {
+   "event_id": "GW-EVT-011",
+   "streams": [
+    "firewall_logs"
+   ],
+   "what": "All 14 sessions to the gateway are in both firewall logs."
+  },
+  {
+   "event_id": "GW-EVT-107",
+   "streams": [
+    "firewall_logs",
+    "web_proxy_logs",
+    "packet_captures"
+   ],
+   "what": "The periodic outbound connections stop after 10:04Z on 2027-10-12."
+  }
+ ],
+ "invariant_probes": "Keys ('INV-...', stream) in probes_itsec_net.py: completeness against Zeek, alert backing, isolation, registry addresses, neutral treatment, size. Run all with: python3 scripts/streams/probes_itsec_net.py",
+ "schemas": [
+  "06_data_streams/schemas/firewall_logs_schema.json",
+  "06_data_streams/schemas/web_proxy_logs_schema.json",
+  "06_data_streams/schemas/dhcp_logs_schema.json",
+  "06_data_streams/schemas/packet_captures_schema.json"
+ ],
+ "regenerate": [
+  "python3 scripts/streams/gen_itsec_net.py --all --fresh --budget=60",
+  "python3 scripts/streams/gen_itsec_net.py --all --resume --budget=60   (repeat until DONE)"
+ ],
+ "run_after": "gen_itsec.py siem, zeek, audit. Must be re-run whenever the Zeek logs or the SIEM alerts change.",
+ "applied": "2026-11-12: streams added to stream_catalog.json; observations added to the MSEL (expected_observation_count in the catalogue is now set from canon_timeline.json)"
+}

@@ -1,0 +1,119 @@
+{
+ "source": "firewall_logs",
+ "folder": "05_other_sources/network_logs/firewall/",
+ "format": "CSV",
+ "verified": true,
+ "standard": "Session log of a zone-based firewall (traffic log written when a session ends, or when a packet is dropped); column names are plain",
+ "notes": "All times UTC with a Z suffix. Sampling follows the Zeek logs: traffic that people cause is a 1-in-200 sample; machine-generated periodic traffic, sessions through the remote-access gateway and the employee VPN, and the flows behind an alert or an audit record are recorded in full. One record for every Zeek flow that crosses the device; dropped inbound internet traffic is a sample. Hosts are joined by address to 06_data_streams/gw_host_registry.json. External addresses and names are invented. Two devices: GW-FW-EDGE-01 (internet edge) and GW-OT-FW-01 (boundary between the corporate network, the IT/OT DMZ and the control network). A flow that passes both appears in both; flows that stay inside the corporate network or inside the control network pass neither. Addresses are those on the inside of the device: for inbound flows dst_ip is the internal address of the published service; for dropped inbound packets it is the public address they were sent to. Byte counters count whole IP packets (headers included) and equal orig_ip_bytes / resp_ip_bytes of the flow in conn.log. While the control network is cut off, the boundary firewall allows nothing across and logs what was refused. Public block 12.186.44.64/28: .65 firewall, .66-.69 outbound source NAT, .70 mail gateway, .71 public website, .72 customer portal, .73 external DNS, .74 file transfer, .75 employee VPN, .76 OT remote-access gateway.",
+ "entity_catalog": "06_data_streams/gw_host_registry.json (hosts, network_zones)",
+ "files": {
+  "sessions": {
+   "filename": "fw_<DEVICE>_<YYYY-MM>[_NN].csv",
+   "description": "One row per session or dropped packet, in time order. A session is filed under the month in which it ended.",
+   "fields": [
+    {
+     "name": "time_utc",
+     "type": "datetime",
+     "example": "2027-09-01T00:48:50Z",
+     "notes": "When the record was written: session end for allowed sessions (start = time_utc - duration_s), arrival time for drops"
+    },
+    {
+     "name": "device",
+     "type": "string",
+     "example": "GW-OT-FW-01",
+     "notes": "hostname in gw_host_registry.json"
+    },
+    {
+     "name": "action",
+     "type": "string",
+     "example": "allow",
+     "notes": "allow, deny"
+    },
+    {
+     "name": "rule_name",
+     "type": "string",
+     "example": "OT-TO-OTDMZ",
+     "notes": "Policy rule that matched"
+    },
+    {
+     "name": "src_zone",
+     "type": "string",
+     "example": "ot-control",
+     "notes": "zone in gw_host_registry.json network_zones, or internet"
+    },
+    {
+     "name": "dst_zone",
+     "type": "string",
+     "example": "ot-dmz",
+     "notes": ""
+    },
+    {
+     "name": "src_ip",
+     "type": "ip",
+     "example": "10.72.1.10",
+     "notes": ""
+    },
+    {
+     "name": "src_port",
+     "type": "int",
+     "example": "57612",
+     "notes": "0 for ICMP"
+    },
+    {
+     "name": "dst_ip",
+     "type": "ip",
+     "example": "10.72.4.20",
+     "notes": ""
+    },
+    {
+     "name": "dst_port",
+     "type": "int",
+     "example": "5450",
+     "notes": "0 for ICMP"
+    },
+    {
+     "name": "proto",
+     "type": "string",
+     "example": "tcp",
+     "notes": "tcp, udp, icmp"
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "example": "historian-data",
+     "notes": "Application the device identified (ssl, web-browsing, smtp, dns, ntp, ms-rdp, ms-ds-smb, historian-data, dnp3, modbus-tcp, ms-update ...); incomplete when a TCP handshake did not finish; not-applicable for drops"
+    },
+    {
+     "name": "bytes_sent",
+     "type": "int",
+     "example": "539930",
+     "notes": "IP bytes from the source, headers included (packet size for drops); equals orig_ip_bytes in conn.log"
+    },
+    {
+     "name": "bytes_recv",
+     "type": "int",
+     "example": "5427",
+     "notes": "IP bytes from the destination, headers included; equals resp_ip_bytes in conn.log; 0 for drops"
+    },
+    {
+     "name": "duration_s",
+     "type": "float",
+     "example": "95.854065",
+     "notes": "Session length in seconds (0 for drops)"
+    },
+    {
+     "name": "nat_src_ip",
+     "type": "ip",
+     "example": "12.186.44.67",
+     "notes": "Public source address after translation, outbound sessions on the edge only"
+    },
+    {
+     "name": "session_end_reason",
+     "type": "string",
+     "example": "tcp-fin",
+     "notes": "tcp-fin, tcp-rst-from-client, tcp-rst-from-server, aged-out, policy-deny"
+    }
+   ]
+  }
+ }
+}

@@ -313,7 +313,7 @@
         "C",
         "D"
       ],
-      "description": "O.N. Stevens Water Treatment Plant issues Boil Water Notice GW-PUB-001 at 17:30 CDT for Districts 3 and 4 (48,000 residents). The notice is transmitted via the city's Everbridge mass notification system in English only. NCLAS receives the English source text at 17:35 CDT. Under the 2-hour life-safety SLA, Spanish delivery is due by 19:35 CDT. However, NCLAS is operating at reduced capacity (3 of 7 translators are unavailable due to storm displacement), and the Spanish text is not completed until 23:45 CDT. CBPWA/OEM does not transmit the Spanish Everbridge alert or forward to KNCB until the following morning. KNCB receives the boil-water notice text from OEM at 06:03 CDT D+13 and airs it at once. The gap is 12 hours 33 minutes from English public notification to Spanish air time.",
+      "description": "O.N. Stevens Water Treatment Plant issues Boil Water Notice GW-PUB-001 at 17:30 CDT for Districts 3 and 4 (48,000 residents). The notice is transmitted via the city's CoastAlert mass notification system in English only. NCLAS receives the English source text at 17:35 CDT. Under the 2-hour life-safety SLA, Spanish delivery is due by 19:35 CDT. However, NCLAS is operating at reduced capacity (3 of 7 translators are unavailable due to storm displacement), and the Spanish text is not completed until 23:45 CDT. CBPWA/OEM does not transmit the Spanish CoastAlert alert or forward to KNCB until the following morning. KNCB receives the boil-water notice text from OEM at 06:03 CDT D+13 and airs it at once. The gap is 12 hours 33 minutes from English public notification to Spanish air time.",
       "observed_in": [
         {
           "stream": "eas_alerts",
@@ -341,9 +341,9 @@
         }
       ],
       "detection_artifacts": [
-        "Everbridge system log: GW-PUB-001 English alert transmitted 17:30 CDT D+12 to 48,000 registered devices in Districts 3–4.",
+        "CoastAlert system log: GW-PUB-001 English alert transmitted 17:30 CDT D+12 to 48,000 registered devices in Districts 3–4.",
         "NCLAS job log entry 2027-09-26-BWN-001: Source received 17:35 CDT. Translation assigned to available staff. Delivery timestamp: 23:45 CDT D+12. SLA breach: 4h 10m past 2-hour life-safety SLA.",
-        "OEM internal email trail: Spanish text received from NCLAS at 23:47 CDT D+12. Next action item (Everbridge Spanish blast and KNCB notification) assigned to morning shift. Email forwarded to KNCB at 05:58 CDT D+13.",
+        "OEM internal email trail: Spanish text received from NCLAS at 23:47 CDT D+12. Next action item (CoastAlert Spanish blast and KNCB notification) assigned to morning shift. Email forwarded to KNCB at 05:58 CDT D+13.",
         "KNCB broadcast log: GW-PUB-001 Spanish boil-water advisory aired 06:03 CDT D+13. Total English-to-Spanish public gap: 12h 33m.",
         "Census ACS data for Districts 3–4: estimated 22,400 residents (46.7%) who speak English 'less than very well,' classified as Spanish-dominant for notification purposes."
       ],
@@ -396,7 +396,7 @@
       ],
       "detection_artifacts": [
         "KNCB broadcast transcript 07:15 CDT D+13: 'Recibimos el aviso oficial esta mañana temprano de la ciudad. Sé que muchos de ustedes están preguntando — ¿por qué no lo supimos antes? Es una pregunta que también tenemos nosotros.' (We received the official notice early this morning from the city. I know many of you are asking — why didn't we know sooner? It is a question we also have.)",
-        "Harborline 6 field interview log: 7 of 9 District 3 evacuees at Richard King shelter stated they first heard about boil-water notice from KNCB on morning of D+13. 2 of 9 stated they heard from a neighbor. 0 of 9 stated they received an Everbridge alert in Spanish."
+        "Harborline 6 field interview log: 7 of 9 District 3 evacuees at Richard King shelter stated they first heard about boil-water notice from KNCB on morning of D+13. 2 of 9 stated they heard from a neighbor. 0 of 9 stated they received an CoastAlert alert in Spanish."
       ],
       "public_fact": "PUB-144",
       "place_ids": [
@@ -910,6 +910,6 @@
       "description": "Fictional. Handles media inquiries for Nueces County OEM throughout the Rafael response. First official to publicly confirm the boil-water notice Spanish delay, attributing it to NCLAS reduced capacity. Used in multiple news hooks."
     }
   ],
-  "answer_key_path": "Teams establish the detection path as follows: (1) Collect all official life-safety alert timestamps from city/county/FEMA records and pair each with the corresponding Spanish-language release timestamp from KNCB logs and Everbridge records. (2) Build a delta table showing English-to-Spanish release lags across all 4 alert categories — the resulting pattern (2h47m, 7h52m, 12h33m, 9h11m avg) is too systematic to be random, pointing to a structural workflow cause. (3) Obtain the NCLAS contract (EVT-1401 artifacts) showing the sequential-translation SLA model — this is the structural cause. (4) Cross-reference with Census ACS data showing ~22,400 Spanish-dominant residents in Districts 3–4 were exposed to the longest gap (12h33m boil-water notice). (5) Cross-reference with T16 gastroenteritis cluster onset (D+15, 3 days after English notice, 2 days after Spanish notice) — Spanish-dominant households had 2 days vs English-dominant households' 3 days to begin protective behavior. (6) Hidden truth: the lag is not failure of individuals but of the architecture — a single-language-first alert workflow that treats Spanish as a downstream translation product rather than a co-primary output.",
+  "answer_key_path": "Teams establish the detection path as follows: (1) Collect all official life-safety alert timestamps from city/county/FEMA records and pair each with the corresponding Spanish-language release timestamp from KNCB logs and CoastAlert records. (2) Build a delta table showing English-to-Spanish release lags across all 4 alert categories — the resulting pattern (2h47m, 7h52m, 12h33m, 9h11m avg) is too systematic to be random, pointing to a structural workflow cause. (3) Obtain the NCLAS contract (EVT-1401 artifacts) showing the sequential-translation SLA model — this is the structural cause. (4) Cross-reference with Census ACS data showing ~22,400 Spanish-dominant residents in Districts 3–4 were exposed to the longest gap (12h33m boil-water notice). (5) Cross-reference with T16 gastroenteritis cluster onset (D+15, 3 days after English notice, 2 days after Spanish notice) — Spanish-dominant households had 2 days vs English-dominant households' 3 days to begin protective behavior. (6) Hidden truth: the lag is not failure of individuals but of the architecture — a single-language-first alert workflow that treats Spanish as a downstream translation product rather than a co-primary output.",
   "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
 }

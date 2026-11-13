@@ -1,0 +1,92 @@
+{
+ "host": "GW-WS-IT-69",
+ "ip": "10.14.20.19",
+ "os": "Windows 10 Enterprise 22H2",
+ "collected_utc": "2027-10-14T14:38:06Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 14,
+   "sha256": "c3220d029ab4aa0b8135b0d82b20ad8c5c8fc7f25eca251483fe53c44a0f92de"
+  },
+  "file_listing.csv": {
+   "rows": 91,
+   "sha256": "4bd23bb7f3742a8d6fa3b11b8e46a6eeff321132b8af1939ad5231e69115ab75"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "2930ee9446d7e7e6f873af510318f98f92a7a67bfd11ad286a0a2ef771fb6f00"
+  },
+  "autoruns.csv": {
+   "rows": 18,
+   "sha256": "8c7d912af9e1cb32c8d74148c22e1a7a94a801b36704b2d13ca08be658bbf8e4"
+  },
+  "execution_history.csv": {
+   "rows": 36,
+   "sha256": "23d8bdceb6a0de1fe41c20c577ad9fad22aa3f932fc4ecdf5de3b3b480323f82"
+  },
+  "logon_history.csv": {
+   "rows": 111,
+   "sha256": "78029fad43270daa58816ce8c65808eca3eaaf078213ed44c81354e602238091"
+  },
+  "installed_software.csv": {
+   "rows": 7,
+   "sha256": "17b7d7aa058a914ad0d9a10179c0450ca6a972bd7752e217547b3fd5c5a3d71d"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "f38b7824ba9d35de2003ee5a313ada169ce875ae26943e7dea24227fc5d076c0"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/alarmlist_export.exe.placeholder.txt",
+   "stands_in_for": "C:\\Program Files\\CBPWA\\Scripts\\alarmlist_export.exe",
+   "sha256": "f91b41ac6849d55290214d2247bfb0a079a32e2349ff065af0daf0136095e474"
+  },
+  {
+   "file": "placeholders/padrehelper.exe.placeholder.txt",
+   "stands_in_for": "C:\\Program Files\\Padre\\padrehelper.exe",
+   "sha256": "ea4f4ebe87f6f9bb1b525e9cb4b932d81c0c61d4c07606197e97cbdc9b9245e1"
+  },
+  {
+   "file": "placeholders/relaydiff.exe.placeholder.txt",
+   "stands_in_for": "C:\\Support\\relaydiff.exe",
+   "sha256": "dd40cbcc2a8b8a7badd14de984b6a830a6bfefcf4b5b09c1e81454a163e0f54e"
+  },
+  {
+   "file": "placeholders/relaycalc.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\RelayCalc\\relaycalc.exe",
+   "sha256": "95f0cd56f07e83683437f52a123510f30ba1cf0624c64db267f7f8ca7cffcf63"
+  },
+  {
+   "file": "placeholders/BaypointConverter_6.32_x64.exe.placeholder.txt",
+   "stands_in_for": "C:\\Users\\rvela\\Downloads\\BaypointConverter_6.32_x64.exe",
+   "sha256": "ae1a417025378b2fa7357efd5972aef0e204d87b3eaa99703a7379de05c23fcb"
+  },
+  {
+   "file": "placeholders/HeronInstaller_x64.exe.placeholder.txt",
+   "stands_in_for": "C:\\Users\\rvela\\Downloads\\HeronInstaller_x64.exe",
+   "sha256": "ce6d640e0ccd14849a12f9e26080e7f6bf76bc4df240b81deb11e01e832d4da8"
+  },
+  {
+   "file": "placeholders/PadreInstaller.exe.placeholder.txt",
+   "stands_in_for": "C:\\Users\\rvela\\Downloads\\PadreInstaller.exe",
+   "sha256": "d0901b214617a7f8e94d26e8eb5fca9f3c121e122556387973407a145f34ff2d"
+  },
+  {
+   "file": "placeholders/gisclip.exe.placeholder.txt",
+   "stands_in_for": "C:\\Utilities\\gisclip.exe",
+   "sha256": "6f9b00b610b50cf0c26287f43a9aa2afe8322672e05b020f77d104e7c6345df1"
+  },
+  {
+   "file": "placeholders/logrotate_helper.exe.placeholder.txt",
+   "stands_in_for": "C:\\Utilities\\logrotate_helper.exe",
+   "sha256": "3dab25899f06d758c4516960bfa337ed716e1c016a1ebb0df84b66ca7b8e09b8"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

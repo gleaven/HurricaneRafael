@@ -6,6 +6,7 @@
 #open	2027-08-24-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1819105072.588423	-	10.14.30.52	23.163.220.114	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1819112227.129362	-	10.14.30.45	13.60.133.44	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1819089676.716061	-	10.14.21.19	216.94.35.248	443	Conn::Content_Gap	login.hospital-patient-portal.org content gap (6922 bytes missing)	10.14.21.19	216.94.35.248	443	Notice::ACTION_LOG
+1819100827.992494	-	10.14.21.33	54.112.244.145	443	Conn::Content_Gap	cdn.fleetfuel-cards.com content gap (8173 bytes missing)	10.14.21.33	54.112.244.145	443	Notice::ACTION_LOG
+1819142148.950680	-	10.14.30.11	35.229.79.13	80	HTTP::Unusual_User_Agent	www.cctexas-services.org user agent not seen before on this network	10.14.30.11	35.229.79.13	80	Notice::ACTION_LOG
 #close	2027-08-25-00-00-00

@@ -6,13 +6,15 @@ import sys, os, hashlib, zipfile, json, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT
 
-SKIP_DIRS = {"_versions", "__pycache__", "_build_cache", "_cache", "_test", "state", ".git"}
+SKIP_DIRS = {"_versions", "__pycache__", "_build_cache", "_cache", "_test", "state", ".git", "cache"}
 LOCK = os.path.join(ROOT, "07_validation", "manifest.lock.json")
 
 def files():
     for d, dirs, fs in os.walk(ROOT):
         dirs[:] = [x for x in dirs if x not in SKIP_DIRS]
         for f in fs:
+            if f.endswith(".pkl"):
+                continue
             full = os.path.join(d, f)
             rel = os.path.relpath(full, ROOT).replace(os.sep, "/")
             if rel == "07_validation/manifest.lock.json":

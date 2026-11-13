@@ -1,0 +1,62 @@
+{
+ "host": "GW-WS-ENG-03",
+ "ip": "10.72.1.43",
+ "os": "Windows 10 Enterprise LTSC 2019",
+ "collected_utc": "2027-10-13T20:44:17Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 11,
+   "sha256": "49fd7260f160c7a0afc56965aaeb220c1d65aa09803b649a84667ff2656bdb32"
+  },
+  "file_listing.csv": {
+   "rows": 41,
+   "sha256": "2eb8b12c0941426169d86e3356c02cb417b6c5d95ee49b6e056dfc1aa169d813"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "8b7ea5d24f0a99a2187b0a01a9290de1477ad4d92c16708f02bcc04f09c1cc1a"
+  },
+  "autoruns.csv": {
+   "rows": 13,
+   "sha256": "1e2bf8e8ee4b23588a98507442f7594429379793fc609cb4138ff9c226d47c40"
+  },
+  "execution_history.csv": {
+   "rows": 13,
+   "sha256": "bc0a85551ff6d6b9f7cfcfd9620cf3071ead7888de7d8dc00b3e93ac8eb00da7"
+  },
+  "logon_history.csv": {
+   "rows": 42,
+   "sha256": "48e90b7ceca761491aa32f26a977aa691485d4510d3cc4f6be4517161dfd5531"
+  },
+  "installed_software.csv": {
+   "rows": 2,
+   "sha256": "804f6c5e1c21f2500b6ba1aea22ec754879472fd0b93e54c4bbea7b8191d8369"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "f5f1e060079ab4d3f091255f758924269c5288c72edd2b7ea04bf581674c42dd"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/histexport.exe.placeholder.txt",
+   "stands_in_for": "C:\\Support\\histexport.exe",
+   "sha256": "6250ce6b10d43d5482aec5fb978c787d9a1e96408487d4a99fc5dae399f88db9"
+  },
+  {
+   "file": "placeholders/backupverify.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\bin\\backupverify.exe",
+   "sha256": "221ae9252a3f8495fb4c6b910dea522807077b979e28f62a1405ea6b50e1270a"
+  },
+  {
+   "file": "placeholders/tagcheck.exe.placeholder.txt",
+   "stands_in_for": "C:\\Utilities\\tagcheck.exe",
+   "sha256": "7f4b355c107290dac07a8fb8db8c9ef83c3b27c8f1ae7adacfc0d5b76acfdebe"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

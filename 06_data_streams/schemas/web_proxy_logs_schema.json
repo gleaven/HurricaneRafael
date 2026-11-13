@@ -1,0 +1,101 @@
+{
+ "source": "web_proxy_logs",
+ "folder": "05_other_sources/network_logs/proxy/",
+ "format": "CSV",
+ "verified": true,
+ "standard": "Access log of a transparent web and DNS filter (GW-SRV-PROXY-01); column names are plain",
+ "notes": "All times UTC with a Z suffix. Sampling follows the Zeek logs: traffic that people cause is a 1-in-200 sample; machine-generated periodic traffic, sessions through the remote-access gateway and the employee VPN, and the flows behind an alert or an audit record are recorded in full. Allowed requests follow the Zeek flows; blocked requests and DNS-filter rows are complete. Hosts are joined by address to 06_data_streams/gw_host_registry.json. External addresses and names are invented. The filter sits in the path of outbound web traffic without changing addresses. For HTTPS it sees only the server name, not the path. A blocked request never reaches the internet, so it has no flow. DNS lookups are logged only when the filter has no category for the name (scheme dns); such a row carries the client, the name and the second of that lookup in dns.log. Byte counts are payload bytes, as orig_bytes / resp_bytes in conn.log. user: a name means that person was logged on to the client and the request was made in their session; requests made by the operating system, services and agents, requests from servers and all DNS rows carry '-'.",
+ "entity_catalog": "06_data_streams/gw_host_registry.json (hosts by ip, users by username)",
+ "files": {
+  "requests": {
+   "filename": "web_proxy_<YYYY-MM>[_NN].csv",
+   "description": "One row per web request (per connection for HTTPS) or logged DNS lookup, in time order.",
+   "fields": [
+    {
+     "name": "time_utc",
+     "type": "datetime",
+     "example": "2027-09-01T00:02:36Z",
+     "notes": "Request time: the second the flow started (the following second for a plain-HTTP request that falls just after a second boundary); for DNS rows the second of the lookup"
+    },
+    {
+     "name": "client_ip",
+     "type": "ip",
+     "example": "10.14.21.36",
+     "notes": "ip in gw_host_registry.json"
+    },
+    {
+     "name": "user",
+     "type": "string",
+     "example": "mwalker",
+     "notes": "username in gw_host_registry.json users when the request was made in that person's logon session on the client; - for service, agent and operating-system traffic, for servers and for DNS rows"
+    },
+    {
+     "name": "method",
+     "type": "string",
+     "example": "CONNECT",
+     "notes": "CONNECT for HTTPS, the HTTP method for plain HTTP, QUERY for DNS"
+    },
+    {
+     "name": "scheme",
+     "type": "string",
+     "example": "https",
+     "notes": "https, http, dns"
+    },
+    {
+     "name": "host",
+     "type": "string",
+     "example": "www.searchindex-api.com",
+     "notes": "Server name, or the address when the client gave no name"
+    },
+    {
+     "name": "url_path",
+     "type": "string",
+     "example": "-",
+     "notes": "Path for plain HTTP; - otherwise"
+    },
+    {
+     "name": "status",
+     "type": "string",
+     "example": "200",
+     "notes": "HTTP status returned to the client (403 for blocked, 502/504 when the server did not answer); DNS response code (NOERROR, NXDOMAIN) for lookups"
+    },
+    {
+     "name": "action",
+     "type": "string",
+     "example": "allowed",
+     "notes": "allowed, blocked"
+    },
+    {
+     "name": "category",
+     "type": "string",
+     "example": "search-engines",
+     "notes": "Category the filter gives the destination; uncategorised when it has none; ip-address for a bare address"
+    },
+    {
+     "name": "bytes_out",
+     "type": "int",
+     "example": "2204",
+     "notes": "Payload bytes from the client"
+    },
+    {
+     "name": "bytes_in",
+     "type": "int",
+     "example": "61377",
+     "notes": "Payload bytes to the client (the size of the block page for blocked requests)"
+    },
+    {
+     "name": "user_agent_family",
+     "type": "string",
+     "example": "-",
+     "notes": "For plain HTTP only: browser families and the families of update, certificate-check and agent clients; - for HTTPS and DNS"
+    },
+    {
+     "name": "policy",
+     "type": "string",
+     "example": "DEFAULT-WEB-ALLOW",
+     "notes": "Filter policy that decided"
+    }
+   ]
+  }
+ }
+}

@@ -240,7 +240,7 @@
       "observed_in": [
         {
           "stream": "aid_applications",
-          "what": "FEMA DisasterAssistance.gov server log: 94 application submissions from IP 198.51.100.44 between D+60 06:01Z and D+62 23:59Z; submission cluster timestamps: burst 1 D+60 06:01-09:17Z (31 apps), burst 2 D+61 01:00-04:45Z (29 apps), burst 3 D+62 23:00-23:59Z (34 apps) | FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash CC-DAM-0014.jpg appears in 7...",
+          "what": "FEMA DisasterAssistance.gov server log: 94 application submissions from IP 198.51.100.44 between D+60 06:01Z and D+62 23:59Z; submission cluster timestamps: burst 1 D+60 06:01-09:17Z (31 apps), burst 2 D+61 01:00-04:45Z (29 apps), burst 3 D+62 23:00-23:59Z (34 apps) | FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash 056a6eeab2bf0df6.jpg appears in 7...",
           "when": {
             "start_utc": "2027-11-13T06:01Z",
             "end_utc": "2027-11-16T06:00Z"
@@ -249,7 +249,7 @@
       ],
       "detection_artifacts": [
         "FEMA DisasterAssistance.gov server log: 94 application submissions from IP 198.51.100.44 between D+60 06:01Z and D+62 23:59Z; submission cluster timestamps: burst 1 D+60 06:01-09:17Z (31 apps), burst 2 D+61 01:00-04:45Z (29 apps), burst 3 D+62 23:00-23:59Z (34 apps)",
-        "FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash CC-DAM-0014.jpg appears in 7 applications with 7 different property addresses",
+        "FEMA ECIMS flag SA-2027-TX-4471 supplemental: image hash deduplication identifies 23 unique damage photos reused across 94 applications; photo hash 056a6eeab2bf0df6.jpg appears in 7 applications with 7 different property addresses",
         "IP geolocation record: 198.51.100.44 registered to Landmark Pacific Holdings LLC, 4411 Leopard Street, Corpus Christi TX 78408; ISP: Spectrum Business"
       ],
       "public_fact": null,
@@ -687,6 +687,6 @@
       "description": "The boil-water notice for Districts 3-4 (T9 water SCADA manipulation) generates real property damage from water exposure in the same districts where LPH concentrates its fraudulent IA applications. Legitimate water damage claims provide camouflage for FastDry Coastal's fraudulent billing."
     }
   ],
-  "answer_key_path": "The key detection artifact for T22 is the FEMA ECIMS IP clustering flag (SA-2027-TX-4471): 94 IA applications submitted from IP 198.51.100.44 (Landmark Pacific Holdings, 4411 Leopard Street) in three time-clustered bursts across D+60 through D+62. Secondary detection: image hash deduplication across the 94 applications reveals 23 unique photos reused across multiple property addresses; photo CC-DAM-0014.jpg appears in 7 applications. Tertiary detection: Sabine National Insurance SIU referral showing 47 commercial claims with identical damage narrative text (address-swap pattern), which predates and partially drives the FBI case opening at D+30. The connection between T22 and T8/T9 is structural cover: legitimate utility damage in Districts 3-4 creates a high-volume, high-noise claims environment that slows adjuster follow-up on suspicious commercial claims. Operation Sandbar is public knowledge after D+90; before D+90 it is entirely hidden, and the public-facing signals are only the generic DPS consumer fraud warnings and TDI fraud task force announcement.",
+  "answer_key_path": "The key detection artifact for T22 is the FEMA ECIMS IP clustering flag (SA-2027-TX-4471): 94 IA applications submitted from IP 198.51.100.44 (Landmark Pacific Holdings, 4411 Leopard Street) in three time-clustered bursts across D+60 through D+62. Secondary detection: image hash deduplication across the 94 applications reveals 23 unique photos reused across multiple property addresses; photo 056a6eeab2bf0df6.jpg appears in 7 applications. Tertiary detection: Sabine National Insurance SIU referral showing 47 commercial claims with identical damage narrative text (address-swap pattern), which predates and partially drives the FBI case opening at D+30. The connection between T22 and T8/T9 is structural cover: legitimate utility damage in Districts 3-4 creates a high-volume, high-noise claims environment that slows adjuster follow-up on suspicious commercial claims. Operation Sandbar is public knowledge after D+90; before D+90 it is entirely hidden, and the public-facing signals are only the generic DPS consumer fraud warnings and TDI fraud task force announcement.",
   "canon_note": "Reconciled with 00_scenario/canon_decisions.md on 2026-11-09. truth, msel_events and public_facts mirror 00_scenario/threads.json, 00_scenario/msel.json and 02_public_record/public_record.json, which are authoritative; news_arcs.story_hooks lists the stories actually published."
 }

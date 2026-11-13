@@ -6,6 +6,9 @@
 #open	2027-10-16-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1823678817.752574	-	10.14.30.23	13.98.76.16	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1823708209.392732	-	10.14.21.54	40.144.190.74	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1823660917.648292	-	10.14.30.63	10.14.10.6	53	DNS::External_Name	old-intranet.cbpwa.example is pointing to a local host	10.14.30.63	10.14.10.6	53	Notice::ACTION_LOG
+1823673691.133181	-	10.14.30.45	142.177.115.137	443	Conn::Content_Gap	www.bank-online-secure.com content gap (3137 bytes missing)	10.14.30.45	142.177.115.137	443	Notice::ACTION_LOG
+1823681082.376879	-	10.14.20.11	96.128.14.101	80	HTTP::Unusual_User_Agent	api.fleetfuel-cards.com user agent not seen before on this network	10.14.20.11	96.128.14.101	80	Notice::ACTION_LOG
+1823717401.376836	-	10.14.20.17	23.37.114.204	443	SSL::Certificate_Expires_Soon	Certificate cdn-east.generator-parts.net is going to expire soon	10.14.20.17	23.37.114.204	443	Notice::ACTION_LOG
+1823724925.733036	-	10.14.22.35	34.182.190.28	443	SSL::Certificate_Expires_Soon	Certificate api.relaytech-support.net is going to expire soon	10.14.22.35	34.182.190.28	443	Notice::ACTION_LOG
 #close	2027-10-17-00-00-00

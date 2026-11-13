@@ -1,0 +1,57 @@
+{
+ "host": "GW-SYS-JMP-01",
+ "ip": "10.72.4.88",
+ "os": "Windows Server 2016",
+ "collected_utc": "2027-10-02T21:22:43Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 12,
+   "sha256": "866d1b29803d77e5e12c7a626c73af69a1a3c24cba228d528747111e4238c0b8"
+  },
+  "file_listing.csv": {
+   "rows": 43,
+   "sha256": "d3a061205ebff7cb324d18cede6794a5d5720beb1365163f2c79e3ab0d473934"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "fefe46a12e41a83d002fa9630b714b1296bb92c3526975447fd26909729bf8be"
+  },
+  "autoruns.csv": {
+   "rows": 14,
+   "sha256": "58e1f1dc319ecea4f802cf005df303a888ab219576044fc8d0612aa15b686cbe"
+  },
+  "execution_history.csv": {
+   "rows": 17,
+   "sha256": "5b3f33ece563b1b848ad6ad0577acb5b5562e9e830a9c2b048aa32d05c2815f6"
+  },
+  "logon_history.csv": {
+   "rows": 786,
+   "sha256": "64b8ceddaddd8f1b8e063c55920e04ba503f8997e3268565c41c9a8cdbba11b0"
+  },
+  "installed_software.csv": {
+   "rows": 2,
+   "sha256": "caa9f99c63e9e5754e3831c6142ae7455607cb15f2e7a75c83d7f5cdd8eabef9"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "f45af66f3edf1dff84e643d7f0f9553ab2d740f33729bb9cd7dc0692abd036bc"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/gisclip.exe.placeholder.txt",
+   "stands_in_for": "C:\\Program Files\\CBPWA\\Scripts\\gisclip.exe",
+   "sha256": "9b2c981d9dd018158626b73de948b7a9047570ae6a4781d6e658a6c219d5cc7f"
+  },
+  {
+   "file": "placeholders/serialterm.exe.placeholder.txt",
+   "stands_in_for": "C:\\Program Files\\CBPWA\\Scripts\\serialterm.exe",
+   "sha256": "72c838108b61b37f370f87c172dadeb3e02d5caa7754961c1d1e998e64d4f078"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

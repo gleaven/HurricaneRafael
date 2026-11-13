@@ -1,0 +1,20 @@
+
+### endpoint_alerts.host nunique=403 per org {'bcmc': 36, 'brw': 33, 'city': 105, 'county': 65, 'nascc': 66, 'port': 48, 'srmc': 50}
+
+### endpoint_alerts.ip nunique=403 per org {'bcmc': 36, 'brw': 33, 'city': 105, 'county': 65, 'nascc': 66, 'port': 48, 'srmc': 50}
+
+### endpoint_alerts.event nunique=8
+org                           bcmc  brw  city  county  nascc  port  srmc
+event                                                                   
+AGENT_HEARTBEAT_MISSED         145   72   337     169    286   137   208
+AGENT_UPDATED                   71   40   168      91    117    76   101
+DEFINITIONS_UPDATED            685  453  1538     809    954   635   895
+REALTIME_PROTECTION_DISABLED    71   42   162      76    124    60    69
+REALTIME_PROTECTION_ENABLED    179  123   418     218    306   164   209
+SCAN_COMPLETED                 453  288  1148     576    751   425   660
+SCAN_STARTED                    37   22    67      38     52    35    64
+THREAT_QUARANTINED              67   33   132      65     79    45    58
+
+### endpoint_alerts.detail nunique=721 per org {'bcmc': 128, 'brw': 107, 'city': 236, 'county': 212, 'nascc': 286, 'port': 214, 'srmc': 247}
+
+### endpoint_alerts.initiated_by nunique=289 per org {'bcmc': 35, 'brw': 20, 'city': 58, 'county': 39, 'nascc': 46, 'port': 36, 'srmc': 61}

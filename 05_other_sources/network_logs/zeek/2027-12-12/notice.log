@@ -6,5 +6,10 @@
 #open	2027-12-12-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1828643769.385945	-	10.14.21.21	151.68.243.101	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+1828574775.359239	-	10.14.21.35	40.219.200.230	443	SSL::Certificate_Expires_Soon	Certificate static.osupdates-delivery.com is going to expire soon	10.14.21.35	40.219.200.230	443	Notice::ACTION_LOG
+1828583773.996515	-	10.14.30.11	64.20.189.142	443	SSL::Certificate_Expires_Soon	Certificate sso-login.geomaps-tiles.net is going to expire soon	10.14.30.11	64.20.189.142	443	Notice::ACTION_LOG
+1828595451.132278	-	10.14.30.45	142.177.115.137	443	SSL::Certificate_Expires_Soon	Certificate www.bank-online-secure.com is going to expire soon	10.14.30.45	142.177.115.137	443	Notice::ACTION_LOG
+1828601763.517228	-	10.14.30.49	157.213.180.7	443	Conn::Content_Gap	web-portal.txroadwatch.org content gap (6575 bytes missing)	10.14.30.49	157.213.180.7	443	Notice::ACTION_LOG
+1828629929.891100	-	10.14.20.37	69.7.230.27	443	SSL::Certificate_Expires_Soon	Certificate api.scada-vendor-docs.com is going to expire soon	10.14.20.37	69.7.230.27	443	Notice::ACTION_LOG
+1828646130.693040	-	10.14.20.12	69.128.107.207	443	SSL::Certificate_Expires_Soon	Certificate www.cellcarrier-account.com is going to expire soon	10.14.20.12	69.128.107.207	443	Notice::ACTION_LOG
 #close	2027-12-13-00-00-00

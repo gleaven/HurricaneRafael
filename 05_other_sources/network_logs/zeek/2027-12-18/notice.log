@@ -6,8 +6,7 @@
 #open	2027-12-18-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1829123178.787187	-	10.14.30.33	34.130.191.40	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1829134120.427192	-	10.14.20.12	104.174.106.39	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1829140312.319734	-	10.14.30.13	104.110.7.66	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1829173833.044078	-	10.14.22.29	34.32.56.133	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+1829139616.589985	-	10.14.22.21	151.170.194.141	443	SSL::Certificate_Expires_Soon	Certificate www.cloudstorage-sync.com is going to expire soon	10.14.22.21	151.170.194.141	443	Notice::ACTION_LOG
+1829150303.689029	-	10.14.30.13	69.128.107.207	443	SSL::Certificate_Expires_Soon	Certificate www.cellcarrier-account.com is going to expire soon	10.14.30.13	69.128.107.207	443	Notice::ACTION_LOG
+1829172904.726486	-	10.14.22.47	185.89.22.232	80	HTTP::Unusual_User_Agent	www.osupdates-delivery.com user agent not seen before on this network	10.14.22.47	185.89.22.232	80	Notice::ACTION_LOG
 #close	2027-12-19-00-00-00

@@ -6,8 +6,7 @@
 #open	2028-01-07-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1830833456.685116	-	10.14.30.41	69.90.2.11	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1830877500.672202	-	10.14.22.32	162.147.18.23	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1830880614.866424	-	10.14.22.37	69.90.2.11	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1830893278.678172	-	10.14.30.29	40.239.50.161	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1830820939.440116	-	10.14.22.14	151.68.243.101	80	HTTP::Unusual_User_Agent	api-gw.cloudstorage-sync.com user agent not seen before on this network	10.14.22.14	151.68.243.101	80	Notice::ACTION_LOG
+1830848079.190448	-	10.14.22.39	23.241.175.6	443	Weird::Activity	possible_split_routing	10.14.22.39	23.241.175.6	443	Notice::ACTION_LOG
+1830858492.617654	-	10.14.22.12	199.204.29.71	80	HTTP::Unusual_User_Agent	www-east.officesuite-mail.com user agent not seen before on this network	10.14.22.12	199.204.29.71	80	Notice::ACTION_LOG
 #close	2028-01-08-00-00-00

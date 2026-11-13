@@ -5,6 +5,8 @@
    "thread": "T1",
    "steps": 16,
    "verified": 16,
+   "raw_records": 1,
+   "raw_verified": 1,
    "streams": [
     "adsb",
     "ais",
@@ -26,6 +28,8 @@
    "thread": "T2",
    "steps": 16,
    "verified": 16,
+   "raw_records": 0,
+   "raw_verified": 0,
    "streams": [
     "ais",
     "base_status_reports",
@@ -42,6 +46,8 @@
    "thread": "T3",
    "steps": 16,
    "verified": 16,
+   "raw_records": 0,
+   "raw_verified": 0,
    "streams": [
     "adsb",
     "aid_applications",
@@ -59,6 +65,8 @@
    "thread": "T4",
    "steps": 8,
    "verified": 8,
+   "raw_records": 5,
+   "raw_verified": 5,
    "streams": [
     "aid_applications",
     "financial_transactions",
@@ -72,6 +80,8 @@
    "thread": "T5",
    "steps": 16,
    "verified": 16,
+   "raw_records": 0,
+   "raw_verified": 0,
    "streams": [
     "aid_applications",
     "avl",
@@ -88,6 +98,8 @@
    "thread": "T6",
    "steps": 16,
    "verified": 16,
+   "raw_records": 5,
+   "raw_verified": 5,
    "streams": [
     "ais",
     "drone_detections",
@@ -104,6 +116,8 @@
    "thread": "T7",
    "steps": 16,
    "verified": 16,
+   "raw_records": 0,
+   "raw_verified": 0,
    "streams": [
     "adsb",
     "ais",
@@ -122,6 +136,8 @@
    "thread": "T8",
    "steps": 16,
    "verified": 16,
+   "raw_records": 15,
+   "raw_verified": 15,
    "streams": [
     "drone_detections",
     "host_audit_logs",
@@ -135,6 +151,8 @@
    "thread": "T9",
    "steps": 16,
    "verified": 16,
+   "raw_records": 3,
+   "raw_verified": 3,
    "streams": [
     "broadcast_logs",
     "cad_911",
@@ -154,6 +172,8 @@
    "thread": "T10",
    "steps": 16,
    "verified": 16,
+   "raw_records": 16,
+   "raw_verified": 16,
    "streams": [
     "host_audit_logs",
     "outage_map",
@@ -168,6 +188,8 @@
    "thread": "T11",
    "steps": 14,
    "verified": 14,
+   "raw_records": 0,
+   "raw_verified": 0,
    "streams": [
     "adsb",
     "damage_assessment",
@@ -181,6 +203,8 @@
    "thread": "T12",
    "steps": 16,
    "verified": 16,
+   "raw_records": 1,
+   "raw_verified": 1,
    "streams": [
     "ais",
     "port_conditions",
@@ -194,6 +218,8 @@
    "thread": "T13",
    "steps": 14,
    "verified": 14,
+   "raw_records": 0,
+   "raw_verified": 0,
    "streams": [
     "avl",
     "cad_911",
@@ -206,6 +232,8 @@
    "thread": "T14",
    "steps": 16,
    "verified": 16,
+   "raw_records": 3,
+   "raw_verified": 3,
    "streams": [
     "broadcast_logs",
     "census",
@@ -220,6 +248,8 @@
    "thread": "T15",
    "steps": 9,
    "verified": 9,
+   "raw_records": 0,
+   "raw_verified": 0,
    "streams": [
     "shelters",
     "social_media"
@@ -230,6 +260,8 @@
    "thread": "T16",
    "steps": 16,
    "verified": 16,
+   "raw_records": 2,
+   "raw_verified": 2,
    "streams": [
     "ed_visits",
     "fuel_deliveries",
@@ -244,6 +276,8 @@
    "thread": "T17",
    "steps": 14,
    "verified": 14,
+   "raw_records": 0,
+   "raw_verified": 0,
    "streams": [
     "adsb",
     "avl",
@@ -257,6 +291,8 @@
    "thread": "T18",
    "steps": 14,
    "verified": 14,
+   "raw_records": 8,
+   "raw_verified": 8,
    "streams": [
     "host_audit_logs",
     "siem_alerts",
@@ -269,6 +305,8 @@
    "thread": "T19",
    "steps": 8,
    "verified": 8,
+   "raw_records": 0,
+   "raw_verified": 0,
    "streams": [
     "ais",
     "drone_detections"
@@ -279,6 +317,8 @@
    "thread": "T20",
    "steps": 10,
    "verified": 10,
+   "raw_records": 0,
+   "raw_verified": 0,
    "streams": [
     "adsb",
     "air_quality",
@@ -293,6 +333,8 @@
    "thread": "T21",
    "steps": 13,
    "verified": 13,
+   "raw_records": 1,
+   "raw_verified": 1,
    "streams": [
     "broadcast_logs",
     "eas_alerts"
@@ -303,6 +345,8 @@
    "thread": "T22",
    "steps": 4,
    "verified": 4,
+   "raw_records": 0,
+   "raw_verified": 0,
    "streams": [
     "aid_applications",
     "broadcast_logs",
@@ -312,5 +356,7 @@
   }
  ],
  "steps_verified": 300,
- "steps": 300
+ "steps": 300,
+ "raw_records_verified": 60,
+ "raw_records": 60
 }

@@ -1,0 +1,4 @@
+task_name,action,author,created_utc,last_run_utc,trigger
+\Microsoft\Windows\Defender\Scheduled Scan,"""C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MsMpEng.exe"" -scan",Microsoft Corporation,2027-06-13T09:43:04Z,2027-10-13T07:02:43Z,daily
+\Microsoft\Windows\UpdateOrchestrator\Schedule Scan,C:\Windows\System32\usoclient.exe StartScan,Microsoft Corporation,2027-06-13T09:43:04Z,2027-10-13T02:26:57Z,daily
+\Vantage Security\Collector Update Check,"""C:\Program Files\Vantage Security\Collector\vscollect.exe"" /updatecheck",SYSTEM,2027-10-02T06:55:41Z,2027-10-13T08:38:26Z,daily 03:15

@@ -6,6 +6,9 @@
 #open	2027-09-30-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1822284900.000000	-	10.14.12.21	-	-	Scan::Port_Scan	internal scanner swept 10.14.20.0/24 (scheduled)	10.14.12.21	-	-	Notice::ACTION_LOG
-1822320658.830804	-	10.14.21.40	23.68.238.14	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1822271882.347782	-	10.14.20.32	10.14.10.5	53	DNS::External_Name	gis-preview.cbpwa-services.org is pointing to a local host	10.14.20.32	10.14.10.5	53	Notice::ACTION_LOG
+1822284922.338433	-	10.14.12.21	-	-	Scan::Port_Scan	10.14.12.21 scanned at least 247 unique hosts on port 22/tcp in 2m1s	10.14.12.21	-	-	Notice::ACTION_LOG
+1822287190.666031	-	10.14.12.44	40.247.95.23	443	Conn::Content_Gap	cdn.airline-bookings.net content gap (2675 bytes missing)	10.14.12.44	40.247.95.23	443	Notice::ACTION_LOG
+1822292119.479843	-	10.14.30.14	199.204.29.71	80	HTTP::Unusual_User_Agent	www-east.officesuite-mail.com user agent not seen before on this network	10.14.30.14	199.204.29.71	80	Notice::ACTION_LOG
+1822337460.919003	-	10.14.21.41	104.110.7.66	443	Conn::Content_Gap	api.insurance-claims-portal.com content gap (4700 bytes missing)	10.14.21.41	104.110.7.66	443	Notice::ACTION_LOG
 #close	2027-10-01-00-00-00

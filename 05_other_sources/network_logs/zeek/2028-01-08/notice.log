@@ -6,7 +6,7 @@
 #open	2028-01-08-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1830906271.912319	-	10.14.30.47	35.229.79.13	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1830914694.475556	-	10.14.21.15	52.162.236.89	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1830951686.864651	-	10.14.12.41	142.26.13.166	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1830919375.192968	-	10.14.30.25	40.219.200.230	443	SSL::Certificate_Expires_Soon	Certificate static.osupdates-delivery.com is going to expire soon	10.14.30.25	40.219.200.230	443	Notice::ACTION_LOG
+1830925467.248725	-	10.14.22.27	162.147.18.23	443	Weird::Activity	possible_split_routing	10.14.22.27	162.147.18.23	443	Notice::ACTION_LOG
+1830987860.505768	-	10.14.22.19	13.98.76.16	443	Weird::Activity	possible_split_routing	10.14.22.19	13.98.76.16	443	Notice::ACTION_LOG
 #close	2028-01-09-00-00-00

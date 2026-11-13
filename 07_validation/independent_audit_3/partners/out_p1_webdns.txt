@@ -1,0 +1,161 @@
+
+##### city web n=21737
+  client_ip [112 distinct] top: '10.60.21.28':383, '10.60.21.24':378, '10.60.21.30':372, '10.60.21.20':372, '10.60.21.21':367, '10.60.21.26':367 | n<=3 values: 0
+  user [194 distinct] top: '-':3308, 'd2efdde':182, 'e84fd75':178, '43bb182':177, '66a5409':174, '985d884':170 | n<=3 values: 0
+  method [2]: 'CONNECT':19334, 'GET':2403
+  scheme [2]: 'https':19334, 'http':2403
+  host [168 distinct] top: 'login.docsign-flow.com':445, 'api.hospital-patient-portal.org':436, 'login.generator-parts.net':417, 'login.weatherradar-tiles.com':396, 'api.geomaps-tiles.net':354, 'www.retail-orders.com':344 | n<=3 values: 3
+  url_path [987 distinct] top: '-':19334, '/':484, '/favicon.ico':472, '/index.html':464, '/content/4305d9d6.cab':1, '/pki/d7b39c.crl':1 | n<=3 values: 983
+  status [2]: '200':21733, '403':4
+  action [2]: 'allowed':21733, 'blocked':4
+  category [20]: 'software updates':3308, 'content delivery':2418, 'government':1908, 'shopping':1888, 'weather':1724, 'business software':1681, 'finance':1432, 'business':1112, 'online storage':975, 'travel':930, 'news':773, 'streaming media':749, 'health':697, 'advertising':607, 'uncategorised':577, 'insurance':358, 'social media':300, 'search engines':160, 'education':136, 'gambling':4
+  bytes_out [7309 distinct] top: '2410':14, '2096':13, '1967':12, '1481':12, '1236':12, '1607':12 | n<=3 values: 4899
+  bytes_in [20410 distinct] top: '45730':4, '19597':3, '15648':3, '17168':3, '75950':3, '42212':3 | n<=3 values: 20409
+  user_agent_family [4]: 'Chrome/Windows':7419, 'Edge/Windows':7341, 'Firefox/Windows':3669, '-':3308
+  policy [2]: 'default-allow':21733, 'category-block':4
+
+##### nascc web n=13684
+  client_ip [69 distinct] top: '10.61.20.22':389, '10.61.20.30':378, '10.61.20.27':371, '10.61.20.24':360, '10.61.20.29':359, '10.61.20.31':358 | n<=3 values: 0
+  user [106 distinct] top: '-':1931, 'd81b2ce':176, '2d73287':168, 'fa1bf4c':165, '796053c':157, '4d7947c':154 | n<=3 values: 0
+  method [2]: 'CONNECT':12276, 'GET':1408
+  scheme [2]: 'https':12276, 'http':1408
+  host [169 distinct] top: 'www.defense-travel.example':381, 'www.coastalbendweather.net':280, 'login.hotel-reservations.com':278, 'www.gis-basemaps.org':266, 'login.storm-prep-guides.org':248, 'login.harborline6.example':234 | n<=3 values: 5
+  url_path [579 distinct] top: '-':12276, '/':282, '/favicon.ico':282, '/index.html':269, '/pki/876765.crl':1, '/pki/7ad899.crl':1 | n<=3 values: 575
+  status [2]: '200':13342, '403':342
+  action [2]: 'allowed':13342, 'blocked':342
+  category [20]: 'government':2059, 'software updates':1931, 'content delivery':1415, 'business':1259, 'weather':1098, 'shopping':1073, 'finance':962, 'business software':755, 'news':726, 'travel':706, 'uncategorised':328, 'streaming media':320, 'search engines':240, 'online storage':235, 'insurance':231, 'advertising':134, 'education':132, 'health':58, 'social media':21, 'gambling':1
+  bytes_out [6187 distinct] top: '3250':9, '2264':9, '2371':9, '2698':9, '2192':9, '2270':9 | n<=3 values: 5141
+  bytes_in [13091 distinct] top: '1101':4, '1142':4, '82430':3, '30591':3, '68146':3, '45256':3 | n<=3 values: 13089
+  user_agent_family [4]: 'Edge/Windows':4735, 'Chrome/Windows':4704, 'Firefox/Windows':2314, '-':1931
+  policy [2]: 'default-allow':13342, 'category-block':342
+
+##### brw web n=7355
+  client_ip [42 distinct] top: '10.80.2.20':352, '10.80.2.23':350, '10.80.2.21':346, '10.80.2.22':346, '10.80.2.25':345, '10.80.2.24':337 | n<=3 values: 6
+  user [53 distinct] top: '-':925, 'w.ibarra':187, 'j.tran':186, 'p.dunmore':185, 'b.strand':184, 'r.nakamura':177 | n<=3 values: 0
+  method [2]: 'CONNECT':6653, 'GET':702
+  scheme [2]: 'https':6653, 'http':702
+  host [169 distinct] top: 'docs.cargo-automation-manuals.example':716, 'parts.marine-spares.example':325, 'class.marine-classification.example':164, 'api.hotel-reservations.com':158, 'www.training-lms.net':141, 'static.packagetracker-api.net':132 | n<=3 values: 14
+  url_path [287 distinct] top: '-':6653, '/index.html':161, '/':135, '/favicon.ico':123, '/content/2fd66297.cab':1, '/pki/02e0c8.crl':1 | n<=3 values: 283
+  status [2]: '200':7351, '403':4
+  action [2]: 'allowed':7351, 'blocked':4
+  category [20]: 'business':1534, 'software updates':925, 'shopping':812, 'content delivery':620, 'government':599, 'travel':478, 'finance':416, 'news':335, 'business software':288, 'weather':261, 'education':237, 'advertising':156, 'health':137, 'online storage':131, 'social media':117, 'streaming media':109, 'uncategorised':107, 'search engines':58, 'insurance':31, 'gambling':4
+  bytes_out [4572 distinct] top: '1801':8, '1647':7, '2984':7, '2455':6, '2175':6, '1255':6 | n<=3 values: 4358
+  bytes_in [7172 distinct] top: '1800':9, '64756':3, '66516':3, '79630':2, '32392':2, '24720':2 | n<=3 values: 7171
+  user_agent_family [4]: 'Edge/Windows':2653, 'Chrome/Windows':2514, 'Firefox/Windows':1263, '-':925
+  policy [2]: 'default-allow':7351, 'category-block':4
+
+##### port web n=11087
+  client_ip [48 distinct] top: '10.90.21.21':370, '10.90.21.27':370, '10.90.20.26':369, '10.90.21.22':363, '10.90.21.25':363, '10.90.20.20':361 | n<=3 values: 0
+  user [103 distinct] top: '-':1338, '12c6ef4':168, 'd7a9ac8':163, '50dd889':161, 'eecd7fb':158, 'e5e9d07':158 | n<=3 values: 0
+  method [2]: 'CONNECT':10049, 'GET':1038
+  scheme [2]: 'https':10049, 'http':1038
+  host [170 distinct] top: 'pilots.aransas-cc-pilots.example':388, 'www.customs-filing.example':381, 'login.relaytech-support.net':212, 'www.scada-vendor-docs.com':209, 'login.pipefittings-direct.com':202, 'www.fontcdn-static.net':192 | n<=3 values: 2
+  url_path [416 distinct] top: '-':10049, '/':221, '/index.html':208, '/favicon.ico':197, '/pki/61eb82.crl':1, '/pki/b99dd4.crl':1 | n<=3 values: 412
+  status [2]: '200':10746, '403':341
+  action [2]: 'allowed':10746, 'blocked':341
+  category [20]: 'business':1851, 'software updates':1338, 'government':1171, 'shopping':1070, 'finance':1016, 'content delivery':945, 'travel':556, 'news':538, 'weather':445, 'advertising':361, 'education':360, 'streaming media':333, 'business software':272, 'online storage':263, 'uncategorised':208, 'insurance':149, 'health':90, 'social media':72, 'search engines':41, 'gambling':8
+  bytes_out [5665 distinct] top: '2213':9, '3418':8, '2850':8, '1409':8, '1486':8, '1895':7 | n<=3 values: 5034
+  bytes_in [10727 distinct] top: '1155':4, '1207':4, '81091':3, '1325':3, '43642':3, '1399':3 | n<=3 values: 10725
+  user_agent_family [4]: 'Chrome/Windows':3920, 'Edge/Windows':3901, 'Firefox/Windows':1928, '-':1338
+  policy [2]: 'default-allow':10746, 'category-block':341
+
+##### srmc web n=18043
+  client_ip [62 distinct] top: '10.110.10.53':394, '10.110.10.32':380, '10.110.10.52':376, '10.110.10.57':376, '10.110.10.55':370, '10.110.10.49':369 | n<=3 values: 0
+  user [189 distinct] top: '-':1737, '962a970':160, '3866bac':158, '1146d14':154, '781c111':154, 'b57c3fb':153 | n<=3 values: 0
+  method [2]: 'CONNECT':16583, 'GET':1460
+  scheme [2]: 'https':16583, 'http':1460
+  host [166 distinct] top: 'rx.eprescribe-network.example':567, 'labs.reference-diagnostics.example':493, 'hie.coastalbend-healthexchange.example':449, 'www.weatherradar-tiles.com':414, 'api.geomaps-tiles.net':409, 'cdn.streamvideo-cdn.net':408 | n<=3 values: 4
+  url_path [545 distinct] top: '-':16583, '/':317, '/index.html':303, '/favicon.ico':299, '/pki/6824ee.crl':1, '/content/1067ad0a.cab':1 | n<=3 values: 541
+  status [2]: '200':17010, '403':1033
+  action [2]: 'allowed':17010, 'blocked':1033
+  category [20]: 'health':1978, 'content delivery':1757, 'software updates':1737, 'government':1465, 'weather':1379, 'finance':1309, 'business':1295, 'business software':1121, 'shopping':1046, 'travel':891, 'streaming media':685, 'news':645, 'uncategorised':614, 'advertising':494, 'online storage':468, 'education':441, 'social media':344, 'insurance':314, 'search engines':56, 'gambling':4
+  bytes_out [6757 distinct] top: '1987':12, '2008':11, '2248':11, '1860':11, '2557':10, '684':10 | n<=3 values: 4924
+  bytes_in [16710 distinct] top: '960':8, '1019':6, '1066':6, '1109':6, '1439':5, '1295':5 | n<=3 values: 16659
+  user_agent_family [4]: 'Edge/Windows':6615, 'Chrome/Windows':6443, 'Firefox/Windows':3248, '-':1737
+  policy [2]: 'default-allow':17010, 'category-block':1033
+
+##### bcmc web n=12973
+  client_ip [44 distinct] top: '10.112.10.20':386, '10.112.10.26':378, '10.112.10.35':377, '10.112.10.31':369, '10.112.10.23':364, '10.112.10.25':362 | n<=3 values: 0
+  user [135 distinct] top: '-':1272, 'd93afe7':181, '20744cd':173, '19ba432':172, '3dcd9d7':162, 'afa096f':157 | n<=3 values: 0
+  method [2]: 'CONNECT':11884, 'GET':1089
+  scheme [2]: 'https':11884, 'http':1089
+  host [164 distinct] top: 'www.tx-waterboard.org':558, 'hie.coastalbend-healthexchange.example':335, 'labs.reference-diagnostics.example':313, 'api.weatherradar-tiles.com':309, 'static.ledgerfinance-cloud.com':289, 'www.scada-vendor-docs.com':261 | n<=3 values: 12
+  url_path [420 distinct] top: '-':11884, '/index.html':231, '/':230, '/favicon.ico':212, '/pki/a0cbf1.crl':1, '/content/2257deb3.cab':1 | n<=3 values: 416
+  status [2]: '200':12424, '403':549
+  action [2]: 'allowed':12424, 'blocked':549
+  category [20]: 'business':1328, 'government':1316, 'software updates':1272, 'finance':1182, 'weather':1135, 'shopping':1087, 'health':1001, 'content delivery':952, 'business software':917, 'travel':542, 'streaming media':476, 'news':430, 'uncategorised':400, 'advertising':249, 'insurance':219, 'online storage':171, 'education':170, 'social media':70, 'search engines':53, 'gambling':3
+  bytes_out [6087 distinct] top: '2594':10, '2067':9, '2249':9, '2171':8, '1555':8, '1530':8 | n<=3 values: 5140
+  bytes_in [12330 distinct] top: '1106':5, '1227':5, '1098':4, '1143':4, '1053':4, '40453':4 | n<=3 values: 12321
+  user_agent_family [4]: 'Chrome/Windows':4694, 'Edge/Windows':4648, 'Firefox/Windows':2359, '-':1272
+  policy [2]: 'default-allow':12424, 'category-block':549
+
+##### county web n=13117
+  client_ip [65 distinct] top: '10.70.21.24':372, '10.70.21.27':352, '10.70.21.20':343, '10.70.21.25':340, '10.70.21.21':337, '10.70.21.31':337 | n<=3 values: 0
+  user [141 distinct] top: '-':1816, '7677285':172, 'dad32ae':172, '56f61cb':166, 'e14b179':165, '0475d6b':164 | n<=3 values: 0
+  method [2]: 'CONNECT':11802, 'GET':1315
+  scheme [2]: 'https':11802, 'http':1315
+  host [166 distinct] top: 'webeoc.tdem-portal.example':380, 'static.officesuite-cdn.net':351, 'cdn.insurance-claims-portal.com':272, 'www.helpdesk-tickets.com':269, 'www.truckrental-fleet.com':231, 'www.tx-waterboard.org':227 | n<=3 values: 2
+  url_path [531 distinct] top: '-':11802, '/index.html':270, '/':260, '/favicon.ico':258, '/content/04cbf82c.cab':1, '/pki/93b6e6.crl':1 | n<=3 values: 527
+  status [2]: '200':12945, '403':172
+  action [2]: 'allowed':12945, 'blocked':172
+  category [20]: 'software updates':1816, 'content delivery':1545, 'business':1337, 'shopping':1269, 'government':1241, 'business software':1130, 'finance':943, 'weather':855, 'news':581, 'uncategorised':429, 'travel':354, 'health':265, 'advertising':265, 'social media':249, 'online storage':246, 'education':221, 'streaming media':167, 'insurance':117, 'search engines':82, 'gambling':5
+  bytes_out [6073 distinct] top: '2480':10, '2077':9, '1836':9, '2558':9, '1981':9, '1265':9 | n<=3 values: 5124
+  bytes_in [12618 distinct] top: '1391':3, '73834':3, '53672':3, '68855':3, '67013':3, '41134':3 | n<=3 values: 12618
+  user_agent_family [4]: 'Edge/Windows':4552, 'Chrome/Windows':4454, 'Firefox/Windows':2295, '-':1816
+  policy [2]: 'default-allow':12945, 'category-block':172
+
+##### city dns n=27432
+  client_ip [112 distinct] top: '10.60.21.30':532, '10.60.21.24':529, '10.60.21.20':529, '10.60.21.28':529, '10.60.21.32':522, '10.60.21.31':518 | n<=3 values: 0
+  query [294 distinct] top: '_ldap._tcp.dc._msdcs.cctexas.example':1387, 'login.docsign-flow.com':452, 'api.hospital-patient-portal.org':441, 'login.generator-parts.net':421, 'cc-prx-01.cctexas.example':410, 'cc-app-01.cctexas.example':408 | n<=3 values: 116
+  qtype [3]: 'A':25282, 'SRV':1387, 'AAAA':763
+  rcode [2]: 'NOERROR':27038, 'NXDOMAIN':394
+  answer [179 distinct] top: '-':1157, 'cc-dc-02.cctexas.example':711, 'cc-dc-01.cctexas.example':676, '216.223.153.143':445, '157.104.4.238':436, '205.137.131.105':417 | n<=3 values: 3
+  resolver [2]: '10.60.1.6':13805, '10.60.1.5':13627
+
+##### nascc dns n=17450
+  client_ip [69 distinct] top: '10.61.20.30':552, '10.61.20.22':540, '10.61.20.29':523, '10.61.20.23':521, '10.61.20.27':520, '10.61.20.20':520 | n<=3 values: 0
+  query [263 distinct] top: '_ldap._tcp.dc._msdcs.nascc.navy.example':926, 'www.defense-travel.example':381, 'nascc-bkp-01.nascc.navy.example':290, 'www.coastalbendweather.net':283, 'nascc-app-01.nascc.navy.example':282, 'login.hotel-reservations.com':281 | n<=3 values: 85
+  qtype [3]: 'A':16030, 'SRV':926, 'AAAA':494
+  rcode [2]: 'NOERROR':17197, 'NXDOMAIN':253
+  answer [180 distinct] top: '-':747, 'nascc-dc-01.nascc.navy.example':491, 'nascc-dc-02.nascc.navy.example':435, '151.227.232.233':381, '10.61.1.61':290, '10.61.1.40':282 | n<=3 values: 5
+  resolver [2]: '10.61.1.5':8758, '10.61.1.6':8692
+
+##### brw dns n=9190
+  client_ip [42 distinct] top: '10.80.2.20':519, '10.80.2.25':510, '10.80.2.22':507, '10.80.2.24':483, '10.80.2.23':479, '10.80.2.21':478 | n<=3 values: 6
+  query [220 distinct] top: 'docs.cargo-automation-manuals.example':719, '_ldap._tcp.dc._msdcs.brightwake-marine.example':434, 'parts.marine-spares.example':325, 'class.marine-classification.example':168, 'api.hotel-reservations.com':161, 'brw-bkp-01.brightwake-marine.example':144 | n<=3 values: 47
+  qtype [3]: 'A':8505, 'SRV':434, 'AAAA':251
+  rcode [2]: 'NOERROR':9057, 'NXDOMAIN':133
+  answer [180 distinct] top: '23.119.209.111':716, '-':384, '199.38.195.164':325, 'brw-dc-01.brightwake-marine.example':233, 'brw-dc-02.brightwake-marine.example':201, '199.64.66.90':164 | n<=3 values: 14
+  resolver [2]: '10.80.1.6':4614, '10.80.1.5':4576
+
+##### port dns n=14785
+  client_ip [48 distinct] top: '10.90.21.21':523, '10.90.21.25':523, '10.90.20.29':521, '10.90.21.20':521, '10.90.20.26':519, '10.90.21.23':516 | n<=3 values: 0
+  query [256 distinct] top: '_ldap._tcp.dc._msdcs.portofcc.example':912, 'pilots.aransas-cc-pilots.example':390, 'www.customs-filing.example':382, 'pcca-dc-01.portofcc.example':264, 'pcca-sql-01.portofcc.example':264, 'pcca-edr-01.portofcc.example':258 | n<=3 values: 75
+  qtype [3]: 'A':13362, 'SRV':912, 'AAAA':511
+  rcode [2]: 'NOERROR':14539, 'NXDOMAIN':246
+  answer [181 distinct] top: '-':757, 'pcca-dc-01.portofcc.example':475, 'pcca-dc-02.portofcc.example':437, '199.2.149.186':387, '151.102.60.230':381, '10.90.1.5':264 | n<=3 values: 2
+  resolver [2]: '10.90.1.6':7453, '10.90.1.5':7332
+
+##### srmc dns n=25379
+  client_ip [62 distinct] top: '10.110.10.53':562, '10.110.10.45':548, '10.110.10.28':546, '10.110.10.61':542, '10.110.10.32':538, '10.110.10.49':537 | n<=3 values: 0
+  query [358 distinct] top: '_ldap._tcp.dc._msdcs.shorelineregional.example':1876, 'rx.eprescribe-network.example':571, 'srmc-sql-01.shorelineregional.example':534, 'srmc-bkp-01.shorelineregional.example':512, 'srmc-dc-02.shorelineregional.example':501, 'srmc-edr-01.shorelineregional.example':499 | n<=3 values: 180
+  qtype [3]: 'A':22564, 'SRV':1876, 'AAAA':939
+  rcode [2]: 'NOERROR':24868, 'NXDOMAIN':511
+  answer [177 distinct] top: '-':1450, 'srmc-dc-02.shorelineregional.example':942, 'srmc-dc-01.shorelineregional.example':934, '199.11.69.135':567, '10.110.1.41':534, '10.110.1.61':512 | n<=3 values: 4
+  resolver [2]: '10.110.1.6':12756, '10.110.1.5':12623
+
+##### bcmc dns n=18072
+  client_ip [44 distinct] top: '10.112.10.31':555, '10.112.10.47':544, '10.112.10.20':536, '10.112.10.26':535, '10.112.10.23':525, '10.112.10.25':523 | n<=3 values: 0
+  query [302 distinct] top: '_ldap._tcp.dc._msdcs.baycitymedical.example':1271, 'www.tx-waterboard.org':564, 'bcmc-file-01.baycitymedical.example':364, 'bcmc-bkp-01.baycitymedical.example':359, 'bcmc-dc-02.baycitymedical.example':355, 'bcmc-app-01.baycitymedical.example':352 | n<=3 values: 125
+  qtype [3]: 'A':16145, 'SRV':1271, 'AAAA':656
+  rcode [2]: 'NOERROR':17701, 'NXDOMAIN':371
+  answer [175 distinct] top: '-':1027, 'bcmc-dc-02.baycitymedical.example':639, 'bcmc-dc-01.baycitymedical.example':632, '52.162.236.89':558, '10.112.1.20':364, '10.112.1.61':359 | n<=3 values: 12
+  resolver [2]: '10.112.1.5':9083, '10.112.1.6':8989
+
+##### county dns n=17222
+  client_ip [65 distinct] top: '10.70.21.27':540, '10.70.21.24':523, '10.70.21.25':513, '10.70.21.26':503, '10.70.21.31':501, '10.70.21.20':498 | n<=3 values: 0
+  query [275 distinct] top: '_ldap._tcp.dc._msdcs.nuecesco.example':1052, 'webeoc.tdem-portal.example':382, 'static.officesuite-cdn.net':354, 'nc-file-01.nuecesco.example':295, 'nc-bkp-01.nuecesco.example':292, 'nc-edr-01.nuecesco.example':289 | n<=3 values: 99
+  qtype [3]: 'A':15632, 'SRV':1052, 'AAAA':538
+  rcode [2]: 'NOERROR':16931, 'NXDOMAIN':291
+  answer [177 distinct] top: '-':829, 'nc-dc-01.nuecesco.example':528, 'nc-dc-02.nuecesco.example':524, '162.60.218.246':380, '162.152.124.142':351, '10.70.1.20':295 | n<=3 values: 2
+  resolver [2]: '10.70.1.5':8611, '10.70.1.6':8611

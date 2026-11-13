@@ -1,0 +1,52 @@
+{
+ "source": "partner_it",
+ "stream_id": "partner_auth_logs",
+ "folder": "data/partner_it/",
+ "files": "auth_<YYYY-MM>.csv",
+ "standard": "Sign-on log: workstation logons and logoffs, and remote sign-ons (single sign-on, webmail, VPN)",
+ "span": "2027-07-16T00:00Z to 2028-01-12T06:00Z",
+ "cadence": "per event; complete for workstation logons and for remote sign-ons",
+ "notes": "One folder per organisation: city, nascc, brw, port, srmc, bcmc, county. Each organisation has its own products, rule names, zone names and habits; do not assume a value seen in one folder means the same in another. Hosts, addresses and accounts are in registries/partner_it_registry.json.",
+ "fields": [
+  {
+   "name": "time_utc",
+   "type": "ISO 8601 UTC"
+  },
+  {
+   "name": "host",
+   "notes": "workstation, or the remote sign-on service host (registry host_id)"
+  },
+  {
+   "name": "event_id",
+   "notes": "4624 logon, 4634 logoff, 4625 failed logon on Windows workstations; login, logout, login-failed on macOS workstations; sso-login, webmail-login, vpn-login on the remote services"
+  },
+  {
+   "name": "account",
+   "notes": "registry account; mailbox form for the city single sign-on and the base webmail"
+  },
+  {
+   "name": "logon_type",
+   "notes": "2 interactive, 7 unlock (console, unlock on macOS workstations), remote"
+  },
+  {
+   "name": "src_ip",
+   "notes": "the workstation itself, or the outside address of a remote sign-on"
+  },
+  {
+   "name": "src_network",
+   "notes": "internal, or the network of the outside address as ASN <number>; the same address carries the same number in every stream"
+  },
+  {
+   "name": "result",
+   "type": "SUCCESS | FAILED"
+  },
+  {
+   "name": "auth_method",
+   "notes": "password, smartcard, badge+pin, password+token"
+  },
+  {
+   "name": "device",
+   "notes": "kind of machine for workstation events; known device / new device for remote sign-ons (whether the service had seen that browser or client before)"
+  }
+ ]
+}

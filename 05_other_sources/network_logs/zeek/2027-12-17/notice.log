@@ -6,8 +6,9 @@
 #open	2027-12-17-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1829010767.279633	-	10.14.21.33	151.68.243.101	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1829011974.252668	-	10.14.20.39	34.161.144.54	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1829031390.617704	-	10.14.20.32	13.60.133.44	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1829065694.648716	-	10.14.21.54	199.204.29.71	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1829013640.349334	-	10.14.22.24	104.110.7.66	443	SSL::Certificate_Expires_Soon	Certificate api.insurance-claims-portal.com is going to expire soon	10.14.22.24	104.110.7.66	443	Notice::ACTION_LOG
+1829056160.435669	-	10.14.30.36	205.116.220.120	80	HTTP::Unusual_User_Agent	www.docsign-flow.com user agent not seen before on this network	10.14.30.36	205.116.220.120	80	Notice::ACTION_LOG
+1829065352.566956	-	10.14.20.25	34.194.54.8	443	SSL::Certificate_Expires_Soon	Certificate sso-login.hotel-reservations.com is going to expire soon	10.14.20.25	34.194.54.8	443	Notice::ACTION_LOG
+1829082791.209744	-	10.14.22.13	52.242.122.9	80	HTTP::Unusual_User_Agent	sso-login.streamvideo-cdn.net user agent not seen before on this network	10.14.22.13	52.242.122.9	80	Notice::ACTION_LOG
+1829084334.740567	-	10.14.30.29	96.232.116.18	443	SSL::Certificate_Expires_Soon	Certificate static.hrcloud-payroll.com is going to expire soon	10.14.30.29	96.232.116.18	443	Notice::ACTION_LOG
 #close	2027-12-18-00-00-00

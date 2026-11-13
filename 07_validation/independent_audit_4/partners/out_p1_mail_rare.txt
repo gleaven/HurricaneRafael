@@ -1,0 +1,28 @@
+org              bcmc   brw   city  county  nascc  port  srmc
+mshape                                                       
+a12$a8$a8         403   637  14806    1138    884   419   593
+a14.a8            417   468   2013    4416    692   921  6182
+a16               369   185   3019     281    717   382   299
+a20               968  2512   3388    1324   9643  3920  1083
+a24               117   139    920     230    253   253   276
+a8-a4-a4-a4-a12  3761   498   2128     709   1884   754   724
+
+## inbound sender domains with n>=5 and span<=5 days (burst domains)
+                                 n  days       first        last  rcp  subj   verd shapes  span
+org   sender_domain                                                                            
+city  aid-help-portal.example  840     4  2027-09-15  2027-09-18  558     1  clean    a16     4
+nascc aid-help-portal.example  360     4  2027-09-15  2027-09-18  246     1  clean    a16     4
+srmc  benefits-portal.example  180     5  2027-11-13  2027-11-17  132     1  clean    a16     5
+bcmc  training-lms.example     120     4  2027-08-25  2027-08-28   93     1  clean    a20     4
+port  benefits-portal.example  120     5  2027-11-01  2027-11-05   84     1  clean    a16     5
+
+## domain count distribution per org
+         count       mean        std  min  25%  50%  75%     max
+org                                                             
+bcmc     509.0   5.436149  15.001127  1.0  1.0  1.0  4.0   205.0
+brw      439.0   5.544419  15.895555  1.0  1.0  1.0  4.0   219.0
+city    1226.0  10.466558  61.208704  1.0  1.0  1.0  5.0  1401.0
+county   593.0   6.897133  20.951792  1.0  1.0  1.0  5.0   233.0
+nascc    587.0  11.378194  42.186204  1.0  1.0  1.0  6.0   475.0
+port     496.0   7.256048  20.309946  1.0  1.0  1.0  6.0   220.0
+srmc     606.0   6.679868  19.458364  1.0  1.0  1.0  4.0   220.0

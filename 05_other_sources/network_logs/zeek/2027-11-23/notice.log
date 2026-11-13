@@ -6,10 +6,9 @@
 #open	2027-11-23-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1826928769.910298	-	10.14.22.11	64.102.136.8	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1826931609.134656	-	10.14.22.17	216.95.107.194	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1826954843.034221	-	10.14.22.39	54.20.233.159	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1826959762.024721	-	10.14.21.32	199.197.72.19	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1826966466.268891	-	10.14.20.33	157.213.180.7	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1826993384.152102	-	10.14.30.61	185.72.4.177	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1826950820.521846	-	10.14.20.21	10.14.10.5	53	DNS::External_Name	gis-preview.cbpwa-services.org is pointing to a local host	10.14.20.21	10.14.10.5	53	Notice::ACTION_LOG
+1826956393.857627	-	10.14.20.16	23.176.192.232	443	Weird::Activity	possible_split_routing	10.14.20.16	23.176.192.232	443	Notice::ACTION_LOG
+1826975624.675512	-	10.14.20.16	64.102.136.8	443	SSL::Certificate_Expires_Soon	Certificate static.tx-waterboard.org is going to expire soon	10.14.20.16	64.102.136.8	443	Notice::ACTION_LOG
+1826977816.169213	-	10.14.21.38	104.133.68.75	443	Weird::Activity	possible_split_routing	10.14.21.38	104.133.68.75	443	Notice::ACTION_LOG
+1827004387.801851	-	10.14.22.32	10.14.10.5	53	DNS::External_Name	old-intranet.cbpwa.example is pointing to a local host	10.14.22.32	10.14.10.5	53	Notice::ACTION_LOG
 #close	2027-11-24-00-00-00

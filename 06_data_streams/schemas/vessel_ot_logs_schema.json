@@ -63,7 +63,7 @@
         },
         {
           "name": "target_system",
-          "notes": "gw_host_registry.json external_systems[].system_id for the two ships that have one, else CCS-<mmsi>; empty for portal-only logins"
+          "notes": "name of the ship's cargo-control network on the vendor's portal (EXT-<SHIP>-CCS); ships whose network also appears elsewhere in the data have an entry with this system_id in gw_host_registry.json external_systems; empty for portal-only logins"
         },
         {
           "name": "vessel_mmsi / vessel_name"

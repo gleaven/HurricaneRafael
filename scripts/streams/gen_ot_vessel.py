@@ -17,6 +17,7 @@ vendor disables its remote access on D+8. Logs say what happened, never why.
 import re
 import numpy as np
 
+import netmap
 from common import SPAN_END, iso, reg, rng, ts, write_csv
 from ot_model import DAY, T, ev_sec
 
@@ -25,7 +26,10 @@ COLS = ["timestamp_utc", "mmsi", "vessel_name", "record_type", "station", "opera
 SESS_COLS = ["session_id", "gateway", "vendor_account", "src_ip", "src_asn", "target_system", "vessel_mmsi", "vessel_name", "login_utc", "logout_utc",
              "duration_s", "access_level", "ticket_ref", "result", "bytes_out"]
 GATEWAY = "rmt-gw.brightwake.example"
-ASN_OFFICE, ASN_VPN, ASN_ODD = "ASN 64496", "ASN 64497", "ASN 64512"     # same notation as the portal and account-logon logs
+# network numbers come from the one address table every stream shares (netmap): the vendor's office and VPN egress
+# sit beside its gateway at one provider; the third network is the one other streams also show
+ASN_OFFICE = ASN_VPN = netmap.label(netmap.VENDOR_OFFICE[0])
+ASN_ODD = netmap.label(netmap.story_ip(41))
 REVOKED = ts("2027-09-22T15:00Z")                 # D+8: vendor disables remote access
 TANKS = [f"{n}{s}" for n in range(1, 7) for s in ("P", "S")]
 TANK_BBL = 61500.0                                # capacity of one cargo tank at 98 percent
@@ -171,14 +175,21 @@ def main():
                          int(nbytes if nbytes is not None else (dur * g.uniform(900, 4200) if result == "SUCCESS" else 0))])
         return tok
 
-    office_ip = lambda: f"198.51.100.{int(g.integers(20, 60))}"
-    vpn_ip = lambda: f"198.51.100.{int(g.integers(130, 180))}"
-    odd_ip = lambda: f"203.0.113.{int(g.choice([41, 44, 87, 112]))}"
+    office_ip = lambda: netmap.VENDOR_OFFICE[int(g.integers(20, 60)) % len(netmap.VENDOR_OFFICE)]     # the vendor's office egress pool
+    vpn_ip = lambda: netmap.VENDOR_VPN[int(g.integers(130, 180)) % len(netmap.VENDOR_VPN)]             # its staff VPN egress pool
+    odd_ip = lambda: netmap.story_ip(int(g.choice([41, 44, 87, 112])))
 
     # the vendor's customers: the two canon tankers and a dozen others
     customers = ["VSL-0041", "VSL-0042", "VSL-0101", "VSL-0102", "VSL-0104", "VSL-0106", "VSL-0109", "VSL-0112", "VSL-0114", "VSL-0116", "VSL-0118",
                  "VSL-0121", "VSL-0171", "VSL-0174"]
     systems = {"VSL-0041": "EXT-KALVORA-CCS", "VSL-0042": "EXT-OSTREL-CCS"}
+
+    def system_of(vid, v):
+        """Name of a ship's cargo-control network on the vendor's portal: one scheme for every customer."""
+        if vid in systems:
+            return systems[vid]
+        w = v["vessel_name"].split()[1:]
+        return "EXT-" + (w[-1] if w[0] == "Gulf" else w[0]).upper() + "-CCS"
     legit_by_ship = {"VSL-0041": [], "VSL-0042": []}
     tick = 3100
     for vid in customers:
@@ -198,10 +209,14 @@ def main():
                 level = str(g.choice(["read-only", "read-only", "maintenance"]))
                 use_vpn = g.random() < 0.3 or callout
                 src_ip, src_asn = (vpn_ip(), ASN_VPN) if use_vpn else (office_ip(), ASN_OFFICE)
+                go = rng("vessel_ot", "travelling", vid, int(ld))
+                if not callout and go.random() < 0.19:      # the engineer is at a customer's office or on the road: phone hotspot, straight to the portal
+                    src_ip = netmap.mobile(("brw-travel", acct, int(ld) // (3 * DAY)))[0]
+                    src_asn = netmap.label(src_ip)
                 ticket = f"BW-MT-27-{tick}" if gx.random() > 0.22 else ""          # ship called the duty engineer; ticket never raised
                 if gx.random() < 0.12:
                     session(acct, src_ip, src_asn, "", None, ld - int(gx.integers(40, 400)), 0, "", "", result="FAILED: bad password")
-                s_id = session(acct, src_ip, src_asn, systems.get(vid, f"CCS-{v['mmsi']}"), v, ld, dur, level, ticket)
+                s_id = session(acct, src_ip, src_asn, system_of(vid, v), v, ld, dur, level, ticket)
                 if vid in legit_by_ship:
                     legit_by_ship[vid].append((ld, dur, acct, level, ticket or "none", s_id))
             t += int(g.integers(16, 40)) * DAY
@@ -218,9 +233,9 @@ def main():
         t += int(gx.integers(1, 5)) * DAY
     # the odd address: first portal login (no ship), then read-only sessions with no ticket, then the night of D0
     first = ts("2027-08-13T02:37Z") + ev_sec("EVT-0107")
-    session(ODD_ACCOUNT, "203.0.113.41", ASN_ODD, "", None, first - 190, 0, "", "", result="FAILED: bad password")
-    session(ODD_ACCOUNT, "203.0.113.41", ASN_ODD, "", None, first, 372, "portal", "", nbytes=48211)
-    session(ODD_ACCOUNT, "203.0.113.44", ASN_ODD, "", None, ts("2027-08-17T03:20Z") + 31, 1140, "portal", "", nbytes=912455)
+    session(ODD_ACCOUNT, netmap.story_ip(41), ASN_ODD, "", None, first - 190, 0, "", "", result="FAILED: bad password")
+    session(ODD_ACCOUNT, netmap.story_ip(41), ASN_ODD, "", None, first, 372, "portal", "", nbytes=50873)
+    session(ODD_ACCOUNT, netmap.story_ip(44), ASN_ODD, "", None, ts("2027-08-17T03:20Z") + 31, 1140, "portal", "", nbytes=912455)
     odd_by_ship = {}
     for key, spec in SHIPS.items():
         v = vessels[spec["vid"]]
@@ -232,11 +247,11 @@ def main():
             odd_by_ship[key].append((a, dur, s_id))
         a, b = EVENT_SESSION
         off = 0 if key == "kalvora_star" else 95
-        s_id = session(ODD_ACCOUNT, "203.0.113.87", ASN_ODD, spec["system"], v, a + off, b - a - off + (0 if key == "kalvora_star" else 40), "maintenance", "")
+        s_id = session(ODD_ACCOUNT, netmap.story_ip(87), ASN_ODD, spec["system"], v, a + off, b - a - off + (0 if key == "kalvora_star" else 40), "maintenance", "")
         odd_by_ship[key].append((a + off, b - a - off + (0 if key == "kalvora_star" else 40), s_id))
     # after the vendor disables remote access: every attempt is refused
-    session("svc-admin", "198.51.100.10", ASN_OFFICE, "", None, REVOKED, 0, "", "BW-SEC-27-0044", result="ALL REMOTE ACCESS DISABLED BY VENDOR")
-    for t_try, acct, ip, asn in ((ts("2027-09-22T23:14Z") + 8, ODD_ACCOUNT, "203.0.113.112", ASN_ODD), (ts("2027-09-24T02:51Z") + 40, ODD_ACCOUNT, "203.0.113.44", ASN_ODD),
+    session("svc-admin", netmap.VENDOR_OFFICE[0], ASN_OFFICE, "", None, REVOKED, 0, "", "BW-SEC-27-0044", result="ALL REMOTE ACCESS DISABLED BY VENDOR")
+    for t_try, acct, ip, asn in ((ts("2027-09-22T23:14Z") + 8, ODD_ACCOUNT, netmap.story_ip(112), ASN_ODD), (ts("2027-09-24T02:51Z") + 40, ODD_ACCOUNT, netmap.story_ip(44), ASN_ODD),
                                  (ts("2027-09-23T15:20Z"), "bw-eng-03", office_ip(), ASN_OFFICE), (ts("2027-09-27T16:05Z"), "bw-eng-05", office_ip(), ASN_OFFICE),
                                  (ts("2027-10-11T14:40Z"), "bw-eng-02", office_ip(), ASN_OFFICE), (ts("2027-11-18T15:10Z"), "bw-eng-08", office_ip(), ASN_OFFICE)):
         session(acct, ip, asn, "", None, t_try, 0, "", "", result="DENIED: remote access disabled")

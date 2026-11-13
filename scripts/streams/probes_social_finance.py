@@ -471,8 +471,8 @@ def p_2206():
     b = [sum(1 for r in rows if lo <= r["submitted_utc"] <= hi) for lo, hi in (("2027-11-13T06:01", "2027-11-13T09:17:59"), ("2027-11-14T01:00", "2027-11-14T04:45:59"), ("2027-11-15T23:00", "2027-11-15T23:59:59"))]
     photos = Counter(p for r in rows for p in r["damage_photo_hashes"].split(";") if p)
     zips = {r["zip"] for r in rows}
-    ok = len(rows) == 94 and b == [31, 29, 34] and len(photos) == 23 and photos.get("CC-DAM-0014.jpg") == 7 and zips == {"78407"}
-    return ok, f"{len(rows)} applications from 198.51.100.44 in bursts of {b}, ZIP {sorted(zips)}; {len(photos)} distinct damage photos, CC-DAM-0014.jpg used {photos.get('CC-DAM-0014.jpg')} times"
+    ok = len(rows) == 94 and b == [31, 29, 34] and len(photos) == 23 and photos.get("056a6eeab2bf0df6.jpg") == 7 and zips == {"78407"}
+    return ok, f"{len(rows)} applications from 198.51.100.44 in bursts of {b}, ZIP {sorted(zips)}; {len(photos)} distinct damage photos, 056a6eeab2bf0df6.jpg used {photos.get('056a6eeab2bf0df6.jpg')} times"
 
 
 def p_0501():

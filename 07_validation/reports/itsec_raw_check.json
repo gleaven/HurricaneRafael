@@ -1,0 +1,436 @@
+{
+ "complete": true,
+ "failures": 0,
+ "results": {
+  "net|firewall_logs|INV-COMPLETE": {
+   "ok": true,
+   "detail": "321,239 crossings of the two firewalls in the Zeek logs, 321,239 matching records (117,493 further denies have no flow, as expected); flows without a record 0, allows without a flow 0",
+   "seconds": 17.9
+  },
+  "net|firewall_logs|INV-ISOLATION": {
+   "ok": true,
+   "detail": "1,066 denies and 0 allows on the IT/OT boundary while the control network was isolated",
+   "seconds": 0.1
+  },
+  "net|firewall_logs|INV-NEUTRAL": {
+   "ok": true,
+   "detail": "229 records of the story's 215 flows carry 16 distinct values in 6 categorical columns; each value is shared with at least 20 other records",
+   "seconds": 5.3
+  },
+  "net|firewall_logs|INV-SIZE": {
+   "ok": true,
+   "detail": "14 files, 69.6 MB, largest 11.6 MB; 116,427 dropped unsolicited packets on 181 days (about 643 a day)",
+   "seconds": 0.2
+  },
+  "net|web_proxy_logs|INV-COMPLETE": {
+   "ok": true,
+   "detail": "202,677 web flows in the Zeek logs, 202,677 allowed web records; flows without a record 0, records without a flow 0, byte mismatches 0",
+   "seconds": 3.0
+  },
+  "net|web_proxy_logs|INV-ALERTS": {
+   "ok": true,
+   "detail": "107,918 blocked-site alerts and 107,918 blocked records (unbacked 0); 67,792 uncategorised-domain alerts and 67,792 DNS-filter records (alerts without a lookup in dns.log 0; without a record at the lookup's own second, client and name 0); blocked site names seen in the Zeek logs: 0",
+   "seconds": 7.4
+  },
+  "net|web_proxy_logs|INV-NEUTRAL": {
+   "ok": true,
+   "detail": "the story's 168 web-filter records carry 7 distinct values in 7 categorical columns; each value is shared with at least 20 other records",
+   "seconds": 0.4
+  },
+  "net|web_proxy_logs|INV-USERS": {
+   "ok": true,
+   "detail": "210,279 requests carry a user name; not logged on to that client at that moment: 0; 178 client and server-name pairs (1 of the names on five or more clients) are service traffic, encrypted requests of those with a user name: 0; DNS-filter records with a user name: 0",
+   "seconds": 6.9
+  },
+  "net|web_proxy_logs|INV-SIZE": {
+   "ok": true,
+   "detail": "7 files, 54.2 MB, largest 9.7 MB; 161 user names, 0 not in the registry",
+   "seconds": 0.1
+  },
+  "net|dhcp_logs|INV-REGISTRY": {
+   "ok": true,
+   "detail": "9,446 lease events on the user networks for 166 machines (166 in the registry); address, MAC or scope different from the registry: 0",
+   "seconds": 0.2
+  },
+  "net|dhcp_logs|INV-VPN": {
+   "ok": true,
+   "detail": "2,647 connections to the employee VPN in the Zeek logs, 2,647 pool leases; without a lease 0, outside the pool 0, address given out twice at once 0",
+   "seconds": 4.5
+  },
+  "net|dhcp_logs|INV-DEVICES": {
+   "ok": true,
+   "detail": "2,647 VPN leases on 227 devices of 172 people (at most 2 per person); devices not in the device model 0, a device with two names or a name with two addresses 0; leases while the owner is on site 0, while the owner is on leave 0",
+   "seconds": 0.1
+  },
+  "net|dhcp_logs|INV-POWER": {
+   "ok": true,
+   "detail": "9,445 lease events on the user networks: 0 while the machine is down (the model has 138 losses of power), 0 from the unplugged workstation after its removal; 2,822 laptop events, 0 outside the owner's working day",
+   "seconds": 2.9
+  },
+  "net|dhcp_logs|INV-NEUTRAL": {
+   "ok": true,
+   "detail": "the 24 lease records of the one workstation carry 3 distinct values in 3 categorical columns; each value is shared with at least 20 other records",
+   "seconds": 0.0
+  },
+  "net|packet_captures|INV-COMPLETE": {
+   "ok": true,
+   "detail": "297,815 flows cross the edge in the Zeek logs; in the capture: missing or first packet off by more than 1 ms 0, flows without a Zeek row 0, packets after the flow's end 0, more payload than the flow carried 0, bad checksums or lengths (every sixth day checked) 0; 181 files, 119.6 MB",
+   "seconds": 9.7
+  },
+  "net|packet_captures|INV-SNI": {
+   "ok": true,
+   "detail": "165,422 captured TLS flows that the sensor also logged in ssl.log; server name in the ClientHello differs from ssl.log in 0; 0 flows carried too few bytes for a whole ClientHello",
+   "seconds": 4.4
+  },
+  "net|packet_captures|INV-NEUTRAL": {
+   "ok": true,
+   "detail": "packets kept per flow, story flows {('tcp', 443, True): {4: 180}}; all other flows by kind (protocol, port, answered): {('tcp', 25, True): {4: 40366}, ('tcp', 443, False): {1: 1746, 2: 1566}, ('tcp', 443, True): {4: 165788}, ('tcp', 80, True): {4: 36456}, ('udp', 123, True): {2: 30589}, ('udp', 53, True): {2: 21124}}",
+   "seconds": 0.1
+  },
+  "host|windows_event_logs|INV-BURSTS": {
+   "ok": true,
+   "detail": "4,465 of 4,465 failed-logon bursts have exactly the stated number of 4625 events in the 300 s before the alert",
+   "seconds": 6.8
+  },
+  "host|windows_event_logs|INV-LOCKOUT": {
+   "ok": true,
+   "detail": "1,277 of 1,277 lockout alerts have a 4740 on a domain controller, at least three failed pre-authentications (4771) there and failed logons on the machine",
+   "seconds": 0.0
+  },
+  "host|windows_event_logs|INV-OUTSIDE-HOURS": {
+   "ok": true,
+   "detail": "480 of 480 out-of-hours logon alerts have their 4624",
+   "seconds": 0.0
+  },
+  "host|windows_event_logs|INV-GROUP": {
+   "ok": true,
+   "detail": "618 of 618 group-change alerts have a 4728/4732/4756",
+   "seconds": 0.0
+  },
+  "host|windows_event_logs|INV-UNWANTED-SOFTWARE": {
+   "ok": true,
+   "detail": "4,353 of 4,353 unwanted-software alerts have Defender 1116 and 1117",
+   "seconds": 0.0
+  },
+  "host|windows_event_logs|INV-FILE-WRITE": {
+   "ok": true,
+   "detail": "551 of 551 file-write alerts on the engineering file server have a 5145 write with that path and account in the 30 s before",
+   "seconds": 0.0
+  },
+  "host|windows_event_logs|INV-ENDPOINT-PROTECTION": {
+   "ok": true,
+   "detail": "6,770 of 6,770 endpoint-protection records have their Defender event (same host, second and initiator)",
+   "seconds": 0.1
+  },
+  "host|windows_event_logs|INV-GATEWAY": {
+   "ok": true,
+   "detail": "1,085 of 1,085 remote-access sessions have their logon and logoff on the gateway (account and source address)",
+   "seconds": 0.0
+  },
+  "host|windows_event_logs|INV-REMOTE-DESKTOP": {
+   "ok": true,
+   "detail": "1,430 of 1,430 remote-desktop flows have a type 10 logon on the target from the source address",
+   "seconds": 11.3
+  },
+  "host|windows_event_logs|INV-FILE-INTEGRITY": {
+   "ok": true,
+   "detail": "551 of 551 file-integrity records have a 5145 write with that path and account",
+   "seconds": 0.0
+  },
+  "host|windows_event_logs|INV-TICKETS": {
+   "ok": true,
+   "detail": "22,438 of 22,438 Kerberos and LDAP flows to a domain controller have a 4768/4769 there",
+   "seconds": 10.8
+  },
+  "host|windows_event_logs|INV-RECORDS": {
+   "ok": true,
+   "detail": "record ids rise with time on every host and channel (0 breaks); 1117 shutdown-to-start windows with 0 events inside",
+   "seconds": 8.3
+  },
+  "host|windows_event_logs|INV-IDS": {
+   "ok": true,
+   "detail": "236 hosts and 417 accounts, all in the registry",
+   "seconds": 0.0
+  },
+  "host|windows_event_logs|INV-LOGONS": {
+   "ok": true,
+   "detail": "79,492 successful logons, each with its own logon id (0 repeats), against 45,348 failed ones; one field order per event id (0 event ids with more than one); group changes without a subject account: 0",
+   "seconds": 0.0
+  },
+  "host|windows_event_logs|INV-SHARE-READS": {
+   "ok": true,
+   "detail": "share reads (5145 ReadData) on 6 servers, 23,125 in all; 41 accounts read archive files from the replica's export share",
+   "seconds": 0.0
+  },
+  "host|windows_event_logs|INV-REMOVED-HOST": {
+   "ok": true,
+   "detail": "last record of any kind from the removed workstation: 2027-10-12T10:04:37Z (removed 2027-10-12T12:00:00Z)",
+   "seconds": 0.0
+  },
+  "host|windows_event_logs|INV-NOT-ONE-OF-A-KIND": {
+   "ok": true,
+   "detail": "44 kinds of record among the story's 611 feature observations; kinds seen fewer than three times elsewhere: 0",
+   "seconds": 0.0
+  },
+  "host|endpoint_telemetry|INV-IMAGES": {
+   "ok": true,
+   "detail": "1,020 distinct process images, 839 started once; images that connect but never start: 0; the service binary of the story starts 3 times and 859 images start as rarely or more rarely",
+   "seconds": 0.0
+  },
+  "host|endpoint_telemetry|INV-REMOVABLE-DRIVES": {
+   "ok": true,
+   "detail": "338 removable drives in 4,757 insertions; 333 drives seen more than once; at most 3 drives per person; drives used by two people: 0",
+   "seconds": 0.0
+  },
+  "host|endpoint_telemetry|INV-FLOWS": {
+   "ok": true,
+   "detail": "406,651 of 406,651 delivered flows from Windows hosts are recorded as the rule says (319,544 recorded in full; of 87,107 ordinary browsing flows 43,577 kept, 50.0 %)",
+   "seconds": 24.4
+  },
+  "host|endpoint_telemetry|INV-DNS": {
+   "ok": true,
+   "detail": "187,791 of 187,791 delivered DNS lookups from Windows hosts that the agent keeps have a dns_query (74,349 of 148,664 lookups for ordinary browsing kept)",
+   "seconds": 19.3
+  },
+  "host|endpoint_telemetry|INV-USB": {
+   "ok": true,
+   "detail": "4,757 of 4,757 removable-storage alerts have a usb_device event",
+   "seconds": 0.2
+  },
+  "host|endpoint_telemetry|INV-SESSION": {
+   "ok": true,
+   "detail": "332,951 of 332,951 person-owned endpoint events lie inside a logon of that account on that host; 0 without a process start in that logon",
+   "seconds": 5.7
+  },
+  "host|endpoint_telemetry|INV-SERVICE": {
+   "ok": true,
+   "detail": "1,579 of 1,579 service registrations in the System log have the agent's service_install (1,579 agent records)",
+   "seconds": 0.0
+  },
+  "host|endpoint_telemetry|INV-IDS": {
+   "ok": true,
+   "detail": "236 hosts and 212 accounts, all in the registry",
+   "seconds": 0.0
+  },
+  "host|host_triage|INV-COMPLETE": {
+   "ok": true,
+   "detail": "14 collections, every table present and matching the hash in collection.json, every placeholder's SHA-256 equal to the recorded hash",
+   "seconds": 5.0
+  },
+  "host|host_triage|INV-NEUTRAL": {
+   "ok": true,
+   "detail": "same file set and headers in all 14 collections; placeholders per collection 2 to 9",
+   "seconds": 1.8
+  },
+  "host|host_triage|INV-TIMES": {
+   "ok": true,
+   "detail": "7,624 times in the 14 collections, 0 later than the collection; services installed inside the log span without a 7045: 0",
+   "seconds": 1.4
+  },
+  "partner|partner_mail_logs|PARTNER-MAIL-CITY": {
+   "ok": true,
+   "detail": "mail_gateway_city.csv: 2,332 rows, identical to the rows of city/mail_*.csv in its window (16 not clean, 180 outbound)",
+   "seconds": 0.3
+  },
+  "partner|partner_mail_logs|PARTNER-MAIL-NASCC": {
+   "ok": true,
+   "detail": "mail_gateway_airstation.csv: 859 rows, identical to the rows of nascc/mail_*.csv in its window (6 not clean, 73 outbound)",
+   "seconds": 0.2
+  },
+  "partner|partner_mail_logs|PARTNER-MAIL-BRW": {
+   "ok": true,
+   "detail": "mail_gateway_brightwake.csv: 973 rows, identical to the rows of brw/mail_*.csv in its window (33 not clean, 240 outbound)",
+   "seconds": 0.2
+  },
+  "partner|partner_mail_logs|PARTNER-MAIL-REALISM": {
+   "ok": true,
+   "detail": "city: 1226 sender domains (800 seen once), 601 senders with five or more messages, 5,338 outbound, 11,017 subjects, 3 other bulk mailings; nascc: 587 sender domains (391 seen once), 325 senders with five or more messages, 2,284 outbound, 5,369 subjects, 2 other bulk mailings; brw: 439 sender domains (292 seen once), 111 senders with five or more messages, 1,051 outbound, 2,700 subjects, 0 other bulk mailings; port: 496 sender domains (309 seen once), 150 senders with five or more messages, 1,281 outbound, 3,332 subjects, 2 other bulk mailings; srmc: 606 sender domains (366 seen once), 170 send",
+   "seconds": 0.7
+  },
+  "partner|partner_web_logs|PARTNER-CLICKS-CITY": {
+   "ok": true,
+   "detail": "149 followed links in the report: 7 on the canon message (received first, from the person's registered workstation), 31 other ones from inside, each with DNS query, web request and firewall session; 111 from phones or homes",
+   "seconds": 0.9
+  },
+  "partner|partner_web_logs|PARTNER-CLICKS-NASCC": {
+   "ok": true,
+   "detail": "23 followed links in the report: 3 on the canon message (received first, from the person's registered workstation), 4 other ones from inside, each with DNS query, web request and firewall session; 16 from phones or homes",
+   "seconds": 0.9
+  },
+  "partner|partner_web_logs|PARTNER-CLICKS-BRW": {
+   "ok": true,
+   "detail": "68 followed links in the report: 1 on the canon message (received first, from the person's registered workstation), 48 other ones from inside, each with DNS query, web request and firewall session; 19 from phones or homes",
+   "seconds": 0.8
+  },
+  "partner|partner_auth_logs|PARTNER-LOGONS-CITY": {
+   "ok": true,
+   "detail": "842 'city single sign-on' rows of account_logons_city_airstation.csv are identical to the remote sign-ons of city/auth_*.csv in the window",
+   "seconds": 0.4
+  },
+  "partner|partner_auth_logs|PARTNER-LOGONS-NASCC": {
+   "ok": true,
+   "detail": "326 'base webmail' rows of account_logons_city_airstation.csv are identical to the remote sign-ons of nascc/auth_*.csv in the window",
+   "seconds": 0.3
+  },
+  "partner|partner_auth_logs|PARTNER-SIGNONS-AFTER-CLICK": {
+   "ok": true,
+   "detail": "10 clicks, 10 followed within nine hours by a password-only sign-on on a new device from a network new to that account",
+   "seconds": 0.0
+  },
+  "partner|partner_firewall_logs|PARTNER-REMOTE-INBOUND": {
+   "ok": true,
+   "detail": "43,462 remote sign-ons in seven organisations: 43,462 have their inbound connection at the edge firewall",
+   "seconds": 2.6
+  },
+  "partner|partner_auth_logs|PARTNER-REMOTE-CALENDAR": {
+   "ok": true,
+   "detail": "remote sign-ons per ordinary weekday / weekend day / landfall day / Thanksgiving / Christmas Day: city 143/70/35/35/48, nascc 68/25/10/23/20, brw 7/3/10/2/3, port 9/3/1/3/3, srmc 31/24/6/30/24, bcmc 21/16/4/29/10, county 12/5/3/1/6",
+   "seconds": 0.0
+  },
+  "partner|partner_firewall_logs|PARTNER-BRW-SESSIONS": {
+   "ok": true,
+   "detail": "74 remote-maintenance sessions of the vessel log: 35 from the office and 17 over the staff VPN have matching vendor-side records; 22 from the third network appear only at the gateway firewall",
+   "seconds": 0.0
+  },
+  "partner|partner_firewall_logs|PARTNER-NASCC-LOGISTICS": {
+   "ok": true,
+   "detail": "65123 of 65123 outside requests in the base logistics log have an inbound firewall session; 0 other sessions to that address carry more than a handshake",
+   "seconds": 3.4
+  },
+  "partner|partner_web_logs|PARTNER-NO-AID-PORTAL": {
+   "ok": true,
+   "detail": "0 requests from the seven organisations to the aid portal (its own access log is complete and shows none)",
+   "seconds": 0.7
+  },
+  "partner|partner_web_logs|PARTNER-ALERTS-COUNTY": {
+   "ok": true,
+   "detail": "5 alert transmissions (county): each has a logged-on alerting workstation and a request to the origination service within 30 s before the issue time; 30 other sign-ins to the service (routine checks)",
+   "seconds": 0.0
+  },
+  "partner|partner_web_logs|PARTNER-ALERTS-CITY": {
+   "ok": true,
+   "detail": "9 alert transmissions (city): each has a logged-on alerting workstation and a request to the origination service within 30 s before the issue time; 52 other sign-ins to the service (routine checks)",
+   "seconds": 0.1
+  },
+  "partner|partner_mail_logs|PARTNER-TRANSLATIONS": {
+   "ok": true,
+   "detail": "7 translation jobs: request and delivery messages at the logged times",
+   "seconds": 0.0
+  },
+  "partner|partner_mail_logs|PARTNER-PORT-NOTICES": {
+   "ok": true,
+   "detail": "20 of 20 port orders are in the port's mail log within ten minutes of issue (19 from the Coast Guard sender, 1 sent by the port itself)",
+   "seconds": 0.0
+  },
+  "partner|partner_web_logs|PARTNER-PORT-GATE": {
+   "ok": true,
+   "detail": "gate offices: 5.5 user web requests a day before the storm; 6 logons on the morning Port Condition Zulu was set, last logoff 69 min after it; 0 requests from landfall to D+3, 1.0 a day while the channel is closed (D+4 to D+29), 5.5 after reopening",
+   "seconds": 0.0
+  },
+  "partner|partner_auth_logs|PARTNER-NASCC-STAFFING": {
+   "ok": true,
+   "detail": "administration building logons: 23.8 a weekday before the evacuation, 0.3 a day from landfall to D+5; no web, DNS or firewall record during the power interruption 2027-10-24T18:52:00Z to 2027-10-24T23:47:00Z",
+   "seconds": 0.0
+  },
+  "partner|partner_auth_logs|PARTNER-LOAD-SRMC": {
+   "ok": true,
+   "detail": "clinical workstation unlocks: 60 a day before the storm, 120 a day around the busiest emergency-department day (D+21); power lost 2027-09-14T06:17:03Z, generator 2027-09-14T06:17:26Z",
+   "seconds": 0.0
+  },
+  "partner|partner_auth_logs|PARTNER-LOAD-BCMC": {
+   "ok": true,
+   "detail": "clinical workstation unlocks: 39 a day before the storm, 86 a day around the busiest emergency-department day (D+20); power lost 2027-09-14T06:31:40Z, generator 2027-09-14T06:32:02Z",
+   "seconds": 0.0
+  },
+  "partner|partner_dns_logs|PARTNER-DNS-BEFORE-WEB": {
+   "ok": true,
+   "detail": "76,996 web requests: each follows a DNS query for the same name from the same client within five minutes (0 without)",
+   "seconds": 0.7
+  },
+  "partner|partner_firewall_logs|PARTNER-WEB-FIREWALL": {
+   "ok": true,
+   "detail": "75,795 allowed web requests: each has one outbound firewall session, 75,795 of them to the address the client's own DNS query returned",
+   "seconds": 0.4
+  },
+  "partner|partner_firewall_logs|PARTNER-NO-EXCLUSIVE-VALUES": {
+   "ok": true,
+   "detail": "2,310 story records in five log types of seven organisations: 0 categorical values occur on them alone; ordinary records from 203.0.113.x: {'city': 1061, 'nascc': 19867, 'brw': 122}",
+   "seconds": 0.6
+  },
+  "partner|partner_firewall_logs|PARTNER-REGISTRY-LAYOUT": {
+   "ok": true,
+   "detail": "496 registry hosts: each inside its site's subnet, no address given twice, no overlap between organisations",
+   "seconds": 0.0
+  },
+  "partner|partner_firewall_logs|PARTNER-DIFFERENT-NETWORKS": {
+   "ok": true,
+   "detail": "share of Edge among browsers 17% to 86%; web sessions ending with FIN 83% to 94%; denied inbound per day 15 to 46; 3 endpoint vocabularies; protocols ['icmp', 'tcp', 'udp']; 11 web status codes",
+   "seconds": 0.9
+  },
+  "partner|partner_firewall_logs|PARTNER-FILES": {
+   "ok": true,
+   "detail": "294 files, 121.4 MB in total, largest 2.8 MB, all in time order",
+   "seconds": 1.9
+  },
+  "partner|partner_endpoint_alerts|PARTNER-POWER-CITY": {
+   "ok": true,
+   "detail": "3 power-loss windows (CH, LIB, SVC): no logon, web, DNS or endpoint record from a site while it has no power",
+   "seconds": 0.0
+  },
+  "partner|partner_endpoint_alerts|PARTNER-POWER-COUNTY": {
+   "ok": true,
+   "detail": "2 power-loss windows (CTH, PH): no logon, web, DNS or endpoint record from a site while it has no power",
+   "seconds": 0.0
+  },
+  "partner|partner_endpoint_alerts|PARTNER-POWER-PORT": {
+   "ok": true,
+   "detail": "2 power-loss windows (ADM, GATE): no logon, web, DNS or endpoint record from a site while it has no power",
+   "seconds": 0.0
+  },
+  "partner|partner_endpoint_alerts|PARTNER-POWER-NASCC": {
+   "ok": true,
+   "detail": "7 power-loss windows (ADM, OPS, PWD, SUP): no logon, web, DNS or endpoint record from a site while it has no power",
+   "seconds": 0.0
+  },
+  "partner|partner_endpoint_alerts|PARTNER-POWER-SRMC": {
+   "ok": true,
+   "detail": "2 power-loss windows (ADM, CLIN): no logon, web, DNS or endpoint record from a site while it has no power",
+   "seconds": 0.1
+  },
+  "partner|partner_endpoint_alerts|PARTNER-POWER-BCMC": {
+   "ok": true,
+   "detail": "2 power-loss windows (ADM, CLIN): no logon, web, DNS or endpoint record from a site while it has no power",
+   "seconds": 0.0
+  },
+  "partner|partner_firewall_logs|PARTNER-REGISTRY-FIREWALL": {
+   "ok": true,
+   "detail": "344,288 firewall rows: every host, internal address and account is in partner_it_registry.json",
+   "seconds": 0.1
+  },
+  "partner|partner_web_logs|PARTNER-REGISTRY-WEB": {
+   "ok": true,
+   "detail": "76,996 web rows: every host, internal address and account is in partner_it_registry.json",
+   "seconds": 0.0
+  },
+  "partner|partner_dns_logs|PARTNER-REGISTRY-DNS": {
+   "ok": true,
+   "detail": "84,794 dns rows: every host, internal address and account is in partner_it_registry.json",
+   "seconds": 0.0
+  },
+  "partner|partner_auth_logs|PARTNER-REGISTRY-AUTH": {
+   "ok": true,
+   "detail": "291,228 auth rows: every host, internal address and account is in partner_it_registry.json",
+   "seconds": 0.1
+  },
+  "partner|partner_mail_logs|PARTNER-REGISTRY-MAIL": {
+   "ok": true,
+   "detail": "74,833 mail rows: every host, internal address and account is in partner_it_registry.json",
+   "seconds": 0.0
+  },
+  "partner|partner_endpoint_alerts|PARTNER-REGISTRY-ENDPOINT_ALERTS": {
+   "ok": true,
+   "detail": "15,175 endpoint_alerts rows: every host, internal address and account is in partner_it_registry.json",
+   "seconds": 0.0
+  }
+ }
+}

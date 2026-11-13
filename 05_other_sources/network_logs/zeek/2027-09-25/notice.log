@@ -6,4 +6,9 @@
 #open	2027-09-25-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
+1821835189.309004	-	10.14.22.20	64.217.47.114	443	Weird::Activity	possible_split_routing	10.14.22.20	64.217.47.114	443	Notice::ACTION_LOG
+1821838025.951967	-	10.14.20.23	10.14.10.5	53	DNS::External_Name	old-intranet.cbpwa.example is pointing to a local host	10.14.20.23	10.14.10.5	53	Notice::ACTION_LOG
+1821843390.353943	-	10.14.22.28	151.68.45.224	443	Conn::Content_Gap	static.newswire-national.com content gap (1148 bytes missing)	10.14.22.28	151.68.45.224	443	Notice::ACTION_LOG
+1821848951.438433	-	10.14.21.11	64.211.79.65	443	Conn::Content_Gap	cdn.helpdesk-tickets.com content gap (8384 bytes missing)	10.14.21.11	64.211.79.65	443	Notice::ACTION_LOG
+1821913299.169646	-	10.14.21.24	13.60.133.44	443	Conn::Content_Gap	api.certstatus-ocsp.net content gap (7292 bytes missing)	10.14.21.24	13.60.133.44	443	Notice::ACTION_LOG
 #close	2027-09-26-00-00-00

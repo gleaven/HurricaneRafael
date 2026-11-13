@@ -1,0 +1,15 @@
+name,display_name,start_type,state,image_path,account,installed_utc
+Dnscache,DNS Client,auto,running,C:\Windows\System32\svchost.exe,NetworkService,2026-12-17T03:40:14Z
+EventLog,Windows Event Log,auto,running,C:\Windows\System32\svchost.exe,LocalService,2026-12-17T03:40:14Z
+WinDefend,Microsoft Defender Antivirus Service,auto,running,C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MsMpEng.exe,LocalSystem,2026-12-17T03:40:14Z
+wuauserv,Windows Update,manual,stopped,C:\Windows\System32\svchost.exe,LocalSystem,2026-12-17T03:40:14Z
+Spooler,Print Spooler,auto,running,C:\Windows\System32\spoolsv.exe,LocalSystem,2026-12-17T03:40:14Z
+LanmanWorkstation,Workstation,auto,running,C:\Windows\System32\svchost.exe,NetworkService,2026-12-17T03:40:14Z
+Schedule,Task Scheduler,auto,running,C:\Windows\System32\svchost.exe,LocalSystem,2026-12-17T03:40:14Z
+W32Time,Windows Time,auto,running,C:\Windows\System32\svchost.exe,LocalService,2026-12-17T03:40:14Z
+VantageCollectorService,Vantage Collector Service,auto,running,C:\Program Files\Vantage Security\Collector\vscollect.exe,LocalSystem,2027-10-02T17:38:33Z
+EndpointProtectionAgent,Endpoint Protection Agent,auto,running,C:\Program Files\EndpointAgent\epagent.exe,LocalSystem,2027-08-20T21:18:54Z
+AssetInventoryAgent,Asset Inventory Agent,auto,running,C:\Program Files\AssetInventory\invagent.exe,LocalSystem,2027-01-15T16:53:28Z
+SMSAgentHost,SMS Agent Host,auto,running,C:\Windows\CCM\CcmExec.exe,LocalSystem,2027-05-17T18:15:03Z
+CBPWAWorkOrderSync,CBPWA Work Order Sync,auto,running,C:\Program Files\CBPWA\WorkOrders\jre\bin\javaw.exe,LocalSystem,2027-05-02T03:15:44Z
+VantageTelemetryUpdateService,Vantage Telemetry Update Service,auto,running,C:\ProgramData\VantageTelemetry\vstelemetry.exe,LocalSystem,2027-08-30T13:24:21Z

@@ -6,5 +6,9 @@
 #open	2027-11-16-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1826365413.239857	-	10.14.20.32	54.104.64.23	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1826327438.068253	-	10.14.20.37	34.247.77.73	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.20.37	34.247.77.73	443	Notice::ACTION_LOG
+1826335764.220264	-	10.14.20.26	104.136.183.237	443	Weird::Activity	possible_split_routing	10.14.20.26	104.136.183.237	443	Notice::ACTION_LOG
+1826365949.311498	-	10.14.30.52	10.14.10.5	53	DNS::External_Name	lab.cbpwa.example is pointing to a local host	10.14.30.52	10.14.10.5	53	Notice::ACTION_LOG
+1826395465.657592	-	10.14.20.22	157.219.222.150	80	HTTP::Unusual_User_Agent	static.ntp-pool-public.org user agent not seen before on this network	10.14.20.22	157.219.222.150	80	Notice::ACTION_LOG
+1826397523.298363	-	10.14.20.37	162.62.176.6	443	Conn::Content_Gap	www.retail-orders.com content gap (566 bytes missing)	10.14.20.37	162.62.176.6	443	Notice::ACTION_LOG
 #close	2027-11-17-00-00-00

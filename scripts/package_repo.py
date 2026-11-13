@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import ROOT
 
 SKIP_DIRS = {"_versions", "__pycache__", "_cache", "_build_cache", "_test", "_preview", "_snapshots",
-             "_delivery", "_scratch", ".git", ".vscode", ".idea"}
+             "_delivery", "_scratch", ".git", ".vscode", ".idea", "cache"}
 SKIP_PATHS = {"10_news_sites/newsroom/state"}                  # saved clock and signing secret
 SKIP_FILES = {"memory_update.md", "viewer.html", "rafael-graph.html"}   # root only: working notes, superseded pages
 SKIP_NAMES = {".DS_Store", "Thumbs.db", "desktop.ini"}
@@ -39,12 +39,14 @@ SCRUB = [
     (re.compile(rb"/sessions/[a-z0-9-]+"), b"./_scratch"),
     (re.compile((_WIN + r"[\\/]+News Stories").encode()), b"."),
     (re.compile(_WIN.encode()), b".."),
-    (re.compile(rb"C:[\\/]+Users[\\/]+[^\\/\"'\s]+[\\/]+AppData[^\"'\s]*"), b"./_scratch"),
-    (re.compile(rb"C:[\\/]+Users[\\/]+[^\\/\"'\s]+"), b"~"),
+    # only the build machine's own working folders: the data and the generators contain fictional
+    # C:\\Users\\<name> paths of the scenario's hosts, which must stay as they are
+    (re.compile(rb"C:[\\/]+Users[\\/]+[^\\/\"'\s]+[\\/]+AppData[\\/]+Local[\\/]+(?:Claude[-]Data|Temp[\\/]+claude)[^\"'\s]*"), b"./_scratch"),
 ]
 # Anything matching these in the finished copy is a failure.
-FORBIDDEN = [re.compile(p) for p in (rb"/sessions/[a-z0-9]+-[a-z0-9]+-[a-z0-9]+", rb"C:[\\/]+Users[\\/]",
-                                     rb"OneDrive[ ]- ", rb"AppData[\\/]+Local", rb"[A-Za-z0-9._-]+@nvidia\.com")]
+FORBIDDEN = [re.compile(p) for p in (rb"/sessions/[a-z0-9]+-[a-z0-9]+-[a-z0-9]+", rb"OneDrive[ ]- ", rb"Claude[-]Data",
+                                     rb"local-agent-mode[-]sessions", rb"AppData[\\/]+Local[\\/]+Temp[\\/]+claude",
+                                     rb"[A-Za-z0-9._-]+@nvidia\.com")]
 
 
 def wanted():
@@ -53,7 +55,7 @@ def wanted():
         rel_d = "" if rel_d == "." else rel_d + "/"
         dirs[:] = sorted(x for x in dirs if x not in SKIP_DIRS and (rel_d + x) not in SKIP_PATHS)
         for f in sorted(fs):
-            if f in SKIP_NAMES or f.endswith(".pyc") or f.startswith("~$"):
+            if f in SKIP_NAMES or f.endswith((".pyc", ".pkl")) or f.startswith("~$"):
                 continue
             if rel_d == "" and f in SKIP_FILES:
                 continue

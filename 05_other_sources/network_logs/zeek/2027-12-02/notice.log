@@ -6,5 +6,7 @@
 #open	2027-12-02-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1827728100.000000	-	10.14.12.21	-	-	Scan::Port_Scan	internal scanner swept 10.14.20.0/24 (scheduled)	10.14.12.21	-	-	Notice::ACTION_LOG
+1827708173.007345	-	10.14.21.14	69.55.157.104	443	SSL::Certificate_Expires_Soon	Certificate login.relaytech-support.net is going to expire soon	10.14.21.14	69.55.157.104	443	Notice::ACTION_LOG
+1827721878.524894	-	10.14.22.30	96.248.43.23	80	HTTP::Unusual_User_Agent	www.utilitybilling-pay.com user agent not seen before on this network	10.14.22.30	96.248.43.23	80	Notice::ACTION_LOG
+1827728128.264759	-	10.14.12.21	-	-	Scan::Port_Scan	10.14.12.21 scanned at least 185 unique hosts on port 445/tcp in 8m48s	10.14.12.21	-	-	Notice::ACTION_LOG
 #close	2027-12-03-00-00-00

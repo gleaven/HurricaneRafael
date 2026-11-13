@@ -1,0 +1,37 @@
+
+### dns.client_ip nunique=826 per org {'bcmc': 105, 'brw': 126, 'city': 105, 'county': 147, 'nascc': 66, 'port': 124, 'srmc': 153}
+
+### dns.query nunique=745 per org {'bcmc': 204, 'brw': 205, 'city': 258, 'county': 223, 'nascc': 223, 'port': 223, 'srmc': 232}
+
+### dns.qtype nunique=3
+org    bcmc   brw   city  county  nascc   port   srmc
+qtype                                                
+A      8744  8760  18853   12911   9055  10850  10579
+AAAA    131    67    188     137    137    155    166
+SRV     264   135    375     290    263    268    368
+
+### dns.rcode nunique=2
+org       bcmc   brw   city  county  nascc   port   srmc
+rcode                                                   
+NOERROR   9068  8929  19306   13242   9386  11199  11009
+NXDOMAIN    71    33    110      96     69     74    104
+
+### dns.answer nunique=977 per org {'bcmc': 333, 'brw': 351, 'city': 430, 'county': 358, 'nascc': 366, 'port': 373, 'srmc': 355}
+
+### dns.resolver nunique=14
+org          bcmc   brw   city  county  nascc  port  srmc
+resolver                                                 
+10.110.0.10     0     0      0       0      0     0  6696
+10.110.0.11     0     0      0       0      0     0  4417
+10.112.1.1    466     0      0       0      0     0     0
+10.112.1.5   8673     0      0       0      0     0     0
+10.60.2.10      0     0  13905       0      0     0     0
+10.60.2.11      0     0   5511       0      0     0     0
+10.61.4.5       0     0      0       0   4677     0     0
+10.61.4.6       0     0      0       0   4778     0     0
+10.70.3.5       0     0      0   10773      0     0     0
+10.70.3.6       0     0      0    2565      0     0     0
+10.80.8.1       0   896      0       0      0     0     0
+10.80.8.10      0  8066      0       0      0     0     0
+10.90.5.5       0     0      0       0      0  7451     0
+10.90.5.6       0     0      0       0      0  3822     0

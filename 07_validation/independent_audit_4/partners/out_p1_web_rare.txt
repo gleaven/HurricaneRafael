@@ -1,0 +1,182 @@
+hosts per org with n<=3: {'bcmc': 19, 'brw': 18, 'city': 13, 'county': 11, 'nascc': 14, 'port': 9, 'srmc': 12}
+
+## hosts with span<=10 days and n>=3
+                               n  days  clients       first        last            cat      act  span
+org   host                                                                                           
+city  aid-help-portal.example  7     2        7  2027-09-16  2027-09-17  uncategorised  allowed     2
+nascc aid-help-portal.example  3     2        3  2027-09-16  2027-09-17  uncategorised  allowed     2
+
+## uncategorised hosts
+                                                           n  days  clients       first        last            cat      act  span
+org    host                                                                                                                      
+bcmc   www.southtexas-youth-sports.example                 1     1        1  2027-12-15  2027-12-15  uncategorised  allowed     1
+brw    forms.event-signup-sheets.example                   1     1        1  2027-12-27  2027-12-27  uncategorised  allowed     1
+       certificates.marine-certification-notices.example   1     1        1  2027-08-12  2027-08-12  uncategorised  allowed     1
+       www.southtexas-youth-sports.example                 1     1        1  2027-11-12  2027-11-12  uncategorised  allowed     1
+nascc  files.svc-portal-cdn.example                        1     1        1  2027-11-08  2027-11-08  uncategorised  allowed     1
+bcmc   app.shiftboard-scheduler.example                    2     2        2  2027-11-10  2027-12-01  uncategorised  allowed    22
+nascc  www.padre-island-rentals.example                    2     2        1  2027-07-30  2027-08-02  uncategorised  allowed     4
+bcmc   cdn.widget-embed-host.example                       3     3        2  2027-08-23  2027-12-06  uncategorised  allowed   106
+county tracker.parcel-status-update.example                3     3        3  2027-08-13  2027-10-18  uncategorised  allowed    67
+port   tracker.parcel-status-update.example                3     3        3  2027-08-06  2027-11-19  uncategorised  allowed   106
+nascc  aid-help-portal.example                             3     2        3  2027-09-16  2027-09-17  uncategorised  allowed     2
+bcmc   www.gulf-coast-catering.example                     4     4        4  2027-08-04  2027-12-03  uncategorised  allowed   122
+brw    cdn.widget-embed-host.example                       4     4        4  2027-09-09  2027-12-28  uncategorised  allowed   111
+city   cdn.widget-embed-host.example                       5     5        5  2027-07-26  2027-10-18  uncategorised  allowed    85
+brw    www.coastal-bend-fishing-reports.example            5     5        5  2027-08-06  2027-12-14  uncategorised  allowed   131
+       tracker.parcel-status-update.example                5     5        4  2027-07-30  2027-12-03  uncategorised  allowed   127
+nascc  app.shiftboard-scheduler.example                    5     5        4  2027-08-03  2027-12-17  uncategorised  allowed   137
+port   www.rgv-truck-parts.example                         6     6        5  2027-07-19  2027-12-19  uncategorised  allowed   154
+nascc  www.gulf-coast-catering.example                     7     7        6  2027-07-22  2028-01-12  uncategorised  allowed   175
+city   aid-help-portal.example                             7     2        7  2027-09-16  2027-09-17  uncategorised  allowed     2
+nascc  cdn.widget-embed-host.example                       8     8        2  2027-07-29  2027-12-28  uncategorised  allowed   153
+port   cdn.widget-embed-host.example                       9     9        9  2027-07-17  2028-01-12  uncategorised  allowed   180
+bcmc   www.padre-island-rentals.example                    9     9        7  2027-08-06  2028-01-12  uncategorised  allowed   160
+srmc   www.southtexas-youth-sports.example                10    10        9  2027-07-20  2027-12-24  uncategorised  allowed   158
+port   www.southtexas-youth-sports.example                12    11       11  2027-07-20  2028-01-08  uncategorised  allowed   173
+county forms.event-signup-sheets.example                  13    13        9  2027-07-23  2027-12-30  uncategorised  allowed   161
+city   tracker.parcel-status-update.example               13    13       13  2027-07-19  2028-01-07  uncategorised  allowed   173
+nascc  www.coastal-bend-fishing-reports.example           15    14       14  2027-07-26  2027-12-27  uncategorised  allowed   155
+port   app.shiftboard-scheduler.example                   15    15        8  2027-08-11  2027-12-04  uncategorised  allowed   116
+nascc  forms.event-signup-sheets.example                  16    15       14  2027-07-19  2028-01-08  uncategorised  allowed   174
+srmc   tracker.parcel-status-update.example               17    15       13  2027-07-20  2028-01-09  uncategorised  allowed   174
+brw    www.padre-island-rentals.example                   17    16        9  2027-07-25  2028-01-05  uncategorised  allowed   165
+srmc   files.svc-portal-cdn.example                       18    18        9  2027-07-19  2027-12-26  uncategorised  allowed   161
+       www.rgv-truck-parts.example                        18    16       13  2027-07-23  2028-01-04  uncategorised  allowed   166
+brw    www.rgv-truck-parts.example                        19    18       17  2027-08-03  2028-01-10  uncategorised  allowed   161
+county www.coastal-bend-fishing-reports.example           20    20       17  2027-07-19  2028-01-10  uncategorised  allowed   176
+city   forms.event-signup-sheets.example                  21
+
+## aid-help web
+                   time_utc     client_ip     user   method scheme                     host url_path status   action       category bytes_out bytes_in user_agent_family         policy    org         day
+5936   2027-09-16T00:23:06Z   10.60.21.33  ef77646  CONNECT  https  aid-help-portal.example        -    200  allowed  uncategorised      5807   259798      Edge/Windows  default-allow   city  2027-09-16
+5964   2027-09-16T11:24:54Z   10.60.21.41  e39dab0  CONNECT  https  aid-help-portal.example        -    200  allowed  uncategorised      9631   186752      Edge/Windows  default-allow   city  2027-09-16
+5997   2027-09-16T22:47:57Z   10.60.21.44  3afab2b  CONNECT  https  aid-help-portal.example        -    200  allowed  uncategorised      5180   238503    Chrome/Windows  default-allow   city  2027-09-16
+5998   2027-09-16T23:15:42Z   10.60.21.35  ff7a022  CONNECT  https  aid-help-portal.example        -    200  allowed  uncategorised      5163   219069    Chrome/Windows  default-allow   city  2027-09-16
+5999   2027-09-16T23:26:18Z   10.60.21.39  1c53c5a  CONNECT  https  aid-help-portal.example        -    200  allowed  uncategorised      6308   178174    Chrome/Windows  default-allow   city  2027-09-16
+6039   2027-09-17T13:44:24Z   10.60.21.31  8f8d8c3  CONNECT  https  aid-help-portal.example        -    200  allowed  uncategorised      4295   354350   Firefox/Windows  default-allow   city  2027-09-17
+6056   2027-09-17T19:02:47Z   10.60.20.35  6332995  CONNECT  https  aid-help-portal.example        -    200  allowed  uncategorised      8246   167399      Edge/Windows  default-allow   city  2027-09-17
+20752  2027-09-16T12:08:52Z  10.61.20.135  79c129e  CONNECT  https  aid-help-portal.example        -    200  allowed  uncategorised     10817   147120      Edge/Windows   DON-standard  nascc  2027-09-16
+20753  2027-09-16T12:16:52Z  10.61.20.105  c903854  CONNECT  https  aid-help-portal.example        -    200  allowed  uncategorised      3932    66693      Edge/Windows   DON-standard  nascc  2027-09-16
+20782  2027-09-17T20:01:12Z  10.61.20.108  64d29c0  CONNECT  https  aid-help-portal.example        -    200  allowed  uncategorised      3119   126527    Chrome/Windows   DON-standard  nascc  2027-09-17
+## aid-help dns
+                   time_utc     client_ip                    query qtype    rcode           answer    resolver    org
+6483   2027-09-16T00:23:05Z   10.60.21.33  aid-help-portal.example     A  NOERROR   162.239.36.114  10.60.2.10   city
+6512   2027-09-16T11:24:53Z   10.60.21.41  aid-help-portal.example     A  NOERROR  157.133.138.182  10.60.2.10   city
+6548   2027-09-16T22:47:56Z   10.60.21.44  aid-help-portal.example     A  NOERROR  157.133.138.182  10.60.2.11   city
+6549   2027-09-16T23:15:41Z   10.60.21.35  aid-help-portal.example     A  NOERROR  157.133.138.182  10.60.2.11   city
+6550   2027-09-16T23:26:17Z   10.60.21.39  aid-help-portal.example     A  NOERROR   162.239.36.114  10.60.2.10   city
+6594   2027-09-17T13:44:23Z   10.60.21.31  aid-help-portal.example     A  NOERROR   162.239.36.114  10.60.2.11   city
+6612   2027-09-17T19:02:46Z   10.60.20.35  aid-help-portal.example     A  NOERROR   162.239.36.114  10.60.2.10   city
+22683  2027-09-16T12:08:51Z  10.61.20.135  aid-help-portal.example     A  NOERROR   205.31.122.206   10.61.4.6  nascc
+22684  2027-09-16T12:16:51Z  10.61.20.105  aid-help-portal.example     A  NOERROR  157.133.138.182   10.61.4.6  nascc
+22721  2027-09-17T20:01:11Z  10.61.20.108  aid-help-portal.example     A  NOERROR  157.133.138.182   10.61.4.5  nascc
+
+## marine-cert web
+                   time_utc   client_ip     user   method scheme                                               host url_path status   action       category bytes_out bytes_in user_agent_family            policy  org         day
+27553  2027-08-12T15:02:07Z  10.80.1.56  m.okoye  CONNECT  https  certificates.marine-certification-notices.example        -    200  allowed  uncategorised      3610    94748    Chrome/Windows  allow-all-logged  brw  2027-08-12
+## marine-cert dns
+                   time_utc   client_ip                                              query qtype    rcode          answer    resolver  org
+30232  2027-08-12T15:02:06Z  10.80.1.56  certificates.marine-certification-notices.example     A  NOERROR  151.141.83.185  10.80.8.10  brw
+
+## disasteraid web
+Empty DataFrame
+Columns: [time_utc, client_ip, user, method, scheme, host, url_path, status, action, category, bytes_out, bytes_in, user_agent_family, policy, org, day]
+Index: []
+## disasteraid dns
+Empty DataFrame
+Columns: [time_utc, client_ip, query, qtype, rcode, answer, resolver, org]
+Index: []
+
+## brightwake web
+                   time_utc      client_ip         user   method scheme                       host url_path status   action  category bytes_out  bytes_in user_agent_family            policy  org         day
+26347  2027-07-19T09:18:02Z   10.80.250.78       l.hart  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    156242   6020287   Firefox/Windows  allow-all-logged  brw  2027-07-19
+26438  2027-07-20T18:47:39Z     10.80.1.52       l.hart  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business     63416   2231969    Chrome/Windows  allow-all-logged  brw  2027-07-20
+26447  2027-07-20T21:26:12Z     10.80.1.55     k.brandt  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business     49008   1621385    Chrome/Windows  allow-all-logged  brw  2027-07-20
+26599  2027-07-23T23:25:55Z  10.80.250.150  t.velasquez  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    523775  20696353    Chrome/Windows  allow-all-logged  brw  2027-07-23
+26724  2027-07-27T15:52:20Z     10.80.1.51       j.tran  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    125706   4903322    Chrome/Windows  allow-all-logged  brw  2027-07-27
+26733  2027-07-27T16:36:43Z     10.80.1.56      m.okoye  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    160557   6269542    Chrome/Windows  allow-all-logged  brw  2027-07-27
+26791  2027-07-28T15:38:26Z     10.80.1.53      d.silva  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business     94864   3619810    Chrome/Windows  allow-all-logged  brw  2027-07-28
+26829  2027-07-28T20:23:57Z  10.80.250.179    s.adeyemi  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    103302   4022528   Firefox/Windows  allow-all-logged  brw  2027-07-28
+26868  2027-07-29T14:35:39Z  10.80.250.107      m.okoye  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    130804   5016483    Chrome/Windows  allow-all-logged  brw  2027-07-29
+26923  2027-07-30T07:23:41Z  10.80.250.194     k.brandt  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    324458  12746535   Firefox/Windows  allow-all-logged  brw  2027-07-30
+27058  2027-08-02T18:54:21Z     10.80.1.53      d.silva  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    293313  11584084    Chrome/Windows  allow-all-logged  brw  2027-08-02
+27107  2027-08-03T17:29:49Z     10.80.1.52       l.hart  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business     55831   1911828    Chrome/Windows  allow-all-logged  brw  2027-08-03
+27111  2027-08-03T17:47:33Z     10.80.1.53      d.silva  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    346150  13733603   Firefox/Windows  allow-all-logged  brw  2027-08-03
+27112  2027-08-03T17:47:49Z     10.80.1.51       j.tran  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    365398  14350427    Chrome/Windows  allow-all-logged  brw  2027-08-03
+27135  2027-08-04T02:46:03Z  10.80.250.179    s.adeyemi  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    426427  16762521   Firefox/Windows  allow-all-logged  brw  2027-08-04
+27153  2027-08-04T16:34:05Z  10.80.250.194     k.brandt  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business      5110      2498   Firefox/Windows  allow-all-logge
+## brightwake dns
+                   time_utc      client_ip                                           query qtype     rcode                               answer    resolver  org
+28871  2027-07-16T00:03:29Z     10.80.2.53  _ldap._tcp.dc._msdcs.brightwake-marine.example   SRV   NOERROR  brw-dc-01.brightwake-marine.example  10.80.8.10  brw
+28945  2027-07-18T03:46:46Z     10.80.2.54  _ldap._tcp.dc._msdcs.brightwake-marine.example   SRV   NOERROR  brw-dc-01.brightwake-marine.example  10.80.8.10  brw
+28962  2027-07-19T09:18:02Z   10.80.250.78                       rmt-gw.brightwake.example     A   NOERROR                           192.0.2.70  10.80.8.10  brw
+28971  2027-07-19T13:26:38Z     10.80.1.63            brw-edr-01.brightwake-marine.example     A   NOERROR                           10.80.8.40  10.80.8.10  brw
+28986  2027-07-19T14:51:23Z     10.80.1.74            brw-git-01.brightwake-marine.example     A   NOERROR                           10.80.8.20  10.80.8.10  brw
+28995  2027-07-19T16:10:19Z     10.80.1.69            brw-lic-01.brightwake-marine.example     A   NOERROR                           10.80.8.41  10.80.8.10  brw
+29027  2027-07-19T22:41:12Z     10.80.2.54         brw-ticket-01.brightwake-marine.example     A   NOERROR                           10.80.8.30   10.80.8.1  brw
+29047  2027-07-20T15:20:01Z     10.80.1.58             brw-dc-01.brightwake-marine.example     A   NOERROR                           10.80.8.10  10.80.8.10  brw
+29060  2027-07-20T18:47:39Z     10.80.1.52                       rmt-gw.brightwake.example     A   NOERROR                           192.0.2.70  10.80.8.10  brw
+29067  2027-07-20T20:53:14Z     10.80.2.54         brw-ticket-01.brightwake-marine.example     A   NOERROR                           10.80.8.30  10.80.8.10  brw
+29070  2027-07-20T21:26:12Z     10.80.1.55                       rmt-gw.brightwake.example     A   NOERROR                           192.0.2.70  10.80.8.10  brw
+29088  2027-07-21T13:19:58Z     10.80.1.77           brw-file-01.brightwake-marine.example     A   NOERROR                           10.80.8.12  10.80.8.10  brw
+29104  2027-07-21T15:51:29Z     10.80.1.56            brw-git-01.brightwake-marine.example     A   NOERROR                           10.80.8.20  10.80.8.10  brw
+29118  2027-07-21T18:04:55Z     10.80.1.64         brw-ticket-01.brightwake-marine.example     A   NOERROR                           10.80.8.30   10.80.8.1  brw
+29138  2027-07-22T00:53:33Z     10.80.2.54            brw-edr-01.brightwake-marine.example     A   NOERROR                           10.80.8.40  10.80.8.10  brw
+29179  2027-07-23T02:11:48Z     10.80.2.51         brw-ticket-01.brightwake-marine.example     A   NOERROR                           10.80.8.30  10.80.8.10  brw
+29199  2027-07-23T14:41:35Z     10.80.1.51  _ldap._tcp.dc._msdcs.brightwake-marine.example   SRV   NOERROR  brw-dc-01.brightwake-marine.example  10.80.8.10  brw
+29217  2027-07-23T19:18:22Z     10.80.1.77  _ldap._tcp.dc._msdcs.brightwake-marine.example   SRV   NOERROR  brw-dc-01.brightwake-marine.example  10.80.8.10  brw
+29229  2027-07-23T23:25:55Z  10.80.250.150                       rmt-gw.brightwake.example     A   NOERROR                           192.0.2.70  10.80.8.10  brw
+29269  2027-07-25T23:34:46Z     10.80.2.52          brw-build-01.brightwake-marine.example     A   NOERROR                           10.80.8.21  10.80.8.10  brw
+29314  2027-07-26T19:31:06Z     10.80.1.61  _ldap._tcp.dc._msdcs.brightwake-marine.example   SRV   NOERROR  brw-dc-01.b
+
+## rmt-gw web
+                   time_utc      client_ip         user   method scheme                       host url_path status   action  category bytes_out  bytes_in user_agent_family            policy  org         day
+26347  2027-07-19T09:18:02Z   10.80.250.78       l.hart  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    156242   6020287   Firefox/Windows  allow-all-logged  brw  2027-07-19
+26438  2027-07-20T18:47:39Z     10.80.1.52       l.hart  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business     63416   2231969    Chrome/Windows  allow-all-logged  brw  2027-07-20
+26447  2027-07-20T21:26:12Z     10.80.1.55     k.brandt  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business     49008   1621385    Chrome/Windows  allow-all-logged  brw  2027-07-20
+26599  2027-07-23T23:25:55Z  10.80.250.150  t.velasquez  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    523775  20696353    Chrome/Windows  allow-all-logged  brw  2027-07-23
+26724  2027-07-27T15:52:20Z     10.80.1.51       j.tran  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    125706   4903322    Chrome/Windows  allow-all-logged  brw  2027-07-27
+26733  2027-07-27T16:36:43Z     10.80.1.56      m.okoye  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    160557   6269542    Chrome/Windows  allow-all-logged  brw  2027-07-27
+26791  2027-07-28T15:38:26Z     10.80.1.53      d.silva  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business     94864   3619810    Chrome/Windows  allow-all-logged  brw  2027-07-28
+26829  2027-07-28T20:23:57Z  10.80.250.179    s.adeyemi  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    103302   4022528   Firefox/Windows  allow-all-logged  brw  2027-07-28
+26868  2027-07-29T14:35:39Z  10.80.250.107      m.okoye  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    130804   5016483    Chrome/Windows  allow-all-logged  brw  2027-07-29
+26923  2027-07-30T07:23:41Z  10.80.250.194     k.brandt  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    324458  12746535   Firefox/Windows  allow-all-logged  brw  2027-07-30
+27058  2027-08-02T18:54:21Z     10.80.1.53      d.silva  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    293313  11584084    Chrome/Windows  allow-all-logged  brw  2027-08-02
+27107  2027-08-03T17:29:49Z     10.80.1.52       l.hart  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business     55831   1911828    Chrome/Windows  allow-all-logged  brw  2027-08-03
+27111  2027-08-03T17:47:33Z     10.80.1.53      d.silva  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    346150  13733603   Firefox/Windows  allow-all-logged  brw  2027-08-03
+27112  2027-08-03T17:47:49Z     10.80.1.51       j.tran  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    365398  14350427    Chrome/Windows  allow-all-logged  brw  2027-08-03
+27135  2027-08-04T02:46:03Z  10.80.250.179    s.adeyemi  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business    426427  16762521   Firefox/Windows  allow-all-logged  brw  2027-08-04
+27153  2027-08-04T16:34:05Z  10.80.250.194     k.brandt  CONNECT  https  rmt-gw.brightwake.example        -    200  allowed  business      5110      2498   Firefox/Windows  allow-all-logge
+## rmt-gw dns
+                   time_utc      client_ip                      query qtype    rcode      answer    resolver  org
+28962  2027-07-19T09:18:02Z   10.80.250.78  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29060  2027-07-20T18:47:39Z     10.80.1.52  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29070  2027-07-20T21:26:12Z     10.80.1.55  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29229  2027-07-23T23:25:55Z  10.80.250.150  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29360  2027-07-27T15:52:20Z     10.80.1.51  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29369  2027-07-27T16:36:43Z     10.80.1.56  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29431  2027-07-28T15:38:26Z     10.80.1.53  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29473  2027-07-28T20:23:57Z  10.80.250.179  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29513  2027-07-29T14:35:39Z  10.80.250.107  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29569  2027-07-30T07:23:40Z  10.80.250.194  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29716  2027-08-02T18:54:21Z     10.80.1.53  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29765  2027-08-03T17:29:49Z     10.80.1.52  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29769  2027-08-03T17:47:32Z     10.80.1.53  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29770  2027-08-03T17:47:48Z     10.80.1.51  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70   10.80.8.1  brw
+29795  2027-08-04T02:46:02Z  10.80.250.179  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29814  2027-08-04T16:34:04Z  10.80.250.194  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70   10.80.8.1  brw
+29815  2027-08-04T16:40:19Z  10.80.250.194  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29840  2027-08-04T20:00:18Z     10.80.1.54  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29844  2027-08-04T20:36:26Z     10.80.1.56  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29845  2027-08-04T20:38:05Z  10.80.250.179  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29897  2027-08-05T20:26:14Z  10.80.250.179  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+29917  2027-08-06T07:09:00Z   10.80.250.64  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+30024  2027-08-09T14:29:58Z     10.80.1.53  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+30113  2027-08-10T18:25:58Z     10.80.1.50  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+30340  2027-08-15T01:20:40Z  10.80.250.107  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+30409  2027-08-16T18:48:30Z     10.80.1.58  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+30446  2027-08-17T16:49:16Z  10.80.250.150  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+30454  2027-08-17T17:28:36Z     10.80.1.57  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+30606  2027-08-19T20:05:09Z     10.80.1.57  rmt-gw.brightwake.example     A  NOERROR  192.0.2.70  10.80.8.10  brw
+30649  2027-08-20T16:12:39Z     10.80.1.50  rmt-gw.brightwake.example     A  NOE

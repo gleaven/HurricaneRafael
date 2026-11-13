@@ -6,6 +6,9 @@
 #open	2027-10-17-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1823765103.419435	-	10.14.20.35	162.174.136.106	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1823805890.633342	-	10.14.22.13	185.89.22.232	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+1823745895.062684	-	10.14.22.33	34.194.54.8	443	Weird::Activity	possible_split_routing	10.14.22.33	34.194.54.8	443	Notice::ACTION_LOG
+1823763179.877406	-	10.14.20.16	104.21.88.66	443	Conn::Content_Gap	status.relaytech-support.net content gap (3750 bytes missing)	10.14.20.16	104.21.88.66	443	Notice::ACTION_LOG
+1823778438.274824	-	10.14.22.16	157.219.222.150	80	HTTP::Unusual_User_Agent	static.ntp-pool-public.org user agent not seen before on this network	10.14.22.16	157.219.222.150	80	Notice::ACTION_LOG
+1823780581.785826	-	10.14.12.41	96.128.14.101	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.12.41	96.128.14.101	443	Notice::ACTION_LOG
+1823792449.503107	-	10.14.12.44	96.248.43.23	443	Weird::Activity	possible_split_routing	10.14.12.44	96.248.43.23	443	Notice::ACTION_LOG
 #close	2027-10-18-00-00-00

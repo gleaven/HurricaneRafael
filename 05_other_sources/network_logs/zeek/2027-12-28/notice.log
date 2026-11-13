@@ -6,6 +6,5 @@
 #open	2027-12-28-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1829969557.031111	-	10.14.21.48	199.197.72.19	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1829978877.236031	-	10.14.30.37	185.164.174.51	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
+1829983226.168237	-	10.14.20.21	52.220.34.193	80	HTTP::Unusual_User_Agent	api.adnetwork-static.net user agent not seen before on this network	10.14.20.21	52.220.34.193	80	Notice::ACTION_LOG
 #close	2027-12-29-00-00-00

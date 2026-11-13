@@ -1,0 +1,62 @@
+{
+ "host": "GW-WS-OPS-02",
+ "ip": "10.72.2.12",
+ "os": "Windows 10 Enterprise LTSC 2019",
+ "collected_utc": "2027-10-13T14:12:28Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 12,
+   "sha256": "9bee230fa82238effe88a47c96efcefcf290865f5d2c98a062ac31f67607e213"
+  },
+  "file_listing.csv": {
+   "rows": 108,
+   "sha256": "293a7f73aa3962121df620becb2de8df6786171ded6ace629995f1a9aebabd8f"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "79929115a6855fb33496f38622965b134bb2d9db80e1ae73a09039f4945ae2e7"
+  },
+  "autoruns.csv": {
+   "rows": 14,
+   "sha256": "e5c52f83947141eed7082ba3290a99887292a3a8c1b790bd9eb6cb3cc52cb1ce"
+  },
+  "execution_history.csv": {
+   "rows": 15,
+   "sha256": "72aa9850841e43da23a660f8fc3174b22bfb8fd3812f7365eab169e83449ba96"
+  },
+  "logon_history.csv": {
+   "rows": 420,
+   "sha256": "92c640f507f9e2f21a3fbffdb7915e39e61a505b0bff0dca16371cbaeb7a4db9"
+  },
+  "installed_software.csv": {
+   "rows": 3,
+   "sha256": "fcf21e99022a90af42e792fb478bfab81c669fea8a5ede352eb824e6857ad198"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "ea23d755c6a6e5564d0949d07904e29283bca0df50a8496f77fba7e3f1edd920"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/backupverify.exe.placeholder.txt",
+   "stands_in_for": "C:\\Program Files\\CBPWA\\Scripts\\backupverify.exe",
+   "sha256": "81fa486824c122f8c7ac5c5b88cd09788bc318cc57d9a6bb2d64644992d92b30"
+  },
+  {
+   "file": "placeholders/meterbatch.exe.placeholder.txt",
+   "stands_in_for": "C:\\Support\\meterbatch.exe",
+   "sha256": "94939476c4d3913fdcdbd13f8d288c1adc9affb06d33024dc9effb236ce69271"
+  },
+  {
+   "file": "placeholders/histexport.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\bin\\histexport.exe",
+   "sha256": "e055727ed940bf916a66cf2528047639f29c198920544c7769fff10762f6ec41"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

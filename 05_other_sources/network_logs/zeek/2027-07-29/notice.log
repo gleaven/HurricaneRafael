@@ -6,6 +6,7 @@
 #open	2027-07-29-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1816841700.000000	-	10.14.12.21	-	-	Scan::Port_Scan	internal scanner swept 10.14.20.0/24 (scheduled)	10.14.12.21	-	-	Notice::ACTION_LOG
-1816857496.638810	-	10.14.30.27	157.246.5.2	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1816841733.151743	-	10.14.12.21	-	-	Scan::Port_Scan	10.14.12.21 scanned at least 239 unique hosts on port 445/tcp in 6m15s	10.14.12.21	-	-	Notice::ACTION_LOG
+1816872754.458174	-	10.14.20.16	54.112.244.145	443	SSL::Certificate_Expires_Soon	Certificate cdn.fleetfuel-cards.com is going to expire soon	10.14.20.16	54.112.244.145	443	Notice::ACTION_LOG
+1816902103.421464	-	10.14.30.39	104.174.106.39	80	HTTP::Unusual_User_Agent	www-east.hotel-reservations.com user agent not seen before on this network	10.14.30.39	104.174.106.39	80	Notice::ACTION_LOG
 #close	2027-07-30-00-00-00

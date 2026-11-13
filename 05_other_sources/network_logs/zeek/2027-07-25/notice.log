@@ -6,6 +6,7 @@
 #open	2027-07-25-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1816491403.825268	-	10.14.30.60	157.2.26.33	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1816541132.826282	-	10.14.21.25	142.26.13.166	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+1816511563.689725	-	10.14.21.52	40.247.95.23	443	SSL::Certificate_Expires_Soon	Certificate cdn.airline-bookings.net is going to expire soon	10.14.21.52	40.247.95.23	443	Notice::ACTION_LOG
+1816528441.854817	-	10.14.22.23	34.182.190.28	80	HTTP::Unusual_User_Agent	api.relaytech-support.net user agent not seen before on this network	10.14.22.23	34.182.190.28	80	Notice::ACTION_LOG
+1816537784.492137	-	10.14.30.53	40.144.190.74	80	HTTP::Unusual_User_Agent	login.helpdesk-tickets.com user agent not seen before on this network	10.14.30.53	40.144.190.74	80	Notice::ACTION_LOG
 #close	2027-07-26-00-00-00

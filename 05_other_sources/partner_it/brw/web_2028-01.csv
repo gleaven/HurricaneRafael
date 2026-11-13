@@ -1,0 +1,544 @@
+time_utc,client_ip,user,method,scheme,host,url_path,status,action,category,bytes_out,bytes_in,user_agent_family,policy
+2028-01-01T00:06:03Z,10.80.1.73,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,1202,8894,-,allow-all-logged
+2028-01-01T00:17:26Z,10.80.2.53,r.lindholm,CONNECT,https,summit-components.example,-,200,allowed,business,2764,127144,Chrome/macOS,allow-all-logged
+2028-01-01T01:11:17Z,10.80.2.51,-,GET,http,auth-prod.certstatus-ocsp.net,/static/83a59f2.js,200,allowed,software updates,1430,129007,-,allow-all-logged
+2028-01-01T02:19:41Z,10.80.2.51,i.brandvold,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,3905,38042,Firefox/macOS,allow-all-logged
+2028-01-01T03:52:58Z,10.80.1.73,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,4586,123970,-,allow-all-logged
+2028-01-01T06:06:31Z,10.80.2.52,m.quince,CONNECT,https,www.ship-registry-lookup.example,-,200,allowed,transportation,1763,85716,Chrome/Windows,allow-all-logged
+2028-01-01T07:28:35Z,10.80.2.53,r.lindholm,CONNECT,https,update-cdn.txroadwatch.org,-,200,allowed,government,2841,116887,Chrome/macOS,allow-all-logged
+2028-01-01T08:46:55Z,10.80.2.52,m.quince,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,2192,68922,Chrome/Windows,allow-all-logged
+2028-01-01T09:39:02Z,10.80.2.51,i.brandvold,CONNECT,https,www.plc-vendor-support.example,-,200,allowed,technology,5923,352972,Firefox/macOS,allow-all-logged
+2028-01-01T10:20:37Z,10.80.2.52,m.quince,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,3432,59191,Chrome/Windows,allow-all-logged
+2028-01-01T11:33:50Z,10.80.2.53,r.lindholm,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,1297,68740,Chrome/macOS,allow-all-logged
+2028-01-01T11:47:47Z,10.80.2.53,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,6856,65585,-,allow-all-logged
+2028-01-01T15:36:08Z,10.80.1.56,m.okoye,CONNECT,https,www.plc-vendor-support.example,-,200,allowed,technology,3766,47862,Chrome/Windows,allow-all-logged
+2028-01-01T16:37:39Z,10.80.1.56,-,GET,http,content.harbourlight-av.example,/updates/4f3e4/manifest.xml,200,allowed,software updates,4434,98929,-,allow-all-logged
+2028-01-01T16:52:42Z,10.80.1.64,-,GET,http,static.browser-safecheck.net,/ocsp/651daba1e021,200,allowed,software updates,1821,49895,-,allow-all-logged
+2028-01-01T17:13:12Z,10.80.1.77,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,2181,59845,-,allow-all-logged
+2028-01-01T18:10:26Z,10.80.2.53,p.achebe,CONNECT,https,forum.embedded-dev.example,-,200,allowed,technology,3668,222886,Chrome/macOS,allow-all-logged
+2028-01-01T18:11:32Z,10.80.1.59,-,GET,http,www.browser-safecheck.net,/pki/081bb9.crl,200,allowed,software updates,1090,116600,-,allow-all-logged
+2028-01-01T19:21:26Z,10.80.2.50,d.verhoeven,CONNECT,https,login.insurance-claims-portal.com,-,200,allowed,insurance,4860,189941,Chrome/Windows,allow-all-logged
+2028-01-01T21:48:56Z,10.80.2.50,d.verhoeven,CONNECT,https,www.customs-filing.example,-,200,allowed,government,5499,424010,Chrome/Windows,allow-all-logged
+2028-01-01T22:23:40Z,10.80.2.51,h.oyelaran,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,2706,202699,Safari/macOS,allow-all-logged
+2028-01-01T22:37:22Z,10.80.1.56,-,GET,http,www.osupdates-delivery.com,/robots.txt,200,allowed,software updates,2108,58508,-,allow-all-logged
+2028-01-01T23:09:01Z,10.80.2.50,-,POST,http,auth-prod.certstatus-ocsp.net,/pki/21f69f.crl,304,allowed,software updates,1678,472,-,allow-all-logged
+2028-01-02T00:54:29Z,10.80.2.51,i.brandvold,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,7935,63530,Firefox/macOS,allow-all-logged
+2028-01-02T04:07:13Z,10.80.2.50,e.salcedo,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,2431,13400,Edge/Windows,allow-all-logged
+2028-01-02T04:09:32Z,10.80.2.54,v.haraldsen,GET,http,web-portal.hospital-patient-portal.org,/images/ed85b9.png,404,allowed,health,3516,97145,Chrome/Windows,allow-all-logged
+2028-01-02T07:07:12Z,10.80.2.50,e.salcedo,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,1850,51299,Edge/Windows,allow-all-logged
+2028-01-02T08:11:37Z,10.80.2.52,m.quince,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,5671,44718,Chrome/Windows,allow-all-logged
+2028-01-02T08:16:50Z,10.80.1.71,-,GET,http,www.osupdates-delivery.com,/,404,allowed,software updates,4293,25823,-,allow-all-logged
+2028-01-02T13:10:59Z,10.80.2.54,w.kowalczyk,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,1555,91605,Firefox/Windows,allow-all-logged
+2028-01-02T16:47:01Z,10.80.2.50,f.hollis,CONNECT,https,www.padre-island-rentals.example,-,200,allowed,uncategorised,3793,69766,Chrome/Windows,allow-all-logged
+2028-01-02T18:38:29Z,10.80.2.50,-,GET,http,static.ntp-pool-public.org,/content/9915a9c5.cab,200,allowed,software updates,3584,198879,-,allow-all-logged
+2028-01-02T18:44:31Z,10.80.2.50,f.hollis,CONNECT,https,web-portal.searchindex-api.com,-,200,allowed,search engines,3873,146789,Chrome/Windows,allow-all-logged
+2028-01-02T19:30:29Z,10.80.2.51,j.estrada,CONNECT,https,static.cctexas-services.org,-,200,allowed,government,9318,88165,Chrome/macOS,allow-all-logged
+2028-01-02T19:32:18Z,10.80.2.50,f.hollis,CONNECT,https,www.hrcloud-payroll.com,-,200,allowed,finance,2408,58399,Chrome/Windows,allow-all-logged
+2028-01-02T20:03:45Z,10.80.2.54,w.kowalczyk,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,1752,131020,Chrome/Windows,allow-all-logged
+2028-01-02T21:47:36Z,10.80.1.76,-,GET,http,www.certstatus-ocsp.net,/pki/17e098.crl,200,allowed,software updates,1690,119285,-,allow-all-logged
+2028-01-02T21:57:12Z,10.80.2.53,s.marchetti,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,4813,127277,Safari/macOS,allow-all-logged
+2028-01-02T23:47:20Z,10.80.2.50,f.hollis,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,3444,69113,Chrome/Windows,allow-all-logged
+2028-01-03T00:04:45Z,10.80.2.53,t.oduya,CONNECT,https,certificates.tejano-group.example,-,200,allowed,business,7073,82713,Safari/macOS,allow-all-logged
+2028-01-03T00:15:44Z,10.80.2.50,g.navarro,CONNECT,https,www.marine-exchange-tx.example,-,200,allowed,transportation,2397,118263,Chrome/Windows,allow-all-logged
+2028-01-03T07:17:34Z,10.80.2.51,k.marlowe,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,1073,66350,Safari/macOS,allow-all-logged
+2028-01-03T08:32:35Z,10.80.2.51,k.marlowe,CONNECT,https,www.bunker-prices.example,-,200,allowed,transportation,4763,142520,Safari/macOS,allow-all-logged
+2028-01-03T09:30:50Z,10.80.2.52,o.ferris,CONNECT,https,cdn.harborline6.example,-,200,allowed,news,3151,129846,Chrome/Windows,allow-all-logged
+2028-01-03T11:41:08Z,10.80.2.50,g.navarro,CONNECT,https,static.newswire-national.com,-,200,allowed,news,1585,181866,Edge/Windows,allow-all-logged
+2028-01-03T12:29:41Z,10.80.2.54,w.kowalczyk,CONNECT,https,www.oleandertelecom.example,-,200,allowed,business,1341,5949,Chrome/Windows,allow-all-logged
+2028-01-03T13:13:44Z,10.80.1.77,c.amadi,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,4088,29586,Edge/Windows,allow-all-logged
+2028-01-03T13:26:03Z,10.80.1.75,a.rooke,CONNECT,https,cdn.hotel-reservations.com,-,200,allowed,travel,3042,33484,Firefox/Windows,allow-all-logged
+2028-01-03T13:31:14Z,10.80.1.66,i.reyes,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,3003,123797,Chrome/Windows,allow-all-logged
+2028-01-03T13:42:39Z,10.80.1.72,w.ibarra,CONNECT,https,docs.cobaltfreight.example,-,200,allowed,transportation,5911,126852,Chrome/Windows,allow-all-logged
+2028-01-03T13:44:54Z,10.80.1.71,v.castell,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,3002,86884,Chrome/macOS,allow-all-logged
+2028-01-03T14:12:40Z,10.80.1.51,j.tran,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,2426,39603,Chrome/Windows,allow-all-logged
+2028-01-03T14:32:00Z,10.80.1.74,z.pemberton,CONNECT,https,www.summitshipyard.example,-,200,allowed,transportation,4197,24909,Edge/Windows,allow-all-logged
+2028-01-03T14:46:08Z,10.80.2.53,s.marchetti,CONNECT,https,docs.protocol-specs.example,-,200,allowed,technology,4937,31811,Safari/macOS,allow-all-logged
+2028-01-03T15:09:19Z,10.80.2.50,f.hollis,CONNECT,https,www.calallensurveying.example,-,200,allowed,business,4919,190933,Edge/Windows,allow-all-logged
+2028-01-03T15:14:06Z,10.80.1.71,v.castell,CONNECT,https,www.marine-exchange-tx.example,-,200,allowed,transportation,4405,109255,Chrome/macOS,allow-all-logged
+2028-01-03T15:18:29Z,10.80.1.57,r.nakamura,CONNECT,https,pilots.aransas-cc-pilots.example,-,200,allowed,transportation,3514,447156,Firefox/Windows,allow-all-logged
+2028-01-03T15:22:14Z,10.80.1.69,q.abara,CONNECT,https,cdn.bank-online-secure.com,-,200,allowed,finance,1935,39426,Chrome/Windows,allow-all-logged
+2028-01-03T15:46:38Z,10.80.1.59,it.admin,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,3615,189201,Chrome/Windows,allow-all-logged
+2028-01-03T15:50:00Z,10.80.1.65,h.tanaka,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,3409,81508,Chrome/Windows,allow-all-logged
+2028-01-03T16:03:04Z,10.80.1.67,n.farrow,CONNECT,https,www.customs-filing.example,-,200,allowed,government,2143,46553,Chrome/macOS,allow-all-logged
+2028-01-03T16:05:36Z,10.80.1.50,o.pryce,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,1157,131197,Chrome/Windows,allow-all-logged
+2028-01-03T16:16:10Z,10.80.2.53,s.marchetti,CONNECT,https,summit-components.example,-,200,allowed,business,4083,131803,Safari/macOS,allow-all-logged
+2028-01-03T16:24:43Z,10.80.1.57,r.nakamura,CONNECT,https,www.streamvideo-cdn.net,-,200,allowed,streaming media,3375,34746,Firefox/Windows,allow-all-logged
+2028-01-03T16:29:25Z,10.80.1.51,j.tran,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,1869,41032,Chrome/Windows,allow-all-logged
+2028-01-03T16:31:50Z,10.80.1.67,n.farrow,CONNECT,https,www.port-security-grants.example,-,200,allowed,government,4318,123082,Chrome/macOS,allow-all-logged
+2028-01-03T17:01:29Z,10.80.1.77,c.amadi,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,12775,35399,Edge/Windows,allow-all-logged
+2028-01-03T17:09:59Z,10.80.1.72,w.ibarra,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,3091,56340,Chrome/Windows,allow-all-logged
+2028-01-03T17:23:18Z,10.80.1.59,it.admin,CONNECT,https,docs.protocol-specs.example,-,200,allowed,technology,1712,57068,Chrome/Windows,allow-all-logged
+2028-01-03T17:46:51Z,10.80.1.50,o.pryce,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,2603,170325,Chrome/Windows,allow-all-logged
+2028-01-03T17:59:34Z,10.80.2.50,f.hollis,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,6661,44683,Chrome/Windows,allow-all-logged
+2028-01-03T18:00:13Z,10.80.1.75,a.rooke,CONNECT,https,www.oleandertelecom.example,-,200,allowed,business,1429,76905,Firefox/Windows,allow-all-logged
+2028-01-03T18:04:14Z,10.80.1.50,o.pryce,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,1041,87724,Chrome/Windows,allow-all-logged
+2028-01-03T18:32:44Z,10.80.1.58,t.velasquez,CONNECT,https,summit-components.example,-,200,allowed,business,7430,205361,Chrome/Windows,allow-all-logged
+2028-01-03T19:05:55Z,10.80.1.54,s.adeyemi,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,4121,124742,Chrome/Windows,allow-all-logged
+2028-01-03T19:12:38Z,10.80.1.69,q.abara,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,2228,54997,Chrome/Windows,allow-all-logged
+2028-01-03T19:17:51Z,10.80.1.65,-,GET,http,static.browser-safecheck.net,/content/da873562.cab,200,allowed,software updates,2333,40909,-,allow-all-logged
+2028-01-03T19:23:50Z,10.80.1.77,c.amadi,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,1046,142518,Edge/Windows,allow-all-logged
+2028-01-03T19:30:23Z,10.80.1.71,v.castell,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,2246,54777,Chrome/macOS,allow-all-logged
+2028-01-03T19:42:57Z,10.80.2.54,w.kowalczyk,CONNECT,https,www.marine-exchange-tx.example,-,200,allowed,transportation,3633,67934,Chrome/Windows,allow-all-logged
+2028-01-03T19:55:39Z,10.80.1.56,m.okoye,CONNECT,https,forum.embedded-dev.example,-,200,allowed,technology,2730,153221,Chrome/Windows,allow-all-logged
+2028-01-03T20:01:00Z,10.80.2.50,f.hollis,CONNECT,https,www.libertytrucking.example,-,200,allowed,business,4542,30790,Chrome/Windows,allow-all-logged
+2028-01-03T20:01:21Z,10.80.1.51,j.tran,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,2165,46439,Chrome/Windows,allow-all-logged
+2028-01-03T20:04:52Z,10.80.1.70,u.sorensen,CONNECT,https,login.helpdesk-tickets.com,-,200,allowed,business software,3466,92983,Chrome/Windows,allow-all-logged
+2028-01-03T20:08:09Z,10.80.1.64,g.lindqvist,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,1658,139795,Safari/macOS,allow-all-logged
+2028-01-03T20:33:53Z,10.80.2.51,j.estrada,CONNECT,https,class.marine-classification.example,-,200,allowed,transportation,1689,39664,Chrome/macOS,allow-all-logged
+2028-01-03T20:37:51Z,10.80.1.65,h.tanaka,CONNECT,https,www.prairieterminals.example,-,200,allowed,business,4110,226167,Chrome/Windows,allow-all-logged
+2028-01-03T20:42:38Z,10.80.1.55,k.brandt,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,7871,22683,Chrome/Windows,allow-all-logged
+2028-01-03T20:58:30Z,10.80.1.54,s.adeyemi,CONNECT,https,www.calallensurveying.example,-,200,allowed,business,1937,113140,Chrome/Windows,allow-all-logged
+2028-01-03T21:13:03Z,10.80.1.57,-,GET,http,static.browser-safecheck.net,/ocsp/04baf043841e,200,allowed,software updates,4459,38423,-,allow-all-logged
+2028-01-03T21:17:13Z,10.80.1.62,e.morrow,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,10951,149641,Edge/Windows,allow-all-logged
+2028-01-03T21:20:22Z,10.80.1.52,l.hart,CONNECT,https,www.storm-prep-guides.org,-,200,allowed,weather,2040,91807,Chrome/Windows,allow-all-logged
+2028-01-03T21:34:19Z,10.80.2.50,f.hollis,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,1016,130893,Chrome/Windows,allow-all-logged
+2028-01-03T21:57:20Z,10.80.1.56,m.okoye,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,1253,223568,Chrome/Windows,allow-all-logged
+2028-01-03T22:31:25Z,10.80.1.67,-,GET,http,static.osupdates-delivery.com,/v2/check?id=6b04521565,200,allowed,software updates,1441,70429,-,allow-all-logged
+2028-01-03T22:34:23Z,10.80.1.65,h.tanaka,CONNECT,https,pilots.aransas-cc-pilots.example,-,200,allowed,transportation,7499,56511,Chrome/Windows,allow-all-logged
+2028-01-03T23:37:32Z,10.80.1.67,n.farrow,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,4402,8784,Chrome/macOS,allow-all-logged
+2028-01-03T23:56:28Z,10.80.2.53,t.oduya,CONNECT,https,certificates.tejanocpa.example,-,200,allowed,finance,3787,107923,Safari/macOS,allow-all-logged
+2028-01-04T00:19:53Z,10.80.1.69,-,GET,http,content.harbourlight-av.example,/ocsp/d013330a0e37,200,allowed,software updates,2785,34246,-,allow-all-logged
+2028-01-04T01:33:39Z,10.80.2.54,x.demir,CONNECT,https,static.school-district-cc.org,-,200,allowed,education,3963,74613,Edge/Windows,allow-all-logged
+2028-01-04T02:19:10Z,10.80.2.52,o.ferris,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,1696,127471,Chrome/Windows,allow-all-logged
+2028-01-04T03:42:35Z,10.80.250.26,e.salcedo,CONNECT,https,www.docsign-flow.com,-,200,allowed,online storage,3984,95889,Chrome/Windows,allow-all-logged
+2028-01-04T04:25:42Z,10.80.2.51,k.marlowe,CONNECT,https,www.unityelectric.example,-,200,allowed,business,6260,146198,Safari/macOS,allow-all-logged
+2028-01-04T04:43:24Z,10.80.2.52,o.ferris,CONNECT,https,www.tidewatervalves.example,-,200,allowed,weather,4921,74202,Chrome/Windows,allow-all-logged
+2028-01-04T06:01:46Z,10.80.1.76,-,GET,http,content.harbourlight-av.example,/content/8b8df499.cab,200,allowed,software updates,4787,95752,-,allow-all-logged
+2028-01-04T07:05:59Z,10.80.2.51,k.marlowe,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,737,88415,Safari/macOS,allow-all-logged
+2028-01-04T10:45:03Z,10.80.2.50,g.navarro,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,607,88791,Chrome/Windows,allow-all-logged
+2028-01-04T10:45:21Z,10.80.2.52,o.ferris,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,9184,75708,Chrome/Windows,allow-all-logged
+2028-01-04T10:49:23Z,10.80.2.52,o.ferris,GET,http,web-portal.meetroom-video.com,/static/adebdd7.js,204,allowed,business software,2792,468,Chrome/Windows,allow-all-logged
+2028-01-04T13:28:26Z,10.80.2.50,d.verhoeven,CONNECT,https,cdn.bank-online-secure.com,-,200,allowed,finance,1633,82230,Chrome/Windows,allow-all-logged
+2028-01-04T13:32:20Z,10.80.1.66,i.reyes,CONNECT,https,www.brazosdredging.example,-,200,allowed,business,3690,66184,Chrome/Windows,allow-all-logged
+2028-01-04T13:34:48Z,10.80.1.51,j.tran,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,1495,159092,Chrome/Windows,allow-all-logged
+2028-01-04T13:52:46Z,10.80.1.57,r.nakamura,CONNECT,https,www.libertytrucking.example,-,200,allowed,business,1290,75293,Firefox/Windows,allow-all-logged
+2028-01-04T14:02:37Z,10.80.1.76,b.strand,GET,http,www.cobalttank-gauging.example,/pki/04075f.crl,204,allowed,business,3945,360,Edge/Windows,allow-all-logged
+2028-01-04T14:04:56Z,10.80.1.52,l.hart,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,2050,16880,Chrome/Windows,allow-all-logged
+2028-01-04T14:07:52Z,10.80.1.60,accounts.ap,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,723,108794,Edge/Windows,allow-all-logged
+2028-01-04T14:36:09Z,10.80.1.52,l.hart,CONNECT,https,www.bunker-prices.example,-,200,allowed,transportation,1505,119031,Chrome/Windows,allow-all-logged
+2028-01-04T14:50:19Z,10.80.1.72,w.ibarra,CONNECT,https,api.bank-online-secure.com,-,200,allowed,finance,2236,116587,Chrome/Windows,allow-all-logged
+2028-01-04T14:58:29Z,10.80.1.65,h.tanaka,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,5859,122746,Chrome/Windows,allow-all-logged
+2028-01-04T15:00:28Z,10.80.2.54,u.valdivia,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,1145,162990,Chrome/Windows,allow-all-logged
+2028-01-04T15:01:59Z,10.80.1.77,c.amadi,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,4413,74410,Edge/Windows,allow-all-logged
+2028-01-04T15:03:11Z,10.80.1.71,v.castell,CONNECT,https,app.shiftboard-scheduler.example,-,200,allowed,uncategorised,1423,24479,Chrome/macOS,allow-all-logged
+2028-01-04T15:08:39Z,10.80.1.75,a.rooke,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,6813,8715,Firefox/Windows,allow-all-logged
+2028-01-04T15:09:59Z,10.80.1.67,n.farrow,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,1235,141866,Chrome/macOS,allow-all-logged
+2028-01-04T15:10:28Z,10.80.1.77,c.amadi,CONNECT,https,cdn.insurance-claims-portal.com,-,200,allowed,content delivery,1836,25710,Edge/Windows,allow-all-logged
+2028-01-04T15:16:33Z,10.80.1.55,k.brandt,CONNECT,https,pilots.aransas-cc-pilots.example,-,200,allowed,transportation,4960,104503,Chrome/Windows,allow-all-logged
+2028-01-04T15:18:55Z,10.80.1.56,m.okoye,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,2108,203396,Chrome/Windows,allow-all-logged
+2028-01-04T15:58:18Z,10.80.1.54,s.adeyemi,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,2454,82935,Chrome/Windows,allow-all-logged
+2028-01-04T16:06:13Z,10.80.1.69,q.abara,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,1544,46675,Chrome/Windows,allow-all-logged
+2028-01-04T16:26:59Z,10.80.1.65,h.tanaka,CONNECT,https,www.prairieterminals.example,-,200,allowed,business,7700,137693,Chrome/Windows,allow-all-logged
+2028-01-04T16:38:46Z,10.80.1.55,k.brandt,CONNECT,https,pilots.aransas-cc-pilots.example,-,200,allowed,transportation,2311,36883,Chrome/Windows,allow-all-logged
+2028-01-04T16:49:13Z,10.80.2.52,l.petrov,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,5957,217170,Firefox/Windows,allow-all-logged
+2028-01-04T16:50:15Z,10.80.1.62,e.morrow,CONNECT,https,web-portal.searchindex-api.com,-,200,allowed,search engines,8050,139432,Edge/Windows,allow-all-logged
+2028-01-04T16:54:18Z,10.80.2.50,d.verhoeven,CONNECT,https,www.keelelectronics.example,-,200,allowed,business,6230,143923,Chrome/Windows,allow-all-logged
+2028-01-04T17:03:40Z,10.80.1.69,q.abara,CONNECT,https,web-portal.hospital-patient-portal.org,-,200,allowed,health,1724,40602,Chrome/Windows,allow-all-logged
+2028-01-04T17:17:48Z,10.80.1.59,it.admin,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,1921,79563,Chrome/Windows,allow-all-logged
+2028-01-04T17:17:50Z,10.80.1.51,j.tran,CONNECT,https,static.training-lms.net,-,200,allowed,education,710,133672,Chrome/Windows,allow-all-logged
+2028-01-04T17:25:00Z,10.80.1.59,it.admin,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,6071,54032,Chrome/Windows,allow-all-logged
+2028-01-04T17:31:45Z,10.80.1.58,t.velasquez,CONNECT,https,www.port-security-grants.example,-,200,allowed,government,2319,232522,Chrome/Windows,allow-all-logged
+2028-01-04T17:44:32Z,10.80.1.58,t.velasquez,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,2463,72849,Chrome/Windows,allow-all-logged
+2028-01-04T17:48:21Z,10.80.1.63,f.okafor,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,2319,83389,Chrome/Windows,allow-all-logged
+2028-01-04T17:49:41Z,10.80.1.72,w.ibarra,CONNECT,https,www.vertexstaffing.example,-,200,allowed,business,5553,110639,Chrome/Windows,allow-all-logged
+2028-01-04T18:04:25Z,10.80.1.57,r.nakamura,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,4543,50551,Chrome/Windows,allow-all-logged
+2028-01-04T18:15:07Z,10.80.1.69,q.abara,CONNECT,https,www.streamvideo-cdn.net,-,200,allowed,streaming media,1552,70953,Chrome/Windows,allow-all-logged
+2028-01-04T18:28:16Z,10.80.1.55,k.brandt,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,2531,140014,Chrome/Windows,allow-all-logged
+2028-01-04T18:29:02Z,10.80.1.50,o.pryce,CONNECT,https,www.cobalttank-gauging.example,-,200,allowed,business,2056,85743,Chrome/Windows,allow-all-logged
+2028-01-04T19:01:53Z,10.80.1.58,t.velasquez,CONNECT,https,www.vertexstevedores.example,-,200,allowed,business,3666,78249,Chrome/Windows,allow-all-logged
+2028-01-04T19:04:08Z,10.80.1.72,w.ibarra,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,4052,144710,Chrome/Windows,allow-all-logged
+2028-01-04T19:05:44Z,10.80.1.75,a.rooke,CONNECT,https,web-portal.hospital-patient-portal.org,-,200,allowed,health,8969,330280,Firefox/Windows,allow-all-logged
+2028-01-04T19:11:25Z,10.80.1.71,v.castell,CONNECT,https,www.brazospumps.example,-,200,allowed,business,2811,58240,Chrome/macOS,allow-all-logged
+2028-01-04T19:14:17Z,10.80.1.77,c.amadi,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,1404,179230,Edge/Windows,allow-all-logged
+2028-01-04T19:18:44Z,10.80.1.71,v.castell,CONNECT,https,www.keelelectronics.example,-,200,allowed,business,2393,47063,Chrome/macOS,allow-all-logged
+2028-01-04T19:31:55Z,10.80.1.66,-,GET,http,cdn.certstatus-ocsp.net,/v1/check?id=4f28c7b334,200,allowed,software updates,3279,93596,-,allow-all-logged
+2028-01-04T19:40:26Z,10.80.1.60,accounts.ap,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,1497,189452,Edge/Windows,allow-all-logged
+2028-01-04T19:52:42Z,10.80.1.70,u.sorensen,CONNECT,https,www.bunker-prices.example,-,200,allowed,transportation,2356,11917,Chrome/Windows,allow-all-logged
+2028-01-04T19:53:47Z,10.80.1.69,q.abara,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,2238,40170,Chrome/Windows,allow-all-logged
+2028-01-04T20:07:08Z,10.80.1.69,q.abara,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,3179,247324,Chrome/Windows,allow-all-logged
+2028-01-04T20:10:17Z,10.80.1.60,accounts.ap,CONNECT,https,www.oleandertelecom.example,-,200,allowed,business,1336,64854,Edge/Windows,allow-all-logged
+2028-01-04T20:24:41Z,10.80.1.59,it.admin,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,5093,37406,Chrome/Windows,allow-all-logged
+2028-01-04T20:26:43Z,10.80.2.54,u.valdivia,CONNECT,https,www.calallensurveying.example,-,200,allowed,business,1990,24761,Edge/Windows,allow-all-logged
+2028-01-04T20:33:15Z,10.80.1.56,m.okoye,CONNECT,https,forum.embedded-dev.example,-,200,allowed,technology,3286,169145,Chrome/Windows,allow-all-logged
+2028-01-04T20:34:04Z,10.80.1.59,it.admin,CONNECT,https,auth-prod.airline-bookings.net,-,504,allowed,travel,6707,214,Chrome/Windows,allow-all-logged
+2028-01-04T20:40:27Z,10.80.1.70,u.sorensen,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,10862,114787,Chrome/Windows,allow-all-logged
+2028-01-04T20:43:09Z,10.80.1.53,d.silva,CONNECT,https,www.oleandertelecom.example,-,200,allowed,business,1380,151143,Chrome/Windows,allow-all-logged
+2028-01-04T20:52:16Z,10.80.2.54,u.valdivia,CONNECT,https,web-portal.searchindex-api.com,-,200,allowed,search engines,2805,45556,Edge/Windows,allow-all-logged
+2028-01-04T20:52:45Z,10.80.1.70,u.sorensen,CONNECT,https,www.prairieterminals.example,-,200,allowed,business,6785,74456,Chrome/Windows,allow-all-logged
+2028-01-04T20:53:12Z,10.80.1.61,c.whitlock,CONNECT,https,login.insurance-claims-portal.com,-,200,allowed,insurance,2393,14626,Firefox/Windows,allow-all-logged
+2028-01-04T21:03:50Z,10.80.1.75,a.rooke,CONNECT,https,www-2.bayside-ledger.example,-,200,allowed,news,3641,84385,Firefox/Windows,allow-all-logged
+2028-01-04T21:05:15Z,10.80.2.51,h.oyelaran,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,2940,97631,Safari/macOS,allow-all-logged
+2028-01-04T21:10:56Z,10.80.1.77,c.amadi,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,3167,187207,Chrome/Windows,allow-all-logged
+2028-01-04T21:10:56Z,10.80.1.71,v.castell,CONNECT,https,www.cobalttank-gauging.example,-,200,allowed,business,869,196959,Chrome/macOS,allow-all-logged
+2028-01-04T21:13:41Z,10.80.1.53,d.silva,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,802,68824,Chrome/Windows,allow-all-logged
+2028-01-04T21:15:57Z,10.80.1.61,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,2547,72150,-,allow-all-logged
+2028-01-04T21:23:09Z,10.80.1.76,b.strand,CONNECT,https,www.calallensurveying.example,-,200,allowed,business,3045,21833,Edge/Windows,allow-all-logged
+2028-01-04T21:41:21Z,10.80.1.61,c.whitlock,CONNECT,https,rest-api.hotel-reservations.com,-,200,allowed,travel,832,157502,Firefox/Windows,allow-all-logged
+2028-01-04T21:43:34Z,10.80.1.60,accounts.ap,CONNECT,https,static.packagetracker-api.net,-,200,allowed,business,3786,166673,Edge/Windows,allow-all-logged
+2028-01-04T21:46:35Z,10.80.1.70,u.sorensen,CONNECT,https,www.hrcloud-payroll.com,-,200,allowed,finance,4081,61280,Chrome/Windows,allow-all-logged
+2028-01-04T21:55:37Z,10.80.1.60,accounts.ap,CONNECT,https,www-east.officesuite-mail.com,-,200,allowed,business software,6112,51564,Edge/Windows,allow-all-logged
+2028-01-04T21:58:43Z,10.80.1.61,c.whitlock,CONNECT,https,tracker.parcel-status-update.example,-,200,allowed,uncategorised,3204,140708,Firefox/Windows,allow-all-logged
+2028-01-04T22:12:26Z,10.80.1.56,m.okoye,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,1919,37642,Chrome/Windows,allow-all-logged
+2028-01-04T22:19:24Z,10.80.1.53,d.silva,CONNECT,https,cdn.hotel-reservations.com,-,200,allowed,travel,5174,21552,Chrome/Windows,allow-all-logged
+2028-01-04T22:54:58Z,10.80.2.54,u.valdivia,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,4296,24405,Edge/Windows,allow-all-logged
+2028-01-05T00:54:01Z,10.80.1.62,-,GET,http,static.osupdates-delivery.com,/content/2b86c427.cab,304,allowed,software updates,2644,628,-,allow-all-logged
+2028-01-05T01:13:40Z,10.80.2.52,m.quince,CONNECT,https,login.adnetwork-static.net,-,200,allowed,advertising,2503,86208,Chrome/Windows,allow-all-logged
+2028-01-05T02:08:13Z,10.80.1.51,-,GET,http,content.harbourlight-av.example,/pki/a96b5b.crl,200,allowed,software updates,6651,51414,-,allow-all-logged
+2028-01-05T03:32:33Z,10.80.2.52,m.quince,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,3650,64175,Chrome/Windows,allow-all-logged
+2028-01-05T04:03:57Z,10.80.2.54,v.haraldsen,CONNECT,https,www.marine-exchange-tx.example,-,200,allowed,transportation,6071,36096,Chrome/Windows,allow-all-logged
+2028-01-05T04:06:34Z,10.80.2.51,i.brandvold,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,5269,32836,Firefox/macOS,allow-all-logged
+2028-01-05T04:30:51Z,10.80.2.52,m.quince,CONNECT,https,cdn.cloudstorage-sync.com,-,200,allowed,content delivery,13982,159266,Chrome/Windows,allow-all-logged
+2028-01-05T04:56:30Z,10.80.2.50,e.salcedo,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,3868,108023,Edge/Windows,allow-all-logged
+2028-01-05T06:17:11Z,10.80.2.50,e.salcedo,CONNECT,https,www.marine-exchange-tx.example,-,200,allowed,transportation,4283,20549,Edge/Windows,allow-all-logged
+2028-01-05T06:35:35Z,10.80.1.53,-,GET,http,content.harbourlight-av.example,/pki/fff49e.crl,200,allowed,software updates,1838,58892,-,allow-all-logged
+2028-01-05T06:47:21Z,10.80.1.67,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,7104,54431,-,allow-all-logged
+2028-01-05T08:08:55Z,10.80.250.38,n.adeola,CONNECT,https,class.marine-classification.example,-,200,allowed,transportation,1646,84743,Chrome/Windows,allow-all-logged
+2028-01-05T08:55:26Z,10.80.2.53,r.lindholm,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,6123,55442,Chrome/macOS,allow-all-logged
+2028-01-05T11:30:20Z,10.80.2.50,e.salcedo,GET,http,login.nueces-county-tx.org,/images/8a9f7c.png,304,allowed,government,3035,693,Firefox/Windows,allow-all-logged
+2028-01-05T13:42:58Z,10.80.1.76,b.strand,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,2756,41153,Edge/Windows,allow-all-logged
+2028-01-05T14:09:03Z,10.80.1.70,u.sorensen,CONNECT,https,certificates.sabal-panels.example,-,200,allowed,business,4805,88294,Chrome/Windows,allow-all-logged
+2028-01-05T14:12:26Z,10.80.2.54,u.valdivia,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,2179,13502,Edge/Windows,allow-all-logged
+2028-01-05T14:21:38Z,10.80.2.52,l.petrov,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,1013,74626,Chrome/Windows,allow-all-logged
+2028-01-05T14:25:04Z,10.80.1.54,s.adeyemi,CONNECT,https,www.socialfeed-img.com,-,200,allowed,social media,1355,109656,Chrome/Windows,allow-all-logged
+2028-01-05T14:30:52Z,10.80.1.64,g.lindqvist,CONNECT,https,api.harborline6.example,-,200,allowed,news,1960,71551,Safari/macOS,allow-all-logged
+2028-01-05T14:53:30Z,10.80.1.77,c.amadi,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,2299,122446,Edge/Windows,allow-all-logged
+2028-01-05T14:54:35Z,10.80.1.62,e.morrow,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,3661,134533,Edge/Windows,allow-all-logged
+2028-01-05T15:09:39Z,10.80.2.52,l.petrov,CONNECT,https,www.plc-vendor-support.example,-,200,allowed,technology,1874,45584,Chrome/Windows,allow-all-logged
+2028-01-05T15:15:52Z,10.80.2.54,u.valdivia,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,15982,36730,Edge/Windows,allow-all-logged
+2028-01-05T15:40:40Z,10.80.1.68,p.dunmore,CONNECT,https,www-east.officesuite-mail.com,-,200,allowed,business software,1682,31182,Chrome/Windows,allow-all-logged
+2028-01-05T15:45:18Z,10.80.1.55,k.brandt,CONNECT,https,www.plc-vendor-support.example,-,502,allowed,technology,2709,182,Chrome/Windows,allow-all-logged
+2028-01-05T15:55:06Z,10.80.2.50,d.verhoeven,CONNECT,https,forum.embedded-dev.example,-,200,allowed,technology,4284,44795,Chrome/Windows,allow-all-logged
+2028-01-05T16:18:58Z,10.80.1.66,i.reyes,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,3499,52469,Chrome/Windows,allow-all-logged
+2028-01-05T16:19:58Z,10.80.1.55,k.brandt,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,6360,197284,Chrome/Windows,allow-all-logged
+2028-01-05T16:36:33Z,10.80.1.68,p.dunmore,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,3196,115352,Chrome/Windows,allow-all-logged
+2028-01-05T16:51:04Z,10.80.2.52,l.petrov,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,5411,139478,Chrome/Windows,allow-all-logged
+2028-01-05T16:54:02Z,10.80.1.57,r.nakamura,CONNECT,https,cdn.bank-online-secure.com,-,200,allowed,finance,1271,143756,Firefox/Windows,allow-all-logged
+2028-01-05T17:05:10Z,10.80.1.64,-,GET,http,cdn.certstatus-ocsp.net,/updates/3ba9a/manifest.xml,404,allowed,software updates,4186,63366,-,allow-all-logged
+2028-01-05T17:24:06Z,10.80.2.50,-,GET,http,auth-prod.certstatus-ocsp.net,/ocsp/d8727a1578c3,301,allowed,software updates,1115,371,-,allow-all-logged
+2028-01-05T17:59:40Z,10.80.1.55,k.brandt,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,9800,64271,Chrome/Windows,allow-all-logged
+2028-01-05T18:04:48Z,10.80.1.74,z.pemberton,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,1683,22642,Edge/Windows,allow-all-logged
+2028-01-05T18:08:30Z,10.80.1.58,t.velasquez,CONNECT,https,www.marine-exchange-tx.example,-,200,allowed,transportation,2665,35910,Chrome/Windows,allow-all-logged
+2028-01-05T18:23:29Z,10.80.1.70,u.sorensen,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,2449,80539,Chrome/Windows,allow-all-logged
+2028-01-05T18:29:21Z,10.80.1.58,t.velasquez,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,835,209519,Chrome/Windows,allow-all-logged
+2028-01-05T18:47:54Z,10.80.1.77,c.amadi,CONNECT,https,update-cdn.txroadwatch.org,-,502,allowed,government,930,374,Edge/Windows,allow-all-logged
+2028-01-05T18:59:05Z,10.80.1.55,k.brandt,CONNECT,https,www.summitshipyard.example,-,200,allowed,transportation,5651,111674,Chrome/Windows,allow-all-logged
+2028-01-05T19:25:36Z,10.80.1.63,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,792,60217,-,allow-all-logged
+2028-01-05T19:45:31Z,10.80.1.62,e.morrow,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,1737,64914,Edge/Windows,allow-all-logged
+2028-01-05T19:58:52Z,10.80.2.54,u.valdivia,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,1492,100776,Edge/Windows,allow-all-logged
+2028-01-05T20:04:37Z,10.80.1.52,l.hart,CONNECT,https,www-2.bayside-ledger.example,-,200,allowed,news,3047,232405,Chrome/Windows,allow-all-logged
+2028-01-05T20:13:11Z,10.80.1.77,c.amadi,CONNECT,https,www.vertexstevedores.example,-,200,allowed,business,3142,135269,Edge/Windows,allow-all-logged
+2028-01-05T20:19:15Z,10.80.250.100,a.thorsen,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,3712,74541,Chrome/Windows,allow-all-logged
+2028-01-05T20:19:40Z,10.80.1.52,l.hart,CONNECT,https,www.keelelectronics.example,-,200,allowed,business,908,125250,Chrome/Windows,allow-all-logged
+2028-01-05T20:34:56Z,10.80.1.72,w.ibarra,CONNECT,https,www.customs-filing.example,-,200,allowed,government,1910,37433,Chrome/Windows,allow-all-logged
+2028-01-05T20:39:05Z,10.80.2.54,u.valdivia,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,5682,82121,Edge/Windows,allow-all-logged
+2028-01-05T20:50:50Z,10.80.2.52,-,GET,http,www-east.telemetry-osvendor.com,/pki/82ce4d.crl,200,allowed,software updates,1283,75041,-,allow-all-logged
+2028-01-05T20:51:42Z,10.80.250.100,a.thorsen,CONNECT,https,static.school-district-cc.org,-,200,allowed,education,3226,78565,Chrome/Windows,allow-all-logged
+2028-01-05T20:59:14Z,10.80.1.62,e.morrow,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,1635,50743,Edge/Windows,allow-all-logged
+2028-01-05T20:59:34Z,10.80.1.66,i.reyes,CONNECT,https,www.flourbluffgroup.example,-,200,allowed,business,5366,147477,Chrome/Windows,allow-all-logged
+2028-01-05T21:27:49Z,10.80.1.54,s.adeyemi,CONNECT,https,summit-components.example,-,200,allowed,business,2860,116301,Chrome/Windows,allow-all-logged
+2028-01-05T21:28:37Z,10.80.1.51,j.tran,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,1634,14292,Chrome/Windows,allow-all-logged
+2028-01-05T21:43:29Z,10.80.1.54,s.adeyemi,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,5647,253220,Chrome/Windows,allow-all-logged
+2028-01-05T21:51:22Z,10.80.1.54,s.adeyemi,CONNECT,https,api.streamvideo-cdn.net,-,200,allowed,streaming media,3337,215099,Chrome/Windows,allow-all-logged
+2028-01-05T22:29:05Z,10.80.1.67,n.farrow,CONNECT,https,www.keelelectronics.example,-,200,allowed,business,2785,96896,Chrome/macOS,allow-all-logged
+2028-01-05T22:54:02Z,10.80.1.54,s.adeyemi,CONNECT,https,cdn.harborline6.example,-,200,allowed,news,2817,34720,Chrome/Windows,allow-all-logged
+2028-01-05T23:44:28Z,10.80.2.54,u.valdivia,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,5585,41908,Edge/Windows,allow-all-logged
+2028-01-06T00:07:05Z,10.80.2.53,r.lindholm,CONNECT,https,www.oleandertelecom.example,-,200,allowed,business,3080,105228,Chrome/macOS,allow-all-logged
+2028-01-06T02:46:56Z,10.80.2.50,e.salcedo,CONNECT,https,www.cobalttank-gauging.example,-,200,allowed,business,5028,35486,Edge/Windows,allow-all-logged
+2028-01-06T03:04:10Z,10.80.2.52,m.quince,CONNECT,https,www.deltadrydock.example,-,200,allowed,business,547,22747,Chrome/Windows,allow-all-logged
+2028-01-06T03:07:26Z,10.80.2.52,m.quince,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,1776,38710,Chrome/Windows,allow-all-logged
+2028-01-06T03:07:42Z,10.80.2.50,e.salcedo,CONNECT,https,www.component-distributor.example,-,502,allowed,shopping,3467,22,Firefox/Windows,allow-all-logged
+2028-01-06T04:09:08Z,10.80.2.51,i.brandvold,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,1473,95478,Firefox/macOS,allow-all-logged
+2028-01-06T04:35:16Z,10.80.1.59,-,GET,http,static.osupdates-delivery.com,/static/47a3601.js,200,allowed,software updates,3979,5998,-,allow-all-logged
+2028-01-06T07:23:56Z,10.80.2.53,r.lindholm,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,1787,238896,Chrome/macOS,allow-all-logged
+2028-01-06T10:29:34Z,10.80.1.52,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,1297,51846,-,allow-all-logged
+2028-01-06T10:56:31Z,10.80.1.68,-,GET,http,www-east.telemetry-osvendor.com,/static/7ac9151.js,200,allowed,software updates,3263,81177,-,allow-all-logged
+2028-01-06T12:43:10Z,10.80.1.75,a.rooke,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,3443,30344,Firefox/Windows,allow-all-logged
+2028-01-06T13:12:48Z,10.80.1.66,i.reyes,CONNECT,https,www.cobalttank-gauging.example,-,200,allowed,business,2917,357184,Chrome/Windows,allow-all-logged
+2028-01-06T13:36:36Z,10.80.1.76,b.strand,CONNECT,https,static.cctexas-services.org,-,200,allowed,government,6234,17468,Edge/Windows,allow-all-logged
+2028-01-06T13:53:31Z,10.80.1.55,k.brandt,CONNECT,https,www.streamvideo-cdn.net,-,200,allowed,streaming media,5084,92177,Chrome/Windows,allow-all-logged
+2028-01-06T14:10:34Z,10.80.1.63,f.okafor,CONNECT,https,docs.protocol-specs.example,-,200,allowed,technology,6174,170670,Chrome/Windows,allow-all-logged
+2028-01-06T14:33:18Z,10.80.1.51,j.tran,CONNECT,https,www.brazosdredging.example,-,200,allowed,business,2486,116075,Chrome/Windows,allow-all-logged
+2028-01-06T14:57:23Z,10.80.1.71,-,CONNECT,https,www.osupdates-delivery.com,-,200,allowed,software updates,4040,77828,-,allow-all-logged
+2028-01-06T15:02:36Z,10.80.1.71,v.castell,CONNECT,https,www.orbitarchitects.example,-,200,allowed,business,937,164174,Chrome/macOS,allow-all-logged
+2028-01-06T15:18:45Z,10.80.1.70,u.sorensen,CONNECT,https,www.plc-vendor-support.example,-,200,allowed,technology,1900,91850,Chrome/Windows,allow-all-logged
+2028-01-06T15:38:53Z,10.80.1.70,u.sorensen,CONNECT,https,www.newswire-national.com,-,200,allowed,news,891,49743,Chrome/Windows,allow-all-logged
+2028-01-06T15:48:36Z,10.80.1.61,c.whitlock,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,1293,88252,Firefox/Windows,allow-all-logged
+2028-01-06T16:02:47Z,10.80.1.73,y.kessler,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,1012,52094,Chrome/Windows,allow-all-logged
+2028-01-06T16:09:14Z,10.80.1.72,w.ibarra,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,6031,76558,Chrome/Windows,allow-all-logged
+2028-01-06T16:31:40Z,10.80.1.70,u.sorensen,CONNECT,https,www.prairieterminals.example,-,200,allowed,business,3175,68520,Chrome/Windows,allow-all-logged
+2028-01-06T16:32:52Z,10.80.1.65,h.tanaka,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,1555,209863,Chrome/Windows,allow-all-logged
+2028-01-06T16:33:48Z,10.80.1.51,j.tran,CONNECT,https,www-2.bayside-ledger.example,-,200,allowed,news,5009,56772,Chrome/Windows,allow-all-logged
+2028-01-06T16:35:13Z,10.80.1.71,v.castell,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,10078,70765,Chrome/macOS,allow-all-logged
+2028-01-06T16:41:36Z,10.80.1.60,accounts.ap,CONNECT,https,www.plc-vendor-support.example,-,200,allowed,technology,3047,59936,Edge/Windows,allow-all-logged
+2028-01-06T17:04:29Z,10.80.1.63,f.okafor,CONNECT,https,api.docsign-flow.com,-,200,allowed,online storage,2467,25339,Chrome/Windows,allow-all-logged
+2028-01-06T17:14:52Z,10.80.1.56,m.okoye,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,2774,94074,Chrome/Windows,allow-all-logged
+2028-01-06T17:17:47Z,10.80.1.70,u.sorensen,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,3604,62390,Chrome/Windows,allow-all-logged
+2028-01-06T17:20:05Z,10.80.1.63,f.okafor,CONNECT,https,www.hrcloud-payroll.com,-,200,allowed,finance,4670,80735,Chrome/Windows,allow-all-logged
+2028-01-06T17:22:05Z,10.80.1.59,it.admin,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,1641,22526,Chrome/Windows,allow-all-logged
+2028-01-06T17:50:29Z,10.80.2.52,n.adeola,CONNECT,https,www.pioneer-calibration.example,-,200,allowed,business,4365,165251,Chrome/Windows,allow-all-logged
+2028-01-06T18:31:19Z,10.80.1.51,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,2311,115508,-,allow-all-logged
+2028-01-06T18:33:49Z,10.80.2.51,j.estrada,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,7316,8925,Chrome/macOS,allow-all-logged
+2028-01-06T19:15:42Z,10.80.1.57,r.nakamura,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,5909,73829,Firefox/Windows,allow-all-logged
+2028-01-06T19:18:37Z,10.80.1.68,p.dunmore,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,1798,116486,Chrome/Windows,allow-all-logged
+2028-01-06T19:26:06Z,10.80.1.69,q.abara,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,1178,40549,Chrome/Windows,allow-all-logged
+2028-01-06T19:26:53Z,10.80.1.66,i.reyes,CONNECT,https,class.marine-classification.example,-,200,allowed,transportation,1801,199317,Chrome/Windows,allow-all-logged
+2028-01-06T19:31:18Z,10.80.1.61,c.whitlock,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,2455,90142,Firefox/Windows,allow-all-logged
+2028-01-06T19:38:46Z,10.80.1.64,g.lindqvist,GET,http,cdn.insurance-claims-portal.com,/images/6a9c76.png,200,allowed,content delivery,2323,19319,Safari/macOS,allow-all-logged
+2028-01-06T19:42:08Z,10.80.1.65,h.tanaka,CONNECT,https,www.deltatrucking.example,-,200,allowed,business,3426,75110,Chrome/Windows,allow-all-logged
+2028-01-06T20:02:28Z,10.80.1.72,w.ibarra,CONNECT,https,www.port-security-grants.example,-,200,allowed,government,6807,101306,Chrome/Windows,allow-all-logged
+2028-01-06T20:09:19Z,10.80.1.56,m.okoye,CONNECT,https,login.fleetfuel-cards.com,-,200,allowed,finance,978,124102,Chrome/Windows,allow-all-logged
+2028-01-06T20:14:44Z,10.80.1.64,-,GET,http,static.osupdates-delivery.com,/index.html,200,allowed,software updates,1568,41738,-,allow-all-logged
+2028-01-06T20:21:15Z,10.80.1.72,w.ibarra,CONNECT,https,www.deltatrucking.example,-,200,allowed,business,5082,42072,Chrome/Windows,allow-all-logged
+2028-01-06T20:26:01Z,10.80.1.73,y.kessler,CONNECT,https,portal.vessel-scheduling.example,-,200,allowed,transportation,877,93292,Chrome/Windows,allow-all-logged
+2028-01-06T20:29:19Z,10.80.1.52,l.hart,CONNECT,https,www.keelelectronics.example,-,200,allowed,business,2804,45328,Chrome/Windows,allow-all-logged
+2028-01-06T20:29:37Z,10.80.1.72,w.ibarra,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,3669,95148,Chrome/Windows,allow-all-logged
+2028-01-06T20:38:31Z,10.80.1.58,t.velasquez,CONNECT,https,www.customs-filing.example,-,502,allowed,government,1072,184,Chrome/Windows,allow-all-logged
+2028-01-06T20:48:32Z,10.80.1.73,y.kessler,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,2353,181808,Chrome/Windows,allow-all-logged
+2028-01-06T20:56:09Z,10.80.1.56,m.okoye,CONNECT,https,api.harborline6.example,-,200,allowed,news,2256,129508,Chrome/Windows,allow-all-logged
+2028-01-06T21:18:47Z,10.80.1.52,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,1242,59672,-,allow-all-logged
+2028-01-06T21:30:15Z,10.80.2.50,f.hollis,CONNECT,https,www.newswire-national.com,-,200,allowed,news,4893,78596,Chrome/Windows,allow-all-logged
+2028-01-06T21:39:06Z,10.80.1.56,m.okoye,GET,http,static.gis-basemaps.org,/favicon.ico,200,allowed,content delivery,2412,50069,Chrome/Windows,allow-all-logged
+2028-01-06T21:59:23Z,10.80.2.53,s.marchetti,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,821,20551,Safari/macOS,allow-all-logged
+2028-01-06T22:11:00Z,10.80.2.51,j.estrada,CONNECT,https,www.summitshipyard.example,-,200,allowed,transportation,1833,19300,Chrome/macOS,allow-all-logged
+2028-01-06T22:13:20Z,10.80.2.51,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,3174,16990,-,allow-all-logged
+2028-01-06T22:45:08Z,10.80.1.57,r.nakamura,CONNECT,https,www.oleandertelecom.example,-,200,allowed,business,1278,50152,Firefox/Windows,allow-all-logged
+2028-01-06T23:02:54Z,10.80.1.53,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,3140,67976,-,allow-all-logged
+2028-01-06T23:29:08Z,10.80.1.76,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,2146,46846,-,allow-all-logged
+2028-01-06T23:38:32Z,10.80.250.75,m.quince,CONNECT,https,www.calallensurveying.example,-,200,allowed,business,4248,93856,Edge/Windows,allow-all-logged
+2028-01-06T23:40:02Z,10.80.2.54,-,GET,http,cdn.certstatus-ocsp.net,/index.html,200,allowed,software updates,1677,32575,-,allow-all-logged
+2028-01-07T00:16:07Z,10.80.2.54,x.demir,CONNECT,https,www.lonestar-systems.example,-,200,allowed,business,7491,99238,Edge/Windows,allow-all-logged
+2028-01-07T01:46:18Z,10.80.2.51,k.marlowe,CONNECT,https,www.bluewavepilots.example,-,200,allowed,transportation,2597,204447,Safari/macOS,allow-all-logged
+2028-01-07T03:37:23Z,10.80.1.65,-,CONNECT,https,www.ntp-pool-public.org,-,200,allowed,software updates,12670,35955,-,allow-all-logged
+2028-01-07T06:10:56Z,10.80.1.58,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,7191,69388,-,allow-all-logged
+2028-01-07T06:59:12Z,10.80.2.52,o.ferris,CONNECT,https,www.deltadrydock.example,-,200,allowed,business,2387,149231,Chrome/Windows,allow-all-logged
+2028-01-07T10:57:57Z,10.80.2.54,x.demir,CONNECT,https,www.marine-exchange-tx.example,-,200,allowed,transportation,2483,22256,Edge/Windows,allow-all-logged
+2028-01-07T13:20:55Z,10.80.1.68,p.dunmore,CONNECT,https,www.bluewave-class-surveys.example,-,200,allowed,business,7274,115042,Chrome/Windows,allow-all-logged
+2028-01-07T13:45:48Z,10.80.2.51,j.estrada,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,2241,78543,Chrome/macOS,allow-all-logged
+2028-01-07T13:55:03Z,10.80.1.67,n.farrow,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,6089,149770,Chrome/macOS,allow-all-logged
+2028-01-07T13:57:55Z,10.80.1.68,p.dunmore,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,1595,28815,Chrome/Windows,allow-all-logged
+2028-01-07T14:17:31Z,10.80.1.54,s.adeyemi,CONNECT,https,www.calallenprint.example,-,200,allowed,business,5355,32237,Chrome/Windows,allow-all-logged
+2028-01-07T14:32:57Z,10.80.1.60,accounts.ap,CONNECT,https,www.rgv-truck-parts.example,-,200,allowed,uncategorised,4623,64390,Edge/Windows,allow-all-logged
+2028-01-07T14:38:40Z,10.80.1.76,b.strand,CONNECT,https,api.fleetfuel-cards.com,-,200,allowed,finance,2648,107762,Edge/Windows,allow-all-logged
+2028-01-07T14:39:24Z,10.80.1.67,n.farrow,CONNECT,https,www.ship-registry-lookup.example,-,200,allowed,transportation,2231,49608,Chrome/macOS,allow-all-logged
+2028-01-07T14:41:50Z,10.80.1.58,t.velasquez,CONNECT,https,cdn.bank-online-secure.com,-,200,allowed,finance,1735,6082,Chrome/Windows,allow-all-logged
+2028-01-07T14:52:39Z,10.80.1.75,a.rooke,CONNECT,https,www.benefits-portal.com,-,200,allowed,business software,3822,73528,Firefox/Windows,allow-all-logged
+2028-01-07T14:54:49Z,10.80.2.50,f.hollis,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,3191,22482,Chrome/Windows,allow-all-logged
+2028-01-07T14:58:39Z,10.80.1.74,z.pemberton,CONNECT,https,web-portal.searchindex-api.com,-,200,allowed,search engines,3260,126889,Edge/Windows,allow-all-logged
+2028-01-07T15:08:21Z,10.80.1.52,l.hart,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,1404,100805,Chrome/Windows,allow-all-logged
+2028-01-07T15:17:00Z,10.80.1.75,a.rooke,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,1769,56526,Firefox/Windows,allow-all-logged
+2028-01-07T15:21:27Z,10.80.1.71,v.castell,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,1594,126148,Chrome/macOS,allow-all-logged
+2028-01-07T15:25:02Z,10.80.1.74,z.pemberton,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,698,134484,Edge/Windows,allow-all-logged
+2028-01-07T15:52:34Z,10.80.1.70,u.sorensen,CONNECT,https,www.deltadrydock.example,-,200,allowed,business,987,39668,Chrome/Windows,allow-all-logged
+2028-01-07T15:53:50Z,10.80.1.76,b.strand,GET,http,www.deltadrydock.example,/v1/check?id=5b17055018,404,allowed,business,5904,84879,Edge/Windows,allow-all-logged
+2028-01-07T16:19:16Z,10.80.2.54,w.kowalczyk,CONNECT,https,www.bluewave-class-surveys.example,-,200,allowed,business,11313,81400,Chrome/Windows,allow-all-logged
+2028-01-07T16:24:55Z,10.80.1.64,g.lindqvist,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,1777,13656,Safari/macOS,allow-all-logged
+2028-01-07T16:27:33Z,10.80.1.53,d.silva,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,6331,128744,Chrome/Windows,allow-all-logged
+2028-01-07T16:37:55Z,10.80.1.54,s.adeyemi,CONNECT,https,www.calallensurveying.example,-,200,allowed,business,786,22702,Chrome/Windows,allow-all-logged
+2028-01-07T16:41:52Z,10.80.1.63,f.okafor,GET,http,www.component-distributor.example,/static/9b3f971.js,200,allowed,shopping,3181,152773,Chrome/Windows,allow-all-logged
+2028-01-07T16:59:23Z,10.80.2.54,w.kowalczyk,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,2215,80121,Chrome/Windows,allow-all-logged
+2028-01-07T17:36:23Z,10.80.1.66,i.reyes,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,4218,38157,Chrome/Windows,allow-all-logged
+2028-01-07T17:38:38Z,10.80.1.52,l.hart,CONNECT,https,cdn.harborline6.example,-,200,allowed,news,5013,145888,Chrome/Windows,allow-all-logged
+2028-01-07T17:42:46Z,10.80.1.65,h.tanaka,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,5353,29945,Chrome/Windows,allow-all-logged
+2028-01-07T17:43:52Z,10.80.2.54,w.kowalczyk,CONNECT,https,www.bunker-prices.example,-,200,allowed,transportation,2120,137444,Chrome/Windows,allow-all-logged
+2028-01-07T18:15:33Z,10.80.1.54,s.adeyemi,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,2987,167802,Chrome/Windows,allow-all-logged
+2028-01-07T18:23:45Z,10.80.1.51,j.tran,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,2309,25430,Chrome/Windows,allow-all-logged
+2028-01-07T18:24:43Z,10.80.1.71,v.castell,CONNECT,https,app.shiftboard-scheduler.example,-,200,allowed,uncategorised,838,11490,Chrome/macOS,allow-all-logged
+2028-01-07T18:44:30Z,10.80.1.77,c.amadi,CONNECT,https,www.docsign-flow.com,-,200,allowed,online storage,1399,50724,Edge/Windows,allow-all-logged
+2028-01-07T19:27:35Z,10.80.1.58,t.velasquez,CONNECT,https,www.ship-registry-lookup.example,-,200,allowed,transportation,4930,136741,Chrome/Windows,allow-all-logged
+2028-01-07T19:49:42Z,10.80.1.74,z.pemberton,CONNECT,https,www.oleandertelecom.example,-,200,allowed,business,3566,145673,Edge/Windows,allow-all-logged
+2028-01-07T20:07:02Z,10.80.2.51,j.estrada,CONNECT,https,login.adnetwork-static.net,-,200,allowed,advertising,4365,218185,Chrome/macOS,allow-all-logged
+2028-01-07T20:10:34Z,10.80.1.54,s.adeyemi,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,5598,77945,Chrome/Windows,allow-all-logged
+2028-01-07T20:21:51Z,10.80.1.64,g.lindqvist,CONNECT,https,www.marine-exchange-tx.example,-,200,allowed,transportation,3062,69098,Safari/macOS,allow-all-logged
+2028-01-07T20:27:52Z,10.80.2.54,w.kowalczyk,CONNECT,https,www.vertexstaffing.example,-,200,allowed,business,1410,118318,Chrome/Windows,allow-all-logged
+2028-01-07T20:32:19Z,10.80.1.67,n.farrow,CONNECT,https,www.marine-exchange-tx.example,-,200,allowed,transportation,3519,15576,Chrome/macOS,allow-all-logged
+2028-01-07T20:56:41Z,10.80.1.74,z.pemberton,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,417,111449,Edge/Windows,allow-all-logged
+2028-01-07T21:06:36Z,10.80.1.50,o.pryce,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,2803,282663,Chrome/Windows,allow-all-logged
+2028-01-07T21:50:44Z,10.80.1.67,-,GET,http,content.harbourlight-av.example,/content/f4fed3fa.cab,200,allowed,software updates,758,17130,-,allow-all-logged
+2028-01-07T21:50:49Z,10.80.1.76,b.strand,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,1051,83269,Edge/Windows,allow-all-logged
+2028-01-07T23:58:23Z,10.80.2.53,t.oduya,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,5310,64629,Safari/macOS,allow-all-logged
+2028-01-08T04:38:38Z,10.80.2.53,t.oduya,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,2309,148459,Safari/macOS,allow-all-logged
+2028-01-08T06:12:51Z,10.80.2.54,x.demir,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,4664,48843,Edge/Windows,allow-all-logged
+2028-01-08T07:50:44Z,10.80.2.53,t.oduya,CONNECT,https,login.insurance-claims-portal.com,-,200,allowed,insurance,1129,180291,Safari/macOS,allow-all-logged
+2028-01-08T12:55:14Z,10.80.2.52,l.petrov,GET,http,www-east.hotel-reservations.com,/updates/09b50/manifest.xml,200,allowed,travel,3748,87422,Chrome/Windows,allow-all-logged
+2028-01-08T14:15:34Z,10.80.2.51,h.oyelaran,CONNECT,https,www.bunker-prices.example,-,200,allowed,transportation,2498,54369,Safari/macOS,allow-all-logged
+2028-01-08T14:56:03Z,10.80.2.51,h.oyelaran,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,1642,79286,Safari/macOS,allow-all-logged
+2028-01-08T18:20:38Z,10.80.2.54,u.valdivia,CONNECT,https,www.newswire-national.com,-,200,allowed,news,1922,102909,Chrome/Windows,allow-all-logged
+2028-01-08T19:38:56Z,10.80.2.50,d.verhoeven,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,3251,51317,Chrome/Windows,allow-all-logged
+2028-01-08T20:00:49Z,10.80.2.50,d.verhoeven,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,10991,104047,Chrome/Windows,allow-all-logged
+2028-01-08T23:29:22Z,10.80.2.54,u.valdivia,CONNECT,https,forum.embedded-dev.example,-,200,allowed,technology,5613,80990,Firefox/Windows,allow-all-logged
+2028-01-09T02:45:40Z,10.80.2.50,e.salcedo,POST,http,www.component-distributor.example,/static/4d32fe9.js,200,allowed,shopping,523,16338,Edge/Windows,allow-all-logged
+2028-01-09T03:15:28Z,10.80.1.61,-,CONNECT,https,www.browser-safecheck.net,-,200,allowed,software updates,2809,174999,-,allow-all-logged
+2028-01-09T03:41:29Z,10.80.2.50,e.salcedo,CONNECT,https,www.anchorshipyard.example,-,200,allowed,transportation,5354,102265,Edge/Windows,allow-all-logged
+2028-01-09T05:13:22Z,10.80.2.51,i.brandvold,CONNECT,https,docs.protocol-specs.example,-,200,allowed,technology,2053,68570,Firefox/macOS,allow-all-logged
+2028-01-09T09:02:52Z,10.80.2.52,m.quince,CONNECT,https,docs.protocol-specs.example,-,200,allowed,technology,4293,10210,Chrome/Windows,allow-all-logged
+2028-01-09T10:58:57Z,10.80.2.50,e.salcedo,CONNECT,https,www.hrcloud-payroll.com,-,200,allowed,finance,3267,38986,Edge/Windows,allow-all-logged
+2028-01-09T11:15:09Z,10.80.2.52,m.quince,CONNECT,https,www.plc-vendor-support.example,-,200,allowed,technology,1266,32421,Chrome/Windows,allow-all-logged
+2028-01-09T11:23:02Z,10.80.2.51,i.brandvold,CONNECT,https,www.plc-vendor-support.example,-,200,allowed,technology,1486,167151,Firefox/macOS,allow-all-logged
+2028-01-09T12:19:17Z,10.80.1.76,-,CONNECT,https,www.browser-safecheck.net,-,200,allowed,software updates,2518,157109,-,allow-all-logged
+2028-01-09T13:07:35Z,10.80.1.60,-,GET,http,static.osupdates-delivery.com,/,200,allowed,software updates,4430,131053,-,allow-all-logged
+2028-01-09T13:59:10Z,10.80.1.62,-,HEAD,http,content.harbourlight-av.example,/pki/f9eb67.crl,304,allowed,software updates,2943,453,-,allow-all-logged
+2028-01-09T15:07:48Z,10.80.2.50,d.verhoeven,CONNECT,https,www.kingfisherinstrumentation.example,-,200,allowed,business,9073,90576,Chrome/Windows,allow-all-logged
+2028-01-09T15:20:18Z,10.80.2.53,p.achebe,CONNECT,https,www.port-security-grants.example,-,200,allowed,government,8022,26730,Chrome/macOS,allow-all-logged
+2028-01-09T16:48:16Z,10.80.1.74,z.pemberton,CONNECT,https,static.coastalbendweather.net,-,200,allowed,weather,1839,13825,Edge/Windows,allow-all-logged
+2028-01-09T16:56:05Z,10.80.1.67,-,GET,http,www.osupdates-delivery.com,/images/412c6f.png,200,allowed,software updates,2412,138487,-,allow-all-logged
+2028-01-09T17:35:18Z,10.80.2.51,h.oyelaran,CONNECT,https,pilots.aransas-cc-pilots.example,-,200,allowed,transportation,2442,177032,Safari/macOS,allow-all-logged
+2028-01-09T17:42:38Z,10.80.1.50,-,GET,http,www.browser-safecheck.net,/v3/check?id=47f16d4f38,200,allowed,software updates,1443,26125,-,allow-all-logged
+2028-01-09T18:43:19Z,10.80.1.74,z.pemberton,CONNECT,https,web-portal.searchindex-api.com,-,200,allowed,search engines,9050,146166,Edge/Windows,allow-all-logged
+2028-01-09T19:11:10Z,10.80.1.62,-,GET,http,content.harbourlight-av.example,/index.html,200,allowed,software updates,8098,98883,-,allow-all-logged
+2028-01-09T19:40:19Z,10.80.1.74,z.pemberton,CONNECT,https,www.customs-filing.example,-,200,allowed,government,1749,94573,Edge/Windows,allow-all-logged
+2028-01-09T20:19:59Z,10.80.1.53,-,CONNECT,https,www.certstatus-ocsp.net,-,200,allowed,software updates,8279,143355,-,allow-all-logged
+2028-01-09T23:36:50Z,10.80.2.54,u.valdivia,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,3604,105992,Edge/Windows,allow-all-logged
+2028-01-09T23:50:00Z,10.80.2.54,v.haraldsen,CONNECT,https,sabal-refining.example,-,200,allowed,business,10520,249442,Chrome/Windows,allow-all-logged
+2028-01-10T00:42:26Z,10.80.2.51,i.brandvold,CONNECT,https,login.adnetwork-static.net,-,200,allowed,advertising,3884,69940,Firefox/macOS,allow-all-logged
+2028-01-10T00:59:30Z,10.80.1.76,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,11594,154151,-,allow-all-logged
+2028-01-10T01:21:29Z,10.80.2.52,m.quince,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,1465,115798,Chrome/Windows,allow-all-logged
+2028-01-10T09:48:20Z,10.80.1.57,-,GET,http,content.harbourlight-av.example,/updates/f2979/manifest.xml,200,allowed,software updates,4502,30159,-,allow-all-logged
+2028-01-10T11:17:46Z,10.80.1.52,l.hart,CONNECT,https,www.lagunaelectric.example,-,200,allowed,business,3435,145575,Chrome/Windows,allow-all-logged
+2028-01-10T11:24:32Z,10.80.1.52,l.hart,CONNECT,https,liveoak-electronics.example,-,200,allowed,business,11198,210821,Chrome/Windows,allow-all-logged
+2028-01-10T13:15:46Z,10.80.1.59,it.admin,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,2876,41904,Chrome/Windows,allow-all-logged
+2028-01-10T13:37:11Z,10.80.1.60,accounts.ap,CONNECT,https,www.cedartank-gauging.example,-,200,allowed,business,3106,55442,Firefox/Windows,allow-all-logged
+2028-01-10T13:44:18Z,10.80.2.53,s.marchetti,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,4053,16351,Safari/macOS,allow-all-logged
+2028-01-10T13:45:38Z,10.80.2.52,n.adeola,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,1894,130067,Chrome/Windows,allow-all-logged
+2028-01-10T14:05:31Z,10.80.2.50,f.hollis,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,3289,103703,Chrome/Windows,allow-all-logged
+2028-01-10T14:30:42Z,10.80.1.72,-,CONNECT,https,static.browser-safecheck.net,-,200,allowed,software updates,3211,13095,-,allow-all-logged
+2028-01-10T14:38:44Z,10.80.1.77,c.amadi,CONNECT,https,www.streamvideo-cdn.net,-,200,allowed,streaming media,3099,29215,Edge/Windows,allow-all-logged
+2028-01-10T14:41:35Z,10.80.1.55,k.brandt,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,3818,69888,Chrome/Windows,allow-all-logged
+2028-01-10T14:57:01Z,10.80.1.73,y.kessler,CONNECT,https,www.deltadrydock.example,-,200,allowed,business,2336,59903,Chrome/Windows,allow-all-logged
+2028-01-10T15:02:18Z,10.80.1.50,o.pryce,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,7097,147164,Chrome/Windows,allow-all-logged
+2028-01-10T15:15:03Z,10.80.1.67,n.farrow,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,2389,117299,Chrome/macOS,allow-all-logged
+2028-01-10T15:34:49Z,10.80.1.59,it.admin,CONNECT,https,login.fleetfuel-cards.com,-,200,allowed,finance,2480,22742,Chrome/Windows,allow-all-logged
+2028-01-10T15:43:31Z,10.80.1.59,it.admin,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,5675,36680,Chrome/Windows,allow-all-logged
+2028-01-10T16:18:48Z,10.80.1.51,j.tran,CONNECT,https,forum.embedded-dev.example,-,200,allowed,technology,8152,194112,Chrome/Windows,allow-all-logged
+2028-01-10T16:21:24Z,10.80.1.50,o.pryce,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,1032,28927,Chrome/Windows,allow-all-logged
+2028-01-10T16:21:28Z,10.80.1.70,u.sorensen,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,1319,217481,Chrome/Windows,allow-all-logged
+2028-01-10T16:41:20Z,10.80.1.55,k.brandt,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,3284,78241,Chrome/Windows,allow-all-logged
+2028-01-10T16:41:55Z,10.80.2.52,-,GET,http,www.certstatus-ocsp.net,/static/c4ee064.js,301,allowed,software updates,3409,667,-,allow-all-logged
+2028-01-10T16:57:12Z,10.80.1.57,r.nakamura,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,6027,85018,Firefox/Windows,allow-all-logged
+2028-01-10T17:05:10Z,10.80.2.52,n.adeola,CONNECT,https,rest-api.hotel-reservations.com,-,200,allowed,travel,4637,34574,Chrome/Windows,allow-all-logged
+2028-01-10T17:12:43Z,10.80.1.64,g.lindqvist,CONNECT,https,www.marine-exchange-tx.example,-,200,allowed,transportation,1238,69586,Safari/macOS,allow-all-logged
+2028-01-10T17:27:03Z,10.80.1.61,c.whitlock,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,3109,133086,Firefox/Windows,allow-all-logged
+2028-01-10T17:32:56Z,10.80.1.60,accounts.ap,CONNECT,https,www.tidewatervalves.example,-,200,allowed,weather,4915,23656,Edge/Windows,allow-all-logged
+2028-01-10T17:40:26Z,10.80.1.50,o.pryce,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,5203,40428,Chrome/Windows,allow-all-logged
+2028-01-10T17:42:37Z,10.80.1.69,q.abara,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,450,86901,Chrome/Windows,allow-all-logged
+2028-01-10T17:45:27Z,10.80.1.65,h.tanaka,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,2122,145495,Chrome/Windows,allow-all-logged
+2028-01-10T17:52:08Z,10.80.1.75,a.rooke,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,3440,215138,Firefox/Windows,allow-all-logged
+2028-01-10T17:53:15Z,10.80.1.75,a.rooke,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,2454,140257,Firefox/Windows,allow-all-logged
+2028-01-10T18:13:45Z,10.80.1.66,i.reyes,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,1736,143827,Chrome/Windows,allow-all-logged
+2028-01-10T18:46:04Z,10.80.1.52,l.hart,CONNECT,https,update-cdn.txroadwatch.org,-,200,allowed,government,1175,48975,Chrome/Windows,allow-all-logged
+2028-01-10T18:49:49Z,10.80.1.61,c.whitlock,CONNECT,https,cdn.bank-online-secure.com,-,200,allowed,finance,430,29547,Firefox/Windows,allow-all-logged
+2028-01-10T19:07:22Z,10.80.1.66,i.reyes,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,1660,15402,Chrome/Windows,allow-all-logged
+2028-01-10T19:19:59Z,10.80.1.53,d.silva,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,1255,85451,Chrome/Windows,allow-all-logged
+2028-01-10T19:27:08Z,10.80.1.77,c.amadi,CONNECT,https,web-portal.meetroom-video.com,-,200,allowed,business software,3157,138992,Edge/Windows,allow-all-logged
+2028-01-10T19:31:39Z,10.80.1.67,n.farrow,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,4456,61197,Chrome/macOS,allow-all-logged
+2028-01-10T19:31:49Z,10.80.1.55,k.brandt,CONNECT,https,www.cellcarrier-account.com,-,200,allowed,business,1996,159355,Chrome/Windows,allow-all-logged
+2028-01-10T19:47:36Z,10.80.1.52,l.hart,CONNECT,https,class.marine-classification.example,-,200,allowed,transportation,1618,67794,Chrome/Windows,allow-all-logged
+2028-01-10T20:35:12Z,10.80.1.57,-,POST,http,content.harbourlight-av.example,/favicon.ico,301,allowed,software updates,3457,683,-,allow-all-logged
+2028-01-10T20:35:32Z,10.80.1.74,z.pemberton,CONNECT,https,www.keelelectronics.example,-,200,allowed,business,2614,71826,Edge/Windows,allow-all-logged
+2028-01-10T20:47:40Z,10.80.1.60,accounts.ap,CONNECT,https,www-east.officesuite-mail.com,-,200,allowed,business software,3490,192392,Edge/Windows,allow-all-logged
+2028-01-10T21:00:20Z,10.80.1.57,r.nakamura,CONNECT,https,login.cloudstorage-sync.com,-,200,allowed,online storage,4900,122834,Firefox/Windows,allow-all-logged
+2028-01-10T21:03:31Z,10.80.1.60,accounts.ap,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,2272,27120,Edge/Windows,allow-all-logged
+2028-01-10T21:26:28Z,10.80.1.67,n.farrow,CONNECT,https,www.calallensurveying.example,-,200,allowed,business,4449,69014,Chrome/macOS,allow-all-logged
+2028-01-10T21:40:37Z,10.80.1.61,c.whitlock,GET,http,api.airline-bookings.net,/updates/95681/manifest.xml,200,allowed,travel,6767,44025,Firefox/Windows,allow-all-logged
+2028-01-10T21:57:01Z,10.80.2.54,w.kowalczyk,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,2582,70964,Chrome/Windows,allow-all-logged
+2028-01-10T22:04:36Z,10.80.1.73,y.kessler,CONNECT,https,web-portal.searchindex-api.com,-,200,allowed,search engines,2268,64395,Chrome/Windows,allow-all-logged
+2028-01-10T22:21:08Z,10.80.1.73,y.kessler,CONNECT,https,login.adnetwork-static.net,-,200,allowed,advertising,1463,77430,Chrome/Windows,allow-all-logged
+2028-01-10T22:33:50Z,10.80.250.104,g.navarro,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,2495,133543,Chrome/Windows,allow-all-logged
+2028-01-11T00:47:41Z,10.80.2.53,t.oduya,CONNECT,https,www-2.bayside-ledger.example,-,200,allowed,news,2383,71919,Safari/macOS,allow-all-logged
+2028-01-11T00:56:21Z,10.80.2.51,k.marlowe,CONNECT,https,web-portal.searchindex-api.com,-,200,allowed,search engines,928,64203,Safari/macOS,allow-all-logged
+2028-01-11T01:08:37Z,10.80.2.51,k.marlowe,CONNECT,https,www.cobalttank-gauging.example,-,200,allowed,business,4249,28126,Safari/macOS,allow-all-logged
+2028-01-11T02:01:52Z,10.80.1.68,-,GET,http,content.harbourlight-av.example,/updates/6f20e/manifest.xml,200,allowed,software updates,3856,22213,-,allow-all-logged
+2028-01-11T02:05:19Z,10.80.2.54,x.demir,CONNECT,https,www.brazosdredging.example,-,504,allowed,business,3819,35,Edge/Windows,allow-all-logged
+2028-01-11T02:15:40Z,10.80.2.51,k.marlowe,CONNECT,https,www.bunker-prices.example,-,200,allowed,transportation,2513,33442,Safari/macOS,allow-all-logged
+2028-01-11T02:34:37Z,10.80.1.62,-,GET,http,static.osupdates-delivery.com,/pki/3ebaed.crl,304,allowed,software updates,1651,453,-,allow-all-logged
+2028-01-11T02:40:51Z,10.80.2.54,x.demir,CONNECT,https,cdn.hotel-reservations.com,-,200,allowed,travel,1249,91219,Edge/Windows,allow-all-logged
+2028-01-11T06:28:45Z,10.80.1.72,-,GET,http,www.browser-safecheck.net,/images/36a369.png,200,allowed,software updates,4598,79785,-,allow-all-logged
+2028-01-11T08:59:05Z,10.80.2.52,-,GET,http,static.osupdates-delivery.com,/ocsp/7573fde9fed8,404,allowed,software updates,7564,42539,-,allow-all-logged
+2028-01-11T09:12:22Z,10.80.2.50,g.navarro,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,535,97404,Chrome/Windows,allow-all-logged
+2028-01-11T11:29:37Z,10.80.2.52,o.ferris,CONNECT,https,www.flourbluffgroup.example,-,200,allowed,business,2557,61205,Chrome/Windows,allow-all-logged
+2028-01-11T11:57:22Z,10.80.2.52,n.adeola,CONNECT,https,www.rgv-truck-parts.example,-,200,allowed,uncategorised,5523,55915,Chrome/Windows,allow-all-logged
+2028-01-11T13:48:50Z,10.80.2.54,w.kowalczyk,CONNECT,https,web-portal.hospital-patient-portal.org,-,200,allowed,health,5007,45688,Chrome/Windows,allow-all-logged
+2028-01-11T13:50:33Z,10.80.2.52,-,POST,http,content.harbourlight-av.example,/updates/3d572/manifest.xml,200,allowed,software updates,2612,41697,-,allow-all-logged
+2028-01-11T14:08:20Z,10.80.1.76,b.strand,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,996,63775,Edge/Windows,allow-all-logged
+2028-01-11T14:23:00Z,10.80.1.56,m.okoye,CONNECT,https,api.harborline6.example,-,200,allowed,news,1627,82484,Chrome/Windows,allow-all-logged
+2028-01-11T14:23:41Z,10.80.1.63,f.okafor,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,1560,67761,Chrome/Windows,allow-all-logged
+2028-01-11T14:43:29Z,10.80.1.58,t.velasquez,CONNECT,https,www.vertexstevedores.example,-,200,allowed,business,9376,97672,Chrome/Windows,allow-all-logged
+2028-01-11T14:47:30Z,10.80.1.54,s.adeyemi,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,3478,96969,Chrome/Windows,allow-all-logged
+2028-01-11T14:49:22Z,10.80.1.71,v.castell,CONNECT,https,www.vertexstaffing.example,-,200,allowed,business,3470,122527,Chrome/macOS,allow-all-logged
+2028-01-11T14:54:24Z,10.80.1.57,r.nakamura,CONNECT,https,www.deltatrucking.example,-,200,allowed,business,7056,34262,Firefox/Windows,allow-all-logged
+2028-01-11T14:54:57Z,10.80.1.68,p.dunmore,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,1208,114126,Chrome/Windows,allow-all-logged
+2028-01-11T15:50:41Z,10.80.2.50,f.hollis,CONNECT,https,www.prairieterminals.example,-,200,allowed,business,1902,95100,Chrome/Windows,allow-all-logged
+2028-01-11T15:52:54Z,10.80.1.71,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,1479,87386,-,allow-all-logged
+2028-01-11T15:53:39Z,10.80.1.71,v.castell,CONNECT,https,class.marine-classification.example,-,200,allowed,transportation,1234,72433,Chrome/macOS,allow-all-logged
+2028-01-11T16:32:40Z,10.80.1.63,f.okafor,CONNECT,https,www.deltadrydock.example,-,200,allowed,business,2679,74389,Chrome/Windows,allow-all-logged
+2028-01-11T17:05:43Z,10.80.1.68,p.dunmore,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,13140,91137,Chrome/Windows,allow-all-logged
+2028-01-11T17:30:21Z,10.80.2.51,j.estrada,CONNECT,https,www.calallensurveying.example,-,200,allowed,business,1251,97890,Chrome/macOS,allow-all-logged
+2028-01-11T17:31:14Z,10.80.1.77,c.amadi,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,8914,18969,Edge/Windows,allow-all-logged
+2028-01-11T17:35:26Z,10.80.1.65,h.tanaka,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,4849,54613,Chrome/Windows,allow-all-logged
+2028-01-11T17:46:23Z,10.80.1.77,c.amadi,CONNECT,https,static.cctexas-services.org,-,200,allowed,government,3142,61692,Edge/Windows,allow-all-logged
+2028-01-11T18:18:30Z,10.80.1.54,s.adeyemi,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,1968,56397,Chrome/Windows,allow-all-logged
+2028-01-11T18:39:49Z,10.80.1.63,f.okafor,CONNECT,https,www.calallensurveying.example,-,200,allowed,business,4666,46900,Chrome/Windows,allow-all-logged
+2028-01-11T18:44:41Z,10.80.1.71,v.castell,CONNECT,https,static.packagetracker-api.net,-,200,allowed,business,412,113106,Chrome/macOS,allow-all-logged
+2028-01-11T18:48:18Z,10.80.1.63,f.okafor,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,3515,61305,Chrome/Windows,allow-all-logged
+2028-01-11T19:04:36Z,10.80.1.55,k.brandt,CONNECT,https,www.bunker-prices.example,-,200,allowed,transportation,5284,115962,Chrome/Windows,allow-all-logged
+2028-01-11T19:08:39Z,10.80.1.68,p.dunmore,CONNECT,https,docs.cargo-automation-manuals.example,-,200,allowed,shopping,2851,135140,Chrome/Windows,allow-all-logged
+2028-01-11T19:14:59Z,10.80.1.65,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,1615,179161,-,allow-all-logged
+2028-01-11T19:23:54Z,10.80.1.55,k.brandt,CONNECT,https,www.summitshipyard.example,-,200,allowed,transportation,7251,44581,Chrome/Windows,allow-all-logged
+2028-01-11T19:36:38Z,10.80.1.56,m.okoye,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,1812,22522,Chrome/Windows,allow-all-logged
+2028-01-11T19:48:43Z,10.80.1.51,-,CONNECT,https,content.harbourlight-av.example,-,200,allowed,software updates,4099,191274,-,allow-all-logged
+2028-01-11T20:08:14Z,10.80.1.72,w.ibarra,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,3233,27949,Chrome/Windows,allow-all-logged
+2028-01-11T20:10:22Z,10.80.1.54,s.adeyemi,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,5365,73067,Chrome/Windows,allow-all-logged
+2028-01-11T20:10:22Z,10.80.1.57,r.nakamura,CONNECT,https,git.codehost-cloud.example,-,200,allowed,technology,3020,85191,Firefox/Windows,allow-all-logged
+2028-01-11T20:17:34Z,10.80.1.65,h.tanaka,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,3782,79674,Chrome/Windows,allow-all-logged
+2028-01-11T20:53:53Z,10.80.1.53,d.silva,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,2636,26908,Chrome/Windows,allow-all-logged
+2028-01-11T21:14:51Z,10.80.1.57,r.nakamura,CONNECT,https,www.component-distributor.example,-,200,allowed,shopping,1477,66337,Firefox/Windows,allow-all-logged
+2028-01-11T22:08:59Z,10.80.1.53,d.silva,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,3709,104739,Chrome/Windows,allow-all-logged
+2028-01-11T22:13:22Z,10.80.1.71,v.castell,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,592,13969,Chrome/macOS,allow-all-logged
+2028-01-11T22:45:35Z,10.80.1.56,m.okoye,CONNECT,https,web-portal.searchindex-api.com,-,200,allowed,search engines,1984,33169,Chrome/Windows,allow-all-logged
+2028-01-11T22:46:15Z,10.80.1.71,v.castell,CONNECT,https,www.flourbluffgroup.example,-,200,allowed,business,3286,32834,Chrome/macOS,allow-all-logged
+2028-01-11T22:52:32Z,10.80.2.50,f.hollis,CONNECT,https,static.coastalbendweather.net,-,200,allowed,weather,4253,76842,Chrome/Windows,allow-all-logged
+2028-01-11T23:20:09Z,10.80.1.57,r.nakamura,CONNECT,https,www.keelservices.example,-,200,allowed,business,4590,58969,Firefox/Windows,allow-all-logged
+2028-01-12T02:28:52Z,10.80.1.66,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,2810,40204,-,allow-all-logged
+2028-01-12T02:54:28Z,10.80.2.53,t.oduya,CONNECT,https,www.bluewavepilots.example,-,200,allowed,transportation,3153,96628,Safari/macOS,allow-all-logged
+2028-01-12T03:58:28Z,10.80.2.53,t.oduya,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,3895,156048,Safari/macOS,allow-all-logged
+2028-01-12T04:37:35Z,10.80.2.52,-,GET,http,content.harbourlight-av.example,/updates/ac184/manifest.xml,200,allowed,software updates,2812,51624,-,allow-all-logged
+2028-01-12T05:56:20Z,10.80.2.50,g.navarro,CONNECT,https,app.shiftboard-scheduler.example,-,200,allowed,uncategorised,6775,94331,Chrome/Windows,allow-all-logged
+2028-01-12T11:16:02Z,10.80.2.53,t.oduya,CONNECT,https,forum.embedded-dev.example,-,200,allowed,technology,1744,56704,Safari/macOS,allow-all-logged
+2028-01-12T12:48:20Z,10.80.1.52,l.hart,CONNECT,https,static.training-lms.net,-,200,allowed,education,5046,59767,Edge/Windows,allow-all-logged
+2028-01-12T13:42:37Z,10.80.1.76,-,POST,http,api.certstatus-ocsp.net,/robots.txt,200,allowed,software updates,2746,114754,-,allow-all-logged
+2028-01-12T14:00:24Z,10.80.1.69,q.abara,CONNECT,https,www.unityelectric.example,-,200,allowed,business,1398,145452,Chrome/Windows,allow-all-logged
+2028-01-12T14:02:57Z,10.80.1.69,q.abara,CONNECT,https,cdn.bank-online-secure.com,-,200,allowed,finance,2639,147326,Chrome/Windows,allow-all-logged
+2028-01-12T14:03:47Z,10.80.1.63,f.okafor,CONNECT,https,cdn.geomaps-tiles.net,-,504,allowed,content delivery,4757,167,Chrome/Windows,allow-all-logged
+2028-01-12T14:08:16Z,10.80.1.52,l.hart,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,4674,101855,Chrome/Windows,allow-all-logged
+2028-01-12T14:08:44Z,10.80.1.59,it.admin,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,491,202643,Chrome/Windows,allow-all-logged
+2028-01-12T14:14:38Z,10.80.1.57,r.nakamura,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,5281,55237,Firefox/Windows,allow-all-logged
+2028-01-12T14:14:42Z,10.80.2.52,l.petrov,CONNECT,https,www.benefits-portal.com,-,200,allowed,business software,4703,29147,Chrome/Windows,allow-all-logged
+2028-01-12T14:19:15Z,10.80.2.52,l.petrov,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,2830,194810,Chrome/Windows,allow-all-logged
+2028-01-12T14:19:30Z,10.80.1.56,m.okoye,CONNECT,https,login.bank-online-secure.com,-,200,allowed,finance,5509,100859,Chrome/Windows,allow-all-logged
+2028-01-12T15:29:27Z,10.80.2.51,h.oyelaran,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,687,99787,Safari/macOS,allow-all-logged
+2028-01-12T15:39:14Z,10.80.1.56,m.okoye,CONNECT,https,www.lonestarconstruction.example,-,200,allowed,business,2587,44709,Chrome/Windows,allow-all-logged
+2028-01-12T15:43:09Z,10.80.1.68,p.dunmore,CONNECT,https,login.weatherradar-tiles.com,-,200,allowed,weather,3331,62038,Chrome/Windows,allow-all-logged
+2028-01-12T16:06:22Z,10.80.250.47,z.ferreira,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,2579,215058,Edge/Windows,allow-all-logged
+2028-01-12T16:34:25Z,10.80.1.54,s.adeyemi,CONNECT,https,pkg.package-registry.example,-,200,allowed,technology,2567,161297,Chrome/Windows,allow-all-logged
+2028-01-12T16:48:06Z,10.80.1.65,h.tanaka,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,3775,153547,Chrome/Windows,allow-all-logged
+2028-01-12T17:01:06Z,10.80.1.61,c.whitlock,CONNECT,https,web-portal.hospital-patient-portal.org,-,200,allowed,health,3321,69780,Firefox/Windows,allow-all-logged
+2028-01-12T17:05:42Z,10.80.1.72,-,CONNECT,https,www.browser-safecheck.net,-,200,allowed,software updates,8186,102437,-,allow-all-logged
+2028-01-12T17:07:49Z,10.80.1.59,it.admin,CONNECT,https,www.oleandertelecom.example,-,200,allowed,business,1832,75853,Chrome/Windows,allow-all-logged
+2028-01-12T17:20:44Z,10.80.1.69,q.abara,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,1821,69643,Chrome/Windows,allow-all-logged
+2028-01-12T17:32:54Z,10.80.2.52,l.petrov,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,6020,134035,Chrome/Windows,allow-all-logged
+2028-01-12T17:46:37Z,10.80.1.67,n.farrow,CONNECT,https,www.keelelectronics.example,-,200,allowed,business,4468,208993,Chrome/macOS,allow-all-logged
+2028-01-12T17:57:59Z,10.80.1.67,n.farrow,CONNECT,https,login.nueces-county-tx.org,-,200,allowed,government,810,11650,Chrome/macOS,allow-all-logged
+2028-01-12T18:31:31Z,10.80.250.146,y.okonkwo,CONNECT,https,www.customs-filing.example,-,200,allowed,government,7169,17956,Edge/Windows,allow-all-logged
+2028-01-12T19:41:47Z,10.80.1.54,s.adeyemi,CONNECT,https,www.calallensurveying.example,-,200,allowed,business,1423,23517,Chrome/Windows,allow-all-logged
+2028-01-12T19:45:01Z,10.80.1.57,r.nakamura,CONNECT,https,www.prairieterminals.example,-,200,allowed,business,647,212737,Firefox/Windows,allow-all-logged
+2028-01-12T19:55:19Z,10.80.1.50,o.pryce,GET,http,api-v2.geomaps-tiles.net,/favicon.ico,304,allowed,content delivery,4241,286,Edge/Windows,allow-all-logged
+2028-01-12T20:05:29Z,10.80.1.74,z.pemberton,CONNECT,https,login.hospital-patient-portal.org,-,200,allowed,health,4589,173642,Edge/Windows,allow-all-logged
+2028-01-12T20:08:52Z,10.80.1.60,accounts.ap,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,2025,122466,Edge/Windows,allow-all-logged
+2028-01-12T20:13:21Z,10.80.1.54,s.adeyemi,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,2473,50984,Chrome/Windows,allow-all-logged
+2028-01-12T20:21:15Z,10.80.1.51,j.tran,CONNECT,https,rest-api.hospital-patient-portal.org,-,200,allowed,health,2429,70297,Chrome/Windows,allow-all-logged
+2028-01-12T20:28:21Z,10.80.1.61,c.whitlock,CONNECT,https,ci.build-cloud.example,-,200,allowed,technology,4839,210465,Firefox/Windows,allow-all-logged
+2028-01-12T20:45:08Z,10.80.1.60,accounts.ap,CONNECT,https,www.plc-vendor-support.example,-,200,allowed,technology,5128,26373,Edge/Windows,allow-all-logged
+2028-01-12T21:00:05Z,10.80.1.73,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,2927,58864,-,allow-all-logged
+2028-01-12T22:32:50Z,10.80.1.61,c.whitlock,CONNECT,https,www.bunker-prices.example,-,200,allowed,transportation,4422,84881,Chrome/Windows,allow-all-logged
+2028-01-12T22:43:48Z,10.80.1.67,n.farrow,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,1232,14910,Chrome/macOS,allow-all-logged
+2028-01-12T22:47:51Z,10.80.1.61,c.whitlock,CONNECT,https,www-2.bayside-ledger.example,-,200,allowed,news,4026,91935,Firefox/Windows,allow-all-logged
+2028-01-12T22:49:26Z,10.80.1.61,c.whitlock,CONNECT,https,www.packagetracker-api.net,-,200,allowed,business,6035,64219,Firefox/Windows,allow-all-logged

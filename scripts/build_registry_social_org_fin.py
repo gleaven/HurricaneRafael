@@ -544,7 +544,7 @@ org("Coastal Bend Power and Water Authority", "utility", None, "Corpus Christi, 
 org("Meridian Controls Corp", "vendor", None, US, "SCADA and historian supplier to the utility", truth={"scenario_id": "GW-ENT-02"})
 org("ClearPath Network Solutions", "vendor", None, US, "Remote-access gateway supplier to the utility", truth={"scenario_id": "GW-ENT-03", "public": "never named in public text"})
 org("Vantage Security Systems", "vendor", None, US, "Security monitoring supplier to the utility")
-org("Bastille Networks", "vendor", None, US, "Firewall supplier to the utility", truth={"generated": True})
+org("Corvane Networks", "vendor", None, US, "Firewall supplier to the utility", truth={"generated": True})
 org("Halden Protection", "vendor", None, US, "Protective relay supplier to the utility", truth={"generated": True})
 org("Delta Pumps & Controls", "vendor", None, TX, "Pump parts supplier", truth={"scenario_id": "SUP-0219", "note": "quoted 9 days, delivered in 34"})
 org("Coastal Bend Aerial Services", "contractor", None, TX, "Aerial thermal survey contractor")
@@ -675,7 +675,7 @@ dump({"_about": "Internal. Never delivered. Scenario ids, hidden relationships a
                                              "GW-ENT-005 (old entity_registry)": oid["FastTrack Claims Services LLC"]},
                        "real_names_replaced": {"Corpus Christi Caller-Times / CallerTimes": "The Bayside Ledger", "KIII TV / KRIS": "Harborline 6 News", "real refiners and terminal operators": "Rendal Terminals and fictional berth operators (terminal registry)",
                                                "real hospital systems": "Shoreline Regional Medical Center, Bay City Medical Center and the facility registry", "State Farm (EVT-2204)": "Sabine National Insurance",
-                                               "AEP Texas": "Coastal Bend Power and Water Authority", "Dragos, AVEVA, Yokogawa, Schneider Electric, SEL, GE, Fortinet, Cummins": "Meridian Controls Corp, Halden Protection, Bastille Networks"}},
+                                               "AEP Texas": "Coastal Bend Power and Water Authority", "Dragos, AVEVA, Yokogawa, Schneider Electric, SEL, GE, Fortinet, Cummins": "Meridian Controls Corp, Halden Protection, Corvane Networks"}},
       "story_variants_to_fix": ["'Coastal Bend Public Works Authority' appears in 7 stories; canon is Coastal Bend Power and Water Authority.", "EVT-2204 names a real insurer (State Farm)."]},
      INT, "organizations_truth.json")
 

@@ -1,0 +1,23 @@
+breaker commands 75 repeating the previous state of the same device (open after open / close after close): {'BREAKER OPEN': 21, 'BREAKER CLOSE': 8}
+pump commands 39 repeating previous state 18
+svc_fieldops_ext session on 08-19: [('RAS-20187', '66.193.54.23', '2027-08-19T11:31:12Z', '2027-08-19T11:40:19Z', 'token', 'GW-SRV-SIEM-OT', ''), ('RAS-20190', '66.193.54.23', '2027-08-19T14:23:08Z', '2027-08-19T14:54:49Z', 'token', 'GW-SRV-HIST-01', 'WO-41502')]
+  flows JMP -> SIEM-OT ( 10.72.4.51 ) on 08-19: [('2027-08-19T11:32:57Z', '443', '205.084689'), ('2027-08-19T17:52:04Z', '443', '332.766910')]
+  other rule_changes by vendor/service accounts: [('2027-07-24T13:04:25Z', 'CREATE', 'MAINT-EXCEPT-0916', 'svc_meridian_support', 'VND-3861'), ('2027-08-19T11:34:20Z', 'CREATE', 'MAINT-EXCEPT-0892', 'svc_fieldops_ext', ''), ('2028-01-03T22:10:58Z', 'CREATE', 'MAINT-EXCEPT-0917', 'svc_vantage_mgmt', 'VND-3634')]
+  sessions targeting SIEM-OT by account Counter({'svc_vantage_mgmt': 7, 'svc_fieldops_ext': 5, 'svc_meridian_support': 1})
+lock/unlock hosts by zone Counter({'corp-users-admin': 28836, 'ot-hmi': 12104, 'ot-wtp': 3972})
+lock/unlock events 44912 outside their logon session 214 sessions with lock/unlock not alternating or starting with unlock 0 of 4597
+6008 events 137 by day [('2027-09-14', 137)] zones [('corp-users-field', 50), ('corp-users-biz', 36), ('corp-users-ops', 25), ('corp-users-admin', 24), ('corp-security', 2)]
+boots 09-12..09-20 [0, 0, 137, 0, 0, 0, 0, 0, 0]
+  hours between last endpoint event and the boot after power loss: median 10.6 min 3.44 | DHCP renewals within 20 min before such a boot 0
+Nov alerts naming a person on a workstation: (rule, user has open session) [(('ACCOUNT_LOCKOUT', False), 14), (('ACCOUNT_LOCKOUT', True), 177), (('ADMIN_GROUP_CHANGE', True), 107), (('FAILED_LOGON_BURST', False), 32), (('FAILED_LOGON_BURST', True), 668), (('LOGON_OUTSIDE_HOURS', True), 90), (('POLICY_BLOCKED_SITE', True), 16893)]
+LOGON_OUTSIDE_HOURS 480 sample [('2027-07-17T00:24:30Z', 'GW-WS-IT-53', '', 'mvillarreal', 'logon_type=10 src_ip=10.14.250.111'), ('2027-07-17T00:58:05Z', 'GW-WS-IT-129', '', 'mwalker', 'logon_type=10 src_ip=10.14.250.160')]
+  matched to a type-10 4624 (host,user,minute) 480
+  hostile gateway logons with a LOGON_OUTSIDE_HOURS alert within 2 min: 0 of 14
+outbound TLS flows 162364 with a dns.log lookup of the server name by the same client in the previous 5 min 60652
+  server_name resolves (in dns.log) to a different address than the flow destination 5060
+http rows with resp_fuids 35157 fuid present in files.log 35157 files rows 35157
+  files seen_bytes != total_bytes 0
+guide ex dns [('1818547535.551716', '10.14.21.13', '10.14.10.5', 'www.cellcarrier-account.com', '13.233.240.179')]
+guide ex ssl [('1818547535.787030', '10.14.21.13', '13.233.240.179', 'www.cellcarrier-account.com')] [('13.795821', '85215')]
+guide ex conn [('2027-08-18T14:16:25Z', '10.14.22.11', '58798', '34.182.190.28', '15.597822', '6078', '60809', '7318', '62769')]
+event ids in data [1001, 1074, 1116, 1117, 2000, 4624, 4625, 4634, 4647, 4672, 4722, 4725, 4728, 4732, 4740, 4756, 4768, 4769, 4771, 4800, 4801, 5000, 5001, 5140, 5145, 6005, 6006, 6008, 7036, 7045] not mentioned in schema []

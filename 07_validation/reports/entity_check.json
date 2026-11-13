@@ -399,13 +399,19 @@
   {
    "files": "network_logs/siem/siem_alerts_*.csv",
    "column": "src_host",
-   "distinct": 234,
+   "distinct": 240,
    "unknown": 0
   },
   {
    "files": "network_logs/siem/siem_alerts_*.csv",
    "column": "dst_host",
-   "distinct": 4,
+   "distinct": 5,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/siem/siem_alerts_*.csv",
+   "column": "user",
+   "distinct": 239,
    "unknown": 0
   },
   {
@@ -417,7 +423,25 @@
   {
    "files": "network_logs/audit/remote_access_sessions.csv",
    "column": "account",
-   "distinct": 47,
+   "distinct": 38,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/audit/employee_vpn_sessions.csv",
+   "column": "gateway",
+   "distinct": 1,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/audit/employee_vpn_sessions.csv",
+   "column": "account",
+   "distinct": 172,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/audit/employee_vpn_sessions.csv",
+   "column": "device",
+   "distinct": 227,
    "unknown": 0
   },
   {
@@ -453,13 +477,169 @@
   {
    "files": "network_logs/audit/scada_command_log.csv",
    "column": "device",
-   "distinct": 15,
+   "distinct": 42,
    "unknown": 0
   },
   {
    "files": "network_logs/portal/*.csv",
    "column": "system",
    "distinct": 2,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/firewall/fw_*.csv",
+   "column": "device",
+   "distinct": 2,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/firewall/fw_*.csv",
+   "column": "src_ip",
+   "distinct": 74635,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/firewall/fw_*.csv",
+   "column": "dst_ip",
+   "distinct": 1320,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/proxy/web_proxy_*.csv",
+   "column": "client_ip",
+   "distinct": 192,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/proxy/web_proxy_*.csv",
+   "column": "user",
+   "distinct": 162,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/dhcp/dhcp_leases_*.csv",
+   "column": "server",
+   "distinct": 3,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/dhcp/dhcp_leases_*.csv",
+   "column": "hostname",
+   "distinct": 366,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/dhcp/dhcp_leases_*.csv",
+   "column": "ip",
+   "distinct": 390,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/windows/*.jsonl",
+   "column": "host",
+   "distinct": 236,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/windows/*.jsonl",
+   "column": "user",
+   "distinct": 413,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/windows/*.jsonl",
+   "column": "target_user",
+   "distinct": 195,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/windows/*.jsonl",
+   "column": "caller_computer",
+   "distinct": 184,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/windows/*.jsonl",
+   "column": "src_host",
+   "distinct": 10,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/endpoint/*.jsonl",
+   "column": "host",
+   "distinct": 236,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/endpoint/*.jsonl",
+   "column": "user",
+   "distinct": 212,
+   "unknown": 0
+  },
+  {
+   "files": "network_logs/triage/*/collection.json",
+   "column": "host",
+   "distinct": 14,
+   "unknown": 0
+  },
+  {
+   "files": "partner_it/*/firewall_*.csv",
+   "column": "device",
+   "distinct": 8,
+   "unknown": 0
+  },
+  {
+   "files": "partner_it/*/web_*.csv",
+   "column": "client_ip",
+   "distinct": 784,
+   "unknown": 0
+  },
+  {
+   "files": "partner_it/*/web_*.csv",
+   "column": "user",
+   "distinct": 1019,
+   "unknown": 0
+  },
+  {
+   "files": "partner_it/*/dns_*.csv",
+   "column": "client_ip",
+   "distinct": 784,
+   "unknown": 0
+  },
+  {
+   "files": "partner_it/*/dns_*.csv",
+   "column": "resolver",
+   "distinct": 14,
+   "unknown": 0
+  },
+  {
+   "files": "partner_it/*/auth_*.csv",
+   "column": "host",
+   "distinct": 410,
+   "unknown": 0
+  },
+  {
+   "files": "partner_it/*/auth_*.csv",
+   "column": "account",
+   "distinct": 2357,
+   "unknown": 0
+  },
+  {
+   "files": "partner_it/*/mail_*.csv",
+   "column": "gateway",
+   "distinct": 7,
+   "unknown": 0
+  },
+  {
+   "files": "partner_it/*/endpoint_alerts_*.csv",
+   "column": "host",
+   "distinct": 403,
+   "unknown": 0
+  },
+  {
+   "files": "partner_it/*/endpoint_alerts_*.csv",
+   "column": "ip",
+   "distinct": 403,
    "unknown": 0
   },
   {
@@ -793,29 +973,29 @@
   },
   "gw_host_registry.hosts": {
    "records": 329,
-   "used_in_streams": 245,
-   "reference_only": 84,
+   "used_in_streams": 267,
+   "reference_only": 62,
    "unmarked_unused": 0,
    "examples": []
   },
   "gw_host_registry.equipment": {
    "records": 74,
-   "used_in_streams": 47,
-   "reference_only": 27,
+   "used_in_streams": 56,
+   "reference_only": 18,
    "unmarked_unused": 0,
    "examples": []
   },
   "gw_host_registry.users": {
    "records": 177,
-   "used_in_streams": 44,
-   "reference_only": 133,
+   "used_in_streams": 177,
+   "reference_only": 0,
    "unmarked_unused": 0,
    "examples": []
   },
   "gw_host_registry.service_accounts": {
    "records": 22,
-   "used_in_streams": 3,
-   "reference_only": 19,
+   "used_in_streams": 20,
+   "reference_only": 2,
    "unmarked_unused": 0,
    "examples": []
   },
@@ -1020,7 +1200,7 @@
    "examples": []
   }
  },
- "text_scan_files": 1567,
+ "text_scan_files": 2654,
  "text_scan_complete": true,
  "problems": []
 }

@@ -6,8 +6,5 @@
 #open	2027-11-09-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1825721436.268470	-	10.14.20.38	162.71.154.172	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1825733569.793583	-	10.14.30.43	69.55.157.104	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1825737361.225807	-	10.14.30.44	13.71.156.212	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1825737386.976534	-	10.14.22.18	23.68.238.14	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
+1825765694.209550	-	10.14.22.19	185.89.22.232	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.22.19	185.89.22.232	443	Notice::ACTION_LOG
 #close	2027-11-10-00-00-00

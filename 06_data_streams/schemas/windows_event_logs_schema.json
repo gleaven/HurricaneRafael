@@ -1,0 +1,56 @@
+{
+ "source": "windows_event_logs",
+ "folder": "05_other_sources/network_logs/windows/",
+ "format": "JSON Lines, one event per line",
+ "files": {
+  "security_<YYYY-MM>[_NN].jsonl": "Security channel (provider Microsoft-Windows-Security-Auditing)",
+  "system_<YYYY-MM>.jsonl": "System channel (EventLog, User32, Service Control Manager)",
+  "defender_<YYYY-MM>.jsonl": "Microsoft-Windows-Windows Defender/Operational channel"
+ },
+ "common_keys": {
+  "time_utc": "event time, UTC, milliseconds",
+  "host": "host name (gw_host_registry.json hosts[].hostname)",
+  "channel": "event log channel",
+  "provider": "event source",
+  "event_id": "Windows event id",
+  "record_id": "record number in that host's log; rises with time, with gaps because only selected events are forwarded",
+  "level": "information, warning or error"
+ },
+ "event_keys": {
+  "4624 logon": "user, domain, logon_type (2 interactive, 3 network, 5 service, 10 remote interactive, 11 cached), logon_id, src_ip (network and remote logons)",
+  "4634 logoff / 4647 user-initiated logoff": "user, domain, logon_type, logon_id (same logon_id as the 4624)",
+  "4625 failed logon": "user, logon_type, sub_status (0xC000006A wrong password, 0xC0000071 password expired, 0xC0000070 workstation restriction, 0xC000006F outside permitted hours, 0xC0000234 account locked), process (credential prompt, when present)",
+  "4648 logon with explicit credentials": "not forwarded in this collection",
+  "4672 special privileges": "user, domain, logon_id, privileges",
+  "4720 / 4726 account created / deleted": "none occur in the period",
+  "4722 / 4725 account enabled / disabled": "user (who did it), domain, target_user",
+  "4728 / 4732 / 4756 member added to a global / local / universal group": "user, domain, target_user, group, group_domain, src_host (domain groups)",
+  "4740 account locked out": "target_user, domain, caller_computer",
+  "4768 / 4769 Kerberos ticket granted (domain controllers)": "user (person or machine account ending in $), domain, src_ip, service, status",
+  "4771 Kerberos pre-authentication failed": "user, domain, src_ip, status (0x18 wrong password), outcome; one for each failed attempt at a workstation",
+  "4800 / 4801 workstation locked / unlocked": "user, domain, logon_id",
+  "5140 share accessed / 5145 file share access check": "user, domain, src_ip, share, path and access (5145)",
+  "System 1074 / 6005 / 6006 / 6008": "shutdown request (user, process, reason, shutdown_type), event log started, stopped, previous shutdown unexpected",
+  "System 7036 / 7045": "service state change (service_name, state); service registered (service_name, image_path, service_type, start_type, account)",
+  "Defender 1001 / 1116 / 1117 / 2000 / 5000 / 5001": "scan finished (scan_type, result); detection (user, threat_name, path, severity); action taken (action); definitions updated (engine_version, signature_version); real-time protection enabled / disabled (user, detail)"
+ },
+ "notes": "A forwarded subset: only the event ids listed here are collected, from the 236 Windows hosts of the utility. Interactive sessions, everything named by a SIEM alert, by a row of the audit tables or by a flow in the Zeek logs is complete; other background (network logons, share access, tickets, service state changes) follows the Zeek sample. Lock and unlock events (4800/4801) are forwarded only from the control network and the administration wing. Credential failures that reach the directory from mail, VPN and mobile clients are recorded by those services, not as 4625 on a workstation. Times are UTC. Event-specific fields always appear in the same order for a given event id. Network logons, share access and tickets follow the Zeek flows (a sample of user-driven traffic); logon ids are unique per host.",
+ "joins": [
+  {
+   "field": "host",
+   "to": "gw_host_registry.json hosts[].hostname"
+  },
+  {
+   "field": "user / target_user",
+   "to": "gw_host_registry.json users[].username, users[].ot_account, service_accounts[].account; machine accounts are <hostname>$"
+  },
+  {
+   "field": "src_ip",
+   "to": "gw_host_registry.json hosts[].ip; Zeek id.orig_h"
+  },
+  {
+   "field": "time_utc + host",
+   "to": "network_logs/siem/siem_alerts_*.csv (src_host, time_utc), network_logs/audit/*.csv, network_logs/endpoint/*.jsonl"
+  }
+ ]
+}

@@ -1,15 +1,15 @@
 {
- "revision": "2026-11-09",
+ "revision": "2026-11-12",
  "streams": [
   "siem_alerts",
   "zeek_logs",
   "host_audit_logs",
   "portal_access_logs"
  ],
- "standard": "Zeek TSV logs; CSV exports from a SIEM, a remote-access gateway, a historian, a change system and a web portal",
+ "standard": "Zeek TSV logs (conn, dns, ssl, http, files, x509, notice); CSV exports from a SIEM, a remote-access gateway, a historian, a change system, mail gateways and a web portal",
  "clock": "All times UTC. Epoch seconds in Zeek logs count from 1970 (2027-09-14T00:00:00Z is 1820880000). Records in different systems that describe the same action agree to within a few seconds; log evidence of a session or write precedes its effect.",
- "sampling": "Zeek background flows are sampled 1 in 200. Flows involving any host that has an alert or a remote-access session are complete. SIEM alerts are complete (daily counts are real counts).",
- "span": "2027-07-16T00:00Z to 2028-01-12T06:00Z",
+ "sampling": "Network sensor: user-driven traffic and internal service chatter are a 1-in-200 sample. Recorded in full: periodic machine-to-internet traffic (endpoint agents, licence, update and feed checks, external time synchronisation), the mail transfers of every message in the mail gateway log, remote-access gateway and VPN sessions, and the flows behind alerts and audit records. Mail gateway: a sample of ordinary mail plus every message behind a mail alert. Audit tables and SIEM alerts: complete.",
+ "span": "2027-07-16T00:00Z to the end of 2028-01-12 UTC",
  "files": {
   "network_logs/siem/siem_alerts_YYYY-MM.csv": [
    "alert_id",
@@ -48,7 +48,10 @@
   ],
   "network_logs/zeek/YYYY-MM-DD/conn.log": "standard Zeek conn fields",
   "network_logs/zeek/YYYY-MM-DD/dns.log": "standard Zeek dns fields",
-  "network_logs/zeek/YYYY-MM-DD/ssl.log": "ts, uid, id.*, version, cipher, server_name, resumed, established",
+  "network_logs/zeek/YYYY-MM-DD/ssl.log": "ts, uid, id.*, version, cipher, server_name, resumed, established, cert_chain_fps",
+  "network_logs/zeek/YYYY-MM-DD/http.log": "standard Zeek http fields (plain HTTP only)",
+  "network_logs/zeek/YYYY-MM-DD/files.log": "standard Zeek files fields (files seen in plain HTTP: sizes and hashes, no content)",
+  "network_logs/zeek/YYYY-MM-DD/x509.log": "standard Zeek x509 fields (certificates seen in TLS 1.2 handshakes)",
   "network_logs/zeek/YYYY-MM-DD/notice.log": "standard Zeek notice fields",
   "network_logs/audit/remote_access_sessions.csv": [
    "session_id",
@@ -65,6 +68,21 @@
    "auth_method",
    "target_hosts",
    "change_ticket"
+  ],
+  "network_logs/audit/employee_vpn_sessions.csv": [
+   "session_id",
+   "gateway",
+   "account",
+   "src_ip",
+   "src_network",
+   "device",
+   "assigned_ip",
+   "login_utc",
+   "logout_utc",
+   "duration_s",
+   "bytes_in",
+   "bytes_out",
+   "auth_method"
   ],
   "network_logs/audit/historian_access.csv": [
    "session_id",
@@ -164,7 +182,7 @@
    "action",
    "message_id"
   ],
-  "network_logs/audit/mail_url_clicks_*.csv": "time_utc, gateway, mailbox, url_host, client_ip (+ message_id, sender_network for the vendor gateway)",
+  "network_logs/audit/mail_url_clicks_*.csv": "time_utc, gateway, mailbox, url_host, client_ip (+ message_id, sender_network for the vendor gateway); one row for every link in delivered mail that a recipient followed in the window; client_ip is an inside address for links followed at a workstation and an outside address for links followed on a phone or at home",
   "network_logs/audit/account_logons_city_airstation.csv": [
    "time_utc",
    "service",
@@ -197,9 +215,24 @@
   "scada_command_log.origin_host": "host a remote desktop session came from",
   "zeek conn.log": "ts, uid, id.orig_h, id.orig_p, id.resp_h, id.resp_p, proto, service, duration, orig_bytes, resp_bytes, conn_state, local_orig, local_resp, missed_bytes, history, orig_pkts, orig_ip_bytes, resp_pkts, resp_ip_bytes (standard Zeek meanings; conn_state SF/S0/REJ/RSTO/RSTR/SH/OTH)",
   "zeek dns.log": "ts, uid, id.orig_h, id.orig_p, id.resp_h, id.resp_p, proto, trans_id, query, qclass_name, qtype_name, rcode_name, AA, RD, RA, answers, TTLs; uid equals the uid of the UDP/53 row in conn.log",
-  "zeek ssl.log": "ts, uid, id.orig_h, id.orig_p, id.resp_h, id.resp_p, version, cipher, server_name, resumed, established",
-  "zeek notice.log": "ts, uid, id.orig_h, id.resp_h, id.resp_p, note, msg, src, dst, p, actions"
+  "zeek ssl.log": "ts, uid, id.orig_h, id.orig_p, id.resp_h, id.resp_p, version, cipher, server_name, resumed, established, cert_chain_fps (fingerprint of the server certificate in x509.log; (empty) for TLS 1.3, which hides the certificate)",
+  "zeek notice.log": "ts, uid, id.orig_h, id.resp_h, id.resp_p, note, msg, src, dst, p, actions",
+  "zeek http.log": "ts, uid, id.orig_h, id.orig_p, id.resp_h, id.resp_p, trans_depth, method, host, uri, referrer, version, user_agent, request_body_len, response_body_len, status_code, status_msg, tags, resp_fuids, resp_mime_types; uid equals the uid of the connection in conn.log",
+  "zeek files.log": "ts, fuid, tx_hosts, rx_hosts, conn_uids, source, depth, analyzers, mime_type, filename, duration, local_orig, is_orig, seen_bytes, total_bytes, missing_bytes, overflow_bytes, timedout, md5, sha1; fuid is listed in http.log resp_fuids",
+  "zeek x509.log": "ts, fingerprint, certificate.version, certificate.serial, certificate.subject, certificate.issuer, certificate.not_valid_before, certificate.not_valid_after, certificate.key_alg, certificate.sig_alg, certificate.key_type, certificate.key_length, certificate.exponent, san.dns, basic_constraints.ca, host_cert, client_cert; one row per certificate per day, at its first sighting",
+  "mail_gateway verdict / action": "clean / delivered for ordinary mail; blocked attachment type / quarantined and sender failed authentication / rejected for the messages behind mail alerts",
+  "employee_vpn_sessions.csv": "One row per session of the employee VPN: the account, the address it connected from and that address's network label, the device (a registry laptop or a home computer named DESKTOP-/LAPTOP-XXXXXXX), the pool address it was given (the DHCP log has the same lease) and the byte counts (the Zeek conn row to the VPN concentrator has the same). A remote-desktop connection from assigned_ip to a workstation appears in conn.log and as a type 10 logon in the Windows Security log."
  },
  "address_ranges": "Internal hosts use 10.14.0.0/16 (corporate), 10.72.0.0/16 (operations) and 172.20.5.0/24 (internet-facing). All external addresses and domain names are invented for the exercise and do not refer to real hosts.",
- "portal_notes": "aid_portal_access: the portal carries information pages only until registration opens at 2027-11-13T06:00Z (midnight local); account_ref joins to payments/aid_applications.csv account_id."
+ "portal_notes": "Both logs record every request: people, and the crawlers, monitors and scripts that visit any public site. aid_portal_access: there are no accounts until registration opens at 2027-11-13T06:00Z (midnight local). account_ref is the account a request belongs to (payments/aid_applications.csv account_id; on the logistics system an air-station account of partner_it_registry.json) and is empty when a sign-in name matches no account. client_network is the network of the address as ASN <number>, or base network; the same address carries the same number in every stream. event: page_view, login_success, login_failed, account_created, validation_error, application_submitted, document_uploaded, password_reset_requested, profile_updated: <field>, request_submitted. A month too large for one file is written as _01, _02 in time order.",
+ "see_also": {
+  "network_logs/firewall/": "firewall_logs_schema.json",
+  "network_logs/proxy/": "web_proxy_logs_schema.json",
+  "network_logs/dhcp/": "dhcp_logs_schema.json",
+  "network_logs/pcap/": "packet_captures_schema.json",
+  "network_logs/windows/": "windows_event_logs_schema.json",
+  "network_logs/endpoint/": "endpoint_telemetry_schema.json",
+  "network_logs/triage/": "host_triage_schema.json",
+  "partner_it/": "partner_*_schema.json"
+ }
 }

@@ -6,4 +6,8 @@
 #open	2027-11-10-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
+1825816383.446903	-	10.14.22.20	52.242.122.9	443	Weird::Activity	possible_split_routing	10.14.22.20	52.242.122.9	443	Notice::ACTION_LOG
+1825849522.542489	-	10.14.30.38	199.204.29.71	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.30.38	199.204.29.71	443	Notice::ACTION_LOG
+1825851465.488593	-	10.14.20.11	185.89.22.232	443	SSL::Certificate_Expires_Soon	Certificate www.osupdates-delivery.com is going to expire soon	10.14.20.11	185.89.22.232	443	Notice::ACTION_LOG
+1825872021.106616	-	10.14.21.38	10.14.10.6	53	DNS::External_Name	lab.cbpwa.example is pointing to a local host	10.14.21.38	10.14.10.6	53	Notice::ACTION_LOG
 #close	2027-11-11-00-00-00

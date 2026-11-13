@@ -1,0 +1,62 @@
+{
+ "host": "GW-WS-IT-12",
+ "ip": "10.14.21.15",
+ "os": "Windows 11 Enterprise 23H2",
+ "collected_utc": "2027-10-14T17:02:13Z",
+ "collected_by": "CBPWA Security Operations",
+ "tool": "triage-collector 3.2",
+ "case": "SI-2027-CC-001",
+ "logon_history_window_days": 45,
+ "items": {
+  "services.csv": {
+   "rows": 14,
+   "sha256": "2bf438119aadfec0e059681149702f7796a0d152748d1f1ee554d1d7f6ccfc3d"
+  },
+  "file_listing.csv": {
+   "rows": 99,
+   "sha256": "a753aa14ff72f5b1797f1a819be5ea3f30ffa18cb9b553844b491717a3929a3c"
+  },
+  "scheduled_tasks.csv": {
+   "rows": 3,
+   "sha256": "f014406fd5dfe1df117851e2c2082a1a3ceaa58444c3bc378dfed51c712eca4a"
+  },
+  "autoruns.csv": {
+   "rows": 18,
+   "sha256": "71a0f73d83734c5ff546791a352073e93f9f06184056c4c64a7d6fc20489805b"
+  },
+  "execution_history.csv": {
+   "rows": 37,
+   "sha256": "f031e921797075a0593655fcf309ce6b6e0b71528acbfb35c1862bbd1e29f711"
+  },
+  "logon_history.csv": {
+   "rows": 144,
+   "sha256": "144a2c25b9c130bf9e1b6d24d0b9761740d69e5535644672291c73bde56a9738"
+  },
+  "installed_software.csv": {
+   "rows": 9,
+   "sha256": "5d8da6d59b9e354d701164283390e8ff53436427e5db85c84f4c0200d26b22a1"
+  },
+  "network_config.csv": {
+   "rows": 1,
+   "sha256": "31b56a148951170f79c536dda703a8cd5f836ba928c1953e47aaa20bcc44347b"
+  }
+ },
+ "samples": [
+  {
+   "file": "placeholders/gisclip.exe.placeholder.txt",
+   "stands_in_for": "C:\\Program Files\\CBPWA\\Scripts\\gisclip.exe",
+   "sha256": "b11d8362ed59354a45aaed580f966ec517ecae9c43667d25e3e006243e523425"
+  },
+  {
+   "file": "placeholders/printfix.exe.placeholder.txt",
+   "stands_in_for": "C:\\Tools\\printfix.exe",
+   "sha256": "4b8d3e85cd199fb600aac8eaf0e571c2ff3c1cef63c7b96afac0d383560599c8"
+  },
+  {
+   "file": "placeholders/HeronConfig_5.5.exe.placeholder.txt",
+   "stands_in_for": "C:\\Users\\dgonzalez\\Downloads\\HeronConfig_5.5.exe",
+   "sha256": "7d91d21084ef78f07740ce1babd08f15fd1410feb39aeec7665c273112902f32"
+  }
+ ],
+ "note": "The collector copies every unsigned executable it finds outside the Windows folders. The copies are stored as inert text placeholders."
+}

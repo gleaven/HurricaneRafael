@@ -1,0 +1,598 @@
+time_utc,client_ip,user,method,scheme,host,url_path,status,action,category,bytes_out,bytes_in,user_agent_family,policy
+2028-01-01T01:12:55Z,10.61.20.120,ad7a4ab,GET,http,www.graniteavionics.example,/favicon.ico,200,allowed,business,2196,36262,Edge/Windows,DON-standard
+2028-01-01T02:40:26Z,10.61.20.117,a342c09,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,6117,59759,Edge/Windows,DON-standard
+2028-01-01T05:27:32Z,10.61.20.123,238654f,CONNECT,https,email.hilltopavionics.example,-,200,allowed,business,4561,177090,Edge/Windows,DON-standard
+2028-01-01T08:58:42Z,10.61.10.129,-,GET,http,static.browser-safecheck.net,/ocsp/e47e9ba2862b,204,allowed,software updates,2770,342,-,DON-standard
+2028-01-01T09:40:14Z,10.61.30.139,-,GET,http,www.certstatus-ocsp.net,/updates/6f4e6/manifest.xml,200,allowed,software updates,1742,52008,-,DON-standard
+2028-01-01T09:51:07Z,10.61.40.109,-,GET,http,www.osupdates-delivery.com,/static/4d2ed7d.js,200,allowed,software updates,1451,80690,-,DON-standard
+2028-01-01T10:27:38Z,10.61.10.120,-,GET,http,www.ntp-pool-public.org,/index.html,200,allowed,software updates,2203,115637,-,DON-standard
+2028-01-01T10:48:10Z,10.61.20.123,-,GET,http,www-east.telemetry-osvendor.com,/v1/check?id=3ff3962b6f,200,allowed,software updates,1456,60878,-,DON-standard
+2028-01-01T12:50:06Z,10.61.20.102,0dac690,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,5079,84554,Edge/Windows,DON-standard
+2028-01-01T15:22:48Z,10.61.20.108,835d1ae,CONNECT,https,static-assets.retail-orders.com,-,200,allowed,shopping,3308,49380,Edge/Windows,DON-standard
+2028-01-01T16:11:01Z,10.61.20.111,1530453,CONNECT,https,www.sanpatstaffing.example,-,200,allowed,business,5327,56384,Edge/Windows,DON-standard
+2028-01-01T16:35:13Z,10.61.20.126,6a3d868,CONNECT,https,www.sanpatstaffing.example,-,200,allowed,business,2663,24751,Edge/Windows,DON-standard
+2028-01-01T19:03:37Z,10.61.20.129,9e4e814,CONNECT,https,www.keelbank.example,-,200,allowed,finance,4104,123676,Edge/Windows,DON-standard
+2028-01-01T21:00:43Z,10.61.10.102,-,POST,http,www.browser-safecheck.net,/ocsp/d11e0fddbc4f,200,allowed,software updates,2958,300050,-,DON-standard
+2028-01-01T22:13:12Z,10.61.20.123,730b346,CONNECT,https,www.zenithavionics.example,-,200,allowed,business,2095,76578,Edge/Windows,DON-standard
+2028-01-01T22:19:58Z,10.61.10.156,-,GET,http,www.certstatus-ocsp.net,/index.html,200,allowed,software updates,11208,56314,-,DON-standard
+2028-01-01T22:47:38Z,10.61.20.135,d5b4375,CONNECT,https,weather.fleet-metoc.example,-,200,allowed,weather,3254,71378,Edge/Windows,DON-standard
+2028-01-01T23:07:10Z,10.61.20.126,a68d600,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,720,1296,Edge/Windows,DON-category-deny
+2028-01-01T23:28:30Z,10.61.20.132,1662338,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,2533,292733,Edge/Windows,DON-standard
+2028-01-02T00:44:00Z,10.61.20.108,6e7fe73,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,3460,12312,Edge/Windows,DON-standard
+2028-01-02T01:42:59Z,10.61.30.142,-,GET,http,static.browser-safecheck.net,/updates/5c6d3/manifest.xml,200,allowed,software updates,2450,227855,-,DON-standard
+2028-01-02T02:11:36Z,10.61.20.114,3343d9b,CONNECT,https,cdn.cloudstorage-sync.com,-,200,allowed,content delivery,5468,78985,Chrome/Windows,DON-standard
+2028-01-02T02:12:06Z,10.61.20.114,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,3604,131369,-,DON-standard
+2028-01-02T02:23:09Z,10.61.20.123,730b346,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,1227,45048,Edge/Windows,DON-standard
+2028-01-02T03:50:32Z,10.61.20.129,58013d9,GET,http,www.packagetracker-api.net,/static/6f4b87b.js,200,allowed,business,5343,124731,Edge/Windows,DON-standard
+2028-01-02T04:17:49Z,10.61.30.136,-,GET,http,sig.corvid-security-cloud.example,/static/85d6edc.js,200,allowed,software updates,3103,20604,-,DON-standard
+2028-01-02T04:18:24Z,10.61.20.120,-,GET,http,www.certstatus-ocsp.net,/ocsp/9b40cf02658a,304,allowed,software updates,3726,497,-,DON-standard
+2028-01-02T05:42:25Z,10.61.20.117,44da68b,CONNECT,https,www.graniteavionics.example,-,200,allowed,business,1021,104983,Edge/Windows,DON-standard
+2028-01-02T05:44:09Z,10.61.20.114,7e4cccf,CONNECT,https,www.cellcarrier-account.com,-,200,allowed,business,4282,141828,Edge/Windows,DON-standard
+2028-01-02T06:11:58Z,10.61.10.141,-,GET,http,www.certstatus-ocsp.net,/,200,allowed,software updates,2135,147281,-,DON-standard
+2028-01-02T06:33:25Z,10.61.20.120,f536c5d,CONNECT,https,mypay.defense-finance.example,-,200,allowed,government,1690,100984,Edge/Windows,DON-standard
+2028-01-02T06:33:51Z,10.61.20.123,238654f,CONNECT,https,weather.fleet-metoc.example,-,200,allowed,weather,2020,169330,Edge/Windows,DON-standard
+2028-01-02T06:42:09Z,10.61.20.123,238654f,CONNECT,https,update-cdn.socialfeed-img.com,-,403,blocked,social media,644,943,Edge/Windows,DON-category-deny
+2028-01-02T07:14:54Z,10.61.40.130,-,GET,http,sig.corvid-security-cloud.example,/,200,allowed,software updates,5658,66605,-,DON-standard
+2028-01-02T07:28:18Z,10.61.20.132,f8078ee,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,2478,39022,Edge/Windows,DON-standard
+2028-01-02T07:28:51Z,10.61.20.132,f8078ee,CONNECT,https,portal.navy-enterprise.example,-,200,allowed,government,5085,139629,Edge/Windows,DON-standard
+2028-01-02T08:53:07Z,10.61.20.123,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,6923,196046,-,DON-standard
+2028-01-02T10:08:50Z,10.61.20.114,7e4cccf,CONNECT,https,www.apexprint.example,-,200,allowed,business,5185,80748,Edge/Windows,DON-standard
+2028-01-02T11:50:46Z,10.61.20.126,4e64386,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,1990,177060,Edge/Windows,DON-standard
+2028-01-02T12:09:32Z,10.61.10.132,-,GET,http,www-east.telemetry-osvendor.com,/v3/check?id=88967d34f6,301,allowed,software updates,2336,502,-,DON-standard
+2028-01-02T13:21:40Z,10.61.30.103,7bfabff,CONNECT,https,login.fleetfuel-cards.com,-,200,allowed,finance,4866,20133,Edge/Windows,DON-standard
+2028-01-02T13:55:45Z,10.61.30.148,-,GET,http,www.osupdates-delivery.com,/index.html,200,allowed,software updates,1420,54888,-,DON-standard
+2028-01-02T13:57:08Z,10.61.30.133,-,GET,http,www.ntp-pool-public.org,/content/5c4b49f9.cab,200,allowed,software updates,9196,46380,-,DON-standard
+2028-01-02T14:00:23Z,10.61.20.111,017e5ab,CONNECT,https,www.redfishutilities.example,-,200,allowed,business,1473,120693,Edge/Windows,DON-standard
+2028-01-02T14:15:35Z,10.61.40.112,-,POST,http,sig.corvid-security-cloud.example,/robots.txt,404,allowed,software updates,1989,6715,-,DON-standard
+2028-01-02T14:34:25Z,10.61.40.115,018b4cb,CONNECT,https,portal.navy-enterprise.example,-,200,allowed,government,1431,29904,Edge/Windows,DON-standard
+2028-01-02T16:33:30Z,10.61.30.148,-,GET,http,www.ntp-pool-public.org,/index.html,200,allowed,software updates,2255,86831,-,DON-standard
+2028-01-02T16:41:14Z,10.61.30.103,-,GET,http,auth-prod.certstatus-ocsp.net,/pki/c1619a.crl,204,allowed,software updates,2260,650,-,DON-standard
+2028-01-02T18:27:00Z,10.61.40.124,-,GET,http,api.certstatus-ocsp.net,/robots.txt,200,allowed,software updates,2638,109125,-,DON-standard
+2028-01-02T18:54:21Z,10.61.20.132,f77e3ad,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,2061,94416,Chrome/Windows,DON-standard
+2028-01-02T20:01:30Z,10.61.30.103,7bfabff,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,5163,34575,Edge/Windows,DON-standard
+2028-01-02T20:36:15Z,10.61.20.123,10341b0,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,5110,12310,Edge/Windows,DON-standard
+2028-01-02T20:39:35Z,10.61.30.121,-,GET,http,cdn.certstatus-ocsp.net,/index.html,200,allowed,software updates,5659,80410,-,DON-standard
+2028-01-02T21:33:54Z,10.61.30.133,-,GET,http,sig.corvid-security-cloud.example,/images/e5ebb6.png,200,allowed,software updates,3400,65887,-,DON-standard
+2028-01-02T23:10:22Z,10.61.20.105,-,GET,http,www-east.telemetry-osvendor.com,/,200,allowed,software updates,8580,27226,-,DON-standard
+2028-01-02T23:10:54Z,10.61.20.105,3412911,CONNECT,https,www.padre-island-rentals.example,-,200,allowed,uncategorised,5090,62932,Edge/Windows,DON-standard
+2028-01-03T02:18:22Z,10.61.10.162,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,1517,144606,-,DON-standard
+2028-01-03T03:09:37Z,10.61.20.120,caf0d9d,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,1386,29730,Edge/Windows,DON-standard
+2028-01-03T03:34:23Z,10.61.10.132,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,5626,129271,-,DON-standard
+2028-01-03T03:51:12Z,10.61.20.132,b08f13a,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,3225,156433,Edge/Windows,DON-standard
+2028-01-03T05:34:28Z,10.61.20.102,d62999e,CONNECT,https,api-gw.cloudstorage-sync.com,-,403,blocked,online storage,338,1044,Edge/Windows,DON-category-deny
+2028-01-03T07:31:13Z,10.61.20.105,6f020c4,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,1532,52459,Edge/Windows,DON-standard
+2028-01-03T07:47:54Z,10.61.20.105,6f020c4,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,3208,116077,Edge/Windows,DON-standard
+2028-01-03T08:01:22Z,10.61.20.120,3f2f052,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,5187,36946,Edge/Windows,DON-standard
+2028-01-03T10:18:01Z,10.61.20.129,5132ca0,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,2410,348903,Edge/Windows,DON-standard
+2028-01-03T12:04:27Z,10.61.30.109,-,GET,http,static.browser-safecheck.net,/robots.txt,200,allowed,software updates,3901,4092,-,DON-standard
+2028-01-03T12:11:55Z,10.61.20.102,d62999e,CONNECT,https,www.alamocontract-logistics.example,-,200,allowed,business,3996,72683,Edge/Windows,DON-standard
+2028-01-03T13:24:56Z,10.61.40.106,3d09af3,CONNECT,https,weather.fleet-metoc.example,-,200,allowed,weather,4707,63022,Chrome/Windows,DON-standard
+2028-01-03T14:46:05Z,10.61.40.121,f0ffa76,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,5293,47105,Edge/Windows,DON-standard
+2028-01-03T15:16:47Z,10.61.10.177,26f392a,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,4160,14301,Chrome/Windows,DON-standard
+2028-01-03T15:31:50Z,10.61.30.127,2893600,CONNECT,https,www.orbitdepot-repair.example,-,200,allowed,business,3445,34179,Edge/Windows,DON-standard
+2028-01-03T15:32:45Z,10.61.30.112,511e5cc,CONNECT,https,www.fleetfuel-cards.com,-,200,allowed,finance,1934,35907,Edge/Windows,DON-standard
+2028-01-03T15:48:52Z,10.61.20.120,c4b86e9,CONNECT,https,www.sanpatsigns.example,-,200,allowed,business,2045,69219,Edge/Windows,DON-standard
+2028-01-03T16:05:59Z,10.61.10.183,1b3c239,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,3351,39716,Edge/Windows,DON-standard
+2028-01-03T16:21:59Z,10.61.30.121,463f56d,CONNECT,https,forms.event-signup-sheets.example,-,200,allowed,uncategorised,4417,138169,Edge/Windows,DON-standard
+2028-01-03T16:22:14Z,10.61.30.121,463f56d,CONNECT,https,api.airline-bookings.net,-,200,allowed,travel,3167,102633,Edge/Windows,DON-standard
+2028-01-03T16:26:41Z,10.61.30.106,4852f75,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2837,63392,Edge/Windows,DON-standard
+2028-01-03T16:42:04Z,10.61.10.162,ee54afb,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,11103,34280,Edge/Windows,DON-standard
+2028-01-03T16:51:54Z,10.61.30.148,eaaa672,CONNECT,https,www.prairierange-services.example,-,200,allowed,business,5314,12736,Chrome/Windows,DON-standard
+2028-01-03T17:30:05Z,10.61.30.103,7bfabff,CONNECT,https,api.fleetfuel-cards.com,-,200,allowed,finance,2201,27567,Edge/Windows,DON-standard
+2028-01-03T17:35:29Z,10.61.10.108,ca50a9a,CONNECT,https,update-cdn.socialfeed-img.com,-,403,blocked,social media,376,1380,Edge/Windows,DON-category-deny
+2028-01-03T17:40:42Z,10.61.20.105,c903854,CONNECT,https,rest-api.hotel-reservations.com,-,200,allowed,travel,2769,5063,Edge/Windows,DON-standard
+2028-01-03T17:49:19Z,10.61.10.180,a993eb2,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,1931,111783,Edge/Windows,DON-standard
+2028-01-03T17:52:25Z,10.61.30.109,-,GET,http,www.certstatus-ocsp.net,/,404,allowed,software updates,1306,28596,-,DON-standard
+2028-01-03T18:13:33Z,10.61.10.138,8f0835d,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3448,51408,Edge/Windows,DON-standard
+2028-01-03T18:25:42Z,10.61.10.132,8abd5d1,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,751,225027,Edge/Windows,DON-standard
+2028-01-03T18:43:09Z,10.61.40.109,f1895fa,CONNECT,https,www.orbitdepot-repair.example,-,200,allowed,business,1707,12091,Edge/Windows,DON-standard
+2028-01-03T18:49:51Z,10.61.10.138,-,GET,http,static.browser-safecheck.net,/ocsp/e3a9b845f58d,301,allowed,software updates,956,498,-,DON-standard
+2028-01-03T18:54:16Z,10.61.20.132,f77e3ad,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,1967,69752,Chrome/Windows,DON-standard
+2028-01-03T19:17:15Z,10.61.10.183,1b3c239,CONNECT,https,cdn.cloudstorage-sync.com,-,200,allowed,content delivery,2604,26822,Edge/Windows,DON-standard
+2028-01-03T19:18:46Z,10.61.30.115,513c6ad,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,1791,22328,Chrome/Windows,DON-standard
+2028-01-03T19:41:32Z,10.61.20.129,d33f908,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,1908,18561,Edge/Windows,DON-standard
+2028-01-03T19:48:15Z,10.61.10.111,5d93829,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,2271,45485,Firefox/Windows,DON-standard
+2028-01-03T20:07:05Z,10.61.40.103,2e14974,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,6316,109551,Edge/Windows,DON-standard
+2028-01-03T20:24:09Z,10.61.30.115,513c6ad,CONNECT,https,www.defense-travel.example,-,200,allowed,government,7011,86897,Chrome/Windows,DON-standard
+2028-01-03T20:59:57Z,10.61.10.183,1b3c239,CONNECT,https,supply.fleet-logistics.example,-,200,allowed,government,1545,54162,Edge/Windows,DON-standard
+2028-01-03T21:14:32Z,10.61.10.120,d04a17a,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,2948,63156,Edge/Windows,DON-standard
+2028-01-03T22:25:36Z,10.61.10.126,a4b7373,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,5382,21401,Edge/Windows,DON-standard
+2028-01-03T22:34:10Z,10.61.40.112,f53ba9e,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,9489,60094,Edge/Windows,DON-standard
+2028-01-03T22:59:13Z,10.61.10.144,-,GET,http,cdn.certstatus-ocsp.net,/favicon.ico,200,allowed,software updates,3661,39065,-,DON-standard
+2028-01-04T00:47:31Z,10.61.20.126,1441580,CONNECT,https,www.truckrental-fleet.com,-,200,allowed,shopping,4327,97856,Edge/Windows,DON-standard
+2028-01-04T01:04:20Z,10.61.20.111,b05fe70,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,2168,28453,Edge/Windows,DON-standard
+2028-01-04T01:50:13Z,10.61.20.126,1441580,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,1920,12485,Edge/Windows,DON-standard
+2028-01-04T05:05:36Z,10.61.20.132,4017c50,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,5944,64877,Edge/Windows,DON-standard
+2028-01-04T06:20:36Z,10.61.20.120,3f2f052,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3639,45320,Edge/Windows,DON-standard
+2028-01-04T06:51:23Z,10.61.30.115,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,4346,45805,-,DON-standard
+2028-01-04T07:30:56Z,10.61.20.135,233ee73,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,712,26674,Edge/Windows,DON-standard
+2028-01-04T08:04:52Z,10.61.40.127,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,1530,50709,-,DON-standard
+2028-01-04T08:36:14Z,10.61.20.111,d40e591,CONNECT,https,www.heronworkforce.example,-,200,allowed,business,4056,128957,Edge/Windows,DON-standard
+2028-01-04T08:37:24Z,10.61.30.106,-,GET,http,www.osupdates-delivery.com,/v1/check?id=01bab8344c,304,allowed,software updates,4012,355,-,DON-standard
+2028-01-04T09:53:48Z,10.61.20.129,-,GET,http,www.ntp-pool-public.org,/ocsp/01cadba67a04,500,allowed,software updates,6187,216311,-,DON-standard
+2028-01-04T13:11:03Z,10.61.40.124,e7cefe8,CONNECT,https,click.fronteraprint.example,-,200,allowed,business,5399,113106,Edge/Windows,DON-standard
+2028-01-04T13:20:40Z,10.61.20.114,2f6fd12,CONNECT,https,api.docsign-flow.com,-,403,blocked,online storage,748,954,Edge/Windows,DON-category-deny
+2028-01-04T13:32:44Z,10.61.20.129,9e4e814,CONNECT,https,www.calichetech.example,-,200,allowed,technology,4442,117151,Edge/Windows,DON-standard
+2028-01-04T14:09:20Z,10.61.30.115,-,GET,http,static.browser-safecheck.net,/content/f4929af5.cab,200,allowed,software updates,4848,85984,-,DON-standard
+2028-01-04T14:37:50Z,10.61.10.159,2488bba,CONNECT,https,www.cellcarrier-account.com,-,200,allowed,business,1513,64626,Edge/Windows,DON-standard
+2028-01-04T14:54:15Z,10.61.40.106,3d09af3,CONNECT,https,www.granitelandscaping.example,-,200,allowed,business,1996,209767,Chrome/Windows,DON-standard
+2028-01-04T15:00:32Z,10.61.10.168,195d9b6,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,3180,150441,Edge/Windows,DON-standard
+2028-01-04T15:02:41Z,10.61.20.135,fa92460,CONNECT,https,static.partsdepot-supply.com,-,200,allowed,shopping,5723,10081,Chrome/Windows,DON-standard
+2028-01-04T15:03:08Z,10.61.30.145,c2c6a95,CONNECT,https,www.insurance-claims-portal.com,-,200,allowed,insurance,3912,81212,Edge/Windows,DON-standard
+2028-01-04T15:08:00Z,10.61.30.115,513c6ad,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,1490,167580,Chrome/Windows,DON-standard
+2028-01-04T15:28:11Z,10.61.10.171,1a4482d,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,5160,20755,Edge/Windows,DON-standard
+2028-01-04T15:28:38Z,10.61.10.144,2bbda0a,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,2693,316048,Chrome/Windows,DON-standard
+2028-01-04T15:50:30Z,10.61.10.120,d04a17a,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,1092,66280,Edge/Windows,DON-standard
+2028-01-04T16:12:22Z,10.61.10.102,daf797a,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,3713,32768,Edge/Windows,DON-standard
+2028-01-04T16:20:59Z,10.61.20.132,2e67aa6,CONNECT,https,portal.navy-enterprise.example,-,200,allowed,government,8813,46877,Edge/Windows,DON-standard
+2028-01-04T16:25:23Z,10.61.30.124,2a21ddb,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,779,69393,Edge/Windows,DON-standard
+2028-01-04T16:29:58Z,10.61.10.102,daf797a,CONNECT,https,update-cdn.socialfeed-img.com,-,403,blocked,social media,577,911,Edge/Windows,DON-category-deny
+2028-01-04T17:02:42Z,10.61.10.177,26f392a,CONNECT,https,www.seawallcatering.example,-,200,allowed,business,3039,16872,Edge/Windows,DON-standard
+2028-01-04T17:16:02Z,10.61.10.144,2bbda0a,CONNECT,https,www.calallensimulation.example,-,200,allowed,business,4530,105439,Chrome/Windows,DON-standard
+2028-01-04T17:45:21Z,10.61.30.139,-,GET,http,sig.corvid-security-cloud.example,/index.html,404,allowed,software updates,1532,35293,-,DON-standard
+2028-01-04T17:47:37Z,10.61.10.171,1a4482d,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,2751,121319,Edge/Windows,DON-standard
+2028-01-04T18:14:30Z,10.61.30.145,c2c6a95,CONNECT,https,www.streamvideo-cdn.net,-,403,blocked,streaming media,819,1374,Edge/Windows,DON-category-deny
+2028-01-04T18:15:43Z,10.61.30.118,3cbcd0e,CONNECT,https,mypay.defense-finance.example,-,200,allowed,government,3421,318772,Edge/Windows,DON-standard
+2028-01-04T18:18:02Z,10.61.10.174,f0c1147,CONNECT,https,www.graniteavionics.example,-,200,allowed,business,7770,110415,Chrome/Windows,DON-standard
+2028-01-04T18:41:10Z,10.61.10.177,26f392a,CONNECT,https,www.seawallcatering.example,-,200,allowed,business,1375,30855,Chrome/Windows,DON-standard
+2028-01-04T18:47:32Z,10.61.10.150,3ceed5d,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,8506,33492,Edge/Windows,DON-standard
+2028-01-04T18:49:49Z,10.61.30.142,42dd429,CONNECT,https,static.hrcloud-payroll.com,-,200,allowed,finance,6667,55075,Edge/Windows,DON-standard
+2028-01-04T19:07:53Z,10.61.40.106,3d09af3,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,3203,120808,Chrome/Windows,DON-standard
+2028-01-04T19:08:30Z,10.61.20.132,2e67aa6,CONNECT,https,www.defense-travel.example,-,200,allowed,government,1286,57990,Edge/Windows,DON-standard
+2028-01-04T19:21:17Z,10.61.30.121,463f56d,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,5216,69488,Edge/Windows,DON-standard
+2028-01-04T19:21:53Z,10.61.10.105,9238cc8,CONNECT,https,www.cellcarrier-account.com,-,200,allowed,business,3174,10299,Edge/Windows,DON-standard
+2028-01-04T19:23:43Z,10.61.10.144,2bbda0a,CONNECT,https,www.calallensimulation.example,-,200,allowed,business,1226,41481,Chrome/Windows,DON-standard
+2028-01-04T19:29:08Z,10.61.10.102,daf797a,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,6470,107784,Edge/Windows,DON-standard
+2028-01-04T19:39:25Z,10.61.20.102,5d0138e,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,3927,134052,Edge/Windows,DON-standard
+2028-01-04T19:47:01Z,10.61.10.183,1b3c239,CONNECT,https,email.nclas-language.example,-,200,allowed,business,4809,81175,Edge/Windows,DON-standard
+2028-01-04T19:59:25Z,10.61.10.129,8f775a2,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,5314,93591,Edge/Windows,DON-standard
+2028-01-04T20:06:49Z,10.61.10.177,26f392a,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,778,106833,Edge/Windows,DON-standard
+2028-01-04T20:15:10Z,10.61.10.147,1dc810d,CONNECT,https,www.zenithavionics.example,-,200,allowed,business,5510,84194,Edge/Windows,DON-standard
+2028-01-04T20:18:07Z,10.61.30.124,2a21ddb,CONNECT,https,app.shiftboard-scheduler.example,-,200,allowed,uncategorised,2888,165806,Edge/Windows,DON-standard
+2028-01-04T20:19:10Z,10.61.30.118,-,GET,http,www-east.telemetry-osvendor.com,/robots.txt,200,allowed,software updates,6243,131125,-,DON-standard
+2028-01-04T20:21:01Z,10.61.10.111,5d93829,CONNECT,https,www.gulf-contract-logistics.example,-,200,allowed,business,2811,107300,Edge/Windows,DON-standard
+2028-01-04T20:24:35Z,10.61.10.168,195d9b6,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,1060,136106,Edge/Windows,DON-standard
+2028-01-04T20:58:51Z,10.61.10.153,717d8f7,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,3837,11431,Edge/Windows,DON-standard
+2028-01-04T21:16:54Z,10.61.10.150,3ceed5d,CONNECT,https,update-cdn.socialfeed-img.com,-,403,blocked,social media,530,1074,Edge/Windows,DON-category-deny
+2028-01-04T21:25:10Z,10.61.30.127,2893600,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,1551,78677,Edge/Windows,DON-standard
+2028-01-04T21:34:30Z,10.61.30.118,3cbcd0e,CONNECT,https,sso-login.harborline6.example,-,200,allowed,news,3877,128232,Edge/Windows,DON-standard
+2028-01-04T21:35:00Z,10.61.20.102,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,4848,46584,-,DON-standard
+2028-01-04T21:35:56Z,10.61.20.120,ad7a4ab,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,2645,58008,Edge/Windows,DON-standard
+2028-01-04T21:38:58Z,10.61.30.118,3cbcd0e,CONNECT,https,www.deltacog.example,-,200,allowed,business,2298,124496,Edge/Windows,DON-standard
+2028-01-04T22:22:28Z,10.61.30.142,42dd429,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,1493,39297,Edge/Windows,DON-standard
+2028-01-04T22:46:57Z,10.61.10.120,d04a17a,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,8887,36978,Edge/Windows,DON-standard
+2028-01-04T23:01:28Z,10.61.30.130,9deb037,CONNECT,https,weather.fleet-metoc.example,-,200,allowed,weather,2283,27856,Chrome/Windows,DON-standard
+2028-01-05T01:01:01Z,10.61.20.126,a68d600,CONNECT,https,www.coastaldrainage.example,-,200,allowed,business,2338,245869,Edge/Windows,DON-standard
+2028-01-05T02:43:16Z,10.61.30.118,3cbcd0e,CONNECT,https,login.docsign-flow.com,-,403,blocked,online storage,686,1327,Chrome/Windows,DON-category-deny
+2028-01-05T05:47:14Z,10.61.20.123,238654f,CONNECT,https,www.seawallcatering.example,-,200,allowed,business,5751,129011,Edge/Windows,DON-standard
+2028-01-05T07:16:03Z,10.61.20.120,f536c5d,CONNECT,https,api.streamvideo-cdn.net,-,403,blocked,streaming media,798,955,Edge/Windows,DON-category-deny
+2028-01-05T09:27:41Z,10.61.10.150,-,GET,http,auth-prod.certstatus-ocsp.net,/robots.txt,200,allowed,software updates,3011,40356,-,DON-standard
+2028-01-05T09:30:04Z,10.61.20.123,238654f,CONNECT,https,update-cdn.socialfeed-img.com,-,403,blocked,social media,397,929,Edge/Windows,DON-category-deny
+2028-01-05T09:47:50Z,10.61.10.108,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,8587,203048,-,DON-standard
+2028-01-05T11:28:35Z,10.61.20.120,f536c5d,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,3122,47136,Edge/Windows,DON-standard
+2028-01-05T12:38:22Z,10.61.10.132,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,3236,59118,-,DON-standard
+2028-01-05T13:14:40Z,10.61.20.123,e659749,CONNECT,https,www.alamosimulation.example,-,200,allowed,business,5906,168493,Edge/Windows,DON-standard
+2028-01-05T13:15:09Z,10.61.20.135,-,GET,http,auth-prod.certstatus-ocsp.net,/content/5b842c91.cab,200,allowed,software updates,2689,55222,-,DON-standard
+2028-01-05T13:20:53Z,10.61.20.105,8be6587,CONNECT,https,www.zenithcontract-logistics.example,-,200,allowed,business,2620,163142,Edge/Windows,DON-standard
+2028-01-05T14:02:52Z,10.61.10.129,-,GET,http,sig.corvid-security-cloud.example,/static/d1b481f.js,404,allowed,software updates,2789,27705,-,DON-standard
+2028-01-05T14:25:52Z,10.61.30.127,2893600,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,1956,40867,Edge/Windows,DON-standard
+2028-01-05T14:43:48Z,10.61.10.102,daf797a,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,2007,99921,Edge/Windows,DON-standard
+2028-01-05T14:56:07Z,10.61.10.141,86f3552,CONNECT,https,static.training-lms.net,-,200,allowed,education,4920,34756,Edge/Windows,DON-standard
+2028-01-05T15:08:43Z,10.61.10.144,2bbda0a,CONNECT,https,www.deltacog.example,-,200,allowed,business,479,87253,Chrome/Windows,DON-standard
+2028-01-05T15:25:08Z,10.61.10.159,2488bba,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,2011,15004,Edge/Windows,DON-standard
+2028-01-05T15:35:20Z,10.61.10.144,2bbda0a,CONNECT,https,www.nuecessimulation.example,-,200,allowed,business,2941,150903,Chrome/Windows,DON-standard
+2028-01-05T15:51:17Z,10.61.10.162,ee54afb,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,2234,26857,Edge/Windows,DON-standard
+2028-01-05T15:54:08Z,10.61.40.115,018b4cb,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,8925,10990,Edge/Windows,DON-standard
+2028-01-05T16:08:07Z,10.61.10.174,f0c1147,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,5066,22491,Edge/Windows,DON-standard
+2028-01-05T16:45:21Z,10.61.10.183,-,GET,http,www.certstatus-ocsp.net,/robots.txt,200,allowed,software updates,2642,80082,-,DON-standard
+2028-01-05T16:46:22Z,10.61.20.132,2e67aa6,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,8356,109703,Edge/Windows,DON-standard
+2028-01-05T17:01:32Z,10.61.40.124,e7cefe8,GET,http,web-static.cellcarrier-account.com,/images/f1768d.png,200,allowed,business,2079,93402,Edge/Windows,DON-standard
+2028-01-05T17:04:56Z,10.61.20.105,8be6587,CONNECT,https,www.calichetech.example,-,200,allowed,technology,6361,131070,Edge/Windows,DON-standard
+2028-01-05T17:17:32Z,10.61.30.133,-,GET,http,www-east.telemetry-osvendor.com,/updates/7984c/manifest.xml,302,allowed,software updates,1166,541,-,DON-standard
+2028-01-05T17:20:24Z,10.61.10.153,717d8f7,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,2118,37721,Edge/Windows,DON-standard
+2028-01-05T17:36:08Z,10.61.40.109,f1895fa,CONNECT,https,weather.fleet-metoc.example,-,200,allowed,weather,2822,160843,Edge/Windows,DON-standard
+2028-01-05T17:36:35Z,10.61.30.121,463f56d,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,4475,221238,Edge/Windows,DON-standard
+2028-01-05T17:38:44Z,10.61.10.126,a4b7373,CONNECT,https,www.graniteavionics.example,-,200,allowed,business,3316,80325,Edge/Windows,DON-standard
+2028-01-05T17:43:16Z,10.61.20.108,835d1ae,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,3654,145796,Edge/Windows,DON-standard
+2028-01-05T17:44:08Z,10.61.20.120,2df6e26,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,309,1396,Edge/Windows,DON-category-deny
+2028-01-05T17:48:24Z,10.61.10.120,d04a17a,CONNECT,https,www.heronworkforce.example,-,200,allowed,business,3658,113701,Edge/Windows,DON-standard
+2028-01-05T18:02:04Z,10.61.40.106,-,GET,http,www.ntp-pool-public.org,/content/5f1ed5ef.cab,200,allowed,software updates,2812,281667,-,DON-standard
+2028-01-05T18:04:21Z,10.61.30.106,4852f75,GET,http,www.fontcdn-static.net,/favicon.ico,304,allowed,content delivery,6057,570,Edge/Windows,DON-standard
+2028-01-05T18:04:39Z,10.61.20.114,2f6fd12,CONNECT,https,static.cctexas-services.org,-,200,allowed,government,2081,34875,Edge/Windows,DON-standard
+2028-01-05T18:09:55Z,10.61.10.147,1dc810d,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,2219,202616,Edge/Windows,DON-standard
+2028-01-05T18:24:39Z,10.61.40.118,35b768b,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,2002,189675,Edge/Windows,DON-standard
+2028-01-05T18:29:33Z,10.61.10.144,2bbda0a,CONNECT,https,www-2.bayside-ledger.example,-,200,allowed,news,950,48444,Chrome/Windows,DON-standard
+2028-01-05T18:33:50Z,10.61.10.144,2bbda0a,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,1838,64491,Chrome/Windows,DON-standard
+2028-01-05T18:45:14Z,10.61.30.118,3cbcd0e,CONNECT,https,www.gis-basemaps.org,-,200,allowed,content delivery,1383,79918,Edge/Windows,DON-standard
+2028-01-05T18:48:22Z,10.61.40.118,35b768b,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,1900,83037,Edge/Windows,DON-standard
+2028-01-05T18:56:47Z,10.61.30.136,8899e2a,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,2381,149589,Edge/Windows,DON-standard
+2028-01-05T19:24:26Z,10.61.40.121,f0ffa76,CONNECT,https,jobboard-alerts.example,-,200,allowed,business,9567,158462,Edge/Windows,DON-standard
+2028-01-05T19:48:23Z,10.61.20.108,835d1ae,CONNECT,https,static-assets.retail-orders.com,-,200,allowed,shopping,518,147014,Edge/Windows,DON-standard
+2028-01-05T19:58:17Z,10.61.20.123,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,2621,190110,-,DON-standard
+2028-01-05T20:03:37Z,10.61.30.124,-,GET,http,static.browser-safecheck.net,/images/8bb85d.png,302,allowed,software updates,1798,511,-,DON-standard
+2028-01-05T20:23:20Z,10.61.10.135,90ad5bf,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,3769,23895,Edge/Windows,DON-standard
+2028-01-05T20:41:09Z,10.61.20.135,fa92460,CONNECT,https,api.adnetwork-static.net,-,200,allowed,advertising,1425,50590,Chrome/Windows,DON-standard
+2028-01-05T21:01:36Z,10.61.10.156,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,3580,17359,-,DON-standard
+2028-01-05T21:13:26Z,10.61.30.106,4852f75,CONNECT,https,static.newswire-national.com,-,200,allowed,news,2280,38657,Edge/Windows,DON-standard
+2028-01-05T21:28:39Z,10.61.30.136,8899e2a,CONNECT,https,cdn.geomaps-tiles.net,-,200,allowed,content delivery,690,54711,Edge/Windows,DON-standard
+2028-01-05T21:44:04Z,10.61.30.118,-,GET,http,www.certstatus-ocsp.net,/updates/725ce/manifest.xml,200,allowed,software updates,4298,138867,-,DON-standard
+2028-01-05T21:59:38Z,10.61.20.111,6050bb0,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,1773,42399,Edge/Windows,DON-standard
+2028-01-05T22:05:54Z,10.61.30.136,8899e2a,CONNECT,https,www.padrecollege.example,-,200,allowed,education,720,71077,Edge/Windows,DON-standard
+2028-01-05T22:10:27Z,10.61.40.109,f1895fa,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,2333,173913,Edge/Windows,DON-standard
+2028-01-05T22:54:54Z,10.61.30.106,4852f75,CONNECT,https,www.orbitdepot-repair.example,-,200,allowed,business,3817,148729,Edge/Windows,DON-standard
+2028-01-05T23:14:18Z,10.61.10.168,195d9b6,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,1673,182656,Edge/Windows,DON-standard
+2028-01-05T23:24:41Z,10.61.10.171,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,1743,15345,-,DON-standard
+2028-01-05T23:37:41Z,10.61.20.102,b60c44d,CONNECT,https,weather.fleet-metoc.example,-,200,allowed,weather,2078,77721,Edge/Windows,DON-standard
+2028-01-06T03:52:29Z,10.61.10.102,daf797a,CONNECT,https,www.helpdesk-tickets.com,-,502,allowed,business software,2973,108,Edge/Windows,DON-standard
+2028-01-06T04:01:02Z,10.61.20.120,ad7a4ab,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,1580,183297,Edge/Windows,DON-standard
+2028-01-06T05:40:23Z,10.61.20.123,238654f,CONNECT,https,www.inglesideaviation-services.example,-,200,allowed,business,2209,36629,Edge/Windows,DON-standard
+2028-01-06T06:15:32Z,10.61.20.114,7e4cccf,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,1541,90199,Edge/Windows,DON-standard
+2028-01-06T08:03:30Z,10.61.20.102,0dac690,CONNECT,https,www.defense-travel.example,-,200,allowed,government,2499,92845,Edge/Windows,DON-standard
+2028-01-06T08:19:59Z,10.61.20.123,238654f,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,2655,81858,Edge/Windows,DON-standard
+2028-01-06T09:55:05Z,10.61.20.120,f536c5d,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,2042,76900,Edge/Windows,DON-standard
+2028-01-06T10:02:24Z,10.61.10.129,-,GET,http,www-east.telemetry-osvendor.com,/pki/26ad94.crl,304,allowed,software updates,2471,334,-,DON-standard
+2028-01-06T10:15:45Z,10.61.10.177,-,GET,http,sig.corvid-security-cloud.example,/images/b099c3.png,304,allowed,software updates,1089,384,-,DON-standard
+2028-01-06T12:24:08Z,10.61.30.109,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,3833,36955,-,DON-standard
+2028-01-06T13:11:19Z,10.61.20.114,133c30d,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,5885,105412,Edge/Windows,DON-standard
+2028-01-06T13:21:01Z,10.61.30.103,7bfabff,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,5293,60504,Edge/Windows,DON-standard
+2028-01-06T13:22:09Z,10.61.10.159,2488bba,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,3902,15756,Edge/Windows,DON-standard
+2028-01-06T13:49:59Z,10.61.30.103,7bfabff,CONNECT,https,www.calichetech.example,-,200,allowed,technology,1444,83287,Edge/Windows,DON-standard
+2028-01-06T14:27:23Z,10.61.30.142,42dd429,CONNECT,https,records.county-clerk-search.example,-,200,allowed,government,5423,127384,Edge/Windows,DON-standard
+2028-01-06T14:30:16Z,10.61.40.109,f1895fa,CONNECT,https,api.helpdesk-tickets.com,-,200,allowed,business software,2726,121306,Edge/Windows,DON-standard
+2028-01-06T14:43:34Z,10.61.40.130,de2f8bf,CONNECT,https,www.cellcarrier-account.com,-,200,allowed,business,6260,80442,Edge/Windows,DON-standard
+2028-01-06T15:12:57Z,10.61.30.136,8899e2a,CONNECT,https,www.alamocontract-logistics.example,-,200,allowed,business,1294,168294,Edge/Windows,DON-standard
+2028-01-06T15:24:24Z,10.61.30.133,0f95104,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,4881,5898,Edge/Windows,DON-standard
+2028-01-06T15:28:42Z,10.61.10.168,195d9b6,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,2093,50587,Edge/Windows,DON-standard
+2028-01-06T15:59:00Z,10.61.10.171,1a4482d,CONNECT,https,www.padrecollege.example,-,200,allowed,education,1562,176716,Edge/Windows,DON-standard
+2028-01-06T15:59:40Z,10.61.10.180,a993eb2,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,7481,64677,Edge/Windows,DON-standard
+2028-01-06T16:07:25Z,10.61.10.138,8f0835d,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,1979,52739,Edge/Windows,DON-standard
+2028-01-06T16:10:27Z,10.61.10.102,daf797a,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,4543,98307,Edge/Windows,DON-standard
+2028-01-06T16:13:08Z,10.61.40.112,-,GET,http,sig.corvid-security-cloud.example,/favicon.ico,200,allowed,software updates,4357,20136,-,DON-standard
+2028-01-06T16:45:55Z,10.61.40.121,f0ffa76,CONNECT,https,www.tx-comptroller-forms.example,-,200,allowed,government,5965,99875,Edge/Windows,DON-standard
+2028-01-06T17:06:20Z,10.61.10.180,a993eb2,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,4513,62138,Edge/Windows,DON-standard
+2028-01-06T17:15:15Z,10.61.40.112,f53ba9e,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,5393,115536,Edge/Windows,DON-standard
+2028-01-06T17:23:38Z,10.61.10.138,8f0835d,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,3539,95592,Edge/Windows,DON-standard
+2028-01-06T17:28:54Z,10.61.30.130,9deb037,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,2683,60121,Chrome/Windows,DON-standard
+2028-01-06T18:00:41Z,10.61.30.148,-,GET,http,www.browser-safecheck.net,/ocsp/8d8a5f70f0eb,200,allowed,software updates,4446,145538,-,DON-standard
+2028-01-06T18:00:52Z,10.61.30.142,42dd429,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,10318,73257,Edge/Windows,DON-standard
+2028-01-06T18:17:04Z,10.61.30.148,eaaa672,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,2578,79047,Chrome/Windows,DON-standard
+2028-01-06T18:19:51Z,10.61.40.106,3d09af3,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,1387,15310,Chrome/Windows,DON-standard
+2028-01-06T18:39:25Z,10.61.10.123,230c3e6,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,2449,60422,Edge/Windows,DON-standard
+2028-01-06T18:57:23Z,10.61.40.109,f1895fa,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,4641,5955,Edge/Windows,DON-standard
+2028-01-06T19:04:20Z,10.61.40.124,e7cefe8,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,3509,294094,Edge/Windows,DON-standard
+2028-01-06T19:20:28Z,10.61.30.136,8899e2a,CONNECT,https,www.streamvideo-cdn.net,-,403,blocked,streaming media,843,1380,Edge/Windows,DON-category-deny
+2028-01-06T19:21:19Z,10.61.10.183,1b3c239,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,7091,62421,Edge/Windows,DON-standard
+2028-01-06T19:23:23Z,10.61.10.132,8abd5d1,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,6840,29271,Edge/Windows,DON-standard
+2028-01-06T20:21:05Z,10.61.30.106,4852f75,CONNECT,https,www.redfishutilities.example,-,200,allowed,business,1729,132633,Edge/Windows,DON-standard
+2028-01-06T20:40:48Z,10.61.10.165,35b5cbc,CONNECT,https,www.prairierange-services.example,-,200,allowed,business,378,35494,Edge/Windows,DON-standard
+2028-01-06T21:10:14Z,10.61.10.138,8f0835d,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,5637,49212,Edge/Windows,DON-standard
+2028-01-06T21:10:41Z,10.61.10.144,2bbda0a,CONNECT,https,api.docsign-flow.com,-,403,blocked,online storage,892,1065,Chrome/Windows,DON-category-deny
+2028-01-06T21:20:10Z,10.61.10.111,-,GET,http,sig.corvid-security-cloud.example,/updates/59421/manifest.xml,200,allowed,software updates,3207,39331,-,DON-standard
+2028-01-06T21:21:33Z,10.61.20.120,caf0d9d,CONNECT,https,click.helpdesk-tickets.example,-,200,allowed,business software,4199,113102,Edge/Windows,DON-standard
+2028-01-06T21:39:53Z,10.61.30.148,eaaa672,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,1673,59891,Chrome/Windows,DON-standard
+2028-01-06T21:40:02Z,10.61.10.156,87d7333,CONNECT,https,www.graniteavionics.example,-,200,allowed,business,1315,4053,Edge/Windows,DON-standard
+2028-01-06T21:53:44Z,10.61.30.133,0f95104,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,4074,25225,Edge/Windows,DON-standard
+2028-01-06T22:12:55Z,10.61.10.171,1a4482d,CONNECT,https,api.storm-prep-guides.org,-,200,allowed,weather,657,57642,Chrome/Windows,DON-standard
+2028-01-06T22:20:32Z,10.61.10.168,195d9b6,CONNECT,https,jobs.govt-careers.example,-,200,allowed,government,3311,100669,Edge/Windows,DON-standard
+2028-01-06T22:22:50Z,10.61.10.126,a4b7373,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,1701,52342,Edge/Windows,DON-standard
+2028-01-06T22:37:48Z,10.61.10.144,2bbda0a,CONNECT,https,records.county-clerk-search.example,-,200,allowed,government,7502,55377,Chrome/Windows,DON-standard
+2028-01-06T22:38:48Z,10.61.30.142,42dd429,GET,http,cdn.weatherradar-tiles.com,/images/7b77cb.png,200,allowed,weather,7161,20565,Edge/Windows,DON-standard
+2028-01-06T22:53:01Z,10.61.10.144,2bbda0a,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,3712,45240,Edge/Windows,DON-standard
+2028-01-06T22:55:02Z,10.61.30.130,9deb037,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,1064,153972,Chrome/Windows,DON-standard
+2028-01-07T02:12:45Z,10.61.40.109,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,1188,99395,-,DON-standard
+2028-01-07T02:30:11Z,10.61.20.132,b08f13a,CONNECT,https,api-v2.nueces-county-tx.org,-,200,allowed,government,2084,24006,Edge/Windows,DON-standard
+2028-01-07T03:16:34Z,10.61.20.120,-,GET,http,sig.corvid-security-cloud.example,/,200,allowed,software updates,1770,46583,-,DON-standard
+2028-01-07T03:54:19Z,10.61.40.124,-,GET,http,static.telemetry-osvendor.com,/static/b93d832.js,200,allowed,software updates,1578,120531,-,DON-standard
+2028-01-07T04:33:29Z,10.61.20.129,-,GET,http,sig.corvid-security-cloud.example,/updates/24d58/manifest.xml,204,allowed,software updates,2338,382,-,DON-standard
+2028-01-07T05:04:38Z,10.61.20.111,d40e591,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,2737,51235,Edge/Windows,DON-standard
+2028-01-07T06:02:30Z,10.61.20.114,5210489,CONNECT,https,rest-api.hotel-reservations.com,-,200,allowed,travel,3608,37190,Edge/Windows,DON-standard
+2028-01-07T08:01:47Z,10.61.10.159,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,7697,132884,-,DON-standard
+2028-01-07T08:06:54Z,10.61.20.120,-,GET,http,sig.corvid-security-cloud.example,/v2/check?id=517193391d,304,allowed,software updates,1117,439,-,DON-standard
+2028-01-07T08:22:33Z,10.61.10.108,-,GET,http,www.osupdates-delivery.com,/index.html,304,allowed,software updates,5189,390,-,DON-standard
+2028-01-07T08:27:16Z,10.61.20.117,02c3d72,CONNECT,https,api.fleetfuel-cards.com,-,200,allowed,finance,2302,284694,Edge/Windows,DON-standard
+2028-01-07T08:43:16Z,10.61.10.141,-,GET,http,sig.corvid-security-cloud.example,/pki/f8b74e.crl,200,allowed,software updates,3307,122255,-,DON-standard
+2028-01-07T09:51:05Z,10.61.10.123,-,GET,http,static.browser-safecheck.net,/v1/check?id=8546bd5e64,200,allowed,software updates,3331,13852,-,DON-standard
+2028-01-07T10:32:43Z,10.61.20.108,c9bcd22,CONNECT,https,forms.event-signup-sheets.example,-,200,allowed,uncategorised,3170,91901,Edge/Windows,DON-standard
+2028-01-07T11:09:42Z,10.61.20.135,233ee73,CONNECT,https,www.seawallcatering.example,-,200,allowed,business,1749,33187,Edge/Windows,DON-standard
+2028-01-07T11:45:56Z,10.61.20.126,547582b,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,3862,34274,Chrome/Windows,DON-standard
+2028-01-07T13:15:43Z,10.61.30.103,7bfabff,CONNECT,https,www.newswire-national.com,-,200,allowed,news,2348,24982,Edge/Windows,DON-standard
+2028-01-07T14:06:20Z,10.61.40.109,f1895fa,CONNECT,https,www.rgv-truck-parts.example,-,200,allowed,uncategorised,1144,35883,Edge/Windows,DON-standard
+2028-01-07T14:08:04Z,10.61.10.168,195d9b6,CONNECT,https,www.packagetracker-api.net,-,200,allowed,business,2687,3059,Edge/Windows,DON-standard
+2028-01-07T14:23:48Z,10.61.40.127,0c11c12,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,4903,103229,Edge/Windows,DON-standard
+2028-01-07T14:26:40Z,10.61.40.112,f53ba9e,CONNECT,https,www.calichetech.example,-,200,allowed,technology,3351,110549,Edge/Windows,DON-standard
+2028-01-07T14:42:18Z,10.61.10.168,195d9b6,CONNECT,https,login.cloudstorage-sync.com,-,403,blocked,online storage,586,1418,Edge/Windows,DON-category-deny
+2028-01-07T15:23:57Z,10.61.10.105,9238cc8,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,794,174096,Edge/Windows,DON-standard
+2028-01-07T15:25:30Z,10.61.20.126,dd37977,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,2592,55663,Edge/Windows,DON-standard
+2028-01-07T15:30:42Z,10.61.40.130,de2f8bf,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,1992,71977,Edge/Windows,DON-standard
+2028-01-07T15:40:24Z,10.61.10.156,87d7333,CONNECT,https,www.inglesidesigns.example,-,200,allowed,business,2787,23150,Edge/Windows,DON-standard
+2028-01-07T15:43:26Z,10.61.10.102,daf797a,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,1157,46460,Edge/Windows,DON-standard
+2028-01-07T15:51:41Z,10.61.10.159,2488bba,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,3729,56126,Edge/Windows,DON-standard
+2028-01-07T16:06:38Z,10.61.40.124,e7cefe8,CONNECT,https,forms.event-signup-sheets.example,-,200,allowed,uncategorised,4670,66776,Edge/Windows,DON-standard
+2028-01-07T16:18:50Z,10.61.10.156,87d7333,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,1720,109180,Edge/Windows,DON-standard
+2028-01-07T16:23:05Z,10.61.10.129,8f775a2,CONNECT,https,www.calallensimulation.example,-,200,allowed,business,3635,158017,Edge/Windows,DON-standard
+2028-01-07T16:33:11Z,10.61.10.165,35b5cbc,CONNECT,https,www.harborrotary.example,-,200,allowed,business,2260,55404,Edge/Windows,DON-standard
+2028-01-07T16:36:24Z,10.61.10.171,1a4482d,CONNECT,https,www.alamocontract-logistics.example,-,200,allowed,business,1090,59393,Edge/Windows,DON-standard
+2028-01-07T16:42:34Z,10.61.30.109,867e34c,CONNECT,https,www.defense-travel.example,-,200,allowed,government,4596,35304,Edge/Windows,DON-standard
+2028-01-07T17:01:47Z,10.61.10.171,1a4482d,CONNECT,https,static.packagetracker-api.net,-,200,allowed,business,9062,16180,Edge/Windows,DON-standard
+2028-01-07T17:25:51Z,10.61.10.174,f0c1147,CONNECT,https,www.nueces-county-tx.org,-,200,allowed,government,7376,50422,Edge/Windows,DON-standard
+2028-01-07T17:30:02Z,10.61.40.121,f0ffa76,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,4934,28513,Edge/Windows,DON-standard
+2028-01-07T17:30:52Z,10.61.10.174,f0c1147,CONNECT,https,www.apexprint.example,-,200,allowed,business,3882,414846,Edge/Windows,DON-standard
+2028-01-07T17:35:25Z,10.61.30.124,2a21ddb,CONNECT,https,www.defense-travel.example,-,200,allowed,government,3613,63021,Edge/Windows,DON-standard
+2028-01-07T17:46:50Z,10.61.10.129,8f775a2,CONNECT,https,www.seawallcatering.example,-,200,allowed,business,1812,161317,Edge/Windows,DON-standard
+2028-01-07T17:53:06Z,10.61.10.180,-,GET,http,auth-prod.certstatus-ocsp.net,/robots.txt,304,allowed,software updates,3796,551,-,DON-standard
+2028-01-07T17:55:58Z,10.61.30.118,3cbcd0e,CONNECT,https,www.deltacog.example,-,200,allowed,business,6838,109712,Edge/Windows,DON-standard
+2028-01-07T18:00:59Z,10.61.30.130,9deb037,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,6435,73235,Chrome/Windows,DON-standard
+2028-01-07T18:11:16Z,10.61.40.112,f53ba9e,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,3113,128196,Edge/Windows,DON-standard
+2028-01-07T18:20:42Z,10.61.30.127,2893600,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,2761,61561,Edge/Windows,DON-standard
+2028-01-07T18:28:47Z,10.61.10.120,d04a17a,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,754,32546,Edge/Windows,DON-standard
+2028-01-07T18:33:03Z,10.61.10.114,-,GET,http,cdn.certstatus-ocsp.net,/robots.txt,200,allowed,software updates,2744,48551,-,DON-standard
+2028-01-07T18:49:27Z,10.61.10.174,f0c1147,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,1985,21814,Edge/Windows,DON-standard
+2028-01-07T18:52:03Z,10.61.30.148,eaaa672,CONNECT,https,www.airline-bookings.net,-,200,allowed,travel,3870,104815,Chrome/Windows,DON-standard
+2028-01-07T18:54:27Z,10.61.30.142,-,GET,http,static.telemetry-osvendor.com,/updates/2b1e3/manifest.xml,304,allowed,software updates,2576,326,-,DON-standard
+2028-01-07T19:04:51Z,10.61.40.115,018b4cb,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,1610,116794,Edge/Windows,DON-standard
+2028-01-07T19:14:38Z,10.61.10.162,ee54afb,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,3136,112665,Edge/Windows,DON-standard
+2028-01-07T19:35:51Z,10.61.30.136,8899e2a,CONNECT,https,www.heronworkforce.example,-,200,allowed,business,8152,37722,Edge/Windows,DON-standard
+2028-01-07T19:38:24Z,10.61.30.118,3cbcd0e,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,2238,9514,Edge/Windows,DON-standard
+2028-01-07T19:42:13Z,10.61.20.111,017e5ab,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,1814,247907,Edge/Windows,DON-standard
+2028-01-07T20:11:01Z,10.61.10.138,8f0835d,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,1831,104098,Edge/Windows,DON-standard
+2028-01-07T20:29:37Z,10.61.10.150,3ceed5d,CONNECT,https,www.cellcarrier-account.com,-,200,allowed,business,4529,51806,Edge/Windows,DON-standard
+2028-01-07T20:44:14Z,10.61.10.147,1dc810d,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,2711,259605,Edge/Windows,DON-standard
+2028-01-07T21:10:16Z,10.61.10.141,86f3552,CONNECT,https,www.retail-orders.com,-,200,allowed,shopping,2442,70289,Edge/Windows,DON-standard
+2028-01-07T21:20:01Z,10.61.30.139,b48ebfe,CONNECT,https,www.inglesidesigns.example,-,200,allowed,business,1293,25649,Firefox/Windows,DON-standard
+2028-01-07T21:53:04Z,10.61.30.130,9deb037,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,8839,23166,Chrome/Windows,DON-standard
+2028-01-07T22:10:26Z,10.61.10.108,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,1241,145739,-,DON-standard
+2028-01-07T22:12:54Z,10.61.30.139,b48ebfe,CONNECT,https,www.inglesidesigns.example,-,200,allowed,business,2950,63438,Firefox/Windows,DON-standard
+2028-01-07T23:06:37Z,10.61.10.171,-,CONNECT,https,www.osupdates-delivery.com,-,200,allowed,software updates,2455,190875,-,DON-standard
+2028-01-07T23:54:24Z,10.61.10.132,-,GET,http,www.ntp-pool-public.org,/content/89a5f9d7.cab,304,allowed,software updates,1553,644,-,DON-standard
+2028-01-08T02:51:13Z,10.61.20.123,7f4a44b,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,7080,6099,Edge/Windows,DON-standard
+2028-01-08T03:24:03Z,10.61.20.105,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,3367,169462,-,DON-standard
+2028-01-08T04:08:04Z,10.61.10.135,-,CONNECT,https,auth-prod.certstatus-ocsp.net,-,200,allowed,software updates,2998,66877,-,DON-standard
+2028-01-08T04:38:03Z,10.61.20.111,b05fe70,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,2873,48130,Edge/Windows,DON-standard
+2028-01-08T05:10:48Z,10.61.20.123,ca50113,CONNECT,https,www.shoreline-depot-repair.example,-,200,allowed,business,7011,127011,Edge/Windows,DON-standard
+2028-01-08T05:15:55Z,10.61.20.111,d40e591,CONNECT,https,www.school-district-cc.org,-,200,allowed,education,1711,10972,Edge/Windows,DON-standard
+2028-01-08T09:31:19Z,10.61.10.120,-,GET,http,www.certstatus-ocsp.net,/favicon.ico,200,allowed,software updates,7157,54537,-,DON-standard
+2028-01-08T10:03:27Z,10.61.40.112,-,GET,http,www.ntp-pool-public.org,/updates/8475e/manifest.xml,200,allowed,software updates,3913,140508,-,DON-standard
+2028-01-08T11:35:43Z,10.61.20.123,ca50113,CONNECT,https,links.delta-aero-parts.example,-,200,allowed,business,9602,113459,Edge/Windows,DON-standard
+2028-01-08T13:49:41Z,10.61.20.126,-,GET,http,www-east.telemetry-osvendor.com,/robots.txt,304,allowed,software updates,1225,542,-,DON-standard
+2028-01-08T15:32:18Z,10.61.40.118,-,CONNECT,https,static.browser-safecheck.net,-,200,allowed,software updates,2389,21695,-,DON-standard
+2028-01-08T16:10:58Z,10.61.20.129,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,8188,11082,-,DON-standard
+2028-01-08T18:06:07Z,10.61.20.108,835d1ae,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,2218,59417,Edge/Windows,DON-standard
+2028-01-08T18:17:52Z,10.61.20.126,6a3d868,CONNECT,https,forms.event-signup-sheets.example,-,200,allowed,uncategorised,1341,44771,Edge/Windows,DON-standard
+2028-01-08T19:57:04Z,10.61.10.126,a4b7373,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,1543,78778,Edge/Windows,DON-standard
+2028-01-08T21:03:31Z,10.61.20.120,ad7a4ab,CONNECT,https,email.klebergfuel-services.example,-,200,allowed,business,7809,128133,Edge/Windows,DON-standard
+2028-01-08T21:08:13Z,10.61.20.126,a68d600,CONNECT,https,www.partner-mail.example,-,200,allowed,business,5573,73507,Edge/Windows,DON-standard
+2028-01-08T21:16:35Z,10.61.20.120,ad7a4ab,CONNECT,https,rest-api.hospital-patient-portal.org,-,200,allowed,health,6106,199160,Edge/Windows,DON-standard
+2028-01-08T22:16:04Z,10.61.20.102,b60c44d,CONNECT,https,www.apexprint.example,-,200,allowed,business,1365,67557,Edge/Windows,DON-standard
+2028-01-08T22:29:55Z,10.61.20.135,d5b4375,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,1328,92987,Edge/Windows,DON-standard
+2028-01-09T00:17:21Z,10.61.10.174,-,GET,http,api.certstatus-ocsp.net,/updates/0cd6a/manifest.xml,200,allowed,software updates,901,12580,-,DON-standard
+2028-01-09T00:37:19Z,10.61.20.129,58013d9,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,2240,72012,Edge/Windows,DON-standard
+2028-01-09T01:05:48Z,10.61.20.120,ad7a4ab,CONNECT,https,api.weatherradar-tiles.com,-,200,allowed,weather,9051,132354,Edge/Windows,DON-standard
+2028-01-09T02:33:47Z,10.61.20.111,6050bb0,CONNECT,https,login.insurance-claims-portal.com,-,200,allowed,insurance,1975,118980,Edge/Windows,DON-standard
+2028-01-09T03:17:57Z,10.61.20.129,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,6379,71072,-,DON-standard
+2028-01-09T04:04:47Z,10.61.10.108,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,867,89696,-,DON-standard
+2028-01-09T05:17:24Z,10.61.20.102,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,2915,40312,-,DON-standard
+2028-01-09T06:13:05Z,10.61.20.132,f8078ee,CONNECT,https,www.calichetech.example,-,200,allowed,technology,1465,142236,Edge/Windows,DON-standard
+2028-01-09T06:25:20Z,10.61.20.108,a030ab9,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,3286,53734,Chrome/Windows,DON-standard
+2028-01-09T07:51:37Z,10.61.20.120,f536c5d,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,2831,115404,Edge/Windows,DON-standard
+2028-01-09T07:52:23Z,10.61.20.111,3f9dfae,CONNECT,https,www.tidewaterlibrary-foundation.example,-,200,allowed,weather,1757,95404,Edge/Windows,DON-standard
+2028-01-09T07:59:54Z,10.61.20.129,6f74d28,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,5528,50745,Edge/Windows,DON-standard
+2028-01-09T09:45:21Z,10.61.40.103,-,GET,http,www.certstatus-ocsp.net,/updates/b8b21/manifest.xml,304,allowed,software updates,4014,311,-,DON-standard
+2028-01-09T09:59:31Z,10.61.20.102,0dac690,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,9803,119628,Edge/Windows,DON-standard
+2028-01-09T10:04:32Z,10.61.20.108,a030ab9,CONNECT,https,supply.fleet-logistics.example,-,200,allowed,government,4429,224693,Chrome/Windows,DON-standard
+2028-01-09T10:36:16Z,10.61.10.168,-,GET,http,www.ntp-pool-public.org,/index.html,304,allowed,software updates,1118,276,-,DON-standard
+2028-01-09T10:48:42Z,10.61.20.108,a030ab9,CONNECT,https,www.calichetech.example,-,200,allowed,technology,2687,41566,Chrome/Windows,DON-standard
+2028-01-09T13:50:14Z,10.61.20.129,9e4e814,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,2381,54527,Edge/Windows,DON-standard
+2028-01-09T14:44:10Z,10.61.20.105,8be6587,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,7844,85719,Edge/Windows,DON-standard
+2028-01-09T15:00:04Z,10.61.10.138,8f0835d,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,1804,28244,Edge/Windows,DON-standard
+2028-01-09T16:45:29Z,10.61.20.135,fa92460,CONNECT,https,login.cloudstorage-sync.com,-,403,blocked,online storage,675,1279,Chrome/Windows,DON-category-deny
+2028-01-09T17:47:40Z,10.61.30.127,2893600,CONNECT,https,www-east.officesuite-mail.com,-,200,allowed,business software,6235,100074,Edge/Windows,DON-standard
+2028-01-09T18:23:32Z,10.61.20.105,8be6587,CONNECT,https,www.sabalisd.example,-,200,allowed,education,393,96563,Edge/Windows,DON-standard
+2028-01-09T18:45:17Z,10.61.20.135,fa92460,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,713,74474,Chrome/Windows,DON-standard
+2028-01-09T18:54:01Z,10.61.10.138,8f0835d,CONNECT,https,www.ledgerfinance-cloud.com,-,200,allowed,finance,3424,42986,Edge/Windows,DON-standard
+2028-01-09T20:17:25Z,10.61.20.117,003b580,CONNECT,https,static.meetroom-video.com,-,200,allowed,business software,1277,86093,Edge/Windows,DON-standard
+2028-01-09T20:30:00Z,10.61.20.132,2e67aa6,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,804,150179,Edge/Windows,DON-standard
+2028-01-09T21:13:55Z,10.61.20.129,58013d9,CONNECT,https,www.defense-travel.example,-,200,allowed,government,1339,92066,Edge/Windows,DON-standard
+2028-01-10T00:19:07Z,10.61.30.130,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,2999,55481,-,DON-standard
+2028-01-10T01:04:55Z,10.61.30.145,-,CONNECT,https,static.osupdates-delivery.com,-,200,allowed,software updates,3767,22087,-,DON-standard
+2028-01-10T02:30:12Z,10.61.30.148,-,GET,http,static.telemetry-osvendor.com,/content/0a815323.cab,200,allowed,software updates,3838,119550,-,DON-standard
+2028-01-10T02:32:09Z,10.61.20.108,6e7fe73,CONNECT,https,www.school-district-cc.org,-,200,allowed,education,10921,91181,Chrome/Windows,DON-standard
+2028-01-10T03:28:56Z,10.61.20.132,1662338,CONNECT,https,www.weatherradar-tiles.com,-,200,allowed,weather,4487,34580,Edge/Windows,DON-standard
+2028-01-10T05:14:46Z,10.61.10.156,-,CONNECT,https,www.osupdates-delivery.com,-,200,allowed,software updates,4134,31133,-,DON-standard
+2028-01-10T05:26:14Z,10.61.20.120,f536c5d,CONNECT,https,www-2.coastalbendweather.net,-,200,allowed,weather,1445,33885,Edge/Windows,DON-standard
+2028-01-10T05:56:20Z,10.61.20.108,-,GET,http,www.osupdates-delivery.com,/robots.txt,200,allowed,software updates,2502,218287,-,DON-standard
+2028-01-10T05:59:36Z,10.61.30.124,-,GET,http,sig.corvid-security-cloud.example,/index.html,200,allowed,software updates,1058,126295,-,DON-standard
+2028-01-10T06:05:46Z,10.61.20.111,3f9dfae,CONNECT,https,portal.state-purchasing.example,-,200,allowed,government,4356,103753,Edge/Windows,DON-standard
+2028-01-10T06:24:26Z,10.61.10.117,-,GET,http,static.ntp-pool-public.org,/content/b3236b34.cab,200,allowed,software updates,3140,32165,-,DON-standard
+2028-01-10T06:32:10Z,10.61.10.126,-,POST,http,www.browser-safecheck.net,/robots.txt,200,allowed,software updates,5126,99653,-,DON-standard
+2028-01-10T07:28:32Z,10.61.20.114,7e4cccf,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,9094,114063,Edge/Windows,DON-standard
+2028-01-10T07:35:15Z,10.61.20.111,3f9dfae,CONNECT,https,www.packagetracker-api.net,-,200,allowed,business,5160,81079,Edge/Windows,DON-standard
+2028-01-10T08:22:43Z,10.61.20.111,3f9dfae,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,4581,27241,Edge/Windows,DON-standard
+2028-01-10T08:49:29Z,10.61.20.123,238654f,CONNECT,https,www.coastaldrainage.example,-,200,allowed,business,1740,153645,Edge/Windows,DON-standard
+2028-01-10T08:58:19Z,10.61.20.135,1655fba,CONNECT,https,www.padrecollege.example,-,200,allowed,education,2843,45891,Edge/Windows,DON-standard
+2028-01-10T09:49:21Z,10.61.20.111,-,GET,http,api.certstatus-ocsp.net,/updates/805db/manifest.xml,304,allowed,software updates,2477,675,-,DON-standard
+2028-01-10T10:40:25Z,10.61.20.114,7e4cccf,POST,http,www.nueces-county-tx.org,/pki/6273fb.crl,200,allowed,government,4837,35278,Edge/Windows,DON-standard
+2028-01-10T11:01:45Z,10.61.40.109,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,3259,108054,-,DON-standard
+2028-01-10T11:28:45Z,10.61.30.142,-,GET,http,www-east.telemetry-osvendor.com,/v2/check?id=2757843eaa,200,allowed,software updates,776,84915,-,DON-standard
+2028-01-10T12:41:28Z,10.61.20.135,79c129e,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,1915,59047,Edge/Windows,DON-standard
+2028-01-10T13:19:17Z,10.61.30.127,2893600,CONNECT,https,www-east.officesuite-mail.com,-,200,allowed,business software,5183,4125,Chrome/Windows,DON-standard
+2028-01-10T13:25:27Z,10.61.10.183,1b3c239,CONNECT,https,portal.navy-enterprise.example,-,200,allowed,government,2597,142152,Edge/Windows,DON-standard
+2028-01-10T14:08:50Z,10.61.10.171,1a4482d,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,4988,92129,Edge/Windows,DON-standard
+2028-01-10T14:18:55Z,10.61.40.106,3d09af3,CONNECT,https,weather.fleet-metoc.example,-,200,allowed,weather,2380,67033,Chrome/Windows,DON-standard
+2028-01-10T14:27:29Z,10.61.20.117,a03582c,POST,http,www.prairierange-services.example,/pki/9e1bfc.crl,301,allowed,business,2374,634,Chrome/Windows,DON-standard
+2028-01-10T14:29:17Z,10.61.30.139,b48ebfe,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,11738,143236,Firefox/Windows,DON-standard
+2028-01-10T14:36:49Z,10.61.10.162,ee54afb,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,1909,18970,Edge/Windows,DON-standard
+2028-01-10T14:53:27Z,10.61.10.159,2488bba,CONNECT,https,cdn.cloudstorage-sync.com,-,200,allowed,content delivery,1937,88191,Edge/Windows,DON-standard
+2028-01-10T15:07:18Z,10.61.10.144,2bbda0a,CONNECT,https,www.prairierange-services.example,-,200,allowed,business,4780,59660,Chrome/Windows,DON-standard
+2028-01-10T15:23:50Z,10.61.10.153,717d8f7,GET,http,rest-api.hotel-reservations.com,/ocsp/c0f44a95c1c7,200,allowed,travel,1195,56886,Edge/Windows,DON-standard
+2028-01-10T15:32:32Z,10.61.30.145,c2c6a95,CONNECT,https,api-v2.nueces-county-tx.org,-,200,allowed,government,1141,14880,Edge/Windows,DON-standard
+2028-01-10T15:33:16Z,10.61.30.112,511e5cc,CONNECT,https,cdn.fleetfuel-cards.com,-,200,allowed,finance,5365,144823,Edge/Windows,DON-standard
+2028-01-10T15:42:08Z,10.61.10.135,90ad5bf,CONNECT,https,login.cloudstorage-sync.com,-,403,blocked,online storage,834,1303,Edge/Windows,DON-category-deny
+2028-01-10T15:55:16Z,10.61.10.159,2488bba,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,4241,27001,Edge/Windows,DON-standard
+2028-01-10T16:01:02Z,10.61.30.115,513c6ad,CONNECT,https,cdn.cloudstorage-sync.com,-,200,allowed,content delivery,3668,17096,Chrome/Windows,DON-standard
+2028-01-10T16:25:39Z,10.61.30.145,c2c6a95,CONNECT,https,web-portal.txroadwatch.org,-,200,allowed,government,6650,194650,Edge/Windows,DON-standard
+2028-01-10T16:30:43Z,10.61.40.106,3d09af3,CONNECT,https,static.officesuite-cdn.net,-,200,allowed,content delivery,3926,33876,Chrome/Windows,DON-standard
+2028-01-10T16:43:42Z,10.61.10.159,2488bba,CONNECT,https,portal.navy-enterprise.example,-,200,allowed,government,2472,5251,Edge/Windows,DON-standard
+2028-01-10T16:45:38Z,10.61.10.111,5d93829,CONNECT,https,www.sanpatstaffing.example,-,200,allowed,business,2096,38462,Firefox/Windows,DON-standard
+2028-01-10T16:48:22Z,10.61.40.106,3d09af3,CONNECT,https,weather.fleet-metoc.example,-,200,allowed,weather,747,70093,Chrome/Windows,DON-standard
+2028-01-10T16:48:58Z,10.61.30.139,b48ebfe,CONNECT,https,www.inglesidebase-housing.example,-,200,allowed,business,4576,202222,Edge/Windows,DON-standard
+2028-01-10T16:58:12Z,10.61.40.124,e7cefe8,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,397,1231,Edge/Windows,DON-category-deny
+2028-01-10T17:05:51Z,10.61.30.145,c2c6a95,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,9231,27334,Edge/Windows,DON-standard
+2028-01-10T17:29:17Z,10.61.10.156,87d7333,GET,http,cdn.helpdesk-tickets.com,/pki/ba5398.crl,200,allowed,content delivery,6940,17767,Edge/Windows,DON-standard
+2028-01-10T17:32:48Z,10.61.40.130,de2f8bf,CONNECT,https,www.apexprint.example,-,200,allowed,business,2098,35292,Edge/Windows,DON-standard
+2028-01-10T17:33:09Z,10.61.30.115,513c6ad,CONNECT,https,static.searchindex-api.com,-,200,allowed,search engines,4913,89306,Chrome/Windows,DON-standard
+2028-01-10T17:37:13Z,10.61.10.141,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,2727,103686,-,DON-standard
+2028-01-10T17:39:24Z,10.61.40.106,3d09af3,CONNECT,https,update-cdn.socialfeed-img.com,-,403,blocked,social media,546,988,Chrome/Windows,DON-category-deny
+2028-01-10T17:42:10Z,10.61.10.126,a4b7373,CONNECT,https,www.cdn-jslibs.net,-,200,allowed,content delivery,821,33323,Edge/Windows,DON-standard
+2028-01-10T18:30:04Z,10.61.10.153,717d8f7,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,6168,24068,Edge/Windows,DON-standard
+2028-01-10T18:50:51Z,10.61.20.126,dd37977,GET,http,www.apexprint.example,/pki/983aeb.crl,304,allowed,business,1987,509,Edge/Windows,DON-standard
+2028-01-10T18:57:01Z,10.61.40.115,018b4cb,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,3100,214095,Edge/Windows,DON-standard
+2028-01-10T19:16:33Z,10.61.40.115,018b4cb,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,7383,27840,Edge/Windows,DON-standard
+2028-01-10T19:17:05Z,10.61.10.129,8f775a2,CONNECT,https,web-portal.geomaps-tiles.net,-,200,allowed,content delivery,6559,61748,Edge/Windows,DON-standard
+2028-01-10T19:17:38Z,10.61.10.150,3ceed5d,CONNECT,https,auth-prod.airline-bookings.net,-,200,allowed,travel,1284,110771,Edge/Windows,DON-standard
+2028-01-10T19:45:04Z,10.61.10.147,1dc810d,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,4754,56193,Edge/Windows,DON-standard
+2028-01-10T19:49:20Z,10.61.10.144,2bbda0a,CONNECT,https,www.defense-travel.example,-,200,allowed,government,4966,68163,Chrome/Windows,DON-standard
+2028-01-10T19:55:44Z,10.61.10.174,f0c1147,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,2720,52456,Edge/Windows,DON-standard
+2028-01-10T20:03:03Z,10.61.10.171,1a4482d,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,4458,31178,Edge/Windows,DON-standard
+2028-01-10T20:10:40Z,10.61.40.109,f1895fa,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,4467,38932,Edge/Windows,DON-standard
+2028-01-10T20:18:43Z,10.61.40.112,f53ba9e,CONNECT,https,cdn.cloudstorage-sync.com,-,200,allowed,content delivery,7728,80279,Edge/Windows,DON-standard
+2028-01-10T20:20:06Z,10.61.20.105,c903854,CONNECT,https,cdn.helpdesk-tickets.com,-,200,allowed,content delivery,2623,21724,Edge/Windows,DON-standard
+2028-01-10T20:21:30Z,10.61.10.126,-,GET,http,www.ntp-pool-public.org,/static/90619d9.js,404,allowed,software updates,6331,65364,-,DON-standard
+2028-01-10T20:27:18Z,10.61.10.120,d04a17a,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,869,18058,Edge/Windows,DON-standard
+2028-01-10T20:28:58Z,10.61.40.127,0c11c12,CONNECT,https,www.tx-comptroller-forms.example,-,200,allowed,government,1267,123196,Edge/Windows,DON-standard
+2028-01-10T20:34:59Z,10.61.40.127,0c11c12,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,1395,36742,Edge/Windows,DON-standard
+2028-01-10T20:38:42Z,10.61.10.147,-,GET,http,cdn.certstatus-ocsp.net,/,200,allowed,software updates,3135,49527,-,DON-standard
+2028-01-10T20:51:41Z,10.61.40.121,f0ffa76,CONNECT,https,www.inglesideaviation-services.example,-,200,allowed,business,2305,72388,Edge/Windows,DON-standard
+2028-01-10T21:13:53Z,10.61.10.135,90ad5bf,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,2174,32285,Edge/Windows,DON-standard
+2028-01-10T21:21:53Z,10.61.10.138,8f0835d,CONNECT,https,static.fontcdn-static.net,-,200,allowed,content delivery,1875,211112,Edge/Windows,DON-standard
+2028-01-10T22:08:11Z,10.61.30.145,-,CONNECT,https,sig.corvid-security-cloud.example,-,200,allowed,software updates,8041,88250,-,DON-standard
+2028-01-10T22:44:42Z,10.61.40.112,f53ba9e,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,4049,60265,Edge/Windows,DON-standard
+2028-01-10T22:51:10Z,10.61.40.112,f53ba9e,CONNECT,https,www.calichetech.example,-,200,allowed,technology,8868,90832,Edge/Windows,DON-standard
+2028-01-10T23:05:07Z,10.61.20.126,1441580,CONNECT,https,www.defense-travel.example,-,200,allowed,government,1930,62556,Edge/Windows,DON-standard
+2028-01-10T23:12:57Z,10.61.20.120,caf0d9d,CONNECT,https,www.coastaldrainage.example,-,200,allowed,business,3551,51564,Edge/Windows,DON-standard
+2028-01-11T00:09:31Z,10.61.20.102,-,POST,http,sig.corvid-security-cloud.example,/images/961d98.png,200,allowed,software updates,1999,258838,-,DON-standard
+2028-01-11T00:24:24Z,10.61.40.127,-,CONNECT,https,static.ntp-pool-public.org,-,200,allowed,software updates,4354,24074,-,DON-standard
+2028-01-11T03:04:49Z,10.61.10.177,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,7384,38268,-,DON-standard
+2028-01-11T04:07:15Z,10.61.10.183,1b3c239,CONNECT,https,cdn.streamvideo-cdn.net,-,403,blocked,streaming media,382,1445,Edge/Windows,DON-category-deny
+2028-01-11T04:08:56Z,10.61.30.139,-,GET,http,static.telemetry-osvendor.com,/content/ce5b545c.cab,200,allowed,software updates,6485,13331,-,DON-standard
+2028-01-11T04:17:48Z,10.61.10.183,1b3c239,CONNECT,https,www.deltacog.example,-,200,allowed,business,3959,71198,Edge/Windows,DON-standard
+2028-01-11T04:55:14Z,10.61.10.117,-,CONNECT,https,static.telemetry-osvendor.com,-,200,allowed,software updates,2084,41574,-,DON-standard
+2028-01-11T05:25:47Z,10.61.20.114,5210489,CONNECT,https,img-cdn.docsign-flow.com,-,200,allowed,content delivery,3103,135488,Edge/Windows,DON-standard
+2028-01-11T07:23:04Z,10.61.30.133,-,CONNECT,https,www.osupdates-delivery.com,-,200,allowed,software updates,4108,86085,-,DON-standard
+2028-01-11T08:01:42Z,10.61.20.126,547582b,CONNECT,https,www.defense-travel.example,-,200,allowed,government,1827,136321,Chrome/Windows,DON-standard
+2028-01-11T08:56:55Z,10.61.20.123,ca50113,CONNECT,https,www.rgv-truck-parts.example,-,200,allowed,uncategorised,1996,25769,Edge/Windows,DON-standard
+2028-01-11T09:02:33Z,10.61.20.117,02c3d72,CONNECT,https,api.fleetfuel-cards.com,-,200,allowed,finance,2436,42257,Edge/Windows,DON-standard
+2028-01-11T09:14:59Z,10.61.20.108,c9bcd22,CONNECT,https,www.txdot-roadconditions.example,-,200,allowed,government,2069,83501,Edge/Windows,DON-standard
+2028-01-11T10:02:23Z,10.61.10.150,-,CONNECT,https,static.ntp-pool-public.org,-,200,allowed,software updates,3058,23452,-,DON-standard
+2028-01-11T10:22:01Z,10.61.20.102,d62999e,GET,http,sso-login.harborline6.example,/pki/ac8f1d.crl,200,allowed,news,2650,79835,Edge/Windows,DON-standard
+2028-01-11T12:39:43Z,10.61.20.117,02c3d72,CONNECT,https,login.insurance-claims-portal.com,-,200,allowed,insurance,5912,27425,Edge/Windows,DON-standard
+2028-01-11T12:40:42Z,10.61.20.123,ca50113,CONNECT,https,img-cdn.docsign-flow.com,-,200,allowed,content delivery,5358,101327,Edge/Windows,DON-standard
+2028-01-11T12:49:59Z,10.61.20.108,2d0663f,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,2486,34068,Edge/Windows,DON-standard
+2028-01-11T13:02:01Z,10.61.20.126,dd37977,CONNECT,https,www.apexprint.example,-,200,allowed,business,2066,111073,Edge/Windows,DON-standard
+2028-01-11T13:37:34Z,10.61.40.106,3d09af3,CONNECT,https,update-cdn.socialfeed-img.com,-,403,blocked,social media,492,1478,Chrome/Windows,DON-category-deny
+2028-01-11T13:59:04Z,10.61.10.111,5d93829,CONNECT,https,alamoaero-parts.example,-,200,allowed,business,3223,95179,Firefox/Windows,DON-standard
+2028-01-11T14:23:59Z,10.61.10.102,daf797a,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,1522,76039,Edge/Windows,DON-standard
+2028-01-11T14:27:44Z,10.61.40.109,f1895fa,CONNECT,https,www.apexprint.example,-,200,allowed,business,2205,17138,Edge/Windows,DON-standard
+2028-01-11T14:32:11Z,10.61.10.162,ee54afb,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,5515,97489,Edge/Windows,DON-standard
+2028-01-11T14:36:42Z,10.61.10.177,26f392a,CONNECT,https,www.inglesidesigns.example,-,200,allowed,business,4367,10707,Chrome/Windows,DON-standard
+2028-01-11T14:48:13Z,10.61.10.174,f0c1147,CONNECT,https,www.defense-travel.example,-,200,allowed,government,6432,93055,Edge/Windows,DON-standard
+2028-01-11T15:05:23Z,10.61.40.106,3d09af3,CONNECT,https,login.cloudstorage-sync.com,-,403,blocked,online storage,499,1115,Chrome/Windows,DON-category-deny
+2028-01-11T15:09:59Z,10.61.30.127,2893600,CONNECT,https,www.adnetwork-static.net,-,200,allowed,advertising,4434,45556,Edge/Windows,DON-standard
+2028-01-11T15:21:55Z,10.61.30.130,9deb037,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,11075,94183,Chrome/Windows,DON-standard
+2028-01-11T15:34:33Z,10.61.10.144,2bbda0a,CONNECT,https,www.defense-travel.example,-,200,allowed,government,3281,66345,Chrome/Windows,DON-standard
+2028-01-11T15:35:42Z,10.61.20.111,017e5ab,CONNECT,https,api.insurance-claims-portal.com,-,200,allowed,insurance,4229,83519,Edge/Windows,DON-standard
+2028-01-11T15:48:55Z,10.61.40.103,2e14974,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,2359,56005,Edge/Windows,DON-standard
+2028-01-11T15:51:20Z,10.61.40.115,018b4cb,CONNECT,https,cdn.weatherradar-tiles.com,-,200,allowed,weather,8194,115738,Edge/Windows,DON-standard
+2028-01-11T16:00:16Z,10.61.30.130,9deb037,CONNECT,https,www.alamocontract-logistics.example,-,200,allowed,business,3991,138890,Chrome/Windows,DON-standard
+2028-01-11T16:08:37Z,10.61.20.123,10341b0,CONNECT,https,www-2.coastalbendweather.net,-,200,allowed,weather,4003,30865,Edge/Windows,DON-standard
+2028-01-11T16:54:27Z,10.61.10.111,5d93829,CONNECT,https,www.sanpatsigns.example,-,200,allowed,business,2913,9474,Firefox/Windows,DON-standard
+2028-01-11T17:10:48Z,10.61.10.102,daf797a,CONNECT,https,www-2.bayside-ledger.example,-,200,allowed,news,1721,40046,Edge/Windows,DON-standard
+2028-01-11T17:23:29Z,10.61.30.139,b48ebfe,CONNECT,https,www.inglesidesigns.example,-,200,allowed,business,5809,143026,Firefox/Windows,DON-standard
+2028-01-11T17:26:23Z,10.61.30.115,513c6ad,CONNECT,https,cdn.fleetfuel-cards.com,-,200,allowed,finance,3373,60071,Chrome/Windows,DON-standard
+2028-01-11T17:49:32Z,10.61.10.168,195d9b6,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,1384,79823,Edge/Windows,DON-standard
+2028-01-11T18:10:11Z,10.61.10.102,daf797a,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,3975,98421,Edge/Windows,DON-standard
+2028-01-11T18:22:11Z,10.61.10.168,195d9b6,CONNECT,https,static.cdn-jslibs.net,-,200,allowed,content delivery,2311,25751,Edge/Windows,DON-standard
+2028-01-11T18:54:51Z,10.61.40.124,e7cefe8,CONNECT,https,web-static.cellcarrier-account.com,-,200,allowed,business,2404,123742,Edge/Windows,DON-standard
+2028-01-11T18:56:37Z,10.61.40.130,de2f8bf,CONNECT,https,cdn.airline-bookings.net,-,200,allowed,travel,7432,30505,Edge/Windows,DON-standard
+2028-01-11T18:58:04Z,10.61.40.127,0c11c12,CONNECT,https,gis.coastalbend-parcels.example,-,200,allowed,government,4818,128757,Edge/Windows,DON-standard
+2028-01-11T19:05:02Z,10.61.10.132,8abd5d1,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,2584,26786,Edge/Windows,DON-standard
+2028-01-11T19:09:57Z,10.61.20.126,dd37977,CONNECT,https,www-2.partsdepot-supply.com,-,200,allowed,shopping,2363,92408,Edge/Windows,DON-standard
+2028-01-11T19:21:19Z,10.61.40.124,e7cefe8,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,1127,175543,Edge/Windows,DON-standard
+2028-01-11T19:35:11Z,10.61.10.168,195d9b6,CONNECT,https,weather.fleet-metoc.example,-,200,allowed,weather,4625,52122,Edge/Windows,DON-standard
+2028-01-11T20:32:35Z,10.61.10.138,8f0835d,CONNECT,https,portal.navy-enterprise.example,-,200,allowed,government,1474,64587,Edge/Windows,DON-standard
+2028-01-11T20:36:50Z,10.61.10.153,717d8f7,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,3759,8325,Edge/Windows,DON-standard
+2028-01-11T20:38:46Z,10.61.10.132,8abd5d1,CONNECT,https,email.utilitybilling-pay.example,-,200,allowed,finance,8322,271518,Edge/Windows,DON-standard
+2028-01-11T21:07:56Z,10.61.20.108,64d29c0,CONNECT,https,go.pioneerappraisal.example,-,200,allowed,business,2966,188462,Chrome/Windows,DON-standard
+2028-01-11T21:15:42Z,10.61.40.103,2e14974,CONNECT,https,codes.municipal-code-library.example,-,200,allowed,government,2088,35166,Edge/Windows,DON-standard
+2028-01-11T21:15:56Z,10.61.40.115,018b4cb,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,6169,47968,Edge/Windows,DON-standard
+2028-01-11T21:25:15Z,10.61.30.124,2a21ddb,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,3736,73741,Edge/Windows,DON-standard
+2028-01-11T21:28:35Z,10.61.30.103,7bfabff,CONNECT,https,www.newswire-national.com,-,200,allowed,news,4929,97901,Edge/Windows,DON-standard
+2028-01-11T21:36:24Z,10.61.10.114,dfd9066,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,5966,69943,Edge/Windows,DON-standard
+2028-01-11T21:48:23Z,10.61.10.153,717d8f7,CONNECT,https,api.airline-bookings.net,-,200,allowed,travel,4736,203142,Edge/Windows,DON-standard
+2028-01-11T23:12:22Z,10.61.30.112,511e5cc,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,2428,179761,Edge/Windows,DON-standard
+2028-01-11T23:15:42Z,10.61.10.102,-,GET,http,www.osupdates-delivery.com,/static/528be60.js,200,allowed,software updates,2038,115383,-,DON-standard
+2028-01-12T00:12:38Z,10.61.20.126,1441580,CONNECT,https,www.hrcloud-payroll.com,-,200,allowed,finance,9289,34104,Edge/Windows,DON-standard
+2028-01-12T02:24:24Z,10.61.20.105,3412911,CONNECT,https,www.cellcarrier-account.com,-,200,allowed,business,3231,59986,Edge/Windows,DON-standard
+2028-01-12T03:02:14Z,10.61.20.114,07e2b9c,CONNECT,https,sso-login.harborline6.example,-,200,allowed,news,4062,74718,Edge/Windows,DON-standard
+2028-01-12T03:17:31Z,10.61.40.127,-,CONNECT,https,cdn.certstatus-ocsp.net,-,200,allowed,software updates,4292,92989,-,DON-standard
+2028-01-12T05:04:28Z,10.61.30.112,-,GET,http,www.osupdates-delivery.com,/ocsp/abf0245fd86b,200,allowed,software updates,1324,31380,-,DON-standard
+2028-01-12T05:20:01Z,10.61.20.126,547582b,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,2972,58884,Edge/Windows,DON-standard
+2028-01-12T06:24:24Z,10.61.20.102,d62999e,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,3481,70281,Edge/Windows,DON-standard
+2028-01-12T06:32:50Z,10.61.20.120,3f2f052,CONNECT,https,www.fontcdn-static.net,-,200,allowed,content delivery,3199,148776,Edge/Windows,DON-standard
+2028-01-12T06:37:39Z,10.61.20.126,547582b,GET,http,api-v2.geomaps-tiles.net,/content/57894fc4.cab,200,allowed,content delivery,1550,178125,Edge/Windows,DON-standard
+2028-01-12T08:45:26Z,10.61.20.120,3f2f052,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,2606,83134,Edge/Windows,DON-standard
+2028-01-12T10:12:34Z,10.61.20.114,5210489,CONNECT,https,static.coastalbendweather.net,-,200,allowed,weather,4423,109763,Edge/Windows,DON-standard
+2028-01-12T11:34:54Z,10.61.20.135,233ee73,CONNECT,https,www.tidewaterlibrary-foundation.example,-,200,allowed,weather,1875,82159,Edge/Windows,DON-standard
+2028-01-12T12:21:02Z,10.61.40.121,-,CONNECT,https,api.certstatus-ocsp.net,-,200,allowed,software updates,415,42076,-,DON-standard
+2028-01-12T13:16:28Z,10.61.20.123,e659749,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,6820,154455,Edge/Windows,DON-standard
+2028-01-12T13:51:34Z,10.61.30.112,511e5cc,CONNECT,https,login.docsign-flow.com,-,403,blocked,online storage,395,1182,Edge/Windows,DON-category-deny
+2028-01-12T14:16:27Z,10.61.10.174,f0c1147,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,6567,40807,Edge/Windows,DON-standard
+2028-01-12T14:20:23Z,10.61.10.141,86f3552,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,3199,104462,Edge/Windows,DON-standard
+2028-01-12T14:34:31Z,10.61.10.180,a993eb2,CONNECT,https,www.tidewaterlibrary-foundation.example,-,200,allowed,weather,1923,40494,Edge/Windows,DON-standard
+2028-01-12T14:49:59Z,10.61.20.102,-,GET,http,www.browser-safecheck.net,/content/089e5b4c.cab,200,allowed,software updates,5346,39190,-,DON-standard
+2028-01-12T15:06:08Z,10.61.10.117,48e1283,CONNECT,https,www.calichetech.example,-,200,allowed,technology,3422,192981,Edge/Windows,DON-standard
+2028-01-12T15:11:08Z,10.61.40.103,2e14974,CONNECT,https,api.harborline6.example,-,200,allowed,news,2158,93611,Edge/Windows,DON-standard
+2028-01-12T15:17:15Z,10.61.10.114,-,CONNECT,https,www-east.telemetry-osvendor.com,-,200,allowed,software updates,5676,85747,-,DON-standard
+2028-01-12T15:19:40Z,10.61.10.144,2bbda0a,CONNECT,https,static.cctexas-services.org,-,200,allowed,government,1398,45563,Chrome/Windows,DON-standard
+2028-01-12T15:20:00Z,10.61.30.133,0f95104,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,1556,241803,Edge/Windows,DON-standard
+2028-01-12T15:33:57Z,10.61.40.115,018b4cb,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,2335,106723,Edge/Windows,DON-standard
+2028-01-12T15:40:58Z,10.61.30.130,9deb037,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,2509,83096,Chrome/Windows,DON-standard
+2028-01-12T15:48:49Z,10.61.10.123,-,GET,http,static.ntp-pool-public.org,/content/e8b41774.cab,200,allowed,software updates,3732,34365,-,DON-standard
+2028-01-12T16:00:14Z,10.61.10.171,1a4482d,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,986,89399,Edge/Windows,DON-standard
+2028-01-12T16:03:03Z,10.61.30.118,3cbcd0e,CONNECT,https,portal.navy-enterprise.example,-,200,allowed,government,2314,3299,Edge/Windows,DON-standard
+2028-01-12T16:16:43Z,10.61.40.103,-,CONNECT,https,www.browser-safecheck.net,-,200,allowed,software updates,2668,65875,-,DON-standard
+2028-01-12T16:24:29Z,10.61.30.118,-,CONNECT,https,www.ntp-pool-public.org,-,200,allowed,software updates,7968,100632,-,DON-standard
+2028-01-12T16:33:20Z,10.61.20.126,6a3d868,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,5795,98858,Edge/Windows,DON-standard
+2028-01-12T16:34:44Z,10.61.40.124,e7cefe8,CONNECT,https,www-east.hotel-reservations.com,-,200,allowed,travel,1947,59038,Edge/Windows,DON-standard
+2028-01-12T16:35:57Z,10.61.10.141,86f3552,CONNECT,https,sso-login.hotel-reservations.com,-,200,allowed,travel,2692,173982,Edge/Windows,DON-standard
+2028-01-12T16:36:04Z,10.61.20.117,003b580,GET,http,weather.fleet-metoc.example,/static/c2409f2.js,302,allowed,weather,6793,309,Edge/Windows,DON-standard
+2028-01-12T16:36:44Z,10.61.20.129,9e4e814,CONNECT,https,www.alamosimulation.example,-,200,allowed,business,4206,235397,Edge/Windows,DON-standard
+2028-01-12T16:42:56Z,10.61.30.139,b48ebfe,CONNECT,https,www.tidewaterlibrary-foundation.example,-,200,allowed,weather,2850,58077,Firefox/Windows,DON-standard
+2028-01-12T16:45:35Z,10.61.40.103,2e14974,CONNECT,https,www.tx-comptroller-forms.example,-,200,allowed,government,6807,162625,Edge/Windows,DON-standard
+2028-01-12T16:57:56Z,10.61.40.124,e7cefe8,CONNECT,https,www.driftwoodmud.example,-,200,allowed,business,4113,113189,Chrome/Windows,DON-standard
+2028-01-12T17:00:54Z,10.61.30.103,-,GET,http,static.telemetry-osvendor.com,/static/7d02487.js,200,allowed,software updates,1067,97602,-,DON-standard
+2028-01-12T17:01:49Z,10.61.20.120,2df6e26,CONNECT,https,www.helpdesk-tickets.com,-,200,allowed,business software,3117,191805,Edge/Windows,DON-standard
+2028-01-12T17:14:09Z,10.61.10.180,a993eb2,CONNECT,https,www.navy-personnel-command.example,-,200,allowed,government,2399,58752,Edge/Windows,DON-standard
+2028-01-12T17:20:26Z,10.61.10.120,d04a17a,CONNECT,https,cdn.hospital-patient-portal.org,-,200,allowed,content delivery,785,207946,Edge/Windows,DON-standard
+2028-01-12T17:24:50Z,10.61.10.150,3ceed5d,CONNECT,https,api-v2.geomaps-tiles.net,-,200,allowed,content delivery,6804,54301,Edge/Windows,DON-standard
+2028-01-12T17:31:43Z,10.61.10.180,a993eb2,CONNECT,https,static.officesuite-mail.com,-,200,allowed,business software,4816,45009,Edge/Windows,DON-standard
+2028-01-12T18:04:01Z,10.61.30.115,513c6ad,CONNECT,https,cdn.nueces-county-tx.org,-,200,allowed,government,3050,11519,Edge/Windows,DON-standard
+2028-01-12T18:14:32Z,10.61.30.133,0f95104,CONNECT,https,static.gis-basemaps.org,-,200,allowed,content delivery,2302,31629,Edge/Windows,DON-standard
+2028-01-12T18:20:24Z,10.61.10.183,1b3c239,CONNECT,https,www.seawallcatering.example,-,200,allowed,business,2793,140678,Edge/Windows,DON-standard
+2028-01-12T18:39:10Z,10.61.30.139,b48ebfe,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,4885,81263,Firefox/Windows,DON-standard
+2028-01-12T19:12:29Z,10.61.40.130,de2f8bf,CONNECT,https,sso-login.geomaps-tiles.net,-,200,allowed,content delivery,2391,102030,Edge/Windows,DON-standard
+2028-01-12T19:51:17Z,10.61.10.171,1a4482d,CONNECT,https,cdn.cloudstorage-sync.com,-,200,allowed,content delivery,10119,133133,Edge/Windows,DON-standard
+2028-01-12T20:17:43Z,10.61.30.130,9deb037,CONNECT,https,www.alamocontract-logistics.example,-,200,allowed,business,1697,54955,Chrome/Windows,DON-standard
+2028-01-12T20:23:13Z,10.61.10.102,daf797a,CONNECT,https,training.navy-elearning.example,-,200,allowed,government,1497,40092,Edge/Windows,DON-standard
+2028-01-12T20:50:39Z,10.61.30.133,0f95104,CONNECT,https,www.defense-travel.example,-,200,allowed,government,3998,46941,Edge/Windows,DON-standard
+2028-01-12T20:57:55Z,10.61.40.106,-,CONNECT,https,www.osupdates-delivery.com,-,200,allowed,software updates,939,177613,-,DON-standard
+2028-01-12T20:59:07Z,10.61.10.132,8abd5d1,CONNECT,https,login.adnetwork-static.net,-,200,allowed,advertising,6532,59194,Edge/Windows,DON-standard
+2028-01-12T21:00:38Z,10.61.10.147,-,GET,http,static.ntp-pool-public.org,/,302,allowed,software updates,3573,451,-,DON-standard
+2028-01-12T21:21:24Z,10.61.20.132,2e67aa6,CONNECT,https,www.defense-travel.example,-,200,allowed,government,3622,164935,Edge/Windows,DON-standard
+2028-01-12T21:28:00Z,10.61.10.108,ca50a9a,CONNECT,https,static-assets.retail-orders.com,-,200,allowed,shopping,1115,19954,Edge/Windows,DON-standard
+2028-01-12T21:46:22Z,10.61.30.145,c2c6a95,CONNECT,https,login.docsign-flow.com,-,403,blocked,online storage,478,1315,Edge/Windows,DON-category-deny
+2028-01-12T21:49:26Z,10.61.40.118,35b768b,CONNECT,https,www.officesuite-cdn.net,-,200,allowed,content delivery,2710,14150,Edge/Windows,DON-standard
+2028-01-12T22:04:59Z,10.61.10.141,86f3552,CONNECT,https,api.docsign-flow.com,-,403,blocked,online storage,399,1156,Edge/Windows,DON-category-deny
+2028-01-12T22:10:58Z,10.61.30.130,9deb037,CONNECT,https,www.prairierange-services.example,-,200,allowed,business,9672,31357,Chrome/Windows,DON-standard
+2028-01-12T22:49:04Z,10.61.10.141,86f3552,CONNECT,https,www.orbitdepot-repair.example,-,200,allowed,business,7195,96148,Edge/Windows,DON-standard
+2028-01-12T22:50:56Z,10.61.10.120,d04a17a,CONNECT,https,update-cdn.socialfeed-img.com,-,403,blocked,social media,663,1162,Edge/Windows,DON-category-deny
+2028-01-12T23:32:15Z,10.61.20.117,a342c09,CONNECT,https,www.tx-comptroller-forms.example,-,200,allowed,government,2779,49409,Edge/Windows,DON-standard

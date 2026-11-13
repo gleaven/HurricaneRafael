@@ -6,6 +6,8 @@
 #open	2027-09-17-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1821161716.623973	-	10.14.30.23	54.104.64.23	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1821174720.256310	-	10.14.22.14	64.133.123.83	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1821151182.849668	-	10.14.20.33	10.14.10.6	53	DNS::External_Name	portal-test.cbpwa-services.org is pointing to a local host	10.14.20.33	10.14.10.6	53	Notice::ACTION_LOG
+1821155575.213979	-	10.14.30.66	34.194.54.8	443	SSL::Certificate_Expires_Soon	Certificate sso-login.hotel-reservations.com is going to expire soon	10.14.30.66	34.194.54.8	443	Notice::ACTION_LOG
+1821159360.047093	-	10.14.21.38	54.13.44.217	443	SSL::Certificate_Expires_Soon	Certificate www.school-district-cc.org is going to expire soon	10.14.21.38	54.13.44.217	443	Notice::ACTION_LOG
+1821204254.663238	-	10.14.22.27	13.60.133.44	443	SSL::Invalid_Server_Cert	SSL certificate validation failed with (unable to get local issuer certificate)	10.14.22.27	13.60.133.44	443	Notice::ACTION_LOG
 #close	2027-09-18-00-00-00

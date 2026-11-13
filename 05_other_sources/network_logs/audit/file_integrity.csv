@@ -1,162 +1,552 @@
 time_utc,host,path,event,previous_hash,new_hash,user,source_host,diff_summary
-2027-07-24T15:39:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\c99037fe.xlsx,MODIFIED,sha256=b7a281c0bbb65cc1,sha256=e99b6e7756199145,GW-TEC-CHAVEZ,GW-SYS-JMP-01,
-2027-07-26T14:58:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\d3cbe036.pdf,MODIFIED,sha256=76fe401ed184b636,sha256=b2586df33626c2eb,GW-OPS-PEREZ,GW-WS-OPS-05,
-2027-07-26T16:40:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\97a822f0.pdf,MODIFIED,sha256=45401c9fb603e36f,sha256=13fc3f56ff3df622,GW-ENG-BAKER,GW-SYS-JMP-01,
-2027-07-28T22:16:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\e0a1f683.docx,MODIFIED,sha256=2f46bc3dd40c32a8,sha256=494b66bc38fac381,GW-ENG-PATEL,GW-WS-ENG-02,
-2027-07-29T22:00:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\9562108b.docx,MODIFIED,sha256=15dc87903ba73fb4,sha256=d55959cd61ab8a62,GW-ENG-VILLARREAL,GW-WS-ENG-04,
-2027-07-30T19:03:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\1d571add.docx,MODIFIED,sha256=2443863852963b9b,sha256=d610bb30d1cb5911,GW-TEC-WILSON,GW-SYS-JMP-01,
-2027-07-30T19:55:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\17699cba.pdf,MODIFIED,sha256=b363408dded3ed27,sha256=c9bcd22941694617,GW-TEC-SHAH,GW-SYS-JMP-01,
-2027-07-30T22:58:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\fa3a8b53.xlsx,MODIFIED,sha256=b19b1c3b953cee26,sha256=0060704fc3129230,GW-OPS-PHAM,GW-WS-OPS-05,
-2027-07-31T16:38:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\b4aa9fa5.xlsx,MODIFIED,sha256=a6597ed45c80a4a4,sha256=9362d8212e772182,GW-ENG-CLARK,GW-SYS-JMP-01,
-2027-08-01T17:40:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\b269a375.docx,MODIFIED,sha256=e25481b35d06ab8b,sha256=133c30d9f6ec6b11,GW-WTR-CANTU,GW-SYS-JMP-01,
-2027-08-01T21:10:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\68dea3fe.xlsx,MODIFIED,sha256=e413ed6284428688,sha256=f003cd1c03a9debd,GW-TEC-MILLER,GW-SYS-JMP-01,
-2027-08-02T12:50:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\9b2c1b34.pdf,MODIFIED,sha256=0aefaf9613bc7585,sha256=618d8cb597d42990,GW-WTR-NELSON,GW-SYS-JMP-01,
-2027-08-02T19:44:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\9831d090.docx,MODIFIED,sha256=f8c754f3e05af076,sha256=c07e7d3a33432093,GW-OPS-ANDERSON,GW-SYS-JMP-01,
-2027-08-04T20:34:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\f80da824.xlsx,MODIFIED,sha256=26f7ad9a93e14e04,sha256=51de53bb9f9d31a0,GW-WTR-SAENZ,GW-SYS-JMP-01,
-2027-08-05T17:50:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\e7620443.pdf,MODIFIED,sha256=069c79c1858d8970,sha256=ec2a1599b53deb2a,GW-ENG-THOMAS,GW-WS-ENG-01,
-2027-08-08T14:39:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\82f11fc8.xlsx,MODIFIED,sha256=03ff4848873bb099,sha256=f17688f2044fbf67,GW-TEC-MARTINEZ,GW-SYS-JMP-01,
-2027-08-10T17:40:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\a69ce232.xlsx,MODIFIED,sha256=63660bf38d1cc905,sha256=f536c5d48d419c86,GW-ENG-SMITH,GW-WS-ENG-04,
-2027-08-11T12:22:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\3e12a48d.xml,MODIFIED,sha256=e56928f4f80dc0f0,sha256=79fe59e6942e73a4,GW-ENG-THOMAS,GW-WS-ENG-01,LTC band 2.0V -> 1.5V
-2027-08-11T19:58:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\df9ed4b0.xml,MODIFIED,sha256=1559c99046635e2f,sha256=017e5ab93c28971e,GW-WTR-WRIGHT,GW-WTP-HMI-02,revision label updated
-2027-08-16T12:07:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\cfbf7962.xlsx,MODIFIED,sha256=19deaae2ec7e6f97,sha256=b3e63a67ec11e6dc,GW-TEC-MARTINEZ,GW-SYS-JMP-01,
-2027-08-17T18:55:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\8cb0d182.xml,MODIFIED,sha256=977c109854201179,sha256=3bdf93bc72b9d4f1,GW-WTR-MORALES,GW-SYS-JMP-01,revision label updated
-2027-08-18T17:21:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\742da1f8.xml,MODIFIED,sha256=4780dbba7d1d7ee2,sha256=88181fe18d62ccec,GW-ENG-SCHROEDER,GW-WS-ENG-05,recloser shots 3 -> 2 for R-04A
-2027-08-20T13:40:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\0a287a49.docx,MODIFIED,sha256=aeb1ae9129f7c309,sha256=093bbec5257d907e,GW-ENG-MARTINEZ,GW-SYS-JMP-01,
-2027-08-23T19:48:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\30783868.xlsx,MODIFIED,sha256=7c876120d871ad6a,sha256=2e1497483e8915d2,GW-WTR-ALLEN,GW-WTP-HMI-02,
-2027-08-24T18:19:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\e6acb241.xlsx,MODIFIED,sha256=05d9e72edb3adb7a,sha256=93bd60125cc28405,GW-OPS-CANTU,GW-WS-OPS-05,
-2027-08-24T22:33:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\8df17820.pdf,MODIFIED,sha256=cbf9c2bebecdf7de,sha256=caf0d9d7ae1483cb,GW-OPS-SCOTT,GW-WS-OPS-05,
-2027-08-25T22:26:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\07bfcfb6.docx,MODIFIED,sha256=e1d55ab1870e0879,sha256=a0bca064759628ef,GW-ENG-NGUYEN,GW-WS-ENG-02,
-2027-08-27T12:32:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\8e5926f4.xml,MODIFIED,sha256=287d8a80183213bf,sha256=6a053a208a8bf6ff,GW-OPS-ANDERSON,GW-WS-OPS-05,overcurrent_trip_threshold 900A -> 1000A for relay R-05A
-2027-08-27T15:00:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\a15ab9ba.pdf,MODIFIED,sha256=39bf0b3755ca68e7,sha256=c999ff50e64c1257,GW-WTR-SANCHEZ,GW-WTP-HMI-02,
-2027-08-27T20:27:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\8b14ea1b.pdf,MODIFIED,sha256=e5dbdc8696253f86,sha256=16c509b649fb9f84,GW-WTR-SAENZ,GW-SYS-JMP-01,
-2027-08-29T18:53:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\1e7ffe9a.pdf,MODIFIED,sha256=982f743925d3e3ee,sha256=a61b14141f84c086,GW-TEC-MILLER,GW-SYS-JMP-01,
-2027-08-29T22:41:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\194fc752.xml,MODIFIED,sha256=4a39ff2afc84337f,sha256=730b3468242c24ea,GW-OPS-PEREZ,GW-SYS-JMP-01,LTC band 2.0V -> 1.5V
-2027-08-30T21:40:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\faa0f26c.xlsx,MODIFIED,sha256=b8abe89fbd7d1d0c,sha256=e659749e073806c8,GW-ENG-SMITH,GW-SYS-JMP-01,
-2027-08-31T18:24:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\2bbe48a9.xml,MODIFIED,sha256=e8552ef938505926,sha256=2d0663f0f4bd581b,GW-WTR-PENA,GW-WTP-HMI-02,revision label updated
-2027-08-31T18:56:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\787579f3.docx,MODIFIED,sha256=ee08406db48c5650,sha256=bbcb56365f3e84f2,GW-ENG-SMITH,GW-WS-ENG-04,
-2027-09-01T20:33:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\4d8a5648.pdf,MODIFIED,sha256=8aef04afce5de362,sha256=f65f1100985e14d5,GW-WTR-SANCHEZ,GW-WTP-HMI-02,
-2027-09-07T20:51:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\2f46265f.docx,MODIFIED,sha256=4c2345ea7a2d72bb,sha256=79c8918026cc5b91,GW-ENG-VILLARREAL,GW-WS-ENG-04,
-2027-09-09T13:29:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\a2d45272.xlsx,MODIFIED,sha256=d95eec24dc0cf5b5,sha256=2bbda0a14d414209,GW-OPS-RODRIGUEZ,GW-WS-OPS-05,
-2027-09-11T20:21:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\9eb02912.docx,MODIFIED,sha256=53def2caa42028e2,sha256=f085a9719c854768,GW-ENG-SMITH,GW-WS-ENG-04,
-2027-09-11T22:11:07Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\rtu_config_draft.xml,MODIFIED,sha256=d7e1a0f3c2b18429,sha256=a3f8c2d1e9b04517,GW-ENG-VELA,GW-SYS-JMP-01,"overcurrent_trip_threshold 1200A -> 2400A for relays R-02A, R-02B, R-02C"
-2027-09-12T13:57:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\8a3d6609.docx,MODIFIED,sha256=784d4eccce5da88d,sha256=a55a6ac651eb8bb5,GW-ENG-BAKER,GW-SYS-JMP-01,
-2027-09-13T19:54:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\e46a4496.xml,MODIFIED,sha256=e88273c361da82be,sha256=567a489c67c223ed,GW-OPS-THOMAS,GW-WS-OPS-05,alarm text edited
-2027-09-15T21:03:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\0c4b1ba1.xml,MODIFIED,sha256=e33a47359bb54dd5,sha256=a3f9b6fa209826e3,GW-WTR-CANTU,GW-WTP-HMI-02,CT ratio field corrected 600:5 -> 800:5 for R-03C
-2027-09-16T13:59:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\45098c11.pdf,MODIFIED,sha256=42b7f0a30e471756,sha256=51dd8bdfd84dddba,GW-ENG-MARTINEZ,GW-WS-ENG-03,
-2027-09-17T13:52:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\647c097f.xml,MODIFIED,sha256=33c960c97e50d1aa,sha256=230c3e6f0363d5a1,GW-TEC-MILLER,GW-SYS-JMP-01,alarm text edited
-2027-09-18T19:08:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\1674e982.docx,MODIFIED,sha256=17688cff393c00c1,sha256=511e5cc903be6f76,GW-ENG-NGUYEN,GW-WS-ENG-02,
-2027-09-19T12:06:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\150acc4b.docx,MODIFIED,sha256=9d45201b7f8e28f6,sha256=2a21ddb1f7634b2c,GW-ENG-BAKER,GW-WS-ENG-03,
-2027-09-19T17:01:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\c909f92b.docx,MODIFIED,sha256=f089c90511c6fe92,sha256=2501c84366a69c51,GW-WTR-SANCHEZ,GW-SYS-JMP-01,
-2027-09-19T17:26:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\33cc7cf8.xlsx,MODIFIED,sha256=ae2f53b6cef3c24d,sha256=0155fbf7aeb436a7,GW-OPS-PHAM,GW-SYS-JMP-01,
-2027-09-19T19:17:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\793b1c49.docx,MODIFIED,sha256=811d2e50e7ef038b,sha256=547582b7232fd106,GW-OPS-ALVAREZ,GW-SYS-JMP-01,
-2027-09-19T20:54:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\95105097.docx,MODIFIED,sha256=4dc274c1e7ff0a32,sha256=b5415e7f4baa958c,GW-ENG-THOMAS,GW-WS-ENG-01,
-2027-09-22T14:05:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\14c4acba.xlsx,MODIFIED,sha256=9f783f9278657a76,sha256=ba1f25ea41aa75c0,GW-WTR-WHITE,GW-SYS-JMP-01,
-2027-09-22T16:32:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\c05e0ac2.xml,MODIFIED,sha256=d1f3dac27faef764,sha256=24e01263ec138b94,GW-OPS-CANTU,GW-WS-OPS-05,revision label updated
-2027-09-23T14:07:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\8e10bbdb.pdf,MODIFIED,sha256=96fdfeb7f4bcfc27,sha256=aadf0e20315377b6,GW-OPS-PEREZ,GW-WS-OPS-05,
-2027-09-25T20:56:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\1fc2810c.docx,MODIFIED,sha256=aefe453a1a517c4c,sha256=b2639a415d0e9d04,GW-ENG-JOHNSON,GW-WS-ENG-01,
-2027-09-25T22:48:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\1572e587.xml,MODIFIED,sha256=7ff90da471412924,sha256=25003d936af890c6,GW-ENG-JOHNSON,GW-WS-ENG-01,CT ratio field corrected 600:5 -> 800:5 for R-03C
-2027-09-26T17:16:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\8bdcf285.docx,MODIFIED,sha256=d669c8f92c10967e,sha256=ebf8839bbd4a072e,GW-ENG-THOMAS,GW-WS-ENG-01,
-2027-09-27T14:40:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\58da89cc.xml,MODIFIED,sha256=9941b92528ce7d2f,sha256=44549c9ed920042d,GW-OPS-SCOTT,GW-WS-OPS-05,alarm text edited
-2027-09-27T19:03:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\7a66a842.xlsx,MODIFIED,sha256=72fef5638c905009,sha256=f287d7ba65dda133,GW-WTR-MORALES,GW-SYS-JMP-01,
-2027-09-27T19:09:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\b4c2def8.xlsx,MODIFIED,sha256=3d90ab7775c5bfee,sha256=3f9dfae8e8354a01,GW-WTR-NELSON,GW-WTP-HMI-02,
-2027-10-01T18:43:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\3770474a.pdf,MODIFIED,sha256=6f883812d3b8f233,sha256=5a5d71103d54a800,GW-TEC-MORENO,GW-SYS-JMP-01,
-2027-10-04T16:25:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\7691a93c.xlsx,MODIFIED,sha256=e2539cca106fc077,sha256=2d732874e2514b5a,GW-OPS-CANTU,GW-WS-OPS-05,
-2027-10-04T17:44:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\e5413e96.xml,MODIFIED,sha256=74bc84ddf615e2dd,sha256=a03582c811aefaac,GW-WTR-CANTU,GW-SYS-JMP-01,comment block updated
-2027-10-04T18:03:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\929adfae.docx,MODIFIED,sha256=ed62b002987aa352,sha256=d04a17aedfce18af,GW-ENG-PATEL,GW-WS-ENG-02,
-2027-10-04T22:33:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\aa63c0dc.xlsx,MODIFIED,sha256=fe47357cc518b202,sha256=effe35be4f2b27d6,GW-TEC-MORENO,GW-SYS-JMP-01,
-2027-10-07T19:28:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\de522cc6.docx,MODIFIED,sha256=9d189c95dbf93ef1,sha256=ccc839f8e08d6ff0,GW-TEC-MILLER,GW-SYS-JMP-01,
-2027-10-07T19:51:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\8cb0a924.docx,MODIFIED,sha256=40a61a42ed41bda4,sha256=4e64386ea46c348f,GW-ENG-SMITH,GW-SYS-JMP-01,
-2027-10-07T22:08:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\606371f2.xml,MODIFIED,sha256=0f4a97ef4806aba7,sha256=90ad5bfcf4eca647,GW-OPS-PEREZ,GW-SYS-JMP-01,relay 51 time dial 2.0 -> 2.5 for relay R-05B
-2027-10-09T17:29:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fe796bc8.docx,MODIFIED,sha256=3b9830142628d4ef,sha256=a2cacb90e865ef25,GW-TEC-WILSON,GW-SYS-JMP-01,
-2027-10-09T19:12:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\4ec4f371.pdf,MODIFIED,sha256=bc480e15e4bd6f93,sha256=d81b2ce479e94bd0,GW-ENG-RUIZ,GW-WS-ENG-05,
-2027-10-11T14:32:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\15f20fca.docx,MODIFIED,sha256=ba6289cce64d06ec,sha256=c903854a79670dad,GW-OPS-CANTU,GW-WS-OPS-05,
-2027-10-11T19:49:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\9dbfabc7.pdf,MODIFIED,sha256=d1a6c51efeae6351,sha256=87154e66a1461441,GW-OPS-RODRIGUEZ,GW-SYS-JMP-01,
-2027-10-11T22:42:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\33ae657e.docx,MODIFIED,sha256=d26fbed0fd0e7185,sha256=d19580a5cd8e4706,GW-OPS-ANDERSON,GW-SYS-JMP-01,
-2027-10-13T16:08:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\75dc92bb.xlsx,MODIFIED,sha256=98be43514477669a,sha256=c4b86e925ecf4805,GW-ENG-CLARK,GW-WS-ENG-02,
-2027-10-13T21:32:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\ad6fc5ab.pdf,MODIFIED,sha256=d09d0d79a3a89568,sha256=c333487b66f4845f,GW-ENG-JOHNSON,GW-WS-ENG-01,
-2027-10-15T22:36:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\608bd72e.xml,MODIFIED,sha256=d6399d40756b6ad9,sha256=d7acfe8f51fd4e11,GW-TEC-MORENO,GW-WS-ENG-02,LTC band 2.0V -> 1.5V
-2027-10-17T18:16:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\b8ace0fb.pdf,MODIFIED,sha256=e1c1a7b515034f67,sha256=e50f263d39e38a98,GW-ENG-SCHROEDER,GW-WS-ENG-05,
-2027-10-17T19:33:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\5c010be9.xlsx,MODIFIED,sha256=278e2794f4f7555f,sha256=52104890d8a0ba62,GW-TEC-MORENO,GW-WS-ENG-02,
-2027-10-18T17:39:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\bc716a03.pdf,MODIFIED,sha256=52dde037e55e3049,sha256=b7fa4d9b78d5f7e1,GW-ENG-SCHROEDER,GW-WS-ENG-05,
-2027-10-19T16:38:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\ad6c5703.pdf,MODIFIED,sha256=a3c19bbd6b8b328e,sha256=d03d8900ad412f97,GW-ENG-JOHNSON,GW-WS-ENG-01,
-2027-10-21T17:06:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\edc5684e.xml,MODIFIED,sha256=26341d17e25541ca,sha256=9c18db5421feb6cd,GW-WTR-SANCHEZ,GW-SYS-JMP-01,LTC band 2.0V -> 1.5V
-2027-10-21T20:36:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\97301ddd.pdf,MODIFIED,sha256=215003f0bcb42d46,sha256=c2c6a956dea525cd,GW-TEC-MORENO,GW-SYS-JMP-01,
-2027-10-22T17:47:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\7a98eed2.docx,MODIFIED,sha256=bc9b4444cf344065,sha256=5e68948992699f70,GW-TEC-MILLER,GW-SYS-JMP-01,
-2027-10-23T16:03:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\09097572.xlsx,MODIFIED,sha256=270ec5f3a74968cf,sha256=a043f3f5507d31ef,GW-ENG-SMITH,GW-WS-ENG-04,
-2027-10-23T17:37:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\30c016ae.xml,MODIFIED,sha256=e79be0ac8e91eda5,sha256=11ec648f8c122838,GW-OPS-PEREZ,GW-WS-OPS-05,CT ratio field corrected 600:5 -> 800:5 for R-03C
-2027-10-23T21:48:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\5dd5a672.xlsx,MODIFIED,sha256=5d64af728733eb0e,sha256=a030ab9b5d61abed,GW-TEC-WILSON,GW-SYS-JMP-01,
-2027-10-24T14:23:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\0f5545ed.xlsx,MODIFIED,sha256=ec701bc340747766,sha256=90418d9df41f5259,GW-WTR-CANTU,GW-SYS-JMP-01,
-2027-10-25T13:36:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\fa1cce6a.xml,MODIFIED,sha256=9023bae17ed2213f,sha256=90a200b1395ca6e2,GW-WTR-NELSON,GW-WTP-HMI-02,CT ratio field corrected 600:5 -> 800:5 for R-03C
-2027-10-25T14:47:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\cab6117f.xml,MODIFIED,sha256=37efc91e95dadd96,sha256=68f08bcc6493220d,GW-ENG-NGUYEN,GW-WS-ENG-02,overcurrent_trip_threshold 900A -> 1000A for relay R-05A
-2027-10-26T14:13:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\141543dc.docx,MODIFIED,sha256=6ea237a1c776009f,sha256=887423a55f88d9c1,GW-ENG-THOMAS,GW-WS-ENG-01,
-2027-10-26T16:44:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\b8f4ef29.xml,MODIFIED,sha256=4dae78b903e02157,sha256=d33f90884366fc06,GW-OPS-SCOTT,GW-SYS-JMP-01,LTC band 2.0V -> 1.5V
-2027-10-28T21:53:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\ebdf85ba.docx,MODIFIED,sha256=c6f17b5577ae4f84,sha256=f53ba9e8a6b20bf0,GW-ENG-THOMAS,GW-WS-ENG-01,
-2027-11-02T21:30:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\a21efe52.pdf,MODIFIED,sha256=2fdd4bb2cc664395,sha256=b64fb9b8ed2053b9,GW-ENG-THOMAS,GW-SYS-JMP-01,
-2027-11-04T20:40:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\b360cd7e.xlsx,MODIFIED,sha256=38aace5202f466a3,sha256=da89875b7a3f0c56,GW-ENG-JIMENEZ,GW-WS-ENG-03,
-2027-11-05T12:05:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\d0804c3a.docx,MODIFIED,sha256=195a149990a95265,sha256=8b0cdaa666d42596,GW-WTR-CANTU,GW-WTP-HMI-02,
-2027-11-05T16:51:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\c9bbeaef.docx,MODIFIED,sha256=b40ae68ec205ecd0,sha256=86f3552a384a225e,GW-OPS-ALVAREZ,GW-WS-OPS-05,
-2027-11-07T22:20:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\a5c6114c.xml,MODIFIED,sha256=ae5a386eb5382f28,sha256=3f96adfc9697b751,GW-OPS-PEREZ,GW-SYS-JMP-01,CT ratio field corrected 600:5 -> 800:5 for R-03C
-2027-11-09T19:29:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\d53bcc96.xml,MODIFIED,sha256=55920ee755f1e8f2,sha256=27d3b4cd608c1bc7,GW-ENG-LOPEZ,GW-WS-ENG-02,relay 51 time dial 2.0 -> 2.5 for relay R-05B
-2027-11-10T20:48:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\471c639a.pdf,MODIFIED,sha256=50f0ea719591c810,sha256=334ef888657c17e6,GW-OPS-PEREZ,GW-WS-OPS-05,
-2027-11-11T17:43:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\d1221171.xml,MODIFIED,sha256=e70756a54c72b512,sha256=2792f1b4a13ad0bb,GW-TEC-CHAVEZ,GW-SYS-JMP-01,revision label updated
-2027-11-12T14:31:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\d5563502.docx,MODIFIED,sha256=2944234013afc211,sha256=69217fa7a32d5202,GW-TEC-MORENO,GW-SYS-JMP-01,
-2027-11-12T15:13:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\917d36e2.xml,MODIFIED,sha256=6ad8e6376b6c718b,sha256=5132ca0693280843,GW-ENG-VELA,GW-SYS-JMP-01,overcurrent_trip_threshold 900A -> 1000A for relay R-05A
-2027-11-12T18:31:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\8c9f2443.docx,MODIFIED,sha256=11cc8d1debde50d2,sha256=daf797ad8e443d01,GW-OPS-RODRIGUEZ,GW-WS-OPS-05,
-2027-11-13T21:31:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\d91195a1.pdf,MODIFIED,sha256=a0cdd60a9fa44104,sha256=e8ff7cb0de90eca6,GW-ENG-JOHNSON,GW-WS-ENG-01,
-2027-11-14T13:08:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\18b2ddac.docx,MODIFIED,sha256=5c685ee5670cc643,sha256=d3b1402ec552e8b7,GW-ENG-VILLARREAL,GW-SYS-JMP-01,
-2027-11-14T21:34:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\f461f688.xlsx,MODIFIED,sha256=25c0225481db33ba,sha256=37ffcba36d5eb49a,GW-WTR-SAENZ,GW-WTP-HMI-02,
-2027-11-15T23:57:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\f2360e51.docx,MODIFIED,sha256=425da979f84446d3,sha256=79c129e147dfba72,GW-WTR-ALLEN,GW-WTP-HMI-02,
-2027-11-17T18:11:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\2b4a6e7a.pdf,MODIFIED,sha256=79556ec2ea4556c2,sha256=752fcc324724e102,GW-OPS-SCOTT,GW-WS-OPS-05,
-2027-11-17T18:15:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ce1581af.docx,MODIFIED,sha256=c3ef0190a0de5ff9,sha256=dbf1606e19f465a5,GW-OPS-ALVAREZ,GW-WS-OPS-05,
-2027-11-20T18:48:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\ba71afab.pdf,MODIFIED,sha256=34fa751e71dc7e40,sha256=3343d9bbb70a6ab2,GW-TEC-THOMAS,GW-SYS-JMP-01,
-2027-11-20T22:36:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\a1821a5c.docx,MODIFIED,sha256=cc7c9d85ea627a81,sha256=7c3d7a0bac845191,GW-WTR-ALLEN,GW-WTP-HMI-02,
-2027-11-21T18:29:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\5a0e03b5.docx,MODIFIED,sha256=decd5fa59ee707ca,sha256=eaaa672e21d6463d,GW-TEC-ADAMS,GW-SYS-JMP-01,
-2027-11-21T20:37:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\be041051.docx,MODIFIED,sha256=4fffe3b70c4aed7b,sha256=6cece4b62bc5b096,GW-ENG-SCHROEDER,GW-WS-ENG-05,
-2027-11-22T18:36:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\a13b3f5c.pdf,MODIFIED,sha256=4683a4634f692ea5,sha256=13aaa3ca322869bd,GW-ENG-NGUYEN,GW-WS-ENG-02,
-2027-11-24T22:10:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\6bf163ed.xml,MODIFIED,sha256=e36ca8fe6240875f,sha256=3158465e4bbe5f56,GW-ENG-VILLARREAL,GW-WS-ENG-04,overcurrent_trip_threshold 900A -> 1000A for relay R-05A
-2027-11-25T21:09:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\c7f8d01c.docx,MODIFIED,sha256=a8e8bf1509da8c5a,sha256=42dd4297452fd17a,GW-OPS-PHAM,GW-WS-OPS-05,
-2027-11-25T21:39:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\ade1c452.pdf,MODIFIED,sha256=6937ed900f4388f3,sha256=2299f1afc617b6e7,GW-WTR-WRIGHT,GW-SYS-JMP-01,
-2027-11-26T13:37:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\edcf697c.pdf,MODIFIED,sha256=dd42610d400d4152,sha256=f77e3ad8902fb4d1,GW-TEC-HERNANDEZ,GW-SYS-JMP-01,
-2027-11-26T14:54:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\b18c6303.docx,MODIFIED,sha256=01f505b945ab2e9a,sha256=463f56d128801a1e,GW-WTR-MORALES,GW-WTP-HMI-02,
-2027-11-26T15:02:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\b1895f89.xlsx,MODIFIED,sha256=8c2e7084de0b5280,sha256=377b9d813dd33967,GW-WTR-MORALES,GW-WTP-HMI-02,
-2027-11-26T17:07:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\be60743d.docx,MODIFIED,sha256=d854484d885ab7c6,sha256=f81496cb3f5968f3,GW-ENG-PATEL,GW-WS-ENG-02,
-2027-11-27T13:35:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\b79b0c71.docx,MODIFIED,sha256=0b85c42967b86ffe,sha256=003b5808e6612989,GW-TEC-WILSON,GW-SYS-JMP-01,
-2027-11-28T18:11:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\db683d70.xml,MODIFIED,sha256=aa55dac0efa81dc7,sha256=0e5cf68369525545,GW-WTR-WRIGHT,GW-SYS-JMP-01,CT ratio field corrected 600:5 -> 800:5 for R-03C
-2027-12-01T13:31:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\c8d82218.xml,MODIFIED,sha256=114c5e4ae21c6fa1,sha256=5c34cab00658e750,GW-ENG-PATEL,GW-SYS-JMP-01,relay 51 time dial 2.0 -> 2.5 for relay R-05B
-2027-12-02T18:57:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\29f2f5df.xml,MODIFIED,sha256=e004fabea6b16fe2,sha256=8a63b70a97ddddc7,GW-WTR-WRIGHT,GW-WTP-HMI-02,comment block updated
-2027-12-03T19:25:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\16ccb5df.docx,MODIFIED,sha256=fdf244603d86dec6,sha256=7f4a44b05ef563e6,GW-WTR-NELSON,GW-SYS-JMP-01,
-2027-12-06T17:09:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\30aad2cc.pdf,MODIFIED,sha256=1fcd0de3b6a7b170,sha256=fbf72d2482a17168,GW-OPS-PHAM,GW-WS-OPS-05,
-2027-12-08T20:14:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\3093100c.xlsx,MODIFIED,sha256=71c82ec15b89e7db,sha256=4fa5c1f6828426c9,GW-TEC-SHAH,GW-SYS-JMP-01,
-2027-12-08T22:04:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\d86eca85.xlsx,MODIFIED,sha256=97a5e332baca45ab,sha256=8899e2a7bef20c45,GW-WTR-CANTU,GW-WTP-HMI-02,
-2027-12-09T14:41:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\51ab20e2.docx,MODIFIED,sha256=fc138b9b49de467b,sha256=b799aa71aa89e399,GW-TEC-CHAVEZ,GW-SYS-JMP-01,
-2027-12-09T15:49:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\86eba3f4.pdf,MODIFIED,sha256=a6be9141f993c758,sha256=0c11c12beacfde49,GW-ENG-VELA,GW-WS-ENG-03,
-2027-12-09T18:26:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\bc2a8496.pdf,MODIFIED,sha256=1ef8e137af8d1d88,sha256=fa1bf4ccaf42ca4e,GW-ENG-BAKER,GW-SYS-JMP-01,
-2027-12-10T17:23:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\40e52097.xml,MODIFIED,sha256=9f7e05e83bd772b4,sha256=05905e5d50fdc690,GW-ENG-RUIZ,GW-WS-ENG-05,recloser shots 3 -> 2 for R-04A
-2027-12-10T23:17:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\65dfa65b.pdf,MODIFIED,sha256=8744bd657de6f924,sha256=9238cc8b9f0a9b7f,GW-ENG-JOHNSON,GW-WS-ENG-01,
-2027-12-12T16:51:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\08b62b86.docx,MODIFIED,sha256=bf779635935cd295,sha256=b24d2fa2238f16aa,GW-OPS-PEREZ,GW-WS-OPS-05,
-2027-12-13T13:04:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\759f9e96.pdf,MODIFIED,sha256=eb4c857380a924f0,sha256=e04649fb4520aa6a,GW-WTR-WRIGHT,GW-SYS-JMP-01,
-2027-12-13T17:06:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\5e5ae9f6.xlsx,MODIFIED,sha256=0b6d4344994e277f,sha256=10341b0b928d751b,GW-ENG-PATEL,GW-WS-ENG-02,
-2027-12-13T18:25:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\ae05a644.docx,MODIFIED,sha256=35a5a5028ea3ce72,sha256=65a25603d802d994,GW-OPS-ALVAREZ,GW-WS-OPS-05,
-2027-12-14T14:14:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\966e9af0.xml,MODIFIED,sha256=087a478a684fca2e,sha256=fd8dc0310533bf1e,GW-ENG-PATEL,GW-WS-ENG-02,CT ratio field corrected 600:5 -> 800:5 for R-03C
-2027-12-14T14:58:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\2494af30.pdf,MODIFIED,sha256=161088ea20e21f4c,sha256=5268adddfd7e8e6c,GW-ENG-JOHNSON,GW-WS-ENG-01,
-2027-12-16T17:42:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\0c2b72c8.xml,MODIFIED,sha256=5e06d4240597af0c,sha256=a68d6005cdbb8e13,GW-ENG-JIMENEZ,GW-SYS-JMP-01,CT ratio field corrected 600:5 -> 800:5 for R-03C
-2027-12-19T21:24:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\d769d4ac.xml,MODIFIED,sha256=b25f280ff4f2f55d,sha256=b7665474e31ce7f4,GW-WTR-PENA,GW-WTP-HMI-02,comment block updated
-2027-12-20T23:17:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\5bf9709a.pdf,MODIFIED,sha256=b3ceaaed5649322f,sha256=4d7947cebadf1ce3,GW-OPS-PEREZ,GW-WS-OPS-05,
-2027-12-22T14:43:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\2bab2bdc.pdf,MODIFIED,sha256=2eb847a28684ea47,sha256=270f6d3e1d2ec66a,GW-TEC-WALKER,GW-SYS-JMP-01,
-2027-12-23T15:49:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\94790ad9.docx,MODIFIED,sha256=4d17e7d08ca191af,sha256=02c3d728d364e8aa,GW-WTR-NELSON,GW-WTP-HMI-02,
-2027-12-23T18:08:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\09f87c91.xlsx,MODIFIED,sha256=b7849a8017d2bf7c,sha256=0175c1e130d58768,GW-ENG-JIMENEZ,GW-WS-ENG-03,
-2027-12-24T22:51:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\ff3176c3.docx,MODIFIED,sha256=c3004f1bbc4e9bdb,sha256=a1ce0698a7747431,GW-OPS-THOMAS,GW-WS-OPS-05,
-2027-12-25T15:45:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\e1363a12.pdf,MODIFIED,sha256=cf1ff0c1c9b27400,sha256=ef7cccc1026f8f65,GW-TEC-HERNANDEZ,GW-SYS-JMP-01,
-2027-12-25T20:17:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\3a3037c9.xml,MODIFIED,sha256=bf1693f8f3722cf8,sha256=91499f64836c6f22,GW-WTR-WHITE,GW-WTP-HMI-02,alarm text edited
-2027-12-27T22:23:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\5fbfbed1.docx,MODIFIED,sha256=11f8276e88069d06,sha256=aa25fdd6d770eb29,GW-WTR-WHITE,GW-WTP-HMI-02,
-2027-12-28T18:13:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\f765090b.xml,MODIFIED,sha256=05b1c21e1e0b2d7a,sha256=80d417943f486c8d,GW-ENG-THOMAS,GW-SYS-JMP-01,overcurrent_trip_threshold 900A -> 1000A for relay R-05A
-2027-12-29T21:31:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\cbb71cb4.pdf,MODIFIED,sha256=1dc03b3439947cea,sha256=3cbcd0e3ec4381fc,GW-OPS-PEREZ,GW-WS-OPS-05,
-2027-12-29T21:55:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\9313c9b0.xml,MODIFIED,sha256=e72f8aa952eac6b2,sha256=796053cf21bca4c7,GW-ENG-SCHROEDER,GW-WS-ENG-05,revision label updated
-2028-01-01T21:11:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\90c245d1.pdf,MODIFIED,sha256=9040268b8b344d7f,sha256=38bf34b65a592723,GW-WTR-CANTU,GW-SYS-JMP-01,
-2028-01-03T22:07:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\904d9ed9.pdf,MODIFIED,sha256=51ea50353a1b8603,sha256=68ea67b5b2c7c078,GW-ENG-GARZA,GW-WS-ENG-05,
-2028-01-04T19:33:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\f321c295.xml,MODIFIED,sha256=70fbccceb1cbfdf9,sha256=f0ffa76192674e18,GW-TEC-SHAH,GW-SYS-JMP-01,comment block updated
-2028-01-06T15:07:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\bf1764e7.docx,MODIFIED,sha256=c2dd1ad1f63f388b,sha256=2fb1fd0bebd7937d,GW-ENG-SMITH,GW-SYS-JMP-01,
-2028-01-08T13:35:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\0ce024b1.docx,MODIFIED,sha256=01d6f82fbbbc0bc1,sha256=e40856f0e3a67a88,GW-ENG-BAKER,GW-SYS-JMP-01,
-2028-01-08T14:16:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\434deee8.docx,MODIFIED,sha256=aa589947b2646104,sha256=a7af5b8c3610281b,GW-TEC-MARTINEZ,GW-SYS-JMP-01,
-2028-01-08T16:51:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\80bb2b99.xlsx,MODIFIED,sha256=72bd16ebfda1ea2f,sha256=56d2ec4bab552469,GW-ENG-PATEL,GW-WS-ENG-02,
-2028-01-09T17:02:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\42a732f2.pdf,MODIFIED,sha256=b6477ec7a79d8928,sha256=df18e688b81c2f0f,GW-TEC-ADAMS,GW-SYS-JMP-01,
+2027-07-16T22:01:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\cost_estimate.xlsx,MODIFIED,sha256=ee2ef40574de4d13,sha256=5fe62c128c99a995,GW-TEC-SHAH,GW-WS-ENG-04,
+2027-07-17T19:00:03Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\schedule.xlsx,MODIFIED,sha256=0112d59cfab86ad3,sha256=f0a5de70f4c42ea2,GW-WTR-SANCHEZ,GW-WS-ENG-01,
+2027-07-19T13:44:34Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\filter_run_log_2027.xlsx,MODIFIED,sha256=faff08419d58c94b,sha256=7ce3a4766a49f67d,GW-ENG-PATEL,GW-WS-ENG-02,
+2027-07-19T15:34:55Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\scope.docx,MODIFIED,sha256=ea8f3f46df1a6319,sha256=4fea900a98a589e6,GW-ENG-PATEL,GW-WS-ENG-02,
+2027-07-19T15:55:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\protection_coordination_sub04.xlsx,MODIFIED,sha256=0eb092dacf3c6cfe,sha256=81af52b2db09b564,GW-ENG-GARZA,GW-SYS-JMP-01,
+2027-07-19T15:57:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\cost_estimate.xlsx,MODIFIED,sha256=b042284129b4aa77,sha256=8b0454b1ec146baf,GW-ENG-JOHNSON,GW-SYS-JMP-01,
+2027-07-19T17:08:15Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\schedule.xlsx,MODIFIED,sha256=9cc55f2d0dd127fb,sha256=9a08dc5bc62e4c02,GW-ENG-SCHROEDER,GW-WS-ENG-05,
+2027-07-19T19:35:03Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\schedule.xlsx,MODIFIED,sha256=c08d682e4d96607a,sha256=aa71967673091104,GW-TEC-HERNANDEZ,GW-WS-ENG-02,
+2027-07-19T19:53:45Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_1_setpoints.cfg,MODIFIED,sha256=7168fdad665307a0,sha256=4a3cb5b1baa39027,GW-TEC-CHAVEZ,GW-WS-ENG-05,pump start level 17.0 -> 18.5 ft
+2027-07-19T20:56:40Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\rtu_config_draft.xml,MODIFIED,sha256=d39ac1be12d85c10,sha256=b5fb46baea1f81c9,GW-ENG-JOHNSON,GW-SYS-JMP-01,27-UV time delay 2.0s -> 1.5s
+2027-07-19T22:06:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\meeting_notes.docx,MODIFIED,sha256=bf78cb525c9cfcb3,sha256=4322d6020874dbc4,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-07-20T14:20:44Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\boil_water_notice_procedure.docx,MODIFIED,sha256=74ae8eaac001f001,sha256=95dc621f0535158a,GW-TEC-ADAMS,GW-WS-ENG-04,
+2027-07-20T14:46:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\cost_estimate.xlsx,MODIFIED,sha256=7b336acab5571ef8,sha256=97fb63010d448ce9,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-07-20T18:24:15Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=c3ccc85ae66f4351,sha256=4024264f4d877b70,GW-ENG-JIMENEZ,GW-SYS-JMP-01,CT ratio field corrected 600:5 -> 800:5 for R-04A
+2027-07-20T20:55:53Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\schedule.xlsx,MODIFIED,sha256=eeadd476530129eb,sha256=d6abd274f05d7ce0,GW-ENG-BAKER,GW-WS-ENG-03,
+2027-07-20T21:10:33Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\turbidity_summary_2027.xlsx,MODIFIED,sha256=122f1aa999fc25e7,sha256=a0eebe0d0353d91a,GW-ENG-PATEL,GW-WS-ENG-02,
+2027-07-21T15:38:18Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=4024264f4d877b70,sha256=4f03cde62d05e63e,GW-TEC-CHAVEZ,GW-WS-ENG-05,CT ratio field corrected 600:5 -> 800:5 for R-04A
+2027-07-21T18:37:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-101.docx,MODIFIED,sha256=e0c96aad1af2a831,sha256=db3cb7481b568218,GW-TEC-WILSON,GW-WS-ENG-04,
+2027-07-21T18:42:17Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\rtu_config_draft.xml,MODIFIED,sha256=7e8859f7e9046405,sha256=320cffb1ca0ab6d7,GW-ENG-LOPEZ,GW-WS-ENG-02,"overcurrent_trip_threshold 900A -> 1000A for relays R-05A, R-05B, R-05C"
+2027-07-21T20:29:34Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\meeting_notes.docx,MODIFIED,sha256=3ac37e4439732da3,sha256=5dab7436b88aad0a,GW-ENG-THOMAS,GW-WS-ENG-01,
+2027-07-22T15:02:05Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\commissioning_notes.docx,MODIFIED,sha256=8302ee672c007c06,sha256=2e362690c5240d1d,GW-TEC-CHAVEZ,GW-WS-ENG-05,
+2027-07-22T17:02:03Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\protection_coordination_sub03.xlsx,MODIFIED,sha256=febf3011b358bef6,sha256=c739ede0e3490353,GW-ENG-SCHROEDER,GW-WS-ENG-05,
+2027-07-22T20:36:05Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\turbidity_summary_2027.xlsx,MODIFIED,sha256=a0eebe0d0353d91a,sha256=e5a378f530d68047,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-07-22T20:59:05Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\lab_results_2027-07.pdf,CREATED,,sha256=601d6a4db0cdd96c,GW-TEC-MORENO,GW-WS-ENG-02,
+2027-07-22T21:34:16Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\schedule.xlsx,MODIFIED,sha256=63d72f63afac5fa8,sha256=763ed5f3826b1bd5,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-07-23T12:27:02Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\storm_restoration_plan_2027.docx,MODIFIED,sha256=6a7a10d139327a11,sha256=88dfbcc7a2e74848,GW-ENG-VILLARREAL,GW-WS-ENG-04,
+2027-07-23T14:08:12Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\schedule.xlsx,MODIFIED,sha256=cb594f246ab729ab,sha256=ac010885b2849341,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-07-23T15:40:09Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\cost_estimate.xlsx,MODIFIED,sha256=97fb63010d448ce9,sha256=5a3908c3bdfbdc12,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2027-07-23T15:49:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\punchlist.xlsx,MODIFIED,sha256=5db6e8abe289137e,sha256=da43f4f8140cdcd3,GW-TEC-SHAH,GW-WS-ENG-04,
+2027-07-23T19:32:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\daily_ops_report_2027-07.xlsx,CREATED,,sha256=71f66ad823764fd6,GW-ENG-GARZA,GW-SYS-JMP-01,
+2027-07-23T19:59:47Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=4f03cde62d05e63e,sha256=44ddc635ce8157c8,GW-ENG-MARTINEZ,GW-WS-ENG-03,breaker failure timer 14 -> 11 cycles for R-04B
+2027-07-23T20:17:58Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\storm_restoration_plan_2027.docx,MODIFIED,sha256=88dfbcc7a2e74848,sha256=042a1b26983724f2,GW-WTR-MORALES,GW-WS-ENG-01,
+2027-07-26T15:28:17Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\schedule.xlsx,MODIFIED,sha256=ac010885b2849341,sha256=19fbe71665e5f53c,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-07-26T15:41:10Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\punchlist.xlsx,MODIFIED,sha256=778616757f6f993e,sha256=d6181f12fa83ede6,GW-ENG-PATEL,GW-SYS-JMP-01,
+2027-07-26T16:37:24Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\relay_settings_R-03C.xml,MODIFIED,sha256=6c57eb45bf21de00,sha256=852152c93ab90e3c,GW-ENG-SMITH,GW-WS-ENG-04,breaker failure timer 14 -> 10 cycles for R-03A
+2027-07-26T17:25:39Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\protection_coordination_sub02.xlsx,MODIFIED,sha256=7ff1ea60598157d8,sha256=53a20f09e34818ca,GW-TEC-SHAH,GW-WS-ENG-04,
+2027-07-26T18:41:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pressure_zones.xlsx,MODIFIED,sha256=a122b09d204c3867,sha256=8d6090929e3ad04b,GW-ENG-BAKER,GW-WS-ENG-03,
+2027-07-26T18:52:18Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\relay_settings_R-01A.xml,MODIFIED,sha256=4913150870ad53a7,sha256=335f149df7db7fcd,GW-TEC-MILLER,GW-SYS-JMP-01,CT ratio field corrected 600:5 -> 800:5 for R-01A
+2027-07-26T19:00:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\scope.docx,MODIFIED,sha256=2ae94588d4444e04,sha256=e70a69f7cfae9137,GW-TEC-HERNANDEZ,GW-WS-ENG-02,
+2027-07-26T19:42:10Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\schedule.xlsx,MODIFIED,sha256=aa71967673091104,sha256=95fd34217834c338,GW-TEC-HERNANDEZ,GW-SYS-JMP-01,
+2027-07-26T20:11:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\schedule.xlsx,MODIFIED,sha256=763ed5f3826b1bd5,sha256=3b5a157b8b36721a,GW-TEC-ADAMS,GW-SYS-JMP-01,
+2027-07-26T20:28:58Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\meeting_notes.docx,MODIFIED,sha256=f1778f6df0d184ad,sha256=a37e5c5e3e7bb688,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2027-07-26T21:14:23Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\cost_estimate.xlsx,MODIFIED,sha256=5fe62c128c99a995,sha256=4997d18c9d480e2f,GW-TEC-HERNANDEZ,GW-SYS-JMP-01,
+2027-07-27T14:06:43Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\commissioning_notes.docx,MODIFIED,sha256=60b98ebc56486972,sha256=0b1ddab51ca495c8,GW-WTR-PENA,GW-WS-ENG-01,
+2027-07-27T14:56:10Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\meeting_notes.docx,MODIFIED,sha256=c1fcf72cda32f569,sha256=05f8ce34cd0be33a,GW-ENG-BAKER,GW-WS-ENG-03,
+2027-07-27T18:20:59Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\storm_restoration_plan_2027.docx,MODIFIED,sha256=042a1b26983724f2,sha256=73e35888992a73fd,GW-ENG-NGUYEN,GW-SYS-JMP-01,
+2027-07-27T19:12:01Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\lockout_tagout_checklist.docx,MODIFIED,sha256=c2dec759d5f7e921,sha256=007e2541c8049dab,GW-ENG-CLARK,GW-WS-ENG-02,
+2027-07-28T14:47:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\punchlist.xlsx,MODIFIED,sha256=01c678dab3b6f78c,sha256=7c25caad0c657b36,GW-TEC-WALKER,GW-WS-ENG-01,
+2027-07-28T15:14:14Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\test_report_2027.pdf,MODIFIED,sha256=93565daec2eace19,sha256=318190e30100166c,GW-TEC-WILSON,GW-WS-ENG-04,
+2027-07-28T15:19:57Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\rtu_config_active.xml,MODIFIED,sha256=a1958c9018284763,sha256=c46be0f508098dff,GW-ENG-RUIZ,GW-WS-ENG-05,revision label rev 6 -> rev 7
+2027-07-28T15:31:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_5_setpoints.cfg,MODIFIED,sha256=3b516289222087d8,sha256=6a7ea7457a0bc4bd,GW-TEC-MARTINEZ,GW-WS-ENG-05,low suction cut-out 8 -> 10 psi
+2027-07-28T16:26:42Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\punchlist.xlsx,MODIFIED,sha256=56f82dbc15444726,sha256=4cd818f895cc6c15,GW-ENG-SCHROEDER,GW-WS-ENG-05,
+2027-07-28T19:45:10Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\rtu_config_draft.xml,MODIFIED,sha256=b5fb46baea1f81c9,sha256=69ce25c3c8f86c82,GW-ENG-NGUYEN,GW-SYS-JMP-01,alarm text edited for R-03A
+2027-07-29T12:00:44Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\vendor_quote.pdf,MODIFIED,sha256=6ba4a2919c74aa0b,sha256=57dc93da2ededc4c,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-07-29T20:13:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-103_sub03_protection.dwg,MODIFIED,sha256=bdb3f6ea2f345fba,sha256=6648912251f198e4,GW-WTR-WHITE,GW-SYS-JMP-01,
+2027-07-29T21:00:13Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\protection_coordination_sub03.xlsx,MODIFIED,sha256=c739ede0e3490353,sha256=2c7c133d89a84857,GW-ENG-JOHNSON,GW-SYS-JMP-01,
+2027-07-30T14:17:14Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\commissioning_notes.docx,MODIFIED,sha256=bd61035f1c0036a6,sha256=7119c3eac77366da,GW-ENG-PATEL,GW-WS-ENG-02,
+2027-07-30T15:38:52Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\scope.docx,MODIFIED,sha256=21964502e204ac3b,sha256=20509f2d71d3ff31,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-07-30T16:01:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\protection_coordination_sub05.xlsx,MODIFIED,sha256=364cff9bab75a721,sha256=c744b7fc9525c1d8,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-07-30T16:24:55Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\schedule.xlsx,MODIFIED,sha256=9a08dc5bc62e4c02,sha256=e456282526943f7e,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-07-30T16:25:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-104.docx,MODIFIED,sha256=0a05f2e9d69ab72f,sha256=80764e0ce896b27d,GW-ENG-THOMAS,GW-WS-ENG-01,
+2027-07-30T16:30:55Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\booster_setpoints.cfg,MODIFIED,sha256=ae63ffe19d6ed8df,sha256=5dac80a084e088e7,GW-TEC-HERNANDEZ,GW-WS-ENG-02,pump start level 19.0 -> 20.5 ft
+2027-07-30T19:53:45Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\schedule.xlsx,MODIFIED,sha256=f0a5de70f4c42ea2,sha256=1f60c14297b17379,GW-ENG-VILLARREAL,GW-SYS-JMP-01,
+2027-07-31T14:24:01Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\schedule.xlsx,MODIFIED,sha256=2f9ac4b38caf3d19,sha256=d3f4e5da899be331,GW-WTR-PENA,GW-WS-ENG-01,
+2027-08-02T16:24:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\commissioning_notes.docx,MODIFIED,sha256=d875ab46ab1280a3,sha256=c7d0ac93483888f9,GW-ENG-VELA,GW-WS-ENG-03,
+2027-08-03T20:17:55Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\schedule.xlsx,MODIFIED,sha256=d6abd274f05d7ce0,sha256=9e948e83d353f708,GW-ENG-VELA,GW-WS-ENG-03,
+2027-08-03T22:41:18Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\punchlist.xlsx,MODIFIED,sha256=da43f4f8140cdcd3,sha256=c326d4372fd3698a,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-08-03T22:45:25Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_3_setpoints.cfg,MODIFIED,sha256=b41eca626e29c9b5,sha256=4756df00b2333df6,GW-ENG-PATEL,GW-WS-ENG-02,low suction cut-out 8 -> 10 psi
+2027-08-04T15:06:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\schedule.xlsx,MODIFIED,sha256=4c561615368b373d,sha256=d61166441c9db13f,GW-TEC-SHAH,GW-WS-ENG-04,
+2027-08-04T17:12:04Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\commissioning_notes.docx,MODIFIED,sha256=c33f9dd261583a85,sha256=9591b1a4d0629128,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-08-04T19:21:13Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_6_setpoints.cfg,MODIFIED,sha256=38f619f93024ad77,sha256=4cba1ab15287554e,GW-ENG-NGUYEN,GW-WS-ENG-02,comment block updated
+2027-08-04T20:28:05Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\cost_estimate.xlsx,MODIFIED,sha256=22e9084b750d4b0d,sha256=37f5ac2438107eea,GW-ENG-NGUYEN,GW-SYS-JMP-01,
+2027-08-05T18:00:28Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\relay_settings_R-03A.xml,MODIFIED,sha256=6b84aca9d0940725,sha256=9423a6b73b61d76d,GW-ENG-JIMENEZ,GW-WS-ENG-03,CT ratio field corrected 600:5 -> 800:5 for R-03A
+2027-08-05T18:09:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\lockout_tagout_checklist.docx,MODIFIED,sha256=007e2541c8049dab,sha256=3052c555d40f7932,GW-ENG-LOPEZ,GW-SYS-JMP-01,
+2027-08-05T18:30:23Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\test_report_2027.pdf,MODIFIED,sha256=ade13d6ee7d9da4b,sha256=2764699c4dee6eb5,GW-ENG-RAMOS,GW-WS-ENG-01,
+2027-08-05T19:42:59Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\relay_settings_2027Q2.zip,MODIFIED,sha256=e0d78db36df22b7a,sha256=84c0c9eb18575c06,GW-TEC-WALKER,GW-WS-ENG-01,
+2027-08-05T22:22:12Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\commissioning_notes.docx,MODIFIED,sha256=4c1ef4bf8e739db7,sha256=ae821e9b65c6a175,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-08-06T13:52:47Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\schedule.xlsx,MODIFIED,sha256=d3f4e5da899be331,sha256=86d37fc69f717845,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-08-06T19:37:23Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\relay_settings_R-01A.xml,MODIFIED,sha256=335f149df7db7fcd,sha256=3879c06b76143a8f,GW-TEC-ADAMS,GW-SYS-JMP-01,"relay 51 time dial 2.0 -> 2.5 for relays R-01A, R-01B, R-01C"
+2027-08-06T21:44:44Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\commissioning_notes.docx,MODIFIED,sha256=9591b1a4d0629128,sha256=f4378c8aed6a53a5,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-08-09T12:10:01Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=aab0fcef4f43188f,sha256=102e536669ac8e3a,GW-ENG-THOMAS,GW-WS-ENG-01,"overcurrent_trip_threshold 1200A -> 1300A for relays R-01A, R-01B, R-01C"
+2027-08-09T20:10:15Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\punchlist.xlsx,MODIFIED,sha256=72a683085d26914a,sha256=e02c71555981bf61,GW-ENG-VELA,GW-SYS-JMP-01,
+2027-08-10T12:38:42Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-108_scada_network.dwg,MODIFIED,sha256=252f913d4e17fca3,sha256=b29d73ac659bf427,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-08-10T12:47:52Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\schedule.xlsx,MODIFIED,sha256=3b5a157b8b36721a,sha256=ae6b33717283502f,GW-WTR-SANCHEZ,GW-WS-ENG-01,
+2027-08-10T15:38:26Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\schedule.xlsx,MODIFIED,sha256=95fd34217834c338,sha256=7bdd0ca934a316f0,GW-WTR-CANTU,GW-SYS-JMP-01,
+2027-08-11T14:31:08Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\black_start_checklist.docx,MODIFIED,sha256=095042465137d56c,sha256=d6c571227105b3c5,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-08-11T15:02:36Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\commissioning_notes.docx,MODIFIED,sha256=7119c3eac77366da,sha256=c5cd9fa0152973de,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2027-08-11T16:03:12Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-109_fiber_ring.dwg,MODIFIED,sha256=a6a82cacbaa641da,sha256=20101f59a949293f,GW-WTR-PENA,GW-WS-ENG-01,
+2027-08-11T16:09:36Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\test_report_2027.pdf,MODIFIED,sha256=00176a1a3fdebac6,sha256=e3b6b3eed1ec73b4,GW-ENG-MARTINEZ,GW-SYS-JMP-01,
+2027-08-11T16:43:44Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-105_sub05_protection.dwg,MODIFIED,sha256=b0ffa61516984065,sha256=b50b85c561f5ce8e,GW-ENG-VILLARREAL,GW-WS-ENG-04,
+2027-08-11T17:29:24Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=44ddc635ce8157c8,sha256=31c5d43c6c1d7172,GW-TEC-WILSON,GW-WS-ENG-04,relay 51 time dial 2.0 -> 2.5 for relay R-04B
+2027-08-11T18:34:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\meeting_notes.docx,MODIFIED,sha256=5dab7436b88aad0a,sha256=714112ebbab63e60,GW-TEC-CHAVEZ,GW-WS-ENG-05,
+2027-08-11T20:37:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\turbidity_summary_2027.xlsx,MODIFIED,sha256=e5a378f530d68047,sha256=c670cb2323915b91,GW-ENG-THOMAS,GW-WS-ENG-01,
+2027-08-11T20:51:44Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\scope.docx,MODIFIED,sha256=91c85e2728029e96,sha256=31c5a56bec2e6b11,GW-ENG-VELA,GW-WS-ENG-03,
+2027-08-11T23:48:02Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-109_fiber_ring.dwg,MODIFIED,sha256=20101f59a949293f,sha256=7c0c77d133104a37,GW-ENG-VELA,GW-SYS-JMP-01,
+2027-08-12T14:44:56Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\punchlist.xlsx,MODIFIED,sha256=5296000421732b6d,sha256=8d3a78ad7f76eab5,GW-ENG-CLARK,GW-SYS-JMP-01,
+2027-08-12T22:25:28Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\daily_ops_report_2027-08.xlsx,CREATED,,sha256=c9b76b1fcd2821fe,GW-TEC-MILLER,GW-WS-ENG-05,
+2027-08-13T14:05:07Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\protection_coordination_sub04.xlsx,MODIFIED,sha256=81af52b2db09b564,sha256=fe1663dae0d65a10,GW-TEC-MORENO,GW-WS-ENG-02,
+2027-08-13T14:42:54Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\rtu_config_draft.xml,MODIFIED,sha256=320cffb1ca0ab6d7,sha256=3f38100a574d37a0,GW-ENG-CLARK,GW-WS-ENG-02,relay 51 time dial 2.5 -> 2.0 for relay R-05B
+2027-08-13T15:35:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-115.docx,MODIFIED,sha256=207406ce62b4d0b0,sha256=f4086fb39475a862,GW-ENG-BAKER,GW-WS-ENG-03,
+2027-08-13T16:32:07Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\lab_results_2027-08.pdf,CREATED,,sha256=fb8a016ae0f4cd8f,GW-TEC-WILSON,GW-SYS-JMP-01,
+2027-08-13T18:19:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\meeting_notes.docx,MODIFIED,sha256=4322d6020874dbc4,sha256=74767f8a297be385,GW-ENG-JOHNSON,GW-WS-ENG-01,
+2027-08-13T20:18:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=31c5d43c6c1d7172,sha256=315059fd08c0ebe5,GW-ENG-PATEL,GW-WS-ENG-02,comment block updated
+2027-08-14T20:21:51Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\cost_estimate.xlsx,MODIFIED,sha256=8b0454b1ec146baf,sha256=2a018f31abc8c245,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-08-15T14:35:33Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-107.docx,MODIFIED,sha256=54339bbcb39fad19,sha256=ad932631e5ab60ef,GW-WTR-MORALES,GW-WS-ENG-01,
+2027-08-16T12:12:45Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_1_setpoints.cfg,MODIFIED,sha256=4a3cb5b1baa39027,sha256=e3e1e676ea195dab,GW-ENG-BAKER,GW-WS-ENG-03,comment block updated
+2027-08-17T14:16:58Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\meeting_notes.docx,MODIFIED,sha256=74767f8a297be385,sha256=ec934483599630de,GW-ENG-VILLARREAL,GW-SYS-JMP-01,
+2027-08-17T14:52:05Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\cost_estimate.xlsx,MODIFIED,sha256=f1a2de55f3bcc197,sha256=f233afa4ca3dd675,GW-TEC-MARTINEZ,GW-WS-ENG-05,
+2027-08-17T16:39:47Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\vendor_quote.pdf,MODIFIED,sha256=7314d7480574effc,sha256=4698d83be9301d3e,GW-TEC-MORENO,GW-WS-ENG-02,
+2027-08-17T16:42:55Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-103_sub03_protection.dwg,MODIFIED,sha256=6648912251f198e4,sha256=c0b10d088461c838,GW-TEC-WILSON,GW-WS-ENG-04,
+2027-08-17T18:33:57Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\wtp_dosing_setpoints.cfg,MODIFIED,sha256=71d9ce2c2a67d7be,sha256=d71a18649465feb7,GW-TEC-WALKER,GW-SYS-JMP-01,lead/lag rotation P-3 -> P-4
+2027-08-17T18:58:13Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\punchlist.xlsx,MODIFIED,sha256=4cd818f895cc6c15,sha256=c6e1a72e39fba66c,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2027-08-17T19:39:08Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\punchlist.xlsx,MODIFIED,sha256=ca739e54d92eb69b,sha256=f0f5bdc50252a44f,GW-ENG-JOHNSON,GW-WS-ENG-01,
+2027-08-17T20:21:25Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\scope.docx,MODIFIED,sha256=f4664cdbbc3ad605,sha256=a8d7f1e8ed1b53b3,GW-TEC-MARTINEZ,GW-WS-ENG-05,
+2027-08-18T12:03:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\scope.docx,MODIFIED,sha256=4fea900a98a589e6,sha256=29f7558a0740258b,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-08-18T13:05:57Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\cost_estimate.xlsx,MODIFIED,sha256=12952bcfbcd19de8,sha256=38d56fc8afd1ddf4,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2027-08-18T15:10:05Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\relay_settings_2026Q4.zip,MODIFIED,sha256=89f597b56e2895d0,sha256=e3112185b9f3f5f0,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-08-18T19:15:51Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\vendor_quote.pdf,MODIFIED,sha256=31cd42c1331f06d4,sha256=731e36502d77be12,GW-TEC-WILSON,GW-WS-ENG-04,
+2027-08-19T12:47:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\commissioning_notes.docx,MODIFIED,sha256=2e362690c5240d1d,sha256=a8baaa770dcf0ae6,GW-ENG-SCHROEDER,GW-WS-ENG-05,
+2027-08-19T17:14:42Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\protection_coordination_sub04.xlsx,MODIFIED,sha256=fe1663dae0d65a10,sha256=80463d8d3d793b54,GW-TEC-MARTINEZ,GW-SYS-JMP-01,
+2027-08-19T19:02:41Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=315059fd08c0ebe5,sha256=af3f08ccdf2859a0,GW-TEC-ADAMS,GW-WS-ENG-04,LTC band 2.0V -> 1.5V
+2027-08-19T19:15:40Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\cost_estimate.xlsx,MODIFIED,sha256=2a018f31abc8c245,sha256=245a98cfb1a1982b,GW-ENG-SCHROEDER,GW-WS-ENG-05,
+2027-08-19T21:44:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\relay_settings_R-05C.xml,MODIFIED,sha256=800b187bd5988f16,sha256=71ad2b31b3911360,GW-TEC-MORENO,GW-SYS-JMP-01,revision label rev 9 -> rev 10
+2027-08-20T12:24:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\meeting_notes.docx,MODIFIED,sha256=ec934483599630de,sha256=54f912274ef8b1cf,GW-WTR-MORALES,GW-WS-ENG-01,
+2027-08-20T13:14:30Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\daily_ops_report_2027-08.xlsx,MODIFIED,sha256=c9b76b1fcd2821fe,sha256=d2fdf16b0f6b5f98,GW-TEC-MORENO,GW-WS-ENG-02,
+2027-08-20T13:41:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_4_setpoints.cfg,MODIFIED,sha256=3d50453751b2f391,sha256=df7ebf760420d134,GW-TEC-WALKER,GW-WS-ENG-01,chlorine dose setpoint 2.0 -> 2.2 mg/L
+2027-08-20T15:00:55Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\schedule.xlsx,MODIFIED,sha256=d61166441c9db13f,sha256=9f2792258d208d5c,GW-ENG-RAMOS,GW-WS-ENG-01,
+2027-08-20T18:26:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\meeting_notes.docx,MODIFIED,sha256=a37e5c5e3e7bb688,sha256=d24bbd89cce131bb,GW-TEC-MILLER,GW-WS-ENG-05,
+2027-08-22T19:24:13Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-108_scada_network.dwg,MODIFIED,sha256=b29d73ac659bf427,sha256=b8c63582d525243d,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-08-23T12:45:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\protection_coordination_sub02.xlsx,MODIFIED,sha256=53a20f09e34818ca,sha256=234c652cc75f4b89,GW-ENG-CLARK,GW-WS-ENG-02,
+2027-08-23T16:37:12Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_active.xml,MODIFIED,sha256=79e72593dfb63847,sha256=57bee07f719c5f82,GW-ENG-MARTINEZ,GW-SYS-JMP-01,recloser shots 2 -> 3 for R-01B
+2027-08-23T18:41:31Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\test_report_2027.pdf,MODIFIED,sha256=2764699c4dee6eb5,sha256=8acd6ba0dd0ebd91,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-08-23T19:26:31Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\schedule.xlsx,MODIFIED,sha256=7bdd0ca934a316f0,sha256=2f6e98af83c7aa02,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-08-23T20:31:16Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\scope.docx,MODIFIED,sha256=452234090b98b72c,sha256=e59c8986a7b5eec5,GW-ENG-RUIZ,GW-WS-ENG-05,
+2027-08-23T21:07:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\commissioning_notes.docx,MODIFIED,sha256=f4378c8aed6a53a5,sha256=d371a76a6784adae,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-08-24T22:05:53Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-101_sub01_protection.dwg,MODIFIED,sha256=afad71f47587879b,sha256=03dda38559ea1d46,GW-TEC-CHAVEZ,GW-SYS-JMP-01,
+2027-08-25T14:15:12Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=af3f08ccdf2859a0,sha256=002ccf47dbd3fb45,GW-ENG-BAKER,GW-SYS-JMP-01,"overcurrent_trip_threshold 1400A -> 1600A for relays R-04A, R-04B, R-04C"
+2027-08-25T15:46:18Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_4_setpoints.cfg,MODIFIED,sha256=df7ebf760420d134,sha256=6b9570d423a658e0,GW-TEC-ADAMS,GW-WS-ENG-04,low suction cut-out 8 -> 10 psi
+2027-08-25T16:19:15Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\schedule.xlsx,MODIFIED,sha256=2f6e98af83c7aa02,sha256=73c99bcf0e50e600,GW-ENG-JOHNSON,GW-WS-ENG-01,
+2027-08-25T16:32:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\commissioning_notes.docx,MODIFIED,sha256=c5cd9fa0152973de,sha256=600751fc545465f1,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-08-25T18:54:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_6_setpoints.cfg,MODIFIED,sha256=4cba1ab15287554e,sha256=02f3bc242ab135ab,GW-TEC-MILLER,GW-WS-ENG-05,pump start level 19.0 -> 20.5 ft
+2027-08-25T19:37:22Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\schedule.xlsx,MODIFIED,sha256=2a47565bde684b70,sha256=7f2b1423ae15f11d,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-08-25T19:44:09Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=102e536669ac8e3a,sha256=18585bfa476984be,GW-ENG-RAMOS,GW-WS-ENG-01,CT ratio field corrected 600:5 -> 800:5 for R-01C
+2027-08-25T21:42:43Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-107_pump_station_typical.dwg,MODIFIED,sha256=f28fe1c619ca16de,sha256=21ebbbe8caa9b967,GW-TEC-MILLER,GW-WS-ENG-05,
+2027-08-25T21:58:57Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\meeting_notes.docx,MODIFIED,sha256=31ba92757d4466df,sha256=df9b9edaf07ac7c5,GW-TEC-WALKER,GW-WS-ENG-01,
+2027-08-25T22:05:40Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\commissioning_notes.docx,MODIFIED,sha256=d371a76a6784adae,sha256=180619e6921e492b,GW-TEC-WALKER,GW-WS-ENG-01,
+2027-08-26T14:14:16Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\protection_coordination_sub05.xlsx,MODIFIED,sha256=c744b7fc9525c1d8,sha256=70c654039f621c40,GW-ENG-NGUYEN,GW-WS-ENG-02,
+2027-08-26T14:46:32Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\test_report_2027.pdf,MODIFIED,sha256=ae8d6f942a936340,sha256=8a4323f780170fb0,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-08-26T18:03:46Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\test_report_2027.pdf,MODIFIED,sha256=318190e30100166c,sha256=8ffc47175ddb1a69,GW-TEC-SHAH,GW-WS-ENG-04,
+2027-08-26T20:33:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\relay_settings_R-01C.xml,MODIFIED,sha256=de32c2de19f95629,sha256=6911fcd1c392fec3,GW-TEC-WALKER,GW-SYS-JMP-01,CT ratio field corrected 600:5 -> 800:5 for R-01C
+2027-08-27T13:42:36Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\relay_test_procedure.docx,MODIFIED,sha256=df5e6e5e8422e152,sha256=ce30ae462f05c1f8,GW-TEC-CHAVEZ,GW-WS-ENG-05,
+2027-08-27T15:06:42Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_6_setpoints.cfg,MODIFIED,sha256=02f3bc242ab135ab,sha256=e6122f7cba7179d2,GW-TEC-WALKER,GW-WS-ENG-01,P-2 discharge setpoint 72 -> 74 psi
+2027-08-27T16:13:59Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\punchlist.xlsx,MODIFIED,sha256=f0f5bdc50252a44f,sha256=0dba7ea023c4b076,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-08-30T14:57:24Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\storm_restoration_plan_2027.docx,MODIFIED,sha256=73e35888992a73fd,sha256=23091ad04c6dbd9a,GW-ENG-RUIZ,GW-SYS-JMP-01,
+2027-08-30T16:34:34Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\rtu_config_active.xml,MODIFIED,sha256=c46be0f508098dff,sha256=4c2460a7ba7fb5de,GW-TEC-MARTINEZ,GW-WS-ENG-05,breaker failure timer 13 -> 11 cycles for R-02A
+2027-08-30T18:54:08Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\cost_estimate.xlsx,MODIFIED,sha256=2148d7ceb46d3d64,sha256=41c219750215f0a7,GW-ENG-PATEL,GW-WS-ENG-02,
+2027-08-30T20:05:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\commissioning_notes.docx,MODIFIED,sha256=0b1ddab51ca495c8,sha256=1a05963836bf1343,GW-ENG-SCHROEDER,GW-WS-ENG-05,
+2027-08-30T20:14:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-107.docx,MODIFIED,sha256=ad932631e5ab60ef,sha256=abefbb9a9ff08887,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-08-30T21:38:28Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\scope.docx,MODIFIED,sha256=29f7558a0740258b,sha256=12403c1fad58cbd6,GW-ENG-THOMAS,GW-WS-ENG-01,
+2027-08-31T12:32:52Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\sld_sub04_revC.dwg,MODIFIED,sha256=b8027511403e7d73,sha256=393ef404396d0c67,GW-ENG-VELA,GW-WS-ENG-03,
+2027-08-31T13:37:43Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\meeting_notes.docx,MODIFIED,sha256=df9b9edaf07ac7c5,sha256=ab2a6224be91ae79,GW-ENG-VILLARREAL,GW-WS-ENG-04,
+2027-08-31T16:15:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\daily_ops_report_2027-08.xlsx,MODIFIED,sha256=d2fdf16b0f6b5f98,sha256=e625196f9e0b9b46,GW-TEC-MILLER,GW-WS-ENG-05,
+2027-08-31T18:11:13Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\rtu_config_draft.xml,MODIFIED,sha256=69ce25c3c8f86c82,sha256=deb3f5a6e94e5012,GW-TEC-SHAH,GW-SYS-JMP-01,27-UV time delay 2.0s -> 1.5s
+2027-08-31T19:42:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=18585bfa476984be,sha256=2873f72c121bf59e,GW-WTR-MORALES,GW-WS-ENG-01,LTC band 1.5V -> 2.0V
+2027-09-01T13:10:18Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_4_setpoints.cfg,MODIFIED,sha256=6b9570d423a658e0,sha256=1b3cd5a1c2585a31,GW-ENG-RAMOS,GW-WS-ENG-01,pump start level 18.0 -> 19.5 ft
+2027-09-01T13:17:45Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\vendor_quote.pdf,MODIFIED,sha256=c3e0c8b041d6e14f,sha256=475bafd86cd9010d,GW-TEC-MILLER,GW-WS-ENG-05,
+2027-09-01T15:21:30Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\relay_settings_R-03B.xml,MODIFIED,sha256=8ad0f459be584355,sha256=0ffc138a9a36c7d1,GW-TEC-MORENO,GW-WS-ENG-02,LTC band 1.5V -> 2.0V
+2027-09-01T17:42:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\schedule.xlsx,MODIFIED,sha256=e456282526943f7e,sha256=61ea0eab01354273,GW-TEC-WILSON,GW-WS-ENG-04,
+2027-09-01T18:22:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\relay_settings_R-04B.xml,MODIFIED,sha256=fd09b2a6a0dd06a6,sha256=62f241aac6a59187,GW-TEC-CHAVEZ,GW-WS-ENG-05,revision label rev 3 -> rev 4
+2027-09-02T12:22:46Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\schedule.xlsx,MODIFIED,sha256=7f2b1423ae15f11d,sha256=54333fadc4a6747c,GW-TEC-MARTINEZ,GW-SYS-JMP-01,
+2027-09-02T15:21:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\punchlist.xlsx,MODIFIED,sha256=7c25caad0c657b36,sha256=02b2b08fb3ed79c2,GW-TEC-MILLER,GW-WS-ENG-05,
+2027-09-02T17:08:56Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\relay_settings_R-04B.xml,MODIFIED,sha256=62f241aac6a59187,sha256=7d9fbfb0c5286b65,GW-TEC-HERNANDEZ,GW-WS-ENG-02,relay 51 time dial 2.5 -> 2.0 for relay R-04C
+2027-09-02T17:13:23Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\archive\relay_settings_2027Q2.zip,MODIFIED,sha256=84c0c9eb18575c06,sha256=ccd2b62c1b839864,GW-WTR-SANCHEZ,GW-SYS-JMP-01,
+2027-09-02T19:52:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\protection_coordination_sub02.xlsx,MODIFIED,sha256=234c652cc75f4b89,sha256=7f4c6b17e936a796,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-09-03T14:05:19Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\filter_run_log_2027.xlsx,MODIFIED,sha256=7ce3a4766a49f67d,sha256=7b8b71cb7381bfbe,GW-WTR-SANCHEZ,GW-WS-ENG-01,
+2027-09-03T16:40:09Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-109_fiber_ring.dwg,MODIFIED,sha256=7c0c77d133104a37,sha256=7cb20d0af0509d49,GW-ENG-THOMAS,GW-WS-ENG-01,
+2027-09-03T16:43:53Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pressure_zones.xlsx,MODIFIED,sha256=8d6090929e3ad04b,sha256=2e0aa8cb9b786699,GW-TEC-THOMAS,GW-SYS-JMP-01,
+2027-09-03T17:32:04Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\rtu_config_draft.xml,MODIFIED,sha256=deb3f5a6e94e5012,sha256=89800e6a09d043d7,GW-ENG-VILLARREAL,GW-WS-ENG-04,alarm text edited for R-03C
+2027-09-03T19:30:42Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\meeting_notes.docx,MODIFIED,sha256=d24bbd89cce131bb,sha256=54773f0dac2db91d,GW-ENG-SMITH,GW-SYS-JMP-01,
+2027-09-03T20:18:44Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_2_setpoints.cfg,MODIFIED,sha256=a76ec67cb612bcf7,sha256=68929b3bb1ca12c5,GW-ENG-SMITH,GW-WS-ENG-04,P-4 discharge setpoint 84 -> 82 psi
+2027-09-05T12:18:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\chlorine_log_2027-09.xlsx,CREATED,,sha256=124ac44adc9f2451,GW-WTR-PENA,GW-WS-ENG-01,
+2027-09-07T14:35:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\scope.docx,MODIFIED,sha256=e70a69f7cfae9137,sha256=cb84245c7ae7d4db,GW-ENG-BAKER,GW-WS-ENG-03,
+2027-09-07T19:09:17Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\meeting_notes.docx,MODIFIED,sha256=98c426e2902769c6,sha256=5e7270289908c45f,GW-TEC-ADAMS,GW-WS-ENG-04,
+2027-09-07T22:06:08Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\rtu_config_draft.xml,MODIFIED,sha256=89800e6a09d043d7,sha256=3a5c821e423cb972,GW-WTR-CANTU,GW-WS-ENG-04,overcurrent_trip_threshold 1200A -> 1100A for relay R-03A
+2027-09-08T13:34:04Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\storm_restoration_plan_2027.docx,MODIFIED,sha256=23091ad04c6dbd9a,sha256=7dfa9f5be1ee9c7e,GW-ENG-JIMENEZ,GW-SYS-JMP-01,
+2027-09-08T15:22:44Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\tank_level_alarms.cfg,MODIFIED,sha256=5925bc2ae508a6db,sha256=1dcd461aeb517098,GW-WTR-PENA,GW-SYS-JMP-01,tank 9 high-level alarm 31.5 -> 31.0 ft
+2027-09-08T17:32:32Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_2_setpoints.cfg,MODIFIED,sha256=68929b3bb1ca12c5,sha256=f2566243e027f1c0,GW-ENG-RUIZ,GW-WS-ENG-05,low suction cut-out 9 -> 11 psi
+2027-09-08T18:38:41Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\commissioning_notes.docx,MODIFIED,sha256=1a05963836bf1343,sha256=61afae5d174274f2,GW-TEC-SHAH,GW-SYS-JMP-01,
+2027-09-08T21:10:30Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\scope.docx,MODIFIED,sha256=31c5a56bec2e6b11,sha256=63582c7a943ed2ee,GW-TEC-THOMAS,GW-SYS-JMP-01,
+2027-09-09T13:47:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\punchlist.xlsx,MODIFIED,sha256=8d3a78ad7f76eab5,sha256=5944e02132a8a1ee,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-09-09T14:42:54Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-107_pump_station_typical.dwg,MODIFIED,sha256=21ebbbe8caa9b967,sha256=f65aece1bc3bcd17,GW-TEC-MORENO,GW-WS-ENG-02,
+2027-09-09T16:29:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\cost_estimate.xlsx,MODIFIED,sha256=d7d9fa252ca4548b,sha256=663b5899eb6c73b5,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-09-09T17:00:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\chlorine_log_2027-09.xlsx,MODIFIED,sha256=124ac44adc9f2451,sha256=b3e0133b860061bc,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-09-09T19:54:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\schedule.xlsx,MODIFIED,sha256=ae6b33717283502f,sha256=dc1e97905ad9228f,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-09-09T20:48:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=002ccf47dbd3fb45,sha256=475dc8d8d3367cb9,GW-TEC-WILSON,GW-WS-ENG-04,comment block updated
+2027-09-09T21:00:14Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-104_sub04_protection.dwg,MODIFIED,sha256=5be2c1e052b7b7e2,sha256=29966d8d8cf0eb53,GW-TEC-WALKER,GW-WS-ENG-01,
+2027-09-10T16:04:01Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-102_sub02_protection.dwg,MODIFIED,sha256=c332c38e44d5a214,sha256=fc4a6b437756a5ef,GW-ENG-THOMAS,GW-WS-ENG-01,
+2027-09-10T21:29:22Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=2873f72c121bf59e,sha256=3ebf608219016882,GW-ENG-LOPEZ,GW-WS-ENG-02,LTC band 1.5V -> 2.0V
+2027-09-10T21:38:46Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\punchlist.xlsx,MODIFIED,sha256=02b2b08fb3ed79c2,sha256=a3b2b69c370159e6,GW-TEC-WALKER,GW-WS-ENG-01,
+2027-09-11T13:29:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\punchlist.xlsx,MODIFIED,sha256=0dba7ea023c4b076,sha256=2dddbe142f081fab,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-09-11T22:11:07Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\rtu_config_draft.xml,MODIFIED,sha256=2e78eabd6a1aa42f,sha256=cd926b73217c0994,GW-ENG-VELA,GW-SYS-JMP-01,"overcurrent_trip_threshold 1200A -> 2400A for relays R-02A, R-02B, R-02C"
+2027-09-20T16:52:05Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\cost_estimate.xlsx,MODIFIED,sha256=37f5ac2438107eea,sha256=7f4fe6daafd7f331,GW-ENG-RUIZ,GW-WS-ENG-05,
+2027-09-21T16:36:22Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\scope.docx,MODIFIED,sha256=89462a0f68597eab,sha256=c3e6dcda0fe6b009,GW-ENG-SCHROEDER,GW-SYS-JMP-01,
+2027-09-21T18:58:28Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\schedule.xlsx,MODIFIED,sha256=86d37fc69f717845,sha256=b7194033af063018,GW-TEC-WILSON,GW-SYS-JMP-01,
+2027-09-21T20:13:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\relay_settings_R-01C.xml,MODIFIED,sha256=6911fcd1c392fec3,sha256=4ee3e6fd620663c7,GW-TEC-THOMAS,GW-WS-ENG-03,LTC band 2.0V -> 1.5V
+2027-09-22T14:20:15Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\vendor_quote.pdf,MODIFIED,sha256=731e36502d77be12,sha256=aff495004f7de0ab,GW-TEC-CHAVEZ,GW-WS-ENG-05,
+2027-09-22T14:29:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\meeting_notes.docx,MODIFIED,sha256=5e7270289908c45f,sha256=72a5e4657a560628,GW-TEC-CHAVEZ,GW-SYS-JMP-01,
+2027-09-22T15:37:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-104.docx,MODIFIED,sha256=80764e0ce896b27d,sha256=8dbb50b4a8101b92,GW-WTR-WHITE,GW-SYS-JMP-01,
+2027-09-22T16:19:16Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\protection_coordination_sub03.xlsx,MODIFIED,sha256=2c7c133d89a84857,sha256=eb5ae0231e801bf9,GW-ENG-RUIZ,GW-SYS-JMP-01,
+2027-09-22T16:32:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_1_setpoints.cfg,MODIFIED,sha256=e3e1e676ea195dab,sha256=dfbecc9278fd726b,GW-ENG-VILLARREAL,GW-WS-ENG-04,pump start level 17.0 -> 18.5 ft
+2027-09-22T17:22:30Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\commissioning_notes.docx,MODIFIED,sha256=5561579c191ee744,sha256=786ba6f8ec3c4d48,GW-ENG-SCHROEDER,GW-WS-ENG-05,
+2027-09-22T19:54:30Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\cost_estimate.xlsx,MODIFIED,sha256=d6706517a8223826,sha256=bd3a294ab297b71c,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-09-22T22:27:26Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\relay_settings_R-05C.xml,MODIFIED,sha256=71ad2b31b3911360,sha256=a4a417be46ced8f7,GW-WTR-CANTU,GW-WS-ENG-04,breaker failure timer 12 -> 11 cycles for R-05A
+2027-09-23T15:10:22Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\commissioning_notes.docx,MODIFIED,sha256=ae821e9b65c6a175,sha256=8da00b6d94bc7bf7,GW-TEC-CHAVEZ,GW-SYS-JMP-01,
+2027-09-23T15:27:30Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\rtu_config_draft.xml,MODIFIED,sha256=3f38100a574d37a0,sha256=7674b6b462529b1b,GW-ENG-THOMAS,GW-WS-ENG-01,revision label rev 1 -> rev 2
+2027-09-23T15:28:36Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\punchlist.xlsx,MODIFIED,sha256=d6181f12fa83ede6,sha256=f7bccfaaf5dc0592,GW-ENG-BAKER,GW-WS-ENG-03,
+2027-09-23T16:22:55Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\daily_ops_report_2027-09.xlsx,CREATED,,sha256=ee31a14a785cbba4,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-09-23T18:52:09Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\rtu_config_draft.xml,MODIFIED,sha256=cd926b73217c0994,sha256=b8d3958226b9789c,GW-ENG-THOMAS,GW-WS-ENG-01,LTC band 1.5V -> 2.0V
+2027-09-23T22:01:22Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\schedule.xlsx,MODIFIED,sha256=54333fadc4a6747c,sha256=c4d1de5dc52516bb,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-09-23T22:10:08Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\commissioning_notes.docx,MODIFIED,sha256=8da00b6d94bc7bf7,sha256=29dc3245ab658e70,GW-TEC-MILLER,GW-WS-ENG-05,
+2027-09-24T13:20:51Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\schedule.xlsx,MODIFIED,sha256=b7194033af063018,sha256=314f1903bddd91fe,GW-TEC-MORENO,GW-SYS-JMP-01,
+2027-09-24T13:46:35Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\meeting_notes.docx,MODIFIED,sha256=54773f0dac2db91d,sha256=92c156232a3bc37c,GW-WTR-MORALES,GW-WS-ENG-01,
+2027-09-24T17:10:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02C.xml,MODIFIED,sha256=21d957e2ff2cb1a0,sha256=8f02dbb555d89a10,GW-ENG-PATEL,GW-WS-ENG-02,"overcurrent_trip_threshold 900A -> 800A for relays R-02A, R-02B, R-02C"
+2027-09-24T19:31:41Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\schedule.xlsx,MODIFIED,sha256=6d6a7bc9ebc994e0,sha256=bbaced9d44b4a514,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-09-24T20:44:07Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\relay_settings_R-04A.xml,MODIFIED,sha256=c5a493d1379895cd,sha256=6d59bc62805a42f4,GW-ENG-MARTINEZ,GW-WS-ENG-03,breaker failure timer 12 -> 10 cycles for R-04A
+2027-09-24T21:35:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\protection_coordination_sub04.xlsx,MODIFIED,sha256=80463d8d3d793b54,sha256=0a51993dc2b4a0f0,GW-TEC-WALKER,GW-WS-ENG-01,
+2027-09-24T21:55:44Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\daily_ops_report_2027-09.xlsx,MODIFIED,sha256=ee31a14a785cbba4,sha256=be6a6e5afdd75c52,GW-TEC-MILLER,GW-WS-ENG-05,
+2027-09-24T22:00:53Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\punchlist.xlsx,MODIFIED,sha256=2dddbe142f081fab,sha256=de77b4c969716e98,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-09-24T22:59:17Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\scope.docx,MODIFIED,sha256=3df1e02d88479bae,sha256=7e7c4d3c4ab78acb,GW-ENG-THOMAS,GW-WS-ENG-01,
+2027-09-27T15:47:12Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\sld_sub05_revB.dwg,MODIFIED,sha256=ae9fef458e8de7ce,sha256=b1fae7d0af5415da,GW-ENG-BAKER,GW-WS-ENG-03,
+2027-09-28T13:08:37Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02B.xml,MODIFIED,sha256=4c5de0549964488a,sha256=4a4aaa58b6162fde,GW-TEC-CHAVEZ,GW-WS-ENG-05,recloser shots 3 -> 2 for R-02C
+2027-09-28T14:13:37Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=3ebf608219016882,sha256=3dce814027955b5b,GW-ENG-RAMOS,GW-WS-ENG-01,"overcurrent_trip_threshold 1200A -> 1400A for relays R-01A, R-01B, R-01C"
+2027-09-28T14:21:22Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\relay_settings_R-05C.xml,MODIFIED,sha256=a4a417be46ced8f7,sha256=b2feba0dad162c01,GW-ENG-JIMENEZ,GW-WS-ENG-03,revision label rev 1 -> rev 2
+2027-09-28T16:52:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\meeting_notes.docx,MODIFIED,sha256=245968bfd5c7a236,sha256=7028bd6d83c7fd66,GW-ENG-VELA,GW-WS-ENG-03,
+2027-09-28T22:10:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-112.docx,MODIFIED,sha256=a4a3cfed783ed05b,sha256=97a850003c7d852a,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-09-29T15:35:28Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_6_setpoints.cfg,MODIFIED,sha256=e6122f7cba7179d2,sha256=57d8c605ff830cc8,GW-TEC-SHAH,GW-SYS-JMP-01,pump start level 19.0 -> 20.5 ft
+2027-09-29T16:36:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\cost_estimate.xlsx,MODIFIED,sha256=38d56fc8afd1ddf4,sha256=1720e93315cf1bf7,GW-ENG-NGUYEN,GW-WS-ENG-02,
+2027-09-29T18:10:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\punchlist.xlsx,MODIFIED,sha256=c326d4372fd3698a,sha256=00c93950f94a7ef8,GW-TEC-HERNANDEZ,GW-SYS-JMP-01,
+2027-09-29T18:53:35Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\scope.docx,MODIFIED,sha256=63582c7a943ed2ee,sha256=fd3cab5026cde949,GW-ENG-RUIZ,GW-WS-ENG-05,
+2027-09-29T19:41:19Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\meeting_notes.docx,MODIFIED,sha256=dc71e242eb38555e,sha256=978658f115d92373,GW-ENG-PATEL,GW-SYS-JMP-01,
+2027-09-29T20:39:58Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_active.xml,MODIFIED,sha256=57bee07f719c5f82,sha256=87927ac011f4152f,GW-TEC-ADAMS,GW-WS-ENG-04,station name corrected
+2027-09-29T21:00:07Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\relay_settings_R-04B.xml,MODIFIED,sha256=7d9fbfb0c5286b65,sha256=6d6adc5e9bd6961f,GW-ENG-JIMENEZ,GW-WS-ENG-03,"overcurrent_trip_threshold 1000A -> 1200A for relays R-04A, R-04B, R-04C"
+2027-09-30T13:00:58Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\punchlist.xlsx,MODIFIED,sha256=9ff92cae52cac1e9,sha256=514d4cd1e3f792a5,GW-ENG-JIMENEZ,GW-SYS-JMP-01,
+2027-09-30T13:46:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\rtu_config_active.xml,MODIFIED,sha256=4c2460a7ba7fb5de,sha256=f6aca725d0dc3034,GW-ENG-VILLARREAL,GW-WS-ENG-04,station name corrected
+2027-09-30T19:22:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\meeting_notes.docx,MODIFIED,sha256=ab2a6224be91ae79,sha256=17a65894876e5589,GW-TEC-WILSON,GW-SYS-JMP-01,
+2027-09-30T22:14:43Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\cost_estimate.xlsx,MODIFIED,sha256=245a98cfb1a1982b,sha256=3866994caeda5da9,GW-ENG-RUIZ,GW-WS-ENG-05,
+2027-10-01T14:47:56Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\vendor_quote.pdf,MODIFIED,sha256=b64728dda1a37aaa,sha256=714c400e4dc9bf80,GW-ENG-BAKER,GW-WS-ENG-03,
+2027-10-01T16:54:37Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\commissioning_notes.docx,MODIFIED,sha256=9269c67d5bbb4677,sha256=9ab93a95b16c8137,GW-ENG-JOHNSON,GW-WS-ENG-01,
+2027-10-01T18:14:36Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\test_report_2027.pdf,MODIFIED,sha256=8ffc47175ddb1a69,sha256=6b3bef4952db985f,GW-ENG-JOHNSON,GW-SYS-JMP-01,
+2027-10-04T18:46:40Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\meeting_notes.docx,MODIFIED,sha256=54f912274ef8b1cf,sha256=3eedc1626c1d98bb,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-10-04T21:32:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\chlorine_log_2027-10.xlsx,CREATED,,sha256=42520cb19db53870,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-10-05T16:35:41Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-107.docx,MODIFIED,sha256=abefbb9a9ff08887,sha256=0317dc029e281102,GW-ENG-JIMENEZ,GW-SYS-JMP-01,
+2027-10-05T17:40:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_active.xml,MODIFIED,sha256=87927ac011f4152f,sha256=f86616f52c968484,GW-ENG-BAKER,GW-WS-ENG-03,recloser shots 2 -> 3 for R-01C
+2027-10-05T19:26:57Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-108_scada_network.dwg,MODIFIED,sha256=b8c63582d525243d,sha256=80c60c241db93f90,GW-ENG-RUIZ,GW-WS-ENG-05,
+2027-10-06T15:18:28Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\punchlist.xlsx,MODIFIED,sha256=fcfd3a05c5ab8214,sha256=4ffa581d06ddf4b8,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-10-07T17:10:44Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\punchlist.xlsx,MODIFIED,sha256=a3b2b69c370159e6,sha256=429ba471b404c922,GW-TEC-CHAVEZ,GW-WS-ENG-05,
+2027-10-08T13:41:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_2_setpoints.cfg,MODIFIED,sha256=f2566243e027f1c0,sha256=9ac6aab821f6e44f,GW-TEC-WALKER,GW-WS-ENG-01,low suction cut-out 8 -> 10 psi
+2027-10-08T13:55:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=475dc8d8d3367cb9,sha256=9a6fa437e0fd9e68,GW-TEC-SHAH,GW-WS-ENG-04,recloser shots 3 -> 2 for R-04C
+2027-10-08T14:37:32Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\meeting_notes.docx,MODIFIED,sha256=92c156232a3bc37c,sha256=d10148cf8f1949c1,GW-TEC-MORENO,GW-SYS-JMP-01,
+2027-10-08T15:19:52Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\punchlist.xlsx,MODIFIED,sha256=e02c71555981bf61,sha256=7aaf6a7040b7a46a,GW-TEC-ADAMS,GW-SYS-JMP-01,
+2027-10-08T16:22:25Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\relay_settings_R-05C.xml,MODIFIED,sha256=b2feba0dad162c01,sha256=54e88604017e74d6,GW-TEC-MORENO,GW-WS-ENG-02,LTC band 2.0V -> 1.5V
+2027-10-08T17:32:46Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\punchlist.xlsx,MODIFIED,sha256=7aaf6a7040b7a46a,sha256=9da4d2f99689d5d3,GW-TEC-WALKER,GW-SYS-JMP-01,
+2027-10-08T19:54:08Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\cost_estimate.xlsx,MODIFIED,sha256=bd3a294ab297b71c,sha256=b1583c1b9b519d8d,GW-ENG-JIMENEZ,GW-SYS-JMP-01,
+2027-10-09T21:01:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\booster_setpoints.cfg,MODIFIED,sha256=5dac80a084e088e7,sha256=dc3515388f11aee6,GW-WTR-WHITE,GW-WS-ENG-03,tank 4 high-level alarm 31.5 -> 31.0 ft
+2027-10-11T14:58:07Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\lab_results_2027-10.pdf,CREATED,,sha256=7bb2f584336eb5a9,GW-ENG-JOHNSON,GW-WS-ENG-01,
+2027-10-11T16:08:52Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\lab_results_2027-10.pdf,MODIFIED,sha256=7bb2f584336eb5a9,sha256=c5cafe9ab399b04e,GW-ENG-RAMOS,GW-WS-ENG-01,
+2027-10-11T16:57:51Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\scope.docx,MODIFIED,sha256=c3e6dcda0fe6b009,sha256=610e5d2e83410421,GW-ENG-VILLARREAL,GW-WS-ENG-04,
+2027-10-11T17:48:36Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\schedule.xlsx,MODIFIED,sha256=73c99bcf0e50e600,sha256=eb1911c0637cbfb2,GW-ENG-PATEL,GW-WS-ENG-02,
+2027-10-11T18:51:45Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\relay_settings_R-03B.xml,MODIFIED,sha256=0ffc138a9a36c7d1,sha256=e871487afa710679,GW-ENG-VILLARREAL,GW-WS-ENG-04,revision label rev 8 -> rev 9
+2027-10-11T19:34:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\meeting_notes.docx,MODIFIED,sha256=17a65894876e5589,sha256=65dc0ef6eb86adf6,GW-WTR-MORALES,GW-WS-ENG-01,
+2027-10-11T22:30:53Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\protection_coordination_sub02.xlsx,MODIFIED,sha256=7f4c6b17e936a796,sha256=edf1dc45c42307b5,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-10-12T13:22:33Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\punchlist.xlsx,MODIFIED,sha256=de77b4c969716e98,sha256=9293b83b904a39c5,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-10-12T15:42:12Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\cost_estimate.xlsx,MODIFIED,sha256=663b5899eb6c73b5,sha256=791b75e374f2b989,GW-ENG-BAKER,GW-WS-ENG-03,
+2027-10-12T16:42:47Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\punchlist.xlsx,MODIFIED,sha256=00c93950f94a7ef8,sha256=4ba0c67b5aff1c9b,GW-ENG-RAMOS,GW-WS-ENG-01,
+2027-10-12T17:25:35Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\rtu_config_draft.xml,MODIFIED,sha256=b8d3958226b9789c,sha256=1c2a542259583a42,GW-TEC-MARTINEZ,GW-WS-ENG-05,breaker failure timer 13 -> 11 cycles for R-02C
+2027-10-13T16:17:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\meeting_notes.docx,MODIFIED,sha256=3eedc1626c1d98bb,sha256=8b74d1cbc806c2f6,GW-WTR-SANCHEZ,GW-WS-ENG-01,
+2027-10-13T16:33:09Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\tank_level_alarms.cfg,MODIFIED,sha256=1dcd461aeb517098,sha256=b0125b4ecbd172aa,GW-WTR-WHITE,GW-WS-ENG-03,comment block updated
+2027-10-13T18:38:57Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\punchlist.xlsx,MODIFIED,sha256=9da4d2f99689d5d3,sha256=6507c4db068a6894,GW-ENG-VELA,GW-WS-ENG-03,
+2027-10-13T19:10:31Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_active.xml,MODIFIED,sha256=f86616f52c968484,sha256=065265ca3882958c,GW-ENG-SCHROEDER,GW-WS-ENG-05,CT ratio field corrected 600:5 -> 800:5 for R-01A
+2027-10-13T20:59:24Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\meeting_notes.docx,MODIFIED,sha256=05f8ce34cd0be33a,sha256=d3da434a71a9c108,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2027-10-14T20:00:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_3_setpoints.cfg,MODIFIED,sha256=4756df00b2333df6,sha256=be8784e0f0c99c53,GW-WTR-PENA,GW-WS-ENG-01,pump start level 17.0 -> 18.5 ft
+2027-10-14T20:53:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\vendor_quote.pdf,MODIFIED,sha256=aff495004f7de0ab,sha256=c524870e9c38deb8,GW-ENG-PATEL,GW-WS-ENG-02,
+2027-10-15T12:29:56Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\meeting_notes.docx,MODIFIED,sha256=d10148cf8f1949c1,sha256=ed72815667f0f5fe,GW-WTR-PENA,GW-WS-ENG-01,
+2027-10-15T18:12:24Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\chlorine_log_2027-10.xlsx,MODIFIED,sha256=42520cb19db53870,sha256=47f955ac8cb49318,GW-WTR-PENA,GW-WS-ENG-01,
+2027-10-15T20:42:32Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\cost_estimate.xlsx,MODIFIED,sha256=602496bd1213824b,sha256=244c1cfe5d98aee2,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-10-18T21:25:07Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-100_one_line_system.dwg,MODIFIED,sha256=c28b9247a8fea1a9,sha256=d6f1e1a1cb1cfce2,GW-ENG-JOHNSON,GW-WS-ENG-01,
+2027-10-18T21:38:14Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\tank_level_alarms.cfg,MODIFIED,sha256=b0125b4ecbd172aa,sha256=d3355eca2487de4d,GW-ENG-GARZA,GW-WS-ENG-05,comment block updated
+2027-10-19T18:43:33Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02A.xml,MODIFIED,sha256=5abe0e89ea8a8404,sha256=66095e71cdd972ba,GW-TEC-MORENO,GW-SYS-JMP-01,comment block updated
+2027-10-19T22:03:45Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\protection_coordination_sub01.xlsx,MODIFIED,sha256=c3dc28d6b1668ec1,sha256=6c9aa54f5fccda77,GW-ENG-THOMAS,GW-SYS-JMP-01,
+2027-10-20T13:44:43Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\black_start_checklist.docx,MODIFIED,sha256=d6c571227105b3c5,sha256=1a0756f422aa3c90,GW-TEC-HERNANDEZ,GW-WS-ENG-02,
+2027-10-20T14:29:34Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\rtu_config_draft.xml,MODIFIED,sha256=3a5c821e423cb972,sha256=d73007aeb34d4ffd,GW-TEC-THOMAS,GW-WS-ENG-03,revision label rev 2 -> rev 3
+2027-10-20T15:51:22Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\meeting_notes.docx,MODIFIED,sha256=d3da434a71a9c108,sha256=a54a7d2f7aeb2530,GW-TEC-WILSON,GW-WS-ENG-04,
+2027-10-20T18:06:52Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\relay_settings_R-03B.xml,MODIFIED,sha256=e871487afa710679,sha256=9557a8925443b19d,GW-ENG-LOPEZ,GW-SYS-JMP-01,alarm text edited for R-03A
+2027-10-20T18:17:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\protection_coordination_sub03.xlsx,MODIFIED,sha256=eb5ae0231e801bf9,sha256=eed99927359143e5,GW-ENG-RAMOS,GW-WS-ENG-01,
+2027-10-20T18:53:28Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\rtu_config_draft.xml,MODIFIED,sha256=1c2a542259583a42,sha256=ab2d17ef22636979,GW-TEC-WILSON,GW-SYS-JMP-01,recloser shots 2 -> 3 for R-02A
+2027-10-21T15:56:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\daily_ops_report_2027-10.xlsx,CREATED,,sha256=e5ee4286af1709f2,GW-ENG-SCHROEDER,GW-WS-ENG-05,
+2027-10-21T17:03:18Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\punchlist.xlsx,MODIFIED,sha256=f7bccfaaf5dc0592,sha256=7f7416613475ea11,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-10-21T17:37:56Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\punchlist.xlsx,MODIFIED,sha256=050d27fca7f80bae,sha256=7217d0a5326a16c9,GW-ENG-NGUYEN,GW-SYS-JMP-01,
+2027-10-22T15:31:55Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=3dce814027955b5b,sha256=3203d455d18adb71,GW-WTR-MORALES,GW-WS-ENG-01,"relay 51 time dial 2.0 -> 2.5 for relays R-01A, R-01B, R-01C"
+2027-10-22T15:56:15Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\punchlist.xlsx,MODIFIED,sha256=429ba471b404c922,sha256=661841c6eac965c2,GW-WTR-MORALES,GW-WS-ENG-01,
+2027-10-22T19:34:43Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\meeting_notes.docx,MODIFIED,sha256=7028bd6d83c7fd66,sha256=52ff2e6e988ed9ca,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-10-22T21:21:08Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\punchlist.xlsx,MODIFIED,sha256=6507c4db068a6894,sha256=8cadbcc5632d31d0,GW-TEC-MORENO,GW-WS-ENG-02,
+2027-10-22T22:39:53Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\relay_settings_R-01A.xml,MODIFIED,sha256=3879c06b76143a8f,sha256=a62ef357f8a81a02,GW-ENG-MARTINEZ,GW-WS-ENG-03,LTC band 1.5V -> 2.0V
+2027-10-25T13:10:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\meeting_notes.docx,MODIFIED,sha256=72a5e4657a560628,sha256=123caa68672a7179,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-10-25T15:11:43Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\punchlist.xlsx,MODIFIED,sha256=7f7416613475ea11,sha256=a87679781c54a1f1,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-10-25T15:48:12Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\commissioning_notes.docx,MODIFIED,sha256=786ba6f8ec3c4d48,sha256=8e4fb55a1a046d84,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-10-25T17:26:08Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_6_setpoints.cfg,MODIFIED,sha256=57d8c605ff830cc8,sha256=a76a97ed8baf5a99,GW-ENG-VELA,GW-WS-ENG-03,lead/lag rotation P-4 -> P-1
+2027-10-25T18:17:45Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\relay_settings_R-04B.xml,MODIFIED,sha256=6d6adc5e9bd6961f,sha256=5b651f6ffcedfc84,GW-ENG-PATEL,GW-SYS-JMP-01,CT ratio field corrected 600:5 -> 800:5 for R-04B
+2027-10-25T20:06:32Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\sld_sub05_revB.dwg,MODIFIED,sha256=b1fae7d0af5415da,sha256=22bc94c0dc697539,GW-WTR-SANCHEZ,GW-WS-ENG-01,
+2027-10-26T15:40:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\cost_estimate.xlsx,MODIFIED,sha256=41c219750215f0a7,sha256=f0325b7edf761bc4,GW-ENG-VILLARREAL,GW-WS-ENG-04,
+2027-10-26T19:04:03Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\cost_estimate.xlsx,MODIFIED,sha256=791b75e374f2b989,sha256=4b5ce9d6954ca127,GW-TEC-MILLER,GW-SYS-JMP-01,
+2027-10-27T13:48:31Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_1_setpoints.cfg,MODIFIED,sha256=dfbecc9278fd726b,sha256=34147be56b4ce714,GW-TEC-MARTINEZ,GW-SYS-JMP-01,pump start level 19.0 -> 20.5 ft
+2027-10-27T17:23:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\meeting_notes.docx,MODIFIED,sha256=a54a7d2f7aeb2530,sha256=28a7ce7b47eacf2f,GW-ENG-VELA,GW-WS-ENG-03,
+2027-10-27T18:08:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\cost_estimate.xlsx,MODIFIED,sha256=4997d18c9d480e2f,sha256=29ac3929d5d1e342,GW-TEC-HERNANDEZ,GW-WS-ENG-02,
+2027-10-27T18:46:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02B.xml,MODIFIED,sha256=4a4aaa58b6162fde,sha256=7286dc9081edc045,GW-ENG-RAMOS,GW-WS-ENG-01,"overcurrent_trip_threshold 1000A -> 1200A for relays R-02A, R-02B, R-02C"
+2027-10-27T19:52:47Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_6_setpoints.cfg,MODIFIED,sha256=a76a97ed8baf5a99,sha256=84598c0a83cce71b,GW-ENG-THOMAS,GW-WS-ENG-01,P-1 discharge setpoint 80 -> 78 psi
+2027-10-27T21:19:52Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\relay_settings_R-03C.xml,MODIFIED,sha256=852152c93ab90e3c,sha256=8f0d35e163b95d87,GW-ENG-RAMOS,GW-WS-ENG-01,LTC band 2.0V -> 1.5V
+2027-10-27T22:18:08Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=3203d455d18adb71,sha256=6369aca2ad61addf,GW-TEC-SHAH,GW-WS-ENG-04,"overcurrent_trip_threshold 900A -> 1100A for relays R-01A, R-01B"
+2027-10-28T12:03:46Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\lab_results_2027-10.pdf,MODIFIED,sha256=c5cafe9ab399b04e,sha256=7bddd9d7ba4bed27,GW-ENG-THOMAS,GW-WS-ENG-01,
+2027-10-28T14:11:23Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\protection_coordination_sub02.xlsx,MODIFIED,sha256=edf1dc45c42307b5,sha256=cc60b837571b8d6a,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-10-28T17:06:24Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\cost_estimate.xlsx,MODIFIED,sha256=5a3908c3bdfbdc12,sha256=a0f22ae72e3987f2,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-10-28T18:56:57Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\relay_settings_R-04A.xml,MODIFIED,sha256=6d59bc62805a42f4,sha256=024a0208d382c1ea,GW-TEC-THOMAS,GW-WS-ENG-03,"overcurrent_trip_threshold 900A -> 1100A for relays R-04A, R-04B, R-04C"
+2027-10-28T19:17:45Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\filter_run_log_2027.xlsx,MODIFIED,sha256=7b8b71cb7381bfbe,sha256=4bbfb9b8facd2d31,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-10-28T20:30:19Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\cost_estimate.xlsx,MODIFIED,sha256=29ac3929d5d1e342,sha256=d8e0fc6668491af0,GW-ENG-LOPEZ,GW-SYS-JMP-01,
+2027-10-28T22:15:18Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\rtu_config_draft.xml,MODIFIED,sha256=ab2d17ef22636979,sha256=5da5e6edede04477,GW-TEC-WALKER,GW-WS-ENG-01,station name corrected
+2027-10-29T12:13:32Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\commissioning_notes.docx,MODIFIED,sha256=600751fc545465f1,sha256=ce276e0e3d3bb441,GW-TEC-MARTINEZ,GW-WS-ENG-05,
+2027-10-29T13:56:13Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\rtu_config_active.xml,MODIFIED,sha256=dcaef284970f0c53,sha256=246e424cd2b89330,GW-ENG-JIMENEZ,GW-WS-ENG-03,"overcurrent_trip_threshold 900A -> 1000A for relays R-05A, R-05B, R-05C"
+2027-10-29T16:54:13Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\test_report_2027.pdf,MODIFIED,sha256=8acd6ba0dd0ebd91,sha256=dec3cc41edeccd63,GW-WTR-SANCHEZ,GW-WS-ENG-01,
+2027-11-01T15:04:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\schedule.xlsx,MODIFIED,sha256=1f60c14297b17379,sha256=c907434234125325,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-11-01T15:06:59Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\relay_settings_R-04A.xml,MODIFIED,sha256=024a0208d382c1ea,sha256=a864ee998a988818,GW-ENG-RUIZ,GW-WS-ENG-05,recloser shots 2 -> 3 for R-04B
+2027-11-01T16:48:56Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\meeting_notes.docx,MODIFIED,sha256=192e9c74f06aa3bf,sha256=fc3f820021409156,GW-ENG-THOMAS,GW-WS-ENG-01,
+2027-11-01T20:54:40Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_2_setpoints.cfg,MODIFIED,sha256=9ac6aab821f6e44f,sha256=b9c8032486e9d145,GW-ENG-MARTINEZ,GW-WS-ENG-03,lead/lag rotation P-3 -> P-4
+2027-11-01T21:59:54Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\meeting_notes.docx,MODIFIED,sha256=8b74d1cbc806c2f6,sha256=a0cfda6f75f7d301,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-11-02T16:33:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\cost_estimate.xlsx,MODIFIED,sha256=3866994caeda5da9,sha256=e01c30d5ccf8ee27,GW-TEC-MORENO,GW-WS-ENG-02,
+2027-11-02T17:39:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\cost_estimate.xlsx,MODIFIED,sha256=244c1cfe5d98aee2,sha256=9e55f96f2815b190,GW-TEC-MARTINEZ,GW-WS-ENG-05,
+2027-11-02T20:47:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\relay_settings_R-03C.xml,MODIFIED,sha256=8f0d35e163b95d87,sha256=b34916c94556c832,GW-ENG-BAKER,GW-SYS-JMP-01,CT ratio field corrected 600:5 -> 800:5 for R-03A
+2027-11-03T15:17:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\punchlist.xlsx,MODIFIED,sha256=8cadbcc5632d31d0,sha256=348b101f11ba3eb4,GW-TEC-WALKER,GW-SYS-JMP-01,
+2027-11-03T16:24:55Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-109_fiber_ring.dwg,MODIFIED,sha256=7cb20d0af0509d49,sha256=1d3209fad7c652f1,GW-TEC-HERNANDEZ,GW-WS-ENG-02,
+2027-11-03T22:19:39Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\scope.docx,MODIFIED,sha256=e59c8986a7b5eec5,sha256=343553069878579a,GW-ENG-RAMOS,GW-WS-ENG-01,
+2027-11-04T19:46:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\meeting_notes.docx,MODIFIED,sha256=a0cfda6f75f7d301,sha256=67d9985078cf0c10,GW-TEC-WALKER,GW-WS-ENG-01,
+2027-11-04T21:18:02Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\punchlist.xlsx,MODIFIED,sha256=c6e1a72e39fba66c,sha256=9c67aeb0d93b39df,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2027-11-04T21:56:37Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\protection_coordination_sub01.xlsx,MODIFIED,sha256=6c9aa54f5fccda77,sha256=3ce92e0b7024c383,GW-WTR-PENA,GW-WS-ENG-01,
+2027-11-04T22:34:35Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pressure_zones.xlsx,MODIFIED,sha256=2e0aa8cb9b786699,sha256=2ad352192bd7b2ba,GW-TEC-MILLER,GW-WS-ENG-05,
+2027-11-05T12:36:14Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\vendor_quote.pdf,MODIFIED,sha256=4698d83be9301d3e,sha256=ae51c57ba48c4354,GW-ENG-CLARK,GW-WS-ENG-02,
+2027-11-05T14:03:14Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\drawing_index.xlsx,MODIFIED,sha256=73b0bc3d9c25b681,sha256=c7b1e7315b314f03,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-11-05T14:17:35Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\meeting_notes.docx,MODIFIED,sha256=52ff2e6e988ed9ca,sha256=63a63c04aa6f1528,GW-TEC-MARTINEZ,GW-WS-ENG-05,
+2027-11-05T14:49:58Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\scope.docx,MODIFIED,sha256=610e5d2e83410421,sha256=ba211f36bc20ffe6,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-11-05T17:38:58Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\cost_estimate.xlsx,MODIFIED,sha256=e01c30d5ccf8ee27,sha256=12bd90537724f507,GW-ENG-NGUYEN,GW-WS-ENG-02,
+2027-11-05T18:27:42Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\filter_run_log_2027.xlsx,MODIFIED,sha256=4bbfb9b8facd2d31,sha256=b96aa63b2a6104b9,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-11-08T18:34:25Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\daily_ops_report_2027-11.xlsx,CREATED,,sha256=b01dab2f03bcc7fa,GW-ENG-NGUYEN,GW-WS-ENG-02,
+2027-11-08T20:20:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\meeting_notes.docx,MODIFIED,sha256=123caa68672a7179,sha256=19c2ed9ae0a6c3da,GW-ENG-RAMOS,GW-SYS-JMP-01,
+2027-11-08T20:58:13Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\turbidity_summary_2027.xlsx,MODIFIED,sha256=c670cb2323915b91,sha256=e54d42317a79c0f4,GW-TEC-ADAMS,GW-WS-ENG-04,
+2027-11-09T14:35:01Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\schedule.xlsx,MODIFIED,sha256=19fbe71665e5f53c,sha256=09a8653ef0d7cd62,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-11-09T16:41:53Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\schedule.xlsx,MODIFIED,sha256=c907434234125325,sha256=2d4b18f5b7a920de,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-11-09T19:35:05Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-107.docx,MODIFIED,sha256=0317dc029e281102,sha256=27fa0b009f6ad8cb,GW-ENG-RUIZ,GW-WS-ENG-05,
+2027-11-09T23:05:05Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_6_setpoints.cfg,MODIFIED,sha256=84598c0a83cce71b,sha256=a34af76d4ab9fd67,GW-ENG-MARTINEZ,GW-SYS-JMP-01,P-3 discharge setpoint 83 -> 81 psi
+2027-11-10T16:00:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\daily_ops_report_2027-11.xlsx,MODIFIED,sha256=b01dab2f03bcc7fa,sha256=ddcc0c352dcc4de9,GW-TEC-WILSON,GW-SYS-JMP-01,
+2027-11-10T18:54:37Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\meeting_notes.docx,MODIFIED,sha256=714112ebbab63e60,sha256=218e44f33bfd1754,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-11-10T19:17:25Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\rtu_config_draft.xml,MODIFIED,sha256=d73007aeb34d4ffd,sha256=28c5556e549a653b,GW-ENG-SMITH,GW-WS-ENG-04,"overcurrent_trip_threshold 1400A -> 1600A for relays R-03A, R-03B"
+2027-11-11T18:22:10Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\cost_estimate.xlsx,MODIFIED,sha256=d8e0fc6668491af0,sha256=f4fd70579fd5518f,GW-TEC-MORENO,GW-SYS-JMP-01,
+2027-11-11T19:44:32Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_2_setpoints.cfg,MODIFIED,sha256=b9c8032486e9d145,sha256=4363dc70629bf388,GW-TEC-WILSON,GW-SYS-JMP-01,pump start level 18.0 -> 19.5 ft
+2027-11-11T21:32:13Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\rtu_config_draft.xml,MODIFIED,sha256=7674b6b462529b1b,sha256=6bcc105e478141d1,GW-ENG-SMITH,GW-WS-ENG-04,"relay 51 time dial 3.0 -> 1.5 for relays R-05A, R-05B, R-05C"
+2027-11-12T14:27:58Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\meeting_notes.docx,MODIFIED,sha256=63a63c04aa6f1528,sha256=7bed6f5b26ce1035,GW-ENG-CLARK,GW-WS-ENG-02,
+2027-11-12T18:45:40Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\meeting_notes.docx,MODIFIED,sha256=ed72815667f0f5fe,sha256=ccc9defc2fa75a13,GW-ENG-BAKER,GW-SYS-JMP-01,
+2027-11-12T19:33:09Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\schedule.xlsx,MODIFIED,sha256=dc1e97905ad9228f,sha256=b3022d1f3141f3e7,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-11-14T17:29:53Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=9a6fa437e0fd9e68,sha256=20c9a1285117d19e,GW-WTR-WHITE,GW-WS-ENG-03,CT ratio field corrected 600:5 -> 800:5 for R-04B
+2027-11-14T23:58:30Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\rtu_config_draft.xml,MODIFIED,sha256=6bcc105e478141d1,sha256=555cbcaabd2f7744,GW-WTR-WHITE,GW-WS-ENG-03,overcurrent_trip_threshold 1000A -> 1200A for relay R-05B
+2027-11-15T22:25:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\sld_sub05_revB.dwg,MODIFIED,sha256=22bc94c0dc697539,sha256=49f97b93f01d93ca,GW-ENG-THOMAS,GW-SYS-JMP-01,
+2027-11-15T22:37:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\scope.docx,MODIFIED,sha256=a8d7f1e8ed1b53b3,sha256=f10a34bd12f83fea,GW-TEC-HERNANDEZ,GW-WS-ENG-02,
+2027-11-15T23:31:41Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\cost_estimate.xlsx,MODIFIED,sha256=a0f22ae72e3987f2,sha256=31b347bd53705eb0,GW-TEC-WILSON,GW-SYS-JMP-01,
+2027-11-15T23:59:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=6369aca2ad61addf,sha256=6e7db83dff45412f,GW-ENG-SMITH,GW-WS-ENG-04,overcurrent_trip_threshold 1400A -> 1600A for relay R-01A
+2027-11-16T15:15:59Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\cost_estimate.xlsx,MODIFIED,sha256=b1583c1b9b519d8d,sha256=c819a72a335abe35,GW-ENG-VELA,GW-WS-ENG-03,
+2027-11-16T15:24:43Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\punchlist.xlsx,MODIFIED,sha256=9293b83b904a39c5,sha256=b3406194be91d274,GW-TEC-HERNANDEZ,GW-WS-ENG-02,
+2027-11-16T19:11:12Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\punchlist.xlsx,MODIFIED,sha256=b3406194be91d274,sha256=e8c454dee783bd49,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2027-11-16T20:07:29Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\punchlist.xlsx,MODIFIED,sha256=348b101f11ba3eb4,sha256=64bd91817be81b8d,GW-TEC-HERNANDEZ,GW-SYS-JMP-01,
+2027-11-16T23:56:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\schedule.xlsx,MODIFIED,sha256=2d4b18f5b7a920de,sha256=171793c3ba54b3ee,GW-ENG-RUIZ,GW-WS-ENG-05,
+2027-11-17T17:12:56Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\booster_setpoints.cfg,MODIFIED,sha256=dc3515388f11aee6,sha256=9ffd1e40942d391a,GW-ENG-NGUYEN,GW-SYS-JMP-01,comment block updated
+2027-11-17T19:18:24Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\scope.docx,MODIFIED,sha256=12403c1fad58cbd6,sha256=bdd3a1bad1533637,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-11-17T19:56:10Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\meeting_notes.docx,MODIFIED,sha256=978658f115d92373,sha256=0ff869a3be3c58d8,GW-TEC-MILLER,GW-WS-ENG-05,
+2027-11-17T23:51:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\punchlist.xlsx,MODIFIED,sha256=a87679781c54a1f1,sha256=522c6024a5b01530,GW-WTR-NELSON,GW-WS-ENG-05,
+2027-11-18T14:08:16Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\punchlist.xlsx,MODIFIED,sha256=4ffa581d06ddf4b8,sha256=f694dc8a0b55d6fd,GW-ENG-JOHNSON,GW-SYS-JMP-01,
+2027-11-18T15:08:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\scope.docx,MODIFIED,sha256=8c86d5179adaed86,sha256=ddc957e0b6317daa,GW-TEC-MORENO,GW-WS-ENG-02,
+2027-11-18T16:25:26Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\punchlist.xlsx,MODIFIED,sha256=661841c6eac965c2,sha256=7b9ceeec2a1235d0,GW-ENG-VELA,GW-WS-ENG-03,
+2027-11-18T17:18:18Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\scope.docx,MODIFIED,sha256=ddc957e0b6317daa,sha256=ac67f0eb5e77dd86,GW-TEC-SHAH,GW-WS-ENG-04,
+2027-11-18T18:34:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\lockout_tagout_checklist.docx,MODIFIED,sha256=3052c555d40f7932,sha256=2ebc83e8cd92e67e,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-11-18T19:00:24Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\meeting_notes.docx,MODIFIED,sha256=19c2ed9ae0a6c3da,sha256=0190601ec772ce0e,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-11-18T21:39:37Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\rtu_config_active.xml,MODIFIED,sha256=35d093c47b530d95,sha256=145ef162075ebddf,GW-ENG-LOPEZ,GW-WS-ENG-02,relay 51 time dial 2.0 -> 2.5 for relay R-03A
+2027-11-18T21:45:55Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\scope.docx,MODIFIED,sha256=7e7c4d3c4ab78acb,sha256=73802b7dc5835f1f,GW-ENG-CLARK,GW-WS-ENG-02,
+2027-11-19T15:57:24Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\meeting_notes.docx,MODIFIED,sha256=67d9985078cf0c10,sha256=af135e63cf2b47fd,GW-TEC-MORENO,GW-SYS-JMP-01,
+2027-11-19T18:25:04Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\rtu_config_active.xml,MODIFIED,sha256=145ef162075ebddf,sha256=89eff5ee5d7879e5,GW-ENG-RUIZ,GW-WS-ENG-05,comment block updated
+2027-11-19T18:32:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\schedule.xlsx,MODIFIED,sha256=eb1911c0637cbfb2,sha256=24ed372617edfda2,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-11-19T18:57:35Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-104_sub04_protection.dwg,MODIFIED,sha256=29966d8d8cf0eb53,sha256=5cadabe567861425,GW-ENG-THOMAS,GW-WS-ENG-01,
+2027-11-19T19:45:54Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_active.xml,MODIFIED,sha256=8a62cb2e7aa1dc2f,sha256=828164ae42df739e,GW-ENG-PATEL,GW-WS-ENG-02,station name corrected
+2027-11-19T22:48:22Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\scope.docx,MODIFIED,sha256=f10a34bd12f83fea,sha256=88e913092c0e0a6d,GW-WTR-PENA,GW-WS-ENG-01,
+2027-11-22T15:12:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\cost_estimate.xlsx,MODIFIED,sha256=f233afa4ca3dd675,sha256=6ec1471681f9f762,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-11-22T15:25:22Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\schedule.xlsx,MODIFIED,sha256=9e948e83d353f708,sha256=f6dc961f7697a12a,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-11-22T15:44:24Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\cost_estimate.xlsx,MODIFIED,sha256=f0325b7edf761bc4,sha256=fdeb9a60f1e97d8e,GW-ENG-NGUYEN,GW-WS-ENG-02,
+2027-11-22T18:36:17Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\schedule.xlsx,MODIFIED,sha256=314f1903bddd91fe,sha256=5cdbfb3ac15713ea,GW-ENG-JOHNSON,GW-WS-ENG-01,
+2027-11-22T19:33:51Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\relay_settings_R-01C.xml,MODIFIED,sha256=4ee3e6fd620663c7,sha256=4847bfa71e272437,GW-ENG-THOMAS,GW-SYS-JMP-01,breaker failure timer 13 -> 10 cycles for R-01B
+2027-11-22T20:49:52Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pressure_zones.xlsx,MODIFIED,sha256=2ad352192bd7b2ba,sha256=0493b18ee94ceb9a,GW-TEC-MILLER,GW-WS-ENG-05,
+2027-11-23T13:56:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\meeting_notes.docx,MODIFIED,sha256=7bed6f5b26ce1035,sha256=111761357b91d9a9,GW-ENG-THOMAS,GW-SYS-JMP-01,
+2027-11-23T15:00:51Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\meeting_notes.docx,MODIFIED,sha256=65dc0ef6eb86adf6,sha256=f6ff1f336b1daca4,GW-TEC-HERNANDEZ,GW-SYS-JMP-01,
+2027-11-23T15:54:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\cost_estimate.xlsx,MODIFIED,sha256=9e55f96f2815b190,sha256=780ed602750dae71,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-11-23T16:24:16Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\punchlist.xlsx,MODIFIED,sha256=7b9ceeec2a1235d0,sha256=6d5db07a1fd184d3,GW-WTR-MORALES,GW-WS-ENG-01,
+2027-11-23T21:01:56Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\filter_run_log_2027.xlsx,MODIFIED,sha256=b96aa63b2a6104b9,sha256=1b93d71b7bcc6f1c,GW-ENG-PATEL,GW-SYS-JMP-01,
+2027-11-23T22:33:17Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\meeting_notes.docx,MODIFIED,sha256=28a7ce7b47eacf2f,sha256=0d99b363bf063159,GW-TEC-HERNANDEZ,GW-WS-ENG-02,
+2027-11-23T23:03:51Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\vendor_quote.pdf,MODIFIED,sha256=fd984f53e216662c,sha256=63efb9a128ddc90d,GW-TEC-SHAH,GW-WS-ENG-04,
+2027-11-24T17:47:29Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\cost_estimate.xlsx,MODIFIED,sha256=7f4fe6daafd7f331,sha256=1e1fd193f8fd0ca1,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-11-24T19:44:17Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\booster_setpoints.cfg,MODIFIED,sha256=9ffd1e40942d391a,sha256=23b192f67aa8979d,GW-ENG-PATEL,GW-WS-ENG-02,revision label rev 7 -> rev 8
+2027-11-24T20:14:17Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=6e7db83dff45412f,sha256=63969db89fc4f527,GW-ENG-JOHNSON,GW-WS-ENG-01,comment block updated
+2027-11-24T21:05:09Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\punchlist.xlsx,MODIFIED,sha256=514d4cd1e3f792a5,sha256=028d42032960aa09,GW-ENG-VILLARREAL,GW-WS-ENG-04,
+2027-11-24T21:16:02Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\meeting_notes.docx,MODIFIED,sha256=0d99b363bf063159,sha256=6122068f64ca9246,GW-ENG-MARTINEZ,GW-SYS-JMP-01,
+2027-11-29T13:53:58Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\relay_settings_R-03C.xml,MODIFIED,sha256=b34916c94556c832,sha256=b82515f7dc43b052,GW-TEC-WILSON,GW-WS-ENG-04,27-UV time delay 2.0s -> 1.5s
+2027-11-29T17:48:26Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\commissioning_notes.docx,MODIFIED,sha256=9ab93a95b16c8137,sha256=45691f1a9aa12f14,GW-ENG-NGUYEN,GW-WS-ENG-02,
+2027-11-29T20:25:30Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\schedule.xlsx,MODIFIED,sha256=f6dc961f7697a12a,sha256=4e1a39ad28c9343c,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-11-29T22:16:31Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\meeting_notes.docx,MODIFIED,sha256=111761357b91d9a9,sha256=7805ba76e6da7e6a,GW-WTR-CANTU,GW-SYS-JMP-01,
+2027-11-30T13:08:14Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\meeting_notes.docx,MODIFIED,sha256=7805ba76e6da7e6a,sha256=1385ae476ea29614,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-11-30T13:11:12Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\turbidity_summary_2027.xlsx,MODIFIED,sha256=e54d42317a79c0f4,sha256=0091d34a3958ba77,GW-ENG-NGUYEN,GW-WS-ENG-02,
+2027-11-30T18:24:30Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-101_sub01_protection.dwg,MODIFIED,sha256=03dda38559ea1d46,sha256=c4038abb54e956eb,GW-TEC-THOMAS,GW-SYS-JMP-01,
+2027-11-30T19:58:36Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\schedule.xlsx,MODIFIED,sha256=9f2792258d208d5c,sha256=53a74b9134b21ec2,GW-ENG-JOHNSON,GW-WS-ENG-01,
+2027-11-30T21:42:35Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\meeting_notes.docx,MODIFIED,sha256=27a4c8cea52a8163,sha256=b0b75b2165a46a63,GW-ENG-CLARK,GW-WS-ENG-02,
+2027-12-01T16:57:31Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\rtu_config_draft.xml,MODIFIED,sha256=28c5556e549a653b,sha256=d6b5a9711d5f7a20,GW-TEC-ADAMS,GW-WS-ENG-04,alarm text edited for R-03B
+2027-12-01T17:39:15Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\relay_settings_R-05B.xml,MODIFIED,sha256=a1538b66b892f90f,sha256=802af7f85c4e2c45,GW-ENG-JOHNSON,GW-WS-ENG-01,comment block updated
+2027-12-01T21:41:10Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\commissioning_notes.docx,MODIFIED,sha256=c7d0ac93483888f9,sha256=856ba4bae1fbaaeb,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-12-01T23:02:23Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\meeting_notes.docx,MODIFIED,sha256=1385ae476ea29614,sha256=8a7495443ecdbf09,GW-ENG-RUIZ,GW-WS-ENG-05,
+2027-12-02T13:14:24Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_6_setpoints.cfg,MODIFIED,sha256=a34af76d4ab9fd67,sha256=2123a98f9d035ac3,GW-ENG-BAKER,GW-WS-ENG-03,comment block updated
+2027-12-02T14:19:39Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_2_setpoints.cfg,MODIFIED,sha256=4363dc70629bf388,sha256=79e022f966774a00,GW-ENG-JIMENEZ,GW-WS-ENG-03,low suction cut-out 9 -> 11 psi
+2027-12-02T16:38:12Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_4_setpoints.cfg,MODIFIED,sha256=1b3cd5a1c2585a31,sha256=88cfc078c2dcb4d4,GW-TEC-MILLER,GW-WS-ENG-05,revision label rev 7 -> rev 8
+2027-12-02T19:19:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02C.xml,MODIFIED,sha256=8f02dbb555d89a10,sha256=b409ade8ee806ca3,GW-TEC-SHAH,GW-WS-ENG-04,alarm text edited for R-02B
+2027-12-02T20:17:56Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\meeting_notes.docx,MODIFIED,sha256=218e44f33bfd1754,sha256=7027b7c87c2f1e0f,GW-WTR-MORALES,GW-WS-ENG-01,
+2027-12-02T20:46:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\cost_estimate.xlsx,MODIFIED,sha256=1e1fd193f8fd0ca1,sha256=1933c79a27f34879,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-12-03T13:33:08Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\meeting_notes.docx,MODIFIED,sha256=6122068f64ca9246,sha256=a0b5905b291f80fc,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-12-03T14:14:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\meeting_notes.docx,MODIFIED,sha256=f6ff1f336b1daca4,sha256=e62393d05cee6671,GW-ENG-CLARK,GW-WS-ENG-02,
+2027-12-03T15:00:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\cost_estimate.xlsx,MODIFIED,sha256=780ed602750dae71,sha256=f539f273c69aca19,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-12-03T15:19:21Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\readme_change_procedure.docx,MODIFIED,sha256=9819938107c07e8f,sha256=ae86fb1499801b8b,GW-ENG-RAMOS,GW-SYS-JMP-01,
+2027-12-03T16:22:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\scope.docx,MODIFIED,sha256=bdd3a1bad1533637,sha256=1e93677469bdaec8,GW-ENG-RAMOS,GW-WS-ENG-01,
+2027-12-03T17:27:28Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\meeting_notes.docx,MODIFIED,sha256=b0b75b2165a46a63,sha256=d5eedc6f43bb2a31,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-12-03T17:37:42Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\schedule.xlsx,MODIFIED,sha256=61ea0eab01354273,sha256=5eb09f98208738e7,GW-WTR-SANCHEZ,GW-WS-ENG-01,
+2027-12-03T23:34:26Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\daily_ops_report_2027-12.xlsx,CREATED,,sha256=be5bdd9d605c2cbe,GW-WTR-SANCHEZ,GW-WS-ENG-01,
+2027-12-04T20:19:04Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02C.xml,MODIFIED,sha256=b409ade8ee806ca3,sha256=ee515c93f61d03a5,GW-WTR-WHITE,GW-WS-ENG-03,breaker failure timer 14 -> 10 cycles for R-02C
+2027-12-06T14:04:26Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\protection_coordination_sub04.xlsx,MODIFIED,sha256=0a51993dc2b4a0f0,sha256=60ea3c563bc03bea,GW-TEC-HERNANDEZ,GW-WS-ENG-02,
+2027-12-06T14:16:37Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-104.docx,MODIFIED,sha256=8dbb50b4a8101b92,sha256=0845109c811193ab,GW-ENG-JIMENEZ,GW-SYS-JMP-01,
+2027-12-06T16:04:32Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\relay_settings_R-01C.xml,MODIFIED,sha256=4847bfa71e272437,sha256=6435892d4057245d,GW-ENG-THOMAS,GW-SYS-JMP-01,relay 51 time dial 2.5 -> 2.0 for relay R-01B
+2027-12-06T18:23:32Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\relay_settings_R-03B.xml,MODIFIED,sha256=9557a8925443b19d,sha256=a8f7e0b4c200a373,GW-ENG-CLARK,GW-SYS-JMP-01,comment block updated
+2027-12-06T20:46:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\commissioning_notes.docx,MODIFIED,sha256=61afae5d174274f2,sha256=85bb68c684bf0a1b,GW-ENG-RAMOS,GW-WS-ENG-01,
+2027-12-07T14:59:44Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\chlorine_log_2027-12.xlsx,CREATED,,sha256=e0feb5ce9ec482a3,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-12-07T15:35:55Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\cost_estimate.xlsx,MODIFIED,sha256=1720e93315cf1bf7,sha256=9f7df0d2640a8d49,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-12-07T18:56:40Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\meeting_notes.docx,MODIFIED,sha256=af135e63cf2b47fd,sha256=144726b76c29f4a4,GW-ENG-MARTINEZ,GW-SYS-JMP-01,
+2027-12-07T21:44:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\test_report_2027.pdf,MODIFIED,sha256=6b3bef4952db985f,sha256=8c834fba4c5f5e91,GW-TEC-WILSON,GW-WS-ENG-04,
+2027-12-07T22:10:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\test_report_2027.pdf,MODIFIED,sha256=e3b6b3eed1ec73b4,sha256=12759043504a8054,GW-ENG-GARZA,GW-WS-ENG-05,
+2027-12-08T14:13:52Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\storm_restoration_plan_2027.docx,MODIFIED,sha256=7dfa9f5be1ee9c7e,sha256=165e890b72028f40,GW-ENG-RAMOS,GW-WS-ENG-01,
+2027-12-08T15:04:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\test_report_2027.pdf,MODIFIED,sha256=8a4323f780170fb0,sha256=55a3fdd40be1b27f,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-12-08T15:24:32Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\punchlist.xlsx,MODIFIED,sha256=6d5db07a1fd184d3,sha256=1e89cf98fa7b26a9,GW-ENG-RUIZ,GW-SYS-JMP-01,
+2027-12-08T22:23:52Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\vendor_quote.pdf,MODIFIED,sha256=714c400e4dc9bf80,sha256=c20d27acc2d1a662,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-12-09T14:34:41Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02A.xml,MODIFIED,sha256=66095e71cdd972ba,sha256=b0e5491276e977a6,GW-ENG-GARZA,GW-WS-ENG-05,station name corrected
+2027-12-09T21:49:03Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\punchlist.xlsx,MODIFIED,sha256=64bd91817be81b8d,sha256=b87094f60d0600b9,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-12-10T15:36:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\vendor_quote.pdf,MODIFIED,sha256=786e9cf6dea12c52,sha256=d11959aca4070002,GW-TEC-WILSON,GW-SYS-JMP-01,
+2027-12-13T14:14:34Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\commissioning_notes.docx,MODIFIED,sha256=856ba4bae1fbaaeb,sha256=b3eb5ed0cbe19795,GW-TEC-MORENO,GW-WS-ENG-02,
+2027-12-13T19:05:58Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\schedule.xlsx,MODIFIED,sha256=4e1a39ad28c9343c,sha256=7be2975b6f0e6f42,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-12-13T20:01:54Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\rtu_config_draft.xml,MODIFIED,sha256=5da5e6edede04477,sha256=dbc8d8732f2721bc,GW-ENG-THOMAS,GW-WS-ENG-01,"overcurrent_trip_threshold 1200A -> 1400A for relays R-02A, R-02B, R-02C"
+2027-12-14T15:22:56Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\vendor_quote.pdf,MODIFIED,sha256=ae51c57ba48c4354,sha256=4689e6906a25708f,GW-WTR-PENA,GW-WS-ENG-01,
+2027-12-14T18:40:31Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-118.docx,MODIFIED,sha256=273ce605648bb1e9,sha256=5442a25cd23c8b93,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2027-12-15T13:33:10Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\vendor_quote.pdf,MODIFIED,sha256=65228a3fac155655,sha256=9b14888f108c1424,GW-ENG-JOHNSON,GW-WS-ENG-01,
+2027-12-15T17:35:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\punchlist.xlsx,MODIFIED,sha256=f694dc8a0b55d6fd,sha256=bd0885ad98895656,GW-ENG-BAKER,GW-WS-ENG-03,
+2027-12-15T17:36:32Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-118.docx,MODIFIED,sha256=5442a25cd23c8b93,sha256=96435d47e2b011ad,GW-TEC-ADAMS,GW-SYS-JMP-01,
+2027-12-16T14:39:22Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\punchlist.xlsx,MODIFIED,sha256=4ba0c67b5aff1c9b,sha256=d5daa5aef745bfd9,GW-ENG-JOHNSON,GW-WS-ENG-01,
+2027-12-16T15:41:54Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\commissioning_notes.docx,MODIFIED,sha256=45691f1a9aa12f14,sha256=1bf71a34bd52746e,GW-TEC-WILSON,GW-SYS-JMP-01,
+2027-12-16T17:06:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\rtu_config_draft.xml,MODIFIED,sha256=555cbcaabd2f7744,sha256=5f4d377037be9f79,GW-WTR-WHITE,GW-WS-ENG-03,relay 51 time dial 3.0 -> 1.5 for relay R-05C
+2027-12-16T20:54:01Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=20c9a1285117d19e,sha256=5cca519a6ba67411,GW-TEC-WILSON,GW-WS-ENG-04,"overcurrent_trip_threshold 1400A -> 1600A for relays R-04A, R-04B, R-04C"
+2027-12-17T18:46:49Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\vendor_quote.pdf,MODIFIED,sha256=c20d27acc2d1a662,sha256=c3f25189f6643364,GW-TEC-WALKER,GW-SYS-JMP-01,
+2027-12-17T19:26:31Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\test_report_2027.pdf,MODIFIED,sha256=12759043504a8054,sha256=80cb27d0216c5f21,GW-TEC-MARTINEZ,GW-WS-ENG-05,
+2027-12-17T22:40:18Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\meeting_notes.docx,MODIFIED,sha256=e62393d05cee6671,sha256=0ab90403237ace12,GW-ENG-PATEL,GW-WS-ENG-02,
+2027-12-17T23:04:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\turbidity_summary_2027.xlsx,MODIFIED,sha256=0091d34a3958ba77,sha256=efa253655351c679,GW-TEC-MILLER,GW-SYS-JMP-01,
+2027-12-17T23:27:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\commissioning_notes.docx,MODIFIED,sha256=a8baaa770dcf0ae6,sha256=8d20bc63bfc6b1f2,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-12-18T20:23:23Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\meeting_notes.docx,MODIFIED,sha256=7027b7c87c2f1e0f,sha256=84bc51d3c0382c3b,GW-WTR-PENA,GW-WS-ENG-01,
+2027-12-20T15:41:17Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\test_report_2027.pdf,MODIFIED,sha256=8c834fba4c5f5e91,sha256=0a57c9f3957519c0,GW-TEC-THOMAS,GW-SYS-JMP-01,
+2027-12-20T17:49:26Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_active.xml,MODIFIED,sha256=828164ae42df739e,sha256=53aafa3a84a3a723,GW-ENG-RUIZ,GW-WS-ENG-05,overcurrent_trip_threshold 1200A -> 1300A for relay R-04C
+2027-12-20T19:16:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\tank_level_alarms.cfg,MODIFIED,sha256=d3355eca2487de4d,sha256=4aebcb57bcb8d0c4,GW-ENG-THOMAS,GW-WS-ENG-01,P-1 discharge setpoint 82 -> 85 psi
+2027-12-20T19:18:07Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\commissioning_notes.docx,MODIFIED,sha256=ce276e0e3d3bb441,sha256=83eccc55d5e7e78f,GW-ENG-BAKER,GW-WS-ENG-03,
+2027-12-20T22:28:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-101.docx,MODIFIED,sha256=db3cb7481b568218,sha256=18e0ff942b7d60be,GW-ENG-SMITH,GW-SYS-JMP-01,
+2027-12-20T23:47:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\punchlist.xlsx,MODIFIED,sha256=e8c454dee783bd49,sha256=d7b8a6be3970446c,GW-WTR-CANTU,GW-WS-ENG-04,
+2027-12-21T19:14:41Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\ami_pilot\schedule.xlsx,MODIFIED,sha256=09a8653ef0d7cd62,sha256=3f288208ebe73afe,GW-ENG-VELA,GW-WS-ENG-03,
+2027-12-21T20:24:05Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\chlorine_log_2027-12.xlsx,MODIFIED,sha256=e0feb5ce9ec482a3,sha256=a84225596d8d3f79,GW-TEC-MARTINEZ,GW-WS-ENG-05,
+2027-12-21T23:21:00Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\commissioning_notes.docx,MODIFIED,sha256=dcaf0ab58fdea98a,sha256=2744383838cb362f,GW-TEC-THOMAS,GW-WS-ENG-03,
+2027-12-22T13:32:13Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\protection_coordination_sub04.xlsx,MODIFIED,sha256=60ea3c563bc03bea,sha256=ffe65b62da654914,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2027-12-22T13:34:31Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02C.xml,MODIFIED,sha256=ee515c93f61d03a5,sha256=92a315c498e1915f,GW-ENG-BAKER,GW-WS-ENG-03,revision label rev 8 -> rev 9
+2027-12-22T13:37:23Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\lockout_tagout_checklist.docx,MODIFIED,sha256=2ebc83e8cd92e67e,sha256=424d6492d6e7eb5d,GW-ENG-NGUYEN,GW-WS-ENG-02,
+2027-12-22T19:05:15Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_1_setpoints.cfg,MODIFIED,sha256=34147be56b4ce714,sha256=fd3b647391cf8e4b,GW-TEC-MORENO,GW-WS-ENG-02,lead/lag rotation P-1 -> P-2
+2027-12-22T19:35:15Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02C.xml,MODIFIED,sha256=92a315c498e1915f,sha256=bd8abd6dec3fa718,GW-ENG-VILLARREAL,GW-WS-ENG-04,comment block updated
+2027-12-22T23:44:23Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\punchlist.xlsx,MODIFIED,sha256=d5daa5aef745bfd9,sha256=fd15855549d88512,GW-ENG-SMITH,GW-WS-ENG-04,
+2027-12-23T13:11:14Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02C.xml,MODIFIED,sha256=bd8abd6dec3fa718,sha256=7e20dfda2e6dc764,GW-ENG-THOMAS,GW-WS-ENG-01,station name corrected
+2027-12-23T14:16:17Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02A.xml,MODIFIED,sha256=b0e5491276e977a6,sha256=534b831f3951505d,GW-TEC-ADAMS,GW-WS-ENG-04,relay 51 time dial 3.0 -> 1.5 for relay R-02A
+2027-12-23T17:50:16Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\meeting_notes.docx,MODIFIED,sha256=a0b5905b291f80fc,sha256=398f0ce083666437,GW-ENG-NGUYEN,GW-WS-ENG-02,
+2027-12-23T21:31:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\storm_restoration_plan_2027.docx,MODIFIED,sha256=165e890b72028f40,sha256=800b971165b72248,GW-TEC-ADAMS,GW-WS-ENG-04,
+2027-12-23T23:09:14Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_1_setpoints.cfg,MODIFIED,sha256=fd3b647391cf8e4b,sha256=c4fce9c66f5d5603,GW-TEC-HERNANDEZ,GW-WS-ENG-02,chlorine dose setpoint 2.2 -> 2.0 mg/L
+2027-12-27T13:08:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\cost_estimate.xlsx,MODIFIED,sha256=12bd90537724f507,sha256=10ae109176408687,GW-WTR-WHITE,GW-WS-ENG-03,
+2027-12-27T14:07:01Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\cost_estimate.xlsx,MODIFIED,sha256=9f7df0d2640a8d49,sha256=ceea3dcaffe63ed9,GW-ENG-NGUYEN,GW-WS-ENG-02,
+2027-12-27T16:16:20Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\cost_estimate.xlsx,MODIFIED,sha256=4b5ce9d6954ca127,sha256=035d1b16ca356c2f,GW-ENG-VILLARREAL,GW-WS-ENG-04,
+2027-12-28T17:10:15Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\scada_point_database_2027\commissioning_notes.docx,MODIFIED,sha256=83eccc55d5e7e78f,sha256=d25d7bb384de9f37,GW-ENG-RUIZ,GW-WS-ENG-05,
+2027-12-29T14:24:11Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\punchlist.xlsx,MODIFIED,sha256=1e89cf98fa7b26a9,sha256=c950335f5f1415b7,GW-ENG-VELA,GW-SYS-JMP-01,
+2027-12-29T14:37:29Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\feeder_14_reconductor\schedule.xlsx,MODIFIED,sha256=bbaced9d44b4a514,sha256=878aaf2d25bf54e5,GW-TEC-MORENO,GW-WS-ENG-02,
+2027-12-29T16:05:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pressure_zones.xlsx,MODIFIED,sha256=0493b18ee94ceb9a,sha256=2c622e98e64436e9,GW-TEC-SHAH,GW-WS-ENG-04,
+2027-12-29T18:37:31Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\commissioning_notes.docx,MODIFIED,sha256=1bf71a34bd52746e,sha256=48f1c598c6345867,GW-TEC-ADAMS,GW-WS-ENG-04,
+2027-12-29T18:42:50Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\protection_coordination_sub02.xlsx,MODIFIED,sha256=cc60b837571b8d6a,sha256=16988b580868b187,GW-ENG-JIMENEZ,GW-WS-ENG-03,
+2027-12-29T20:18:08Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_4_setpoints.cfg,MODIFIED,sha256=88cfc078c2dcb4d4,sha256=c370f488c0fe5b64,GW-TEC-HERNANDEZ,GW-SYS-JMP-01,comment block updated
+2027-12-29T23:24:22Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\chlorine_log_2027-12.xlsx,MODIFIED,sha256=a84225596d8d3f79,sha256=80fefc5782ae2457,GW-WTR-PENA,GW-WS-ENG-01,
+2027-12-30T15:03:34Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\protection_coordination_sub01.xlsx,MODIFIED,sha256=3ce92e0b7024c383,sha256=032152c7fd8ec3a3,GW-ENG-VELA,GW-WS-ENG-03,
+2027-12-30T16:06:25Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\vendor_quote.pdf,MODIFIED,sha256=c524870e9c38deb8,sha256=39e7576a0fec5b08,GW-TEC-SHAH,GW-WS-ENG-04,
+2027-12-30T17:02:28Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\rtu_config_draft.xml,MODIFIED,sha256=5f4d377037be9f79,sha256=7ba823dd491266e5,GW-ENG-NGUYEN,GW-WS-ENG-02,LTC band 1.5V -> 2.0V
+2027-12-30T19:32:02Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\vendor_quote.pdf,MODIFIED,sha256=c38461f0e34ad6c7,sha256=fa48cf7641c1c3f5,GW-TEC-HERNANDEZ,GW-WS-ENG-02,
+2027-12-30T20:19:41Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\commissioning_notes.docx,MODIFIED,sha256=8d20bc63bfc6b1f2,sha256=54c0195adb608c29,GW-ENG-VILLARREAL,GW-SYS-JMP-01,
+2027-12-30T20:58:31Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\cost_estimate.xlsx,MODIFIED,sha256=ceea3dcaffe63ed9,sha256=b0106008cc2ca43c,GW-WTR-PENA,GW-SYS-JMP-01,
+2028-01-03T13:45:33Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\chlorine_log_2028-01.xlsx,CREATED,,sha256=4633b2dec21d356f,GW-ENG-VILLARREAL,GW-WS-ENG-04,
+2028-01-03T14:10:43Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\commissioning_notes.docx,MODIFIED,sha256=d0d706092f33f9b9,sha256=a5401591bdcb64bb,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2028-01-03T18:11:03Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\punchlist.xlsx,MODIFIED,sha256=fd15855549d88512,sha256=97fb823007a14ab7,GW-TEC-WALKER,GW-WS-ENG-01,
+2028-01-03T21:41:35Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_active.xml,MODIFIED,sha256=065265ca3882958c,sha256=47515e9908b4ebf3,GW-ENG-GARZA,GW-WS-ENG-05,recloser shots 3 -> 2 for R-01A
+2028-01-03T21:58:48Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub05_relay_upgrade\cost_estimate.xlsx,MODIFIED,sha256=fdeb9a60f1e97d8e,sha256=2463b4c5991cebf8,GW-WTR-PENA,GW-WS-ENG-01,
+2028-01-03T22:12:04Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\meeting_notes.docx,MODIFIED,sha256=d5eedc6f43bb2a31,sha256=3b8991389885373a,GW-WTR-PENA,GW-WS-ENG-01,
+2028-01-03T22:51:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\vendor_quote.pdf,MODIFIED,sha256=475bafd86cd9010d,sha256=2b69c14278ea32dc,GW-ENG-GARZA,GW-SYS-JMP-01,
+2028-01-04T14:41:15Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\commissioning_notes.docx,MODIFIED,sha256=2744383838cb362f,sha256=fea5956410579e5e,GW-TEC-CHAVEZ,GW-WS-ENG-05,
+2028-01-04T16:58:57Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\meeting_notes.docx,MODIFIED,sha256=0ab90403237ace12,sha256=120e48a8a47e8bed,GW-TEC-THOMAS,GW-WS-ENG-03,
+2028-01-04T21:40:04Z,GW-SRV-OT-01,\\gw-srv-ot-01\drawings\E-102_sub02_protection.dwg,MODIFIED,sha256=fc4a6b437756a5ef,sha256=23d06007ec02174b,GW-ENG-JOHNSON,GW-SYS-JMP-01,
+2028-01-05T20:28:54Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=63969db89fc4f527,sha256=2e5993ca8626aca5,GW-ENG-VILLARREAL,GW-SYS-JMP-01,CT ratio field corrected 600:5 -> 800:5 for R-01B
+2028-01-06T13:58:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\meeting_notes.docx,MODIFIED,sha256=144726b76c29f4a4,sha256=48217d13d42d2706,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2028-01-06T14:51:51Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=5cca519a6ba67411,sha256=f1cb1616955f82d4,GW-ENG-PATEL,GW-WS-ENG-02,alarm text edited for R-04C
+2028-01-06T15:04:09Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\wtp_filter_4_rehab\meeting_notes.docx,MODIFIED,sha256=120e48a8a47e8bed,sha256=cbc0c57e96a4d500,GW-ENG-PATEL,GW-WS-ENG-02,
+2028-01-06T15:04:51Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=2e5993ca8626aca5,sha256=e3bad2d49f7c7b8e,GW-ENG-THOMAS,GW-WS-ENG-01,"overcurrent_trip_threshold 900A -> 1100A for relays R-01A, R-01B, R-01C"
+2028-01-06T16:03:54Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\relay_settings_R-01A.xml,MODIFIED,sha256=a62ef357f8a81a02,sha256=f2f7b48604c67a25,GW-ENG-PATEL,GW-WS-ENG-02,LTC band 2.0V -> 1.5V
+2028-01-06T17:26:42Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\fiber_ring_phase2\schedule.xlsx,MODIFIED,sha256=5eb09f98208738e7,sha256=7deadf4c786cd4f8,GW-ENG-MARTINEZ,GW-WS-ENG-03,
+2028-01-06T18:35:06Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\test_report_2027.pdf,MODIFIED,sha256=dec3cc41edeccd63,sha256=be9f7abca06eb298,GW-ENG-VILLARREAL,GW-WS-ENG-04,
+2028-01-06T21:41:56Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\status_report_2028-01.docx,CREATED,,sha256=b0d78701eea951e9,GW-TEC-THOMAS,GW-SYS-JMP-01,
+2028-01-06T23:44:59Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\rtu_config_draft.xml,MODIFIED,sha256=e3bad2d49f7c7b8e,sha256=3bc261e4ee735423,GW-ENG-RUIZ,GW-WS-ENG-05,LTC band 2.0V -> 1.5V
+2028-01-07T19:01:47Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\sub03_breaker_replacement\cost_estimate.xlsx,MODIFIED,sha256=f539f273c69aca19,sha256=e86cdf4d06d95198,GW-ENG-SCHROEDER,GW-SYS-JMP-01,
+2028-01-07T22:28:38Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\punchlist.xlsx,MODIFIED,sha256=7217d0a5326a16c9,sha256=adceade68fb224b9,GW-TEC-HERNANDEZ,GW-SYS-JMP-01,
+2028-01-07T23:45:27Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\cost_estimate.xlsx,MODIFIED,sha256=035d1b16ca356c2f,sha256=9c3b9e42f14f1cea,GW-TEC-THOMAS,GW-WS-ENG-03,
+2028-01-10T13:54:17Z,GW-SRV-OT-01,\\gw-srv-ot-01\procedures\switching_procedure_SP-115.docx,MODIFIED,sha256=f4086fb39475a862,sha256=3f395d0bdd5a79d5,GW-TEC-MARTINEZ,GW-SYS-JMP-01,
+2028-01-10T13:58:43Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub03\protection_coordination_sub03.xlsx,MODIFIED,sha256=eed99927359143e5,sha256=b3eb5de07730dc2c,GW-ENG-LOPEZ,GW-WS-ENG-02,
+2028-01-10T20:56:59Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\readme_change_procedure.docx,MODIFIED,sha256=ae86fb1499801b8b,sha256=d0912a72492a5ec5,GW-WTR-PENA,GW-WS-ENG-01,
+2028-01-10T22:18:16Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\sld_sub01_revB.dwg,MODIFIED,sha256=d5d7db4e90e11340,sha256=51a6532632ca4d71,GW-TEC-THOMAS,GW-WS-ENG-03,
+2028-01-10T23:56:04Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\relay_settings_R-02B.xml,MODIFIED,sha256=7286dc9081edc045,sha256=e4b1187d431642ca,GW-WTR-ALLEN,GW-WS-ENG-04,CT ratio field corrected 600:5 -> 800:5 for R-02C
+2028-01-11T20:45:33Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\sld_sub05_revB.dwg,MODIFIED,sha256=49f97b93f01d93ca,sha256=40b18af687781720,GW-ENG-BAKER,GW-WS-ENG-03,
+2028-01-11T20:56:37Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\tank_5_recoat\punchlist.xlsx,MODIFIED,sha256=bd0885ad98895656,sha256=17f2d0d2d56b1ef4,GW-ENG-GARZA,GW-WS-ENG-05,
+2028-01-11T22:41:33Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub02\test_report_2027.pdf,MODIFIED,sha256=80cb27d0216c5f21,sha256=434843cb3bb19ea6,GW-ENG-PATEL,GW-WS-ENG-02,
+2028-01-12T14:10:46Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub04\rtu_config_draft.xml,MODIFIED,sha256=f1cb1616955f82d4,sha256=1765626451004e06,GW-ENG-JIMENEZ,GW-WS-ENG-03,revision label rev 9 -> rev 10
+2028-01-12T14:45:37Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub05\relay_settings_R-05B.xml,MODIFIED,sha256=802af7f85c4e2c45,sha256=be2c05054fc5d4a1,GW-WTR-CANTU,GW-WS-ENG-04,alarm text edited for R-05C
+2028-01-12T15:53:33Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\test_report_2027.pdf,MODIFIED,sha256=55a3fdd40be1b27f,sha256=b348da421988a856,GW-TEC-MARTINEZ,GW-WS-ENG-05,
+2028-01-12T17:30:51Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\booster2_vfd_upgrade\scope.docx,MODIFIED,sha256=ba211f36bc20ffe6,sha256=2e5fcfc05bb55e14,GW-ENG-SMITH,GW-WS-ENG-04,
+2028-01-12T20:19:39Z,GW-SRV-OT-01,\\gw-srv-ot-01\projects\pump_station_3_generator\schedule.xlsx,MODIFIED,sha256=5cdbfb3ac15713ea,sha256=c2a1bf8a28ce17c1,GW-ENG-SCHROEDER,GW-WS-ENG-05,
+2028-01-12T20:41:42Z,GW-SRV-OT-01,\\gw-srv-ot-01\wtp\reports\filter_run_log_2027.xlsx,MODIFIED,sha256=1b93d71b7bcc6f1c,sha256=667568e25a4ee1b1,GW-ENG-VILLARREAL,GW-WS-ENG-04,
+2028-01-12T22:05:33Z,GW-SRV-OT-01,\\gw-srv-ot-01\setpoints\pump_station_1_setpoints.cfg,MODIFIED,sha256=c4fce9c66f5d5603,sha256=d21e50a8c2ea83db,GW-TEC-CHAVEZ,GW-SYS-JMP-01,chlorine dose setpoint 2.2 -> 2.0 mg/L
+2028-01-12T23:20:35Z,GW-SRV-OT-01,\\gw-srv-ot-01\relayconfigs\sub01\relay_settings_R-01A.xml,MODIFIED,sha256=f2f7b48604c67a25,sha256=d61edaf738a827f9,GW-TEC-SHAH,GW-WS-ENG-04,alarm text edited for R-01B

@@ -1,8 +1,64 @@
 time_utc,action,rule_id,rule_type,description,changed_by,change_ticket
+2027-07-22T15:41:13Z,UPDATE,WL-NET-0109,whitelist,151.101.64.0/24 added to vendor CDN range,imorales,
+2027-07-22T17:26:05Z,UPDATE,SE3-SYS-7005,detection,description corrected,tperez,
+2027-07-26T14:16:05Z,UPDATE,SE3-OT-6010,detection,priority lowered to INFO,aclark,
+2027-07-28T12:36:54Z,UPDATE,SE3-SYS-7002,detection,threshold lowered from 40 to 30,jperez,
+2027-08-02T19:31:51Z,UPDATE,SE3-NET-3011,detection,priority lowered to INFO,jperez,CHG-27-0667
+2027-08-03T19:05:44Z,UPDATE,WL-NET-0112,whitelist,13.107.6.0/24 added to trusted SaaS range,jperez,
+2027-08-08T18:30:16Z,UPDATE,SE3-NET-3011,detection,suppression window shortened to 15 min,tperez,CHG-27-0686
+2027-08-13T20:20:44Z,CREATE,MAINT-EXCEPT-0918,exception,auto-acknowledge SE3-EP-2010 for field laptops outside working hours,jperez,CHG-27-0726
+2027-08-17T14:48:09Z,UPDATE,WL-NET-0115,whitelist,52.96.38.0/24 added to vendor CDN range,tperez,
+2027-08-18T15:00:02Z,CREATE,MAINT-EXCEPT-0880,exception,auto-acknowledge SE3-NET-3011 when source is the vulnerability scanner,jperez,CHG-27-0737
+2027-08-18T15:06:42Z,UPDATE,SE3-AUTH-1012,detection,description corrected,jperez,
 2027-08-19T11:34:20Z,CREATE,MAINT-EXCEPT-0892,exception,auto-acknowledge SE3-OT-1104 when source is GW-SYS-JMP-01,svc_fieldops_ext,
-2027-08-24T15:02:00Z,CREATE,MAINT-EXCEPT-0893,exception,auto-acknowledge SE3-OT-6010 during approved windows,aclark,CHG-27-0812
-2027-08-31T14:22:00Z,UPDATE,WL-NET-0117,whitelist,104.21.88.0/24 added to vendor CDN range,tperez,
-2027-09-14T06:14:05Z,ACTIVATE,SE3-BULK-STORM-01,bulk dismissal,storm mode: dismiss LOW and MEDIUM alerts from 44 device-availability and OT maintenance rule families,jperez,EOC-ACT-27-09
-2027-09-18T14:00:00Z,DEACTIVATE,SE3-BULK-STORM-01,bulk dismissal,storm mode ended,jperez,EOC-ACT-27-09
-2027-10-18T15:20:00Z,DELETE,MAINT-EXCEPT-0892,exception,removed (AUDIT-EXC-2027-10),falrasheedobinna,SI-2027-CC-001
-2027-10-19T00:30:00Z,REPORT,AUDIT-EXC-2027-10,audit,"exception rule audit complete: 41 rules reviewed, 1 removed",bflores,SI-2027-CC-001
+2027-08-21T15:24:30Z,CREATE,MAINT-EXCEPT-0885,exception,auto-acknowledge SE3-EP-2010 for field laptops outside working hours,jperez,CHG-27-0750
+2027-08-21T18:24:40Z,UPDATE,SE3-MAIL-4009,detection,window widened from 300 s to 600 s,jperez,
+2027-08-23T11:08:14Z,UPDATE,SE3-NET-3004,detection,threshold lowered from 40 to 30,tperez,CHG-27-0746
+2027-08-24T15:02:37Z,CREATE,MAINT-EXCEPT-0893,exception,auto-acknowledge SE3-OT-6010 during approved windows,aclark,CHG-27-0755
+2027-08-25T16:34:55Z,UPDATE,SE3-NET-3025,detection,description corrected,imorales,CHG-27-0742
+2027-08-28T18:03:11Z,UPDATE,SE3-EP-2010,detection,priority lowered to INFO,tperez,CHG-27-0749
+2027-08-31T14:22:48Z,UPDATE,WL-NET-0117,whitelist,104.21.88.0/24 added to vendor CDN range,tperez,
+2027-09-01T18:56:52Z,UPDATE,SE3-SYS-7002,detection,description corrected,tperez,CHG-27-0764
+2027-09-08T15:31:43Z,CREATE,MAINT-EXCEPT-0895,exception,auto-acknowledge SE3-SYS-7005 on backup volumes during the backup window,tperez,
+2027-09-08T20:12:31Z,UPDATE,WL-NET-0119,whitelist,34.117.59.0/24 added to vendor CDN range,imorales,
+2027-09-09T21:41:34Z,CREATE,MAINT-EXCEPT-0891,exception,auto-acknowledge SE3-OT-6001 for substations under planned work,svc_meridian_support,VND-3912
+2027-09-10T22:35:12Z,UPDATE,SE3-NET-9941,detection,description corrected,imorales,
+2027-09-11T14:18:39Z,UPDATE,SE3-AUTH-1012,detection,priority lowered to INFO,jperez,
+2027-09-12T16:16:35Z,CREATE,MAINT-EXCEPT-0919,exception,auto-acknowledge SE3-MAIL-4002 for the scan-to-mail printers,tperez,
+2027-09-14T06:14:05Z,ACTIVATE,SE3-BULK-STORM-01,bulk dismissal,"storm mode: dismiss LOW and MEDIUM alerts from the 44 sources on the storm whitelist (device availability, network, endpoint and OT maintenance)",jperez,EOC-ACT-27-09
+2027-09-18T14:00:41Z,DEACTIVATE,SE3-BULK-STORM-01,bulk dismissal,storm mode ended,jperez,EOC-ACT-27-09
+2027-09-22T19:15:03Z,UPDATE,SE3-OT-6010,detection,added device group field-laptops,imorales,
+2027-09-30T19:12:47Z,CREATE,MAINT-EXCEPT-0908,exception,auto-acknowledge SE3-NET-3020 on the redundant core uplink during maintenance,svc_vantage_mgmt,VND-3352
+2027-10-05T19:37:30Z,UPDATE,SE3-SYS-7005,detection,added device group field-laptops,jperez,
+2027-10-06T16:30:52Z,UPDATE,WL-NET-0121,whitelist,142.250.114.0/24 added to vendor CDN range,jperez,
+2027-10-10T18:26:20Z,UPDATE,SE3-AUTH-1001,detection,priority lowered to INFO,tperez,
+2027-10-10T18:31:17Z,CREATE,MAINT-EXCEPT-0917,exception,auto-acknowledge SE3-OT-6001 for substations under planned work,tperez,
+2027-10-14T20:04:05Z,UPDATE,SE3-MAIL-4009,detection,priority lowered to INFO,tperez,
+2027-10-18T15:20:26Z,DELETE,MAINT-EXCEPT-0892,exception,removed (AUDIT-EXC-2027-10),falrasheedobinna,SI-2027-CC-001
+2027-10-19T00:30:52Z,REPORT,AUDIT-EXC-2027-10,audit,"exception rule audit complete: 41 rules reviewed, 1 removed",bflores,SI-2027-CC-001
+2027-10-20T15:31:43Z,DELETE,MAINT-EXCEPT-0895,exception,expired,tperez,
+2027-10-22T14:49:13Z,CREATE,MAINT-EXCEPT-0921,exception,auto-acknowledge SE3-NET-3020 on the redundant core uplink during maintenance,svc_vantage_mgmt,VND-3662
+2027-10-23T17:27:04Z,UPDATE,SE3-OT-6010,detection,threshold raised from 5 to 8 failures,tperez,
+2027-11-06T16:16:35Z,DELETE,MAINT-EXCEPT-0919,exception,expired,tperez,
+2027-11-07T23:42:32Z,UPDATE,SE3-OT-6001,detection,suppression window shortened to 15 min,tperez,CHG-27-0836
+2027-11-09T15:17:06Z,UPDATE,WL-NET-0124,whitelist,199.232.46.0/24 added to trusted SaaS range,tperez,
+2027-11-16T23:29:13Z,CREATE,MAINT-EXCEPT-0903,exception,auto-acknowledge SE3-AUTH-1012 for the on-call rota,aclark,CHG-27-0874
+2027-11-18T17:02:37Z,UPDATE,SE3-POL-5011,detection,added device group field-laptops,jperez,
+2027-11-20T23:34:38Z,UPDATE,SE3-MAIL-4009,detection,suppression window shortened to 15 min,tperez,
+2027-11-27T17:32:34Z,UPDATE,SE3-EP-2010,detection,suppression window shortened to 15 min,aclark,CHG-27-0905
+2027-11-30T19:26:57Z,CREATE,MAINT-EXCEPT-0902,exception,auto-acknowledge SE3-NET-3020 on the redundant core uplink during maintenance,imorales,CHG-27-0894
+2027-12-02T21:44:27Z,UPDATE,WL-NET-0126,whitelist,23.196.3.0/24 added to trusted SaaS range,imorales,
+2027-12-07T20:48:58Z,UPDATE,SE3-NET-3020,detection,suppression window shortened to 15 min,jperez,
+2027-12-10T19:00:39Z,UPDATE,SE3-NET-3004,detection,window widened from 300 s to 600 s,tperez,CHG-27-0924
+2027-12-11T20:29:35Z,UPDATE,SE3-NET-3004,detection,suppression window shortened to 15 min,jperez,CHG-27-0920
+2027-12-14T18:07:50Z,UPDATE,SE3-NET-9941,detection,window widened from 300 s to 600 s,tperez,CHG-27-0926
+2027-12-14T23:29:13Z,DELETE,MAINT-EXCEPT-0903,exception,expired,aclark,
+2027-12-15T18:29:17Z,UPDATE,SE3-AUTH-1012,detection,window widened from 300 s to 600 s,imorales,CHG-27-0935
+2027-12-18T13:45:57Z,UPDATE,SE3-NET-3025,detection,priority lowered to INFO,aclark,CHG-27-0951
+2027-12-19T13:05:31Z,UPDATE,SE3-MAIL-4009,detection,window widened from 300 s to 600 s,imorales,CHG-27-0951
+2027-12-30T23:46:40Z,CREATE,MAINT-EXCEPT-0881,exception,auto-acknowledge SE3-OT-6001 for substations under planned work,tperez,
+2028-01-02T15:01:13Z,UPDATE,SE3-AUTH-1012,detection,priority lowered to INFO,aclark,CHG-27-0985
+2028-01-03T15:43:23Z,UPDATE,SE3-MAIL-4009,detection,threshold lowered from 40 to 30,tperez,
+2028-01-03T22:10:58Z,CREATE,MAINT-EXCEPT-0915,exception,auto-acknowledge SE3-NET-3020 on the redundant core uplink during maintenance,svc_meridian_support,VND-3144
+2028-01-04T00:49:57Z,UPDATE,SE3-MAIL-4002,detection,threshold lowered from 40 to 30,bflores,CHG-27-0985
+2028-01-07T22:11:52Z,CREATE,MAINT-EXCEPT-0901,exception,auto-acknowledge SE3-EP-2010 for field laptops outside working hours,tperez,CHG-27-0995

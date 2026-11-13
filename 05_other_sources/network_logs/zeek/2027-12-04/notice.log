@@ -6,7 +6,8 @@
 #open	2027-12-04-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1827906113.681861	-	10.14.20.27	216.130.240.145	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
-1827940717.543829	-	10.14.21.22	64.219.140.227	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1827945219.488222	-	10.14.30.27	151.68.45.224	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1827892386.513648	-	10.14.22.31	104.211.179.45	80	HTTP::Unusual_User_Agent	api.airline-bookings.net user agent not seen before on this network	10.14.22.31	104.211.179.45	80	Notice::ACTION_LOG
+1827897111.831858	-	10.14.30.34	185.172.97.58	443	Weird::Activity	possible_split_routing	10.14.30.34	185.172.97.58	443	Notice::ACTION_LOG
+1827906868.919862	-	10.14.30.30	10.14.10.5	53	DNS::External_Name	portal-test.cbpwa-services.org is pointing to a local host	10.14.30.30	10.14.10.5	53	Notice::ACTION_LOG
+1827929338.812816	-	10.14.30.43	96.128.14.101	443	Conn::Content_Gap	api.fleetfuel-cards.com content gap (349 bytes missing)	10.14.30.43	96.128.14.101	443	Notice::ACTION_LOG
 #close	2027-12-05-00-00-00

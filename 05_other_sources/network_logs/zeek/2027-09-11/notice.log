@@ -6,5 +6,8 @@
 #open	2027-09-11-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1820695311.858113	-	10.14.21.53	54.232.216.175	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1820639822.107335	-	10.14.30.50	34.194.54.8	443	Conn::Content_Gap	sso-login.hotel-reservations.com content gap (6972 bytes missing)	10.14.30.50	34.194.54.8	443	Notice::ACTION_LOG
+1820651184.295171	-	10.14.30.13	10.14.10.6	53	DNS::External_Name	gis-preview.cbpwa-services.org is pointing to a local host	10.14.30.13	10.14.10.6	53	Notice::ACTION_LOG
+1820691434.363517	-	10.14.30.24	10.14.10.5	53	DNS::External_Name	lab.cbpwa.example is pointing to a local host	10.14.30.24	10.14.10.5	53	Notice::ACTION_LOG
+1820701172.995340	-	10.14.30.14	216.130.240.145	80	HTTP::Unusual_User_Agent	www.gridnotices-tx.org user agent not seen before on this network	10.14.30.14	216.130.240.145	80	Notice::ACTION_LOG
 #close	2027-09-12-00-00-00

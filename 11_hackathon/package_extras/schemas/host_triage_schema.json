@@ -1,0 +1,36 @@
+{
+ "source": "host_triage",
+ "folder": "data/network_logs/triage/",
+ "format": "CSV tables and one JSON file per collected host",
+ "files": {
+  "collection.json": "host, ip, os, collected_utc, collected_by, tool, case, logon_history_window_days, items (rows and SHA-256 of each table), samples (placeholder files)",
+  "file_listing.csv": "path, size_bytes, created_utc, modified_utc, sha256, signer",
+  "autoruns.csv": "location (service, registry run key, scheduled task), name, image_path, signer, sha256, enabled, first_seen_utc",
+  "services.csv": "name, display_name, start_type, state, image_path, account, installed_utc",
+  "scheduled_tasks.csv": "task_name, action, author, created_utc, last_run_utc, trigger",
+  "execution_history.csv": "image_path, run_count, first_run_utc, last_run_utc, sha256",
+  "logon_history.csv": "time_utc, event_id (4624, 4625, 4634, 4647), user, domain, logon_type, src_ip, logon_id; the 45 days before the collection",
+  "installed_software.csv": "name, version, publisher, install_date",
+  "network_config.csv": "interface, ip, mac, gateway, dns_servers, dhcp_enabled",
+  "placeholders/<name>.placeholder.txt": "inert text stand-in for an unsigned executable the collector copied (every collection has some: in-house utilities, vendor tools, downloaded programs); its SHA-256 is the hash the logs record for that file"
+ },
+ "notes": "Fourteen collections taken by the utility's security team between 2027-10-02 and 2027-10-14. Listings and hashes only: no executable content is included anywhere. The tables agree with the Windows event logs and the endpoint telemetry of the same host. Times are UTC. No time in a collection is later than the collection.",
+ "joins": [
+  {
+   "field": "<HOST> folder name, collection.json host",
+   "to": "gw_host_registry.json hosts[].hostname"
+  },
+  {
+   "field": "sha256",
+   "to": "network_logs/endpoint/*.jsonl sha256"
+  },
+  {
+   "field": "logon_history.csv time_utc, logon_id",
+   "to": "network_logs/windows/security_*.jsonl"
+  },
+  {
+   "field": "services.csv name / installed_utc",
+   "to": "network_logs/windows/system_*.jsonl event 7045"
+  }
+ ]
+}

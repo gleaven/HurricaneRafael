@@ -1,0 +1,19 @@
+location,name,image_path,signer,sha256,enabled,first_seen_utc
+service,DNS Client,C:\Windows\System32\svchost.exe,Microsoft Windows,d25ebd1ea06740e499837dc0aba3a6aca380f436522ea7c33f50aab96431eb41,yes,2026-12-17T03:40:14Z
+service,Windows Event Log,C:\Windows\System32\svchost.exe,Microsoft Windows,d25ebd1ea06740e499837dc0aba3a6aca380f436522ea7c33f50aab96431eb41,yes,2026-12-17T03:40:14Z
+service,Microsoft Defender Antivirus Service,C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MsMpEng.exe,Microsoft Windows,8b099c7eeb1cfa53e718e8fc738450ef0710b1d5806354ba1f262857e21c377a,yes,2026-12-17T03:40:14Z
+service,Print Spooler,C:\Windows\System32\spoolsv.exe,Microsoft Windows,13cfc2a29686f6e50d43e02ba06854185b5cc3eafb78fd8426a90e681b111db1,yes,2026-12-17T03:40:14Z
+service,Workstation,C:\Windows\System32\svchost.exe,Microsoft Windows,d25ebd1ea06740e499837dc0aba3a6aca380f436522ea7c33f50aab96431eb41,yes,2026-12-17T03:40:14Z
+service,Task Scheduler,C:\Windows\System32\svchost.exe,Microsoft Windows,d25ebd1ea06740e499837dc0aba3a6aca380f436522ea7c33f50aab96431eb41,yes,2026-12-17T03:40:14Z
+service,Windows Time,C:\Windows\System32\svchost.exe,Microsoft Windows,d25ebd1ea06740e499837dc0aba3a6aca380f436522ea7c33f50aab96431eb41,yes,2026-12-17T03:40:14Z
+service,Vantage Collector Service,C:\Program Files\Vantage Security\Collector\vscollect.exe,Vantage Security Systems Inc,6c8d57ef846e28dddfc4cf757c773e8d8130fba7182c84ae77263601e792aaa4,yes,2027-10-02T17:38:33Z
+service,Endpoint Protection Agent,C:\Program Files\EndpointAgent\epagent.exe,Endpoint Agent Software Inc,bb6f04a96bc35175367fdb0db21f838f95228e540157063a2054b74850ec4f98,yes,2027-08-20T21:18:54Z
+service,Asset Inventory Agent,C:\Program Files\AssetInventory\invagent.exe,Asset Inventory Software Inc,a41b22914e903b622a5ad1fe76bdd8957dd47600de30e9d499954cbaaeb4506e,yes,2027-01-15T16:53:28Z
+service,SMS Agent Host,C:\Windows\CCM\CcmExec.exe,Microsoft Corporation,5a7e4c989fdf58cb24366b02c8cf10357ce4da60487c0a3fa08241df68e4c953,yes,2027-05-17T18:15:03Z
+service,CBPWA Work Order Sync,C:\Program Files\CBPWA\WorkOrders\jre\bin\javaw.exe,Coastal Bend Power and Water Authority,fa13ac20209f20d7edcfd67fa66ef17e4db3a5ef6ba611e5e5d2e729f19dcee0,yes,2027-05-02T03:15:44Z
+service,Vantage Telemetry Update Service,C:\ProgramData\VantageTelemetry\vstelemetry.exe,,68c125df70cfa63c6c0ed69e78bd30f8a6bb202f828314a6c7aaca7de0b5ef56,yes,2027-08-30T13:24:21Z
+registry run key,PDFView,"""C:\Program Files\PDFView\pdfview.exe"" /background",PDFView Software Ltd,001fa183ea470e4f0af94da612d99b60246d7f8a2d4281145129e81e231ad0fa,yes,2027-07-29T21:14:58Z
+registry run key,MeetRoom,"""C:\Program Files\MeetRoom\meetroom.exe"" /background",MeetRoom Video Inc,991206cdf5fe9b86c5ebc5c5b74ab03be78912098e9e88bea5ca19c32172fa7f,yes,2027-08-12T21:59:03Z
+scheduled task,\Microsoft\Windows\Defender\Scheduled Scan,"""C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MsMpEng.exe"" -scan",,,yes,2026-12-17T03:40:14Z
+scheduled task,\Microsoft\Windows\UpdateOrchestrator\Schedule Scan,C:\Windows\System32\usoclient.exe StartScan,,,yes,2026-12-17T03:40:14Z
+scheduled task,\Vantage Security\Collector Update Check,"""C:\Program Files\Vantage Security\Collector\vscollect.exe"" /updatecheck",,,yes,2027-10-02T17:38:31Z

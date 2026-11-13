@@ -6,6 +6,8 @@
 #open	2027-11-21-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1826764903.710541	-	10.14.20.35	162.62.176.6	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1826840135.225639	-	10.14.22.39	104.70.165.180	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
+1826806675.208686	-	10.14.21.11	104.21.88.66	80	HTTP::Unusual_User_Agent	status.relaytech-support.net user agent not seen before on this network	10.14.21.11	104.21.88.66	80	Notice::ACTION_LOG
+1826822445.802881	-	10.14.30.13	104.244.6.116	443	Conn::Content_Gap	auth-prod.certstatus-ocsp.net content gap (5194 bytes missing)	10.14.30.13	104.244.6.116	443	Notice::ACTION_LOG
+1826829962.967519	-	10.14.21.37	104.110.7.66	443	Conn::Content_Gap	api.insurance-claims-portal.com content gap (2728 bytes missing)	10.14.21.37	104.110.7.66	443	Notice::ACTION_LOG
+1826835536.975503	-	10.14.22.29	23.241.175.6	443	Weird::Activity	possible_split_routing	10.14.22.29	23.241.175.6	443	Notice::ACTION_LOG
 #close	2027-11-22-00-00-00

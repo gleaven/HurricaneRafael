@@ -1,0 +1,290 @@
+
+## src_network x result
+result              FAILED  SUCCESS
+org    src_network                 
+bcmc   ASN 11427        36      573
+       ASN 20057        29      431
+       ASN 20115         2       27
+       ASN 21928        25      512
+       ASN 22773        24      543
+       ASN 64496         0       24
+       ASN 64499         0       30
+       ASN 64512         3       51
+       ASN 7018         51      951
+       ASN 7922          0       13
+brw    ASN 11427         0        3
+       ASN 20057        13      186
+       ASN 20115        15      279
+       ASN 21928         0       23
+       ASN 64496         0        4
+       ASN 64499         0        1
+       ASN 64512         3       31
+       ASN 7018          3       23
+       ASN 7922         19      420
+city   ASN 11427       239     4088
+       ASN 20057       201     3115
+       ASN 20115        65      894
+       ASN 21928       126     2061
+       ASN 22773       225     3233
+       ASN 64496         2       87
+       ASN 64499        18      170
+       ASN 64512        34      704
+       ASN 7018        315     5522
+       ASN 7922         25      309
+county ASN 11427        33      459
+       ASN 20057         6      246
+       ASN 20115         3       79
+       ASN 21928         7      186
+       ASN 22773        11      162
+       ASN 64496         0       13
+       ASN 64499         2       57
+       ASN 64512        11      106
+       ASN 7018         20      323
+       ASN 7922          5       43
+nascc  ASN 11427        82     1427
+       ASN 20057        77     1310
+       ASN 20115        24      529
+       ASN 21928        54      993
+       ASN 22773        98     1604
+       ASN 64496         0        2
+       ASN 64499         6      196
+       ASN 64512         9      167
+       ASN 7018        132     2673
+       ASN 7922          3      107
+port   ASN 11427        20      378
+       ASN 20057        12      165
+       ASN 20115         3       22
+       ASN 21928         4       51
+       ASN 22773        10      181
+       ASN 64496         0        3
+       ASN 64512         2       14
+       ASN 7018         21      435
+       ASN 7922          4       59
+srmc   ASN 11427        53     1022
+       ASN 20057        45      769
+       ASN 20115         7       77
+       ASN 21928        31      510
+       ASN 22773        65      930
+       ASN 64496         4       58
+       ASN 64499         1       25
+       ASN 64512         4      172
+       ASN 7018         64     1142
+       ASN 7922          5       98
+
+## src_network x auth_method
+auth_method         password  password+token  smartcard
+org    src_network                                     
+bcmc   ASN 11427          42             567          0
+       ASN 20057          34             426          0
+       ASN 20115           0              29          0
+       ASN 21928          37             500          0
+       ASN 22773          30             537          0
+       ASN 64496           2              22          0
+       ASN 64499           1              29          0
+       ASN 64512           4              50          0
+       ASN 7018           68             934          0
+       ASN 7922            1              12          0
+brw    ASN 11427           0               3          0
+       ASN 20057           0             199          0
+       ASN 20115           0             294          0
+       ASN 21928           0              23          0
+       ASN 64496           0               4          0
+       ASN 64499           0               1          0
+       ASN 64512           0              34          0
+       ASN 7018            0              26          0
+       ASN 7922            0             439          0
+city   ASN 11427         429            3898          0
+       ASN 20057         330            2986          0
+       ASN 20115         106             853          0
+       ASN 21928         218            1969          0
+       ASN 22773         370            3088          0
+       ASN 64496           6              83          0
+       ASN 64499          24             164          0
+       ASN 64512          76             662          0
+       ASN 7018          563            5274          0
+       ASN 7922           46             288          0
+county ASN 11427          12             480          0
+       ASN 20057          10             242          0
+       ASN 20115           2              80          0
+       ASN 21928          11             182          0
+       ASN 22773           9             164          0
+       ASN 64496           2              11          0
+       ASN 64499           5              54          0
+       ASN 64512           4             113          0
+       ASN 7018           14             329          0
+       ASN 7922            2              46          0
+nascc  ASN 11427          89             114       1306
+       ASN 20057          66             137       1184
+       ASN 20115          23              47        483
+       ASN 21928          51              89        907
+       ASN 22773          80             169       1453
+       ASN 64496           0               0          2
+       ASN 64499           8              21        173
+       ASN 64512           9              22        145
+       ASN 7018          125             254       2426
+       ASN 7922            8               7         95
+port   ASN 11427          10             388          0
+       ASN 20057           8             169          0
+       ASN 20115           2              23          0
+       ASN 21928           0              55          0
+       ASN 22773           2             189          0
+       ASN 64496           1               2          0
+       ASN 64512           1              15          0
+       ASN 7018           18             438          0
+       ASN 7922            1              62          0
+srmc   ASN 11427           0            1075          0
+       ASN 20057           0             814          0
+       ASN 20115           0              84          0
+       ASN 21928           0             541          0
+       ASN 22773           0             995          0
+       ASN 64496           0              62          0
+       ASN 64499           0              26          0
+       ASN 64512           0             176          0
+       ASN 7018            0            1206          0
+       ASN 7922            0             103          0
+
+## src_network x device
+device              known device  new device
+org    src_network                          
+bcmc   ASN 11427             583          26
+       ASN 20057             416          44
+       ASN 20115              26           3
+       ASN 21928             490          47
+       ASN 22773             549          18
+       ASN 64496              22           2
+       ASN 64499              30           0
+       ASN 64512              52           2
+       ASN 7018              968          34
+       ASN 7922               10           3
+brw    ASN 11427               3           0
+       ASN 20057             180          19
+       ASN 20115             279          15
+       ASN 21928              16           7
+       ASN 64496               4           0
+       ASN 64499               1           0
+       ASN 64512              33           1
+       ASN 7018               24           2
+       ASN 7922              416          23
+city   ASN 11427            4156         171
+       ASN 20057            2992         324
+       ASN 20115             920          39
+       ASN 21928            1953         234
+       ASN 22773            3310         148
+       ASN 64496              83           6
+       ASN 64499             176          12
+       ASN 64512             702          36
+       ASN 7018             5594         243
+       ASN 7922              319          15
+county ASN 11427             478          14
+       ASN 20057             217          35
+       ASN 20115              78           4
+       ASN 21928             170          23
+       ASN 22773             162          11
+       ASN 64496              12           1
+       ASN 64499              56           3
+       ASN 64512             114           3
+       ASN 7018              326          17
+       ASN 7922               48           0
+nascc  ASN 11427            1437          72
+       ASN 20057            1244         143
+       ASN 20115             531          22
+       ASN 21928             942         105
+       ASN 22773            1635          67
+       ASN 64496               1           1
+       ASN 64499             189          13
+       ASN 64512             163          13
+       ASN 7018             2685         120
+       ASN 7922              106           4
+port   ASN 11427             377          21
+       ASN 20057             152          25
+       ASN 20115              24           1
+       ASN 21928              40          15
+       ASN 22773             179          12
+       ASN 64496               2           1
+       ASN 64512              15           1
+       ASN 7018              436          20
+       ASN 7922               62           1
+srmc   ASN 11427            1040          35
+       ASN 20057             723          91
+       ASN 20115              76           8
+       ASN 21928             494          47
+       ASN 22773             953          42
+       ASN 64496              61           1
+       ASN 64499              25           1
+       ASN 64512             169           7
+       ASN 7018             1141          65
+       ASN 7922              102           1
+
+## device x result
+result               FAILED  SUCCESS
+org    device                       
+bcmc   known device     162     2984
+       new device         8      171
+brw    known device      50      906
+       new device         3       64
+city   known device    1191    19014
+       new device        59     1169
+county known device      92     1569
+       new device         6      105
+nascc  known device     456     8477
+       new device        29      531
+port   known device      71     1216
+       new device         5       92
+srmc   known device     264     4520
+       new device        15      283
+
+## auth_method x device
+device                 known device  new device
+org    auth_method                             
+bcmc   password                 205          14
+       password+token          2941         165
+brw    password+token           956          67
+city   password                2042         126
+       password+token         18163        1102
+county password                  68           3
+       password+token          1593         108
+nascc  password                 430          29
+       password+token           806          54
+       smartcard               7697         477
+port   password                  40           3
+       password+token          1247          94
+srmc   password+token          4784         298
+
+## auth_method x result
+result                 FAILED  SUCCESS
+org    auth_method                    
+bcmc   password             6      213
+       password+token     164     2942
+brw    password+token      53      970
+city   password           123     2045
+       password+token    1127    18138
+county password             2       69
+       password+token      96     1605
+nascc  password            31      428
+       password+token      39      821
+       smartcard          415     7759
+port   password             3       40
+       password+token      73     1268
+srmc   password+token     279     4803
+
+## first octet by ASN
+src_network  ASN 11427  ASN 20057  ASN 20115  ASN 21928  ASN 22773  ASN 64496  ASN 64499  ASN 64512  ASN 7018  ASN 7922
+p8                                                                                                                     
+107                  0          0        396          0       1522          0          0          0         0         0
+174               1907          0          0        919          0          0          0          0         0         0
+192                  0          0          0          0          0          0        506          0         0         0
+198                  0          0          0          0          0        197          0          0         0         0
+203                  0          0          0          0          0          0          0       1311         0         0
+24                   0       1333          0          0          0          0          0          0      2160       178
+47                   0          0        442          0       1228          0          0          0         0         0
+66                1625          0          0        871          0          0          0          0         0         0
+67                   0       1370          0          0          0          0          0          0      2320       138
+68                   0          0        440          0       1415          0          0          0         0         0
+70                1719          0          0        923          0          0          0          0         0         0
+72                   0       1350          0          0          0          0          0          0      2485       229
+73                   0          0        330          0       1389          0          0          0         0         0
+75                1507          0          0        890          0          0          0          0         0         0
+76                   0       1369          0          0          0          0          0          0      2515       339
+97                   0          0        418          0       1532          0          0          0         0         0
+98                1655          0          0        980          0          0          0          0         0         0
+99                   0       1183          0          0          0          0          0          0      2195       226

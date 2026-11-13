@@ -6,8 +6,6 @@
 #open	2027-09-14-00-00-00
 #fields	ts	uid	id.orig_h	id.resp_h	id.resp_p	note	msg	src	dst	p	actions
 #types	time	string	addr	addr	port	enum	string	addr	addr	port	set[enum]
-1820911957.152446	-	10.14.21.46	216.177.199.69	443	DNS::External_Name	-	-	-	443	Notice::ACTION_LOG
-1820913690.365390	-	10.14.21.33	185.164.174.51	443	SSL::Certificate_Expires_Soon	-	-	-	443	Notice::ACTION_LOG
-1820928235.870103	-	10.14.30.48	199.52.45.214	443	SSL::Invalid_Server_Cert	-	-	-	443	Notice::ACTION_LOG
-1820949000.469180	-	10.14.21.15	96.143.242.82	443	Conn::Content_Gap	-	-	-	443	Notice::ACTION_LOG
+1820942476.375803	-	10.14.21.22	162.152.124.142	443	Weird::Activity	possible_split_routing	10.14.21.22	162.152.124.142	443	Notice::ACTION_LOG
+1820954640.953232	-	10.14.20.19	64.102.136.8	443	Weird::Activity	possible_split_routing	10.14.20.19	64.102.136.8	443	Notice::ACTION_LOG
 #close	2027-09-15-00-00-00
